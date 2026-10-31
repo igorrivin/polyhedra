@@ -1,0 +1,157 @@
+{
+  "validations": [
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/numerical-correctness-2026-10-31/integration-installed-cli-v2.json",
+      "sha256": "8cf995d09227639d3c599d8a5316fef3b59fd531f1e0dad17261c0fa06c8448c",
+      "schema_version": 2,
+      "schema_sha256": "c37419bfd086a8ad5c2206215df45554dd4114f34e7b6a9bd08e89234e137bde",
+      "valid": true
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/numerical-correctness-2026-10-31/integration-installed-controlled-v2.json",
+      "sha256": "243dbb1fbca20e06a6dd12015019a5b642db8d8d95fd88054735cfb9671729a6",
+      "schema_version": 2,
+      "schema_sha256": "c37419bfd086a8ad5c2206215df45554dd4114f34e7b6a9bd08e89234e137bde",
+      "valid": true
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/tests/fixtures/optimization-result-v1.json",
+      "sha256": "f8408759dd9a0b46f047bb4fb58ff9f4f1811a80c5ca22b4277ff66f3d8f8558",
+      "schema_version": 1,
+      "schema_sha256": "7a224b6c08a4380df70309f391d725ec1cb6a1abf0de843f5bbc04f80b5a4511",
+      "valid": true
+    }
+  ],
+  "v1_schema_unchanged_from_HEAD": true,
+  "v1_fixture_identical_to_original": "/Volumes/Lexar/lambda/devel/polyhedra/execution/2026-10-31/tetrahedron-cli.json",
+  "cli": {
+    "schema_version": 2,
+    "source": "cli",
+    "metadata": {
+      "timestamp": "2026-10-31T19:37:11.823577",
+      "n_vertices": 4,
+      "objective": "vectorized_scipy_bloch_wigner",
+      "implicit_infinity_index": 3,
+      "settings": {
+        "n_trials": 1,
+        "maxiter": 30,
+        "popsize": 8,
+        "workers": 1,
+        "seed_base": 42
+      },
+      "n_trials": 1,
+      "maxiter": 30,
+      "popsize": 8,
+      "workers": 1,
+      "seed_base": 42
+    },
+    "best": {
+      "volume": 1.0149416063712777,
+      "params": [
+        1.5707978504984372,
+        1.0471882612361003
+      ],
+      "vertices_real": [
+        0.0,
+        1.0,
+        0.5000088071848242
+      ],
+      "vertices_imag": [
+        0.0,
+        0.0,
+        0.8660220783267211
+      ],
+      "structure": {
+        "n_vertices": 4,
+        "n_finite_vertices": 3,
+        "implicit_infinity_index": 3,
+        "n_faces": 4,
+        "n_finite_faces": 1,
+        "n_infinity_faces": 3,
+        "n_edges": 6,
+        "euler_characteristic": 2,
+        "vertex_degrees": [
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "triangulation": [
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "finite_delaunay_triangulation": [
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "boundary_triangulation": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          2,
+          1,
+          3
+        ]
+      ]
+    },
+    "statistics": {
+      "n_vertices": 4,
+      "n_faces": 4,
+      "n_finite_faces": 1,
+      "best_volume": 1.0149416063712777,
+      "mean_volume": 1.0149416063712777,
+      "std_volume": 0.0,
+      "all_volumes": [
+        1.0149416063712777
+      ],
+      "n_valid_trials": 1,
+      "n_invalid_trials": 0,
+      "verification_evals": 1
+    },
+    "all_trials": [
+      {
+        "trial": 1,
+        "volume": 1.0149416063712777,
+        "valid": true,
+        "params": [
+          1.5707978504984372,
+          1.0471882612361003
+        ],
+        "success": true,
+        "message": "Optimization terminated successfully.",
+        "iterations": 10,
+        "function_evals": 185,
+        "verification_evals": 1,
+        "validation": {
+          "status": "verified",
+          "reason": "Canonical volume and complete boundary reconstruction passed",
+          "cached_objective": -1.0149416063712777,
+          "cached_objective_repr": null,
+          "objective_difference": 0.0,
+          "invalid_params_repr": null,
+          "polish": null
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "status": "bounded numerical integration checks passed; full suite remains dependency-blocked",
+  "full_suite": {
+    "failure": 4,
+    "error": 9,
+    "skipped": 18,
+    "passed": 393
+  },
+  "baseline_full_suite": {
+    "failure": 4,
+    "error": 9,
+    "skipped": 18,
+    "passed": 279
+  },
+  "failed_error_skip_nodes_unchanged": true,
+  "additional_passes": 114,
+  "warnings": 0,
+  "core_environment": "/tmp/polyhedra-numerical-core-20261031",
+  "runtime_dependencies": {
+    "numpy": "2.5.4",
+    "pip": "25.0.1",
+    "mpmath": "1.3.0",
+    "ideal_poly_volume_toolkit": "0.3.0",
+    "scipy": "1.18.1"
+  },
+  "source_python_files_matching_build_wheel_sdist_install": 47,
+  "source_python_files_unchanged_after_checks": 47,
+  "distributions": [
+    {
+      "path": "/tmp/polyhedra-numerical-distributions-20261031/ideal_poly_volume_toolkit-0.3.0-py3-none-any.whl",
+      "bytes": 256966,
+      "sha256": "4c3d2531a3f345b893e467bc5c4af726be672f858e8a2a84894e93f23e559333"
+    },
+    {
+      "path": "/tmp/polyhedra-numerical-distributions-20261031/ideal_poly_volume_toolkit-0.3.0.tar.gz",
+      "bytes": 231715,
+      "sha256": "9fab55fc7a84a684d43099717a720f85994b0445a87ae5ccd53afa63ac34eb95"
+    }
+  ],
+  "lfs_paths_materialized": 412,
+  "lfs_json_payloads": 354,
+  "schema_validation": {
+    "current_v2_cli": true,
+    "current_v2_controlled": true,
+    "historical_v1_fixture": true,
+    "historical_v1_schema_unchanged": true
+  },
+  "installed_precision": {
+    "tiny_lobachevsky_nonzero": true,
+    "tiny_lobachevsky_relative_error": "9.36532240210509e-122",
+    "negative_axis_relative_error": "3.99775811389688e-122",
+    "triangle_relative_error": "3.99775811389688e-122",
+    "huge_binary64": 3.55271391116223e-306,
+    "huge_reference": 3.55271391116223e-306,
+    "scoped_precision_restored": true
+  },
+  "installed_angle_regular_volume": 1.0149416064096537,
+  "installed_strict_lp_common_margin": 0.14285714285714285,
+  "cli_volume": 1.0149416063712777,
+  "section9": {
+    "installed_wheel": {
+      "numerical_checks": 12,
+      "exact_checks": true
+    },
+    "detached_new_bundle": {
+      "numerical_checks": 12,
+      "exact_checks": true,
+      "payload_count": 9,
+      "payload_hashes_match": true
+    },
+    "canonical_clean_source_regeneration_pending": true
+  },
+  "limits": [
+    "No fresh network dependency resolution",
+    "Only current CPython3.12.11/macOS arm64 environment verified",
+    "Gymnasium and Hypothesis failures remain; pynauty tests skipped",
+    "Optional GUI/RL/accelerators and supported Python matrix unverified",
+    "No full research-corpus numerical replay or whole-book proof audit",
+    "No browser QA, publication, push, or deployment",
+    "Wheel installed; sdist built/hash-inspected only",
+    "Section9 preliminary outputs truthfully retain dirty source provenance"
+  ],
+  "verification_harness_correction": "Initial installed probe used nonexistent LP residuals key; corrected to documented primal_residuals/passed. Original KeyError log preserved; no product source changed."
+}

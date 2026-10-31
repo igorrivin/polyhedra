@@ -126,11 +126,12 @@ def test_realization_attains_rivin_angles():
     assert real["closure_error"] < 1e-9
 
 
-def test_require_interior_early_tie_rejection():
-    """With require_interior=True the optimizer must reject a combinatorial
-    type whose volume maximum is a boundary (cocircular-tie) maximum —
-    quickly, at the first tie activation — and must pass a known
-    interior-maximum type through unchanged."""
+def test_require_interior_final_tie_rejection():
+    """Reject a converged dihedral tie after the independent KKT audit.
+
+    A working-set constraint can be released; its temporary activation does
+    not establish that the final optimum lies on that boundary.
+    """
     from ideal_poly_volume_toolkit.rivin_delaunay import (
         check_delaunay_realizability,
         optimize_hyperbolic_volume,
@@ -157,9 +158,9 @@ def test_require_interior_early_tie_rejection():
     assert boundary_on.get("rejected_tie") is True
     assert ("tie" in boundary_on["message"].lower()
             or "boundary maximum" in boundary_on["message"])
-    # rejected at the FIRST tie activation: strictly fewer Newton
-    # iterations than the full boundary convergence
-    assert boundary_on["n_iterations"] < boundary_off["n_iterations"]
+    assert boundary_on["kkt"]["passed"]
+    assert boundary_on["residuals"]["feasible"]
+    np.testing.assert_allclose(boundary_on["angles"], boundary_off["angles"], atol=1e-10)
 
     # seed 1007: interior maximum — must pass through unchanged
     interior_on = run(1007, require_interior=True)

@@ -23,6 +23,7 @@ from jsonschema.validators import validator_for
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 OPTIMIZATION_RESULT_SCHEMA_PATH = "docs/schemas/optimization-result-v1.schema.json"
+OPTIMIZATION_RESULT_V2_SCHEMA_PATH = "docs/schemas/optimization-result-v2.schema.json"
 ARITHMETIC_CORPUS_SCHEMA_PATH = "docs/schemas/arithmetic-corpus-v1.schema.json"
 RESULT_MANIFEST_PATH = "results/manifest.json"
 RESULT_MANIFEST_SCHEMA_PATH = "docs/schemas/result-manifest-v1.schema.json"
@@ -37,6 +38,8 @@ REQUIRED_INPUT_HASHES = {
 }
 ORDINARY_GIT_PATHS = (
     OPTIMIZATION_RESULT_SCHEMA_PATH,
+    OPTIMIZATION_RESULT_V2_SCHEMA_PATH,
+    "tests/fixtures/optimization-result-v1.json",
     ARITHMETIC_CORPUS_SCHEMA_PATH,
     RESULT_MANIFEST_PATH,
     RESULT_MANIFEST_SCHEMA_PATH,

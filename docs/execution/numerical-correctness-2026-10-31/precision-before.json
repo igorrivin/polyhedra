@@ -1,0 +1,31 @@
+{
+  "source_module": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py",
+  "cases": {
+    "decimal_angle": {
+      "observed": "0.2962424544683455940454767941725516041339962581320748291586462156486081408705819810131233973214940945",
+      "reference": "0.2962424544683455961912915820605157306601611783400361823972414635457905108290789574153861005172586747",
+      "absolute_error": "2.1458147878879641265e-18",
+      "precision_before": 31,
+      "precision_after": 90
+    },
+    "underflow_angle": {
+      "observed": "0.0",
+      "reference": "9.2134089001705832829777934975228750647236509531715e-398"
+    },
+    "bw_zero": {
+      "observed": "nan"
+    },
+    "bw_one": {
+      "observed": "0.0"
+    },
+    "exception_precision": {
+      "exception": "ValueError",
+      "before": 31,
+      "after": 73
+    },
+    "mp_triangle": {
+      "exception": "AttributeError",
+      "message": "'mpf' object has no attribute 'arctan2'"
+    }
+  }
+}

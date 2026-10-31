@@ -24,7 +24,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 def _validate_optimization_result_schema(payload):
-    schema_path = REPO_ROOT / "docs/schemas/optimization-result-v1.schema.json"
+    version = payload["schema_version"]
+    assert version in (1, 2)
+    schema_path = REPO_ROOT / f"docs/schemas/optimization-result-v{version}.schema.json"
     schema = json.loads(schema_path.read_text(encoding="utf-8"))
     validator_class = validator_for(schema)
     validator_class.check_schema(schema)
@@ -137,7 +139,9 @@ def test_optimizer_service_returns_a_complete_positive_result():
     assert result.boundary_triangulation.shape == (4, 3)
     assert result.structure["euler_characteristic"] == 2
     assert len(result.trials) == 1
-    assert callbacks == [result.trials[0]]
+    assert len(callbacks) == 1
+    assert callbacks[0] is not result.trials[0]
+    assert callbacks[0].as_dict() == result.trials[0].as_dict()
     assert result.trials[0].function_evals > 0
 
     payload = optimization_result_to_dict(
@@ -152,7 +156,7 @@ def test_optimizer_service_returns_a_complete_positive_result():
             "seed_base": 0,
         },
     )
-    assert payload["schema_version"] == 1
+    assert payload["schema_version"] == 2
     assert payload["source"] == "test"
     assert payload["metadata"]["settings"] == {
         "n_trials": 1,
@@ -186,7 +190,7 @@ def test_optimizer_excludes_penalty_trials_from_volume_statistics(monkeypatch):
         [
             SimpleNamespace(
                 fun=OBJECTIVE_PENALTY,
-                x=params,
+                x=np.array([math.nan, math.pi / 3.0]),
                 success=False,
                 message="penalty",
                 nit=0,
@@ -262,10 +266,10 @@ def test_serial_optimizer_retains_scipy_builtin_polish(monkeypatch):
 
 
 def test_parallel_optimizer_polishes_serially_and_accepts_improvement(monkeypatch):
-    de_params = np.array([math.pi / 2.0, math.pi / 3.0])
-    polished_params = np.array([math.pi / 2.0, math.pi / 2.0])
+    de_params = np.array([math.pi / 2.0, math.pi / 2.0])
+    polished_params = np.array([math.pi / 2.0, math.pi / 3.0])
     de_result = SimpleNamespace(
-        fun=-1.0,
+        fun=negative_volume_objective(de_params, 4),
         x=de_params.copy(),
         success=False,
         message="DE iteration limit",
@@ -282,7 +286,7 @@ def test_parallel_optimizer_polishes_serially_and_accepts_improvement(monkeypatc
     def fake_minimize(objective, x, **kwargs):
         calls["minimize"] = (objective, x, kwargs, x is de_result.x)
         return SimpleNamespace(
-            fun=-1.1,
+            fun=negative_volume_objective(polished_params, 4),
             x=polished_params.copy(),
             success=True,
             nfev=7,
@@ -320,9 +324,10 @@ def test_parallel_optimizer_polishes_serially_and_accepts_improvement(monkeypatc
     }
 
     trial = result.trials[0]
-    assert trial.volume == pytest.approx(1.1)
+    assert trial.volume == pytest.approx(-negative_volume_objective(polished_params, 4))
     np.testing.assert_array_equal(trial.params, polished_params)
     assert trial.function_evals == 18
+    assert trial.verification_evals == 2
     assert trial.iterations == 3
     assert trial.success is False
     assert trial.message == "DE iteration limit"
@@ -379,7 +384,7 @@ def test_parallel_optimizer_rejects_invalid_polish_but_counts_its_work(
     )
 
     trial = result.trials[0]
-    assert trial.volume == pytest.approx(1.0)
+    assert trial.volume == pytest.approx(-negative_volume_objective(de_params, 4))
     np.testing.assert_array_equal(trial.params, de_params)
     assert trial.function_evals == 18
     assert trial.iterations == 3

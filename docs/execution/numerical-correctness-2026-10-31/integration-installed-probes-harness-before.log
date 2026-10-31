@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Volumes/Lexar/lambda/devel/polyhedra/execution/numerical-correctness-2026-10-31/integration-installed-probes.py", line 164, in <module>
+    main()
+  File "/Volumes/Lexar/lambda/devel/polyhedra/execution/numerical-correctness-2026-10-31/integration-installed-probes.py", line 97, in main
+    assert lp['residuals']['feasible']
+           ~~^^^^^^^^^^^^^
+KeyError: 'residuals'

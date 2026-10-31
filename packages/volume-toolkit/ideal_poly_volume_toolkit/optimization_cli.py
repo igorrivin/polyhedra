@@ -177,7 +177,13 @@ def main(argv: Sequence[str] | None = None) -> int:
             print("  Volume: invalid configuration")
         else:
             print(f"  Volume: {trial.volume:.8f}")
-        print(f"  Success: {trial.success}")
+        print(f"  Solver converged: {trial.success}")
+        validation = trial.validation
+        if validation is not None:
+            print(f"  Candidate validation: {validation['status']}")
+            print(f"  Validation detail: {validation['reason']}")
+        else:
+            print("  Candidate validation: not checked")
         print(f"  Iterations: {trial.iterations}")
         if is_best:
             print("  → NEW BEST!")

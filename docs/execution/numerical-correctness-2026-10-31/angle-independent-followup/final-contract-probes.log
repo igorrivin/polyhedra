@@ -1,0 +1,48 @@
+{
+  "counter_cases": [
+    {
+      "name": "stationary_zero_budget",
+      "reported": 1,
+      "observed": 1,
+      "success": true,
+      "reason": "numerical_kkt_converged"
+    },
+    {
+      "name": "nonstationary",
+      "reported": 14,
+      "observed": 14,
+      "success": true,
+      "reason": "numerical_kkt_converged"
+    },
+    {
+      "name": "nonstationary_zero_budget",
+      "reported": 1,
+      "observed": 1,
+      "success": false,
+      "reason": "max_iterations"
+    },
+    {
+      "name": "nonpositive_initial",
+      "reported": 0,
+      "observed": 0,
+      "success": false,
+      "reason": "nonpositive_or_flat_initial_angles"
+    },
+    {
+      "name": "infeasible_initial",
+      "reported": 0,
+      "observed": 0,
+      "success": false,
+      "reason": "infeasible_initial_angles"
+    },
+    {
+      "name": "rejected_trials",
+      "reported": 57,
+      "observed": 57,
+      "success": false,
+      "reason": "line_search_failed"
+    }
+  ],
+  "lp_failure_cases": 3,
+  "prior_evidence_preserved": true
+}

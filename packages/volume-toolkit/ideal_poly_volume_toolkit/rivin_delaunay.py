@@ -1,17 +1,19 @@
 """
-Rivin's algorithm for checking Delaunay realizability of a triangulation.
+Numerical Rivin angle feasibility and constrained volume optimization.
 
-A triangulation can be realized as a Delaunay triangulation if and only if
-there exists an assignment of angles satisfying:
+For the intended triangulated-disk setting, search for angles satisfying:
 (a) All angles are positive
 (b) Sum of angles in each triangle equals π (or 1 after scaling)
 (c) Sum of angles around each interior vertex equals 2π (or 2 after scaling)
 (d) Sum of angles at each boundary vertex is ≤ π (or ≤ 1 after scaling)
 (e) Sum of opposite angles across each interior edge is ≤ π (or ≤ 1 after scaling)
 
-We check this via linear programming: maximize the minimum angle subject to
-these constraints. If the optimal minimum angle is > 0, the triangulation
-is Delaunay realizable.
+The standard LP maximizes the minimum angle. The strict LP maximizes one
+common margin for angles and the boundary/dihedral inequalities. Returned
+candidates are checked against the original finite constraints. A positive
+witness is numerical evidence for this angle system; no verified witness
+does not establish exact infeasibility. These routines do not certify the
+triangulated-disk hypothesis or a global geometric embedding.
 
 References:
 - Rivin, I. (1994). "Euclidean structures on simplicial surfaces and hyperbolic volume"
@@ -437,9 +439,14 @@ def check_delaunay_realizability(triangles: List[Tuple[int, int, int]],
                                  strict: bool = False,
                                  andreev: bool = False) -> Dict:
     """
-    Check if a triangulation can be realized as a Delaunay triangulation.
+    Search for a numerical positive witness for the Delaunay angle system.
 
-    Uses Rivin's criterion via linear programming on angle assignments.
+    Searches for a numerically verified positive angle assignment. The
+    constraints assume the intended triangulated-disk setting; this function
+    does not itself certify a global embedding or exact infeasibility.
+    In strict mode it maximizes one common margin for angles, boundary sums
+    and dihedrals. Units are normalized by pi. It does not independently
+    maximize dihedral slack or perform lexicographic optimization.
 
     Constraints:
     (a) All angles are positive
@@ -460,13 +467,14 @@ def check_delaunay_realizability(triangles: List[Tuple[int, int, int]],
 
     Returns:
         Dict with keys:
-        - 'realizable': bool, True if Delaunay realizable
-        - 'min_angle': float, the maximum achievable minimum angle (>0 iff realizable)
-        - 'slack': float, the dihedral angle slack (only for strict=True)
+        - 'realizable': bool, True if a positive feasible witness is verified
+        - 'min_angle': float, measured minimum normalized angle in the witness
+        - 'slack': float, the guaranteed common normalized margin (strict=True)
         - 'angles': np.ndarray of shape (n_triangles, 3), angle assignment (if realizable)
         - 'status': int, optimization status from scipy
         - 'message': str, status message
     """
+    triangles, boundary_vertices = _validate_rivin_inputs(triangles, boundary_vertices)
     n_triangles = len(triangles)
     n_angles = 3 * n_triangles  # 3 angles per triangle
 
@@ -507,7 +515,7 @@ def check_delaunay_realizability(triangles: List[Tuple[int, int, int]],
 
     # LP formulation:
     # Standard mode: maximize t (minimum angle)
-    # Strict mode: maximize ε (dihedral slack), then t
+    # Strict mode: maximize a common positive margin, with t = ε.
     #
     # Variables:
     # - Standard: [angle[0,0], ..., angle[n-1,2], t]
@@ -523,12 +531,11 @@ def check_delaunay_realizability(triangles: List[Tuple[int, int, int]],
 
     if strict:
         n_vars = n_angles + 2  # angles + t + ε
-        # Objective: lexicographic optimization - prioritize slack ε, then min angle t
-        # We use a weighted combination: maximize ε with high weight + t with low weight
-        # In practice, maximize 1000*ε + t  <=>  minimize -1000*ε - t
+        # A weighted epsilon/t tradeoff can set t=0 despite existence of a
+        # strictly positive witness. Coupling t=epsilon below tests strict
+        # feasibility through the common margin instead.
         c = np.zeros(n_vars)
-        c[-2] = -1.0      # coefficient for t (min angle)
-        c[-1] = -1000.0   # coefficient for ε (dihedral slack) - much higher priority
+        c[-1] = -1.0
         t_idx = -2
         eps_idx = -1
     else:
@@ -601,6 +608,12 @@ def check_delaunay_realizability(triangles: List[Tuple[int, int, int]],
         A_eq_list.append(row)
         b_eq_list.append(2.0)  # scaled: sum = 2π becomes sum = 2
 
+    if strict:
+        row = np.zeros(n_vars)
+        row[t_idx], row[eps_idx] = 1.0, -1.0
+        A_eq_list.append(row)
+        b_eq_list.append(0.0)
+
     A_eq = np.array(A_eq_list)
     b_eq = np.array(b_eq_list)
 
@@ -636,39 +649,48 @@ def check_delaunay_realizability(triangles: List[Tuple[int, int, int]],
     result = linprog(c, A_ub=A_ub, b_ub=b_ub, A_eq=A_eq, b_eq=b_eq,
                     bounds=bounds, method='highs')
 
-    if verbose:
-        print("\nOptimization result:")
-        print(f"  Status: {result.status} - {result.message}")
-        print(f"  Success: {result.success}")
-        if result.success:
-            if strict:
-                print(f"  Optimal min angle (t): {result.x[t_idx]:.6f} (scaled units)")
-                print(f"  In radians: {result.x[t_idx] * np.pi:.6f}")
-                print(f"  Optimal dihedral slack (ε): {result.x[eps_idx]:.6f} (scaled units)")
-                print(f"  In radians: {result.x[eps_idx] * np.pi:.6f}")
-                print(f"  Max dihedral angle: {dihedral_bound - result.x[eps_idx]:.6f} (< {dihedral_bound})")
-            else:
-                print(f"  Optimal min angle: {result.x[t_idx]:.6f} (scaled units)")
-                print(f"  In radians: {result.x[t_idx] * np.pi:.6f}")
-
-    # Extract angles and other values if successful
+    # Audit the original normalized equations, inequalities and bounds rather
+    # than treating the optimizer's status flag as a feasibility certificate.
+    # https://docs.scipy.org/doc/scipy/tutorial/optimize.html#linear-programming
+    lp_tolerance = 1e-8
+    candidate = None if result.x is None else np.asarray(result.x, dtype=float)
+    finite_candidate = bool(candidate is not None and candidate.shape == (n_vars,)
+                            and np.all(np.isfinite(candidate)))
+    primal = {"finite_candidate": finite_candidate, "tolerance": lp_tolerance,
+              "equality_residual": None, "inequality_violation": None,
+              "bound_violation": None, "passed": False}
+    if finite_candidate:
+        equality_error = float(np.max(np.abs(A_eq @ candidate-b_eq), initial=0.0))
+        inequality_error = float(np.max(A_ub @ candidate-b_ub, initial=0.0))
+        bound_error = float(np.max(-candidate[n_angles:], initial=0.0))
+        primal.update({"equality_residual": equality_error,
+                       "inequality_violation": inequality_error,
+                       "bound_violation": bound_error,
+                       "passed": max(equality_error, inequality_error, bound_error) <= lp_tolerance})
+    accepted = bool(result.success and result.status == 0 and primal["passed"])
     angles = None
     min_angle = 0.0
     slack = 0.0
-
-    if result.success and result.x is not None:
-        angles = result.x[:n_angles].reshape(n_triangles, 3)
-        min_angle = result.x[t_idx]
+    if accepted:
+        angles = candidate[:n_angles].reshape(n_triangles, 3)
+        min_angle = float(np.min(angles))
         if strict:
-            slack = result.x[eps_idx]
+            slack = float(candidate[eps_idx])
 
-    # Realizability check:
-    # - Standard/Andreev: realizable if min_angle > 0
-    # - Strict: realizable if min_angle > 0 AND slack > 0
+    # Numerical positive-witness threshold, distinct from the residual audit.
+    positive_witness_threshold = 1e-6
     if strict:
-        realizable = result.success and min_angle > 1e-6 and slack > 1e-6
+        realizable = (accepted and min_angle > positive_witness_threshold
+                      and slack > positive_witness_threshold)
     else:
-        realizable = result.success and min_angle > 1e-6  # small tolerance for numerical errors
+        realizable = accepted and min_angle > positive_witness_threshold
+
+    message = str(result.message)
+    if result.success and not accepted:
+        message += "; rejected by original-constraint feasibility audit"
+    if verbose:
+        print(f"\nLP status: {result.status} - {message}")
+        print(f"  Solver success: {result.success}; residual audit: {primal['passed']}")
 
     result_dict = {
         'realizable': realizable,
@@ -677,8 +699,15 @@ def check_delaunay_realizability(triangles: List[Tuple[int, int, int]],
         'angles': angles,
         'angles_radians': angles * np.pi if angles is not None else None,
         'status': result.status,
-        'message': result.message,
-        'success': result.success,
+        'solver_iterations': getattr(result, 'nit', None),
+        'message': message,
+        'success': accepted,
+        'solver_success': bool(result.success),
+        'primal_residuals': primal,
+        'evidence_status': 'numerical_angle_feasibility' if accepted else 'not_verified',
+        'feasibility_status': ('positive_witness_found' if realizable
+                               else 'no_positive_witness_verified'),
+        'positive_witness_threshold': positive_witness_threshold,
         'n_triangles': n_triangles,
         'n_vertices': len(all_vertices),
         'n_interior': len(interior_vertices),
@@ -690,17 +719,28 @@ def check_delaunay_realizability(triangles: List[Tuple[int, int, int]],
 
     # Add slack information for strict mode
     if strict:
+        result_dict['strict_objective'] = 'max_common_positive_margin'
         result_dict['slack'] = slack
         result_dict['slack_radians'] = slack * np.pi
+        # Legacy max_dihedral fields are guaranteed upper bounds implied by
+        # the common margin; actual measured margins are reported separately.
         result_dict['max_dihedral'] = dihedral_bound - slack
         result_dict['max_dihedral_radians'] = (dihedral_bound - slack) * np.pi
+        actual_dihedrals = [sum(angles[t, k] for t, k in uses)
+                            for uses in interior_edges.values()] if angles is not None else []
+        actual_boundary = [sum(angles[t, k] for t, k in vertex_angles[v])
+                           for v in boundary_vertices] if angles is not None else []
+        result_dict['measured_min_dihedral_margin'] = (
+            float(dihedral_bound-max(actual_dihedrals)) if actual_dihedrals else None)
+        result_dict['measured_min_boundary_margin'] = (
+            float(boundary_bound-max(actual_boundary)) if actual_boundary else None)
 
     return result_dict
 
 
 def format_realizability_report(result: Dict) -> str:
     """
-    Format realizability check results as a readable string.
+    Format the numerical angle-witness result without a geometric certificate.
 
     Args:
         result: Dictionary returned by check_delaunay_realizability
@@ -710,24 +750,30 @@ def format_realizability_report(result: Dict) -> str:
     """
     report = []
     report.append("=" * 60)
-    report.append("DELAUNAY REALIZABILITY CHECK (Rivin's Algorithm)")
+    report.append("NUMERICAL DELAUNAY ANGLE-FEASIBILITY CHECK")
     report.append("=" * 60)
     report.append(f"Triangulation: {result['n_triangles']} triangles, {result['n_vertices']} vertices")
     report.append(f"  Interior vertices: {result['n_interior']}")
     report.append(f"  Boundary vertices: {result['n_boundary']}")
+    if result.get('strict', False):
+        report.append("Objective: maximize the common angle/inequality margin")
+    else:
+        report.append("Objective: maximize the minimum angle")
     report.append("")
 
     if result['realizable']:
-        report.append("✓ REALIZABLE as Delaunay triangulation")
-        report.append(f"  Maximum min angle: {result['min_angle']:.6f} (scaled units)")
-        report.append(f"  Maximum min angle: {result['min_angle_radians']:.6f} radians")
-        report.append(f"  Maximum min angle: {np.degrees(result['min_angle_radians']):.2f}°")
+        report.append("✓ Positive angle witness verified numerically")
     else:
-        report.append("✗ NOT REALIZABLE as Delaunay triangulation")
-        if result['success']:
-            report.append(f"  Best min angle found: {result['min_angle']:.6f} (≤ 0)")
-        else:
-            report.append(f"  LP solver status: {result['message']}")
+        report.append("✗ No positive angle witness verified by this run")
+    if result['success']:
+        report.append(f"  Measured min angle: {result['min_angle']:.9g} (normalized by pi)")
+        report.append(f"  Measured min angle: {result['min_angle_radians']:.9g} radians")
+        report.append(f"  Measured min angle: {np.degrees(result['min_angle_radians']):.9g}°")
+        if result.get('strict', False):
+            report.append(f"  Guaranteed common margin: {result['slack']:.9g} (normalized by pi)")
+    threshold = result.get('positive_witness_threshold', 1e-6)
+    report.append(f"  Required positive-witness margin: > {threshold:.9g} (normalized by pi)")
+    report.append("Disk topology, a global embedding, and exact infeasibility are not certified.")
 
     report.append("")
     report.append(f"Solver status: {result['status']} - {result['message']}")
@@ -737,28 +783,19 @@ def format_realizability_report(result: Dict) -> str:
 
 
 def lobachevsky_function(theta: float) -> float:
+    """Evaluate Lambda(theta) = D(exp(2i theta))/2 in binary64.
+
+    The angle domain is the closed interval [0, pi], with removable endpoint
+    values zero. This uses the canonical Bloch-Wigner kernel rather than a
+    cutoff quadrature; it supplies neither exact arithmetic nor an enclosure.
     """
-    Compute the Lobachevsky function Λ(θ) = -∫₀^θ log|2sin(t)| dt.
+    from .geometry import bloch_wigner
 
-    This is related to the Bloch-Wigner dilogarithm and appears in
-    hyperbolic volume computations.
-
-    Args:
-        theta: Angle in radians
-
-    Returns:
-        Value of Lobachevsky function
-    """
-    from scipy.integrate import quad
-
-    if theta <= 0 or theta >= np.pi:
+    if not np.isfinite(theta) or not 0 <= theta <= np.pi:
+        raise ValueError("theta must be finite and between zero and pi")
+    if theta == 0 or theta == np.pi:
         return 0.0
-
-    def integrand(t):
-        return -np.log(2 * np.sin(t)) if np.sin(t) > 1e-10 else 0.0
-
-    result, _ = quad(integrand, 0, theta, limit=100)
-    return result
+    return 0.5*bloch_wigner(np.exp(2j*theta))
 
 
 def lobachevsky_gradient(theta: float) -> float:
@@ -800,369 +837,474 @@ def lobachevsky_hessian(theta: float) -> float:
     return -1.0 / np.tan(theta)
 
 
-def _newton_in_nullspace(x, N, verbose=False, tol=1e-12, max_iter=50, label=""):
-    """Run Newton's method for maximizing V(θ) = Σ Λ(θᵢ) projected
-    onto the column space of N (null space of equality constraints).
+_RIVIN_RANK_RCOND = 1e-12
 
-    Only uses Λ'(θ) = -log(2 sin θ) and Λ''(θ) = -cot θ.
-    No Lobachevsky function evaluations.
 
-    Returns ``(x, n_iter, converged, reduced_gradient_norm)``.
+def _validate_rivin_inputs(triangles, boundary_vertices):
+    """Validate the angle-complex data, without asserting disk topology."""
+    from numbers import Integral
+
+    faces = []
+    for face in triangles:
+        if len(face) != 3 or any(
+            not isinstance(v, Integral) or isinstance(v, (bool, np.bool_))
+            for v in face
+        ):
+            raise ValueError("each triangle must contain three integer labels")
+        face = tuple(map(int, face))
+        if len(set(face)) != 3:
+            raise ValueError("triangle vertices must be distinct")
+        faces.append(face)
+    if not faces or len({tuple(sorted(face)) for face in faces}) != len(faces):
+        raise ValueError("triangles must be nonempty and contain no duplicate faces")
+    if any(len(uses) > 2 for uses in build_edge_adjacency(faces).values()):
+        raise ValueError("an edge must have at most two incident triangles")
+    actual_boundary = extract_boundary_vertices(faces)
+    boundary = actual_boundary if boundary_vertices is None else set(boundary_vertices)
+    if boundary != actual_boundary:
+        raise ValueError("boundary_vertices must match the triangle-complex boundary")
+    return faces, boundary
+
+
+def _rivin_constraint_matrices(triangles, boundary_vertices):
+    """Retain every original row; numerical rank is used only for solves."""
+    n = 3 * len(triangles)
+    incidence = build_vertex_angle_incidence(triangles)
+    interior = sorted(set(incidence) - boundary_vertices)
+    equalities = []
+    for t in range(len(triangles)):
+        row = np.zeros(n)
+        row[3*t:3*t+3] = 1.0
+        equalities.append(row)
+    for vertex in interior:
+        row = np.zeros(n)
+        for t, k in incidence[vertex]:
+            row[3*t+k] = 1.0
+        equalities.append(row)
+    inequalities, labels = [], []
+    for edge, uses in sorted(build_edge_adjacency(triangles).items()):
+        if len(uses) == 2:
+            row = np.zeros(n)
+            for t, k in uses:
+                row[3*t+k] = 1.0
+            inequalities.append(row)
+            labels.append(f"dihedral {edge}")
+    n_dihedrals = len(inequalities)
+    for vertex in sorted(boundary_vertices):
+        row = np.zeros(n)
+        for t, k in incidence[vertex]:
+            row[3*t+k] = 1.0
+        inequalities.append(row)
+        labels.append(f"boundary vertex {vertex}")
+    return (
+        np.asarray(equalities),
+        np.array([np.pi] * len(triangles) + [2*np.pi] * len(interior)),
+        np.asarray(inequalities).reshape(-1, n),
+        np.full(len(inequalities), np.pi),
+        labels,
+        n_dihedrals,
+    )
+
+
+def _angle_structure_volume(x):
+    """Accurate binary64 tetrahedral sum through the canonical BW kernel.
+
+    Cyclically choose the largest sine as denominator, keeping each shape's
+    modulus at most one. This is not an exact or interval evaluation.
     """
-    EPS = 1e-6
+    from .geometry import bloch_wigner
 
-    converged = False
-    for it in range(max_iter):
-        x = np.clip(x, EPS, np.pi - EPS)
-        sin_x = np.sin(x)
-        cos_x = np.cos(x)
+    angles = np.asarray(x, dtype=float).reshape(-1, 3)
+    if not np.all(np.isfinite(angles)) or np.any(angles <= 0) or np.any(angles >= np.pi):
+        raise ValueError("volume evaluation requires positive nonflat angle triples")
+    c = np.argmax(np.sin(angles), axis=1)
+    order = (c[:, None] + np.array([1, 2, 0])) % 3
+    a, b, c = np.take_along_axis(angles, order, axis=1).T
+    shapes = (np.sin(b) / np.sin(c)) * np.exp(1j*a)
+    return float(np.sum(bloch_wigner(shapes)))
 
-        grad = -np.log(2.0 * sin_x)
-        g_red = N.T @ grad
-        grad_norm = np.linalg.norm(g_red)
 
-        if verbose and (it < 3 or it % 10 == 0 or grad_norm < tol):
-            print(f"  {label}iter {it:3d}:  |∇V|_red = {grad_norm:.3e}")
+def _angle_gradient(x):
+    if not np.all(np.isfinite(x)) or np.any(x <= 0) or np.any(x >= np.pi):
+        raise ValueError("volume derivatives require positive nonflat angles")
+    return -np.log(2*np.sin(x))
 
-        if grad_norm < tol:
-            converged = True
-            if verbose:
-                print(f"  {label}Converged at iteration {it}")
-            break
 
-        H_diag = -cos_x / sin_x
-        H_red = (N * H_diag[:, None]).T @ N
-
+def _newton_direction(x, null_basis):
+    gradient = _angle_gradient(x)
+    reduced = null_basis.T @ gradient
+    # Near a flat angle the curvature can exceed binary64 range even while
+    # the gradient remains finite. Use a genuine ascent direction in that
+    # case; do not replace the angle or fabricate a finite curvature value.
+    with np.errstate(over="ignore", divide="ignore", invalid="ignore"):
+        hessian = (null_basis * (-1/np.tan(x))[:, None]).T @ null_basis
+    coordinates = reduced
+    if np.all(np.isfinite(hessian)):
         try:
-            delta_y = np.linalg.solve(H_red, -g_red)
+            coordinates = np.linalg.solve(hessian, -reduced)
         except np.linalg.LinAlgError:
-            if verbose:
-                print(f"  {label}Singular Hessian at iteration {it}")
+            pass
+    with np.errstate(over="ignore", invalid="ignore"):
+        slope = float(reduced @ coordinates)
+    if not np.all(np.isfinite(coordinates)) or not np.isfinite(slope) or slope <= 0:
+        coordinates = reduced
+    return null_basis @ coordinates, gradient, float(np.linalg.norm(reduced))
+
+
+def _angle_armijo_step(x, direction, gradient, alpha, inequalities, rhs, tolerance):
+    """Backtrack feasibly; count both initial and attempted candidate values."""
+    evaluations = 1
+    initial_value = _angle_structure_volume(x)
+    slope = float(gradient @ direction)
+    roundoff = 32*np.finfo(float).eps * max(1.0, abs(initial_value))
+    for _ in range(80):
+        candidate = x + alpha*direction
+        feasible = (
+            np.all(np.isfinite(candidate))
+            and np.all(candidate > 0) and np.all(candidate < np.pi)
+            and (not len(inequalities) or np.max(inequalities @ candidate - rhs) <= tolerance)
+        )
+        if feasible:
+            evaluations += 1
+            value = _angle_structure_volume(candidate)
+            if value + roundoff >= initial_value + 1e-4*alpha*slope:
+                return candidate, alpha, evaluations
+        alpha *= 0.5
+        if np.array_equal(x + alpha*direction, x):
+            break
+    return None, alpha, evaluations
+
+
+def _angle_bound_step(x, direction):
+    positive = direction > 0
+    negative = direction < 0
+    limits = [1.0]
+    if np.any(positive):
+        limits.append(0.995*float(np.min((np.pi-x[positive])/direction[positive])))
+    if np.any(negative):
+        limits.append(0.995*float(np.min(-x[negative]/direction[negative])))
+    return min(limits)
+
+
+def _newton_in_nullspace(x, N, verbose=False, tol=1e-12, max_iter=50, label=""):
+    """Equality-preserving Newton ascent with an actual-volume line search.
+
+    The caller supplies a valid positive triangle-angle structure and a basis
+    preserving its equalities. No coordinate clipping is performed. Returns
+    the historical (angles, iterations, converged, reduced-gradient norm).
+    """
+    x = np.asarray(x, dtype=float).copy()
+    N = np.asarray(N, dtype=float)
+    if x.ndim != 1 or x.size % 3 or N.ndim != 2 or N.shape[0] != len(x):
+        raise ValueError("incompatible angle vector and null-space basis")
+    if (isinstance(max_iter, (bool, np.bool_))
+            or not isinstance(max_iter, (int, np.integer)) or max_iter < 0):
+        raise ValueError("max_iter must be a nonnegative integer")
+    if not np.isfinite(tol) or tol <= 0 or not np.all(np.isfinite(N)):
+        raise ValueError("tol must be positive and finite, and the basis must be finite")
+    _angle_gradient(x)
+    iterations = 0
+    for iteration in range(max_iter):
+        direction, gradient, norm = _newton_direction(x, N)
+        if verbose:
+            print(f"  {label}iter {iteration}: reduced gradient {norm:.3e}")
+        if norm <= tol:
+            break
+        candidate, _, _ = _angle_armijo_step(
+            x, direction, gradient, _angle_bound_step(x, direction),
+            np.zeros((0, len(x))), np.zeros(0), tol,
+        )
+        if candidate is None:
+            break
+        x = candidate
+        iterations += 1
+    final_norm = float(np.linalg.norm(N.T @ _angle_gradient(x)))
+    return x, iterations, final_norm <= tol, final_norm
+
+
+def _rivin_kkt_diagnostics(x, A, b, B, d, *, tolerance, null_basis=None):
+    """Independent primal/dual check against every supplied constraint.
+
+    For maximizing V under Bx <= d, grad(V) = A.T*lambda + B.T*mu,
+    mu >= 0. Nonnegative least squares checks existence of multipliers even
+    when binding rows are redundant; an unconstrained least-squares sign
+    check alone is insufficient in that case.
+    """
+    from scipy.linalg import null_space
+    from scipy.optimize import nnls
+
+    gradient = _angle_gradient(x)
+    N = null_space(A, rcond=_RIVIN_RANK_RCOND) if null_basis is None else null_basis
+    slack = d - B @ x
+    tight = np.flatnonzero(slack <= 10*tolerance)
+    multipliers = np.zeros(len(B))
+    dual_solver_success = True
+    # scipy.optimize.nnls returns (nonnegative solution, residual norm).
+    # https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.nnls.html
+    if len(tight) and N.shape[1]:
+        try:
+            multipliers[tight], _ = nnls(
+                N.T @ B[tight].T, N.T @ gradient,
+                maxiter=max(100, 10*len(tight)),
+            )
+        except (RuntimeError, np.linalg.LinAlgError):
+            dual_solver_success = False
+    equality_multipliers = np.linalg.lstsq(
+        A.T, gradient - B.T @ multipliers, rcond=_RIVIN_RANK_RCOND
+    )[0]
+    stationarity = gradient - A.T @ equality_multipliers - B.T @ multipliers
+    equality_error = float(np.max(np.abs(A @ x - b), initial=0.0))
+    inequality_error = float(np.max(-slack, initial=0.0))
+    stationarity_error = float(np.linalg.norm(stationarity, ord=np.inf))
+    complementarity_error = float(np.max(np.abs(multipliers*slack), initial=0.0))
+    dual_error = float(np.max(-multipliers, initial=0.0))
+    positive_angles = bool(np.all(x > 0) and np.all(x < np.pi))
+    passed = (
+        dual_solver_success and positive_angles and equality_error <= tolerance
+        and inequality_error <= tolerance and stationarity_error <= tolerance
+        and complementarity_error <= tolerance and dual_error <= tolerance
+    )
+    return {
+        "passed": bool(passed), "tolerance": float(tolerance),
+        "equality_residual": equality_error,
+        "inequality_violation": inequality_error,
+        "stationarity_residual": stationarity_error,
+        "complementarity_residual": complementarity_error,
+        "dual_sign_violation": dual_error,
+        "positive_angles": positive_angles,
+        "dual_solver_success": dual_solver_success,
+        "equality_multipliers": equality_multipliers.tolist(),
+        "inequality_multipliers": multipliers.tolist(),
+        "binding_indices": tight.tolist(),
+        "numerical_equality_rank": int(len(x)-N.shape[1]),
+        "rank_rcond": _RIVIN_RANK_RCOND,
+        "evidence_status": "numerical_kkt_check",
+    }
+
+
+def _solve_angle_polytope(x, A, b, B, d, *, max_iter, max_active_rounds,
+                          tolerance, verbose=False):
+    """Feasible active-set Newton, with blocker activation and dual release."""
+    from scipy.linalg import null_space
+
+    x = np.asarray(x, dtype=float).copy()
+    base_null = null_space(A, rcond=_RIVIN_RANK_RCOND)
+    active, history = [], []
+    projected_rows = []
+    # Select independent initially binding rows; retain all rows for auditing.
+    for index in np.flatnonzero(d-B @ x <= tolerance):
+        projected = B[index] @ base_null
+        remainder = projected.copy()
+        for q in projected_rows:
+            remainder -= (remainder @ q)*q
+        norm = np.linalg.norm(remainder)
+        if norm > _RIVIN_RANK_RCOND*max(1.0, np.linalg.norm(projected)):
+            projected_rows.append(remainder/norm)
+            active.append(int(index))
+    cached_active, N = None, base_null
+    evaluations = changes = iterations = 0
+    reason = "max_iterations"
+    target = min(1e-12, tolerance*0.01)
+    for iteration in range(max_iter):
+        iterations = iteration+1
+        if tuple(active) != cached_active:
+            N = (base_null @ null_space(B[active] @ base_null, rcond=_RIVIN_RANK_RCOND)
+                 if active else base_null)
+            cached_active = tuple(active)
+        direction, gradient, norm = _newton_direction(x, N)
+        if verbose:
+            print(f"  iter {iteration}: reduced gradient {norm:.3e}; active {len(active)}")
+        if norm <= target:
+            multipliers = np.linalg.lstsq(
+                (B[active] @ base_null).T, base_null.T @ gradient,
+                rcond=_RIVIN_RANK_RCOND,
+            )[0] if active else np.zeros(0)
+            if len(multipliers) and np.min(multipliers) < -tolerance:
+                if changes >= max_active_rounds:
+                    reason = "max_active_set_changes"
+                    break
+                position = int(np.argmin(multipliers))
+                index = active.pop(position)
+                history.append({"action": "release", "constraint_index": index,
+                                "multiplier": float(multipliers[position]), "iteration": iteration})
+                changes += 1
+                continue
+            reason = "stationary_working_set"
             break
 
-        delta_x = N @ delta_y
-
-        # Backtracking line search: keep angles in (0, π)
-        alpha = 1.0
-        for _ in range(20):
-            x_new = x + alpha * delta_x
-            if np.all(x_new > EPS) and np.all(x_new < np.pi - EPS):
+        alpha = _angle_bound_step(x, direction)
+        blocker = None
+        slack = d-B @ x
+        directional = B @ direction
+        direction_floor = 64*np.finfo(float).eps*max(1.0, np.linalg.norm(direction))
+        for index in range(len(B)):
+            if index not in active and directional[index] > direction_floor:
+                limit = max(0.0, float(slack[index]))/directional[index]
+                if limit < alpha:
+                    alpha, blocker = limit, index
+        blocked_alpha = alpha
+        if alpha == 0 and blocker is not None:
+            candidate, accepted_alpha, count = x.copy(), alpha, 0
+        else:
+            candidate, accepted_alpha, count = _angle_armijo_step(
+                x, direction, gradient, alpha, B, d, tolerance
+            )
+        evaluations += count
+        if candidate is None:
+            reason = "line_search_failed"
+            break
+        x = candidate
+        if (blocker is not None and accepted_alpha == blocked_alpha
+                and d[blocker]-B[blocker] @ x <= tolerance):
+            if changes >= max_active_rounds:
+                reason = "max_active_set_changes"
                 break
-            alpha *= 0.5
-        x = x + alpha * delta_x
-
-    # Report the residual at the returned iterate.  On an exhausted Newton
-    # loop the last update happens after the norm above was computed.
-    x = np.clip(x, EPS, np.pi - EPS)
-    final_gradient = -np.log(2.0 * np.sin(x))
-    reduced_gradient_norm = float(np.linalg.norm(N.T @ final_gradient))
-    return x, it + 1, converged, reduced_gradient_norm
+            row_norm = np.linalg.norm(B[blocker] @ N)
+            if row_norm <= _RIVIN_RANK_RCOND*max(1.0, np.linalg.norm(B[blocker])):
+                reason = "numerically_dependent_blocker"
+                break
+            active.append(blocker)
+            history.append({"action": "activate", "constraint_index": int(blocker),
+                            "iteration": iteration})
+            changes += 1
+    # A zero budget can certify an already stationary feasible point, but
+    # exhaustion never makes a nonstationary point successful.
+    kkt = _rivin_kkt_diagnostics(x, A, b, B, d, tolerance=tolerance, null_basis=base_null)
+    augmented = np.vstack([A, B[active]]) if active else A
+    final_null = null_space(augmented, rcond=_RIVIN_RANK_RCOND)
+    reduced_norm = float(np.linalg.norm(final_null.T @ _angle_gradient(x)))
+    if kkt["passed"]:
+        reason = "numerical_kkt_converged"
+    return x, {
+        "success": bool(kkt["passed"]), "termination_reason": reason,
+        "n_iterations": iterations, "n_active_set_changes": changes,
+        "n_volume_evaluations": evaluations, "active_set_history": history,
+        "working_set_indices": active, "reduced_gradient_norm": reduced_norm,
+        "kkt": kkt,
+    }
 
 
 def optimize_hyperbolic_volume(triangles: List[Tuple[int, int, int]],
                                initial_angles: Optional[np.ndarray] = None,
                                boundary_vertices: Optional[Set[int]] = None,
                                verbose: bool = False,
-                               require_interior: bool = False) -> Dict:
+                               require_interior: bool = False,
+                               *, max_iter: int = 300,
+                               max_active_rounds: Optional[int] = None,
+                               tolerance: float = 1e-10) -> Dict:
+    """Numerically maximize volume on the specified positive angle polytope.
+
+    Feasible projected Newton steps use an accurate-volume Armijo search.
+    Inequalities can enter and leave the working set. Success requires an
+    independent check of all original constraints, positive angles, and
+    numerical KKT stationarity, dual signs and complementarity. This is not
+    an exact/global-optimality or geometric-realization certificate.
+
+    Exact flat triangles are outside this differentiable solver's domain.
+    Nonpositive or infeasible starts are reported explicitly, never clipped.
+    If no start is supplied, a residual-audited feasibility LP provides one.
+    The final volume uses the canonical binary64 Bloch-Wigner kernel.
+
+    require_interior rejects a final converged dihedral tie (within 1e-9 of
+    pi), not a temporary working-set activation. Boundary-vertex equalities
+    alone do not trigger it. Arithmeticity requires its separate downstream
+    tests/certificates. max_iter and max_active_rounds bound iteration work
+    and working-set changes, respectively; tolerance controls the residual
+    acceptance tests. Existing return fields are retained with added method,
+    termination and KKT diagnostics.
+
+    n_volume_evaluations counts all objective calls, including each line
+    search's initial value, rejected candidate values, and the final report
+    value. n_iterations counts only angle-optimizer iterations; LP status,
+    margins and solver_iterations are retained separately in feasibility_lp
+    (None when the caller supplies initial_angles).
     """
-    Find the volume-maximizing angle assignment for a Delaunay realizable
-    triangulation via active-set Newton's method.
+    triangles, boundary_vertices = _validate_rivin_inputs(triangles, boundary_vertices)
+    for name, value in (("max_iter", max_iter), ("max_active_rounds", max_active_rounds)):
+        if value is not None and (isinstance(value, (bool, np.bool_))
+                                  or not isinstance(value, (int, np.integer)) or value < 0):
+            raise ValueError(f"{name} must be a nonnegative integer")
+    if not np.isfinite(tolerance) or tolerance <= 0:
+        raise ValueError("tolerance must be finite and positive")
+    A, b, B, d, labels, n_dihedrals = _rivin_constraint_matrices(triangles, boundary_vertices)
+    if max_active_rounds is None:
+        max_active_rounds = max(20, 4*len(B))
+    lp = None
 
-    Since V(θ) = Σ Λ(θᵢ) is strictly concave on the Rivin polytope, the
-    unique maximum is found by:
-
-      1. Newton in the null space of the equality constraints
-         (triangle angle sums = π, interior vertex sums = 2π).
-      2. Check inequality constraints (dihedral ≤ π, boundary sums ≤ π).
-      3. If violated, pin the most-violated constraint at equality and
-         repeat with the augmented constraint set.
-
-    Only uses Λ'(θ) = -log(2 sin θ) and Λ''(θ) = -cot θ — no
-    Lobachevsky function evaluations.  Each Newton solve converges
-    quadratically in ~7 iterations.
-
-    Note: when the optimum is in the interior of the Rivin polytope
-    (no active inequality constraints), it is arithmetic.  When the
-    optimum lies on the boundary (some dihedrals pinned at π), the
-    extra Lagrange multipliers generically break arithmeticity.
-
-    Args:
-        triangles: List of triangles as (v0, v1, v2) tuples
-        initial_angles: Initial angle assignment (n_triangles, 3) in radians.
-            If None, solves LP for a feasible start.
-        boundary_vertices: Set of boundary vertex indices (if None, auto-detect)
-        verbose: If True, print optimization progress
-        require_interior: If True, abort as soon as a DIHEDRAL (cocircular
-            tie) constraint becomes active — i.e. the maximum lies on the
-            boundary of the Rivin polytope.  Boundary maxima are perfectly
-            legitimate volume answers, but they can never be zero-shear
-            certified (the tie multipliers break the log-sin cancellation),
-            so witness generation for the arithmeticity benchmark should
-            reject them immediately and try another combinatorial type
-            instead of paying for full convergence.  Boundary-VERTEX
-            constraints becoming active are fine either way: their
-            multipliers cancel in every shear expression.
-
-    Returns:
-        Dict with keys:
-        - 'success': bool
-        - 'angles': np.ndarray of shape (n_triangles, 3), optimal angles (radians)
-        - 'volume': float (computed from the Fourier series at convergence)
-        - 'n_active_constraints': int, number of pinned inequality constraints
-        - 'message': str
-        - 'n_iterations': int (total across all active-set rounds)
-    """
-    from scipy.linalg import null_space
-
-    n_triangles = len(triangles)
-    n_angles = 3 * n_triangles
-
-    if boundary_vertices is None:
-        boundary_vertices = extract_boundary_vertices(triangles)
-
-    all_vertices = set()
-    for tri in triangles:
-        all_vertices.update(tri)
-    interior_vertices = all_vertices - boundary_vertices
-
-    vertex_angles = build_vertex_angle_incidence(triangles)
-    edge_opposite_angles = build_edge_adjacency(triangles)
-    interior_edges = {edge: angles for edge, angles in edge_opposite_angles.items()
-                      if len(angles) == 2}
-
-    # --- Feasible starting point from LP ---
-    if initial_angles is None:
-        if verbose:
-            print("Solving LP for feasible starting point...")
-        lp_result = check_delaunay_realizability(triangles, boundary_vertices, verbose=False)
-        if not lp_result['realizable']:
-            return {
-                'success': False,
-                'angles': None,
-                'volume': None,
-                'message': 'Triangulation is not Delaunay realizable',
-                'n_active_constraints': 0,
-                'active_constraint_labels': [],
-                'n_iterations': 0,
-                'reduced_gradient_norm': None,
-                'residuals': None,
-            }
-        initial_angles = lp_result['angles_radians']
-
-    x = initial_angles.flatten().copy()
-
-    # --- Base equality constraints ---
-    # Triangle angle sums = π,  interior vertex angle sums = 2π
-    A_base_rows = []
-
-    for tri_id in range(n_triangles):
-        row = np.zeros(n_angles)
-        for c in range(3):
-            row[3 * tri_id + c] = 1.0
-        A_base_rows.append(row)
-
-    for vertex in interior_vertices:
-        row = np.zeros(n_angles)
-        for tri_id, corner_id in vertex_angles[vertex]:
-            row[3 * tri_id + corner_id] = 1.0
-        A_base_rows.append(row)
-
-    A_base = np.array(A_base_rows)
-
-    # --- Build all inequality constraint rows (for checking violations) ---
-    # Each is a row a such that a @ x <= π
-    ineq_rows = []
-    ineq_labels = []
-
-    for edge, opposite_angles in interior_edges.items():
-        row = np.zeros(n_angles)
-        for tri_id, corner_id in opposite_angles:
-            row[3 * tri_id + corner_id] = 1.0
-        ineq_rows.append(row)
-        ineq_labels.append(f"dihedral {edge}")
-
-    n_dihedral_rows = len(ineq_rows)  # dihedral rows come first
-
-    for vertex in boundary_vertices:
-        row = np.zeros(n_angles)
-        for tri_id, corner_id in vertex_angles[vertex]:
-            row[3 * tri_id + corner_id] = 1.0
-        ineq_rows.append(row)
-        ineq_labels.append(f"boundary vertex {vertex}")
-
-    # --- Active-set loop ---
-    active_indices = []      # indices into ineq_rows that are pinned at π
-    total_iters = 0
-    converged = False
-    reduced_gradient_norm = None
-    MAX_ACTIVE_ROUNDS = len(ineq_rows) + 1  # can't activate more than all
-
-    # RHS for base equality constraints
-    b_base = np.array(
-        [np.pi] * n_triangles + [2 * np.pi] * len(interior_vertices))
-
-    for active_round in range(MAX_ACTIVE_ROUNDS):
-        # Build augmented equality constraint matrix and RHS
-        if active_indices:
-            A_active = np.array([ineq_rows[i] for i in active_indices])
-            A_eq = np.vstack([A_base, A_active])
-            b_eq = np.concatenate([b_base, np.full(len(active_indices), np.pi)])
-        else:
-            A_eq = A_base
-            b_eq = b_base
-
-        # Project x onto the augmented constraint manifold:
-        # x -= A_eq^T (A_eq A_eq^T)^{-1} (A_eq x - b_eq)
-        residual = A_eq @ x - b_eq
-        if np.linalg.norm(residual) > 1e-12:
-            x -= A_eq.T @ np.linalg.solve(A_eq @ A_eq.T, residual)
-
-        N = null_space(A_eq)
-
-        if N.shape[1] == 0:
-            # Fully determined — no free dimensions left
-            converged = True
-            reduced_gradient_norm = 0.0
-            if verbose:
-                print(f"  No free dimensions (round {active_round}), "
-                      f"system fully determined")
-            break
-
-        if verbose:
-            if active_round == 0:
-                print(f"\nNewton in null space: {n_angles} angles, "
-                      f"{A_eq.shape[0]} equality constraints, "
-                      f"{N.shape[1]} free dims")
-            else:
-                print(f"\n  Active-set round {active_round}: "
-                      f"{len(active_indices)} pinned, "
-                      f"{N.shape[1]} free dims")
-
-        x, n_it, converged, reduced_gradient_norm = _newton_in_nullspace(
-            x, N, verbose=verbose,
-            label=f"[r{active_round}] " if active_round > 0 else "")
-        total_iters += n_it
-
-        if not converged:
-            break
-
-        # Check all inequality constraints: a @ x <= π
-        worst_violation = 0.0
-        worst_idx = -1
-        for i, row in enumerate(ineq_rows):
-            if i in active_indices:
-                continue  # already pinned
-            violation = row @ x - np.pi
-            if violation > worst_violation:
-                worst_violation = violation
-                worst_idx = i
-
-        if worst_violation <= 1e-6:
-            # All inequalities satisfied — done
-            if verbose and active_round > 0:
-                print(f"  All inequalities satisfied after "
-                      f"{active_round} activation(s)")
-            break
-
-        # Early tie-rejection: a dihedral about to be pinned means the
-        # maximum is a boundary (cocircular-tie) maximum, which can never
-        # be zero-shear certified — bail out now rather than converge.
-        if require_interior and worst_idx < n_dihedral_rows:
-            rejected_angles = x.reshape(n_triangles, 3)
-            angle_residuals = compute_rivin_angle_residuals(
-                triangles,
-                rejected_angles,
-                boundary_vertices,
-            )
-            if verbose:
-                print(f"  REJECT (require_interior): {ineq_labels[worst_idx]} "
-                      f"hit π (excess {np.degrees(worst_violation):.2f}°) — "
-                      f"boundary maximum, not zero-shear certifiable")
-            return {
-                'success': False,
-                'angles': rejected_angles,
-                'volume': None,
-                'max_dihedral_angle': float(ineq_rows[worst_idx] @ x),
-                'n_active_constraints': len(active_indices),
-                'active_constraint_labels': [
-                    ineq_labels[index] for index in active_indices
-                ],
-                'message': (f'Rejected: cocircular tie active '
-                            f'({ineq_labels[worst_idx]}) — boundary maximum '
-                            f'(require_interior)'),
-                'rejected_tie': True,
-                'n_iterations': total_iters,
-                'reduced_gradient_norm': reduced_gradient_norm,
-                'residuals': angle_residuals,
-            }
-
-        # Pin the most-violated constraint at equality
-        active_indices.append(worst_idx)
-        if verbose:
-            print(f"  Violated: {ineq_labels[worst_idx]} "
-                  f"(excess {np.degrees(worst_violation):.2f}°), "
-                  f"pinning at π")
-
-    optimal_angles = x.reshape(n_triangles, 3)
-
-    # --- Compute volume via Fourier series ---
-    k = np.arange(1, 65)
-    volume = 0.5 * np.sum(np.sin(2.0 * np.outer(x, k)) / (k * k))
-
-    # --- Final feasibility check ---
-    max_dihedral = 0.0
-    for edge, opposite_angles in interior_edges.items():
-        (tri1, c1), (tri2, c2) = opposite_angles
-        dihedral = optimal_angles[tri1, c1] + optimal_angles[tri2, c2]
-        max_dihedral = max(max_dihedral, dihedral)
-
-    success = converged and (max_dihedral <= np.pi + 1e-6)
-    angle_residuals = compute_rivin_angle_residuals(
-        triangles,
-        optimal_angles,
-        boundary_vertices,
-    )
-
-    # Asymptotically tight tie (converged onto the boundary without a pin):
-    # equally not zero-shear certifiable.
-    if require_interior and success and max_dihedral >= np.pi - 1e-9:
+    def failure(reason, message, angles=None, residuals=None):
         return {
-            'success': False,
-            'angles': optimal_angles,
-            'volume': volume,
-            'max_dihedral_angle': max_dihedral,
-            'n_active_constraints': len(active_indices),
-            'active_constraint_labels': [
-                ineq_labels[index] for index in active_indices
-            ],
-            'message': ('Rejected: dihedral within 1e-9 of π at convergence '
-                        '— boundary maximum (require_interior)'),
-            'rejected_tie': True,
-            'n_iterations': total_iters,
-            'reduced_gradient_norm': reduced_gradient_norm,
-            'residuals': angle_residuals,
+            "success": False, "angles": angles, "volume": None,
+            "message": message, "termination_reason": reason,
+            "n_active_constraints": 0, "active_constraint_labels": [],
+            "n_iterations": 0, "n_active_set_changes": 0,
+            "n_volume_evaluations": 0, "feasibility_lp": lp,
+            "reduced_gradient_norm": None, "residuals": residuals,
+            "kkt": None, "volume_method": "bloch_wigner_binary64",
+            "evidence_status": "not_verified", "active_set_history": [],
         }
 
-    if verbose:
-        print(f"\n  Volume: {volume:.6f}")
-        print(f"  Max dihedral: {max_dihedral:.6f} rad ({np.degrees(max_dihedral):.2f}°)")
-        print(f"  Active constraints: {len(active_indices)}")
-        print(f"  Total Newton iterations: {total_iters}")
-        print(f"  Success: {success}")
-
+    if initial_angles is None:
+        lp = check_delaunay_realizability(triangles, boundary_vertices, verbose=False)
+        if not lp["realizable"]:
+            context = f"LP status {lp['status']}: {lp['message']}"
+            if not lp["success"]:
+                if not lp["solver_success"] or lp["status"] != 0:
+                    return failure("feasibility_lp_failed", f"Feasibility LP solver failed. {context}")
+                return failure("feasibility_lp_audit_failed",
+                               f"Feasibility LP candidate failed the residual audit. {context}")
+            return failure("no_positive_initial_witness",
+                           "No positive initial angle witness verified: measured minimum "
+                           f"{lp['min_angle']:.9g} (normalized by pi), required > "
+                           f"{lp.get('positive_witness_threshold', 1e-6):.9g}. {context}")
+        initial_angles = lp["angles_radians"]
+    angles = np.asarray(initial_angles, dtype=float)
+    if angles.shape != (len(triangles), 3) or not np.all(np.isfinite(angles)):
+        raise ValueError("initial_angles must be finite with shape (n_triangles, 3)")
+    residuals = compute_rivin_angle_residuals(
+        triangles, angles, boundary_vertices, tolerance=tolerance
+    )
+    if np.any(angles <= 0) or np.any(angles >= np.pi):
+        return failure("nonpositive_or_flat_initial_angles",
+                       "Positive nonflat angles are required; no clipping was performed", angles.copy(), residuals)
+    x = angles.ravel().copy()
+    if (np.max(np.abs(A @ x-b), initial=0) > tolerance
+            or np.max(B @ x-d, initial=0) > tolerance):
+        return failure("infeasible_initial_angles", "Initial angles violate the original constraints",
+                       angles.copy(), residuals)
+    # Correct only roundoff-size affine residuals via a rank-revealing solve.
+    # All original rows remain in both the final audit and residual output.
+    correction = np.linalg.lstsq(A, b-A @ x, rcond=_RIVIN_RANK_RCOND)[0]
+    candidate = x+correction
+    if np.all(candidate > 0) and np.all(candidate < np.pi) and np.max(B @ candidate-d, initial=0) <= tolerance:
+        x = candidate
+    x, diagnostics = _solve_angle_polytope(
+        x, A, b, B, d, max_iter=max_iter, max_active_rounds=max_active_rounds,
+        tolerance=tolerance, verbose=verbose,
+    )
+    final_angles = x.reshape(-1, 3)
+    residuals = compute_rivin_angle_residuals(
+        triangles, final_angles, boundary_vertices, tolerance=tolerance
+    )
+    binding = diagnostics["kkt"]["binding_indices"]
+    max_dihedral = float(np.max(B[:n_dihedrals] @ x, initial=0.0))
+    rejected_tie = bool(require_interior and diagnostics["success"]
+                        and n_dihedrals and max_dihedral >= np.pi-1e-9)
+    success = bool(diagnostics["success"] and residuals["feasible"] and not rejected_tie)
+    message = "Numerical primal and KKT checks passed" if success else diagnostics["termination_reason"]
+    if rejected_tie:
+        message = "Rejected: final cocircular tie within 1e-9 of pi (require_interior)"
+    diagnostics["n_volume_evaluations"] += 1
+    final_volume = _angle_structure_volume(x)
     return {
-        'success': success,
-        'angles': optimal_angles,
-        'volume': volume,
-        'max_dihedral_angle': max_dihedral,
-        'n_active_constraints': len(active_indices),
-        'active_constraint_labels': [
-            ineq_labels[index] for index in active_indices
-        ],
-        'message': 'Converged' if success else 'Did not converge',
-        'n_iterations': total_iters,
-        'reduced_gradient_norm': reduced_gradient_norm,
-        'residuals': angle_residuals,
+        **diagnostics, "success": success, "angles": final_angles,
+        "volume": final_volume, "volume_method": "bloch_wigner_binary64",
+        "feasibility_lp": lp,
+        "n_active_constraints": len(binding),
+        "active_constraint_labels": [labels[i] for i in binding],
+        "constraint_labels": labels,
+        "max_dihedral_angle": max_dihedral, "message": message,
+        "rejected_tie": rejected_tie, "residuals": residuals,
+        "evidence_status": "numerical_kkt_check" if diagnostics["success"] else "not_verified",
     }
 
 
@@ -1345,7 +1487,8 @@ def legalize_to_interior_maximum(
             history.append(history_row)
             return finish(
                 "lp_failure",
-                f"Rivin feasibility LP failed: {lp_result['message']}",
+                "Rivin LP did not verify a positive initial angle witness "
+                f"(status {lp_result['status']}): {lp_result['message']}",
             )
 
         optimization_start = time.perf_counter()

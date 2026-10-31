@@ -101,8 +101,12 @@ def test_legalization_is_deterministic_bounded_and_reports_residuals():
     assert triangles == original  # no caller-owned mutation
     assert first["success"]
     assert first["termination_reason"] == "accepted"
-    assert first["n_flips"] == 1
-    assert first["n_states"] == 2
+    # Final KKT-based tie classification may choose a different valid flip
+    # path than the old premature rejection. Check its bounded, repeatable
+    # work separately from the unchanged strict-acceptance conditions.
+    assert 1 <= first["n_flips"] <= 8
+    assert first["n_flips"] == second["n_flips"]
+    assert first["n_states"] == first["n_flips"] + 1
     assert first["finite_triangulation"] == second["finite_triangulation"]
     assert [row["flipped_edge"] for row in first["history"]] == [
         row["flipped_edge"] for row in second["history"]

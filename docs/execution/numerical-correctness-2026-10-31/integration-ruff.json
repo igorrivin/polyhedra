@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/ruff",
+    "check",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/optimization.py",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/optimization_cli.py",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/rivin_delaunay.py",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/volume_threshold.py",
+    "packages/volume-toolkit/scripts/check_data_integrity.py",
+    "packages/volume-toolkit/tests/test_geometry_precision.py",
+    "packages/volume-toolkit/tests/test_optimization.py",
+    "packages/volume-toolkit/tests/test_optimizer_result_contract.py",
+    "packages/volume-toolkit/tests/test_penner_rivin_regression.py",
+    "packages/volume-toolkit/tests/test_rivin_legalization.py",
+    "packages/volume-toolkit/tests/test_rivin_numerical_contracts.py"
+  ],
+  "returncode": 0
+}

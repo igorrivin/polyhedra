@@ -1,0 +1,89 @@
+{
+  "source_head": "285a6cb71473ba1f238983e062662cf890cbba05",
+  "worktree_state": "uncommitted implementation under independent review",
+  "schema_version": 2,
+  "new_cli_volume": 1.0149416063712777,
+  "prior_cli_volume": 1.0149416063705312,
+  "volume_delta": 7.465139617579553e-13,
+  "trial": {
+    "trial": 1,
+    "volume": 1.0149416063712777,
+    "valid": true,
+    "params": [
+      1.5707978504984372,
+      1.0471882612361003
+    ],
+    "success": true,
+    "message": "Optimization terminated successfully.",
+    "iterations": 10,
+    "function_evals": 185,
+    "verification_evals": 1,
+    "validation": {
+      "status": "verified",
+      "reason": "Canonical volume and complete boundary reconstruction passed",
+      "cached_objective": -1.0149416063712777,
+      "cached_objective_repr": null,
+      "objective_difference": 0.0,
+      "invalid_params_repr": null,
+      "polish": null
+    }
+  },
+  "historical_fixture_origin": "docs/execution/2026-10-31/tetrahedron-cli.json",
+  "historical_fixture_sha256": "f8408759dd9a0b46f047bb4fb58ff9f4f1811a80c5ca22b4277ff66f3d8f8558",
+  "historical_schema_sha256": "7a224b6c08a4380df70309f391d725ec1cb6a1abf0de843f5bbc04f80b5a4511",
+  "owned_file_sha256": {
+    ".gitattributes": "e89ea5a0b1cfb2c03d175b6ba7188982e7057974bef132acbd5fb0c13ca2b6fc",
+    "ideal_poly_volume_toolkit/optimization.py": "1e9cedb1bd48e8a79356c51c336199b9134012eedf59487b6819fb491918098e",
+    "ideal_poly_volume_toolkit/optimization_cli.py": "1976f56d420623b50b8fdc4b15d81ceac523d6f8f74f174fa2aabfe0afb962a7",
+    "ideal_poly_volume_toolkit/volume_threshold.py": "2ea2a99a6f81efd98174b54c657b4167d1add36452a1d531c9c54b75424441e7",
+    "scripts/check_data_integrity.py": "76aeb0b61984313fde3d926208f85a19913b7c4c08c309f6df384c406dc32520",
+    "tests/test_optimization.py": "a72e498764a4c9abb88280aa0ac294b6530214a28a8c2e282085c14afe9f4bf3",
+    "tests/test_optimizer_result_contract.py": "35d63d130fa3e70294ee253a4922ef148a4bd02779451cd3022b7211cbf6cf58",
+    "tests/fixtures/optimization-result-v1.json": "f8408759dd9a0b46f047bb4fb58ff9f4f1811a80c5ca22b4277ff66f3d8f8558",
+    "docs/schemas/optimization-result-v2.schema.json": "c37419bfd086a8ad5c2206215df45554dd4114f34e7b6a9bd08e89234e137bde",
+    "docs/optimizer-result-contract.md": "1e530a06faf15fc68795d7b73cbc4d9def4907b735f26d7b6f620fd19f4a5dc6"
+  },
+  "canonical_geometry_sha256": "6b779e418e9a5328404b7cb18be9c2cdf7226a6c480fe5e235df0490cceaa51e",
+  "environment": {
+    "python": "3.12.11",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "mpmath": "1.3.0"
+  },
+  "owned_file_path_base": "consolidated/packages/volume-toolkit",
+  "pre_callback_fix_owned_file_sha256": {
+    ".gitattributes": "e89ea5a0b1cfb2c03d175b6ba7188982e7057974bef132acbd5fb0c13ca2b6fc",
+    "ideal_poly_volume_toolkit/optimization.py": "571b59f86ce5a0535dd513d786dfcc31a3a8ca921636b77ff92d39514420a6d9",
+    "ideal_poly_volume_toolkit/optimization_cli.py": "1976f56d420623b50b8fdc4b15d81ceac523d6f8f74f174fa2aabfe0afb962a7",
+    "ideal_poly_volume_toolkit/volume_threshold.py": "2ea2a99a6f81efd98174b54c657b4167d1add36452a1d531c9c54b75424441e7",
+    "scripts/check_data_integrity.py": "76aeb0b61984313fde3d926208f85a19913b7c4c08c309f6df384c406dc32520",
+    "tests/test_optimization.py": "f313755f3e9a8fb05141438671739c32bf2157b8111252b2b688ded70ce1146a",
+    "tests/test_optimizer_result_contract.py": "393ce4ff0b0867e3777410b736e324ed093db2ab1c00864af3264a28b48c2690",
+    "tests/fixtures/optimization-result-v1.json": "f8408759dd9a0b46f047bb4fb58ff9f4f1811a80c5ca22b4277ff66f3d8f8558",
+    "docs/schemas/optimization-result-v2.schema.json": "c37419bfd086a8ad5c2206215df45554dd4114f34e7b6a9bd08e89234e137bde",
+    "docs/optimizer-result-contract.md": "770adaf29de4a4d7962544d225b9e59d0eae40fc1e6fcc0d5f8e3b6617f291df"
+  },
+  "callback_isolation": {
+    "implementation": "deep-copy each callback trial, including parameters and validation diagnostics",
+    "scope": "during-run callback boundary; completed result arrays remain mutable",
+    "focused_tests": {
+      "passed": 64,
+      "duration_seconds": 2.68,
+      "log": "optimization-service-callback-tests.log"
+    },
+    "original_independent_reviewer_probe_sha256": "bb1b306f95de8bca0992f3fb30918b9d2528285ee9e4796c7564f407751df66a",
+    "reviewer_reproducer_rerun": {
+      "status": "passed under author-run reproduction; independent re-review pending",
+      "output": "optimization-service-callback-recheck.json",
+      "log": "optimization-service-callback-recheck.log",
+      "only_script_change": "output filename service-review-probe.json redirected to optimization-service-callback-recheck.json",
+      "executed_source_sha256": "ddf9a6d647ebcb8493b2e501298fb8da3dff542540d20222b8096006459d36b9",
+      "original_failure_artifact_sha256": "e6e7e2a5a1a3ded606c7b19fc21563433ebc9944703b72f95955337fa5bdc2da",
+      "best_volume": 1.0149416064096535,
+      "volume_recomputed_from_best_params": 1.0149416064096535,
+      "volume_recomputed_from_returned_vertices": 1.0149416064096535,
+      "params_match_returned_vertices": true,
+      "callback_diagnostics_mutated_internal_record": false
+    }
+  }
+}

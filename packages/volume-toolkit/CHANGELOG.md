@@ -12,6 +12,10 @@ note](docs/release-0.4.0.md) for compatibility details and the release gates.
 
 ### Added
 
+- Explicit mpf-returning H³ Lobachevsky, Bloch–Wigner and local-tetrahedron
+  helpers with scoped working precision and documented input conversions.
+- Numerical precision, Rivin angle and optimizer-result contracts, including
+  independent-reference regressions and preserved historical schema fixtures.
 - A canonical H^3 optimization service in
   `ideal_poly_volume_toolkit.optimization`, shared by the command-line and GUI
   adapters.
@@ -42,6 +46,16 @@ note](docs/release-0.4.0.md) for compatibility details and the release gates.
 
 ### Changed
 
+- Current optimizer producers emit schema v2 with fresh endpoint validation,
+  separate verification-evaluation counts and strict JSON. Historical v1
+  schemas and artifacts remain unchanged; consumers select the schema by
+  version. Solver convergence remains separate from candidate validity.
+- Strict angle feasibility now maximizes a common positive angle/inequality
+  margin in units of pi. Legacy result names remain, with measured margins
+  and the numerical evidence status made explicit.
+- Rivin interior-only classification uses the final converged dihedral ties;
+  temporary active constraints may be released. The bounded seed-2 regression
+  now takes two legalization flips instead of one; no speed gain is claimed.
 - H^3 objective evaluation now uses a vectorized double-precision
   Bloch--Wigner path instead of the former per-triangle Torch series loop.
 - CLI and GUI optimization results use the same versioned schema. The full
@@ -74,6 +88,24 @@ note](docs/release-0.4.0.md) for compatibility details and the release gates.
 
 ### Fixed
 
+- Binary64 Bloch–Wigner evaluation reduces extreme finite arguments without
+  overflowing squared magnitudes. Multiprecision conversion avoids initial
+  float underflow, restores precision on failure, and stabilizes tiny
+  imaginary components near the negative real axis.
+- Angle optimization preserves constraints without angle clipping, releases
+  incorrectly active inequalities and requires full original-constraint/KKT
+  residuals. Failed or malformed LP endpoints remain explicit failures.
+- Angle feasibility reports now distinguish verified numerical witnesses from
+  unsuccessful or subthreshold runs; volume-call counts include line-search
+  starting values, rejected trials and final reporting values.
+- Final angle volumes use the canonical Bloch–Wigner kernel instead of a
+  64-term Fourier report. The value helper also replaces cutoff quadrature
+  with the canonical Clausen identity and explicit endpoint/domain handling.
+- Optimization ranks freshly verified endpoints, retains an earlier valid
+  candidate after later rejection, and isolates callback edits from internal
+  trial history and winning geometry.
+- Volume-threshold inputs reject NaN coordinates/thresholds and boolean
+  series lengths; threshold decisions are documented as numerical.
 - Exact zero-shear certification now tests the original declared real values,
   so a nonzero rational that underflows in floating-point diagnostics is not
   promoted to an exact certificate.

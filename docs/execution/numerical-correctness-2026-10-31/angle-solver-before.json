@@ -1,0 +1,64 @@
+[
+  {
+    "case": "equilateral",
+    "success": true,
+    "volume": 1.0151497106006686,
+    "angles": [
+      [
+        1.0471975511965976,
+        1.0471975511965976,
+        1.0471975511965976
+      ]
+    ],
+    "equality_residual": 0.0,
+    "reduced_gradient_norm": 0.0,
+    "independent_reference": "1.01494160640965",
+    "volume_error": 0.00020810419101491284
+  },
+  {
+    "case": "tiny_angle",
+    "success": false,
+    "volume": 4.743891587862782e-06,
+    "angles": [
+      [
+        1e-06,
+        1.5707963267948966,
+        1.5707963267938965
+      ]
+    ],
+    "equality_residual": 9.999990000508774e-07,
+    "reduced_gradient_norm": 11.280317134348865
+  },
+  {
+    "case": "two_tiny",
+    "success": false,
+    "volume": 4.743890901200666e-06,
+    "angles": [
+      [
+        1e-06,
+        1e-06,
+        3.141591653589793
+      ]
+    ],
+    "equality_residual": 9.999999996956888e-07,
+    "reduced_gradient_norm": 2.1411911612718958e-10
+  },
+  {
+    "case": "infeasible",
+    "success": false,
+    "volume": -4.743890904665643e-06,
+    "angles": [
+      [
+        1.0000000008881811e-06,
+        3.1415916535897925,
+        3.1415916535897925
+      ]
+    ],
+    "equality_residual": 3.141591653589793,
+    "reduced_gradient_norm": 1.48479875597152e-10
+  },
+  {
+    "case": "zero_iteration_budget",
+    "exception": "UnboundLocalError(\"cannot access local variable 'it' where it is not associated with a value\")"
+  }
+]

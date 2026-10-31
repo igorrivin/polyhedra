@@ -1,0 +1,531 @@
+{
+  "python": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+  "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit",
+  "imports": {
+    "ideal_poly_volume_toolkit.optimization": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/ideal_poly_volume_toolkit/optimization.py",
+    "ideal_poly_volume_toolkit.geometry": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py",
+    "ideal_poly_volume_toolkit.volume_threshold": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/ideal_poly_volume_toolkit/volume_threshold.py"
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "mpmath": "1.3.0",
+    "jsonschema": "4.26.0"
+  },
+  "source_sha256": {
+    ".gitattributes": "e89ea5a0b1cfb2c03d175b6ba7188982e7057974bef132acbd5fb0c13ca2b6fc",
+    "ideal_poly_volume_toolkit/optimization.py": "1e9cedb1bd48e8a79356c51c336199b9134012eedf59487b6819fb491918098e",
+    "ideal_poly_volume_toolkit/optimization_cli.py": "1976f56d420623b50b8fdc4b15d81ceac523d6f8f74f174fa2aabfe0afb962a7",
+    "ideal_poly_volume_toolkit/volume_threshold.py": "2ea2a99a6f81efd98174b54c657b4167d1add36452a1d531c9c54b75424441e7",
+    "scripts/check_data_integrity.py": "76aeb0b61984313fde3d926208f85a19913b7c4c08c309f6df384c406dc32520",
+    "tests/test_optimization.py": "a72e498764a4c9abb88280aa0ac294b6530214a28a8c2e282085c14afe9f4bf3",
+    "tests/test_optimizer_result_contract.py": "35d63d130fa3e70294ee253a4922ef148a4bd02779451cd3022b7211cbf6cf58",
+    "tests/fixtures/optimization-result-v1.json": "f8408759dd9a0b46f047bb4fb58ff9f4f1811a80c5ca22b4277ff66f3d8f8558",
+    "docs/schemas/optimization-result-v2.schema.json": "c37419bfd086a8ad5c2206215df45554dd4114f34e7b6a9bd08e89234e137bde",
+    "docs/optimizer-result-contract.md": "1e530a06faf15fc68795d7b73cbc4d9def4907b735f26d7b6f620fd19f4a5dc6"
+  },
+  "source_matches_author_manifest": true,
+  "geometry_sha256": "3a1ce69bddaa9afc980376cf382ed84ccd7b5746c2d30f5e89edc7f85307f4e9",
+  "fresh_ranking_and_quarantine": {
+    "schema_version": 2,
+    "source": "independent-review",
+    "metadata": {
+      "timestamp": "2026-10-31T19:25:01.415079",
+      "n_vertices": 4,
+      "objective": "vectorized_scipy_bloch_wigner",
+      "implicit_infinity_index": 3,
+      "settings": {}
+    },
+    "best": {
+      "volume": 1.0149416064096535,
+      "params": [
+        1.5707963267948966,
+        1.0471975511965976
+      ],
+      "vertices_real": [
+        0.0,
+        1.0,
+        0.5
+      ],
+      "vertices_imag": [
+        0.0,
+        0.0,
+        0.8660254037844385
+      ],
+      "structure": {
+        "n_vertices": 4,
+        "n_finite_vertices": 3,
+        "implicit_infinity_index": 3,
+        "n_faces": 4,
+        "n_finite_faces": 1,
+        "n_infinity_faces": 3,
+        "n_edges": 6,
+        "euler_characteristic": 2,
+        "vertex_degrees": [
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "triangulation": [
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "finite_delaunay_triangulation": [
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "boundary_triangulation": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          2,
+          1,
+          3
+        ]
+      ]
+    },
+    "statistics": {
+      "n_vertices": 4,
+      "n_faces": 4,
+      "n_finite_faces": 1,
+      "best_volume": 1.0149416064096535,
+      "mean_volume": 0.9654536002934363,
+      "std_volume": 0.049488006116217176,
+      "all_volumes": [
+        0.9159655941772191,
+        1.0149416064096535
+      ],
+      "n_valid_trials": 2,
+      "n_invalid_trials": 2,
+      "verification_evals": 2
+    },
+    "all_trials": [
+      {
+        "trial": 1,
+        "volume": 0.9159655941772191,
+        "valid": true,
+        "params": [
+          1.5707963267948966,
+          1.5707963267948966
+        ],
+        "success": true,
+        "message": "controlled review probe",
+        "iterations": 1,
+        "function_evals": 3,
+        "verification_evals": 1,
+        "validation": {
+          "status": "verified",
+          "reason": "Canonical volume and complete boundary reconstruction passed",
+          "cached_objective": -1000.0,
+          "cached_objective_repr": null,
+          "objective_difference": 999.0840344058228,
+          "invalid_params_repr": null,
+          "polish": null
+        }
+      },
+      {
+        "trial": 2,
+        "volume": 1.0149416064096535,
+        "valid": true,
+        "params": [
+          1.5707963267948966,
+          1.0471975511965976
+        ],
+        "success": false,
+        "message": "controlled review probe",
+        "iterations": 1,
+        "function_evals": 3,
+        "verification_evals": 1,
+        "validation": {
+          "status": "verified",
+          "reason": "Canonical volume and complete boundary reconstruction passed",
+          "cached_objective": -0.01,
+          "cached_objective_repr": null,
+          "objective_difference": 1.0049416064096535,
+          "invalid_params_repr": null,
+          "polish": null
+        }
+      },
+      {
+        "trial": 3,
+        "volume": null,
+        "valid": false,
+        "params": [],
+        "success": true,
+        "message": "controlled review probe",
+        "iterations": 1,
+        "function_evals": 3,
+        "verification_evals": 0,
+        "validation": {
+          "status": "rejected",
+          "reason": "Parameters must be a finite one-dimensional array",
+          "cached_objective": -10000.0,
+          "cached_objective_repr": null,
+          "objective_difference": null,
+          "invalid_params_repr": "array([nan,  1.])",
+          "polish": null
+        }
+      },
+      {
+        "trial": 4,
+        "volume": null,
+        "valid": false,
+        "params": [
+          1.1
+        ],
+        "success": true,
+        "message": "controlled review probe",
+        "iterations": 1,
+        "function_evals": 3,
+        "verification_evals": 0,
+        "validation": {
+          "status": "rejected",
+          "reason": "Expected 2 parameters",
+          "cached_objective": -10000.0,
+          "cached_objective_repr": null,
+          "objective_difference": null,
+          "invalid_params_repr": null,
+          "polish": null
+        }
+      }
+    ]
+  },
+  "parallel_serial_polish": {
+    "schema_version": 2,
+    "source": "independent-review",
+    "metadata": {
+      "timestamp": "2026-10-31T19:25:01.428326",
+      "n_vertices": 4,
+      "objective": "vectorized_scipy_bloch_wigner",
+      "implicit_infinity_index": 3,
+      "settings": {}
+    },
+    "best": {
+      "volume": 1.0149416064096535,
+      "params": [
+        1.5707963267948966,
+        1.0471975511965976
+      ],
+      "vertices_real": [
+        0.0,
+        1.0,
+        0.5
+      ],
+      "vertices_imag": [
+        0.0,
+        0.0,
+        0.8660254037844385
+      ],
+      "structure": {
+        "n_vertices": 4,
+        "n_finite_vertices": 3,
+        "implicit_infinity_index": 3,
+        "n_faces": 4,
+        "n_finite_faces": 1,
+        "n_infinity_faces": 3,
+        "n_edges": 6,
+        "euler_characteristic": 2,
+        "vertex_degrees": [
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "triangulation": [
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "finite_delaunay_triangulation": [
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "boundary_triangulation": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          2,
+          1,
+          3
+        ]
+      ]
+    },
+    "statistics": {
+      "n_vertices": 4,
+      "n_faces": 4,
+      "n_finite_faces": 1,
+      "best_volume": 1.0149416064096535,
+      "mean_volume": 1.0149416064096535,
+      "std_volume": 0.0,
+      "all_volumes": [
+        1.0149416064096535
+      ],
+      "n_valid_trials": 1,
+      "n_invalid_trials": 0,
+      "verification_evals": 2
+    },
+    "all_trials": [
+      {
+        "trial": 1,
+        "volume": 1.0149416064096535,
+        "valid": true,
+        "params": [
+          1.5707963267948966,
+          1.0471975511965976
+        ],
+        "success": false,
+        "message": "controlled review probe",
+        "iterations": 1,
+        "function_evals": 18,
+        "verification_evals": 2,
+        "validation": {
+          "status": "verified",
+          "reason": "Canonical volume and complete boundary reconstruction passed",
+          "cached_objective": -0.01,
+          "cached_objective_repr": null,
+          "objective_difference": 1.0049416064096535,
+          "invalid_params_repr": null,
+          "polish": "Accepted: verified volume improved"
+        }
+      }
+    ]
+  },
+  "manual_legacy_status": "not_checked",
+  "strict_json_rejection": "Out of range float values are not JSON compliant: nan",
+  "historical_v1": {
+    "valid": true,
+    "byte_identical_to_historical_artifact": true,
+    "sha256": "f8408759dd9a0b46f047bb4fb58ff9f4f1811a80c5ca22b4277ff66f3d8f8558",
+    "schema_sha256": "7a224b6c08a4380df70309f391d725ec1cb6a1abf0de843f5bbc04f80b5a4511",
+    "historical_keys_preserved": true
+  },
+  "additional_series_input_rejections": [
+    {
+      "series_terms_repr": "nan",
+      "error": "series_terms must be a positive integer or None"
+    },
+    {
+      "series_terms_repr": "inf",
+      "error": "series_terms must be a positive integer or None"
+    },
+    {
+      "series_terms_repr": "-inf",
+      "error": "series_terms must be a positive integer or None"
+    },
+    {
+      "series_terms_repr": "True",
+      "error": "series_terms must be a positive integer or None"
+    },
+    {
+      "series_terms_repr": "np.False_",
+      "error": "series_terms must be a positive integer or None"
+    },
+    {
+      "series_terms_repr": "0",
+      "error": "series_terms must be a positive integer or None"
+    },
+    {
+      "series_terms_repr": "-2",
+      "error": "series_terms must be a positive integer or None"
+    },
+    {
+      "series_terms_repr": "1.5",
+      "error": "series_terms must be a positive integer or None"
+    }
+  ],
+  "real_scipy_run": {
+    "schema_version": 2,
+    "source": "independent-review",
+    "metadata": {
+      "timestamp": "2026-10-31T19:25:01.473453",
+      "n_vertices": 4,
+      "objective": "vectorized_scipy_bloch_wigner",
+      "implicit_infinity_index": 3,
+      "settings": {}
+    },
+    "best": {
+      "volume": 1.014941606409507,
+      "params": [
+        1.570795896673396,
+        5.235987363580198
+      ],
+      "vertices_real": [
+        0.0,
+        1.0,
+        0.49999944510861805
+      ],
+      "vertices_imag": [
+        0.0,
+        0.0,
+        -0.8660252274896169
+      ],
+      "structure": {
+        "n_vertices": 4,
+        "n_finite_vertices": 3,
+        "implicit_infinity_index": 3,
+        "n_faces": 4,
+        "n_finite_faces": 1,
+        "n_infinity_faces": 3,
+        "n_edges": 6,
+        "euler_characteristic": 2,
+        "vertex_degrees": [
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "triangulation": [
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "finite_delaunay_triangulation": [
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "boundary_triangulation": [
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    "statistics": {
+      "n_vertices": 4,
+      "n_faces": 4,
+      "n_finite_faces": 1,
+      "best_volume": 1.014941606409507,
+      "mean_volume": 1.014941606409507,
+      "std_volume": 0.0,
+      "all_volumes": [
+        1.014941606409507
+      ],
+      "n_valid_trials": 1,
+      "n_invalid_trials": 0,
+      "verification_evals": 1
+    },
+    "all_trials": [
+      {
+        "trial": 1,
+        "volume": 1.014941606409507,
+        "valid": true,
+        "params": [
+          1.570795896673396,
+          5.235987363580198
+        ],
+        "success": false,
+        "message": "Maximum number of iterations has been exceeded.",
+        "iterations": 5,
+        "function_evals": 60,
+        "verification_evals": 1,
+        "validation": {
+          "status": "verified",
+          "reason": "Canonical volume and complete boundary reconstruction passed",
+          "cached_objective": -1.014941606409507,
+          "cached_objective_repr": null,
+          "objective_difference": 0.0,
+          "invalid_params_repr": null,
+          "polish": null
+        }
+      }
+    ]
+  },
+  "callback_mutation_regression": {
+    "best_volume": 1.0149416064096535,
+    "best_params": [
+      1.5707963267948966,
+      1.0471975511965976
+    ],
+    "volume_recomputed_from_best_params": 1.0149416064096535,
+    "volume_recomputed_from_returned_vertices": 1.0149416064096535,
+    "params_match_returned_vertices": true,
+    "serialized_trial": {
+      "trial": 1,
+      "volume": 1.0149416064096535,
+      "valid": true,
+      "params": [
+        1.5707963267948966,
+        1.0471975511965976
+      ],
+      "success": true,
+      "message": "controlled review probe",
+      "iterations": 1,
+      "function_evals": 3,
+      "verification_evals": 1,
+      "validation": {
+        "status": "verified",
+        "reason": "Canonical volume and complete boundary reconstruction passed",
+        "cached_objective": -1.0149416064096537,
+        "cached_objective_repr": null,
+        "objective_difference": 2.220446049250313e-16,
+        "invalid_params_repr": null,
+        "polish": null
+      }
+    },
+    "v2_schema_accepts_record": true,
+    "callback_diagnostics_mutated_internal_record": false
+  },
+  "source_unchanged_during_probe": true
+}

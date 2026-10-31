@@ -1,0 +1,60 @@
+{
+  "created_utc": "2026-10-31T23:34:10.836281+00:00",
+  "disposition": "Approved for integration within the reviewed H3 scope; no remaining blockers found.",
+  "source_module": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py",
+  "source_sha256": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73",
+  "interpreter": "/tmp/polyhedra-baseline-20261031/bin/python",
+  "focused_pytest": {
+    "exit_code": 0,
+    "passed": 60,
+    "seconds": 17.74,
+    "command": "python -m pytest tests/test_geometry_precision.py tests/test_geometry.py tests/test_variational.py -q -p no:cacheprovider"
+  },
+  "ruff": {
+    "exit_code": 0,
+    "result": "All checks passed!",
+    "command": "/opt/anaconda3/bin/ruff check ideal_poly_volume_toolkit/geometry.py tests/test_geometry_precision.py"
+  },
+  "diff_check": {
+    "exit_code": 0,
+    "command": "git diff --check -- ideal_poly_volume_toolkit/geometry.py tests/test_geometry_precision.py docs/numerical-precision.md"
+  },
+  "independent_original_replay": {
+    "exit_code": 0,
+    "cases": 74,
+    "all_passed": true,
+    "raw_reference_dps": [
+      450,
+      1100
+    ]
+  },
+  "independent_extra_negative_axis": {
+    "exit_code": 0,
+    "cases": 20,
+    "all_passed": true,
+    "raw_reference_dps": 450
+  },
+  "full_suite_run": false,
+  "production_source_edited": false,
+  "artifacts_sha256": {
+    "precision-review.md": "e325b9d656836c04ee6f07952e2159cf86a55c56c79aac29c4d31c5658cd6b69",
+    "precision-review-probe.py": "04472068b1b0a783e3320873bb44745b2f0f07479fe8bb6fc2ebaf45cab77712",
+    "precision-review-checks.json": "a938197a1b3ea595fbcd0e97ade4cb301b742d838d69b5f1063085cc69ef55b1",
+    "precision-review-negative-axis.json": "e6e2172b73490a5ec5721fc939d82592ac5fc4d85cafa907a43d2012bfcef6bb",
+    "precision-reviewed-geometry.py": "6b779e418e9a5328404b7cb18be9c2cdf7226a6c480fe5e235df0490cceaa51e",
+    "precision-rereview.md": "bfa8a227386ab839cbbd894f82846a20dba2f14db5b206dc724bcacf1c9570a7",
+    "precision-rereview-probe.py": "cc1de322d59c8734b72d3a98a7fad83ff6166f6a1200576830c49115c8001693",
+    "precision-rereview-checks.json": "aa4e27f7955877ab349d56121cecaeb9a822ecad3172bc82c367e33177ae0fe4",
+    "precision-rereview-probe.log": "09027a479f3328fe0336b74adec313786aeeb4a0a961b7676fd5b013d7f9ffaf",
+    "precision-rereview-negative-axis-probe.py": "2c981a6dd28cb5ee2453b198d0c2553560c143dc5b86751c5a5b420eb46b27c8",
+    "precision-rereview-negative-axis.json": "3e626a43db6752724d6b3dd28c3830c1b87d1aaf285b54042594dbbfc3969f4a",
+    "precision-rereview-negative-axis.log": "18e360225ffa99dcfd9bc97950087986579c1b07257ba00e231e2c928e936731",
+    "precision-rereview-tests.log": "32947f8e1d98dff2a1668fcb751849febad2493f9d9dc69389ca0f3e45d3964a",
+    "precision-rereview-tests.xml": "d414355d7b8fbfc5318d6a4f26b434b798517d3485fd75e9fc2ec7a933e5351e"
+  },
+  "reviewed_source_sha256": {
+    "ideal_poly_volume_toolkit/geometry.py": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73",
+    "tests/test_geometry_precision.py": "14f2ef19805af78d295ab8c3b37d46967a19f368cedc5aac2f5a6a43701965d6",
+    "docs/numerical-precision.md": "97f391d4a887a9a4f4d800aa89dfbd4bc154928df1c9039e195b8571d17e7d46"
+  }
+}

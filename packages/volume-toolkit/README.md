@@ -53,10 +53,10 @@ python3 -m pip install -e .
 canonical installation path.
 
 Release history is recorded in
-[`CHANGELOG.md`](https://github.com/igorrivin/ideal_poly_volume_toolkit/blob/main/CHANGELOG.md).
+[`CHANGELOG.md`](CHANGELOG.md).
 The draft 0.4
 migration guide and release gates are in
-[`docs/release-0.4.0.md`](https://github.com/igorrivin/ideal_poly_volume_toolkit/blob/main/docs/release-0.4.0.md).
+[`docs/release-0.4.0.md`](docs/release-0.4.0.md).
 
 ## Project Structure
 
@@ -111,13 +111,22 @@ ideal_poly_volume_toolkit/
 - **Pole-aware sphere projection**: `stereographic_project_from_pole()`
 - **Triangulation**: `delaunay_triangulation_indices()`, `hull_tris_projected_back()`
 - **Bloch–Wigner kernel**: `bloch_wigner()` (vectorized SciPy path)
-- **Lobachevsky function**: `lob_fast()` (lazy PyTorch autodiff from the
-  `torch` extra), `lob_exact()` (mpmath high-precision)
+- **Multiprecision kernels**: `lobachevsky_mp()`, `bloch_wigner_mp()`, and
+  `triangle_volume_from_points_mp()` return mpmath values at scoped working precision
+- **Compatibility entries**: `lob_exact()` is a numerical mpmath alias;
+  `lob_fast()` lazily loads the optional Torch approximation
 - **Volume computation**:
   - `triangle_volume_from_points()` - Single triangle volume
   - `ideal_poly_volume_via_delaunay()` - Full polyhedron via Delaunay
   - `ideal_poly_volume_from_sphere()` - Rotation/pole-invariant sphere entry
   - `ideal_poly_volume_via_hull_project_back()` - Full polyhedron via convex hull
+
+See the [precision contract](docs/numerical-precision.md) for input and output
+types. Legacy `mode="fast"` defaults remain truncated Fourier approximations.
+Use an explicit `mode="bloch_wigner"` or `mode="mpmath"` for maintained result
+reporting. The legacy `exact` and `eval_only` modes alias mpmath evaluation;
+polyhedron outputs remain floats and Qhull/projection topology remains
+binary64. Working precision is not a certified error bound.
 
 ### `ideal_poly_volume_toolkit.optimization` - H³ Optimization
 
@@ -126,6 +135,21 @@ ideal_poly_volume_toolkit/
 - `analyze_ideal_polyhedron_structure()` - Full boundary combinatorics,
   including the implicit infinity vertex
 - `optimization_result_to_dict()` - Shared, versioned CLI/GUI result schema
+
+The [endpoint and result contract](docs/optimizer-result-contract.md) requires
+fresh canonical volume and geometry checks before ranking candidates. Solver
+convergence and candidate validation are reported separately, and callbacks
+receive detached trial snapshots. New outputs use schema v2; the unchanged v1
+schema continues to describe historical outputs.
+
+### `ideal_poly_volume_toolkit.rivin_delaunay` - Angle Feasibility and Optimization
+
+The [Rivin numerical contract](docs/rivin-numerics.md) describes the normalized
+common-margin LP, feasible angle steps, active-constraint release and full
+numerical KKT audit. Final volumes use the canonical binary64 Bloch–Wigner
+kernel. These checks concern the supplied finite angle program; geometric
+realization and embedding require their own checks. The monograph's Section 9
+fixed-dihedral coordinates are a separate feasible family.
 
 ### `ideal_poly_volume_toolkit.rivin_holonomy` - Penner-Rivin Algorithm
 

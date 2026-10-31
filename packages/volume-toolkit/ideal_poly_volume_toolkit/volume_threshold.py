@@ -1,12 +1,13 @@
 """
 Self-contained module for checking if ideal polyhedron volume exceeds threshold.
 
-Given complex vertices (including 0, 1, ∞, and k other points), determines
+Given finite complex vertices, with infinity explicit or implicit, determines
 whether the volume of the associated ideal hyperbolic polyhedron is greater
 than a specified threshold.
 
-This module is completely self-contained and does not depend on other files
-in the toolkit.
+The default uses the toolkit's canonical binary64 Bloch-Wigner kernel.
+An explicit Fourier term count selects a truncated approximation. Neither
+path provides an exact value or a rigorous enclosure for threshold decisions.
 
 Usage:
     from ideal_poly_volume_toolkit.volume_threshold import volume_exceeds_threshold
@@ -17,12 +18,38 @@ Usage:
 """
 
 import numpy as np
+from numbers import Real
 from scipy.spatial import ConvexHull, Delaunay
 
 if __package__:
     from .geometry import bloch_wigner
 else:  # pragma: no cover - direct-script compatibility
     from geometry import bloch_wigner
+
+
+def _validated_vertices(vertices):
+    """Validate the API's finite complex vertices and optional infinity point."""
+    values = np.asarray(vertices, dtype=np.complex128)
+    if values.ndim != 1:
+        raise ValueError("vertices must be a one-dimensional complex array")
+    if np.any(np.isnan(values.real)) or np.any(np.isnan(values.imag)):
+        raise ValueError("vertices must not contain NaN")
+    infinite = np.isinf(values.real) | np.isinf(values.imag)
+    if np.count_nonzero(infinite) > 1:
+        raise ValueError("at most one vertex at infinity is allowed")
+    if np.count_nonzero(~infinite) < 3:
+        raise ValueError("at least three finite vertices are required")
+    return values
+
+
+def _validated_series_terms(series_terms):
+    if series_terms is not None and (
+        isinstance(series_terms, (bool, np.bool_))
+        or not isinstance(series_terms, (int, np.integer))
+        or series_terms < 1
+    ):
+        raise ValueError("series_terms must be a positive integer or None")
+    return series_terms
 
 
 # ============================================================================
@@ -130,7 +157,7 @@ def _lob_value_series(theta: float, n: int = 64) -> float:
 
     Args:
         theta: Angle in radians
-        n: Number of terms in series (default 64 for good accuracy)
+        n: Number of terms in the finite approximation (default 64)
 
     Returns:
         Λ(θ) value
@@ -181,6 +208,7 @@ def triangle_volume(z1, z2, z3, series_terms=None):
     Returns:
         Volume of the ideal tetrahedron
     """
+    _validated_series_terms(series_terms)
     if series_terms is None:
         denominator = z2 - z3
         if denominator == 0:
@@ -188,8 +216,6 @@ def triangle_volume(z1, z2, z3, series_terms=None):
         shape = (z1 - z3) / denominator
         return abs(bloch_wigner(shape))
 
-    if not isinstance(series_terms, (int, np.integer)) or series_terms < 1:
-        raise ValueError("series_terms must be a positive integer or None")
     a1, a2, a3 = _angles_for_triangle(z1, z2, z3)
     return (_lob_value_series(a1, int(series_terms)) +
             _lob_value_series(a2, int(series_terms)) +
@@ -218,6 +244,8 @@ def compute_volume_hull_method(vertices: np.ndarray, index_inf: int = None,
     Returns:
         Total volume
     """
+    vertices = _validated_vertices(vertices)
+    _validated_series_terms(series_terms)
     if index_inf is None:
         # Find infinity vertex
         is_inf = ~np.isfinite(vertices.real) | ~np.isfinite(vertices.imag)
@@ -250,7 +278,9 @@ def compute_volume_delaunay_method(vertices: np.ndarray, series_terms=None) -> f
     Returns:
         Total volume
     """
-    # Filter out infinity
+    vertices = _validated_vertices(vertices)
+    _validated_series_terms(series_terms)
+    # Infinity is implicit when this direct helper receives only finite points.
     is_finite = np.isfinite(vertices.real) & np.isfinite(vertices.imag)
     z_finite = vertices[is_finite]
 
@@ -283,12 +313,14 @@ def compute_volume(vertices, method="auto", series_terms=None):
         method: "auto", "hull", or "delaunay"
                - "auto": Use Delaunay if ∞ present, else hull
                - "hull": Lift to sphere, convex hull, project back
-               - "delaunay": Delaunay triangulation of finite vertices
+               - "delaunay": Delaunay triangulation; requires explicit ∞
         series_terms: Number of terms in the Lobachevsky series. If None
             (the default), use the accurate Bloch-Wigner closed form.
 
     Returns:
-        Volume of the ideal polyhedron
+        Binary64 numerical volume. In auto/hull mode, infinity is implicit if
+        omitted from the input; this API does not interpret a finite-only list as a
+        different polyhedron without that infinity vertex.
 
     Examples:
         >>> # Tetrahedron with vertices at 0, 1, i, ∞
@@ -299,8 +331,8 @@ def compute_volume(vertices, method="auto", series_terms=None):
         >>> vertices = [0+0j, 1+0j, 1j, np.inf, 0.5+0.3j, -0.2+0.7j, 0.8-0.1j]
         >>> vol = compute_volume(vertices)
     """
-    # Convert to numpy array
-    vertices = np.asarray(vertices, dtype=complex)
+    vertices = _validated_vertices(vertices)
+    _validated_series_terms(series_terms)
 
     # Check if infinity is present
     has_inf = np.any(~np.isfinite(vertices.real) | ~np.isfinite(vertices.imag))
@@ -327,16 +359,18 @@ def volume_exceeds_threshold(vertices, threshold, series_terms=None):
     Check if ideal polyhedron volume exceeds a threshold.
 
     This is the main API function. Given vertices (which implicitly or
-    explicitly include 0, 1, and ∞), compute the volume and check if
+    explicitly include ∞), compute the volume and check if
     it exceeds the given threshold.
 
     Args:
         vertices: Array-like of complex numbers (and optionally np.inf)
-                 Should include or implicitly represent 0, 1, ∞
+                 Infinity can be explicit or implicit; finite vertices are
+                 used as supplied (0 and 1 are not inserted automatically).
         threshold: Real number to compare against
 
     Returns:
-        True if volume > threshold, False otherwise
+        The ordinary numerical comparison, not an interval-certified decision.
+        Values near the threshold require a separately validated error bound.
 
     Examples:
         >>> # Check if tetrahedron volume > 1.0
@@ -348,13 +382,21 @@ def volume_exceeds_threshold(vertices, threshold, series_terms=None):
         >>> vertices = [0+0j, 1+0j, 1j, np.inf, 0.5+0.5j, -0.3+0.8j]
         >>> result = volume_exceeds_threshold(vertices, 2.5)
     """
+    if (
+        isinstance(threshold, (bool, np.bool_))
+        or not isinstance(threshold, Real)
+        or not -float("inf") < threshold < float("inf")
+    ):
+        raise ValueError("threshold must be a finite real number")
     volume = compute_volume(vertices, series_terms=series_terms)
-    return volume > threshold
+    if not np.isfinite(volume):
+        raise ValueError("volume evaluation must be finite before comparison")
+    return bool(volume > threshold)
 
 
 def get_volume(vertices, series_terms=None):
     """
-    Convenience function to get the exact volume value.
+    Convenience function to get a binary64 numerical volume value.
 
     Args:
         vertices: Array-like of complex numbers (and optionally np.inf)

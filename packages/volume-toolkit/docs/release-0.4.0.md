@@ -8,6 +8,13 @@ for 0.4.0. The checklist is intentionally conservative: scientific
 correctness, installability, and reproducible performance evidence are release
 requirements.
 
+The monorepo's [31 October H³ checkpoint](../../../docs/execution/numerical-correctness-2026-10-31/README.md)
+records current numerical corrections and local Python 3.12 package checks.
+Its full-suite attempt remains limited by missing optional dependencies;
+the historical validation statements below do not imply that the current
+supported-platform release matrix has been rerun. The package version remains
+0.3.0 until a separate release is finalized.
+
 ## Migrating from 0.3.0
 
 ### Python and installation
@@ -63,23 +70,35 @@ spelling and delegates to the same `optimization_cli` adapter.
 
 ### Optimization result schema
 
-CLI and GUI output now share schema version 1. Its machine-readable contract
-is `docs/schemas/optimization-result-v1.schema.json`; generated payloads are
-validated against it in the test suite.
+Current CLI and GUI producers share schema version 2. Its machine-readable
+contract is [optimization-result-v2.schema.json](schemas/optimization-result-v2.schema.json).
+The [v1 schema](schemas/optimization-result-v1.schema.json) and a byte-identical
+prior-checkpoint fixture remain available for historical outputs. Historical
+artifacts are not rewritten or promoted to newly verified results.
 
 - `best.volume` is positive even though SciPy minimizes an internal negative
   objective.
 - Invalid penalty-only trials have `volume: null` and `valid: false`; they do
   not contribute to volume statistics.
+- Each endpoint is freshly checked before candidate ranking. The cached
+  objective remains diagnostic, with its discrepancy recorded.
+- `success` retains raw solver convergence. `validation.status` separately
+  records `verified`, `rejected` or `not_checked`; a valid candidate can remain
+  useful after an iteration limit without claiming convergence.
+- `verification_evals` counts subsequent canonical volume checks separately
+  from SciPy's `function_evals`. Malformed diagnostic values have an explicit
+  nullable/string representation, and serialization rejects NaN/Infinity.
 - `finite_delaunay_triangulation` contains only finite planar faces.
 - `boundary_triangulation` is the complete spherical boundary and uses
   `best.structure.implicit_infinity_index` for the added infinity vertex.
 - `triangulation` remains a compatibility alias for the finite triangulation.
 - Result filenames identify whether the CLI or GUI produced them.
 
-Consumers should branch on `schema_version`, use the explicit finite or
+Consumers must branch on `schema_version`, use the explicit finite or
 boundary field they require, and stop inferring a spherical Euler
-characteristic from the finite planar disk.
+characteristic from the finite planar disk. A closed-v1 validator does not
+accept v2 payloads. See the [endpoint and result contract](optimizer-result-contract.md),
+including detached callback snapshots and the separate threshold API.
 
 ### Arithmetic corpus and holonomy semantics
 
@@ -113,10 +132,27 @@ used as release or publication ground truth.
 
 ### Numerical behavior
 
-The standard H^3 path now uses the vectorized SciPy Bloch--Wigner evaluator.
-Tiny differences from the former 96-term Lobachevsky series are expected. The
-release benchmark reports both absolute and relative differences against a
-frozen 0.3 scalar Torch reference before it records timings.
+The H^3 optimizer and maintained final-value reporting explicitly use the
+vectorized binary64 Bloch--Wigner evaluator. Public geometry `fast` defaults
+remain finite Fourier approximations for compatibility; callers must select
+the intended method. The release benchmark reports absolute and relative
+differences against a frozen 0.3 scalar Torch reference before timing.
+
+New `lobachevsky_mp`, `bloch_wigner_mp` and
+`triangle_volume_from_points_mp` entries return mpf values without an initial
+conversion through binary64. Precision is scoped and restored on failure.
+`lob_exact` remains a numerical alias; high-level `exact` and `eval_only`
+modes alias `mpmath`, with float output and binary64 Qhull/projection. These
+names do not provide exact arithmetic or interval bounds. See the
+[precision contract](numerical-precision.md).
+
+The angle solver uses feasible steps, constraint release and a full numerical
+KKT audit. Its strict LP maximizes a common angle/inequality margin in units
+of pi, and its final volume uses Bloch--Wigner evaluation. Failure to verify
+a positive LP witness is not a proof of infeasibility. See the
+[Rivin numerical contract](rivin-numerics.md) and the monorepo's
+[numerical errata](../../../book/numerical-errata.md) for changed bounded
+examples. Existing corpus values remain historical until explicitly replayed.
 
 Torch-only H^3 kernels now belong to
 `ideal_poly_volume_toolkit.geometry_torch`. Existing imports such as

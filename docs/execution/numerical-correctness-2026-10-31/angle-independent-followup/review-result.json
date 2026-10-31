@@ -1,0 +1,30 @@
+{
+  "review_status": "approved",
+  "remaining_blockers": [],
+  "source_import": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/ideal_poly_volume_toolkit/rivin_delaunay.py",
+  "artifact_sha256": {
+    "ideal_poly_volume_toolkit/rivin_delaunay.py": "65a388fc0682a32370c2ad886ef807852ae68df07f1a00d7f7b3a587f066f053",
+    "ideal_poly_volume_toolkit/geometry.py": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73",
+    "tests/test_rivin_numerical_contracts.py": "c52459da4635c6ddf7b006a7dadfb200b95bf7d0a2a448f99026be6b9cb2d4db",
+    "tests/test_penner_rivin_regression.py": "a4f3ef7c18fe17fd01b0fd939c015e6bdca3d8dad1acfb7d4b43a3a62d8dcad3",
+    "tests/test_rivin_legalization.py": "3af52cdb1d6de6200c27bab267c2998dfc91f25426b1c0a282c4d42e33a0da07",
+    "docs/rivin-numerics.md": "e66ab132f03a3f2b1c4487155aac453a6499036484210280d889f99a8c24fd6e"
+  },
+  "focused_pytest": {
+    "passed": 73,
+    "seconds": 2.0
+  },
+  "ruff": {
+    "passed": true,
+    "version": "0.12.0",
+    "executable": "/opt/anaconda3/bin/ruff"
+  },
+  "git_diff_check": "passed",
+  "independent_mesh_comparisons": 7,
+  "exact_common_margin_primal_dual": "1/7",
+  "endpoint_reference_cases": 8,
+  "prior_evidence_preserved": true,
+  "report": "angle-solver-followup-review.md",
+  "product_source_modified_by_reviewer": false,
+  "full_suite_run_by_reviewer": false
+}

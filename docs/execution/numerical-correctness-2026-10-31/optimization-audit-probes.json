@@ -1,0 +1,32 @@
+{
+  "imports": {
+    "optimization": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/ideal_poly_volume_toolkit/optimization.py",
+    "threshold": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/ideal_poly_volume_toolkit/volume_threshold.py"
+  },
+  "reference_volume": 1.0149416064096537,
+  "stale_fun_probe": {
+    "reported": 100.0,
+    "recomputed": 1.0149416064096537,
+    "reported_success": true
+  },
+  "invalid_best_probe": {
+    "exception": "ValueError",
+    "message": "optimization parameters must be finite"
+  },
+  "invalid_trial_serialization": {
+    "strict_json": false,
+    "exception": "ValueError",
+    "message": "Out of range float values are not JSON compliant: nan",
+    "invalid_trial_params": "[nan, 1.0]"
+  },
+  "valid_unconverged_control": {
+    "volume": 1.0149416064096537,
+    "solver_success": false
+  },
+  "threshold": {
+    "valid_volume": 1.0149416064096535,
+    "nan_vertex_volume": 1.0149416064096535,
+    "nan_threshold_result": false,
+    "series_bool_value": 1.299038105676658
+  }
+}

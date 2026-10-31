@@ -1,0 +1,659 @@
+{
+  "review_stage": "final independent review after formatter and work-counter corrections",
+  "source_import": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/ideal_poly_volume_toolkit/rivin_delaunay.py",
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "mpmath": "1.3.0"
+  },
+  "source_hashes": {
+    "rivin_delaunay.py": "65a388fc0682a32370c2ad886ef807852ae68df07f1a00d7f7b3a587f066f053",
+    "geometry.py": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+  },
+  "independent_comparisons": [
+    {
+      "name": "triangle",
+      "faces": 1,
+      "toolkit_success": true,
+      "reference_success": true,
+      "reference_message": "Optimization terminated successfully",
+      "value": 1.0149416064096537,
+      "mp_value": 1.014941606409654,
+      "reference_value": 1.014941606409654,
+      "reference_iterations": 1,
+      "reference_value_difference": 2.220446049250313e-16,
+      "reference_angle_max_difference": 0.0,
+      "original_equality_error": 0.0,
+      "original_inequality_violation": 0.0,
+      "active_set_history": [],
+      "kkt": {
+        "passed": true,
+        "tolerance": 1e-10,
+        "equality_residual": 0.0,
+        "inequality_violation": 0.0,
+        "stationarity_residual": 1.1102230246251565e-16,
+        "complementarity_residual": 0.0,
+        "dual_sign_violation": 0.0,
+        "positive_angles": true,
+        "dual_solver_success": true,
+        "equality_multipliers": [
+          -0.5493061443340549
+        ],
+        "inequality_multipliers": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "binding_indices": [],
+        "numerical_equality_rank": 1,
+        "rank_rcond": 1e-12,
+        "evidence_status": "numerical_kkt_check"
+      }
+    },
+    {
+      "name": "square",
+      "faces": 2,
+      "toolkit_success": true,
+      "reference_success": true,
+      "reference_message": "Optimization terminated successfully",
+      "value": 2.0298832128193074,
+      "mp_value": 2.0298832128193074,
+      "reference_value": 2.0298832128193074,
+      "reference_iterations": 1,
+      "reference_value_difference": 0.0,
+      "reference_angle_max_difference": 0.0,
+      "original_equality_error": 0.0,
+      "original_inequality_violation": 0.0,
+      "active_set_history": [],
+      "kkt": {
+        "passed": true,
+        "tolerance": 1e-10,
+        "equality_residual": 0.0,
+        "inequality_violation": 0.0,
+        "stationarity_residual": 2.220446049250313e-16,
+        "complementarity_residual": 0.0,
+        "dual_sign_violation": 0.0,
+        "positive_angles": true,
+        "dual_solver_success": true,
+        "equality_multipliers": [
+          -0.5493061443340549,
+          -0.549306144334055
+        ],
+        "inequality_multipliers": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "binding_indices": [],
+        "numerical_equality_rank": 2,
+        "rank_rcond": 1e-12,
+        "evidence_status": "numerical_kkt_check"
+      }
+    },
+    {
+      "name": "four_fan",
+      "faces": 4,
+      "toolkit_success": true,
+      "reference_success": true,
+      "reference_message": "Optimization terminated successfully",
+      "value": 3.6638623767088756,
+      "mp_value": 3.6638623767088765,
+      "reference_value": 3.6638623767088765,
+      "reference_iterations": 1,
+      "reference_value_difference": 8.881784197001252e-16,
+      "reference_angle_max_difference": 0.0,
+      "original_equality_error": 0.0,
+      "original_inequality_violation": 0.0,
+      "active_set_history": [],
+      "kkt": {
+        "passed": true,
+        "tolerance": 1e-10,
+        "equality_residual": 0.0,
+        "inequality_violation": 0.0,
+        "stationarity_residual": 4.440892098500626e-16,
+        "complementarity_residual": 0.0,
+        "dual_sign_violation": 0.0,
+        "positive_angles": true,
+        "dual_solver_success": true,
+        "equality_multipliers": [
+          -0.3465735902799727,
+          -0.34657359027997275,
+          -0.3465735902799726,
+          -0.3465735902799727,
+          -0.346573590279973
+        ],
+        "inequality_multipliers": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "binding_indices": [],
+        "numerical_equality_rank": 5,
+        "rank_rcond": 1e-12,
+        "evidence_status": "numerical_kkt_check"
+      }
+    },
+    {
+      "name": "release_fixture",
+      "faces": 8,
+      "toolkit_success": true,
+      "reference_success": true,
+      "reference_message": "Optimization terminated successfully",
+      "value": 7.010183466124133,
+      "mp_value": 7.010183466124132,
+      "reference_value": 7.010183466124035,
+      "reference_iterations": 14,
+      "reference_value_difference": 9.769962616701378e-14,
+      "reference_angle_max_difference": 3.3451211223223254e-07,
+      "original_equality_error": 8.881784197001252e-16,
+      "original_inequality_violation": 0.0,
+      "active_set_history": [
+        {
+          "action": "release",
+          "constraint_index": 3,
+          "multiplier": -0.4564632748140673,
+          "iteration": 5
+        },
+        {
+          "action": "release",
+          "constraint_index": 14,
+          "multiplier": -0.05232717244459603,
+          "iteration": 11
+        }
+      ],
+      "kkt": {
+        "passed": true,
+        "tolerance": 1e-10,
+        "equality_residual": 8.881784197001252e-16,
+        "inequality_violation": 0.0,
+        "stationarity_residual": 7.085443343157749e-13,
+        "complementarity_residual": 2.7791605471626315e-17,
+        "dual_sign_violation": 0.0,
+        "positive_angles": true,
+        "dual_solver_success": true,
+        "equality_multipliers": [
+          -0.5685391603741076,
+          -0.1738060732579797,
+          -0.5685391603741259,
+          -0.1738060732579348,
+          -0.17380607325769398,
+          -0.1738060732579726,
+          -0.17380607325823894,
+          -0.17380607325797454,
+          -0.4747306155083728,
+          -0.4601533582036385
+        ],
+        "inequality_multipliers": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.06258113202302205,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "binding_indices": [
+          11
+        ],
+        "numerical_equality_rank": 10,
+        "rank_rcond": 1e-12,
+        "evidence_status": "numerical_kkt_check"
+      }
+    },
+    {
+      "name": "random_8_0",
+      "faces": 9,
+      "toolkit_success": true,
+      "reference_success": true,
+      "reference_message": "Optimization terminated successfully",
+      "value": 7.701995043273636,
+      "mp_value": 7.701995043273637,
+      "reference_value": 7.70199504327358,
+      "reference_iterations": 15,
+      "reference_value_difference": 5.595524044110789e-14,
+      "reference_angle_max_difference": 2.305283223202892e-07,
+      "original_equality_error": 8.881784197001252e-16,
+      "original_inequality_violation": 0.0,
+      "active_set_history": [
+        {
+          "action": "release",
+          "constraint_index": 11,
+          "multiplier": -0.2332369701555686,
+          "iteration": 5
+        }
+      ],
+      "kkt": {
+        "passed": true,
+        "tolerance": 1e-10,
+        "equality_residual": 8.881784197001252e-16,
+        "inequality_violation": 0.0,
+        "stationarity_residual": 1.7484624859065434e-13,
+        "complementarity_residual": 0.0,
+        "dual_sign_violation": 0.0,
+        "positive_angles": true,
+        "dual_solver_success": true,
+        "equality_multipliers": [
+          -0.08122208826181426,
+          -0.08122208826210792,
+          -0.08122208826227878,
+          -0.08122208826210764,
+          -0.3672913132863333,
+          -0.36729131328633297,
+          -0.08122208826212353,
+          -0.08122208826212372,
+          -0.36729131328632486,
+          -0.6008220851884423,
+          -0.5190094061374009,
+          -0.32496017196617977
+        ],
+        "inequality_multipliers": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "binding_indices": [],
+        "numerical_equality_rank": 12,
+        "rank_rcond": 1e-12,
+        "evidence_status": "numerical_kkt_check"
+      }
+    },
+    {
+      "name": "random_8_3",
+      "faces": 8,
+      "toolkit_success": true,
+      "reference_success": true,
+      "reference_message": "Optimization terminated successfully",
+      "value": 7.49797527667427,
+      "mp_value": 7.497975276674271,
+      "reference_value": 7.497975276674207,
+      "reference_iterations": 15,
+      "reference_value_difference": 6.306066779870889e-14,
+      "reference_angle_max_difference": 2.2548000910838084e-07,
+      "original_equality_error": 4.440892098500626e-16,
+      "original_inequality_violation": 0.0,
+      "active_set_history": [
+        {
+          "action": "release",
+          "constraint_index": 1,
+          "multiplier": -0.25878057015019007,
+          "iteration": 4
+        }
+      ],
+      "kkt": {
+        "passed": true,
+        "tolerance": 1e-10,
+        "equality_residual": 4.440892098500626e-16,
+        "inequality_violation": 0.0,
+        "stationarity_residual": 2.9976021664879227e-15,
+        "complementarity_residual": 2.6256086143278135e-17,
+        "dual_sign_violation": 0.0,
+        "positive_angles": true,
+        "dual_solver_success": true,
+        "equality_multipliers": [
+          -0.5675562129658887,
+          -0.43332940511495677,
+          -0.42597184444235847,
+          -0.42597184444235847,
+          -0.27568569430464335,
+          -0.28380069025094423,
+          -0.2856857596166938,
+          -0.27837803365086367,
+          -0.25214249422124996,
+          -0.40084517938001113
+        ],
+        "inequality_multipliers": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.05912344988553753,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "binding_indices": [
+          10
+        ],
+        "numerical_equality_rank": 10,
+        "rank_rcond": 1e-12,
+        "evidence_status": "numerical_kkt_check"
+      }
+    },
+    {
+      "name": "random_15_2",
+      "faces": 22,
+      "toolkit_success": true,
+      "reference_success": true,
+      "reference_message": "Optimization terminated successfully",
+      "value": 19.112626012370175,
+      "mp_value": 19.11262601237018,
+      "reference_value": 19.112626012369752,
+      "reference_iterations": 21,
+      "reference_value_difference": 4.227729277772596e-13,
+      "reference_angle_max_difference": 6.319674967780742e-07,
+      "original_equality_error": 1.7763568394002505e-15,
+      "original_inequality_violation": 0.0,
+      "active_set_history": [
+        {
+          "action": "activate",
+          "constraint_index": 10,
+          "iteration": 0
+        },
+        {
+          "action": "release",
+          "constraint_index": 22,
+          "multiplier": -0.30697178458266894,
+          "iteration": 6
+        },
+        {
+          "action": "activate",
+          "constraint_index": 12,
+          "iteration": 7
+        },
+        {
+          "action": "release",
+          "constraint_index": 15,
+          "multiplier": -0.16241761145819064,
+          "iteration": 11
+        }
+      ],
+      "kkt": {
+        "passed": true,
+        "tolerance": 1e-10,
+        "equality_residual": 1.7763568394002505e-15,
+        "inequality_violation": 0.0,
+        "stationarity_residual": 1.5543122344752192e-15,
+        "complementarity_residual": 1.2590269982512418e-17,
+        "dual_sign_violation": 0.0,
+        "positive_angles": true,
+        "dual_solver_success": true,
+        "equality_multipliers": [
+          -0.38030357948704635,
+          -0.38180027648192255,
+          0.06151309250638366,
+          -0.4493221524142419,
+          -0.34343240646183926,
+          0.11206191493898868,
+          0.3323396399347448,
+          0.048621050893519806,
+          -0.1370781887734857,
+          -0.1242288288519358,
+          0.021811345982267163,
+          -0.09716211327240379,
+          0.06177286624885658,
+          0.16004754369684202,
+          0.2600956585076369,
+          -0.0134096107830427,
+          0.01839607065946991,
+          -0.4502690240166983,
+          0.11718940642589633,
+          0.22277877077893732,
+          0.42834947646350857,
+          0.16496908137791955,
+          -0.5447551465144682,
+          -0.31040250814335424,
+          -0.4937620546109157,
+          -0.2171004919587622,
+          -0.849569933670156,
+          -0.5954157418707655,
+          -0.7103646825243364,
+          -0.6997357753422865,
+          -0.810149752945431
+        ],
+        "inequality_multipliers": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.028350767600868434,
+          0.0,
+          0.005150894531681838,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "binding_indices": [
+          10,
+          12
+        ],
+        "numerical_equality_rank": 31,
+        "rank_rcond": 1e-12,
+        "evidence_status": "numerical_kkt_check"
+      }
+    }
+  ],
+  "exact_common_margin": {
+    "primal_margin": "1/7",
+    "dual_objective": "-1/7",
+    "dual_stationarity_exact": true,
+    "dual_signs_exact": true,
+    "all_primal_constraints_exact": true,
+    "equality_dual": [
+      "0",
+      "0",
+      "1/7",
+      "1/7",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "inequality_dual": [
+      "-1/7",
+      "0",
+      "0",
+      "-1/7",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1/7",
+      "0",
+      "-1/7",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1/7",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1/7",
+      "0",
+      "0",
+      "-1/7"
+    ]
+  },
+  "lobachevsky_endpoint_probes": [
+    {
+      "angle": 5e-324,
+      "value": 3.676e-321,
+      "reference": "3.679538703603561185400148e-321",
+      "absolute_error": 5e-324
+    },
+    {
+      "angle": 1e-300,
+      "value": 6.910823807176539e-298,
+      "reference": "6.91082380717653777188818e-298",
+      "absolute_error": 8.5029418204e-314
+    },
+    {
+      "angle": 1e-150,
+      "value": 3.456946167685469e-148,
+      "reference": "3.456946167685469094632576e-148",
+      "absolute_error": 1.927266727725408e-164
+    },
+    {
+      "angle": 1e-30,
+      "value": 6.938440560926143e-29,
+      "reference": "6.93844056092614309100341e-29",
+      "absolute_error": 4.079304334321886e-45
+    },
+    {
+      "angle": 1e-12,
+      "value": 2.79378739353686e-11,
+      "reference": "2.793787393536860235698771e-11",
+      "absolute_error": 9.895127340375574e-28
+    },
+    {
+      "angle": 1.5707963267948966,
+      "value": 4.2443023800535505e-17,
+      "reference": "4.244302380053747450668377e-17",
+      "absolute_error": 1.969332550257864e-30
+    },
+    {
+      "angle": 3.141592653588793,
+      "value": -2.7943567643821503e-11,
+      "reference": "-2.794356764382150092286055e-11",
+      "absolute_error": 1.633891266843467e-27
+    },
+    {
+      "angle": 3.1415926535897927,
+      "value": -2.0063833104201056e-14,
+      "reference": "-2.006383310420105567933402e-14",
+      "absolute_error": 4.941087696727507e-31
+    }
+  ],
+  "work_counter_probes": [
+    {
+      "name": "stationary",
+      "reported": 1,
+      "observed": 1
+    },
+    {
+      "name": "nonstationary",
+      "reported": 14,
+      "observed": 14
+    }
+  ],
+  "formatter_subthreshold_probe": {
+    "positive_minimum": 5e-07,
+    "formatted": "============================================================\nNUMERICAL DELAUNAY ANGLE-FEASIBILITY CHECK\n============================================================\nTriangulation: 1 triangles, 3 vertices\n  Interior vertices: 0\n  Boundary vertices: 3\nObjective: maximize the minimum angle\n\n\u2717 No positive angle witness verified by this run\n  Measured min angle: 5e-07 (normalized by pi)\n  Measured min angle: 1.57079633e-06 radians\n  Measured min angle: 9e-05\u00b0\n  Required positive-witness margin: > 1e-06 (normalized by pi)\nDisk topology, a global embedding, and exact infeasibility are not certified.\n\nSolver status: 0 - Optimization terminated successfully. (HiGHS Status 7: Optimal)\n============================================================"
+  },
+  "formatter_strict_probe": {
+    "objective": "max_common_positive_margin",
+    "formatted": "============================================================\nNUMERICAL DELAUNAY ANGLE-FEASIBILITY CHECK\n============================================================\nTriangulation: 8 triangles, 8 vertices\n  Interior vertices: 2\n  Boundary vertices: 6\nObjective: maximize the common angle/inequality margin\n\n\u2713 Positive angle witness verified numerically\n  Measured min angle: 0.142857143 (normalized by pi)\n  Measured min angle: 0.448798951 radians\n  Measured min angle: 25.7142857\u00b0\n  Guaranteed common margin: 0.142857143 (normalized by pi)\n  Required positive-witness margin: > 1e-06 (normalized by pi)\nDisk topology, a global embedding, and exact infeasibility are not certified.\n\nSolver status: 0 - Optimization terminated successfully. (HiGHS Status 7: Optimal)\n============================================================"
+  },
+  "failure_metadata": {
+    "strict_json_after_numpy_conversion": true,
+    "success": false,
+    "termination_reason": "max_iterations",
+    "stationarity_residual": 0.9964142358510629
+  },
+  "forced_line_search_failure": {
+    "success": false,
+    "reason": "line_search_failed",
+    "stationarity_residual": 0.9964142358510629
+  },
+  "forced_singular_curvature": {
+    "success": true,
+    "reason": "numerical_kkt_converged",
+    "stationarity_residual": 4.675149156696534e-13
+  },
+  "disconnected_complex": {
+    "faces": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "realizable": true,
+    "formatted": "============================================================\nNUMERICAL DELAUNAY ANGLE-FEASIBILITY CHECK\n============================================================\nTriangulation: 2 triangles, 6 vertices\n  Interior vertices: 0\n  Boundary vertices: 6\nObjective: maximize the minimum angle\n\n\u2713 Positive angle witness verified numerically\n  Measured min angle: 0.333333333 (normalized by pi)\n  Measured min angle: 1.04719755 radians\n  Measured min angle: 60\u00b0\n  Required positive-witness margin: > 1e-06 (normalized by pi)\nDisk topology, a global embedding, and exact infeasibility are not certified.\n\nSolver status: 0 - Optimization terminated successfully. (HiGHS Status 7: Optimal)\n============================================================",
+    "evidence_status": "numerical_angle_feasibility"
+  },
+  "positive_start_failure_message": {
+    "injected_valid_api_state": true,
+    "solver_success": true,
+    "lp_audit_success": true,
+    "min_angle": 5e-07,
+    "feasibility_status": "no_positive_witness_verified",
+    "optimizer_success": false,
+    "optimizer_reason": "no_positive_initial_witness",
+    "optimizer_message": "No positive initial angle witness verified: measured minimum 5e-07 (normalized by pi), required > 1e-06. LP status 0: Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+  }
+}

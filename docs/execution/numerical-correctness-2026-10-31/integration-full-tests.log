@@ -1,0 +1,369 @@
+.............s.......................................................... [ 17%]
+........................................................................ [ 34%]
+......F..sssssssssssssssss.............................................. [ 52%]
+........................................................................ [ 69%]
+.................................................................FF..F.. [ 86%]
+.......................................................                  [100%]
+==================================== ERRORS ====================================
+___________ ERROR collecting tests/test_cage_optimizer_accounting.py ___________
+ImportError while importing test module '/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/tests/test_cage_optimizer_accounting.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_cage_optimizer_accounting.py:10: in <module>
+    import ideal_poly_volume_toolkit.rl.cage.task as cage_task
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+ideal_poly_volume_toolkit/rl/generic.py:22: in <module>
+    import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+__________ ERROR collecting tests/test_h4_combinatorics_benchmark.py ___________
+ImportError while importing test module '/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/tests/test_h4_combinatorics_benchmark.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_h4_combinatorics_benchmark.py:11: in <module>
+    import ideal_poly_volume_toolkit.rl.polytope.h4_combinatorics_benchmark as benchmark
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+ideal_poly_volume_toolkit/rl/generic.py:22: in <module>
+    import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+___________ ERROR collecting tests/test_h4_combinatorics_response.py ___________
+ImportError while importing test module '/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/tests/test_h4_combinatorics_response.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_h4_combinatorics_response.py:25: in <module>
+    SPEC.loader.exec_module(checker)
+scripts/check_h4_combinatorics_response.py:28: in <module>
+    from ideal_poly_volume_toolkit.rl.polytope.h4_combinatorics_benchmark import (
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+ideal_poly_volume_toolkit/rl/generic.py:22: in <module>
+    import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+____________ ERROR collecting tests/test_h4_symmetric_benchmark.py _____________
+ImportError while importing test module '/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/tests/test_h4_symmetric_benchmark.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_h4_symmetric_benchmark.py:8: in <module>
+    import ideal_poly_volume_toolkit.rl.polytope.h4_symmetric_benchmark as h4_benchmark
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+ideal_poly_volume_toolkit/rl/generic.py:22: in <module>
+    import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+_____________ ERROR collecting tests/test_h4_symmetric_response.py _____________
+ImportError while importing test module '/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/tests/test_h4_symmetric_response.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_h4_symmetric_response.py:23: in <module>
+    SPEC.loader.exec_module(checker)
+scripts/check_h4_symmetric_response.py:26: in <module>
+    from ideal_poly_volume_toolkit.rl.polytope.h4_symmetric_benchmark import (
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+ideal_poly_volume_toolkit/rl/generic.py:22: in <module>
+    import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+_____________ ERROR collecting tests/test_numerical_properties.py ______________
+ImportError while importing test module '/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/tests/test_numerical_properties.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_numerical_properties.py:7: in <module>
+    from hypothesis import assume, given, settings, strategies as st
+E   ModuleNotFoundError: No module named 'hypothesis'
+______________ ERROR collecting tests/test_rl_budget_contract.py _______________
+ImportError while importing test module '/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/tests/test_rl_budget_contract.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_rl_budget_contract.py:13: in <module>
+    import ideal_poly_volume_toolkit.rl.polytope.optimizers as polytope_optimizers
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+ideal_poly_volume_toolkit/rl/generic.py:22: in <module>
+    import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+__________________ ERROR collecting tests/test_rl_harness.py ___________________
+ImportError while importing test module '/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/tests/test_rl_harness.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_rl_harness.py:10: in <module>
+    import ideal_poly_volume_toolkit.rl.polytope.task as polytope_task_module
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+ideal_poly_volume_toolkit/rl/generic.py:22: in <module>
+    import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+_________________ ERROR collecting tests/test_rl_validator.py __________________
+ImportError while importing test module '/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/tests/test_rl_validator.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_rl_validator.py:14: in <module>
+    from ideal_poly_volume_toolkit.rl.generic import OptimizerRun, OptimizerRunError
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+ideal_poly_volume_toolkit/rl/generic.py:22: in <module>
+    import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+=================================== FAILURES ===================================
+_________________ test_real_n8_sixteen_cell_calibration_smoke __________________
+
+tmp_path = PosixPath('/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/pytest-of-igorrivin/pytest-69/test_real_n8_sixteen_cell_cali0')
+
+    def test_real_n8_sixteen_cell_calibration_smoke(tmp_path: Path):
+        output = tmp_path / "real-calibration.json"
+        config = _run_config(
+            starts=0,
+            calibrate_16_cell=True,
+            local_max_on_shortlist=False,
+            budget=1,
+        )
+        document = campaign.run_campaign(
+            output,
+            config,
+>           api=campaign._load_core_api(),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+            invocation=["pytest", "real-16-cell-calibration"],
+        )
+
+tests/test_h4_symmetric_maxima_campaign.py:875: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/mine_h4_symmetric_maxima.py:324: in _load_core_api
+    module = importlib.import_module(
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1310: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:488: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1310: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:488: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+<frozen importlib._bootstrap_external>:999: in exec_module
+    ???
+<frozen importlib._bootstrap>:488: in _call_with_frames_removed
+    ???
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """
+    Generic hierarchical RL optimizer for black-box optimization.
+    
+    The framework is agnostic to the inner optimization problem.
+    Users provide:
+      - A Task class (defines objective, random solutions, perturbations)
+      - Inner optimizers (greedy local search, random perturbation, etc.)
+    
+    The RL controller learns to orchestrate these across a search tree.
+    
+    This is the generalization of rl_optimizer.py from ideal polytopes
+    to arbitrary optimization problems.
+    """
+    
+    import time
+    from abc import ABC, abstractmethod
+    from dataclasses import dataclass, field
+    from numbers import Integral
+    from typing import Any, List, Optional
+    
+    import numpy as np
+>   import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+
+ideal_poly_volume_toolkit/rl/generic.py:22: ModuleNotFoundError
+____________ test_launcher_writes_truthful_atomic_model_and_config _____________
+
+tmp_path = PosixPath('/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/pytest-of-igorrivin/pytest-69/test_launcher_writes_truthful_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x118518d40>
+
+    def test_launcher_writes_truthful_atomic_model_and_config(
+        tmp_path: Path,
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+>       calls = _install_fake_training(monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_rl_training_launcher.py:103: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_rl_training_launcher.py:76: in _install_fake_training
+    import ideal_poly_volume_toolkit.rl.polytope as polytope_module
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """
+    Generic hierarchical RL optimizer for black-box optimization.
+    
+    The framework is agnostic to the inner optimization problem.
+    Users provide:
+      - A Task class (defines objective, random solutions, perturbations)
+      - Inner optimizers (greedy local search, random perturbation, etc.)
+    
+    The RL controller learns to orchestrate these across a search tree.
+    
+    This is the generalization of rl_optimizer.py from ideal polytopes
+    to arbitrary optimization problems.
+    """
+    
+    import time
+    from abc import ABC, abstractmethod
+    from dataclasses import dataclass, field
+    from numbers import Integral
+    from typing import Any, List, Optional
+    
+    import numpy as np
+>   import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+
+ideal_poly_volume_toolkit/rl/generic.py:22: ModuleNotFoundError
+___________ test_training_failure_leaves_no_partial_artifact_or_lock ___________
+
+tmp_path = PosixPath('/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/pytest-of-igorrivin/pytest-69/test_training_failure_leaves_n0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x1185183e0>
+
+    def test_training_failure_leaves_no_partial_artifact_or_lock(
+        tmp_path: Path,
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+>       _install_fake_training(monkeypatch, fail=True)
+
+tests/test_rl_training_launcher.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_rl_training_launcher.py:76: in _install_fake_training
+    import ideal_poly_volume_toolkit.rl.polytope as polytope_module
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """
+    Generic hierarchical RL optimizer for black-box optimization.
+    
+    The framework is agnostic to the inner optimization problem.
+    Users provide:
+      - A Task class (defines objective, random solutions, perturbations)
+      - Inner optimizers (greedy local search, random perturbation, etc.)
+    
+    The RL controller learns to orchestrate these across a search tree.
+    
+    This is the generalization of rl_optimizer.py from ideal polytopes
+    to arbitrary optimization problems.
+    """
+    
+    import time
+    from abc import ABC, abstractmethod
+    from dataclasses import dataclass, field
+    from numbers import Integral
+    from typing import Any, List, Optional
+    
+    import numpy as np
+>   import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+
+ideal_poly_volume_toolkit/rl/generic.py:22: ModuleNotFoundError
+_____________ test_dry_run_writes_nothing_and_never_calls_trainer ______________
+
+tmp_path = PosixPath('/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/pytest-of-igorrivin/pytest-69/test_dry_run_writes_nothing_an0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x118518f50>
+capsys = <_pytest.capture.CaptureFixture object at 0x1182284a0>
+
+    def test_dry_run_writes_nothing_and_never_calls_trainer(
+        tmp_path: Path,
+        monkeypatch: pytest.MonkeyPatch,
+        capsys: pytest.CaptureFixture[str],
+    ) -> None:
+>       calls = _install_fake_training(monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_rl_training_launcher.py:276: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_rl_training_launcher.py:76: in _install_fake_training
+    import ideal_poly_volume_toolkit.rl.polytope as polytope_module
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """
+    Generic hierarchical RL optimizer for black-box optimization.
+    
+    The framework is agnostic to the inner optimization problem.
+    Users provide:
+      - A Task class (defines objective, random solutions, perturbations)
+      - Inner optimizers (greedy local search, random perturbation, etc.)
+    
+    The RL controller learns to orchestrate these across a search tree.
+    
+    This is the generalization of rl_optimizer.py from ideal polytopes
+    to arbitrary optimization problems.
+    """
+    
+    import time
+    from abc import ABC, abstractmethod
+    from dataclasses import dataclass, field
+    from numbers import Integral
+    from typing import Any, List, Optional
+    
+    import numpy as np
+>   import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+
+ideal_poly_volume_toolkit/rl/generic.py:22: ModuleNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_h4_symmetric_maxima_campaign.py::test_real_n8_sixteen_cell_calibration_smoke
+FAILED tests/test_rl_training_launcher.py::test_launcher_writes_truthful_atomic_model_and_config
+FAILED tests/test_rl_training_launcher.py::test_training_failure_leaves_no_partial_artifact_or_lock
+FAILED tests/test_rl_training_launcher.py::test_dry_run_writes_nothing_and_never_calls_trainer
+ERROR tests/test_cage_optimizer_accounting.py
+ERROR tests/test_h4_combinatorics_benchmark.py
+ERROR tests/test_h4_combinatorics_response.py
+ERROR tests/test_h4_symmetric_benchmark.py
+ERROR tests/test_h4_symmetric_response.py
+ERROR tests/test_numerical_properties.py
+ERROR tests/test_rl_budget_contract.py
+ERROR tests/test_rl_harness.py
+ERROR tests/test_rl_validator.py
+4 failed, 393 passed, 18 skipped, 9 errors in 35.44s

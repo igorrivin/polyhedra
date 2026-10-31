@@ -12,6 +12,8 @@ tracked in `docs/implementation-status.md`.
 
 ### Volume / geometry — H^3 (ideal polyhedra in hyperbolic 3-space)
 - `geometry.py` — canonical H^3 geometry kernel: vectorized `bloch_wigner`,
+  scoped mpf-returning `lobachevsky_mp`, `bloch_wigner_mp` and
+  `triangle_volume_from_points_mp`,
   pole-aware `stereographic_project_from_pole`, sphere entry point
   `ideal_poly_volume_from_sphere`, and the established Delaunay and
   hull-project-back volume paths. Historical differentiable entries remain as
@@ -20,15 +22,16 @@ tracked in `docs/implementation-status.md`.
   Bloch–Wigner Torch kernels, loaded through the `geometry.py` compatibility
   surface only when a Torch API is used.
 - `optimization.py` — canonical reusable H^3 parameterization, objective,
-  differential-evolution trial orchestration, boundary reconstruction, and
-  result accounting shared by CLI/GUI adapters. Public functions:
+  differential-evolution trial orchestration, fresh endpoint validation,
+  detached callback snapshots, boundary reconstruction, and result accounting
+  shared by CLI/GUI adapters. Public functions:
   `spherical_to_complex`, `parameters_to_complex`,
   `negative_volume_objective`, `complete_boundary_triangulation`,
   `analyze_ideal_polyhedron_structure`, `optimize_ideal_polyhedron`, and
   `optimization_result_to_dict`; result records: `OptimizationTrial` and
   `PolyhedronOptimizationResult`.
 - `optimization_cli.py` — installed `ideal-poly-optimize` argument parsing,
-  progress reporting, and schema-v1 JSON output; the source-tree
+  progress reporting, and schema-v2 strict JSON output; the source-tree
   `bin/optimize_polyhedron.py` is a compatibility shim.
 - `visualization.py` — 3D rendering, Klein / Poincaré ball plots, mesh export.
 
@@ -72,16 +75,19 @@ tracked in `docs/implementation-status.md`.
   shared CP1 normalization, and `solve_zero_shear_from_initial` for reusable
   cube-root or standard-upper-half-plane solves. Its planar straight-edge result
   is diagnostic rather than an acceptance gate.
-- `rivin_delaunay.py` — Rivin's Delaunay-realizability and volume-critical
-  angle solver, including bounded worst-edge legalization, strict disk
-  topology/winding validation, and solver/realization residual reports.
+- `rivin_delaunay.py` — finite angle-feasibility LP and constrained
+  angle-volume solver with common margins, feasible steps, active-constraint
+  release, canonical final values and full numerical KKT residuals; also owns
+  bounded worst-edge legalization and the separate disk/realization checks.
 - `pointset_to_fuchsian.py` — Full pipeline: point set → triangulation → Fuchsian group → invariant trace field.
 
 ### Realization and inscribability
 - `geometric_realization.py` — Oriented numerical development of compatible triangle angles, with local closure checks; no global embedding certificate.
 - `cone_realization.py` — Inscribed realization of simplicial 4-polytopes via the cone / Volkov method.
 - `inscribed_realization.py` — Inscribed realization of simplicial 4-polytopes on S^3.
-- `volume_threshold.py` — Self-contained volume-exceeds-threshold oracle.
+- `volume_threshold.py` — Numerical threshold comparison delegating to the
+  canonical H³ kernel, with explicit finite-series mode and input validation;
+  no exact or interval-certified near-threshold decision.
 
 ### Combinatorics
 - `combinatorial_enumeration.py` — Combinatorial type enumeration for convex polyhedra inscribed in the sphere.
@@ -197,8 +203,17 @@ Main clusters (by filename prefix / purpose):
 - `CHANGELOG.md` — canonical versioned user-facing change history.
 - `docs/release-0.4.0.md` — draft 0.4 migration guide, reproducible benchmark
   protocol, and release checklist.
-- `docs/schemas/optimization-result-v1.schema.json` — machine-readable contract
-  for shared CLI/GUI optimizer output.
+- `docs/numerical-precision.md` — H³ input/arithmetic/output modes, scoped
+  multiprecision, legacy aliases and binary64 topology limits.
+- `docs/rivin-numerics.md` — finite angle LP/optimizer constraints, KKT
+  tolerances, final-volume method and evidence scope.
+- `docs/optimizer-result-contract.md` — endpoint validation, work and
+  convergence semantics, callback isolation and schema migration.
+- `docs/schemas/optimization-result-v2.schema.json` — current shared CLI/GUI
+  optimizer output with endpoint-validation and verification-work fields.
+- `docs/schemas/optimization-result-v1.schema.json` — unchanged historical
+  optimizer contract; `tests/fixtures/optimization-result-v1.json` preserves
+  the previous checkpoint's output bytes.
 - `docs/schemas/tutte-zero-shear-audit-v1.schema.json` — checkpointable,
   provenance-bearing contract for the Tutte-start/multi-start zero-shear basin
   audit and its endpoint classifications.
@@ -222,6 +237,10 @@ covers Penner–Rivin regressions (`test_penner_rivin_regression.py`), package
 imports, model transforms, coplanar facets, gradients, and threshold behavior
 (`test_correctness_regressions.py`), plus the H^3 geometry kernel
 (`test_geometry.py`), reusable optimization service (`test_optimization.py`),
+precision and degeneration behavior (`test_geometry_precision.py`), endpoint
+validation/schema/callback isolation (`test_optimizer_result_contract.py`),
+feasible angle steps, strict LP witnesses and KKT checks
+(`test_rivin_numerical_contracts.py`),
 deterministic numerical invariants across generic randomized strata
 (`test_numerical_properties.py`),
 exact/common-frame holonomy and strict topology (`test_rivin_holonomy_exact.py`),

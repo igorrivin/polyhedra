@@ -1,0 +1,79 @@
+{
+  "source_import": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/ideal_poly_volume_toolkit/rivin_delaunay.py",
+  "source_sha256": "65a388fc0682a32370c2ad886ef807852ae68df07f1a00d7f7b3a587f066f053",
+  "counter_cases": [
+    {
+      "name": "stationary_zero_budget",
+      "reported": 1,
+      "observed": 1,
+      "success": true,
+      "reason": "numerical_kkt_converged"
+    },
+    {
+      "name": "nonstationary",
+      "reported": 14,
+      "observed": 14,
+      "success": true,
+      "reason": "numerical_kkt_converged"
+    },
+    {
+      "name": "nonstationary_zero_budget",
+      "reported": 1,
+      "observed": 1,
+      "success": false,
+      "reason": "max_iterations"
+    },
+    {
+      "name": "nonpositive_initial",
+      "reported": 0,
+      "observed": 0,
+      "success": false,
+      "reason": "nonpositive_or_flat_initial_angles"
+    },
+    {
+      "name": "infeasible_initial",
+      "reported": 0,
+      "observed": 0,
+      "success": false,
+      "reason": "infeasible_initial_angles"
+    },
+    {
+      "name": "rejected_trials",
+      "reported": 57,
+      "observed": 57,
+      "success": false,
+      "reason": "line_search_failed"
+    }
+  ],
+  "lp_failure_cases": [
+    {
+      "name": "solver",
+      "reason": "feasibility_lp_failed",
+      "message": "Feasibility LP solver failed. LP status 1: Iteration limit reached",
+      "formatted": "============================================================\nNUMERICAL DELAUNAY ANGLE-FEASIBILITY CHECK\n============================================================\nTriangulation: 1 triangles, 3 vertices\n  Interior vertices: 0\n  Boundary vertices: 3\nObjective: maximize the minimum angle\n\n\u2717 No positive angle witness verified by this run\n  Required positive-witness margin: > 1e-06 (normalized by pi)\nDisk topology, a global embedding, and exact infeasibility are not certified.\n\nSolver status: 1 - Iteration limit reached\n============================================================",
+      "strict_json_after_numpy_conversion": true,
+      "solver_iterations_retained": 17,
+      "volume_calls": 0
+    },
+    {
+      "name": "audit",
+      "reason": "feasibility_lp_audit_failed",
+      "message": "Feasibility LP candidate failed the residual audit. LP status 0: Rejected by original-constraint feasibility audit",
+      "formatted": "============================================================\nNUMERICAL DELAUNAY ANGLE-FEASIBILITY CHECK\n============================================================\nTriangulation: 1 triangles, 3 vertices\n  Interior vertices: 0\n  Boundary vertices: 3\nObjective: maximize the minimum angle\n\n\u2717 No positive angle witness verified by this run\n  Required positive-witness margin: > 1e-06 (normalized by pi)\nDisk topology, a global embedding, and exact infeasibility are not certified.\n\nSolver status: 0 - Rejected by original-constraint feasibility audit\n============================================================",
+      "strict_json_after_numpy_conversion": true,
+      "solver_iterations_retained": 17,
+      "volume_calls": 0
+    },
+    {
+      "name": "subthreshold",
+      "reason": "no_positive_initial_witness",
+      "message": "No positive initial angle witness verified: measured minimum 5e-07 (normalized by pi), required > 1e-06. LP status 0: Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "formatted": "============================================================\nNUMERICAL DELAUNAY ANGLE-FEASIBILITY CHECK\n============================================================\nTriangulation: 1 triangles, 3 vertices\n  Interior vertices: 0\n  Boundary vertices: 3\nObjective: maximize the minimum angle\n\n\u2717 No positive angle witness verified by this run\n  Measured min angle: 5e-07 (normalized by pi)\n  Measured min angle: 1.57079633e-06 radians\n  Measured min angle: 9e-05\u00b0\n  Required positive-witness margin: > 1e-06 (normalized by pi)\nDisk topology, a global embedding, and exact infeasibility are not certified.\n\nSolver status: 0 - Optimization terminated successfully. (HiGHS Status 7: Optimal)\n============================================================",
+      "strict_json_after_numpy_conversion": true,
+      "solver_iterations_retained": 17,
+      "volume_calls": 0
+    }
+  ],
+  "formatter_success_scope_passed": true,
+  "prior_failure_evidence_preserved": true
+}

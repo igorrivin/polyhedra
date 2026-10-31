@@ -1,0 +1,119 @@
+{
+  "schema_version": 2,
+  "source": "installed-wheel-controlled-probe",
+  "metadata": {
+    "timestamp": "2026-10-31T19:37:30.143827",
+    "n_vertices": 4,
+    "objective": "vectorized_scipy_bloch_wigner",
+    "implicit_infinity_index": 3,
+    "settings": {}
+  },
+  "best": {
+    "volume": 1.0149416064096535,
+    "params": [
+      1.5707963267948966,
+      1.0471975511965976
+    ],
+    "vertices_real": [
+      0.0,
+      1.0,
+      0.5
+    ],
+    "vertices_imag": [
+      0.0,
+      0.0,
+      0.8660254037844385
+    ],
+    "structure": {
+      "n_vertices": 4,
+      "n_finite_vertices": 3,
+      "implicit_infinity_index": 3,
+      "n_faces": 4,
+      "n_finite_faces": 1,
+      "n_infinity_faces": 3,
+      "n_edges": 6,
+      "euler_characteristic": 2,
+      "vertex_degrees": [
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    "triangulation": [
+      [
+        1,
+        2,
+        0
+      ]
+    ],
+    "finite_delaunay_triangulation": [
+      [
+        1,
+        2,
+        0
+      ]
+    ],
+    "boundary_triangulation": [
+      [
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        0,
+        3
+      ],
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        2,
+        1,
+        3
+      ]
+    ]
+  },
+  "statistics": {
+    "n_vertices": 4,
+    "n_faces": 4,
+    "n_finite_faces": 1,
+    "best_volume": 1.0149416064096535,
+    "mean_volume": 1.0149416064096535,
+    "std_volume": 0.0,
+    "all_volumes": [
+      1.0149416064096535
+    ],
+    "n_valid_trials": 1,
+    "n_invalid_trials": 0,
+    "verification_evals": 1
+  },
+  "all_trials": [
+    {
+      "trial": 1,
+      "volume": 1.0149416064096535,
+      "valid": true,
+      "params": [
+        1.5707963267948966,
+        1.0471975511965976
+      ],
+      "success": false,
+      "message": "controlled endpoint contract probe",
+      "iterations": 1,
+      "function_evals": 7,
+      "verification_evals": 1,
+      "validation": {
+        "status": "verified",
+        "reason": "Canonical volume and complete boundary reconstruction passed",
+        "cached_objective": -100.0,
+        "cached_objective_repr": null,
+        "objective_difference": 98.98505839359035,
+        "invalid_params_repr": null,
+        "polish": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "manifest_sha256": "8f4c5303b6fcbfc1df44412049221572526634b57f8398fcfdbb5a9f8d31ddb4",
+  "manifest_entries": 103,
+  "destination_mismatches": [],
+  "origin_mismatches_at_review": [
+    "execution/numerical-correctness-2026-10-31/integration-installed-probes.log",
+    "execution/numerical-correctness-2026-10-31/integration-installed-probes.py"
+  ],
+  "three_real_adapter_replay_outputs": {
+    "angle-before-after.py": {
+      "execution_owner": "numerical_docs; independent result and live-source hash inspection by crosscutting reviewer",
+      "driver_sha256": "f0f60392144c665af4f18ffa8b8ea3e74acf51b3b696942d38b4786901fe2db7",
+      "output": "/tmp/polyhedra-docs-replay-20261031/angle-before-after.json",
+      "output_sha256": "5fe6d2b8a8c9c5063a96a591105a74beefa3cb435ad4ea0a39685d81972a3653",
+      "source_hashes": null,
+      "cases": 5,
+      "all_passed": null,
+      "driver_hash_matches": true
+    },
+    "angle-independent.py": {
+      "execution_owner": "numerical_docs; independent result and live-source hash inspection by crosscutting reviewer",
+      "driver_sha256": "fac5a49494dae1819482d88c9f78e90f6bc7a4988be2274c70e1573f44cf0b8a",
+      "output": "/tmp/polyhedra-docs-replay-20261031/angle-independent.json",
+      "output_sha256": "eebe080802e5502719e807ad6e469c5b442bbe764d53036e672c5fbfb6c7b911",
+      "source_hashes": {
+        "rivin_delaunay.py": "65a388fc0682a32370c2ad886ef807852ae68df07f1a00d7f7b3a587f066f053",
+        "geometry.py": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+      },
+      "cases": 7,
+      "all_passed": null,
+      "driver_hash_matches": true
+    },
+    "precision-independent.py": {
+      "execution_owner": "numerical_docs; independent result and live-source hash inspection by crosscutting reviewer",
+      "driver_sha256": "68a34fa56063e9c5596f9045d35f39941554610e871cb2c7e1f8aa2dcfbc9cd8",
+      "output": "/tmp/polyhedra-docs-replay-20261031/precision-independent-corrected.json",
+      "output_sha256": "f6a1411011d60d1eedbc29d768b9594748bf99e3fb16050b796b3fc9f97d942e",
+      "source_hashes": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73",
+      "cases": 74,
+      "all_passed": true,
+      "driver_hash_matches": true
+    }
+  },
+  "all_preservation_checks_passed": false
+}

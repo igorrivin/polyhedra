@@ -1,4 +1,6 @@
+from decimal import Decimal
 from importlib import import_module
+from numbers import Integral, Rational
 
 import mpmath as mp
 import numpy as np
@@ -172,9 +174,71 @@ def lob_fast(theta, n: int = 64):
     return _geometry_torch_module().lob_fast(theta, n)
 
 
-def lob_exact(theta: float, dps: int = 120) -> float:
-    mp.mp.dps = dps
-    return 0.5 * mp.clsin(2, 2 * float(theta))
+def _precision_digits(dps):
+    if isinstance(dps, bool) or not isinstance(dps, Integral) or dps < 1:
+        raise ValueError("dps must be a positive integer")
+    return int(dps)
+
+
+def _finite_mpf(value):
+    """Convert supported real scalars without an intermediate binary64 cast."""
+    if isinstance(value, Integral):
+        value = int(value)
+    elif isinstance(value, Rational):
+        value = mp.mpf(int(value.numerator)) / int(value.denominator)
+    elif isinstance(value, Decimal):
+        value = str(value)
+    elif isinstance(value, np.floating):
+        if not np.isfinite(value):
+            raise ValueError("values must be finite and real")
+        numerator, denominator = value.as_integer_ratio()
+        value = mp.mpf(numerator) / denominator
+    value = mp.mpf(value)
+    if not mp.isfinite(value):
+        raise ValueError("values must be finite and real")
+    return value
+
+
+def _finite_mpc(value):
+    """Convert under the caller's precision, without a Python-complex cast."""
+    if isinstance(value, (tuple, list)) and len(value) == 2:
+        value = mp.mpc(_finite_mpf(value[0]), _finite_mpf(value[1]))
+    elif isinstance(value, (complex, np.complexfloating)):
+        value = mp.mpc(_finite_mpf(value.real), _finite_mpf(value.imag))
+    elif isinstance(value, (Rational, Decimal, np.floating)):
+        value = mp.mpc(_finite_mpf(value))
+    else:
+        value = mp.mpc(value)
+    if not mp.isfinite(value):
+        raise ValueError("coordinates must be finite")
+    return value
+
+
+def lobachevsky_mp(theta, dps: int = 120):
+    """Evaluate Lambda(theta) as an ``mpmath.mpf`` at the requested precision.
+
+    Decimal strings/Decimal, rational and NumPy real scalars, and existing mpf
+    inputs are converted inside the precision context without a float cast.
+    Python and NumPy floating inputs retain their represented binary values.
+    This is arbitrary-precision floating-point evaluation, not exact arithmetic
+    or a rigorous enclosure. Precision is restored even when evaluation fails.
+    """
+    # workdps restores the enclosing context, including on exceptions:
+    # https://mpmath.org/doc/current/basics.html#temporarily-changing-the-precision
+    # Lambda(theta) = Cl_2(2 theta) / 2:
+    # https://mpmath.org/doc/current/functions/zeta.html#clausen-functions
+    with mp.workdps(_precision_digits(dps)):
+        theta = _finite_mpf(theta)
+        return mp.clsin(2, 2 * theta) / 2
+
+
+def lob_exact(theta, dps: int = 120):
+    """Legacy alias for :func:`lobachevsky_mp`; the result is not exact.
+
+    Retains the historical mpf return type while avoiding binary64 input
+    conversion and persistent changes to mpmath's working precision.
+    """
+    return lobachevsky_mp(theta, dps=dps)
 
 
 # ============================================================================
@@ -188,7 +252,8 @@ def bloch_wigner(z):
     Parameters
     ----------
     z : complex or array-like of complex
-        Cross-ratio value(s).
+        Finite cross-ratio value(s). Nonfinite inputs are rejected; an infinity
+        limit is not inferred from a floating-point overflow.
 
     Returns
     -------
@@ -198,32 +263,107 @@ def bloch_wigner(z):
     Notes
     -----
     SciPy's vectorized complex ``spence`` implementation evaluates
-    ``Li₂(z) = spence(1-z)``.  The removable values at z=0 and z=1 are
-    handled explicitly instead of relying on products involving ``log(0)``.
+    ``Li₂(z) = spence(1-z)``. The identities ``D(z)=-D(1/z)=-D(1-z)`` reduce
+    arguments to ``abs(z)<=1`` and ``real(z)<=1/2`` before this evaluation,
+    avoiding cancellation near 1 and infinity. Real-axis values, including
+    the removable points 0 and 1, are zero. This remains floating-point
+    evaluation, with no rigorous error enclosure.
     """
     z_arr, is_scalar = _as_complex_array(z)
+    if not np.all(np.isfinite(z_arr)):
+        raise ValueError("Bloch-Wigner inputs must be finite")
     out = np.empty(z_arr.shape, dtype=np.float64)
-    removable = (z_arr == 0.0) | (z_arr == 1.0)
-    out[removable] = 0.0
+    real_axis = z_arr.imag == 0.0
+    out[real_axis] = 0.0
 
-    regular = ~removable
+    regular = ~real_axis
     if np.any(regular):
-        zr = z_arr[regular]
+        zr = z_arr[regular].copy()
+        sign = np.ones(zr.shape, dtype=np.float64)
+        scale = np.maximum(np.abs(zr.real), np.abs(zr.imag))
+        outside_unit = scale > 1.0
+        bounded = ~outside_unit
+        outside_unit[bounded] = np.hypot(zr[bounded].real, zr[bounded].imag) > 1.0
+        if np.any(outside_unit):
+            large = zr[outside_unit]
+            large_scale = scale[outside_unit]
+            real, imag = large.real / large_scale, large.imag / large_scale
+            norm_sq = real * real + imag * imag
+            # Do not form |z|**2, a + b*(b/a), or scale*norm_sq: each can
+            # overflow for finite inputs. Divide by the scale only at the end.
+            zr[outside_unit] = (real / norm_sq) / large_scale - 1j * (imag / norm_sq) / large_scale
+            sign[outside_unit] = -1.0
+        near_one = zr.real > 0.5
+        zr[near_one] = 1.0 - zr[near_one]
+        sign[near_one] *= -1.0
         li2 = spence(1.0 - zr)
-        out[regular] = li2.imag + np.angle(1.0 - zr) * np.log(np.abs(zr))
+        # This log-hypot form also avoids rounding a subnormal magnitude to 0
+        # (or losing its relative precision) before taking its logarithm.
+        largest = np.maximum(np.abs(zr.real), np.abs(zr.imag))
+        smallest = np.minimum(np.abs(zr.real), np.abs(zr.imag))
+        log_abs = np.log(largest) + 0.5 * np.log1p((smallest / largest) ** 2)
+        out[regular] = sign * (li2.imag + np.angle(1.0 - zr) * log_abs)
 
     return float(out) if is_scalar else out
 
 
-def bloch_wigner_mpmath(z: complex) -> float:
-    """
-    Compute Bloch-Wigner dilogarithm using mpmath.
+def _bloch_wigner_mp_value(z):
+    """Evaluate on the current mp context, including the real-axis limits."""
+    if not z.imag:
+        return mp.mpf(0)
+    sign = 1
+    # Reflect first near 1: forming 1 - 1/z there would introduce an avoidable
+    # cancellation after rounding the reciprocal at the working precision.
+    if z.real > mp.mpf("0.5"):
+        z, sign = 1 - z, -sign
+    if abs(z) > 1:
+        z, sign = 1 / z, -sign
+    if z.real < 0:
+        # D(z) = -D(z/(z-1)). For |z| <= 1 and Re(z) < 0 this maps
+        # into 0 <= Re(w) <= 1/2 and |w| <= 1/sqrt(2). In that region
+        # polylog's convergent series preserves a tiny imaginary component;
+        # its negative-real-side continuation can lose it to cancellation.
+        z, sign = z / (z - 1), -sign
+    return sign * (mp.im(mp.polylog(2, z)) + mp.arg(1 - z) * mp.log(abs(z)))
 
-    D(z) = Im(Li_2(z)) + arg(1-z) * log|z|
 
-    This is exact and should be used for validation/testing.
+def bloch_wigner_mp(z, dps: int = 120):
+    """Evaluate the Bloch--Wigner dilogarithm as an ``mpmath.mpf``.
+
+    Accept finite mpf/mpc values, Python/NumPy real or complex scalars, real
+    decimal strings/Decimal, rationals, or a ``(real, imaginary)`` pair of
+    supported real inputs. Conversion and arithmetic use ``dps`` digits. Values on the real
+    axis, including the removable points 0 and 1, are zero. This is numerical
+    arbitrary precision, not an exact value or a validated error enclosure.
     """
-    return float(mp.im(mp.polylog(2, z)) + mp.arg(1 - z) * mp.log(abs(z)))
+    with mp.workdps(_precision_digits(dps)):
+        return _bloch_wigner_mp_value(_finite_mpc(z))
+
+
+def bloch_wigner_mpmath(z: complex, dps: int | None = None) -> float:
+    """Binary64-output compatibility wrapper for :func:`bloch_wigner_mp`.
+
+    Omitting ``dps`` retains the caller's current mpmath precision, as in the
+    historical API. The final conversion to float limits output precision;
+    use ``bloch_wigner_mp`` when arbitrary-precision output is required.
+    """
+    return float(bloch_wigner_mp(z, dps=mp.mp.dps if dps is None else dps))
+
+
+def triangle_volume_from_points_mp(z1, z2, z3, dps: int = 120):
+    """Volume of ``[z1, z2, z3, infinity]`` with mp input and mpf output.
+
+    Coordinates use the same input forms as :func:`bloch_wigner_mp`. Distinct
+    collinear vertices have limiting volume zero; repeated or nonfinite
+    vertices are rejected. No binary64 angles, triangulation or projection
+    enter this local tetrahedron evaluation. Input accuracy and conditioning
+    still limit attainable accuracy; this function supplies no error bound.
+    """
+    with mp.workdps(_precision_digits(dps)):
+        z1, z2, z3 = (_finite_mpc(z) for z in (z1, z2, z3))
+        if z1 == z2 or z1 == z3 or z2 == z3:
+            raise ValueError("triangle vertices must be distinct at the working precision")
+        return abs(_bloch_wigner_mp_value((z1 - z3) / (z2 - z3)))
 
 
 def bloch_wigner_torch(z_real, z_imag):
@@ -248,6 +388,14 @@ def cross_ratio_torch(
 
 
 def triangle_volume_from_points(z1, z2, z3, mode="fast", series_terms=64, dps=120):
+    """Evaluate one tetrahedron and return a Python float.
+
+    The legacy default ``fast`` is a truncated Fourier approximation.
+    ``mpmath`` evaluates the cross-ratio kernel at ``dps`` digits before the
+    final binary64 conversion; ``exact`` and ``eval_only`` are compatibility
+    aliases, not exact-arithmetic claims. Use ``triangle_volume_from_points_mp``
+    for arbitrary-precision output without a binary64 conversion.
+    """
     if mode == "fast":
         a1, a2, a3 = _angles_for_triangle_np(z1, z2, z3)
         value = (
@@ -256,12 +404,9 @@ def triangle_volume_from_points(z1, z2, z3, mode="fast", series_terms=64, dps=12
             + _lob_value_series_np(a3, series_terms)
         )
         return float(value)
-    if mode in ("exact", "eval_only"):
-        a1, a2, a3 = _angles_for_triangle_np(z1, z2, z3)
-        return float(
-            lob_exact(a1, dps=dps) + lob_exact(a2, dps=dps) + lob_exact(a3, dps=dps)
-        )
-    raise ValueError("mode must be 'fast', 'exact', or the legacy alias 'eval_only'")
+    if mode in ("mpmath", "exact", "eval_only"):
+        return float(triangle_volume_from_points_mp(z1, z2, z3, dps=dps))
+    raise ValueError("mode must be 'fast', 'mpmath', or the legacy aliases 'exact'/'eval_only'")
 
 
 def triangle_volume_from_points_torch(z1t, z2t, z3t, series_terms=64):
@@ -279,7 +424,19 @@ def triangle_volume_bloch_wigner(z1t, z2t, z3t):
 def ideal_poly_volume_via_hull_project_back(
     W, index_inf=0, mode="fast", dps=120, series_terms=64
 ):
+    """Volume with binary64 hull/projection and a float result.
+
+    ``fast`` is the legacy truncated-series default. ``mpmath`` (legacy
+    aliases ``exact``/``eval_only``) evaluates and sums kernels at ``dps``
+    digits on the already rounded geometric decomposition.
+    """
     tris = hull_tris_projected_back(W, index_inf=index_inf)
+    if mode in ("mpmath", "exact", "eval_only"):
+        with mp.workdps(_precision_digits(dps)):
+            return float(mp.fsum(
+                triangle_volume_from_points_mp(z1, z2, z3, dps=dps)
+                for z1, z2, z3 in tris
+            ))
     total = 0.0
     for z1, z2, z3 in tris:
         total += triangle_volume_from_points(
@@ -335,13 +492,17 @@ def ideal_poly_volume_via_delaunay(
 
     Args:
         z_finite_complex: Array of finite vertices (complex numbers)
-        mode: "bloch_wigner"/"bw", "fast" (series), or "exact" (mpmath)
-        dps: Decimal precision for exact mode
+        mode: "bloch_wigner"/"bw", "fast" (legacy series default), or "mpmath".
+            "exact" and "eval_only" are legacy aliases for "mpmath".
+        dps: Decimal working precision for mpmath kernel evaluation and summation
         series_terms: Number of terms for fast mode
-        use_bloch_wigner: If True, use Bloch-Wigner dilogarithm (most accurate)
+        use_bloch_wigner: If True, use the binary64 Bloch-Wigner kernel
 
     Returns:
-        Total volume as float
+        Total volume as float. Input conversion and Qhull topology are always
+        binary64, including in mpmath mode; this is not exact geometry or a
+        validated volume enclosure. ``triangle_volume_from_points_mp`` is the
+        separate arbitrary-precision local tetrahedron entry.
     """
     z_finite_complex = np.asarray(z_finite_complex, dtype=np.complex128)
     if z_finite_complex.ndim != 1:
@@ -358,20 +519,16 @@ def ideal_poly_volume_via_delaunay(
         return _volume_from_triangles_fast_series(
             z_finite_complex, idx_tris, series_terms
         )
-    if mode in ("exact", "eval_only"):
-        total = 0.0
-        for i, j, k in idx_tris:
-            total += triangle_volume_from_points(
-                z_finite_complex[i],
-                z_finite_complex[j],
-                z_finite_complex[k],
-                mode=mode,
-                series_terms=series_terms,
-                dps=dps,
-            )
-        return total
+    if mode in ("mpmath", "exact", "eval_only"):
+        with mp.workdps(_precision_digits(dps)):
+            return float(mp.fsum(
+                triangle_volume_from_points_mp(
+                    z_finite_complex[i], z_finite_complex[j], z_finite_complex[k], dps=dps
+                )
+                for i, j, k in idx_tris
+            ))
     raise ValueError(
-        "mode must be 'bloch_wigner', 'fast', 'exact', or the legacy alias 'eval_only'"
+        "mode must be 'bloch_wigner', 'fast', 'mpmath', or the legacy aliases 'exact'/'eval_only'"
     )
 
 
@@ -390,13 +547,16 @@ def ideal_poly_volume_from_sphere(
     chosen pole for generic configurations.
 
     ``mode='bloch_wigner'`` is the accurate vectorized double-precision path.
-    ``mode='fast'`` uses the truncated Lobachevsky series, while ``'exact'``
-    (and its legacy alias ``'eval_only'``) uses mpmath.
+    ``mode='fast'`` uses the truncated Lobachevsky series. ``'mpmath'`` (legacy
+    aliases ``'exact'`` and ``'eval_only'``) evaluates and sums the kernel at
+    ``dps`` digits but still uses binary64 sphere projection, input geometry
+    and Qhull topology, and returns a float. It is not exact geometry or a
+    validated error enclosure.
     """
     projected, _ = stereographic_project_from_pole(points_sphere, pole_index)
     if mode in ("bloch_wigner", "bw"):
         return ideal_poly_volume_via_delaunay(projected, use_bloch_wigner=True)
-    if mode in ("fast", "exact", "eval_only"):
+    if mode in ("fast", "mpmath", "exact", "eval_only"):
         return ideal_poly_volume_via_delaunay(
             projected,
             mode=mode,
@@ -404,4 +564,4 @@ def ideal_poly_volume_from_sphere(
             series_terms=series_terms,
             use_bloch_wigner=False,
         )
-    raise ValueError("mode must be 'bloch_wigner', 'fast', 'exact', or 'eval_only'")
+    raise ValueError("mode must be 'bloch_wigner', 'fast', 'mpmath', 'exact', or 'eval_only'")

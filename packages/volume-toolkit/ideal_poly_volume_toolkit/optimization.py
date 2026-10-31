@@ -14,9 +14,12 @@ building Torch autograd graphs.
 
 from __future__ import annotations
 
+from copy import deepcopy
 from dataclasses import dataclass
 from datetime import datetime
 from functools import partial
+import json
+from numbers import Real
 from typing import Callable, Iterable, Mapping
 
 import numpy as np
@@ -90,16 +93,23 @@ def _serially_polish_differential_evolution_result(
     result,
     objective: Callable[[np.ndarray], float],
     bounds: list[tuple[float, float]],
-) -> None:
+    *,
+    n_vertices: int,
+) -> tuple[_EndpointCheck, int, str]:
     """Apply SciPy's differential-evolution polish semantics without a pool.
 
     Recent SciPy versions pass the differential-evolution worker map into
     L-BFGS-B polishing.  That is useful for expensive objectives, but the H^3
     objective is fine-grained enough that repeated process dispatch dominates
     the finite-difference evaluations.  Running the same minimizer directly
-    keeps polishing serial while preserving SciPy's result acceptance and
-    function-evaluation accounting rules.
+    keeps polishing serial. Both endpoints are checked afresh before accepting
+    an improvement. The returned verification count is separate from SciPy's
+    reported function-evaluation count. ``result.success`` retains the DE
+    convergence status even if a local polish improves the candidate.
     """
+    initial = _check_endpoint(result.x, n_vertices, bounds)
+    if initial.volume is None:
+        return initial, initial.verification_evals, "Not run: invalid DE endpoint"
     polished = minimize(
         objective,
         np.copy(result.x),
@@ -107,17 +117,22 @@ def _serially_polish_differential_evolution_result(
         bounds=bounds,
     )
     result.nfev += polished.nfev
-
-    limits = np.asarray(bounds, dtype=np.float64).T
+    candidate = _check_endpoint(polished.x, n_vertices, bounds)
+    evaluations = initial.verification_evals + candidate.verification_evals
     if (
-        polished.fun < result.fun
+        candidate.volume is not None
+        and candidate.volume > initial.volume
         and polished.success
-        and np.all(polished.x <= limits[1])
-        and np.all(limits[0] <= polished.x)
     ):
         result.fun = polished.fun
         result.x = polished.x
         result.jac = polished.jac
+        return candidate, evaluations, "Accepted: verified volume improved"
+    if candidate.volume is None:
+        return initial, evaluations, f"Rejected: {candidate.reason}; parameters={repr(polished.x)}"
+    if not polished.success:
+        return initial, evaluations, "Rejected: local solver did not converge"
+    return initial, evaluations, "Rejected: verified volume did not improve"
 
 
 def _canonical_edge(u: int, v: int) -> tuple[int, int]:
@@ -326,7 +341,12 @@ def analyze_ideal_polyhedron_structure(
 
 @dataclass(frozen=True)
 class OptimizationTrial:
-    """Serializable summary of one differential-evolution run."""
+    """One run; solver convergence and endpoint validation are independent.
+
+    ``function_evals`` is SciPy's reported work (including its polish).
+    ``verification_evals`` counts subsequent canonical volume evaluations.
+    Legacy manually constructed records have no fresh validation evidence.
+    """
 
     trial: int
     volume: float | None
@@ -335,6 +355,8 @@ class OptimizationTrial:
     message: str
     iterations: int
     function_evals: int
+    verification_evals: int = 0
+    validation: Mapping[str, object] | None = None
 
     def as_dict(self) -> dict:
         return {
@@ -346,7 +368,89 @@ class OptimizationTrial:
             "message": self.message,
             "iterations": self.iterations,
             "function_evals": self.function_evals,
+            "verification_evals": self.verification_evals,
+            "validation": dict(self.validation) if self.validation is not None else {
+                "status": "not_checked",
+                "reason": "No endpoint verification evidence was supplied",
+                "cached_objective": None,
+                "cached_objective_repr": None,
+                "objective_difference": None,
+                "invalid_params_repr": None,
+                "polish": None,
+            },
         }
+
+
+@dataclass(frozen=True)
+class _EndpointCheck:
+    params: np.ndarray
+    volume: float | None = None
+    finite_vertices: np.ndarray | None = None
+    triangulation: np.ndarray | None = None
+    structure: dict | None = None
+    verification_evals: int = 0
+    reason: str = ""
+    invalid_params_repr: str | None = None
+
+
+def _check_endpoint(raw_params, n_vertices: int, bounds) -> _EndpointCheck:
+    """Validate an endpoint before it can displace an earlier valid trial."""
+    empty = np.empty(0, dtype=np.float64)
+    try:
+        raw_array = np.asarray(raw_params)
+        if raw_array.dtype.kind not in "fiu":
+            raise ValueError("parameters must contain real numeric values, not strings, booleans or complex values")
+        params = raw_array.astype(np.float64, copy=True)
+    except (TypeError, ValueError, OverflowError) as exc:
+        return _EndpointCheck(
+            empty, reason=f"Invalid parameter data: {exc}",
+            invalid_params_repr=repr(raw_params),
+        )
+    if params.ndim != 1 or not np.all(np.isfinite(params)):
+        return _EndpointCheck(
+            empty, reason="Parameters must be a finite one-dimensional array",
+            invalid_params_repr=repr(raw_params),
+        )
+    if params.size != len(bounds):
+        return _EndpointCheck(params, reason=f"Expected {len(bounds)} parameters")
+    limits = np.asarray(bounds, dtype=np.float64)
+    if np.any(params < limits[:, 0]) or np.any(params > limits[:, 1]):
+        return _EndpointCheck(params, reason="Parameters lie outside the search bounds")
+
+    evaluations = 0
+    try:
+        vertices = parameters_to_complex(params, n_vertices)
+        evaluations += 1
+        volume = float(ideal_poly_volume_via_delaunay(vertices, mode="bloch_wigner"))
+        if not np.isfinite(volume) or volume <= 0:
+            return _EndpointCheck(
+                params, verification_evals=evaluations,
+                reason="Canonical endpoint volume must be finite and positive",
+            )
+        triangles = delaunay_triangulation_indices(vertices)
+        structure = analyze_ideal_polyhedron_structure(vertices, triangles)
+    except (QhullError, ValueError, FloatingPointError, OverflowError, ZeroDivisionError) as exc:
+        return _EndpointCheck(
+            params, verification_evals=evaluations,
+            reason=f"Endpoint geometry failed: {type(exc).__name__}: {exc}",
+        )
+    return _EndpointCheck(
+        params, volume, vertices, triangles, structure, evaluations,
+        "Canonical volume and complete boundary reconstruction passed",
+    )
+
+
+def _cached_objective_record(value) -> tuple[float | None, str | None]:
+    """Retain malformed/nonfinite cached scores as diagnostics, never JSON NaN."""
+    try:
+        if isinstance(value, (bool, np.bool_)) or not isinstance(value, Real):
+            raise ValueError("cached objective is not a real scalar")
+        number = float(value)
+        if np.isfinite(number):
+            return number, None if value == number else repr(value)
+    except (TypeError, ValueError, OverflowError):
+        pass
+    return None, repr(value)
 
 
 @dataclass(frozen=True)
@@ -373,7 +477,7 @@ def optimization_result_to_dict(
     timestamp: str | None = None,
     settings: Mapping[str, object] | None = None,
 ) -> dict:
-    """Serialize an optimization result using the shared CLI/GUI schema.
+    """Serialize an optimization result using shared CLI/GUI schema v2.
 
     ``source`` identifies the adapter that initiated the run. Additional run
     settings are nested under ``metadata.settings`` so callers cannot replace
@@ -400,14 +504,14 @@ def optimization_result_to_dict(
         "implicit_infinity_index": int(len(result.finite_vertices)),
         "settings": run_settings,
     }
-    # Schema v1 owns a nested settings namespace. Retain the settings exposed
-    # by the two legacy writers at metadata level so existing result readers
-    # can migrate without losing configuration data.
+    # Preserve the nested settings namespace and the legacy adapter aliases.
+    # Invalid diagnostic coordinates are quarantined before trial creation;
+    # the final strict-JSON check also rejects invalid manually built records.
     for legacy_key in ("n_trials", "maxiter", "popsize", "workers", "seed_base"):
         if legacy_key in run_settings:
             metadata[legacy_key] = run_settings[legacy_key]
-    return {
-        "schema_version": 1,
+    payload = {
+        "schema_version": 2,
         "source": source.strip(),
         "metadata": metadata,
         "best": {
@@ -431,9 +535,14 @@ def optimization_result_to_dict(
             "all_volumes": volumes,
             "n_valid_trials": len(volumes),
             "n_invalid_trials": len(result.trials) - len(volumes),
+            "verification_evals": sum(trial.verification_evals for trial in result.trials),
         },
         "all_trials": [trial.as_dict() for trial in result.trials],
     }
+    # Both adapters use this owner. Reject undefined values before either can
+    # emit permissive, nonstandard JSON through a default json.dump call.
+    json.dumps(payload, allow_nan=False)
+    return payload
 
 
 def optimize_ideal_polyhedron(
@@ -453,6 +562,12 @@ def optimize_ideal_polyhedron(
     available CPU; values greater than one use that many worker processes for
     differential evolution.  L-BFGS-B polishing remains serial because this
     fine-grained objective costs less than repeated process dispatch.
+
+    Every candidate is re-evaluated and its boundary validated before ranking.
+    A valid candidate from an unconverged run remains usable with
+    ``trial.success=False``. No global-optimum certificate is implied.
+    Each callback receives a detached snapshot, including its parameter array
+    and validation diagnostics; edits to it do not alter verified results.
     """
     if n_vertices < 4:
         raise ValueError("n_vertices must be at least 4")
@@ -472,6 +587,7 @@ def optimize_ideal_polyhedron(
     trials: list[OptimizationTrial] = []
     best_volume = -np.inf
     best_params: np.ndarray | None = None
+    best_endpoint: _EndpointCheck | None = None
     for trial_index in range(n_trials):
         serial_polish = workers != 1
         result = differential_evolution(
@@ -486,48 +602,59 @@ def optimize_ideal_polyhedron(
             updating="deferred" if workers != 1 else "immediate",
         )
         if serial_polish:
-            _serially_polish_differential_evolution_result(
+            endpoint, verification_evals, polish = _serially_polish_differential_evolution_result(
                 result,
                 objective,
                 bounds,
+                n_vertices=n_vertices,
             )
-        objective_value = float(result.fun)
-        trial_volume = (
-            -objective_value
-            if np.isfinite(objective_value) and objective_value < 0.0
-            else None
-        )
+        else:
+            endpoint = _check_endpoint(result.x, n_vertices, bounds)
+            verification_evals = endpoint.verification_evals
+            polish = None  # SciPy's built-in polish is inside the returned DE result.
+        objective_value, objective_repr = _cached_objective_record(result.fun)
+        objective_difference = None
+        if endpoint.volume is not None and objective_value is not None:
+            difference = abs(objective_value + endpoint.volume)
+            objective_difference = difference if np.isfinite(difference) else None
         trial = OptimizationTrial(
             trial=trial_index + 1,
-            volume=trial_volume,
-            params=np.asarray(result.x, dtype=np.float64).copy(),
+            volume=endpoint.volume,
+            params=endpoint.params,
             success=bool(result.success),
             message=str(result.message),
             iterations=int(result.nit),
             function_evals=int(result.nfev),
+            verification_evals=verification_evals,
+            validation={
+                "status": "verified" if endpoint.volume is not None else "rejected",
+                "reason": endpoint.reason,
+                "cached_objective": objective_value,
+                "cached_objective_repr": objective_repr,
+                "objective_difference": objective_difference,
+                "invalid_params_repr": endpoint.invalid_params_repr,
+                "polish": polish,
+            },
         )
         trials.append(trial)
         if trial_callback is not None:
-            trial_callback(trial)
+            trial_callback(deepcopy(trial))
         if trial.volume is not None and trial.volume > best_volume:
             best_volume = trial.volume
             best_params = trial.params.copy()
+            best_endpoint = endpoint
 
     if best_params is None or not np.isfinite(best_volume) or best_volume <= 0.0:
         raise RuntimeError("optimization did not produce a valid configuration")
 
-    finite_vertices = parameters_to_complex(best_params, n_vertices)
-    finite_triangulation = delaunay_triangulation_indices(finite_vertices)
-    structure = analyze_ideal_polyhedron_structure(
-        finite_vertices, finite_triangulation
-    )
+    assert best_endpoint is not None
     return PolyhedronOptimizationResult(
         n_vertices=n_vertices,
         best_volume=best_volume,
         best_params=best_params,
-        finite_vertices=finite_vertices,
-        finite_triangulation=finite_triangulation,
-        structure=structure,
+        finite_vertices=best_endpoint.finite_vertices,
+        finite_triangulation=best_endpoint.triangulation,
+        structure=best_endpoint.structure,
         trials=tuple(trials),
     )
 

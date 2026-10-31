@@ -1,6 +1,20 @@
 # Computational status of the monograph
 
-This ledger begins the review required by the [integration plan](../INTEGRATION_PLAN.md). It records the status of three computational passages in the unchanged [canonical source](polyhedral_volumes_and_geodesic_identities.tex). The source snapshot and supplied reference PDF retain their original bytes. A reproduced finite example does not audit a general proof, and missing computational evidence does not by itself disprove a mathematical statement.
+This ledger begins the review required by the [integration plan](../INTEGRATION_PLAN.md). It records the maintained numerical foundations and the status of three computational passages in the unchanged [canonical source](polyhedral_volumes_and_geodesic_identities.tex). The source snapshot and supplied reference PDF retain their original bytes. A reproduced finite example does not audit a general proof, and missing computational evidence does not by itself disprove a mathematical statement.
+
+## H³ numerical foundations
+
+The [numerical errata](numerical-errata.md) records the bounded software corrections and changed values. The [execution checkpoint](../docs/execution/numerical-correctness-2026-10-31/README.md) preserves author results, independent review findings and their separate resolution stages. Existing scientific tables and research outputs have not been comprehensively replayed or rewritten.
+
+| Evidence type | Maintained contract | Limit |
+| --- | --- | --- |
+| Binary64 volume | [Canonical Bloch–Wigner kernel](../packages/volume-toolkit/docs/numerical-precision.md), explicit method in final angle/optimizer reports; finite large arguments handled without magnitude overflow. | Floating-point values, not certified enclosures. Legacy `fast` defaults remain finite Fourier approximations. |
+| Multiprecision evaluation | mpf-returning kernels preserve supported inputs and scope working precision; legacy `exact`/`eval_only` names alias numerical mpmath evaluation. | High-level output and Qhull/projection geometry remain binary64; extra working digits cannot recover lost input information or validate topology. |
+| Angle feasibility and stationarity | [Common-margin LP and full numerical KKT audit](../packages/volume-toolkit/docs/rivin-numerics.md), with feasible steps and active-constraint release. | A verified finite angle-program witness or numerical stationary point is not a global embedding, exact infeasibility or interval-optimality certificate. Exact flat-angle optima are outside the differentiable solver. |
+| Optimizer endpoint | [Fresh canonical endpoint checks](../packages/volume-toolkit/docs/optimizer-result-contract.md), separate raw convergence and candidate-validity fields, strict schema-v2 JSON. | A valid unconverged candidate can be retained; no global maximum follows. Historical v1 files retain their original status. |
+| Exact finite identities | Section 9 integer/rational matrices and forest enumeration; the strict LP fixture's rational primal and dual witnesses establish common margin `1/7`. | Exact statements about the named fixtures only. They do not certify general numerical routines. |
+
+The free-corner-angle optimizer with dihedral inequalities and Section 9's prescribed-dihedral leading–trailing coordinates describe different feasible families. A KKT result for the former is not a proof of a coordinate-space assertion in the latter. The imported [historical companion](../research/ipoly/duffin_rivin_volume_laplacian_solvers.tex) remains unchanged; its identified mathematical contradictions need their own editorial/proof review.
 
 ## Section 9: a reproducible finite example
 
@@ -14,6 +28,8 @@ This ledger begins the review required by the [integration plan](../INTEGRATION_
 The [worked companion](../site/section9/index.html), [reproduction guide](../experiments/section9/README.md), [runnable archive](../site/section9/downloads/section9-reproduction.zip), and [result](../artifacts/section9/result.json) connect the text, implementation and evidence. The [initial mathematical review](../docs/execution/2026-10-31/section9-review.md) is preserved, with its three implementation findings addressed in the [independent re-review](../docs/execution/2026-10-31/section9-rereview.md). A separate [installed-package verification](../docs/execution/2026-10-31/package-verification.md) ran both the corrected wheel and extracted archive outside the source tree in a minimal NumPy/SciPy/mpmath environment. The result records the actual source and input hashes, methods, versions and numerical tolerances. Its source commit and dirty-state fields identify the run precisely.
 
 Zero-weight square diagonals make this example non-strict Delaunay. Deformed off-origin angles are abstract angle structures; geometric closure is not asserted. The example supplies neither a strict convex-polyhedron certificate nor an interval enclosure. The local HTML is an authored companion, not the complete converted chapter. Browser layout and interaction remain unverified under the current local-server and browser URL restrictions.
+
+The existing canonical result and reproduction archive were generated from clean source `c02b358de5a6f724faf3368a641ba64f5841d859` and committed as `74e2abc67e434e0d7eadf70d7becaa6de2f77785`, before the present kernel correction. They remain evidence for that recorded source state. New [installed-wheel and detached-archive preliminary replays](../docs/execution/numerical-correctness-2026-10-31/integration-section9-replays.json) pass all twelve numerical checks and exact fixture identities using the corrected kernel. Their provenance records a modified source checkout; they do not replace the final clean-source artifact. Regeneration after the reviewed source commit and replay of that final archive remain pending. Changed source hashes must not be presented as already covered by the older canonical artifact.
 
 ## Section 15: Airy table awaiting executable provenance
 

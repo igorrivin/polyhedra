@@ -11,7 +11,9 @@ This repository integrates the volume toolkit, the historical `ipoly` study, and
 - [Historical ipoly study](research/ipoly/README.md): original manuscript and verification scripts, retained unchanged.
 - [Section 9 companion](site/section9/index.html): the first worked text, computation and result example; [runnable reproduction archive](site/section9/downloads/section9-reproduction.zip) and [instructions](experiments/section9/README.md).
 - [Computational status](book/computational-status.md): checked examples, reported results awaiting evidence, and the next mathematical review tasks.
-- [Execution checkpoint](docs/execution/2026-10-31/README.md): baseline, independent reviews, recovery inventory and continuation steps.
+- [Numerical errata](book/numerical-errata.md): corrected software contracts, changed bounded examples, and the limits of those corrections.
+- [Numerical-correctness checkpoint](docs/execution/numerical-correctness-2026-10-31/README.md): precision, angle-solver and optimizer-result evidence, review stages and remaining checks.
+- [First integration checkpoint](docs/execution/2026-10-31/README.md): preserved baseline, initial independent reviews and recovery inventory.
 - [Integration plan](INTEGRATION_PLAN.md): correction priorities, computational coverage and publication phases.
 - [Provenance](provenance/README.md): source identities, restoration checks and path mapping.
 - [Audit](audit/2026-10-31/): the evidence used to plan this integration.
@@ -28,6 +30,8 @@ cd packages/volume-toolkit
 ```
 
 The commands above describe the installation procedure. [Baseline environment validation](docs/execution/2026-10-31/baseline.md) used an isolated copy of existing dependencies after PyPI DNS resolution failed; complete optional-dependency validation remains outstanding. The minimal numerical installation is `pip install -e packages/volume-toolkit`. See the package README for optional dependencies. The installed `ideal-poly-optimize` command retains its name.
+
+For numerical work, choose an explicit [volume precision mode](packages/volume-toolkit/docs/numerical-precision.md). Legacy `fast` defaults remain finite Fourier approximations; `exact` and `eval_only` are compatibility names for numerical mpmath evaluation. Current optimizer output uses [schema v2](packages/volume-toolkit/docs/optimizer-result-contract.md), separating freshly checked candidates from the solver's convergence flag. The [Rivin angle contract](packages/volume-toolkit/docs/rivin-numerics.md) records feasibility and KKT residuals for the finite angle program. None of these numerical statuses supplies an interval proof or a general embedding certificate.
 
 The original HF deployment and maintenance workflows remain as historical files inside the imported package. GitHub does not run workflows in that nested directory. Root workflows are deliberately configured for checks only; this repository does not currently publish a package, update HF, or deploy a Site automatically.
 

@@ -1,0 +1,146 @@
+{
+  "created_utc": "2026-10-31T23:39:58.287956+00:00",
+  "scope": "Real executable portability checks of adapted review drivers. Product source and all original review artifacts unchanged. Raw temporary results are not historical baseline artifacts.",
+  "interpreter": "/tmp/polyhedra-baseline-20261031/bin/python",
+  "working_directory": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "command_pattern": "python DRIVER --repo REPOSITORY --output NEW_OUTPUT",
+  "runs": [
+    {
+      "driver": "docs/execution/numerical-correctness-2026-10-31/replay/angle-before-after.py",
+      "driver_sha256": "f0f60392144c665af4f18ffa8b8ea3e74acf51b3b696942d38b4786901fe2db7",
+      "raw_result_local_path": "/tmp/polyhedra-docs-replay-20261031/angle-before-after.json",
+      "raw_result_sha256": "5fe6d2b8a8c9c5063a96a591105a74beefa3cb435ad4ea0a39685d81972a3653",
+      "exit_code": 0
+    },
+    {
+      "driver": "docs/execution/numerical-correctness-2026-10-31/replay/angle-independent.py",
+      "driver_sha256": "fac5a49494dae1819482d88c9f78e90f6bc7a4988be2274c70e1573f44cf0b8a",
+      "raw_result_local_path": "/tmp/polyhedra-docs-replay-20261031/angle-independent.json",
+      "raw_result_sha256": "eebe080802e5502719e807ad6e469c5b442bbe764d53036e672c5fbfb6c7b911",
+      "exit_code": 0
+    },
+    {
+      "driver": "docs/execution/numerical-correctness-2026-10-31/replay/precision-independent.py",
+      "driver_sha256": "68a34fa56063e9c5596f9045d35f39941554610e871cb2c7e1f8aa2dcfbc9cd8",
+      "raw_result_local_path": "/tmp/polyhedra-docs-replay-20261031/precision-independent-corrected.json",
+      "raw_result_sha256": "f6a1411011d60d1eedbc29d768b9594748bf99e3fb16050b796b3fc9f97d942e",
+      "exit_code": 0
+    }
+  ],
+  "observed_results": {
+    "angle_before_after": {
+      "cases": 5,
+      "strict_scan_cases": 90,
+      "strict_false_negatives_corrected": 36,
+      "strict_new_positive_witnesses": 90
+    },
+    "angle_independent": {
+      "comparison_cases": 7,
+      "exact_common_margin": {
+        "primal_margin": "1/7",
+        "dual_objective": "-1/7",
+        "dual_stationarity_exact": true,
+        "dual_signs_exact": true,
+        "all_primal_constraints_exact": true,
+        "equality_dual": [
+          "0",
+          "0",
+          "1/7",
+          "1/7",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "inequality_dual": [
+          "-1/7",
+          "0",
+          "0",
+          "-1/7",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/7",
+          "0",
+          "-1/7",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/7",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/7",
+          "0",
+          "0",
+          "-1/7"
+        ]
+      },
+      "endpoint_probes": 8,
+      "work_counter_probes": [
+        {
+          "name": "stationary",
+          "reported": 1,
+          "observed": 1
+        },
+        {
+          "name": "nonstationary",
+          "reported": 14,
+          "observed": 14
+        }
+      ],
+      "source_hashes": {
+        "rivin_delaunay.py": "65a388fc0682a32370c2ad886ef807852ae68df07f1a00d7f7b3a587f066f053",
+        "geometry.py": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+      }
+    },
+    "precision_independent": {
+      "case_count": 74,
+      "all_passed": true,
+      "failures": 0,
+      "source_sha256": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+    }
+  },
+  "adapter_review_corrections": [
+    {
+      "finding": "angle-independent final print referred to undefined strargs.output",
+      "correction": "Changed the added output expression to str(args.output); numerical calculations unchanged; real rerun passed."
+    },
+    {
+      "finding": "precision-independent CLI args name collided with the original main function local tuple",
+      "correction": "Renamed only the added CLI namespace to replay_options; numerical calculations unchanged; real rerun passed."
+    }
+  ],
+  "other_checks": {
+    "all_three_cli_help": "passed",
+    "all_three_ast_parse": "passed",
+    "manifest_destination_entries_verified": 103,
+    "markdown_local_links_checked": 138,
+    "authored_markdown_whitespace_files_checked": 10,
+    "authored_diff_check": "passed"
+  },
+  "limits": "No fresh dependency resolution, interval proof, all-platform test, full monograph audit or clean-source artifact regeneration is implied. Earlier --help/AST checks alone were insufficient; the real runs above are the portability evidence."
+}

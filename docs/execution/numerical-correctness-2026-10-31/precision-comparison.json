@@ -1,0 +1,126 @@
+{
+  "base_commit": "285a6cb71473ba1f238983e062662cf890cbba05",
+  "old_geometry_sha256": "244a28d55646dc7f8ce182d18473a308ea1194d4f6d45130599dae5fc76083ed",
+  "new_geometry_sha256": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73",
+  "new_module_path": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py",
+  "driver_sha256": "0b9e94ec5ac089286f8766b0010a6c7eaf4ececfe671a8c1075a3f027e0b1363",
+  "comparison_scope": "Same represented inputs; MP comparisons are numerical, not enclosures. Current source may be uncommitted.",
+  "cases": [
+    {
+      "case": "lobachevsky",
+      "input_kind": "decimal string",
+      "input": "0.123456789012345678901234567890123456789",
+      "old": "0.2962424544683455940454767941725516041339962581320748291586462156486081408705819810131233973167387007731381947214816",
+      "new": "0.296242454468345596191291582060515730660161178340036182397241463545790510829078957415386100517258674743381140025925",
+      "reference": "0.2962424544683455961912915820605157306601611783400361823972414635457905108290789574153861005172586747433811510927859",
+      "old_absolute_error": "2.1458147878879641265e-18",
+      "new_absolute_error": "1.1066860912126566092e-107",
+      "old_precision_after_from_23": 105,
+      "new_precision_after_from_23": 23
+    },
+    {
+      "case": "lobachevsky",
+      "input_kind": "decimal string below binary64 range",
+      "input": "1e-400",
+      "old": "0.0",
+      "new": "9.213408900170583282977793497522875064723650953171489351592104803775356502489712973787930187088429006492452424372174e-398",
+      "reference": "9.213408900170583282977793497522875064723650953171489351592104803775356502489712973787930187088429006492451121358939e-398",
+      "old_absolute_error": "9.213408900170583283e-398",
+      "new_absolute_error": "1.3030132350745038738e-503",
+      "old_precision_after_from_23": 105,
+      "new_precision_after_from_23": 23
+    },
+    {
+      "case": "lobachevsky",
+      "input_kind": "Fraction(1, 10**400)",
+      "input": "1/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "old": "0.0",
+      "new": "9.213408900170583282977793497522875064723650953171489351592104803775356502489712973787930187088429006492452424372174e-398",
+      "reference": "9.213408900170583282977793497522875064723650953171489351592104803775356502489712973787930187088429006492451121358939e-398",
+      "old_absolute_error": "9.213408900170583283e-398",
+      "new_absolute_error": "1.3030132350745038738e-503",
+      "old_precision_after_from_23": 105,
+      "new_precision_after_from_23": 23
+    },
+    {
+      "case": "binary64_bloch_wigner",
+      "input_real_hex": "0x0.0p+0",
+      "input_imag_hex": "0x0.0p+0",
+      "old": 0.0,
+      "old_is_finite": true,
+      "new": 0.0,
+      "reference_float": 0.0
+    },
+    {
+      "case": "binary64_bloch_wigner",
+      "input_real_hex": "0x1.0000000000000p+0",
+      "input_imag_hex": "0x0.0p+0",
+      "old": 0.0,
+      "old_is_finite": true,
+      "new": 0.0,
+      "reference_float": 0.0
+    },
+    {
+      "case": "binary64_bloch_wigner",
+      "input_real_hex": "0x1.7e43c8800759cp+996",
+      "input_imag_hex": "0x1.7e43c8800759cp+996",
+      "old": 0.0,
+      "old_is_finite": true,
+      "new": 3.460610507442469e-298,
+      "reference_float": 3.460610507442468e-298
+    },
+    {
+      "case": "binary64_bloch_wigner",
+      "input_real_hex": "0x1.1ccf385ebc8a0p+1023",
+      "input_imag_hex": "0x1.1ccf385ebc8a0p+1023",
+      "old": null,
+      "old_is_finite": false,
+      "new": 3.55271391116223e-306,
+      "reference_float": 3.55271391116223e-306
+    },
+    {
+      "case": "five_vertices_legacy_vs_mpmath",
+      "inputs_real_imag": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.2,
+          0.8
+        ],
+        [
+          -0.5,
+          0.4
+        ],
+        [
+          2.0,
+          -0.3
+        ]
+      ],
+      "old_float": 2.497622683293108,
+      "new_float": 2.4976226832931077,
+      "difference": -4.440892098500626e-16,
+      "scope": "Both use binary64 Qhull geometry; new evaluation uses MP cross-ratios and fsum before float conversion."
+    }
+  ],
+  "compatibility_removable_zero": {
+    "old": "nan",
+    "new": 0.0
+  },
+  "logarithmic_range_sample": {
+    "seed": 1031,
+    "count": 128,
+    "exponent_range": [
+      -308,
+      308
+    ],
+    "max_absolute_error": 1.3552527156068805e-20,
+    "max_relative_error": 3.7388158724542584e-16,
+    "acceptance": "8 output ulps + 4e-14 relative against 100-digit MP; no interval guarantee"
+  }
+}

@@ -17,8 +17,14 @@ Canonical module: `geometry`. Its established entries are
 `stereographic_project_from_pole` exposing the corresponding projection and
 index map.
 
-The ordinary double-precision path uses `geometry.bloch_wigner`, while the
-arbitrary-precision alternative uses `geometry.lob_exact`. Torch-only H³
+The binary64 kernel is `geometry.bloch_wigner`. The explicit multiprecision
+entries are `lobachevsky_mp`, `bloch_wigner_mp` and
+`triangle_volume_from_points_mp`, with scoped precision and mpf outputs.
+High-level `mpmath` modes retain float outputs and binary64 Qhull/projection;
+`exact` and `eval_only` remain numerical compatibility aliases. Existing
+`fast` defaults remain truncated Fourier approximations, so maintained final
+reporting selects its method explicitly. See the
+[precision contract](numerical-precision.md). Torch-only H³
 implementations live in `geometry_torch`; `geometry.lob_fast` and the other
 historical Torch entries are lazy compatibility forwarders, so importing the
 core H³ geometry or optimizer does not import Torch. `li2_torch` and
@@ -42,6 +48,13 @@ objective sign. The service's public functions are `spherical_to_complex`,
 records use `OptimizationTrial` and `PolyhedronOptimizationResult`, and both
 adapters serialize them through the versioned `optimization_result_to_dict`
 schema.
+
+The service freshly evaluates and validates each endpoint before ranking it;
+the solver's cached score is diagnostic. Raw solver convergence, candidate
+validation and verification-evaluation work remain separate. Callback trial
+snapshots are detached from internal history. Current producers use schema
+v2, while v1 remains unchanged for historical artifacts; see the
+[endpoint and result contract](optimizer-result-contract.md).
 
 ### 3. H^3 volume via convex hull, projected back
 
@@ -131,6 +144,15 @@ assignment geometrically compatible. `geometric_realization` retains a generic
 oriented triangle-development helper; success checks local angles, orientation
 and closure, not global embedding or convexity. See
 [the realization contract](GEOMETRIC_REALIZATION_README.md).
+
+The [angle numerical contract](rivin-numerics.md) specifies normalized LP
+common margins, feasible projected Newton steps, activation/release of
+inequality constraints and an independent final audit of all original
+constraints and KKT residuals. Final values use the canonical binary64
+Bloch–Wigner kernel. Exact flat angles lie outside this differentiable solver.
+This free-angle problem with dihedral inequalities differs from the prescribed
+dihedral, leading–trailing coordinates owned by `variational` for Section 9.
+Numerical acceptance is not an embedding or global-optimality certificate.
 
 Other entries are `cone_realization` (Volkov cone method for simplicial
 4-polytopes) and `inscribed_realization`.

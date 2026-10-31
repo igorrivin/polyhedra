@@ -14,3 +14,5 @@ tests/**/*.json filter=lfs diff=lfs merge=lfs -text
 results/manifest.json !filter !diff !merge text
 results/data/optimal_d4_symmetry_analysis.json !filter !diff !merge text
 results/data/optimal_d5_d6_symmetry_analysis.json !filter !diff !merge text
+# Small historical schema fixture, copied byte-for-byte from the baseline run.
+tests/fixtures/optimization-result-v1.json !filter !diff !merge text

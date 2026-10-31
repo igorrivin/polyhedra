@@ -1,0 +1,35 @@
+======================================================================
+Ideal Polyhedron Volume Optimization
+======================================================================
+Vertices:       4
+Free vertices:  1 (parameterized)
+Parameters:     2 (spherical coordinates)
+Trials:         1
+Max iterations: 30
+Population mult:8 (nominal size 16)
+Workers:        1
+Output:         /Volumes/Lexar/lambda/devel/polyhedra/execution/numerical-correctness-2026-10-31/integration-installed-cli-v2.json
+======================================================================
+
+Trial 1/1:
+  Volume: 1.01494161
+  Solver converged: True
+  Candidate validation: verified
+  Validation detail: Canonical volume and complete boundary reconstruction passed
+  Iterations: 10
+  → NEW BEST!
+
+======================================================================
+BEST RESULT:
+======================================================================
+Volume: 1.0149416064
+
+Combinatorial structure:
+  Vertices:    4
+  Edges:       6
+  Faces:       4
+  Euler char:  2 (should be 2 for sphere)
+  Vertex degrees: [3, 3, 3, 3]
+
+Results saved to: /Volumes/Lexar/lambda/devel/polyhedra/execution/numerical-correctness-2026-10-31/integration-installed-cli-v2.json
+======================================================================
