@@ -1,0 +1,64 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\small,>=Latex,line cap=round]
+\begin{scope}[shift={(-4.5,1.6)}]
+\draw[mpgray!65] (0,0) circle (1.1);
+\node[font=\bfseries\small] at (0,1.55) {Crossing};
+\draw[mpblue,line width=1.15pt] (0:1.1)--(180:1.1) (60:1.1)--(240:1.1);
+\draw[mpochre] (.37,0) arc (0:60:.37);
+\node[text=mpochre,font=\scriptsize] at (30:.58) {$\theta$};
+\node[text=mpgray] at (0,-1.5) {total length $4r$};
+\fill[mpblue] (0:1.1) circle (1.6pt);
+\fill[mpblue] (60:1.1) circle (1.6pt);
+\fill[mpblue] (180:1.1) circle (1.6pt);
+\fill[mpblue] (240:1.1) circle (1.6pt);
+\end{scope}
+\begin{scope}[shift={(0,1.6)}]
+\draw[mpgray!65] (0,0) circle (1.1);
+\node[font=\bfseries\small] at (0,1.55) {First reconnection};
+\draw[mpteal,line width=1.15pt] (1.10000000,0.00000000) arc[start angle=-132.84678884,delta angle=-34.30642232,radius=1.86486286];
+\draw[mpteal,line width=1.15pt] (-1.10000000,0.00000000) arc[start angle=47.15321116,delta angle=-34.30642232,radius=1.86486286];
+\node[text=mpteal] at (0,-1.5) {$L_0<4r$};
+\fill[mpblue] (0:1.1) circle (1.6pt);
+\fill[mpblue] (60:1.1) circle (1.6pt);
+\fill[mpblue] (180:1.1) circle (1.6pt);
+\fill[mpblue] (240:1.1) circle (1.6pt);
+\end{scope}
+\begin{scope}[shift={(4.5,1.6)}]
+\draw[mpgray!65] (0,0) circle (1.1);
+\node[font=\bfseries\small] at (0,1.55) {Second reconnection};
+\draw[mpteal,line width=1.15pt] (1.10000000,0.00000000) arc[start angle=107.18035662,delta angle=25.63928676,radius=4.29338334];
+\draw[mpteal,line width=1.15pt] (0.55000000,0.95262794) arc[start angle=-47.18035662,delta angle=-25.63928676,radius=4.29338334];
+\node[text=mpteal] at (0,-1.5) {$L_\infty<4r$};
+\fill[mpblue] (0:1.1) circle (1.6pt);
+\fill[mpblue] (60:1.1) circle (1.6pt);
+\fill[mpblue] (180:1.1) circle (1.6pt);
+\fill[mpblue] (240:1.1) circle (1.6pt);
+\end{scope}
+  \draw[->,mpgray!80] (-5.75,-2.55)--(5.75,-2.55) node[right] {$\ell$};
+  \node[text=mpgray] at (0,-.65) {Coefficient extraction: the first atom of $\sigma_\alpha^X$};
+  \draw[mpblue,line width=1.4pt] (-3.55,-2.55)--(-3.55,-1.35);
+  \fill[mpblue] (-3.55,-1.35) circle (2pt);
+  \node[above=3pt,text=mpblue,font=\scriptsize] at (-3.55,-1.35)
+    {$\ell_\alpha/\sinh(\ell_\alpha/2)$};
+  \node[below=4pt] at (-3.55,-2.55) {$\ell_\alpha$};
+  \foreach \x/\y in {-1.0/-.6,.55/.45,2.0/-.9,3.85/.55} {
+    \draw[mpgray,line width=.8pt] (\x,-2.55)--(\x,{-2.55-\y});
+    \fill[mpgray] (\x,{-2.55-\y}) circle (1.4pt);
+  }
+  \draw[<->,mpgray!65] (-3.4,-2.0)--node[above,font=\scriptsize,fill=white,inner sep=1pt]
+    {a gap for fixed $X$}(-1.15,-2.0);
+  \node[align=center,font=\scriptsize,text=mpgray] at (2.1,-3.45)
+    {Later atoms can have either sign; their positions and heights here are schematic.};
+\end{tikzpicture}
+\caption{Reconnection and coefficient extraction are different operations.
+The upper pictures show the two noncrossing pairings in a hyperbolic
+metric disk; both shorten the original pair of diameters. Reconnection
+changes connectivity and is not a negative direction of the length
+Hessian within the original loop space. For a simple primitive support
+$\alpha$, the lower schematic records the exact first atom of
+$\sigma_\alpha^X$ at $\ell_\alpha$, with the stated mass; all remaining
+atoms lie strictly above that length. Their depicted positions and
+weights are illustrative, not numerical data.}
+\label{fig:mono-reconnection-atoms}
+\end{figure}

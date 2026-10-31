@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-31",
+  "scope": "source preservation, unsquashed history import, monograph snapshot and monorepo path compatibility",
+  "baseline_import_checks": {
+    "original_heads_reachable": true,
+    "source_subtree_identity": true,
+    "tracked_source_hashes_verified": 953,
+    "restored_git_bundles": 2,
+    "backup_lfs_objects_sha256_verified": 396,
+    "monograph_member_mappings_verified": 39,
+    "deduplicated_companion_files": 25
+  },
+  "integration_path_tests": {
+    "interpreter": "/private/tmp/polyhedra-baseline-20261031/bin/python",
+    "python_version": "3.12.11",
+    "pytest_command": "python -m pytest tests/test_data_integrity.py -q -p no:cacheprovider",
+    "working_directory": "packages/volume-toolkit",
+    "pytest_passed": 11,
+    "integrity_command": "python scripts/check_data_integrity.py --require-materialized",
+    "lfs_paths_verified": 412,
+    "lfs_json_payloads_parsed": 354,
+    "canonical_hashes_verified": 2,
+    "manifest_artifacts_verified": 2,
+    "all_lfs_paths_materialized": true
+  },
+  "limitations": [
+    "Full package suite and numerical corrections are separate workstreams.",
+    "Remote visibility, remote CI and public deployment were not checked or changed.",
+    "Imported historical whitespace was preserved; authored edits checked separately."
+  ],
+  "original_worktrees_clean": true
+}

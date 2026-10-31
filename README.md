@@ -15,16 +15,16 @@ This repository integrates the volume toolkit, the historical `ipoly` study, and
 
 ## Development
 
-Use Python 3.10 through 3.14, matching the toolkit's declared support. From the repository root:
+Use Python 3.10 through 3.14, matching the toolkit's declared support. The system `python3` is currently 3.15 and is unsuitable. With an installed supported interpreter (3.12 shown), from the repository root:
 
 ```sh
-python3 -m venv .venv
+python3.12 -m venv .venv
 .venv/bin/python -m pip install -e 'packages/volume-toolkit[dev]'
 cd packages/volume-toolkit
 ../../.venv/bin/python -m pytest -q
 ```
 
-The minimal numerical installation is `pip install -e packages/volume-toolkit`. See the package README for optional dependencies. The installed `ideal-poly-optimize` command retains its name.
+The commands above describe the installation procedure, not a claim that a full development install has passed in this checkout. Baseline environment validation is recorded separately. The minimal numerical installation is `pip install -e packages/volume-toolkit`. See the package README for optional dependencies. The installed `ideal-poly-optimize` command retains its name.
 
 The original HF deployment and maintenance workflows remain as historical files inside the imported package. GitHub does not run workflows in that nested directory. Root workflows are deliberately configured for checks only; this repository does not currently publish a package, update HF, or deploy a Site automatically.
 

@@ -1,0 +1,63 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\small,>=Latex,line cap=round,line join=round]
+  \node[font=\bfseries\small] at (-3.5,3.75) {Genus-two surface $X$};
+  \begin{scope}[shift={(-3.5,2.15)}]
+    \filldraw[fill=mpblue!7,draw=mpblue,line width=.9pt]
+      (-2.2,0) .. controls (-2.2,1) and (-1.4,1.25) .. (-.75,.85)
+      .. controls (-.3,.55) and (.3,.55) .. (.75,.85)
+      .. controls (1.4,1.25) and (2.2,1) .. (2.2,0)
+      .. controls (2.2,-1) and (1.4,-1.2) .. (.75,-.8)
+      .. controls (.3,-.5) and (-.3,-.5) .. (-.75,-.8)
+      .. controls (-1.4,-1.2) and (-2.2,-1) .. (-2.2,0);
+    \filldraw[fill=white,draw=mpblue] (-1.2,.05) ellipse (.58 and .23);
+    \filldraw[fill=white,draw=mpblue] (1.2,.05) ellipse (.58 and .23);
+    \draw[mpblue!55] (-1.78,.05) .. controls (-1.5,-.6) and (-.9,-.6) .. (-.62,.05);
+    \draw[mpblue!55] (.62,.05) .. controls (.9,-.6) and (1.5,-.6) .. (1.78,.05);
+  \end{scope}
+  \node[align=center,font=\scriptsize,text width=6cm] at (-3.5,.65)
+    {$y^2=B_4(z)(z-b_1)(z-b_2)$\\$q_X=\pi^*q_0\in\mathcal Q_2^{\mathrm{ns}}(2,2)$};
+  \node[font=\bfseries\small] at (3.5,3.75) {Marked flat torus $E$};
+  \begin{scope}[shift={(1.75,1.05)},x={(3cm,0cm)},y={(.6cm,2.15cm)}]
+    \filldraw[fill=mpteal!5,draw=mpteal,line width=.8pt] (0,0)--(1,0)--(1,1)--(0,1)--cycle;
+    \draw[mpteal!25] (.5,0)--(.5,1) (0,.5)--(1,.5);
+    \draw[->,mpteal] (.35,0)--(.65,0);\draw[->,mpteal] (.35,1)--(.65,1);
+    \draw[->,mpteal] (0,.35)--(0,.65);\draw[->,mpteal] (1,.35)--(1,.65);
+    \foreach \p in {(0,0),(.5,0),(0,.5),(.5,.5)}\fill[mpblue] \p circle (1.8pt);
+    \fill[mpochre] (.2,.3) circle (2pt) node[left=2pt,font=\scriptsize] {$p$};
+    \fill[mpochre] (.8,.7) circle (2pt) node[right=2pt,font=\scriptsize] {$-p$};
+    \fill[mpred] (.25,.75) circle (2pt) node[left=2pt,font=\scriptsize] {$q$};
+    \fill[mpred] (.75,.25) circle (2pt) node[right=2pt,font=\scriptsize] {$-q$};
+  \end{scope}
+  \node[align=center,font=\scriptsize,text width=5.5cm] at (3.5,.65)
+    {$w^2=B_4(z),\qquad \omega=\sqrt c\,dz/w$\\$\rho^*q_0=\omega^2$};
+  \draw[->,mpgray,line width=.8pt] (-2.9,.15)--(-1.05,-1.0)
+    node[midway,above left,font=\scriptsize,align=center] {degree two\\six branch values};
+  \draw[->,mpgray,line width=.8pt] (2.9,.15)--(1.05,-1.0)
+    node[midway,above right,font=\scriptsize,align=center] {degree two\\four branch values};
+  \begin{scope}[shift={(0,-2.25)}]
+    \filldraw[fill=mpblue!3,draw=mpgray!70] (0,0) circle (1.35);
+    \draw[mpgray!25,dashed] (-1.35,0) arc (180:360:1.35 and .32);
+    \draw[mpgray!35] (-1.35,0) arc (180:0:1.35 and .32);
+    \fill[mpblue] (-.92,.51) circle (2pt) node[left=2pt,font=\scriptsize] {$a_1$};
+    \fill[mpblue] (-.63,-.72) circle (2pt) node[below left=1pt,font=\scriptsize] {$a_2$};
+    \fill[mpblue] (.68,-.7) circle (2pt) node[below right=1pt,font=\scriptsize] {$a_3$};
+    \fill[mpblue] (.93,.47) circle (2pt) node[right=1pt,font=\scriptsize] {$a_4$};
+    \fill[mpochre] (-.23,.43) circle (2.3pt) node[above=2pt,font=\scriptsize] {$b_1$};
+    \fill[mpred] (.25,-.3) circle (2.3pt) node[right=2pt,font=\scriptsize] {$b_2$};
+  \end{scope}
+  \node[align=center] at (0,-4.3)
+    {$q_0=\displaystyle\frac{c\,dz^2}{B_4(z)}$ on $\mathbb P^1$\\[4pt]
+     \textcolor{mpblue}{four simple poles $a_i$},
+     \textcolor{mpochre}{two regular marks $b_1,b_2$}};
+\end{tikzpicture}
+\caption{The two double covers used on the nonsquare genus-two stratum
+$\mathcal Q_2^{\mathrm{ns}}(2,2)$. The cover $X\to\mathbb P^1$ branches
+at all six marked values; the orientation cover $E\to\mathbb P^1$
+branches only at the four poles. The two regular marks lift to the pairs
+$\{p,-p\}$ and $\{q,-q\}$. Blue points in the torus diagram represent
+the four classes in $E[2]$, with boundary identifications understood.
+This is a diagram of flat differentials, distinct from the hyperbolic
+six-cone-point quotient metric.}
+\label{fig:mono-double-covers}
+\end{figure}

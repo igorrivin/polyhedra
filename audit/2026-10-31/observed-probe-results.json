@@ -1,0 +1,58 @@
+{
+  "scope": "bounded source-module probes, independently rerun by parent agent; not pytest or package validation",
+  "interpreter": "/Volumes/Lexar/lambda/devel/billiards/.venv/bin/python",
+  "canonical_reconstruction": {
+    "lp_realizable": true,
+    "optimization_success": true,
+    "realization_success": true,
+    "angle_error_degrees": 2.5803332996847785e-14,
+    "closure_error": 2.3557928023801794e-15,
+    "triangulation_preserved": true
+  },
+  "abstract_tetrahedron_certificate": {
+    "psl2z_index": 12,
+    "all_determinants_one": true,
+    "all_traces_integral": true
+  },
+  "underflow_bug": {
+    "input_shear": "Fraction(1, 10**400) on every edge",
+    "all_inputs_nonzero": true,
+    "observed_has_exact_zero_shears": true,
+    "observed_status": "certified_declared_exact_zero_shear"
+  },
+  "orientation_bug": {
+    "original_faces": [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        3,
+        2
+      ]
+    ],
+    "rotated_faces": [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        3,
+        2,
+        0
+      ]
+    ],
+    "original_signed_double_areas": [
+      0.8,
+      1.4399999999999997
+    ],
+    "rotated_signed_double_areas": [
+      0.8,
+      -1.44
+    ],
+    "both_report_success": true
+  }
+}

@@ -1,0 +1,45 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  font=\small,>=Latex,line cap=round,
+  box/.style={draw=mpblue!60,fill=mpblue!4,rounded corners=2pt,
+    minimum height=9mm,inner sep=5pt,align=center,text width=3.5cm},
+  link/.style={->,draw=mpgray,line width=.75pt},
+  lab/.style={font=\scriptsize,fill=white,inner sep=2pt,align=center}]
+  \node[box,text width=4.7cm] (poly) at (0,4.4)
+    {Polyhedral volume and angle structures\\\textit{Euclidean and hyperbolic}};
+  \node[box] (wp) at (-4.5,1.7)
+    {Weil--Petersson geometry\\and Euclidean periods};
+  \node[box] (fem) at (4.5,1.7)
+    {Cotangent Hessians\\and finite elements};
+  \node[box,text width=3.4cm] (surgery) at (0,-.25)
+    {Peripheral holonomy\\and Dehn filling};
+  \node[box] (quantum) at (-4.5,-2.25)
+    {Quantum geometry\\and fusion amplitudes};
+  \node[box] (complexity) at (4.5,-.25)
+    {Resistor networks\\and sparse computation};
+  \node[box] (trace) at (4.5,-2.25)
+    {Twisted trace formulas\\and curve coefficients};
+  \node[box,text width=4.7cm] (count) at (0,-5.1)
+    {Mapping-class orbits\\counting errors and mixing};
+  \draw[link] (poly.west) -| (wp.north);
+  \node[lab] at (-4.5,3.35) {realization and\\degeneration};
+  \draw[link] (poly.east) -| (fem.north);
+  \node[lab] at (4.5,3.35) {second variation};
+  \draw[link] (poly.south)--(surgery.north);
+  \node[lab,text width=2.0cm,anchor=west] at (.12,2.55) {gluing and\\constrained\\variation};
+  \draw[link] (wp.south)--node[lab,left]{area potentials\\and fusion}(quantum.north);
+  \draw[link] (fem.south)--node[lab,right]{linear solves}(complexity.north);
+  \draw[link] (surgery.south west)--node[lab,sloped,above]{critical values}(quantum.north east);
+  \draw[draw=mpgray,dashed,line width=.75pt] (quantum.east)--node[lab,above]{shared semiclassical methods}(trace.west);
+  \draw[link] (trace.south) |- (count.east);
+  \node[lab,text width=3cm,anchor=east] at (4.35,-3.95) {coefficient extraction\\and weighted counting};
+\end{tikzpicture}
+\caption{A guide to the constructions developed in the monograph. Solid
+arrows name operations whose domains and hypotheses are stated in the text;
+they do not assert equivalences of entire theories. The dashed link records
+the use of semiclassical analysis in two different settings: quantum
+three-manifold constructions and surface trace formulas. The counting-to-mixing
+implications retain their endpoint-weight and nonescape hypotheses.}
+\label{fig:mono-connections}
+\end{figure}

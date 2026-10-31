@@ -88,10 +88,20 @@ def is_lfs_pointer(data: bytes) -> bool:
 
 
 def list_lfs_paths(root: Path) -> list[str]:
-    """Return all paths represented by LFS pointers in the current index."""
+    """Return indexed LFS paths within ``root``, relative to that directory.
+
+    Git LFS lists paths relative to the repository top level even when invoked
+    from a package subdirectory. Keep the integrity checks scoped to this
+    package when it is imported into a monorepo.
+    """
 
     output = _run_git(root, "lfs", "ls-files", "--name-only")
-    paths = [line for line in output.splitlines() if line]
+    prefix = _run_git(root, "rev-parse", "--show-prefix").strip()
+    paths = [
+        line[len(prefix):]
+        for line in output.splitlines()
+        if line and line.startswith(prefix)
+    ]
     if not paths:
         raise IntegrityError("no Git LFS paths found")
     return paths

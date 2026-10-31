@@ -38,7 +38,10 @@ def _copy_result_manifest_fixture(tmp_path):
 def test_existing_lfs_paths_remain_attribute_filtered():
     paths = list_lfs_paths(REPO_ROOT)
 
-    assert len(paths) == 407
+    # Additional artifacts may be imported without weakening path coverage.
+    assert len(paths) >= 407
+    assert len(paths) == len(set(paths))
+    assert all((REPO_ROOT / path).is_file() for path in paths)
     check_lfs_attributes(REPO_ROOT, paths)
 
 

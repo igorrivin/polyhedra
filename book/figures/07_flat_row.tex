@@ -1,0 +1,49 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\small,>=Latex,line cap=round]
+  \begin{scope}[shift={(-3.7,.3)}]
+    \node[font=\bfseries\small] at (0,2.25) {Local inverse width};
+    \draw[mpgray!60,dashed] (-2.05,1.5)--(2.05,1.5);
+    \draw[mpblue,line width=1.1pt,domain=-1.85:1.85,samples=100]
+      plot (\x,{1.5-.18*\x*\x*\x*\x});
+    \draw[mpteal,line width=.8pt] (-2.05,.8)--(2.05,.8);
+    \fill[mpblue] (0,1.5) circle (2pt) node[above=3pt] {$p=(\alpha,h)$};
+    \fill[mpteal] (-1.404,.8) circle (1.8pt);
+    \fill[mpteal] (1.404,.8) circle (1.8pt);
+    \draw[mpgray!55,dashed] (-1.404,.8)--(-1.404,.35) (1.404,.8)--(1.404,.35);
+    \draw[<->,mpteal] (-1.404,.35)--node[below=2pt] {$W(u)$}(1.404,.35);
+    \draw[<->,mpgray] (1.95,.8)--node[right] {$u$}(1.95,1.5);
+    \node[left=2pt,text=mpteal] at (-2.05,.8) {$h-u$};
+    \node[text=mpblue,align=center,font=\scriptsize] at (0,-.65)
+      {$y=h-f(x-\alpha)$\\profile shown schematically};
+  \end{scope}
+  \begin{scope}[shift={(3.2,1.15)}]
+    \node[font=\bfseries\small] at (0,1.4) {A prime lattice row};
+    \fill[mpteal!9] (-1.65,-.13) rectangle (1.85,.13);
+    \draw[->,mpgray] (-2.65,0)--(2.65,0) node[right] {$y=n$};
+    \foreach \x in {-2.5,-2,-1.5,-1,-.5,.5,1,1.5,2,2.5}
+      \fill[mpgray!60] (\x,0) circle (1.8pt);
+    \foreach \x in {-1.5,-1,-.5,.5,1,1.5}
+      \fill[mpteal] (\x,0) circle (2.3pt);
+    \filldraw[fill=white,draw=mpred,line width=1pt] (0,0) circle (2.8pt);
+    \draw[mpgray] (-1.65,-.2)--(-1.65,.2) (1.85,-.2)--(1.85,.2);
+    \node[above=4pt] at (-1.65,0) {$a_T$};\node[above=4pt] at (1.85,0) {$b_T$};
+    \draw[<->,mpteal] (-1.65,-.43)--node[below=2pt] {$w_n(\delta)$}(1.85,-.43);
+    \node[align=center,text=mpred,font=\scriptsize] at (0,-1.25)
+      {At most one excluded point\\when $w_n(\delta)<n$: $k\equiv0\pmod n$};
+    \node[font=\scriptsize,text=mpgray] at (0,.8) {Teal points are primitive; $n$ is prime};
+  \end{scope}
+  \node[align=center] at (0,-1.75)
+    {$L=n/h,\qquad T=L+\delta,\qquad
+      u=\displaystyle\frac{h\delta}{T},\qquad
+      w_n(\delta)=T\,W(u)$.};
+\end{tikzpicture}
+\caption{How a supporting cap becomes a primitive-row contribution.
+At the contact scale $L=n/h$, the hypothesis $\alpha/h\notin\mathbb Q$
+leaves the row empty. Increasing the scale to $T=L+\delta$ cuts an interval
+of width $TW(h\delta/T)$ from that row. When $n$ is prime and the width
+is smaller than $n$, all but at most one of its integer points are
+primitive. The local profile and row spacing are schematic; the
+displayed width relation is exact.}
+\label{fig:mono-flat-row}
+\end{figure}

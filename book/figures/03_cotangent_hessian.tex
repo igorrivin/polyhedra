@@ -1,0 +1,45 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\small,line cap=round,>=Latex]
+  \begin{scope}[shift={(-5.3,0)}]
+    \coordinate (fi) at (0,0); \coordinate (fj) at (4,0);
+    \coordinate (fk) at (1.5,2.6); \coordinate (fl) at (2.4,-2.4);
+    \coordinate (fc1) at (2,.5788461538); \coordinate (fc2) at (2,-.4);
+    \draw[mpblue!15] (fc1) circle (2.082081);\draw[mpblue!15] (fc2) circle (2.039608);
+    \fill[mpblue!5] (fi)--(fj)--(fk)--cycle;
+    \fill[mpteal!5] (fi)--(fl)--(fj)--cycle;
+    \draw[mpgray!85] (fi)--(fk)--(fj) (fi)--(fl)--(fj);
+    \draw[mpblue,line width=1.3pt] (fi)--(fj);
+    \draw[mpochre,line width=1.7pt] (fc1)--(fc2);
+    \draw[mpgray!60] (2.12,0)--(2.12,.12)--(2,.12);
+    \pic[draw=mpgray,"$\alpha_e$",angle radius=7mm,angle eccentricity=1.5]
+      {angle=fi--fk--fj};
+    \pic[draw=mpgray,"$\beta_e$",angle radius=7mm,angle eccentricity=1.5]
+      {angle=fj--fl--fi};
+    \foreach \p in {fi,fj,fk,fl}\fill[mpblue] (\p) circle (1.7pt);
+    \fill[mpochre] (fc1) circle (1.7pt) node[right=3pt] {$c_+$};
+    \fill[mpochre] (fc2) circle (1.7pt) node[right=3pt] {$c_-$};
+    \node[left] at (fi) {$i$};\node[right] at (fj) {$j$};
+    \node[above] at (fk) {$k$};\node[below] at (fl) {$l$};
+    \node[below,text=mpblue] at (1,0) {$e$};
+    \node[left,text=mpochre] at (2,.32) {$e^*$};
+  \end{scope}
+  \node[align=left,text width=6.3cm,anchor=west] at (.35,.55) {%
+    \textbf{One local weight, several roles}\\[7pt]
+    $\displaystyle w_e=\frac12(\cot\alpha_e+\cot\beta_e)$\\[6pt]
+    $\displaystyle\hphantom{w_e}=\frac{|e^*|_\pm}{|e|}$\\[9pt]
+    $\displaystyle\int |\nabla u|^2=\sum_{e=ij}w_e(u_i-u_j)^2$\\[9pt]
+    $\displaystyle -D_u^2\mathcal V=2L_{II}$\\[8pt]
+    \textcolor{mpgray}{The last identity uses the specified angle
+    coordinates and fixed boundary values.}};
+\end{tikzpicture}
+\caption{The cotangent weight for two adjacent Euclidean triangles.
+The dual segment joins their circumcenters and has signed length
+$|e^*|_\pm$; in the locally Delaunay configuration shown, its sign is
+positive. The finite-element stiffness matrix is the same cotangent
+matrix that appears as minus one half of the volume Hessian in the
+coordinates $\alpha_c(u)=\alpha_c^0+u_i-u_j$, with fixed edge-angle
+sums and $u=0$ on the boundary. This identity is specific to that
+coordinate and constraint system.}
+\label{fig:mono-cotangent-hessian}
+\end{figure}

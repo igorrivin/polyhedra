@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-31",
+  "imports": [
+    {
+      "source_directory": "ideal_poly_volume_toolkit",
+      "source_head": "cc6b689652ce735f2098bb0a3235089210d764df",
+      "source_tree": "77de37c814ca7c562f0f2dd05bb3f7c138fe8d5c",
+      "destination_prefix": "packages/volume-toolkit",
+      "import_commit": "4662e5996862a7f438728c4561363597ee76493d",
+      "verified_subtree_tree": "77de37c814ca7c562f0f2dd05bb3f7c138fe8d5c",
+      "source_head_reachable": true
+    },
+    {
+      "source_directory": "ipoly",
+      "source_head": "30ef40e23005509bd94d26f27dc48ea778832a50",
+      "source_tree": "94231c471e8b362a3181cddd5ec3ef0e261b09e0",
+      "destination_prefix": "research/ipoly",
+      "import_commit": "b0119244ee0e62b33e3fa871975091e5775868a9",
+      "verified_subtree_tree": "94231c471e8b362a3181cddd5ec3ef0e261b09e0",
+      "source_head_reachable": true
+    }
+  ],
+  "monograph_archive": {
+    "path": "provenance/archives/polyhedra_moduli_quantum_monograph_sources.zip",
+    "sha256": "8f28b07686ea579a7dfb7b88ccef5c12bdd50b6e328737d5a8a79f6e06ba92dc",
+    "member_map": "provenance/monograph/member-map.json"
+  },
+  "backup_location": "../integration-backups/2026-10-31",
+  "original_repositories_unchanged": true,
+  "remote_operations": "none; local bundle fetches only",
+  "root_checkout": "consolidated",
+  "original_source_inventory": "audit/2026-10-31/source-inventory.json"
+}

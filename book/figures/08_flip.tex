@@ -1,0 +1,45 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\small,>=Latex,line cap=round,line join=round]
+  \begin{scope}[shift={(-5.3,0)}]
+    \coordinate (fa) at (0,0);\coordinate (fb) at (3.2,0);
+    \coordinate (fc) at (2.7,2);\coordinate (fd) at (.3,1.5);
+    \draw[mpblue!15] (1.6,.6625) circle (1.731735);
+    \fill[mpblue!5] (fa)--(fb)--(fc)--cycle;
+    \fill[mpteal!5] (fa)--(fc)--(fd)--cycle;
+    \draw[mpgray] (fa)--(fb)--(fc)--(fd)--cycle;
+    \draw[mpochre,line width=1.35pt] (fa)--(fc);
+    \foreach \p in {fa,fb,fc,fd}\fill[mpblue] (\p) circle (1.8pt);
+    \node[below left] at (fa) {$A$};\node[below right] at (fb) {$B$};
+    \node[above right] at (fc) {$C$};\node[above left] at (fd) {$D$};
+    \node[font=\bfseries\small] at (1.6,2.85) {The diagonal $AC$};
+    \node[text=mpochre,align=center,font=\scriptsize] at (1.6,-1.35)
+      {Not locally Delaunay\\$D$ lies inside the circle through $A,B,C$};
+  \end{scope}
+  \draw[->,mpgray,line width=.85pt] (-1.1,.85)--(.9,.85)
+    node[midway,above] {flip};
+  \begin{scope}[shift={(1.8,0)}]
+    \coordinate (ga) at (0,0);\coordinate (gb) at (3.2,0);
+    \coordinate (gc) at (2.7,2);\coordinate (gd) at (.3,1.5);
+    \fill[mpblue!5] (ga)--(gb)--(gd)--cycle;
+    \fill[mpteal!5] (gb)--(gc)--(gd)--cycle;
+    \draw[mpgray] (ga)--(gb)--(gc)--(gd)--cycle;
+    \draw[mpteal,line width=1.35pt] (gb)--(gd);
+    \foreach \p in {ga,gb,gc,gd}\fill[mpblue] (\p) circle (1.8pt);
+    \node[below left] at (ga) {$A$};\node[below right] at (gb) {$B$};
+    \node[above right] at (gc) {$C$};\node[above left] at (gd) {$D$};
+    \node[font=\bfseries\small] at (1.6,2.85) {The diagonal $BD$};
+    \node[text=mpteal,align=center,font=\scriptsize] at (1.6,-1.35)
+      {Locally Delaunay\\the planar vertices have not moved};
+  \end{scope}
+  \node[align=center] at (0,-2.35)
+    {For the same nodal values $u$: \quad
+     $D_{\mathcal T_{BD}}(u)\le D_{\mathcal T_{AC}}(u)$.};
+\end{tikzpicture}
+\caption{A diagonal flip on a fixed Euclidean quadrilateral, shown
+with its actual vertex positions. Rippa's energy comparison selects the
+Delaunay diagonal for fixed nodal values. The same combinatorial move
+also occurs in flip graphs used in surface topology; the displayed
+energy comparison concerns the fixed Euclidean realization.}
+\label{fig:mono-flip}
+\end{figure}

@@ -1,0 +1,56 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+  \begin{scope}[shift={(-3.35,2.15)}]
+    \node[align=center,font=\bfseries\small] at (0,1.95) {Euclidean tangent geometry};
+    \draw[mpblue!15,line width=.5pt] (-1.7,-1.1) grid[step=.55] (1.7,1.15);
+    \filldraw[fill=mpblue!8,draw=mpblue,line width=1pt]
+      (-1.1,-.65)--(1.1,-.65)--(.05,1.1)--cycle;
+    \foreach \p in {(-1.1,-.65),(1.1,-.65),(.05,1.1)}\fill[mpblue] \p circle (2pt);
+    \node[align=center,text width=4.5cm,text=mpgray] at (0,-1.65)
+      {Shrink, then rescale\\about an interior point};
+  \end{scope}
+  \begin{scope}[shift={(3.35,2.15)}]
+    \node[font=\bfseries\small] at (0,1.95) {Compact vertices};
+    \draw[mpgray!65,line width=.6pt] (0,0) circle (1.35);
+    \filldraw[fill=mpblue!8,draw=mpblue,line width=1pt]
+      (90:.9)--(210:.9)--(330:.9)--cycle;
+    \foreach \a in {90,210,330}\fill[mpblue] (\a:.9) circle (2pt);
+    \node[text=mpgray] at (0,-1.65) {Vertices inside the Klein ball};
+  \end{scope}
+  \begin{scope}[shift={(-3.35,-2.35)}]
+    \node[font=\bfseries\small] at (0,1.95) {Ideal vertices};
+    \draw[mpgray!65,line width=.6pt] (0,0) circle (1.35);
+    \filldraw[fill=mpteal!8,draw=mpteal,line width=1pt]
+      (90:1.35)--(210:1.35)--(330:1.35)--cycle;
+    \foreach \a in {90,210,330}\filldraw[fill=white,draw=mpteal,line width=1pt] (\a:1.35) circle (2.4pt);
+    \node[text=mpgray] at (0,-1.65) {Vertices on the sphere at infinity};
+  \end{scope}
+  \begin{scope}[shift={(3.35,-2.35)}]
+    \node[font=\bfseries\small] at (0,1.95) {Hyperideal vertices};
+    \draw[mpgray!65,line width=.6pt] (0,0) circle (1.35);
+    \draw[mpgray!60,dashed] (90:1.55)--(210:1.55)--(330:1.55)--cycle;
+    \fill[mpteal!8]
+      (-.21604075,1.17580645)--(-1.12629863,-.40080645)--(-.91025788,-.775)
+      --(.91025788,-.775)--(1.12629863,-.40080645)--(.21604075,1.17580645)--cycle;
+    \draw[mpblue,line width=1pt]
+      (-.21604075,1.17580645)--(-1.12629863,-.40080645)
+      (-.91025788,-.775)--(.91025788,-.775)
+      (1.12629863,-.40080645)--(.21604075,1.17580645);
+    \draw[mpochre,line width=1.4pt]
+      (-.21604075,1.17580645)--(.21604075,1.17580645)
+      (-1.12629863,-.40080645)--(-.91025788,-.775)
+      (.91025788,-.775)--(1.12629863,-.40080645);
+    \foreach \a in {90,210,330}\fill[mpgray] (\a:1.55) circle (1.6pt);
+    \node[text=mpgray,align=center] at (0,-1.65)
+      {Exterior vertices and\\polar truncation planes};
+  \end{scope}
+\end{tikzpicture}
+\caption{Local pictures for the geometric regimes. The three Klein-model
+drawings are planar sections illustrating the location of vertices;
+the ochre segments are polar truncations in the hyperideal case.
+The Euclidean picture represents a tangent-scale limit after shrinking
+and rescaling. These drawings do not assert a single global deformation
+through all four regimes with arbitrary prescribed data.}
+\label{fig:mono-polyhedral-regimes}
+\end{figure}

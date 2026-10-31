@@ -1,0 +1,10 @@
+{
+  "adaptations": [
+    {
+      "path": "audit/2026-10-31/toolkit-probes.py",
+      "original_sha256": "51bbffaa44de11a5404fc5d300f236ced7a04d07a34e1a39cd780fab5a657e20",
+      "adapted_sha256": "7805166e190335a22d551676a84d6653524184bebe1ea0d293db954b72e5521d",
+      "reason": "Add explicit toolkit-root argument with monorepo default; historical observed results unchanged."
+    }
+  ]
+}
