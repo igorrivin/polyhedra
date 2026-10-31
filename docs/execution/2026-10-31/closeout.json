@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-31T22:45:00.558730+00:00",
+  "scope": "First local integration checkpoint; no public release or complete proof audit.",
+  "repository": "consolidated",
+  "source_commit": "c02b358de5a6f724faf3368a641ba64f5841d859",
+  "artifact_commit": "74e2abc67e434e0d7eadf70d7becaa6de2f77785",
+  "source_commit_clean_before_generation": true,
+  "artifact_commit_clean_after_commit": true,
+  "canonical_command": {
+    "cwd": "repository root",
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "experiments/section9/run.py"
+    ],
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONPATH": "packages/volume-toolkit"
+    },
+    "returncode": 0
+  },
+  "canonical_verification": {
+    "source_commit": "c02b358de5a6f724faf3368a641ba64f5841d859",
+    "dirty_at_start": false,
+    "source_files_verified": 7,
+    "exact_checks_passed": true,
+    "numerical_checks_passed": 12,
+    "html_links_verified": 12,
+    "javascript_syntax_passed": true,
+    "bundle_payloads_verified": 9,
+    "artifacts": [
+      {
+        "path": "artifacts/section9/result.json",
+        "sha256": "75403f2c513ec1d962ba3742409f5b08ba1de7a87a17b7f7265ede2890a978bf",
+        "bytes": 11432
+      },
+      {
+        "path": "site/section9/downloads/fixture.json",
+        "sha256": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1",
+        "bytes": 1092
+      },
+      {
+        "path": "site/section9/downloads/polyhedral_volumes_and_geodesic_identities.pdf",
+        "sha256": "40dd069bd2653f9a78666a31f53910d74b7f8de2a4a75d5a5dd62466032a6cd5",
+        "bytes": 1399634
+      },
+      {
+        "path": "site/section9/downloads/polyhedral_volumes_and_geodesic_identities.tex",
+        "sha256": "63102e64405a58b8f5d51bfdffe6be43fc5cfe9a232dc0f396f1709733d750dc",
+        "bytes": 569093
+      },
+      {
+        "path": "site/section9/downloads/result.json",
+        "sha256": "75403f2c513ec1d962ba3742409f5b08ba1de7a87a17b7f7265ede2890a978bf",
+        "bytes": 11432
+      },
+      {
+        "path": "site/section9/downloads/run.py",
+        "sha256": "efd0f829cb8e8663b23ab23eb0dd19e3988afd1db3710d2fccaf65c3a38f28f5",
+        "bytes": 20131
+      },
+      {
+        "path": "site/section9/downloads/section9-reproduction.zip",
+        "sha256": "b95eea258e8f6ad8928a583be68b221acb1dbec825c5118bdeabfbfd39291f04",
+        "bytes": 25911
+      },
+      {
+        "path": "site/section9/downloads/variational.py",
+        "sha256": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+        "bytes": 10242
+      },
+      {
+        "path": "site/section9/index.html",
+        "sha256": "ce09d5f07a62616a8d94a4576bd31b6828158af57ab2be72982774a9e35d423e",
+        "bytes": 25846
+      }
+    ]
+  },
+  "detached_verification": {
+    "command": [
+      "/tmp/polyhedra-core-verification-20261031/bin/python",
+      "/tmp/polyhedra-final-section9-265qs7er/section9-reproduction/experiments/section9/run.py"
+    ],
+    "cwd": "/tmp",
+    "environment": {
+      "PYTHONPATH": "unset",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "returncode": 0,
+    "stdout": "{\n  \"all_checks_passed\": true,\n  \"source_commit\": null,\n  \"dirty_at_start\": null,\n  \"result\": \"/private/tmp/polyhedra-final-section9-265qs7er/section9-reproduction/artifacts/section9/result.json\",\n  \"html\": \"/private/tmp/polyhedra-final-section9-265qs7er/section9-reproduction/site/section9/index.html\"\n}\n",
+    "stderr": "",
+    "temporary_directory": "/tmp/polyhedra-final-section9-265qs7er",
+    "result_path": "/tmp/polyhedra-final-section9-265qs7er/section9-reproduction/artifacts/section9/result.json",
+    "source_commit": null,
+    "dirty_state": null,
+    "origin_source_commit": "c02b358de5a6f724faf3368a641ba64f5841d859",
+    "origin_dirty_at_start": false,
+    "bundle_payload_hashes_match": true,
+    "bundled_modules_imported": true,
+    "optional_book_assets_explicitly_unavailable": true,
+    "exact_checks_passed": true,
+    "numerical_checks_passed": 12,
+    "result_sha256": "5e47c176ccdc6e8490fb52240a808402d640fc64fbadcb3fcffda409962fd40e"
+  },
+  "originals": [
+    {
+      "path": "ideal_poly_volume_toolkit",
+      "head": "cc6b689652ce735f2098bb0a3235089210d764df",
+      "worktree_clean": true,
+      "tracked_files_sha256_verified": 925,
+      "head_reachable_in_integrated_history": true
+    },
+    {
+      "path": "ipoly",
+      "head": "30ef40e23005509bd94d26f27dc48ea778832a50",
+      "worktree_clean": true,
+      "tracked_files_sha256_verified": 28,
+      "head_reachable_in_integrated_history": true
+    }
+  ],
+  "reviewed_package_modules_matching_independent_build": 47,
+  "copied_evidence_files_verified": 54,
+  "prior_runtime_evidence": {
+    "full_available_suite": {
+      "passed": 279,
+      "skipped": 18,
+      "failed": 4,
+      "collection_errors": 9,
+      "warnings": 2,
+      "failure_cause": "Gymnasium missing for four failures and eight collection errors; Hypothesis missing for one collection error.",
+      "stage": "Before driver import-order-only cleanup."
+    },
+    "final_driver_focused_tests_passed": 11,
+    "ruff_changed_python_files_passed": 7,
+    "corrected_wheel_and_sdist_built": true,
+    "corrected_wheel_minimal_install_and_cli_verified": true,
+    "dependency_resolution": "Copied local dependency snapshots; fresh online resolver validation unavailable."
+  },
+  "whitespace": {
+    "authored_files_pass": true,
+    "raw_evidence_whitespace_paths": [
+      "docs/execution/2026-10-31/final-suite.log",
+      "docs/execution/2026-10-31/final-suite.xml",
+      "docs/execution/2026-10-31/installed-cli-help.log",
+      "docs/execution/2026-10-31/pytest-baseline.log",
+      "docs/execution/2026-10-31/pytest-baseline.xml",
+      "docs/execution/2026-10-31/pytest-consolidated.log",
+      "docs/execution/2026-10-31/pytest-consolidated.xml"
+    ],
+    "policy": "Preserve exact captured logs and JUnit bytes; do not normalize evidence."
+  },
+  "git_metadata_cleanup": {
+    "receipt": "docs/execution/2026-10-31/git-metadata-cleanup.json",
+    "removed_count": 143,
+    "fsck_after_removal_passed": true
+  },
+  "post_documentation_commit_verification": {
+    "receipt_location": "outer workspace execution/2026-10-31/final-post-commit-verification.json",
+    "note": "Records final documentation HEAD, clean status, fsck and any final verified AppleDouble cleanup. Stored outside the checkout to avoid a self-referential commit/cleanup cycle."
+  },
+  "remote_operations": {
+    "configured_remotes": [],
+    "pushed": false,
+    "published_site": false
+  },
+  "pending": [
+    "Complete optional-development dependency installation and fully passing suite.",
+    "Supported-Python/platform CI matrix and GUI construction.",
+    "Browser layout and interaction QA, blocked by local-listener and file-URL policies.",
+    "Remaining solver/precision contracts and maintained companion integration.",
+    "Monograph proof review, source modularization, full HTML conversion and release-PDF CMap investigation.",
+    "Recover/reproduce Airy and torus diagnostic evidence; resolve authorship and text/companion licensing.",
+    "Choose canonical remote and visibility, then verify intended Sites publication."
+  ],
+  "documentation_sources": [
+    "https://github.com/git/htmldocs/blob/gh-pages/git-add.html",
+    "https://github.com/git/htmldocs/blob/gh-pages/git-diff.adoc"
+  ]
+}
