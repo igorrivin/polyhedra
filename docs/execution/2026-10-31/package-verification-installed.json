@@ -1,0 +1,42 @@
+{
+  "module_paths": {
+    "ideal_poly_volume_toolkit": "/private/tmp/polyhedra-core-verification-20261031/lib/python3.12/site-packages/ideal_poly_volume_toolkit/__init__.py",
+    "ideal_poly_volume_toolkit.geometry": "/private/tmp/polyhedra-core-verification-20261031/lib/python3.12/site-packages/ideal_poly_volume_toolkit/geometry.py",
+    "ideal_poly_volume_toolkit.variational": "/private/tmp/polyhedra-core-verification-20261031/lib/python3.12/site-packages/ideal_poly_volume_toolkit/variational.py",
+    "ideal_poly_volume_toolkit.rivin_holonomy": "/private/tmp/polyhedra-core-verification-20261031/lib/python3.12/site-packages/ideal_poly_volume_toolkit/rivin_holonomy.py",
+    "ideal_poly_volume_toolkit.rivin_delaunay": "/private/tmp/polyhedra-core-verification-20261031/lib/python3.12/site-packages/ideal_poly_volume_toolkit/rivin_delaunay.py",
+    "ideal_poly_volume_toolkit.geometric_realization": "/private/tmp/polyhedra-core-verification-20261031/lib/python3.12/site-packages/ideal_poly_volume_toolkit/geometric_realization.py"
+  },
+  "module_sha256": {
+    "ideal_poly_volume_toolkit": "fda3d00ed62182daf44add73655024a29716fe2c959b61bdcd7e7b93229a53e2",
+    "ideal_poly_volume_toolkit.geometry": "244a28d55646dc7f8ce182d18473a308ea1194d4f6d45130599dae5fc76083ed",
+    "ideal_poly_volume_toolkit.variational": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+    "ideal_poly_volume_toolkit.rivin_holonomy": "50af5141de45833b072789dcfcd0fa1eb9af743c7d3b5fc77ebe91167aea6afe",
+    "ideal_poly_volume_toolkit.rivin_delaunay": "79c558641490334505cad8e8f528da64508f4e3d9f60af35a19baa826f156570",
+    "ideal_poly_volume_toolkit.geometric_realization": "6828a449d9994168f1c6bac4b19d30cda56d8980070bc1884a5f32a6d90e2344"
+  },
+  "optional_dependencies_absent": {
+    "torch": true,
+    "gymnasium": true,
+    "gradio": true,
+    "pytest": true,
+    "hypothesis": true,
+    "pynauty": true,
+    "matplotlib": true,
+    "networkx": true
+  },
+  "optional_dependencies_not_imported": true,
+  "underflow_not_certified": true,
+  "exact_zero_certified": true,
+  "cyclic_realization_passes": true,
+  "max_angle_error": 1.1102230246251565e-16,
+  "near_pi_hessian_positive": true,
+  "uint64_overflow_rejected": true,
+  "installed_versions": {
+    "numpy": "2.5.4",
+    "pip": "25.0.1",
+    "mpmath": "1.3.0",
+    "ideal_poly_volume_toolkit": "0.3.0",
+    "scipy": "1.18.1"
+  }
+}

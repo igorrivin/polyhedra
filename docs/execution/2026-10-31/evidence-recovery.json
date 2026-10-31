@@ -1,0 +1,438 @@
+{
+  "date": "2026-10-31",
+  "scope": "Supplied original worktrees, their locally reachable Git objects and local ZIP members; no remote fetch, broad home-directory search, numerical replay or unavailable LFS-history payload retrieval.",
+  "pattern": "markoff|airy|double[ _-]?sine|diagnostic archive|sensitivity table|18191508|18486116",
+  "repositories": [
+    {
+      "path": "ideal_poly_volume_toolkit",
+      "head": "cc6b689652ce735f2098bb0a3235089210d764df",
+      "reachable_commits": 89,
+      "historical_code_blobs_scanned": 359,
+      "historical_code_bytes_scanned": 4101144,
+      "historical_name_matches": [
+        {
+          "object": "8709324789f149ab588b9d6768d9a9afe403f3f4",
+          "path": "results/plots/euclidean_fit_diagnostics.png"
+        }
+      ],
+      "historical_code_content_matches": []
+    },
+    {
+      "path": "ipoly",
+      "head": "30ef40e23005509bd94d26f27dc48ea778832a50",
+      "reachable_commits": 1,
+      "historical_code_blobs_scanned": 22,
+      "historical_code_bytes_scanned": 73782,
+      "historical_name_matches": [
+        {
+          "object": "b17e26120c26bce83be5712ac22b016a81a76ecb",
+          "path": "v8_torus_bundles.py"
+        }
+      ],
+      "historical_code_content_matches": []
+    }
+  ],
+  "archives": [
+    {
+      "path": "polyhedra_moduli_quantum_monograph_sources.zip",
+      "sha256": "8f28b07686ea579a7dfb7b88ccef5c12bdd50b6e328737d5a8a79f6e06ba92dc",
+      "members": 39,
+      "name_matches": [
+        "polyhedra_moduli_quantum_monograph/companion_ipoly/v8_torus_bundles.py",
+        "polyhedra_moduli_quantum_monograph/figures/09_airy.tex"
+      ],
+      "text_members_scanned": 24,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_hadamard_v2.zip",
+      "sha256": "8ddf42f5f5f989af0c5cf40bf89bc276c6ac5d07c58cc188df6874da10aba7af",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_hadamard_hard.zip",
+      "sha256": "00515d1a2963e58e9a7f39145d5518f91da57b8a5f1faf6006397950bc2445b3",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_hadamard_curriculum_v3.zip",
+      "sha256": "6b38d70bd2b66857c9c58eb04050e27cf31aae807b913c594786408414d9b78e",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_hadamard_curriculum.zip",
+      "sha256": "0cedc333da350c2e4a6fdecb3295ae6e0dc9b6dc6b7174130acbbb27503c1497",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_hadamard.zip",
+      "sha256": "2b73b000f1d8b6973cd57b351f8869bb8d5bead401f6bdd80875029736849f06",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d6_v2_final.zip",
+      "sha256": "b27ea9b048e3dc488fa3de874ad870c8fa04062bb84180d5f1c98873fc74adc5",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d6_controller-v2-seed42.zip",
+      "sha256": "9ec626f16dd7d9ee40178408aa5b0c468c17567d5deffd722fdbb071605651a8",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d6_50000_steps.zip",
+      "sha256": "f5eeb9b83424b6b9ec769a423cfcb3a4647d2fbfb386a9f1cc7c65b480128559",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d6_150000_steps.zip",
+      "sha256": "a5d157fee495ca457a3db8d33ee4e3da78b097942b95ac51fa270474e97c1c38",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d6_100000_steps.zip",
+      "sha256": "a6543a57d8c24d7dd3a5b19eef8bfc4a98df4364a7f808085d6a4459a4f4d3e6",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d5_v2_final.zip",
+      "sha256": "7eabe46c47a85ec66129f4a83855435e099b1706a54079e90cff6e12fae0880a",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d5_final.zip",
+      "sha256": "2a49d87890191c3906aad03bc8a12ae9c20ddc35f7e205db33521c4b266033c3",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d5_controller-v2-seed42.zip",
+      "sha256": "2742e454e708290a7a4dc23c9be9805a7671f9aadbe7f095fc96693b391443d1",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d5_50000_steps.zip",
+      "sha256": "8292fd7deed82140efcf99548ce0efd66268c3fe8be7af57050c3ff79a9b866e",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d5_200000_steps.zip",
+      "sha256": "95003dbbc1ee61d2b9e46c6f938be00da11ceee10d8c84c0fd0b3529d9bb0a12",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d5_150000_steps.zip",
+      "sha256": "2b283ec7ddfc87c7a7d9eab837f67614ba896f08c1a249c81943ab95dded26a6",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d5_100000_steps.zip",
+      "sha256": "f4a4a19469af9b51e0983a98b8fcf4c4e271c1b2b9b33d8a975b8986dae41f19",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d4_v2_final.zip",
+      "sha256": "d1ae667153e08bfbf825b7f9c96a00f00d11815f401b13a329d124a79b3c1647",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d4_final.zip",
+      "sha256": "ced3f5ffec15a63519adb81b2d6ea3ad8d3aec22a9cd70ff75ff87b769272589",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d4_controller-v2-seed42.zip",
+      "sha256": "9b25a4766c90e432e9dfb735a184159985246586aacc5165e42829bd1781f7c1",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d4_50000_steps.zip",
+      "sha256": "789ddcafd08788a32c059a7a4c0e025b6475bb4e06bfe1f1681f35e2dce17200",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d4_200000_steps.zip",
+      "sha256": "5d72cbae5b30c48ab1a5c0b213dc3456e0cf6a90030e9d5aaeb53a3690f01cf8",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d4_150000_steps.zip",
+      "sha256": "25059409380036bfd0805f0d164a3ff849187e4cd1895af0f19551060476fd7c",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d4_100000_steps.zip",
+      "sha256": "50211af49ac95802eabf7272d9127da0ec3ef0e99e8964d2b031cf2b363ae3a3",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d3v2_final.zip",
+      "sha256": "301df8c68387a9e61b8f754c8f22c7d2cbf2a70f9a7c9456fc6ab33fc38d06f3",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d3v2_300000_steps.zip",
+      "sha256": "31103806575c0dc45db0970e3de4b930a586cc2b815cf205128b3e85f5765177",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d3v2_200000_steps.zip",
+      "sha256": "6e279e7a32414097a9f3d78f47c82aec86bad3b97d2b72384d48b6736f61f0cc",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d3v2_100000_steps.zip",
+      "sha256": "9e72b54bd44fa8dfb1a01562b330c89158a01454737d8ddb8015fe8870e5cbc7",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d3_v2_final.zip",
+      "sha256": "272ca5f63b0669a01f14ee60b1deed9b60864b232f27f5baf9b2191dd3d2c644",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d3_final.zip",
+      "sha256": "d764df209e2e59680e954e22196dd31e6e5d6211ec51b2a87f60a392354307e5",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d3_controller-v2-seed42.zip",
+      "sha256": "4d2c3b82230783638c89a43517b1e27f22818a089e2366e445d5dc0d7ff96fce",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d3_50000_steps.zip",
+      "sha256": "d159afa7f4f65afcde365c0353028b6100d68fbc846318f8332f3f8183c6e5ab",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d3_200000_steps.zip",
+      "sha256": "400585f13dd4a746d607a7c6fe3b16ed536174cdc62ccada95749817a2747c7c",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d3_150000_steps.zip",
+      "sha256": "5f22a6e89ed22abe4dc9d290bd556467ddaaeb3989db750155c0533176aec8f6",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_d3_100000_steps.zip",
+      "sha256": "105a682b0378bc466231c24b5eec4d12c6b13d0b02031244b07363825aebd50d",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_cage_v2.zip",
+      "sha256": "db65825d9d6e80a3c9d82a1ccfd0fe4f7ae3a81c398e80d9ca212780f43b3e76",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/rl_models/ppo_cage.zip",
+      "sha256": "a19810e70386cb84a0ffb66134957d467163362182c75fa525c3eb7b6ddb6404",
+      "members": 6,
+      "name_matches": [],
+      "text_members_scanned": 1,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/data/ideal_poly_volume_toolkit_autograd_patch.zip",
+      "sha256": "c2cd72e24689016c0933aa514e76c9f56a8f16cbfc14b27f241132c7330ffb45",
+      "members": 2,
+      "name_matches": [],
+      "text_members_scanned": 2,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/data/llm_challenges_arithmetic/care_package.zip",
+      "sha256": "b582f1dfe0939d81d7fa131d880624304ccfae27f82c928f745bd7a4599d4c7d",
+      "members": 7,
+      "name_matches": [],
+      "text_members_scanned": 6,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/data/llm_challenges_delaunay/care_package.zip",
+      "sha256": "ff66bfd318c687bbac166d8b5650db62922f41abc9d32a1617fa3c5e05436724",
+      "members": 5,
+      "name_matches": [],
+      "text_members_scanned": 4,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ideal_poly_volume_toolkit/results/data/llm_challenges_4d_volume/care_package.zip",
+      "sha256": "2fbd838a64ff8d60462ec1fde5efde272bf555452613a197ffc065b34bcdfc44",
+      "members": 10,
+      "name_matches": [],
+      "text_members_scanned": 9,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ipoly/verification_scripts.zip",
+      "sha256": "ccc008f62b6da99abdedf09e25095b8d27418dcab3580e692ebc1e27a1626237",
+      "members": 22,
+      "name_matches": [
+        "v8_torus_bundles.py"
+      ],
+      "text_members_scanned": 22,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    },
+    {
+      "path": "ipoly/files (5).zip",
+      "sha256": "bd9065af9a50d8019d83807282deb747b8bb5938f9739cc6749950c5bcca2ddf",
+      "members": 3,
+      "name_matches": [],
+      "text_members_scanned": 0,
+      "content_matches": [],
+      "oversized_text_members_not_scanned": []
+    }
+  ]
+}

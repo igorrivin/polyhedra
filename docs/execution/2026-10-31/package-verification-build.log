@@ -1,0 +1,291 @@
+* Getting build dependencies for sdist...
+running egg_info
+creating ideal_poly_volume_toolkit.egg-info
+writing ideal_poly_volume_toolkit.egg-info/PKG-INFO
+writing dependency_links to ideal_poly_volume_toolkit.egg-info/dependency_links.txt
+writing entry points to ideal_poly_volume_toolkit.egg-info/entry_points.txt
+writing requirements to ideal_poly_volume_toolkit.egg-info/requires.txt
+writing top-level names to ideal_poly_volume_toolkit.egg-info/top_level.txt
+writing manifest file 'ideal_poly_volume_toolkit.egg-info/SOURCES.txt'
+reading manifest file 'ideal_poly_volume_toolkit.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE'
+writing manifest file 'ideal_poly_volume_toolkit.egg-info/SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing ideal_poly_volume_toolkit.egg-info/PKG-INFO
+writing dependency_links to ideal_poly_volume_toolkit.egg-info/dependency_links.txt
+writing entry points to ideal_poly_volume_toolkit.egg-info/entry_points.txt
+writing requirements to ideal_poly_volume_toolkit.egg-info/requires.txt
+writing top-level names to ideal_poly_volume_toolkit.egg-info/top_level.txt
+reading manifest file 'ideal_poly_volume_toolkit.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE'
+writing manifest file 'ideal_poly_volume_toolkit.egg-info/SOURCES.txt'
+running check
+creating ideal_poly_volume_toolkit-0.3.0
+creating ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+creating ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit.egg-info
+creating ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit/rl
+creating ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit/rl/cage
+creating ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit/rl/polytope
+copying files to ideal_poly_volume_toolkit-0.3.0...
+copying LICENSE -> ideal_poly_volume_toolkit-0.3.0
+copying MANIFEST.in -> ideal_poly_volume_toolkit-0.3.0
+copying README.md -> ideal_poly_volume_toolkit-0.3.0
+copying pyproject.toml -> ideal_poly_volume_toolkit-0.3.0
+copying ideal_poly_volume_toolkit/__init__.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/combinatorial_enumeration.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/cone_realization.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/fast_logdet.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/geometric_realization.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/geometry.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/geometry_4d.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/geometry_4d_torch.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/geometry_torch.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/h5_volume_torch.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/hyperbolic_4_simplex_volume.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/hyperbolic_4_simplex_volume_models.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/hyperbolic_5_6_simplex_volume.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/hyperbolic_model_transforms.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/inscribed_realization.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/li2_torch.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/murakami_torch.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/optimization.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/optimization_cli.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/planar_utils.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/plantri_interface.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/pointset_to_fuchsian.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/rivin_delaunay.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/rivin_holonomy.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/rivin_zero_shear.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/rl_cages.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/rl_generic.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/rl_optimizer.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/simplex_volume_4d.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/symmetry.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/variational.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/visualization.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/volume_threshold.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit.egg-info/PKG-INFO -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit.egg-info
+copying ideal_poly_volume_toolkit.egg-info/SOURCES.txt -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit.egg-info
+copying ideal_poly_volume_toolkit.egg-info/dependency_links.txt -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit.egg-info
+copying ideal_poly_volume_toolkit.egg-info/entry_points.txt -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit.egg-info
+copying ideal_poly_volume_toolkit.egg-info/requires.txt -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit.egg-info
+copying ideal_poly_volume_toolkit.egg-info/top_level.txt -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit.egg-info
+copying ideal_poly_volume_toolkit/rl/__init__.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit/rl
+copying ideal_poly_volume_toolkit/rl/_legacy_polytope_env.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit/rl
+copying ideal_poly_volume_toolkit/rl/generic.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit/rl
+copying ideal_poly_volume_toolkit/rl/inner_optimizers.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit/rl
+copying ideal_poly_volume_toolkit/rl/training.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit/rl
+copying ideal_poly_volume_toolkit/rl/cage/__init__.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit/rl/cage
+copying ideal_poly_volume_toolkit/rl/cage/task.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit/rl/cage
+copying ideal_poly_volume_toolkit/rl/polytope/__init__.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit/rl/polytope
+copying ideal_poly_volume_toolkit/rl/polytope/env.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit/rl/polytope
+copying ideal_poly_volume_toolkit/rl/polytope/h4_combinatorics_benchmark.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit/rl/polytope
+copying ideal_poly_volume_toolkit/rl/polytope/h4_symmetric_benchmark.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit/rl/polytope
+copying ideal_poly_volume_toolkit/rl/polytope/optimizers.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit/rl/polytope
+copying ideal_poly_volume_toolkit/rl/polytope/task.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit/rl/polytope
+copying ideal_poly_volume_toolkit/rl/polytope/types.py -> ideal_poly_volume_toolkit-0.3.0/ideal_poly_volume_toolkit/rl/polytope
+Writing ideal_poly_volume_toolkit-0.3.0/setup.cfg
+Creating tar archive
+removing 'ideal_poly_volume_toolkit-0.3.0' (and everything under it)
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+running egg_info
+writing ideal_poly_volume_toolkit.egg-info/PKG-INFO
+writing dependency_links to ideal_poly_volume_toolkit.egg-info/dependency_links.txt
+writing entry points to ideal_poly_volume_toolkit.egg-info/entry_points.txt
+writing requirements to ideal_poly_volume_toolkit.egg-info/requires.txt
+writing top-level names to ideal_poly_volume_toolkit.egg-info/top_level.txt
+reading manifest file 'ideal_poly_volume_toolkit.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'tests'
+adding license file 'LICENSE'
+writing manifest file 'ideal_poly_volume_toolkit.egg-info/SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/geometric_realization.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/murakami_torch.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/geometry_torch.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/symmetry.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/rivin_holonomy.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/rl_cages.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/simplex_volume_4d.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/fast_logdet.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/li2_torch.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/cone_realization.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/planar_utils.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/rl_generic.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/optimization.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/geometry_4d_torch.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/hyperbolic_5_6_simplex_volume.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/__init__.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/combinatorial_enumeration.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/visualization.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/optimization_cli.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/inscribed_realization.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/pointset_to_fuchsian.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/geometry.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/hyperbolic_model_transforms.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/rivin_delaunay.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/hyperbolic_4_simplex_volume_models.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/variational.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/h5_volume_torch.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/volume_threshold.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/rl_optimizer.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/hyperbolic_4_simplex_volume.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/rivin_zero_shear.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/plantri_interface.py -> build/lib/ideal_poly_volume_toolkit
+copying ideal_poly_volume_toolkit/geometry_4d.py -> build/lib/ideal_poly_volume_toolkit
+creating build/lib/ideal_poly_volume_toolkit/rl
+copying ideal_poly_volume_toolkit/rl/generic.py -> build/lib/ideal_poly_volume_toolkit/rl
+copying ideal_poly_volume_toolkit/rl/__init__.py -> build/lib/ideal_poly_volume_toolkit/rl
+copying ideal_poly_volume_toolkit/rl/_legacy_polytope_env.py -> build/lib/ideal_poly_volume_toolkit/rl
+copying ideal_poly_volume_toolkit/rl/inner_optimizers.py -> build/lib/ideal_poly_volume_toolkit/rl
+copying ideal_poly_volume_toolkit/rl/training.py -> build/lib/ideal_poly_volume_toolkit/rl
+creating build/lib/ideal_poly_volume_toolkit/rl/cage
+copying ideal_poly_volume_toolkit/rl/cage/task.py -> build/lib/ideal_poly_volume_toolkit/rl/cage
+copying ideal_poly_volume_toolkit/rl/cage/__init__.py -> build/lib/ideal_poly_volume_toolkit/rl/cage
+creating build/lib/ideal_poly_volume_toolkit/rl/polytope
+copying ideal_poly_volume_toolkit/rl/polytope/h4_symmetric_benchmark.py -> build/lib/ideal_poly_volume_toolkit/rl/polytope
+copying ideal_poly_volume_toolkit/rl/polytope/task.py -> build/lib/ideal_poly_volume_toolkit/rl/polytope
+copying ideal_poly_volume_toolkit/rl/polytope/env.py -> build/lib/ideal_poly_volume_toolkit/rl/polytope
+copying ideal_poly_volume_toolkit/rl/polytope/__init__.py -> build/lib/ideal_poly_volume_toolkit/rl/polytope
+copying ideal_poly_volume_toolkit/rl/polytope/h4_combinatorics_benchmark.py -> build/lib/ideal_poly_volume_toolkit/rl/polytope
+copying ideal_poly_volume_toolkit/rl/polytope/types.py -> build/lib/ideal_poly_volume_toolkit/rl/polytope
+copying ideal_poly_volume_toolkit/rl/polytope/optimizers.py -> build/lib/ideal_poly_volume_toolkit/rl/polytope
+running egg_info
+writing ideal_poly_volume_toolkit.egg-info/PKG-INFO
+writing dependency_links to ideal_poly_volume_toolkit.egg-info/dependency_links.txt
+writing entry points to ideal_poly_volume_toolkit.egg-info/entry_points.txt
+writing requirements to ideal_poly_volume_toolkit.egg-info/requires.txt
+writing top-level names to ideal_poly_volume_toolkit.egg-info/top_level.txt
+reading manifest file 'ideal_poly_volume_toolkit.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'tests'
+adding license file 'LICENSE'
+writing manifest file 'ideal_poly_volume_toolkit.egg-info/SOURCES.txt'
+warning: build_py: byte-compiling is disabled, skipping.
+
+installing to build/bdist.macosx-11.0-arm64/wheel
+running install
+running install_lib
+creating build/bdist.macosx-11.0-arm64/wheel
+creating build/bdist.macosx-11.0-arm64/wheel/ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/geometric_realization.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/murakami_torch.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/geometry_torch.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/symmetry.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/rivin_holonomy.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/rl_cages.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/simplex_volume_4d.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/fast_logdet.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/li2_torch.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/cone_realization.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/planar_utils.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/rl_generic.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/optimization.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/geometry_4d_torch.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/hyperbolic_5_6_simplex_volume.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/combinatorial_enumeration.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/visualization.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/optimization_cli.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/inscribed_realization.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/pointset_to_fuchsian.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/geometry.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/hyperbolic_model_transforms.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/rivin_delaunay.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/hyperbolic_4_simplex_volume_models.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/variational.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/h5_volume_torch.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/volume_threshold.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/rl_optimizer.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/hyperbolic_4_simplex_volume.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/rivin_zero_shear.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+copying build/lib/ideal_poly_volume_toolkit/plantri_interface.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+creating build/bdist.macosx-11.0-arm64/wheel/ideal_poly_volume_toolkit/rl
+copying build/lib/ideal_poly_volume_toolkit/rl/generic.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit/rl
+copying build/lib/ideal_poly_volume_toolkit/rl/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit/rl
+creating build/bdist.macosx-11.0-arm64/wheel/ideal_poly_volume_toolkit/rl/cage
+copying build/lib/ideal_poly_volume_toolkit/rl/cage/task.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit/rl/cage
+copying build/lib/ideal_poly_volume_toolkit/rl/cage/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit/rl/cage
+copying build/lib/ideal_poly_volume_toolkit/rl/_legacy_polytope_env.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit/rl
+creating build/bdist.macosx-11.0-arm64/wheel/ideal_poly_volume_toolkit/rl/polytope
+copying build/lib/ideal_poly_volume_toolkit/rl/polytope/h4_symmetric_benchmark.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit/rl/polytope
+copying build/lib/ideal_poly_volume_toolkit/rl/polytope/task.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit/rl/polytope
+copying build/lib/ideal_poly_volume_toolkit/rl/polytope/env.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit/rl/polytope
+copying build/lib/ideal_poly_volume_toolkit/rl/polytope/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit/rl/polytope
+copying build/lib/ideal_poly_volume_toolkit/rl/polytope/h4_combinatorics_benchmark.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit/rl/polytope
+copying build/lib/ideal_poly_volume_toolkit/rl/polytope/types.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit/rl/polytope
+copying build/lib/ideal_poly_volume_toolkit/rl/polytope/optimizers.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit/rl/polytope
+copying build/lib/ideal_poly_volume_toolkit/rl/inner_optimizers.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit/rl
+copying build/lib/ideal_poly_volume_toolkit/rl/training.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit/rl
+copying build/lib/ideal_poly_volume_toolkit/geometry_4d.py -> build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit
+warning: install_lib: byte-compiling is disabled, skipping.
+
+running install_egg_info
+Copying ideal_poly_volume_toolkit.egg-info to build/bdist.macosx-11.0-arm64/wheel/./ideal_poly_volume_toolkit-0.3.0-py3.12.egg-info
+running install_scripts
+creating build/bdist.macosx-11.0-arm64/wheel/ideal_poly_volume_toolkit-0.3.0.dist-info/WHEEL
+creating '/tmp/polyhedra-corrected-package-artifacts-20261031/.tmp-e41zck26/ideal_poly_volume_toolkit-0.3.0-py3-none-any.whl' and adding 'build/bdist.macosx-11.0-arm64/wheel' to it
+adding 'ideal_poly_volume_toolkit/__init__.py'
+adding 'ideal_poly_volume_toolkit/combinatorial_enumeration.py'
+adding 'ideal_poly_volume_toolkit/cone_realization.py'
+adding 'ideal_poly_volume_toolkit/fast_logdet.py'
+adding 'ideal_poly_volume_toolkit/geometric_realization.py'
+adding 'ideal_poly_volume_toolkit/geometry.py'
+adding 'ideal_poly_volume_toolkit/geometry_4d.py'
+adding 'ideal_poly_volume_toolkit/geometry_4d_torch.py'
+adding 'ideal_poly_volume_toolkit/geometry_torch.py'
+adding 'ideal_poly_volume_toolkit/h5_volume_torch.py'
+adding 'ideal_poly_volume_toolkit/hyperbolic_4_simplex_volume.py'
+adding 'ideal_poly_volume_toolkit/hyperbolic_4_simplex_volume_models.py'
+adding 'ideal_poly_volume_toolkit/hyperbolic_5_6_simplex_volume.py'
+adding 'ideal_poly_volume_toolkit/hyperbolic_model_transforms.py'
+adding 'ideal_poly_volume_toolkit/inscribed_realization.py'
+adding 'ideal_poly_volume_toolkit/li2_torch.py'
+adding 'ideal_poly_volume_toolkit/murakami_torch.py'
+adding 'ideal_poly_volume_toolkit/optimization.py'
+adding 'ideal_poly_volume_toolkit/optimization_cli.py'
+adding 'ideal_poly_volume_toolkit/planar_utils.py'
+adding 'ideal_poly_volume_toolkit/plantri_interface.py'
+adding 'ideal_poly_volume_toolkit/pointset_to_fuchsian.py'
+adding 'ideal_poly_volume_toolkit/rivin_delaunay.py'
+adding 'ideal_poly_volume_toolkit/rivin_holonomy.py'
+adding 'ideal_poly_volume_toolkit/rivin_zero_shear.py'
+adding 'ideal_poly_volume_toolkit/rl_cages.py'
+adding 'ideal_poly_volume_toolkit/rl_generic.py'
+adding 'ideal_poly_volume_toolkit/rl_optimizer.py'
+adding 'ideal_poly_volume_toolkit/simplex_volume_4d.py'
+adding 'ideal_poly_volume_toolkit/symmetry.py'
+adding 'ideal_poly_volume_toolkit/variational.py'
+adding 'ideal_poly_volume_toolkit/visualization.py'
+adding 'ideal_poly_volume_toolkit/volume_threshold.py'
+adding 'ideal_poly_volume_toolkit/rl/__init__.py'
+adding 'ideal_poly_volume_toolkit/rl/_legacy_polytope_env.py'
+adding 'ideal_poly_volume_toolkit/rl/generic.py'
+adding 'ideal_poly_volume_toolkit/rl/inner_optimizers.py'
+adding 'ideal_poly_volume_toolkit/rl/training.py'
+adding 'ideal_poly_volume_toolkit/rl/cage/__init__.py'
+adding 'ideal_poly_volume_toolkit/rl/cage/task.py'
+adding 'ideal_poly_volume_toolkit/rl/polytope/__init__.py'
+adding 'ideal_poly_volume_toolkit/rl/polytope/env.py'
+adding 'ideal_poly_volume_toolkit/rl/polytope/h4_combinatorics_benchmark.py'
+adding 'ideal_poly_volume_toolkit/rl/polytope/h4_symmetric_benchmark.py'
+adding 'ideal_poly_volume_toolkit/rl/polytope/optimizers.py'
+adding 'ideal_poly_volume_toolkit/rl/polytope/task.py'
+adding 'ideal_poly_volume_toolkit/rl/polytope/types.py'
+adding 'ideal_poly_volume_toolkit-0.3.0.dist-info/licenses/LICENSE'
+adding 'ideal_poly_volume_toolkit-0.3.0.dist-info/METADATA'
+adding 'ideal_poly_volume_toolkit-0.3.0.dist-info/WHEEL'
+adding 'ideal_poly_volume_toolkit-0.3.0.dist-info/entry_points.txt'
+adding 'ideal_poly_volume_toolkit-0.3.0.dist-info/top_level.txt'
+adding 'ideal_poly_volume_toolkit-0.3.0.dist-info/RECORD'
+removing build/bdist.macosx-11.0-arm64/wheel
+Successfully built ideal_poly_volume_toolkit-0.3.0.tar.gz and ideal_poly_volume_toolkit-0.3.0-py3-none-any.whl

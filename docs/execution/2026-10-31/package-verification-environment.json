@@ -1,0 +1,29 @@
+{
+  "python": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+  "executable": "/tmp/polyhedra-core-verification-20261031/bin/python",
+  "enable_user_site": false,
+  "sys_path": [
+    "",
+    "/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python312.zip",
+    "/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12",
+    "/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/lib-dynload",
+    "/tmp/polyhedra-core-verification-20261031/lib/python3.12/site-packages"
+  ],
+  "versions": {
+    "pip": "25.0.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "mpmath": "1.3.0"
+  },
+  "absent": {
+    "torch": true,
+    "gymnasium": true,
+    "gradio": true,
+    "pytest": true,
+    "hypothesis": true,
+    "pynauty": true,
+    "matplotlib": true,
+    "networkx": true,
+    "ideal_poly_volume_toolkit": true
+  }
+}

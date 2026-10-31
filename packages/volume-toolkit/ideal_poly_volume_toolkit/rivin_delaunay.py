@@ -766,15 +766,17 @@ def lobachevsky_gradient(theta: float) -> float:
     Compute the gradient of the Lobachevsky function: Λ'(θ) = -log(2sin(θ)).
 
     Args:
-        theta: Angle in radians
+        theta: Finite angle strictly between zero and pi, in radians.
 
     Returns:
-        Gradient value
-    """
-    if theta <= 1e-10 or theta >= np.pi - 1e-10:
-        # Avoid log(0) at boundaries
-        return 0.0
+        Gradient value. The derivative diverges at both endpoints; no finite
+        boundary sentinel is substituted.
 
+    Raises:
+        ValueError: If theta is outside the open angle domain.
+    """
+    if not np.isfinite(theta) or not 0 < theta < np.pi:
+        raise ValueError("theta must be finite and strictly between zero and pi")
     return -np.log(2 * np.sin(theta))
 
 
@@ -783,15 +785,18 @@ def lobachevsky_hessian(theta: float) -> float:
     Compute the Hessian (second derivative) of the Lobachevsky function: Λ''(θ) = -cot(θ).
 
     Args:
-        theta: Angle in radians
+        theta: Finite angle strictly between zero and pi, in radians.
 
     Returns:
-        Hessian value (diagonal element)
-    """
-    if theta <= 1e-10 or theta >= np.pi - 1e-10:
-        # Avoid division by zero at boundaries
-        return -1e10  # Large negative value (concave)
+        Second derivative, negative below pi/2 and positive above pi/2.
+        Concavity of tetrahedral volume holds on the constrained angle plane,
+        not for each unconstrained scalar summand.
 
+    Raises:
+        ValueError: If theta is outside the open angle domain.
+    """
+    if not np.isfinite(theta) or not 0 < theta < np.pi:
+        raise ValueError("theta must be finite and strictly between zero and pi")
     return -1.0 / np.tan(theta)
 
 

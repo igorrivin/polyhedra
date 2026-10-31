@@ -786,7 +786,8 @@ def check_arithmeticity(triangles: List[Tuple[int, int, int]],
     invariant trace field are not checked.
 
     ``is_arithmetic`` is true only when the caller supplies a complete shear
-    mapping whose values are all exactly zero.  In that case the separately
+    mapping whose original values are all exactly zero, before conversion to
+    floating-point holonomy parameters. In that case the separately
     implemented exact evaluator proves that every holonomy generator has
     integral matrix entries and the group is a finite-index subgroup of
     PSL(2,Z).  Zero shears merely inferred from floating-point coordinates are
@@ -851,6 +852,9 @@ def check_arithmeticity(triangles: List[Tuple[int, int, int]],
             list(input_faces), vertices_complex
         )
     validated_shears = _validated_shear_mapping(triangulation, shears)
+    # Validation accepts real values such as Fraction. Preserve their exact-zero
+    # declaration before a lossy float conversion can underflow nonzero inputs.
+    has_exact_zero_shears = all(value == 0 for value in shears.values())
     gens = generators_from_triangulation(
         triangulation, validated_shears, root=0
     )
@@ -884,10 +888,6 @@ def check_arithmeticity(triangles: List[Tuple[int, int, int]],
     passes_generator_trace_diagnostic = integral_count == len(gens)
     max_abs_shear = max(map(abs, validated_shears.values()), default=0.0)
     passes_zero_shear_diagnostic = max_abs_shear <= shear_tolerance
-    has_exact_zero_shears = all(
-        value == 0.0 for value in validated_shears.values()
-    )
-
     is_arithmetic = geometry_source == "declared_shears" and has_exact_zero_shears
     if is_arithmetic:
         # This checks topology again intentionally: the public exact API is the

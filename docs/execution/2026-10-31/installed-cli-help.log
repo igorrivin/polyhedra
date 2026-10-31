@@ -1,0 +1,28 @@
+usage: ideal-poly-optimize [-h] --vertices VERTICES [--trials TRIALS]
+                           [--maxiter MAXITER] [--popsize POPSIZE]
+                           [--workers WORKERS] [--output OUTPUT] [--seed SEED]
+
+Optimize ideal polyhedron volumes
+
+options:
+  -h, --help            show this help message and exit
+  --vertices VERTICES, -v VERTICES
+                        Number of vertices (must be >= 4)
+  --trials TRIALS, -t TRIALS
+                        Number of optimization trials (default: 10)
+  --maxiter MAXITER, -m MAXITER
+                        Max iterations per trial (default: 200)
+  --popsize POPSIZE, -p POPSIZE
+                        SciPy population multiplier (default: 15)
+  --workers WORKERS, -w WORKERS
+                        Worker processes; -1 uses all CPUs (default: 1)
+  --output OUTPUT, -o OUTPUT
+                        Output JSON file (default: results/data/{n}vertex_opti
+                        mization_cli_TIMESTAMP.json)
+  --seed SEED, -s SEED  Random seed base (default: 42)
+
+Examples:
+  ideal-poly-optimize --vertices 7 --trials 10
+  ideal-poly-optimize --vertices 12 --trials 20 --maxiter 300
+  ideal-poly-optimize --vertices 20 --trials 5 --output results/data/my_20vertex.json
+        

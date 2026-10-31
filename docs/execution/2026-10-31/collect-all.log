@@ -1,0 +1,405 @@
+tests/test_arithmetic_corpus.py::test_layered_ring_factorizations_for_300_and_302_vertices
+tests/test_arithmetic_corpus.py::test_every_layered_ring_factor_has_exact_closed_sphere_counts[300]
+tests/test_arithmetic_corpus.py::test_every_layered_ring_factor_has_exact_closed_sphere_counts[302]
+tests/test_arithmetic_corpus.py::test_large_layered_ring_coordinates_pass_default_shear_gate[1-298]
+tests/test_arithmetic_corpus.py::test_large_layered_ring_coordinates_pass_default_shear_gate[2-149]
+tests/test_arithmetic_corpus.py::test_large_layered_ring_coordinates_pass_default_shear_gate[1-300]
+tests/test_arithmetic_corpus.py::test_large_layered_ring_coordinates_pass_default_shear_gate[75-4]
+tests/test_arithmetic_corpus.py::test_exact_holonomy_integers_are_decimal_strings_at_json_boundary
+tests/test_arithmetic_corpus.py::test_strict_json_rejects_nonfinite_values_and_duplicate_keys
+tests/test_arithmetic_corpus.py::test_atomic_create_is_no_clobber_and_atomic_replace_is_strict
+tests/test_arithmetic_corpus.py::test_complete_campaign_validates_schema_and_resumes_without_clobber
+tests/test_arithmetic_corpus.py::test_schema_rejects_unknown_root_fields
+tests/test_arithmetic_corpus.py::test_networkx_fallback_uses_exact_isomorphism_after_relabeling
+tests/test_arithmetic_corpus.py::test_pynauty_identifier_is_relabeling_invariant_when_available
+tests/test_arithmetic_corpus.py::test_legalized_mode_calls_settled_apis_and_closes_infinity
+tests/test_arithmetic_corpus.py::test_failed_attempts_are_bounded_and_checkpointed
+tests/test_arithmetic_corpus.py::test_deprecated_cli_alias_and_bounds
+tests/test_correctness_regressions.py::test_numerical_modules_import_through_package_namespace
+tests/test_correctness_regressions.py::test_coplanar_cube_facets_are_reconstructed_as_squares
+tests/test_correctness_regressions.py::test_unsigned_bloch_wigner_volume_gradient_matches_finite_difference
+tests/test_correctness_regressions.py::test_near_degenerate_bloch_wigner_gradient_is_not_flattened[(1e-16+1e-16j)]
+tests/test_correctness_regressions.py::test_near_degenerate_bloch_wigner_gradient_is_not_flattened[(1+1e-16j)]
+tests/test_correctness_regressions.py::test_near_coincident_cross_ratio_uses_the_true_reciprocal
+tests/test_correctness_regressions.py::test_halfspace_numpy_arrays_are_not_treated_as_infinity_sentinels
+tests/test_correctness_regressions.py::test_threshold_default_is_accurate_and_explicit_series_terms_propagate
+tests/test_data_integrity.py::test_existing_lfs_paths_remain_attribute_filtered
+tests/test_data_integrity.py::test_canonical_inputs_are_ordinary_git_with_expected_hashes
+tests/test_data_integrity.py::test_result_manifest_validates_schema_paths_and_hashes
+tests/test_data_integrity.py::test_legacy_arithmetic_collections_are_explicitly_superseded
+tests/test_data_integrity.py::test_result_manifest_rejects_tampered_artifact_hash
+tests/test_data_integrity.py::test_result_manifest_rejects_weakened_canonical_classification
+tests/test_data_integrity.py::test_lfs_pointer_detection
+tests/test_data_integrity.py::test_angle_analysis_prefers_canonical_results
+tests/test_data_integrity.py::test_angle_analysis_warns_before_legacy_fallback
+tests/test_data_integrity.py::test_spanning_tree_analysis_prefers_corrected_data
+tests/test_data_integrity.py::test_spanning_tree_analysis_warns_before_legacy_fallback
+tests/test_distribution.py::test_sampling_is_invariant_to_worker_count
+tests/test_distribution.py::test_serial_cli_saves_volume_list_and_sampling_metadata
+tests/test_distribution.py::test_sampling_requires_at_least_four_vertices[0]
+tests/test_distribution.py::test_sampling_requires_at_least_four_vertices[3]
+tests/test_distribution.py::test_bootstrap_is_local_reproducible_and_supports_fewer_than_ten_draws
+tests/test_distribution.py::test_fit_distribution_uses_a_bound_cdf_callable
+tests/test_distribution.py::test_fit_distribution_selects_new_anderson_method
+tests/test_distribution.py::test_unexpected_sampling_error_propagates
+tests/test_distribution.py::test_known_numerical_failure_is_retried_and_counted
+tests/test_distribution.py::test_attempt_limit_reports_underfill
+tests/test_distribution.py::test_sampling_rejects_nonpositive_worker_counts[0]
+tests/test_distribution.py::test_sampling_rejects_nonpositive_worker_counts[-1]
+tests/test_distribution.py::test_cli_preserves_empty_underfill_diagnostics_without_plotting
+tests/test_fast_logdet.py::test_apply_swap_commits_adjacency_and_rebuild_preserves_it
+tests/test_fast_logdet.py::test_disconnected_graph_has_negative_infinite_logdet
+tests/test_fast_logdet.py::test_invalid_swap_is_transactional
+tests/test_geometry.py::test_regular_ideal_tetrahedron_volume
+tests/test_geometry.py::test_bloch_wigner_scalar_and_batch_agree
+tests/test_geometry.py::test_vectorized_delaunay_paths_match_scalar_triangle_sums
+tests/test_geometry.py::test_sphere_volume_is_rotation_pole_and_scale_invariant
+tests/test_geometry.py::test_stereographic_projection_mapping_and_actual_degeneracy
+tests/test_geometry.py::test_stereographic_projection_is_stable_near_the_north_pole
+tests/test_geometry.py::test_volume_is_invariant_under_similarity_and_general_mobius_map
+tests/test_geometry.py::test_lobachevsky_custom_backward_matches_its_forward_series
+tests/test_geometry.py::test_bloch_wigner_custom_backward_matches_finite_differences
+tests/test_geometry.py::test_bloch_wigner_custom_backward_is_stable_near_endpoints[(1e-18+1e-18j)]
+tests/test_geometry.py::test_bloch_wigner_custom_backward_is_stable_near_endpoints[(0.9999999999999999+1e-18j)]
+tests/test_geometry_4d_torch.py::test_regular_ideal_4simplex_matches_numpy_formula
+tests/test_geometry_4d_torch.py::test_vectorized_projected_polytope_matches_both_numpy_paths
+tests/test_geometry_4d_torch.py::test_simplex_labels_and_row_order_are_preserved
+tests/test_geometry_4d_torch.py::test_similarity_gauge_is_differentiable_and_removes_four_null_directions
+tests/test_geometry_4d_torch.py::test_autograd_matches_central_finite_difference_in_a_stable_chamber
+tests/test_geometry_4d_torch.py::test_invalid_projected_inputs_fail_explicitly[points0-simplices0-ValueError-finite]
+tests/test_geometry_4d_torch.py::test_invalid_projected_inputs_fail_explicitly[points1-simplices1-ValueError-labels]
+tests/test_geometry_4d_torch.py::test_invalid_projected_inputs_fail_explicitly[points2-simplices2-ValueError-distinct]
+tests/test_geometry_4d_torch.py::test_invalid_projected_inputs_fail_explicitly[points3-simplices3-TypeError-int64]
+tests/test_geometry_4d_torch.py::test_invalid_projected_inputs_fail_explicitly[points4-simplices4-ValueError-degenerate]
+tests/test_geometry_4d_torch.py::test_similarity_gauge_rejects_collapsed_points
+tests/test_geometry_4d_torch.py::test_numpy_h4_geometry_stays_importable_without_torch
+tests/test_h4_symmetric_maxima_campaign.py::test_task_plan_is_deterministic_and_config_is_bounded
+tests/test_h4_symmetric_maxima_campaign.py::test_optimizer_dispatch_and_legacy_powell_compatibility
+tests/test_h4_symmetric_maxima_campaign.py::test_worker_entry_preserves_deterministic_optimizer_arm
+tests/test_h4_symmetric_maxima_campaign.py::test_compact_fresh_ad_topology_diagnostics_have_bounded_size
+tests/test_h4_symmetric_maxima_campaign.py::test_campaign_shortlists_locally_and_retains_only_certified_coordinates
+tests/test_h4_symmetric_maxima_campaign.py::test_local_audit_error_retains_candidate_with_inconclusive_classification
+tests/test_h4_symmetric_maxima_campaign.py::test_no_clobber_checkpoint_resume_and_validate_only
+tests/test_h4_symmetric_maxima_campaign.py::test_resume_rejects_optimizer_arm_drift
+tests/test_h4_symmetric_maxima_campaign.py::test_timeout_checkpoint_is_resumable
+tests/test_h4_symmetric_maxima_campaign.py::test_semantic_and_finite_json_gates_reject_tampering
+tests/test_h4_symmetric_maxima_campaign.py::test_fresh_optimizer_diagnostic_invariants_reject_mutations
+tests/test_h4_symmetric_maxima_campaign.py::test_fake_calibration_requires_exact_certified_order_384
+tests/test_h4_symmetric_maxima_campaign.py::test_real_n8_sixteen_cell_calibration_smoke
+tests/test_h4_symmetric_maxima_campaign.py::test_failed_calibration_stops_before_mining
+tests/test_h4_symmetric_maxima_campaign.py::test_resume_rejects_changed_runtime_environment
+tests/test_hd_geometric_symmetry.py::test_h4_16_cell_has_full_hyperoctahedral_group
+tests/test_hd_geometric_symmetry.py::test_group_is_invariant_under_nontrivial_lorentz_boundary_map
+tests/test_hd_geometric_symmetry.py::test_group_certification_survives_strong_lorentz_boost[7.0]
+tests/test_hd_geometric_symmetry.py::test_group_certification_survives_strong_lorentz_boost[8.0]
+tests/test_hd_geometric_symmetry.py::test_group_certification_survives_strong_lorentz_boost[10.0]
+tests/test_hd_geometric_symmetry.py::test_huge_finite_coordinates_fail_with_strict_json_diagnostics
+tests/test_hd_geometric_symmetry.py::test_generic_ideal_h4_simplex_filters_combinatorial_symmetries
+tests/test_hd_geometric_symmetry.py::test_almost_symmetric_input_is_not_fully_certified_without_rejection_gap
+tests/test_hd_geometric_symmetry.py::test_indeterminate_fit_prevents_full_group_certification
+tests/test_hd_geometric_symmetry.py::test_invalid_nonunit_input_is_rejected_before_hull_work
+tests/test_hd_geometric_symmetry.py::test_nonsimplicial_tesseract_is_not_certified
+tests/test_hd_geometric_symmetry.py::test_group_enumeration_cap_preserves_topology_and_order
+tests/test_hd_geometric_symmetry.py::test_invalid_audit_controls_raise[unit_tolerance-0.0]
+tests/test_hd_geometric_symmetry.py::test_invalid_audit_controls_raise[distinct_tolerance-inf]
+tests/test_hd_geometric_symmetry.py::test_invalid_audit_controls_raise[support_tolerance--1.0]
+tests/test_hd_geometric_symmetry.py::test_invalid_audit_controls_raise[isometry_tolerance-nan]
+tests/test_hd_geometric_symmetry.py::test_invalid_audit_controls_raise[max_group_order-0]
+tests/test_installed_cli.py::test_package_exposes_installed_version
+tests/test_installed_cli.py::test_optimization_cli_parser_accepts_explicit_arguments
+tests/test_installed_cli.py::test_optimization_cli_module_help
+tests/test_optimization.py::test_regular_tetrahedron_objective_and_parameter_validation
+tests/test_optimization.py::test_infinity_fan_closes_planar_delaunay_disk
+tests/test_optimization.py::test_infinity_fan_rejects_a_punctured_torus
+tests/test_optimization.py::test_infinity_fan_orients_mixed_winding_input_coherently
+tests/test_optimization.py::test_optimizer_service_returns_a_complete_positive_result
+tests/test_optimization.py::test_optimizer_excludes_penalty_trials_from_volume_statistics
+tests/test_optimization.py::test_serial_optimizer_retains_scipy_builtin_polish
+tests/test_optimization.py::test_parallel_optimizer_polishes_serially_and_accepts_improvement
+tests/test_optimization.py::test_parallel_optimizer_rejects_invalid_polish_but_counts_its_work[not-improved]
+tests/test_optimization.py::test_parallel_optimizer_rejects_invalid_polish_but_counts_its_work[unsuccessful]
+tests/test_optimization.py::test_parallel_optimizer_rejects_invalid_polish_but_counts_its_work[outside-bounds]
+tests/test_optional_dependencies.py::test_h3_core_imports_and_evaluates_when_torch_is_unavailable
+tests/test_optional_dependencies.py::test_private_geometry_torch_compatibility_exports_are_lazy_aliases
+tests/test_penner_rivin_regression.py::test_inf_sentinel_zero_shear_integer_traces[points0-regular ideal tetrahedron]
+tests/test_penner_rivin_regression.py::test_inf_sentinel_zero_shear_integer_traces[points1-regular ideal octahedron]
+tests/test_penner_rivin_regression.py::test_standard_cross_ratio_convention_all_finite
+tests/test_penner_rivin_regression.py::test_check_arithmeticity_requires_geometry
+tests/test_penner_rivin_regression.py::test_realization_attains_rivin_angles
+tests/test_penner_rivin_regression.py::test_require_interior_early_tie_rejection
+tests/test_penner_rivin_regression.py::test_interior_optimum_zero_shear_diagnostic_is_not_an_open_certificate
+tests/test_release_benchmark.py::test_h3_release_benchmark_smoke
+tests/test_rivin_holonomy_exact.py::test_strict_sphere_validation_and_orientation_normalization
+tests/test_rivin_holonomy_exact.py::test_strict_sphere_validation_rejects_invalid_complexes[faces0-ValueError-incidence 1]
+tests/test_rivin_holonomy_exact.py::test_strict_sphere_validation_rejects_invalid_complexes[faces1-ValueError-incidence 3]
+tests/test_rivin_holonomy_exact.py::test_strict_sphere_validation_rejects_invalid_complexes[faces2-ValueError-disconnected]
+tests/test_rivin_holonomy_exact.py::test_strict_sphere_validation_rejects_invalid_complexes[faces3-ValueError-duplicates]
+tests/test_rivin_holonomy_exact.py::test_strict_sphere_validation_rejects_invalid_complexes[faces4-ValueError-Euler characteristic is 0]
+tests/test_rivin_holonomy_exact.py::test_strict_sphere_validation_rejects_invalid_complexes[faces5-TypeError-non-negative integers]
+tests/test_rivin_holonomy_exact.py::test_strict_sphere_validation_rejects_invalid_complexes[faces6-ValueError-non-negative]
+tests/test_rivin_holonomy_exact.py::test_strict_sphere_validation_rejects_invalid_complexes[faces7-ValueError-repeated vertices]
+tests/test_rivin_holonomy_exact.py::test_triangulation_from_faces_keeps_edge_ids_and_boundary_behavior
+tests/test_rivin_holonomy_exact.py::test_exact_generators_match_zero_shear_float_words_and_matrices
+tests/test_rivin_holonomy_exact.py::test_reverse_crossing_reuses_shear_and_backtrack_is_projective_identity
+tests/test_rivin_holonomy_exact.py::test_coordinate_shears_are_oriented_by_faces_not_crossing_direction
+tests/test_rivin_holonomy_exact.py::test_nonzero_complete_shears_still_give_parabolic_cusp_loops
+tests/test_rivin_holonomy_exact.py::test_basis_trace_integrality_is_only_a_diagnostic_in_common_frame
+tests/test_rivin_holonomy_exact.py::test_declared_exact_zero_shears_are_the_certified_compatibility_path
+tests/test_rivin_holonomy_exact.py::test_shear_mapping_requires_exact_finite_edge_coverage[shears0-missing edge ids]
+tests/test_rivin_holonomy_exact.py::test_shear_mapping_requires_exact_finite_edge_coverage[shears1-unexpected]
+tests/test_rivin_holonomy_exact.py::test_shear_mapping_requires_exact_finite_edge_coverage[shears2-finite]
+tests/test_rivin_holonomy_exact.py::test_shear_mapping_requires_exact_finite_edge_coverage[shears3-finite]
+tests/test_rivin_holonomy_exact.py::test_near_degenerate_cross_ratio_is_not_clamped_to_zero
+tests/test_rivin_holonomy_exact.py::test_vertex_entry_point_closes_sphere_without_vacuous_generator_set
+tests/test_rivin_holonomy_exact.py::test_exact_certificate_is_serializable_and_has_area_index
+tests/test_rivin_holonomy_exact.py::test_exact_certificate_scales_to_exactly_300_vertices
+tests/test_rivin_holonomy_exact.py::test_exact_certificate_refuses_open_input_and_invalid_root
+tests/test_rivin_legalization.py::test_flip_edge_preserves_cyclic_orientation
+tests/test_rivin_legalization.py::test_flip_edge_refuses_inconsistent_shared_edge_winding
+tests/test_rivin_legalization.py::test_compute_rivin_angle_residuals_for_equilateral_grid
+tests/test_rivin_legalization.py::test_triangle_angle_is_scale_stable_near_collinear[1e-150]
+tests/test_rivin_legalization.py::test_triangle_angle_is_scale_stable_near_collinear[1.0]
+tests/test_rivin_legalization.py::test_triangle_angle_is_scale_stable_near_collinear[1e+150]
+tests/test_rivin_legalization.py::test_triangle_angle_handles_zero_length_ray_explicitly
+tests/test_rivin_legalization.py::test_legalization_is_deterministic_bounded_and_reports_residuals
+tests/test_rivin_legalization.py::test_legalization_rejects_non_disk_triangulations[disconnected]
+tests/test_rivin_legalization.py::test_legalization_rejects_non_disk_triangulations[pinched]
+tests/test_rivin_legalization.py::test_legalization_rejects_noncontiguous_vertex_labels
+tests/test_rivin_legalization.py::test_legalization_normalizes_mixed_face_winding
+tests/test_rivin_legalization.py::test_legalization_recomputes_residuals_with_caller_tolerance
+tests/test_rivin_legalization.py::test_legalization_cycle_detection
+tests/test_rivin_legalization.py::test_realization_reports_extended_residuals
+tests/test_rivin_solver_comparison.py::test_schema_is_valid_draft_2020_12
+tests/test_rivin_solver_comparison.py::test_pole_link_disk_removes_entire_star_not_one_face
+tests/test_rivin_solver_comparison.py::test_plain_face_list_and_answer_key_inputs_are_supported
+tests/test_rivin_solver_comparison.py::test_arithmetic_corpus_selection_is_sorted_and_bounded
+tests/test_rivin_solver_comparison.py::test_direct_contract_and_strict_endpoint_are_independent_of_solver_status
+tests/test_rivin_solver_comparison.py::test_noncanonical_face_uses_script_anchor_gate_not_core_label_gate
+tests/test_rivin_solver_comparison.py::test_complete_fake_run_validates_schema_and_never_initializes_from_reference
+tests/test_rivin_solver_comparison.py::test_output_is_no_clobber_by_default_and_strict_json
+tests/test_rivin_solver_comparison.py::test_partial_failure_cli_exit_is_nonzero
+tests/test_rivin_zero_shear.py::test_canonical_tetrahedron_has_every_authoritative_certificate
+tests/test_rivin_zero_shear.py::test_octahedron_and_mobius_image_remain_strict_zero_shear
+tests/test_rivin_zero_shear.py::test_normalization_is_label_ordered_and_explicitly_optional
+tests/test_rivin_zero_shear.py::test_normalization_does_not_collapse_a_near_anchor_finite_point
+tests/test_rivin_zero_shear.py::test_public_normalization_handles_arbitrary_labels_and_handedness
+tests/test_rivin_zero_shear.py::test_duplicates_and_nonfinite_coordinates_return_finite_audits
+tests/test_rivin_zero_shear.py::test_support_tie_uses_adaptive_exact_sign_and_is_not_strict
+tests/test_rivin_zero_shear.py::test_support_filter_matches_exact_sign_across_extreme_scales[points0]
+tests/test_rivin_zero_shear.py::test_support_filter_matches_exact_sign_across_extreme_scales[points1]
+tests/test_rivin_zero_shear.py::test_support_report_cannot_merge_opposite_exact_sides_at_extreme_scale
+tests/test_rivin_zero_shear.py::test_explicit_embedded_zero_shear_wrong_hull_is_classified
+tests/test_rivin_zero_shear.py::test_input_orientation_coherence_is_a_strict_gate
+tests/test_rivin_zero_shear.py::test_zero_shear_sparse_jacobian_matches_centered_difference
+tests/test_rivin_zero_shear.py::test_log_height_sparse_jacobian_matches_centered_difference
+tests/test_rivin_zero_shear.py::test_weighted_tutte_start_is_planar_and_satisfies_barycenters
+tests/test_rivin_zero_shear.py::test_pole_link_tutte_start_fixes_full_regular_boundary_and_disk_barycenter
+tests/test_rivin_zero_shear.py::test_lognormal_weights_are_complete_positive_and_reproducible
+tests/test_rivin_zero_shear.py::test_tutte_solver_keeps_disk_coordinates_and_normalizes_separately
+tests/test_rivin_zero_shear.py::test_generic_cube_solver_is_exactly_the_tutte_wrapper_on_same_start
+tests/test_rivin_zero_shear.py::test_generic_solver_normalizes_caller_start_and_preserves_positive_heights
+tests/test_rivin_zero_shear.py::test_generic_solver_rejects_malformed_or_degenerate_initial_data[points0-cube_roots-coordinate count]
+tests/test_rivin_zero_shear.py::test_generic_solver_rejects_malformed_or_degenerate_initial_data[points1-cube_roots-pairwise distinct]
+tests/test_rivin_zero_shear.py::test_generic_solver_rejects_malformed_or_degenerate_initial_data[points2-standard_upper_half_plane-half-plane]
+tests/test_rivin_zero_shear.py::test_generic_solver_rejects_malformed_or_degenerate_initial_data[points3-unknown-gauge must be]
+tests/test_rivin_zero_shear.py::test_gapped_labels_and_bad_weights_are_rejected_cleanly
+tests/test_rl_training_launcher.py::test_default_artifact_name_uses_current_protocol_not_final
+tests/test_rl_training_launcher.py::test_invalid_training_arguments_fail_before_training[arguments0]
+tests/test_rl_training_launcher.py::test_invalid_training_arguments_fail_before_training[arguments1]
+tests/test_rl_training_launcher.py::test_invalid_training_arguments_fail_before_training[arguments2]
+tests/test_rl_training_launcher.py::test_invalid_training_arguments_fail_before_training[arguments3]
+tests/test_rl_training_launcher.py::test_invalid_training_arguments_fail_before_training[arguments4]
+tests/test_rl_training_launcher.py::test_invalid_training_arguments_fail_before_training[arguments5]
+tests/test_rl_training_launcher.py::test_invalid_training_arguments_fail_before_training[arguments6]
+tests/test_rl_training_launcher.py::test_invalid_training_arguments_fail_before_training[arguments7]
+tests/test_rl_training_launcher.py::test_launcher_writes_truthful_atomic_model_and_config
+tests/test_rl_training_launcher.py::test_training_failure_leaves_no_partial_artifact_or_lock
+tests/test_rl_training_launcher.py::test_overwrite_pair_promotion_restores_both_old_artifacts_on_sidecar_failure
+tests/test_rl_training_launcher.py::test_no_clobber_pair_promotion_removes_first_artifact_if_second_fails
+tests/test_rl_training_launcher.py::test_dry_run_writes_nothing_and_never_calls_trainer
+tests/test_script_layout.py::test_legacy_debug_launcher_delegates_to_canonical_script[debug_gradient_sign.py]
+tests/test_script_layout.py::test_legacy_debug_launcher_delegates_to_canonical_script[debug_original.py]
+tests/test_script_layout.py::test_legacy_debug_launcher_delegates_to_canonical_script[test_from_bad_init.py]
+tests/test_script_layout.py::test_legacy_debug_launcher_delegates_to_canonical_script[test_gradients.py]
+tests/test_script_layout.py::test_legacy_debug_launcher_delegates_to_canonical_script[test_lbfgs_issue.py]
+tests/test_tutte_basin_audit.py::test_task_expansion_is_worker_count_independent
+tests/test_tutte_basin_audit.py::test_explicit_ordered_anchor_is_preserved
+tests/test_tutte_basin_audit.py::test_checkpoint_resume_no_clobber_schema_and_hardness
+tests/test_tutte_basin_audit.py::test_validator_and_resume_reject_fabricated_aggregates_and_terminal_status
+tests/test_tutte_basin_audit.py::test_resume_rejects_runtime_dependency_platform_and_thread_drift
+tests/test_tutte_basin_audit.py::test_root_clusters_use_direct_chordal_tolerance_without_integer_grids
+tests/test_tutte_basin_audit.py::test_ready_worker_results_are_committed_in_task_order
+tests/test_tutte_basin_audit.py::test_fake_study_outcomes_do_not_depend_on_worker_setting
+tests/test_tutte_basin_audit.py::test_errors_are_checkpointed_and_make_a_target_start_fragile
+tests/test_tutte_basin_audit.py::test_schema_and_strict_json_reject_unversioned_or_nonfinite_data
+tests/test_tutte_basin_audit.py::test_worker_and_numerical_bounds_are_explicit
+tests/test_tutte_basin_audit.py::test_coordinate_payload_filter_keeps_trajectory_metrics_only
+tests/test_tutte_basin_audit.py::test_compact_audit_replaces_linear_diagnostic_arrays_with_counts
+tests/test_tutte_basin_audit.py::test_trajectory_summary_reports_target_cell_entry_and_later_exit
+tests/test_tutte_basin_audit.py::test_real_script_task_skips_spherical_scan_and_compacts_audit
+tests/test_tutte_basin_audit.py::test_small_real_uniform_tutte_solve_reaches_strict_target
+tests/test_zero_shear_checker.py::test_valid_labeled_normalized_tetrahedron_passes
+tests/test_zero_shear_checker.py::test_wrong_anchor_fails_normalization[vertices0]
+tests/test_zero_shear_checker.py::test_wrong_anchor_fails_normalization[vertices1]
+tests/test_zero_shear_checker.py::test_wrong_handedness_is_not_accepted_as_the_same_realization
+tests/test_zero_shear_checker.py::test_target_labels_must_be_exact_contiguous_range
+tests/test_zero_shear_checker.py::test_private_key_requires_normalization_metadata
+tests/test_zero_shear_checker.py::test_target_orientation_must_already_be_coherent
+tests/test_zero_shear_checker.py::test_main_reports_malformed_or_nonstandard_json_as_strict_json[{"exists": true, "exists": false}]
+tests/test_zero_shear_checker.py::test_main_reports_malformed_or_nonstandard_json_as_strict_json[{"exists": true, "vertices": [null, [0, 0], [1, 0], [NaN, 1]]}]
+tests/test_zero_shear_checker.py::test_main_reports_malformed_or_nonstandard_json_as_strict_json[not JSON]
+tests/test_zero_shear_checker.py::test_response_contract_rejects_extra_keys
+tests/test_zero_shear_checker.py::test_false_answer_uses_only_the_private_existence_bit[False-False-True-private_key_nonexistence_match]
+tests/test_zero_shear_checker.py::test_false_answer_uses_only_the_private_existence_bit[True-False-False-incorrect_existence_claim]
+tests/test_zero_shear_checker.py::test_private_reference_is_diagnostic_unless_tolerance_is_requested
+tests/test_zero_shear_checker.py::test_atomic_output_is_complete_and_stdout_stays_empty
+tests/test_zero_shear_checker.py::test_output_refuses_to_clobber_without_explicit_overwrite
+tests/test_zero_shear_checker.py::test_explicit_overwrite_atomically_replaces_existing_grade
+tests/test_zero_shear_holdouts.py::test_export_is_deterministic_private_and_publicly_leakage_resistant
+tests/test_zero_shear_holdouts.py::test_answer_key_preserves_winding_and_passes_independent_audit
+tests/test_zero_shear_holdouts.py::test_lower_half_plane_source_is_conjugated_with_positive_bending
+tests/test_zero_shear_holdouts.py::test_refuses_nonfinal_tampered_or_overlapping_outputs
+tests/test_zero_shear_holdouts.py::test_recomputes_hardness_and_rejects_duplicate_selected_topologies
+tests/test_zero_shear_holdouts.py::test_rejects_false_index_and_incoherent_prompt_winding
+tests/test_zero_shear_holdouts.py::test_multiple_basin_audits_merge_into_one_private_provenance
+tests/test_zero_shear_holdouts.py::test_public_only_cli_warns_and_persists_no_keys
+
+==================================== ERRORS ====================================
+___________ ERROR collecting tests/test_cage_optimizer_accounting.py ___________
+ImportError while importing test module '/Volumes/Lexar/lambda/devel/polyhedra/ideal_poly_volume_toolkit/tests/test_cage_optimizer_accounting.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_cage_optimizer_accounting.py:10: in <module>
+    import ideal_poly_volume_toolkit.rl.cage.task as cage_task
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+ideal_poly_volume_toolkit/rl/generic.py:22: in <module>
+    import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+__________ ERROR collecting tests/test_h4_combinatorics_benchmark.py ___________
+ImportError while importing test module '/Volumes/Lexar/lambda/devel/polyhedra/ideal_poly_volume_toolkit/tests/test_h4_combinatorics_benchmark.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_h4_combinatorics_benchmark.py:11: in <module>
+    import ideal_poly_volume_toolkit.rl.polytope.h4_combinatorics_benchmark as benchmark
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+ideal_poly_volume_toolkit/rl/generic.py:22: in <module>
+    import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+___________ ERROR collecting tests/test_h4_combinatorics_response.py ___________
+ImportError while importing test module '/Volumes/Lexar/lambda/devel/polyhedra/ideal_poly_volume_toolkit/tests/test_h4_combinatorics_response.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_h4_combinatorics_response.py:25: in <module>
+    SPEC.loader.exec_module(checker)
+scripts/check_h4_combinatorics_response.py:28: in <module>
+    from ideal_poly_volume_toolkit.rl.polytope.h4_combinatorics_benchmark import (
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+ideal_poly_volume_toolkit/rl/generic.py:22: in <module>
+    import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+____________ ERROR collecting tests/test_h4_symmetric_benchmark.py _____________
+ImportError while importing test module '/Volumes/Lexar/lambda/devel/polyhedra/ideal_poly_volume_toolkit/tests/test_h4_symmetric_benchmark.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_h4_symmetric_benchmark.py:8: in <module>
+    import ideal_poly_volume_toolkit.rl.polytope.h4_symmetric_benchmark as h4_benchmark
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+ideal_poly_volume_toolkit/rl/generic.py:22: in <module>
+    import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+_____________ ERROR collecting tests/test_h4_symmetric_response.py _____________
+ImportError while importing test module '/Volumes/Lexar/lambda/devel/polyhedra/ideal_poly_volume_toolkit/tests/test_h4_symmetric_response.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_h4_symmetric_response.py:23: in <module>
+    SPEC.loader.exec_module(checker)
+scripts/check_h4_symmetric_response.py:26: in <module>
+    from ideal_poly_volume_toolkit.rl.polytope.h4_symmetric_benchmark import (
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+ideal_poly_volume_toolkit/rl/generic.py:22: in <module>
+    import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+_____________ ERROR collecting tests/test_numerical_properties.py ______________
+ImportError while importing test module '/Volumes/Lexar/lambda/devel/polyhedra/ideal_poly_volume_toolkit/tests/test_numerical_properties.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_numerical_properties.py:7: in <module>
+    from hypothesis import assume, given, settings, strategies as st
+E   ModuleNotFoundError: No module named 'hypothesis'
+______________ ERROR collecting tests/test_rl_budget_contract.py _______________
+ImportError while importing test module '/Volumes/Lexar/lambda/devel/polyhedra/ideal_poly_volume_toolkit/tests/test_rl_budget_contract.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_rl_budget_contract.py:13: in <module>
+    import ideal_poly_volume_toolkit.rl.polytope.optimizers as polytope_optimizers
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+ideal_poly_volume_toolkit/rl/generic.py:22: in <module>
+    import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+__________________ ERROR collecting tests/test_rl_harness.py ___________________
+ImportError while importing test module '/Volumes/Lexar/lambda/devel/polyhedra/ideal_poly_volume_toolkit/tests/test_rl_harness.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_rl_harness.py:10: in <module>
+    import ideal_poly_volume_toolkit.rl.polytope.task as polytope_task_module
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+ideal_poly_volume_toolkit/rl/generic.py:22: in <module>
+    import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+_________________ ERROR collecting tests/test_rl_validator.py __________________
+ImportError while importing test module '/Volumes/Lexar/lambda/devel/polyhedra/ideal_poly_volume_toolkit/tests/test_rl_validator.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/igorrivin/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_rl_validator.py:14: in <module>
+    from ideal_poly_volume_toolkit.rl.generic import OptimizerRun, OptimizerRunError
+ideal_poly_volume_toolkit/rl/__init__.py:9: in <module>
+    from .generic import (
+ideal_poly_volume_toolkit/rl/generic.py:22: in <module>
+    import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'
+=========================== short test summary info ============================
+ERROR tests/test_cage_optimizer_accounting.py
+ERROR tests/test_h4_combinatorics_benchmark.py
+ERROR tests/test_h4_combinatorics_response.py
+ERROR tests/test_h4_symmetric_benchmark.py
+ERROR tests/test_h4_symmetric_response.py
+ERROR tests/test_numerical_properties.py
+ERROR tests/test_rl_budget_contract.py
+ERROR tests/test_rl_harness.py
+ERROR tests/test_rl_validator.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 9 errors during collection !!!!!!!!!!!!!!!!!!!!
+265 tests collected, 9 errors in 36.37s

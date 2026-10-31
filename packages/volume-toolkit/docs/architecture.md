@@ -123,9 +123,17 @@ embedding, and bending inequalities.
 
 ### 6. Rivin LP and geometric realization
 
-`planar graph + angles from LP → geometric realization of an ideal polyhedron`
+`planar graph → feasible angle structure → compatible volume optimization → coordinate realization and independent geometric checks`
 
-Entries: `rivin_delaunay` (Delaunay realizability oracle), `geometric_realization`, `cone_realization` (Volkov cone method for simplicial 4-polytopes), `inscribed_realization`.
+`rivin_delaunay` owns feasibility, optimization, and its residual-bearing
+realization workflow. LP feasibility alone does not make every returned angle
+assignment geometrically compatible. `geometric_realization` retains a generic
+oriented triangle-development helper; success checks local angles, orientation
+and closure, not global embedding or convexity. See
+[the realization contract](GEOMETRIC_REALIZATION_README.md).
+
+Other entries are `cone_realization` (Volkov cone method for simplicial
+4-polytopes) and `inscribed_realization`.
 
 ### 7. H^4 ideal-polytope volume via Schläfli
 

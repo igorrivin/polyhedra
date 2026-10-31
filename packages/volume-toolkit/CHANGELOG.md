@@ -74,6 +74,16 @@ note](docs/release-0.4.0.md) for compatibility details and the release gates.
 
 ### Fixed
 
+- Exact zero-shear certification now tests the original declared real values,
+  so a nonzero rational that underflows in floating-point diagnostics is not
+  promoted to an exact certificate.
+- Rigid triangle development now preserves cyclic face orientation, anchors
+  an actual edge under relabeling, and requires angle/orientation/closure
+  residuals before reporting numerical success.
+- The public Lobachevsky derivative helpers use their actual formulas near
+  both endpoints; values outside the open interval (0, pi) raise `ValueError`
+  instead of returning misleading finite sentinels.
+
 - Corrected Bloch--Wigner and Lobachevsky autodiff behavior.
 - Corrected pole projection, positive rescaling invariance, coplanar hull-face
   reconstruction, and near-degenerate volume gradients.

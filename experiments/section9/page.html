@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Section 9 · Volume Hessians and boundary response</title>
+  <meta name="description" content="A reproducible worked example connecting ideal tetrahedral volume, a cotangent Laplacian, boundary response, and rooted forests.">
+  <style>
+    :root{color-scheme:light;--paper:#fbfaf6;--ink:#25313a;--blue:#234e68;--teal:#267478;--line:#d9dedc;--muted:#55646a;--accent:#965e20}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 Georgia,serif}
+    a{color:var(--blue);text-underline-offset:.16em}a:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+    header,main,footer{max-width:1120px;margin:auto;padding:2rem}header{padding-top:3.8rem;border-bottom:1px solid var(--line)}
+    .eyebrow,nav,.meta,table,label,button,.badge{font-family:system-ui,sans-serif}.eyebrow{font-size:.8rem;letter-spacing:.13em;color:var(--teal);text-transform:uppercase}
+    h1{font-size:clamp(2rem,5vw,3.8rem);line-height:1.13;font-weight:500;max-width:900px;margin:.7rem 0 1.2rem}h2{font-size:1.65rem;font-weight:500;margin:0 0 1rem}h3{font-size:1.18rem;margin-top:1.3rem}
+    p{max-width:78ch}.lede{font-size:1.18rem;color:var(--muted);max-width:780px}nav{display:flex;flex-wrap:wrap;gap:.7rem 1.4rem;font-size:.9rem;margin-top:1.7rem}
+    section{padding:2.3rem 0;border-bottom:1px solid var(--line);scroll-margin-top:1.5rem}.grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+    .panel{background:white;border:1px solid var(--line);border-radius:8px;padding:1.2rem 1.5rem}.note{border-left:3px solid var(--teal);padding:.15rem 1.1rem;color:var(--muted)}
+    .equation{font-size:1.25rem;overflow:auto;padding:.8rem 0;font-family:Georgia,serif}.equation sub,.equation sup{font-size:.7em}.matrix{display:inline-table;width:auto;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:8px;margin:0 .5rem}
+    .matrix td{padding:.15rem .65rem;text-align:right;border:0;font-family:Georgia,serif}table{border-collapse:collapse;width:100%;font-size:.85rem}th,td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--line)}th{font-weight:600;color:var(--muted)}caption{text-align:left;font-weight:600;padding:0 0 .6rem}
+    .scroll{overflow-x:auto}code,pre{font: .83rem/1.5 ui-monospace,SFMono-Regular,Consolas,monospace}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eff2f0;padding:1rem;border-radius:6px}.meta{font-size:.8rem;color:var(--muted);overflow-wrap:anywhere}.badge{display:inline-block;font-size:.78rem;border:1px solid var(--teal);border-radius:20px;padding:.2rem .7rem;color:var(--teal)}
+    svg{width:100%;height:auto;display:block}svg text{font:14px system-ui,sans-serif;fill:var(--ink)}input[type=range]{width:100%;accent-color:var(--teal)}.value{font-variant-numeric:tabular-nums}.muted{color:var(--muted)}ul{padding-left:1.3rem}.download-list{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;list-style:none;padding:0;font-family:system-ui,sans-serif;font-size:.9rem}footer{font-size:.85rem;color:var(--muted)}
+    @media(max-width:760px){header,main,footer{padding-left:1.2rem;padding-right:1.2rem}.grid{grid-template-columns:1fr;gap:1rem}header{padding-top:2.5rem}.panel{padding:1rem}.equation{font-size:1.08rem}}
+    @media print{body{background:white}nav,input{display:none}header,main{padding:1rem}.grid{grid-template-columns:1fr 1fr}section{break-inside:avoid}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">Polyhedra, Moduli, and Quantum Geometry · Section 9</div>
+  <h1>Volume Hessians and boundary response</h1>
+  <p class="lede">A small worked example connects a hyperbolic volume function to a finite-element matrix, an electrical boundary response, and a sum over rooted forests.</p>
+  <span class="badge">Computational companion</span>
+  <nav aria-label="On this page"><a href="#mesh">The mesh</a><a href="#eq:ipolyHessian">The Hessian</a><a href="#eq:ipolyDtN">Boundary response</a><a href="#eq:ipolyForestDeterminant">Rooted forests</a><a href="#reproduce">Reproduce</a></nav>
+</header>
+<main>
+  <section id="mesh">
+    <h2>A rectangle with two interior vertices</h2>
+    <div class="grid">
+      <div>
+        <p>Divide a 3 by 2 rectangle into six unit squares, then divide each square along its northeast diagonal. There are twelve right-isosceles triangles and two interior vertices, numbered 5 and 6. Every face has counterclockwise orientation.</p>
+        <p>For an oriented triangle (a,b,c), the angle at a changes by u<sub>b</sub> − u<sub>c</sub>, with the same rule cyclically. Set u = 0 on the boundary. These <em>leading–trailing angle coordinates</em> preserve each triangle sum and each prescribed opposite-edge angle sum.</p>
+        <p class="note">The square diagonals have zero cotangent weight. This is a non-strict Delaunay example with flat diagonals, not a certificate of a strictly simplicial convex polyhedron.</p>
+      </div>
+      <div class="panel">
+        <svg id="mesh-diagram" viewBox="0 0 440 320" role="img" aria-labelledby="mesh-title mesh-desc"><title id="mesh-title">Triangulated 3 by 2 rectangle</title><desc id="mesh-desc">Twelve triangles form six squares. Interior vertices 5 and 6 are highlighted. Dashed square diagonals have zero network conductance.</desc></svg>
+        <p class="meta">Solid grid edges carry the network. Dashed diagonals carry zero weight. Interior vertices are teal.</p>
+      </div>
+    </div>
+  </section>
+  <section id="eq:ipolyHessian">
+    <h2>The negative volume Hessian is twice the stiffness matrix</h2>
+    <p>Let V be the sum of Lobachevsky functions over all corner angles. At the geometric configuration, adjoining the ideal point at infinity to each planar triangle gives twelve ideal tetrahedra. Their total volume is 12G, where G is Catalan’s constant.</p>
+    <div class="equation" role="math" aria-label="The negative Hessian of V is twice L I I">−D<sub>u</sub><sup>2</sup>V = 2L<sub>II</sub> = K.</div>
+    <div class="grid">
+      <div class="panel">
+        <div class="equation">L<sub>II</sub> = <table class="matrix" aria-label="Grounded stiffness matrix"><tbody><tr><td>4</td><td>−1</td></tr><tr><td>−1</td><td>4</td></tr></tbody></table></div>
+        <div class="equation">K = <table class="matrix" aria-label="Negative volume Hessian"><tbody><tr><td>8</td><td>−2</td></tr><tr><td>−2</td><td>8</td></tr></tbody></table>, &nbsp; det K = 60.</div>
+        <p class="meta">These matrix entries and determinant are checked with rational arithmetic directly from the integer-coordinate geometry.</p>
+      </div>
+      <div>
+        <p>The computation assembles L in two independent ways: from cotangents, and by integrating products of barycentric basis gradients. It also differentiates an independent high-precision Clausen representation of V.</p>
+        <p>Numerical volume: <strong id="volume" class="value"></strong>.</p>
+        <p class="note">The extra check at u = (0.05, −0.03) tests the Hessian identity on an abstract positive angle structure. It does not assert that the deformed triangles close to form a planar mesh.</p>
+      </div>
+    </div>
+  </section>
+  <section id="eq:ipolyDtN">
+    <h2>Eliminate the interior to obtain boundary currents</h2>
+    <p>For this separate electrical problem, prescribe boundary voltages v<sub>B</sub>. The interior harmonic values and the Dirichlet-to-Neumann matrix are</p>
+    <div class="equation">v<sub>I</sub> = −L<sub>II</sub><sup>−1</sup>L<sub>IB</sub>v<sub>B</sub>, &nbsp; N = L<sub>BB</sub> − L<sub>BI</sub>L<sub>II</sub><sup>−1</sup>L<sub>IB</sub>.</div>
+    <p>The program uses a linear solve, not an explicitly formed inverse. N is symmetric and annihilates constant boundary voltages. With v = x/3, the interior values are exactly 1/3 and 2/3, and the Dirichlet energy is 2/3.</p>
+    <div class="grid">
+      <div class="panel">
+        <label for="voltage-scale">Scale the prescribed voltage: v = <output id="scale-label" for="voltage-scale">1.0</output> × x/3</label>
+        <input id="voltage-scale" type="range" min="-2" max="2" step="0.1" value="1">
+        <p id="voltage-result" class="value" aria-live="polite"></p>
+        <p class="meta">This control scales the checked linear solution. It is not a new optimization or an angle deformation.</p>
+      </div>
+      <div class="scroll"><table><caption>Boundary currents</caption><thead><tr><th scope="col">Vertex</th><th scope="col">Voltage</th><th scope="col">Current</th></tr></thead><tbody id="currents"></tbody></table></div>
+    </div>
+    <div id="eq:ipolySchur">
+      <h3>The same elimination in the volume quadratic form</h3>
+      <p>Eliminating the first interior coordinate from K leaves K<sub>eff</sub> = 8 − (−2)²/8 = 15/2. The determinant factorization is exact: det K = 8 × 15/2 = 60. These angle variables and the electrical boundary voltages are different variables; it is the elimination operation that they share.</p>
+    </div>
+  </section>
+  <section id="eq:ipolyForestDeterminant">
+    <h2>The determinant counts rooted forests</h2>
+    <p>A boundary-rooted spanning forest has exactly one boundary vertex in each component. A contributing forest here has two edges. Nine choices attach each interior vertex to a boundary vertex separately. Six choices join the two interior vertices and attach the pair to one of their six boundary neighbors.</p>
+    <div class="equation">∑<sub>F rooted at B</sub> ∏<sub>e ∈ F</sub> w<sub>e</sub> = 9 + 6 = 15; &nbsp; det K = 2² × 15 = 60.</div>
+    <p>All fifteen nonzero contributions have weight one. Exhaustive enumeration in rational arithmetic agrees with the grounded determinant. This exact calculation concerns this finite fixture; the general identity is the theorem explained in the monograph.</p>
+  </section>
+  <section id="reproduce">
+    <h2>Reproduce and inspect the evidence</h2>
+    <p id="run-status"></p>
+    <p class="meta" id="provenance"></p>
+    <div class="scroll"><table><caption>Numerical checks and declared tolerances</caption><thead><tr><th scope="col">Check</th><th scope="col">Maximum error</th><th scope="col">Tolerance</th><th scope="col">Result</th></tr></thead><tbody id="checks"></tbody></table></div>
+    <p>From the consolidated repository, with its toolkit installed in a supported Python environment, or from the extracted reproduction bundle after installing its requirements:</p>
+    <pre>python experiments/section9/run.py</pre>
+    <p>For a repository run without an editable installation, add <code>PYTHONPATH=packages/volume-toolkit</code> to that command. The ZIP contains the complete experiment and a labeled export of the maintained numerical modules; detached execution needs only NumPy, SciPy and mpmath. The result records actual source and input hashes, dependency versions, and methods. Detached runs explicitly lack a Git working-tree status and may omit the book assets. The volume uses the binary64 Bloch–Wigner kernel. The independent derivative comparison uses 50 decimal digits; neither is an interval enclosure.</p>
+    <ul class="download-list">
+      <li><a href="downloads/section9-reproduction.zip" download>Runnable reproduction bundle (ZIP)</a></li>
+      <li><a href="downloads/result.json" download>Result and provenance</a></li>
+      <li><a href="downloads/fixture.json" download>Input fixture</a></li>
+      <li><a href="downloads/run.py" download>Inspect driver source</a></li>
+      <li><a href="downloads/variational.py" download>Inspect operator source</a></li>
+      __BOOK_DOWNLOAD_LINKS__
+    </ul>
+    <p class="meta">Individual Python links are inspection copies; use the complete ZIP or repository to run the experiment. Canonical source labels: eq:ipolyAngleCoordinates, eq:ipolyHessian, eq:ipolyDtN, eq:ipolySchur, eq:ipolyForestDeterminant. When included, the full PDF is the imported reference edition, not a newly reviewed release. This is an authored worked-example companion, not a conversion of the complete chapter. It makes no global-optimality, strict-realization, or nearly-linear-solver claim.</p>
+  </section>
+</main>
+<footer>Polyhedra computational monograph · Section 9 pilot · Generated from the experiment source and its recorded output.</footer>
+<script>
+const data = __EXPERIMENT_DATA__;
+const {report, fixture} = data;
+const ns = 'http://www.w3.org/2000/svg';
+const svg = document.getElementById('mesh-diagram');
+const xy = ([x,y]) => [55 + 110*x, 275 - 110*y];
+const edges = new Set();
+for (const face of fixture.triangles) for (let i=0;i<3;i++) edges.add([face[i],face[(i+1)%3]].sort((a,b)=>a-b).join(','));
+for (const key of edges) {
+  const [a,b] = key.split(',').map(Number), [x1,y1]=xy(fixture.points[a]), [x2,y2]=xy(fixture.points[b]);
+  const diagonal = fixture.points[a][0] !== fixture.points[b][0] && fixture.points[a][1] !== fixture.points[b][1];
+  const line = document.createElementNS(ns,'line');
+  for (const [k,v] of Object.entries({x1,y1,x2,y2,stroke:diagonal?'#a4afb0':'#234e68','stroke-width':diagonal?1.3:2})) line.setAttribute(k,v);
+  if (diagonal) line.setAttribute('stroke-dasharray','5 5');
+  svg.append(line);
+}
+fixture.points.forEach((p,i)=>{
+  const [cx,cy]=xy(p), interior=fixture.interior_vertices.includes(i);
+  const circle=document.createElementNS(ns,'circle');
+  for(const [k,v] of Object.entries({cx,cy,r:interior?7:5,fill:interior?'#267478':'#fbfaf6',stroke:'#234e68','stroke-width':1.5}))circle.setAttribute(k,v);
+  svg.append(circle);
+  const text=document.createElementNS(ns,'text');text.setAttribute('x',cx+10);text.setAttribute('y',cy-10);text.textContent=i;svg.append(text);
+});
+document.getElementById('volume').textContent=report.numerical.volume.toFixed(12);
+document.getElementById('run-status').textContent=report.all_checks_passed?'All declared checks passed for this recorded run.':'One or more declared checks failed; inspect the result before using it.';
+const p=report.provenance;
+const treeStatus=p.repository_dirty_at_start===null?'unavailable in this detached execution':(p.repository_dirty_at_start?'had uncommitted changes at the start of this run':'was clean at the start of this run');
+document.getElementById('provenance').textContent=`Source commit ${p.source_commit || 'unavailable'}. Working tree ${treeStatus}. Generated ${p.generated_at_utc}. Python ${p.python}; NumPy ${p.numpy}; SciPy ${p.scipy}; mpmath ${p.mpmath}.`;
+for(const [name,check] of Object.entries(report.checks)){
+  const tr=document.createElement('tr');
+  for(const value of [name.replaceAll('_',' '),check.max_abs_error.toExponential(2),check.tolerance.toExponential(0),check.passed?'Pass':'Fail']){const td=document.createElement('td');td.textContent=value;tr.append(td);}
+  document.getElementById('checks').append(tr);
+}
+const scale=document.getElementById('voltage-scale');
+function updateVoltage(){
+  const s=Number(scale.value);document.getElementById('scale-label').value=s.toFixed(1);
+  document.getElementById('voltage-result').textContent=`Interior voltages: ${(s/3).toFixed(4)}, ${(2*s/3).toFixed(4)}. Energy: ${(2*s*s/3).toFixed(4)}.`;
+  const rows=document.getElementById('currents');rows.replaceChildren();
+  report.numerical.boundary_vertices.forEach((v,i)=>{const tr=document.createElement('tr');for(const value of [v,(s*report.numerical.boundary_voltage[i]).toFixed(4),(s*report.numerical.boundary_current[i]).toFixed(4)]){const td=document.createElement('td');td.textContent=value;tr.append(td);}rows.append(tr);});
+}
+scale.addEventListener('input',updateVoltage);updateVoltage();
+</script>
+</body>
+</html>

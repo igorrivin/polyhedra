@@ -1,0 +1,462 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-31",
+  "scope": "Copied execution evidence. Historical reports retain their own reviewed states and test counts. Files are not fresh replays. Large distribution artifacts and temporary environments omitted.",
+  "entries": [
+    {
+      "origin": "execution/2026-10-31/baseline.json",
+      "destination": "docs/execution/2026-10-31/baseline.json",
+      "origin_sha256": "a206c85a4d6a39c3cc7f776f77dcfc63d5637dda0a162cdb11c4e17b78411c84",
+      "destination_sha256": "a206c85a4d6a39c3cc7f776f77dcfc63d5637dda0a162cdb11c4e17b78411c84",
+      "destination_bytes": 4348,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/baseline.md",
+      "destination": "docs/execution/2026-10-31/baseline.md",
+      "origin_sha256": "3bd18af418172a3d174b311a022ac57c836eed6d470c8d192c571003115023a1",
+      "destination_sha256": "d8c89a2d1f3b2e86a377a239c627b587ef7f58852347190f44b07d4409a3a2b2",
+      "destination_bytes": 7231,
+      "adaptation": "Replaced link to omitted bulky wheel/sdist directory with baseline.json and explicit original outer location; numerical observations unchanged."
+    },
+    {
+      "origin": "execution/2026-10-31/build.log",
+      "destination": "docs/execution/2026-10-31/build.log",
+      "origin_sha256": "ed70ff369ad9c934b0c89b4d54f20bd4b173d47f5965524851bbf3b68f349292",
+      "destination_sha256": "ed70ff369ad9c934b0c89b4d54f20bd4b173d47f5965524851bbf3b68f349292",
+      "destination_bytes": 24766,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/collect-all.log",
+      "destination": "docs/execution/2026-10-31/collect-all.log",
+      "origin_sha256": "bc444be9c97b0cd19329fd196c80d2a1d9f4705ed65d26b4d4051bd95a02d747",
+      "destination_sha256": "bc444be9c97b0cd19329fd196c80d2a1d9f4705ed65d26b4d4051bd95a02d747",
+      "destination_bytes": 34218,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/core-defect-fixes.md",
+      "destination": "docs/execution/2026-10-31/core-defect-fixes.md",
+      "origin_sha256": "82470d19188e51e5dba86271eb5ec66e233b10445235a60ecf6b5593306b38c3",
+      "destination_sha256": "82470d19188e51e5dba86271eb5ec66e233b10445235a60ecf6b5593306b38c3",
+      "destination_bytes": 4937,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/core-independent-smoke.log",
+      "destination": "docs/execution/2026-10-31/core-independent-smoke.log",
+      "origin_sha256": "4bc1c12119f83847b1b080d70a2ab305a8984a54e7a952684e8c402f86b42497",
+      "destination_sha256": "4bc1c12119f83847b1b080d70a2ab305a8984a54e7a952684e8c402f86b42497",
+      "destination_bytes": 2174,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/core-review.md",
+      "destination": "docs/execution/2026-10-31/core-review.md",
+      "origin_sha256": "1b5736ecb5fd0aa66221ee6dde644bddac354ef4f43967d0995aab5e8e3f9caa",
+      "destination_sha256": "1b5736ecb5fd0aa66221ee6dde644bddac354ef4f43967d0995aab5e8e3f9caa",
+      "destination_bytes": 5809,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/data-integrity.log",
+      "destination": "docs/execution/2026-10-31/data-integrity.log",
+      "origin_sha256": "9223e8a0c555d70bf0055651517b04b4a9b96d82e3bf01c726b8d137d3868b59",
+      "destination_sha256": "9223e8a0c555d70bf0055651517b04b4a9b96d82e3bf01c726b8d137d3868b59",
+      "destination_bytes": 173,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/evidence-recovery.json",
+      "destination": "docs/execution/2026-10-31/evidence-recovery.json",
+      "origin_sha256": "34ce575272cdebabde6be51e8dd29eb93ec504d9da07a58800f49fe18f9a0e79",
+      "destination_sha256": "34ce575272cdebabde6be51e8dd29eb93ec504d9da07a58800f49fe18f9a0e79",
+      "destination_bytes": 16225,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/final-lint.log",
+      "destination": "docs/execution/2026-10-31/final-lint.log",
+      "origin_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "destination_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "destination_bytes": 19,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/final-suite.log",
+      "destination": "docs/execution/2026-10-31/final-suite.log",
+      "origin_sha256": "2bc182385af792170ae4ccab39eddd77ae0e79671802e61b64e03a13b76d0742",
+      "destination_sha256": "2bc182385af792170ae4ccab39eddd77ae0e79671802e61b64e03a13b76d0742",
+      "destination_bytes": 19149,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/final-suite.xml",
+      "destination": "docs/execution/2026-10-31/final-suite.xml",
+      "origin_sha256": "188a2f8a20f5f9caded5c10d6ddc93cf8dbb0a140e312ebebcdbee2a1443ce46",
+      "destination_sha256": "188a2f8a20f5f9caded5c10d6ddc93cf8dbb0a140e312ebebcdbee2a1443ce46",
+      "destination_bytes": 64195,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/install-core.log",
+      "destination": "docs/execution/2026-10-31/install-core.log",
+      "origin_sha256": "df59654024d8579fdd792900a44d1a205fd3a6ad22a5103b3b72d5a4a70f31b9",
+      "destination_sha256": "df59654024d8579fdd792900a44d1a205fd3a6ad22a5103b3b72d5a4a70f31b9",
+      "destination_bytes": 427,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/install-wheel.log",
+      "destination": "docs/execution/2026-10-31/install-wheel.log",
+      "origin_sha256": "3289f43aa14bcf0173b8b6b24e220da5e79222df3147c350f21b6a6afdfa2719",
+      "destination_sha256": "3289f43aa14bcf0173b8b6b24e220da5e79222df3147c350f21b6a6afdfa2719",
+      "destination_bytes": 215,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/installed-cli-help.log",
+      "destination": "docs/execution/2026-10-31/installed-cli-help.log",
+      "origin_sha256": "07a2e3139e5252db3594a5566c04c18d2dd619d9e484ae5ef291470b33222540",
+      "destination_sha256": "07a2e3139e5252db3594a5566c04c18d2dd619d9e484ae5ef291470b33222540",
+      "destination_bytes": 1236,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/integration-review.md",
+      "destination": "docs/execution/2026-10-31/integration-review.md",
+      "origin_sha256": "46afb21520ac9e595ba3412bda8166ce0914b7785b04371ff605c3d3009d294a",
+      "destination_sha256": "46afb21520ac9e595ba3412bda8166ce0914b7785b04371ff605c3d3009d294a",
+      "destination_bytes": 9628,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/local-package-copy.json",
+      "destination": "docs/execution/2026-10-31/local-package-copy.json",
+      "origin_sha256": "6403613235f9ffa340123e125d04e56a770a6ad5bf2cfb91f12d8e915aed97f1",
+      "destination_sha256": "6403613235f9ffa340123e125d04e56a770a6ad5bf2cfb91f12d8e915aed97f1",
+      "destination_bytes": 28974,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/package-verification-build.log",
+      "destination": "docs/execution/2026-10-31/package-verification-build.log",
+      "origin_sha256": "bc64d599db26f95a37e707a6195efd33dac720d5192857ad8f80755a62041f63",
+      "destination_sha256": "bc64d599db26f95a37e707a6195efd33dac720d5192857ad8f80755a62041f63",
+      "destination_bytes": 25149,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/package-verification-detached-bundle.log",
+      "destination": "docs/execution/2026-10-31/package-verification-detached-bundle.log",
+      "origin_sha256": "f7149e8a92c4da9961034545bca9c437b510c507eeebcd93df9d230207e24366",
+      "destination_sha256": "f7149e8a92c4da9961034545bca9c437b510c507eeebcd93df9d230207e24366",
+      "destination_bytes": 247,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/package-verification-detached-result.json",
+      "destination": "docs/execution/2026-10-31/package-verification-detached-result.json",
+      "origin_sha256": "58f31a1ac9797cf3479d00de5c25c76f1bb00f4bb2cd699238cd47a61bcfbd81",
+      "destination_sha256": "58f31a1ac9797cf3479d00de5c25c76f1bb00f4bb2cd699238cd47a61bcfbd81",
+      "destination_bytes": 15641,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/package-verification-distributions.json",
+      "destination": "docs/execution/2026-10-31/package-verification-distributions.json",
+      "origin_sha256": "18b0923fc0dee668acfc2d7cf8117ac12ff71a25bc614dc4f2ec3708b3982ace",
+      "destination_sha256": "18b0923fc0dee668acfc2d7cf8117ac12ff71a25bc614dc4f2ec3708b3982ace",
+      "destination_bytes": 9033,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/package-verification-environment.json",
+      "destination": "docs/execution/2026-10-31/package-verification-environment.json",
+      "origin_sha256": "29f8f47963d12075bb86d7ab86603c17ac823fd4522ee08ccbf37f8a494bc85b",
+      "destination_sha256": "29f8f47963d12075bb86d7ab86603c17ac823fd4522ee08ccbf37f8a494bc85b",
+      "destination_bytes": 924,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/package-verification-install.log",
+      "destination": "docs/execution/2026-10-31/package-verification-install.log",
+      "origin_sha256": "2ca6cc5af746e99ac9d85005ee663018e867a123c72ab8723395283ce181bd73",
+      "destination_sha256": "2ca6cc5af746e99ac9d85005ee663018e867a123c72ab8723395283ce181bd73",
+      "destination_bytes": 224,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/package-verification-installed-wheel.log",
+      "destination": "docs/execution/2026-10-31/package-verification-installed-wheel.log",
+      "origin_sha256": "600d4d1cc272783c1cd12514bf569b32a00d8b0c7e241e63a787f26b8dbcf046",
+      "destination_sha256": "600d4d1cc272783c1cd12514bf569b32a00d8b0c7e241e63a787f26b8dbcf046",
+      "destination_bytes": 279,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/package-verification-installed.json",
+      "destination": "docs/execution/2026-10-31/package-verification-installed.json",
+      "origin_sha256": "3539fb89f956c646d406707344c8abc5dcf33f7bdf839d0be3b46255bb42a157",
+      "destination_sha256": "3539fb89f956c646d406707344c8abc5dcf33f7bdf839d0be3b46255bb42a157",
+      "destination_bytes": 2391,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/package-verification-local-copies.json",
+      "destination": "docs/execution/2026-10-31/package-verification-local-copies.json",
+      "origin_sha256": "d632e582d22467e50904369f0c81b3dc5d4379dd8d45fd850b459105ca503154",
+      "destination_sha256": "d632e582d22467e50904369f0c81b3dc5d4379dd8d45fd850b459105ca503154",
+      "destination_bytes": 455583,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/package-verification-replay-commands.json",
+      "destination": "docs/execution/2026-10-31/package-verification-replay-commands.json",
+      "origin_sha256": "b4af167eb0591b082df74a563be80359a20cc5acd71c0daec467f28af16c3c55",
+      "destination_sha256": "b4af167eb0591b082df74a563be80359a20cc5acd71c0daec467f28af16c3c55",
+      "destination_bytes": 1002,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/package-verification-source-copy.json",
+      "destination": "docs/execution/2026-10-31/package-verification-source-copy.json",
+      "origin_sha256": "59de4dae4388cf8363e2fa803d8c595a9d4efb99fcc39c9729d0e7e30e05b75f",
+      "destination_sha256": "59de4dae4388cf8363e2fa803d8c595a9d4efb99fcc39c9729d0e7e30e05b75f",
+      "destination_bytes": 150761,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/package-verification-summary.json",
+      "destination": "docs/execution/2026-10-31/package-verification-summary.json",
+      "origin_sha256": "436612eeb7741e1e79ef38c0f94d6d04616a31ce01c61bb5192ad745053c7ad4",
+      "destination_sha256": "436612eeb7741e1e79ef38c0f94d6d04616a31ce01c61bb5192ad745053c7ad4",
+      "destination_bytes": 14718,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/package-verification-tetrahedron.json",
+      "destination": "docs/execution/2026-10-31/package-verification-tetrahedron.json",
+      "origin_sha256": "743ef046021bf49b711339f8440d0d2546a0be47cf68d7cda54c5859958791b3",
+      "destination_sha256": "743ef046021bf49b711339f8440d0d2546a0be47cf68d7cda54c5859958791b3",
+      "destination_bytes": 2062,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/package-verification-tetrahedron.log",
+      "destination": "docs/execution/2026-10-31/package-verification-tetrahedron.log",
+      "origin_sha256": "5a849297c60968acc8313ff9e219c6a2b29a0997e1d8a5bddd9ee314a39dda7a",
+      "destination_sha256": "5a849297c60968acc8313ff9e219c6a2b29a0997e1d8a5bddd9ee314a39dda7a",
+      "destination_bytes": 1144,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/package-verification-wheel-result.json",
+      "destination": "docs/execution/2026-10-31/package-verification-wheel-result.json",
+      "origin_sha256": "7b92b48fb0b2a44c0d5af472ecd41836d9fce64d84b94b6fb887b4ec3dfa59e1",
+      "destination_sha256": "7b92b48fb0b2a44c0d5af472ecd41836d9fce64d84b94b6fb887b4ec3dfa59e1",
+      "destination_bytes": 12415,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/package-verification.md",
+      "destination": "docs/execution/2026-10-31/package-verification.md",
+      "origin_sha256": "54684f5241ce7ec460e8ea12961cc097acc7f395581fdd9ecca56f3b149c96f7",
+      "destination_sha256": "54684f5241ce7ec460e8ea12961cc097acc7f395581fdd9ecca56f3b149c96f7",
+      "destination_bytes": 7285,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/pdf-review/page-1.png",
+      "destination": "docs/execution/2026-10-31/pdf-review/page-1.png",
+      "origin_sha256": "d6c4036799f242c949476e9d426bb45ada8a61640160ab20460f6430c06c6b07",
+      "destination_sha256": "d6c4036799f242c949476e9d426bb45ada8a61640160ab20460f6430c06c6b07",
+      "destination_bytes": 109963,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/pdf-review/page-168.png",
+      "destination": "docs/execution/2026-10-31/pdf-review/page-168.png",
+      "origin_sha256": "be7c658ab4498e45353ece90e19e0c01d6e2b08fdba13327aa3ded43097267a4",
+      "destination_sha256": "be7c658ab4498e45353ece90e19e0c01d6e2b08fdba13327aa3ded43097267a4",
+      "destination_bytes": 128362,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/pdf-review/page-28.png",
+      "destination": "docs/execution/2026-10-31/pdf-review/page-28.png",
+      "origin_sha256": "7f909bcb4fe706b067eb5519ea5a84b1ee0fb1c241930a2b6248442400ceb4c9",
+      "destination_sha256": "7f909bcb4fe706b067eb5519ea5a84b1ee0fb1c241930a2b6248442400ceb4c9",
+      "destination_bytes": 127315,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/pdf-review/page-29.png",
+      "destination": "docs/execution/2026-10-31/pdf-review/page-29.png",
+      "origin_sha256": "599311174359819e99556e42e4e95e9714b4946e7cb08d1329020ded2d02f18a",
+      "destination_sha256": "599311174359819e99556e42e4e95e9714b4946e7cb08d1329020ded2d02f18a",
+      "destination_bytes": 121711,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/pip-check.log",
+      "destination": "docs/execution/2026-10-31/pip-check.log",
+      "origin_sha256": "134bb3782adef342d14ffdc72c2c21fa296bd8669a0ca01b9a128cda358b03db",
+      "destination_sha256": "134bb3782adef342d14ffdc72c2c21fa296bd8669a0ca01b9a128cda358b03db",
+      "destination_bytes": 307,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/pytest-baseline.log",
+      "destination": "docs/execution/2026-10-31/pytest-baseline.log",
+      "origin_sha256": "53d61e599448f1e5ce4616c6b8b91ca069b22e2fc3f45320b47c8167ba27dbe8",
+      "destination_sha256": "53d61e599448f1e5ce4616c6b8b91ca069b22e2fc3f45320b47c8167ba27dbe8",
+      "destination_bytes": 19630,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/pytest-baseline.xml",
+      "destination": "docs/execution/2026-10-31/pytest-baseline.xml",
+      "origin_sha256": "710c94498f635a349ac5aff68fa251e5c0ca3b9f029183bfc1a692687a5abc97",
+      "destination_sha256": "710c94498f635a349ac5aff68fa251e5c0ca3b9f029183bfc1a692687a5abc97",
+      "destination_bytes": 59683,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/pytest-consolidated.log",
+      "destination": "docs/execution/2026-10-31/pytest-consolidated.log",
+      "origin_sha256": "362386a9daa9b4770ac397857554e4794ed2fc55955cf05c0ba48bb885794879",
+      "destination_sha256": "362386a9daa9b4770ac397857554e4794ed2fc55955cf05c0ba48bb885794879",
+      "destination_bytes": 19149,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/pytest-consolidated.xml",
+      "destination": "docs/execution/2026-10-31/pytest-consolidated.xml",
+      "origin_sha256": "b2bf785c64335c690ebb4c50c237cddee3e067391ed5d1b4224da1fe4ebf7205",
+      "destination_sha256": "b2bf785c64335c690ebb4c50c237cddee3e067391ed5d1b4224da1fe4ebf7205",
+      "destination_bytes": 63699,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/requirements-snapshot.txt",
+      "destination": "docs/execution/2026-10-31/requirements-snapshot.txt",
+      "origin_sha256": "ff93150144727b46bbafdb56c8c7aa0ede2db45c21631c14fd8258b8a3f25e5f",
+      "destination_sha256": "ff93150144727b46bbafdb56c8c7aa0ede2db45c21631c14fd8258b8a3f25e5f",
+      "destination_bytes": 1393,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/rereview-import-paths.json",
+      "destination": "docs/execution/2026-10-31/rereview-import-paths.json",
+      "origin_sha256": "d8306a58d0aa6047068b357253f094c4c91e505c666ec79e54dbb88230eb8cc2",
+      "destination_sha256": "d8306a58d0aa6047068b357253f094c4c91e505c666ec79e54dbb88230eb8cc2",
+      "destination_bytes": 779,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/rereview-test-execution.json",
+      "destination": "docs/execution/2026-10-31/rereview-test-execution.json",
+      "origin_sha256": "9aa5c32fcf091f28507cdbaaef67a420f241320f1617a82e311511929be028f7",
+      "destination_sha256": "9aa5c32fcf091f28507cdbaaef67a420f241320f1617a82e311511929be028f7",
+      "destination_bytes": 880,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/section9-focused.log",
+      "destination": "docs/execution/2026-10-31/section9-focused.log",
+      "origin_sha256": "8ca50bafe137d03f4a4a51f197158bd7ba19cb84999df93b2443e3e49f310229",
+      "destination_sha256": "8ca50bafe137d03f4a4a51f197158bd7ba19cb84999df93b2443e3e49f310229",
+      "destination_bytes": 100,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/section9-focused.xml",
+      "destination": "docs/execution/2026-10-31/section9-focused.xml",
+      "origin_sha256": "e6431df522dd40843f4d8dca42cb279c3ccec56bb193b8b43bcb9ae136b47ab7",
+      "destination_sha256": "e6431df522dd40843f4d8dca42cb279c3ccec56bb193b8b43bcb9ae136b47ab7",
+      "destination_bytes": 1595,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/section9-implementation.md",
+      "destination": "docs/execution/2026-10-31/section9-implementation.md",
+      "origin_sha256": "8b00856ca753d4fb3f29a05f14d1ac95d641ccb4d23f086d4fe3cd2e24838910",
+      "destination_sha256": "8b00856ca753d4fb3f29a05f14d1ac95d641ccb4d23f086d4fe3cd2e24838910",
+      "destination_bytes": 10001,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/section9-rereview.md",
+      "destination": "docs/execution/2026-10-31/section9-rereview.md",
+      "origin_sha256": "b70f2732abb557b6c57b7498d33cfa56c9e917291793f5de5ac6be05378bba06",
+      "destination_sha256": "b70f2732abb557b6c57b7498d33cfa56c9e917291793f5de5ac6be05378bba06",
+      "destination_bytes": 6904,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/section9-review.md",
+      "destination": "docs/execution/2026-10-31/section9-review.md",
+      "origin_sha256": "1e25af61ed2c6856272e8f2ce930424ffd17da89d975fe77d33a08edd78871aa",
+      "destination_sha256": "1e25af61ed2c6856272e8f2ce930424ffd17da89d975fe77d33a08edd78871aa",
+      "destination_bytes": 8033,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/tetrahedron-cli.json",
+      "destination": "docs/execution/2026-10-31/tetrahedron-cli.json",
+      "origin_sha256": "f8408759dd9a0b46f047bb4fb58ff9f4f1811a80c5ca22b4277ff66f3d8f8558",
+      "destination_sha256": "f8408759dd9a0b46f047bb4fb58ff9f4f1811a80c5ca22b4277ff66f3d8f8558",
+      "destination_bytes": 2062,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/tetrahedron-cli.log",
+      "destination": "docs/execution/2026-10-31/tetrahedron-cli.log",
+      "origin_sha256": "139472ee0dc2a70ff94c6c943e9b5fecffebc30fb41f1b9e07fa231246d52a9e",
+      "destination_sha256": "139472ee0dc2a70ff94c6c943e9b5fecffebc30fb41f1b9e07fa231246d52a9e",
+      "destination_bytes": 1110,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/tetrahedron-consolidated-cli.json",
+      "destination": "docs/execution/2026-10-31/tetrahedron-consolidated-cli.json",
+      "origin_sha256": "665a1fa1f17699d673f5a0ee478ebbff76f462a3e1a052ee1301031a7fd9579c",
+      "destination_sha256": "665a1fa1f17699d673f5a0ee478ebbff76f462a3e1a052ee1301031a7fd9579c",
+      "destination_bytes": 2062,
+      "adaptation": null
+    },
+    {
+      "origin": "execution/2026-10-31/tetrahedron-consolidated-cli.log",
+      "destination": "docs/execution/2026-10-31/tetrahedron-consolidated-cli.log",
+      "origin_sha256": "b20b954a1270d8de2ed72d24d025c436cd079a36744456d58eb4553a7dc46a8b",
+      "destination_sha256": "b20b954a1270d8de2ed72d24d025c436cd079a36744456d58eb4553a7dc46a8b",
+      "destination_bytes": 1136,
+      "adaptation": null
+    }
+  ],
+  "force_add_paths": [
+    "docs/execution/2026-10-31/build.log",
+    "docs/execution/2026-10-31/collect-all.log",
+    "docs/execution/2026-10-31/core-independent-smoke.log",
+    "docs/execution/2026-10-31/data-integrity.log",
+    "docs/execution/2026-10-31/final-lint.log",
+    "docs/execution/2026-10-31/final-suite.log",
+    "docs/execution/2026-10-31/install-core.log",
+    "docs/execution/2026-10-31/install-wheel.log",
+    "docs/execution/2026-10-31/installed-cli-help.log",
+    "docs/execution/2026-10-31/package-verification-build.log",
+    "docs/execution/2026-10-31/package-verification-detached-bundle.log",
+    "docs/execution/2026-10-31/package-verification-install.log",
+    "docs/execution/2026-10-31/package-verification-installed-wheel.log",
+    "docs/execution/2026-10-31/package-verification-tetrahedron.log",
+    "docs/execution/2026-10-31/pip-check.log",
+    "docs/execution/2026-10-31/pytest-baseline.log",
+    "docs/execution/2026-10-31/pytest-consolidated.log",
+    "docs/execution/2026-10-31/section9-focused.log",
+    "docs/execution/2026-10-31/tetrahedron-cli.log",
+    "docs/execution/2026-10-31/tetrahedron-consolidated-cli.log"
+  ],
+  "force_add_note": "Root .gitignore ignores *.log; stage only these explicitly enumerated evidence logs with force-add. Never include AppleDouble ._* sidecars."
+}

@@ -1,0 +1,30 @@
+{
+  "installed-wheel": {
+    "command": [
+      "/tmp/polyhedra-core-verification-20261031/bin/python",
+      "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/section9/run.py",
+      "--fixture",
+      "/tmp/polyhedra-package-replay-final-20261031/external-fixture.json",
+      "--output",
+      "/tmp/polyhedra-package-replay-final-20261031/wheel-result.json",
+      "--site-dir",
+      "/tmp/polyhedra-package-replay-final-20261031/wheel-site"
+    ],
+    "cwd": "/tmp",
+    "PYTHONPATH": "unset",
+    "exit_code": 0
+  },
+  "detached-bundle": {
+    "command": [
+      "/tmp/polyhedra-core-verification-20261031/bin/python",
+      "/tmp/polyhedra-package-replay-final-20261031/section9-reproduction/experiments/section9/run.py",
+      "--output",
+      "/tmp/polyhedra-package-replay-final-20261031/detached-result.json",
+      "--site-dir",
+      "/tmp/polyhedra-package-replay-final-20261031/detached-site"
+    ],
+    "cwd": "/tmp",
+    "PYTHONPATH": "unset",
+    "exit_code": 0
+  }
+}

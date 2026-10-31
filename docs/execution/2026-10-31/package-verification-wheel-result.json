@@ -1,0 +1,426 @@
+{
+  "schema_version": 2,
+  "experiment_id": "section9-rectangle-grid-v1",
+  "provenance": {
+    "source_commit": "c53387221dc6d000ac46c0b1ce44232c50f02a3c",
+    "execution_context": "git-checkout",
+    "repository_dirty_at_start": true,
+    "git_status_porcelain_at_start": [
+      " M README.md",
+      " M packages/volume-toolkit/CHANGELOG.md",
+      " M packages/volume-toolkit/docs/GEOMETRIC_REALIZATION_README.md",
+      " M packages/volume-toolkit/docs/architecture.md",
+      " M packages/volume-toolkit/docs/module-index.md",
+      " M packages/volume-toolkit/ideal_poly_volume_toolkit/geometric_realization.py",
+      " M packages/volume-toolkit/ideal_poly_volume_toolkit/rivin_delaunay.py",
+      " M packages/volume-toolkit/ideal_poly_volume_toolkit/rivin_holonomy.py",
+      "?? artifacts/",
+      "?? book/computational-status.md",
+      "?? docs/execution/",
+      "?? experiments/",
+      "?? packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+      "?? packages/volume-toolkit/tests/test_core_defect_regressions.py",
+      "?? packages/volume-toolkit/tests/test_variational.py",
+      "?? site/"
+    ],
+    "input_sha256": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1",
+    "source_files": [
+      {
+        "role": "experiment.driver",
+        "path": "experiments/section9/run.py",
+        "location_kind": "project-relative",
+        "required": true,
+        "available": true,
+        "sha256": "efd0f829cb8e8663b23ab23eb0dd19e3988afd1db3710d2fccaf65c3a38f28f5"
+      },
+      {
+        "role": "toolkit.variational",
+        "path": "/private/tmp/polyhedra-core-verification-20261031/lib/python3.12/site-packages/ideal_poly_volume_toolkit/variational.py",
+        "location_kind": "external",
+        "required": true,
+        "available": true,
+        "sha256": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b"
+      },
+      {
+        "role": "toolkit.geometry",
+        "path": "/private/tmp/polyhedra-core-verification-20261031/lib/python3.12/site-packages/ideal_poly_volume_toolkit/geometry.py",
+        "location_kind": "external",
+        "required": true,
+        "available": true,
+        "sha256": "244a28d55646dc7f8ce182d18473a308ea1194d4f6d45130599dae5fc76083ed"
+      },
+      {
+        "role": "experiment.fixture",
+        "path": "/private/tmp/polyhedra-package-replay-final-20261031/external-fixture.json",
+        "location_kind": "external",
+        "required": true,
+        "available": true,
+        "sha256": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1"
+      },
+      {
+        "role": "experiment.template",
+        "path": "experiments/section9/page.html",
+        "location_kind": "project-relative",
+        "required": true,
+        "available": true,
+        "sha256": "fd3e70a21ef81478124742e43fdcffa55a20a4645528f486f788e6a9eec6982f"
+      },
+      {
+        "role": "book.tex",
+        "path": "book/polyhedral_volumes_and_geodesic_identities.tex",
+        "location_kind": "project-relative",
+        "required": false,
+        "available": true,
+        "sha256": "63102e64405a58b8f5d51bfdffe6be43fc5cfe9a232dc0f396f1709733d750dc"
+      },
+      {
+        "role": "book.reference_pdf",
+        "path": "book/reference/polyhedral_volumes_and_geodesic_identities.pdf",
+        "location_kind": "project-relative",
+        "required": false,
+        "available": true,
+        "sha256": "40dd069bd2653f9a78666a31f53910d74b7f8de2a4a75d5a5dd62466032a6cd5"
+      }
+    ],
+    "source_sha256": {
+      "experiment.driver": "efd0f829cb8e8663b23ab23eb0dd19e3988afd1db3710d2fccaf65c3a38f28f5",
+      "toolkit.variational": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+      "toolkit.geometry": "244a28d55646dc7f8ce182d18473a308ea1194d4f6d45130599dae5fc76083ed",
+      "experiment.fixture": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1",
+      "experiment.template": "fd3e70a21ef81478124742e43fdcffa55a20a4645528f486f788e6a9eec6982f",
+      "book.tex": "63102e64405a58b8f5d51bfdffe6be43fc5cfe9a232dc0f396f1709733d750dc",
+      "book.reference_pdf": "40dd069bd2653f9a78666a31f53910d74b7f8de2a4a75d5a5dd62466032a6cd5"
+    },
+    "bundle_origin": null,
+    "bundle_payload_hashes_match": null,
+    "bundle_payload_mismatches": [],
+    "python": "3.12.11",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "mpmath": "1.3.0",
+    "generated_at_utc": "2026-10-31T22:37:07.508505+00:00"
+  },
+  "statement_labels": [
+    "eq:ipolyAngleCoordinates",
+    "eq:ipolyHessian",
+    "eq:ipolyDtN",
+    "eq:ipolySchur",
+    "eq:ipolyForestDeterminant"
+  ],
+  "conventions": {
+    "curvature": -1,
+    "angle_units": "radians",
+    "corner_order": "vertex order in each oriented triangle",
+    "deformation": "angle at a in (a,b,c) changes by u_b-u_c; boundary u=0",
+    "volume": "sum of ideal tetrahedral volumes obtained by adjoining infinity; binary64 evaluation",
+    "boundary_voltage": "x/3, independent of the angle-deformation parameter u",
+    "delaunay_scope": "non-strict: each square diagonal has zero cotangent weight",
+    "certificate_scope": "exact rational finite matrix/forest identities for this fixture; no strict polyhedral realization certificate"
+  },
+  "methods": {
+    "volume": "canonical geometry.bloch_wigner, binary64",
+    "derivatives": "analytic leading-trailing derivatives, binary64",
+    "independent_derivative_oracle": "mpmath.diff of Clausen volume at 50 decimal digits",
+    "exact_fixture": "Fraction FEM gradients from integer geometry; exhaustive nonzero rooted forests"
+  },
+  "exact_fixture": {
+    "grounded_laplacian": [
+      [
+        "4",
+        "-1"
+      ],
+      [
+        "-1",
+        "4"
+      ]
+    ],
+    "det_L_II": "15",
+    "det_negative_volume_hessian": "60",
+    "rooted_forest_weight_sum": "15",
+    "nonzero_rooted_forest_count": 15,
+    "eliminated_K_entry": "8",
+    "effective_K_entry": "15/2",
+    "checks_passed": true
+  },
+  "numerical": {
+    "volume": 10.991587130126629,
+    "reference_12_catalan_50_digits": "10.99158713012662818065524217918860932928979249138",
+    "gradient": [
+      0.0,
+      0.0
+    ],
+    "negative_hessian": [
+      [
+        8.000000000000002,
+        -2.0000000000000004
+      ],
+      [
+        -2.0000000000000004,
+        8.000000000000002
+      ]
+    ],
+    "grounded_laplacian": [
+      [
+        4.000000000000001,
+        -1.0000000000000002
+      ],
+      [
+        -1.0000000000000002,
+        4.000000000000001
+      ]
+    ],
+    "dirichlet_response": [
+      [
+        1.0000000000000002,
+        -0.5000000000000001,
+        -4.082155997157844e-18,
+        0.0,
+        -0.5000000000000001,
+        -4.082155997157844e-18,
+        0.0,
+        -1.6328623988631376e-17,
+        -4.082155997157845e-18,
+        -2.4995996377697623e-34
+      ],
+      [
+        -0.5000000000000001,
+        1.7333333333333338,
+        -0.5666666666666668,
+        0.0,
+        -0.2666666666666667,
+        -0.0666666666666667,
+        0.0,
+        -0.2666666666666667,
+        -0.06666666666666671,
+        -4.082155997157845e-18
+      ],
+      [
+        -4.082155997157844e-18,
+        -0.5666666666666668,
+        1.7333333333333338,
+        -0.5000000000000001,
+        -0.06666666666666668,
+        -0.2666666666666668,
+        0.0,
+        -0.06666666666666668,
+        -0.2666666666666667,
+        -1.6328623988631376e-17
+      ],
+      [
+        0.0,
+        0.0,
+        -0.5000000000000001,
+        1.0000000000000002,
+        0.0,
+        -0.5000000000000001,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -0.5000000000000001,
+        -0.2666666666666667,
+        -0.06666666666666668,
+        0.0,
+        1.7333333333333338,
+        -0.06666666666666668,
+        -0.5000000000000001,
+        -0.2666666666666668,
+        -0.0666666666666667,
+        -4.082155997157844e-18
+      ],
+      [
+        -4.082155997157844e-18,
+        -0.0666666666666667,
+        -0.2666666666666668,
+        -0.5000000000000001,
+        -0.06666666666666668,
+        1.7333333333333338,
+        0.0,
+        -0.06666666666666668,
+        -0.2666666666666667,
+        -0.5000000000000001
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.5000000000000001,
+        0.0,
+        1.0000000000000002,
+        -0.5000000000000001,
+        0.0,
+        0.0
+      ],
+      [
+        -1.6328623988631376e-17,
+        -0.2666666666666667,
+        -0.06666666666666668,
+        0.0,
+        -0.2666666666666668,
+        -0.06666666666666668,
+        -0.5000000000000001,
+        1.7333333333333338,
+        -0.5666666666666668,
+        -4.082155997157844e-18
+      ],
+      [
+        -4.082155997157845e-18,
+        -0.06666666666666671,
+        -0.2666666666666667,
+        0.0,
+        -0.0666666666666667,
+        -0.2666666666666667,
+        0.0,
+        -0.5666666666666668,
+        1.7333333333333338,
+        -0.5000000000000001
+      ],
+      [
+        -2.4995996377697623e-34,
+        -4.082155997157845e-18,
+        -1.6328623988631376e-17,
+        0.0,
+        -4.082155997157844e-18,
+        -0.5000000000000001,
+        0.0,
+        -4.082155997157844e-18,
+        -0.5000000000000001,
+        1.0000000000000002
+      ]
+    ],
+    "boundary_vertices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "boundary_voltage": [
+      0.0,
+      0.3333333333333333,
+      0.6666666666666666,
+      1.0,
+      0.0,
+      1.0,
+      0.0,
+      0.3333333333333333,
+      0.6666666666666666,
+      1.0
+    ],
+    "harmonic_interior_voltage": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "boundary_current": [
+      -0.16666666666666669,
+      1.1102230246251565e-16,
+      1.1102230246251565e-16,
+      0.16666666666666674,
+      -0.33333333333333337,
+      0.3333333333333336,
+      -0.16666666666666669,
+      5.551115123125783e-17,
+      1.1102230246251565e-16,
+      0.16666666666666674
+    ],
+    "energy": 0.6666666666666673,
+    "off_origin_parameters": [
+      0.05,
+      -0.03
+    ],
+    "off_origin_minimum_angle": 0.7053981633974483,
+    "off_origin_hessian": [
+      [
+        -8.056001449691404,
+        2.02587593928867
+      ],
+      [
+        2.02587593928867,
+        -8.03669216304014
+      ]
+    ]
+  },
+  "checks": {
+    "cotangent_vs_independent_fem": {
+      "max_abs_error": 8.881784197001252e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    "fem_vs_exact_rational_fixture": {
+      "max_abs_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    "negative_hessian_equals_twice_grounded_laplacian": {
+      "max_abs_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    "geometric_gradient": {
+      "max_abs_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    "volume_vs_12_catalan": {
+      "max_abs_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    "off_origin_negative_hessian_identity": {
+      "max_abs_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    "off_origin_hessian_vs_50_digit_derivative": {
+      "max_abs_error": 1.7763568394002505e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    "dirichlet_response_constant_kernel": {
+      "max_abs_error": 2.7347360015913127e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    "dirichlet_response_symmetry": {
+      "max_abs_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    "harmonic_linear_voltage": {
+      "max_abs_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    "linear_voltage_energy": {
+      "max_abs_error": 6.661338147750939e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    "schur_determinant_factor": {
+      "max_abs_error": 3.552713678800501e-14,
+      "tolerance": 1e-11,
+      "passed": true
+    }
+  },
+  "all_checks_passed": true,
+  "scope": {
+    "exact": "finite rational matrix and forest calculations on the integer-coordinate fixture",
+    "numerical": "binary64 operators and 50-digit derivative comparison, without rigorous enclosures",
+    "off_origin": "abstract angle structure; no assertion that its triangles close geometrically",
+    "not_claimed": [
+      "strict simplicial convex realization",
+      "global optimality",
+      "nearly-linear solver",
+      "full Section 9 proof verification",
+      "complete chapter-to-HTML conversion"
+    ]
+  }
+}

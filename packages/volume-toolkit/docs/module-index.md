@@ -55,6 +55,11 @@ tracked in `docs/implementation-status.md`.
   threshold grading.
 
 ### Rivin / Penner holonomy pipeline
+- `variational.py` — small dense leading–trailing angle-coordinate operators,
+  binary64 volume/derivatives, independent FEM assembly, and Schur complements
+  for the monograph's Section 9 companion. The reproducible grid experiment is
+  owned by the monorepo's `experiments/section9/`; these operators are not an
+  embedding certificate or a large-scale solver.
 - `rivin_holonomy.py` — Penner–Rivin Fuchsian-group generators, strict
   closed-sphere validation, coordinate-shear diagnostics, and exact integer
   zero-shear PSL(2,Z) certificates. Generator-trace near-integrality alone is
@@ -73,7 +78,7 @@ tracked in `docs/implementation-status.md`.
 - `pointset_to_fuchsian.py` — Full pipeline: point set → triangulation → Fuchsian group → invariant trace field.
 
 ### Realization and inscribability
-- `geometric_realization.py` — Geometric realization from Rivin LP angles.
+- `geometric_realization.py` — Oriented numerical development of compatible triangle angles, with local closure checks; no global embedding certificate.
 - `cone_realization.py` — Inscribed realization of simplicial 4-polytopes via the cone / Volkov method.
 - `inscribed_realization.py` — Inscribed realization of simplicial 4-polytopes on S^3.
 - `volume_threshold.py` — Self-contained volume-exceeds-threshold oracle.

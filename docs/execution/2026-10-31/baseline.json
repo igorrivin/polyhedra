@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-31",
+  "source_head": "cc6b689652ce735f2098bb0a3235089210d764df",
+  "environment": "/tmp/polyhedra-baseline-20261031",
+  "python": "3.12.11",
+  "environment_provenance": "isolated venv populated with local package snapshots; network resolver attempt failed DNS; not a fresh resolved dependency installation",
+  "full_suite": {
+    "passed": 242,
+    "failed": 5,
+    "skipped": 18,
+    "collection_errors": 9,
+    "seconds": 31.76,
+    "exit_code": 1,
+    "failures": [
+      {
+        "test": "tests.test_data_integrity::test_existing_lfs_paths_remain_attribute_filtered",
+        "message": "AssertionError: assert 412 == 407\n +  where 412 = len(['bin/results/data/12vertex_optimization_20251027_034454.json', 'bin/results/data/12vertex_optimization_20251027_04010...s/data/21vertex_optimization_20251030_020944.json', 'bin/results/data/21vertex_optimization_20251030_021740.json', ...])"
+      },
+      {
+        "test": "tests.test_h4_symmetric_maxima_campaign::test_real_n8_sixteen_cell_calibration_smoke",
+        "message": "ModuleNotFoundError: No module named 'gymnasium'"
+      },
+      {
+        "test": "tests.test_rl_training_launcher::test_launcher_writes_truthful_atomic_model_and_config",
+        "message": "ModuleNotFoundError: No module named 'gymnasium'"
+      },
+      {
+        "test": "tests.test_rl_training_launcher::test_training_failure_leaves_no_partial_artifact_or_lock",
+        "message": "ModuleNotFoundError: No module named 'gymnasium'"
+      },
+      {
+        "test": "tests.test_rl_training_launcher::test_dry_run_writes_nothing_and_never_calls_trainer",
+        "message": "ModuleNotFoundError: No module named 'gymnasium'"
+      }
+    ],
+    "errors": [
+      {
+        "test": "::tests.test_cage_optimizer_accounting",
+        "message": "collection failure"
+      },
+      {
+        "test": "::tests.test_h4_combinatorics_benchmark",
+        "message": "collection failure"
+      },
+      {
+        "test": "::tests.test_h4_combinatorics_response",
+        "message": "collection failure"
+      },
+      {
+        "test": "::tests.test_h4_symmetric_benchmark",
+        "message": "collection failure"
+      },
+      {
+        "test": "::tests.test_h4_symmetric_response",
+        "message": "collection failure"
+      },
+      {
+        "test": "::tests.test_numerical_properties",
+        "message": "collection failure"
+      },
+      {
+        "test": "::tests.test_rl_budget_contract",
+        "message": "collection failure"
+      },
+      {
+        "test": "::tests.test_rl_harness",
+        "message": "collection failure"
+      },
+      {
+        "test": "::tests.test_rl_validator",
+        "message": "collection failure"
+      }
+    ],
+    "skip_reasons": {
+      "pynauty is not installed": 1,
+      "pynauty is required for geometric symmetry certification": 17
+    }
+  },
+  "build": {
+    "exit_code": 0,
+    "artifacts": [
+      {
+        "path": "execution/2026-10-31/package-artifacts/ideal_poly_volume_toolkit-0.3.0.tar.gz",
+        "bytes": 219621,
+        "sha256": "7fa4c7f3dd230da171595586284d024966ed65a16113b4b7b8c9096ed1b202af",
+        "members": 64,
+        "unwanted_members": []
+      },
+      {
+        "path": "execution/2026-10-31/package-artifacts/ideal_poly_volume_toolkit-0.3.0-py3-none-any.whl",
+        "bytes": 244839,
+        "sha256": "3a83accb261fc046bd00f99341a70000b31e27752b8050fe764729c0506bba0a",
+        "members": 52,
+        "unwanted_members": []
+      }
+    ]
+  },
+  "wheel_install": {
+    "exit_code": 0,
+    "outside_checkout_import": "passed",
+    "cli_help": "passed",
+    "tetrahedron_cli": {
+      "schema_validation": "passed",
+      "schema_version": 1,
+      "volume": 1.0149416063705312,
+      "structure": {
+        "n_vertices": 4,
+        "n_finite_vertices": 3,
+        "implicit_infinity_index": 3,
+        "n_faces": 4,
+        "n_finite_faces": 1,
+        "n_infinity_faces": 3,
+        "n_edges": 6,
+        "euler_characteristic": 2,
+        "vertex_degrees": [
+          3,
+          3,
+          3,
+          3
+        ]
+      }
+    }
+  },
+  "data_integrity": {
+    "exit_code": 0,
+    "lfs_paths": 412,
+    "json_payloads": 354,
+    "canonical_hashes": 2,
+    "manifest_artifacts": 2,
+    "all_materialized": true
+  },
+  "source_verification": {
+    "changed_tracked_files": [],
+    "status_porcelain": ""
+  }
+}

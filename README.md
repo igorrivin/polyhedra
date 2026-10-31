@@ -9,6 +9,9 @@ This repository integrates the volume toolkit, the historical `ipoly` study, and
 - [Volume toolkit](packages/volume-toolkit/README.md): existing Python package and API, tests, examples, and historical results.
 - [Monograph source](book/README.md): canonical LaTeX source snapshot and figures.
 - [Historical ipoly study](research/ipoly/README.md): original manuscript and verification scripts, retained unchanged.
+- [Section 9 companion](site/section9/index.html): the first worked text, computation and result example; [runnable reproduction archive](site/section9/downloads/section9-reproduction.zip) and [instructions](experiments/section9/README.md).
+- [Computational status](book/computational-status.md): checked examples, reported results awaiting evidence, and the next mathematical review tasks.
+- [Execution checkpoint](docs/execution/2026-10-31/README.md): baseline, independent reviews, recovery inventory and continuation steps.
 - [Integration plan](INTEGRATION_PLAN.md): correction priorities, computational coverage and publication phases.
 - [Provenance](provenance/README.md): source identities, restoration checks and path mapping.
 - [Audit](audit/2026-10-31/): the evidence used to plan this integration.
@@ -24,7 +27,7 @@ cd packages/volume-toolkit
 ../../.venv/bin/python -m pytest -q
 ```
 
-The commands above describe the installation procedure, not a claim that a full development install has passed in this checkout. Baseline environment validation is recorded separately. The minimal numerical installation is `pip install -e packages/volume-toolkit`. See the package README for optional dependencies. The installed `ideal-poly-optimize` command retains its name.
+The commands above describe the installation procedure. [Baseline environment validation](docs/execution/2026-10-31/baseline.md) used an isolated copy of existing dependencies after PyPI DNS resolution failed; complete optional-dependency validation remains outstanding. The minimal numerical installation is `pip install -e packages/volume-toolkit`. See the package README for optional dependencies. The installed `ideal-poly-optimize` command retains its name.
 
 The original HF deployment and maintenance workflows remain as historical files inside the imported package. GitHub does not run workflows in that nested directory. Root workflows are deliberately configured for checks only; this repository does not currently publish a package, update HF, or deploy a Site automatically.
 

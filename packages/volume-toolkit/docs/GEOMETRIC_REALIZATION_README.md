@@ -1,136 +1,69 @@
-# Geometric Realization from Rivin LP Angles
+# Geometric realization from triangle angles
 
-## Overview
+The toolkit separates angle feasibility, compatible volume optimization, and
+coordinate realization. A feasible LP assigns positive angles with the required
+linear sums; an arbitrary feasible assignment need not close when its triangles
+are developed into the plane. Flatness applies at interior vertices, whose
+angles sum to 2π. Boundary conditions are different and depend on the intended
+convexity constraints.
 
-This toolkit now supports **geometric realization** of planar triangulations from the angles computed by Rivin's linear programming method. Given a combinatorial triangulation that passes the Delaunay realizability test, we can construct the actual 2D point positions that realize those angles.
+## Maintained polyhedral workflow
 
-## Key Insight: Rivin LP Gives Complete Angle Specification
-
-The Rivin LP solver provides **all interior angles of all triangles**. These angles, when the LP is feasible, are both **necessary and sufficient** for geometric realizability. The LP ensures:
-
-1. Each triangle's angles sum to π (Euclidean constraint)
-2. Boundary vertex angles sum to 2π (flatness)
-3. Dihedral angles (sums across interior edges) satisfy realizability constraints
-
-## Angle Scaling
-
-**Important**: The LP uses scaled units where π = 1 (for numerical stability). To convert to radians for geometric construction:
+Use the residual-bearing Rivin workflow when constructing a Delaunay realization:
 
 ```python
-angles_radians = lp_angles * np.pi
+from ideal_poly_volume_toolkit.rivin_delaunay import (
+    check_delaunay_realizability,
+    optimize_hyperbolic_volume,
+    realize_angles_as_points,
+)
+
+feasibility = check_delaunay_realizability(triangles)
+if feasibility["realizable"]:
+    optimum = optimize_hyperbolic_volume(
+        triangles, initial_angles=feasibility["angles_radians"]
+    )
+    if optimum["success"]:
+        realization = realize_angles_as_points(triangles, optimum["angles"])
+        # Inspect success and the angle, closure, orientation and triangulation
+        # diagnostics before using realization["points"].
 ```
 
-Each triangle's angles in the LP output sum to 1.0 (scaled), which equals π radians.
+The LP's `angles` field uses scaled units with π = 1. Its
+`angles_radians` field is already in radians. Do not multiply the latter by π
+again. Optimization and realization consume radians.
 
-## Rigid Construction Algorithm
+Neither LP feasibility nor optimizer termination alone establishes an embedded
+convex polyhedron. The closed-sphere pipeline has a separate strict numerical
+audit in `rivin_zero_shear`; exact existence would additionally require validated
+root enclosures and geometric inequalities. See [architecture](architecture.md).
 
-The geometric realization uses a **rigid construction** approach based on the law of sines:
+## Rigid development compatibility entry point
 
-### Algorithm Steps
+`geometric_realization.realize_from_angles_rigid` remains a small numerical
+angle-development helper. It accepts arbitrary integer vertex labels and
+coherently oriented faces. The angle in column k belongs to the vertex in
+column k of that face. Cyclically rotating a face and its angle row preserves
+the result.
 
-1. **Fix first two vertices**:
-   - v₁ = 0 (complex plane)
-   - v₂ = 1
+The helper anchors an actual edge, then uses one oriented law-of-sines formula
+to develop adjacent faces. It checks all triangle angles, local orientations,
+vertex distinctness, and developing-map closure. Disconnected complexes and
+incompatible cycles return `success=False`; malformed angle or face data raise
+`ValueError`. The returned `vertex_list` maps the coordinate rows back to the
+input labels. The retained `boundary_vertices` argument does not change the
+angle development.
 
-2. **Place third vertex** using first triangle containing v₁ and v₂:
-   - Given angles α, β, γ at vertices v₁, v₂, v₃
-   - Use law of sines: `|v₁-v₃|/sin(β) = |v₂-v₃|/sin(α) = |v₁-v₂|/sin(γ)`
-   - Since |v₁-v₂| = 1 is fixed, compute edge lengths
-   - Find v₃ by circle intersection (two circles centered at v₁, v₂)
+`success=True` means those local floating-point checks passed at the reported
+`residual_tolerance`. The result is marked `evidence_status="numerical_development"`
+and `embedding_checked=False`: global overlap, Delaunayness, convexity, and exact
+existence are not certified by this helper. Use the maintained workflow and
+independent geometric audit for those additional questions.
 
-3. **Incrementally place remaining vertices**:
-   - For each unplaced vertex, find a triangle containing it and two placed vertices
-   - Use same law of sines + circle intersection approach
-   - Choose intersection that doesn't overlap existing vertices
-   - Construction is **rigid** - angles uniquely determine positions
+## Regression coverage
 
-### Implementation
-
-```python
-from ideal_poly_volume_toolkit.geometric_realization import realize_from_angles_rigid
-from ideal_poly_volume_toolkit.rivin_delaunay import check_delaunay_realizability
-
-# Check realizability and get angles
-result = check_delaunay_realizability(triangles, verbose=False, strict=True)
-
-if result['realizable']:
-    # Extract angles (in scaled units, π = 1)
-    angles_scaled = result['angles']
-    n_triangles = len(triangles)
-
-    # Convert to radians
-    angles_radians = angles_scaled * np.pi
-    angles_array = angles_radians.reshape((n_triangles, 3))
-
-    # Rigid construction
-    construction = realize_from_angles_rigid(triangles, angles_array, verbose=True)
-
-    if construction['success']:
-        points = construction['points']  # Shape: (n_vertices, 2)
-        vertex_list = construction['vertex_list']  # Vertex IDs
-
-        # Use points for further analysis...
-```
-
-## Example: The Octahedron
-
-For n=6, the unique strictly realizable triangulation (the octahedron) has:
-- 4 triangles: [(1,2,5), (1,4,5), (2,3,5), (3,4,5)]
-- All angles: 45-45-90 degrees (π/4, π/4, π/2 radians)
-
-Geometric realization produces:
-```
-v₁: (0.0, 0.0)
-v₂: (1.0, 0.0)
-v₃: (1.0, 1.0)
-v₄: (0.0, 1.0)
-v₅: (0.5, 0.5)
-```
-
-This forms a **square with center point**, creating 4 right isosceles triangles.
-
-## Verification
-
-The construction achieves:
-- **Angle accuracy**: < 10⁻⁸ degrees RMS error
-- **Triangulation preservation**: Delaunay triangulation of realized points matches input
-- **Rigidity**: Construction is deterministic given the angle specification
-
-## Testing
-
-```bash
-# Test on octahedron
-python examples/test_rigid_construction.py
-
-# Test on other cases
-python examples/test_rigid_construction.py --n 7 --index 0
-```
-
-## Technical Details
-
-### Why This Works
-
-Rivin's criterion is that the LP being feasible is **necessary and sufficient** for Delaunay realizability. When the LP has a solution:
-
-1. The angles satisfy all geometric constraints
-2. The construction is rigid (angles → unique geometry up to similarity)
-3. The resulting point configuration is Delaunay
-
-### Ambiguity Resolution
-
-At each step, circle intersection gives two possible positions. We choose based on:
-1. **No overlap**: Reject positions too close to existing vertices
-2. **Orientation**: Prefer positive signed area (counterclockwise)
-
-This ensures the construction follows the intended combinatorial structure.
-
-## Files
-
-- `ideal_poly_volume_toolkit/geometric_realization.py`: Core implementation
-- `examples/test_rigid_construction.py`: Test and verification
-- `examples/debug_angles.py`: Detailed angle debugging
-
-## References
-
-- Rivin, I. "Euclidean structures on simplicial surfaces and hyperbolic volume"
-- The Rivin criterion provides both necessity and sufficiency for realizability
+`tests/test_core_defect_regressions.py` checks cyclic rotations, arbitrary
+relabeling (including when the two smallest labels are not adjacent), malformed
+inputs, disconnected faces, and an incompatible cycle whose vertices can all be
+placed. The legacy `examples/test_rigid_construction.py` remains an exploratory
+plantri-based example; its LP output must still pass the development checks.
