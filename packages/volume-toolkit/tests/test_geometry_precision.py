@@ -296,4 +296,3 @@ def test_high_level_mpmath_and_legacy_aliases_keep_float_returns():
             assert all(isinstance(value, float) for value in row)
             np.testing.assert_allclose(row, reference, rtol=0, atol=2e-15)
         assert results[0] == results[1] == results[2]
-

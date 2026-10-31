@@ -387,4 +387,3 @@ def test_lp_solver_iterations_remain_separate_from_volume_work(monkeypatch):
     assert result["feasibility_lp"]["solver_iterations"] == 13
     assert result["n_iterations"] == 0
     assert result["n_volume_evaluations"] == 1
-
