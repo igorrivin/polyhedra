@@ -1,0 +1,25 @@
+# Local environments, generated build products and machine metadata
+._*
+.DS_Store
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+htmlcov/
+*.egg-info/
+site/dist/
+book/build/
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+# Local proof and benchmark material stays separate from publication assets.
+*.answer-key.json
+manifest.private.json
