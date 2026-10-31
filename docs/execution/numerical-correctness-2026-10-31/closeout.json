@@ -1,0 +1,239 @@
+{
+  "date_utc": "2026-10-31T23:49:18.633918+00:00",
+  "scope": "Local numerical increment closeout; generated companion and final detached replay, not a release or whole-book proof audit",
+  "baseline_commit": "285a6cb71473ba1f238983e062662cf890cbba05",
+  "numerical_source_commit": "bed2d7dbaf80df7bcc4fd75ecce0459627c58963",
+  "clean_source_commit": "9188e0624cdf6d9949af1f620336eff67c8b59d7",
+  "artifact_commit": "29440cfbfcdaa23711cfdac4e09bf5f939404273",
+  "current_head_before_documentation_commit": "29440cfbfcdaa23711cfdac4e09bf5f939404273",
+  "source_hygiene": {
+    "record": "source-hygiene.json",
+    "two_test_eof_blank_lines_removed": true,
+    "ast_unchanged": true,
+    "initial_staged_whitespace_gate_passed": false,
+    "corrected_authored_whitespace_passed": true,
+    "product_source_unchanged": true
+  },
+  "reviewed_source_hashes": {
+    "count": 47,
+    "all_match": true,
+    "manifest_sha256": "1c9fd1548298a55660049df8fc24d35962b5f72b2e6357414aeeadc92ac8d6e4"
+  },
+  "precommit_evidence_inventory": {
+    "entries": 127,
+    "origin_and_destination_hashes_match": true,
+    "manifest_sha256": "7338793546ff0eaff3ed40c690fd910dec44d0469b5fb8a14224b88784ad5c36"
+  },
+  "source_preservation": {
+    "repositories": [
+      {
+        "path": "ideal_poly_volume_toolkit",
+        "head": "cc6b689652ce735f2098bb0a3235089210d764df",
+        "clean": true,
+        "tracked_hashes_verified": 925,
+        "head_reachable": true
+      },
+      {
+        "path": "ipoly",
+        "head": "30ef40e23005509bd94d26f27dc48ea778832a50",
+        "clean": true,
+        "tracked_hashes_verified": 28,
+        "head_reachable": true
+      }
+    ],
+    "tracked_hashes_verified": 953,
+    "archive": {
+      "path": "polyhedra_moduli_quantum_monograph_sources.zip",
+      "sha256": "8f28b07686ea579a7dfb7b88ccef5c12bdd50b6e328737d5a8a79f6e06ba92dc"
+    },
+    "protected_prefixes_unchanged_from_baseline": [
+      "research/ipoly",
+      "book/polyhedral_volumes_and_geodesic_identities.tex",
+      "book/reference",
+      "book/figures",
+      "provenance",
+      "packages/volume-toolkit/results"
+    ]
+  },
+  "lfs": {
+    "objects": 396,
+    "materialized_paths": 412,
+    "all_sha256_verified": true,
+    "paths_manifest_sha256": "a2d163ad33c66dfb37d7b26fada1c5867510f74bb9a1fc0a3291c6f83af69a5c"
+  },
+  "canonical_generation": {
+    "source_commit": "9188e0624cdf6d9949af1f620336eff67c8b59d7",
+    "artifact_commit": "29440cfbfcdaa23711cfdac4e09bf5f939404273",
+    "canonical_checks": 12,
+    "all_checks_passed": true,
+    "exact_fixture": {
+      "grounded_laplacian": [
+        [
+          "4",
+          "-1"
+        ],
+        [
+          "-1",
+          "4"
+        ]
+      ],
+      "det_L_II": "15",
+      "det_negative_volume_hessian": "60",
+      "rooted_forest_weight_sum": "15",
+      "nonzero_rooted_forest_count": 15,
+      "eliminated_K_entry": "8",
+      "effective_K_entry": "15/2",
+      "checks_passed": true
+    },
+    "clean_origin": true,
+    "source_book_hashes_verified": 7,
+    "bundle_payload_hashes_verified": 9,
+    "artifacts": [
+      {
+        "path": "artifacts/section9/result.json",
+        "sha256": "96a9a6a3542610d840331b87b1d89ab65932c3b5082598f7065000fd612ee269",
+        "bytes": 11432
+      },
+      {
+        "path": "site/section9/downloads/fixture.json",
+        "sha256": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1",
+        "bytes": 1092
+      },
+      {
+        "path": "site/section9/downloads/polyhedral_volumes_and_geodesic_identities.pdf",
+        "sha256": "40dd069bd2653f9a78666a31f53910d74b7f8de2a4a75d5a5dd62466032a6cd5",
+        "bytes": 1399634
+      },
+      {
+        "path": "site/section9/downloads/polyhedral_volumes_and_geodesic_identities.tex",
+        "sha256": "63102e64405a58b8f5d51bfdffe6be43fc5cfe9a232dc0f396f1709733d750dc",
+        "bytes": 569093
+      },
+      {
+        "path": "site/section9/downloads/result.json",
+        "sha256": "96a9a6a3542610d840331b87b1d89ab65932c3b5082598f7065000fd612ee269",
+        "bytes": 11432
+      },
+      {
+        "path": "site/section9/downloads/run.py",
+        "sha256": "efd0f829cb8e8663b23ab23eb0dd19e3988afd1db3710d2fccaf65c3a38f28f5",
+        "bytes": 20131
+      },
+      {
+        "path": "site/section9/downloads/section9-reproduction.zip",
+        "sha256": "aa686dfd6eecb6cbaa13e3c64eeae1ec15513b03c105d953daeb37a60fa36f46",
+        "bytes": 28344
+      },
+      {
+        "path": "site/section9/downloads/variational.py",
+        "sha256": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+        "bytes": 10242
+      },
+      {
+        "path": "site/section9/index.html",
+        "sha256": "af77e291673aed70ecb64294d92f6ad680bfab47f7f3da9f861b52f44fe08899",
+        "bytes": 25846
+      }
+    ],
+    "commit_stdout": "[main 29440cf] Regenerate Section 9 companion from corrected clean numerical source\n 4 files changed, 9 insertions(+), 9 deletions(-)\n",
+    "commit_stderr": ""
+  },
+  "final_detached_replay": {
+    "command": [
+      "/tmp/polyhedra-numerical-core-20261031/bin/python",
+      "/tmp/polyhedra-numerical-final-replay-3plpx4zx/section9-reproduction/experiments/section9/run.py",
+      "--output",
+      "/tmp/polyhedra-numerical-final-replay-3plpx4zx/detached-result.json",
+      "--site-dir",
+      "/tmp/polyhedra-numerical-final-replay-3plpx4zx/detached-site"
+    ],
+    "working_directory": "/tmp",
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONPATH": "unset"
+    },
+    "returncode": 0,
+    "archive_sha256": "aa686dfd6eecb6cbaa13e3c64eeae1ec15513b03c105d953daeb37a60fa36f46",
+    "result_sha256": "17f3dbe8954978823a0dde979fe1429929487b090eccd09edfab74a9d4031abd",
+    "origin_source_commit": "9188e0624cdf6d9949af1f620336eff67c8b59d7",
+    "origin_clean": true,
+    "live_git_state": null,
+    "numerical_checks_passed": 12,
+    "exact_fixture_passed": true,
+    "payload_hashes_verified": 9,
+    "geometry_sha256": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73",
+    "book_assets_unavailable": true
+  },
+  "static_site_checks": {
+    "scope": "Static local links, HTML anchors and JavaScript syntax only; browser layout/interaction remain unverified",
+    "html_sha256": "af77e291673aed70ecb64294d92f6ad680bfab47f7f3da9f861b52f44fe08899",
+    "local_links_checked": [
+      "#mesh",
+      "#eq:ipolyHessian",
+      "#eq:ipolyDtN",
+      "#eq:ipolyForestDeterminant",
+      "#reproduce",
+      "downloads/section9-reproduction.zip",
+      "downloads/result.json",
+      "downloads/fixture.json",
+      "downloads/run.py",
+      "downloads/variational.py",
+      "downloads/polyhedral_volumes_and_geodesic_identities.tex",
+      "downloads/polyhedral_volumes_and_geodesic_identities.pdf"
+    ],
+    "script_syntax_checks": [
+      {
+        "index": 0,
+        "sha256": "3bae7f6b56d8c0bd140b18e27427684216c60e57fefd669f9e23e8f61829b3e2",
+        "node_check_exit": 0
+      }
+    ],
+    "node": "/opt/homebrew/bin/node"
+  },
+  "git_integrity_before_documentation_commit": {
+    "receipt": "checkpoint-git-metadata-cleanup.json",
+    "removed_appledouble_sidecars": 209,
+    "initial_fsck_returncode": 0,
+    "initial_fsck_diagnostic_free": false,
+    "final_fsck": {
+      "command": [
+        "git",
+        "fsck",
+        "--full"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "diagnostic_free": true
+    }
+  },
+  "final_post_commit_receipt": "execution/numerical-correctness-2026-10-31/final-post-commit-verification.json (outer workspace, generated after documentation commit)",
+  "local_verification_helper": {
+    "path": "execution/numerical-correctness-2026-10-31/closeout-support.py",
+    "sha256": "8725496747530888188fbd8a3b88217ccafb6eae90cc97932f4c0023645a581a",
+    "scope": "Machine-local closeout inventory and verified AppleDouble cleanup, not needed for numerical reproduction"
+  },
+  "available_full_suite": {
+    "passed": 393,
+    "skipped": 18,
+    "failed": 4,
+    "collection_errors": 9,
+    "warnings": 0,
+    "failure_error_skip_node_ids_unchanged": true,
+    "missing_dependencies": [
+      "gymnasium",
+      "hypothesis",
+      "pynauty"
+    ],
+    "clean_full_suite": false
+  },
+  "limitations": [
+    "Local dependency copies, not fresh online resolution",
+    "Optional GUI/RL/accelerator and supported-Python/platform matrix not fully validated",
+    "Browser layout/interaction unverified",
+    "Historical geometry refiner, H4/H5 and Torch beyond this increment",
+    "No corpus-wide numerical replay, global embedding certificate, interval proof or whole-monograph proof audit",
+    "No remote configured, push, package release, tag or Sites deployment"
+  ],
+  "configured_remotes": ""
+}

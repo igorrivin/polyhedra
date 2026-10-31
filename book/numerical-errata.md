@@ -152,13 +152,15 @@ No corpus-wide replay, complete proof audit or release is implied. The
 fresh-endpoint contract applies to `optimization.optimize_ideal_polyhedron`;
 the separate historical `refine_geometry_for_volume` path still uses a cached
 solver objective and has not received this boundary audit. H⁴/H⁵ and Torch
-kernels were outside this increment. The
-Section 9 artifact must be regenerated from the reviewed clean source after
-kernel changes; preliminary installed-wheel and detached-archive checks pass,
-and older canonical outputs retain their recorded provenance. The integrated
+kernels were outside this increment. The Section 9 artifact has been
+regenerated from clean corrected source `9188e0624cdf6d9949af1f620336eff67c8b59d7`,
+committed as `29440cfbfcdaa23711cfdac4e09bf5f939404273`, and successfully
+replayed from its final detached archive; see the
+[closeout](../docs/execution/numerical-correctness-2026-10-31/closeout.md).
+Older outputs retain their recorded provenance in history and the first
+checkpoint. The integrated
 available-suite attempt reports 393 passes, with the same four failures and
 nine collection errors from unavailable optional dependencies as before.
-Optional
-dependency and platform gates remain outstanding. Airy-table and torus-
+Optional dependency and platform gates remain outstanding. Airy-table and torus-
 diagnostic evidence remains unavailable, and complete monograph conversion,
 browser validation, licensing and Sites publication remain future work.

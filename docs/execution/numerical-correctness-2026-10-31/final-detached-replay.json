@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/tmp/polyhedra-numerical-core-20261031/bin/python",
+    "/tmp/polyhedra-numerical-final-replay-3plpx4zx/section9-reproduction/experiments/section9/run.py",
+    "--output",
+    "/tmp/polyhedra-numerical-final-replay-3plpx4zx/detached-result.json",
+    "--site-dir",
+    "/tmp/polyhedra-numerical-final-replay-3plpx4zx/detached-site"
+  ],
+  "working_directory": "/tmp",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "unset"
+  },
+  "returncode": 0,
+  "archive_sha256": "aa686dfd6eecb6cbaa13e3c64eeae1ec15513b03c105d953daeb37a60fa36f46",
+  "result_sha256": "17f3dbe8954978823a0dde979fe1429929487b090eccd09edfab74a9d4031abd",
+  "origin_source_commit": "9188e0624cdf6d9949af1f620336eff67c8b59d7",
+  "origin_clean": true,
+  "live_git_state": null,
+  "numerical_checks_passed": 12,
+  "exact_fixture_passed": true,
+  "payload_hashes_verified": 9,
+  "geometry_sha256": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73",
+  "book_assets_unavailable": true
+}

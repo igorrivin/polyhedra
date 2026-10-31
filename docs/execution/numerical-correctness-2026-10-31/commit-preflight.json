@@ -1,0 +1,64 @@
+{
+  "checked_at_utc": "2026-10-31T23:44:40.056845+00:00",
+  "head": "285a6cb71473ba1f238983e062662cf890cbba05",
+  "status": "M README.md\n M book/computational-status.md\n M packages/volume-toolkit/.gitattributes\n M packages/volume-toolkit/CHANGELOG.md\n M packages/volume-toolkit/README.md\n M packages/volume-toolkit/docs/architecture.md\n M packages/volume-toolkit/docs/module-index.md\n M packages/volume-toolkit/docs/release-0.4.0.md\n M packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py\n M packages/volume-toolkit/ideal_poly_volume_toolkit/optimization.py\n M packages/volume-toolkit/ideal_poly_volume_toolkit/optimization_cli.py\n M packages/volume-toolkit/ideal_poly_volume_toolkit/rivin_delaunay.py\n M packages/volume-toolkit/ideal_poly_volume_toolkit/volume_threshold.py\n M packages/volume-toolkit/scripts/check_data_integrity.py\n M packages/volume-toolkit/tests/test_optimization.py\n M packages/volume-toolkit/tests/test_penner_rivin_regression.py\n M packages/volume-toolkit/tests/test_rivin_legalization.py\n?? book/numerical-errata.md\n?? docs/execution/numerical-correctness-2026-10-31/\n?? packages/volume-toolkit/docs/numerical-precision.md\n?? packages/volume-toolkit/docs/optimizer-result-contract.md\n?? packages/volume-toolkit/docs/rivin-numerics.md\n?? packages/volume-toolkit/docs/schemas/optimization-result-v2.schema.json\n?? packages/volume-toolkit/tests/fixtures/\n?? packages/volume-toolkit/tests/test_geometry_precision.py\n?? packages/volume-toolkit/tests/test_optimizer_result_contract.py\n?? packages/volume-toolkit/tests/test_rivin_numerical_contracts.py",
+  "sources": {
+    "count": 47,
+    "all_match": true,
+    "manifest_sha256": "1c9fd1548298a55660049df8fc24d35962b5f72b2e6357414aeeadc92ac8d6e4"
+  },
+  "evidence": {
+    "entries": 127,
+    "origin_and_destination_hashes_match": true,
+    "manifest_sha256": "7338793546ff0eaff3ed40c690fd910dec44d0469b5fb8a14224b88784ad5c36"
+  },
+  "originals": {
+    "repositories": [
+      {
+        "path": "ideal_poly_volume_toolkit",
+        "head": "cc6b689652ce735f2098bb0a3235089210d764df",
+        "clean": true,
+        "tracked_hashes_verified": 925,
+        "head_reachable": true
+      },
+      {
+        "path": "ipoly",
+        "head": "30ef40e23005509bd94d26f27dc48ea778832a50",
+        "clean": true,
+        "tracked_hashes_verified": 28,
+        "head_reachable": true
+      }
+    ],
+    "tracked_hashes_verified": 953,
+    "archive": {
+      "path": "polyhedra_moduli_quantum_monograph_sources.zip",
+      "sha256": "8f28b07686ea579a7dfb7b88ccef5c12bdd50b6e328737d5a8a79f6e06ba92dc"
+    },
+    "protected_prefixes_unchanged_from_baseline": [
+      "research/ipoly",
+      "book/polyhedral_volumes_and_geodesic_identities.tex",
+      "book/reference",
+      "book/figures",
+      "provenance",
+      "packages/volume-toolkit/results"
+    ]
+  },
+  "lfs": {
+    "objects": 396,
+    "materialized_paths": 412,
+    "all_sha256_verified": true,
+    "paths_manifest_sha256": "a2d163ad33c66dfb37d7b26fada1c5867510f74bb9a1fc0a3291c6f83af69a5c"
+  },
+  "remotes": "",
+  "fsck": {
+    "command": [
+      "git",
+      "fsck",
+      "--full"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "diagnostic_free": true
+  }
+}

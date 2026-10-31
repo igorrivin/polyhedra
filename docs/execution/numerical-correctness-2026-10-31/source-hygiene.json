@@ -1,0 +1,24 @@
+{
+  "initial_source_commit": "bed2d7dbaf80df7bcc4fd75ecce0459627c58963",
+  "clean_source_commit": "9188e0624cdf6d9949af1f620336eff67c8b59d7",
+  "reason": "Staged inspection found two extra EOF blank lines after earlier unstaged checks did not include new files. The source commit command continued after the assertion because its shell block lacked fail-fast; this follow-up changes test whitespace only.",
+  "changes": [
+    {
+      "path": "packages/volume-toolkit/tests/test_geometry_precision.py",
+      "before_sha256": "14f2ef19805af78d295ab8c3b37d46967a19f368cedc5aac2f5a6a43701965d6",
+      "after_sha256": "f029a8855d42fa966e8def851b45626682e701e4c18a1449b9d22d6781b074c6",
+      "removed_bytes": 1,
+      "ast_unchanged": true
+    },
+    {
+      "path": "packages/volume-toolkit/tests/test_rivin_numerical_contracts.py",
+      "before_sha256": "c52459da4635c6ddf7b006a7dadfb200b95bf7d0a2a448f99026be6b9cb2d4db",
+      "after_sha256": "7cc53a9656645af0cfab398414f6372a72e5bcfb1d23205f9279d0a5458326e6",
+      "removed_bytes": 1,
+      "ast_unchanged": true
+    }
+  ],
+  "product_source_files_changed": false,
+  "commit_stdout": "[main 9188e06] Remove trailing blank lines from numerical regression tests\n 2 files changed, 2 deletions(-)\n",
+  "commit_stderr": ""
+}

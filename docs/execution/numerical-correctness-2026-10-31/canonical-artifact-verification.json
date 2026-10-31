@@ -1,0 +1,77 @@
+{
+  "source_commit": "9188e0624cdf6d9949af1f620336eff67c8b59d7",
+  "artifact_commit": "29440cfbfcdaa23711cfdac4e09bf5f939404273",
+  "canonical_checks": 12,
+  "all_checks_passed": true,
+  "exact_fixture": {
+    "grounded_laplacian": [
+      [
+        "4",
+        "-1"
+      ],
+      [
+        "-1",
+        "4"
+      ]
+    ],
+    "det_L_II": "15",
+    "det_negative_volume_hessian": "60",
+    "rooted_forest_weight_sum": "15",
+    "nonzero_rooted_forest_count": 15,
+    "eliminated_K_entry": "8",
+    "effective_K_entry": "15/2",
+    "checks_passed": true
+  },
+  "clean_origin": true,
+  "source_book_hashes_verified": 7,
+  "bundle_payload_hashes_verified": 9,
+  "artifacts": [
+    {
+      "path": "artifacts/section9/result.json",
+      "sha256": "96a9a6a3542610d840331b87b1d89ab65932c3b5082598f7065000fd612ee269",
+      "bytes": 11432
+    },
+    {
+      "path": "site/section9/downloads/fixture.json",
+      "sha256": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1",
+      "bytes": 1092
+    },
+    {
+      "path": "site/section9/downloads/polyhedral_volumes_and_geodesic_identities.pdf",
+      "sha256": "40dd069bd2653f9a78666a31f53910d74b7f8de2a4a75d5a5dd62466032a6cd5",
+      "bytes": 1399634
+    },
+    {
+      "path": "site/section9/downloads/polyhedral_volumes_and_geodesic_identities.tex",
+      "sha256": "63102e64405a58b8f5d51bfdffe6be43fc5cfe9a232dc0f396f1709733d750dc",
+      "bytes": 569093
+    },
+    {
+      "path": "site/section9/downloads/result.json",
+      "sha256": "96a9a6a3542610d840331b87b1d89ab65932c3b5082598f7065000fd612ee269",
+      "bytes": 11432
+    },
+    {
+      "path": "site/section9/downloads/run.py",
+      "sha256": "efd0f829cb8e8663b23ab23eb0dd19e3988afd1db3710d2fccaf65c3a38f28f5",
+      "bytes": 20131
+    },
+    {
+      "path": "site/section9/downloads/section9-reproduction.zip",
+      "sha256": "aa686dfd6eecb6cbaa13e3c64eeae1ec15513b03c105d953daeb37a60fa36f46",
+      "bytes": 28344
+    },
+    {
+      "path": "site/section9/downloads/variational.py",
+      "sha256": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+      "bytes": 10242
+    },
+    {
+      "path": "site/section9/index.html",
+      "sha256": "af77e291673aed70ecb64294d92f6ad680bfab47f7f3da9f861b52f44fe08899",
+      "bytes": 25846
+    }
+  ],
+  "commit_stdout": "[main 29440cf] Regenerate Section 9 companion from corrected clean numerical source\n 4 files changed, 9 insertions(+), 9 deletions(-)\n",
+  "commit_stderr": ""
+}

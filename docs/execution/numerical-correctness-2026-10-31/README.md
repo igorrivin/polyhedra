@@ -14,11 +14,11 @@ Fresh endpoint validation is owned by
 outside that service audit; H⁴/H⁵ and Torch algorithms are also outside this
 increment.
 
-This pre-commit checkpoint records independently approved precision, service
-and angle corrections, the integrated available-suite attempt, and passing
-minimal-wheel and preliminary detached-replay checks. It does not record a
-completed source commit, clean-source artifact regeneration, complete Phase 2
-release gate or deployment.
+This local checkpoint records independently approved precision, service and
+angle corrections, the integrated available-suite attempt, and passing
+minimal-wheel checks. The [closeout](closeout.md) records the committed source,
+Section 9 regeneration from clean source, and final detached-archive replay.
+The complete Phase 2 release gate and publication remain outstanding.
 
 ## What changed
 
@@ -73,7 +73,8 @@ following results:
 | Source, wheel, sdist and installation | All **47 package Python files** match across live source, temporary build copy, both distributions and installed wheel; hashes remained stable. Both distributions were built and inspected; only the wheel was installed. Version remains 0.3.0, with no release or tag. |
 | Minimal installed core | New isolated environment, only local NumPy/SciPy/mpmath snapshots plus pip and the new wheel. `pip check`, installed numerical probes, v2 CLI/schema checks and preserved v1 fixture/schema checks pass. This is not a fresh online dependency resolution. |
 | Data integrity | 412 materialized LFS paths, 354 JSON payloads, two canonical input hashes and two manifest artifacts pass. This checks retained data integrity, not a fresh numerical replay of that corpus. |
-| Preliminary Section 9 reproduction | Both installed-wheel and newly extracted archive modes pass all **12 numerical checks** and exact rational fixture identities. All nine archive payload hashes match. Their origin records the modified checkout honestly; the final canonical clean-source archive is still pending. |
+| Preliminary Section 9 reproduction | Both installed-wheel and newly extracted archive modes pass all **12 numerical checks** and exact rational fixture identities. All nine archive payload hashes match. Their origin records the modified checkout honestly; these preliminary records are preserved unchanged. |
+| Final canonical Section 9 reproduction | Regenerated from clean source `9188e0624cdf6d9949af1f620336eff67c8b59d7`, committed as `29440cfbfcdaa23711cfdac4e09bf5f939404273`, and replayed from the final ZIP outside the checkout. All 12 numerical checks, exact fixture identities and nine payload hashes pass. [Final evidence](closeout.json). |
 
 The installed verification harness initially read a nonexistent LP field
 `residuals`; its correction uses the existing `primal_residuals` field.
@@ -174,19 +175,24 @@ The manifest's `force_add_paths` enumerates exact copied `*.log` paths ignored
 by root Git rules. Add only those paths when staging evidence; exclude
 AppleDouble `._*` files. Temporary environments, wheels and sdists are omitted.
 The [integration-specific manifest](integration-evidence-manifest.json)
-records the verifier's original output hashes. Source/artifact commit
-identities must be added before claiming those later stages.
+records the verifier's original output hashes. The later
+[closeout inventory](closeout-evidence.json) separately records clean-source
+generation, final replay and preservation checks. The pre-commit staging
+manifest remains a historical record of the initial staging scope.
 
-Remaining work for this increment:
+The reviewed numerical source was committed as `bed2d7dbaf80df7bcc4fd75ecce0459627c58963`.
+A following [test-whitespace correction](source-hygiene.json) produced clean
+source `9188e0624cdf6d9949af1f620336eff67c8b59d7`; only two trailing blank lines
+were removed, with both test ASTs unchanged and all 47 product Python hashes
+unchanged. The initial staged whitespace check found those two issues; it was
+not a passing gate. The corrected authored whitespace check passes.
 
-1. Commit the reviewed source and regenerate Section 9 from that clean source.
-   Its existing outputs record source `c02b358de5a6f724faf3368a641ba64f5841d859`
-   and artifact commit `74e2abc67e434e0d7eadf70d7becaa6de2f77785`; they remain
-   historical evidence, not a replay of the changed geometry hash. Verify the
-   new archive outside the source tree and record source/artifact commits.
-2. Complete the final evidence hash inventory and Git closeout. This checkout
-   has no configured remote; no push, package release or Sites publication is
-   claimed.
+The new Section 9 outputs and final replay are recorded in the
+[closeout](closeout.md). Earlier source `c02b358de5a6f724faf3368a641ba64f5841d859`
+and artifact commit `74e2abc67e434e0d7eadf70d7becaa6de2f77785` remain preserved
+in Git history and the first checkpoint. This checkout has no configured
+remote; this is a local checkpoint, with no push, package release or Sites
+publication.
 
 The full optional development environment, Gymnasium/Hypothesis coverage,
 GUI construction and supported-Python/platform matrix remain release gates.

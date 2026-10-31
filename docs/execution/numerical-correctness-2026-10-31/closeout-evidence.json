@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-31T23:49:20.170574+00:00",
+  "scope": "Later closeout evidence; preserves the separate 127-entry precommit inventory unchanged",
+  "origin_paths_relative_to": "outer workspace",
+  "destination_paths_relative_to": "consolidated repository root",
+  "entries": [
+    {
+      "origin": "execution/numerical-correctness-2026-10-31/commit-preflight.json",
+      "destination": "docs/execution/numerical-correctness-2026-10-31/commit-preflight.json",
+      "sha256": "e8227710bdaec59894448dfb80be09db5d04165f259625f45934e121adec0818",
+      "bytes": 3237
+    },
+    {
+      "origin": "execution/numerical-correctness-2026-10-31/source-staging.json",
+      "destination": "docs/execution/numerical-correctness-2026-10-31/source-staging.json",
+      "sha256": "0dfeec9db9b4f2c3235a8f86f5e380f43abf4192b4d45f07370e63d812c6f32a",
+      "bytes": 19469
+    },
+    {
+      "origin": "execution/numerical-correctness-2026-10-31/source-hygiene.json",
+      "destination": "docs/execution/numerical-correctness-2026-10-31/source-hygiene.json",
+      "sha256": "6cef03fdc1f020be08a561643799acec61c963657416ca06f451be0b9af13af2",
+      "bytes": 1275
+    },
+    {
+      "origin": "execution/numerical-correctness-2026-10-31/canonical-artifact-verification.json",
+      "destination": "docs/execution/numerical-correctness-2026-10-31/canonical-artifact-verification.json",
+      "sha256": "420f50405ce73f4402ade7272b9913f49b1b2f46e3fc75876f35105662c7dd3f",
+      "bytes": 2472
+    },
+    {
+      "origin": "execution/numerical-correctness-2026-10-31/final-section9-generation-command.json",
+      "destination": "docs/execution/numerical-correctness-2026-10-31/final-section9-generation-command.json",
+      "sha256": "39dbfb123284d06e8e740177147aced7a2e4534a7c87734e345276290cf008ee",
+      "bytes": 734
+    },
+    {
+      "origin": "execution/numerical-correctness-2026-10-31/final-section9-generation.log",
+      "destination": "docs/execution/numerical-correctness-2026-10-31/final-section9-generation.log",
+      "sha256": "5f27f0cb89e9ec4340b7c9650f3289d5588d746efeabbe1120a82c7964f1e23f",
+      "bytes": 308
+    },
+    {
+      "origin": "execution/numerical-correctness-2026-10-31/final-detached-replay.log",
+      "destination": "docs/execution/numerical-correctness-2026-10-31/final-detached-replay.log",
+      "sha256": "196a61ee9a9e27370f371e5a36aa4af78fced55a723a3b9b63d3d03485d85c00",
+      "bytes": 251
+    },
+    {
+      "origin": "execution/numerical-correctness-2026-10-31/final-detached-result.json",
+      "destination": "docs/execution/numerical-correctness-2026-10-31/final-detached-result.json",
+      "sha256": "17f3dbe8954978823a0dde979fe1429929487b090eccd09edfab74a9d4031abd",
+      "bytes": 14751
+    },
+    {
+      "origin": "execution/numerical-correctness-2026-10-31/final-detached-replay.json",
+      "destination": "docs/execution/numerical-correctness-2026-10-31/final-detached-replay.json",
+      "sha256": "678d8d4b95a0645cd81e98a8634162065f3705e92cc9fb7adc2b815acc8e6504",
+      "bytes": 1012
+    },
+    {
+      "origin": "execution/numerical-correctness-2026-10-31/final-static-site-verification.json",
+      "destination": "docs/execution/numerical-correctness-2026-10-31/final-static-site-verification.json",
+      "sha256": "8b3531c73190216c0a36377bd4cd862e776095c0bb4ccb1dd4c960561710d120",
+      "bytes": 844
+    },
+    {
+      "origin": "execution/numerical-correctness-2026-10-31/checkpoint-git-metadata-cleanup.json",
+      "destination": "docs/execution/numerical-correctness-2026-10-31/checkpoint-git-metadata-cleanup.json",
+      "sha256": "8df644b1aa0255fbd50310dfba90e092621e0901746ffb5dec42f8420d11bafe",
+      "bytes": 151420
+    },
+    {
+      "origin": "execution/numerical-correctness-2026-10-31/closeout.json",
+      "destination": "docs/execution/numerical-correctness-2026-10-31/closeout.json",
+      "sha256": "d482e1fa92e0972248ba98abf45cb37994e5c48bdb08c025748cbecd52c7184e",
+      "bytes": 8707
+    }
+  ],
+  "force_add_paths": [
+    "docs/execution/numerical-correctness-2026-10-31/final-section9-generation.log",
+    "docs/execution/numerical-correctness-2026-10-31/final-detached-replay.log"
+  ],
+  "authored_files_excluded": [
+    "closeout.md",
+    "closeout-evidence.json",
+    "README.md",
+    "book/computational-status.md",
+    "book/numerical-errata.md"
+  ],
+  "post_commit_receipt_is_external": true
+}
