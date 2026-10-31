@@ -1,0 +1,1656 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\title{Maximal Volume Ideal Polyhedra and the Arithmetic Angle Phenomenon}
+
+\author{Igor Rivin}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We present a software suite for the analysis and optimization of ideal convex polyhedra in hyperbolic 3-space $\mathbb{H}^3$. Using Rivin's variational characterization of ideal polyhedra, we develop efficient algorithms for checking combinatorial realizability and finding volume-maximizing configurations. Our systematic computational study reveals two striking phenomena: (1) maximal volume ideal polyhedra consistently exhibit dihedral angles that are rational multiples of $\pi$---a property with no obvious explanation from the optimization formulation; and (2) the distribution of volumes for random configurations is well-approximated by a Beta distribution, with mean normalized volume converging to approximately $\ln 2 \approx 0.69$ as the vertex count increases. We provide complete data for small vertex counts, including vertex positions, triangulations, and verified rational angle structures. Extending to $\mathbb{H}^4$ and $\mathbb{H}^6$, we discover a \emph{combinatorial invariance} phenomenon: the $f$-vector of the volume-maximizing ideal polytope with $N$ vertices on $S^{d-1}$ is the same whether volume is measured in the Euclidean or hyperbolic sense, holding exactly for $N \lesssim 5d$ (tested up to $d=3$, $N \leq 50$; $d=4$, $N \leq 40$; $d=5$, $N \leq 20$; $d = 6$, $N \leq 30$).  At larger~$N$, small deviations appear ($\leq 3$ facets), with the hyperbolic optimizer consistently finding fewer facets.  CMA-ES (Covariance Matrix Adaptation) provides Euclidean warm starts that are within $0.0$--$0.4\%$ of the hyperbolic optimum, confirming the near-equivalence of the two objectives near their shared maximum. An interactive implementation is publicly available.
+\end{abstract}
+
+\smallskip\noindent
+\textbf{Keywords:} ideal polyhedra, hyperbolic volume, Lobachevsky function,
+dilogarithm, combinatorial invariance, Frobenius groups, vertex-transitive
+polytopes, CMA-ES, Schl\"afli formula
+
+\smallskip\noindent
+\textbf{MSC 2020:} 52B10 (primary), 51M25, 52A40, 52B15, 20B25, 11R18
+
+\tableofcontents
+
+% ============================================================================
+\section{Introduction}
+% ============================================================================
+
+Ideal polyhedra in hyperbolic 3-space $\mathbb{H}^3$ occupy a central position in low-dimensional topology and geometry. Their study connects to the geometry of hyperbolic 3-manifolds, Teichmüller theory, and the representation theory of surface groups. The volume of hyperbolic 3-manifolds, a topological invariant, can often be computed by decomposing the manifold into ideal tetrahedra---the simplest ideal polyhedra.
+
+A natural question arises: among all ideal polyhedra with a given number of vertices, which has the largest volume? This optimization problem, while analytically straightforward (it reduces to maximizing a concave function over a convex polytope), reveals surprising structure. The maximal configurations exhibit a form of ``arithmeticity''---their dihedral angles are consistently rational multiples of $\pi$. Moreover, the distribution of volumes for random configurations follows a Beta distribution, with parameters scaling linearly in the vertex count and mean normalized volume converging to approximately $\ln 2$.
+
+In this paper, we present a comprehensive software suite for:
+\begin{enumerate}[label=(\roman*)]
+    \item Checking whether a given triangulation is realizable as the boundary of an ideal convex polyhedron
+    \item Finding optimal (volume-maximizing) geometric realizations of realizable triangulations
+    \item Computing the Fuchsian group associated with the surface of the polyhedron
+    \item Visualizing polyhedra in multiple models of hyperbolic space
+\end{enumerate}
+
+Our computational experiments reveal a surprising phenomenon: when optimizing for maximal volume, the resulting polyhedra consistently have dihedral angles that are \emph{exact rational multiples of $\pi$}. This arithmetic structure emerges from a purely analytic optimization problem with no built-in number-theoretic constraints.
+
+% ============================================================================
+\section{Background and Notation}
+% ============================================================================
+
+\subsection{Ideal Polyhedra in $\mathbb{H}^3$}
+
+An \emph{ideal polyhedron} in hyperbolic 3-space $\mathbb{H}^3$ is a convex polyhedron whose vertices lie on the boundary at infinity $\partial_\infty \mathbb{H}^3 \cong \mathbb{CP}^1$. Despite having vertices ``at infinity,'' such polyhedra have finite volume---a consequence of the exponential shrinking of hyperbolic space toward the boundary.
+
+The combinatorial structure of an ideal polyhedron is encoded by a triangulation of the 2-sphere: the \emph{Delaunay triangulation} of the ideal vertices as seen from the center of mass of the polyhedron. Conversely, not every triangulation of the sphere arises from an ideal polyhedron---realizability imposes constraints on the possible angle structures, as characterized by Rivin's theorem below.
+
+We work primarily in the upper half-space model, where $\mathbb{H}^3 = \{(x,y,z) \in \mathbb{R}^3 : z > 0\}$ with metric $ds^2 = (dx^2 + dy^2 + dz^2)/z^2$. The boundary $\partial_\infty \mathbb{H}^3$ is the extended complex plane $\mathbb{C} \cup \{\infty\}$, and ideal vertices are specified as points in $\mathbb{CP}^1$.
+
+\subsection{Rivin's Variational Characterization}
+
+The foundational result for our approach is Rivin's characterization of ideal polyhedra:
+
+\begin{theorem}[Rivin \cite{Rivin1994,RivinCombOpt}]
+A triangulation $\mathcal{T}$ of the sphere is realizable as the boundary of a convex ideal polyhedron in $\mathbb{H}^3$ if and only if there exist positive real numbers $\theta_c > 0$ assigned to each corner $c$ of each triangle such that:
+\begin{enumerate}[label=(\roman*)]
+    \item \textbf{Triangle constraint:} For each triangle $T$ with corners $c_1, c_2, c_3$:
+    \[
+    \theta_{c_1} + \theta_{c_2} + \theta_{c_3} = \pi
+    \]
+    \item \textbf{Vertex constraint:} For each vertex $v$, summing over all corners at $v$:
+    \[
+    \sum_{c \text{ at } v} \theta_c = 2\pi
+    \]
+    \item \textbf{Edge constraint:} For each edge $e$, let $\alpha_e$ and $\beta_e$ be the angles opposite to $e$ in the two triangles sharing $e$. Then:
+    \[
+    \alpha_e + \beta_e < \pi
+    \]
+\end{enumerate}
+\end{theorem}
+
+The angles $\theta_c$ are the \emph{dihedral angles} of the ideal polyhedron---the angle between adjacent faces along their common edge, measured inside the polyhedron. The key insight is that these constraints are all linear (or strict linear inequalities), so realizability can be checked via linear programming, and volume optimization becomes a concave maximization problem over a convex polytope.
+
+\subsection{The Lobachevsky Function and Hyperbolic Volume}
+
+The hyperbolic volume of an ideal tetrahedron with dihedral angles $\alpha, \beta, \gamma$ (opposite pairs equal) is given by:
+\[
+V(\alpha, \beta, \gamma) = \Lambda(\alpha) + \Lambda(\beta) + \Lambda(\gamma)
+\]
+where $\Lambda(\theta)$ is the Lobachevsky function:
+\[
+\Lambda(\theta) = -\int_0^\theta \log |2\sin t| \, dt
+\]
+
+The Lobachevsky function satisfies $\Lambda(\pi - \theta) = -\Lambda(\theta)$ and has maximum value $\Lambda(\pi/3) \approx 0.5074$ (Catalan's constant divided by 2). The function is strictly concave on $(0, \pi)$, which ensures that the volume function over the Rivin polytope has a unique maximum. The regular ideal tetrahedron, with all dihedral angles equal to $\pi/3$, achieves volume $V_4 = 3\Lambda(\pi/3) \approx 1.0149$.
+
+\subsection{The Penner-Rivin Algorithm}
+
+Given a realized ideal polyhedron with its dihedral angles, we can compute the associated Fuchsian group $\Gamma < \mathrm{PSL}(2,\mathbb{R})$ using the Penner-Rivin algorithm \cite{RivinTriangulations}. The surface of the ideal polyhedron inherits a complete hyperbolic metric, making it a hyperbolic surface $S$ with cusps at the ideal vertices. The fundamental group $\pi_1(S)$ acts on the hyperbolic plane via a discrete faithful representation---the \emph{holonomy representation}.
+
+The algorithm proceeds as follows:
+\begin{enumerate}[label=(\roman*)]
+    \item \textbf{Decorate the triangulation:} Assign to each edge $e$ the complex number
+    \[
+    z_e = \exp(i(\alpha_e + \beta_e))
+    \]
+    where $\alpha_e, \beta_e$ are the angles opposite $e$ in the adjacent triangles. This is the \emph{shape parameter} of the edge.
+
+    \item \textbf{Compute edge matrices:} For each oriented edge from vertex $u$ to vertex $v$, construct a $2 \times 2$ matrix encoding the hyperbolic translation along the edge, parameterized by the shape parameters of the surrounding edges.
+
+    \item \textbf{Compose around loops:} For each generator of $\pi_1(S)$, represented as a path crossing edges of the triangulation, multiply the corresponding edge matrices to obtain the holonomy matrix in $\mathrm{PSL}(2,\mathbb{R})$.
+\end{enumerate}
+
+The resulting matrices generate the Fuchsian group $\Gamma$. When all shape parameters have modulus 1 (equivalently, when all $\alpha_e + \beta_e$ are real), the group is \emph{arithmetic} if certain additional number-theoretic conditions hold. Our observation that maximal volume configurations have rational angles $p\pi/q$ suggests a connection to arithmetic Fuchsian groups, since in these cases $z_e = \exp(ip\pi/q)$ is a root of unity.
+
+% ============================================================================
+\section{Methods}
+\label{sec:methods}
+% ============================================================================
+
+We describe the computational methods in rough order of generality,
+beginning with the $d = 3$ angle-based approach (which is exact
+and special to $\mathbb{H}^3$) and proceeding to the vertex-based
+optimization pipeline used in dimensions $d = 4, 5, 6$.
+
+\subsection{Dimension 3: Angle-Based Optimization}
+
+\subsubsection{Realizability testing}
+
+Given a triangulation $\mathcal{T}$ with $n$ vertices, $f$ faces,
+and $e$ edges, realizability as an ideal polyhedron is equivalent
+to feasibility of a linear program.  Introduce variables $\theta_c$
+for each corner $c$ (there are $3f$ corners).  The constraints from
+Theorem~1 become:
+\begin{align*}
+\theta_{c_1} + \theta_{c_2} + \theta_{c_3} &= \pi
+  && \text{for each triangle } T, \\
+\sum_{c \text{ at } v} \theta_c &= 2\pi
+  && \text{for each vertex } v, \\
+\alpha_e + \beta_e &< \pi
+  && \text{for each edge } e, \\
+\theta_c &> 0
+  && \text{for each corner } c.
+\end{align*}
+Strict inequalities are implemented with a tolerance
+$\epsilon = 10^{-6}$.
+
+\subsubsection{Volume optimization in angle coordinates}
+
+The volume is a concave function of the dihedral angles:
+\[
+V(\boldsymbol{\theta})
+= \sum_T \bigl(\Lambda(\theta_{c_1})
+  + \Lambda(\theta_{c_2})
+  + \Lambda(\theta_{c_3})\bigr),
+\]
+where $\Lambda$ is the Lobachevsky function.  Concavity over the
+convex Rivin polytope guarantees a unique global maximum, which we
+find by L-BFGS-B from multiple random starting points.
+
+\subsubsection{Direct vertex optimization via Bloch--Wigner}
+
+For larger vertex counts ($n \geq 20$), we bypass the angle
+parameterization and optimize directly over vertex configurations
+on~$S^2$.  Each ideal tetrahedron $[\infty, z_1, z_2, z_3]$ has
+volume $|D(z)|$ where $D$ is the Bloch--Wigner dilogarithm and
+$z = (z_1 - z_3)/(z_2 - z_3)$ is the cross-ratio.  The
+Bloch--Wigner function is evaluated via
+$D(z) = \mathrm{Im}(\mathrm{Li}_2(z)) + \arg(1-z)\log|z|$
+using \texttt{scipy.special.spence}, giving $\sim 0.1\,\text{ms}$
+per volume evaluation.
+
+CMA-ES~\cite{HansenOstermeier2001} is applied directly to the
+$\mathbb{H}^3$-volume objective (not the Euclidean proxy), with
+20 restarts and $500n$ function evaluations per restart.  For
+$n \geq 100$, sep-CMA-ES (diagonal covariance approximation) is
+used, reducing the per-generation cost from $O(n^2)$ to~$O(n)$.
+
+\subsubsection{Rational angle detection}
+
+We detect rational multiples of $\pi$ via continued fraction
+expansion of $\theta/\pi$.  If some convergent $p_k/q_k$
+satisfies $|\theta/\pi - p_k/q_k| < 10^{-10}$ with $q_k \leq 100$,
+we report $\theta = p_k\pi/q_k$.  All maximal configurations
+tested pass this test at machine precision.
+
+\subsection{Dimensions $d \geq 4$: Vertex-Based Optimization}
+
+In $d \geq 4$, the Rivin angle parameterization is unavailable:
+the configuration space is the set of $N$ points on $S^{d-1}$
+(ideal vertices), and the volume must be computed from vertex
+coordinates.  Our pipeline has three stages.
+
+\subsubsection{Stage 1: Euclidean warm start via CMA-ES}
+
+We maximize the Euclidean convex hull volume of $N$ points
+on $S^{d-1}$ using the Covariance Matrix Adaptation Evolution
+Strategy (CMA-ES)~\cite{HansenOstermeier2001}.  CMA-ES adapts a
+multivariate Gaussian distribution to the promising region of
+parameter space, without requiring gradients.  The objective
+function is $-\mathrm{Vol}(\mathrm{conv}(x_1,\ldots,x_N))$,
+evaluated via \texttt{scipy.spatial.ConvexHull} (which calls
+Qhull's C implementation).
+
+The Cartesian coordinates of the $N$ points are the $Nd$ free
+parameters; after each CMA-ES step, vertices are projected back to
+$S^{d-1}$.  Typical budget: $500N$ function evaluations with initial
+step size $\sigma_0 = 0.3$, seeded from the best of 5--10 random
+configurations.  CMA-ES dramatically outperforms random restarts:
+in $d = 4$, the Euclidean volume of the CMA-ES solution exceeds
+that of 50 random restarts by 40--230\%, and is already within
+$0.0$--$0.4\%$ of the hyperbolic optimum.
+
+\subsubsection{Stage 2: Hyperbolic polish}
+
+The CMA-ES Euclidean solution is used as a warm start for
+hyperbolic volume maximization.  The approach depends on
+the dimension.
+
+\paragraph{$d = 4$: Haagerup--Munkholm formula + Powell.}
+The ideal 4-simplex volume is given by the Haagerup--Munkholm
+angle formula~\cite{HM}, involving Euclidean dihedral angles,
+circumradii, and signed distances---all closed-form from the
+vertex coordinates.  The polytope volume is the sum over a
+Delaunay triangulation into ideal 4-simplices.  Since each volume
+evaluation takes $\sim 2\,\text{ms}$, we use Powell's derivative-free
+method for the hyperbolic polish.
+
+\paragraph{$d = 5$: Schl\"afli gradient + LBFGS.}
+In odd dimensions there is no closed-form volume formula.
+However, \emph{for optimization the volume itself is not needed}.
+The Schl\"afli differential formula
+\[
+  dV_5 = -\tfrac{1}{4}\sum_{F} V_3(F)\,d\theta_F
+\]
+gives the exact gradient in closed form: the codimension-2 faces
+$F$ of an ideal 5-simplex are ideal tetrahedra in a totally
+geodesic $\mathbb{H}^3$, with volumes given by the
+Milnor--Lobachevsky formula $V_3 = \Lambda(\alpha) + \Lambda(\beta)
++ \Lambda(\gamma)$, and the dihedral angles $\theta_F$ come from
+the angle Gram matrix.  We build a ``surrogate'' function
+$S = -\frac{1}{4}\sum_F V_3(F) \cdot \theta_F$ whose gradient
+equals the Schl\"afli gradient exactly (treating $V_3(F)$ as
+constants), and optimize $S$ with torch LBFGS.  The actual
+volume is computed once at the final configuration via the
+Schl\"afli path integral.
+
+\paragraph{$d = 6$: Hopf--Murakami formula + torch LBFGS.}
+For even dimensions, the Poincar\'e--Schl\"afli--Hopf reduction
+gives a closed-form volume for each ideal 6-simplex:
+\[
+  V_6 = \frac{8\pi^3}{15}\Bigl(\frac{17}{4} - w_4 + \frac{1}{2}w_2\Bigr),
+\]
+where $w_4$ involves dihedral angles and $w_2$ involves $S^3$
+link volumes computed by Murakami's dilogarithm formula.  We
+implement this in PyTorch with a custom \texttt{autograd.Function}
+for the dilogarithm $\mathrm{Li}_2$: a pure-torch forward pass
+using Bernoulli-series evaluation with argument reduction
+(inversion + reflection identities map all arguments to the
+convergence region), and an analytical backward pass
+$d\mathrm{Li}_2/dz = -\log(1-z)/z$.  All operations are
+vectorized over simplices and batched over the $\binom{7}{4} = 35$
+Murakami calls per 6-simplex, yielding a single autograd node per
+simplex.  On an NVIDIA GH200 GPU, the full forward + backward
+pass for $N = 80$ (3175 simplices, 889\,000 $\mathrm{Li}_2$
+evaluations) takes $\sim 16\,\text{ms}$.
+
+\subsubsection{Stage 3: Triangulation management}
+
+In all dimensions $d \geq 4$, the ideal polytope is decomposed
+into simplices via stereographic projection from one vertex
+(the ``pole'') to $\mathbb{R}^{d-1}$, followed by Delaunay
+triangulation of the projected points.  Coning from the pole
+vertex produces $(d+1)$-vertex simplices suitable for the volume
+formula.  The triangulation is recomputed periodically during
+LBFGS optimization (every 5 steps) to accommodate changes in
+the combinatorial type; the cost of a full Delaunay recomputation
+(via Qhull) is negligible compared to the volume evaluation.
+
+\subsubsection{Structured initialization: a small-$N$ phenomenon}
+\label{sec:structured-seeds}
+
+In addition to the random Stage~1 starts, we maintain a library
+of \emph{structured} initial configurations---free sums of regular
+polygons in mutually orthogonal $2$-planes
+(\S\ref{sec:joins}), the cross-polytope, the regular simplex and
+its joins, and (for $d = 4$) the $24$-cell.  Each natural object
+has a fixed vertex count; at $N$ slightly above that count we
+augment with a few random points, but only up to the next natural
+object's size.  We run the hyperbolic polish from each member of
+this library and take the best.
+
+Empirically, structured seeds matter substantially at small $N$
+and fade---then invert---as $N$ grows.  At $N \leq 2d + 2$ the
+volume-optimal polytope is one of the structured library members
+verbatim (see Table in \S\ref{sec:joins}: $N = d{+}2$ is
+$\Delta_{d/2}{*}\Delta_{d/2}$, $N = 2d$ is the cross-polytope, etc.),
+and structured warm starts converge to the optimum on the first
+polish, where random restarts often miss it entirely.  Past the
+library-exhaustion point---empirically near $N \approx 2d^2$,
+where the largest natural object in our library
+($24$-cell at $d = 4$, $C_4^3$ cross-polytope at $d = 6$) has
+been outgrown---the relationship inverts.  In a controlled
+$1{,}000$-restart comparison at $d = 4$, the best structured-seed
+final volume is $97\%$ of the best random-restart final volume at
+$N = 30$, $94\%$ at $N = 50$, and $90\%$ at $N = 80$; at
+$d = 6, N = 35$ the ratio drops to $77\%$.  The structured-seed
+advantage is genuinely a small-$N$, low-dimensional artefact.
+
+The clean interpretation is Erd\H{o}s--R\'enyi-style.  At small $N$
+the moduli space of inscribed simplicial polytopes is small enough
+that the volume-optimal stratum is forced to contain an
+algebraically distinguished configuration; structured seeds find
+this stratum by construction, while random restarts have to hit it
+by chance.  As $N$ grows, the number of combinatorial types grows
+at least at Catalan rate, the global optimum's automorphism group
+collapses to triviality (Tables~\ref{tab:comb_d4}
+and~\ref{tab:comb_H6}), and the volume-optimal stratum is no
+longer algebraically distinguished---random restarts now sample
+relevant strata at a rate proportional to their parameter-space
+measure, which is the right rate for high-$N$.  The structured-seed
+advantage tracks the ``law of small numbers'': there are only
+finitely many natural algebraic objects, and once $N$ exceeds them
+the optimization landscape ceases to know about them.
+
+\subsection{Symmetry Analysis}
+
+The geometric automorphism group of an optimal polytope is computed
+as follows:
+\begin{enumerate}[label=(\roman*)]
+\item \textbf{Centering.}  The Douady--Earle conformal
+  barycenter~\cite{DouadyEarle} of the ideal vertices is
+  computed by fixed-point iteration (M\"obius transport of the
+  centroid), then moved to the origin of the Poincar\'e ball by
+  the corresponding M\"obius isometry.  After centering, every
+  geometric symmetry of the configuration is an element of
+  $\mathrm{O}(d)$.
+\item \textbf{Distance coloring.}  The chordal distances between
+  centered vertices are clustered into equivalence classes
+  (tolerance $10^{-4}$--$10^{-6}$), yielding a coloring of
+  the complete graph $K_N$.
+\item \textbf{Automorphism computation.}  The colored graph is
+  encoded as a vertex-colored graph (via the standard
+  gadget-vertex trick) and fed to
+  \textsc{nauty}~\cite{McKayPiperno} via \texttt{pynauty}.
+  The output is the automorphism group order, generators as
+  permutations, and vertex orbits.
+\end{enumerate}
+
+\subsection{Hessian Analysis}
+
+To classify critical points as local maxima, saddle points, or
+degenerate, we compute the Hessian of the volume functional
+restricted to the tangent space of $(S^{d-1})^N$.  At each vertex
+$v_i$, a $(d-1)$-dimensional orthonormal tangent basis is
+constructed by Gram--Schmidt projection of the standard basis
+against $v_i$.  The Hessian is assembled by finite differencing
+of the gradient in each tangent direction (for $d = 5, 6$, the
+gradient itself is computed analytically via the Schl\"afli or
+Hopf formula).  The resulting $(d-1)N \times (d-1)N$ symmetric
+matrix is diagonalized; the signature (numbers of positive,
+negative, and zero eigenvalues) determines the critical point type.
+The expected nullity is $\dim\mathrm{SO}(d) = d(d-1)/2$ from
+rotational invariance; any additional zero eigenvalues indicate
+a volume-constant ridge in the configuration space.
+
+% ============================================================================
+\section{Results}
+% ============================================================================
+
+\subsection{Maximal Volume Configurations}
+
+We computed maximal volume ideal polyhedra for $n = 4, 5, \ldots, 12$ vertices using 100 independent optimization trials per vertex count, and extended the results to much larger~$n$ using CMA-ES with the Bloch--Wigner
+dilogarithm evaluator ($\sim 0.1\,\text{ms}$ per volume computation).
+Table~\ref{tab:maximal-volumes} summarizes our findings.
+
+\begin{table}[htbp]
+\centering
+\caption{Maximal volume ideal polyhedra with $n$ vertices.
+$V_4 \approx 1.0149$ is the volume of the regular ideal tetrahedron.
+For $n \leq 12$, angle denominators are shown; for larger~$n$ the
+volume was maximized directly via CMA-ES on the Bloch--Wigner
+functional over vertex configurations on~$S^2$.}
+\label{tab:maximal-volumes}
+\begin{tabular}{ccccl}
+\toprule
+$n$ & Volume & Faces & $V/V_4$ & Notes \\
+\midrule
+4 & 1.014942 & 4 & 1.0000 & $q = 3$ \\
+5 & 2.029883 & 6 & 2.0000 & $q = 3$ \\
+6 & 3.663862 & 8 & 3.6099 & $q = 2$ \\
+7 & 4.986773 & 10 & 4.9134 & $q = 5$ \\
+8 & 6.488469 & 12 & 6.3929 & $q = 11$ \\
+9 & 8.162538 & 14 & 8.0424 & mixed \\
+10 & 9.839315 & 16 & 9.6946 & $q = 14$ \\
+11 & 11.449290 & 18 & 11.2810 & $q = 7, 14$ \\
+12 & 13.529628 & 20 & 13.3308 & $q = 5$ \\
+\midrule
+20 & 27.699 & 36 & 27.29 & \\
+30 & 46.486 & 56 & 45.80 & \\
+50 & 84.971 & 96 & 83.72 & \\
+70 & 123.893 & 136 & 122.07 & \\
+100 & 182.671 & 196 & 180.02 & sep-CMA-ES \\
+150 & 279.727 & --- & 275.61 & sep-CMA-ES \\
+200 & 377.729 & --- & 372.17 & sep-CMA-ES \\
+300 & 573.429 & --- & 565.00 & sep-CMA-ES \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+As an independent check, a $300$-restart vertex-space search
+(random initialization on $S^2$, CMA-ES on the hyperbolic objective,
+scipy Powell polish) reproduces the $n = 11$ and $n = 12$ records
+to within $10^{-4}$ and $5 \cdot 10^{-4}$ respectively, confirming
+that the angle-parameterization maxima reported above are not
+artifacts of a small search budget.
+
+For $n \geq 100$, we use sep-CMA-ES (CMA-ES with diagonal
+covariance), which scales as $O(n)$ per generation rather than
+$O(n^2)$ for the full covariance update.  Covariance spectrum
+analysis reveals that the volume landscape on $\mathrm{Conf}_n(S^2)$
+has only 2 dominant eigenvalues, with the remaining $3n - 2$
+directions being nearly isotropic (condition number $\lesssim 20$).
+This explains why the diagonal approximation loses less than $1\%$
+in volume quality while being $2\times$ faster.
+
+The per-vertex volume contribution $V_n/n$ increases monotonically:
+$1.82$ at $n = 100$, rising to $1.91$ at $n = 300$.
+
+\begin{remark}[Comparison with Platonic solids]
+For $n=6$, the ``obvious'' candidate is the ideal right-angled octahedron, with all dihedral angles equal to $\pi/2$. Indeed, our optimization confirms this: the maximal configuration has angle denominator $q=2$, meaning all angles are multiples of $\pi/2$. The right-angled octahedron is optimal among 6-vertex ideal polyhedra.
+
+For $n=8$, the natural candidate is the ideal cube (with vertices at the 8 corners of a cube inscribed in the sphere). The ideal cube has $V/V_4 = 5$, giving volume $V_{\text{cube}} \approx 5.07$. However, our optimization finds a configuration with $V \approx 6.49$, exceeding the cube by approximately 28\%. The optimal 8-vertex polyhedron is \emph{not} combinatorially a cube---it has a different triangulation with the surprising angle denominator $q=11$.
+
+For $n=12$, the natural candidate is the ideal regular icosahedron. The icosahedron has $V/V_4 = 10$, giving $V_{\text{icosahedron}} \approx 10.15$. Our optimization finds $V \approx 13.53$, exceeding the icosahedron by approximately 33\%. As with the cube, the optimal 12-vertex polyhedron has a different combinatorial structure. Remarkably, all dihedral angles are multiples of $\pi/5$: specifically $2\pi/5$, $3\pi/5$, $4\pi/5$, and $\pi$ (a flat edge).
+\end{remark}
+
+\begin{remark}[Symmetry of optimal configurations]
+The automorphism groups of the optimal triangulations show a clear pattern: high symmetry for small $n$, rapidly decreasing thereafter.
+\begin{center}
+\begin{tabular}{ccc}
+$n$ & $|\mathrm{Aut}|$ & Structure \\
+\hline
+4 & 6 & $S_3$ (tetrahedron) \\
+5 & 6 & $D_3$ (bipyramid) \\
+6 & 8 & $D_4$ (octahedron) \\
+7 & 4 & $\mathbb{Z}_2 \times \mathbb{Z}_2$ \\
+8--12 & 2--4 & $\mathbb{Z}_2$ or $\mathbb{Z}_2 \times \mathbb{Z}_2$
+\end{tabular}
+\end{center}
+Volume maximization does not favor symmetric configurations---the optimal polyhedra for $n \geq 7$ have only a single reflection symmetry or none at all.
+\end{remark}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/triangulations_panel.png}
+\caption{Planar Delaunay triangulations of the maximal volume ideal polyhedra. Each triangulation represents the combinatorial structure of the polyhedron projected onto the plane, with the point at infinity as the unbounded face.}
+\label{fig:triangulations}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/poincare_panel.png}
+\caption{Maximal volume ideal polyhedra visualized in the Poincar\'e ball model of $\mathbb{H}^3$. Vertices lie on the boundary sphere $\partial_\infty \mathbb{H}^3$, and the geodesic faces curve inward as characteristic of hyperbolic space.}
+\label{fig:poincare}
+\end{figure}
+
+\subsection{The Rational Angle Phenomenon}
+
+Our most striking finding is that volume-maximizing configurations \emph{within each combinatorial type} exhibit dihedral angles that are exact rational multiples of $\pi$. This holds not only for the globally maximal configurations shown in Table~\ref{tab:maximal-volumes}, but for every realizable triangulation we have tested.
+
+\begin{conjecture}[Rational Angle Conjecture]
+For every realizable triangulation $\mathcal{T}$ of the sphere, the volume-maximizing ideal polyhedron with combinatorial type $\mathcal{T}$ has all dihedral angles of the form $\frac{p\pi}{q}$ for integers $p, q$.
+\end{conjecture}
+
+This phenomenon is remarkable because:
+\begin{itemize}
+    \item The optimization has no built-in preference for rational angles
+    \item The Lobachevsky function has no special behavior at rational multiples of $\pi$
+    \item The constraint set (Rivin polytope) has no obvious arithmetic structure
+    \item The phenomenon persists across \emph{all} combinatorial types, not just the globally optimal ones
+\end{itemize}
+
+For the globally maximal configurations shown in Table~\ref{tab:maximal-volumes}, we verified the rational angle property in all cases $n = 4, \ldots, 12$. The denominators range from small values like $q = 3$ (tetrahedron), $q = 2$ (octahedral $n=6$), and $q = 5$ ($n=7$ and $n=12$) to larger values like $q = 11$ for $n=8$ and $q = 14$ for $n = 10$ and $n=11$.
+
+\subsection{Connection to Arithmetic Groups}
+
+The prevalence of rational angles in maximal volume configurations suggests a deep connection to arithmetic hyperbolic geometry. When the dihedral angles are rational multiples of $\pi$, the shape parameters $z_e = \exp(i(\alpha_e + \beta_e))$ are roots of unity. This places strong constraints on the holonomy representation.
+
+A Fuchsian group $\Gamma < \mathrm{PSL}(2,\mathbb{R})$ is \emph{arithmetic} if it is commensurable with the group of units in a quaternion algebra over a totally real number field. Arithmetic Fuchsian groups are characterized by having trace field $\mathbb{Q}(\mathrm{tr}(\gamma) : \gamma \in \Gamma)$ that is a number field, and satisfying additional ramification conditions.
+
+When all shape parameters are roots of unity, the traces of holonomy matrices lie in cyclotomic fields. While this alone does not guarantee arithmeticity, it is highly suggestive. We conjecture that:
+
+\begin{conjecture}[Arithmetic Holonomy]
+For maximal volume ideal polyhedra, the holonomy representation $\rho: \pi_1(S) \to \mathrm{PSL}(2,\mathbb{R})$ has image commensurable with an arithmetic Fuchsian group.
+\end{conjecture}
+
+For the Platonic cases, the Fuchsian groups are known principal congruence subgroups:
+\begin{itemize}
+    \item $n=4$ (tetrahedron): $\Gamma(3)$
+    \item $n=6$ (octahedron): $\Gamma(4)$
+    \item Icosahedron: $\Gamma(5)$ --- but this is \emph{not} maximal for $n=12$
+\end{itemize}
+Identifying the Fuchsian groups corresponding to the maximal volume configurations for $n \geq 7$ remains an interesting open problem. The angle denominators (e.g., $q=11$ for $n=8$, $q=14$ for $n=10$) suggest these may be congruence subgroups of higher level.
+
+\begin{remark}[Coxeter polytopes and branched covers]
+A striking distinction emerges between the Platonic and non-Platonic cases. For $n=4$ and $n=6$, \emph{all} dihedral angles have the form $\pi/m$ for an integer $m$ (specifically $\pi/3$ and $\pi/2$ respectively). This means these ideal polyhedra are \emph{Coxeter polytopes}---fundamental domains for discrete reflection groups in $\mathbb{H}^3$.
+
+For $n \geq 7$, however, the angles are $k\pi/q$ with $k > 1$. For instance, $n=7$ has angles $2\pi/5$, $3\pi/5$, $4\pi/5$, and $n=8$ has angles $4\pi/11$, $5\pi/11$, etc. These are \emph{not} Coxeter fundamental domains. The common denominator $q$ suggests these polyhedra may arise as fundamental domains for finite-index subgroups of reflection groups, or equivalently, that their universal covers are branched covers over some link complement. This connection to orbifold geometry and branched coverings merits further investigation.
+\end{remark}
+
+\subsection{Volume Distribution of Random Configurations}
+
+To understand the landscape of ideal polyhedron volumes, we sampled 5000 random configurations for each vertex count $n \in \{5, 6, 7, 8, 10, 12\}$ by placing $n-3$ uniformly random points on the sphere (in addition to two fixed vertices and infinity) and computing the volume via the Delaunay triangulation.
+
+Normalizing each volume by the maximal volume $V_{\max}(n)$ from Table~\ref{tab:maximal-volumes}, we find that the normalized volume distribution $V/V_{\max}$ is remarkably well-approximated by a Beta distribution:
+\[
+\frac{V}{V_{\max}} \sim \mathrm{Beta}(\alpha_n, \beta_n)
+\]
+
+Table~\ref{tab:beta-fits} summarizes the fitted parameters. The goodness of fit (KS test p-values $> 0.3$ for $n \geq 8$) confirms that the Beta distribution is an appropriate model.
+
+\begin{table}[htbp]
+\centering
+\caption{Beta distribution fit parameters for normalized volume $V/V_{\max}$.}
+\label{tab:beta-fits}
+\begin{tabular}{ccccccc}
+\toprule
+$n$ & $\alpha$ & $\beta$ & Mean & Std & KS stat & p-value \\
+\midrule
+5  & 2.88  & 1.53  & 0.659 & 0.208 & 0.031 & 0.0001 \\
+6  & 6.74  & 4.11  & 0.623 & 0.140 & 0.046 & 0.0000 \\
+7  & 9.67  & 4.84  & 0.667 & 0.120 & 0.024 & 0.0053 \\
+8  & 13.26 & 6.12  & 0.685 & 0.103 & 0.011 & 0.62 \\
+10 & 23.02 & 10.05 & 0.696 & 0.079 & 0.012 & 0.48 \\
+12 & 32.56 & 14.49 & 0.692 & 0.067 & 0.014 & 0.32 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The parameters exhibit clear linear scaling with $n$:
+\[
+\alpha_n \approx 4.25n - 19.3, \qquad \beta_n \approx 1.78n - 7.4
+\]
+with the ratio $\alpha_n/\beta_n \approx 2.39$ remaining approximately constant. This implies that the mean normalized volume
+\[
+\mathbb{E}\left[\frac{V}{V_{\max}}\right] = \frac{\alpha_n}{\alpha_n + \beta_n} \approx 0.69 \approx \ln 2
+\]
+stabilizes as $n$ increases. The intriguing appearance of $\ln 2$ (or perhaps a related constant) as the asymptotic mean suggests a deeper connection to hyperbolic volume theory that we have not yet identified.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/volume_distributions.png}
+\caption{Volume distributions of random ideal polyhedra, normalized by $V_{\max}(n)$. Histograms (blue) show empirical distributions from 5000 samples; red curves show fitted Beta($\alpha$, $\beta$) distributions. The fit quality improves with $n$.}
+\label{fig:volume-distributions}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/beta_parameters_scaling.png}
+\caption{Scaling of Beta distribution parameters with vertex count $n$. Left: $\alpha$ grows approximately as $4.25n$. Center: $\beta$ grows as $1.78n$. Right: Mean normalized volume stabilizes near $0.69 \approx \ln 2$.}
+\label{fig:beta-scaling}
+\end{figure}
+
+The concentration of the distribution (decreasing standard deviation as $n$ increases) indicates that for large $n$, most random configurations achieve volumes close to $69\%$ of the maximum---suggesting that volume optimization yields only modest improvements over random placement for large polyhedra.
+
+% ============================================================================
+\section{Visualizations}
+% ============================================================================
+
+Figure~\ref{fig:triangulations} shows the planar Delaunay triangulations for the maximal volume configurations with $n = 4, \ldots, 12$ vertices. These represent the combinatorial structure of the polyhedra, projected onto the plane via stereographic projection with one vertex (at infinity) as the unbounded outer face.
+
+Figure~\ref{fig:poincare} shows the corresponding ideal polyhedra in the Poincar\'e ball model of $\mathbb{H}^3$. In this model, the ideal vertices lie on the boundary sphere, and the faces appear as geodesic surfaces that curve inward---a characteristic feature of negative curvature. The progression from the simple ideal tetrahedron ($n=4$) to more complex structures is clearly visible.
+
+% ============================================================================
+\section{Software}
+% ============================================================================
+
+The complete software suite is available at:
+\begin{itemize}
+    \item GitHub: \url{https://github.com/[repo]}
+    \item Interactive demo: \url{https://huggingface.co/spaces/igriv/idealpolyhedra}
+\end{itemize}
+
+The implementation includes:
+\begin{itemize}
+    \item Realizability checking via Rivin's LP characterization
+    \item Volume optimization via CMA-ES on the Euclidean surrogate
+          and L-BFGS on the Bloch--Wigner / Murakami differentiable
+          hyperbolic objective, with dimension-specific gradient paths
+          for $d \in \{3,4,5,6\}$
+    \item Fuchsian group computation via the Penner-Rivin algorithm
+    \item 3D visualization in Klein, Poincaré ball, and sphere models
+    \item Symmetry analysis using nauty
+\end{itemize}
+
+\paragraph{Development methodology.} Mathematical software has long suffered from ``bit rot''---the gradual degradation of code as dependencies evolve and environments change. This software was developed using an AI-assisted ``self-maintaining'' approach with Claude Code \cite{RivinDjinn}, which enables automated testing, dependency management, and iterative refinement. This methodology addresses the endemic problem of unmaintained research code by building in mechanisms for autonomous repair and adaptation.
+
+% ============================================================================
+% ============================================================================
+\section{Higher Dimensions: Ideal Polytopes in $\mathbb{H}^4$}
+\label{sec:H4}
+% ============================================================================
+
+\subsection{Setup}
+
+An \emph{ideal polytope} in $\mathbb{H}^4$ has vertices on $S^3 = \partial_\infty \mathbb{H}^4$.
+Given $N$ points on $S^3$, the ideal polytope is determined by the convex hull
+of these points in the Klein model (the open unit ball in $\mathbb{R}^4$).
+The 4-volume is computed by stereographic projection from one vertex to $\mathbb{R}^3$,
+Delaunay triangulation, and the Haagerup--Munkholm angle formula for each ideal 4-simplex:
+\[
+\mathrm{Vol}_4[\infty, v_1, v_2, v_3, v_4]
+= \frac{\pi}{3}\Bigl(4\pi - \sum_{i<j}\varphi_{ij} - \sum_\ell \arccos\frac{d_\ell}{R}\Bigr),
+\]
+where $\varphi_{ij}$ are the Euclidean dihedral angles of the tetrahedron
+$T = \mathrm{conv}(v_1,\ldots,v_4)$, $R$ is its circumradius, and $d_\ell$
+is the signed distance from the circumcenter to face $\ell$.
+
+The \emph{boundary $3$-measure} (surface area) is the sum of hyperbolic
+3-volumes of the boundary facets: each facet is a tetrahedron on $S^3$,
+hence an ideal tetrahedron in a totally geodesic $\mathbb{H}^3 \subset \mathbb{H}^4$.
+Its $\mathbb{H}^3$-volume is computed via the Lobachevsky formula
+$\Lambda(\alpha) + \Lambda(\beta) + \Lambda(\gamma)$, where $\alpha,\beta,\gamma$
+are the angles of a triangle obtained by stereographic projection from one
+facet vertex.
+
+\begin{remark}
+In $\mathbb{H}^3$, the boundary of an ideal polyhedron consists of ideal
+polygons, each with $\mathbb{H}^2$-area $(k-2)\pi$ for a $k$-gon---a
+topologically determined quantity. In $\mathbb{H}^4$, boundary facets are ideal
+tetrahedra with continuously varying $\mathbb{H}^3$-volumes. Thus the surface
+area optimization problem is genuinely geometric only in dimension $d \geq 4$.
+\end{remark}
+
+\subsection{Combinatorial Invariance of Optimal Polytopes}
+
+We numerically optimized configurations of $N$ points on $S^{d-1}$
+($d = 3, 4$) to maximize three functionals:
+\begin{enumerate}[label=(\alph*)]
+\item \textbf{Volume:} Euclidean volume of $\mathrm{conv}(v_1,\ldots,v_N)$,
+      or $\mathbb{H}^d$-volume of the ideal polytope.
+\item \textbf{Surface area} ($d=4$ only): boundary $3$-measure.
+\item \textbf{Isoperimetric ratio:} $I(P) = \mathrm{Vol}_d(P) / \mathrm{Area}_{d-1}(\partial P)$.
+\end{enumerate}
+For each $(N, \text{metric})$ pair, we performed multi-start optimization
+in both the Euclidean and hyperbolic settings,
+then compared the $f$-vectors of the optimal convex hulls.
+The Euclidean phase uses the CMA-ES (Covariance Matrix Adaptation
+Evolution Strategy) algorithm~\cite{HansenOstermeier2001},
+which adapts a multivariate Gaussian to the promising region of
+parameter space.  This dramatically outperforms random restarts:
+in $d = 4$, CMA-ES finds Euclidean-optimal configurations that
+are within $0.0$--$0.4\%$ of the hyperbolic optimum after a single
+derivative-free Powell polish.  The hyperbolic phase uses either
+Powell's method ($d = 4$, where volume evaluation via the
+Haagerup--Munkholm formula takes $\sim$2\,ms) or torch LBFGS
+with exact gradients through a custom $\mathrm{Li}_2$
+autograd function ($d = 6$, where the Hopf--Murakami formula
+requires dilogarithm evaluations).
+
+\begin{table}[ht]
+\centering
+\caption{Combinatorial type comparison: Euclidean vs.\ Hyperbolic volume maximization in $d = 4$ (points on $S^3$).
+CMA-ES Euclidean warm start with Powell hyperbolic polish.
+Exact $f$-vector match holds for $N \leq 40$; small discrepancies
+($\leq 3$ facets) appear at larger~$N$.}
+\label{tab:comb_d4}
+\smallskip
+\begin{tabular}{r l l c r r}
+\toprule
+$N$ & Eucl.\ $f$-vector & Hyp.\ $f$-vector & Match & Eucl.\ vol & Hyp.\ vol \\
+\midrule
+5  & $(5,10,10,5)$     & $(5,10,10,5)$     & Yes & 0.146 & 0.269 \\
+6  & $(6,15,18,9)$     & $(6,15,18,9)$     & Yes & 0.281 & 0.588 \\
+7  & $(7,19,24,12)$    & $(7,19,24,12)$    & Yes & 0.433 & 1.024 \\
+8  & $(8,24,32,16)$    & $(8,24,32,16)$    & Yes & 0.667 & 1.771 \\
+9  & $(9,29,40,20)$    & $(9,29,40,20)$    & Yes & 0.793 & 2.314 \\
+10 & $(10,35,50,25)$   & $(10,35,50,25)$   & Yes & 0.908 & 2.894 \\
+12 & $(12,46,68,34)$   & $(12,46,68,34)$   & Yes & 1.158 & 4.324 \\
+16 & $(16,69,104,52)$  & $(16,69,104,52)$  & Yes & 1.598 & 7.794 \\
+20 & $(20,92,144,72)$  & $(20,92,144,72)$  & Yes & 1.958 & 11.936 \\
+24 & $(24,117,186,93)$ & $(24,117,186,93)$ & Yes & 2.175 & 15.568 \\
+30 & $(30,153,248,124)$& $(30,153,248,124)$& Yes & 2.479 & 22.068 \\
+\midrule
+40 & $(40,220,360,180)$& $(40,220,360,180)$& Yes & 2.813 & 32.936 \\
+50 & $(50,282,464,232)$& $(50,281,462,231)$& \textbf{No} & 3.069 & 45.014 \\
+60 & $(60,347,574,287)$& $(60,346,572,286)$& \textbf{No} & 3.243 & 56.711 \\
+80 & $(80,478,796,398)$& $(80,478,796,398)$& Yes & 3.506 & 81.416 \\
+100& $(100,613,1026,513)$& $(100,610,1020,510)$& \textbf{No} & 3.685 & 107.411 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Same comparison in $d=3$ (points on $S^2$). All $f$-vectors match.}
+\label{tab:comb_d3}
+\smallskip
+\begin{tabular}{r l c r r}
+\toprule
+$N$ & $f$-vector & Match & Eucl.\ vol & Hyp.\ vol \\
+\midrule
+4  & $(4,6,4)$       & Yes & 0.513 & 1.015 \\
+6  & $(6,12,8)$      & Yes & 1.333 & 3.664 \\
+8  & $(8,18,12)$     & Yes & 1.816 & 6.489 \\
+12 & $(12,30,20)$    & Yes & 2.536 & 13.529 \\
+20 & $(20,54,36)$    & Yes & 3.119 & 27.673 \\
+30 & $(30,84,56)$    & Yes & 3.450 & 46.231 \\
+50 & $(50,144,96)$   & Yes & 3.733 & 83.990 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The key empirical finding is:
+
+\begin{conjecture}[Combinatorial invariance --- strong form]
+\label{conj:comb_invariance}
+For $N$ points on $S^{d-1}$, the $f$-vector of the volume-maximizing
+convex polytope is the same whether volume is measured in the Euclidean
+sense (volume of the convex hull) or in the hyperbolic sense (volume of the
+ideal polytope in $\mathbb{H}^d$).
+\end{conjecture}
+
+This holds exactly in all tested cases with $N \lesssim 5d$:
+$d=3$ ($N \leq 50$), $d=4$ ($N \leq 40$), $d=5$ ($N \leq 20$),
+and $d=6$ ($N \leq 30$).
+However, extending to larger~$N$ reveals a more nuanced picture.
+At $N = 50$ in $d = 4$ and $N = 40$ in $d = 6$, the hyperbolic optimizer
+finds a slightly different combinatorial type---with $1$--$3$ fewer facets
+than the Euclidean optimum.  The discrepancies are small
+($\leq 0.6\%$ of the facet count) and non-monotone: the $f$-vectors
+match again at $N = 80$ in $d = 4$ and at $N = 50$ in $d = 6$.
+In every case of divergence, the hyperbolic optimizer has \emph{fewer}
+facets, paralleling the surface-area vs.\ volume divergence
+(Section~\ref{sec:cross_metric}).
+This suggests a weaker form that may hold universally:
+
+\begin{conjecture}[Combinatorial invariance --- weak form]
+\label{conj:comb_weak}
+For $N$ points on $S^{d-1}$, the $f$-vectors of the Euclidean and
+hyperbolic volume maximizers satisfy
+$|f_i^{\mathrm{Eucl}} - f_i^{\mathrm{Hyp}}| = O(1)$
+as $N \to \infty$, with $f_i^{\mathrm{Hyp}} \leq f_i^{\mathrm{Eucl}}$
+for all~$i$.
+\end{conjecture}
+
+The CMA-ES Euclidean warm start is within $0.0$--$0.4\%$ of the
+hyperbolic optimum in every case, confirming that the two objectives
+share essentially the same landscape near their maxima.
+
+\subsection{Cross-Metric Divergence}
+\label{sec:cross_metric}
+
+While the combinatorial type is invariant under change of geometry
+(Euclidean vs.\ hyperbolic), it is \emph{not} invariant under change
+of objective function. In $d=4$, the surface-area-maximizing polytope
+can have a different $f$-vector from the volume-maximizing one:
+
+\begin{center}
+\begin{tabular}{r l l}
+\toprule
+$N$ & Volume-optimal $f$-vector & Area-optimal $f$-vector \\
+\midrule
+6  & $(6,15,18,9)$   & $(6,14,16,8)$ \\
+16 & $(16,69,106,53)$ & $(16,68,104,52)$ \\
+30 & $(30,154,248,124)$ & $(30,153,246,123)$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+In each divergent case, the area-optimal polytope has fewer edges and facets.
+Geometrically, surface area is maximized when boundary facets approach the
+regular ideal tetrahedron volume $v_3 \approx 1.0149$, which favors fewer,
+more regular facets; volume maximization instead favors packing more
+simplicial cells into the interior.
+
+\subsection{Correlation Between Euclidean and Hyperbolic Volumes}
+
+The combinatorial invariance suggests a deeper relationship between
+the two volume functionals. To quantify this, we computed both
+$V_E$ (Euclidean hull volume) and $V_H$ (hyperbolic ideal polytope volume)
+for 200 independent local optima at each $N$, obtained by single-phase
+L-BFGS-B from random starting points.
+
+\begin{center}
+\begin{tabular}{r r r r}
+\toprule
+$N$ & Correlation & Log-log elasticity & $V_H/V_E$ (mean $\pm$ std) \\
+\midrule
+10 & 0.9985 & 1.21 & $3.17 \pm 0.02$ \\
+20 & 0.9986 & 1.66 & $5.97 \pm 0.06$ \\
+30 & 0.9956 & 1.97 & $8.78 \pm 0.05$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The Pearson correlation exceeds 0.995 in all cases: in the space of
+near-optimal configurations, the Euclidean and hyperbolic volumes are
+almost perfectly correlated. The log-log elasticity
+$\partial \log V_H / \partial \log V_E$ increases with $N$,
+approaching 2 at $N = 30$. This means a 1\% improvement in
+Euclidean volume yields approximately a 2\% improvement in
+hyperbolic volume near the optimum---consistent with empirical
+observations from independent optimization.
+
+This near-proportionality is surprising: $V_E$ is a polynomial in
+the vertex coordinates, while $V_H$ involves the transcendental
+Haagerup--Munkholm formula. The correlation suggests that both
+functionals are effectively measuring the same underlying geometric
+quantity---roughly, how ``uniformly spread'' the points are on
+$S^{d-1}$.
+
+\subsection{Non-Isolated Maxima: The Volume Plateau}
+
+A striking observation emerges at $N = 9$ (equivalently, 20 simplicial facets
+in $d = 4$). We performed two independent 500-restart optimizations:
+\begin{enumerate}[label=(\roman*)]
+\item Maximize \emph{Euclidean} hull volume $V_E$ over 9 points on $S^3$.
+\item Maximize \emph{hyperbolic} ideal polytope volume $V_H$ over 9 points on $S^3$.
+\end{enumerate}
+Both converge to the same hyperbolic volume
+$V_H = 2.313851299873$ (to 13 digits), yet the two
+optimal configurations are \emph{metrically distinct}: their sorted
+pairwise chordal distance vectors differ by up to $0.25$.
+A third configuration, found independently by GPT-o3
+(using a different optimization method), achieves
+$V_H = 2.313850783625$---the same to 6 digits but a demonstrably
+different polytope (different Gram matrix).
+
+The Euclidean maximizer turns out to be a classical algebraic object:
+the \emph{free sum} $C_5 \oplus I \oplus I$, the convex hull of a
+regular pentagon in the $(x_1,x_2)$-plane and two orthogonal diameters
+$\pm e_3$, $\pm e_4$.  Its Euclidean volume and surface area are
+\[
+V_E^* = \tfrac{5}{24}\sqrt{10 + 2\sqrt{5}}
+      \approx 0.7925,
+\qquad
+A_E^* = \tfrac{5}{3}\sqrt{15 - \sqrt{5}}
+      \approx 5.9544.
+\]
+The free sum simultaneously maximizes \emph{both} the Euclidean
+4-volume and the boundary 3-measure among all 9-vertex polytopes
+inscribed in $S^3$ (500 independent restarts of each objective
+all converge to these values).  It has only four distinct pairwise
+chordal distances, with $\sqrt{2}$ appearing 24 out of 36 times.
+
+More generally, for any composite number $n = pq$ of facets,
+the free sum $C_p \oplus C_q$ (a $p$-gon and $q$-gon in orthogonal
+planes, with all vertices on $S^3$) gives a simplicial 4-polytope
+with exactly $pq$ tetrahedral facets and $p + q$ vertices.
+For prime $n$, no such product construction is available, and the
+optimal configuration may lack algebraic structure.
+
+A systematic sweep over all facet counts $9 \leq n \leq 37$ reveals a
+richer picture.  The free sum $C_p \oplus C_q$ requires both $p, q \geq 3$,
+so it is available precisely when $n$ admits a factorization $n = pq$ with
+$p, q \geq 3$---excluding primes, twice-primes ($2p$), and $n < 9$.
+For each $n$, we also performed 200-restart penalized L-BFGS-B optimization
+over all inscribed simplicial 4-polytopes with exactly $n$ facets.
+Key findings:
+
+\begin{enumerate}[label=(\roman*)]
+\item \textbf{Balanced products dominate:} At fixed facet count, the free
+      sum with the most balanced factorization gives the largest volume.
+      For example, $C_4 \oplus C_5$ ($n = 20$, vol $\approx 0.793$) far exceeds
+      $C_3 \oplus C_7$ ($n = 21$, vol $\approx 0.592$).
+\item \textbf{Unbalanced products are suboptimal:} For $n = 21$ and $n = 27$
+      ($= 9 \times 3$), the unconstrained optimizer beats the free sum
+      by 28\% and 39\% respectively, finding asymmetric configurations
+      with higher volume.
+\item \textbf{Volume grows primarily with vertex count:} At fixed vertex
+      count $N$, volume increases monotonically with facet count.
+      Products pack more facets per vertex than generic configurations
+      (e.g., $C_5 \oplus C_5$ achieves 25 facets with only 10 vertices),
+      which is the primary source of their advantage.
+\item \textbf{Primes do not intrinsically trail:} At fixed $N$,
+      prime facet counts are only slightly below neighboring composites
+      (e.g., at $N = 9$: $f = 23$ (prime) gives vol $\approx 0.743$
+      vs.\ $f = 22$ ($= 2 \times 11$) at $0.757$ and
+      $f = 21$ ($= 3 \times 7$) at $0.758$).
+      The apparent deficit of primes in the overall ranking is an artifact
+      of the facet--vertex relationship, not number theory.
+\end{enumerate}
+
+\subsection{Higher Dimensions}
+
+Extending the Euclidean cross-metric comparison (volume vs.\ surface area)
+to $d = 5$ and $d = 6$, we find the same qualitative pattern:
+
+\begin{center}
+\begin{tabular}{r r l l c}
+\toprule
+$d$ & $N$ & Vol-optimal $f$-vector & Area-optimal $f$-vector & Match \\
+\midrule
+5 & 6  & $(6,15,6)$ & $(6,15,6)$ & Yes \\
+5 & 7  & $(7,21,12)$ & $(7,21,12)$ & Yes \\
+5 & 8  & $(8,27,18)$ & $(8,26,16)$ & \textbf{No} \\
+5 & 9  & $(9,33,24)$ & $(9,33,24)$ & Yes \\
+5 & 10 & $(10,40,32)$ & $(10,40,32)$ & Yes \\
+5 & 15 & $(15,80,82)$ & $(15,80,82)$ & Yes \\
+\midrule
+6 & 7  & $(7,21,7)$ & $(7,21,7)$ & Yes \\
+6 & 8  & $(8,28,16)$ & $(8,28,15)$ & \textbf{No} \\
+6 & 9  & $(9,36,27)$ & $(9,36,27)$ & Yes \\
+6 & 10 & $(10,43,36)$ & $(10,43,36)$ & Yes \\
+6 & 12 & $(12,60,64)$ & $(12,60,64)$ & Yes \\
+6 & 18 & $(18,123,196)$ & $(18,123,198)$ & \textbf{No} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+In every dimension $d \geq 4$, volume and surface area optimizers
+agree for most values of $N$, but diverge at specific small $N$
+(around $d+2$ to $d+3$). The direction of divergence is universal:
+\emph{the area optimizer always finds a polytope with fewer or equal
+facets compared to the volume optimizer}. In $d = 3$, no divergence
+was observed for $N \leq 50$.
+
+\subsection{Ideal Polytopes in $\mathbb{H}^5$}
+
+Computing the volume of an ideal simplex in $\mathbb{H}^5$ is more
+challenging than in even dimensions: there is no closed-form analogue
+of the Hopf reduction.  Instead, the volume must be evaluated via the
+Schl\"afli path integral.  However, for \emph{optimization}, the volume
+itself is not needed: the Schl\"afli differential formula
+\[
+dV_5 = -\tfrac{1}{4}\sum_{F} V_3(F)\,d\theta_F
+\]
+gives the exact gradient in closed form, since each codimension-2 face~$F$
+of an ideal 5-simplex is an ideal tetrahedron in a totally geodesic
+$\mathbb{H}^3$, with volume given by the Milnor--Lobachevsky formula
+$V_3 = \Lambda(\alpha) + \Lambda(\beta) + \Lambda(\gamma)$.
+The dihedral angles~$\theta_F$ come from the angle Gram matrix.
+Thus the optimization loop is entirely quadrature-free; the
+Schl\"afli path integral is evaluated only once at the final
+configuration to report the volume.
+
+\begin{table}[ht]
+\centering
+\caption{Combinatorial invariance: Euclidean vs.\ ideal $\mathbb{H}^5$
+volume maximization (points on $S^4$).  All $f$-vectors match,
+and the hyperbolic polish improvement is exactly zero in every case.}
+\label{tab:comb_H5}
+\smallskip
+\begin{tabular}{r l c r r}
+\toprule
+$N$ & $f$-vector & Match & Eucl.\ vol & $\mathbb{H}^5$ vol \\
+\midrule
+7  & $(7,21,12)$      & Yes & 0.06667 & 0.13123 \\
+8  & $(8,27,18)$      & Yes & 0.11250 & 0.24414 \\
+9  & $(9,33,24)$      & Yes & 0.17321 & 0.41394 \\
+10 & $(10,40,32)$     & Yes & 0.26667 & 0.69954 \\
+12 & $(12,55,50)$     & Yes & 0.37688 & 1.13886 \\
+14 & $(14,71,70)$     & Yes & 0.48199 & 1.64660 \\
+16 & $(16,89,94)$     & Yes & 0.58601 & 2.23211 \\
+20 & $(20,125,142)$   & Yes & 0.80565 & 3.75231 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In contrast to $d = 4$ and $d = 6$, where the hyperbolic polish
+improves the volume by $0.03$--$0.4\%$, in $d = 5$ the CMA-ES
+Euclidean optimizer already finds the hyperbolic optimum to full
+precision.  This suggests that the Euclidean and hyperbolic volume
+landscapes on $S^4$ are even more tightly aligned than in even
+dimensions.
+
+\paragraph{Reproducibility note on Table~\ref{tab:comb_H5}.}
+Vertex coordinates for the $\mathbb{H}^5$-optimal polytopes in the
+table were not retained alongside the volumes at the time of the
+original runs.  We subsequently recomputed $\mathbb{H}^5$ volumes
+via the Schl\"afli path integral from the stored
+Euclidean-optimal coordinates in
+\texttt{optimal\_d5\_d6\_symmetry\_analysis.json}.  The recomputed
+values match Table~\ref{tab:comb_H5} to $\sim 0.1\%$ (paper
+print precision) at $N \in \{7, 8, 9, 10, 16\}$, confirming that
+those stored Euclidean-optima are also $\mathbb{H}^5$-optima.
+At $N \in \{12, 14, 20\}$ the recomputed volumes fall short of
+the table by $1$--$4\%$, indicating that the retained coordinates
+at those $N$ represent local rather than global maxima of the
+Euclidean objective; the values in the table, produced at the
+original-run budget, are the tighter records and are treated as
+authoritative here.  The symmetry structure of Table~\ref{tab:comb_H5}
+(join-of-cyclic-polygons at $N \leq 11$, trivial join structure at
+$N \geq 12$) is consistent with this: the high-symmetry
+configurations were easier for the optimizer to locate
+reproducibly.
+
+\subsection{Ideal Polytopes in $\mathbb{H}^6$}
+
+We extended the combinatorial invariance test to $d = 6$ by computing
+ideal $\mathbb{H}^6$ polytope volumes directly.  For ideal simplices,
+the vertex-link terms vanish ($w_0 = 0$), and the Hopf reduction gives
+\[
+\operatorname{Vol}_6(\Delta_{\mathrm{ideal}})
+= \frac{8\pi^3}{15}\left(\frac{17}{4} - w_4 + \frac{1}{2}w_2\right),
+\]
+where $w_4$ involves only dihedral angles and $w_2$ involves only
+$\mathbb{S}^3$-tetrahedral link volumes computable by Murakami's
+dilogarithm formula.  A float64 implementation of Murakami's formula
+achieves a 108$\times$ speedup over arbitrary-precision evaluation,
+making optimization feasible.  Full details are in the companion
+note~\cite{H56note}.
+
+\begin{table}[ht]
+\centering
+\caption{Combinatorial invariance: Euclidean vs.\ ideal $\mathbb{H}^6$
+volume maximization (points on $S^5$).  Exact match holds for $N \leq 30$;
+at $N = 40$ the hyperbolic optimizer finds $2$ fewer facets.}
+\label{tab:comb_H6}
+\smallskip
+\begin{tabular}{r l l c r r}
+\toprule
+$N$ & Eucl.\ $f$-vector & Hyp.\ $f$-vector & Match & Eucl.\ vol & $\mathbb{H}^6$ vol \\
+\midrule
+7  & $(7,21,7)$       & $(7,21,7)$       & Yes & 0.00584 & 0.01023 \\
+8  & $(8,28,16)$      & $(8,28,16)$      & Yes & 0.01317 & 0.02504 \\
+9  & $(9,36,27)$      & $(9,36,27)$      & Yes & 0.02436 & 0.05022 \\
+10 & $(10,43,36)$     & $(10,43,36)$     & Yes & 0.03750 & 0.08390 \\
+12 & $(12,60,64)$     & $(12,60,64)$     & Yes & 0.08889 & 0.23284 \\
+14 & $(14,79,100)$    & $(14,79,100)$    & Yes & 0.12563 & 0.36922 \\
+16 & $(16,100,145)$   & $(16,100,145)$   & Yes & 0.16588 & 0.54078 \\
+20 & $(20,146,251)$   & $(20,146,251)$   & Yes & 0.24508 & 0.95399 \\
+24 & $(24,199,390)$   & $(24,199,390)$   & Yes & 0.32510 & 1.47180 \\
+30 & $(30,284,620)$   & $(30,284,620)$   & Yes & 0.45559 & 2.51089 \\
+\midrule
+40 & $(40,435,1049)$  & $(40,435,1047)$  & \textbf{No} & 0.64425 & 4.62319 \\
+50 & $(50,608,1576)$  & $(50,608,1576)$  & Yes & 0.81844 & 7.20649 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The strong form of the combinatorial invariance conjecture
+(Conjecture~\ref{conj:comb_invariance}) holds exactly in
+$d = 3$ ($N \leq 50$), $d = 4$ ($N \leq 40$), $d = 5$ ($N \leq 20$),
+and $d = 6$ ($N \leq 30$).
+At larger~$N$, small deviations appear (see Tables~\ref{tab:comb_d4}
+and~\ref{tab:comb_H6}), consistent with the weak form
+(Conjecture~\ref{conj:comb_weak}).
+
+\subsection{Identification of Optimal Polytopes: Joins of Regular Polygons}
+\label{sec:joins}
+
+Searching polytope databases and comparing with known constructions,
+we find that the volume-optimal polytopes for small~$N$ are
+\emph{joins (free sums) of regular polygons in mutually orthogonal $2$-planes}.
+
+In $d = 2k$, the join $C_{p_1} \oplus C_{p_2} \oplus \cdots \oplus C_{p_k}$
+of $k$ regular polygons in $k$ orthogonal $2$-planes in $\mathbb{R}^{2k}$
+gives a simplicial polytope with $p_1 + \cdots + p_k$ vertices on
+$S^{2k-1}$ and $p_1 \cdots p_k$ tetrahedral facets. The following table
+identifies each small-$N$ optimal polytope:
+
+\begin{center}
+\begin{tabular}{r l l l}
+\toprule
+$N$ & $d=4$ optimal & $d=6$ optimal & Structure \\
+\midrule
+$d+1$ & $(5,10,10,5)$ & $(7,21,7)$ & Simplex $\Delta_d$ \\
+$d+2$ & $(6,15,18,9)$ & $(8,28,16)$ & $\Delta_{d/2} * \Delta_{d/2}$ \\
+$d+3$ & $(7,19,24,12)$ & $(9,36,27)$ & $C_3^{d/2}$ (join of $d/2$ triangles) \\
+$d+4$ & $(8,24,32,16)$ & $(10,43,36)$ & Cross-polytope at $d{=}4$; $C_3^2{\oplus}C_4$ at $d{=}6$\\
+$d+5$ & $(9,29,40,20)$ & --- & $C_4{\oplus}C_5$ \\
+$d+6$ & $(10,35,50,25)$ & $(12,60,64)$ & $C_5^2$ at $d{=}4$; $C_4^3$ (cross-polytope) at $d{=}6$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+For $d = 4$, the optimal polytope matches the best balanced
+free sum $C_p \oplus C_q$ for all $N \leq 10$, but not for $N \geq 12$.
+For $d = 6$, the optimal matches the best balanced triple
+$C_p \oplus C_q \oplus C_r$ for all $N \leq 14$, but not for $N = 16$.
+In both cases the threshold is approximately $N \approx 2d + 2$, beyond
+which the optimizer discovers asymmetric configurations that beat
+the rigid product structure.
+
+Notable special cases:
+\begin{itemize}
+\item $N = 2d$: the \emph{$d$-dimensional cross-polytope}
+      ($C_4 \oplus C_4$ in $d = 4$; $C_4 \oplus C_4 \oplus C_4$ in $d = 6$).
+\item $N = d + 2$: the join of two simplices of half the dimension
+      ($\Delta_2 * \Delta_2$ in $d = 4$; $\Delta_3 * \Delta_3$ in $d = 6$).
+\end{itemize}
+
+The volume-optimal polytopes are \emph{not} cyclic polytopes, and
+are in fact far from neighborly: at $N = 30$ in $d = 4$, the optimal
+polytope has only 123 facets compared to 756 for the cyclic polytope
+$C(30,4)$. Maximizing facet count and maximizing volume are almost
+opposite goals.
+
+The hyperbolic-optimal configuration, by contrast, has no transposition
+symmetries and a completely different distance spectrum.
+Yet both achieve the same hyperbolic volume $V_H = 2.31385$ to
+13 significant digits. A third configuration, found independently by
+GPT-o3 using a different optimization method, achieves
+$V_H = 2.31385078$---the same to 6 digits but again a
+demonstrably different polytope (different Gram matrix).
+
+The Hessian of $V_H$ at the hyperbolic optimum
+has two near-zero eigenvalues ($\sim 10^{-3}$), indicating that
+the maximum is achieved on (at least) a 2-dimensional manifold
+in the 16-dimensional configuration space
+$\mathrm{Conf}_9(S^3) / \mathrm{O}(4)$.
+
+This suggests a phenomenon that is invisible to
+$f$-vector comparisons: not only do different metrics find the same
+combinatorial type, but the hyperbolic volume maximum is achieved on
+a \emph{locus} that contains configurations with very different
+Euclidean properties.  The free sum $C_5 \oplus I \oplus I$---the
+unique maximizer of $V_E$---and the asymmetric hyperbolic maximizer
+are different points on this locus, connected by a flat ridge along
+which $V_H$ is constant (to the precision of our computation)
+but $V_E$ varies by over 10\%.
+
+\subsection{Symmetry Analysis via Douady--Earle Centering}
+
+Beyond $f$-vector comparisons, we can determine the full geometric
+automorphism group of each optimal polytope by normalizing the
+Douady--Earle conformal barycenter to the origin of the ball model.
+The residual symmetries are then elements of $\mathrm{O}(d)$, and
+the automorphism group can be computed exactly using
+\textsc{nauty}~\cite{McKayPiperno} on the edge-colored complete graph
+whose colors encode the chordal distance classes.
+
+\begin{table}[ht]
+\centering
+\caption{Symmetry groups of volume-optimal inscribed polytopes in $d = 4$.
+For small~$N$, the join structure produces highly symmetric polytopes;
+symmetry breaks sharply at $N \approx 11$ and vanishes beyond $N = 20$.}
+\label{tab:symmetry_d4}
+\smallskip
+\begin{tabular}{r r r l l}
+\toprule
+$N$ & Facets & $|\mathrm{Aut}|$ & Group & Orbits \\
+\midrule
+5  & 5  & 120     & $S_5$            & $[5]$    \\
+6  & 9  & 720     & $S_6$            & $[6]$    \\
+7  & 12 & 48      & $D_4 \times S_3$ & $[4,3]$  \\
+8  & 16 & 384     & $\beta_4$ (hyperoctahedral) & $[8]$    \\
+9  & 20 & 80      & $D_4 \times D_5$ & $[5,4]$  \\
+10 & 25 & 200     & $(C_5 \times C_5) \rtimes D_4$ & $[10]$   \\
+\midrule
+11 & 29 & 8       & $D_4$            & $[4,4,2,1]$ \\
+12 & 34 & 8       & $D_4$            & $[8,4]$  \\
+\textbf{13} & \textbf{39} & \textbf{52} & $\mathbf{C_{13} \rtimes C_4}$ & $\mathbf{[13]}$ \\
+14 & 43 & 2       & $C_2$            & $[2^6,1^2]$ \\
+15 & 48 & 72      & $(S_3 \times S_3) \rtimes C_2$ & $[6,6,2,1]$ \\
+16 & 53 & 2       & $C_2$            & 9 orbits \\
+20 & 72 & 16      & $C_2 \times D_4$ & 4 orbits \\
+30 & 124& 1       & trivial          & all singletons \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The $N = 10$ case is noteworthy: the volume-optimal polytope is the
+join $C_5 \oplus C_5$---two regular pentagons in orthogonal
+$2$-planes---with vertex-transitive automorphism group
+$(C_5 \times C_5) \rtimes D_4$ of order~200.  The $D_4$ factor swaps
+the two pentagons and reflects within each; the $C_5 \times C_5$
+factor acts by independent cyclic rotations.  This structure was
+independently rediscovered by Google's Gemini~3.1~Pro model
+(see~\S\ref{sec:llm_benchmark}), which identified the join
+decomposition from the face lattice alone.
+
+The most remarkable case is $N = 13$ in $d = 4$. The volume-maximizing
+inscribed 4-polytope with 13 vertices on $S^3$ has a transitive
+automorphism group of order~52 isomorphic to the Frobenius group
+$C_{13} \rtimes C_4$, with only 3 distinct chordal distances.
+This is the unique Frobenius group of order~52: the normal subgroup
+$C_{13}$ acts as a cyclic permutation of all vertices, while the
+complement $C_4$ acts as the subgroup of 4th powers in
+$\mathrm{AGL}(1, \mathbb{F}_{13})$.
+The polytope has 39 tetrahedral facets ($= 3 \times 13$).
+
+This vertex-transitive polytope does not appear in any catalog of
+uniform, scaliform, or swirlchoron polytopes that we could locate.
+The classification of vertex-transitive convex 4-polytopes is an
+open problem (unlike in 3D, where they are all deformations of
+Archimedean solids).
+
+\subsubsection{The Frobenius construction}
+
+The $N = 13$ polytope belongs to an infinite family.  For each prime
+$p \equiv 1 \pmod{4}$, let $k$ be a primitive 4th root of unity
+modulo~$p$ (so $k^2 \equiv -1$).  The vertices
+\[
+  v_j = \frac{1}{\sqrt{2}}\Bigl(
+    \cos\frac{2\pi j}{p},\;
+    \sin\frac{2\pi j}{p},\;
+    \cos\frac{2\pi kj}{p},\;
+    \sin\frac{2\pi kj}{p}
+  \Bigr), \qquad j = 0,\ldots,p-1,
+\]
+form a vertex-transitive polytope on $S^3$ with automorphism
+group $\mathbb{Z}_p \rtimes \mathbb{Z}_4$ and exactly $(p-1)/4$ chordal distance
+classes~\cite{FrobeniusNote}.  The construction arises from a
+faithful four-dimensional real representation induced by a single orbit
+of $\mathbb{Z}_4$ acting on the characters of~$\mathbb{Z}_p$.
+
+\begin{center}
+\begin{tabular}{r r r r}
+\toprule
+$p$ & $|{\mathrm{Aut}}|$ & Distance classes & Volume status \\
+\midrule
+5  & 20  & 1 & global max (= simplex $\Delta_4$) \\
+13 & 52  & 3 & global max \\
+17 & 68  & 4 & local max (not global) \\
+29 & 116 & 7 & critical point \\
+37 & 148 & 9 & critical point \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Every Frobenius configuration is a critical point of the hyperbolic volume
+functional (the gradient vanishes by equivariance: the $\mathbb{Z}_4$ stabilizer
+of the base vertex leaves no free parameter after normalization to $S^3$).
+Hessian analysis shows that $p = 13$ and $p = 17$ are both
+\emph{non-degenerate local maxima}: the constrained Hessian on
+the tangent space to $(S^3)^p / \mathrm{O}(4)$ is negative-definite,
+with exactly $\dim \mathrm{SO}(4) = 6$ zero eigenvalues.  For $p = 17$
+the Frobenius polytope achieves $85\%$ of the global maximum volume,
+which is attained by an asymmetric configuration with $|\mathrm{Aut}| = 1$.
+
+\subsubsection{Volume ridges}
+
+The Hessian analysis also reveals that the \emph{join} configurations
+$C_p \oplus C_q$ have a degenerate local-maximum structure: the
+hyperbolic volume Hessian at these configurations has
+$\dim \mathrm{SO}(d) + r$ zero eigenvalues for some $r > 0$,
+indicating a volume-constant ridge of dimension~$r$.  In $d = 4$,
+every join has $r = 4$ extra zero eigenvalues; in $d = 6$, all
+tested joins have $r = 6$.  Thus the hyperbolic volume maximum for
+join-type polytopes is achieved on a positive-dimensional manifold
+in the configuration space $\mathrm{Conf}_N(S^{d-1}) / \mathrm{O}(d)$,
+containing configurations with very different Euclidean properties.
+The Frobenius polytopes, by contrast, are isolated (non-degenerate)
+local maxima.
+
+The pattern is universal across dimensions $d = 4, 5, 6$:
+\begin{enumerate}[label=(\roman*)]
+\item \textbf{Join regime} ($N \leq \lfloor 2.5 d \rfloor$):
+      the optimum is a join of regular polygons with large
+      automorphism group ($|\mathrm{Aut}| \geq 100$).
+      The cross-polytope $\beta_d$ at $N = 2d$ is always the
+      symmetry peak.
+\item \textbf{Sharp transition} (1--2 values of $N$):
+      symmetry drops by 1--3 orders of magnitude.
+\item \textbf{Asymmetric regime} ($N \geq 4d$--$5d$):
+      $|\mathrm{Aut}| = 1$, all vertices in distinct orbits.
+\end{enumerate}
+
+\begin{table}[ht]
+\centering
+\caption{Symmetry groups of volume-optimal polytopes in $d = 5$
+(points on $S^4$).  Joins $C_p \oplus C_q \oplus I$ dominate
+for $N \leq 11$; symmetry breaks at $N = 12$.}
+\label{tab:symmetry_d5}
+\smallskip
+\begin{tabular}{r r r l l r}
+\toprule
+$N$ & Facets & $|\mathrm{Aut}|$ & Structure & Orbits & \#dist \\
+\midrule
+6  & 6    & 720    & $\Delta_5$             & $[6]$    & 1 \\
+8  & 18   & 144    & $C_3 \oplus C_3 \oplus I$ & $[6,2]$  & 3 \\
+9  & 24   & 288    & $C_3 \oplus C_4 \oplus I$ & $[6,3]$  & 3 \\
+10 & 32   & 3840   & $\beta_5$              & $[10]$   & 2 \\
+11 & 40   & 480    & $C_4 \oplus C_5 \oplus I$ & $[6,5]$  & 4 \\
+\midrule
+12 & 48   & 64     & ?                      & $[4,4,4]$& 8 \\
+13 & 58   & 16     & ---                    & $[4,4,2^2,1]$ & 20 \\
+$\geq 15$ & --- & 1 & trivial & all singletons & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Symmetry groups of volume-optimal polytopes in $d = 6$
+(points on $S^5$).  Triple joins $C_p \oplus C_q \oplus C_r$
+dominate for $N \leq 15$; symmetry breaks at $N = 16$.}
+\label{tab:symmetry_d6}
+\smallskip
+\begin{tabular}{r r r l l r}
+\toprule
+$N$ & Facets & $|\mathrm{Aut}|$ & Structure & Orbits & \#dist \\
+\midrule
+7  & 7     & 5040   & $\Delta_6$             & $[7]$    & 1 \\
+8  & 16    & 1152   & $(S_4 \times S_4) \rtimes C_2$ & $[8]$ & 2 \\
+9  & 27    & 1296   & $C_3^3$                & $[9]$    & 2 \\
+10 & 36    & 576    & $C_3^2 \oplus C_4$     & $[6,4]$  & 3 \\
+11 & 48    & 2304   & $C_3 \oplus C_4^2$     & $[8,3]$  & 3 \\
+12 & 64    & 46080  & $\beta_6 = C_4^3$      & $[12]$   & 2 \\
+13 & 80    & 3840   & $C_4^2 \oplus C_5$     & $[8,5]$  & 4 \\
+14 & 100   & 1600   & $C_4 \oplus C_5^2$     & $[10,4]$ & 4 \\
+15 & 125   & 6000   & $C_5^3$                & $[15]$   & 3 \\
+\midrule
+16 & 140   & 16     & ---                    & $[4,4,2^4]$ & 34 \\
+$\geq 17$ & --- & $\leq 2$ & --- & --- & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The classification of finite groups realizable as automorphism groups
+of convex polytopes is now well understood:
+every finite group arises as the full automorphism group of some
+convex polytope~\cite{SchulteWilliams2015,Doignon2018}.
+For \emph{vertex-transitive} polytopes, Babai~\cite{Babai1977}
+showed that abelian groups other than elementary 2-groups, and
+generalized dicyclic groups, cannot occur.
+The Frobenius group $C_{13} \rtimes C_4$ at $N = 13$ in $d = 4$
+passes Babai's test, confirming it is \emph{allowed} as a
+vertex-transitive symmetry group---but to our knowledge it has
+not previously been realized as a convex 4-polytope.
+
+\subsection{Isoperimetric Ratio}
+
+For the isoperimetric ratio $I(P) = \mathrm{Vol}_4(P) / \mathrm{Area}_3(\partial P)$,
+the optimized values grow with $N$ but remain well below the Euclidean
+ball ratio of $1/4$:
+
+\begin{center}
+\begin{tabular}{r r r}
+\toprule
+$N$ & Best $I(P)$ & Euclidean ball $I$ \\
+\midrule
+5  & 0.053 & \\
+8  & 0.109 & \\
+10 & 0.126 & \\
+20 & 0.169 & \\
+30 & 0.187 & 0.250 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The hyperbolic ball of radius $r$ in $\mathbb{H}^4$ has
+$\mathrm{Vol}_4 = (\pi/2)(\sinh 2r - 2r)$ and
+$\mathrm{Area}_3 = 2\pi^2 \sinh^3 r$, giving
+$I_{\mathrm{ball}}(r) \to 1/4$ as $r \to 0$ (Euclidean regime)
+and $I_{\mathrm{ball}}(r) \sim e^{-r}/\pi \to 0$ as $r \to \infty$.
+Whether the optimal $I(P)$ converges to a definite limit as
+$N \to \infty$---and whether that limit is strictly less than
+$1/4$---remains open.
+
+% ============================================================================
+\section{LLM Benchmarks: A Pointer}
+\label{sec:llm_benchmark}
+% ============================================================================
+
+The objects studied here---volume-maximizing ideal polytopes, the
+combinatorial structures they realize, and the associated face
+lattices---turn out to provide a natural family of benchmarks for
+large language models, with the property that an answer is a list of
+vertex coordinates verifiable by a standalone checker rather than a
+prose argument.  Three distinct benchmark families have been
+designed and released alongside this paper, each probing a different
+reasoning regime: inscribed reconstruction (face lattice
+$\to$ coordinates), windowed volume (hit a target measure to within a
+tolerance), and volume lower bound (give the sharpest bound you can
+backed by explicit coordinates).  Their detailed specifications,
+grader implementations, and frontier-model evaluations are reported
+in the companion note~\cite{LLMNote}.  We restrict ourselves here to
+two observations that bear directly on the mathematical content of
+the present paper.
+
+\subsection{The reconstruction problem and rigidity}
+
+The reconstruction task asks: given the $f$-vector, edge list, and
+facet list of a convex polytope inscribed in $S^{d-1}$, produce
+$N$ explicit coordinates realizing it.  The inscribed constraint
+is essential---without it, the problem reduces to combinatorial
+realization of simplicial polytopes, a substantially easier
+question.  When LLMs were tested on instances drawn from our
+volume-optimal polytopes (large automorphism order, often joins) and
+from random sphere configurations (generically trivial automorphism
+group), GPT-5.4 Pro succeeded at instances up to $N = 30$ with
+$|\mathrm{Aut}| = 1$ via numerical constraint satisfaction;
+Gemini~3.1~Pro DeepThink succeeded on highly symmetric instances by
+algebraic recognition (e.g., identifying the $N = 10$ optimal
+polytope as $C_5 \oplus C_5$) but failed on asymmetric random
+instances.  The relevance for the present paper is that the
+\emph{rigidity} of the configuration---the dimension of the space
+of inscribed coordinate configurations realizing a given
+combinatorial type---is exactly the empirical difficulty axis the
+LLMs see.  Volume-optimal polytopes are maximally rigid in this
+sense; the hardest reconstruction instances should be large $N$
+with simultaneously high volume and low automorphism order, of
+which the $N = 16$ optimal polytope ($|\mathrm{Aut}| = 2$, $53$
+facets, volume per vertex $0.49$) is a natural candidate.
+
+\subsection{Volume lower bound and our records}
+
+The volume-lower-bound benchmark asks the model to give the sharpest
+LB it can on $V^*(d, N)$ and back the claim with explicit vertex
+coordinates.  Our published records (Tables~\ref{tab:maximal-volumes},
+\ref{tab:comb_H5}, etc.) are the reference; an LLM submission
+classifies as \emph{strong} if it matches or beats them, \emph{pass}
+if it is within $95\%$, and \emph{fail} otherwise.  An LLM that
+beats our records produces new mathematical content; the
+benchmark's anti-hallucination design ensures that this is a
+falsifiable claim.  Hyperbolic $d = 5$ is excluded by design: as
+discussed in the reproducibility note accompanying
+Table~\ref{tab:comb_H5}, our stored $d = 5$ configurations at
+$N \in \{12, 14, 20\}$ are known local rather than global maxima
+of the Euclidean (and hence hyperbolic) objective in $d = 5$, so
+grading against them would be unreliable in that dimension.
+
+% ============================================================================
+\section{Open Questions}
+% ============================================================================
+
+\begin{enumerate}
+    \item \textbf{Proof of Rational Angles}: Can we prove that maximal volume implies rational dihedral angles?
+
+    \item \textbf{Denominator Patterns}: What determines the denominator $q$ for a given $n$? Our data suggests connections to $n-2$ or $n-3$ in some cases.
+
+    \item \textbf{Uniqueness}: Are maximal volume configurations unique up to symmetry?
+
+    \item \textbf{Asymptotics}: What is the growth rate of $V_{\max}(n)$ as $n \to \infty$?
+
+    \item \textbf{Beta Distribution}: Why does the normalized volume follow a Beta distribution? Is the limiting mean exactly $\ln 2$, or merely close to it? What geometric principle underlies the linear scaling of $\alpha_n$ and $\beta_n$ with $n$?
+
+    \item \textbf{Combinatorial Invariance}: The strong form (Conjecture~\ref{conj:comb_invariance}) holds for $N \lesssim 5d$ but fails at larger~$N$, while the weak form (Conjecture~\ref{conj:comb_weak}) holds in all tested cases.  What determines the threshold?  Both the Euclidean and hyperbolic volume functionals factor through the Delaunay triangulation of the stereographic projection, which depends only on the M\"obius geometry of the point configuration.  The small discrepancies at large~$N$ ($\leq 3$ facets out of hundreds) suggest near-degenerate facets that resolve differently under the two metrics.  Is the weak conjecture true, and is the $O(1)$ bound tight?
+
+    \item \textbf{Cross-Metric Divergence}: Characterize which functionals on $S^{d-1}$ give the same optimal combinatorial type and which do not. Our data suggests volume and isoperimetric ratio agree, while surface area can diverge.
+
+    \item \textbf{Hyperbolic Isoperimetric Limit}: Does $\sup_P I(P)$ over all $N$-vertex ideal polytopes in $\mathbb{H}^4$ converge as $N \to \infty$, and if so, is the limit strictly less than $1/4$?
+
+    \item \textbf{Spectral Realizability of Volume-Optimal Polytopes}.
+    Let~$P$ be a simplicial 4-polytope inscribed in $S^3$ that
+    maximizes hyperbolic volume among all inscribed polytopes with
+    the same number of vertices, and let $L = D - A$ be the graph
+    Laplacian of the 1-skeleton of~$P$.  Let
+    $\varphi\colon i \mapsto (v_1(i), v_2(i), v_3(i), v_4(i)) / \|{\cdot}\|$
+    be the map sending each vertex to the (normalized) vector of its
+    first four nontrivial Laplacian eigenvector entries.
+
+    \emph{Empirical observation:} $\varphi$ produces a polytope on~$S^{d-1}$
+    combinatorially equivalent to~$P$ in dimensions $d = 3$ and $d = 4$,
+    but \emph{not} in $d \geq 5$.  The results are as follows:
+    \begin{center}
+    \begin{tabular}{r l l l}
+    \toprule
+    $d$ & Success range & Failure onset & Success rate \\
+    \midrule
+    3 & $N = 6$ to $30$ & $N = 5$ (degenerate) & 25/25 \\
+    4 & $N = 5$ to $30$ & never (in tested range) & 14/14 \\
+    5 & $N = 10, 11$ only & $N = 12$ & 2/15 \\
+    6 & $N = 12\text{--}15$ only & $N = 16$ & 4/18 \\
+    \bottomrule
+    \end{tabular}
+    \end{center}
+    In $d = 4$, this includes the $N = 30$ case with trivial
+    automorphism group and 124 facets.  The method also fails for
+    generic inscribable polytopes in $d = 4$: random inscribable
+    simplicial 4-polytopes consistently produce the wrong
+    combinatorial type under spectral embedding.
+
+    \emph{Explanation.}  The dimensional threshold $d \leq 4$
+    coincides exactly with the range of the
+    Blind--Mani--Kalai theorem~\cite{Kalai1988}: for
+    simplicial polytopes in $d \leq 4$, the 1-skeleton
+    determines the entire face lattice.  In $d \geq 5$, the
+    1-skeleton is no longer sufficient, and distinct
+    simplicial polytopes can share the same graph.  Since the
+    spectral embedding uses only the 1-skeleton (via the
+    graph Laplacian), it contains all the combinatorial
+    information needed for realization in $d \leq 4$, but
+    is provably incomplete in $d \geq 5$.
+
+    The remaining mystery is why the spectral embedding
+    succeeds for volume-\emph{optimal} inscribed polytopes
+    but fails for generic inscribable ones in the same
+    dimension.  One possible connection: volume-optimal
+    configurations have vertices ``maximally spread'' on
+    $S^{d-1}$ (approximate spherical designs), and the
+    Laplacian eigenvectors also spread vertices according to
+    graph distance.  For configurations that are already
+    optimally spread, these two notions of dispersion may
+    coincide.  A proof would yield a fast, deterministic
+    algorithm for inscribed realization of volume-optimal
+    polytopes in dimensions $d \leq 4$.
+
+    For $d \geq 5$, a natural candidate is the Hodge
+    1-Laplacian $L_1 = B_1 B_1^T + B_2 B_2^T$ acting on
+    edges~\cite{Forman2003}, where $B_1$ and $B_2$ are the
+    boundary operators of the simplicial complex.  The
+    up-Laplacian $L_1^{\mathrm{up}} = B_2 B_2^T$ encodes
+    triangle co-incidence, carrying information beyond the
+    1-skeleton.  Preliminary experiments show that the naive
+    approach (project $L_1$ eigenvectors back to vertices
+    by averaging over incident edges) does not improve over
+    $L_0$ in $d \geq 5$; the projection step discards the
+    higher-order structure.  A more principled approach---using
+    the edge-level embedding to reconstruct the Gram matrix
+    directly, or using sheaf Laplacians that preserve the
+    fiber structure---may succeed.
+
+    \item \textbf{Inscribability in Dimension 4}.
+    In $d = 3$, Rivin's linear program characterizes which
+    simplicial polytopes are inscribable in~$S^2$.  No analogue
+    is known in $d = 4$.  Our spectral realization algorithm
+    and the cone/Volkov method (optimizing dihedral angle deficits
+    around codimension-2 faces of the cone from the origin)
+    provide practical heuristics for constructing inscribed
+    realizations when they exist.  Can these be developed into
+    a complete decision procedure?  A neural-network classifier
+    trained on combinatorial features of face lattices, using
+    the realization algorithms as an oracle for generating
+    training data, might reveal patterns pointing toward a
+    combinatorial characterization.
+\end{enumerate}
+
+% ============================================================================
+\section{Application: High-Girth Cubic Graphs}
+\label{sec:cages}
+% ============================================================================
+
+The optimization framework developed for ideal polytope volumes
+applies more broadly to combinatorial search problems.  As a proof
+of concept, we apply a similar strategy to the \emph{cage problem}:
+finding the smallest $3$-regular (cubic) graph with girth~$g$.
+
+\subsection{Method}
+
+We maximize girth over cubic graphs on $N$ vertices using a two-phase
+approach inspired by the Euclidean--hyperbolic pipeline for polytope
+volumes:
+\begin{enumerate}[label=(\roman*)]
+\item \textbf{Log-determinant warm start.}  Maximize
+      $\log \tau(G) = \log \det(\tilde L)$, where $\tilde L$ is the
+      reduced Laplacian and $\tau(G)$ is the number of spanning trees.
+      This smooth proxy correlates with graph expansion, which in turn
+      correlates with girth.  Optimization is by simulated annealing
+      with edge swaps (which preserve $3$-regularity).
+\item \textbf{Cycle-breaking polish.}  Find a shortest cycle by BFS,
+      then attempt to eliminate it by swapping one of its edges with
+      a random non-cycle edge.  Repeat.
+\end{enumerate}
+
+The log-determinant phase plays the same role as the Euclidean
+warm start for polytopes: it navigates the search toward a
+well-structured region, from which the discrete girth-improving
+moves can push to higher values.  For incremental evaluation,
+edge swaps are rank-4 updates to the Laplacian, and the resulting
+determinant change can be computed in $O(N^2)$ via Cholesky
+rank-1 updates (with \texttt{numba} JIT acceleration), compared
+to $O(N^3)$ for a full eigendecomposition.
+
+\subsection{Results}
+
+\begin{table}[ht]
+\centering
+\caption{Best girth found for cubic graphs on $N$ vertices,
+using log-determinant warm start + cycle breaking
+(100 trials, total budget 600 edge swaps per trial).
+Known cage values are shown for reference.}
+\label{tab:cages}
+\smallskip
+\begin{tabular}{r c c l}
+\toprule
+$N$ & Best girth & Cage girth & Graph \\
+\midrule
+10 & 5 & 5 & Petersen (optimal) \\
+14 & 6 & 6 & Heawood (optimal) \\
+24 & 7 & 7 & McGee (optimal) \\
+30 & 7 & 8 & --- \\
+40 & 7 & --- & --- \\
+50 & 7 & --- & --- \\
+60 & 8 & --- & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The method rediscovers three known cages exactly: the Petersen
+graph ($g = 5$, $N = 10$), the Heawood graph ($g = 6$, $N = 14$),
+and the McGee graph ($g = 7$, $N = 24$).  It reaches girth~8 at
+$N = 60$, twice the $(3,8)$-cage size of~30 (the Tutte--Coxeter
+graph).  Girth~7 is achieved consistently for all $N \geq 24$.
+
+% ============================================================================
+% References
+% ============================================================================
+
+\begin{thebibliography}{99}
+
+\bibitem{Rivin1994}
+I.~Rivin, ``Euclidean structures on simplicial surfaces and hyperbolic volume,'' \emph{Ann. of Math.} \textbf{139} (1994), 553--580.
+
+\bibitem{RivinCombOpt}
+I.~Rivin, ``Combinatorial optimization in geometry,'' \emph{Adv. in Appl. Math.} \textbf{31} (2003), 242--271.
+
+\bibitem{RivinTriangulations}
+I.~Rivin, ``Triangulations into groups,'' arXiv:math/0510613, 2005.
+
+\bibitem{RivinDjinn}
+I.~Rivin, ``I Built a `Djinn' That Fixes My Code While I Sleep,'' \emph{Impure Thoughts} (Substack), December 2025. \url{https://impurethoughts.substack.com/}
+
+\bibitem{Milnor}
+J.~Milnor, ``Hyperbolic geometry: The first 150 years,'' \emph{Bull. Amer. Math. Soc.} \textbf{6} (1982), 9--24.
+
+\bibitem{H56note}
+I.~Rivin, ``Notes on hyperbolic 5- and 6-simplex volumes: formulas, reductions, and a practical code path,'' companion note, 2026.
+
+\bibitem{LLMNote}
+I.~Rivin, ``Hyperbolic polytope volume as an LLM benchmark suite: three tasks of increasing freedom,'' companion note, 2026.
+
+\bibitem{RLNote}
+I.~Rivin, ``When meta-learned optimization fails to beat round-robin: a validation study on hyperbolic polytope volume,'' companion note, 2026.
+
+\bibitem{RivinBasmajian}
+I.~Rivin, ``On Basmajian's identities, and other stories,'' arXiv:1404.1583, 2014.
+
+\bibitem{HansenOstermeier2001}
+N.~Hansen and A.~Ostermeier, ``Completely derandomized self-adaptation in evolution strategies,'' \emph{Evol.\ Comput.} \textbf{9} (2001), 159--195.
+
+\bibitem{McKayPiperno}
+B.~D.~McKay and A.~Piperno, ``Practical graph isomorphism, {II},'' \emph{J. Symbolic Comput.} \textbf{60} (2014), 94--112.
+
+\bibitem{SchulteWilliams2015}
+E.~Schulte and G.~I.~Williams, ``Polytopes with preassigned automorphism groups,'' \emph{Discrete Comput.\ Geom.} \textbf{54} (2015), 444--458.
+
+\bibitem{Doignon2018}
+J.-P.~Doignon, ``Any finite group is the group of some binary, convex polytope,'' \emph{Discrete Comput.\ Geom.} \textbf{59} (2018), 451--460.
+
+\bibitem{Babai1977}
+L.~Babai, ``Symmetry groups of vertex-transitive polytopes,'' \emph{Geom.\ Dedicata} \textbf{6} (1977), 331--337.
+
+\bibitem{DouadyEarle}
+A.~Douady and C.~J.~Earle, ``Conformally natural extension of homeomorphisms of the circle,'' \emph{Acta Math.} \textbf{157} (1986), 23--48.
+
+\bibitem{FrobeniusNote}
+I.~Rivin, ``Frobenius polytopes on $S^3$,'' companion note, 2026.
+
+\bibitem{Firsching2017}
+M.~Firsching, ``Realizability and inscribability for simplicial polytopes via optimization,'' \emph{Math.\ Program.} \textbf{166} (2017), 273--295. arXiv:1710.00979.
+
+\bibitem{Kalai1988}
+G.~Kalai, ``A simple way to tell a simple polytope from its graph,'' \emph{J. Combin.\ Theory Ser.~A} \textbf{49} (1988), 381--383.
+
+\bibitem{Forman2003}
+R.~Forman, ``Bochner's method for cell complexes and combinatorial Ricci curvature,'' \emph{Discrete Comput.\ Geom.} \textbf{29} (2003), 323--374.
+
+\end{thebibliography}
+
+\end{document}

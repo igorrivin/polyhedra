@@ -1,0 +1,106 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Gradio cache
+.gradio/
+
+# macOS
+.DS_Store
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Test coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Logs
+*.log
+
+# Database
+*.db
+*.sqlite
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Output images (keep the important ones)
+# *.png  # Commented out - we want to keep our visualization PNGs
+
+# Generated data files (root level only)
+/certificate_points.npy
+/delaunay_*.json
+/test_*.json
+/logs_*.txt
+/strict_mode_summary.txt
+
+# Challenge files (keep benchmark, ignore others at root)
+/challenge_for_llm.json
+/challenge_for_testing.json
+/complete_challenge_package.json
+/llm_benchmark_150v.json
+
+# Private LLM holdout material must never be committed beside public prompts.
+*.answer-key.json
+manifest.private.json
+
+# Results data (keep structure, ignore large generated files)
+results/data/*.json
+!results/data/optimal_d4_symmetry_analysis.json
+!results/data/optimal_d5_d6_symmetry_analysis.json
+# Mutable arithmetic-corpus checkpoints are operational outputs. Completed,
+# validated corpora may be promoted deliberately through the result manifest.
+results/data/arithmetic_corpora/*.json
+bin/results/*.aux
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.pyc
+.claude/scheduled_tasks.lock
