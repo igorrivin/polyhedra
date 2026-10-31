@@ -10,7 +10,7 @@ The separate local backup directory is `../integration-backups/2026-10-31/`, rel
 
 Both bundles were verified and restored into fresh temporary checkouts with their LFS payloads. All 925 toolkit and 28 ipoly tracked files matched the original SHA-256 inventory, and `git fsck --full --no-reflogs` passed in both restored checkouts. Source branch heads remained unchanged and worktrees were clean. The temporary restoration checkouts were removed after verification; the backups and original repositories remain.
 
-To restore, clone the relevant bundle with `--no-checkout`, copy its backed-up `lfs/objects` content into the restored `.git/lfs/objects`, then check out `main`. Compare file hashes to `audit/2026-10-31/source-inventory.json`. Use an ordinary local filesystem for restoration; the Lexar filesystem can generate AppleDouble `._pack*.idx` sidecars which Git mistakes for indexes. Only verified AppleDouble sidecars created in the new checkout were removed during import; no original repository was modified.
+To restore, clone the relevant bundle with `--no-checkout`, copy its backed-up `lfs/objects` content into the restored `.git/lfs/objects`, then check out `main`. Compare file hashes to `audit/2026-10-31/source-inventory.json`. Use an ordinary local filesystem for restoration; the Lexar filesystem can generate AppleDouble `._*` sidecars which Git mistakes for indexes, refs or loose objects. Only verified AppleDouble sidecars created in the new checkout were removed during import; no original repository was modified.
 
 ## Monograph and audit
 
