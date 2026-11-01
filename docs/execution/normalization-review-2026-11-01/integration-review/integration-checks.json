@@ -1,0 +1,224 @@
+{
+  "generated_at_utc": "2026-11-01T16:35:59.396872+00:00",
+  "checks_passed": true,
+  "baseline_commit": "ad63b7ac9821040cb69e19c61bfbc46c68eff1a3",
+  "frozen_extraction_exact": true,
+  "full_expansion_sha256": "96acc3746321a64e308424dce697a40e8bc77f76902cf3126a7447457dbaa97a",
+  "main_changes_beyond_extraction": [
+    "KawazumiWP bibliography",
+    "FillastreMetrics bibliography"
+  ],
+  "labels_preserved_in_order": 607,
+  "baseline_tracked_files": 1719,
+  "protected_baseline_paths": 1713,
+  "protected_lfs_files": 412,
+  "protected_inventory_sha256": "24a53447e1d685ee3a30ede752d29b0abcfd3df57235bf6f00ed12f124d5cdc7",
+  "original_repositories": [
+    {
+      "path": "ideal_poly_volume_toolkit",
+      "head": "cc6b689652ce735f2098bb0a3235089210d764df",
+      "verified_files": 925
+    },
+    {
+      "path": "ipoly",
+      "head": "30ef40e23005509bd94d26f27dc48ea778832a50",
+      "verified_files": 28
+    }
+  ],
+  "original_archive_sha256": "8f28b07686ea579a7dfb7b88ccef5c12bdd50b6e328737d5a8a79f6e06ba92dc",
+  "supplied_reference_pdf_sha256": "40dd069bd2653f9a78666a31f53910d74b7f8de2a4a75d5a5dd62466032a6cd5",
+  "ledgers": [
+    {
+      "path": "book/claims/sections1-6.json",
+      "claims": 28
+    },
+    {
+      "path": "book/claims/sections7-8.json",
+      "claims": 13
+    }
+  ],
+  "claim_count": 41,
+  "approved_source_identities": [
+    {
+      "path": "INTEGRATION_PLAN.md",
+      "bytes": 43633,
+      "sha256": "9e75532ba6c164d3192529820075502ce80e5b90bdb9f9459a64ec122f5211d3"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6851,
+      "sha256": "2f70a6bb21b91838ef55bd41bb9b717980d5a4915dc3f3937226cd948c16247c"
+    },
+    {
+      "path": "book/README.md",
+      "bytes": 5154,
+      "sha256": "8550cd2f15fe65dcf5a100ea57f12543817c616020512629924930ea2bd27cc9"
+    },
+    {
+      "path": "book/chapters/01-volume-normalization.tex",
+      "bytes": 3889,
+      "sha256": "b35a17e1dce5aa276d915e67eff0d15926da7c4180a32f9ffa9706476c2fe095"
+    },
+    {
+      "path": "book/chapters/02-ideal-angle-cells.tex",
+      "bytes": 5697,
+      "sha256": "968ea966c452494a299be719165b5ac25c5ebd70e31e8bfd974705b763f9644d"
+    },
+    {
+      "path": "book/chapters/03-ideal-tetrahedron.tex",
+      "bytes": 5926,
+      "sha256": "81c51ade3378fbfd4baff1cebeb2dcdd8b0fd43a032ac45fb3b30c4908060797"
+    },
+    {
+      "path": "book/chapters/04-hyperideal-integrand.tex",
+      "bytes": 11640,
+      "sha256": "94da7f5288e0b6c606ff7d1a80516bc421e1de1a801e83873a0c9a25af7946b5"
+    },
+    {
+      "path": "book/chapters/05-boundary-cone-continuation.tex",
+      "bytes": 6788,
+      "sha256": "feee80182603e334d8cda389435a43a8b9d37192b581befd1e761c03b93e51d5"
+    },
+    {
+      "path": "book/chapters/06-torus-sphere.tex",
+      "bytes": 3959,
+      "sha256": "4a60370b881044ff89f45bbe51a171f04fb315b3be9317468a6cf212e8fd2947"
+    },
+    {
+      "path": "book/chapters/07-euclidean-periods.tex",
+      "bytes": 11798,
+      "sha256": "3665a4e2ff074950a5e74ef9fba511af4dc5820e3589d823d9d96f7fac2de8d9"
+    },
+    {
+      "path": "book/chapters/08-wp-flat-limit.tex",
+      "bytes": 16284,
+      "sha256": "1a175315aa975708a5c93151b9ae107b7dd36f79720dae7c7264adda062a6283"
+    },
+    {
+      "path": "book/chapters/appendix-a-fricke.tex",
+      "bytes": 2191,
+      "sha256": "61bde2f802c7c5cb931d6bc5c4528e82459392e803b2a7aaf1a7d5afc4fb7e5f"
+    },
+    {
+      "path": "book/claims/sections1-6.json",
+      "bytes": 29510,
+      "sha256": "46d3939d0cacda4f5780f18ed6b9e2ba21758d2fc3d0deecac99130ab14b6af2"
+    },
+    {
+      "path": "book/claims/sections7-8.json",
+      "bytes": 19707,
+      "sha256": "7438f1b5c8fde23fa81b0b1c3250d2965debf79678026d649bd7ff7cd368439d"
+    },
+    {
+      "path": "book/computational-status.md",
+      "bytes": 20132,
+      "sha256": "9edc907757cf65776a5a5b0e5100e63c0be34527e93a16628613187757e1c026"
+    },
+    {
+      "path": "book/polyhedral_volumes_and_geodesic_identities.tex",
+      "bytes": 453455,
+      "sha256": "8d0aee6dd20fd1870b8df741618f68cff83710679000b64eeed9b26cabe6e687"
+    },
+    {
+      "path": "docs/INTEGRATION_STATUS.md",
+      "bytes": 3556,
+      "sha256": "38c737799f2e11b637b007283d2efeaa40e5a1c1f2148046c7a3398d2a75fb3f"
+    },
+    {
+      "path": "experiments/normalizations/README.md",
+      "bytes": 4433,
+      "sha256": "0f460da36f82b31d4e2b51a11b1e732544410281e7f1322206eb30b1564b86cb"
+    },
+    {
+      "path": "experiments/normalizations/fixture.json",
+      "bytes": 1438,
+      "sha256": "603a15ca995ba2b430aa06cdaa6439443a79bbf59f2275590f8f22ad5a537141"
+    },
+    {
+      "path": "experiments/normalizations/run.py",
+      "bytes": 23054,
+      "sha256": "cd74141cb4ed4230b84f3e156c96ec67dbbed27bc4047c05fc2f8106e74d018d"
+    },
+    {
+      "path": "experiments/normalizations/tests/test_normalizations.py",
+      "bytes": 9480,
+      "sha256": "65bd0079d7efd9a920bc00069c764d27cc66aebd6ab4af38fb13a01a0c277502"
+    }
+  ],
+  "local_links_checked": 134,
+  "planned_missing_targets": [
+    "docs/execution/normalization-review-2026-11-01/README.md"
+  ],
+  "new_source_whitespace_inventory": [
+    {
+      "path": "book/chapters/01-volume-normalization.tex",
+      "line": 80,
+      "kind": "blank_line_at_eof"
+    },
+    {
+      "path": "book/chapters/02-ideal-angle-cells.tex",
+      "line": 112,
+      "kind": "blank_line_at_eof"
+    },
+    {
+      "path": "book/chapters/03-ideal-tetrahedron.tex",
+      "line": 140,
+      "kind": "blank_line_at_eof"
+    },
+    {
+      "path": "book/chapters/04-hyperideal-integrand.tex",
+      "line": 246,
+      "kind": "blank_line_at_eof"
+    },
+    {
+      "path": "book/chapters/05-boundary-cone-continuation.tex",
+      "line": 144,
+      "kind": "blank_line_at_eof"
+    },
+    {
+      "path": "book/chapters/06-torus-sphere.tex",
+      "line": 81,
+      "kind": "blank_line_at_eof"
+    },
+    {
+      "path": "book/chapters/07-euclidean-periods.tex",
+      "line": 252,
+      "kind": "blank_line_at_eof"
+    },
+    {
+      "path": "book/chapters/08-wp-flat-limit.tex",
+      "line": 385,
+      "kind": "blank_line_at_eof"
+    },
+    {
+      "path": "book/chapters/appendix-a-fricke.tex",
+      "line": 55,
+      "kind": "blank_line_at_eof"
+    }
+  ],
+  "repository_dirty_at_review": true,
+  "status_porcelain": [
+    " M INTEGRATION_PLAN.md",
+    " M README.md",
+    " M book/README.md",
+    " M book/computational-status.md",
+    " M book/polyhedral_volumes_and_geodesic_identities.tex",
+    " M docs/INTEGRATION_STATUS.md",
+    "?? book/chapters/01-volume-normalization.tex",
+    "?? book/chapters/02-ideal-angle-cells.tex",
+    "?? book/chapters/03-ideal-tetrahedron.tex",
+    "?? book/chapters/04-hyperideal-integrand.tex",
+    "?? book/chapters/05-boundary-cone-continuation.tex",
+    "?? book/chapters/06-torus-sphere.tex",
+    "?? book/chapters/07-euclidean-periods.tex",
+    "?? book/chapters/08-wp-flat-limit.tex",
+    "?? book/chapters/appendix-a-fricke.tex",
+    "?? book/claims/sections1-6.json",
+    "?? book/claims/sections7-8.json",
+    "?? experiments/normalizations/README.md",
+    "?? experiments/normalizations/fixture.json",
+    "?? experiments/normalizations/run.py",
+    "?? experiments/normalizations/tests/test_normalizations.py"
+  ],
+  "scope": "Source preservation, structure, source/document consistency and links; separate mathematical/computational reviews supply their bounded approvals."
+}

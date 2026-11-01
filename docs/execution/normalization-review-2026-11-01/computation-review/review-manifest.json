@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-11-01T16:24:24.729004+00:00",
+  "status": "computation_approved_readme_link_fix_pending",
+  "baseline_commit": "ad63b7ac9821040cb69e19c61bfbc46c68eff1a3",
+  "approved_sources": [
+    {
+      "path": "experiments/normalizations/run.py",
+      "sha256": "cd74141cb4ed4230b84f3e156c96ec67dbbed27bc4047c05fc2f8106e74d018d",
+      "bytes": 23054
+    },
+    {
+      "path": "experiments/normalizations/fixture.json",
+      "sha256": "603a15ca995ba2b430aa06cdaa6439443a79bbf59f2275590f8f22ad5a537141",
+      "bytes": 1438
+    },
+    {
+      "path": "experiments/normalizations/tests/test_normalizations.py",
+      "sha256": "65bd0079d7efd9a920bc00069c764d27cc66aebd6ab4af38fb13a01a0c277502",
+      "bytes": 9480
+    }
+  ],
+  "readme_provisional": {
+    "path": "experiments/normalizations/README.md",
+    "sha256": "e61a51d0aeb87c750cd68ea20a5558fa6431acb8aa944d2c373fa41b70904e61",
+    "finding": "Last paragraph: compactified Koziarz-Nguyen/McMullen volume formulas belong to Section 8, not Section 7."
+  },
+  "evidence_files": [
+    {
+      "path": "anti-pattern-command.json",
+      "sha256": "8ebc757d1939647d7dcb3c678c93449756df2d2f33c1b7533ab166ed33f19259",
+      "bytes": 284
+    },
+    {
+      "path": "anti-pattern-scan.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "anti-pattern-scan.stdout",
+      "sha256": "dc16a01b37f674128950ee386070421868e650f400065cd0af5317e59f26ba16",
+      "bytes": 467
+    },
+    {
+      "path": "commands.json",
+      "sha256": "044bc5b4ceb0c8936b5dbd9c5bc0e13e652229d2f860d44c7fd3feaa4c4391a0",
+      "bytes": 2994
+    },
+    {
+      "path": "fixed-replay.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "fixed-replay.stdout",
+      "sha256": "13275f8e4aeb33140567187ce5f1551bf25047790d82b774c4a45495ad0f2f63",
+      "bytes": 148
+    },
+    {
+      "path": "import-only.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "import-only.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "independent-command.json",
+      "sha256": "ac7b1696160a052e6c14930047a6507fd9bfd4f9cc21859787b98d523eb92fbc",
+      "bytes": 237
+    },
+    {
+      "path": "independent-result.json",
+      "sha256": "09ad2077fd8704329bc82b7a25221f7e8b873902db234c6ef4b5bd0613d48ac8",
+      "bytes": 2112
+    },
+    {
+      "path": "optimized-failure.stderr",
+      "sha256": "25f401f269662a93b1f5e607e381bc64f99448e94ed423a8e4e0611b8296f0fc",
+      "bytes": 528
+    },
+    {
+      "path": "optimized-failure.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "optimized-replay.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "optimized-replay.stdout",
+      "sha256": "8d7f7b423af64683dda6cc78d3e6efeedbb08395f4d42d47f6eca38ea0a95bd4",
+      "bytes": 158
+    },
+    {
+      "path": "replay-optimized.json",
+      "sha256": "b736d4d04dc8949da51a1d2c55265e5a892166cc15b0ec0ad1a36d70c8098dd8",
+      "bytes": 23189
+    },
+    {
+      "path": "replay.json",
+      "sha256": "4a87436786a39d308df1156e126ca374c047e8832b9fa967b1ba2e1078c80e74",
+      "bytes": 23189
+    },
+    {
+      "path": "review.md",
+      "sha256": "10a8a04f90f5f1a58cde991e5bc2fd935795ea3ecd836de10079ec1619130c67",
+      "bytes": 4327
+    },
+    {
+      "path": "ruff.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "ruff.stdout",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    {
+      "path": "unittest.stderr",
+      "sha256": "fffc97897964c7e928c0485b6f790fcf63c2d21f191418ddbae4be9764c68b8c",
+      "bytes": 1577
+    },
+    {
+      "path": "unittest.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "verify_companion.py",
+      "sha256": "dfaffe2843a50496484f42f1a7edd6b913938f3e82164eabcc9b3be34a7fed89",
+      "bytes": 15175
+    }
+  ],
+  "limits": [
+    "Finite arithmetic only; external intersection and geometric theorems are inputs.",
+    "No general divisor proof, local convergence proof, full cell integration or global realization is asserted.",
+    "Manuscript sources may change during parallel authorship and are not frozen by this code review."
+  ]
+}

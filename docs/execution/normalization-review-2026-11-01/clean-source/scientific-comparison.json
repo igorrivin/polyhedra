@@ -1,0 +1,23 @@
+{
+  "generated_at_utc": "2026-11-01T16:43:56.641558+00:00",
+  "source_commit": "2a91e9f33b2b2e4ed3ae8ec9863870f91c22a83f",
+  "clean_result_sha256": "9aceff49e5a8a66399004eec292183087ab640e6441bf580d7007b5dd7949490",
+  "independent_replay_path": "computation-review/replay.json",
+  "independent_replay_sha256": "4a87436786a39d308df1156e126ca374c047e8832b9fa967b1ba2e1078c80e74",
+  "scientific_fields_equal": true,
+  "excluded_json_paths": [
+    "/generated_at_utc",
+    "/elapsed_seconds",
+    "/source"
+  ],
+  "exclusion_reasons": {
+    "/generated_at_utc": "Run timestamp",
+    "/elapsed_seconds": "Runtime metadata",
+    "/source": "Development Git status, originating commit and source identities; current clean identities are verified separately against the independent final approval manifest."
+  },
+  "clean_source_record_verified": true,
+  "approved_recorded_source_hash_count": 14,
+  "python_version_equal": true,
+  "clean_before_and_after": true,
+  "source_status": "No result or artifact was written inside the checkout before this run completed."
+}

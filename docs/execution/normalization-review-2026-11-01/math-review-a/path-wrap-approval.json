@@ -1,0 +1,24 @@
+{
+  "status": "approved",
+  "scope": "One typesetting replacement only; reversed replacement reproduces previously approved chapter bytes exactly",
+  "changed_path": "book/chapters/01-volume-normalization.tex",
+  "replacement": {
+    "before": "\\texttt{artifacts/normalizations/result.json}",
+    "after": "\\path{artifacts/normalizations/result.json}"
+  },
+  "approved_source_sha256": {
+    "book/chapters/01-volume-normalization.tex": "b35a17e1dce5aa276d915e67eff0d15926da7c4180a32f9ffa9706476c2fe095",
+    "book/chapters/02-ideal-angle-cells.tex": "968ea966c452494a299be719165b5ac25c5ebd70e31e8bfd974705b763f9644d",
+    "book/chapters/03-ideal-tetrahedron.tex": "81c51ade3378fbfd4baff1cebeb2dcdd8b0fd43a032ac45fb3b30c4908060797",
+    "book/chapters/04-hyperideal-integrand.tex": "94da7f5288e0b6c606ff7d1a80516bc421e1de1a801e83873a0c9a25af7946b5",
+    "book/chapters/05-boundary-cone-continuation.tex": "feee80182603e334d8cda389435a43a8b9d37192b581befd1e761c03b93e51d5",
+    "book/chapters/06-torus-sphere.tex": "4a60370b881044ff89f45bbe51a171f04fb315b3be9317468a6cf212e8fd2947",
+    "book/chapters/appendix-a-fricke.tex": "61bde2f802c7c5cb931d6bc5c4528e82459392e803b2a7aaf1a7d5afc4fb7e5f",
+    "book/claims/sections1-6.json": "46d3939d0cacda4f5780f18ed6b9e2ba21758d2fc3d0deecac99130ab14b6af2"
+  },
+  "other_seven_reviewed_files_unchanged": true,
+  "mathematical_content_changed": false,
+  "exact_probes_repeated": false,
+  "previous_approval_sha256": "587773a2948901bd94613cde8698299b07944c1904dae941f87e9141c59085e4",
+  "pdf_layout_verification": "Owned by integration reviewer; this receipt verifies source-only scope."
+}

@@ -1,0 +1,200 @@
+{
+  "operation": "byte-preserving extraction before mathematical revision",
+  "baseline_commit": "ad63b7ac9821040cb69e19c61bfbc46c68eff1a3",
+  "baseline_main_sha256": "bec25e96072e617a40de9ed00a81427afcb08568679e0b73585a9b6de82609d7",
+  "extracted_main_sha256": "6567d1a3db8dd2622335159effd658a28d67bf3a0f4d2c3dd0deafa4330d632c",
+  "reconstructed_main_sha256": "bec25e96072e617a40de9ed00a81427afcb08568679e0b73585a9b6de82609d7",
+  "full_expansion_sha256": "96acc3746321a64e308424dce697a40e8bc77f76902cf3126a7447457dbaa97a",
+  "full_expansion_bytes": 587296,
+  "exact_main_reconstruction": true,
+  "exact_full_expansion": true,
+  "labels_in_identical_order": true,
+  "label_count": 607,
+  "unique_label_count": 607,
+  "duplicate_labels": [],
+  "baseline_inventory_files": 1063,
+  "sections": {
+    "01-volume-normalization.tex": {
+      "path": "book/chapters/01-volume-normalization.tex",
+      "section_label": "sec:conventions",
+      "sha256": "c56aa1b1ab43e4f29516996e4a7fe8defc96b2b68ae69b38b2c42f36f39ccba4",
+      "bytes": 2328,
+      "lines": 52,
+      "baseline_start_line": 379,
+      "baseline_end_line": 430,
+      "labels": [
+        "sec:conventions",
+        "eq:fn",
+        "eq:basevolumes"
+      ],
+      "input_line": "\\input{chapters/01-volume-normalization.tex}\n"
+    },
+    "02-ideal-angle-cells.tex": {
+      "path": "book/chapters/02-ideal-angle-cells.tex",
+      "section_label": "sec:idealcells",
+      "sha256": "ce9e605df8618f9ecc78c3fac8fcc05fe71c12655dbfe37b1fa9c775aceef02f",
+      "bytes": 4700,
+      "lines": 94,
+      "baseline_start_line": 431,
+      "baseline_end_line": 524,
+      "labels": [
+        "sec:idealcells",
+        "eq:rivinangles1",
+        "eq:rivinangles2",
+        "eq:rivinangles3",
+        "eq:deltameasure",
+        "eq:polyhedralpartition"
+      ],
+      "input_line": "\\input{chapters/02-ideal-angle-cells.tex}\n"
+    },
+    "03-ideal-tetrahedron.tex": {
+      "path": "book/chapters/03-ideal-tetrahedron.tex",
+      "section_label": "sec:tetrahedron",
+      "sha256": "7d5bbc06a342725446932e2b565f2661148179aca3a352b5d2274aa371a064e0",
+      "bytes": 5239,
+      "lines": 125,
+      "baseline_start_line": 525,
+      "baseline_end_line": 649,
+      "labels": [
+        "sec:tetrahedron",
+        "eq:penner",
+        "eq:lambdagauge",
+        "eq:tetdensity",
+        "eq:onecell",
+        "eq:v04direct"
+      ],
+      "input_line": "\\input{chapters/03-ideal-tetrahedron.tex}\n"
+    },
+    "04-hyperideal-integrand.tex": {
+      "path": "book/chapters/04-hyperideal-integrand.tex",
+      "section_label": "sec:hyperideal",
+      "sha256": "82b2ed1a4145b69aaedd95ef61c33a7237ac80d3a3c0f74b6f339ca8f554511b",
+      "bytes": 8832,
+      "lines": 198,
+      "baseline_start_line": 650,
+      "baseline_end_line": 847,
+      "labels": [
+        "sec:hyperideal",
+        "eq:qvertices",
+        "eq:truncationlengths",
+        "eq:gram",
+        "eq:boundarykernel",
+        "eq:hyperidealdensity",
+        "eq:gramdensity",
+        "eq:pfaffiandensity",
+        "eq:buddidentity",
+        "eq:treevolume"
+      ],
+      "input_line": "\\input{chapters/04-hyperideal-integrand.tex}\n"
+    },
+    "05-boundary-cone-continuation.tex": {
+      "path": "book/chapters/05-boundary-cone-continuation.tex",
+      "section_label": "sec:cones",
+      "sha256": "f68a6093068be5e867a1d49acc51fc1f610129f3f684ed69767f66d3a2c2ffae",
+      "bytes": 5754,
+      "lines": 128,
+      "baseline_start_line": 848,
+      "baseline_end_line": 975,
+      "labels": [
+        "sec:cones",
+        "eq:gb",
+        "eq:wpclass",
+        "eq:intersectionvolume",
+        "eq:mixedv04",
+        "eq:wallclass",
+        "eq:conev04",
+        "eq:kernelcontinuation"
+      ],
+      "input_line": "\\input{chapters/05-boundary-cone-continuation.tex}\n"
+    },
+    "06-torus-sphere.tex": {
+      "path": "book/chapters/06-torus-sphere.tex",
+      "section_label": "sec:torussphere",
+      "sha256": "7bc4ac732aa9db7a896d674cf3be5557f2c01bae056eae856408c63f36c0d906",
+      "bytes": 3047,
+      "lines": 69,
+      "baseline_start_line": 976,
+      "baseline_end_line": 1044,
+      "labels": [
+        "sec:torussphere",
+        "eq:commonorbifold",
+        "eq:lengthtorussphere",
+        "eq:voltorussphere",
+        "eq:conetorus"
+      ],
+      "input_line": "\\input{chapters/06-torus-sphere.tex}\n"
+    },
+    "07-euclidean-periods.tex": {
+      "path": "book/chapters/07-euclidean-periods.tex",
+      "section_label": "sec:thurstonDM",
+      "sha256": "8929c471128a503a87c9e34bd88a3927338fa6fed53097361cbef6a3a9422568",
+      "bytes": 10391,
+      "lines": 226,
+      "baseline_start_line": 1045,
+      "baseline_end_line": 1270,
+      "labels": [
+        "sec:thurstonDM",
+        "eq:flatweights",
+        "eq:flatconemetric",
+        "fig:mono-polyhedral-regimes",
+        "eq:DMdifferential",
+        "eq:DMperiods",
+        "eq:DMarea",
+        "eq:CHpotential",
+        "eq:vanishingperiod",
+        "eq:INT",
+        "eq:ellipticDM",
+        "eq:ellipticperiodratio"
+      ],
+      "input_line": "\\input{chapters/07-euclidean-periods.tex}\n"
+    },
+    "08-wp-flat-limit.tex": {
+      "path": "book/chapters/08-wp-flat-limit.tex",
+      "section_label": "sec:flatlimit",
+      "sha256": "611a8b79c820459ba8cde3c2174c88e57fab179fc13ce69155d5b3e88b9f52ad",
+      "bytes": 10983,
+      "lines": 272,
+      "baseline_start_line": 1271,
+      "baseline_end_line": 1542,
+      "labels": [
+        "sec:flatlimit",
+        "eq:anglepath",
+        "eq:areapath",
+        "eq:unitareanormalization",
+        "eq:flatmetriclimit",
+        "eq:localWPCHlimit",
+        "eq:CHclassB",
+        "eq:CHintersection",
+        "eq:Xiclass",
+        "eq:exactWPclassflat",
+        "eq:exactWPvolumeflat",
+        "eq:WPCHvolumeasymptotic",
+        "eq:finalchamberwidth",
+        "eq:equalflatvolume",
+        "eq:McMullenpartitionvolume"
+      ],
+      "input_line": "\\input{chapters/08-wp-flat-limit.tex}\n"
+    },
+    "appendix-a-fricke.tex": {
+      "path": "book/chapters/appendix-a-fricke.tex",
+      "section_label": "app:fricke",
+      "sha256": "a77ed7ed9011c0c06b04b9381db1f566d6ae9505cb9088354bbc65483bee6ee8",
+      "bytes": 1611,
+      "lines": 46,
+      "baseline_start_line": 11158,
+      "baseline_end_line": 11203,
+      "labels": [
+        "app:fricke",
+        "eq:fricke",
+        "eq:frickedensity"
+      ],
+      "input_line": "\\input{chapters/appendix-a-fricke.tex}\n"
+    }
+  },
+  "existing_chapter_sha256": {
+    "09-volume-hessians.tex": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00",
+    "15-quantum-airy.tex": "e042499f66436b1aafc1219efbef3c9db945f6a99bc60738ac913ebfa78a0d9e",
+    "30-sharp-diagnostics.tex": "ec9973858c9dc2dca31537230158e39a323287408782afb5dc9b599735ad996f"
+  },
+  "claim_scope": "Structural source equivalence only; no mathematical or numerical validation."
+}

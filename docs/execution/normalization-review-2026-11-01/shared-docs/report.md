@@ -1,0 +1,13 @@
+# Shared documentation handoff
+
+The five approved shared documents now describe the Sections 1–8 and Appendix A normalization increment, its 41-claim scope, the fixed exact companion and its evidence limits. They distinguish the passed independent computation review (497 weight vectors, 1,491 class evaluations, 512 SL₂ triples, 195 F-curve probes and 11 tests) from the mathematical review and PDF verification recorded by the checkpoint. Output paths are listed without claiming that a precommit PDF was rebuilt from a later clean commit.
+
+The previous Airy/torus checkpoint is identified as prior, and its results, prior PDFs, Site exports and downloads remain frozen. The missing original Airy exact-integral and length-8192 torus evidence, Section 15's broader analytic review, and the optional-dependency full-suite limitations remain explicit. Sections 12–14 and 16 are the next substantive review. Upload and deployment remain the final publication step.
+
+The companion README now points the Koziarz–Nguyen/McMullen compactification formulas to Section 8. A reverse substitution reproduces its original SHA-256, proving that only the approved source-pointer paragraph changed. The scientific driver, fixture and test bytes match the independently reviewed source exactly. Their original author manifest remains preserved; `../computation/author-manifest-after-review.json` supplements it.
+
+Main contains only the byte-preserving extraction and the two authorized bibliography entries, `KawazumiWP` and `FillastreMetrics`. The latter is pinned to arXiv:0801.0538v1, as requested. The shared status note distinguishes inspection of Fillastre's precise restatement from inspection of Schlenker's original proof. No chapter source or claim ledger was edited in this task.
+
+Focused checks passed: main's exact comparison against the extracted snapshot plus the two entries, unchanged scientific source hashes, 28+13 claim counts, and whitespace validation of all six approved modified baseline paths. All 134 local links were checked. The sole deferred target is the forthcoming `docs/execution/normalization-review-2026-11-01/README.md`; all other targets existed. Parent-requested final wording adjustments preserved the exact link list and all previously verified non-document bytes.
+
+`manifest.json` records the six approved modified baseline paths for the later preservation gate, the companion README, current source hashes and evidence hashes. This focused task does not replace the later check of all 1,719 baseline tracked paths or the original 953 imported files. No build, artifact copy, commit, install, browser, network, Site or remote operation occurred.

@@ -1,0 +1,81 @@
+[
+  {
+    "name": "unittest",
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/normalizations/tests",
+      "-v"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "elapsed_seconds": 0.3704092080006376
+  },
+  {
+    "name": "ruff",
+    "argv": [
+      "/opt/anaconda3/bin/ruff",
+      "check",
+      "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/normalizations"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "elapsed_seconds": 0.05264916701707989
+  },
+  {
+    "name": "fixed-replay",
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "-B",
+      "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/normalizations/run.py",
+      "--output",
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/normalization-review-2026-11-01/computation-review/replay.json"
+    ],
+    "cwd": "/private/tmp",
+    "returncode": 0,
+    "elapsed_seconds": 0.15466958400793374
+  },
+  {
+    "name": "optimized-replay",
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "-B",
+      "-O",
+      "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/normalizations/run.py",
+      "--output",
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/normalization-review-2026-11-01/computation-review/replay-optimized.json"
+    ],
+    "cwd": "/private/tmp",
+    "returncode": 0,
+    "elapsed_seconds": 0.29325779201462865
+  },
+  {
+    "name": "optimized-failure",
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "-B",
+      "-O",
+      "-c",
+      "import importlib.util\ns=importlib.util.spec_from_file_location(\"reviewed\",'/Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/normalizations/run.py')\nm=importlib.util.module_from_spec(s);s.loader.exec_module(m)\ndef fail(): m.check(False,\"injected failed exact check\")\nm.normalization_checks=fail\nm.main([\"--output\",'/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/tmpa1fk7mjb/not-created.json'])\n"
+    ],
+    "cwd": "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/tmpa1fk7mjb",
+    "returncode": 1,
+    "elapsed_seconds": 0.19384941598400474
+  },
+  {
+    "name": "import-only",
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "-B",
+      "-c",
+      "import importlib.util,subprocess\ndef fail(*args,**kwargs): raise RuntimeError(\"import invoked a subprocess\")\nsubprocess.check_output=fail\ns=importlib.util.spec_from_file_location(\"reviewed\",'/Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/normalizations/run.py')\nm=importlib.util.module_from_spec(s);s.loader.exec_module(m)\n"
+    ],
+    "cwd": "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/tmpa1fk7mjb",
+    "returncode": 0,
+    "elapsed_seconds": 0.04588925000280142
+  }
+]

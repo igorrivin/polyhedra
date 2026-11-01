@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-11-01T16:32:59.227789+00:00",
+  "status": "approved",
+  "supplements_manifest": {
+    "path": "review-manifest.json",
+    "sha256": "aa05fd758ba0c62b684cfb76fc272fc3905be393a17651f55e7c477b680e3a80"
+  },
+  "finding_resolved": "KN/McMullen formula pointer corrected from Section 7 to Section 8.",
+  "verification": {
+    "exact_single_replacement_verified_by_original_hash": true,
+    "driver_fixture_and_tests_unchanged": true,
+    "corrected_link_resolves_to_expected_formula_chapter": true,
+    "earlier_review_and_evidence_preserved": true,
+    "extensive_checks_repeated": false
+  },
+  "reviewed_replacement": {
+    "before": "Koziarz\u2013Nguyen and McMullen's compactified volume formulas in [Section 7](../../book/chapters/07-euclidean-periods.tex), and the flat-limit convention in [Section 8](../../book/chapters/08-wp-flat-limit.tex).",
+    "after": "and Koziarz\u2013Nguyen and McMullen's compactified volume formulas and the flat-limit convention in [Section 8](../../book/chapters/08-wp-flat-limit.tex)."
+  },
+  "approved_sources": [
+    {
+      "path": "experiments/normalizations/run.py",
+      "sha256": "cd74141cb4ed4230b84f3e156c96ec67dbbed27bc4047c05fc2f8106e74d018d",
+      "bytes": 23054
+    },
+    {
+      "path": "experiments/normalizations/fixture.json",
+      "sha256": "603a15ca995ba2b430aa06cdaa6439443a79bbf59f2275590f8f22ad5a537141",
+      "bytes": 1438
+    },
+    {
+      "path": "experiments/normalizations/tests/test_normalizations.py",
+      "sha256": "65bd0079d7efd9a920bc00069c764d27cc66aebd6ab4af38fb13a01a0c277502",
+      "bytes": 9480
+    },
+    {
+      "path": "experiments/normalizations/README.md",
+      "bytes": 4433,
+      "sha256": "0f460da36f82b31d4e2b51a11b1e732544410281e7f1322206eb30b1564b86cb"
+    }
+  ],
+  "verification_script": {
+    "path": "verify_readme_followup.py",
+    "sha256": "b9ae5c4c0ce0012648cd4b32bdb54b7ae39606ad0982f5d7f5d500820b870c05"
+  },
+  "limits": [
+    "Finite arithmetic only; external intersection and geometric theorems are inputs.",
+    "No general divisor proof, local convergence proof, full cell integration or global realization is asserted.",
+    "Manuscript sources may change during parallel authorship and are not frozen by this code review."
+  ],
+  "scope": "Closes the only documentation finding. Prior computation approval remains; manuscript proof review is separate."
+}

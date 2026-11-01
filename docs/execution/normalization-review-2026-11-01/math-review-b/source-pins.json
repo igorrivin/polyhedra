@@ -1,0 +1,60 @@
+{
+  "review_date": "2026-11-01",
+  "access": "Primary web text fetched independently. PDF screenshot calls for Wang and Koziarz-Nguyen returned cache-miss errors; no visual PDF source inspection is claimed.",
+  "sources": [
+    {
+      "key": "KawazumiWP",
+      "url": "https://arxiv.org/pdf/2408.04937",
+      "pins": ["Introduction equation (1)", "Section 6.1 equation (38), printed p.31"],
+      "scope": "Closed-surface convention calibration only; opposite twist orientation is accounted for in Section 1."
+    },
+    {
+      "key": "WangFlatWP",
+      "url": "https://arxiv.org/pdf/2209.10842v2",
+      "pins": ["Assumption (2.4), p.5", "Equations (2.8)-(2.11), pp.8-10", "Section 4.4 final calculation, p.27"],
+      "scope": "Positive deficits below one, total two. Used the invariant orthogonal norm ratio, with positive area convention; did not transplant displayed form signs."
+    },
+    {
+      "key": "MazzeoWeiss",
+      "url": "https://arxiv.org/html/1509.07608",
+      "pins": ["Theorem 1", "Section 6.1, Theorem 8 and following remark", "Proposition 16 and following remark"],
+      "scope": "Unit-area existence and local smooth conic deformation; no global boundary or zero-weight uniformity."
+    },
+    {
+      "key": "KoziarzNguyen",
+      "url": "https://arxiv.org/pdf/1601.05252",
+      "pins": ["Theorem 1.1, pp.1-2", "Remark 1.3, p.3", "Section 7.3 divisor class", "Section 7.4 curvature conversion, pp.32-33", "Remark 8.1 pullback identity, p.34", "Section 8.4 intersections, pp.37-38"],
+      "scope": "Balanced formulas by continuity. Direct current analysis excludes balanced sums; source-location and scope wording corrections requested."
+    },
+    {
+      "key": "AMN",
+      "url": "https://arxiv.org/html/2310.13281",
+      "pins": ["Theorems 2.10-2.11", "Definitions 2.12-2.13", "Lemma 2.14"],
+      "scope": "Geometric WP extension, top intersection, and ordinary-compactification collision correction."
+    },
+    {
+      "key": "MostowHalfIntegral",
+      "url": "https://www.numdam.org/item/PMIHES_1986__63__91_0.pdf",
+      "pins": ["Introduction, printed pp.91-92", "Section 2 theorem, p.93", "Theorem 3.12 and uniformization argument, pp.99-100"],
+      "scope": "One specified equal-weight permutation block; INT also recalled explicitly."
+    },
+    {
+      "key": "ThurstonShapes",
+      "url": "https://arxiv.org/pdf/math/9801088",
+      "pins": ["Theorem 0.2, printed p.513", "Section 5 finite-volume argument"],
+      "scope": "Full permitted equal-weight quotient criterion and finite volume; labels are distinguished in the manuscript."
+    },
+    {
+      "key": "Kojima",
+      "url": "https://rendiconti.dmi.units.it/volumi/32s1/09.pdf",
+      "pins": ["Examples 2.1-2.2, p.151", "Lemmas 4.1-4.2 and Theorem 4.3, pp.157-158", "Section 5"],
+      "scope": "Labeled period/developed-edge identification; area scalar; ineffective Klein-four action and five-point boundary geometry."
+    },
+    {
+      "key": "McMullenGB",
+      "url": "https://people.math.harvard.edu/~ctm/papers/home/text/papers/gb/gb.pdf",
+      "pins": ["Section 8 opening normalization", "Theorem 8.1 and proof, pp.24-25"],
+      "scope": "Ordered marks, curvature -1, partition prefactor and balanced finite-volume extension."
+    }
+  ]
+}

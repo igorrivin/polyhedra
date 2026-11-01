@@ -1,0 +1,244 @@
+{
+  "generated_at_utc": "2026-11-01T16:50:13.557379+00:00",
+  "baseline_commit": "ad63b7ac9821040cb69e19c61bfbc46c68eff1a3",
+  "source_commit": "2a91e9f33b2b2e4ed3ae8ec9863870f91c22a83f",
+  "approved_source_sha256": {
+    "book/chapters/01-volume-normalization.tex": "b35a17e1dce5aa276d915e67eff0d15926da7c4180a32f9ffa9706476c2fe095",
+    "book/chapters/02-ideal-angle-cells.tex": "968ea966c452494a299be719165b5ac25c5ebd70e31e8bfd974705b763f9644d",
+    "book/chapters/03-ideal-tetrahedron.tex": "81c51ade3378fbfd4baff1cebeb2dcdd8b0fd43a032ac45fb3b30c4908060797",
+    "book/chapters/04-hyperideal-integrand.tex": "94da7f5288e0b6c606ff7d1a80516bc421e1de1a801e83873a0c9a25af7946b5",
+    "book/chapters/05-boundary-cone-continuation.tex": "feee80182603e334d8cda389435a43a8b9d37192b581befd1e761c03b93e51d5",
+    "book/chapters/06-torus-sphere.tex": "4a60370b881044ff89f45bbe51a171f04fb315b3be9317468a6cf212e8fd2947",
+    "book/chapters/appendix-a-fricke.tex": "61bde2f802c7c5cb931d6bc5c4528e82459392e803b2a7aaf1a7d5afc4fb7e5f",
+    "book/claims/sections1-6.json": "46d3939d0cacda4f5780f18ed6b9e2ba21758d2fc3d0deecac99130ab14b6af2",
+    "book/chapters/07-euclidean-periods.tex": "3665a4e2ff074950a5e74ef9fba511af4dc5820e3589d823d9d96f7fac2de8d9",
+    "book/chapters/08-wp-flat-limit.tex": "1a175315aa975708a5c93151b9ae107b7dd36f79720dae7c7264adda062a6283",
+    "book/claims/sections7-8.json": "7438f1b5c8fde23fa81b0b1c3250d2965debf79678026d649bd7ff7cd368439d",
+    "experiments/normalizations/run.py": "cd74141cb4ed4230b84f3e156c96ec67dbbed27bc4047c05fc2f8106e74d018d",
+    "experiments/normalizations/fixture.json": "603a15ca995ba2b430aa06cdaa6439443a79bbf59f2275590f8f22ad5a537141",
+    "experiments/normalizations/tests/test_normalizations.py": "65bd0079d7efd9a920bc00069c764d27cc66aebd6ab4af38fb13a01a0c277502",
+    "experiments/normalizations/README.md": "0f460da36f82b31d4e2b51a11b1e732544410281e7f1322206eb30b1564b86cb",
+    "README.md": "2f70a6bb21b91838ef55bd41bb9b717980d5a4915dc3f3937226cd948c16247c",
+    "book/README.md": "8550cd2f15fe65dcf5a100ea57f12543817c616020512629924930ea2bd27cc9",
+    "book/computational-status.md": "9edc907757cf65776a5a5b0e5100e63c0be34527e93a16628613187757e1c026",
+    "docs/INTEGRATION_STATUS.md": "38c737799f2e11b637b007283d2efeaa40e5a1c1f2148046c7a3398d2a75fb3f",
+    "INTEGRATION_PLAN.md": "9e75532ba6c164d3192529820075502ce80e5b90bdb9f9459a64ec122f5211d3",
+    "book/polyhedral_volumes_and_geodesic_identities.tex": "8d0aee6dd20fd1870b8df741618f68cff83710679000b64eeed9b26cabe6e687"
+  },
+  "files": {
+    "artifacts/normalization-review-2026-11-01/monograph-working-draft.pdf": {
+      "bytes": 1420991,
+      "sha256": "b1e2d53b7352a2ed66b71ef7473d46cc55cb7bf58f35698092f6744900a4d9e6"
+    },
+    "artifacts/normalizations/result.json": {
+      "bytes": 22364,
+      "sha256": "9aceff49e5a8a66399004eec292183087ab640e6441bf580d7007b5dd7949490"
+    },
+    "docs/execution/normalization-review-2026-11-01/README.md": {
+      "bytes": 3561,
+      "sha256": "009db7e0e311cb1d2109dc4770427ee72359bbf7e33e76351283ac148ca14347"
+    },
+    "docs/execution/normalization-review-2026-11-01/checkpoint/source-checkpoint.json": {
+      "bytes": 4479,
+      "sha256": "58144eb90f4a5ddc82641401ebc1a8a9c6f6af15e0a8a7ecf074b8028d67ba2d"
+    },
+    "docs/execution/normalization-review-2026-11-01/checkpoint/source-stage.json": {
+      "bytes": 1602,
+      "sha256": "2be4d83488a071fa72bc21f698f43baa65cb9848fb558776369c8d00f3dfd5cd"
+    },
+    "docs/execution/normalization-review-2026-11-01/checkpoint/source-whitespace-exceptions.json": {
+      "bytes": 3493,
+      "sha256": "bd7ef887f667691c7418ffa6d1883b7fec84d316df4f00c91243487736b2d0bb"
+    },
+    "docs/execution/normalization-review-2026-11-01/clean-source/run-command.json": {
+      "bytes": 438,
+      "sha256": "ebd0307c840e1ef40c9e9ce17ab1eb68732dbef906845c01dd32415d56601c06"
+    },
+    "docs/execution/normalization-review-2026-11-01/clean-source/scientific-comparison.json": {
+      "bytes": 1060,
+      "sha256": "bb1809aa61f328a41243ae8e56f14f1600319e09f7a01e9ee0a8cbb37df842d2"
+    },
+    "docs/execution/normalization-review-2026-11-01/closeout.md": {
+      "bytes": 5182,
+      "sha256": "fbeabfbc5af7d9bfc1b67d1890fbfe2bc80361854a8c44dfcbd5b41bffb38cfb"
+    },
+    "docs/execution/normalization-review-2026-11-01/computation-review/commands.json": {
+      "bytes": 2994,
+      "sha256": "044bc5b4ceb0c8936b5dbd9c5bc0e13e652229d2f860d44c7fd3feaa4c4391a0"
+    },
+    "docs/execution/normalization-review-2026-11-01/computation-review/independent-result.json": {
+      "bytes": 2112,
+      "sha256": "09ad2077fd8704329bc82b7a25221f7e8b873902db234c6ef4b5bd0613d48ac8"
+    },
+    "docs/execution/normalization-review-2026-11-01/computation-review/replay.json": {
+      "bytes": 23189,
+      "sha256": "4a87436786a39d308df1156e126ca374c047e8832b9fa967b1ba2e1078c80e74"
+    },
+    "docs/execution/normalization-review-2026-11-01/computation-review/review-final-supplement.json": {
+      "bytes": 2414,
+      "sha256": "32d7536f8644c8e629376c724d9c5a9f666820056582ef2a628954d689d6df4f"
+    },
+    "docs/execution/normalization-review-2026-11-01/computation-review/review-manifest.json": {
+      "bytes": 4762,
+      "sha256": "aa05fd758ba0c62b684cfb76fc272fc3905be393a17651f55e7c477b680e3a80"
+    },
+    "docs/execution/normalization-review-2026-11-01/computation-review/review.md": {
+      "bytes": 4327,
+      "sha256": "10a8a04f90f5f1a58cde991e5bc2fd935795ea3ecd836de10079ec1619130c67"
+    },
+    "docs/execution/normalization-review-2026-11-01/computation-review/verify_companion.py": {
+      "bytes": 15175,
+      "sha256": "dfaffe2843a50496484f42f1a7edd6b913938f3e82164eabcc9b3be34a7fed89"
+    },
+    "docs/execution/normalization-review-2026-11-01/evidence-copy-manifest.json": {
+      "bytes": 8591,
+      "sha256": "d2e66b963e123ded44fea3018065fc597e51d578383c02231475314a4d4d75bd"
+    },
+    "docs/execution/normalization-review-2026-11-01/integration-review/full-book-build-command.json": {
+      "bytes": 576,
+      "sha256": "3bdcd7ef872b49cecf9eb5d913ca7771ab961e3cd89d2d81ccc0b85a932777eb"
+    },
+    "docs/execution/normalization-review-2026-11-01/integration-review/integration-checks.json": {
+      "bytes": 7352,
+      "sha256": "adcec5a9a1bb9f45dcb0a4237a5231d1004538678a953a5dec3d74e7aa0cb9ca"
+    },
+    "docs/execution/normalization-review-2026-11-01/integration-review/pdf-build-review.json": {
+      "bytes": 8345,
+      "sha256": "cf72b981e251db5ca72d91c1acab4c4c5bbba4a01ae715e82fcf9d7de294aa37"
+    },
+    "docs/execution/normalization-review-2026-11-01/integration-review/pdf-inputs.json": {
+      "bytes": 2480,
+      "sha256": "1cf44e7f8cb36f71943c22a4f1591ea37a44d9663b2f6fd5aad7d38533fe1506"
+    },
+    "docs/execution/normalization-review-2026-11-01/integration-review/pdf-operation-marker-command.json": {
+      "bytes": 569,
+      "sha256": "63002e0f543bee0a024a9595a6a3e3a0f4cdf1d9a4e34d9893c6ce621f0a5cfd"
+    },
+    "docs/execution/normalization-review-2026-11-01/integration-review/review-manifest.json": {
+      "bytes": 12163,
+      "sha256": "a4a5d6e440d25188408c0ec2d70e8ce1e2c24ba69015c228936d2f408dcc9026"
+    },
+    "docs/execution/normalization-review-2026-11-01/integration-review/review.md": {
+      "bytes": 4016,
+      "sha256": "466138baefb8b230d3162c7057be09f6d74e2b3d1fda3103d6d73afd9a37c827"
+    },
+    "docs/execution/normalization-review-2026-11-01/integration-review/site-tests-command.json": {
+      "bytes": 310,
+      "sha256": "67b14b0c856994bdb1b2dbee9fb8a14dc0f61a336ced1de630664d0bdaf208ae"
+    },
+    "docs/execution/normalization-review-2026-11-01/integration-review/site-tests.stderr": {
+      "bytes": 3752,
+      "sha256": "b743065d3e9e8442ac6e4e46c2dd334235d1df313b895239149005383f7c5ecd"
+    },
+    "docs/execution/normalization-review-2026-11-01/math-b/author-corrections-v2.md": {
+      "bytes": 1240,
+      "sha256": "c8c546c963747ec597b120cb193d685be4f85959012a698a5c87596cabcc5e22"
+    },
+    "docs/execution/normalization-review-2026-11-01/math-review-a/fillastre-patch-approval.json": {
+      "bytes": 1614,
+      "sha256": "587773a2948901bd94613cde8698299b07944c1904dae941f87e9141c59085e4"
+    },
+    "docs/execution/normalization-review-2026-11-01/math-review-a/fillastre-patch-review.md": {
+      "bytes": 1787,
+      "sha256": "5655384d680df437f4894e2f9e2ec5406c9af299e6a8cd9e0da9a5cfed633bf3"
+    },
+    "docs/execution/normalization-review-2026-11-01/math-review-a/path-wrap-approval.json": {
+      "bytes": 1628,
+      "sha256": "f2812b294a2211c25e771aebaf9a546b10328e22d1361c8a493d982c8dedc4fa"
+    },
+    "docs/execution/normalization-review-2026-11-01/math-review-a/review-manifest.json": {
+      "bytes": 1136,
+      "sha256": "cbb7729ed06b0e563452c3cbcd8af751cf5caecd54e75682ff6b84c4329b515d"
+    },
+    "docs/execution/normalization-review-2026-11-01/math-review-a/review.md": {
+      "bytes": 7810,
+      "sha256": "ad9b41090ba735c8f08c3be15459c74d2d676b1dcd4f21aa9a6346c87b31d45b"
+    },
+    "docs/execution/normalization-review-2026-11-01/math-review-a/source-pins.json": {
+      "bytes": 3469,
+      "sha256": "9d6b091ce546b2f23ea464f146b8573ddd735050618163041838d5f9543de2ec"
+    },
+    "docs/execution/normalization-review-2026-11-01/math-review-a/verification.json": {
+      "bytes": 1916,
+      "sha256": "a15fc7e927a75704e96098ab3386b66859f394643c5b4cd5015a9302a9ee4992"
+    },
+    "docs/execution/normalization-review-2026-11-01/math-review-a/verify_review.py": {
+      "bytes": 5098,
+      "sha256": "e85fd5d10ed28bff3658b1aa44d48a362e7985f5bdc65cafbde8769f056be5db"
+    },
+    "docs/execution/normalization-review-2026-11-01/math-review-b/final-approval.json": {
+      "bytes": 1362,
+      "sha256": "aa92618dcd6946b9aa549b1a48d4ddb575c603a942a06b339bc8539838784aac"
+    },
+    "docs/execution/normalization-review-2026-11-01/math-review-b/independent_checks.json": {
+      "bytes": 766,
+      "sha256": "247031c4cec4b99398ff8451cc07aecb1a55e0f2d239c43278b5207d3691e952"
+    },
+    "docs/execution/normalization-review-2026-11-01/math-review-b/independent_checks.py": {
+      "bytes": 4184,
+      "sha256": "7349ed7b756fcc816496f1044763117ecdbbde0278654038a4e326fed6f5073f"
+    },
+    "docs/execution/normalization-review-2026-11-01/math-review-b/review-manifest.json": {
+      "bytes": 1744,
+      "sha256": "54776cab1ea98441f79288774bca52a3581fcd97af19922aaad220640f64994e"
+    },
+    "docs/execution/normalization-review-2026-11-01/math-review-b/review.md": {
+      "bytes": 4616,
+      "sha256": "cb6020bc0fe4197c64fd1cb37b66e5dfe62a973545bf01481d17104451c06b12"
+    },
+    "docs/execution/normalization-review-2026-11-01/math-review-b/source-pins.json": {
+      "bytes": 3264,
+      "sha256": "739f99df96d45c3b8e79d6ab1265812a4eeb11d284088484189d8ba7bb7a23a4"
+    },
+    "docs/execution/normalization-review-2026-11-01/shared-docs/manifest.json": {
+      "bytes": 4882,
+      "sha256": "d06ffadd746924c7adc1f267ca7d56a92f35dd83b212d35cff2c538c7fb8c696"
+    },
+    "docs/execution/normalization-review-2026-11-01/shared-docs/report.md": {
+      "bytes": 2681,
+      "sha256": "890da04bc6f3289f639579b3ea29a739119429e75b0c48c823aa991a24380e70"
+    },
+    "docs/execution/normalization-review-2026-11-01/structure/extracted-whitespace-inventory.json": {
+      "bytes": 1921,
+      "sha256": "dafe9fcf265ce049e87f6b90f66c26ce3445128ff1b48337430938b1a391c715"
+    },
+    "docs/execution/normalization-review-2026-11-01/structure/extraction.json": {
+      "bytes": 6856,
+      "sha256": "2668a080234c4e31dd48e80477b51d91f8d8528e7bd8727d71481a8794ae4b54"
+    },
+    "docs/execution/normalization-review-2026-11-01/structure/structure-manifest.json": {
+      "bytes": 6752,
+      "sha256": "f7dd0f324b47dc3c904e91c06a0bf11d0a0aab170dcabaf1d196351886225107"
+    },
+    "docs/execution/normalization-review-2026-11-01/verify_checkpoint.py": {
+      "bytes": 11062,
+      "sha256": "01d22681d885271166b529c9c9fb2893fb4de4331efe83f8b808b6e2933131fc"
+    }
+  },
+  "self_inventory": "This manifest is the sole additional candidate file beyond the hashed files; its final SHA is recorded by the outer candidate/postcommit receipts.",
+  "copied_evidence_files": 41,
+  "pdf_tex_input_sha256": {
+    "book/main.tex": "be3c45c0c4e3105d5e5275b2bbfefed5b8a79e088a456b83a8ea81dcce89a99d",
+    "book/polyhedral_volumes_and_geodesic_identities.tex": "8d0aee6dd20fd1870b8df741618f68cff83710679000b64eeed9b26cabe6e687",
+    "book/chapters/01-volume-normalization.tex": "b35a17e1dce5aa276d915e67eff0d15926da7c4180a32f9ffa9706476c2fe095",
+    "book/chapters/02-ideal-angle-cells.tex": "968ea966c452494a299be719165b5ac25c5ebd70e31e8bfd974705b763f9644d",
+    "book/chapters/03-ideal-tetrahedron.tex": "81c51ade3378fbfd4baff1cebeb2dcdd8b0fd43a032ac45fb3b30c4908060797",
+    "book/chapters/04-hyperideal-integrand.tex": "94da7f5288e0b6c606ff7d1a80516bc421e1de1a801e83873a0c9a25af7946b5",
+    "book/chapters/05-boundary-cone-continuation.tex": "feee80182603e334d8cda389435a43a8b9d37192b581befd1e761c03b93e51d5",
+    "book/chapters/06-torus-sphere.tex": "4a60370b881044ff89f45bbe51a171f04fb315b3be9317468a6cf212e8fd2947",
+    "book/chapters/07-euclidean-periods.tex": "3665a4e2ff074950a5e74ef9fba511af4dc5820e3589d823d9d96f7fac2de8d9",
+    "book/chapters/08-wp-flat-limit.tex": "1a175315aa975708a5c93151b9ae107b7dd36f79720dae7c7264adda062a6283",
+    "book/chapters/09-volume-hessians.tex": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00",
+    "book/chapters/15-quantum-airy.tex": "e042499f66436b1aafc1219efbef3c9db945f6a99bc60738ac913ebfa78a0d9e",
+    "book/chapters/30-sharp-diagnostics.tex": "ec9973858c9dc2dca31537230158e39a323287408782afb5dc9b599735ad996f",
+    "book/chapters/appendix-a-fricke.tex": "61bde2f802c7c5cb931d6bc5c4528e82459392e803b2a7aaf1a7d5afc4fb7e5f"
+  },
+  "artifact_whitespace_check": {
+    "method": "git diff --no-index --check /dev/null <path>, for each new file",
+    "files_checked_before_manifest": 47,
+    "exit_code_for_added_file_difference": 1,
+    "warnings": [],
+    "scope": "No broad whitespace suppression; source-stage nine inherited exceptions are recorded separately."
+  },
+  "status": "Prepared for independent artifact review; this file does not authorize the artifact commit."
+}

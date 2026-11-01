@@ -1,0 +1,1086 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-11-01T16:22:31.784661+00:00",
+  "arithmetic": "Exact finite rational arithmetic (fractions.Fraction); no floating precision parameter.",
+  "units": {
+    "area_variable": "a=A/pi",
+    "WP": "V_WP/pi^(2d)",
+    "CH": "V_CH/pi^d, curvature -1"
+  },
+  "python_version": "3.12.11",
+  "source": {
+    "git_commit": "ad63b7ac9821040cb69e19c61bfbc46c68eff1a3",
+    "git_dirty": true,
+    "git_status_porcelain": [
+      " M book/polyhedral_volumes_and_geodesic_identities.tex",
+      "?? book/chapters/01-volume-normalization.tex",
+      "?? book/chapters/02-ideal-angle-cells.tex",
+      "?? book/chapters/03-ideal-tetrahedron.tex",
+      "?? book/chapters/04-hyperideal-integrand.tex",
+      "?? book/chapters/05-boundary-cone-continuation.tex",
+      "?? book/chapters/06-torus-sphere.tex",
+      "?? book/chapters/07-euclidean-periods.tex",
+      "?? book/chapters/08-wp-flat-limit.tex",
+      "?? book/chapters/appendix-a-fricke.tex",
+      "?? book/claims/sections1-6.json",
+      "?? book/claims/sections7-8.json",
+      "?? experiments/normalizations/README.md",
+      "?? experiments/normalizations/fixture.json",
+      "?? experiments/normalizations/run.py",
+      "?? experiments/normalizations/tests/test_normalizations.py"
+    ],
+    "sources": [
+      {
+        "path": "experiments/normalizations/run.py",
+        "sha256": "cd74141cb4ed4230b84f3e156c96ec67dbbed27bc4047c05fc2f8106e74d018d",
+        "bytes": 23054
+      },
+      {
+        "path": "experiments/normalizations/fixture.json",
+        "sha256": "603a15ca995ba2b430aa06cdaa6439443a79bbf59f2275590f8f22ad5a537141",
+        "bytes": 1438
+      },
+      {
+        "path": "experiments/normalizations/README.md",
+        "sha256": "e61a51d0aeb87c750cd68ea20a5558fa6431acb8aa944d2c373fa41b70904e61",
+        "bytes": 4491
+      },
+      {
+        "path": "experiments/normalizations/tests/test_normalizations.py",
+        "sha256": "65bd0079d7efd9a920bc00069c764d27cc66aebd6ab4af38fb13a01a0c277502",
+        "bytes": 9480
+      },
+      {
+        "path": "book/polyhedral_volumes_and_geodesic_identities.tex",
+        "sha256": "48e74ab63d70165fe65988da2a0bb0c492cd5da622c9511774a49f5ca18d6baa",
+        "bytes": 453256
+      },
+      {
+        "path": "book/chapters/01-volume-normalization.tex",
+        "sha256": "66f0a7fd0297a4b1792fa8e4354a55d430a9f686b71d423c8c1926b6ffa80b95",
+        "bytes": 3891
+      },
+      {
+        "path": "book/chapters/02-ideal-angle-cells.tex",
+        "sha256": "968ea966c452494a299be719165b5ac25c5ebd70e31e8bfd974705b763f9644d",
+        "bytes": 5697
+      },
+      {
+        "path": "book/chapters/03-ideal-tetrahedron.tex",
+        "sha256": "81c51ade3378fbfd4baff1cebeb2dcdd8b0fd43a032ac45fb3b30c4908060797",
+        "bytes": 5926
+      },
+      {
+        "path": "book/chapters/04-hyperideal-integrand.tex",
+        "sha256": "6935c32a5253fdb18d72487995f10c9d06644bf90bd7f5768ff7987d0dffa370",
+        "bytes": 11337
+      },
+      {
+        "path": "book/chapters/05-boundary-cone-continuation.tex",
+        "sha256": "feee80182603e334d8cda389435a43a8b9d37192b581befd1e761c03b93e51d5",
+        "bytes": 6788
+      },
+      {
+        "path": "book/chapters/06-torus-sphere.tex",
+        "sha256": "4a60370b881044ff89f45bbe51a171f04fb315b3be9317468a6cf212e8fd2947",
+        "bytes": 3959
+      },
+      {
+        "path": "book/chapters/07-euclidean-periods.tex",
+        "sha256": "3665a4e2ff074950a5e74ef9fba511af4dc5820e3589d823d9d96f7fac2de8d9",
+        "bytes": 11798
+      },
+      {
+        "path": "book/chapters/08-wp-flat-limit.tex",
+        "sha256": "417666ee858e21722744cb681f8c0b4419ec061d5ec414f27a86d152df4264b4",
+        "bytes": 16105
+      },
+      {
+        "path": "book/chapters/appendix-a-fricke.tex",
+        "sha256": "61bde2f802c7c5cb931d6bc5c4528e82459392e803b2a7aaf1a7d5afc4fb7e5f",
+        "bytes": 2191
+      }
+    ]
+  },
+  "tetrahedron_base_and_cone": {
+    "perimeter_minor": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        1
+      ]
+    ],
+    "perimeter_minor_determinant": "-2",
+    "eliminated_edge_fixture_over_pi": [
+      "3/4",
+      "2/3",
+      "7/12",
+      "7/12",
+      "2/3",
+      "3/4"
+    ],
+    "angle_triangle_area_over_pi2": "1/2",
+    "disintegrated_one_sheet_over_pi2": "1/4",
+    "disintegrated_two_sheets_over_pi2": "1/2",
+    "WP_two_sheets_over_pi2": "2",
+    "base_volume_fixtures": [
+      {
+        "signed_boundary_square_over_pi2": "0",
+        "V04_over_pi2": "2",
+        "V11_stack_over_pi2": "1/12",
+        "V11_effective_over_pi2": "1/6"
+      },
+      {
+        "signed_boundary_square_over_pi2": "1/9",
+        "V04_over_pi2": "20/9",
+        "V11_stack_over_pi2": "5/54",
+        "V11_effective_over_pi2": "5/27"
+      },
+      {
+        "signed_boundary_square_over_pi2": "9/4",
+        "V04_over_pi2": "13/2",
+        "V11_stack_over_pi2": "13/48",
+        "V11_effective_over_pi2": "13/24"
+      },
+      {
+        "signed_boundary_square_over_pi2": "-1/4",
+        "V04_over_pi2": "3/2",
+        "V11_stack_over_pi2": "1/16",
+        "V11_effective_over_pi2": "1/8"
+      }
+    ],
+    "large_cone_example": {
+      "opening_angles_over_pi": [
+        "0",
+        "0",
+        "3/2",
+        "3/2"
+      ],
+      "naive_over_pi2": "-1/4",
+      "wall_correction_over_pi2": "1/2",
+      "corrected_over_pi2": "1/4"
+    }
+  },
+  "gram_pfaffian": {
+    "uniform_q": "2",
+    "gram_determinant": "-135",
+    "D": "27",
+    "kernel": "1/5",
+    "arc_density_coefficient": "10",
+    "gram_density_coefficient": "10/3",
+    "skew_matrix": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        -1,
+        0,
+        5,
+        7
+      ],
+      [
+        -2,
+        -5,
+        0,
+        11
+      ],
+      [
+        -3,
+        -7,
+        -11,
+        0
+      ]
+    ],
+    "pfaffian": 12,
+    "skew_determinant": "144",
+    "inverse_poisson_density_coefficient": "1/12"
+  },
+  "intersection_relations": {
+    "n4_integral_psi_i": 1,
+    "n4_integral_kappa": 1,
+    "n5_integral_psi_i_squared": 1,
+    "n5_integral_psi_i_psi_j_distinct": 2,
+    "n5_integral_kappa_psi_i": 3,
+    "n5_integral_kappa_squared": 5,
+    "fixed_vs_averaged_psi_numerically_equivalent": true
+  },
+  "flat_fixtures": [
+    {
+      "id": "n4-equal",
+      "mu": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "complex_dimension": 1,
+      "light_sides": [],
+      "balanced_boundaries": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "epsilon_upper": "1",
+      "epsilon_upper_is_strict": false,
+      "a_upper": "4",
+      "CH_over_pi_d_from_intersections": "2",
+      "CH_over_pi_d_from_partitions": "2",
+      "partition_signed_sums_by_block_count": {
+        "3": "0",
+        "4": "-1"
+      },
+      "partition_counts": {
+        "3": 6,
+        "4": 1
+      },
+      "WP_over_pi_2d_polynomial_in_a": {
+        "1": "1",
+        "2": "-1/8"
+      },
+      "intersection_values": {
+        "B": "1/2",
+        "Xi": "-1/8"
+      },
+      "direct_piecewise_class_samples": [
+        {
+          "epsilon": "1/3",
+          "a": "4/3",
+          "weights": [
+            "2/3",
+            "2/3",
+            "2/3",
+            "2/3"
+          ],
+          "direct_WP_over_pi_2d": "10/9",
+          "polynomial_WP_over_pi_2d": "10/9"
+        },
+        {
+          "epsilon": "2/3",
+          "a": "8/3",
+          "weights": [
+            "5/6",
+            "5/6",
+            "5/6",
+            "5/6"
+          ],
+          "direct_WP_over_pi_2d": "16/9",
+          "polynomial_WP_over_pi_2d": "16/9"
+        }
+      ]
+    },
+    {
+      "id": "n4-printed",
+      "mu": [
+        "3/10",
+        "2/5",
+        "3/5",
+        "7/10"
+      ],
+      "complex_dimension": 1,
+      "light_sides": [
+        {
+          "boundary": [
+            0,
+            1
+          ],
+          "side": [
+            0,
+            1
+          ],
+          "weight": "7/10"
+        },
+        {
+          "boundary": [
+            0,
+            2
+          ],
+          "side": [
+            0,
+            2
+          ],
+          "weight": "9/10"
+        }
+      ],
+      "balanced_boundaries": [
+        [
+          0,
+          3
+        ]
+      ],
+      "epsilon_upper": "1/11",
+      "epsilon_upper_is_strict": true,
+      "a_upper": "4/11",
+      "CH_over_pi_d_from_intersections": "6/5",
+      "CH_over_pi_d_from_partitions": "6/5",
+      "partition_signed_sums_by_block_count": {
+        "3": "2/5",
+        "4": "-1"
+      },
+      "partition_counts": {
+        "3": 6,
+        "4": 1
+      },
+      "WP_over_pi_2d_polynomial_in_a": {
+        "1": "3/5",
+        "2": "9/40"
+      },
+      "intersection_values": {
+        "B": "3/10",
+        "Xi": "9/40"
+      },
+      "direct_piecewise_class_samples": [
+        {
+          "epsilon": "1/33",
+          "a": "4/33",
+          "weights": [
+            "53/165",
+            "23/55",
+            "101/165",
+            "39/55"
+          ],
+          "direct_WP_over_pi_2d": "46/605",
+          "polynomial_WP_over_pi_2d": "46/605"
+        },
+        {
+          "epsilon": "2/33",
+          "a": "8/33",
+          "weights": [
+            "113/330",
+            "24/55",
+            "103/165",
+            "79/110"
+          ],
+          "direct_WP_over_pi_2d": "96/605",
+          "polynomial_WP_over_pi_2d": "96/605"
+        }
+      ]
+    },
+    {
+      "id": "n4-perturbed-1-10",
+      "mu": [
+        "2/5",
+        "2/5",
+        "3/5",
+        "3/5"
+      ],
+      "complex_dimension": 1,
+      "light_sides": [
+        {
+          "boundary": [
+            0,
+            1
+          ],
+          "side": [
+            0,
+            1
+          ],
+          "weight": "4/5"
+        }
+      ],
+      "balanced_boundaries": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "epsilon_upper": "1/6",
+      "epsilon_upper_is_strict": true,
+      "a_upper": "2/3",
+      "CH_over_pi_d_from_intersections": "8/5",
+      "CH_over_pi_d_from_partitions": "8/5",
+      "partition_signed_sums_by_block_count": {
+        "3": "1/5",
+        "4": "-1"
+      },
+      "partition_counts": {
+        "3": 6,
+        "4": 1
+      },
+      "WP_over_pi_2d_polynomial_in_a": {
+        "1": "4/5",
+        "2": "1/20"
+      },
+      "intersection_values": {
+        "B": "2/5",
+        "Xi": "1/20"
+      },
+      "direct_piecewise_class_samples": [
+        {
+          "epsilon": "1/18",
+          "a": "2/9",
+          "weights": [
+            "13/30",
+            "13/30",
+            "28/45",
+            "28/45"
+          ],
+          "direct_WP_over_pi_2d": "73/405",
+          "polynomial_WP_over_pi_2d": "73/405"
+        },
+        {
+          "epsilon": "1/9",
+          "a": "4/9",
+          "weights": [
+            "7/15",
+            "7/15",
+            "29/45",
+            "29/45"
+          ],
+          "direct_WP_over_pi_2d": "148/405",
+          "polynomial_WP_over_pi_2d": "148/405"
+        }
+      ]
+    },
+    {
+      "id": "n4-perturbed-1-100",
+      "mu": [
+        "49/100",
+        "49/100",
+        "51/100",
+        "51/100"
+      ],
+      "complex_dimension": 1,
+      "light_sides": [
+        {
+          "boundary": [
+            0,
+            1
+          ],
+          "side": [
+            0,
+            1
+          ],
+          "weight": "49/50"
+        }
+      ],
+      "balanced_boundaries": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "epsilon_upper": "1/51",
+      "epsilon_upper_is_strict": true,
+      "a_upper": "4/51",
+      "CH_over_pi_d_from_intersections": "49/25",
+      "CH_over_pi_d_from_partitions": "49/25",
+      "partition_signed_sums_by_block_count": {
+        "3": "1/50",
+        "4": "-1"
+      },
+      "partition_counts": {
+        "3": 6,
+        "4": 1
+      },
+      "WP_over_pi_2d_polynomial_in_a": {
+        "1": "49/50",
+        "2": "1/200"
+      },
+      "intersection_values": {
+        "B": "49/100",
+        "Xi": "1/200"
+      },
+      "direct_piecewise_class_samples": [
+        {
+          "epsilon": "1/153",
+          "a": "4/153",
+          "weights": [
+            "37/75",
+            "37/75",
+            "1963/3825",
+            "1963/3825"
+          ],
+          "direct_WP_over_pi_2d": "14996/585225",
+          "polynomial_WP_over_pi_2d": "14996/585225"
+        },
+        {
+          "epsilon": "2/153",
+          "a": "8/153",
+          "weights": [
+            "149/300",
+            "149/300",
+            "7901/15300",
+            "7901/15300"
+          ],
+          "direct_WP_over_pi_2d": "29996/585225",
+          "polynomial_WP_over_pi_2d": "29996/585225"
+        }
+      ]
+    },
+    {
+      "id": "n5-equal",
+      "mu": [
+        "2/5",
+        "2/5",
+        "2/5",
+        "2/5",
+        "2/5"
+      ],
+      "complex_dimension": 2,
+      "light_sides": [
+        {
+          "boundary": [
+            0,
+            1
+          ],
+          "side": [
+            0,
+            1
+          ],
+          "weight": "4/5"
+        },
+        {
+          "boundary": [
+            0,
+            2
+          ],
+          "side": [
+            0,
+            2
+          ],
+          "weight": "4/5"
+        },
+        {
+          "boundary": [
+            0,
+            3
+          ],
+          "side": [
+            0,
+            3
+          ],
+          "weight": "4/5"
+        },
+        {
+          "boundary": [
+            0,
+            4
+          ],
+          "side": [
+            0,
+            4
+          ],
+          "weight": "4/5"
+        },
+        {
+          "boundary": [
+            1,
+            2
+          ],
+          "side": [
+            1,
+            2
+          ],
+          "weight": "4/5"
+        },
+        {
+          "boundary": [
+            1,
+            3
+          ],
+          "side": [
+            1,
+            3
+          ],
+          "weight": "4/5"
+        },
+        {
+          "boundary": [
+            1,
+            4
+          ],
+          "side": [
+            1,
+            4
+          ],
+          "weight": "4/5"
+        },
+        {
+          "boundary": [
+            2,
+            3
+          ],
+          "side": [
+            2,
+            3
+          ],
+          "weight": "4/5"
+        },
+        {
+          "boundary": [
+            2,
+            4
+          ],
+          "side": [
+            2,
+            4
+          ],
+          "weight": "4/5"
+        },
+        {
+          "boundary": [
+            3,
+            4
+          ],
+          "side": [
+            3,
+            4
+          ],
+          "weight": "4/5"
+        }
+      ],
+      "balanced_boundaries": [],
+      "epsilon_upper": "1/6",
+      "epsilon_upper_is_strict": true,
+      "a_upper": "1",
+      "CH_over_pi_d_from_intersections": "8/5",
+      "CH_over_pi_d_from_partitions": "8/5",
+      "partition_signed_sums_by_block_count": {
+        "3": "3/5",
+        "4": "-2",
+        "5": "2"
+      },
+      "partition_counts": {
+        "3": 25,
+        "4": 10,
+        "5": 1
+      },
+      "WP_over_pi_2d_polynomial_in_a": {
+        "2": "2/5",
+        "3": "1/5",
+        "4": "1/40"
+      },
+      "intersection_values": {
+        "B_squared": "1/5",
+        "B_Xi": "1/10",
+        "Xi_squared": "1/20"
+      },
+      "direct_piecewise_class_samples": [
+        {
+          "epsilon": "1/18",
+          "a": "1/3",
+          "weights": [
+            "13/30",
+            "13/30",
+            "13/30",
+            "13/30",
+            "13/30"
+          ],
+          "direct_WP_over_pi_2d": "169/3240",
+          "polynomial_WP_over_pi_2d": "169/3240"
+        },
+        {
+          "epsilon": "1/9",
+          "a": "2/3",
+          "weights": [
+            "7/15",
+            "7/15",
+            "7/15",
+            "7/15",
+            "7/15"
+          ],
+          "direct_WP_over_pi_2d": "98/405",
+          "polynomial_WP_over_pi_2d": "98/405"
+        }
+      ]
+    },
+    {
+      "id": "n5-asymmetric",
+      "mu": [
+        "1/5",
+        "3/10",
+        "2/5",
+        "1/2",
+        "3/5"
+      ],
+      "complex_dimension": 2,
+      "light_sides": [
+        {
+          "boundary": [
+            0,
+            1
+          ],
+          "side": [
+            0,
+            1
+          ],
+          "weight": "1/2"
+        },
+        {
+          "boundary": [
+            0,
+            2
+          ],
+          "side": [
+            0,
+            2
+          ],
+          "weight": "3/5"
+        },
+        {
+          "boundary": [
+            0,
+            3
+          ],
+          "side": [
+            0,
+            3
+          ],
+          "weight": "7/10"
+        },
+        {
+          "boundary": [
+            0,
+            4
+          ],
+          "side": [
+            0,
+            4
+          ],
+          "weight": "4/5"
+        },
+        {
+          "boundary": [
+            1,
+            2
+          ],
+          "side": [
+            1,
+            2
+          ],
+          "weight": "7/10"
+        },
+        {
+          "boundary": [
+            1,
+            3
+          ],
+          "side": [
+            1,
+            3
+          ],
+          "weight": "4/5"
+        },
+        {
+          "boundary": [
+            1,
+            4
+          ],
+          "side": [
+            1,
+            4
+          ],
+          "weight": "9/10"
+        },
+        {
+          "boundary": [
+            2,
+            3
+          ],
+          "side": [
+            2,
+            3
+          ],
+          "weight": "9/10"
+        },
+        {
+          "boundary": [
+            3,
+            4
+          ],
+          "side": [
+            0,
+            1,
+            2
+          ],
+          "weight": "9/10"
+        }
+      ],
+      "balanced_boundaries": [
+        [
+          2,
+          4
+        ]
+      ],
+      "epsilon_upper": "1/21",
+      "epsilon_upper_is_strict": true,
+      "a_upper": "2/7",
+      "CH_over_pi_d_from_intersections": "22/25",
+      "CH_over_pi_d_from_partitions": "22/25",
+      "partition_signed_sums_by_block_count": {
+        "3": "43/100",
+        "4": "-21/10",
+        "5": "2"
+      },
+      "partition_counts": {
+        "3": 25,
+        "4": 10,
+        "5": 1
+      },
+      "WP_over_pi_2d_polynomial_in_a": {
+        "2": "11/50",
+        "3": "17/75",
+        "4": "58/2025"
+      },
+      "intersection_values": {
+        "B_squared": "11/100",
+        "B_Xi": "17/150",
+        "Xi_squared": "116/2025"
+      },
+      "direct_piecewise_class_samples": [
+        {
+          "epsilon": "1/63",
+          "a": "2/21",
+          "weights": [
+            "67/315",
+            "14/45",
+            "43/105",
+            "32/63",
+            "191/315"
+          ],
+          "direct_WP_over_pi_2d": "863902/393824025",
+          "polynomial_WP_over_pi_2d": "863902/393824025"
+        },
+        {
+          "epsilon": "2/63",
+          "a": "4/21",
+          "weights": [
+            "71/315",
+            "29/90",
+            "44/105",
+            "65/126",
+            "193/315"
+          ],
+          "direct_WP_over_pi_2d": "3775192/393824025",
+          "polynomial_WP_over_pi_2d": "3775192/393824025"
+        }
+      ]
+    }
+  ],
+  "f_curve_probes": [
+    {
+      "id": "n6-equal-3111",
+      "mu": [
+        "1/3",
+        "1/3",
+        "1/3",
+        "1/3",
+        "1/3",
+        "1/3"
+      ],
+      "parts": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "kappa_pairing": "1",
+      "beta_at_zero_pairing": "0",
+      "beta_epsilon_linear_pairing": "0",
+      "B_pairing": "0"
+    },
+    {
+      "id": "n6-equal-2211",
+      "mu": [
+        "1/3",
+        "1/3",
+        "1/3",
+        "1/3",
+        "1/3",
+        "1/3"
+      ],
+      "parts": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "kappa_pairing": "1",
+      "beta_at_zero_pairing": "0",
+      "beta_epsilon_linear_pairing": "8/3",
+      "B_pairing": "1/3"
+    },
+    {
+      "id": "n6-asymmetric-2211",
+      "mu": [
+        "1/10",
+        "1/5",
+        "3/10",
+        "2/5",
+        "9/20",
+        "11/20"
+      ],
+      "parts": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "kappa_pairing": "1",
+      "beta_at_zero_pairing": "0",
+      "beta_epsilon_linear_pairing": "2",
+      "B_pairing": "1/4"
+    }
+  ],
+  "sl2_fixtures": [
+    {
+      "id": "integer-noncommuting",
+      "D": [
+        [
+          "5",
+          "-7"
+        ],
+        [
+          "-2",
+          "3"
+        ]
+      ],
+      "traces": {
+        "a": "2",
+        "b": "2",
+        "c": "4",
+        "d": "8",
+        "x": "3",
+        "y": "5",
+        "z": "6"
+      },
+      "Fricke_residual": "0",
+      "Phi_z": "3",
+      "twist_numerator": "-3",
+      "chart_nondegenerate": true,
+      "scope": "Algebraic SL2 fixture; no global hyperbolic surface realization is asserted."
+    },
+    {
+      "id": "rational-noncommuting",
+      "D": [
+        [
+          "-31/3",
+          "15/2"
+        ],
+        [
+          "-19/3",
+          "9/2"
+        ]
+      ],
+      "traces": {
+        "a": "5/2",
+        "b": "3",
+        "c": "0",
+        "d": "-35/6",
+        "x": "16/3",
+        "y": "-1",
+        "z": "-20/3"
+      },
+      "Fricke_residual": "0",
+      "Phi_z": "-49/12",
+      "twist_numerator": "49/12",
+      "chart_nondegenerate": true,
+      "scope": "Algebraic SL2 fixture; no global hyperbolic surface realization is asserted."
+    },
+    {
+      "id": "identity-chart-degeneracy",
+      "D": [
+        [
+          "1",
+          "-1"
+        ],
+        [
+          "-1",
+          "2"
+        ]
+      ],
+      "traces": {
+        "a": "2",
+        "b": "2",
+        "c": "2",
+        "d": "3",
+        "x": "2",
+        "y": "2",
+        "z": "3"
+      },
+      "Fricke_residual": "0",
+      "Phi_z": "0",
+      "twist_numerator": "0",
+      "chart_nondegenerate": false,
+      "scope": "Algebraic SL2 fixture; no global hyperbolic surface realization is asserted."
+    }
+  ],
+  "coverage_limits": [
+    "The stated intersection relations and source theorems are inputs, not computer-proved geometry.",
+    "Top intersections cover only n=4,5; three n=6 F-curve probes do not prove a general divisor identity.",
+    "No numerical quadrature, all-genus volume engine, hyperideal cell solver, or global surface realization.",
+    "Finite cohomology agreement does not prove local metric, measure, or pointwise convergence.",
+    "Balanced walls use strict light subsets; each final polynomial is restricted to its stated chamber."
+  ],
+  "checks_passed": true,
+  "elapsed_seconds": 0.1044409170281142
+}

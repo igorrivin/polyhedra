@@ -1,0 +1,171 @@
+{
+  "generated_at_utc": "2026-11-01T16:05:55.150549+00:00",
+  "baseline_commit": "ad63b7ac9821040cb69e19c61bfbc46c68eff1a3",
+  "owned_active_files": [
+    "book/polyhedral_volumes_and_geodesic_identities.tex"
+  ],
+  "main_sha256": "6567d1a3db8dd2622335159effd658a28d67bf3a0f4d2c3dd0deafa4330d632c",
+  "released_chapter_sha256": {
+    "book/chapters/01-volume-normalization.tex": "c56aa1b1ab43e4f29516996e4a7fe8defc96b2b68ae69b38b2c42f36f39ccba4",
+    "book/chapters/02-ideal-angle-cells.tex": "ce9e605df8618f9ecc78c3fac8fcc05fe71c12655dbfe37b1fa9c775aceef02f",
+    "book/chapters/03-ideal-tetrahedron.tex": "7d5bbc06a342725446932e2b565f2661148179aca3a352b5d2274aa371a064e0",
+    "book/chapters/04-hyperideal-integrand.tex": "82b2ed1a4145b69aaedd95ef61c33a7237ac80d3a3c0f74b6f339ca8f554511b",
+    "book/chapters/05-boundary-cone-continuation.tex": "f68a6093068be5e867a1d49acc51fc1f610129f3f684ed69767f66d3a2c2ffae",
+    "book/chapters/06-torus-sphere.tex": "7bc4ac732aa9db7a896d674cf3be5557f2c01bae056eae856408c63f36c0d906",
+    "book/chapters/07-euclidean-periods.tex": "8929c471128a503a87c9e34bd88a3927338fa6fed53097361cbef6a3a9422568",
+    "book/chapters/08-wp-flat-limit.tex": "611a8b79c820459ba8cde3c2174c88e57fab179fc13ce69155d5b3e88b9f52ad",
+    "book/chapters/appendix-a-fricke.tex": "a77ed7ed9011c0c06b04b9381db1f566d6ae9505cb9088354bbc65483bee6ee8"
+  },
+  "chapter_label_counts": {
+    "01-volume-normalization.tex": 3,
+    "02-ideal-angle-cells.tex": 6,
+    "03-ideal-tetrahedron.tex": 6,
+    "04-hyperideal-integrand.tex": 10,
+    "05-boundary-cone-continuation.tex": 8,
+    "06-torus-sphere.tex": 5,
+    "07-euclidean-periods.tex": 12,
+    "08-wp-flat-limit.tex": 15,
+    "appendix-a-fricke.tex": 3
+  },
+  "checks": [
+    {
+      "name": "verify-extraction",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/normalization-review-2026-11-01/structure/verify_extraction.py"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "elapsed_seconds": 0.07931708300020546,
+      "stdout": "verify-extraction.stdout",
+      "stderr": "verify-extraction.stderr"
+    },
+    {
+      "name": "main-whitespace",
+      "argv": [
+        "git",
+        "diff",
+        "--check",
+        "--",
+        "book/polyhedral_volumes_and_geodesic_identities.tex"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "elapsed_seconds": 0.023854083032347262,
+      "stdout": "main-whitespace.stdout",
+      "stderr": "main-whitespace.stderr"
+    }
+  ],
+  "evidence": {
+    "01-volume-normalization.tex": {
+      "bytes": 2328,
+      "sha256": "c56aa1b1ab43e4f29516996e4a7fe8defc96b2b68ae69b38b2c42f36f39ccba4"
+    },
+    "02-ideal-angle-cells.tex": {
+      "bytes": 4700,
+      "sha256": "ce9e605df8618f9ecc78c3fac8fcc05fe71c12655dbfe37b1fa9c775aceef02f"
+    },
+    "03-ideal-tetrahedron.tex": {
+      "bytes": 5239,
+      "sha256": "7d5bbc06a342725446932e2b565f2661148179aca3a352b5d2274aa371a064e0"
+    },
+    "04-hyperideal-integrand.tex": {
+      "bytes": 8832,
+      "sha256": "82b2ed1a4145b69aaedd95ef61c33a7237ac80d3a3c0f74b6f339ca8f554511b"
+    },
+    "05-boundary-cone-continuation.tex": {
+      "bytes": 5754,
+      "sha256": "f68a6093068be5e867a1d49acc51fc1f610129f3f684ed69767f66d3a2c2ffae"
+    },
+    "06-torus-sphere.tex": {
+      "bytes": 3047,
+      "sha256": "7bc4ac732aa9db7a896d674cf3be5557f2c01bae056eae856408c63f36c0d906"
+    },
+    "07-euclidean-periods.tex": {
+      "bytes": 10391,
+      "sha256": "8929c471128a503a87c9e34bd88a3927338fa6fed53097361cbef6a3a9422568"
+    },
+    "08-wp-flat-limit.tex": {
+      "bytes": 10983,
+      "sha256": "611a8b79c820459ba8cde3c2174c88e57fab179fc13ce69155d5b3e88b9f52ad"
+    },
+    "09-volume-hessians.tex": {
+      "bytes": 34587,
+      "sha256": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00"
+    },
+    "15-quantum-airy.tex": {
+      "bytes": 18274,
+      "sha256": "e042499f66436b1aafc1219efbef3c9db945f6a99bc60738ac913ebfa78a0d9e"
+    },
+    "30-sharp-diagnostics.tex": {
+      "bytes": 29049,
+      "sha256": "ec9973858c9dc2dca31537230158e39a323287408782afb5dc9b599735ad996f"
+    },
+    "appendix-a-fricke.tex": {
+      "bytes": 1611,
+      "sha256": "a77ed7ed9011c0c06b04b9381db1f566d6ae9505cb9088354bbc65483bee6ee8"
+    },
+    "baseline-main.tex": {
+      "bytes": 505505,
+      "sha256": "bec25e96072e617a40de9ed00a81427afcb08568679e0b73585a9b6de82609d7"
+    },
+    "baseline-tracked-inventory.json": {
+      "bytes": 216408,
+      "sha256": "1fb2d34692c5d4a740201ec58ddff0daf972bdbae74802932265fa1d2d5093b6"
+    },
+    "extract_chapters.py": {
+      "bytes": 7718,
+      "sha256": "7acfb1a53e76e725a0f07c20b72b66cb4a677e075b05fc087c7c44c296865297"
+    },
+    "extracted-main.tex": {
+      "bytes": 453001,
+      "sha256": "6567d1a3db8dd2622335159effd658a28d67bf3a0f4d2c3dd0deafa4330d632c"
+    },
+    "extracted-whitespace-inventory.json": {
+      "bytes": 1921,
+      "sha256": "dafe9fcf265ce049e87f6b90f66c26ce3445128ff1b48337430938b1a391c715"
+    },
+    "extraction-command.json": {
+      "bytes": 376,
+      "sha256": "d2d7978084b6e57ff392627ca77fe6c82c3ddff66eb88c0e30208818e18cf607"
+    },
+    "extraction.json": {
+      "bytes": 6856,
+      "sha256": "2668a080234c4e31dd48e80477b51d91f8d8528e7bd8727d71481a8794ae4b54"
+    },
+    "extraction.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "extraction.stdout": {
+      "bytes": 439,
+      "sha256": "5af7bd13d89054d6d796e8b6ce624ae9feb7cfa5ddec82aa645e4a9d95d3c2e9"
+    },
+    "main-whitespace.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "main-whitespace.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "verify-extraction.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "verify-extraction.stdout": {
+      "bytes": 321,
+      "sha256": "88b3fec73ceb71dcd395144134088c055fc6b454d2d1cc77d3058f667294f3de"
+    },
+    "verify_extraction.py": {
+      "bytes": 2124,
+      "sha256": "2c75b3bf28dab8b9dd38ade41182ec3d2fe5067f04f4827b8593cefb04ecdea7"
+    }
+  },
+  "boundaries": [
+    "Source extraction only; no mathematical, numerical, PDF or publication claim.",
+    "Chapter ownership released to mathematical authors; frozen snapshots remain immutable.",
+    "No original repository, old artifact, package, historical source or prior evidence changed.",
+    "No commit, push, upload, dependency installation or browser operation."
+  ]
+}

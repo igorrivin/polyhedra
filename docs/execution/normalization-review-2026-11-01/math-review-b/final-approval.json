@@ -1,0 +1,25 @@
+{
+  "reviewer": "normalization_review_b",
+  "date": "2026-11-01",
+  "verdict": "approved",
+  "final_hash_approval": true,
+  "approved_sha256": {
+    "book/chapters/07-euclidean-periods.tex": "3665a4e2ff074950a5e74ef9fba511af4dc5820e3589d823d9d96f7fac2de8d9",
+    "book/chapters/08-wp-flat-limit.tex": "1a175315aa975708a5c93151b9ae107b7dd36f79720dae7c7264adda062a6283",
+    "book/claims/sections7-8.json": "7438f1b5c8fde23fa81b0b1c3250d2965debf79678026d649bd7ff7cd368439d"
+  },
+  "scope": "Targeted recheck of two KN attribution corrections; initial mathematical review and its limits remain applicable.",
+  "checks": {
+    "chapter07_unchanged": true,
+    "only_requested_chapter08_paragraph_changed": true,
+    "displayed_equation_in_changed_paragraph_unchanged": true,
+    "only_requested_ledger_KN_source_and_compactification_claim_changed": true,
+    "correct_conversion_pin_7_4": true,
+    "balanced_current_scope_and_continuity_explicit": true,
+    "earlier_math_proofs_examples_and_labels_unchanged": true,
+    "exact_probes_not_rerun": true
+  },
+  "prior_review_manifest_sha256": "54776cab1ea98441f79288774bca52a3581fcd97af19922aaad220640f64994e",
+  "targeted_verifier_sha256": "a715501e441e3a48e41bf6177007afb955a21830aea0e89982d9d6ee978d9291",
+  "correction_source_manifest_sha256": "28839dc877adef1bb29ee9d43c8bc78e2f8e36519ce0eb6d1aacfd8fa48ffc78"
+}

@@ -1,0 +1,22 @@
+{
+  "status": "approved_bounded_review_with_source_improvement_recommended",
+  "reviewer": "normalization_review_a",
+  "scope": "Sections 1-6 and Appendix A; external statement checks and direct derivations; no complete external-proof audit",
+  "approved_source_hashes_from": "verification.json",
+  "files": {
+    "review.md": "ad9b41090ba735c8f08c3be15459c74d2d676b1dcd4f21aa9a6346c87b31d45b",
+    "source-pins.json": "9d6b091ce546b2f23ea464f146b8573ddd735050618163041838d5f9543de2ec",
+    "verification.json": "a15fc7e927a75704e96098ab3386b66859f394643c5b4cd5015a9302a9ee4992",
+    "verify_review.py": "e85fd5d10ed28bff3658b1aa44d48a362e7985f5bdc65cafbde8769f056be5db"
+  },
+  "command": {
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "-B",
+      "../execution/normalization-review-2026-11-01/math-review-a/verify_review.py"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0
+  },
+  "pending_author_change": "Add version-pinned FillastreMetrics theorem restatement citation and accurately scoped ledger source check; requires a narrow recheck after author patch."
+}

@@ -1,0 +1,57 @@
+{
+  "flat_checks": {
+    "n4_weight_vectors": 121,
+    "n5_weight_vectors": 376,
+    "direct_class_samples_including_continuous_wall_values": 1491,
+    "partition_counts": {
+      "4": 15,
+      "5": 52,
+      "6": 203
+    },
+    "domain": "denominator-six positive flat grid plus every distinct fixture relabeling"
+  },
+  "sl2_checks": {
+    "triples": 512,
+    "degenerate_trace_charts": 340,
+    "independent_twist_test": "exact odd part of a quadratic conjugation expression"
+  },
+  "f_curve_checks": {
+    "weight_vectors": 3,
+    "four_block_partitions_per_vector": 65,
+    "probes": 195
+  },
+  "matrix_checks": {
+    "perimeter_determinant": -2,
+    "gram_eigenvalues": [
+      -5,
+      3,
+      3,
+      3
+    ],
+    "skew_determinant": 144,
+    "scope": "finite fixtures conditional on geometric input formulas"
+  },
+  "status": "pass",
+  "author_owned_source_sha256": {
+    "experiments/normalizations/run.py": "cd74141cb4ed4230b84f3e156c96ec67dbbed27bc4047c05fc2f8106e74d018d",
+    "experiments/normalizations/fixture.json": "603a15ca995ba2b430aa06cdaa6439443a79bbf59f2275590f8f22ad5a537141",
+    "experiments/normalizations/README.md": "e61a51d0aeb87c750cd68ea20a5558fa6431acb8aa944d2c373fa41b70904e61",
+    "experiments/normalizations/tests/test_normalizations.py": "65bd0079d7efd9a920bc00069c764d27cc66aebd6ab4af38fb13a01a0c277502"
+  },
+  "unit_test_cases": 11,
+  "scientific_replay_equal": true,
+  "scientific_comparison_omitted_top_level_fields": [
+    "generated_at_utc",
+    "elapsed_seconds",
+    "source"
+  ],
+  "omission_reason": "timestamps/timing and development source record; stable code hashes checked separately; concurrent manuscript edits are outside this review",
+  "optimized_checks_active": true,
+  "failure_before_output": true,
+  "import_safe": true,
+  "limits": [
+    "Finite arithmetic only; external intersection and geometric theorems are inputs.",
+    "No general divisor proof, local convergence proof, full cell integration or global realization is asserted.",
+    "Manuscript sources may change during parallel authorship and are not frozen by this code review."
+  ]
+}
