@@ -3,84 +3,457 @@
   "chapter_source": "book/chapters/15-quantum-airy.tex",
   "chapter_label": "sec:quantumAiry",
   "review_date": "2026-11-01",
-  "baseline_commit": "df952174e55f08a52596d912d9713a9d1e116313",
-  "revision_scope": "Historical numerical-evidence wording corrected; finite algebra and the printed Airy approximation column checked. Mathematical proposition and analytic proof retained without substantive changes. This is not a complete chapter proof audit.",
+  "baseline_commit": "3ddf610dbe4578c7828e55f4e9cd92aacaba6df6",
+  "revision_scope": "Analytic review and repair of the specified regular-family cleared integral, followed by a separately sourced exact-integrand numerical evaluation and comparison with the preserved historical table. The first newly computed Q value rounds to 0.459086, replacing the old 0.459087; the other five rounded Q values agree. Prior artifacts and the original historical inputs remain frozen. No arbitrary-shape, unbounded-transition, fixed-volume or global-invariant theorem is asserted.",
   "path_convention": "All local paths are relative to the repository root.",
   "status_definitions": {
-    "inherited_analytic_claim_not_fully_reviewed": "The statement and argument are retained from the supplied manuscript; this increment does not approve their complete analytic proof.",
+    "analytic_derivation_in_chapter": "Author-checked analytic proof for the stated regular-family hypotheses, using the cited external special-function and geometric volume statements. Independent review is recorded separately; numerical tests do not establish this status.",
+    "derived_from_external_statements": "Author-checked consequence of the cited primary statements with the normalization or real specialization displayed in the chapter.",
     "finite_exact_algebra_checked": "Exact arithmetic verifies the named finite identity or coefficient at the specified fold, not a uniform asymptotic theorem.",
-    "numerical_approximation_column_checked": "Two working precisions and an independent ODE-series formula agree for the six printed Airy approximation values; no exact-integrand evaluation or interval certificate.",
-    "historical_unreplayed_result": "A reported value is retained with its provenance gap explicit; it is not newly computed output."
+    "numerical_approximation_column_checked": "The earlier companion compares two working precisions and an independent ODE-series formula for the six printed Airy approximation values; no exact-integrand or interval claim follows.",
+    "historical_unreplayed_result": "The original reported calculation remains unavailable as a replayable artifact. Any new exact-integrand calculation has separate provenance; it does not recover the original raw output.",
+    "numerical_exact_integrand_checked": "Source-recorded finite quadrature of the exact cleared Barnes integrand, with a rational correction-series truncation bound, precision/contour/cutoff comparisons, direct special-function integrals and a separate whole-Barnes reference. No total interval quadrature enclosure or theorem follows from these numerical checks."
   },
   "claims": [
     {
       "id": "s15.normalization",
-      "labels": ["eq:realregularsymbol", "eq:externalpoleclearing", "eq:clearedregularsymbol"],
-      "status": "inherited_analytic_claim_not_fully_reviewed",
-      "hypotheses": ["b>0 sufficiently small; real eta near acos(1/3).", "Upward separating contour; explicitly normalized measure dw/i; continuation of the pole-cleared expression."],
-      "source_evidence": [{"source": "TeschnerVartanov", "url": "https://arxiv.org/html/1202.4698v3", "pin": "Equation 2.27 and its contour prescription; Appendix A", "access": "Primary equal-label formula and printed dw measure inspected. Complete branch, analytic-continuation and special-function proof not independently audited."}],
-      "computation": {"status": "exact_quantum_integral_not_implemented", "code_paths": [], "evidence_paths": []}
+      "labels": [
+        "eq:realregularsymbol",
+        "eq:externalpoleclearing",
+        "eq:clearedregularsymbol"
+      ],
+      "status": "derived_from_external_statements",
+      "hypotheses": [
+        "b>0 sufficiently small; real eta near acos(1/3).",
+        "Upward separating contour; explicitly normalized measure dw/i; continuation of the pole-cleared expression."
+      ],
+      "source_evidence": [
+        {
+          "source": "TeschnerVartanov",
+          "url": "https://arxiv.org/pdf/1202.4698v3",
+          "version": "arXiv:1202.4698v3, 2013-04-30",
+          "pins": [
+            "Equation (2.27) and its following contour prescription, printed p. 7",
+            "Appendix A (A.1), printed p. 22; (A.11), (A.13), (A.15), (A.16) and Gamma quotient, printed pp. 22-23"
+          ],
+          "checked": "Equal-label integrand and trivalent product; printed dw versus explicit dw/i; functional/reflection identities and fixed-b vertical asymptotics. The factor-two subtraction typo in (A.1) is corrected explicitly by the small-u expansion."
+        }
+      ],
+      "computation": {
+        "status": "separate_finite_exact_integrand_evaluation",
+        "code_paths": [
+          "experiments/section15_quantum/evaluate.py",
+          "experiments/section15_quantum/check.py"
+        ],
+        "evidence_paths": [
+          "artifacts/section15_quantum/result.json"
+        ],
+        "description": "The new numerical companion evaluates the cleared integral and checks selected special-function identities. Its success is distinct from the analytic proof and is subject to the recorded quadrature limitations."
+      },
+      "proof": "The four identical trivalent roots give the stated quotient. The b^{-1} shift gives the scalar sine-square identity exactly; the real integral, upward orientation, and literal printed-dw phase are explicit. The fixed-b contour argument supplies convergence and holomorphic continuation near the regular slice."
     },
     {
       "id": "s15.uniform_transition",
-      "labels": ["prop:regularquantumAiry", "eq:quantumAirytheorem"],
-      "status": "inherited_analytic_claim_not_fully_reviewed",
-      "hypotheses": ["Fixed Z>0; real |zeta|<=Z; eta=eta_E-h^(2/3)*zeta/(6*sqrt(2)), h=2*pi*b^2, b down to zero.", "Specified regular-family cleared integral and upward contour; additive error in braces."],
-      "dependencies": ["s15.normalization", "s15.strip_estimate", "s15.phase", "s15.contour", "s15.first_correction"],
-      "coverage_gap": "Finite coefficient checks do not verify the entire uniform remainder, analytic continuation or global contour argument. No extension to arbitrary tetrahedral shapes, fixed nonzero volume, unbounded zeta or a global quantum invariant is established."
+      "labels": [
+        "prop:regularquantumAiry",
+        "eq:quantumAirytheorem"
+      ],
+      "status": "analytic_derivation_in_chapter",
+      "hypotheses": [
+        "Fixed Z>0; real |zeta|<=Z; eta=eta_E-h^(2/3)*zeta/(6*sqrt(2)), h=2*pi*b^2, b down to zero.",
+        "Specified regular-family cleared integral and upward contour; additive error in braces."
+      ],
+      "dependencies": [
+        "s15.normalization",
+        "s15.strip_estimate",
+        "s15.phase",
+        "s15.phase_constant",
+        "s15.contour",
+        "s15.integrated_remainder",
+        "s15.first_correction"
+      ],
+      "coverage_gap": "The theorem is for the specified regular family and fixed bounded real zeta. Arbitrary tetrahedral shapes, fixed nonzero volume as b tends to zero, unbounded zeta and a global quantum invariant remain outside scope.",
+      "proof": "A positive real displacement of order h^(1/3) provides a uniform Gaussian after rescaling; fixed tails are exponentially small. The local expansion is integrable with an additive O_Z(h^(2/3)) remainder in braces, also for negative zeta and at Airy zeros."
     },
     {
       "id": "s15.strip_estimate",
-      "labels": ["lem:stripdoubleSine", "eq:uniformstripSb", "eq:stripSbexactremainder", "eq:Sbremainderintegral"],
-      "status": "inherited_analytic_claim_not_fully_reviewed",
-      "hypotheses": ["Scaled argument in the fundamental strip; bounded real shift kappa; compact subsets for complex errors and closed substrips for real-part bounds."],
-      "computation": {"status": "not_implemented", "code_paths": [], "evidence_paths": []},
-      "coverage_gap": "No exact log-double-sine evaluator or rigorous global numerical enclosure supplied by this increment."
+      "labels": [
+        "lem:stripdoubleSine",
+        "eq:uniformstripSb",
+        "eq:stripSbexactremainder",
+        "eq:Sbremainderintegral"
+      ],
+      "status": "analytic_derivation_in_chapter",
+      "hypotheses": [
+        "b>0 tends to zero; kappa lies in a fixed bounded real set.",
+        "The centered coordinate is z=bx-b^2/2. Compact subsets of 0<Re z<1 control the full logarithmic error and its derivatives; closed substrips control its real part for all imaginary coordinates.",
+        "The fundamental x strip 0<Re x<Q alone does not give this uniform centered-strip estimate."
+      ],
+      "computation": {
+        "status": "separate_finite_exact_integrand_evaluation",
+        "code_paths": [
+          "experiments/section15_quantum/evaluate.py",
+          "experiments/section15_quantum/check.py"
+        ],
+        "evidence_paths": [
+          "artifacts/section15_quantum/result.json"
+        ],
+        "description": "The new numerical companion evaluates the cleared integral and checks selected special-function identities. Its success is distinct from the analytic proof and is subject to the recorded quadrature limitations."
+      },
+      "proof": "The convergent Gamma difference gives the explicit real log-S integral and exact centered D_b. The leading primitive is fixed by its second derivative, value at 1/2 and first derivative log(2) there. The csch remainder bound and holomorphy give compact derivative bounds, and the cosine formula gives the global real-part bound.",
+      "source_evidence": [
+        {
+          "source": "TeschnerVartanov",
+          "url": "https://arxiv.org/pdf/1202.4698v3",
+          "version": "arXiv:1202.4698v3, 2013-04-30",
+          "pins": [
+            "Equation (2.27) and its following contour prescription, printed p. 7",
+            "Appendix A (A.1), printed p. 22; (A.11), (A.13), (A.15), (A.16) and Gamma quotient, printed pp. 22-23"
+          ],
+          "checked": "Equal-label integrand and trivalent product; printed dw versus explicit dw/i; functional/reflection identities and fixed-b vertical asymptotics. The factor-two subtraction typo in (A.1) is corrected explicitly by the small-u expansion."
+        }
+      ]
     },
     {
       "id": "s15.phase",
-      "labels": ["eq:regularstripangles", "eq:fullsmoothquantumphase", "eq:clearedphaseamplitude"],
-      "status": "inherited_analytic_claim_not_fully_reviewed",
-      "hypotheses": ["v=2*pi*b*w; five specified affine angle arguments; powers continued from positive real values."],
-      "coverage_gap": "The finite derivative check starts from the displayed phase/amplitude and fold trigonometric values. It is not verification of the phase constant G_star=0 or its Murakami--Yano branch identification."
+      "labels": [
+        "eq:regularstripangles",
+        "eq:fullsmoothquantumphase",
+        "eq:clearedphaseamplitude"
+      ],
+      "status": "analytic_derivation_in_chapter",
+      "hypotheses": [
+        "v=2*pi*b*w; five specified affine angle arguments; powers continued from positive real values."
+      ],
+      "coverage_gap": "This phase formula is proved on the specified regular slice; no arbitrary six-angle continuation is asserted.",
+      "proof": "The five affine double-sine arguments and shifts kappa=(0,0,2,-1,0) give the displayed G and amplitude, including the cleared external factor. Positive real sines fix all logarithms and powers; the real-part estimate controls the full vertical line near the fold.",
+      "dependencies": [
+        "s15.strip_estimate"
+      ]
     },
     {
       "id": "s15.fold_algebra",
-      "labels": ["eq:regularAiryamplitude", "eq:regularAiryderivatives"],
+      "labels": [
+        "eq:regularAiryamplitude",
+        "eq:regularAiryderivatives"
+      ],
       "status": "finite_exact_algebra_checked",
-      "hypotheses": ["eta_E=acos(1/3), v_star=4*pi-5*eta_E; positive fold sines with the listed cotangents.", "Lambda'=-log(2*sin); derivatives of the five affine-angle terms of G."],
-      "computation": {"status": "exact_rational_quadratic_field_check", "code_paths": ["experiments/section15/check.py"], "evidence_paths": [], "description": "Checks G_v and G_eta through positive sine ratios, G_vv, G_vvv, G_v_eta, G_eta_eta, G_vvvv, G_vv_eta, A_star squared and (log A)_v. G_star itself is explicitly excluded."}
+      "hypotheses": [
+        "eta_E=acos(1/3), v_star=4*pi-5*eta_E; positive fold sines with the listed cotangents.",
+        "Lambda'=-log(2*sin); derivatives of the five affine-angle terms of G."
+      ],
+      "computation": {
+        "status": "exact_rational_quadratic_field_check",
+        "code_paths": [
+          "experiments/section15/check.py"
+        ],
+        "evidence_paths": [],
+        "description": "The earlier exact rational/quadratic-field companion checks G_v and G_eta through positive sine ratios; G_vv, G_vvv, G_v_eta, G_eta_eta, G_vvvv, G_vv_eta; A_star squared and (log A)_v. It does not compute G_star; that constant has a separate analytic proof in s15.phase_constant."
+      },
+      "dependencies": [
+        "s15.phase",
+        "s15.phase_constant"
+      ]
     },
     {
       "id": "s15.contour",
-      "labels": ["eq:verticalphasegap", "eq:verticalphasepositivity", "eq:AiryGaussianbound"],
-      "status": "inherited_analytic_claim_not_fully_reviewed",
-      "hypotheses": ["Fold vertical contour and a positive real displacement c*h^(1/3); bounded transition parameter."],
-      "computation": {"status": "finite_rational_identity_only", "code_paths": ["experiments/section15/check.py"], "evidence_paths": [], "description": "Clears denominators to verify the exact polynomial numerator of Psi'(r)/sqrt(2). This does not by itself verify global tail decay, contour closing, or a uniform Gaussian majorant."}
+      "labels": [
+        "eq:verticalphasegap",
+        "eq:verticalphasepositivity",
+        "eq:AiryGaussianbound"
+      ],
+      "status": "analytic_derivation_in_chapter",
+      "hypotheses": [
+        "b>0 fixed for initial contour relocation; each contour separates the stated pole families.",
+        "For uniform small-b tails, eta and the real v coordinate lie in a sufficiently small fixed fold neighborhood inside the centered strips.",
+        "For localization, v=v_star+c*h^(1/3)+iy with fixed c>0 and bounded real zeta."
+      ],
+      "computation": {
+        "status": "finite_rational_identity_only",
+        "code_paths": [
+          "experiments/section15/check.py"
+        ],
+        "evidence_paths": [],
+        "description": "The earlier finite companion verifies the polynomial numerator of Psi prime exactly. The global tail, contour-closing and Gaussian estimates are supplied by the analytic proof, not by this identity alone."
+      },
+      "proof": "The exact full product has fixed-b modulus O(exp(-2*pi*Q*abs(Im w))), giving contour independence before any centered-strip estimate. Pole separation and locally uniform domination give holomorphic continuation. Psi positivity fixes the fold-line maximum; sine arguments give decay slope 2*pi and a uniform gap outside a fixed neighborhood. The even local Taylor expansion gives -c1*h^(1/3)*y^2-c2*y^4.",
+      "source_evidence": [
+        {
+          "source": "TeschnerVartanov",
+          "url": "https://arxiv.org/pdf/1202.4698v3",
+          "version": "arXiv:1202.4698v3, 2013-04-30",
+          "pins": [
+            "Equation (2.27) and its following contour prescription, printed p. 7",
+            "Appendix A (A.1), printed p. 22; (A.11), (A.13), (A.15), (A.16) and Gamma quotient, printed pp. 22-23"
+          ],
+          "checked": "Equal-label integrand and trivalent product; printed dw versus explicit dw/i; functional/reflection identities and fixed-b vertical asymptotics. The factor-two subtraction typo in (A.1) is corrected explicitly by the small-u expansion."
+        }
+      ]
     },
     {
       "id": "s15.first_correction",
-      "labels": ["eq:Airyweightedexpansion", "eq:Airyscaledquantum", "eq:Airycorrectionpolynomial"],
-      "status": "finite_exact_algebra_checked",
-      "hypotheses": ["x=lambda*Y/3, t=lambda^2*zeta/(6*sqrt(2)); lambda=h^(1/3).", "The upward Airy contour sends Y^k to (-1)^k Ai^(k); Ai''=zeta*Ai."],
-      "computation": {"status": "exact_weighted_coefficients_and_cancellation", "code_paths": ["experiments/section15/check.py"], "evidence_paths": [], "description": "Derives the four correction polynomial coefficients from the fold derivatives, cancels zeta^2*Ai, obtains -3*sqrt(2)*Ai prime, and checks the oriented measure prefactor 3/4."},
-      "coverage_gap": "Termwise integration and its uniform error bound remain analytic proof obligations, not consequences of this finite check."
+      "labels": [
+        "eq:Airyweightedexpansion",
+        "eq:Airyscaledquantum",
+        "eq:Airycorrectionpolynomial"
+      ],
+      "status": "analytic_derivation_in_chapter",
+      "hypotheses": [
+        "x=lambda*Y/3, t=lambda^2*zeta/(6*sqrt(2)); lambda=h^(1/3).",
+        "The upward Airy contour sends Y^k to (-1)^k Ai^(k); Ai''=zeta*Ai."
+      ],
+      "computation": {
+        "status": "exact_weighted_coefficients_and_cancellation",
+        "code_paths": [
+          "experiments/section15/check.py"
+        ],
+        "evidence_paths": [],
+        "description": "Derives the four correction polynomial coefficients from the fold derivatives, cancels zeta^2*Ai, obtains -3*sqrt(2)*Ai prime, and checks the oriented measure prefactor 3/4."
+      },
+      "dependencies": [
+        "s15.fold_algebra",
+        "s15.integrated_remainder",
+        "s15.orientation"
+      ],
+      "proof": "The weighted Taylor expansion and amplitude give P. The upward Airy moments send Y^k to (-1)^k Ai^(k); the differential equation cancels zeta^2*Ai terms and gives -3*sqrt(2)*Ai prime. The exact quantum logarithmic error is O(h), beyond this correction."
     },
     {
       "id": "s15.airy_column",
-      "labels": ["sec:quantumAiry"],
+      "labels": [
+        "sec:quantumAiry"
+      ],
       "status": "numerical_approximation_column_checked",
-      "hypotheses": ["Exactly the six decimal-string b,zeta pairs transcribed from the supplied table."],
-      "computation": {"status": "mpmath_and_ode_series_comparison", "code_paths": ["experiments/section15/check.py"], "evidence_paths": ["experiments/section15/historical-table.json"], "description": "Checks the Airy approximation Q1 at 80 and 120 digits against a separately coded ODE series; compares only to the six-decimal approximation column. Historical Q values remain inputs."},
-      "source_evidence": [{"source": "DLMF", "url": "https://dlmf.nist.gov/9.2", "pin": "9.2.1, 9.2.3 and 9.2.4", "access": "Airy ODE and initial values inspected."}, {"source": "DLMF", "url": "https://dlmf.nist.gov/9.4", "pin": "9.4.1 and 9.4.2", "access": "Value/derivative power series inspected."}, {"source": "DLMF", "url": "https://dlmf.nist.gov/9.5", "pin": "9.5.4", "access": "Oriented complex Airy contour formula inspected; deformation to the chapter's vertical contour is a separate argument."}]
+      "hypotheses": [
+        "Exactly the six decimal-string b,zeta pairs transcribed from the supplied table."
+      ],
+      "computation": {
+        "status": "mpmath_and_ode_series_comparison",
+        "code_paths": [
+          "experiments/section15/check.py"
+        ],
+        "evidence_paths": [
+          "experiments/section15/historical-table.json"
+        ],
+        "description": "The prior frozen companion checks Q1 at 80 and 120 digits against a separately coded ODE series. The new exact-integrand companion independently computes its comparison column after quadrature. Both agree on the six printed Airy values; historical Q values remain unchanged in their original JSON."
+      },
+      "source_evidence": [
+        {
+          "source": "DLMF",
+          "url": "https://dlmf.nist.gov/9.2",
+          "pin": "9.2.1, 9.2.3 and 9.2.4",
+          "access": "Airy ODE and initial values inspected."
+        },
+        {
+          "source": "DLMF",
+          "url": "https://dlmf.nist.gov/9.4",
+          "pin": "9.4.1 and 9.4.2",
+          "access": "Value/derivative power series inspected."
+        },
+        {
+          "source": "DLMF",
+          "url": "https://dlmf.nist.gov/9.5",
+          "pin": "9.5.4",
+          "access": "Oriented complex Airy contour formula inspected; deformation to the chapter's vertical contour is a separate argument."
+        }
+      ]
     },
     {
       "id": "s15.reported_quantum_column",
-      "labels": ["sec:quantumAiry"],
+      "labels": [
+        "sec:quantumAiry"
+      ],
       "status": "historical_unreplayed_result",
-      "hypotheses": ["The supplied draft reports exact-integrand quadrature at six b,zeta pairs, and three scaled residuals."],
-      "computation": {"status": "not_reproduced", "code_paths": [], "evidence_paths": ["experiments/section15/historical-table.json"]},
-      "coverage_gap": "Original evaluator, raw values, precision, displacement, branch choices and tail/convergence records are unavailable. An Airy-only calculation cannot reproduce this column. Recover the original evidence or implement and review the exact double-sine integral with independent convergence studies."
+      "hypotheses": [
+        "The supplied draft reports exact-integrand quadrature at six b,zeta pairs and three scaled residuals, but its evaluator and raw runs remain unavailable."
+      ],
+      "computation": {
+        "status": "original_calculation_not_recovered",
+        "code_paths": [],
+        "evidence_paths": [
+          "experiments/section15/historical-table.json",
+          "artifacts/section15/checks.json"
+        ],
+        "description": "Preserved historical inputs and earlier finite-check artifact. A new computation is recorded by s15.quantum_numerics and does not reconstruct the missing original run."
+      },
+      "coverage_gap": "Original evaluator, raw values, precision, displacement, branch and tail/convergence records remain unrecovered. The new first Q is 0.459086488736078952..., whose nearest-six-decimal value differs from the supplied 0.459087; original rounding conventions are unknown. The other five historical values agree after rounding. New numerical evidence has separate source and review records."
+    },
+    {
+      "id": "s15.phase_constant",
+      "labels": [
+        "eq:regularAiryderivatives"
+      ],
+      "status": "derived_from_external_statements",
+      "hypotheses": [
+        "The real regular compact family approaches eta_E from eta<eta_E.",
+        "The two unit-circle saddle lifts converge to v_star; the regular volume tends to zero."
+      ],
+      "proof": "The chapter displays the real Murakami-Yano U_Lambda and Delta_Lambda specializations and uses periodicity and oddness to obtain G=2(U_Lambda+Delta_Lambda). Their saddle values have absolute value 2W; continuity gives G_star=0. No numerical Lobachevsky identity or unspecified complex dilogarithm branch fixes this constant.",
+      "source_evidence": [
+        {
+          "source": "MurakamiYano",
+          "url": "https://intlpress.com/site/pub/files/_fulltext/journals/cag/2005/0013/0002/CAG-2005-0013-0002-a005.pdf",
+          "version": "Communications in Analysis and Geometry 13(2), 379-400 (2005), DOI 10.4310/CAG.2005.v13.n2.a5",
+          "pins": [
+            "Theorem 2 and equations (0.4)-(0.8), pp. 381-382",
+            "Section 1.2, equations (1.14)-(1.18) and following absolute-value statement, pp. 385-386"
+          ],
+          "checked": "Real Lobachevsky specialization fixes G=2(U_Lambda+Delta_Lambda) at the regular saddles without an unshown complex branch convention. The Euclidean collision has volume zero."
+        }
+      ],
+      "dependencies": [
+        "s15.phase",
+        "Section 14 eq:regularsaddlequadratic and eq:regularvolumebyarea"
+      ]
+    },
+    {
+      "id": "s15.integrated_remainder",
+      "labels": [
+        "eq:AiryGaussianbound",
+        "eq:Airyweightedexpansion",
+        "eq:Airyscaledquantum"
+      ],
+      "status": "analytic_derivation_in_chapter",
+      "hypotheses": [
+        "Fixed c>0, fixed finite Z, real abs(zeta)<=Z; lambda=h^(1/3).",
+        "All five scaled arguments remain in compact centered substrips on the fixed fold neighborhood."
+      ],
+      "proof": "The explicit phase Taylor remainder is bounded by C(|x|^5+|t||x|^3+t^2|x|+|t|^3). On abs(Y)<=lambda^(-1/12), exponentiation yields C_Z*lambda^2*(1+abs(Y)^8) against a fixed Gaussian. The exact Gaussian majorant makes the remaining local tail smaller than every power of lambda; the global tail has a fixed exponential gap.",
+      "dependencies": [
+        "s15.strip_estimate",
+        "s15.contour",
+        "s15.fold_algebra"
+      ]
+    },
+    {
+      "id": "s15.orientation",
+      "labels": [
+        "eq:quantumAirytheorem",
+        "eq:Airyscaledquantum"
+      ],
+      "status": "derived_from_external_statements",
+      "hypotheses": [
+        "The initial and displaced Barnes lines are upward, and Re Y=3c>0.",
+        "The measure is explicitly dw/i."
+      ],
+      "proof": "DLMF 9.5.4 is deformed from its lower and upper rays by horizontal connectors with real exponent <=-(8/9)*x*T^2+Z*x. Therefore the vertical integral is +Ai. The Jacobian dw/i=lambda*dY/(6*pi*i*b) and amplitude9/4 give +3*lambda/(4*b).",
+      "source_evidence": [
+        {
+          "source": "DLMF",
+          "url": "https://dlmf.nist.gov/9.5.E4",
+          "version": "DLMF 1.2.8, released 2026-09-15; accessed 2026-11-01",
+          "pin": "9.5.4",
+          "checked": "Lower-to-upper Airy contour orientation. The chapter proves the deformation to a positive vertical line and retains the signed dw/i Jacobian."
+        }
+      ]
+    },
+    {
+      "id": "s15.resonance_noncancellation",
+      "labels": [
+        "eq:externalpoleclearing",
+        "eq:clearedregularsymbol",
+        "eq:quantumAirytheorem"
+      ],
+      "status": "analytic_derivation_in_chapter",
+      "hypotheses": [
+        "For each fixed Z, 0<=zeta<=Z and b is sufficiently small.",
+        "Zeros of the explicit sine-square scalar factor; at eta=eta_E the displayed m sequence is genuine only for all sufficiently large m by this proof."
+      ],
+      "proof": "The positive minimum of Ai on [0,Z] dominates the uniformly vanishing correction and remainder. The cleared quantity is nonzero, so the original normalization has genuine double poles.",
+      "dependencies": [
+        "s15.uniform_transition"
+      ],
+      "exclusions": [
+        "No uniform noncancellation on negative-zeta intervals containing Airy zeros.",
+        "No claim that every finite early member of the displayed scalar resonance sequence is noncanceled."
+      ]
+    },
+    {
+      "id": "s15.quantum_numerics",
+      "labels": [
+        "sec:quantumAiry",
+        "eq:clearedregularsymbol"
+      ],
+      "status": "numerical_exact_integrand_checked",
+      "hypotheses": [
+        "The six displayed decimal-string pairs plus b=1/160,zeta=-1.",
+        "Upward v=v_star+lambda*(C+i*t)/3, measure dw/i, centered arguments checked in [1/100,99/100], real-log/Lobachevsky branches fixed by the convergent integral."
+      ],
+      "computation": {
+        "status": "source_recorded_finite_comparison",
+        "code_paths": [
+          "experiments/section15_quantum/check.py",
+          "experiments/section15_quantum/evaluate.py"
+        ],
+        "evidence_paths": [
+          "artifacts/section15_quantum/result.json",
+          "docs/execution/section15-analytic-review-2026-11-01/computation/full-v1.json",
+          "docs/execution/section15-analytic-review-2026-11-01/computation-review/independent-whole-q-matrix.json"
+        ],
+        "description": "Combines all five exact centered logarithms before exponentiation. A finite cotangent-derivative expansion evaluates D_b with an exact rational series remainder bound; outer Gauss-Legendre quadrature uses 60/90 dps, two contour displacements and cutoff-extension comparisons. Direct D and whole-log-S integrals, reflection/shift checks and a separately coded whole-Barnes QUADPACK calculation support the seven finite values.",
+        "observed_max_60_90_difference_upper_decimal": "4e-57",
+        "observed_max_contour_difference_upper_decimal": "1.3e-91",
+        "independent_whole_barnes_max_difference_upper_decimal": "2e-12"
+      },
+      "limitations": [
+        "Exact rational bounds control D-series truncation conditional on the centered-strip hypothesis, not floating-point evaluation.",
+        "The propagated D error uses a numerical absolute-integral estimate. Quadrature errors, sign checks and tail-majorant evaluations lack outward rounding.",
+        "No total interval enclosure or guaranteed achieved-digit claim. Finite agreement is not a proof of the uniform asymptotic.",
+        "The original historical evaluator and raw runs remain unrecovered."
+      ]
     }
-  ]
+  ],
+  "author_review": {
+    "status": "completed_for_independent_review",
+    "date": "2026-11-01",
+    "scope": "Analytic proof in this chapter, with primary-source conventions and stated external special-function and geometric volume inputs checked; not re-refereeing all external proofs."
+  },
+  "independent_review": {
+    "status": "separate_review_record",
+    "record_directory": "docs/execution/section15-analytic-review-2026-11-01/",
+    "author_is_independent_reviewer": false,
+    "scope": "The exact independently reviewed snapshot and decision are recorded in the checkpoint, separately from this author ledger."
+  },
+  "source_evidence": [
+    {
+      "source": "TeschnerVartanov",
+      "url": "https://arxiv.org/pdf/1202.4698v3",
+      "version": "arXiv:1202.4698v3, 2013-04-30",
+      "pins": [
+        "Equation (2.27) and its following contour prescription, printed p. 7",
+        "Appendix A (A.1), printed p. 22; (A.11), (A.13), (A.15), (A.16) and Gamma quotient, printed pp. 22-23"
+      ],
+      "checked": "Equal-label integrand and trivalent product; printed dw versus explicit dw/i; functional/reflection identities and fixed-b vertical asymptotics. The factor-two subtraction typo in (A.1) is corrected explicitly by the small-u expansion."
+    },
+    {
+      "source": "MurakamiYano",
+      "url": "https://intlpress.com/site/pub/files/_fulltext/journals/cag/2005/0013/0002/CAG-2005-0013-0002-a005.pdf",
+      "version": "Communications in Analysis and Geometry 13(2), 379-400 (2005), DOI 10.4310/CAG.2005.v13.n2.a5",
+      "pins": [
+        "Theorem 2 and equations (0.4)-(0.8), pp. 381-382",
+        "Section 1.2, equations (1.14)-(1.18) and following absolute-value statement, pp. 385-386"
+      ],
+      "checked": "Real Lobachevsky specialization fixes G=2(U_Lambda+Delta_Lambda) at the regular saddles without an unshown complex branch convention. The Euclidean collision has volume zero."
+    },
+    {
+      "source": "DLMF",
+      "url": "https://dlmf.nist.gov/9.5.E4",
+      "version": "DLMF 1.2.8, released 2026-09-15; accessed 2026-11-01",
+      "pin": "9.5.4",
+      "checked": "Lower-to-upper Airy contour orientation. The chapter proves the deformation to a positive vertical line and retains the signed dw/i Jacobian."
+    }
+  ],
+  "computational_companion": {
+    "code": "experiments/section15_quantum/check.py",
+    "evaluator": "experiments/section15_quantum/evaluate.py",
+    "readme": "experiments/section15_quantum/README.md",
+    "result": "artifacts/section15_quantum/result.json",
+    "checkpoint": "docs/execution/section15-analytic-review-2026-11-01/README.md",
+    "source_record": "docs/execution/section15-analytic-review-2026-11-01/computation/full-v1.json",
+    "generation_status": "Run/source identity, final clean replay and artifact generation are recorded separately in the result and checkpoint.",
+    "preserved_prior_inputs": [
+      "experiments/section15/historical-table.json",
+      "artifacts/section15/checks.json"
+    ],
+    "scope": "Seven parameter pairs, each under three settings: 60 dps C=1 T=12; 90 dps C=1 T=14; 90 dps C=5/4 T=14 with two extra D terms. This is exact-integrand numerical evaluation; the Airy expression is only a comparison."
+  }
 }
