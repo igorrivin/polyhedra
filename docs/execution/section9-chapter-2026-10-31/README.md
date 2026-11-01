@@ -11,9 +11,31 @@ The [final proof review](proof-review.md) and
 [frozen identity manifest](proof-review-final-manifest.json) delimit that
 approval. The [independent implementation review](build-review.md) also
 approves the publishing source and strict preliminary artifacts. Final
-generation from a clean source commit, verification of those new artifacts
-and artifact commits are pending. No Site or public book edition has been
-published.
+generation from a clean source commit, verification and a fresh detached
+numerical replay have now passed; the local artifacts are committed. No Site
+or public book edition has been published.
+
+## Final local artifacts
+
+The source commit is `1bafb83d2ec152f1f8eac75b2be0e3c4b796198e`; the separately
+verified artifact commit is `a69e47346209fff04c94062552af5400d3d5da05`.
+Later documentation commits do not change the recorded computation origin.
+The [closeout](closeout.md), [final generation checks](final-generation-checks.json),
+[artifact manifest](final-artifact-manifest.json), and
+[commit record](artifact-commit.json) identify the exact results and limits.
+
+- [Complete chapter HTML](../../../site/section9/chapter.html) and
+  [ten-page PDF](../../../site/section9/downloads/section9.pdf).
+- [Full monograph LaTeX source ZIP](../../../site/section9/downloads/monograph-source.zip).
+- [Worked computational companion](../../../site/section9/index.html),
+  [numerical result](../../../artifacts/section9/result.json), and
+  [detached reproduction ZIP](../../../site/section9/downloads/section9-reproduction.zip).
+
+All twelve numerical checks and exact fixture identities pass in the fresh
+source run and detached replay. Every final PDF page image matches the pages
+visually inspected in the preview. The final source archive has the same
+seven payloads that the independent reviewer extracted and compiled; its
+origin manifest now records the clean source commit.
 
 ## Mathematical changes and evidence
 
@@ -106,9 +128,10 @@ The [chapter build guide](../../../site/README.md) owns the actual build
 commands. Implementation review, focused regressions, source-archive
 extraction/build, detached numerical replay and preview PDF/download
 validation have now passed for the identified source and preview hashes.
-The next gate is a clean source commit, followed by temporary-directory
-generation and verification of the actual final artifacts before their
-separate commit. Static HTML checks and PDF raster review do not establish browser
+The [final generation record](final-generation-run.json) now records the later
+clean-source execution in temporary directories, and the
+[final checks](final-generation-checks.json) and [copy manifest](final-copy-manifest.json)
+verify the actual committed artifacts. Static HTML checks and PDF raster review do not establish browser
 interaction or desktop/mobile layout behavior. The earlier browser/server
 policy denials were not retried or worked around in this checkpoint.
 
@@ -127,8 +150,10 @@ of this chapter revision. See the
 The maintained [Section 9 experiment](../../../experiments/section9/README.md)
 provides exact grid/forest/Schur identities and twelve numerical checks. The
 strict-preview numerical run and separately extracted replay passed, with
-all mathematical result fields equal outside provenance. A final clean-source
-result must identify its own source commit and execution state. A render-only
+all mathematical result fields equal outside provenance. The later
+[clean-source result](../../../artifacts/section9/result.json) and
+[fresh detached replay](final-detached-result.json) independently identify
+their execution states and retain that same mathematical agreement. A render-only
 refresh retains the existing result's original numerical provenance and is
 not a fresh computation.
 
@@ -141,6 +166,11 @@ pending revision stages were not rewritten to look like final success.
 Some raw TeX snapshots and compiler logs retain original trailing whitespace
 or blank final lines; those exact archival exceptions are listed in the
 manifest. They are not newly authored implementation formatting.
+The [source staging record](source-staging-verification.json) and
+[artifact staging record](artifact-staging-verification.json) preserve the
+exact accepted diagnostics, including the generated HTML's single-space blank
+line already present in the reviewed preview. No unexpected whitespace finding
+was accepted, and these records do not claim an unqualified whitespace pass.
 
 The copied diagnostic scripts are inspection evidence of the recorded runs.
 `math-audit-checks.py` and `proof-review-checks.py` use the standard library
@@ -152,6 +182,8 @@ no path adapter or independent replay is claimed by copying it.
 `strict-preview-checks.py` and the `build-review-*` probes also retain their
 recorded workspace/temporary-directory assumptions. Their successful
 recorded executions are distinct from portability of these archived copies.
+The final generation/check scripts similarly pin this local checkpoint and
+are inspection records; use the maintained build guide for reusable commands.
 The source snapshots are likewise archival inputs, not alternate maintained
 chapters.
 

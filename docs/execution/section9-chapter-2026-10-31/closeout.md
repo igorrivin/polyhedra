@@ -5,9 +5,11 @@ Date: 31 October 2026, America/New_York.
 The reviewed Section 9 source and publishing tools were committed as
 `1bafb83d2ec152f1f8eac75b2be0e3c4b796198e`. The final numerical computation,
 chapter build and render-only link refresh all ran from that clean source
-commit, with their outputs outside the checkout. The final artifact and
-documentation commit identities are recorded in the checkpoint README and
-the separate final postcommit receipt; they are not the computation origin.
+commit, with their outputs outside the checkout. The separately verified
+artifact commit is `a69e47346209fff04c94062552af5400d3d5da05`, recorded in
+[artifact-commit.json](artifact-commit.json). The final documentation commit is
+identified by the separate final postcommit receipt; neither later commit is
+the computation origin.
 
 ## Delivered artifacts
 
@@ -78,6 +80,10 @@ previews remain unchanged. Source staging matched the reviewed hashes and only
 the exact enumerated archival/reviewed-source whitespace exceptions; this is
 not an unqualified `git diff --check` pass. The final generated inspection
 copies preserve those bytes as well.
+The generated HTML also retains Pandoc's single-space blank line 42, identical
+to the independently reviewed preview. This exact additional preservation
+exception was explicitly accepted and is recorded in
+[artifact-staging-verification.json](artifact-staging-verification.json).
 
 The local release/check scripts saved here use deliberately pinned checkpoint
 paths. They are inspection evidence, not portable entry points; the maintained
