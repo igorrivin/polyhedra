@@ -1,0 +1,83 @@
+{
+  "status": "independent_static_artifact_checks_passed",
+  "site": "/private/tmp/polyhedra-section9-final-20261031/site/section9",
+  "chapter_builder_sha256": "b02995dab6d0c1b7b9c5f700a12be0878481a8d372057339daeea40b41afff94",
+  "chapter_html_sha256": "b43ed517a4542442236edb16110a78730d53301df33104898dfd03b4e9df308a",
+  "chapter_pdf_sha256": "a5b684f086fad6d0249da7cfc2a1fcf98b5eb193927614dc98baa1ab2cfc6e61",
+  "source_archive_sha256": "5a1d5a306a0504ebf5a0e8b46ba0ea6c9d2a664ba5fedc702ae748cd114b993b",
+  "numerical_result_sha256": "66fdc288483c07a30930714c97eb59c70c0be92566eaba9437fc7f4d10707a61",
+  "chapter_labels": 26,
+  "external_reference_only_labels": 2,
+  "math_count_from_canonical_delimiters_without_tikz": 206,
+  "mathml_total_with_reference_excerpts_and_bibliography": 209,
+  "images": [
+    {
+      "src": "assets/section9-figure-1.png",
+      "width": "1224",
+      "height": "634",
+      "alt": "The cotangent Hessian and its finite-element interpretation"
+    },
+    {
+      "src": "assets/section9-figure-2.png",
+      "width": "1186",
+      "height": "580",
+      "alt": "A diagonal exchange and the Delaunay energy comparison"
+    }
+  ],
+  "source_archive_payloads_verified": 7,
+  "all_local_html_targets_exist": true,
+  "pdf_pages": 10,
+  "local_pdf_links": [
+    {
+      "page": 8,
+      "target": "reproduction-guide.md"
+    },
+    {
+      "page": 8,
+      "target": "variational.py"
+    },
+    {
+      "page": 8,
+      "target": "run.py"
+    },
+    {
+      "page": 8,
+      "target": "result.json"
+    },
+    {
+      "page": 8,
+      "target": "../index.html"
+    },
+    {
+      "page": 8,
+      "target": "section9-reproduction.zip"
+    },
+    {
+      "page": 9,
+      "target": "section9-claims.json"
+    },
+    {
+      "page": 9,
+      "target": "companion-reconciliation.md"
+    }
+  ],
+  "external_pdf_link_count": 13,
+  "internal_pdf_link_count": 20,
+  "all_internal_pdf_named_targets_exist": true,
+  "modified_numerical_zip_rejected": "existing numerical ZIP payload hash mismatch: packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py",
+  "rendered_page_sha256": {
+    "page-001.png": "5600fe0895c8541681a774acb3c860c6c8430f16c7cfb6443fe8b602cb0d15ed",
+    "page-002.png": "dfb40a1469bda851a08fa9e3f184bad814a413e790c33aee5df514b2e11d5b81",
+    "page-003.png": "871731176bdd74f542745b6b32a907cdcdc700ac89c2c1261be8e624d322e638",
+    "page-004.png": "735cfd2353489fa0b222a1e343c39841849e5c702c2892152a83eee84ac4a06c",
+    "page-005.png": "ea3cc9c399a3e632ed3b9589c6629017a22c5ae945152d864544ca448aefd202",
+    "page-006.png": "744cd0500f42a69b036816dcb4f86956ab72310919e24c1b1182924499ea731c",
+    "page-007.png": "be9f9c4c73ed2bb56cfb8d6d777499034b4f3fb619e0c9aa0471040f398bd9fb",
+    "page-008.png": "3d69af20855b7d6e0d84486644d76fcbd511598f34cbe1c24a1ad99208969cb6",
+    "page-009.png": "6ed5c3f3667ce6f9ad8dcafecd74759b719109b375a92b471784405e92297585",
+    "page-010.png": "653fd4c5d6e4f8a0cca537f83d7c183bf461dfb0f5d1548173405a0ecf57b362"
+  },
+  "matches_previous_rendered_pages": true,
+  "browser_review": "Not performed; static checks do not verify browser layout or interactions.",
+  "proof_scope": "This is software/artifact verification, not a mathematical proof audit."
+}

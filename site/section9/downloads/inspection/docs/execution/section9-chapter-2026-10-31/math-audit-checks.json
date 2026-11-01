@@ -1,0 +1,159 @@
+{
+  "scope": "exact finite illustrations accompanying an independent general proof audit",
+  "script_sha256": "8b8ed3970a0c15179cc5879616ab371d4763fe956cb27ae10956ad51026bc6bd",
+  "baseline_commit": "26b3c134d9308d345cb76f1240db9de982b2e5a6",
+  "baseline_tex_sha256": "63102e64405a58b8f5d51bfdffe6be43fc5cfe9a232dc0f396f1709733d750dc",
+  "disk": {
+    "vertices": 4,
+    "edges": 6,
+    "faces": 3,
+    "boundary_vertices": [
+      1,
+      2,
+      3
+    ],
+    "interior_vertices": [
+      0
+    ],
+    "constraint_rank": 8,
+    "angle_tangent_dimension": 1,
+    "coordinate_rank": 1,
+    "all_coordinate_columns_satisfy_original_constraints": true
+  },
+  "annulus_scope_counterexample": {
+    "vertices": 6,
+    "edges": 12,
+    "faces": 6,
+    "boundary_vertices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "interior_vertices": [],
+    "constraint_rank": 17,
+    "angle_tangent_dimension": 1,
+    "coordinate_rank": 0,
+    "all_coordinate_columns_satisfy_original_constraints": true
+  },
+  "obtuse_boundary_matrix_scaled_2sqrt3": [
+    [
+      6,
+      -3,
+      -3
+    ],
+    [
+      -3,
+      2,
+      1
+    ],
+    [
+      -3,
+      1,
+      2
+    ]
+  ],
+  "obtuse_matrix_eigenvalues_exact": [
+    0,
+    1,
+    9
+  ],
+  "regular_tetra_edge_matrix_scaled_sqrt3": [
+    [
+      2,
+      -1,
+      -1,
+      2,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      2,
+      -1,
+      -1,
+      2,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      2,
+      -1,
+      -1,
+      2
+    ],
+    [
+      2,
+      -1,
+      -1,
+      2,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      2,
+      -1,
+      -1,
+      2,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      2,
+      -1,
+      -1,
+      2
+    ]
+  ],
+  "tetra_rank": 2,
+  "tetra_psd_gram_factorization": [
+    [
+      0,
+      -1,
+      1,
+      0,
+      -1,
+      1
+    ],
+    [
+      1,
+      0,
+      -1,
+      1,
+      0,
+      -1
+    ],
+    [
+      -1,
+      1,
+      0,
+      -1,
+      1,
+      0
+    ]
+  ],
+  "tetra_has_positive_off_diagonal": true,
+  "tetra_not_diagonally_dominant": true,
+  "rooted_forest_cases": [
+    {
+      "forests": 8,
+      "nonzero_forests": 8,
+      "weight_sum": "196",
+      "internal_weight": "2",
+      "determinant": "196"
+    },
+    {
+      "forests": 8,
+      "nonzero_forests": 4,
+      "weight_sum": "144",
+      "internal_weight": "0",
+      "determinant": "144"
+    }
+  ],
+  "all_checks_passed": true
+}

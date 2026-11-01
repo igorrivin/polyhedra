@@ -139,6 +139,7 @@ def source_provenance(fixture_path):
                record('experiment.fixture', fixture_path),
                record('experiment.template', HERE / 'page.html'),
                record('book.tex', ROOT / 'book/polyhedral_volumes_and_geodesic_identities.tex', False),
+               record('book.chapter', ROOT / 'book/chapters/09-volume-hessians.tex', False),
                record('book.reference_pdf', ROOT / 'book/reference/polyhedral_volumes_and_geodesic_identities.pdf', False)]
     commit, status, dirty = None, [], None
     if (ROOT / '.git').exists():
@@ -277,7 +278,8 @@ def create_reproduction_bundle(report, fixture_path, destination):
         b'Original maintained modules are copied unchanged. See LICENSES and section9-bundle.json.\n"""\n'
     )
     payload['LICENSES/volume-toolkit-MIT.txt'] = license_path.read_bytes()
-    payload['requirements.txt'] = f'numpy=={np.__version__}\nscipy=={scipy.__version__}\nmpmath=={mp.__version__}\n'.encode()
+    origin = report['provenance']
+    payload['requirements.txt'] = ''.join(f'{name}=={origin[name]}\n' for name in ('numpy', 'scipy', 'mpmath')).encode()
     payload['README.md'] = (
         '# Section 9 reproduction bundle\n\n'
         'This is a generated numerical subset of the Ideal Polyhedra Volume Toolkit, '
@@ -286,7 +288,7 @@ def create_reproduction_bundle(report, fixture_path, destination):
         'The original MIT license is in LICENSES/volume-toolkit-MIT.txt. '
         'The numerical reproduction needs only NumPy, SciPy and mpmath.\n\n'
         'The captured reproduction used CPython '
-        f'{platform.python_version()}; other Python/platform combinations were not validated for this bundle. '
+        f'{origin["python"]}; other Python/platform combinations were not validated for this bundle. '
         'From this extracted directory, install dependencies with '
         '`python -m pip install -r requirements.txt`, then run '
         '`python experiments/section9/run.py`. '
@@ -310,23 +312,75 @@ def create_reproduction_bundle(report, fixture_path, destination):
             archive.writestr('section9-reproduction/' + name, data)
 
 
-def render_site(report, fixture_path, result_path, site_dir):
+def validate_render_sources(report, fixture_path):
+    """Prevent an old report from acquiring a bundle of changed current sources.
+
+    Relocated, byte-identical inputs are allowed. Rendering retains the report's
+    original timestamp, numerical results and execution provenance.
+    """
+    if report.get('schema_version') != 2:
+        raise ValueError('unsupported stored report schema')
+    fixture_path = Path(fixture_path)
+    fixture = json.loads(fixture_path.read_text())
+    if report.get('experiment_id') != fixture.get('id'):
+        raise ValueError('stored report experiment does not match fixture')
+    old = report['provenance']
+    current = source_provenance(fixture_path)
+    if old.get('input_sha256') != current['input_sha256']:
+        raise ValueError('stored report input hash does not match current fixture')
+    recorded = {row['role']: row for row in old.get('source_files', [])}
+    if len(recorded) != len(old.get('source_files', [])):
+        raise ValueError('stored report has duplicate source roles')
+    for row in current['source_files']:
+        previous = recorded.get(row['role'])
+        if previous is None or previous.get('available') != row['available']:
+            raise ValueError(f"stored report source availability differs: {row['role']}")
+        if row['available'] and (previous.get('sha256') != row['sha256']
+                                or old.get('source_sha256', {}).get(row['role']) != row['sha256']):
+            raise ValueError(f"stored report source hash differs: {row['role']}")
+    if current['bundle_payload_mismatches']:
+        raise ValueError('detached bundle payload integrity check failed')
+
+
+def render_site(report, fixture_path, result_path, site_dir, *, chapter_page=None,
+                book_source_archive=None):
+    """Render an identity-checked report; this operation performs no computation."""
+    fixture_path, result_path, site_dir = map(Path, (fixture_path, result_path, site_dir))
+    validate_render_sources(report, fixture_path)
+    if json.loads(result_path.read_text()) != report:
+        raise ValueError('result file does not contain the supplied report')
+    requested = [(chapter_page, 'chapter page'), (book_source_archive, 'complete source archive')]
+    for path, title in requested:
+        if path is not None and not Path(path).is_file():
+            raise FileNotFoundError(f'requested {title} is missing: {path}')
+
+    def copy(source, destination):
+        if Path(source).resolve() != destination.resolve():
+            shutil.copyfile(source, destination)
+
     site_dir.mkdir(parents=True, exist_ok=True)
     downloads = site_dir / 'downloads'
     downloads.mkdir(exist_ok=True)
     for source, name in [(fixture_path, 'fixture.json'), (result_path, 'result.json'),
                          (Path(__file__), 'run.py'), (Path(var.__file__), 'variational.py')]:
-        shutil.copyfile(source, downloads / name)
+        copy(source, downloads / name)
     book_files = [ROOT / 'book/polyhedral_volumes_and_geodesic_identities.tex',
                   ROOT / 'book/reference/polyhedral_volumes_and_geodesic_identities.pdf']
     book_links = []
     for source in book_files:
         if source.is_file():
-            shutil.copyfile(source, downloads / source.name)
-            title = 'Full monograph PDF (supplied reference)' if source.suffix == '.pdf' else 'Canonical LaTeX source'
+            copy(source, downloads / source.name)
+            title = 'Full monograph PDF (supplied reference)' if source.suffix == '.pdf' else 'Main LaTeX inspection copy (requires chapter inputs)'
             book_links.append(f'<li><a href="downloads/{source.name}">{title}</a></li>')
     if not book_links:
         book_links.append('<li>Monograph source and PDF are not included in this detached computation bundle.</li>')
+    if chapter_page is not None:
+        if Path(chapter_page).resolve() != (site_dir / 'chapter.html').resolve():
+            raise ValueError('chapter page must be built in this site directory with its local assets')
+        book_links.append('<li><a href="chapter.html">Read the complete Section 9 chapter and claim ledger</a></li>')
+    if book_source_archive is not None:
+        copy(book_source_archive, downloads / 'monograph-source.zip')
+        book_links.append('<li><a href="downloads/monograph-source.zip">Complete monograph LaTeX source (ZIP)</a></li>')
     create_reproduction_bundle(report, fixture_path, downloads / 'section9-reproduction.zip')
     template = (HERE / 'page.html').read_text()
     data = json.dumps({'report': report, 'fixture': json.loads(fixture_path.read_text())}, allow_nan=False)
@@ -340,15 +394,27 @@ def main():
                         help='path to an unchanged copy of the supplied rectangle fixture')
     parser.add_argument('--output', type=Path, default=ROOT / 'artifacts/section9/result.json')
     parser.add_argument('--site-dir', type=Path, default=ROOT / 'site/section9')
+    parser.add_argument('--render-result', type=Path,
+                        help='render an existing identity-checked result without recomputing it')
+    parser.add_argument('--chapter-page', type=Path, help='existing chapter.html in --site-dir')
+    parser.add_argument('--book-source-archive', type=Path, help='existing complete LaTeX source ZIP')
     args = parser.parse_args()
-    report = build_report(args.fixture)
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(report, indent=2, allow_nan=False) + '\n')
-    render_site(report, args.fixture, args.output, args.site_dir)
-    print(json.dumps({'all_checks_passed': report['all_checks_passed'],
+    if args.render_result:
+        report = json.loads(args.render_result.read_text(),
+                            parse_constant=lambda value: (_ for _ in ()).throw(ValueError(f'nonfinite JSON: {value}')))
+        result_path = args.render_result
+    else:
+        report = build_report(args.fixture)
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(report, indent=2, allow_nan=False) + '\n')
+        result_path = args.output
+    render_site(report, args.fixture, result_path, args.site_dir,
+                chapter_page=args.chapter_page, book_source_archive=args.book_source_archive)
+    print(json.dumps({'operation': 'render_existing_report' if args.render_result else 'compute_and_render',
+                      'all_checks_passed': report['all_checks_passed'],
                       'source_commit': report['provenance']['source_commit'],
                       'dirty_at_start': report['provenance']['repository_dirty_at_start'],
-                      'result': str(args.output), 'html': str(args.site_dir / 'index.html')}, indent=2))
+                      'result': str(result_path), 'html': str(args.site_dir / 'index.html')}, indent=2))
     return 0 if report['all_checks_passed'] else 1
 
 

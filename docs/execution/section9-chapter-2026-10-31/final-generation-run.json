@@ -1,0 +1,59 @@
+{
+  "source_commit": "1bafb83d2ec152f1f8eac75b2be0e3c4b796198e",
+  "records": [
+    {
+      "operation": "final-numerical-run",
+      "command": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "experiments/section9/run.py",
+        "--output",
+        "/tmp/polyhedra-section9-final-20261031/result.json",
+        "--site-dir",
+        "/tmp/polyhedra-section9-final-20261031/site/section9"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "started_at_utc": "2026-11-01T00:51:15.237740+00:00",
+      "returncode": 0,
+      "log": "/Volumes/Lexar/lambda/devel/polyhedra/execution/section9-chapter-2026-10-31/final-numerical-run.log",
+      "log_sha256": "c4346dd3765a2018816da415d5e25828a628f077b54cdc20e6a11a3f30ed999a"
+    },
+    {
+      "operation": "final-chapter-build",
+      "command": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "site/build_section9.py",
+        "--output-dir",
+        "/tmp/polyhedra-section9-final-20261031/site/section9",
+        "--computation-result",
+        "/tmp/polyhedra-section9-final-20261031/result.json",
+        "--work-dir",
+        "/tmp/polyhedra-section9-final-20261031/chapter-build"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "started_at_utc": "2026-11-01T00:51:21.680773+00:00",
+      "returncode": 0,
+      "log": "/Volumes/Lexar/lambda/devel/polyhedra/execution/section9-chapter-2026-10-31/final-chapter-build.log",
+      "log_sha256": "ed6db7b04cf8b7e5296c480e84d51fdfd9dd0d3aed0824f57f7fe76d29dea96a"
+    },
+    {
+      "operation": "final-render-only",
+      "command": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "experiments/section9/run.py",
+        "--render-result",
+        "/tmp/polyhedra-section9-final-20261031/result.json",
+        "--site-dir",
+        "/tmp/polyhedra-section9-final-20261031/site/section9",
+        "--chapter-page",
+        "/tmp/polyhedra-section9-final-20261031/site/section9/chapter.html",
+        "--book-source-archive",
+        "/tmp/polyhedra-section9-final-20261031/site/section9/downloads/monograph-source.zip"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "started_at_utc": "2026-11-01T00:51:38.424443+00:00",
+      "returncode": 0,
+      "log": "/Volumes/Lexar/lambda/devel/polyhedra/execution/section9-chapter-2026-10-31/final-render-only.log",
+      "log_sha256": "ebb29e9bf9cda2120f1e631d668bf3dde9d96f2f5278552b43aca60da87f25b3"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "initial_checker_failure": "KeyError exact: ad hoc verifier assumed a report field name without reading the schema; source/report unchanged and no publication copy performed.",
+  "initial_script_sha256": "9a06cc0c20a763a0317cba5484e41758a1ab987aa288a0c97dc0473f7434a204",
+  "product_failure": false,
+  "corrected_checker_status": "passed",
+  "corrected_script_sha256": "652cc5624da3f229c747e1905b1348fbf847c19de861255938c096d29ef6651d",
+  "final_check_result_sha256": "5f133dd234cdd12d2dc46bae3343651ffa79ce63043d2be594998e7c89739017",
+  "correction": "Use observed schema-2 exact_fixture field and explicitly check determinant 60, forest sum 15, Schur entry 15/2."
+}
