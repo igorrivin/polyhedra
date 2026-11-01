@@ -1,0 +1,1738 @@
+{
+  "schema_version": "1.0",
+  "review_date": "2026-11-01",
+  "baseline_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+  "chapter_sources": [
+    {
+      "path": "book/chapters/26-counting-to-mixing.tex",
+      "sha256": "64562ebf631c59b84b9c991a632926107b3e24cb5b08b29c21e263bd50a9e901",
+      "label_count": 21
+    },
+    {
+      "path": "book/chapters/27-weighted-mixing-converse.tex",
+      "sha256": "79fb4660fe87a5723eea0d410e55e954913b0386057a31542473d6486492dcc1",
+      "label_count": 35
+    },
+    {
+      "path": "book/chapters/28-genus-two-model.tex",
+      "sha256": "18c05143e86fb9630868bb2824ddf44643c1ee1c84a40dc77a8c9d5354663fb4",
+      "label_count": 33
+    },
+    {
+      "path": "book/chapters/29-controlled-observables.tex",
+      "sha256": "8c26fb3e18186d95ead2ae71eebd601966855d1bf0f9f7ed662f9996ab3b49f1",
+      "label_count": 36
+    }
+  ],
+  "revision_scope": "Author mathematical audit followed by independent approval of all four chapters and 59 claims; three source/section metadata corrections were independently accepted. External proofs remain cited inputs. Integration changes computational prose and records only.",
+  "review_status": "independently_approved_with_written_hypotheses",
+  "path_convention": "Canonical code/artifact paths are relative to consolidated repository root. dynamics-author paths are outer execution provenance, not published computational artifacts.",
+  "status_definitions": {
+    "derived_in_chapter": "Explicit derivation author-audited in the chapter; independent acceptance not asserted.",
+    "derived_in_chapter_external_inputs": "Explicit derivation from named established external theorems, whose statements and hypotheses were checked.",
+    "conditional_implication": "Valid implication only under the exact counting, regularity, or tail assumptions listed; those assumptions are not proved by finite fixtures.",
+    "conditional_external_comparison": "External estimate applied only within its stated compactness, recurrence, and normalization regime.",
+    "external_theorem_statement_checked": "Primary source statement and application hypotheses inspected; not a new proof of the external result.",
+    "exact_identity_and_bound": "Exact algebraic/analytic identity with stated domain and normalization, not an assertion of exact floating-point evaluation.",
+    "exact_definition_external_input": "Definition relying on a stated external parametrization or measure formula.",
+    "exact_counterexample": "Explicit exact example disproving a broader implication.",
+    "open_comparison": "A necessary comparison or estimate remains unproved in this manuscript.",
+    "illustration": "Schematic visual only."
+  },
+  "source_pins": {
+    "PollicottSharpZeta": {
+      "url": "https://arxiv.org/pdf/2203.15741v2",
+      "version": "arXiv v2, 8 January 2024, 23 pages",
+      "pin": "Section 2.1, PDF pages 2-3; equation (1.1), Theorem 2.1",
+      "checked": "Selberg product is over all primitive conjugacy classes, with no quotient by inversion; compact oriented genus at least two. The chapter supplies the continuation argument from its assumed remainder."
+    },
+    "BJPZeta": {
+      "url": "https://ems.press/content/serial-article-files/43056",
+      "version": "Comment. Math. Helv. 80 (2005), 483-515, publisher PDF",
+      "pin": "Theorem 1.1, page 483; Theorem 4.1 and equation (4.2), page 494",
+      "checked": "Spectral zeros are resonances with multiplicity. In the compact case positive Laplace eigenvalues below 1/4 supply zeros s in (1/2,1). No cusp pole occurs there."
+    },
+    "EdwardsOhMixing": {
+      "url": "https://bpb-us-w2.wpmucdn.com/campuspress.yale.edu/dist/5/5177/files/2025/11/Exp_Mixing.pdf",
+      "version": "Author PDF corresponding to Duke Math. J. 170 (2021), 3417-3458",
+      "pin": "Theorem 1.1 and Remark 1.1, author pages 2-3; non-tempered unitary-dual description, page 4",
+      "checked": "Finite-volume specialization with critical exponent d=1 has every Sobolev rate below 1-s1. The nontrivial non-tempered PSL2(R) representations are spherical complementary series."
+    },
+    "GNDiscrepancy": {
+      "url": "https://jtnb.centre-mersenne.org/item/10.5802/jtnb.1275.pdf",
+      "version": "J. Theor. Nombres Bordeaux 36 (2024), 127-174, publisher PDF",
+      "pin": "Section 1.3 and Theorem 1.4, pages 131-132; Section 5, Theorem 5.2, printed page 147 (proof page 148 onward)",
+      "checked": "Exact factor 2 times congruence index times real-ball volume inverse; simply connected K-simple group, noncompact real factor, unramified S, bounded positive-measure hyperspecial bi-invariant set, discretely embedded irreducible representation, representation-dependent small radius."
+    },
+    "SharpZeta": {
+      "url": "https://warwick.ac.uk/fac/sci/maths/people/staff/richard_sharp/p2/zeta-infinite-convergence-revised.pdf",
+      "version": "12-page author's revised version cited in the bibliography",
+      "pin": "Section 4, PDF page 8; definitions in Section 1",
+      "checked": "Fixed-point trace and reciprocal determinant identities. Extension from a zero-one state graph to an integer adjacency matrix uses its edge shift, as explained in the chapter."
+    },
+    "BabillotMixing": {
+      "url": "https://www.math.utah.edu/~chaika/Babillot-Mixing",
+      "version": "13-page full-text PDF of the cited 2002 paper",
+      "pin": "Quasi-product definition and Theorem 1, PDF page 6; finite-measure discussion, page 7",
+      "checked": "Simply connected complete negative-curvature cover with curvature bounded above by a negative constant; non-elementary discrete group. Current equivalent to a product of boundary probability measures. Nonarithmeticity yields mixing; the chapter assumes a finite nonzero measure."
+    },
+    "DolgopyatMixing": {
+      "url": "https://www.math.umd.edu/~dolgop/aapl.pdf",
+      "version": "Author PDF, Ann. of Math. 147 (1998), 357-390",
+      "pin": "Section 1, PDF pages 1-2",
+      "checked": "Discussion explicitly distinguishes suspension/roof obstructions from discrete-time mixing. The chapter's constant-roof counterexample is derived independently."
+    },
+    "WentworthGardiner": {
+      "url": "https://math.umd.edu/~raw/papers/gardiner.pdf",
+      "version": "9-page author's version",
+      "pin": "Theorem 1.6 and Corollary 1.7, PDF page 3",
+      "checked": "Filling pair iff a unique marked conformal structure and holomorphic quadratic differential realizes it; intersection equals flat area."
+    },
+    "AranaHerreraSquare2020": {
+      "url": "https://arxiv.org/pdf/1902.05626v1",
+      "version": "arXiv v1, 14 February 2019, 27 pages; journal citation is J. Mod. Dyn. 16 (2020)",
+      "pin": "Theorem 1.6, PDF page 4; stabilizer denominator in the unnumbered display in the Sketch of proof of Theorem 1.1, printed/PDF page 5, immediately after Theorem 1.8; Section 3",
+      "checked": "Equivariant homeomorphism to filling pairs, integral pairs to square tilings, and area to intersection; simultaneous-quotient weights retain pair stabilizers."
+    },
+    "AranaHerreraSquareEffective": {
+      "url": "https://arxiv.org/pdf/2207.04091v1",
+      "version": "arXiv v1, 8 July 2022, 13 pages; journal reference 45 (2025), 649-662",
+      "pin": "Theorem 1.1 and Remark 1.2, PDF page 3; Theorem 3.2 and proof, pages 8-9; Theorem 3.9, page 12",
+      "checked": "Area exponent is complex stratum dimension. The two-type effective count uses existing exponential mixing. One unrestricted foliation type permits ordinary lattice counting. The baseline citation to Section 3.2 was corrected to Theorem 3.2."
+    },
+    "ABEMPolar": {
+      "url": "https://arxiv.org/pdf/math/0610715v5",
+      "version": "arXiv v5 header dated 17 September 2011; served 45-page PDF has title-page compilation date 26 November 2024",
+      "pin": "Section 2.2; Section 2.4, equation (2.3), Proposition 2.5, PDF page 9; Theorem 3.3 and Section 3.2, pages 15-16",
+      "checked": "Polar Jacobian and conditional fiber measure; asymptotic requires compact principal-stratum endpoints and at least half-time recurrence to a compact principal-stratum set. Forni's contraction enters the asymptotic, not the exact unfolding. Probability rescaling is derived in the chapter."
+    },
+    "AranaHerreraLattice": {
+      "url": "https://arxiv.org/pdf/2010.03123v2",
+      "version": "arXiv v2, 3 April 2021, 51 pages",
+      "pin": "Introduction, pages 1-3; Section 10, pages 47-50; Theorem 3.2, page 10",
+      "checked": "Effective bisector counts are proved using exponential mixing; cited as a dependency warning, not an independent input establishing the proposed converse remainder."
+    },
+    "HumphriesModular": {
+      "url": "https://arxiv.org/pdf/2003.09955",
+      "version": "11-page arXiv PDF inspected; corresponding journal paper Quart. J. Math. 73 (2022), 1-16",
+      "pin": "Section 1.1, PDF page 1; equation (3.2), page 6",
+      "checked": "Inverse-residue Fourier coefficient and Weil bound tau(c)*sqrt(c*gcd(m,n,c)); smoothing estimates in the chapter are then elementary."
+    },
+    "BenirschkeServan": {
+      "url": "https://math.uchicago.edu/~cservan/isom_embeddings.pdf",
+      "version": "20-page author's original corresponding to Advances in Mathematics 452 (2024), 109817",
+      "pin": "Corollary 1.2(3), PDF page 2",
+      "checked": "Only the classical hyperelliptic isometry T(2,0)=T(0,6) is used. The general embedding classification is not required for the polynomial Q(2,2) argument.",
+      "erratum": {
+        "url": "https://math.uchicago.edu/~cservan/erratum_2.pdf",
+        "doi": "10.1016/j.aim.2026.110831",
+        "journal": "Advances in Mathematics 489 (April 2026), 110831",
+        "pin": "3-page author's erratum, page 1 and final paragraph on page 3",
+        "checked": "Repairs original Remark 5.2 and the holomorphic-map argument; says results unchanged. Also narrows the wording about totally geodesic complex submanifolds. No impact on the classical isometry used here."
+      }
+    },
+    "FillastreIzmestievCusps": {
+      "url": "https://msp.org/gt/2009/13-1/gt-v13-n1-p11-p.pdf",
+      "version": "Geometry & Topology 13 (2009), 457-492, publisher PDF",
+      "pin": "Theorem 1.1, page 459; reformulation, page 460",
+      "checked": "Constant-curvature sphere cone metric with positive singular curvature has unique convex polyhedral realization in the matching space form. The chapter uses K=-1 and six angle-pi vertices."
+    },
+    "LanneauComponents": {
+      "url": "https://www.numdam.org/article/ASENS_2008_4_41_1_1_0.pdf",
+      "version": "Ann. Sci. ENS 41 (2008), 1-56, publisher PDF with cover sheet",
+      "pin": "Sections 1.1.1-1.1.2, printed pages 3-6; Section 1.1.3, printed pages 7-8",
+      "checked": "Quadratic Q notation excludes global squares; period-coordinate and invariant measure conventions; marked regular points allowed; pullback order/covering construction. The chapter proves its particular genus-two classification directly."
+    },
+    "StrombergssonVishe": {
+      "url": "https://arxiv.org/pdf/1811.10340v1",
+      "version": "arXiv v1, 26 November 2018, 54 pages",
+      "pin": "Section 4, especially Lemma 4.3, PDF page 12",
+      "checked": "Rank-one unipotent and rank-two trivial frequency stabilizer types. The chapter independently unfolds using its right-quotient and transpose conventions."
+    },
+    "BenoistKobayashi": {
+      "url": "https://www.ms.u-tokyo.ac.jp/~toshi/texpdf/tk2017e-temperedII.pdf",
+      "version": "34-page author PDF of Tempered homogeneous spaces II",
+      "pin": "Lemma 2.3 and Remark 2.4, PDF page 11; Proposition 2.6, page 12",
+      "checked": "Induction preserves temperedness; amenable groups have tempered trivial representation; K-finite matrix-coefficient bound with square roots of K-span dimensions."
+    },
+    "CowlingHaagerupHowe": {
+      "url": "https://doi.org/10.1515/crll.1988.387.97",
+      "version": "J. reine angew. Math. 387 (1988), 97-110",
+      "pin": "Exact theorem statement inspected through BenoistKobayashi Proposition 2.6, which cites original Theorems 1, 2 and Corollary",
+      "checked": "Historical attribution retained. Original full-text endpoints were unavailable (404/access failure); no claim of inspecting or re-proving the original proof. The operative statement was verified in the primary research text Benoist-Kobayashi."
+    },
+    "OtalRosas": {
+      "url": "https://arxiv.org/pdf/0905.0506v1",
+      "version": "arXiv v1, 5 May 2009, 11 pages",
+      "pin": "Discrete spectrum definition, PDF page 2; Theorem 2, page 3",
+      "checked": "Finite-area type (g,n), lambda_0=0, residual and cuspidal eigenvalues both included. lambda_(2g-2+n)>1/4; at type (0,3) no positive small eigenvalue. This is not asserted for arbitrary congruence covers."
+    },
+    "AthreyaLagaceMollerRaum": {
+      "url": "https://ems.press/content/serial-article-files/50718",
+      "version": "J. Spectr. Theory 15 (2025), 895-959, publisher PDF; arXiv 2404.06597v1 also inspected",
+      "pin": "Section 6.1; Proposition 6.11, printed page 954 (also arXiv v1 page 47); genuine-part decomposition in Section 1 and Proposition 3.9",
+      "checked": "One relative marked vector, not the two-relative-mark model of this chapter. M=1 affine mean/variance isometry and absence of complementary series in the genuine part; the chapter supplies its own two-mark rank decomposition."
+    },
+    "AthreyaAffineLattices": {
+      "url": "https://arxiv.org/pdf/1409.6355v1",
+      "version": "arXiv v1, 22 September 2014, 6 pages",
+      "pin": "Lemma 3, PDF page 3; Lemma 4, page 4",
+      "checked": "Affine lattice point counts in bounded measurable regions have mean equal to volume and variance equal to volume. Used as a corroborating indicator-test special case."
+    },
+    "McShaneRivinTori": {
+      "url": "https://arxiv.org/pdf/math/0005220v1",
+      "version": "arXiv v1, 23 May 2000, 9 pages",
+      "pin": "Length norm in Sections 1-2; Theorems 4.1-4.2 and Conjecture 4.3, PDF pages 7-8",
+      "checked": "Fixed once-punctured hyperbolic torus; primitive lattice count, dense-moduli flat-point obstruction, modular-torus conjecture. The chapter separately proves only the stated exponent-one obstruction, not literal Omega(L)."
+    },
+    "ShigaHyperbolicQC": {
+      "url": "https://integraali.com/courses/kleinian_groups/shiga2005.pdf",
+      "version": "Publisher reprint, Complex Variables 50 (2005), 123-130, with cover sheet",
+      "pin": "Equation (1.1), printed page 123",
+      "checked": "Wolpert inequality K^-1*l_X <= l_Y <= K*l_X for closed geodesic classes under K-quasiconformal maps; chapter also supplies annular-cover proof and Lie-bracket derivative argument."
+    }
+  },
+  "computation_status": "Maintained finite checks are implemented for the groups recorded per claim. They do not prove general mixing, classify geometric strata, certify numerical errors, or implement every optional author fixture.",
+  "claims": [
+    {
+      "id": "s26.scope",
+      "section": 26,
+      "labels": [
+        "sec:countmixing"
+      ],
+      "status": "open_comparison",
+      "statement": "Scalar simple-curve counting has no established identification with a complete trace or two-endpoint transition operator.",
+      "hypotheses": [
+        "Counts must retain the operator or sufficiently uniform initial and terminal data."
+      ],
+      "derivation_or_dependency": "The chapter proves separate sufficient converses; none supplies this missing comparison.",
+      "source_keys": [],
+      "coverage_gap": "The full curve-counting-to-mixing route remains open here.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s26.selberg_converse",
+      "section": 26,
+      "labels": [
+        "subsec:countmixselberg",
+        "prop:countmixselberg",
+        "eq:countmixselbergcount",
+        "eq:countmixselberggap",
+        "eq:countmixselbergmixing",
+        "eq:countmixselberglogderivative"
+      ],
+      "status": "conditional_implication",
+      "statement": "A leading-only prime-class remainder with saving delta in (0,1/2) excludes lambda_1<delta(1-delta) and yields every mixing rate r<delta.",
+      "hypotheses": [
+        "Closed connected oriented curvature -1 surface.",
+        "Primitive conjugacy classes count inverse classes separately.",
+        "Assumed remainder holds through all large real lengths; exceptional eigenvalue main terms have not been subtracted.",
+        "Finite Sobolev norms and normalized Liouville measure; unit-speed time diag(exp(t/2),exp(-t/2))."
+      ],
+      "derivation_or_dependency": "Stieltjes integration gives a holomorphic continuation of F(s)-1/(s-1) to Re(s)>1-delta. Prime powers and denominator correction are holomorphic on Re(s)>1/2. Spectral zeros and the external matrix-coefficient theorem give the stated consequence.",
+      "source_keys": [
+        "PollicottSharpZeta",
+        "BJPZeta",
+        "EdwardsOhMixing"
+      ],
+      "coverage_gap": "External spectral identities and mixing theorem are assumed established inputs; constants are surface-dependent, and equality in the gap bound is allowed.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s26.arithmetic_discrepancy",
+      "section": 26,
+      "labels": [
+        "eq:countmixGN"
+      ],
+      "status": "external_theorem_statement_checked",
+      "statement": "Localized L2 discrepancy bounds a discretely embedded averaging operator with the displayed factor 2.",
+      "hypotheses": [
+        "Standing Gorodnik-Nevo simply connected Q-simple group and congruence hypotheses.",
+        "Noncompact real factor; unramified S; bounded positive-measure hyperspecial bi-invariant B.",
+        "Irreducible representation discretely embedded in the mean-zero automorphic spectrum; radius at most r0(pi)."
+      ],
+      "derivation_or_dependency": "Specialization of the exact inequality in Theorem 5.2, with notation of Theorem 1.4.",
+      "source_keys": [
+        "GNDiscrepancy"
+      ],
+      "coverage_gap": "This is not a scalar count-to-flow theorem and does not control arbitrary representations or radii.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s26.finite_trace",
+      "section": 26,
+      "labels": [
+        "subsec:countmixfinite",
+        "prop:countmixfinite",
+        "eq:countmixtrace",
+        "eq:countmixgap"
+      ],
+      "status": "conditional_implication",
+      "statement": "A trace remainder for an irreducible integer adjacency matrix bounds all non-Perron eigenvalues in modulus.",
+      "hypotheses": [
+        "Finite irreducible nonnegative integer matrix, Perron eigenvalue lambda>0.",
+        "Fixed-point edge sequences, including repetitions and a distinguished start; not primitive orbits.",
+        "A bound for every positive integer n."
+      ],
+      "derivation_or_dependency": "The generating function is a sum z*lambda_j/(1-z*lambda_j). Poles at distinct inverse eigenvalues cannot cancel and algebraic multiplicities add.",
+      "source_keys": [
+        "SharpZeta"
+      ],
+      "coverage_gap": "No finite computation is a proof of the general statement.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "2",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "exact.scalar_trace_mixing"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s26.parry_decay",
+      "section": 26,
+      "labels": [
+        "eq:countmixparry",
+        "eq:countmixmatrixconstant"
+      ],
+      "status": "derived_in_chapter",
+      "statement": "Perron normalization gives a stochastic chain, an explicit resolvent bound, and a stated two-sided Holder decay rate.",
+      "hypotheses": [
+        "The preceding trace gap; positive left/right Perron vectors normalized by sum l_i*r_i=1.",
+        "0<kappa_prime<kappa; resolvent radius exp(-kappa)<r<1.",
+        "Holder metric theta^N with 0<theta<1 and beta>0."
+      ],
+      "derivation_or_dependency": "Similarity to A/lambda yields spectral decay with possible endpoint Jordan factors. The circle resolvent excludes the Perron eigenvalue; determinant and adjugate bounds give the displayed constant. Cylinder errors theta^(beta*p) balance exp(-kappa_prime*(n-2p)).",
+      "source_keys": [],
+      "coverage_gap": "No finite computation is a proof of the general statement.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "2",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "exact.scalar_trace_mixing"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s26.scalar_and_roof_obstructions",
+      "section": 26,
+      "labels": [
+        "subsec:countmixscalar"
+      ],
+      "status": "exact_counterexample",
+      "statement": "An exact total-path count need not mix; a mixing base with roof one need not have a mixing suspension.",
+      "hypotheses": [
+        "A=[[0,m],[m,0]], integer m>=2; stationary probability (1/2,1/2).",
+        "Full m-shift with Bernoulli measure and constant roof one; F=exp(2*pi*i*u)."
+      ],
+      "derivation_or_dependency": "The sign eigenvector has covariance (-1)^n; the suspension has eigenmode exp(2*pi*i*t). Nonarithmeticity and quantitative return-time control are additional issues.",
+      "source_keys": [
+        "DolgopyatMixing"
+      ],
+      "coverage_gap": "No finite computation is a proof of the general statement.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "1",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "exact.scalar_trace_mixing"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s26.geodesic_nonarithmeticity",
+      "section": 26,
+      "labels": [],
+      "status": "conditional_implication",
+      "statement": "A full exponential primitive-orbit asymptotic through all real cutoffs forces a nonarithmetic spectrum and hence qualitative mixing in Babillot's setting.",
+      "hypotheses": [
+        "Complete simply connected curvature bounded above by a negative constant; non-elementary discrete isometry group.",
+        "Finite nonzero quasi-product flow measure, normalized to probability.",
+        "Finite primitive count at each cutoff and asymptotic C*exp(h*T)/T with C,h>0."
+      ],
+      "derivation_or_dependency": "If periods were in aZ, counts at n*a+a/4 and n*a+3*a/4 would agree but proposed main terms have asymptotic ratio exp(h*a/2). Apply the external theorem.",
+      "source_keys": [
+        "BabillotMixing"
+      ],
+      "coverage_gap": "No rate; polynomial simple-curve growth does not give the fixed-shift contradiction.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s26.localized_converse",
+      "section": 26,
+      "labels": [
+        "subsec:countmixlocalized",
+        "prop:countmixlocalized",
+        "eq:countmixentry",
+        "eq:countmixrate"
+      ],
+      "status": "conditional_implication",
+      "statement": "Uniform transition-cell errors yield rate kappa*beta/(m+2D+beta).",
+      "hypotheses": [
+        "Compact metric probability space and measure-preserving flow.",
+        "Partitions of diameter <=h with at most B*h^-D cells.",
+        "Actual joint masses satisfy the uniform stated entrywise error for every i,j,h,t.",
+        "Bounded beta-Holder endpoint tests, 0<beta<=1."
+      ],
+      "derivation_or_dependency": "Cellwise averages incur O(h^beta). Summing at most B^2*h^-2D entries and optimizing h proves the bound; probability-weighted entries remove the 2D loss.",
+      "source_keys": [],
+      "coverage_gap": "Geometric counts still require an independent Jacobian/multiplicity/boundary/time-window comparison at shrinking resolution.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s26.cusp_converse",
+      "section": 26,
+      "labels": [
+        "subsec:countmixnoncompact",
+        "eq:countmixcusprate"
+      ],
+      "status": "conditional_implication",
+      "statement": "A declared exponential tail and localization cost give the displayed cusp-loss rate.",
+      "hypotheses": [
+        "Tail <=C exp(-aH), a>0.",
+        "At most B exp(bH)h^-D retained cells; entrywise cost A exp(cH)h^-m exp(-kappa*t).",
+        "Bounded global beta-Holder observables; nonnegative b,c,m."
+      ],
+      "derivation_or_dependency": "Use L1 error on discarded cells and invariance, then balance h^beta, exp(-aH), and exp((2b+c)H)h^-(m+2D)exp(-kappa*t).",
+      "source_keys": [],
+      "coverage_gap": "No Teichmuller cusp estimates or transition comparison are established. R=exp(t) alone is only a parameter change.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s27.tensor_first_corner",
+      "section": 27,
+      "labels": [
+        "sec:pairconverse",
+        "subsec:paircoefficients",
+        "prop:pairfirstcorner"
+      ],
+      "status": "derived_in_chapter",
+      "statement": "Independent character variables preserve a marked ordered filling pair through its unit first corner.",
+      "hypotheses": [
+        "The locally finite discrete unit-diagonal coefficient statement eq:globaldiagonal from Section 25.",
+        "Two independent character variables and external product of measures; finite rectangles of source lengths."
+      ],
+      "derivation_or_dependency": "Tensor the two isolated first-atom decompositions. The first corner has mass one, with no claim about convergence uniform over moving labels.",
+      "source_keys": [],
+      "coverage_gap": "Area cutoff and mapping-class quotient are additional operations; no uniform nonlinear extraction or orbit-sum estimate follows.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s27.pair_realization",
+      "section": 27,
+      "labels": [
+        "subsec:pairgeometry",
+        "eq:pairgeometryflow"
+      ],
+      "status": "external_theorem_statement_checked",
+      "statement": "Filling measured-foliation pairs uniquely parameterize marked nonzero quadratic differentials, with area equal to intersection.",
+      "hypotheses": [
+        "Closed oriented genus g>=2; both measured foliations nonzero.",
+        "Filling means i(A,C)+i(B,C)>0 for every nonzero measured foliation C.",
+        "Vertical transverse measure |dx|, horizontal |dy|, time diag(exp(t),exp(-t))."
+      ],
+      "derivation_or_dependency": "Realization and area from the cited theorem; coordinate stretching gives the stated flow and area normalization. Integral weights give rectangles and square tilings.",
+      "source_keys": [
+        "WentworthGardiner",
+        "AranaHerreraSquare2020"
+      ],
+      "coverage_gap": "No finite computation is a proof of the general statement.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s27.quotient_scales",
+      "section": 27,
+      "labels": [
+        "subsec:pairquotient"
+      ],
+      "status": "derived_in_chapter",
+      "statement": "The growing family is a diagonal quotient of independently prescribed types, and area L has exponent h while linear scale sqrt(L) has exponent 2h.",
+      "hypotheses": [
+        "Measured stabilizers fix actual scales; integral filling graph only for integral pairs.",
+        "Appropriate fixed stratum lattice/covolume and intrinsic Masur-Veech measure.",
+        "Complex dimension h; square and nonsquare loci use different dimensions."
+      ],
+      "derivation_or_dependency": "Double cosets and intersection stabilizers give the orbifold weight; period dilation scales Lebesgue measure by r^(2h). General foliation stabilizers use the finite conformal automorphism group.",
+      "source_keys": [
+        "AranaHerreraSquare2020",
+        "LanneauComponents"
+      ],
+      "coverage_gap": "No dimension-free transfer of principal Thurston product measure to lower-dimensional strata or affine loci.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s27.existing_count_dependency",
+      "section": 27,
+      "labels": [
+        "subsec:pairliterature"
+      ],
+      "status": "external_theorem_statement_checked",
+      "statement": "The existing two-type square-tiled power saving uses exponential mixing; the one-type count has a lattice-counting route.",
+      "hypotheses": [
+        "Fixed connected stratum component and prescribed integral horizontal/vertical types; area cutoff.",
+        "Constants and saving depend on the geometric component and types."
+      ],
+      "derivation_or_dependency": "Theorem 1.1, Theorem 3.2 proof and Theorem 3.9 identify the relevant distinction.",
+      "source_keys": [
+        "AranaHerreraSquareEffective"
+      ],
+      "coverage_gap": "Using the two-type result to prove mixing would not be independent.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s27.mesh_quadrature",
+      "section": 27,
+      "labels": [
+        "eq:pairquadrature",
+        "eq:pairpoissonzero"
+      ],
+      "status": "exact_identity_and_bound",
+      "statement": "A finer mesh controls quadrature error but leaves the correlation as the zero Poisson mode.",
+      "hypotheses": [
+        "F in C_c^1 with fixed compact support, G in C_b^1, R>=1,t>=0.",
+        "Poisson identity additionally assumes Schwartz data."
+      ],
+      "derivation_or_dependency": "Cube comparison gives R^-1 exp(t) derivative loss. A radial shell bounded away from zero can be used locally; Poisson zero mode is I(t), not a product of means.",
+      "source_keys": [],
+      "coverage_gap": "Not uniform across charts/cusps; exact circle mesh example has nondecaying covariance.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s27.polar_kernel",
+      "section": 27,
+      "labels": [
+        "subsec:twopointkernel",
+        "eq:twopointpolar",
+        "eq:twopointkernel"
+      ],
+      "status": "exact_definition_external_input",
+      "statement": "An a.e. exact inverse-Jacobian kernel is a finite discrete two-endpoint count before basepoint averaging.",
+      "hypotheses": [
+        "Closed genus g>=2, h=6g-6; torsion-free finite-index subgroup.",
+        "Full unit cotangent bundle with principal Masur-Veech probability measure; probability conditional fiber measures.",
+        "Fundamental domain in marked Teichmuller space, lower time cutoff one, a.e. regular polar data for all countably many group elements."
+      ],
+      "derivation_or_dependency": "Use the external polar-coordinate measure formula on the marked space; exact weights are exp(h*length)/J. The polar map is not injective on the quotient.",
+      "source_keys": [
+        "ABEMPolar"
+      ],
+      "coverage_gap": "No assertion for exceptional prescribed basepoints or lower-dimensional strata.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s27.unfolding",
+      "section": 27,
+      "labels": [
+        "prop:twopointunfolding",
+        "eq:twopointexact"
+      ],
+      "status": "exact_identity_and_bound",
+      "statement": "Averaged discrete kernel equals the exponential time integral of the two-time correlation.",
+      "hypotheses": [
+        "Kernel hypotheses above.",
+        "Bounded tests, or L2 tests interpreted by the absolutely integrable unfolded expression."
+      ],
+      "derivation_or_dependency": "Tonelli unfolds the y domain and group sum; the polar Jacobian cancels. Cauchy-Schwarz and invariance give the L2 absolute bound.",
+      "source_keys": [
+        "ABEMPolar"
+      ],
+      "coverage_gap": "The identity is exact but proves no counting asymptotic.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s27.deaveraging",
+      "section": 27,
+      "labels": [
+        "subsec:twopointdeaverage",
+        "thm:twopointconverse",
+        "eq:twopointcountassumption",
+        "eq:twopointmixrate",
+        "eq:twopointderivative"
+      ],
+      "status": "conditional_implication",
+      "statement": "A single-test cumulative remainder saving delta plus k flow derivatives yields decay delta*k/(k+1).",
+      "hypotheses": [
+        "Strongly continuous probability-preserving unitary flow; F in L2 and G in Dom(V^k), k>=1.",
+        "Assumed cumulative bound through all T>=1, with A(F,G) quantitative.",
+        "Correlation notation here is bilinear; replace F by its conjugate for Hermitian covariance."
+      ],
+      "derivation_or_dependency": "For R=exp(-hT)E, R prime+hR=centered correlation. A compact smoothing kernel with k-1 vanishing moments gives epsilon^-1 exp(-delta*t)+epsilon^k; optimize epsilon.",
+      "source_keys": [],
+      "coverage_gap": "No endpoint exponent delta from this single-test argument; no transverse-derivative or cusp uniformity is manufactured.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s27.pointwise_sufficient_count",
+      "section": 27,
+      "labels": [
+        "eq:twopointpointwise"
+      ],
+      "status": "conditional_implication",
+      "statement": "An a.e. bisector remainder with an integrable basepoint constant implies the required averaged bound.",
+      "hypotheses": [
+        "Uniform signed/complex endpoint test norm N.",
+        "C(x,y) in L1(DxD); uniformity through all large real T.",
+        "Leading factors are conditional-fiber averages with probability base measure."
+      ],
+      "derivation_or_dependency": "Integrate; source and terminal fiber averages integrate to their global means. An admissible mean-zero flow eigenfunction violates every positive saving.",
+      "source_keys": [],
+      "coverage_gap": "One unweighted count neither verifies the hypothesis nor tests missing eigenmodes.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s27.full_rate",
+      "section": 27,
+      "labels": [
+        "subsec:twopointderivativeweight",
+        "thm:twopointfullrate",
+        "eq:twopointderivativecount",
+        "eq:twopointfullrate",
+        "eq:twopointfundamental",
+        "eq:twopointfullidentity",
+        "eq:twopointfullnorm"
+      ],
+      "status": "conditional_implication",
+      "statement": "A remainder for terminal weight (h+V)G recovers the full exponent delta with an explicit lower-cutoff boundary term.",
+      "hypotheses": [
+        "F in L2; G in Dom(V); (h+V)G an admissible signed terminal test.",
+        "0<delta<=h, h>0; norm-controlled bound for that differentiated endpoint, not just for G."
+      ],
+      "derivation_or_dependency": "Invariance gives mu(VG)=0. Fundamental theorem of calculus integrates exp(ht)(hC+C prime) exactly, without differentiating an asymptotic.",
+      "source_keys": [],
+      "coverage_gap": "Norm cost includes N(VG), cutoff derivatives, and any noncompact coefficient growth.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "2",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "exact.terminal_exponential_algebra",
+          "numerical.terminal_family"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s27.full_rate_cusp",
+      "section": 27,
+      "labels": [
+        "eq:twopointfullcusprate"
+      ],
+      "status": "conditional_implication",
+      "statement": "Cutoff tails exp(-aH) and differentiated-count cost exp(bH) yield delta*a/(a+b).",
+      "hypotheses": [
+        "Bounded observables with norm-controlled correlation and mean cutoff errors.",
+        "a>0,b>=0; cost includes V of the cutoff; 0<delta<=h.",
+        "Uniform control of the lower-time boundary correlation."
+      ],
+      "derivation_or_dependency": "Balance exp(bH-delta*t) and exp(-aH); the exp(-ht) boundary term decays at least as fast.",
+      "source_keys": [],
+      "coverage_gap": "Measure-tail estimates alone are insufficient for unbounded L2 observables.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s27.jacobian_comparison",
+      "section": 27,
+      "labels": [
+        "subsec:twopointjacobian",
+        "eq:twopointHM",
+        "eq:twopointinverseHM"
+      ],
+      "status": "conditional_external_comparison",
+      "statement": "Hubbard-Masur endpoint factors approximate the inverse polar weight only in the stated recurrent compact regime.",
+      "hypotheses": [
+        "Compact principal-stratum endpoints; segment spends at least half its time in a larger compact principal-stratum set.",
+        "External local-product measure mu0 of total mass V0; mu=mu0/V0, same fiber probabilities, J=J0/V0.",
+        "Endpoint factors bounded below; time sufficiently large for relative error <1/2."
+      ],
+      "derivation_or_dependency": "ABEM Proposition 2.5 plus measure rescaling and reciprocal expansion. The terminal backward-pointing convention requires replacing q by -q in G.",
+      "source_keys": [
+        "ABEMPolar",
+        "AranaHerreraLattice"
+      ],
+      "coverage_gap": "Weighted count error, Jacobian replacement error and discarded nonrecurrent/cusp mass are separate. Forni contraction is an external input to the asymptotic.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s27.smoothing_cusp",
+      "section": 27,
+      "labels": [
+        "eq:twopointcusprate"
+      ],
+      "status": "conditional_implication",
+      "statement": "Single-test smoothing with cutoffs gives delta/[1+b/a+1/k], or delta/[1+b/a+(1+d/a)/k] with derivative growth.",
+      "hypotheses": [
+        "Cutoff correlation error exp(-aH); counting constant exp(bH); kth derivative product exp(dH).",
+        "a>0, b,d>=0; bounded endpoints or a norm-controlled substitute for the tail."
+      ],
+      "derivation_or_dependency": "Balance epsilon^k exp(dH), epsilon^-1 exp(bH-delta*t), and exp(-aH).",
+      "source_keys": [],
+      "coverage_gap": "These rate calculations do not prove the cutoff assumptions.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s27.residue_endpoint_arithmetic",
+      "section": 27,
+      "labels": [
+        "eq:pairbruhat",
+        "eq:pairkloosterman",
+        "eq:pairkloostermansmooth"
+      ],
+      "status": "derived_in_chapter_external_inputs",
+      "statement": "The inverse-residue endpoint statistic has a norm-controlled product main term via Kloosterman cancellation.",
+      "hypotheses": [
+        "c positive integer; matrix determinant one; Fourier coefficients absolutely summable for the exact identity.",
+        "C2 tests for the displayed smooth estimate; prime-frequency improvement requires bandwidth M<p.",
+        "Explicit oriented matrix model without hidden signs or orbifold weights."
+      ],
+      "derivation_or_dependency": "Multiply Bruhat matrices, expand both endpoint Fourier series, use the external Weil bound and two integrations by parts. The adaptive frequency e(c*x) has statistic one but growing test norm.",
+      "source_keys": [
+        "HumphriesModular"
+      ],
+      "coverage_gap": "This is endpoint-residue decorrelation, not a modular or higher-genus phase-space flow-box comparison.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "3",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "exact.Bruhat_residues",
+          "numerical.endpoint_Fourier"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s27.totient_count",
+      "section": 27,
+      "labels": [],
+      "status": "derived_in_chapter",
+      "statement": "The chosen oriented torus matrix model has phi(c) residue classes and leading cumulative coefficient 3/pi^2.",
+      "hypotheses": [
+        "Primitive oriented torus types and positive oriented intersection c.",
+        "No quotient by sign or additional automorphism weights."
+      ],
+      "derivation_or_dependency": "Mobius divisor expansion of phi(c), summing c=d*k, gives O(L log L).",
+      "source_keys": [],
+      "coverage_gap": "The zero-frequency totient identity does not bound nonzero Kloosterman modes.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "3",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "exact.Bruhat_residues"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s27.remaining_comparison",
+      "section": 27,
+      "labels": [],
+      "status": "open_comparison",
+      "statement": "A uniform comparison between coefficient-extracted square tilings and the full weighted bisector kernel is not established.",
+      "hypotheses": [
+        "Independent initial and terminal weights, including derivative tests for the full-rate converse."
+      ],
+      "derivation_or_dependency": "A statement of the missing estimate and its norm/cusp requirements, not a theorem proving it.",
+      "source_keys": [],
+      "coverage_gap": "The exceptional nonsquare genus-two affine result does not settle the principal higher-genus kernel or cocycle spectra.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s28.hyperelliptic_polyhedron",
+      "section": 28,
+      "labels": [
+        "sec:genus2markedtorus",
+        "subsec:genus2compact"
+      ],
+      "status": "derived_in_chapter_external_inputs",
+      "statement": "A genus-two hyperbolic surface descends to a six-angle-pi cone sphere of area 2*pi with unique compact convex polyhedral realization.",
+      "hypotheses": [
+        "Closed genus-two surface; curvature -1 normalization; marked hyperelliptic quotient.",
+        "Convex realization includes the doubled-polygon degenerate case."
+      ],
+      "derivation_or_dependency": "Riemann-Hurwitz, isometric hyperelliptic involution and Gauss-Bonnet give six branch points and area; apply Alexandrov realization. The branched double cover reverses the construction.",
+      "source_keys": [
+        "BenirschkeServan",
+        "FillastreIzmestievCusps"
+      ],
+      "coverage_gap": "The complete six-cusp metric has area 8*pi and different length/volume data; dihedral constraints do not follow from intrinsic cone angles.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s28.quadratic_formula",
+      "section": 28,
+      "labels": [
+        "subsec:genus2quadraticformula",
+        "eq:genus2curve",
+        "eq:genus2qformula",
+        "eq:genus2order"
+      ],
+      "status": "derived_in_chapter",
+      "statement": "Every genus-two holomorphic quadratic differential is P2(z) dz^2/y^2, degree P2<=2, and is hyperelliptic invariant.",
+      "hypotheses": [
+        "Six distinct finite branch values after a coordinate choice; y^2=B6(z).",
+        "Basis dz/y and z dz/y for holomorphic one-forms."
+      ],
+      "derivation_or_dependency": "Three symmetric products are independent and exhaust the three-dimensional quadratic space. Local branch coordinate z-a=w^2 gives order 2*ord(q0)+2.",
+      "source_keys": [
+        "LanneauComponents"
+      ],
+      "coverage_gap": "Unit-area pullback requires factor 1/2; area factor alone does not determine lattice/label/orbifold volume constants.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s28.nonsquare_classification",
+      "section": 28,
+      "labels": [
+        "subsec:genus2twodouble",
+        "eq:genus2cancel",
+        "eq:genus2pillowmark"
+      ],
+      "status": "derived_in_chapter",
+      "statement": "Nonsquare Q_2(2,2) consists exactly of P2 with two distinct roots at branch values, yielding Q_0(-1^4,0,0).",
+      "hypotheses": [
+        "Global squares excluded explicitly; six branch values distinct.",
+        "Regular marks b1,b2 retained; fixed X has fifteen unordered choices."
+      ],
+      "derivation_or_dependency": "P2 is a global square iff it is the square of a linear polynomial, including constant case and homogeneous root at infinity. Degree one has two simple infinity zeros. Two distinct branch roots are the sole nonsquare (2,2) case.",
+      "source_keys": [],
+      "coverage_gap": "The unit stratum has real dimension seven; the principal unit locus has dimension eleven. Its intrinsic measure is not a restriction of principal measure.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s28.torus_cover",
+      "section": 28,
+      "labels": [
+        "subsec:genus2ellipticcover",
+        "eq:genus2toruscover",
+        "eq:genus2torusadmissible",
+        "eq:genus2equalareas"
+      ],
+      "status": "derived_in_chapter",
+      "statement": "The four-pole sphere orientation cover is an equal-area elliptic differential with two pairs of admissible regular marks.",
+      "hypotheses": [
+        "p,q not in E[2] and p!=q,-q; an origin chosen over a pole.",
+        "Double cover X branches at all six values; orientation torus cover branches at only four."
+      ],
+      "derivation_or_dependency": "Branched-cover monodromy proves the connected double cover is unique. Distinct branch sets obstruct a square root on X. Both degree-two maps imply area(E)=area(X).",
+      "source_keys": [],
+      "coverage_gap": "No time rescaling; finite labels and period-lattice covolumes still matter for unnormalized volumes.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s28.cover_figure",
+      "section": 28,
+      "labels": [
+        "fig:mono-double-covers"
+      ],
+      "status": "illustration",
+      "statement": "Diagram records the two distinct double covers and regular-mark lifts.",
+      "hypotheses": [
+        "Schematic flat geometry only."
+      ],
+      "derivation_or_dependency": "Labels match the proved cover construction.",
+      "source_keys": [],
+      "coverage_gap": "No numerical, metric, or polyhedral realization is inferred from the drawing.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s28.homogeneous_model",
+      "section": 28,
+      "labels": [
+        "subsec:genus2homogeneous",
+        "eq:genus2Y2",
+        "eq:genus2homflow"
+      ],
+      "status": "derived_in_chapter",
+      "statement": "The admissible conull invariant open subset of the affine quotient is a finite labeled model of nonsquare unit-area Q_2(2,2).",
+      "hypotheses": [
+        "G2=SL2(R) semidirect two physical vectors; right quotient by Gamma(2) semidirect Z^4.",
+        "Finite origin, level-two, ordering, and sign choices; collision and 2-torsion loci removed."
+      ],
+      "derivation_or_dependency": "Right multiplication gives exactly lattice-basis and lift changes. The deleted fiber sets have real codimension two. Left diagonal flow commutes with finite forgetting; fractional mark coordinates have nontrivial modular monodromy.",
+      "source_keys": [],
+      "coverage_gap": "Not literally the full homogeneous space as a geometric stratum; coarse covering excludes automorphism points, and orbifold order-two factors need volume conventions.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s28.haar_period_measure",
+      "section": 28,
+      "labels": [
+        "subsec:genus2haarmeasure"
+      ],
+      "status": "derived_in_chapter_external_inputs",
+      "statement": "Probability-normalized intrinsic stratum measure agrees with Haar measure on the finite model.",
+      "hypotheses": [
+        "Local marked periods and paths fixed; commensurable, not necessarily identical, integral lattices.",
+        "Equal torus/genus-two area and finite cover conventions."
+      ],
+      "derivation_or_dependency": "Fiber-product orientation cover gives rational-linear invertible period changes. Cone measure scales as s^3 ds dB dxi1 dxi2; area-one disintegration is Haar up to a constant removed by probability normalization.",
+      "source_keys": [
+        "LanneauComponents"
+      ],
+      "coverage_gap": "No unnormalized volume identity. Growth near collision loci requires actual norm bounds, not just their measure-zero status.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s28.fiber_fourier",
+      "section": 28,
+      "labels": [
+        "subsec:markedtorusconverse",
+        "eq:markedtorusfourier",
+        "eq:markedtorusequivariance",
+        "eq:markedtorusinduction"
+      ],
+      "status": "exact_identity_and_bound",
+      "statement": "Fiber Fourier orbit summands are L2(G/Gamma_M) under the stated transpose convention.",
+      "hypotheses": [
+        "L2 on affine Haar probability quotient; u=g^-1 v modulo Z^4.",
+        "Gamma initially Gamma(2); count all its frequency orbits, without assuming primitive-vector transitivity."
+      ],
+      "derivation_or_dependency": "F_M(g gamma)=F_(gamma^-T M)(g); Parseval and orbit unfolding yield the isometry. Rank two stabilizer is trivial; rank one stabilizer is a discrete unipotent subgroup.",
+      "source_keys": [
+        "StrombergssonVishe"
+      ],
+      "coverage_gap": "This is an orbit decomposition, not a full irreducible spectral classification.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s28.tempered_nonzero_modes",
+      "section": 28,
+      "labels": [],
+      "status": "derived_in_chapter_external_inputs",
+      "statement": "All nonzero-frequency summands and their full Hilbert direct sum are tempered.",
+      "hypotheses": [
+        "Closed amenable rank-one stabilizers or trivial rank-two stabilizers."
+      ],
+      "derivation_or_dependency": "Amenable trivial representations are tempered; induction preserves this. Uniform convolution operator bound by the regular representation passes to the direct sum.",
+      "source_keys": [
+        "BenoistKobayashi",
+        "AthreyaLagaceMollerRaum"
+      ],
+      "coverage_gap": "No frequency-dependent constants are summed; no higher-genus classification is asserted.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s28.tempered_base",
+      "section": 28,
+      "labels": [
+        "eq:markedtorusalltempered"
+      ],
+      "status": "derived_in_chapter_external_inputs",
+      "statement": "The entire mean-zero affine L2 representation is tempered for Gamma(2) or SL2(Z).",
+      "hypotheses": [
+        "Base Gamma(2) gives the thrice-punctured sphere, with -I acting trivially in the base.",
+        "All positive residual/cuspidal small eigenvalues excluded by Otal-Rosas.",
+        "PSL2(R) nontrivial non-tempered spectrum is spherical complementary series."
+      ],
+      "derivation_or_dependency": "Type (0,3) has no positive discrete eigenvalue <=1/4; continuous spectrum begins at 1/4. Combine base with nonzero-frequency result; full-modular case embeds in level two.",
+      "source_keys": [
+        "OtalRosas",
+        "EdwardsOhMixing",
+        "BenoistKobayashi"
+      ],
+      "coverage_gap": "Arbitrary further finite-index covers can have new small spectrum; no such extension is claimed.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s28.rotation_spherical_bounds",
+      "section": 28,
+      "labels": [
+        "eq:markedtorusKnorm",
+        "eq:markedtorusXi"
+      ],
+      "status": "derived_in_chapter_external_inputs",
+      "statement": "One angular derivative controls the K-type l1 norm, and Xi(a_t)<=4/pi*(1+t)*exp(-t).",
+      "hypotheses": [
+        "K=SO2 with ordinary matrix angle; nth character derivative i*n.",
+        "S1^2=||F||2^2+||Theta F||2^2; a_t=diag(exp(t),exp(-t))."
+      ],
+      "derivation_or_dependency": "Weighted Cauchy-Schwarz gives sqrt(pi*coth(pi)); spherical principal-series integral becomes the stated u-integral, split at 1 and exp(2t).",
+      "source_keys": [
+        "BenoistKobayashi",
+        "CowlingHaagerupHowe"
+      ],
+      "coverage_gap": "On genus-two quadratic phase, Theta is twice phase differentiation; changing time convention changes the decay exponent.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s28.global_correlation",
+      "section": 28,
+      "labels": [
+        "thm:markedtorusmixing",
+        "eq:markedtorusexplicitmix"
+      ],
+      "status": "derived_in_chapter_external_inputs",
+      "statement": "The explicit global bound is 4*coth(pi)*(1+t)*exp(-t) times centered S1 norms.",
+      "hypotheses": [
+        "The proven level-two or full-modular tempered representation.",
+        "F,G in the L2 rotation-generator domain; probability normalization."
+      ],
+      "derivation_or_dependency": "Apply CHH to single K-types, sum absolutely using the S1 bound, and use Xi. Pullback through the finite quotient preserves correlation and norms.",
+      "source_keys": [
+        "BenoistKobayashi",
+        "CowlingHaagerupHowe",
+        "OtalRosas"
+      ],
+      "coverage_gap": "No compact support needed. This is a proof from external representation inputs, not a consequence of finite Gaussian samples or a theorem for the principal stratum.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "5,7",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "numerical.affine_Gaussian",
+          "numerical.rank_two_Gaussian"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s28.finite_return_unfolding",
+      "section": 28,
+      "labels": [
+        "eq:markedtorusweight",
+        "eq:markedtorusweightcoordinates",
+        "eq:markedtorusexactcount"
+      ],
+      "status": "exact_identity_and_bound",
+      "statement": "Two periodized compact smooth weights have an exact finite lattice overlap sum for their covariance plus product of means.",
+      "hypotheses": [
+        "phi,psi in C_c^infty of the full affine group; Haar covolume one.",
+        "For each fixed time only lattice elements in K_phi^-1 a_-t K_psi contribute."
+      ],
+      "derivation_or_dependency": "Unfold the first periodization; the coordinate formula uses the semidirect law v+g*m. Signs or complex values remain for arbitrary tests.",
+      "source_keys": [],
+      "coverage_gap": "Finite weighted overlaps are not an unweighted sharp orbit count.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s28.return_remainder",
+      "section": 28,
+      "labels": [
+        "eq:markedtoruscountremainder"
+      ],
+      "status": "derived_in_chapter_external_inputs",
+      "statement": "The exp(4t)-normalized cumulative return sum has explicit O((1+T)exp(3T)) remainder.",
+      "hypotheses": [
+        "Compact smooth periodized tests as above; time T>=1.",
+        "The exponent four is the affine unstable Jacobian: weights 2,1,1."
+      ],
+      "derivation_or_dependency": "Integrate the global correlation estimate; integral <=(1+T)exp(3T)/3. Local periodization multiplicity M_K bounds S1(Pphi) by the stated compact-support norms.",
+      "source_keys": [
+        "BenoistKobayashi",
+        "OtalRosas"
+      ],
+      "coverage_gap": "R=exp(T) is a time parameter, not established to be hyperbolic length, square-tiled area, or intersection cutoff.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s28.return_derivative",
+      "section": 28,
+      "labels": [
+        "eq:markedtorusderivativeweight"
+      ],
+      "status": "exact_identity_and_bound",
+      "statement": "Terminal test (4+V)psi gives the exact boundary evaluation for the cumulative affine return sum.",
+      "hypotheses": [
+        "Compact smooth original tests; periodization commutes with V.",
+        "The norm includes S1(VG) and hence Theta V G."
+      ],
+      "derivation_or_dependency": "Differentiate exp(4t) times the exact correlation, not a counting asymptotic.",
+      "source_keys": [],
+      "coverage_gap": "Theta and V do not commute; no mixed derivative is suppressed.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "2",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "exact.terminal_exponential_algebra",
+          "numerical.terminal_family"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s28.scope",
+      "section": 28,
+      "labels": [
+        "subsec:genus2torusscope"
+      ],
+      "status": "open_comparison",
+      "statement": "Affine calculation settles the stated weighted statistic only on nonsquare Q_2(2,2).",
+      "hypotheses": [
+        "Seven-dimensional unit stratum; affine exponent four.",
+        "Full genus-two principal unit locus has dimension eleven and polar exponent six."
+      ],
+      "derivation_or_dependency": "Identify the actual direction of proof: representation theory to correlations to counts; the exact terminal identity provides a reverse conditional implication.",
+      "source_keys": [],
+      "coverage_gap": "No full simple-geodesic count remainder or principal-stratum extension is proved.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s29.normball_upper",
+      "section": 29,
+      "labels": [
+        "sec:coefficientobservables",
+        "subsec:normballbarrier",
+        "eq:normballall",
+        "eq:normballprimitive"
+      ],
+      "status": "derived_in_chapter_external_inputs",
+      "statement": "Fixed once-punctured torus simple-curve lengths give O(L) all-lattice and O(L log L) oriented-primitive remainders.",
+      "hypotheses": [
+        "Fixed complete finite-area hyperbolic once-punctured torus; McShane-Rivin norm ball.",
+        "All-lattice count includes origin; unoriented simple count is half the oriented primitive count."
+      ],
+      "derivation_or_dependency": "Convex planar boundary-cell counting and Mobius inversion with d=O_X(L).",
+      "source_keys": [
+        "McShaneRivinTori"
+      ],
+      "coverage_gap": "Constants are surface-dependent; a different moduli-averaged mixing estimate does not sharpen this sharp count.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s29.flat_primitive_row",
+      "section": 29,
+      "labels": [
+        "prop:normballflatrow",
+        "eq:normballlowerpower"
+      ],
+      "status": "derived_in_chapter",
+      "statement": "Infinite graph-flatness with rational support normal and irrational radial direction forbids every fixed primitive-count exponent below one.",
+      "hypotheses": [
+        "Strictly convex compact body with origin interior.",
+        "At the indicated boundary point, each N has f(s)<=C_N |s|^N near zero.",
+        "Arbitrarily large prime row indices n."
+      ],
+      "derivation_or_dependency": "Scale from L=n/h to L+1/L. The newly included row has radius comparable to L^(1-2/N), at most one nonprimitive point, and only bounded area-main-term increment.",
+      "source_keys": [],
+      "coverage_gap": "Proves arbitrarily large c_epsilon L^(1-epsilon) discrepancies, not literal Omega(L); not asserted for every hyperbolic torus.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s29.fourier_flatness",
+      "section": 29,
+      "labels": [
+        "subsec:normballspectral",
+        "eq:normballfinitephase"
+      ],
+      "status": "derived_in_chapter",
+      "statement": "A localized finite-type flat boundary has Fourier scale r^(-1-1/k); the norm multiplier realizes the counting function spectrally.",
+      "hypotheses": [
+        "Smooth localized arc, f(x)=a x^k+O(x^(k+1)), a>0, k even >=2.",
+        "Cutoff equal one at the isolated support point; fixed physical normal.",
+        "Auxiliary torus Fourier multiplier is defined spectrally, not by a smooth pseudodifferential symbol."
+      ],
+      "derivation_or_dependency": "Normal integration contributes r^-1 and stationary rescaling contributes r^-1/k. Norm equivalence gives a discrete multiplier spectrum; primitive and even subspaces give P and N.",
+      "source_keys": [],
+      "coverage_gap": "Global supporting phases can interfere. No formal infinite-type stationary-phase expansion, global trace formula, or complementary-series obstruction is inferred.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s29.primitive_pole_arcs",
+      "section": 29,
+      "labels": [
+        "subsec:primitivepolebridge",
+        "lem:primitivepolearcs",
+        "eq:polearcflatlength"
+      ],
+      "status": "derived_in_chapter",
+      "statement": "Primitive nonzero parity directions modulo sign yield distinct nonseparating simple regular flat geodesics of length |g*m|.",
+      "hypotheses": [
+        "Nonsquare genus-two finite labeled torus model; nonzero delta mod2.",
+        "Remove the countable SL2-invariant null set of marks on rational circles and all inadmissible collisions."
+      ],
+      "derivation_or_dependency": "Primitivity excludes self-identification and interior two-torsion on the pillow arc. Double lifting joins regularly at angle-pi endpoints; four remaining branch points ensure nonseparation. Transverse regular geodesics cannot be freely homotopic in a CAT(0) flat metric.",
+      "source_keys": [],
+      "coverage_gap": "Finite lattice arithmetic alone does not prove the topology or generic null-set claim.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "4",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "exact.primitive_parity"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s29.coefficient_weight",
+      "section": 29,
+      "labels": [
+        "eq:polearccoefficientweight"
+      ],
+      "status": "derived_in_chapter",
+      "statement": "A selected hyperbolic curve-length weight is exactly recovered from its isolated first coefficient atom.",
+      "hypotheses": [
+        "Section 23 prop:coefffirstatom for the indicated simple curve.",
+        "Cutoff equals one near the first atom and vanishes on all remaining support; bounded length weight."
+      ],
+      "derivation_or_dependency": "The ratio of the atom-weighted evaluations cancels its nonzero mass; for Borel weights use the recovered atom location.",
+      "source_keys": [],
+      "coverage_gap": "This is not a uniformly bounded linear extraction functional or a perturbation-stability theorem.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s29.observable_definition",
+      "section": 29,
+      "labels": [
+        "eq:polearcobservable"
+      ],
+      "status": "exact_definition_external_input",
+      "statement": "The parity-restricted primitive sum defines a measurable bounded L2 observable after assigning zero on the invariant exceptional null set.",
+      "hypotheses": [
+        "Even f in C_c^2 supported in the unit disk; bounded Borel h; R>=1,L>0.",
+        "Factor 1/2 for opposite vectors; basis changes in Gamma(2)."
+      ],
+      "derivation_or_dependency": "Basis changes relabel parity classes and finite sums; finite marking averages descend to the unlabelled stratum.",
+      "source_keys": [],
+      "coverage_gap": "Averaging selected families may retain multiplicity; flat cutoff R and hyperbolic scale L are distinct.",
+      "finite_computation": {
+        "status": "no_finite_check_claimed",
+        "limit": "Author proof audit or explicit external theorem input only."
+      }
+    },
+    {
+      "id": "s29.primitive_bound",
+      "section": 29,
+      "labels": [
+        "subsec:polearcnorms",
+        "lem:polearcprimitivebound",
+        "eq:polearcprimitivebound"
+      ],
+      "status": "derived_in_chapter",
+      "statement": "Every unimodular lattice has at most 2+2*pi*R^2 primitive vectors in a radius-R disk.",
+      "hypotheses": [
+        "R>0; oriented primitive vectors include both signs."
+      ],
+      "derivation_or_dependency": "Nonparallel determinants are nonzero integers. Unoriented angles are separated by at least arcsin(R^-2) when R>=1; below one at most one direction survives.",
+      "source_keys": [],
+      "coverage_gap": "No finite computation is a proof of the general statement.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "4",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "exact.primitive_parity"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s29.rotation_norm",
+      "section": 29,
+      "labels": [
+        "eq:polearcuniformS1",
+        "eq:polearccorrelation",
+        "eq:polearcKfixedcorrelation"
+      ],
+      "status": "derived_in_chapter_external_inputs",
+      "statement": "The geometric observable has a global uniform S1 bound, allowing a sharp hyperbolic cutoff; radial flat tests have the sharper K-fixed bound.",
+      "hypotheses": [
+        "Bounded h; even compact flat f as above; invariant conull set.",
+        "Rotation fixes the conformal base and the selected topological arc, so Theta*l_m=0."
+      ],
+      "derivation_or_dependency": "Differentiate only f by D_J and use the primitive-vector count divided by 2R^2. Uniform difference quotients yield the strong L2 generator domain. For radial sharp flat cutoff the function is K-invariant.",
+      "source_keys": [
+        "BenoistKobayashi"
+      ],
+      "coverage_gap": "No rotational derivative is charged to the hyperbolic cutoff; this does not address flow derivatives or fixed-surface unsmoothing.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "4,5",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "exact.Gaussian_algebra",
+          "numerical.affine_Gaussian"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s29.length_derivatives",
+      "section": 29,
+      "labels": [
+        "subsec:polearcterminal",
+        "eq:polearclengthderivatives"
+      ],
+      "status": "derived_in_chapter_external_inputs",
+      "statement": "|V*l_m|<=2*l_m and |Theta V*l_m|<=4*l_m.",
+      "hypotheses": [
+        "Closed hyperbolic surface along the Teichmuller diagonal flow; fixed marked curve along its SL2 orbit.",
+        "Ordinary matrix rotation generator."
+      ],
+      "derivation_or_dependency": "Cyclic annular-cover modulus gives Wolpert quasiconformal inequality; diagonal dilatation is exp(2|t|). Theta*l=0 and Lie bracket plus rotated-diagonal bound give the mixed derivative.",
+      "source_keys": [
+        "ShigaHyperbolicQC"
+      ],
+      "coverage_gap": "No uniform transverse smoothness across the exceptional marking walls is asserted.",
+      "finite_computation": {
+        "status": "optional_fixture_not_implemented",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "5",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "The author specification is retained as provenance. No direct maintained finite check of this claim was implemented; its analytic review is separate."
+      }
+    },
+    {
+      "id": "s29.terminal_norm",
+      "section": 29,
+      "labels": [
+        "eq:polearcVnorms",
+        "eq:polearcterminalidentity"
+      ],
+      "status": "derived_in_chapter",
+      "statement": "Smooth hyperbolic weights with bounded s*h prime have explicit global S1(VF) and terminal identity bounds.",
+      "hypotheses": [
+        "h in C1, H0=||h||infinity finite, H1=sup s|h prime(s)| finite.",
+        "f in C_c^2; R>=1,L>0; all geometric conventions above."
+      ],
+      "derivation_or_dependency": "Product rule uses f_A, f_KA and the length inequalities. No h second derivative occurs since Theta*l=0. Uniform orbitwise bounds justify generators and the exact integrated identity.",
+      "source_keys": [],
+      "coverage_gap": "Sharp h needs a separate boundary/smoothing argument for V; individual curve sum is not identified with a finite affine return sum.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "2,5",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "exact.terminal_exponential_algebra",
+          "numerical.terminal_family"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s29.parity_mean_and_scope",
+      "section": 29,
+      "labels": [
+        "subsec:polearcscope"
+      ],
+      "status": "derived_in_chapter_external_inputs",
+      "statement": "Unweighted parity transform has mean (6*zeta(2))^-1 integral f; the selected hyperbolic family has O_(X,q)(L^2) size.",
+      "hypotheses": [
+        "Nonzero parity delta; h=1 for mean/count.",
+        "Fixed compact genus-two (X,q) for the metric comparison constant."
+      ],
+      "derivation_or_dependency": "Odd Mobius divisors give equal primitive densities among three parity classes. The metric ratio |q|^1/2/ds_hyp is bounded on fixed X, and the regular flat geodesic minimizes its class length.",
+      "source_keys": [
+        "AthreyaLagaceMollerRaum"
+      ],
+      "coverage_gap": "The selected family is sparse relative to genus-two L^6 growth; first-atom conditioning remains open.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "4",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "exact.primitive_parity"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s29.affine_isometry",
+      "section": 29,
+      "labels": [
+        "subsec:affinedisplacements",
+        "eq:affinesiegelisometry",
+        "eq:affinesiegelexactcorr"
+      ],
+      "status": "exact_identity_and_bound",
+      "statement": "The centered one-mark affine transform is an L2 isometry with correlation exactly equal to the Euclidean test correlation.",
+      "hypotheses": [
+        "Schwartz tests initially; Haar probability, one specified relative mark, Fourier convention exp(-2*pi*i*x.dot(xi)).",
+        "Level-two cover does not change base-invariant integrals."
+      ],
+      "derivation_or_dependency": "Poisson summation, fiber Parseval and all-nonzero-vector Siegel mean formula give the norm and polarized flow identity. Density extends the centered isometry to L2.",
+      "source_keys": [
+        "AthreyaLagaceMollerRaum",
+        "AthreyaAffineLattices"
+      ],
+      "coverage_gap": "Pointwise sums need not represent every L2 extension. Different-mark covariance is zero by independent fiber integration, not independence of full functions.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "5",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "exact.Gaussian_algebra",
+          "numerical.affine_Gaussian"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s29.one_mark_gaussian",
+      "section": 29,
+      "labels": [
+        "eq:affinegaussiancorr"
+      ],
+      "status": "exact_identity_and_bound",
+      "statement": "The radial Gaussian covariance is 1/(2*cosh t), attaining an exp(-t) asymptotic scale.",
+      "hypotheses": [
+        "f(x)=exp(-pi|x|^2); a_t=diag(exp(t),exp(-t)).",
+        "General asymptotic uses Schwartz source and terminal tests."
+      ],
+      "derivation_or_dependency": "Product Gaussian integration gives the closed form; x1=exp(-t)u and Schwartz domination give the general limiting product of axial integrals.",
+      "source_keys": [],
+      "coverage_gap": "No finite computation is a proof of the general statement.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "5",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "numerical.affine_Gaussian"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s29.raw_two_mark_divergence",
+      "section": 29,
+      "labels": [
+        "subsec:affineranktwo"
+      ],
+      "status": "derived_in_chapter_external_inputs",
+      "statement": "The raw product of two centered affine Gaussian transforms is not in L2 because of collinear frequencies.",
+      "hypotheses": [
+        "Two relative marks; both Gaussian tests, or both Fourier transforms nonzero at zero for the broader cusp statement."
+      ],
+      "derivation_or_dependency": "Primitive Siegel unfolding of (a*n,b*n) gives (4*zeta(2))^-1 sum_(a,b!=0)1/(a^2+b^2), which diverges logarithmically.",
+      "source_keys": [
+        "AthreyaLagaceMollerRaum"
+      ],
+      "coverage_gap": "Centering removes zero frequency but not rank one; finite truncations of the raw product do not justify global L2 projection.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "6",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "exact.Gaussian_algebra"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s29.rank_two_definition_and_norm",
+      "section": 29,
+      "labels": [
+        "eq:affineranktwoobservable",
+        "eq:affineranktwonorm"
+      ],
+      "status": "exact_identity_and_bound",
+      "statement": "Retaining determinant-nonzero frequencies yields the stated orbit-unfolded norm with factor sigma_1(|k|).",
+      "hypotheses": [
+        "Schwartz tests and fiberwise series before global L2 is proved.",
+        "Right quotient convention; Haar volume one for SL2(Z); J(x1,x2)=(-x2,x1)."
+      ],
+      "derivation_or_dependency": "Hermite normal form gives sigma_1(|k|) full modular orbits; stabilizers are trivial. Haar coordinates dg=dx ds/zeta(2) and s rescaling by k give the determinant-k integral. Sixfold splitting cancels Haar division at level two.",
+      "source_keys": [],
+      "coverage_gap": "Fourier rank deletion is not a positive selection of physical segments.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "7",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "exact.Gaussian_algebra",
+          "numerical.rank_two_Gaussian"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s29.rank_two_schwartz_norms",
+      "section": 29,
+      "labels": [
+        "eq:affineranktwoschwartz",
+        "eq:affineranktwoKnorm"
+      ],
+      "status": "derived_in_chapter",
+      "statement": "Full-rank transforms satisfy the displayed Schwartz L2 bound and rotation norm bound with pi*sqrt(zeta(3))/2.",
+      "hypotheses": [
+        "A(f)=sup(1+|xi|^2)^(3/2)|fhat(xi)|; B(f)=A(f)+A(D_J f)."
+      ],
+      "derivation_or_dependency": "Reduce the determinant integral to a radial SL2 Gaussian, integrate its Laplace representation, and sum sigma_1(k)/k^3=zeta(3)zeta(2). Rotation differentiates each test and preserves rank.",
+      "source_keys": [],
+      "coverage_gap": "The ensuing correlation bound uses the external tempered theorem; finite integration checks do not prove it.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "5,7",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "exact.Gaussian_algebra",
+          "numerical.affine_Gaussian",
+          "numerical.rank_two_Gaussian"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s29.two_mark_gaussian",
+      "section": 29,
+      "labels": [
+        "subsec:affineranktwogaussian",
+        "eq:affineranktwogaussiancorr"
+      ],
+      "status": "exact_identity_and_bound",
+      "statement": "The full-rank Gaussian covariance is the positive divisor series with cosh(t), and decays faster than exponentially for these tests.",
+      "hypotheses": [
+        "Both tests exp(-pi|x|^2); t>=0; Haar probability and the determinant-orbit normalization above."
+      ],
+      "derivation_or_dependency": "C_t=I+a_-2t has determinant square root 2*cosh(t). An SL2 change of variables reduces to the exact radial Gaussian integral; sum both determinant signs. Euler product and the displayed positive series-tail majorant give independent finite evaluation contracts.",
+      "source_keys": [],
+      "coverage_gap": "The analytic tail bounds only truncation. Floating-point quadrature/roundoff require separate estimates, and sampled t values do not prove mixing.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "7",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
+        "result_groups": [
+          "numerical.rank_two_Gaussian"
+        ],
+        "code_path": "experiments/counting_mixing/",
+        "result_path": "artifacts/counting_mixing/result.json"
+      }
+    },
+    {
+      "id": "s29.sharp_rotation",
+      "section": 29,
+      "labels": [
+        "subsec:affinesharprotation"
+      ],
+      "status": "derived_in_chapter",
+      "statement": "A nonrotationally invariant convex-body affine indicator has angular Sobolev regularity exactly below one half.",
+      "hypotheses": [
+        "Fixed bounded convex body in physical Euclidean coordinates, with nonempty interior.",
+        "Ordinary rotation about the origin; use the L2 extension of the affine transform."
+      ],
+      "derivation_or_dependency": "Isometry equates squared L2 rotation difference to symmetric-difference area. BV first variation gives |theta| times integral_boundary |Jx.dot(n)|. The fractional difference norm converges for s<1/2 and diverges at s>=1/2 when that coefficient is positive.",
+      "source_keys": [],
+      "coverage_gap": "A rotation-invariant body has no such cost; hyperbolic-length cutoffs over a fixed conformal base are rotation invariant and are a different case.",
+      "finite_computation": {
+        "status": "optional_fixture_not_implemented",
+        "fixture_specification": "dynamics-author/companion-fixtures.md",
+        "fixture": "8",
+        "planned_code_path": "experiments/counting_mixing/",
+        "planned_result_path": "artifacts/counting_mixing/result.json",
+        "limit": "The author specification is retained as provenance. No direct maintained finite check of this claim was implemented; its analytic review is separate."
+      }
+    }
+  ],
+  "independent_review": {
+    "status": "approved_after_targeted_metadata_repair",
+    "records": [
+      "docs/execution/counting-mixing-review-2026-11-01/dynamics-review/review-report.md",
+      "docs/execution/counting-mixing-review-2026-11-01/dynamics-review/targeted-acceptance-v2.json",
+      "docs/execution/counting-mixing-review-2026-11-01/dynamics-review/targeted-acceptance-v2.md"
+    ],
+    "scope": "All 59 claims and all four unchanged analytic chapters; no claim of complete external-proof, companion-code or PDF review."
+  },
+  "chapter_source_hash_scope": "Chapter hashes identify the integrated source snapshot, including computational prose and the Section 29 layout repair. The separately recorded analytic-review freeze remains the approval source; mathematical proof blocks are unchanged.",
+  "computational_companion": {
+    "code_path": "experiments/counting_mixing/",
+    "result_path": "artifacts/counting_mixing/result.json",
+    "checkpoint": "docs/execution/counting-mixing-review-2026-11-01/",
+    "review_record": "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/review-v2.md",
+    "approval_manifest": "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/approved-manifest-v2.json",
+    "approval_manifest_sha256": "c059cf9591f534bb6517486389b111c79fdff77531b192cbfab846021bd6536e",
+    "approved_source_set_sha256": "4b1f8f22f155c464f0ecda6ab95c581926db157bae4ee7583e67fbc6448ded63",
+    "independent_review_status": "approved_v2_R1_resolved_no_open_findings",
+    "reviewer_replay_counts": {
+      "exact": 4054,
+      "numerical_formula_comparisons": 354,
+      "cross_precision_observations": 297,
+      "focused_tests": 38
+    },
+    "prior_v1_status": "Initial numerical acceptance was rejected for R1 and is not retroactively approved; its evidence remains frozen.",
+    "scope": "Exact finite fixtures and selected 60/90-digit formula comparisons; analytic truncation bounds are separate from uncertified quadrature and roundoff.",
+    "generation_status": "Final generation and source identities are recorded separately in the checkpoint; author and reviewer runs retain their own provenance."
+  }
+}

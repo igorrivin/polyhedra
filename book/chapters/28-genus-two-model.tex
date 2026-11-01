@@ -1,0 +1,771 @@
+\section{Genus two: compact polyhedra and a marked-torus model}
+\label{sec:genus2markedtorus}
+
+The hyperelliptic quotient makes genus two a concrete testing ground
+for the counting converse.  There are two useful reductions.  The
+hyperbolic quotient gives a compact polyhedral model for every
+conformal base.  On the nonsquare stratum with two double zeros,
+a second, flat quotient identifies the entire stratum flow space, up to
+finite markings, with the admissible invariant open subset of an affine
+homogeneous space of marked flat tori. Its complement has measure zero.
+The latter identification is specific to that stratum.
+
+\subsection{Six branch points and the compact polyhedron}
+\label{subsec:genus2compact}
+
+Every genus-two Riemann surface $X$ is hyperelliptic.  Its quotient
+map $\pi:X\to\mathbb P^1$ has six branch values: the
+Riemann--Hurwitz formula reads $2=2(-2)+6$.  With compatible
+markings the quotient induces a holomorphic Teichm\"uller isometry
+\[
+ \T_{2,0}\cong\T_{0,6};
+\]
+see, for example, \cite[Corollary~1.2(3)]{BenirschkeServan}.
+Both sides have complex dimension three.  The four-pointed sphere
+is the corresponding genus-one example.
+
+The hyperelliptic involution is an isometry of the curvature-$-1$
+metric on $X$.  The quotient metric is a hyperbolic sphere with
+\emph{six cone angles $\pi$}, and its area is $2\pi$.
+Alexandrov's hyperbolic realization theorem therefore gives a
+unique compact convex polyhedron in $\HH^3$ whose intrinsic
+boundary metric is this quotient metric, allowing the usual
+degenerate case of a doubled convex polygon
+\cite[Theorem~1.1]{FillastreIzmestievCusps}.
+There are six vertices, all with intrinsic total angle $\pi$.
+Conversely, take the double cover of such a cone sphere branched at
+its six vertices.  Each cone angle becomes $2\pi$, so the lifted
+metric is smooth, complete, and of curvature $-1$.  Riemann--Hurwitz
+identifies its genus as two.  Thus this compact-polyhedral
+realization is an exact model for the genus-two hyperbolic metric,
+with the appropriate finite labeling and marking conventions.
+
+This metric must be distinguished from the complete hyperbolic
+metric on the sphere with the six branch values deleted.  The
+latter has six cusps and area $8\pi$; it is the metric to which the
+ideal-polyhedron realization applies.  Passing between them uses
+uniformization within the same punctured conformal class.  It does
+not identify their lengths, vertex data, or volume forms.
+In particular, fixed intrinsic cone angles at compact vertices are
+not automatically linear constraints on the dihedral angles.
+
+\subsection{An explicit formula for every quadratic differential}
+\label{subsec:genus2quadraticformula}
+
+Choose a coordinate with all six branch values finite and write
+\begin{equation}
+ X:\quad y^2=B_6(z):=\prod_{i=1}^{6}(z-a_i).
+ \label{eq:genus2curve}
+\end{equation}
+The forms $\dd z/y$ and $z\dd z/y$ form a basis of
+$H^0(X,K_X)$.  Their three symmetric products are linearly
+independent and, by Riemann--Roch, span $H^0(X,K_X^2)$.
+Hence every holomorphic quadratic differential is
+\begin{equation}
+ q_X=P_2(z)\frac{\dd z^2}{y^2}
+     =\pi^*q_0,
+ \qquad
+ q_0=\frac{P_2(z)}{B_6(z)}\dd z^2,
+ \qquad \deg P_2\leq2.
+ \label{eq:genus2qformula}
+\end{equation}
+In particular, every such differential is invariant under the
+hyperelliptic involution.  At a branch point the order transforms by
+\begin{equation}
+ \operatorname{ord}_p(\pi^*q_0)
+ =2\operatorname{ord}_{\pi(p)}(q_0)+2.
+ \label{eq:genus2order}
+\end{equation}
+For a generic polynomial with two distinct roots away from the
+branch values, this gives
+\[
+ \mathcal Q_2(1^4)\longleftrightarrow
+ \mathcal Q_0(1^2,-1^6),
+\]
+with finite choices of labels understood.  This is the genus-two
+case of the hyperelliptic covering construction in
+\cite[Section~1.1.3]{LanneauComponents}.
+The descended flat metric has six angles $\pi$ at its poles and
+two angles $3\pi$ at its zeros.  It is different from the
+hyperbolic cone metric of the preceding subsection.
+
+Pullback multiplies flat area by two.  Thus the correspondence
+between unit-area differentials on the six-pointed sphere and on
+$X$ is
+\[
+ q_0\longmapsto\tfrac12\pi^*q_0.
+\]
+It commutes with $g_t=\diag(e^t,e^{-t})$, with no change of the time
+parameter.  Period-lattice covolumes, finite labelings, and orbifold
+stabilizers must still be tracked when comparing unnormalized
+Masur--Veech volumes; the area factor alone is not a formula for
+those volumes.
+
+\subsection{The nonsquare stratum with two double zeros}
+\label{subsec:genus2twodouble}
+
+Write $\mathcal Q^{\mathrm{ns}}_2(2,2)$ for quadratic
+differentials with two double zeros which are not global squares
+of Abelian differentials.  The superscript is essential: the
+squares of differentials in $\mathcal H_2(1,1)$ have the same
+quadratic zero orders but form a different locus.
+
+Formula~\eqref{eq:genus2qformula} gives an elementary description.
+The differential is a global square exactly when $P_2$ is the square
+of a polynomial of degree at most one: this follows by writing every
+Abelian differential as $(az+b)\,\dd z/y$. In homogeneous degree-two
+notation this includes a double root at infinity. A nonzero constant
+$P_2$ is therefore a square, while a degree-one $P_2$ has a simple zero
+at each of the two unbranched points at infinity and cannot lie in
+$\mathcal Q_2(2,2)$. For degree two, a simple root at a branch value
+gives one double zero by~\eqref{eq:genus2order}, and a simple root
+elsewhere gives two simple zeros. Thus, to obtain two double zeros
+without a square, the roots must be two distinct branch values, say
+$b_1,b_2$.
+After relabeling the remaining four branch values,
+\begin{equation}
+ \begin{split}
+ X:&\quad y^2=B_4(z)(z-b_1)(z-b_2),
+       \qquad B_4(z)=\prod_{i=1}^4(z-a_i),\\
+ q_X&=c(z-b_1)(z-b_2)\frac{\dd z^2}{y^2}
+      =\pi^*\left(\frac{c\,\dd z^2}{B_4(z)}\right),
+      \qquad c\in\CC^*.
+ \end{split}
+ \label{eq:genus2cancel}
+\end{equation}
+The six values $a_1,\ldots,a_4,b_1,b_2$ are distinct.
+Downstairs $q_0=c\,\dd z^2/B_4(z)$ has four simple poles and is
+regular at the two additionally marked points $b_1,b_2$:
+\begin{equation}
+ \mathcal Q^{\mathrm{ns}}_2(2,2)
+ \longleftrightarrow \mathcal Q_0(-1^4,0,0).
+ \label{eq:genus2pillowmark}
+\end{equation}
+The regular marks cannot be discarded.  They are branch values of
+$X\to\mathbb P^1$, and their positions supply four real
+parameters.
+
+For each fixed $X$, choosing the unordered pair of branch values
+$b_1,b_2$ gives $\binom62=15$ complex lines of nonsquare
+$(2,2)$ differentials in the three-dimensional cotangent space.
+Area normalization leaves a phase on each line.  Consequently this
+stratum meets every conformal base, but its unit-area locus has
+real dimension seven, compared with eleven for the full principal
+unit cotangent locus.  Its Masur--Veech measure is an intrinsic
+stratum measure, not a conditional probability obtained by
+restricting the principal measure to a set of measure zero.
+
+\subsection{The pillowcase cover and two marked torus points}
+\label{subsec:genus2ellipticcover}
+
+The orientation double cover of the four-pole differential $q_0$
+is the elliptic curve
+\begin{equation}
+ E:\quad w^2=B_4(z),
+ \qquad \omega=\sqrt c\,\frac{\dd z}{w},
+ \qquad \rho^*q_0=\omega^2.
+ \label{eq:genus2toruscover}
+\end{equation}
+Choose one branch point of $E\to\mathbb P^1$ as the origin.
+The involution is then $v\mapsto-v$, and its four fixed points are
+$E[2]$.  The two marked regular points lift to unordered pairs
+\[
+ \rho^{-1}(b_1)=\{p,-p\},\qquad
+ \rho^{-1}(b_2)=\{q,-q\}.
+\]
+Their admissibility conditions are exactly
+\begin{equation}
+ p,q\notin E[2],\qquad p\ne q,\qquad p\ne -q.
+ \label{eq:genus2torusadmissible}
+\end{equation}
+Conversely, a flat torus $(E,\omega)$ with an origin and such two
+points gives the sphere $E/\{\pm1\}$ with its four poles and two
+regular marks.  The unique connected double cover of this sphere
+branched at all six marked values is $X$, and pullback of $q_0$
+gives~\eqref{eq:genus2cancel}.
+The cover is connected because its monodromy is the nontrivial
+homomorphism to $\ZZ/2\ZZ$ on every small loop around a branch
+value; six such loops satisfy the sphere relation.  It is unique
+because those loops generate the fundamental group of the
+punctured sphere.
+
+The resulting $q_X$ is nonsquare.  Indeed, its being square would
+force the orientation cover $E\to\mathbb P^1$ to factor through
+$X\to\mathbb P^1$.  Both covers have degree two, but their branch
+sets differ: the former is branched at the four $a_i$, the latter
+also at $b_1,b_2$.
+Equivalently, the square root of $B_4$ is not in the function field
+$\CC(z,\sqrt{B_4(z)(z-b_1)(z-b_2)})$.
+
+Both covering maps to the sphere have degree two, so
+\begin{equation}
+ \operatorname{Area}(E,\omega)
+ =2\operatorname{Area}(q_0)
+ =\operatorname{Area}(X,q_X).
+ \label{eq:genus2equalareas}
+\end{equation}
+Thus the unit-area marked torus corresponds directly to the
+unit-area genus-two differential, with no further area scaling.
+The entire construction commutes with the $SL_2(\RR)$ action on
+flat charts.  In particular its time parameter is exactly the
+Teichm\"uller time used above.
+
+
+% BEGIN INLINE FIGURE: 06_double_covers.tex
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\small,>=Latex,line cap=round,line join=round]
+  \node[font=\bfseries\small] at (-3.5,3.75) {Genus-two surface $X$};
+  \begin{scope}[shift={(-3.5,2.15)}]
+    \filldraw[fill=mpblue!7,draw=mpblue,line width=.9pt]
+      (-2.2,0) .. controls (-2.2,1) and (-1.4,1.25) .. (-.75,.85)
+      .. controls (-.3,.55) and (.3,.55) .. (.75,.85)
+      .. controls (1.4,1.25) and (2.2,1) .. (2.2,0)
+      .. controls (2.2,-1) and (1.4,-1.2) .. (.75,-.8)
+      .. controls (.3,-.5) and (-.3,-.5) .. (-.75,-.8)
+      .. controls (-1.4,-1.2) and (-2.2,-1) .. (-2.2,0);
+    \filldraw[fill=white,draw=mpblue] (-1.2,.05) ellipse (.58 and .23);
+    \filldraw[fill=white,draw=mpblue] (1.2,.05) ellipse (.58 and .23);
+    \draw[mpblue!55] (-1.78,.05) .. controls (-1.5,-.6) and (-.9,-.6) .. (-.62,.05);
+    \draw[mpblue!55] (.62,.05) .. controls (.9,-.6) and (1.5,-.6) .. (1.78,.05);
+  \end{scope}
+  \node[align=center,font=\scriptsize,text width=6cm] at (-3.5,.65)
+    {$y^2=B_4(z)(z-b_1)(z-b_2)$\\$q_X=\pi^*q_0\in\mathcal Q_2^{\mathrm{ns}}(2,2)$};
+  \node[font=\bfseries\small] at (3.5,3.75) {Marked flat torus $E$};
+  \begin{scope}[shift={(1.75,1.05)},x={(3cm,0cm)},y={(.6cm,2.15cm)}]
+    \filldraw[fill=mpteal!5,draw=mpteal,line width=.8pt] (0,0)--(1,0)--(1,1)--(0,1)--cycle;
+    \draw[mpteal!25] (.5,0)--(.5,1) (0,.5)--(1,.5);
+    \draw[->,mpteal] (.35,0)--(.65,0);\draw[->,mpteal] (.35,1)--(.65,1);
+    \draw[->,mpteal] (0,.35)--(0,.65);\draw[->,mpteal] (1,.35)--(1,.65);
+    \foreach \p in {(0,0),(.5,0),(0,.5),(.5,.5)}\fill[mpblue] \p circle (1.8pt);
+    \fill[mpochre] (.2,.3) circle (2pt) node[left=2pt,font=\scriptsize] {$p$};
+    \fill[mpochre] (.8,.7) circle (2pt) node[right=2pt,font=\scriptsize] {$-p$};
+    \fill[mpred] (.25,.75) circle (2pt) node[left=2pt,font=\scriptsize] {$q$};
+    \fill[mpred] (.75,.25) circle (2pt) node[right=2pt,font=\scriptsize] {$-q$};
+  \end{scope}
+  \node[align=center,font=\scriptsize,text width=5.5cm] at (3.5,.65)
+    {$w^2=B_4(z),\qquad \omega=\sqrt c\,dz/w$\\$\rho^*q_0=\omega^2$};
+  \draw[->,mpgray,line width=.8pt] (-2.9,.15)--(-1.05,-1.0)
+    node[midway,above left,font=\scriptsize,align=center] {degree two\\six branch values};
+  \draw[->,mpgray,line width=.8pt] (2.9,.15)--(1.05,-1.0)
+    node[midway,above right,font=\scriptsize,align=center] {degree two\\four branch values};
+  \begin{scope}[shift={(0,-2.25)}]
+    \filldraw[fill=mpblue!3,draw=mpgray!70] (0,0) circle (1.35);
+    \draw[mpgray!25,dashed] (-1.35,0) arc (180:360:1.35 and .32);
+    \draw[mpgray!35] (-1.35,0) arc (180:0:1.35 and .32);
+    \fill[mpblue] (-.92,.51) circle (2pt) node[left=2pt,font=\scriptsize] {$a_1$};
+    \fill[mpblue] (-.63,-.72) circle (2pt) node[below left=1pt,font=\scriptsize] {$a_2$};
+    \fill[mpblue] (.68,-.7) circle (2pt) node[below right=1pt,font=\scriptsize] {$a_3$};
+    \fill[mpblue] (.93,.47) circle (2pt) node[right=1pt,font=\scriptsize] {$a_4$};
+    \fill[mpochre] (-.23,.43) circle (2.3pt) node[above=2pt,font=\scriptsize] {$b_1$};
+    \fill[mpred] (.25,-.3) circle (2.3pt) node[right=2pt,font=\scriptsize] {$b_2$};
+  \end{scope}
+  \node[align=center] at (0,-4.3)
+    {$q_0=\displaystyle\frac{c\,dz^2}{B_4(z)}$ on $\mathbb P^1$\\[4pt]
+     \textcolor{mpblue}{four simple poles $a_i$},
+     \textcolor{mpochre}{two regular marks $b_1,b_2$}};
+\end{tikzpicture}
+\caption[The genus-two and marked-torus double covers]{The two double covers used on the nonsquare genus-two stratum
+$\mathcal Q_2^{\mathrm{ns}}(2,2)$. The cover $X\to\mathbb P^1$ branches
+at all six marked values; the orientation cover $E\to\mathbb P^1$
+branches only at the four poles. The two regular marks lift to the pairs
+$\{p,-p\}$ and $\{q,-q\}$. Blue points in the torus diagram represent
+the four classes in $E[2]$, with boundary identifications understood.
+This is a diagram of flat differentials, distinct from the hyperbolic
+six-cone-point quotient metric.}
+\label{fig:mono-double-covers}
+\end{figure}
+% END INLINE FIGURE
+
+\subsection{A homogeneous finite cover}
+\label{subsec:genus2homogeneous}
+
+Choose a full symplectic level-two structure on the torus and
+choose an ordering and one lift from each of the two pairs
+$\{\pm p\},\{\pm q\}$.  Together with the origin, level two
+labels the four two-torsion points and hence the four poles.  Set
+\[
+ \Gamma_2=\ker\bigl(SL_2(\ZZ)\to SL_2(\ZZ/2\ZZ)\bigr),
+ \qquad
+ G_2=SL_2(\RR)\ltimes(\RR^2\oplus\RR^2),
+\]
+where $SL_2(\RR)$ acts in the standard way on both vector factors.
+Our group law and right-quotient convention are
+\begin{align}
+ (A,u_1,u_2)(B,v_1,v_2)
+   &=(AB,u_1+Av_1,u_2+Av_2),\\
+ Y_2&=G_2/(\Gamma_2\ltimes(\ZZ^2\oplus\ZZ^2)).
+ \label{eq:genus2Y2}
+\end{align}
+A representative $(A,u_1,u_2)$ describes the area-one torus
+$\RR^2/A\ZZ^2$ with marked points $[u_1],[u_2]$.
+Right multiplication by $(\gamma,n_1,n_2)$ changes the
+representative to
+\[
+ (A\gamma,u_1+An_1,u_2+An_2),
+\]
+which is exactly change of the lattice basis preserving level two
+and change of the two point lifts.  The presence of $-I$ in
+$\Gamma_2$ causes no singularity in this homogeneous quotient:
+right translation by a discrete subgroup on a Lie group is free.
+Here $A$ and $-A$ give the same physical lattice and the same
+level-two data.  A finer congruence level gives an additional finite cover. The spectral
+argument below uses level two specifically; its conclusion about the
+base spectrum is not automatically inherited by further covers.
+
+Delete the locus where one of the points is two-torsion or where
+$[u_1]=\pm[u_2]$, and call the resulting open set $Y_2^\circ$.
+In each torus fiber the deleted set is a finite union of real
+codimension-two subtori.  It has Haar measure zero and its
+complement is connected.  Since the base $SL_2(\RR)/\Gamma_2$ is
+connected, so is $Y_2^\circ$.
+Forgetting the finite marking choices gives a finite equivariant
+local parameterization of $\mathcal Q^{\mathrm{ns},1}_2(2,2)$.
+The finite choices include the distinguished origin over a pole,
+the level structure, the ordering of the two regular marks, and
+their signs.  Their changes preserve Haar measure and commute
+with the $SL_2(\RR)$ action; the stratum is their finite quotient.
+Over the coarse-moduli locus without additional automorphisms
+this is an ordinary finite covering.  If one retains the
+ubiquitous genus-two hyperelliptic involution in the orbifold
+stabilizers, its fixed order-two contribution must also be
+included in unnormalized volume conventions.  No infinite
+marking choice is being discarded in this finite-cover statement.
+
+The flow is left multiplication:
+\begin{equation}
+ g_t[A,u_1,u_2]
+   =[a_tA,a_tu_1,a_tu_2],
+ \qquad a_t=\diag(e^t,e^{-t}).
+ \label{eq:genus2homflow}
+\end{equation}
+The admissible set $Y_2^\circ$ is invariant under this action.
+Although the coordinates $\xi_i=A^{-1}u_i\pmod{\ZZ^2}$ are
+unchanged in a fixed lattice chart, a change $A\mapsto A\gamma$
+changes them by $\xi_i\mapsto\gamma^{-1}\xi_i$.  Therefore they
+are not globally fixed torus coordinates on the quotient.
+This monodromy is essential in the later Fourier calculation.
+
+\subsection{Haar measure and the period lattice}
+\label{subsec:genus2haarmeasure}
+
+The group $G_2$ is unimodular, and its Haar measure is
+\[
+ \dd A\,\dd u_1\,\dd u_2,
+\]
+where $\dd A$ is Haar measure on $SL_2(\RR)$.
+In a local lattice chart, $u_i=A\xi_i$ and $\det A=1$, so its
+quotient measure is the product of modular Haar measure and
+Lebesgue probability on $(\RR^2/\ZZ^2)^2$.
+The modular quotient has finite Haar volume and each torus fiber
+has volume one, hence $Y_2$ has finite volume.
+
+Before area normalization, local coordinates are the two complex
+lattice periods and the two complex positions of the marked
+points.  These are four complex coordinates, agreeing with
+\[
+ \dim_{\CC}\mathcal Q^{\mathrm{ns}}_2(2,2)=4.
+\]
+The covering construction transports these coordinates to
+quadratic-differential period coordinates by a fixed linear map
+on each marked chart.  This can be seen without a global
+classification theorem.  The orientation cover of $q_X$ is the
+fiber product
+\[
+ \widehat X:\quad
+ w^2=B_4(z),\qquad t^2=(z-b_1)(z-b_2),
+ \qquad y=wt,
+ \qquad \widehat\omega=\sqrt c\,\frac{\dd z}{w}.
+\]
+Its map to $E$ is a double cover branched at
+$\{p,-p,q,-q\}$.  Thus its relative periods are integral linear
+combinations of torus periods and marked-point positions, after
+paths and lifts have been fixed.  Transfer on absolute cycles and
+paths between $p$ and $-p$, or between $q$ and $-q$, recover the
+torus periods and twice the point positions, up to periods.
+Consequently the inverse change of coordinates is rational
+linear.  The integral period lattices are commensurable; factors
+of two can occur, so the map need not be unimodular.  This is the
+period-coordinate construction underlying the stratum measure
+\cite[Sections~1.1.1--1.1.2]{LanneauComponents}.
+
+It follows that the transported Masur--Veech measure is a constant
+multiple of Lebesgue measure in these cone coordinates.  More
+explicitly, write the torus area as $s>0$, put $A=\sqrt{s}\,B$
+with $\det B=1$, and use the point coordinates $\xi_i=A^{-1}u_i$.
+Up to a fixed positive constant the cone measure is
+\[
+ s^3\,\dd s\,\dd B\,\dd\xi_1\,\dd\xi_2.
+\]
+Restricting by area as in~\eqref{eq:genus2equalareas} therefore
+makes the unit-area measure a constant multiple of Haar measure
+on $Y_2$.  After
+normalizing to probability and accounting for the finite covering,
+the measures agree.  No numerical identity between unnormalized
+volumes is asserted without a choice of lattice and labeling
+conventions.  The measure-zero exclusions in $Y_2\setminus
+Y_2^\circ$ do not affect this probability identification.
+
+For observables compactly supported inside $Y_2^\circ$, extension
+by zero gives smooth observables on the homogeneous space.  Thus
+estimates proved there pass to the stratum after lifting the
+observables and, if necessary, averaging over the finite markings.
+For observables which grow near collisions, extension and norm
+control require additional estimates; a null collision set alone
+is not a bound on such observables.
+
+
+\subsection{Fourier decomposition and temperedness}
+\label{subsec:markedtorusconverse}
+
+The affine homogeneous model admits a direct calculation which does
+not use a general Teichm\"uller mixing theorem. Let
+\[
+ G=\operatorname{SL}_2(\RR),\qquad
+ \mathsf A=G\ltimes\operatorname{Mat}_{2\times2}(\RR),\qquad
+ \Lambda=\Gamma\ltimes\operatorname{Mat}_{2\times2}(\ZZ),
+\]
+where $\Gamma=\Gamma(2)$ initially. The group law is
+\[
+ (g,v)(g',v')=(gg',v+gv').
+\]
+Set $Y_2=\mathsf A/\Lambda$, with Haar probability measure $\mu$, and
+let $a_t=\diag(e^t,e^{-t})$ act by left translation. A point is a
+unit-area lattice together with two marked vectors modulo that
+lattice. If one counts the origin as a marked point, this is a
+torus with three ordered marked points. Coincidence loci have
+measure zero and may be removed. Any application to a particular
+quadratic stratum uses its separately established geometric
+identification with this model or a finite quotient; an arbitrary
+finite cover cannot be discarded without checking its base spectrum.
+
+\subsubsection*{Fiber Fourier coefficients and their stabilizers}
+
+Write $v=gu$, with $u\in\operatorname{Mat}_{2\times2}(\RR)/
+\operatorname{Mat}_{2\times2}(\ZZ)$. Then
+\[
+ (g,u)\sim(g\gamma,\gamma^{-1}u),\qquad
+ a_t(g,u)=(a_tg,u).
+\]
+For $F\in L^2(Y_2)$ expand, in the $L^2$ sense,
+\begin{equation}
+ F(g,u)=\sum_{M\in\operatorname{Mat}_{2\times2}(\ZZ)}
+   F_M(g)e^{2\pi i\tr(M^Tu)}.
+ \label{eq:markedtorusfourier}
+\end{equation}
+The equivariance relation is
+\begin{equation}
+ F_M(g\gamma)=F_{\gamma^{-T}M}(g).
+ \label{eq:markedtorusequivariance}
+\end{equation}
+Consequently each $\Gamma$-orbit of frequency matrices contributes
+a $G$-invariant summand isometric to
+\begin{equation}
+ L^2(G/\Gamma_M),\qquad
+ \Gamma_M=\{\gamma\in\Gamma:\gamma^TM=M\}.
+ \label{eq:markedtorusinduction}
+\end{equation}
+Indeed, Parseval followed by unfolding the orbit sum gives
+\[
+ \int_{G/\Gamma}
+       \sum_{M'\in\Gamma\cdot M}|F_{M'}(g)|^2\,\dd g
+   =\int_{G/\Gamma_M}|F_M(g)|^2\,\dd g.
+\]
+
+The stabilizers are elementary. If $M=0$, the summand is
+$L^2(G/\Gamma)$. If $M$ has rank two, $\Gamma_M=\{1\}$.
+If $M$ has rank one, write $M=vw^T$, with $v$ a primitive
+integral column vector and $w\ne0$ an integral column vector.
+Then $\Gamma_M$ fixes $v$ under the transpose action. It is a
+subgroup conjugate to a discrete unipotent group, hence is
+amenable. For example, if $v=(1,0)^T$ and $\Gamma=\Gamma(2)$,
+\[
+ \Gamma_M=
+ \left\{\begin{pmatrix}1&0\\2n&1\end{pmatrix}:n\in\ZZ\right\}.
+\]
+No transitivity assertion about primitive vectors under $\Gamma(2)$
+is required: one simply sums over all its frequency orbits. The same
+rank distinction appears in the fiber Fourier analysis of
+\cite[Section~4, especially Lemma~4.3]{StrombergssonVishe}.
+
+The trivial representation of an amenable group is weakly
+contained in its regular representation. Induction preserves
+weak containment and takes the regular representation of a closed
+subgroup to that of $G$. Thus every nonzero-frequency summand
+in~\eqref{eq:markedtorusinduction} is tempered. See
+\cite[Lemma 2.3 and Remark 2.4]{BenoistKobayashi}.
+The whole orthogonal complement of the fiber average is tempered,
+including its countably many frequency orbits. This gives uniform
+control of their sum; there is no frequency-dependent implied
+constant left to sum. Explicitly, for every $f\in C_c(G)$, all
+summands satisfy $\|\pi_{[M]}(f)\|\leq\|\lambda_G(f)\|$;
+their Hilbert direct sum satisfies the same inequality.
+
+This simple stabilizer argument is enough for the present rate
+estimate. It does not claim a complete irreducible spectral
+decomposition. The corresponding finer decomposition for one
+relative marked vector is developed in
+\cite{AthreyaLagaceMollerRaum}; in particular, that paper's genuine
+part contains no complementary series.
+
+\subsubsection*{The base spectrum at level two}
+
+The quotient $\Gamma(2)\backslash\HH$ is the thrice-punctured
+sphere. The finite-area theorem of
+\cite[Theorem 2]{OtalRosas} states that the discrete eigenvalue
+$\lambda_{2g-2+n}$ exceeds $1/4$, counting $\lambda_0=0$ and
+including residual as well as cuspidal eigenvalues. For $(g,n)=(0,3)$,
+there is therefore no positive discrete eigenvalue at or below
+$1/4$. The continuous spectrum starts at $1/4$.
+Since $-I\in\Gamma(2)$, the base representation factors through
+$\operatorname{PSL}_2(\RR)$. All non-tempered nontrivial representations of
+$\operatorname{PSL}_2(\RR)$ in this setting are spherical
+complementary-series representations and would produce a
+Laplacian eigenvalue in $(0,1/4)$; this is the $d=1$ specialization of
+the unitary-dual description in~\cite[Section~1]{EdwardsOhMixing}.
+It follows that
+$L^2_0(G/\Gamma(2))$ is tempered. The same conclusion holds for
+$\Gamma=\operatorname{SL}_2(\ZZ)$, by pullback from that quotient
+to the level-two cover.
+
+Combining the base and nonzero-frequency parts proves that
+\begin{equation}
+ L^2_0(Y_2)\quad\hbox{is a tempered $G$-representation}
+ \label{eq:markedtorusalltempered}
+\end{equation}
+for either of these two choices of $\Gamma$. The statement does
+not automatically hold for a further finite-index subgroup.
+
+\subsection{A global correlation bound with an explicit constant}
+
+Let $K=\operatorname{SO}(2)$, with angular generator $\Theta$,
+normalized so that the $n$th character has derivative $in$.
+Use the norm
+\begin{equation}
+ \mathcal S_1(F)^2=\|F\|_2^2+\|\Theta F\|_2^2.
+ \label{eq:markedtorusKnorm}
+\end{equation}
+The angle is the ordinary matrix rotation angle: on the orientation
+cover, $\omega$ changes to $e^{i\theta}\omega$, so the genus-two
+quadratic differential changes to $e^{2i\theta}q_X$. Thus this
+normalization is twice differentiation in the phase of $q_X$.
+Write $F^\circ=F-\mu(F)$ and $G^\circ=G-\mu(G)$.
+The Cowling--Haagerup--Howe bound for a tempered representation is
+\[
+ |\langle\pi(g)v,w\rangle|
+ \leq\Xi(g)\|v\|\|w\|
+       \sqrt{\dim Kv\,\dim Kw}
+\]
+for $K$-finite vectors; see
+\cite[Proposition 2.6]{BenoistKobayashi} and
+\cite{CowlingHaagerupHowe}. For single $K$-types the two
+dimension factors equal one. Decomposing into $K$-types and
+using Cauchy--Schwarz gives
+\[
+ \sum_{n\in\ZZ}\|F_n\|_2
+ \leq\left(\sum_{n\in\ZZ}(1+n^2)^{-1}\right)^{1/2}
+       \mathcal S_1(F)
+ =\sqrt{\pi\coth\pi}\,\mathcal S_1(F).
+\]
+Here the subscript denotes $K$-type, distinct from the matrix
+frequency in~\eqref{eq:markedtorusfourier}.
+
+For $e_1=(1,0)^T$, the spherical principal-series realization gives
+$\Xi(a_t)=\int_K|a_tke_1|^{-1}\,\dd k$, with Haar probability on $K$.
+Using $u=\tan\theta$ on a quadrant gives, in our time normalization,
+the elementary integral
+\begin{equation}
+ \Xi(a_t)=\frac2\pi e^{-t}
+   \int_0^\infty
+    \frac{\dd u}{\sqrt{(1+u^2)(1+e^{-4t}u^2)}}
+ \leq\frac4\pi(1+t)e^{-t},\qquad t\geq0.
+ \label{eq:markedtorusXi}
+\end{equation}
+For the inequality, split the integral at $u=1$ and $u=e^{2t}$.
+The three contributions are at most $1$, $2t$, and $1$.
+\begin{theorem}[An explicit marked-torus correlation bound]
+\label{thm:markedtorusmixing}
+For Haar probability measure on $Y_2$ and all $F,G$ in the domain
+of the rotation generator, the following inequality holds for $t\geq0$:
+\begin{equation}
+ \begin{split}
+ \left|\int_{Y_2}\overline F\,(G\circ a_t)\,\dd\mu
+       -\overline{\mu(F)}\mu(G)\right|
+ \leq4\coth\pi\,(1+t)e^{-t}
+       \mathcal S_1(F^\circ)\mathcal S_1(G^\circ).
+ \end{split}
+ \label{eq:markedtorusexplicitmix}
+\end{equation}
+The same estimate holds on $\mathcal Q^{\mathrm{ns},1}_2(2,2)$
+with its probability-normalized Masur--Veech measure and the induced
+rotation norm.
+\end{theorem}
+\begin{proof}
+The preceding $K$-type estimate and~\eqref{eq:markedtorusXi} apply
+to the tempered representation~\eqref{eq:markedtorusalltempered}.
+Remove the constant components to obtain the displayed covariance.
+The geometric statement follows by pulling observables back to the
+finite model of Section~\ref{subsec:genus2homogeneous}; probability
+normalization preserves the norms and the correlation.
+\end{proof}
+Centering the functions does not increase $\mathcal S_1$.
+The norm needs only one rotation derivative; neither derivatives in
+the marked-point coordinates nor compact support are required.
+This is global on the finite-volume affine quotient. No compact
+cutoff or unquantified cusp-tail estimate enters this inequality.
+The polynomial factor allows every pure exponential rate
+$e^{-(1-\varepsilon)t}$, but not a uniform constant times $e^{-t}$
+from this argument. More explicitly, for $0<\varepsilon\leq1$ one
+may replace $4\coth\pi(1+t)e^{-t}$ by
+$4\coth\pi\,\varepsilon^{-1}e^{-(1-\varepsilon)t}$.
+For the convention $a_t=\diag(e^{t/2},e^{-t/2})$, replace $t$
+by $t/2$ throughout.
+
+\subsection{An exact finite lattice sum with two endpoint weights}
+
+The following unfolding supplies a concrete counting statistic.
+For $\varphi,\psi\in C_c^\infty(\mathsf A)$ let
+\[
+ P\varphi(h\Lambda)=\sum_{\lambda\in\Lambda}\varphi(h\lambda),
+ \qquad F=P\varphi,\quad G=P\psi.
+\]
+Normalize Haar measure $\dd h$ so that $\mathsf A/\Lambda$ has volume one.
+For fixed $t$ define the overlap weight
+\begin{equation}
+ W_t^{\varphi,\psi}(\lambda)
+ =\int_{\mathsf A}\overline{\varphi(h)}\,
+                   \psi(a_th\lambda)\,\dd h.
+ \label{eq:markedtorusweight}
+\end{equation}
+Only finitely many $\lambda$ contribute, since any such lattice
+element lies in the compact set
+$(\operatorname{supp}\varphi)^{-1}a_{-t}
+\operatorname{supp}\psi$. In coordinates
+$h=(g,v)$ and $\lambda=(\gamma,m)$, the weight is explicitly
+\begin{equation}
+ W_t^{\varphi,\psi}(\gamma,m)
+ =\int_G\int_{\operatorname{Mat}_{2\times2}(\RR)}
+    \overline{\varphi(g,v)}\,
+    \psi\bigl(a_tg\gamma,a_t(v+gm)\bigr)\,\dd v\,\dd g.
+ \label{eq:markedtorusweightcoordinates}
+\end{equation}
+Unfolding the periodization of the first observable gives exactly
+\begin{equation}
+ \sum_{\lambda\in\Lambda}W_t^{\varphi,\psi}(\lambda)
+   =\int_{Y_2}\overline F\,(G\circ a_t)\,\dd\mu.
+ \label{eq:markedtorusexactcount}
+\end{equation}
+The weights are nonnegative when $\varphi$ and $\psi$ are
+nonnegative. For arbitrary observables they are signed or complex.
+Thus~\eqref{eq:markedtorusexactcount} is a finite weighted return
+sum, not an assertion about an unweighted sharp orbit count.
+
+The unstable Jacobian exponent is $4$: conjugation by $a_t$
+expands the upper-unipotent direction in $\mathfrak{sl}_2$ by
+$e^{2t}$ and the two expanding translation directions by $e^t$
+each. Accordingly define the normalized return statistic and its
+cumulative version, for $T\geq1$, by
+\[
+ \mathcal N_{\varphi,\psi}(t)
+   =e^{4t}\sum_{\lambda\in\Lambda}
+                     W_t^{\varphi,\psi}(\lambda),\qquad
+ \mathcal A_{\varphi,\psi}(T)
+   =\int_1^T\mathcal N_{\varphi,\psi}(t)\,\dd t.
+\]
+This normalization uses the affine model's unstable Jacobian. It
+does not use the polar Jacobian of full Teichm\"uller space.
+Since $\mu(P\varphi)=\int_{\mathsf A}\varphi\,\dd h$,
+\eqref{eq:markedtorusexplicitmix} gives the explicit remainder
+\begin{equation}
+ \begin{split}
+ \left|\mathcal A_{\varphi,\psi}(T)
+    -\overline{\mu(F)}\mu(G)\frac{e^{4T}-e^4}{4}\right|
+ \leq\frac43\coth\pi\,(1+T)e^{3T}
+       \mathcal S_1(F^\circ)\mathcal S_1(G^\circ).
+ \end{split}
+ \label{eq:markedtoruscountremainder}
+\end{equation}
+Equivalently, with $R=e^T$, this is an $O(R^3\log R)$
+remainder against an $R^4$ main term, with a displayed norm bound.
+Here $R=e^T$ is an exponential-time parameter; identifying it with
+hyperbolic curve length, intersection number, or square-tiled area
+would require a separate comparison. The estimate follows simply from
+$\int_1^T(1+t)e^{3t}\dd t\leq\tfrac13(1+T)e^{3T}$.
+
+These norms can also be bounded using the original compactly
+supported weights. If $K_0\subset \mathsf A$ contains their supports and
+\[
+ M_{K_0}=\#(\Lambda\cap K_0^{-1}K_0),
+\]
+then Cauchy--Schwarz in the locally finite periodization gives
+\[
+ \mathcal S_1(P\varphi)
+  \leq\sqrt{M_{K_0}}
+       \bigl(\|\varphi\|_{L^2(\mathsf A)}^2+
+              \|\Theta\varphi\|_{L^2(\mathsf A)}^2\bigr)^{1/2},
+\]
+and similarly for $\psi$. All quantities in this bound are finite
+for the chosen compact supports.
+
+Define the flow generator by
+$V\psi(h)=\left.\frac{\dd}{\dd s}\right|_{s=0}\psi(a_sh)$.
+Periodization commutes with this generator:
+$V(P\psi)=P(V\psi)$. Therefore inserting the terminal weight
+$(4+V)\psi$ gives the exact identity
+\begin{equation}
+ \begin{split}
+ \mathcal A_{\varphi,(4+V)\psi}(T)
+  &=e^{4T}\int_{Y_2}\overline F\,(G\circ a_T)\,\dd\mu\\
+  &\quad-e^4\int_{Y_2}\overline F\,(G\circ a_1)\,\dd\mu.
+ \end{split}
+ \label{eq:markedtorusderivativeweight}
+\end{equation}
+There is no convolution operator to commute past $V$, and no
+unjustified differentiation of a counting asymptotic.
+The quantitative norm required for this terminal test is
+$\mathcal S_1((4+V)G)\leq4\mathcal S_1(G)+\mathcal S_1(VG)$.
+It includes $\|\Theta VG\|_2$; the generators $\Theta$ and $V$
+do not commute, and this mixed derivative is not omitted.
+
+
+\subsection{What the marked-torus calculation settles}
+\label{subsec:genus2torusscope}
+
+The compact polyhedron encodes the genus-two hyperbolic base, whereas the
+marked flat torus encodes the nonsquare $(2,2)$ differential and its flow.
+They use different intrinsic metrics and are linked by the same six branch
+values. The affine model gives an exact Fourier decomposition, an explicit
+global correlation bound, and the finite weighted return sum with
+remainder~\eqref{eq:markedtoruscountremainder}. These are conclusions of the
+calculation, not hypotheses imported from general Teichm\"uller mixing.
+The inputs are classical: amenability and induction, the
+Cowling--Haagerup--Howe bound, the elementary $SL_2$ spherical function,
+and the absence of positive small spectrum on the thrice-punctured sphere.
+Related marked-torus harmonic analysis is already developed in
+\cite{StrombergssonVishe,AthreyaLagaceMollerRaum}; no novelty claim for that
+machinery is intended.
+
+The derivative identity~\eqref{eq:markedtorusderivativeweight} also makes
+the counting converse exact in this model. After subtracting the product
+of means, a bound for the terminal test $(4+V)G$ recovers the correlation
+at $T$ with the same exponential saving. In the proof here the direction
+is Fourier/representation theory to correlations and hence to counts.
+The identity identifies the reverse implication as well, without making
+the proof circular.
+
+The restriction to the chosen stratum remains substantial. Although it
+meets every genus-two conformal base, its unit-area dimension is seven;
+the principal unit stratum has dimension eleven. The affine expanding
+Jacobian is $e^{4t}$, whereas the full genus-two Teichm\"uller polar kernel
+in Section~\ref{sec:pairconverse} has exponent $6$. The two kernels cannot
+be substituted for one another. Section~\ref{sec:coefficientobservables}
+constructs selected primitive-arc observables from the coefficient data
+with controlled geometric norms. A comparison with the full orbit kernel,
+and uniform stability of the nonlinear coefficient extraction, remain
+open. In particular, the $O(R^3\log R)$ estimate above is not an error
+term for the unweighted count of connected simple closed geodesics.
+A comparison with that count, or an extension to the principal stratum
+$\mathcal Q^1_2(1^4)$, is a further problem.
+
+
+

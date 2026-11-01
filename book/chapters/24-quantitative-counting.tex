@@ -1,0 +1,659 @@
+\section{Quantitative counting and coefficient cancellation}
+\label{sec:quantitativecounting}
+
+The preceding construction raises a quantitative question: can explicit
+crossing resolutions give a counting remainder with a specified exponent
+and geometric constants? We first give an elementary counting benchmark.
+We then prove a systole-dependent gap and a uniform recovery estimate,
+and show on a fixed surface why their exponential separation scale is
+unavoidable for estimates of individual orbital terms. Finally, a finite
+support coefficient and a smoothing criterion isolate the additional
+estimate needed for connected-curve counting.
+
+\subsection{Effective counting and the meaning of an explicit saving}
+\label{subsec:countknown}
+
+Continue with a closed hyperbolic surface $X$ of genus $g\geq2$, and
+put $d=6g-6$.  For a fixed nonzero rational multicurve $\gamma_0$, write
+\[
+ N_{X,\gamma_0}(R)=
+ \#\{\gamma\in\operatorname{Mod}(S)\gamma_0:
+                         \ell_X(\gamma)\leq R\}.
+\]
+Eskin--Mirzakhani--Mohammadi prove that there exists
+$\kappa(g)>0$ such that
+\begin{equation}
+ N_{X,\gamma_0}(R)
+ =c_{X,\gamma_0}R^d
+   +O_{X,\gamma_0}(R^{d-\kappa(g)}).
+ \label{eq:countEMM}
+\end{equation}
+Their theorem also allows variable negative curvature; the hyperbolic
+case suffices here~\cite[Theorem 1.1]{EMMEffective}.  The theorem
+states the existence of the exponent rather than a numerical value.
+Its proof uses exponential mixing of the Teichm\"uller flow.  A
+specified exponent and certified constants for a given surface would
+therefore be additional quantitative information.  This distinction
+does not diminish the proved power saving or establish that its
+constants are intrinsically noncomputable.
+
+The coefficient distributions offer explicit local formulas, but
+their present estimates do not improve~\eqref{eq:countEMM}.
+The task is to control a growing collection of connected supports.
+The qualitative leading term, treated in
+\cite{MirzSimple,RivinSimpleAsymptotics}, and an effective remainder
+are separate questions.  It is useful first to record how much
+quantitative control follows from ordinary lattice geometry alone.
+
+\subsection{A constructive lattice benchmark for all multicurves}
+\label{subsec:countlattice}
+
+Let $\mathcal{ML}_{\ZZ}(S)$ denote integral measured laminations,
+equivalently essential simple multicurves with positive integer
+weights.  These include disconnected supports.  Normalize Thurston
+measure by the actual integral-lamination lattice in each chart, and
+set
+\[
+ M_X(R)=\#\{C\in\mathcal{ML}_{\ZZ}(S)\setminus\{0\}:
+                  \ell_X(C)\leq R\},\qquad
+ B(X)=\mu_{\mathrm{Th}}\{\lambda:\ell_X(\lambda)\leq1\}.
+\]
+
+\begin{proposition}[Total multicurve error]
+\label{prop:countall}
+For the fixed surface $X$,
+\begin{equation}
+ \boxed{M_X(R)=B(X)R^d+O_X(R^{d-1}).}
+ \label{eq:countall}
+\end{equation}
+The error can be bounded using finitely many lattice covolumes,
+fundamental-cell radii, convex-body inradii and volumes, and
+lower-dimensional face bounds.
+\end{proposition}
+
+\begin{proof}
+Here is the quantitative lattice estimate needed for the argument.
+Let $\Lambda\subset\RR^d$ have covolume $v$ and a fundamental cell
+$F\subset B(0,\rho)$.  Suppose the convex compact body $K$ has volume
+$V$ and contains $B(x_0,r)$, where $r>0$.  Put $a=\rho/r$.  Then
+\begin{equation}
+ \frac Vv(R-a)_+^d
+ \leq\#(\Lambda\cap RK)
+ \leq\frac Vv(R+a)^d.
+ \label{eq:countsandwich}
+\end{equation}
+Indeed, up to null sets the lattice cells tile Euclidean space, so
+\[
+ (RK)\ominus B_\rho
+ \ \subset\!
+ \bigcup_{p\in\Lambda\cap RK}(p+F)
+ \ \subset RK+B_\rho.
+\]
+Here $A\ominus B_\rho=\{x:x+B_\rho\subset A\}$.
+Writing $K_0=K-x_0$, we have $B_r\subset K_0$ and
+\[
+ RK+B_\rho\subset Rx_0+(R+a)K_0.
+\]
+For $R\geq a$, also
+$Rx_0+(R-a)K_0\subset(RK)\ominus B_\rho$.
+Taking volumes proves~\eqref{eq:countsandwich}; the lower bound is
+zero when $R<a$.  Notice that the homotheties are centered at
+$Rx_0$, since the origin can be a boundary point of $K$.
+For $R\geq a$ this gives the explicit bound
+\begin{equation}
+ \left|\#(\Lambda\cap RK)-\frac VvR^d\right|
+ \leq d\,2^{d-1}\frac Vv\frac\rho r\,R^{d-1}.
+ \label{eq:countcellerror}
+\end{equation}
+The upper increment $(R+a)^d-R^d$ dominates the lower decrement.
+
+To apply this estimate, use a finite rational polyhedral cone
+subdivision subordinate to train-track charts, with their actual
+integral weight lattices. Length is convex in each train-track cone,
+by the surgery argument in \cite[Theorem 5.1]{EMMEffective}.
+The finite polyhedral handling of chart overlaps is given in
+\cite[Lemma 5.1 and the end of the proof of Theorem 1.1 in
+Section 8]{EMMEffective}; a further finite subdivision makes the
+chambers convex and their overlaps faces. In the coordinates of
+each chamber $Q_i$, the sets
+$K_i=Q_i\cap\{\ell_X\leq1\}$ are compact convex bodies.
+Indeed, continuity and positivity of length on the projectivized
+cone give boundedness, and scaling an interior point of a
+full-dimensional chamber to length less than one gives an interior
+ball. Lower-dimensional chambers are handled as faces. Apply
+\eqref{eq:countsandwich} in every full-dimensional chamber with its
+own integral lattice.  Their normalized volumes sum to $B(X)$.
+In particular, a coordinate parity condition must be absorbed into
+the lattice covolume, not silently discarded.
+
+Shared faces can be assigned to one chamber.  Alternatively, count
+closed chambers and bound the overcount.  If a face has dimension
+$1\leq k\leq d-1$, its unit-length part lies in a ball of radius $A_F$, and
+its induced lattice has shortest nonzero vector of length $\delta_F$,
+disjoint-ball packing gives
+\[
+ \#(\Lambda_F\cap RK_F)
+ \leq\left(1+\frac{2RA_F}{\delta_F}\right)^k.
+\]
+Zero-dimensional faces contribute at most one point each.  The
+finite sum of these bounds is $O_X(R^{d-1})$.
+Removing the zero multicurve changes the answer by one.
+\end{proof}
+
+This refines the elementary total-multicurve lattice asymptotic in
+\cite[Proposition 3.1]{MirzSimple}; it is a benchmark for the new
+machinery.  Formula~\eqref{eq:countcellerror} is explicit once bounds
+on its geometric inputs are certified.  It does not supply numerical
+values for an unspecified surface.  Fixed train-track representatives
+give linear upper bounds for length, and coordinate length estimates
+such as~\cite{LuoStongLengths} help certify the required geometric
+bounds.  Hyperbolic length itself need not be piecewise linear.
+For example, choose an interior rational weight vector in a chamber
+and scale it until a certified linear upper bound for length is less
+than one.  A small coordinate ball then remains both in that chamber
+and below the upper bound, producing an inradius certificate.
+For an outer-radius certificate one needs a lower bound for length
+on the chamber's unit coordinate sphere.  A finite filling collection
+of curves, together with collar inequalities and their
+piecewise-linear intersection functions, supplies such a bound.
+The constants can deteriorate when the surface degenerates; no
+uniformity over the entire moduli space is being asserted.
+On a fixed compact subset of Teichm\"uller space the same finite
+coordinate construction and uniform length comparisons give uniform
+versions of the bounds.
+
+\subsection{Primitivity, connectivity, and the torus benchmark}
+\label{subsec:countprimitive}
+
+Write $C=\sum_jm_j\alpha_j$ with distinct simple supports.  Call $C$
+primitive as an integral lamination if $\gcd_jm_j=1$.
+Every nonzero integral multicurve is uniquely $kC_0$ with $C_0$
+primitive.  This intrinsic definition avoids coordinate conventions:
+division by $k$ is allowed precisely when the resulting lamination
+remains integral.  Let $P_X(R)$ count these primitive laminations.
+M\"obius inversion gives
+\[
+ P_X(R)=\sum_{k\leq R/\operatorname{sys}(X)}\mu(k)M_X(R/k).
+\]
+Since $d>2$, the error series $\sum k^{-(d-1)}$ converges, while
+the truncated leading-term tail is $O_X(R)$.  Therefore
+\begin{equation}
+ P_X(R)=\frac{B(X)}{\zeta(d)}R^d+O_X(R^{d-1}).
+ \label{eq:countprimitive}
+\end{equation}
+A union $\alpha+\beta$ of distinct disjoint simple curves is primitive
+but disconnected.  Thus~\eqref{eq:countprimitive} does not count
+connected simple curves in higher genus.
+
+For a once-punctured torus every essential multicurve has one
+distinct support.  The McShane--Rivin norm on $H_1(T;\RR)$ identifies
+simple curves with primitive lattice vectors modulo sign.  If $B_X$
+is its full centrally symmetric unit ball, our unoriented convention
+gives
+\begin{equation}
+ N_X(R)=\frac{\operatorname{area}(B_X)}{2\zeta(2)}R^2
+                  +O_X(R\log R).
+ \label{eq:counttorus}
+\end{equation}
+This is the norm-and-M\"obius-inversion argument of
+\cite[Theorem 4.1]{McShaneRivinTori}; the factor $1/2$ identifies
+opposite homology vectors.  The logarithm comes from
+$\sum_{k\leq O_X(R)}k^{-1}$.  This independent torus benchmark does
+not extend the closed-surface trace formula across a cusp.
+
+
+\subsection{A fixed-surface obstruction to uniform first-atom separation}
+\label{subsec:countnearcollision}
+
+The exponentially small remainder for one fixed simple curve does not
+remain small uniformly over curves whose length tends to infinity.
+There is an explicit obstruction on a fixed hyperbolic surface, with
+no degeneration of its metric.
+
+\begin{proposition}[An exponentially close pants contribution]
+\label{prop:countnearcollision}
+On every closed hyperbolic surface $X$ of genus at least two there
+are fixed distinct simple curves $a,b$, and simple curves $c_n$
+with $R_n=\ell_X(c_n)\to\infty$, such that $a,b,c_n$ bound
+embedded geodesic pairs of pants. Let $\gamma_n$ be their
+figure-eight curves with
+$T_{\gamma_n}=T_aT_b-T_{c_n}$, and set
+\[
+ A=\cosh\frac{\ell_X(a)}2\cosh\frac{\ell_X(b)}2,
+ \qquad L_n=\ell_X(\gamma_n).
+\]
+Then
+\begin{align}
+ L_n-R_n&=8A e^{-R_n/2}+O(e^{-R_n}),\notag\\
+ L_n^2-R_n^2&=16A R_n e^{-R_n/2}
+                    +O(R_n e^{-R_n}).
+ \label{eq:countpantsgap}
+\end{align}
+The coefficient of $T_{c_n}$ in $T_{\gamma_n}$ is $-1$.
+\end{proposition}
+
+\begin{proof}
+Choose distinct disjoint nonseparating curves $a,b$ whose complement
+after cutting is connected, of genus $g-2$ with four boundary
+components. In this cut surface let $c$ bound a pair of pants with
+one copy of $a$ and one copy of $b$. Choose an essential interior
+curve intersecting $c$. A Dehn twist about that curve fixes the boundary
+and gives infinitely many distinct curves $c_n$, each bounding a
+pair of pants with $a,b$. Straightening preserves this configuration.
+Finiteness of the closed-geodesic length set below a bound implies
+$R_n\to\infty$.
+
+Rivin's pants identity~\cite[Theorem 1.3]{RivinFigures} gives
+\[
+ \cosh(L_n/2)=\cosh(R_n/2)+2A.
+\]
+Expanding its inverse for $R_n\to\infty$ gives
+\eqref{eq:countpantsgap}. The coefficient assertion is the ordinary
+trace identity in the displayed pants variables.
+\end{proof}
+
+Normalize the $c_n$ heat coefficient by its first-atom contribution.
+The single primitive orbital term supplied by $\gamma_n$ becomes
+\begin{equation}
+ -r_n\exp\!\left(-\frac{L_n^2-R_n^2}{4t}\right),
+ \qquad
+ r_n=\frac{L_n}{R_n}
+       \frac{\sinh(R_n/2)}{\sinh(L_n/2)}
+     =1+O(e^{-R_n/2}).
+ \label{eq:countnormalizedpants}
+\end{equation}
+For $t=R_n^{-p}$, with any fixed $p>0$, this tends to $-1$.
+Thus the absolute-valued orbital remainder contains an order-one
+term at every polynomial time scale. Suppressing this one term
+below $R_n^{-M}$ requires
+\begin{equation}
+ t\leq\left(\frac{4A}{M}+o(1)\right)
+       \frac{R_n e^{-R_n/2}}{\log R_n}.
+ \label{eq:countnecessarytime}
+\end{equation}
+This is a statement about an individual orbital contribution and
+the absolute-valued remainder. It does not exclude cancellations
+with other curves, including other curves of exactly the same
+length, and does not by itself identify a nonzero net atom of
+$\sigma_{c_n}^X$.
+
+Such cancellation is precisely what the coefficient approach can
+organize. By~\eqref{eq:coefffigurecancellation},
+$\sigma_{c_n}^X+\sigma_{a+b}^X$ cancels the entire chosen
+$\gamma_n$ family, including all iterates, exactly. A useful
+counting construction should exploit these relations before taking
+absolute values. The proposition explains why the cancellation is
+more than a small correction to an already uniform first-atom
+estimate.
+
+\subsection{A constructive uniform isolation estimate}
+\label{subsec:countuniformisolation}
+
+The same bracelet estimate that bounded the coefficients also
+provides an explicit lower bound on their orbital separation.
+Write $\varepsilon=\operatorname{sys}(X)>0$, and put
+\begin{equation}
+ c_\varepsilon=\min\left\{1,
+       2\cosh(3\varepsilon/2)-2\cosh(\varepsilon/2)\right\}>0.
+ \label{eq:counttracegapconstant}
+\end{equation}
+
+\begin{lemma}[A quantitative trace gap]
+\label{lem:counttracegap}
+Let $\alpha$ be simple, $x=\ell_X(\alpha)$, and let
+$\gamma=\delta^k$ be an orbital label contributing to
+$\sigma_\alpha^X$, other than $(\alpha,1)$. If $L=\ell_X(\gamma)$,
+then
+\begin{equation}
+ 2\cosh(L/2)-2\cosh(x/2)\geq c_\varepsilon.
+ \label{eq:counttracegap}
+\end{equation}
+Consequently, for $x\leq R$,
+\begin{equation}
+ L^2-x^2\geq\Delta_\varepsilon(R),\qquad
+ \Delta_\varepsilon(R)=
+ 4\arcosh^2\!\left(\cosh(R/2)+\frac{c_\varepsilon}{2}\right)-R^2
+ \sim4c_\varepsilon R e^{-R/2}.
+ \label{eq:countactiongap}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+By~\eqref{eq:coeffbraceletpositive}, the positive Fuchsian value
+$2\cosh(L/2)$ is an integer positive sum of bracelet values.
+At least one contributing bracelet has an $\alpha$ coefficient.
+It therefore has an odd winding $n\geq1$ around $\alpha$;
+any additional support components must contribute constant
+Chebyshev terms and have even windings at least two.
+
+If $n\geq3$, that bracelet exceeds $2\cosh(x/2)$ by at least
+$2\cosh(3\varepsilon/2)-2\cosh(\varepsilon/2)$.
+If $n=1$ and additional support occurs, its value is at least
+$2\cosh(x/2)\,2\cosh\varepsilon$, giving a difference greater
+than two. The remaining case is the bracelet $\alpha$ itself.
+Unless it is the only term with coefficient of absolute value one,
+integrality gives an additional positive value of at least one.
+If it were that sole term, the Fuchsian lengths would satisfy
+$L=x$, contrary to the strict length-ordering lemma for the
+orbital labels under consideration. This proves
+\eqref{eq:counttracegap}.
+
+Set $f(x)=2\arcosh(\cosh(x/2)+c_\varepsilon/2)$.
+The trace gap gives $L\geq f(x)>x$. Moreover,
+\[
+ \frac{\dd}{\dd x}\bigl(f(x)^2-x^2\bigr)
+ =2\left[f(x)\frac{\sinh(x/2)}{\sinh(f(x)/2)}-x\right]<0,
+\]
+because $y/\sinh(y/2)$ decreases for $y>0$.
+This proves the uniform action bound; its asymptotic follows by
+expanding $f(R)-R=2c_\varepsilon e^{-R/2}+O(e^{-R})$.
+\end{proof}
+
+Here and below ``orbital gap'' refers to the individual summands
+before cancellation at coincident lengths. This convention both
+makes the estimate stronger and avoids assuming that a later
+summand survives in the signed measure.
+
+For explicit constants let $D=\operatorname{diam}(X)$ and define
+\begin{align}
+ Q_X&=\frac{e^{2D}}{(1-e^{-\varepsilon/2})^2},\notag\\
+ A_\varepsilon&=\frac{1+e^{-\varepsilon}}{(1-e^{-\varepsilon})^2}
+       \geq\sup_{\substack{n\geq1\\n\ {\rm odd}}}
+             n e^{-(n-1)\varepsilon/2},\notag\\
+ C_X&=\frac{Q_X A_\varepsilon\coth(\varepsilon/2)e^2}
+               {(1-e^{-1})^2}\left(1+\frac2\varepsilon\right).
+ \label{eq:countuniformconstants}
+\end{align}
+For a simple $\alpha$ let $b_\alpha$ be the smaller of
+$\ell_\alpha+1$ and its first later contributing orbital length.
+The latter exists: the orbital label $(\alpha,3)$ contributes
+coefficient $-3$, irrespective of cancellation with other labels
+at the same length.
+For $R\geq\varepsilon$ put
+\[
+ \eta_X(R)=\min_{\substack{\alpha\ {\rm simple}\\\ell_\alpha\leq R}}
+             (b_\alpha^2-\ell_\alpha^2),\qquad
+ \underline\eta_X(R)=
+             \min\{2\varepsilon+1,\Delta_\varepsilon(R)\}.
+\]
+Only finitely many labels enter the first minimum, and
+Lemma~\ref{lem:counttracegap} gives
+$\eta_X(R)\geq\underline\eta_X(R)>0$.
+
+\begin{proposition}[Uniform recovery with explicit constants]
+\label{prop:countuniformisolation}
+For $0<t\leq\varepsilon/4$,
+\begin{equation}
+ \boxed{
+ \sup_{\substack{\alpha\ {\rm simple}\\\ell_\alpha\leq R}}
+ \left|
+   \frac{\sinh(\ell_\alpha/2)}{\ell_\alpha}
+   e^{\ell_\alpha^2/(4t)}G_\alpha^X(t)-1
+ \right|
+ \leq C_X\exp\!\left(R-\frac{\eta_X(R)}{4t}\right).
+ }
+ \label{eq:countuniformisolation}
+\end{equation}
+The explicit $\underline\eta_X(R)$ may replace $\eta_X(R)$.
+\end{proposition}
+
+\begin{proof}
+Orbit packing gives a bound $N_{\rm all}(U)\leq Q_Xe^U$
+for primitive/iterate labels of length at most $U$.
+Indeed, choose a representative whose axis comes within $D$ of
+a fixed lift of a basepoint. It moves that point at most $U+2D$.
+The orbit points have separation at least $\varepsilon$, and
+comparison of disjoint disks of radius $\varepsilon/2$ with the
+disk of radius $U+2D+\varepsilon/2$ gives the stated constant.
+
+Set $x=\ell_\alpha$ and $w_\alpha=x/\sinh(x/2)$.
+The sharper form of the fixed-coefficient bound is
+\[
+ \frac{K_{\alpha,X}}{w_\alpha}
+ \leq\frac{A_\varepsilon}{2x}.
+\]
+In fact,
+$\sinh(x/2)/\cosh(nx/2)\leq e^{-(n-1)x/2}$, and the sum
+over odd $n=2j+1$ of
+$(2j+1)e^{-j\varepsilon}$ equals $A_\varepsilon$.
+Thus the absolute mass of a length-$L$ orbital term, divided by
+$w_\alpha$, is at most
+$A_\varepsilon\coth(\varepsilon/2)L/x$.
+Sum the tail in unit shells starting at $b=b_\alpha$.
+Since $b\geq\varepsilon$ and $t\leq\varepsilon/4$, its normalized
+absolute value is at most the following expression: the shell
+count contributes $e^j$, whereas
+$((b+j)^2-b^2)/(4t)\geq2j$ supplies at least $e^{-2j}$.
+\[
+ \frac{Q_X A_\varepsilon\coth(\varepsilon/2)}{x}
+ e^{b+1-(b^2-x^2)/(4t)}
+ \sum_{j\geq0}(b+j+1)e^{-j}
+ \leq
+ \frac{Q_X A_\varepsilon\coth(\varepsilon/2)}{(1-e^{-1})^2}
+ \frac{b+1}{x}e^{b+1-(b^2-x^2)/(4t)}.
+\]
+Use $b\leq x+1\leq R+1$ and $(b+1)/x\leq1+2/\varepsilon$.
+This proves~\eqref{eq:countuniformisolation}.
+\end{proof}
+
+For $R>1$ and $M>0$, a sufficient condition for relative error
+at most $R^{-M}$ is
+\begin{equation}
+ t\leq\min\left\{\frac\varepsilon4,
+ \frac{\underline\eta_X(R)}
+      {4\bigl(R+M\log R+\log\max\{1,C_X\}\bigr)}\right\}.
+ \label{eq:countcertifiedtime}
+\end{equation}
+Every displayed constant is determined by geometric data, and
+certified lower bounds for the systole and upper bounds for the
+diameter suffice for a conservative version. A sharper $\eta_X(R)$
+can also be found from the finite cutoff $R+1$ when length
+comparisons and the metric are supplied effectively. The guaranteed
+time scale in~\eqref{eq:countcertifiedtime} is exponential in $-R/2$.
+Together with Proposition~\ref{prop:countnearcollision}, this
+identifies the exponential separation scale constructively.
+
+This is a quantitative recovery theorem, not a counting asymptotic.
+Summing its normalized expression over $\ell_\alpha\leq R$
+already presupposes the target set and its lengths. A counting
+argument must construct an aggregate observable, perform the
+necessary signed cancellations, and estimate its large-length
+behavior without assuming that list.
+
+\subsection{A finite coefficient that selects one support}
+\label{subsec:countsupport}
+
+There is a useful way to state the remaining selection problem without
+an infinite-dimensional coefficient operation. For an integral
+multicurve $C=\sum_{i=1}^r m_i\alpha_i$, with distinct supports
+$\alpha_i$, put $r(C)=r$ and $r(0)=0$. Define
+\begin{equation}
+ \mathcal P_X(s,z)=\sum_{C\in\mathcal{ML}_{\ZZ}(S)}
+       z^{r(C)}e^{-s\ell_X(C)},\qquad \Re s>0.
+ \label{eq:countsupportpartition}
+\end{equation}
+The estimate~\eqref{eq:countall} implies absolute
+convergence. Since $r(C)\leq3g-3$, this is a polynomial in $z$ of
+degree at most $3g-3$, with holomorphic coefficients in $s$.
+Here $r(C)$ counts distinct geodesic supports, not the number of
+parallel copies used in the trace monomial $T_C$.
+
+Its linear coefficient has an exact interpretation:
+\begin{equation}
+ F_X(s):=[z]\mathcal P_X(s,z)
+ =\sum_{\alpha\ {\rm simple}}\sum_{m\geq1}e^{-sm\ell_\alpha}
+ =\sum_{\alpha\ {\rm simple}}\frac{1}{e^{s\ell_\alpha}-1}.
+ \label{eq:countonesupport}
+\end{equation}
+All curves in these sums are unoriented. Divisor inversion gives
+\begin{equation}
+ \boxed{\quad
+ Z_X^{\rm simple}(s):=\sum_{\alpha\ {\rm simple}}e^{-s\ell_\alpha}
+ =\sum_{k\geq1}\mu(k)F_X(ks),\qquad \Re s>0.
+ \quad}
+ \label{eq:countsupportmobius}
+\end{equation}
+There is no factor $1/k$. Indeed, after expanding the right side,
+the coefficient of $e^{-sn\ell_\alpha}$ is
+$\sum_{k\mid n}\mu(k)$, which is one for $n=1$ and zero otherwise.
+The rearrangement is absolutely convergent: for
+$\sigma=\Re s>0$ and $\varepsilon=\operatorname{sys}(X)$,
+\[
+ \sum_{\alpha,k,m\geq1}e^{-\sigma km\ell_\alpha}
+ \leq\frac{Z_X^{\rm simple}(\sigma)}
+               {(1-e^{-\sigma\varepsilon})^2}<\infty,
+\]
+using $km\geq k+m-1$.
+
+Even the support-coefficient extraction is explicit and bounded.
+Set $q=3g-2$ and $\omega=e^{2\pi i/q}$. Then
+\begin{equation}
+ F_X(s)=\frac1q\sum_{j=0}^{q-1}
+                 \omega^{-j}\mathcal P_X(s,\omega^j).
+ \label{eq:countsupportfourier}
+\end{equation}
+Thus an error bounded by $E(s)$ at each of these finitely many
+values remains bounded by $E(s)$ after extracting the linear
+coefficient. This operation has none of the growing-degree
+conditioning of arbitrary trace-coefficient extraction.
+
+For example, suppose a future argument establishes
+\[
+ \mathcal P_X(s,\omega^j)
+ =s^{-d}A_X(\omega^j)+O_X(s^{-d+\eta}),
+ \qquad 0<s\leq1,
+\]
+for every $j$, with a specified $0<\eta<d-1$ and a polynomial
+$A_X$ of degree at most $3g-3$. If $a_1=[z]A_X(z)$, then
+\begin{equation}
+ Z_X^{\rm simple}(s)
+ =\frac{a_1}{\zeta(d)}s^{-d}+O_X(s^{-d+\eta}).
+ \label{eq:countsupportconditional}
+\end{equation}
+To check the error, split the sum in~\eqref{eq:countsupportmobius}
+at $k=1/s$. The small-$ks$ remainder is bounded by
+$s^{-d+\eta}\sum k^{-d+\eta}$; this converges because
+$d-\eta>1$. The omitted leading tail and the large-$ks$ tail
+are $O_X(s^{-1})$, the latter by exponential decay from the
+positive systole. Both are absorbed in the displayed error.
+
+This is a conditional transfer of a remainder, not a proof of
+the hypothesized expansion. At $z=1$ ordinary lattice counting
+already gives
+\[
+ \mathcal P_X(s,1)
+ =\Gamma(d+1)B(X)s^{-d}+O_X(s^{-d+1})
+ \qquad(s\downarrow0).
+\]
+It does not determine the other values in
+\eqref{eq:countsupportfourier}. The support count is a discrete
+connectivity statistic, and a general weighted multicurve cannot
+be assigned that statistic by a continuous function on all of
+measured-lamination space. Knowing its value for each integral
+point does not establish its density in expanding regions.
+
+Connectivity itself is computationally accessible: the
+Agol--Hass--Thurston interval-pairing algorithm counts components
+of a normal curve in time polynomial in the triangulation size
+and the logarithm of its normal weight
+\cite[Theorem 12 and Corollary 13]{AHTComponents}.
+For the one-support selector, first pass from $C$ to its primitive
+integral divisor $C_0$: then $r(C)=1$ if and only if $C_0$ has one
+component. This division takes place in an integral-lamination
+chart before supplying a normal representative to the component
+algorithm; admissibility and parity must be respected in the
+chosen coordinates. A coordinate gcd alone is not a substitute
+for this integral-divisibility test.
+Counting the components of $C$ without this division would count
+parallel copies separately and would not compute $r(C)$.
+The missing quantitative input is an average estimate for this
+selector, or a cancellation formula that supplies such an estimate.
+Moreover,~\eqref{eq:countsupportpartition} is a target positive
+partition function. It has not been identified with an evaluation
+of the signed coefficient heat expansion. Defining a linear
+operation $T_C\mapsto z^{r(C)}$ on finite trace polynomials alone
+does not change an orbital length $\ell_\gamma$ into the resolved
+length $\ell_X(C)$, and does not supply that identification.
+
+
+\subsection{An explicit criterion for passing from smooth to sharp counts}
+\label{subsec:countdesmooth}
+
+Proposition~\ref{prop:countall} also bounds the number of connected
+simple curves in a shell: for $R\geq2$ and $0\leq\Delta\leq R/2$,
+\begin{equation}
+ \#\{\alpha\text{ simple}:|\ell_X(\alpha)-R|\leq\Delta\}
+       =O_X\bigl((\Delta+1)R^{d-1}\bigr).
+ \label{eq:countshell}
+\end{equation}
+Subtract the total-multicurve estimates at the shell endpoints;
+one-sided limits handle endpoint atoms.  The simple curves form a
+subset, so positivity gives the stated bound.
+
+\begin{proposition}[Conditional quantitative desmoothing]
+\label{prop:countdesmooth}
+Let $N_X(R)$ count connected unoriented simple curves.  For
+$0<h\leq1/2$, choose smooth $0\leq f_h\leq1$
+equal to one on $[0,1-h]$ and zero on
+$[1+h,\infty)$.  Suppose, with specified $\eta>0$ and
+$m\geq0$, a future argument proves uniformly in $R,h$ that
+\begin{equation}
+ \sum_{\alpha\text{ simple}}f_h(\ell_X(\alpha)/R)
+ =c_XR^d\,d\!\int_0^\infty
+             f_h(u)u^{d-1}\,\dd u
+   +O_X(h^{-m}R^{d-\eta}).
+ \label{eq:countsmoothhypothesis}
+\end{equation}
+Then
+\begin{equation}
+ \boxed{N_X(R)=c_XR^d+O_X(R^{d-\delta}),\qquad
+        \delta=\min\left\{1,\frac\eta{m+1}\right\}.}
+ \label{eq:countsharpconditional}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The cutoff differs from the sharp indicator only in a shell of
+width $h R$.  Equation~\eqref{eq:countshell} bounds this
+loss by $O_X(h R^d+R^{d-1})$.  The normalized integral
+in~\eqref{eq:countsmoothhypothesis} differs from one by
+$O(h)$.  Hence the total error is
+\[
+ O_X\bigl(h R^d+R^{d-1}
+                   +h^{-m}R^{d-\eta}\bigr).
+\]
+Choose $h=R^{-\delta}$ for sufficiently large $R$, with $\delta$ as in the statement.
+\end{proof}
+
+This criterion identifies the necessary analytic input and its
+explicit payoff.  The present coefficient estimates do not establish
+\eqref{eq:countsmoothhypothesis}.  In particular, fixed-target
+first-atom asymptotics must acquire quantitative control of the
+sum over growing connected supports before they imply a counting
+remainder.
+
+\subsection{The remaining analytic step}
+
+The two limiting regimes must be distinguished. The first-atom theorem
+uses $t\downarrow0$ for $G_\alpha(t)$, or a large positive Laplace
+parameter. A positive sum over simple curves detects growing lengths
+through $Z_X^{\rm simple}(s)$ as $s\downarrow0$. With the denominator
+Gaussian $e^{-L^2/(4t)}$, lengths of order $R$ correspond to $t$ of
+order $R^2$. These are different asymptotic problems, and the latter
+positive measure has not been constructed by summing the present signed
+coefficient measures.
+
+The support polynomial~\eqref{eq:countsupportpartition} specifies a
+useful aggregate target. Its finite Fourier extraction is stable, and
+its primitive inversion is exact. A positive-axis Laplace remainder
+such as~\eqref{eq:countsupportconditional} does not by itself justify
+an equally strong sharp counting error; quantitative desmoothing or
+suitable complex-parameter estimates are still required.
+Proposition~\ref{prop:countdesmooth} gives one sufficient condition
+with an explicit loss. The unresolved task is to construct and bound
+that smoothed connected-support observable using the coefficient
+relations, including their pants cancellations, before taking absolute
+values. No improved connected-simple-curve exponent is claimed here.
+
+
+\clearpage

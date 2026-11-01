@@ -1,0 +1,522 @@
+{
+  "schema_version": "1.1",
+  "chapter_source": "book/chapters/31-arithmetic-remainder.tex",
+  "chapter_label": "sec:arithmeticgeometry",
+  "review_date": "2026-11-01",
+  "baseline_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+  "review_scope": "Author audit followed by independent analytic approval of the complete local argument and pinned primary-source statements in Chapters 30-31. Numerical and integration review have separate records; recent preprint applications remain conditional.",
+  "path_convention": "Paths are relative to the research repository; outer execution evidence is identified in the integration checkpoint.",
+  "status_definitions": {
+    "derivation_checked": "Local mathematical derivation checked by author and independent reviewer under the written hypotheses.",
+    "external_statement_checked": "The stated theorem/convention was checked in the pinned primary source; the external proof was not re-refereed.",
+    "conditional_external_statement_checked": "A preprint statement was checked in its pinned source; it is retained only as an explicit hypothetical input.",
+    "exact_finite_check": "Exact rational/algebraic arithmetic checks the stated finite fixture, not transcendental evaluation or an asymptotic theorem.",
+    "numerical_check": "Finite numerical evidence tied to its own source/result and measured residuals; no interval certification or asymptotic conclusion.",
+    "conditional_bound": "A proved implication under an error or analytic hypothesis not established by the finite computation.",
+    "reported_unreplayed": "Historical implementation or precision/sensitivity report remains unrecovered; any reproduced numerical values are identified separately.",
+    "open_target": "An unproved target or unverified geometric instantiation, not a publication-ready theorem."
+  },
+  "source_pins": {
+    "BakerPrimitive2010": {
+      "url": "https://www.impan.pl/shop/en/publication/transaction/download/product/82662",
+      "version": "Acta Arithmetica 142 (2010), 267-302; DOI 10.4064/aa142-3-4",
+      "locator": "Hypotheses (H1)-(H4), pages 267-268; Theorem 1, page 268",
+      "scope": "RH-conditional x^(5/13+epsilon) comparison for the specified piecewise C4 radial/reciprocal-curve class; x=L^2 gives exponent 10/13 with renamed epsilon.",
+      "accessed": "2026-11-01",
+      "verification": "Primary-source statement inspection through web retrieval; not a local byte download or full proof audit."
+    },
+    "OpenAIQuasiRHOctober": {
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+      "version": "Manuscript dated 5 October 2026; initial-release Git revision adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+      "locator": "Theorem 1.1 (TeX label thm:main), introduction; October source also has the following intermediate-result paragraph",
+      "scope": "The claimed half-plane statement was read in the pinned TeX source. Neither the full proof nor Lean correspondence/checking was audited. No arithmetic consequence here is promoted to unconditional status.",
+      "pdf_access_limit": "The web fetcher rejected raw PDFs with application/octet-stream. The theorem locator is the actual TeX source label, not a guessed PDF page.",
+      "accessed": "2026-11-01",
+      "verification": "Primary-source statement inspection through web retrieval; not a local byte download or full proof audit."
+    },
+    "OpenAIQuasiRHSeptember": {
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex",
+      "version": "Manuscript dated 30 September 2026; initial-release Git revision adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+      "locator": "Theorem 1.1 (TeX label thm:main), introduction; October source also has the following intermediate-result paragraph",
+      "scope": "The claimed half-plane statement was read in the pinned TeX source. Neither the full proof nor Lean correspondence/checking was audited. No arithmetic consequence here is promoted to unconditional status.",
+      "pdf_access_limit": "The web fetcher rejected raw PDFs with application/octet-stream. The theorem locator is the actual TeX source label, not a guessed PDF page.",
+      "accessed": "2026-11-01",
+      "verification": "Primary-source statement inspection through web retrieval; not a local byte download or full proof audit."
+    },
+    "ZhaiPrimitive2003": {
+      "url": "https://www.impan.pl/shop/en/publication/transaction/download/product/82504",
+      "version": "Acta Arithmetica 109 (2003), 1-26; DOI 10.4064/aa109-1-1",
+      "locator": "Geometric hypotheses, page 1; equations (1.4)-(1.5), page 2",
+      "scope": "Unconditional Mertens and smooth curved-domain benchmark statements; paper uses area scale x=L^2.",
+      "accessed": "2026-11-01",
+      "verification": "Primary-source statement inspection through web retrieval; not a local byte download or full proof audit."
+    }
+  },
+  "computational_boundary": "The prior length-64 source/result remain frozen. A new length-8192 campaign reproduces counts and printed M/Q rows with its own provenance, sampled precision checks and conditional rational sensitivity. True-spectrum membership, every-node errors, asymptotic bounds, recent preprint proofs/formalizations and a flat-normal identification remain unverified.",
+  "claims": [
+    {
+      "id": "s31.conventions",
+      "labels": [
+        "sec:arithmeticgeometry"
+      ],
+      "status": "derivation_checked",
+      "scope": "Delta_B is the same all-point discrepancy as D_B in Section 30; primitive counts include both signs, with half-count only for symmetric bodies.",
+      "hypotheses": [
+        "Fixed convex body containing zero; shortest nonzero lattice gauge one."
+      ],
+      "dependencies": [
+        "s30.normalization"
+      ],
+      "source_keys": []
+    },
+    {
+      "id": "s31.large_divisor_identity",
+      "labels": [
+        "prop:primitiveRHtransfer"
+      ],
+      "status": "derivation_checked",
+      "scope": "Reversing the finite large-divisor sum gives the lattice sum M(L/r(m))-M(D) over 0<r(m)<=L/D.",
+      "hypotheses": [
+        "D is integer, 1<=D<=L; M is defined with floor cutoff."
+      ],
+      "dependencies": [
+        "s31.conventions"
+      ],
+      "source_keys": [],
+      "proof_notes": "For each m, the permitted integers are D<d<=L/r(m). Boundary terms with floor(L/r)=D vanish; no upper cutoff is omitted because A_B(u)=0 below one.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "result_groups": [
+          "exact.Mobius_lattice"
+        ],
+        "result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
+      }
+    },
+    {
+      "id": "s31.reciprocal_lattice_bound",
+      "labels": [
+        "prop:primitiveRHtransfer"
+      ],
+      "status": "derivation_checked",
+      "scope": "A_B(U)<<_B U^2 and partial summation give sum(r(m)^-1,0<r<=U)<<_B U.",
+      "hypotheses": [
+        "U>=1; lattice minimum one."
+      ],
+      "dependencies": [],
+      "source_keys": [],
+      "proof_notes": "The exact summation formula is A_B(U)/U+integral_1^U A_B(u)/u^2 du; the lower endpoint convention includes lattice points of gauge one."
+    },
+    {
+      "id": "s31.mobius_area_tail",
+      "labels": [
+        "prop:primitiveRHtransfer"
+      ],
+      "status": "conditional_bound",
+      "scope": "Partial summation bounds abs(sum(mu(d)/d^2,d>D)) by O(C*eta(D)/D).",
+      "hypotheses": [
+        "|M(x)|<=C*x*eta(x); eta>=0 and nonincreasing."
+      ],
+      "dependencies": [],
+      "source_keys": [],
+      "proof_notes": "The tail is -M(D)/D^2+2*integral_D^infinity M(t)/t^3 dt; bounded eta makes the endpoint at infinity vanish.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "result_groups": [
+          "exact.Mobius_lattice"
+        ],
+        "result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
+      }
+    },
+    {
+      "id": "s31.master_transfer",
+      "labels": [
+        "eq:primitiveRHmaster",
+        "eq:primitiveRHpowerM"
+      ],
+      "status": "conditional_bound",
+      "scope": "The small-divisor geometric discrepancy plus L^2*eta(D)/D bounds the primitive remainder; eta(x)=x^(theta-1) gives L^2 D^(theta-2).",
+      "hypotheses": [
+        "Same Mertens/envelope hypothesis; 0<=theta<1 for the power form."
+      ],
+      "dependencies": [
+        "s31.large_divisor_identity",
+        "s31.reciprocal_lattice_bound",
+        "s31.mobius_area_tail"
+      ],
+      "source_keys": [],
+      "proof_notes": "Bound both M(L/r) and M(D) using eta(D). This explicitly pays for the geometric counting variation; pointwise discrepancy size alone cannot be multiplied by |M|."
+    },
+    {
+      "id": "s31.modulus_comparison",
+      "labels": [
+        "eq:primitiveRHmodulus"
+      ],
+      "status": "derivation_checked",
+      "scope": "The small-divisor sum is at most 2L times the logarithmic modulus integral from L/(D+1) to L.",
+      "hypotheses": [
+        "L/(D+1)>=1; decreasing geometric envelope."
+      ],
+      "dependencies": [
+        "s30.dini_comparison"
+      ],
+      "source_keys": []
+    },
+    {
+      "id": "s31.dini_pnt",
+      "labels": [
+        "eq:primitiveDiniPNT"
+      ],
+      "status": "conditional_bound",
+      "scope": "The geometric Dini condition implies E_B(L)=o_B(L), using only the unconditional PNT form M(x)=o(x).",
+      "hypotheses": [
+        "Integral_1^infinity omega(u)/u du is finite."
+      ],
+      "dependencies": [
+        "s31.master_transfer",
+        "s31.modulus_comparison"
+      ],
+      "source_keys": [],
+      "proof_notes": "Use eta(x)=sup(y>=x)|M(y)|/y. Fix U>=2 and take D=floor(L/U); the normalized tail tends to zero at fixed U, then the small-divisor integral tends to zero as U grows. No RH input is used."
+    },
+    {
+      "id": "s31.zero_free_to_mertens",
+      "labels": [
+        "eq:zeroFreeMertens"
+      ],
+      "status": "conditional_bound",
+      "scope": "A fixed zeta-zero-free half-plane Re(s)>theta0 gives M(x)=O_epsilon(x^(theta0+epsilon)) for every epsilon>0.",
+      "hypotheses": [
+        "1/2<=theta0<1; the pole at one is excluded from the nonvanishing statement."
+      ],
+      "dependencies": [],
+      "source_keys": [],
+      "proof_notes": "The chapter now gives explicit zero-free disks, a log-zeta branch, polynomial strip growth, Borel-Caratheodory and three-circles exponent lambda<1. This bounds 1/zeta by every height power on smaller half-planes. Half-integer truncated Perron inversion with T=x^2 then yields the sharp cutoff bound. No claim about a general Dirichlet series is made."
+    },
+    {
+      "id": "s31.mertens_to_zero_free",
+      "labels": [
+        "eq:zeroFreeMertens"
+      ],
+      "status": "conditional_bound",
+      "scope": "The family of Mertens bounds gives a locally uniformly convergent Mellin representation for 1/zeta throughout Re(s)>theta0, hence excludes zeta zeros there.",
+      "hypotheses": [
+        "For every epsilon>0, M(x)=O_epsilon(x^(theta0+epsilon))."
+      ],
+      "dependencies": [],
+      "source_keys": [],
+      "proof_notes": "On each compact choose epsilon below its distance from theta0, then use partial summation and analytic continuation."
+    },
+    {
+      "id": "s31.openai_september",
+      "labels": [
+        "subsec:quasiRHapplication"
+      ],
+      "status": "conditional_external_statement_checked",
+      "scope": "The pinned September manuscript claims the 7/8 half-plane for finite-order Hecke characters over Q(sqrt(-3)) and Dirichlet L-functions, including zeta.",
+      "hypotheses": [],
+      "dependencies": [
+        "s31.zero_free_to_mertens"
+      ],
+      "source_keys": [
+        "OpenAIQuasiRHSeptember"
+      ],
+      "coverage_gap": "Neither full proof nor formalization/correspondence was independently verified; 7/8+epsilon Mertens input remains hypothetical in this chapter."
+    },
+    {
+      "id": "s31.openai_october",
+      "labels": [
+        "subsec:quasiRHapplication"
+      ],
+      "status": "conditional_external_statement_checked",
+      "scope": "The pinned October manuscript claims the separate 11/12 result and calls it an intermediate step toward the September statement.",
+      "hypotheses": [],
+      "dependencies": [
+        "s31.zero_free_to_mertens"
+      ],
+      "source_keys": [
+        "OpenAIQuasiRHOctober"
+      ],
+      "coverage_gap": "Neither full proof nor formalization/correspondence was independently verified; no later revision or publication status is inferred."
+    },
+    {
+      "id": "s31.log_geometric_power_arithmetic",
+      "labels": [
+        "eq:primitiveRHgeometry",
+        "eq:primitiveRHlogresult"
+      ],
+      "status": "conditional_bound",
+      "scope": "Any fixed Mertens power theta<1 and geometric u/(log u)^beta imply primitive L*(log L)^(1-beta); beta=1 gives O(L).",
+      "hypotheses": [
+        "Geometric estimate for all u>=3; beta>0; M(x)<<x^theta, theta<1."
+      ],
+      "dependencies": [
+        "s31.master_transfer"
+      ],
+      "source_keys": [],
+      "proof_notes": "Choose 1/(2-theta)<d<1 and D=floor(L^d). The tail is a smaller fixed power than L and the integral over log u in [(1-d)log L+O(1),log L] has order (log L)^(1-beta), including beta=1."
+    },
+    {
+      "id": "s31.vk_input",
+      "labels": [],
+      "status": "external_statement_checked",
+      "scope": "The unconditional Vinogradov-Korobov Mertens estimate is the one recorded in Zhai equation (1.5).",
+      "hypotheses": [],
+      "dependencies": [],
+      "source_keys": [
+        "ZhaiPrimitive2003"
+      ]
+    },
+    {
+      "id": "s31.vk_log_table",
+      "labels": [
+        "eq:primitiveRHgeometry"
+      ],
+      "status": "conditional_bound",
+      "scope": "The three beta rows follow by integrating t^-beta from a*F(L)+O(1) to log L after an exponential cutoff.",
+      "hypotheses": [
+        "Same geometric logarithmic bound; classical VK Mertens bound."
+      ],
+      "dependencies": [
+        "s31.master_transfer",
+        "s31.vk_input"
+      ],
+      "source_keys": [],
+      "proof_notes": "D=floor(L exp(-aF(L))) with a small fixed positive a; F(D)/F(L)->1. Rates are L log(L)^(1-beta) for beta<1, L log log L for beta=1, and L F(L)^(1-beta) for beta>1. No optimality is asserted."
+    },
+    {
+      "id": "s31.balanced_power",
+      "labels": [
+        "eq:primitiveRHbalancedpower"
+      ],
+      "status": "conditional_bound",
+      "scope": "Balancing L^alpha D^(1-alpha) with L^2 D^(theta-2) gives d=(2-alpha)/(3-alpha-theta) and kappa=(2-alpha*theta)/(3-alpha-theta).",
+      "hypotheses": [
+        "0<=alpha<1; 0<=theta<1; both geometric and Mertens bounds hold."
+      ],
+      "dependencies": [
+        "s31.master_transfer"
+      ],
+      "source_keys": [],
+      "proof_notes": "The cutoff exponent lies in (0,1). At alpha=2/3, theta=1/2,7/8,11/12 gives 10/11,34/35,50/51. Epsilon losses are renamed; none of these assigns alpha=2/3 to a torus norm ball.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "result_groups": [
+          "exact.row_and_balance"
+        ],
+        "result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
+      }
+    },
+    {
+      "id": "s31.vk_power_geometry",
+      "labels": [],
+      "status": "conditional_bound",
+      "scope": "A fixed geometric power saving plus VK yields L exp(-c_B F(L)) for some positive constant.",
+      "hypotheses": [
+        "|Delta_B(u)|<<u^alpha, 0<=alpha<1; VK Mertens bound."
+      ],
+      "dependencies": [
+        "s31.master_transfer",
+        "s31.vk_input"
+      ],
+      "source_keys": [],
+      "proof_notes": "Small divisor term is L exp(-a(1-alpha)F(L)), while the tail is L exp(-(c-a+o(1))F(L)); choose 0<a<c."
+    },
+    {
+      "id": "s31.zhai_benchmark",
+      "labels": [],
+      "status": "external_statement_checked",
+      "scope": "Zhai equation (1.4) is an unconditional sublinear primitive comparison for the stated smooth, positively curved convex class.",
+      "hypotheses": [
+        "Finite nonzero curvature everywhere; one-to-one C4 Gauss map; zero is interior."
+      ],
+      "dependencies": [],
+      "source_keys": [
+        "ZhaiPrimitive2003"
+      ],
+      "proof_notes": "Area parameter x=L^2 changes x^(1/2)exp(-cF(x)) into L exp(-c_new F(L)). These hypotheses are not imposed on the torus norm ball."
+    },
+    {
+      "id": "s31.baker_benchmark",
+      "labels": [],
+      "status": "external_statement_checked",
+      "scope": "Baker Theorem 1 gives O_epsilon(L^(10/13+epsilon)) for its specified domain class under RH.",
+      "hypotheses": [
+        "RH and all of (H1)-(H4): positive continuous radial graph, piecewise C4 nonzero-curvature arcs, no tangent through zero, no single arc containing both horizontal/vertical tangents, C4 reciprocal arcs, rational endpoint tangent slopes."
+      ],
+      "dependencies": [],
+      "source_keys": [
+        "BakerPrimitive2010"
+      ],
+      "proof_notes": "Statement comparison only, no external proof audit or assertion of the best current exponent."
+    },
+    {
+      "id": "s31.qualitative_obstruction",
+      "labels": [],
+      "status": "derivation_checked",
+      "scope": "Strict convexity alone still gives only an unspecified o(L log L) rate in this transfer scheme even with a fixed Mertens power saving.",
+      "hypotheses": [
+        "Same geometric envelope; choose the fixed cutoff exponent used above."
+      ],
+      "dependencies": [
+        "s30.strict_convex_primitive",
+        "s31.master_transfer"
+      ],
+      "source_keys": [],
+      "proof_notes": "Bound the modulus by its value at cL^(1-d); total variation of A_B(L/d) on a divisor dyadic block can be order (L/D)^2. This is an insufficiency of these inputs, not a general impossibility theorem."
+    },
+    {
+      "id": "s31.gauge_zeta",
+      "labels": [],
+      "status": "derivation_checked",
+      "scope": "Z_B^prim(s)=Z_B(s)/zeta(s) for Re(s)>2, and the discrepancy integral continues the numerator meromorphically to Re(s)>1 with the area pole at two.",
+      "hypotheses": [
+        "Gauge minimum one; all-point discrepancy O(u), in particular o(u) under strict convexity."
+      ],
+      "dependencies": [
+        "s31.conventions"
+      ],
+      "source_keys": [],
+      "proof_notes": "Positive multiples give the absolutely convergent product; Stieltjes summation gives a_B*s/(s-2)+s*integral_1^infinity Delta_B(u)u^(-s-1)du. A zero-free denominator does not provide continuation/growth of the numerator through Re(s)=1."
+    },
+    {
+      "id": "s31.flat_primitive_obstruction",
+      "labels": [],
+      "status": "conditional_bound",
+      "scope": "The explicit flat-point/rational-normal construction excludes every fixed primitive sublinear power bound for that body, without excluding O(L) or o(L).",
+      "hypotheses": [
+        "All hypotheses of prop:normballflatrow and the local graph-flatness bounds."
+      ],
+      "dependencies": [
+        "s30.infinite_flatness_scope"
+      ],
+      "source_keys": []
+    },
+    {
+      "id": "s31.all_point_width_compatibility",
+      "labels": [],
+      "status": "conditional_bound",
+      "scope": "For all lattice points the same empty contact row and microscopic increment imply max(|Delta(L)|,|Delta(L+1/L)|)>=L W(h/L^2)/2-O_B(1). Therefore O(L/log L) requires W(h/L^2)=O(1/log L) on contact scales.",
+      "hypotheses": [
+        "Same rational supporting normal, two-sided upper graph, irrational alpha/h, and L=n/h; now every sufficiently large integer n is allowed."
+      ],
+      "dependencies": [
+        "s30.inverse_width",
+        "s30.microscopic_row"
+      ],
+      "source_keys": [],
+      "proof_notes": "Count all row integers with w+O(1), without a phi(n)/n density factor. The area increment is a_B*(2+L^-2). The local double-exponential profile has W~(log log L)^(-1/beta), which violates the proposed necessary condition."
+    },
+    {
+      "id": "s31.geometric_target",
+      "labels": [
+        "eq:primitiveRHgeometry"
+      ],
+      "status": "open_target",
+      "scope": "A quantitative all-point modulus compatible with a specified torus ball remains unproved here; O(L/log L) is only a candidate conditional target.",
+      "hypotheses": [],
+      "dependencies": [
+        "s31.all_point_width_compatibility"
+      ],
+      "source_keys": []
+    },
+    {
+      "id": "s31.all_point_dyadic",
+      "labels": [
+        "eq:allPointLogDiagnostic"
+      ],
+      "status": "derivation_checked",
+      "scope": "The all-point O(L/log L) remainder is equivalent to the same bound for A_B(2L)-4A_B(L), with the usual quadratic asymptotic.",
+      "hypotheses": [
+        "Fixed body; large L>1; statement concerns a uniform infinite range."
+      ],
+      "dependencies": [
+        "s30.dyadic_inversion"
+      ],
+      "source_keys": [],
+      "proof_notes": "Forward implication uses log(2L)~log L. Reverse implication bounds each inverse term by 2^-j L/log L and sums the geometric series.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "result_groups": [
+          "exact.dyadic_events"
+        ],
+        "result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
+      },
+      "campaign_computation": {
+        "result_path": "artifacts/torus_campaign/result.json",
+        "scope": "Signed A_hyp(L)=2 sum floor(L/ell) and A_hyp(2L)-4 A_hyp(L) at finite dyadic hyperbolic cutoffs, using exact comparisons of stored binary64 rationals.",
+        "limit": "Unit-shortest gauge needs lambda=ell/systole. Stored-length arithmetic does not certify true threshold membership or a uniform asymptotic bound."
+      }
+    },
+    {
+      "id": "s31.all_point_from_primitive_lengths",
+      "labels": [
+        "eq:allPointLogDiagnostic"
+      ],
+      "status": "derivation_checked",
+      "scope": "For a symmetric torus ball A_B(L)=2*sum_gamma floor(L/lambda_gamma), using all unoriented primitive lengths up to L with multiplicity.",
+      "hypotheses": [
+        "Lengths use the same gauge normalization as B; divide hyperbolic lengths by the systole when imposing unit shortest vector."
+      ],
+      "dependencies": [
+        "s31.conventions"
+      ],
+      "source_keys": [],
+      "proof_notes": "Each nonzero integral vector has a unique primitive signed ray and positive integer multiple. This exact identity does not validate an infinite-range geometric bound from a finite list.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "result_groups": [
+          "exact.dyadic_events"
+        ],
+        "result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
+      },
+      "campaign_computation": {
+        "result_path": "artifacts/torus_campaign/result.json",
+        "scope": "Signed A_hyp(L)=2 sum floor(L/ell) and A_hyp(2L)-4 A_hyp(L) at finite dyadic hyperbolic cutoffs, using exact comparisons of stored binary64 rationals.",
+        "limit": "Unit-shortest gauge needs lambda=ell/systole. Stored-length arithmetic does not certify true threshold membership or a uniform asymptotic bound."
+      }
+    }
+  ],
+  "independent_review": {
+    "status": "approved_with_written_hypotheses",
+    "records": [
+      "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/review.md",
+      "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/review-decisions.json",
+      "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/analytic-claim-review.json"
+    ],
+    "scope": "All 57 claims in the frozen analytic chapters and ledgers; not a full audit of cited preprint proofs/formalizations, interval certification, or asymptotic inference from finite data."
+  },
+  "computational_companion": {
+    "code_path": "experiments/counting_mixing/",
+    "result_path": "artifacts/counting_mixing/result.json",
+    "checkpoint": "docs/execution/counting-mixing-review-2026-11-01/",
+    "review_record": "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/review-v2.md",
+    "approval_manifest": "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/approved-manifest-v2.json",
+    "approval_manifest_sha256": "c059cf9591f534bb6517486389b111c79fdff77531b192cbfab846021bd6536e",
+    "approved_source_set_sha256": "4b1f8f22f155c464f0ecda6ab95c581926db157bae4ee7583e67fbc6448ded63",
+    "independent_review_status": "approved_v2_R1_resolved_no_open_findings",
+    "reviewer_replay_counts": {
+      "exact": 4054,
+      "numerical_formula_comparisons": 354,
+      "cross_precision_observations": 297,
+      "focused_tests": 38
+    },
+    "prior_v1_status": "Initial numerical acceptance was rejected for R1 and is not retroactively approved; its evidence remains frozen.",
+    "scope": "Exact finite fixtures and selected 60/90-digit formula comparisons; analytic truncation bounds are separate from uncertified quadrature and roundoff.",
+    "generation_status": "Final generation and source identities are recorded separately in the checkpoint; author and reviewer runs retain their own provenance."
+  },
+  "torus_campaign": {
+    "code_path": "experiments/torus_campaign/",
+    "result_path": "artifacts/torus_campaign/result.json",
+    "review_record": "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/review-decisions.json",
+    "generation_record": "docs/execution/counting-mixing-review-2026-11-01/",
+    "scope": "New full campaign through hyperbolic length 8192; 18191508 modular and 18486116 asymmetric curves, all twenty block rows, dyadic signed all-point counts and conditional sensitivity.",
+    "units": "Hyperbolic length. For unit-shortest gauge, lambda=ell/systole and A_B(L)=A_hyp(systole*L).",
+    "historical_boundary": "No recovery of the historical extended-precision implementation, sample selection or sensitivity construction. The length-64 predecessor retains its prior bytes and source identity.",
+    "generation_status": "Final repaired-source replay and source identities are recorded separately by the checkpoint; the reviewed v2 author run is not relabeled as a v3 or clean-source run."
+  }
+}

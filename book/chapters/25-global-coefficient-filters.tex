@@ -1,0 +1,361 @@
+\section{Global coefficient filters and a length-valued Euler product}
+\label{sec:globalfilters}
+
+Continue throughout with a closed hyperbolic surface of genus at least
+two; the pants cuffs below are essential curves, not specialized
+peripheral trace constants. There are two concrete ways to advance the
+preceding construction.
+First, an explicit bounded coefficient functional cancels every
+one-self-intersection primitive geodesic together with all its iterates,
+simultaneously over all pants. Second, a product in the length-convolution
+algebra gives a unit first atom for every weighted multicurve, including
+those with disconnected support. Neither result proves a new counting
+remainder. They also reveal why a fixed linear functional cannot remove
+every nonsimple primitive curve.
+
+\subsection{An explicit filter for the entire one-crossing sector}
+
+Write $n(C)=\#C$, counting parallel copies, and $n(\varnothing)=0$.
+This differs from the number $r(C)$ of distinct supports in
+Section~\ref{subsec:countsupport}. We seek a functional
+\[
+ \Lambda(T_C)=w_{n(C)}
+\]
+which preserves simple primitive curves and annihilates the complete
+iterate family of every primitive figure-eight.
+
+For $0\leq\theta\leq\pi$, put $v=2\cos\theta$ and let
+$u_+,u_-$ be the two roots of
+\[
+ u^2-u=v.
+\]
+The unordered pair of roots is unambiguous, including where the
+discriminant vanishes. Define
+\begin{equation}
+ w_n=\frac1\pi\int_0^\pi
+       \bigl(u_+(\theta)^n+u_-(\theta)^n\bigr)\,\dd\theta,
+ \qquad n\geq0.
+ \label{eq:globalmoments}
+\end{equation}
+In particular $w_0=2$ and $w_1=1$. If $v\geq-1/4$, the roots are
+real and lie in $[-1,2]$. If $v<-1/4$, they are complex conjugates
+of modulus $\sqrt{-v}\leq\sqrt2$. Thus
+\begin{equation}
+ |w_n|\leq2^{n+1},\qquad
+ |\Lambda(f)|\leq2\|f\|_2.
+ \label{eq:globalbounded}
+\end{equation}
+Here $\|\cdot\|_2$ is the weighted coefficient norm from
+Section~\ref{sec:coefficientdistributions}, not a norm obtained
+by evaluating characters.
+
+The weights have a closed generating function. The root sums
+$S_n(v)=u_+^n+u_-^n$ satisfy
+$S_0=2$, $S_1=1$, and $S_n=S_{n-1}+vS_{n-2}$, whence
+\begin{equation}
+ \boxed{\quad
+ \sum_{n\geq0}w_n q^n
+ =\frac{2-q}{\sqrt{(1-q)^2-4q^4}},
+ \qquad |q|<\frac12.
+ \quad}
+ \label{eq:globalweightseries}
+\end{equation}
+The square root has value one at zero. To derive the formula,
+average $(2-q)/(1-q-vq^2)$ over $v=2\cos\theta$ and use the
+elementary integral of $(a-b\cos\theta)^{-1}$.
+The first weights are
+\[
+ 2,\ 1,\ 1,\ 1,\ 5,\ 11,\ 19,\ 29,\ 53,\ldots.
+\]
+They are nonnegative integers: the coefficients of $S_n(v)$ are
+nonnegative integers and the averages of $v^{2j}$ and $v^{2j+1}$
+are $\binom{2j}{j}$ and zero, respectively.
+
+\begin{proposition}[A global one-crossing filter]
+\label{prop:globalonecrossing}
+For every simple primitive curve $\alpha$,
+$\Lambda(T_\alpha)=1$. For every primitive geodesic $\gamma$
+with exactly one transverse self-intersection and every $k\geq1$,
+\begin{equation}
+ \boxed{\Lambda(T_{\gamma^k})=0.}
+ \label{eq:globalonecrossing}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Use the pants neighborhood of a one-crossing geodesic and its
+relation $T_\gamma=xy-z$, where $x,y,z$ are the unnegated cuff
+traces~\cite[Theorem 1.1]{RivinFigures}. In a closed surface these
+cuffs are essential; when two boundary curves have the same
+geodesic representative, keep them distinct until their traces
+are identified. Replacing every trace monomial of total
+degree $n$ by $u^n$ sends $P_k(xy-z)$ to $P_k(u^2-u)$.
+This remains true if two cuff images coincide: the identification
+preserves total degree, including parallel multiplicities. Since
+$u_\pm^2-u_\pm=2\cos\theta$,
+\[
+ \Lambda(T_{\gamma^k})
+ =\frac2\pi\int_0^\pi P_k(2\cos\theta)\,\dd\theta
+ =\frac4\pi\int_0^\pi\cos(k\theta)\,\dd\theta=0.
+\]
+The simple-curve assertion is $w_1=1$.
+\end{proof}
+
+This is a single global functional, so no choice of a pants
+decomposition and no sum of separately normalized pants projections
+is required. It is not evaluation at a flat representation having
+the same trace on every simple curve; no such assertion is used.
+
+Equation~\eqref{eq:coefffullheatexpansion} and
+\eqref{eq:globalbounded} justify the convergent aggregate
+\begin{equation}
+ \mathcal H_X^\Lambda(t)=\sum_C w_{n(C)}H_C^X(t),
+ \qquad \Re t>0.
+ \label{eq:globalfilteredheat}
+\end{equation}
+It is holomorphic in that half-plane. Since $\Lambda(1)=2$, the
+constant identity contribution must also be multiplied by two if
+one applies the functional before subtracting that contribution.
+Absolute convergence of the
+orbital weighted-norm estimate permits applying $\Lambda$ before
+the orbital sum. Every one-crossing primitive and all its powers
+therefore disappear. Simple iterates remain with the explicit
+coefficients $\Lambda(P_k(T_\alpha))$; their first values are
+$1,-3,-2,5,11,-6,\ldots$. Primitives with at least two
+self-intersections also remain.
+
+If the higher symmetric-power twisting spectra used for primitive
+extraction in Section~\ref{sec:coefficientdistributions} are supplied,
+let
+\[
+ \Pi_\rho^X=\sum_{\delta\in\mathcal P_{\rm un}}
+                T_\delta(\rho)\delta_{\ell_\delta}.
+\]
+This is the primitive measure from that section divided by its
+positive length variable. Then the filtered primitive measure satisfies
+\begin{equation}
+ \Lambda(\Pi_\rho^X)
+ =\sum_{\alpha\ {\rm simple}}\delta_{\ell_\alpha}
+      +\mathcal R_X,
+ \qquad
+ \mathcal R_X=
+ \sum_{\substack{\delta\in\mathcal P_{\rm un}\\i(\delta,\delta)\geq2}}
+      \Lambda(T_\delta)\delta_{\ell_\delta}.
+ \label{eq:globalresidual}
+\end{equation}
+Here $i(\delta,\delta)$ is the minimal self-intersection number.
+The remainder is signed. Its Gaussian transforms converge by the
+same norm estimate; no smaller-order counting bound for it has
+been established.
+
+\subsection{Why a fixed linear filter cannot finish the job}
+
+There is an exact obstruction already in one pair of pants.
+Choose embedded geodesic pants with three distinct essential cuffs,
+let $a,b$ generate its fundamental group, and put
+\[
+ \gamma_1=a^2ba^{-1}b^{-1},\qquad
+ \gamma_2=a^3b^2,\qquad
+ \gamma_3=a^2bab.
+\]
+Then, as functions on the $\mathrm{SL}_2$ character variety,
+\begin{equation}
+ \boxed{T_a=T_{\gamma_1}+T_{\gamma_2}-T_{\gamma_3}.}
+ \label{eq:globalobstruction}
+\end{equation}
+For a direct verification set $x=T_a$, $y=T_b$, $z=T_{ab}$ and
+$k=x^2+y^2+z^2-xyz-2$. Cayley--Hamilton gives
+\begin{align*}
+ T_{\gamma_1}&=x(k-1),\\
+ T_{\gamma_2}&=(x^2-1)yz-xy^2-x^3+3x,\\
+ T_{\gamma_3}&=xz^2-yz-x.
+\end{align*}
+The indicated combination is $x$.
+
+All three words are primitive in the geodesic sense of not being
+proper powers: their homology vectors are $(1,0)$, $(3,2)$, and
+$(3,2)$. They are nonperipheral cyclically reduced words in the
+pants group, so their geodesics are nonsimple. Embedded geodesic
+pants are convex; these intersections persist in the ambient
+surface. An ambient proper root would traverse the same geodesic
+image inside the pants and give a root in the pants group, which
+the homology vectors exclude. Here the word primitive does not assert membership in a
+free basis of the pants group.
+
+Consequently, any linear functional $L$ satisfying $L(T_a)=1$
+must satisfy
+\begin{equation}
+ \max_{1\leq j\leq3}|L(T_{\gamma_j})|\geq\frac13.
+ \label{eq:globalobstructionbound}
+\end{equation}
+In particular, no linear functional on this character algebra
+preserves every primitive simple trace and annihilates every
+primitive nonsimple trace. The assertion applies also to
+cutoff-dependent functionals once the same functional is applied
+to all four labels. It does not exclude functionals depending
+on each atom's length, nonlinear operations, or richer
+representation data. Our explicit filter has values $-5,5,-1$
+on these three words, in agreement with the identity.
+
+\subsection{Retaining lengths: an Euler product with a unit diagonal}
+
+To preserve the information discarded by a fixed character
+functional, work in the convolution algebra of locally finite
+length measures supported on $[0,\infty)$, with
+$\delta_u*\delta_v=\delta_{u+v}$.
+Its coefficients lie in the character algebra and its unit is
+$\mathbf1=T_\varnothing\delta_0$. All products are first defined
+by finite length cutoffs, so each retained coefficient is a finite
+character polynomial. Define
+\begin{equation}
+ \mathbf E_X(\rho)=
+ \prod_{\delta\in\mathcal P_{\rm un}}
+ \bigl(\mathbf1-T_\delta(\rho)\delta_{\ell_\delta}\bigr)^{*-1}.
+ \label{eq:globalEuler}
+\end{equation}
+This is a product of scalar trace geometric series, not the
+determinant Selberg product. The positive systole makes every
+length cutoff finite. Equivalently,
+\[
+ \mathbf E_X(\rho)=
+ \sum_{\mathfrak m}
+   \left(\prod_\delta T_\delta(\rho)^{m_\delta}\right)
+   \delta_{\sum_\delta m_\delta\ell_\delta}
+ =\sum_C T_C(\rho)\nu_C^X,
+\]
+where $\mathfrak m$ runs over finite multisets of primitive
+unoriented geodesics, including the empty multiset.
+
+\begin{proposition}[A unit first atom for every multicurve]
+\label{prop:globaldiagonal}
+For every integral weighted multicurve $C$, including the empty one,
+\begin{equation}
+ \boxed{
+ \nu_C^X=\delta_{\ell_X(C)}+\tau_C^X,\qquad
+ \operatorname{supp}\tau_C^X\subset(\ell_X(C),\infty).
+ }
+ \label{eq:globaldiagonal}
+\end{equation}
+The first atom is isolated.
+\end{proposition}
+
+\begin{proof}
+Resolve the crossings of the union of geodesics in an input
+multiset. Every resulting multicurve has total length at most
+the input length. If some primitive component is nonsimple, or
+two distinct components intersect, resolving a genuine transverse
+crossing and tightening gives strict shortening, as in the earlier
+length-ordering argument. Repeated components can be separated by
+small perturbations; a transverse crossing already present in a
+component or between distinct geodesics retains a strict shortening.
+
+Equality is therefore possible only when all primitive components
+are simple and mutually disjoint, allowing repeated copies.
+Their product is then exactly $T_C$, and the unique multiset giving
+this $C$ has coefficient one. The geometric series in
+\eqref{eq:globalEuler} supplies no factorial. Local finiteness
+isolates the first length. The empty multiset gives the empty
+multicurve's unit atom at zero.
+\end{proof}
+
+\subsection{Absolute convergence and spectral input}
+
+The fixed-coefficient bracelet estimate extends to multicomponent
+diagrams. With $t(u)=2\cosh(u/2)$ and the same $K_{C,X}$ as before,
+\[
+ \left|[T_C]\prod_\delta T_\delta^{m_\delta}\right|
+ \leq K_{C,X}\prod_\delta t(\ell_\delta)^{m_\delta}.
+\]
+Indeed, sign coherence and positive Fuchsian evaluation apply to
+the entire diagram, whose absolute evaluation is that product.
+It follows that
+\begin{equation}
+ \int e^{-sL}\,\dd|\nu_C^X|(L)
+ \leq K_{C,X}
+ \prod_{\delta\in\mathcal P_{\rm un}}
+ \bigl(1-t(\ell_\delta)e^{-s\ell_\delta}\bigr)^{-1}
+ <\infty
+ \label{eq:globalEulerbound}
+\end{equation}
+for real
+\begin{equation}
+ s>s_X^*=
+ \max\left\{\frac32,
+       \frac{\log(2\cosh(\varepsilon/2))}{\varepsilon}\right\},
+ \qquad \varepsilon=\operatorname{sys}(X).
+ \label{eq:globalEulerhalfplane}
+\end{equation}
+The second condition makes every geometric-series ratio less
+than one: $\log t(u)/u$ decreases in $u$. The first makes the
+sum of those ratios converge using the elementary $O_X(e^R)$
+primitive-orbit bound. This also proves coefficient holomorphy
+for $\Re s>s_X^*$ and convergence of every coefficient Gaussian
+transform for $\Re t>0$. For the latter claim fix any real
+$s_0>s_X^*$ in~\eqref{eq:globalEulerbound}; on a compact subset
+of $\Re t>0$, the factor
+$\exp(-L^2\Re(1/t)/4+s_0L)$ is uniformly bounded. This supplies
+an integrable majorant against $e^{-s_0L}\,\dd|\nu_C^X|$.
+No norm convergence of the whole character-valued product is
+needed for this fixed-coefficient assertion.
+
+Recovering this product spectrally requires its higher twisting
+data to be kept straight. For a representation $V$, write
+$\Pi_V=\sum_\delta\chi_V(\delta)\delta_{\ell_\delta}$ and let
+$D_m\delta_L=\delta_{mL}$. The precise reconstruction formula is
+\begin{equation}
+ \boxed{
+ \log_*\mathbf E_X(\rho)
+ =\sum_{m\geq1}\frac1m D_m\Pi_{\rho^{\otimes m}}.
+ }
+ \label{eq:globalEulerinput}
+\end{equation}
+The tensor-power character is $T_\delta^m$. It must not be
+replaced by $P_m(T_\delta)=\operatorname{tr}\rho(\delta^m)$.
+Tensor powers decompose into finite sums of $\mathrm{SU}(2)$
+symmetric powers, and the earlier Adams inversion recovers their
+primitive measures from the corresponding higher-twist spectra.
+Thus all those twisting spectra suffice for
+\eqref{eq:globalEulerinput}. A single rank-two primitive trace
+measure does not directly provide the required power sums at
+coincident lengths.
+
+\subsection{What these constructions settle, and what remains}
+
+The global filter gives an actual convergent aggregate with the
+entire one-crossing sector removed. Equation~\eqref{eq:globalobstruction}
+proves that eliminating all nonsimple primitives by a fixed linear
+character functional is impossible. The length-valued product
+avoids that obstruction: its first-atom extraction is nonlinear
+and retains the source lengths.
+
+In particular, the positive support partition function of
+Section~\ref{subsec:countsupport} has the exact reconstruction
+\[
+ \mathcal P_X(s,z)
+ =\sum_C z^{r(C)}
+   \exp\!\left[-s\,\inf\operatorname{supp}\nu_C^X\right],
+ \qquad \Re s>0.
+\]
+The unit first atoms make this identity unambiguous. It is a
+reconstruction statement, not a remainder estimate. Quantitative
+counting now requires either control of the residual
+$\mathcal R_X$ in~\eqref{eq:globalresidual}, using cancellations
+among higher-intersection curves, or uniform control of the
+nonlinear diagonal extraction from $\mathbf E_X$. Neither follows
+from fixed-coefficient convergence alone.
+
+\paragraph{Finite computational companion.}
+The maintained recipe \path{experiments/counting_mixing/run.py} checks
+the trace recurrences through power $12$, four rational $SL_2$ word
+fixtures, the global weights, finite support selectors, and a formal
+length-valued Euler product through length $14$. Its result is
+\path{artifacts/counting_mixing/result.json}; the input ranges and
+independent review are recorded with the recipe and the checkpoint
+\path{docs/execution/counting-mixing-review-2026-11-01/}.
+These are exact finite algebraic checks. The formal lengths are not
+asserted to come from one hyperbolic metric, and the checks do not
+establish the infinite-product convergence, geometric first-atom
+theorem, or a sharp counting remainder.
+
+\clearpage
+

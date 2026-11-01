@@ -1,0 +1,1855 @@
+{
+  "schema_version": "1.0",
+  "chapter_sources": [
+    "book/chapters/23-trace-coefficients.tex",
+    "book/chapters/24-quantitative-counting.tex",
+    "book/chapters/25-global-coefficient-filters.tex"
+  ],
+  "chapter_labels": [
+    "sec:coefficientdistributions",
+    "sec:quantitativecounting",
+    "sec:globalfilters"
+  ],
+  "review_date": "2026-11-01",
+  "baseline_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+  "revision_review": "Author audit followed by independent mathematical approval of the frozen Chapters 23-25 and all 52 claims; integration adds computational prose and evidence metadata without changing proof statements.",
+  "author_review": {
+    "status": "completed_for_independent_review",
+    "scope": "Every displayed theorem/proposition/lemma/corollary and substantive algebraic or analytic assertion in Sections 23-25, with explicit external inputs and unproved aggregate-counting boundaries.",
+    "no_claim_of_full_external_proof_refereeing": true
+  },
+  "independent_review": {
+    "status": "approved_with_written_hypotheses",
+    "record_directory": "docs/execution/counting-mixing-review-2026-11-01/",
+    "records": [
+      "docs/execution/counting-mixing-review-2026-11-01/algebra-review/review-report.md",
+      "docs/execution/counting-mixing-review-2026-11-01/algebra-review/approved-hash-manifest.json",
+      "docs/execution/counting-mixing-review-2026-11-01/algebra-review/source-audit.md"
+    ],
+    "author_is_independent_reviewer": false,
+    "scope": "Local derivations, external theorem statements and convention conversions; not complete external-proof, companion-code or PDF approval."
+  },
+  "status_definitions": {
+    "derived_exact_algebra": "General finite algebraic derivation author-checked; bounded symbolic examples are separate evidence.",
+    "derived_geometric": "Geometric argument and hypotheses author-checked in the chapter.",
+    "derived_analytic": "Analytic implication author-checked with the stated convergence or uniformity hypotheses.",
+    "derived_from_external_statements": "Author-checked deduction using the cited source statements, without re-refereeing their complete proofs.",
+    "external_statement_and_derived_normalization": "Primary external statement plus explicitly checked convention conversion or selector interpretation.",
+    "external_statement": "Externally proved result quoted at its stated scope; complete external proof not independently reviewed here.",
+    "conditional_analytic_statement": "Implication proved under an explicitly unproved analytic hypothesis.",
+    "scope_boundary": "Explicit distinction or open requirement; no theorem resolving it is claimed."
+  },
+  "conventions": {
+    "geometry": "Closed marked oriented hyperbolic surface, curvature -1, genus >=2, except the separately identified once-punctured torus benchmark.",
+    "curves": "Unoriented primitive orbital supports; positive iterate index; multicurves allow parallel copies; empty target included.",
+    "traces": "Unnegated SL(2) traces, P0=2, P1=x; identity character coefficient treated separately.",
+    "counting": "Thurston measure normalized by each actual integral-lamination lattice. Primitivity of a weighted lamination means gcd of geometric support multiplicities, not an unchecked coordinate gcd.",
+    "support_statistics": "n(C) counts copies; r(C) counts distinct supports. They are used by different functionals.",
+    "measure_status": "Coefficient measures are signed locally finite atomic measures. An orbital term at a length may cancel against another label.",
+    "uniformity": "Fixed target or compact marked metric family unless a finite length cutoff and explicit constants are stated. No global moduli uniformity."
+  },
+  "computational_companion": {
+    "planned_code": "experiments/counting_mixing/",
+    "planned_result": "artifacts/counting_mixing/result.json",
+    "status_at_author_freeze": "planned_execution_record_pending",
+    "fixture_specification": "execution/counting-mixing-review-2026-11-01/algebra-author/companion-fixtures.md (outer execution workspace)",
+    "author_scratch_result": "execution/counting-mixing-review-2026-11-01/algebra-author/scratch-exact-results.json (outer execution workspace)",
+    "author_scratch_evidence": "471 finite exact identities passed using SymPy 1.14.0; independent of any future maintained companion execution.",
+    "exclusions": [
+      "No global trace/skein enumeration",
+      "No geometric systole or diameter certificate",
+      "No implemented twisted spectral solver or higher-twist spectrum",
+      "No infinite-product numerical convergence certificate",
+      "No connected-simple-curve exponent or mixing theorem inferred from finite algebra"
+    ],
+    "code_path": "experiments/counting_mixing/",
+    "result_path": "artifacts/counting_mixing/result.json",
+    "checkpoint": "docs/execution/counting-mixing-review-2026-11-01/",
+    "review_record": "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/review-v2.md",
+    "approval_manifest": "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/approved-manifest-v2.json",
+    "approval_manifest_sha256": "c059cf9591f534bb6517486389b111c79fdff77531b192cbfab846021bd6536e",
+    "approved_source_set_sha256": "4b1f8f22f155c464f0ecda6ab95c581926db157bae4ee7583e67fbc6448ded63",
+    "independent_review_status": "approved_v2_R1_resolved_no_open_findings",
+    "reviewer_replay_counts": {
+      "exact": 4054,
+      "numerical_formula_comparisons": 354,
+      "cross_precision_observations": 297,
+      "focused_tests": 38
+    },
+    "prior_v1_status": "Initial numerical acceptance was rejected for R1 and is not retroactively approved; its evidence remains frozen.",
+    "scope": "Exact finite fixtures and selected 60/90-digit formula comparisons; analytic truncation bounds are separate from uncertified quadrature and roundoff.",
+    "generation_status": "Final generation and source identities are recorded separately in the checkpoint; author and reviewer runs retain their own provenance.",
+    "implementation_status": "Implemented finite fixture groups are recorded per claim; optional numerical gap illustrations were omitted."
+  },
+  "sources": [
+    {
+      "key": "CharlesMarche",
+      "url": "https://arxiv.org/pdf/0901.3064v1",
+      "version": "arXiv:0901.3064v1, 20 January 2009",
+      "pins": [
+        "Introduction pp. 1-2; Theorem 1.1 and skein discussion p. 4"
+      ],
+      "checked": "Multicurve trace basis for SU(2) and SL(2,C); source uses minus trace per component. Basis signs convert to the unnegated convention.",
+      "verification": "Primary PDF statement read through web tools; no claim to re-referee the complete external proof."
+    },
+    {
+      "key": "NaudTwisted",
+      "url": "https://arxiv.org/pdf/2209.07941v1",
+      "version": "arXiv:2209.07941v1, 16 September 2022",
+      "pins": [
+        "Fourier convention p. 2; Theorem 2.2 and definition of primitive conjugacy classes p. 6"
+      ],
+      "checked": "Finite-dimensional unitary twist, compact hyperbolic surface, identity coefficient (g-1)dim(V), denominator 2sinh for conjugacy classes. Grouping inverse-invariant SU(2) characters gives the manuscript denominator sinh.",
+      "verification": "Primary PDF statement and normalization read through web tools; later journal metadata not needed for this derivation."
+    },
+    {
+      "key": "DThurstonPositive",
+      "url": "https://arxiv.org/pdf/1310.1959v2",
+      "version": "arXiv:1310.1959v2, 16 February 2015, published-version upload",
+      "pins": [
+        "Definition 1.1, spin identification, and Theorem 2 p. 1",
+        "Proposition 4.4, Definition 4.9 and Proposition 4.10 p. 5"
+      ],
+      "checked": "Sign coherence for every diagram at skein parameter +1; Chebyshev bracelets and disjoint distinct supports. The auxiliary positive twisted Fuchsian evaluation is not an SU(2) Laplacian twist.",
+      "verification": "Primary PDF statements read through web tools; the manuscript derives its bounds from these inputs."
+    },
+    {
+      "key": "BasokChelkak",
+      "url": "https://ems.press/content/serial-article-files/32573",
+      "version": "JEMS 23 (2021), 2787-2832, publisher PDF",
+      "pins": [
+        "Section 4.4 pp. 2820-2822; Theorems 4.7 and 4.9 p. 2821"
+      ],
+      "checked": "Related sign coherence and exponential coefficient estimates on punctured planar surfaces. The full analytic lamination expansion is not imported into the closed-surface construction.",
+      "verification": "Primary publisher PDF statements read through web tools."
+    },
+    {
+      "key": "EMMEffective",
+      "url": "https://arxiv.org/pdf/1905.04435v2",
+      "version": "arXiv:1905.04435v2, 5 July 2021",
+      "pins": [
+        "Theorem 1.1 p. 2",
+        "Lemma 5.1 and integral train-track points p. 27",
+        "Theorem 5.1 and Lemma 5.6 pp. 29-30",
+        "End of proof of Theorem 1.1, Section 8 p. 45"
+      ],
+      "checked": "Existence of kappa(g)>0 for a fixed nonzero rational multicurve and fixed negatively curved metric; train-track length convexity; finite-sided overlap partition. The source gives no numerical kappa or certified constants used by this chapter.",
+      "verification": "Primary version-pinned PDF statements and partition paragraph read through web tools; external mixing proof not re-refereed."
+    },
+    {
+      "key": "MirzSimple",
+      "url": "https://www.labri.fr/perso/vdelecro/toprint/mirzakhani4-pdf2up.pdf",
+      "version": "Annals of Mathematics 168 (2008), 97-125, journal PDF in two-page layout",
+      "pins": [
+        "Integral lattice and length normalization p. 105; Proposition 3.1 and proof p. 106"
+      ],
+      "checked": "All integral multicurves have the Thurston-lattice leading term B(X)R^(6g-6). This qualitative result alone supplies no boundary error estimate.",
+      "verification": "Primary journal text and printed page labels retrieved by web search within the PDF; direct PDF opening timed out. Cross-checked the same statement as Theorem 3.1, p. 8, in the 11 April 2004 primary preprint.",
+      "crosscheck_url": "https://www.math.stonybrook.edu/~mlyubich/Archive/Geometry/Teichmuller%20Space/Mirz1.pdf"
+    },
+    {
+      "key": "LuoStongLengths",
+      "url": "https://arxiv.org/pdf/math/0211421v1",
+      "version": "arXiv:math/0211421v1; Geometry & Topology 6 (2002), 495-521",
+      "pins": [
+        "Theorem 1.1, equations (1.1)-(1.2), p. 497; Corollary 1.2 p. 498"
+      ],
+      "checked": "Coordinate Lipschitz estimates for the length pairing and extension to measured laminations. No universal numerical inradius is read from these statements.",
+      "verification": "Primary PDF statements read through web tools."
+    },
+    {
+      "key": "McShaneRivinTori",
+      "url": "https://arxiv.org/pdf/math/0005220v1",
+      "version": "arXiv:math/0005220v1, 23 May 2000",
+      "pins": [
+        "Abstract p. 1 and norm construction Section 2",
+        "Theorem 4.1 and its preceding paragraph p. 8"
+      ],
+      "checked": "Once-punctured torus norm and primitive lattice-point O(R log R) count. The source counts primitive vectors; this chapter divides by two for unoriented curves in the full centrally symmetric ball.",
+      "verification": "Primary PDF theorem and conventions read through web tools."
+    },
+    {
+      "key": "RivinFigures",
+      "url": "https://arxiv.org/pdf/0901.2543v4",
+      "version": "arXiv:0901.2543v4, 2 July 2011",
+      "pins": [
+        "Theorem 1.1 p. 4; Theorem 1.3, equation (1), p. 5; punctured-torus cuff identification p. 7"
+      ],
+      "checked": "One-crossing pants neighborhood and positive hyperbolic pants trace identity. Same-image boundary cuffs must be identified after the pants polynomial is formed.",
+      "verification": "Primary version-pinned PDF statements read through web tools. No counting theorem from this paper is needed for the local filter or gap."
+    },
+    {
+      "key": "AHTComponents",
+      "url": "https://arxiv.org/pdf/math/0205057v2",
+      "version": "arXiv:math/0205057v2, 10 July 2004",
+      "pins": [
+        "Theorem 12 p. 14; Corollary 13 and proof p. 18"
+      ],
+      "checked": "Interval orbit count polynomial in k log N, and normal-curve component count polynomial in triangulation size times log normal weight. Components count parallel copies; one-support selection requires legitimate primitive integral division first.",
+      "verification": "Primary PDF statements read through web tools; no implemented normal-coordinate pipeline or average selector estimate is claimed."
+    },
+    {
+      "key": "CdVPeriodic",
+      "url": "https://www.numdam.org/item/CM_1973__27_2_159_0.pdf",
+      "version": "Compositio Mathematica 27 (1973), 159-184, Numdam journal scan",
+      "pins": [
+        "Introduction pp. 159-160; Section 1 pp. 160-162; Propositions (1.1)-(1.2) p. 162"
+      ],
+      "checked": "Broken-geodesic finite-dimensional energy, matching critical points, and squared-length critical values. The chapter uses this as background, not as a simplicity selector.",
+      "verification": "Primary scan text read through web tools. Displayed equal-time energy and normal Hessian are independently derived elementary formulas in the chapter."
+    },
+    {
+      "key": "WolpertTwist",
+      "url": "https://gdz.sub.uni-goettingen.de/download/pdf/PPN358147735_0056/LOG_0014.pdf",
+      "version": "Commentarii Mathematici Helvetici 56 (1981), 132-135, GDZ journal scan",
+      "pins": [
+        "First-variation formula (1.1) p. 132; Section 2 and deformation (2.1) p. 133"
+      ],
+      "checked": "Smooth closed-geodesic first variation and displacement twist construction; manuscript also gives the cut-arc endpoint derivation of the cosine sum, including immersed curves.",
+      "verification": "Primary first-page text and p. 133 OCR read through web tools. The final-page cosine formula was not independently recovered from the scan by these tools; it is not assigned a fabricated theorem/page pin.",
+      "independent_review_supplement": {
+        "url": "https://gdz.sub.uni-goettingen.de/download/pdf/PPN358147735_0056/LOG_0014.pdf#page=1",
+        "pin": "Section 3, printed page 134 (cosine sum and signed angles); page 135 (local contribution argument)",
+        "record": "docs/execution/counting-mixing-review-2026-11-01/algebra-review/source-audit.md",
+        "scope": "The independent reviewer recovered the final formula; the author's earlier access-limit note above remains historical."
+      }
+    },
+    {
+      "key": "AougabLahnLovingMiller",
+      "url": "https://arxiv.org/pdf/2210.16706v2",
+      "version": "arXiv:2210.16706v2, 18 July 2023",
+      "pins": [
+        "Theorem 1 and Corollary 2 p. 2"
+      ],
+      "checked": "Existence of unmarked length-isospectral closed hyperbolic surfaces with different simple length spectra. This is the scalar-data obstruction, not a statement about labelled SU(2) twist families.",
+      "verification": "Primary version-pinned PDF statements read through web tools."
+    },
+    {
+      "key": "RivinSimpleAsymptotics",
+      "url": "https://arxiv.org/pdf/math/0512066v1",
+      "version": "arXiv:math/0512066v1, 2 December 2005",
+      "pins": [
+        "Introduction p. 1; Section 2 and Theorem 1 p. 3"
+      ],
+      "checked": "Background discussion of qualitative simple-curve and multicurve asymptotics. Quantitative chamber counting here uses the actual integral train-track lattices and EMM convexity; no coordinate parity simplification or dominated-convergence step from this note is imported.",
+      "verification": "Primary version-pinned PDF background read through web tools; its full proof is not a dependency audited in this increment."
+    }
+  ],
+  "claims": [
+    {
+      "id": "23.01",
+      "title": "Broken-geodesic energy and positive normal Hessian",
+      "labels": [],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Fixed closed hyperbolic surface of curvature -1; equal time subdivision within injectivity radius.",
+        "Hessian is evaluated on periodic normal fields along a unit-speed closed geodesic."
+      ],
+      "proof_summary": "Matching first variations yield closed geodesics and squared-length energy. The length index form is the integral of f-prime squared plus f squared; self-intersections do not change the local index form.",
+      "dependencies": [],
+      "source_pins": [
+        {
+          "source_key": "CdVPeriodic",
+          "pins": [
+            "Introduction pp. 159-160; Section 1 pp. 160-162; Propositions (1.1)-(1.2) p. 162"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "No approximation algorithm for full loop space or numerical Hessian is supplied; positivity cannot select simplicity."
+    },
+    {
+      "id": "23.02",
+      "title": "Strict reconnection shortening",
+      "labels": [
+        "eq:coeffuncrossing"
+      ],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "A small embedded convex hyperbolic disk centered at a transverse crossing; radius r>0 and angle in (0,pi)."
+      ],
+      "proof_summary": "The hyperbolic chord formula gives the two reconnection lengths. Both half-angle factors are strictly below one, so tightening and contractible-component removal retain strict shortening.",
+      "dependencies": [],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          6
+        ],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "Finite function evaluation does not certify embedded disks or classify all crossings on an unspecified surface."
+    },
+    {
+      "id": "23.03",
+      "title": "Finite integral multicurve expansion",
+      "labels": [
+        "eq:coeffbasis",
+        "eq:coeffcurveexpansion"
+      ],
+      "status": "external_statement_and_derived_normalization",
+      "hypotheses": [
+        "Closed marked oriented surface, genus at least two.",
+        "Unnegated traces; parallel copies allowed; empty multicurve is the unit."
+      ],
+      "proof_summary": "Charles-Marche provides the simple-multicurve trace basis; switching minus trace to trace changes basis signs. Skein resolution and contractible-loop factors yield integer finite coefficients.",
+      "dependencies": [],
+      "source_pins": [
+        {
+          "source_key": "CharlesMarche",
+          "pins": [
+            "Introduction pp. 1-2; Theorem 1.1 and skein discussion p. 4"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          1,
+          2
+        ],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "The general basis theorem is external. Matrix samples do not prove linear independence of all multicurve functions."
+    },
+    {
+      "id": "23.04",
+      "title": "Twisted Selberg normalization and coefficient measure",
+      "labels": [
+        "eq:coefftwistedSelberg",
+        "eq:coeffdistribution"
+      ],
+      "status": "external_statement_and_derived_normalization",
+      "hypotheses": [
+        "Rank-two unitary twists and even smooth compactly supported length tests.",
+        "Unoriented primitive labels; inverse-invariant characters; compact surface without cusps or boundary."
+      ],
+      "proof_summary": "Group the two inverse conjugacy classes in Naud Theorem 2.2. The rank-two identity term is subtracted before coefficient extraction. Every length cutoff has finitely many orbital labels.",
+      "dependencies": [
+        "23.03"
+      ],
+      "source_pins": [
+        {
+          "source_key": "NaudTwisted",
+          "pins": [
+            "Fourier convention p. 2; Theorem 2.2 and definition of primitive conjugacy classes p. 6"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "No twisted spectral solver or entire labelled spectral family is computed. Scalar spectra alone do not supply these coefficients."
+    },
+    {
+      "id": "23.05",
+      "title": "Length triangularity for primitive curves, iterates, and products",
+      "labels": [
+        "lem:coefftriangularity"
+      ],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Primitive orbital support delta, positive iterate k, and a fixed hyperbolic metric."
+      ],
+      "proof_summary": "Resolve genuine crossings with strict saving, including multiple crossings by noncrossing endpoint matchings. Products obey weak length subadditivity. Chebyshev leading term gives the only equality case: k parallel copies of a simple delta with coefficient one.",
+      "dependencies": [
+        "23.02",
+        "23.03"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          1
+        ],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "Exact polynomial fixtures exercise finite examples only; strict geometric shortening is proved analytically."
+    },
+    {
+      "id": "23.06",
+      "title": "First simple-support atom and local compact-set gap",
+      "labels": [
+        "prop:coefffirstatom",
+        "eq:coefffirstatom"
+      ],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Fixed simple primitive alpha, positive integer m, and a fixed marked metric or compact marked family."
+      ],
+      "proof_summary": "Triangularity leaves the unique equality label (alpha,m), giving primitive numerator ell(alpha). Finitely many potential nearby labels on a compact marked family have a positive minimum gap.",
+      "dependencies": [
+        "23.04",
+        "23.05"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          1
+        ],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "No uniform gap over all simple supports or all moduli is asserted. Nonparallel coefficients may vanish after cancellation."
+    },
+    {
+      "id": "23.07",
+      "title": "Localized moment recovery",
+      "labels": [
+        "eq:coeffmomentratio"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "A fixed smooth cutoff equal to one at the first atom and disjoint from the other orbital lengths in a local metric neighborhood."
+      ],
+      "proof_summary": "The denominator is the positive first mass; dividing the first length moment by it gives the simple length exactly.",
+      "dependencies": [
+        "23.06"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "The cutoff requires local isolation. There is no uniform-norm stable coefficient-extraction assertion."
+    },
+    {
+      "id": "23.08",
+      "title": "Bracelet evaluation with sign-convention conversion",
+      "labels": [
+        "eq:coeffbraceletpositive"
+      ],
+      "status": "external_statement_and_derived_normalization",
+      "hypotheses": [
+        "Skein parameter +1, canonical twisted Fuchsian evaluation, and sign-coherent bracelet expansion.",
+        "Simple support curves are distinct and disjoint; windings enter bracelet length."
+      ],
+      "proof_summary": "Sign coherence identifies absolute total evaluation with the sum of absolute coefficients times positive bracelet values. A spin identification changes simple generators by signs; Chebyshev parity preserves coefficient magnitudes.",
+      "dependencies": [],
+      "source_pins": [
+        {
+          "source_key": "DThurstonPositive",
+          "pins": [
+            "Definition 1.1, spin identification, and Theorem 2 p. 1",
+            "Proposition 4.4, Definition 4.9 and Proposition 4.10 p. 5"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          1
+        ],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "Positive twisted Fuchsian evaluation is auxiliary and does not define a unitary Laplacian twist. General sign coherence is an external theorem."
+    },
+    {
+      "id": "23.09",
+      "title": "Fixed target exponential coefficient bound",
+      "labels": [
+        "prop:coeffgrowth",
+        "eq:coeffexponentialbound",
+        "eq:coeffMrbound"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "Fixed target multicurve C and a fixed metric with all support lengths positive."
+      ],
+      "proof_summary": "The factorial Chebyshev coefficient is polynomially bounded in winding n. Exponential cosh growth makes each M_r finite. Additional bracelet supports can only contribute constants of relative magnitude at most one.",
+      "dependencies": [
+        "23.08"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          1
+        ],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "The constant depends on target multiplicities and metric. No uniform bound over all growing supports follows."
+    },
+    {
+      "id": "23.10",
+      "title": "Signed coefficient measure growth",
+      "labels": [
+        "cor:coeffmeasuregrowth",
+        "eq:coeffmeasuregrowth"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "Positive systole and compact hyperbolic quotient; fixed C."
+      ],
+      "proof_summary": "Each absolute orbital mass is O_C,X(L); axis-based orbit packing gives O_X(exp(R)) primitive/iterate labels. Sum before cancellation for the total-variation bound.",
+      "dependencies": [
+        "23.09"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "No prime-geodesic asymptotic, net later-atom nonvanishing, or sharp orbit count is used."
+    },
+    {
+      "id": "23.11",
+      "title": "Heat and Laplace transforms in their proved domains",
+      "labels": [
+        "eq:coeffheatdefinition",
+        "eq:coeffLaplacedefinition"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "Fixed coefficient C; Re(t)>0 for the Gaussian transform; Re(s)>1 for the Laplace transform."
+      ],
+      "proof_summary": "Total-variation growth is dominated by Gaussian decay, or by the indicated Laplace decay. Compact subsets of the parameter domains give integrable derivative majorants.",
+      "dependencies": [
+        "23.10"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "No meromorphic continuation of individual coefficients beyond Re(s)>1 is established."
+    },
+    {
+      "id": "23.12",
+      "title": "Weighted coefficient norm and entire heat expansion",
+      "labels": [
+        "eq:coeffallchannelbound",
+        "eq:coefffullheatexpansion"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "Weighted l1 coefficient norm uses 2 to the number of copies, not an L2 function norm.",
+        "Unitary characters, fixed surface, Re(t)>0."
+      ],
+      "proof_summary": "Chebyshev recurrence bounds each bracelet coefficient norm; positivity bounds support length and coefficient sum. Orbit packing plus Gaussian decay allows all-channel rearrangement. Smooth Gaussian cutoffs and the compact-surface Weyl estimate identify the spectral heat trace.",
+      "dependencies": [
+        "23.04",
+        "23.08",
+        "23.10"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          1
+        ],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "This does not establish uniqueness of arbitrary infinite continuous-function expansions. Coefficient extraction is unbounded for the SU(2) uniform norm."
+    },
+    {
+      "id": "23.13",
+      "title": "First-atom heat and large-Laplace asymptotics",
+      "labels": [
+        "prop:coeffheatfirst",
+        "eq:coeffheatfirst",
+        "eq:coeffLaplacefirst",
+        "eq:coefflengthlimits"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "Fixed simple alpha and a positive orbital gap b>ell(alpha).",
+        "t decreases to zero through positive reals; s increases to positive infinity."
+      ],
+      "proof_summary": "Split off the positive leading atom. A fixed transform parameter majorizes the signed tail and preserves the endpoint exponent b. Leading positivity makes the real logarithms eventually well-defined.",
+      "dependencies": [
+        "23.06",
+        "23.11"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          6
+        ],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "The recovery limit is for fixed support and is not a large-length counting asymptotic."
+    },
+    {
+      "id": "23.14",
+      "title": "Chebyshev coefficient formula and simple iterates",
+      "labels": [
+        "eq:coeffChebyshev",
+        "eq:coeffsimplepowers",
+        "eq:coeffoddpowers"
+      ],
+      "status": "derived_exact_algebra",
+      "hypotheses": [
+        "k>=1, positive target multiplicity m, simple primitive alpha; P0=2 and P1=x."
+      ],
+      "proof_summary": "The recurrence gives the factorial coefficient formula, parity restriction, leading coefficient one and alternating odd-family multipliers. Orbital masses retain the primitive length numerator.",
+      "dependencies": [
+        "23.04"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          1
+        ],
+        "maintained_companion_execution": "finite_examples_recorded_separately",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [
+          "exact.trace_coefficients"
+        ],
+        "evidence_record": "artifacts/counting_mixing/result.json",
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "The individual primitive family is exact; subtracting it does not remove nonsimple primitive powers that resolve to the same target."
+    },
+    {
+      "id": "23.15",
+      "title": "Simple-iterate generating and transform formulas",
+      "labels": [
+        "eq:coeffpowergenerating",
+        "eq:coeffpowerLaplace",
+        "eq:coeffpowerheat"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "Positive simple length; m>=1; Re(s)>-1/2 only for the one fixed primitive family."
+      ],
+      "proof_summary": "Extract a fixed x coefficient from the rational recurrence generating series. Expand csch geometrically and rearrange absolutely on the stated half-plane; convert q to sech and tanh. The heat expression factors the first iterate exactly.",
+      "dependencies": [
+        "23.14"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          1,
+          6
+        ],
+        "maintained_companion_execution": "finite_examples_recorded_separately",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [
+          "exact.trace_coefficients"
+        ],
+        "evidence_record": "artifacts/counting_mixing/result.json",
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "The wider family half-plane does not apply to the full coefficient Laplace transform. No global analytic continuation is inferred."
+    },
+    {
+      "id": "23.16",
+      "title": "Figure-eight coefficients and full-iterate cancellation",
+      "labels": [
+        "eq:coefffigurepowers",
+        "eq:coefffigurecancellation"
+      ],
+      "status": "derived_exact_algebra",
+      "hypotheses": [
+        "Embedded pants with three distinct essential cuff classes for the displayed coefficient indexing.",
+        "Unnegated unitary traces satisfy T_gamma=xy-z; gamma is the selected primitive figure-eight."
+      ],
+      "proof_summary": "Substitute xy-z into Chebyshev polynomials and expand. The xy and z coefficients are opposite for every iterate, so their whole orbital family cancels in either convergent transform.",
+      "dependencies": [
+        "23.14",
+        "23.15"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          1
+        ],
+        "maintained_companion_execution": "finite_examples_recorded_separately",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [
+          "exact.trace_coefficients"
+        ],
+        "evidence_record": "artifacts/counting_mixing/result.json",
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "Cuff identifications require collecting equal monomials first. Other primitive classes can contribute, so the complete signed measures need not cancel."
+    },
+    {
+      "id": "23.17",
+      "title": "Smooth metric variation of discrete measures",
+      "labels": [
+        "eq:coeffmetricvariation"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "Fixed topological target and compactly supported smooth test function; smooth marked metric variation."
+      ],
+      "proof_summary": "Locally only finitely many labels occur. Differentiate mass and atom location; derivative of delta_L is minus L-prime delta-prime_L. Coefficients are topological constants.",
+      "dependencies": [
+        "23.04"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "No real analyticity for arbitrary smooth test functions is asserted; no derivative of an infinite unweighted coefficient sum is taken."
+    },
+    {
+      "id": "23.18",
+      "title": "Twist derivative including immersed orbital curves",
+      "labels": [
+        "eq:coeffWolpert"
+      ],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Twisting curve beta is simple; displacement twist and intersection-angle sign conventions are consistent.",
+        "Closed delta may be immersed; passages through beta count with multiplicity."
+      ],
+      "proof_summary": "Cut delta at beta. Stationarity cancels the interior arc variations and each relative endpoint displacement contributes its tangent projection cos(theta). A power of beta has zero derivative and empty crossing sum.",
+      "dependencies": [
+        "23.17"
+      ],
+      "source_pins": [
+        {
+          "source_key": "WolpertTwist",
+          "pins": [
+            "First-variation formula (1.1) p. 132; Section 2 and deformation (2.1) p. 133"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "The original scan final cosine display was not recovered; the chapter includes the first-variation argument instead of inventing a source pin. No numerical twist family is evaluated."
+    },
+    {
+      "id": "23.19",
+      "title": "Differentiated leading heat response",
+      "labels": [
+        "eq:coeffheatvariation"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "Fixed simple alpha, a compact local metric neighborhood, and a bounded tangent direction."
+      ],
+      "proof_summary": "Differentiate the leading mass and Gaussian action. Local orbital gap and length derivative O(length), together with uniform coefficient bounds, control the differentiated tail by a polynomial times a smaller Gaussian.",
+      "dependencies": [
+        "23.06",
+        "23.09",
+        "23.13",
+        "23.17"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "No uniform derivative estimate over growing supports or degenerating metrics is claimed."
+    },
+    {
+      "id": "23.20",
+      "title": "Unoriented determinant product and coefficient derivative",
+      "labels": [
+        "eq:coeffunorientedproduct",
+        "eq:coeffproductderivative"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "Unitary rank-two twists; Re(v)>1 for the product; Re(s)>1 for its fixed-coefficient derivative at v=s+1/2."
+      ],
+      "proof_summary": "Expand the determinant logarithm in trace powers; summing the n-geometric series yields csch and the explicit factor two. Fixed coefficients are defined through finite cutoffs, not uniform-norm continuity.",
+      "dependencies": [
+        "23.04",
+        "23.09",
+        "23.11"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          1
+        ],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "No individual coefficient continuation follows from Selberg-product continuation. The scalar-trace Euler product of Section 25 is a different product."
+    },
+    {
+      "id": "23.21",
+      "title": "Obstruction to a multiplicative Chebyshev substitution",
+      "labels": [
+        "eq:coeffAdamsobstruction"
+      ],
+      "status": "derived_exact_algebra",
+      "hypotheses": [
+        "Arbitrary SL(2) matrices A,B; unnegated traces and P2(x)=x^2-2."
+      ],
+      "proof_summary": "Cayley-Hamilton and the commutator trace identity give the displayed nonzero defect. Mapping every trace to its kth-power trace need not respect products in the surface character ring.",
+      "dependencies": [],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          2
+        ],
+        "maintained_companion_execution": "finite_examples_recorded_separately",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [
+          "exact.SL2_words"
+        ],
+        "evidence_record": "artifacts/counting_mixing/result.json",
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "Finite matrix samples alone would not establish the polynomial identity; the symbolic identity and algebraic derivation are supplied."
+    },
+    {
+      "id": "23.22",
+      "title": "Primitive extraction with higher twisting data",
+      "labels": [],
+      "status": "derived_exact_algebra",
+      "hypotheses": [
+        "Spectra for symmetric-power twists are supplied as additional data; virtual twists are handled additively.",
+        "Locally finite positive-length measures and inverse-invariant characters."
+      ],
+      "proof_summary": "Adams operations compose multiplicatively in their indices. Apply length dilation and divisor Mobius inversion to Q_rho=sum_k D_k P_psi^k rho; every bounded cutoff is finite.",
+      "dependencies": [
+        "23.04",
+        "23.21"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          4
+        ],
+        "maintained_companion_execution": "finite_examples_recorded_separately",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [
+          "exact.finite_support"
+        ],
+        "evidence_record": "artifacts/counting_mixing/result.json",
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "No claim that rank-two spectra determine higher symmetric-power spectra. No higher-twist spectra are computed."
+    },
+    {
+      "id": "23.23",
+      "title": "Scalar spectral limitation",
+      "labels": [],
+      "status": "external_statement",
+      "hypotheses": [
+        "Unmarked scalar length/Laplace spectra, without a labelled holonomy family."
+      ],
+      "proof_summary": "The cited covers supply length-isospectral surfaces with different simple length spectra; the coefficient recovery uses strictly richer labelled data.",
+      "dependencies": [],
+      "source_pins": [
+        {
+          "source_key": "AougabLahnLovingMiller",
+          "pins": [
+            "Theorem 1 and Corollary 2 p. 2"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "External example theorem is not re-proved; no numerical isospectral pair is constructed."
+    },
+    {
+      "id": "23.24",
+      "title": "All-multicurve Laplace benchmark",
+      "labels": [],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "Thurston measure normalized by the actual integral multicurve lattice; all weighted multicurves counted."
+      ],
+      "proof_summary": "The qualitative lattice asymptotic gives the Laplace leading term Gamma(d+1)B(X)t^(-d) by partial summation and polynomial growth.",
+      "dependencies": [],
+      "source_pins": [
+        {
+          "source_key": "MirzSimple",
+          "pins": [
+            "Integral lattice and length normalization p. 105; Proposition 3.1 and proof p. 106"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "This is a separate positive counting measure, not a consequence of the signed coefficient heat expansion."
+    },
+    {
+      "id": "24.01",
+      "title": "Existing effective fixed-orbit count",
+      "labels": [
+        "eq:countEMM"
+      ],
+      "status": "external_statement",
+      "hypotheses": [
+        "Fixed nonzero rational multicurve and fixed compact negatively curved metric; genus g>=2."
+      ],
+      "proof_summary": "EMM Theorem 1.1 provides an exponent kappa(g)>0 and an error constant depending on metric and orbit. Hyperbolic metrics form the case used here.",
+      "dependencies": [],
+      "source_pins": [
+        {
+          "source_key": "EMMEffective",
+          "pins": [
+            "Theorem 1.1 p. 2",
+            "Lemma 5.1 and integral train-track points p. 27",
+            "Theorem 5.1 and Lemma 5.6 pp. 29-30",
+            "End of proof of Theorem 1.1, Section 8 p. 45"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "No numerical exponent, certified constant, or improvement of the external theorem is established."
+    },
+    {
+      "id": "24.02",
+      "title": "Convex-body lattice sandwich and explicit boundary error",
+      "labels": [
+        "eq:countsandwich",
+        "eq:countcellerror"
+      ],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Full lattice with covolume v and a fundamental cell inside the radius-rho ball.",
+        "Compact convex K with positive inradius r about x0; R>=rho/r for the stated boundary-error coefficient."
+      ],
+      "proof_summary": "Lattice cells sandwich eroded and inflated bodies. Homotheties are centered at Rx0, not the possibly boundary origin. Expand the upper volume increment to bound both errors.",
+      "dependencies": [],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "Computing certified body inputs for a particular surface is separate; no such body is constructed by the algebra companion."
+    },
+    {
+      "id": "24.03",
+      "title": "Total weighted multicurve O(R^(d-1)) error",
+      "labels": [
+        "prop:countall",
+        "eq:countall"
+      ],
+      "status": "derived_from_external_statements",
+      "hypotheses": [
+        "Fixed closed hyperbolic X; d=6g-6; actual integral chart lattices, including parity constraints.",
+        "Finite rational cone subdivision subordinate to train tracks."
+      ],
+      "proof_summary": "EMM length convexity and finite overlap partition reduce the unit-length region to compact full-dimensional convex bodies plus lower-dimensional faces. Sum lattice-cell bounds and face packing errors; remove zero once.",
+      "dependencies": [
+        "24.02"
+      ],
+      "source_pins": [
+        {
+          "source_key": "EMMEffective",
+          "pins": [
+            "Theorem 1.1 p. 2",
+            "Lemma 5.1 and integral train-track points p. 27",
+            "Theorem 5.1 and Lemma 5.6 pp. 29-30",
+            "End of proof of Theorem 1.1, Section 8 p. 45"
+          ]
+        },
+        {
+          "source_key": "MirzSimple",
+          "pins": [
+            "Integral lattice and length normalization p. 105; Proposition 3.1 and proof p. 106"
+          ]
+        },
+        {
+          "source_key": "LuoStongLengths",
+          "pins": [
+            "Theorem 1.1, equations (1.1)-(1.2), p. 497; Corollary 1.2 p. 498"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "Certified numerical inradii, outer radii, covolumes and diameters are not supplied. Constants need not remain bounded near degeneration."
+    },
+    {
+      "id": "24.04",
+      "title": "Primitive integral laminations differ from connected curves",
+      "labels": [
+        "eq:countprimitive"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "Nonzero integral laminations; primitive means gcd of support multiplicities is one; d>2."
+      ],
+      "proof_summary": "Unique integral scaling gives Mobius inversion. The boundary-error Dirichlet series converges and the leading tail is O(R). A primitive lamination may retain several distinct supports.",
+      "dependencies": [
+        "24.03"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          4
+        ],
+        "maintained_companion_execution": "finite_examples_recorded_separately",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [
+          "exact.finite_support",
+          "exact.Mobius_lattice"
+        ],
+        "evidence_record": "artifacts/counting_mixing/result.json",
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "No connected-simple-curve asymptotic follows from this primitive-lamination count; coordinate gcd without admissibility is not used."
+    },
+    {
+      "id": "24.05",
+      "title": "Unoriented punctured-torus benchmark",
+      "labels": [
+        "eq:counttorus"
+      ],
+      "status": "derived_from_external_statements",
+      "hypotheses": [
+        "Complete once-punctured torus; full centrally symmetric McShane-Rivin norm ball; primitive vectors modulo sign."
+      ],
+      "proof_summary": "Use the planar norm-body boundary estimate and Mobius inversion. The harmonic error sum gives R log R and dividing by two groups opposite primitive homology vectors.",
+      "dependencies": [],
+      "source_pins": [
+        {
+          "source_key": "McShaneRivinTori",
+          "pins": [
+            "Abstract p. 1 and norm construction Section 2",
+            "Theorem 4.1 and its preceding paragraph p. 8"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          4
+        ],
+        "maintained_companion_execution": "finite_examples_recorded_separately",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [
+          "exact.Mobius_lattice"
+        ],
+        "evidence_record": "artifacts/counting_mixing/result.json",
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "This independent cusp example does not extend the compact twisted Selberg formula across a cusp."
+    },
+    {
+      "id": "24.06",
+      "title": "Fixed-surface exponentially close pants contributions",
+      "labels": [
+        "prop:countnearcollision",
+        "eq:countpantsgap"
+      ],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Any fixed closed hyperbolic surface of genus at least two.",
+        "Two disjoint nonseparating cuffs with connected complement; an interior twist curve meeting the third cuff."
+      ],
+      "proof_summary": "Dehn twisting in the cut surface gives distinct third cuffs with lengths tending to infinity. The positive pants trace identity gives L=2acosh(cosh(R/2)+2A), whose inverse expansion yields the stated leading gap.",
+      "dependencies": [],
+      "source_pins": [
+        {
+          "source_key": "RivinFigures",
+          "pins": [
+            "Theorem 1.1 p. 4; Theorem 1.3, equation (1), p. 5; punctured-torus cuff identification p. 7"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          6
+        ],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "The result concerns individual orbital labels. Equal-length cancellations can erase their net atom."
+    },
+    {
+      "id": "24.07",
+      "title": "Necessary time scale for one absolute-valued remainder term",
+      "labels": [
+        "eq:countnormalizedpants",
+        "eq:countnecessarytime"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "The sequence and fixed positive constant A of the near-collision proposition; desired error R^(-M), M>0."
+      ],
+      "proof_summary": "Divide the chosen negative orbital term by the first positive atom. Its prefactor tends to one, so polynomially small t leaves order-one magnitude. Solve the exponential suppression inequality to obtain R exp(-R/2)/log R.",
+      "dependencies": [
+        "24.06"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          6
+        ],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "This is not a lower bound for the net signed remainder and does not exclude cancellation-based recovery."
+    },
+    {
+      "id": "24.08",
+      "title": "Quantitative trace and action gaps",
+      "labels": [
+        "eq:counttracegapconstant",
+        "lem:counttracegap",
+        "eq:counttracegap",
+        "eq:countactiongap"
+      ],
+      "status": "derived_from_external_statements",
+      "hypotheses": [
+        "Positive systole epsilon; simple target alpha; contributing orbital label other than (alpha,1)."
+      ],
+      "proof_summary": "A contributing bracelet must have odd alpha winding and even windings on any extra supports. Positivity and integrality force a uniform positive trace excess, unless equality contradicts strict triangularity. Monotonicity of y/sinh(y/2) makes the action gap decrease with target length.",
+      "dependencies": [
+        "23.05",
+        "23.08"
+      ],
+      "source_pins": [
+        {
+          "source_key": "DThurstonPositive",
+          "pins": [
+            "Definition 1.1, spin identification, and Theorem 2 p. 1",
+            "Proposition 4.4, Definition 4.9 and Proposition 4.10 p. 5"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          6
+        ],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "The gap is for orbital labels before equal-length cancellation. It is not a surface-independent gap in ordinary length."
+    },
+    {
+      "id": "24.09",
+      "title": "Explicit orbit-packing and uniform recovery constants",
+      "labels": [
+        "eq:countuniformconstants"
+      ],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Fixed surface with systole epsilon>0 and diameter D; basepoint orbit in the hyperbolic plane."
+      ],
+      "proof_summary": "Choose class representatives with axes within D, pack disjoint epsilon/2 disks, and simplify the hyperbolic disk-area ratio. The odd-winding exponential sum gives A_epsilon.",
+      "dependencies": [
+        "23.09"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          6
+        ],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "The companion may evaluate constants at supplied numbers; it does not certify the geometric systole or diameter of a surface."
+    },
+    {
+      "id": "24.10",
+      "title": "Uniform fixed-cutoff recovery and sufficient time",
+      "labels": [
+        "prop:countuniformisolation",
+        "eq:countuniformisolation",
+        "eq:countcertifiedtime"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "R>=epsilon; all simple targets of length at most R; 0<t<=epsilon/4.",
+        "The later orbital label (alpha,3) ensures b_alpha exists even if its net atom cancels."
+      ],
+      "proof_summary": "Normalize coefficient bounds by the first mass. Unit-shell orbit counts grow by e^j while Gaussian loss is at least e^(-2j). Sum shells, use b<=ell(alpha)+1, then insert the trace-gap lower bound and solve for time.",
+      "dependencies": [
+        "23.06",
+        "24.08",
+        "24.09"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          6
+        ],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "Summing this over target curves presupposes their list and lengths. It is recovery, not a new counting argument or an implemented orbit enumerator."
+    },
+    {
+      "id": "24.11",
+      "title": "Positive support partition and one-support coefficient",
+      "labels": [
+        "eq:countsupportpartition",
+        "eq:countonesupport"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "All weighted simple multicurves; r(C) counts distinct supports, and r(0)=0; Re(s)>0."
+      ],
+      "proof_summary": "Polynomial all-multicurve growth implies absolute convergence. At most 3g-3 distinct disjoint supports occur. The linear z coefficient sums positive multiples of one simple support.",
+      "dependencies": [
+        "24.03"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          4
+        ],
+        "maintained_companion_execution": "finite_examples_recorded_separately",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [
+          "exact.finite_support"
+        ],
+        "evidence_record": "artifacts/counting_mixing/result.json",
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "No equality with the signed coefficient heat expansion is asserted; orbital and resolved lengths differ."
+    },
+    {
+      "id": "24.12",
+      "title": "Support Mobius inversion without an extra factor",
+      "labels": [
+        "eq:countsupportmobius"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "Re(s)>0 and positive systole; unoriented simple supports."
+      ],
+      "proof_summary": "The sum of mu(k) over divisors leaves only multiplicity one. The inequality km>=k+m-1 yields an absolutely summable dominating series.",
+      "dependencies": [
+        "24.11"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          4
+        ],
+        "maintained_companion_execution": "finite_examples_recorded_separately",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [
+          "exact.finite_support"
+        ],
+        "evidence_record": "artifacts/counting_mixing/result.json",
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "Finite divisor checks do not verify large-length asymptotics; no 1/k is present."
+    },
+    {
+      "id": "24.13",
+      "title": "Stable finite Fourier support extraction",
+      "labels": [
+        "eq:countsupportfourier"
+      ],
+      "status": "derived_exact_algebra",
+      "hypotheses": [
+        "Degree at most 3g-3, q=3g-2, and all qth roots of unity."
+      ],
+      "proof_summary": "Root-of-unity orthogonality selects exponent one without aliasing. The l1 norm of extraction weights is one, preserving a common error bound.",
+      "dependencies": [
+        "24.11"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          4
+        ],
+        "maintained_companion_execution": "finite_examples_recorded_separately",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [
+          "exact.finite_support"
+        ],
+        "evidence_record": "artifacts/counting_mixing/result.json",
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "This bounded finite-degree operation does not make arbitrary trace-coefficient extraction uniformly bounded."
+    },
+    {
+      "id": "24.14",
+      "title": "Conditional transfer of a support-partition remainder",
+      "labels": [
+        "eq:countsupportconditional"
+      ],
+      "status": "conditional_analytic_statement",
+      "hypotheses": [
+        "Assumed common small-positive-s expansion at every Fourier sample; specified 0<eta<d-1.",
+        "Leading A_X is a polynomial of degree at most 3g-3."
+      ],
+      "proof_summary": "Extract the linear coefficient, then split Mobius inversion at k=1/s. The small-parameter error Dirichlet series converges; the omitted leading and large-parameter tails are O(s^-1).",
+      "dependencies": [
+        "24.12",
+        "24.13"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "The Fourier-sample expansions are not proved. A positive-axis Laplace remainder alone does not provide the same sharp counting error."
+    },
+    {
+      "id": "24.15",
+      "title": "Algorithmic connectivity and the unresolved selector average",
+      "labels": [],
+      "status": "external_statement_and_derived_normalization",
+      "hypotheses": [
+        "Normal curve input for AHT; for one-support selection first compute the valid primitive integral divisor in an integral-lamination chart."
+      ],
+      "proof_summary": "AHT counts all normal-curve components in compressed-input polynomial time. The primitive divisor has one component exactly when the original multicurve has one distinct support.",
+      "dependencies": [],
+      "source_pins": [
+        {
+          "source_key": "AHTComponents",
+          "pins": [
+            "Theorem 12 p. 14; Corollary 13 and proof p. 18"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          4
+        ],
+        "maintained_companion_execution": "finite_examples_recorded_separately",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [
+          "exact.finite_support"
+        ],
+        "evidence_record": "artifacts/counting_mixing/result.json",
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "No AHT implementation, coordinate-conversion complexity claim, or asymptotic average of the selector is supplied."
+    },
+    {
+      "id": "24.16",
+      "title": "Shell count inherited from all multicurves",
+      "labels": [
+        "eq:countshell"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "R>=2; 0<=Delta<=R/2; simple curves are a subset of all positive weighted multicurves."
+      ],
+      "proof_summary": "Subtract total counts at shell endpoints, using one-sided limits for endpoint atoms. Main-term differences are O(Delta R^(d-1)) and boundary errors are O(R^(d-1)).",
+      "dependencies": [
+        "24.03"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "This does not estimate a signed coefficient shell, where positivity is absent."
+    },
+    {
+      "id": "24.17",
+      "title": "Quantitative desmoothing criterion",
+      "labels": [
+        "prop:countdesmooth",
+        "eq:countsmoothhypothesis",
+        "eq:countsharpconditional"
+      ],
+      "status": "conditional_analytic_statement",
+      "hypotheses": [
+        "Assumed uniform smoothed connected-count error O(h^-m R^(d-eta)); eta>0 and m>=0.",
+        "Smooth 0<=f_h<=1 equals one below 1-h and zero above 1+h."
+      ],
+      "proof_summary": "The shell loss, integral normalization loss and smoothed error sum to O(hR^d+R^(d-1)+h^-mR^(d-eta)). Choose delta=min(1,eta/(m+1)) and h=R^-delta.",
+      "dependencies": [
+        "24.16"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "The smoothed hypothesis is explicitly unproved by the coefficient machinery. No improved simple-curve exponent is claimed."
+    },
+    {
+      "id": "24.18",
+      "title": "Distinct minimum-recovery and large-length limits",
+      "labels": [],
+      "status": "scope_boundary",
+      "hypotheses": [
+        "First-atom t decreases to zero; positive simple-curve partition s decreases to zero; Gaussian lengths of order R correspond to t of order R squared."
+      ],
+      "proof_summary": "The different scaling regimes follow from their kernels and cannot be interchanged without an aggregate construction and uniform estimates.",
+      "dependencies": [
+        "23.13",
+        "24.11",
+        "24.17"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "Construction and analysis of the connected-support observable remain open in this program."
+    },
+    {
+      "id": "25.01",
+      "title": "Root-sum weights and bounded coefficient functional",
+      "labels": [
+        "eq:globalmoments",
+        "eq:globalbounded"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "v=2cos(theta), theta in [0,pi]; unordered roots of u^2-u=v; Lambda is defined on the multicurve basis."
+      ],
+      "proof_summary": "All roots have modulus at most two; their symmetric power sums are single-valued polynomials. This gives |w_n|<=2^(n+1) and |Lambda(f)|<=2||f||_2. The empty weight is two.",
+      "dependencies": [
+        "23.03",
+        "23.12"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          3
+        ],
+        "maintained_companion_execution": "finite_examples_recorded_separately",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [
+          "exact.global_filter"
+        ],
+        "evidence_record": "artifacts/counting_mixing/result.json",
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "Lambda is not an algebra homomorphism, representation evaluation, or uniform-norm bounded character functional."
+    },
+    {
+      "id": "25.02",
+      "title": "Integer moment sequence and generating series",
+      "labels": [
+        "eq:globalweightseries"
+      ],
+      "status": "derived_exact_algebra",
+      "hypotheses": [
+        "The branch of the square root equals one at q=0; |q|<1/2."
+      ],
+      "proof_summary": "The root-sum recurrence gives a rational generating series in v; averaging v powers gives central binomial even moments and zero odd moments. The elementary cosine resolvent yields the square-root formula.",
+      "dependencies": [
+        "25.01"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          3
+        ],
+        "maintained_companion_execution": "finite_examples_recorded_separately",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [
+          "exact.global_filter"
+        ],
+        "evidence_record": "artifacts/counting_mixing/result.json",
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "Finite Taylor coefficients verify examples; analytic convergence follows from the root bound, not the truncation."
+    },
+    {
+      "id": "25.03",
+      "title": "Global one-crossing filter including coincident cuff images",
+      "labels": [
+        "prop:globalonecrossing",
+        "eq:globalonecrossing"
+      ],
+      "status": "derived_from_external_statements",
+      "hypotheses": [
+        "Primitive closed geodesic with one transverse self-intersection on a closed surface.",
+        "Pants cuff traces remain essential variables; identify equal cuff images only after forming the polynomial."
+      ],
+      "proof_summary": "The pants polynomial is P_k(xy-z). On multicurve monomials total-degree replacement gives P_k(u^2-u)=2cos(k theta); its averaged nonzero Fourier mode vanishes. Cuff identification preserves degree, and w1=1 preserves primitive simples.",
+      "dependencies": [
+        "23.16",
+        "25.01"
+      ],
+      "source_pins": [
+        {
+          "source_key": "RivinFigures",
+          "pins": [
+            "Theorem 1.1 p. 4; Theorem 1.3, equation (1), p. 5; punctured-torus cuff identification p. 7"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          1,
+          3
+        ],
+        "maintained_companion_execution": "finite_examples_recorded_separately",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [
+          "exact.global_filter"
+        ],
+        "evidence_record": "artifacts/counting_mixing/result.json",
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "Primitives with more intersections are not removed. Peripheral trace specialization is outside the assertion."
+    },
+    {
+      "id": "25.04",
+      "title": "Convergent filtered heat aggregate and primitive residual",
+      "labels": [
+        "eq:globalfilteredheat",
+        "eq:globalresidual"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "Re(t)>0; weighted coefficient norm convergence.",
+        "Primitive residual formula additionally requires higher twisting spectra for Adams extraction."
+      ],
+      "proof_summary": "Boundedness of Lambda in the weighted coefficient norm permits applying it before the convergent orbital heat sum. One-crossing families vanish, simple primitive coefficients are one, and all remaining primitive labels have at least two intersections.",
+      "dependencies": [
+        "23.12",
+        "23.22",
+        "25.01",
+        "25.03"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          3
+        ],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "The residual is signed and has no proved smaller-order counting bound. The identity contribution must receive Lambda(1)=2."
+    },
+    {
+      "id": "25.05",
+      "title": "Exact obstruction to a universal fixed linear selector",
+      "labels": [
+        "eq:globalobstruction",
+        "eq:globalobstructionbound"
+      ],
+      "status": "derived_exact_algebra",
+      "hypotheses": [
+        "Embedded geodesic pants with distinct essential cuffs; the same linear functional is applied to all four trace functions."
+      ],
+      "proof_summary": "Cayley-Hamilton gives the three word polynomials and their combination x. Their primitive homology vectors exclude pants roots; nonperipheral words are nonsimple. Convexity keeps the geodesic image and any possible ambient root inside pants. The triangle inequality gives the 1/3 obstruction.",
+      "dependencies": [],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          2,
+          3
+        ],
+        "maintained_companion_execution": "finite_examples_recorded_separately",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [
+          "exact.SL2_words",
+          "exact.global_filter"
+        ],
+        "evidence_record": "artifacts/counting_mixing/result.json",
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "The result excludes fixed linear selectors of traces, not length-dependent or nonlinear operations. Generic symbolic checks verify polynomials but not the topological word assertions."
+    },
+    {
+      "id": "25.06",
+      "title": "Formal length-convolution Euler product",
+      "labels": [
+        "eq:globalEuler"
+      ],
+      "status": "derived_exact_algebra",
+      "hypotheses": [
+        "Positive systole; finitely many primitive labels below each cutoff; measures supported on nonnegative lengths.",
+        "Each factor is the scalar trace geometric series, not a determinant or a Chebyshev series."
+      ],
+      "proof_summary": "At a fixed cutoff only finitely many primitive supports and multiplicities enter, giving a well-defined finite character polynomial at every retained length. Finite multisets carry coefficient one before trace resolution.",
+      "dependencies": [
+        "23.04"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          5
+        ],
+        "maintained_companion_execution": "finite_examples_recorded_separately",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [
+          "exact.finite_Euler_convolution"
+        ],
+        "evidence_record": "artifacts/counting_mixing/result.json",
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "The full character-valued completion is defined by length cutoffs; no Banach-norm convergence is asserted here."
+    },
+    {
+      "id": "25.07",
+      "title": "Unit first atom for every weighted multicurve",
+      "labels": [
+        "prop:globaldiagonal",
+        "eq:globaldiagonal"
+      ],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Every integral weighted multicurve, including zero; geometric primitive input multiset on the fixed surface."
+      ],
+      "proof_summary": "Any genuine self-crossing or intersection between distinct primitive components strictly shortens under resolution. Equality requires mutually disjoint simple primitives. Exactly one multiset then gives the target, with unit coefficient and no factorial; local finiteness isolates it.",
+      "dependencies": [
+        "23.05",
+        "25.06"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          5
+        ],
+        "maintained_companion_execution": "finite_examples_recorded_separately",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [
+          "exact.finite_Euler_convolution"
+        ],
+        "evidence_record": "artifacts/counting_mixing/result.json",
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "The first-atom extraction is nonlinear. Finite formal-length examples do not prove the geometric statement for all multicurves."
+    },
+    {
+      "id": "25.08",
+      "title": "Euler coefficient half-plane and Gaussian holomorphy",
+      "labels": [
+        "eq:globalEulerbound",
+        "eq:globalEulerhalfplane"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "Fixed C, positive systole epsilon, real s greater than max(3/2,log(2cosh(epsilon/2))/epsilon)."
+      ],
+      "proof_summary": "Multi-diagram sign coherence bounds a coefficient by the product of positive Fuchsian trace values. Monotonicity of log(t(u))/u makes each geometric ratio less than one; orbit packing makes their sum finite. A fixed Laplace majorant also controls Gaussian transforms locally on Re(t)>0.",
+      "dependencies": [
+        "23.08",
+        "23.09",
+        "25.06"
+      ],
+      "source_pins": [
+        {
+          "source_key": "DThurstonPositive",
+          "pins": [
+            "Definition 1.1, spin identification, and Theorem 2 p. 1",
+            "Proposition 4.4, Definition 4.9 and Proposition 4.10 p. 5"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          5,
+          6
+        ],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "Only fixed-coefficient convergence and holomorphy are proved; finite products do not verify the infinite bound or a global extraction norm."
+    },
+    {
+      "id": "25.09",
+      "title": "Higher tensor-twist reconstruction of the Euler logarithm",
+      "labels": [
+        "eq:globalEulerinput"
+      ],
+      "status": "derived_exact_algebra",
+      "hypotheses": [
+        "All required higher symmetric-power twisting spectra are additional input; tensor powers are decomposed into SU(2) symmetric powers."
+      ],
+      "proof_summary": "The convolution logarithm of each geometric factor has T_delta^m/m at m ell(delta). Tensor character powers, followed by primitive Adams inversion, supply those terms. Replacing tensor powers with Chebyshev traces would give a different product.",
+      "dependencies": [
+        "23.22",
+        "25.06"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          2,
+          5
+        ],
+        "maintained_companion_execution": "finite_examples_recorded_separately",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [
+          "exact.finite_Euler_convolution"
+        ],
+        "evidence_record": "artifacts/counting_mixing/result.json",
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "No actual higher-twist spectra or inverse reconstruction algorithm is implemented. Coincident-length aggregate rank-two data do not directly furnish individual power sums."
+    },
+    {
+      "id": "25.10",
+      "title": "Nonlinear reconstruction of the positive support partition",
+      "labels": [],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "All coefficient measures nu_C and their isolated unit first atoms are available; Re(s)>0."
+      ],
+      "proof_summary": "The infimum of support of each nu_C equals ell(C), including zero for the empty target. Substitute this identity into the already convergent support partition.",
+      "dependencies": [
+        "24.11",
+        "25.07"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          5
+        ],
+        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
+        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+      },
+      "coverage_gaps": "No conditioning bound or counting remainder is obtained for the nonlinear first-support operation; residual cancellation and uniform extraction estimates remain open."
+    }
+  ],
+  "label_coverage": {
+    "total_chapter_labels": 91,
+    "covered_substantive_labels": 80,
+    "structural_or_figure_labels": [
+      "sec:coefficientdistributions",
+      "fig:mono-reconnection-atoms",
+      "sec:quantitativecounting",
+      "subsec:countknown",
+      "subsec:countlattice",
+      "subsec:countprimitive",
+      "subsec:countnearcollision",
+      "subsec:countuniformisolation",
+      "subsec:countsupport",
+      "subsec:countdesmooth",
+      "sec:globalfilters"
+    ],
+    "all_substantive_labels_covered": true
+  },
+  "snapshot": {
+    "book/chapters/23-trace-coefficients.tex": {
+      "sha256": "5520b28607f96a3e65ea32e7c4dab267f6556dbbe8975d29b4186b9b27e429c9",
+      "bytes": 35208
+    },
+    "book/chapters/24-quantitative-counting.tex": {
+      "sha256": "4099f91c4abddf5f2a13831e48d7d52ac4d90af137068b969ca612fc6b273c58",
+      "bytes": 27440
+    },
+    "book/chapters/25-global-coefficient-filters.tex": {
+      "sha256": "7b2a7af525bfb556c4ca9da88bec560ce2f985906d62448d86ede7210f07b608",
+      "bytes": 13760
+    }
+  },
+  "snapshot_scope": "The snapshot below is the mathematically approved author freeze, before computational integration prose; final integrated source identities are in the checkpoint."
+}

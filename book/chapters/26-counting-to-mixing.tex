@@ -1,0 +1,423 @@
+\section{When counting errors imply mixing}
+\label{sec:countmixing}
+
+A counting remainder can imply mixing when the counts determine an
+appropriate operator, or when they retain sufficiently uniform information
+about both endpoints of orbit segments. The following elementary
+converses make these hypotheses and their quantitative losses explicit.
+They do not identify the simple-curve counting function of
+Section~\ref{sec:quantitativecounting} with such an operator.
+
+\subsection{A direct converse in the compact Selberg setting}
+\label{subsec:countmixselberg}
+
+There is a particularly close answer to the original trace-formula
+question. Let $X=\Gamma\backslash\mathbb H^2$ be a closed connected
+oriented surface of curvature $-1$. Let $\pi_X(L)$ count primitive
+hyperbolic conjugacy classes in $\Gamma$ of length at most $L$.
+Thus the two orientations are counted separately: $[\gamma]$ and
+$[\gamma^{-1}]$ are distinct. This is the primitive-class convention
+in the Selberg product; see \cite[Section~2.1]{PollicottSharpZeta}.
+
+\begin{proposition}[A prime-geodesic remainder forces a mixing rate]
+\label{prop:countmixselberg}
+Suppose that, for some $0<\delta<\tfrac12$,
+\begin{equation}
+ \pi_X(L)=\operatorname{Li}(e^L)+O(e^{(1-\delta)L}).
+ \label{eq:countmixselbergcount}
+\end{equation}
+Then the first positive Laplace eigenvalue satisfies
+\begin{equation}
+ \lambda_1(X)\geq\delta(1-\delta).
+ \label{eq:countmixselberggap}
+\end{equation}
+For every $0<r<\delta$, the unit-speed geodesic flow $g_t$ on $T^1X$
+therefore satisfies
+\begin{equation}
+ |\operatorname{Corr}_t(f,h)|
+ \leq C_{X,r}S_m(f)S_m(h)e^{-rt}
+ \label{eq:countmixselbergmixing}
+\end{equation}
+for some finite Sobolev order $m$. Here $S_m$ is an $L^2$ Sobolev norm
+and the correlation uses normalized Liouville measure.
+\end{proposition}
+
+\begin{proof}
+Put $\alpha=1-\delta>\tfrac12$. For $\Re s>1$, define
+\[
+ F(s)=\sum_{P\ \mathrm{primitive}}\ell(P)e^{-s\ell(P)}
+     =\int_0^\infty t e^{-st}\,d\pi_X(t).
+\]
+Above a fixed positive cutoff $L_0$, write
+$\pi_X(t)=\operatorname{Li}(e^t)+E(t)$ with
+$E(t)=O(e^{\alpha t})$. Since
+$d\operatorname{Li}(e^t)=e^t\,dt/t$, the main term contributes
+$e^{-(s-1)L_0}/(s-1)$. Integration by parts gives the error contribution,
+up to an entire cutoff term, as
+\[
+ \int_{L_0}^\infty (st-1)e^{-st}E(t)\,dt.
+\]
+This integral is locally uniformly convergent for $\Re s>\alpha$.
+Consequently $F(s)-1/(s-1)$ is holomorphic there.
+
+The logarithmic derivative of the Selberg product is
+\begin{equation}
+ \frac{Z_X'(s)}{Z_X(s)}
+ =\sum_P\sum_{k\geq1}
+       \frac{\ell(P)e^{-sk\ell(P)}}{1-e^{-k\ell(P)}}.
+ \label{eq:countmixselberglogderivative}
+\end{equation}
+Subtracting $F(s)$ leaves a function holomorphic for $\Re s>\tfrac12$:
+the terms with $k\geq2$ have exponent at least $2\Re s>1$, and the
+$k=1$ denominator correction supplies an extra factor $e^{-\ell(P)}$.
+The positive systole and the counting bound justify local uniform
+convergence. Hence $Z_X'/Z_X-1/(s-1)$ is holomorphic for
+$\Re s>\alpha$, excluding zeros of $Z_X$ there except at $1$.
+
+Every Laplace eigenvalue $\lambda_j=s_j(1-s_j)<\tfrac14$, with
+$\tfrac12<s_j<1$, gives a zero $s_j$ of $Z_X$; see
+\cite[Theorems~1.1 and~4.1]{BJPZeta}. Thus $s_j\leq1-\delta$,
+which proves \eqref{eq:countmixselberggap}; equality is allowed.
+Set $s_*=\tfrac12$ if there is no such positive eigenvalue, and otherwise
+let $s_*$ be the largest such parameter. The matrix-coefficient estimate
+of \cite[Theorem~1.1]{EdwardsOhMixing}, specialized to a compact surface,
+gives Sobolev correlation decay at every rate below $1-s_*$.
+Since $s_*\leq1-\delta$, this proves
+\eqref{eq:countmixselbergmixing}. The time normalization is
+$a_t=\operatorname{diag}(e^{t/2},e^{-t/2})$ in
+$\mathrm{PSL}_2(\mathbb R)$.
+\end{proof}
+
+Two qualifications delimit this converse. First,
+\eqref{eq:countmixselbergcount} contains only the leading term:
+an error estimate \emph{after subtracting} exceptional contributions
+$\operatorname{Li}(e^{s_jL})$ does not exclude those small eigenvalues.
+Second, the conclusion concerns the complete primitive spectrum.
+Applying it to simple curves or coefficient-filtered counts would require
+a corresponding spectral identity. If geometric geodesics are counted
+without orientation, the main term is
+$\tfrac12\operatorname{Li}(e^L)$; doubling that count recovers the stated
+convention. The exponent is quantitative, while explicit numerical or
+family-uniform mixing constants require additional estimates.
+
+\subsection{A quantitative converse in homogeneous dynamics}
+
+There is an established arithmetic converse. In the $S$-arithmetic
+setting of Gorodnik--Nevo~\cite[Theorems 1.4 and 5.2]{GNDiscrepancy},
+let $E_{S,m}(r,B)$ denote the $L^2$ discrepancy of normalized rational
+point counts in translated real balls of radius $r$ and an
+$S$-adic set $B$. For a discretely embedded irreducible representation
+$\pi$ in the mean-zero automorphic spectrum, their estimate is
+\begin{equation}
+ \|\pi(\beta_B)\|
+ \leq 2[\Gamma_S:\Gamma_{S,m}]
+       m_{G_\infty}(B(e,r))^{-1}E_{S,m}(r,B),
+ \qquad 0<r\leq r_0(\pi).
+ \label{eq:countmixGN}
+\end{equation}
+The ambient group and congruence quotients satisfy the standing
+algebraic hypotheses of that paper, including a connected, simply
+connected $\mathbb Q$-simple group in the notation displayed here.
+Here the real factor is noncompact, the places in $S$ are unramified,
+$B$ is bounded, positive-measure, and bi-invariant under the specified
+hyperspecial compact subgroup, and $\beta_B$ is its normalized Haar
+measure. The small-radius threshold depends on $\pi$.
+Thus sufficiently strong localized discrepancy controls averaging
+operators quantitatively. Their application to forms of $\mathrm{SL}_2$
+uses arithmetic counting to obtain a spectral gap. This statement is
+not a general implication from one scalar count to mixing of a flow.
+
+
+\subsection{A converse for a finite Markov model}
+\label{subsec:countmixfinite}
+
+Let $A$ be an irreducible nonnegative integer $q\times q$ adjacency
+matrix, allowing parallel edges, and let $\lambda>0$ be its Perron
+eigenvalue. The number $F_n$ of periodic edge sequences fixed by the
+$n$th shift, with a distinguished starting position, is
+\[
+ F_n=\tr(A^n).
+\]
+It includes repetitions and is not the number of primitive orbits.
+The associated identity
+\[
+ \zeta_A(z)=
+ \exp\left(\sum_{n\geq1}\frac{\tr(A^n)}n z^n\right)
+ =\frac1{\det(I-zA)}
+\]
+is the usual finite-state trace formula; see
+\cite[Sections 1 and 4]{SharpZeta}.
+
+\begin{proposition}[A trace-counting remainder forces a gap]
+\label{prop:countmixfinite}
+Suppose that, for a specified $\kappa>0$,
+\begin{equation}
+ \tr(A^n)=\lambda^n+
+          O\bigl((\lambda e^{-\kappa})^n\bigr).
+ \label{eq:countmixtrace}
+\end{equation}
+Then every eigenvalue of $A$ other than its simple Perron eigenvalue
+satisfies
+\begin{equation}
+ |\lambda_j|\leq\lambda e^{-\kappa}.
+ \label{eq:countmixgap}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Put $\rho=\lambda e^{-\kappa}$. The power series
+\[
+ E(z)=\sum_{n\geq1}\bigl(\tr(A^n)-\lambda^n\bigr)z^n
+\]
+is holomorphic for $|z|<\rho^{-1}$. On its initial convergence disk,
+\[
+ E(z)=\sum_{j=2}^q\frac{z\lambda_j}{1-z\lambda_j},
+\]
+where algebraic multiplicities are included. A nonzero $\lambda_j$
+produces a pole at $z=\lambda_j^{-1}$. Distinct eigenvalues produce
+different poles, and repeated copies of one eigenvalue have the same
+nonzero residue and add. No pole can therefore lie inside
+$|z|<\rho^{-1}$. Zero eigenvalues already satisfy the conclusion.
+\end{proof}
+
+To convert the gap into a mixing statement, choose positive Perron
+vectors $r,l$ normalized by $\sum_i l_ir_i=1$, and set
+\[
+ P_{ij}=\frac{A_{ij}r_j}{\lambda r_i},
+ \qquad \pi_i=l_ir_i,\qquad \Pi=\mathbf1\pi^T.
+\]
+Then $P$ is stochastic, $\pi$ is stationary, and $P$ is similar to
+$A/\lambda$. For every $0<\kappa'<\kappa$,
+\begin{equation}
+ \|P^n-\Pi\|_\infty\leq C_{\kappa',A}e^{-\kappa'n}.
+ \label{eq:countmixparry}
+\end{equation}
+At the endpoint $\kappa$ a polynomial factor can arise from Jordan
+blocks. In particular, the stationary Markov chain satisfies
+\[
+ \left|\mathbb E_\pi[f(X_0)g(X_n)]
+       -\mathbb E_\pi f\,\mathbb E_\pi g\right|
+ \leq C_{\kappa',A}e^{-\kappa'n}\|f\|_\infty\|g\|_\infty.
+\]
+Fixed-width cylinder observables have the same decay after the
+corresponding time offset. Approximation by cylinder functions gives
+mixing of the shift, and quantitative approximation gives a rate for
+H\"older observables with an explicit regularity loss. For example, on
+the two-sided stationary vertex shift use the metric $d_\theta(x,y)
+=\theta^{N(x,y)}$, where $0<\theta<1$ and $N(x,y)$ is the least
+$|j|$ for which $x_j\ne y_j$. A $\beta$-H\"older test is approximated
+by conditioning on coordinates $-p,\ldots,p$ with error
+$O(\theta^{\beta p})$. The Markov property bounds the covariance of
+the two resulting cylinder tests at lag $n>2p$ by
+$O(e^{-\kappa'(n-2p)})$ times their sup norms. Taking
+$p=\lfloor\kappa'n/(2\kappa'+\beta|\log\theta|)\rfloor$ gives the rate
+\[
+ \exp\left(-\frac{\kappa'\beta|\log\theta|}
+ {2\kappa'+\beta|\log\theta|}\,n\right).
+\]
+Parallel-edge observations are handled by conditioning on the adjoining
+vertices; a bounded change in the time offset changes only the constant.
+
+The matrix constant can itself be bounded explicitly. If
+$r_0=e^{-\kappa}<r<1$, the resolvent integral around $|z|=r$ gives
+\begin{equation}
+ \|P^n-\Pi\|_\infty
+ \leq
+ \frac{r\,q!(1+r)^{q-1}}
+      {(1-r)(r-r_0)^{q-1}}\,r^n.
+ \label{eq:countmixmatrixconstant}
+\end{equation}
+Indeed, on this circle the determinant has modulus at least
+$(1-r)(r-r_0)^{q-1}$, while the row-sum norm of its adjugate is
+at most $q!(1+r)^{q-1}$. Thus a numerical counting saving produces
+a numerical mixing estimate in this model.
+
+\subsection{Which scalar count is being estimated?}
+\label{subsec:countmixscalar}
+
+An exact count of unrestricted paths need not imply mixing.
+For example, with $m\geq2$,
+\[
+ A=\begin{pmatrix}0&m\\m&0\end{pmatrix},
+ \qquad \mathbf1^T A^n\mathbf1=2m^n.
+\]
+This count has no error at all. Its normalized transition chain
+alternates between two states; the correlation of $(1,-1)$ with
+itself is $(-1)^n$. The closed-path count detects what the total
+path count misses:
+\[
+ \tr(A^n)=m^n+(-m)^n.
+\]
+Thus a scalar sequence can suffice when it is a complete trace
+encoding of a suitable operator. The decisive issue is what the
+chosen count retains.
+
+Continuous time introduces a separate return-time issue. The full
+shift on $m$ symbols has exactly $m^n$ fixed points for its $n$th
+iterate and is mixing for its Bernoulli measure. Suspend it with
+constant roof $1$:
+\[
+ Y=(\Sigma\times[0,1])/
+       \bigl((x,1)\sim(\sigma x,0)\bigr).
+\]
+For the suspension flow $\phi^t$, the mean-zero function
+$F([x,u])=e^{2\pi i u}$ is well defined and satisfies
+\[
+ F\circ\phi^t=e^{2\pi it}F,\qquad
+ \int\overline F\,F\circ\phi^t\,\dd\nu=e^{2\pi it}.
+\]
+The flow is therefore not mixing. Its physical periods lie in a
+lattice, so this is not an example of an unoscillating continuous-time
+prime-orbit asymptotic. It shows why a discrete-time counting converse
+does not automatically pass to a suspension. Ruling out arithmetic
+return times is necessary; quantitative flow estimates also require
+control of approximate eigenfunctions or high-frequency return-time
+operators. The role of these additional geometric conditions is
+discussed in~\cite{DolgopyatMixing}.
+
+\subsection{A qualitative converse from full geodesic counting}
+
+There is also a simple geometric deduction. In
+Babillot~\cite[Theorem~1]{BabillotMixing},
+the universal cover is a simply connected complete Riemannian manifold
+with sectional curvature bounded above by a negative constant, and
+the acting discrete isometry group is non-elementary. A quasi-product
+measure means a flow-invariant measure whose geodesic current is in the
+measure class of a product of its two boundary measures. For such a
+measure, nonarithmeticity of the closed length spectrum implies mixing.
+Assume a nonzero finite such measure, normalized to probability,
+and suppose the full
+primitive closed-orbit count is finite at each cutoff and satisfies
+\[
+ \pi(T)\sim C\,\frac{e^{hT}}{T},\qquad C,h>0,
+\]
+as $T\longrightarrow\infty$ through all real values. If all periods
+belonged to $a\ZZ$, $a>0$, then
+\[
+ \pi(na+a/4)=\pi(na+3a/4),
+\]
+whereas the ratio of their proposed main terms tends to $e^{ha/2}>1$.
+This contradiction proves nonarithmeticity and hence qualitative
+mixing under the stated structural hypotheses. No rate follows from
+this argument. For a polynomial simple-curve main term $CT^d$,
+the corresponding fixed-shift ratio tends to one, so this argument
+does not transfer to simple-curve counting.
+
+\subsection{Localized counts and correlations}
+\label{subsec:countmixlocalized}
+
+A useful general converse applies once geometric counts are related
+to joint transition masses. Let $(Y,d,\mu)$ be a compact metric
+probability space, with a measure-preserving flow $\phi^t$. Suppose
+that for every $0<h\leq1$ there is a measurable partition
+$\mathcal P_h=\{P_1,\ldots,P_{N(h)}\}$ with
+\[
+ \operatorname{diam}(P_i)\leq h,\qquad N(h)\leq B h^{-D}.
+\]
+Zero-measure cells may be discarded. Define
+$p_{ij}(t,h)=\mu(P_i\cap\phi^{-t}P_j)$.
+
+\begin{proposition}[A quantitative localized converse]
+\label{prop:countmixlocalized}
+Assume that geometric weighted counts give, uniformly in $i,j,h,t$,
+\begin{equation}
+ |p_{ij}(t,h)-\mu(P_i)\mu(P_j)|
+       \leq A h^{-m}e^{-\kappa t},
+ \qquad m\geq0,\quad\kappa>0.
+ \label{eq:countmixentry}
+\end{equation}
+For $0<\beta\leq1$ and bounded $\beta$-H\"older functions $f,g$,
+\begin{equation}
+ \left|\int f\,g\circ\phi^t\,\dd\mu-\int f\,\dd\mu\int g\,\dd\mu\right|
+ \leq C\|f\|_{C^\beta}\|g\|_{C^\beta}e^{-\eta t},
+ \qquad
+ \eta=\frac{\kappa\beta}{m+2D+\beta}.
+ \label{eq:countmixrate}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Replace $f,g$ by their cellwise averages $f_h,g_h$. Their uniform
+approximation errors are at most $[f]_\beta h^\beta$ and
+$[g]_\beta h^\beta$. Invariance bounds the resulting correlation
+error by $C\|f\|_{C^\beta}\|g\|_{C^\beta}h^\beta$.
+For the step functions the centered correlation is
+\[
+ \sum_{i,j}f_i g_j
+       \bigl(p_{ij}(t,h)-\mu(P_i)\mu(P_j)\bigr).
+\]
+There are at most $B^2h^{-2D}$ terms. Equation~\eqref{eq:countmixentry}
+therefore bounds the original correlation by
+\[
+ C\|f\|_{C^\beta}\|g\|_{C^\beta}
+       \bigl(h^\beta+h^{-(m+2D)}e^{-\kappa t}\bigr).
+\]
+Choose $h=e^{-\kappa t/(m+2D+\beta)}$.
+\end{proof}
+
+If the right side of~\eqref{eq:countmixentry} contains the additional
+factor $\mu(P_i)\mu(P_j)$, its sum costs one, and the exponent
+improves to $\kappa\beta/(m+\beta)$. The normalization of a localized
+count therefore materially affects the resulting rate.
+
+The substantive hypothesis is the geometric identification of counts
+with $p_{ij}$. In an application one needs a formula of the form
+\[
+ p_{ij}(t,h)=
+ \frac{\text{weighted segment count from }P_i\text{ to }P_j}
+      {\text{normalizing growth}}
+ +\text{controlled error}.
+\]
+Jacobian weights, multiplicities, boundary effects, and time-window
+errors must be controlled uniformly at both endpoints and at shrinking
+resolution $h$. If the comparison error satisfies the same bound as
+the normalized counting error, their constants add and the proposition
+applies. The proposition does not supply this comparison for an
+arbitrary raw counting problem.
+
+\subsection{Nonescape and the counting time parameter}
+\label{subsec:countmixnoncompact}
+
+There is an explicit version with a noncompact tail. Suppose an
+exhaustion $K_H$ satisfies
+$\mu(Y\setminus K_H)\leq C e^{-aH}$, with $a>0$.
+Assume that $K_H$ has at most $B e^{bH}h^{-D}$ cells of diameter
+$h$, and that the entrywise bound is
+$A e^{cH}h^{-m}e^{-\kappa t}$, where $b,c,m\geq0$.
+For bounded globally $\beta$-H\"older observables the preceding
+argument, extending the step approximations by zero off $K_H$, gives
+\[
+ |\operatorname{Corr}_t(f,g)|
+ \leq C\|f\|_{C^\beta}\|g\|_{C^\beta}
+ \left(h^\beta+e^{-aH}
+       +e^{(2b+c)H}h^{-(m+2D)}e^{-\kappa t}\right).
+\]
+The tail error uses invariance and the $L^1$ approximation bound;
+no uniform approximation on the discarded region is required.
+Taking $h=e^{-\eta t/\beta}$ and $H=\eta t/a$ yields
+\begin{equation}
+ \boxed{\displaystyle
+ \eta=
+ \frac{\kappa}
+ {1+(2b+c)/a+(m+2D)/\beta}.}
+ \label{eq:countmixcusprate}
+\end{equation}
+These are declared sufficient hypotheses, not estimates established
+here for Teichm\"uller flow.
+
+Finally, under the counting-time conversion $R=e^t$, a relative power
+saving becomes an exponential one:
+\[
+ \frac{O(R^{d-\delta})}{R^d}=O(e^{-\delta t}).
+\]
+This explains why the exponents in effective counting and mixing
+are related. The conversion alone gives no transition-mass identity.
+A converse for our curve-counting program would require the estimates
+to retain independent endpoint or sector weights, with controlled
+dependence on localization and on excursions into the noncompact
+part of the parameter space. Alternatively, an appropriate trace or
+transfer-operator representation could provide a spectral converse.
+Neither representation follows merely from a good remainder for the
+single unweighted simple-length count.
+
+\clearpage

@@ -1,0 +1,415 @@
+\section{Arithmetic cancellation and the geometric remainder}
+\label{sec:arithmeticgeometry}
+
+\subsection{A transfer estimate with both inputs explicit}
+\label{subsec:primitiveRHtransfer}
+
+Let $B\subset\mathbb R^2$ be a fixed convex body containing the origin in
+its interior, and normalize its gauge so that the shortest nonzero
+integer vector has gauge one.  Put
+\[
+ A_B(u)=\#\bigl(uB\cap(\mathbb Z^2\setminus\{0\})\bigr),\qquad
+ \Delta_B(u)=A_B(u)-a_Bu^2,\qquad a_B=\operatorname{Area}(B),
+\]
+and write
+\[
+ P_B(L)=\#\bigl(LB\cap\mathbb Z^2_{\rm prim}\bigr),\qquad
+ E_B(L)=P_B(L)-\frac{a_B}{\zeta(2)}L^2.
+\]
+All primitive vectors are counted with their signs; an unoriented count
+for a centrally symmetric body is half this count.
+The notation $\Delta_B$ here is the all-point discrepancy $D_B$ of
+Section~\ref{subsec:mobiusmodulus}.
+
+There are two inputs in the primitive problem: the geometric discrepancy
+$\Delta_B$, and cancellation in the M\"obius function.  A quantitative
+bound for the second input does not by itself specify the first.  The
+following elementary estimate keeps their roles separate.
+
+\begin{proposition}[A large-divisor transfer estimate]
+\label{prop:primitiveRHtransfer}
+Suppose
+\[
+ M(x):=\sum_{n\le x}\mu(n),\qquad |M(x)|\le Cx\eta(x),
+\]
+where $\eta$ is nonnegative and nonincreasing on $[1,\infty)$.
+Then, for every integer $1\le D\le L$,
+\begin{equation}\label{eq:primitiveRHmaster}
+ |E_B(L)|\ll_{B,C}
+       \sum_{d\le D}|\Delta_B(L/d)|
+       +\frac{L^2}{D}\eta(D).
+\end{equation}
+In particular, $M(x)\ll x^\theta$, with $0\le\theta<1$, gives
+\begin{equation}\label{eq:primitiveRHpowerM}
+ |E_B(L)|\ll_{B,\theta}
+       \sum_{d\le D}|\Delta_B(L/d)|+L^2D^{\theta-2}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+M\"obius inversion gives
+\[
+ P_B(L)=\sum_{d\le L}\mu(d)A_B(L/d).
+\]
+Set $U=L/D$.  Reversing the order of summation in its large-divisor
+part gives the exact identity
+\[
+ \sum_{d>D}\mu(d)A_B(L/d)
+   =\sum_{\substack{m\in\mathbb Z^2\setminus\{0\}\\\|m\|_B\le U}}
+       \left(M\!\left(\frac{L}{\|m\|_B}\right)-M(D)\right).
+\]
+The summands with $\lfloor L/\|m\|_B\rfloor=D$ are zero.
+Since $A_B(u)\ll_B u^2$ for $u\ge1$, partial summation gives
+\[
+ \sum_{\substack{m\ne0\\\|m\|_B\le U}}\|m\|_B^{-1}\ll_B U.
+\]
+Monotonicity of $\eta$ therefore bounds the large-divisor part by
+\[
+ \eta(D)\left(L\sum_{0<\|m\|_B\le U}\|m\|_B^{-1}
+                      +D A_B(U)\right)
+       \ll_B\frac{L^2}{D}\eta(D).
+\]
+The area term has the same tail bound, because partial summation yields
+\[
+ \left|\sum_{d>D}\frac{\mu(d)}{d^2}\right|
+       \ll\frac{\eta(D)}{D}.
+\]
+Subtract the area main term in the small-divisor sum and bound its
+remaining terms absolutely.  This proves the first estimate; take
+$\eta(x)=x^{\theta-1}$ for the second.
+\end{proof}
+
+\subsection{An unconditional sublinear consequence of the Dini condition}
+Define the nonincreasing geometric modulus
+\[
+ \omega_B(u)=\sup_{v\ge u}\frac{|\Delta_B(v)|}{v}.
+\]
+For $L/(D+1)\ge1$, direct comparison on the intervals
+$[L/(d+1),L/d]$ gives
+\begin{equation}\label{eq:primitiveRHmodulus}
+ \sum_{d\le D}|\Delta_B(L/d)|
+   \le 2L\int_{L/(D+1)}^L\omega_B(u)\frac{du}{u}.
+\end{equation}
+Consequently,
+\begin{equation}\label{eq:primitiveDiniPNT}
+ \int_1^\infty\omega_B(u)\frac{du}{u}<\infty
+ \quad\Longrightarrow\quad E_B(L)=o_B(L).
+\end{equation}
+Here the arithmetic input is only the prime number theorem, in the
+equivalent form $M(x)=o(x)$, not RH.  Indeed, use the nonincreasing
+envelope $\eta(x)=\sup_{y\ge x}|M(y)|/y$, fix $U\ge2$, and choose
+$D=\lfloor L/U\rfloor$.  After division by $L$, the large-divisor
+bound tends to zero for this fixed $U$, whereas the small-divisor bound
+is at most
+$2\int_{U/2}^{\infty}\omega_B(u)\,du/u$ for all sufficiently large $L$.
+Let $L\to\infty$ and then $U\to\infty$.
+This strengthens the earlier absolute-value Dini argument, which gave
+only $O_B(L)$.
+
+
+\subsection{Fixed zero-free half-planes and the recent quasi-RH claims}
+\label{subsec:quasiRHapplication}
+
+For the Riemann zeta function and $1/2\le\theta_0<1$, the standard
+zero-free-half-plane formulation is equivalent to
+\begin{equation}
+ \zeta(s)\ne0\quad(\Re s>\theta_0)
+ \quad\Longleftrightarrow\quad
+ M(x)=O_\varepsilon(x^{\theta_0+\varepsilon})
+ \quad\hbox{for every }\varepsilon>0.
+ \label{eq:zeroFreeMertens}
+\end{equation}
+Here nonvanishing excludes the pole at $s=1$, where $1/\zeta$
+instead has a zero. We give the analytic step because a fixed zero-free
+half-plane and a height-dependent zero-free region are different inputs.
+
+Suppose first that the left side of~\eqref{eq:zeroFreeMertens} holds.
+Fix $0<\delta<(1-\theta_0)/2$. At sufficiently large $|t|$, choose the
+branch of $\log\zeta$ on the disk centered at $2+it$ of radius
+$R_2=2-\theta_0-\delta/4$ that agrees with the Euler-product logarithm
+at its center. This disk contains neither zeros nor the pole.
+Polynomial growth of $\zeta$ in a fixed vertical strip gives
+$\Re\log\zeta\ll_\delta\log(2+|t|)$ there.
+Borel--Carath\'eodory bounds $|\log\zeta|$ by the same order on the
+smaller disk of radius $R=2-\theta_0-\delta/2$. On the disk of radius
+$r_0=1/2$ the absolutely convergent Euler-product logarithm is bounded.
+The three-circles theorem, with $r=2-\theta_0-\delta<R$, now gives
+\[
+ |\log\zeta(\sigma+it)|\ll_\delta(\log(2+|t|))^{\lambda_\delta},
+ \qquad \theta_0+\delta\le\sigma\le2,\qquad
+ \lambda_\delta=\frac{\log(r/r_0)}{\log(R/r_0)}<1.
+\]
+Consequently, for every $\varepsilon>0$,
+$1/\zeta(\sigma+it)\ll_{\delta,\varepsilon}(1+|t|)^\varepsilon$
+on $\sigma\ge\theta_0+\delta$; bounded heights and $\sigma\ge2$
+are handled by analyticity of the reciprocal and the Euler product.
+
+For a half-integer $x$, truncated Perron inversion on
+$c=1+1/\log x$, at height $T=x^2$, has error
+$O(x\log^2x/T)$ because $|\mu(n)|\le1$. Move the contour to
+$\sigma_0=\theta_0+\delta$. There are no poles of the reciprocal in
+the intervening strip. The new vertical integral is
+$O_{\delta,\varepsilon}(x^{\sigma_0}T^\varepsilon)$ and the two
+horizontal integrals are $O_{\delta,\varepsilon}(xT^{\varepsilon-1})$.
+Choosing $\delta$ and $\varepsilon$ sufficiently small gives every
+exponent $\theta_0+\varepsilon'$ requested on the right side
+of~\eqref{eq:zeroFreeMertens}. Half-integers suffice since $M$ is
+constant between consecutive integers.
+
+Conversely, for each compact subset of $\Re s>\theta_0$, choose
+$\varepsilon>0$ smaller than its distance from the boundary. The bound
+for $M$ makes $s\int_1^\infty M(x)x^{-s-1}\,dx$ locally uniformly
+convergent and holomorphic there. Partial summation identifies it with
+$1/\zeta(s)$ on $\Re s>1$, so analytic continuation precludes a zero
+of $\zeta$ in $\Re s>\theta_0$. This equivalence uses the Euler product,
+meromorphic continuation and vertical growth of $\zeta$; zero-freeness
+of an arbitrary Dirichlet series would not alone suffice.
+
+The OpenAI manuscript dated 30 September 2026 claims the half-plane
+$\Re s>7/8$ for all finite-order Hecke $L$-functions over
+$\mathbb Q(\sqrt{-3})$, and hence for Dirichlet $L$-functions,
+including $\zeta$~\cite[Theorem~1.1]{OpenAIQuasiRHSeptember}.
+The manuscript dated 5 October 2026 gives a separate proof claiming
+$\Re s>11/12$ and describes it as a simpler intermediate result toward
+the September theorem~\cite[Theorem~1.1 and the following paragraph]{OpenAIQuasiRHOctober}.
+For both papers we use the theorem statements in the TeX sources at
+repository revision \texttt{adc7f1241b42} (the initial release), as pinned
+in the claim ledger and bibliography. We checked those statements,
+not either complete proof or its formalization. All applications here are conditional on
+the explicit arithmetic hypothesis in Proposition~\ref{prop:primitiveRHtransfer}.
+The corresponding Mertens exponents would be $7/8+\varepsilon$,
+$11/12+\varepsilon$, and, under full RH, $1/2+\varepsilon$.
+The generalized assertions about other $L$-functions are unnecessary
+for this primitive planar count.
+
+\subsection{Logarithmic geometric savings}
+The next comparison is conditional on an additional estimate for the
+all-point discrepancy:
+\begin{equation}\label{eq:primitiveRHgeometry}
+ |\Delta_B(u)|\ll_B\frac{u}{(\log u)^\beta},\qquad u\ge3,
+ \qquad\beta>0.
+\end{equation}
+No such estimate is asserted here for a McShane--Rivin norm ball.
+
+First suppose $M(x)\ll x^\theta$ for some fixed $\theta<1$.
+Choose any fixed $d$ with
+$1/(2-\theta)<d<1$, and take $D=\lfloor L^d\rfloor$.
+The large-divisor contribution in~\eqref{eq:primitiveRHpowerM} is
+$O(L^{2-d(2-\theta)})$, with exponent strictly smaller than one.
+The small-divisor contribution is
+\[
+ \ll L\int_{L^{1-d}/2}^L\frac{du}{u(\log u)^\beta}
+ \ll_{\beta,d} L(\log L)^{1-\beta}.
+\]
+Thus
+\begin{equation}\label{eq:primitiveRHlogresult}
+ M(x)\ll x^\theta\ (\theta<1),\quad
+ \Delta_B(u)\ll u(\log u)^{-\beta}
+ \quad\Longrightarrow\quad
+ E_B(L)\ll L(\log L)^{1-\beta}.
+\end{equation}
+In particular, the geometric threshold $\beta=1$ gives $O_B(L)$.
+Any fixed power saving for $M$ suffices for this conclusion: full RH
+does not improve the logarithmic exponent in this elementary argument.
+
+For comparison, the classical unconditional Vinogradov--Korobov estimate,
+recorded for example in Zhai~\cite[eq.~(1.5)]{ZhaiPrimitive2003}, has the form
+\[
+ M(x)\ll x\exp\!\left(-c(\log x)^{3/5}
+                              (\log\log x)^{-1/5}\right).
+\]
+Write $F(L)=(\log L)^{3/5}(\log\log L)^{-1/5}$ and take
+$D=\lfloor L\exp(-aF(L))\rfloor$ with a sufficiently small fixed
+$a>0$.  Since $F(D)\sim F(L)$, the large-divisor part is
+$O(L\exp(-c'F(L)))$.  The small-divisor part is bounded by
+\[
+ L\int_{\exp(aF(L))/2}^L\frac{du}{u(\log u)^\beta}.
+\]
+The resulting elementary comparison is
+\[
+\begin{array}{c|c|c}
+ \text{geometric exponent }\beta
+ &\text{unconditional VK input}
+ &M(x)\ll x^\theta,\ \theta<1\\ \hline
+ 0<\beta<1
+ &O\!\left(L(\log L)^{1-\beta}\right)
+ &O\!\left(L(\log L)^{1-\beta}\right)\\[2pt]
+ \beta=1
+ &O(L\log\log L)
+ &O(L)\\[2pt]
+ \beta>1
+ &O\!\left(LF(L)^{1-\beta}\right)
+ &O\!\left(L(\log L)^{1-\beta}\right).
+\end{array}
+\]
+These are consequences of one elementary splitting argument, not
+assertions of optimality.  The constants can depend on $B$, $\beta$,
+the arithmetic exponent, and the chosen cutoff exponent.
+
+\subsection{Power-saving geometric discrepancies and established benchmarks}
+If instead $|\Delta_B(u)|\ll u^\alpha$ with $0\le\alpha<1$, then
+\[
+ \sum_{d\le D}|\Delta_B(L/d)|\ll L^\alpha D^{1-\alpha}.
+\]
+Balancing this with $L^2D^{\theta-2}$ gives
+\begin{equation}\label{eq:primitiveRHbalancedpower}
+ D\asymp L^{(2-\alpha)/(3-\alpha-\theta)},\qquad
+ E_B(L)\ll L^{\kappa(\alpha,\theta)},\qquad
+ \kappa(\alpha,\theta)=\frac{2-\alpha\theta}{3-\alpha-\theta}.
+\end{equation}
+For example, $\alpha=2/3$ and a Mertens exponent arbitrarily close
+to $1/2$ give $O_\varepsilon(L^{10/11+\varepsilon})$.
+Exponents arbitrarily close to $7/8$ and $11/12$ give, respectively,
+$O_\varepsilon(L^{34/35+\varepsilon})$ and
+$O_\varepsilon(L^{50/51+\varepsilon})$ by this method.
+These examples concern a hypothetical or separately established
+geometric estimate with $\alpha=2/3$; they do not assign that exponent
+to a McShane--Rivin ball.  Stronger results for smooth curved domains
+use additional structure and should not be confused with this general
+transfer bound.
+
+With the same power-saving geometric input, the unconditional VK
+estimate already gives
+\[
+ E_B(L)\ll L\exp(-c_B F(L))
+\]
+for some $c_B>0$, by choosing
+$D=L\exp(-aF(L))$ and balancing the two exponential factors.
+Thus sublinear primitive errors in suitable geometries do not require RH.
+
+
+This unconditional sublinear conclusion is a classical one for
+sufficiently smooth, positively curved domains: Zhai records it in
+equation~(1.4) of~\cite{ZhaiPrimitive2003}. His parameter is the area
+scale $x=L^2$, so his $O(x^{1/2}\exp(-cF(x)))$ becomes
+$O(L\exp(-c'F(L)))$ here. The hypotheses include finite nonzero
+curvature throughout and a $C^4$ Gauss map. Those hypotheses do not
+hold for a McShane--Rivin ball.
+
+Under RH, Baker~\cite[Theorem~1]{BakerPrimitive2010} proves
+$O_\varepsilon(L^{10/13+\varepsilon})$ for a specified class of
+piecewise $C^4$ domains whose arcs have nonzero curvature, with
+additional $C^4$ reciprocal-curve regularity and rational endpoint
+tangents, as specified by hypotheses (H1)--(H4) on pages~267--268.
+This is an established comparison result, not a claim about the best
+current exponent or about the flat norm balls considered here.
+In the opposite direction, the unconditional polygon obstruction
+$\Omega_\pm(L\sqrt{\log\log L})$ recalled in
+Section~\ref{subsec:rationalpolygonbenchmark} persists regardless of RH.
+It belongs to rational polygons and is not a lower bound for strictly
+convex bodies. These examples show why the shape hypothesis must
+accompany any arithmetic hypothesis.
+
+\subsection{The remaining geometric obstruction}
+Strict convexity supplies $\Delta_B(u)=o(u)$ and hence
+$\omega_B(u)\to0$, but no specified rate for that convergence.
+Under any fixed arithmetic exponent $\theta<1$, the preceding
+power cutoff yields a bound of the form
+\[
+ |E_B(L)|\ll L\log L\,\omega_B(cL^{1-d})
+                      +L^{2-d(2-\theta)}.
+\]
+It is again $o(L\log L)$, without a universal logarithmic saving
+specified by this argument.  This is a limitation of the stated inputs
+and this transfer estimate, not an impossibility theorem for more
+special convex bodies.
+
+One cannot simply multiply a bound for $M$ by the supremum of the
+weights $\Delta_B(L/d)$.  Abel summation also sees their variation.
+On a dyadic interval $d\asymp D$, the counting part of these weights
+can have total variation of order $(L/D)^2$, despite a much smaller
+pointwise discrepancy.  The large-divisor estimate above pays for
+that variation explicitly.  Further cancellation would require
+additional information about the geometric weights or their correlation
+with $\mu(d)$.
+
+Equivalently, for $\Re s>2$ the gauge zeta functions satisfy
+\[
+ Z_B(s)=\sum_{m\ne0}\|m\|_B^{-s},\qquad
+ Z_B^{\rm prim}(s)=\frac{Z_B(s)}{\zeta(s)}.
+\]
+The estimate $\Delta_B(u)=o(u)$ provides the representation
+\[
+ Z_B(s)=\frac{a_Bs}{s-2}
+          +s\int_1^\infty\Delta_B(u)u^{-s-1}\,du,
+ \qquad \Re s>1.
+\]
+A zero-free result for the denominator does not on its own continue
+the geometric numerator through the line $\Re s=1$, nor provide the
+vertical growth bounds needed for a sharp counting inversion.  This is
+the analytic reason to keep the arithmetic and geometric inputs separate.
+
+
+For a body satisfying the infinite-flatness and rational-normal hypotheses
+of Proposition~\ref{prop:normballflatrow}, the prime-row construction gives
+$\Omega(L^{1-\varepsilon})$ along an unbounded sequence for every
+$\varepsilon>0$. This excludes a fixed sublinear power bound for that
+body even if RH holds. It does not exclude $O(L)$, or even $o(L)$:
+the quantitative lower bound is $L W(h/L^2)$ up to constants, and
+$W(h/L^2)\to0$ under strict convexity. A useful next geometric target is therefore a quantitative modulus.
+One possible target is $\Delta_B(u)=O(u/\log u)$, provided it is
+compatible with that body's local widths. Under the same supporting-row,
+two-sided-graph and irrational-contact hypotheses, the row is empty at
+$L=n/h$ and contributes $w_n(L^{-1})+O(1)$ all points at $L+L^{-1}$.
+The all-point main term changes by only $a_B(2+L^{-2})$, so
+\[
+ \max\{|\Delta_B(L)|,|\Delta_B(L+L^{-1})|\}
+ \ge \frac L2W(h/L^2)-O_B(1).
+\]
+There is no totient density factor in this all-point estimate, and it
+holds for every sufficiently large integer $n$, without primality.
+Consequently the proposed target requires $W(h/L^2)=O(1/\log L)$
+along these contact scales. Strict
+convexity and infinite flatness alone do not give that condition;
+the model $f(s)=\exp[-\exp(|s|^{-\beta})]$ in
+Section~\ref{subsec:flatnessmodels} violates it. Establishing a compatible
+modulus for any specified McShane--Rivin ball remains a separate problem.
+
+The all-point target has a numerical diagnostic independent of the area
+constant, just as in Section~\ref{subsec:dyadicdiagnostic}. Define
+\[
+ \mathcal D_A(L)=A_B(2L)-4A_B(L).
+\]
+The dyadic inverse identity proves the equivalence
+\begin{equation}
+ \Delta_B(L)=O(L/\log L)
+ \quad\Longleftrightarrow\quad
+ \mathcal D_A(L)=O(L/\log L).
+ \label{eq:allPointLogDiagnostic}
+\end{equation}
+Indeed, the reverse implication follows from
+$\Delta_B(L)=-\sum_{j\ge0}4^{-j-1}\mathcal D_A(2^jL)$
+and $\log(2^jL)\ge\log L$. For a symmetric torus norm ball,
+let $\lambda_\gamma$ be the simple-geodesic length in the same
+normalization as the gauge of $B$. The length list already used in
+Section~\ref{subsec:torustraceexperiment}, rescaled when imposing the
+unit-shortest-vector convention, gives the exact identity
+\[
+ A_B(L)=2\sum_{\substack{\gamma\text{ unoriented simple}\\\lambda_\gamma\le L}}
+               \left\lfloor\frac L{\lambda_\gamma}\right\rfloor.
+\]
+Thus the proposed geometric threshold can be investigated without
+estimating the norm-ball area or introducing a new enumeration of
+curve types. No finite numerical range proves the uniform bound
+in~\eqref{eq:allPointLogDiagnostic}.
+
+The full campaign \path{experiments/torus_campaign/run.py} implements
+this signed-multiple diagnostic at its dyadic cutoffs, with the all-point
+rows and differences in \path{artifacts/torus_campaign/result.json}.
+The floor comparisons use exact rational representations of the stored
+binary64 lengths. Membership for the true geodesic lengths remains
+numerical; the exact identity does not certify the required length or
+completeness assumptions. The campaign uses hyperbolic lengths
+$\ell_\gamma$ without rescaling. If
+$s_X$ is the shortest hyperbolic length, the unit-shortest-vector gauge
+uses $\lambda_\gamma=\ell_\gamma/s_X$ and hence
+$A_B(L)=A_{\rm hyp}(s_XL)$. The campaign's hyperbolic dyadic rows must
+be interpreted with that change of units; they do not establish a
+uniform logarithmic bound. The separate finite companion
+\path{experiments/counting_mixing/run.py} checks rational examples of
+M\"obius inversion, signed multiples, row selectors, finite dyadic
+identities and conditional balance exponents. These finite checks do
+not supply either the required geometric modulus or an arithmetic
+hypothesis. Source, independent-review and generation records are in
+\path{docs/execution/counting-mixing-review-2026-11-01/}.
+

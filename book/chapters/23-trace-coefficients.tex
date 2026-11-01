@@ -1,0 +1,881 @@
+\section{Simple multicurve coefficients of a twisted trace formula}
+\label{sec:coefficientdistributions}
+
+This section develops a spectral version of the crossing-resolution
+idea. We work throughout with a marked, closed, oriented hyperbolic
+surface $X$ of genus $g\geq2$ and curvature $-1$. All closed curves
+are unoriented, unless conjugacy classes are explicitly being counted
+with orientation. A multicurve may have parallel components; its
+length and number of components count those multiplicities. The
+empty multicurve is included. Cusps and boundary require additional
+trace terms and are not included in the assertions below.
+
+The inputs are the twisted Selberg formula, the simple-multicurve
+basis of the character ring, and Dylan Thurston's sign-coherence
+theorem for the bracelet basis. We prove the intervening length and
+coefficient estimates explicitly. The resulting construction is a
+deduction from these established inputs, with no novelty claim.
+
+\subsection{Broken geodesics and the effect of reconnection}
+
+Colin de Verdi\`ere's construction approximates loop space by broken
+geodesics and applies stationary phase to a complex heat
+parametrix~\cite{CdVPeriodic}. For an equal time subdivision the
+finite-dimensional energy is
+\[
+ E_N(x_0,\ldots,x_{N-1})
+ =N\sum_{i=0}^{N-1}d(x_i,x_{i+1})^2,\qquad x_N=x_0,
+\]
+with consecutive points within the injectivity radius. The critical
+equations match incoming and outgoing velocities; the critical
+value for a constant-speed closed geodesic is $\ell_\gamma^2$.
+On a hyperbolic surface every closed geodesic, including a
+self-intersecting one, has positive transverse length Hessian.
+For a unit-speed parametrization and a periodic normal variation
+$f(s)N(s)$ this is
+\[
+ \delta^2L_\gamma(f,f)
+ =\int_0^{\ell_\gamma}\bigl((f')^2+f^2\bigr)\,\dd s.
+\]
+Consequently simplicity cannot be selected by retaining only
+positive Hessians in the ordinary loop space.
+
+Reconnection enlarges that space. In a small embedded disk of radius
+$r$ about a transverse crossing of angle $\theta\in(0,\pi)$, the two
+original diameters have total length $4r$. The two noncrossing
+pairings have lengths
+\begin{align}
+ L_0&=4\arsinh\bigl(\sinh r\sin(\theta/2)\bigr),\notag\\
+ L_\infty&=4\arsinh\bigl(\sinh r\cos(\theta/2)\bigr).
+ \label{eq:coeffuncrossing}
+\end{align}
+Both are strictly less than $4r$. In particular,
+\[
+ 4r-L_0=4r\bigl(1-\sin(\theta/2)\bigr)+O(r^3).
+\]
+The descent is first order in the surgery radius. Tightening the
+resolved components to geodesics, and discarding contractible
+components, cannot increase total length. This is a change of
+connectivity, not a negative direction of the original Hessian.
+An unconstrained global minimization would select the empty cycle;
+we instead keep the different multicurves as algebraic observables.
+
+\subsection{The finite coefficient distributions}
+
+Let $\mathscr C(S)$ be the set of essential simple multicurves on
+the underlying marked surface. For
+$\rho:\pi_1(S)\to\mathrm{SU}(2)$ set
+\begin{equation}
+ T_C(\rho)=\prod_{\alpha\subset C}\tr\rho(\alpha),
+ \qquad T_\varnothing=1.
+ \label{eq:coeffbasis}
+\end{equation}
+The phrase ``unnegated trace basis'' refers to this sign convention,
+not to positivity of the function on $\mathrm{SU}(2)$. The functions
+$T_C$ are linearly independent on the unitary character variety and
+form a basis of the complex character ring after complexification;
+see Charles--March\'e~\cite[Theorem 1.1]{CharlesMarche}. The usual Kauffman
+convention uses $-\tr$ per component, so differs by a basis sign.
+The relation
+\[
+ \tr A\,\tr B=\tr(AB)+\tr(AB^{-1})
+\]
+resolves crossings. For every nontrivial closed curve $\gamma$ there
+is a unique finite expansion
+\begin{equation}
+ \tr\rho(\gamma)=\sum_{C\in\mathscr C(S)}a_C(\gamma)T_C(\rho),
+ \qquad a_C(\gamma)\in\ZZ.
+ \label{eq:coeffcurveexpansion}
+\end{equation}
+These integers depend only on topology, not on $X$.
+
+Let $\Delta_\rho$ be the rank-two flat unitary bundle Laplacian,
+and write $\lambda_j(\rho)=1/4+r_j(\rho)^2$. For an even
+$\varphi\in C_c^\infty(\RR)$ put
+\[
+ h(r)=\int_\RR\varphi(L)e^{irL}\,\dd L,
+\]
+and define
+\begin{align}
+ \mathscr T^X_\varphi(\rho)
+ &=\sum_j h(r_j(\rho))
+ -\frac{2\operatorname{Area}(X)}{4\pi}
+   \int_\RR r h(r)\tanh(\pi r)\,\dd r.\notag
+\end{align}
+With the two orientations grouped, the twisted Selberg formula is
+\begin{equation}
+ \mathscr T^X_\varphi(\rho)
+ =\sum_{\delta\in\mathcal P_{\rm un}}
+   \sum_{k\geq1}
+   \frac{\ell_\delta}{\sinh(k\ell_\delta/2)}
+   \varphi(k\ell_\delta)\tr\rho(\delta^k).
+ \label{eq:coefftwistedSelberg}
+\end{equation}
+Here $\mathcal P_{\rm un}$ consists of unoriented primitive closed
+geodesics. Naud's statement~\cite[Theorem 2.2]{NaudTwisted} sums
+over oriented primitive conjugacy classes with denominator
+$2\sinh$; grouping inverses gives~\eqref{eq:coefftwistedSelberg}.
+The compact length support makes the geometric sum finite.
+
+\begin{definition}[Coefficient distribution]
+For $C\in\mathscr C(S)$ define the locally finite signed measure
+on $(0,\infty)$
+\begin{equation}
+ \boxed{
+ \sigma_C^X
+ =\sum_{\delta\in\mathcal P_{\rm un}}\sum_{k\geq1}
+   \frac{\ell_\delta a_C(\delta^k)}
+        {\sinh(k\ell_\delta/2)}\,\delta_{k\ell_\delta}.
+ }
+ \label{eq:coeffdistribution}
+\end{equation}
+Thus
+\[
+ [T_C]\mathscr T^X_\varphi=\langle\sigma_C^X,\varphi\rangle.
+\]
+The notation $\delta_L$ denotes the unit point mass at $L$.
+\end{definition}
+
+Local finiteness follows from the finiteness of the closed-geodesic
+length set below any bound. The identity term in the trace formula
+is a constant function of $\rho$, hence affects only the empty
+multicurve coefficient. The input is the \emph{labelled family}
+$\rho\mapsto\operatorname{Spec}\Delta_\rho$ on the marked character
+variety. A scalar spectrum alone does not retain these coefficients.
+
+\subsection{Length triangularity and the first atom}
+
+\begin{lemma}[Length ordering of resolutions]
+\label{lem:coefftriangularity}
+If $\delta$ is primitive and $k\geq1$, then
+\[
+ a_C(\delta^k)\neq0\quad\Longrightarrow\quad
+ \ell_X(C)\leq k\ell_X(\delta).
+\]
+Equality can occur only when $\delta$ is simple and $C=k\delta$,
+the multicurve consisting of $k$ parallel copies. Its coefficient
+in that case is $1$. If $\delta$ is nonsimple, the inequality is strict.
+\end{lemma}
+
+\begin{proof}
+For a primitive nonsimple geodesic, completely resolve its crossings.
+Each state has a representative obtained by reconnecting the original
+arcs in small disks. Formula~\eqref{eq:coeffuncrossing} gives a strict
+total saving; tightening and removing contractible loops cannot
+increase length. At a multiple intersection, resolve the endpoints
+in a small convex disk by a noncrossing pairing. The original pairing
+uses intersecting diameters, so at least one new chord is shorter
+than a diameter. The same strict conclusion holds. Coefficient
+cancellation cannot introduce a state not produced by a resolution.
+
+The product version is also useful: every multicurve in the
+expansion of $T_{C_1}\cdots T_{C_j}$ has length at most
+$\sum_i\ell_X(C_i)$. Superimpose representatives, separate parallel
+components, resolve crossings, and tighten.
+
+For powers use the Chebyshev polynomials
+\[
+ P_0(x)=2,\quad P_1(x)=x,\quad
+ P_{k+1}(x)=xP_k(x)-P_{k-1}(x),
+ \qquad \tr(A^k)=P_k(\tr A).
+\]
+If $\delta$ is simple, $P_k(T_\delta)$ contains only parallel copies
+$m\delta$ with $m\leq k$, and its leading term is $T_\delta^k$.
+If $\delta$ is nonsimple, every basis term in $\tr\rho(\delta)$
+has length strictly below $\ell_\delta$. Apply the product inequality
+to each monomial in $P_k$: every nonconstant output has length
+strictly below $k\ell_\delta$; the constant term has length zero.
+\end{proof}
+
+\begin{proposition}[First atom for a simple support]
+\label{prop:coefffirstatom}
+For a simple primitive curve $\alpha$ and $m\geq1$,
+\begin{equation}
+ \boxed{
+ \sigma_{m\alpha}^X
+ =\frac{\ell_\alpha}{\sinh(m\ell_\alpha/2)}
+      \delta_{m\ell_\alpha}
+   +\text{a measure supported strictly above }m\ell_\alpha.
+ }
+ \label{eq:coefffirstatom}
+\end{equation}
+For each fixed $C$ the gap is locally uniform in $X$, and uniform
+on compact subsets of marked Teichm\"uller space. If $C$ has two
+or more nonparallel support components, every contributing orbit
+has length strictly greater than $\ell_X(C)$; this statement does
+not assert that the resulting signed measure is nonzero.
+\end{proposition}
+
+\begin{proof}
+Lemma~\ref{lem:coefftriangularity} gives the lower support bound.
+At $m\ell_\alpha$ the only contributing pair is
+$(\delta,k)=(\alpha,m)$, with coefficient $1$. This gives the
+stated mass, whose numerator is the \emph{primitive} length.
+Every other contributing pair has strictly greater length.
+Local finiteness gives a gap at each $X$.
+
+For uniformity on a compact set of marked metrics, use uniform
+bilipschitz comparison with one reference metric. The target lengths
+are bounded, and only finitely many orbit labels can have lengths
+within one unit above them somewhere on the compact set. The
+strictly positive differences for those finitely many labels have
+a positive minimum; all remaining labels have a gap at least one.
+The argument also applies to nonparallel $C$, without requiring a
+nonzero first mass after cancellation.
+\end{proof}
+
+For $m=1$ the first atom determines both the simple length and its
+normalization. Choose a fixed smooth cutoff $\chi$, equal to one
+near $\ell_\alpha$ and supported away from every other atom in a
+small neighborhood of $X$. Then
+\begin{equation}
+ \boxed{
+ \ell_X(\alpha)
+ =\frac{\langle\sigma_\alpha^X,L\chi(L)\rangle}
+        {\langle\sigma_\alpha^X,\chi(L)\rangle},\qquad
+ \langle\sigma_\alpha^X,\chi\rangle
+ =\frac{\ell_\alpha}{\sinh(\ell_\alpha/2)}.
+ }
+ \label{eq:coeffmomentratio}
+\end{equation}
+This is an exact localized identity, with no limiting interchange.
+
+
+% BEGIN INLINE FIGURE: 05_reconnection_atoms.tex
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\small,>=Latex,line cap=round]
+\begin{scope}[shift={(-4.5,1.6)}]
+\draw[mpgray!65] (0,0) circle (1.1);
+\node[font=\bfseries\small] at (0,1.55) {Crossing};
+\draw[mpblue,line width=1.15pt] (0:1.1)--(180:1.1) (60:1.1)--(240:1.1);
+\draw[mpochre] (.37,0) arc (0:60:.37);
+\node[text=mpochre,font=\scriptsize] at (30:.58) {$\theta$};
+\node[text=mpgray] at (0,-1.5) {total length $4r$};
+\fill[mpblue] (0:1.1) circle (1.6pt);
+\fill[mpblue] (60:1.1) circle (1.6pt);
+\fill[mpblue] (180:1.1) circle (1.6pt);
+\fill[mpblue] (240:1.1) circle (1.6pt);
+\end{scope}
+\begin{scope}[shift={(0,1.6)}]
+\draw[mpgray!65] (0,0) circle (1.1);
+\node[font=\bfseries\small] at (0,1.55) {First reconnection};
+\draw[mpteal,line width=1.15pt] (1.10000000,0.00000000) arc[start angle=-132.84678884,delta angle=-34.30642232,radius=1.86486286];
+\draw[mpteal,line width=1.15pt] (-1.10000000,0.00000000) arc[start angle=47.15321116,delta angle=-34.30642232,radius=1.86486286];
+\node[text=mpteal] at (0,-1.5) {$L_0<4r$};
+\fill[mpblue] (0:1.1) circle (1.6pt);
+\fill[mpblue] (60:1.1) circle (1.6pt);
+\fill[mpblue] (180:1.1) circle (1.6pt);
+\fill[mpblue] (240:1.1) circle (1.6pt);
+\end{scope}
+\begin{scope}[shift={(4.5,1.6)}]
+\draw[mpgray!65] (0,0) circle (1.1);
+\node[font=\bfseries\small] at (0,1.55) {Second reconnection};
+\draw[mpteal,line width=1.15pt] (1.10000000,0.00000000) arc[start angle=107.18035662,delta angle=25.63928676,radius=4.29338334];
+\draw[mpteal,line width=1.15pt] (0.55000000,0.95262794) arc[start angle=-47.18035662,delta angle=-25.63928676,radius=4.29338334];
+\node[text=mpteal] at (0,-1.5) {$L_\infty<4r$};
+\fill[mpblue] (0:1.1) circle (1.6pt);
+\fill[mpblue] (60:1.1) circle (1.6pt);
+\fill[mpblue] (180:1.1) circle (1.6pt);
+\fill[mpblue] (240:1.1) circle (1.6pt);
+\end{scope}
+  \draw[->,mpgray!80] (-5.75,-2.55)--(5.75,-2.55) node[right] {$\ell$};
+  \node[text=mpgray] at (0,-.65) {Coefficient extraction: the first atom of $\sigma_\alpha^X$};
+  \draw[mpblue,line width=1.4pt] (-3.55,-2.55)--(-3.55,-1.35);
+  \fill[mpblue] (-3.55,-1.35) circle (2pt);
+  \node[above=3pt,text=mpblue,font=\scriptsize] at (-3.55,-1.35)
+    {$\ell_\alpha/\sinh(\ell_\alpha/2)$};
+  \node[below=4pt] at (-3.55,-2.55) {$\ell_\alpha$};
+  \foreach \x/\y in {-1.0/-.6,.55/.45,2.0/-.9,3.85/.55} {
+    \draw[mpgray,line width=.8pt] (\x,-2.55)--(\x,{-2.55-\y});
+    \fill[mpgray] (\x,{-2.55-\y}) circle (1.4pt);
+  }
+  \draw[<->,mpgray!65] (-3.4,-2.0)--node[above,font=\scriptsize,fill=white,inner sep=1pt]
+    {a gap for fixed $X$}(-1.15,-2.0);
+  \node[align=center,font=\scriptsize,text=mpgray] at (2.1,-3.45)
+    {Later atoms can have either sign; their positions and heights here are schematic.};
+\end{tikzpicture}
+\caption[Crossing resolution and the first coefficient atom]{Reconnection and coefficient extraction are different operations.
+The upper pictures show the two noncrossing pairings in a hyperbolic
+metric disk; both shorten the original pair of diameters. Reconnection
+changes connectivity and is not a negative direction of the length
+Hessian within the original loop space. For a simple primitive support
+$\alpha$, the lower schematic records the exact first atom of
+$\sigma_\alpha^X$ at $\ell_\alpha$, with the stated mass; all remaining
+atoms lie strictly above that length. Their depicted positions and
+weights are illustrative, not numerical data.}
+\label{fig:mono-reconnection-atoms}
+\end{figure}
+% END INLINE FIGURE
+
+\subsection{An exponential coefficient bound from bracelet positivity}
+
+The passage from compactly supported tests to heat kernels needs a
+growth estimate. A direct crossing count gives an exponential in
+$\ell_\gamma^2$ and only a small-time conclusion. Bracelet
+positivity gives a stronger estimate.
+
+At skein parameter $+1$, Dylan Thurston proves that every diagram
+has a sign-coherent expansion in the bracelet
+basis~\cite[Theorem 2]{DThurstonPositive}. A bracelet supported on
+a simple curve $\beta$ with winding $n$ is the Chebyshev element
+$P_n(z_\beta)$~\cite[Proposition 4.4]{DThurstonPositive}.
+Distinct bracelet support curves are disjoint; their windings are
+included in the length $\ell_X(D)=\sum_i n_i\ell_X(\beta_i)$.
+The canonical twisted Fuchsian evaluation associated to $X$ is
+positive on bracelet basis elements:
+\[
+ B_D(X)=\prod_i2\cosh\bigl(n_i\ell_X(\beta_i)/2\bigr)>0.
+\]
+For a one-component diagram representing $\gamma$, its evaluation
+has absolute value $2\cosh(\ell_X(\gamma)/2)$. Sign coherence
+therefore gives
+\begin{equation}
+ \sum_D |b_D(\gamma)| B_D(X)
+ =2\cosh\bigl(\ell_X(\gamma)/2\bigr).
+ \label{eq:coeffbraceletpositive}
+\end{equation}
+A spin structure identifies the $+1$ and $-1$ skein algebras by
+signs on diagrams. Changing to~\eqref{eq:coeffbasis} also changes
+only basis signs. On a simple generator this replaces $z_\beta$ by
+$\epsilon_\beta T_\beta$, with $\epsilon_\beta\in\{1,-1\}$;
+the identity $P_n(\epsilon x)=\epsilon^nP_n(x)$ shows that the
+bracelet-to-multicurve coefficient magnitudes are unchanged.
+All the absolute estimates below are consequently
+valid in our unnegated trace basis. The positive Fuchsian evaluation
+is an auxiliary algebraic estimate; the Laplacians defining
+$\sigma_C^X$ still use unitary twists.
+
+\begin{proposition}[Fixed-coefficient bound]
+\label{prop:coeffgrowth}
+Write $C=\sum_{j=1}^q r_j\beta_j$ with distinct support curves.
+For $r\geq1$ and $\ell>0$ put
+\[
+ M_r(\ell)=\sup_{n\geq1}
+ \frac{|[x^r]P_n(x)|}{2\cosh(n\ell/2)},\qquad
+ K_{C,X}=\prod_{j=1}^q M_{r_j}(\ell_X(\beta_j)).
+\]
+Set $K_{\varnothing,X}=1$. These constants are finite, and
+\begin{equation}
+ \boxed{
+ |a_C(\gamma)|\leq
+ K_{C,X}\,2\cosh\bigl(\ell_X(\gamma)/2\bigr)
+ }
+ \label{eq:coeffexponentialbound}
+\end{equation}
+for every nontrivial closed curve, including iterates.
+\end{proposition}
+
+\begin{proof}
+When $n\geq r\geq1$ have the same parity,
+\[
+ |[x^r]P_n(x)|
+ =\frac{2n}{n+r}\binom{(n+r)/2}{r}
+ \leq\frac{2n^r}{r!};
+\]
+otherwise the coefficient is zero. Consequently
+\begin{equation}
+ M_r(\ell)\leq
+ \frac{2}{r!}\left(\frac{2r}{e\ell}\right)^r<\infty.
+ \label{eq:coeffMrbound}
+\end{equation}
+To contribute to $C$, a bracelet element must contain every
+$\beta_j$ in its support. Additional support curves must contribute
+constant terms, which are either zero or $\pm2$. Their absolute
+constant coefficient divided by $2\cosh(n\ell/2)$ is at most one.
+It follows that
+\[
+ |[T_C]B_D|\leq K_{C,X}B_D(X).
+\]
+Apply this bound to~\eqref{eq:coeffbraceletpositive} and use the
+triangle inequality. Spin and basis signs do not affect the estimate.
+\end{proof}
+
+For a single simple $\alpha$ one can use
+\[
+ K_{\alpha,X}
+ =\sup_{\substack{n\geq1\\n\text{ odd}}}
+   \frac{n}{2\cosh(n\ell_\alpha/2)}
+ \leq\frac{2}{e\ell_\alpha}.
+\]
+The estimates are uniform for a fixed target $C$ on compact subsets
+of Teichm\"uller space. Related positivity and Chebyshev estimates
+for analytic lamination expansions on punctured planar surfaces
+appear in Basok--Chelkak~\cite[Section 4.4, Theorems 4.7 and 4.9]{BasokChelkak}. Their
+full analytic expansion theorem is not needed here.
+
+\begin{corollary}[Growth of the signed measure]
+\label{cor:coeffmeasuregrowth}
+For each fixed $X,C$ there is a constant $B_{C,X}$ such that
+\begin{equation}
+ |\sigma_C^X|([0,R])\leq B_{C,X}(1+R)e^R.
+ \label{eq:coeffmeasuregrowth}
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+Put $\varepsilon=\operatorname{sys}(X)>0$ and
+$L=k\ell_\delta$. Each orbital summand has absolute mass at most
+\[
+ \frac{\ell_\delta}{\sinh(L/2)}
+ K_{C,X}2\cosh(L/2)
+ \leq2K_{C,X}\coth(\varepsilon/2)L.
+\]
+The number of primitive/iterate classes of length at most $R$ is
+$O_X(e^R)$. One elementary proof conjugates each class so its axis
+passes a bounded distance from a fixed point in $\HH^2$; the chosen
+element then moves that point by at most $R+O_X(1)$. Orbit points
+are uniformly separated, and hyperbolic disk area is $O(e^R)$.
+Summing the displayed mass bound proves the claim. No prime-geodesic
+asymptotic is required.
+\end{proof}
+
+\subsection{Convergent heat and Laplace transforms}
+
+Define
+\begin{align}
+ G_C^X(t)&=\int_0^\infty e^{-L^2/(4t)}\,\dd\sigma_C^X(L),
+ &H_C^X(t)&=\frac{e^{-t/4}}{\sqrt{4\pi t}}G_C^X(t),
+ \label{eq:coeffheatdefinition}\\
+ D_C^X(s)&=\int_0^\infty e^{-sL}\,\dd\sigma_C^X(L).
+ &&\label{eq:coeffLaplacedefinition}
+\end{align}
+By~\eqref{eq:coeffmeasuregrowth}, $G_C$ and $H_C$ are absolutely
+convergent for every $t>0$, and holomorphic for $\Re t>0$ with
+the principal square root. The Laplace transform is absolutely
+convergent and holomorphic for $\Re s>1$. Differentiation in these
+variables is permitted locally uniformly in the stated domains.
+
+There is also a convergent expansion of the whole heat trace.
+For a finite character polynomial set
+\[
+ \|f\|_2=\sum_C|[T_C]f|\,2^{\#C},\qquad
+ c_X=\frac{\log(1+\sqrt2)}{\operatorname{sys}(X)}.
+\]
+The subscript $2$ denotes the trace bound $|\tr\rho(\alpha)|\leq2$;
+this is a weighted coefficient norm, not an $L^2$ norm.
+The Chebyshev recurrence gives
+\[
+ \sum_r|[x^r]P_n(x)|2^r\leq2(1+\sqrt2)^n.
+\]
+A bracelet has at most $3g-3$ distinct support curves, so
+$\|B_D\|_2\leq2^{3g-3}e^{c_X\ell_X(D)}$.
+In~\eqref{eq:coeffbraceletpositive} the nonzero coefficients are
+integers, and $B_D(X)\geq e^{\ell_X(D)/2}$. Hence
+$\ell_X(D)\leq\ell_X(\gamma)+2\log2$ for every occurring $D$,
+and $\sum_D|b_D|\leq2e^{\ell_X(\gamma)/2}$. Therefore
+\begin{equation}
+ \|\tr_\gamma\|_2\leq
+ C_X e^{(1/2+c_X)\ell_X(\gamma)},\qquad
+ C_X=2^{3g-2}e^{2c_X\log2}.
+ \label{eq:coeffallchannelbound}
+\end{equation}
+Gaussian decay dominates this exponential bound and the orbit count.
+It follows that
+\begin{equation}
+ \boxed{
+ \operatorname{Tr}e^{-t\Delta_\rho}-2I_X(t)
+ =\sum_{C\in\mathscr C(S)}H_C^X(t)T_C(\rho),\qquad t>0,
+ }
+ \label{eq:coefffullheatexpansion}
+\end{equation}
+where
+\[
+ I_X(t)=\frac{\operatorname{Area}(X)}{4\pi}
+  \int_\RR r\tanh(\pi r)e^{-t(r^2+1/4)}\,\dd r,
+ \qquad \sum_C|H_C^X(t)|2^{\#C}<\infty.
+\]
+The series is uniform on the unitary character variety and locally
+uniform for $\Re t>0$. It is obtained by taking the limit of the
+finite length-cutoff expansions; the preceding absolute estimate
+justifies the rearrangement. For a compact set of such $t$,
+$\Re(1/t)$ has a positive lower bound, so the same Gaussian
+majorant proves local uniformity and termwise holomorphy. On the
+spectral side, smooth cutoffs of the Gaussian converge in the
+Schwartz topology on the real spectral axis and at the finitely
+many imaginary spectral parameters; the compact-surface Weyl bound
+justifies passing to the heat trace for each unitary twist.
+
+This construction does not assert uniqueness among arbitrary
+infinite expansions of a continuous function. For example,
+$\|\tr\rho(\alpha^{2n+1})\|_\infty\leq2$, while its
+$T_\alpha$ coefficient is $(-1)^n(2n+1)$. Coefficient extraction
+is therefore not bounded for the uniform norm on unitary characters.
+Our coefficients are fixed by the finite spectral tests first;
+the estimates then justify their heat transform.
+
+\begin{proposition}[Simple-curve semiclassical term]
+\label{prop:coeffheatfirst}
+Let $\alpha$ be simple and $\ell=\ell_X(\alpha)$. Choose
+$b>\ell$ so that every other orbital contribution to
+$\sigma_\alpha^X$ has length at least $b$. Then
+\begin{align}
+ G_\alpha^X(t)
+ &=\frac{\ell}{\sinh(\ell/2)}e^{-\ell^2/(4t)}
+   +O\bigl(e^{-b^2/(4t)}\bigr),\notag\\
+ H_\alpha^X(t)
+ &=\frac{e^{-t/4}}{\sqrt{4\pi t}}
+   \frac{\ell}{\sinh(\ell/2)}e^{-\ell^2/(4t)}
+   \left[1+O\!\left(e^{-(b^2-\ell^2)/(4t)}\right)\right],
+ \label{eq:coeffheatfirst}\\
+ D_\alpha^X(s)
+ &=\frac{\ell}{\sinh(\ell/2)}e^{-s\ell}
+   \left[1+O\bigl(e^{-s(b-\ell)}\bigr)\right]
+   \quad(s\to+\infty).
+ \label{eq:coeffLaplacefirst}
+\end{align}
+In particular,
+\begin{equation}
+ \boxed{
+ \ell^2=-\lim_{t\downarrow0}4t\log G_\alpha^X(t),\qquad
+ \ell=-\lim_{s\to+\infty}s^{-1}\log D_\alpha^X(s).
+ }
+ \label{eq:coefflengthlimits}
+\end{equation}
+Both logarithms are real for sufficiently small $t$, respectively
+sufficiently large positive $s$.
+\end{proposition}
+
+\begin{proof}
+Separate the first atom in~\eqref{eq:coefffirstatom}. For its
+remaining measure $\tau$, supported on $[b,\infty)$, fix $t_0>0$.
+For $0<t\leq t_0$,
+\[
+ \int e^{-L^2/(4t)}\,\dd|\tau|(L)
+ \leq e^{-b^2/(4t)+b^2/(4t_0)}
+       \int e^{-L^2/(4t_0)}\,\dd|\tau|(L).
+\]
+The last integral is finite. The same argument with a fixed real
+$s_0>1$ gives the Laplace remainder. The leading masses are
+positive, so the leading terms eventually dominate the signed tails.
+\end{proof}
+
+After removing the explicit $e^{-t/4}$ factor, the correction to
+the single-geodesic term is exponentially small, rather than a new
+power series in $t$. Thus the constant-curvature heat coefficient
+has an exact isolated-orbit prefactor, followed by contributions at
+larger length actions. For $m\alpha$ replace the action by
+$(m\ell_\alpha)^2/(4t)$ and the mass by
+$\ell_\alpha/\sinh(m\ell_\alpha/2)$.
+
+\subsection{All iterates of a simple curve}
+
+Write $\sigma_C^{X,[\delta]}$ for the contribution of one primitive
+unoriented class $\delta$ and all of its iterates. The polynomial
+identity
+\begin{equation}
+ P_k(x)=\sum_{j=0}^{\lfloor k/2\rfloor}
+ (-1)^j\frac{k(k-j-1)!}{j!(k-2j)!}x^{k-2j},\qquad k\geq1,
+ \label{eq:coeffChebyshev}
+\end{equation}
+follows from the recurrence. If $\alpha$ is simple, the coefficient
+of $m\alpha$ vanishes unless $k=m+2j$, and for $m\geq1$ is
+\begin{equation}
+ b_{m+2j,m}=(-1)^j
+  \frac{(m+2j)(m+j-1)!}{j!\,m!}.
+ \label{eq:coeffsimplepowers}
+\end{equation}
+In particular, with $\ell=\ell_\alpha$,
+\begin{equation}
+ \boxed{
+ \sigma_\alpha^{X,[\alpha]}
+ =\ell\sum_{j\geq0}
+   \frac{(-1)^j(2j+1)}{\sinh((2j+1)\ell/2)}
+   \delta_{(2j+1)\ell}.
+ }
+ \label{eq:coeffoddpowers}
+\end{equation}
+The first masses have multipliers $1,-3,5,-7,\ldots$ at
+$\ell,3\ell,5\ell,7\ell,\ldots$. For $2\alpha$ the multipliers
+are $1,-4,9,-16,\ldots$ at $2\ell,4\ell,6\ell,8\ell,\ldots$.
+These are explicit later atoms, not changes to the first-atom mass.
+
+For $m\geq1$ the coefficient generating function is
+\begin{equation}
+ B_m(q):=\sum_{k\geq1}b_{k,m}q^k
+ =\frac{q^m(1-q^2)}{(1+q^2)^{m+1}}.
+ \label{eq:coeffpowergenerating}
+\end{equation}
+Indeed,
+$\sum_{k\geq1}P_k(x)q^k=(xq-2q^2)/(1-xq+q^2)$,
+and extracting $x^m$ gives this formula. Expanding the hyperbolic
+denominator yields, for $\Re s>-1/2$,
+\begin{align}
+ D_{m\alpha}^{X,[\alpha]}(s)
+ &=2\ell\sum_{n\geq0}B_m(q_n),
+ &q_n&=e^{-(s+n+1/2)\ell},\notag\\
+ &=2^{1-m}\ell\sum_{n\geq0}
+   \sech^m(u_n)\tanh(u_n),
+ &u_n&=(s+n+1/2)\ell.
+ \label{eq:coeffpowerLaplace}
+\end{align}
+This larger convergence domain concerns the one fixed primitive
+family; the proved half-plane for the full $D_C$ is $\Re s>1$.
+
+The heat contribution of the same family is
+\begin{align}
+ H_\alpha^{X,[\alpha]}(t)
+ ={}&\frac{e^{-t/4}}{\sqrt{4\pi t}}
+ \frac{\ell e^{-\ell^2/(4t)}}{\sinh(\ell/2)}\notag\\
+ &\mathrel{}\times\left[
+ 1-3\frac{\sinh(\ell/2)}{\sinh(3\ell/2)}e^{-2\ell^2/t}
+ +5\frac{\sinh(\ell/2)}{\sinh(5\ell/2)}e^{-6\ell^2/t}
+ -\cdots\right].
+ \label{eq:coeffpowerheat}
+\end{align}
+Other primitive classes may supply corrections before these particular
+iterate actions. Once $\ell_\alpha$ is recovered, subtracting the
+$j\geq1$ terms of~\eqref{eq:coeffoddpowers} removes exactly the
+nonprimitive powers of the simple curve $\alpha$; it leaves powers
+of nonsimple curves that resolve with an $\alpha$ coefficient.
+
+\subsection{A figure-eight family and an exact cancellation}
+
+Take an embedded geodesic pair of pants with three distinct essential
+cuffs $a,b,c$, and $c=(ab)^{-1}$. Set
+\[
+ x=T_a,\qquad y=T_b,\qquad z=T_c,\qquad
+ \gamma=a^{-1}b,
+ \qquad T_\gamma=xy-z.
+\]
+These are functions of arbitrary unitary holonomy. The minus sign
+therefore differs from the positive hyperbolic length convention
+in~\eqref{eq:figuretrace}. Powers are given exactly by
+$T_{\gamma^k}=P_k(xy-z)$. For example,
+\begin{align*}
+ T_\gamma&=xy-z,\\
+ T_{\gamma^2}&=x^2y^2-2xyz+z^2-2,\\
+ T_{\gamma^3}&=x^3y^3-3x^2y^2z+3xyz^2-z^3-3xy+3z.
+\end{align*}
+Only multicurves $C=ra+rb+mc$ occur. Put $d=r+m\geq1$.
+Their coefficients vanish unless $k=d+2j$, and in that case
+\begin{equation}
+ \boxed{
+ a_{ra+rb+mc}(\gamma^k)
+ =(-1)^{j+m}\frac{k(k-j-1)!}{j!\,r!\,m!}
+ =(-1)^m\binom{r+m}{r}b_{k,r+m}.
+ }
+ \label{eq:coefffigurepowers}
+\end{equation}
+This follows by substituting $xy-z$ into~\eqref{eq:coeffChebyshev}
+and expanding the relevant monomial. Consequently
+\[
+ \sum_{k\geq1}a_{ra+rb+mc}(\gamma^k)q^k
+ =(-1)^m\binom{r+m}{r}
+ \frac{q^{r+m}(1-q^2)}{(1+q^2)^{r+m+1}}.
+\]
+
+For $r+m=1$ the two target coefficients are opposite for every
+iterate. If $L=\ell_\gamma$, then
+\begin{equation}
+ \boxed{
+ \sigma_{a+b}^{X,[\gamma]}
+ =-\sigma_c^{X,[\gamma]}
+ =L\sum_{j\geq0}
+ \frac{(-1)^j(2j+1)}{\sinh((2j+1)L/2)}
+ \delta_{(2j+1)L}.
+ }
+ \label{eq:coefffigurecancellation}
+\end{equation}
+Thus $\sigma_c^X+\sigma_{a+b}^X$ cancels the entire chosen
+figure-eight family, including all its powers. This does not assert
+that the full sum vanishes: other primitive classes contribute to
+both coefficients. It gives an exact family-by-family cancellation
+which is preserved by either transform in
+\eqref{eq:coeffheatdefinition}--\eqref{eq:coeffLaplacedefinition}.
+
+The distinct-cuff assumption makes the monomials above distinct
+multicurve basis elements. If cuff images coincide, as in some
+one-holed-torus configurations of Section~\ref{sec:figures}, the
+corresponding variables must first be identified and equal basis
+terms collected; the displayed coefficient indexing cannot be
+carried over unchanged.
+
+\subsection{Metric variation and the twist derivative}
+
+For a fixed topological $C$, the map
+$X\mapsto\sigma_C^X$ is smooth as a distribution-valued map.
+After applying any compactly supported test function, it is locally
+a finite sum of smooth length functions. It is not asserted to be
+real analytic for arbitrary smooth test functions.
+
+For an orbital label $(\delta,k)$ write
+\[
+ L=k\ell_\delta,\qquad
+ w=\ell_\delta\operatorname{csch}(L/2).
+\]
+For a tangent vector $v$ to Teichm\"uller space one has
+\begin{equation}
+ D_v\sigma_C^X
+ =\sum_{\delta,k}a_C(\delta^k)
+  \left[(D_vw)\delta_L-w(D_vL)\delta'_L\right],
+ \label{eq:coeffmetricvariation}
+\end{equation}
+where $\langle\delta'_L,\varphi\rangle=-\varphi'(L)$ and
+\[
+ D_vL=kD_v\ell_\delta,\qquad
+ D_vw=\operatorname{csch}(L/2)
+       \left(1-\frac L2\coth\frac L2\right)D_v\ell_\delta.
+\]
+The coefficients $a_C$ are constant under metric variation. This
+formula describes movement of the atoms as well as variation of
+their masses; omitting the $\delta'_L$ term would lose the length
+variation itself.
+
+For a twist of displacement $\tau_\beta$ about a simple geodesic
+$\beta$, Wolpert's cosine formula gives
+\begin{equation}
+ \frac{\partial\ell_\delta}{\partial\tau_\beta}
+ =\sum_{p\in\delta\cap\beta}\cos\theta_p,
+ \label{eq:coeffWolpert}
+\end{equation}
+with the consistent right-twist angle convention and intersections
+counted with multiplicity~\cite{WolpertTwist}. Substitution in
+\eqref{eq:coeffmetricvariation} gives an exact variation formula
+for every coefficient distribution. For a simple $\alpha$, one
+can equivalently differentiate the localized ratio
+\eqref{eq:coeffmomentratio}; it recovers~\eqref{eq:coeffWolpert}
+from two spectral coefficient moments, without an infinite limit.
+The first-variation argument also applies when $\delta$ is immersed:
+cut it at its crossings with $\beta$. Interior variations of the
+geodesic arcs cancel by stationarity; the relative tangential
+displacement at each paired endpoint contributes the projection
+$\cos\theta_p$. Summing over the passages through the cut gives
+the formula with precisely the stated multiplicities. If $\delta$
+is a power of $\beta$, its twist derivative is zero and the sum is
+interpreted as empty.
+
+The compact-set gap in Proposition~\ref{prop:coefffirstatom} also
+permits differentiating the leading heat asymptotic locally.
+The leading logarithmic response is
+\begin{equation}
+ D_v\log H_\alpha^X(t)
+ =\left[-\frac{\ell_\alpha}{2t}
+          +\frac1{\ell_\alpha}
+          -\frac12\coth\frac{\ell_\alpha}{2}\right]
+    D_v\ell_\alpha
+  +O\bigl(t^{-1}e^{-c/t}\bigr)
+ \label{eq:coeffheatvariation}
+\end{equation}
+for some local $c>0$. To justify the differentiated tail, metric
+length derivatives on a compact parameter neighborhood are bounded
+by constants times the length, while
+\eqref{eq:coeffexponentialbound} is locally uniform. Gaussian
+decay absorbs the additional polynomial factors.
+
+\subsection{The logarithmic product and primitive extraction}
+
+A useful connection to the Selberg product keeps the orientation
+normalization explicit. Define, for $\Re v>1$,
+\begin{equation}
+ \mathcal Z_\rho^X(v)
+ =\prod_{\delta\in\mathcal P_{\rm un}}\prod_{n\geq0}
+ \det\left(I-e^{-(v+n)\ell_\delta}\rho(\delta)\right).
+ \label{eq:coeffunorientedproduct}
+\end{equation}
+This definition uses unoriented primitives; a product over both
+oriented conjugacy classes squares it. Expanding the logarithm gives
+\begin{equation}
+ 2\left.\frac{\partial}{\partial v}
+     \log\mathcal Z_\rho^X(v)\right|_{v=s+1/2}
+ =\sum_{\delta,k}
+   \frac{\ell_\delta e^{-sk\ell_\delta}}
+        {\sinh(k\ell_\delta/2)}\tr\rho(\delta^k).
+ \label{eq:coeffproductderivative}
+\end{equation}
+With coefficients defined by finite length cutoffs, the $T_C$
+coefficient on the right is $D_C^X(s)$ for $\Re s>1$.
+The coefficient estimate proves this assertion; it is not an
+appeal to continuity of coefficient extraction in the uniform norm.
+No meromorphic continuation of the individual $D_C$ is established
+by this calculation.
+
+Removing all iterates by a global Chebyshev substitution is not
+legitimate in the rank-two character ring. If
+$x=\tr A$, $y=\tr B$, $u=\tr(AB)$, and $v=\tr(AB^{-1})$,
+then $u+v=xy$, but
+\begin{equation}
+ P_2(u)+P_2(v)-P_2(x)P_2(y)
+ =2\bigl(\tr[A,B]-2\bigr),
+ \label{eq:coeffAdamsobstruction}
+\end{equation}
+which is generally nonzero. Thus sending every trace to its
+Chebyshev polynomial does not define a multiplicative operation
+on this character ring.
+
+There is an exact repair if extra twisting data are supplied.
+For the original $\mathrm{SU}(2)$ representation $\rho$, work in
+the virtual representation ring generated by its symmetric powers.
+Let $\psi^k\rho$ denote its Adams operation, characterized by
+$\chi_{\psi^k\rho}(\gamma)=\chi_\rho(\gamma^k)$. For the
+standard rank-two representation,
+\[
+ \psi^k\rho=\operatorname{Sym}^k\rho-
+             \operatorname{Sym}^{k-2}\rho\quad(k\geq2),
+ \qquad \psi^1\rho=\rho.
+\]
+Trace formulas extend additively to virtual representations.
+All twists used here have inverse-invariant characters, so the
+unoriented normalization is preserved. Let $\Sigma_\rho$ denote the character-valued geometric measure
+on the right of~\eqref{eq:coefftwistedSelberg}, and set
+\[
+ Q_\rho=\sinh(L/2)\Sigma_\rho,\qquad
+ P_\rho=\sum_{\delta\in\mathcal P_{\rm un}}
+         \ell_\delta\chi_\rho(\delta)\delta_{\ell_\delta}.
+\]
+For $D_k\delta_L=\delta_{kL}$,
+\[
+ Q_\rho=\sum_{k\geq1}D_kP_{\psi^k\rho},\qquad
+ \boxed{P_\rho=\sum_{k\geq1}\mu(k)D_kQ_{\psi^k\rho}.}
+\]
+These sums are locally finite, and the second identity follows from
+$\psi^j\psi^k=\psi^{jk}$ and divisor M\"obius inversion. It requires
+spectra for higher symmetric-power twists, which are additional
+data beyond the original rank-two family. The explicit subtraction
+in~\eqref{eq:coeffoddpowers} needs no such enlargement.
+
+\subsection{Scope and further questions}
+
+The construction now supplies signed coefficient distributions,
+an isolated first simple-curve atom, globally convergent heat
+transforms, a Laplace half-plane, explicit iterate families, a
+figure-eight cancellation, and metric derivatives. It has not
+produced a positive measure with the weights of simple-geodesic
+counting, nor a pointwise constant McShane series.
+
+The scalar limitation is genuine: length-isospectral closed
+hyperbolic surfaces can have different simple length spectra
+\cite{AougabLahnLovingMiller}. The labelled holonomy family retains
+the information used by~\eqref{eq:coeffmomentratio}.
+
+For a counting comparison, let $d=6g-6$ and normalize Thurston
+measure by the integral multicurve lattice. If
+\[
+ B(X)=\mu_{\rm Th}\{\lambda:\ell_X(\lambda)\leq1\},
+\]
+ordinary lattice counting gives
+$\#\{C\in\mathcal{ML}_{\ZZ}:\ell_X(C)\leq R\}\sim B(X)R^d$
+\cite[Proposition 3.1]{MirzSimple}. Its Laplace consequence is
+\[
+ \sum_{C\in\mathcal{ML}_{\ZZ}}e^{-t\ell_X(C)}
+ \sim\Gamma(d+1)B(X)t^{-d}\qquad(t\downarrow0).
+\]
+This is a target for a measure comparison, not a consequence of
+the coefficient heat expansion. It counts all weighted multicurves;
+connected or fixed-orbit counts require additional information.
+The large-length limit here is also different from the
+minimum-selection limits in~\eqref{eq:coefflengthlimits}.
+
+Two concrete further problems are to continue $D_C(s)$ beyond its
+proved half-plane, with control of the coefficient operation, and
+to find combinations of coefficients whose cancellations organize
+globally over pants. Formula~\eqref{eq:coefffigurecancellation}
+provides an exact local model for the second problem. An identity
+constant in $X$ would require an additional normalization or
+geometric partition; the existence of these transforms alone does
+not supply that constancy. Section~\ref{sec:quantitativecounting}
+strengthens the lattice benchmark and gives explicit orbital gaps,
+uniform recovery estimates, and a conditional counting criterion.
+
+
+\clearpage

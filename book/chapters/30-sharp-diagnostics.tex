@@ -8,15 +8,18 @@ intermediate rate. A normalized M\"obius formula identifies a sufficient
 criterion for $O(L)$. An exact dyadic inversion removes the leading area
 constant from the numerical test, and an inverse-flatness formula measures
 the contribution of a particular supporting row. Finally we describe the
-dyadic diagnostic using hyperbolic trace recursion on two tori, distinguish
-the supplied draft's unreplayed numerical report from a new bounded
-replacement calculation, and provide the latter's computational recipe.
+dyadic diagnostic using hyperbolic trace recursion on two tori. A new
+full campaign reproduces the supplied draft's counts and rounded block
+values through length $8192$, with its own precision and provenance
+records; the historical implementation remains unrecovered.
 The proofs and the exploratory numerical observations are stated separately.
 
 \subsection{The normalized all-point discrepancy and the logarithmic loss}
 \label{subsec:mobiusmodulus}
 
-Rescale the norm so that its shortest nonzero integer vector has length one.
+Let $B$ be a fixed convex body containing the origin in its interior.
+Rescale its gauge so that the shortest nonzero integer vector has gauge one;
+central symmetry is not needed in this subsection.
 Write $a=\operatorname{Area}(B)$,
 \[
  A_0(u)=\#(uB\cap(\mathbb Z^2\setminus\{0\})),\qquad
@@ -31,7 +34,10 @@ M\"obius inversion gives the exact identity
    -aL\sum_{d>M}\frac{\mu(d)}{d^2}.
  \label{eq:primitiveexactnormalizedmobius}
 \end{equation}
-The final term is bounded uniformly for $L\ge2$. Thus the linear
+The cutoff is exact because $A_0(u)=0$ for $u<1$; boundary points at
+$u=1$ are included. Moreover
+$L\sum_{d>M}d^{-2}\le L/M\le2$ for $L\ge2$, so the final term
+is bounded uniformly. Thus the linear
 remainder problem is precisely a boundedness problem for the displayed
 M\"obius-weighted harmonic sum. The prime number theorem alone does not
 bound it: the geometric weight $D_B(L/d)/(L/d)$ varies with both $L$ and $d$.
@@ -84,9 +90,11 @@ chord $B\cap\{x:x\cdot\nu=s\}$. Its support is an interval
 $[a_\nu,b_\nu]$. Convexity makes $w_\nu$ concave, and strict
 convexity makes both extreme supporting chords singletons, so
 $w_\nu(a_\nu)=w_\nu(b_\nu)=0$. A finite continuous concave
-function on a compact interval is absolutely continuous: its
-monotone one-sided derivative is integrable, and the fundamental
-theorem on interior subintervals extends to the endpoints.
+function on a compact interval is absolutely continuous. Indeed, it is
+locally absolutely continuous, is monotone on either side of a maximum,
+and the integral of the absolute value of its monotone one-sided
+derivative on exhausting interior intervals tends to its total variation.
+Continuity at the endpoints then extends the fundamental theorem there.
 The zero extension therefore belongs to $W^{1,1}(\mathbb R)$.
 Moreover
 \[
@@ -148,7 +156,8 @@ while their upper bound for every rational polygon is
  =O_{\mathcal A}\bigl(L(\log L)^{2/3}
                          (\log\log L)^{4/3}\bigr).
 \]
-These are Theorems~1.4 and~1.2, respectively, in
+These are Theorems~1.4 and~1.2, respectively, on page~2 of the
+31 July 2019 version (arXiv:1509.02201v2) of
 \emph{Primitive points in rational polygons}~\cite{BaranyPrimitivePolygons}.
 The polygons have genuine straight sides. These results do not
 transfer to a strictly convex McShane--Rivin norm ball; they show
@@ -234,7 +243,8 @@ in the discrepancy. The local graph itself gives a more precise statement.
 Let $B\subset\RR^2$ be strictly convex, compact, and contain the origin in
 its interior. After an integral unimodular change of coordinates, suppose
 its unique top point is $p=(\alpha,h)$, with $h>0$ and
-$\alpha/h\notin\mathbb Q$. Write the upper boundary near $p$ as
+$\alpha/h\notin\mathbb Q$. Assume that the upper boundary is a
+two-sided graph over an open interval about $\alpha$, and write it as
 \[
  y=h-f(x-\alpha),\qquad f(0)=0.
 \]
@@ -469,18 +479,27 @@ lattice-rational supporting normal at an irrational radial point.
 Finding such a direction is a separate geometric step and is not
 automatic for an arbitrary fixed surface.
 
-The height $h$ must also be known accurately. An error $\Delta h$ moves
-the contact scale $n/h$ by approximately $-L\Delta h/h$. Resolving
-the window of width $L^{-1}$ thus requires $|\Delta h|\ll hL^{-2}$.
+The height $h$ must also be known accurately. If $\widetilde h=h+e$
+and $|e|\le h/2$, then the exact contact-scale error satisfies
+\[
+ \left|\frac n{\widetilde h}-\frac nh\right|
+ =\frac{L|e|}{|h+e|}\le\frac{2L|e|}{h}.
+\]
+Resolving the window of width $L^{-1}$ therefore requires a height
+error small compared with $hL^{-2}$.
 Using a larger window relaxes this requirement but changes the depth
 sampled by~\eqref{eq:inverseflatwidth} and increases the background
 main-term increment. The local statistic is consequently complementary
 to a global main-term-free discrepancy diagnostic; it does not replace
-one.
+one. In an implemented row count, the floor and ceiling operations in
+\eqref{eq:primitiveintervalexact} also require certified endpoint
+comparisons with the relevant integers, or an explicit range of possible
+counts when those comparisons are unresolved. Agreement at two working
+precisions does not certify a transcendental height or endpoint.
 
 
 
-\subsection{A trace diagnostic: retained report and bounded replacement}
+\subsection{A trace diagnostic: historical report and new full campaign}
 \label{subsec:torustraceexperiment}
 
 The count here is $N_X(L)$ for unoriented essential simple closed
@@ -528,17 +547,19 @@ On the chosen outward edges the subtracted ratio is at most $1/2$,
 so this computation avoids catastrophic cancellation. The supplied draft
 describes extended-precision arithmetic for this recursion and double
 precision for sorting the resulting lengths. That reported implementation
-was not included in the supplied materials. The bounded replacement below
-uses binary64 logarithmic recursion and a separate exact-trace oracle.
-Neither calculation provides an interval certificate of every event location.
+was not included in the supplied materials. Both maintained replacement
+calculations below use binary64 logarithmic recursion, with separate
+multiprecision trace checks. Neither provides an interval certificate
+of every event location.
 
-\paragraph{Retained numerical report, awaiting reproduction.}
+\paragraph{Historical report and reproduced printed values.}
 The supplied draft reports enumeration through hyperbolic length $8192$, obtaining
 $18\,191\,508$ curves for the modular torus and $18\,486\,116$ for
 the asymmetric torus. Such a cutoff permits evaluating the dyadic block statistics
 through $T=2048$, because the largest count used in a block is $N_X(4T)$.
-The following selected values are retained verbatim from that report;
-all entries are rounded and have not been reproduced for this edition.
+The following selected values are retained verbatim from that report.
+The new full campaign below matches both integer counts and every
+displayed entry at four decimal places.
 
 \begin{center}
 \begin{tabular}{r r r r r}
@@ -571,9 +592,11 @@ $M(T)$ differ by less than $7.1\times10^{-7}$. This is a conditional
 sensitivity check, not a proof that every computed length has that error
 bound. The advertised source, full block table, precision report, and
 sensitivity tables were not found in the supplied archive or repositories.
-Consequently these counts, table entries, precision comparisons, and
-sensitivity bounds remain unreplayed reported results. This edition does
-not claim that the advertised diagnostic archive accompanies the book.
+The new campaign reproduces the counts and rounded table entries, but
+does not recover that implementation, its selected precision comparisons,
+or its sensitivity construction. Those historical precision and
+sensitivity claims remain unverified historical reports. This edition
+does not claim that the original diagnostic archive accompanies the book.
 
 The displayed finite-range normalized excursions decrease overall;
 they do not establish an asymptotic linear or sublinear bound. The modular
@@ -581,17 +604,55 @@ torus was already singled out as a candidate for exceptional behavior in
 \cite[Conjecture~4.3]{McShaneRivinTori}. Neither example is asserted to
 have a verified lattice-rational supporting normal at an infinitely flat
 irrational point. Sparse resonances can occur beyond the tested range.
-The stability claims for this reported long run remain awaiting their
-computational evidence.
+The historical stability claims remain distinct from the new evidence.
 
-\paragraph{A bounded replacement calculation.}
-The maintained recipe \path{experiments/section30/run.py} performs a new
+\paragraph{A new full campaign through length $8192$.}
+The maintained recipe \path{experiments/torus_campaign/run.py} gives
+new counts $18\,191\,508$ and $18\,486\,116$ for the two ordered trace
+triples. It records every dyadic count and all ten blocks
+$T=4,8,\ldots,2048$ for each surface, including the full/half event
+sweep, both relevant one-sided limits and simultaneous multiplicities.
+The compact result \path{artifacts/torus_campaign/result.json} retains
+all twenty block rows, selected paths, residuals, conditional sensitivity
+rows and source/input identities. The recipe describes the separately
+hashed slope and sorted-length streams and their regeneration. The
+checkpoint \path{docs/execution/counting-mixing-review-2026-11-01/}
+records independent review and final source/generation identities.
+
+The full campaign is supported by a complete exact-trace comparison
+through length $64$, an independent direct-trace traversal and membership
+probes through $512$, and selected long-path references. The latter use
+$100$ and $140$ decimal digits on $151$ modular and $126$ asymmetric
+samples, including $36$ distinct curves near length $8192$ on each
+surface. The largest observed difference from binary64 is below
+$1.2\times10^{-9}$; this is a sampled residual, not a bound at every
+node. Independent review additionally checked long samples by matrix
+words at $100$ and $160$ digits and recomputed every dyadic primitive
+and signed all-point count from the full stored length streams.
+Exact arithmetic on stored binary64 values does not certify membership
+or ordering for the true transcendental lengths.
+
+The new sensitivity calculation gives exact rational envelopes for
+$M(T)$ conditional on an error at most $10^{-6}$ in each listed length.
+Its maximum envelope widths across all ten blocks are below
+$1.232\times10^{-6}$ and $5.613\times10^{-7}$, respectively.
+These conservative bounds differ from the historical reported
+construction and must not be substituted for its claimed width.
+Application to the complete true spectrum also requires completeness
+and exclusion of entry by omitted curves under perturbation. The
+sampled precision checks certify neither hypothesis. The result also
+records signed all-point counts and their dyadic differences, in
+hyperbolic length units, as used at the end of
+Section~\ref{sec:arithmeticgeometry}.
+
+\paragraph{The frozen length-$64$ predecessor.}
+The earlier recipe \path{experiments/section30/run.py} records a frozen
 calculation through length $64$ for the same two exact trace triples.
-It finds $1104$ modular and $1127$ asymmetric curves. This is a replacement
-experiment, not a reconstruction of the missing length-$8192$ run.
+It finds $1104$ modular and $1127$ asymmetric curves. This was the first bounded replacement
+experiment; its code, README and result retain their earlier bytes.
 Its complete slope list, exact traces, numerical lengths, and block
 statistics are recorded in \path{artifacts/section30/result.json}, with
-the source identity and precision settings. The new block values are
+that run's source identity and precision settings. Its block values are
 \begin{center}
 \begin{tabular}{r r r r r}
 \toprule
@@ -643,26 +704,29 @@ curve list; application to the complete spectrum also assumes that no
 omitted curve can enter a block threshold under the perturbation.
 The full derivation and run instructions
 are in \path{experiments/section30/README.md}. This bounded check provides
-no long-range sensitivity bound, no asymptotic remainder theorem, and
-no audit of the remaining proof chain in this section.
+no long-range sensitivity bound and no asymptotic remainder theorem.
+The analytic arguments in this section have their own hypotheses and
+claim ledger; their validity does not follow from this finite computation.
 
 \subsection{A recent qualification of irrational flatness}
 \label{subsec:recentflatnessqualification}
 
-Doan--Li--Nguyen's recent preprint~\cite{DoanLiNguyenStableNorm},
-version~3 dated 9 October 2026, gives a Diophantine refinement of the
-irrational flatness statement. Its Theorem~4.7 states that infinite
+Doan--Li--Nguyen's preprint~\cite{DoanLiNguyenStableNorm},
+version~3 dated 9 October 2026, states a Diophantine refinement of the
+irrational flatness statement. Its Theorem~4.7 on page~23 states that infinite
 graph-flatness holds precisely when the exponential rational-approximation
 exponent vanishes; superexponentially approximable irrational directions
 can have graph-flatness order only one. In slope coordinates the relevant
-quantity is $\limsup_j(\log q_{j+1})/q_j$, where $q_j$ are continued-fraction
-denominators. The local convexity mechanism is that a nearby rational
+vanishing criterion is $\limsup_j(\log q_{j+1})/q_j=0$, where $q_j$
+are continued-fraction denominators; Lemma~4.8 on pages~25--26 specifies
+the slope-coordinate normalization. The proposed local convexity
+mechanism is that a nearby rational
 corner can remain visible at a much smaller spatial scale than its
 exponentially small angle.
 
-We have checked the local Fricke and convexity mechanism relevant to
-this distinction, but have not audited the entire preprint. None of its
-global counting assertions is used in the proofs above. In particular,
+We have checked these statements against that pinned version, but have
+not independently audited its flatness proof or its global counting
+assertions. None is used as a proved input above. In particular,
 Propositions~\ref{prop:normballflatrow} and~\ref{prop:inverseflatrow}
 retain their explicit flat-point hypotheses, and
 Proposition~\ref{prop:strictconvexlittleo} uses only strict convexity.

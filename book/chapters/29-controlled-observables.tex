@@ -1,0 +1,772 @@
+\section{From simple-curve coefficients to controlled observables}
+\label{sec:coefficientobservables}
+
+The preceding section supplies an explicit analytic norm for its mixing
+estimate. We now connect that norm to a selected family of simple curves
+and their coefficient distributions. The genus-one norm-ball obstruction
+first fixes the attainable scale of sharp remainders. Primitive
+pole-to-pole arcs then give geometric coefficient observables with
+uniform rotation and terminal-derivative bounds. Exact affine Gaussian
+calculations provide independent tests of the analytic estimates.
+Throughout, a fixed-surface sharp count, a moduli-averaged covariance,
+and the conditioning of coefficient extraction remain separate problems.
+
+\subsection{The norm-ball obstruction and the correct error scale}
+\label{subsec:normballbarrier}
+
+The genus-one length norm gives a necessary benchmark for any passage from
+smooth return estimates to sharp simple-curve counting. Let $X$ be a fixed
+complete hyperbolic once-punctured torus, and let $B_X$ be the unit ball of
+the McShane--Rivin length norm on $H_1(X;\RR)\simeq\RR^2$. Put
+\[
+ A_X(L)=\#(LB_X\cap\ZZ^2),\qquad
+ P_X(L)=\#(LB_X\cap\ZZ^2_{\mathrm{prim}}).
+\]
+The first count includes the origin and nonprimitive classes. The second
+counts oriented primitive classes; the count of unoriented simple closed
+geodesics is $N_X(L)=\tfrac12P_X(L)$. Elementary planar lattice counting
+and M\"obius inversion give
+\begin{align}
+ A_X(L)&=\operatorname{Area}(B_X)L^2+O_X(L),\label{eq:normballall}\\
+ P_X(L)&=\frac{\operatorname{Area}(B_X)}{\zeta(2)}L^2
+           +O_X(L\log L).\label{eq:normballprimitive}
+\end{align}
+Indeed, $P_X(L)=\sum_d\mu(d)(A_X(L/d)-1)$, with $d\ll_X L$;
+the boundary errors sum as $L\sum_{d\ll_X L}d^{-1}$. These are the
+upper estimates behind \cite[Theorem~4.1]{McShaneRivinTori}, with the
+orientation factor made explicit here.
+
+The next theorem in that paper concerns a dense set of hyperbolic
+structures. Its mechanism is an infinitely flat boundary point whose
+supporting normal is rational with respect to the homology lattice.
+The subsequent Conjecture~4.3 proposes an $O(L^{1/2+\varepsilon})$ error
+for the modular torus; thus the obstruction is not asserted there for
+every individual surface. The phrase ``at least $O(L)$'' in Theorem~4.2
+should be separated from the literal modern assertion
+$\limsup|E_X(L)|/L>0$. The elementary argument below proves the precise
+consequence needed here: no fixed improvement of the exponent below one
+is possible under the stated flat-point hypothesis. We do not use it to
+claim a literal $\Omega(L)$ bound.
+
+\begin{proposition}[A primitive-row obstruction]
+\label{prop:normballflatrow}
+Let $B\subset\RR^2$ be a strictly convex compact body with the origin
+in its interior. Suppose that $p\in\partial B$ has irrational radial
+direction, a rational supporting normal, and infinite graph-flatness.
+Then, for
+\[
+ E_B(L)=\#(LB\cap\ZZ^2_{\mathrm{prim}})
+       -\frac{\operatorname{Area}(B)}{\zeta(2)}L^2,
+\]
+and every $\varepsilon>0$, there are $c_\varepsilon>0$ and arbitrarily
+large $L$ such that
+\begin{equation}
+ |E_B(L)|\geq c_\varepsilon L^{1-\varepsilon}.
+ \label{eq:normballlowerpower}
+\end{equation}
+In particular $E_B(L)=O(L^{1-\eta})$ fails for every fixed $\eta>0$.
+\end{proposition}
+
+\begin{proof}
+An integral unimodular change of coordinates makes the supporting normal
+vertical. Write $p=(\alpha,h)$, with $h>0$ and $\alpha/h$ irrational.
+Near $p$, the upper boundary has the form
+\[
+ y=h-f(x-\alpha),\qquad f(0)=0,
+\]
+where $f\geq0$ is convex. Infinite graph-flatness means that for every
+integer $N>2$ there are $C_N,\rho_N>0$ such that
+\[
+ 0\leq f(s)\leq C_N|s|^N\qquad (|s|\leq\rho_N).
+\]
+Fix $N$, let $n$ run through primes, and set
+\[
+ L_n=\frac nh,\qquad \delta_n=L_n^{-1},\qquad L_n^+=L_n+\delta_n.
+\]
+The line $y=n$ supports $L_nB$ at the single point
+$(L_n\alpha,n)$. Its first coordinate is irrational, so this row
+contains no lattice point of $L_nB$.
+
+In $L_n^+B$, the same row lies a normalized depth
+$h\delta_n/L_n^+$ below the supporting line. Therefore it contains the
+horizontal interval centered at $L_n^+\alpha$ with half-width
+\[
+ r_n=\min\left\{
+ \left(\frac h{2C_N}\right)^{1/N}
+ (L_n^+)^{1-1/N}\delta_n^{1/N},\ \frac n4
+ \right\}.
+\]
+For sufficiently large $n$ the local graph description applies, the
+first quantity realizes the minimum, and
+\[
+ r_n\asymp_{B,N}L_n^{1-2/N}.
+\]
+The interval has length at most $n/2$. Among its integer points
+$(k,n)$, at most one has $n\mid k$; every other point is primitive
+because $n$ is prime. Thus
+\[
+ P_B(L_n^+)-P_B(L_n)\geq 2r_n-O(1).
+\]
+The change in the quadratic main term is bounded, since
+\[
+ (L_n^+)^2-L_n^2=2+L_n^{-2}.
+\]
+It follows that
+\[
+ \max\{|E_B(L_n)|,|E_B(L_n^+)|\}
+ \geq c_{B,N}L_n^{1-2/N}
+\]
+for all sufficiently large primes $n$. Choose $N>2/\varepsilon$ to
+obtain the assertion. To rule out a proposed $O(L^{1-\eta})$ estimate,
+apply the assertion with $0<\varepsilon<\eta$.
+\end{proof}
+
+The proof works directly with primitive classes, so no cancellation in a
+M\"obius sum needs to be controlled. The short interval
+$[L_n,L_n+L_n^{-1}]$ acquires many new primitive points along a nearly
+flat supporting row, while its predicted main-term increment stays
+bounded. Infinite flatness alone does not force the row length to be a
+positive fraction of $L_n$; that is why the proof gives an exponent-one
+barrier, not a literal linear lower bound. The distinction between a
+fixed-surface estimate, an estimate uniform over moduli, and a smoothed
+estimate must be retained.
+
+\subsection{The Fourier and spectral meaning of the obstruction}
+\label{subsec:normballspectral}
+
+The flatness obstruction has a direct oscillatory-integral interpretation.
+For illustration, suppose a localized smooth boundary arc has graph
+\[
+ y=h-f(x),\qquad f(x)=a x^k+O(x^{k+1}),\quad a>0,
+\]
+where $k\geq2$ is even. Apply smooth cutoffs supported near this arc
+and equal to one at the supporting point. Integrating the localized
+indicator in the normal coordinate first gives, up to rapidly decreasing
+terms,
+\[
+ -\frac{e^{-2\pi i r h}}{2\pi i r}
+       \int \chi(x)e^{2\pi i r f(x)}\,\dd x.
+\]
+The substitution $x=r^{-1/k}u$ in the stationary-phase calculation gives
+\begin{equation}
+ \widehat{\chi_0\mathbf1_B}(r\nu)
+   =c_{a,k}\,e^{-2\pi i r h}r^{-1-1/k}
+     +o(r^{-1-1/k}),\qquad c_{a,k}\ne0.
+ \label{eq:normballfinitephase}
+\end{equation}
+where $\nu$ is the chosen normal direction and $\chi_0$ is the localized
+cutoff. The familiar nondegenerate exponent is $r^{-3/2}$ when $k=2$;
+larger contact order weakens it toward $r^{-1}$. Localization matters:
+the contributions of different supporting points can interfere in the
+Fourier transform of the whole ball. No global lower bound follows from
+discarding those phases.
+
+Under dilation,
+\[
+ \widehat{\mathbf1_{LB}}(m)=L^2\widehat{\mathbf1_B}(Lm).
+\]
+Thus a finite-type flat point with a lattice-rational normal contributes
+on the scale $L^{1-1/k}$ to the corresponding localized Poisson terms.
+For an infinitely flat point there is no fixed finite type to insert in
+this formula. Proposition~\ref{prop:normballflatrow} supplies a direct
+counting argument in that case, without assuming smooth boundary
+regularity at all nearby points or invoking a formal stationary-phase
+expansion there.
+
+There is also an exact elementary spectral model. On an auxiliary flat
+torus $\RR^2/\ZZ^2$, define the positive self-adjoint Fourier multiplier
+\[
+ \mathsf P_X e^{2\pi i\langle m,x\rangle}
+   =\|m\|_X e^{2\pi i\langle m,x\rangle}.
+\]
+Norm equivalence gives a discrete spectrum tending to infinity. Its
+counting function is $A_X(L)$, and restriction to the closed span of
+primitive Fourier modes has counting function $P_X(L)$. Restricting
+further to the even part identifies $m$ and $-m$ and gives $N_X(L)$.
+This multiplier is defined spectrally; the nonsmooth length norm is not
+being asserted to be a classical smooth pseudodifferential symbol.
+At a differentiable point $p$ of its unit ball, a supporting covector
+$\nu$ satisfies
+\[
+ \nabla\|\cdot\|_X(p)=\frac{\nu}{\langle\nu,p\rangle}.
+\]
+Thus a lattice-rational normal is exactly a rational direction for the
+translation velocity of the associated Hamiltonian. This explains the
+periodic-phase interpretation, without assuming that a global smooth
+trace formula applies to the length norm.
+
+The norm-ball discrepancy is therefore a spectral-projector remainder
+for this particular length multiplier. Its flat normal directions
+produce degenerate phases in a regularized Poisson or trace calculation.
+This is distinct from complementary-series spectrum for the
+$SL_2(\RR)$ action on the marked-torus moduli space. In particular, it
+does not contradict the temperedness statement or the smooth
+correlation estimate in Section~\ref{sec:genus2markedtorus}. The
+rotation-Sobolev issue depends on what is held fixed. A sharp indicator
+of a nonradial region in fixed physical vector coordinates generally
+has rotational jumps, so smoothing it introduces growing derivative
+norms. By contrast, hyperbolic length is unchanged when the flat charts
+are rotated while the underlying conformal surface stays fixed. A sharp
+cutoff in that invariant length can therefore lie in the rotation
+generator's domain, and a radial flat cutoff can be rotation invariant
+as well. Sharpness alone is not an obstruction to the stated mixing
+bound. For those invariant observables, the remaining boundary and
+regularity issues enter when taking flow derivatives or passing from
+an averaged correlation to a fixed-surface counting remainder.
+
+\subsection{A coefficient observable from primitive pole-to-pole arcs}
+\label{subsec:primitivepolebridge}
+
+The marked-torus construction supplies an explicit family of simple curves
+for which the coefficient data become observables with controlled norms.
+This family carries a flat-length cutoff as well as a hyperbolic-length
+weight. The two length parameters remain distinct.
+
+Work on the finite labeled model $Y_2$ of
+Section~\ref{subsec:genus2homogeneous}. Write
+$E=\RR^2/g\ZZ^2$, with its origin one of the four ramification points
+of the pillowcase map. Fix a nonzero parity vector
+$\delta\in(\ZZ/2\ZZ)^2$. For a nonzero primitive integer vector
+$m\equiv\delta\pmod2$, project the straight segment
+\[
+ [0,gm/2]\subset\RR^2
+\]
+first to $E$ and then to $E/\{\pm1\}$. It joins the pole at the
+origin to the pole corresponding to $\delta/2$.
+
+\begin{lemma}[Primitive directions give simple curves]
+\label{lem:primitivepolearcs}
+Outside a Haar-null invariant subset of $Y_2$, the preceding segment
+projects to an embedded arc avoiding the two regular marked points.
+Its lift to the genus-two double cover is a nonseparating simple
+closed regular flat geodesic $\alpha_m$, with
+\begin{equation}
+ \ell_{q_X}(\alpha_m)=|gm|.
+ \label{eq:polearcflatlength}
+\end{equation}
+Opposite vectors give the same curve; distinct primitive directions
+modulo sign give distinct free homotopy classes.
+\end{lemma}
+
+\begin{proof}
+If two parameters $0<s,t<1$ on the segment identify on the pillowcase,
+then $(s-t)m\in2\ZZ^2$ or $(s+t)m\in2\ZZ^2$. Primitivity forces
+the corresponding scalar to be an even integer. The first case gives
+$s=t$, and the second is impossible. Likewise the interior contains no
+two-torsion point. The segment hits one of the additional regular marks
+only if one of its lifts $p,q$ lies on the closed rational circle
+$\RR gm/g\ZZ^2$. For each $m$ this is a null condition in the point
+fiber. The union over the countable set of primitive $m$ is still null
+and is invariant under the entire $SL_2(\RR)$ action.
+
+The preimage of an embedded arc joining two branch values of a double
+cover is a circle. Removing it leaves a connected cover, since the four
+other branch values still have nontrivial monodromy; thus the circle is
+nonseparating. At its endpoints the sphere flat angle $\pi$ doubles to
+$2\pi$, so the two lifted segments join to a regular flat geodesic.
+Its length is twice $|gm|/2$. Different directions give intersecting
+regular geodesics with distinct tangents at the Weierstrass point over
+the origin. Freely homotopic regular geodesics in a nonpositively curved
+flat metric lie in a flat cylinder and cannot intersect transversely.
+This proves the last assertion.
+\end{proof}
+
+Write $\ell_m(q_X)=\ell_X(\alpha_m)$ for the hyperbolic length of the
+same topological curve. Proposition~\ref{prop:coefffirstatom} identifies
+it as the position of the first atom of $\sigma^X_{\alpha_m}$. In
+particular, if a local cutoff $\chi_m$ is one near that atom and
+vanishes on the remaining support, then for a
+bounded length weight $H$,
+\begin{equation}
+ H(\ell_m)=
+ \frac{\langle\sigma^X_{\alpha_m},H(s)\chi_m(s)\rangle}
+      {\langle\sigma^X_{\alpha_m},\chi_m(s)\rangle}.
+ \label{eq:polearccoefficientweight}
+\end{equation}
+For arbitrary bounded Borel $H$, the same statement is interpreted
+using the already recovered first-atom location. No assertion that
+first-atom extraction is a bounded linear functional is being made.
+
+Choose an even $f\in C_c^2(\RR^2)$ supported in the unit disk, a bounded
+Borel function $h:(0,\infty)\to\CC$, and parameters $R\geq1$, $L>0$.
+Define
+\begin{equation}
+ \mathcal F_{\delta;f,h}^{R,L}(q_X)
+  =\frac1{2R^2}
+    \sum_{\substack{m\in\ZZ^2\ \mathrm{primitive}\\m\equiv\delta\ (2)}}
+       f(gm/R)\,h\bigl(\ell_m(q_X)/L\bigr).
+ \label{eq:polearcobservable}
+\end{equation}
+The factor $1/2$ identifies opposite directions. The function is
+well defined on $Y_2$: changes of lattice basis preserve the parity
+class and relabel the sum. More precisely, define the geometric formula
+on the invariant conull admissible set of
+Lemma~\ref{lem:primitivepolearcs} and set it to zero on its complement;
+this fixes a measurable representative of the same $L^2$ class.
+Averaging over the finite labeling choices
+gives observables on the unlabelled stratum, with the same norm bounds.
+Such an average is an average of selected families; it need not count
+their union without multiplicities.
+
+\subsection{Uniform rotation norms, including a sharp hyperbolic cutoff}
+\label{subsec:polearcnorms}
+
+Put
+\[
+ J=\begin{pmatrix}0&-1\\1&0\end{pmatrix},\qquad
+ A=\begin{pmatrix}1&0\\0&-1\end{pmatrix},\qquad
+ D_Bf(x)=(Bx)\cdot\nabla f(x).
+\]
+The notation $D_B$ here is a linear vector field on $\RR^2$.
+
+\begin{lemma}[Uniform primitive-vector bound]
+\label{lem:polearcprimitivebound}
+For every unimodular lattice $g\ZZ^2$ and every $R>0$,
+\begin{equation}
+ \#\{m\in\ZZ^2:\ m\ \mathrm{primitive},\ |gm|\leq R\}
+ \leq 2+2\pi R^2.
+ \label{eq:polearcprimitivebound}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Two nonparallel lattice vectors $u,v$ have $|\det(u,v)|\geq1$.
+If both have length at most $R$, their unoriented angular separation
+therefore has sine at least $R^{-2}$. For $R<1$ there is at most one
+primitive direction. For $R\geq1$, placing the directions on the circle
+of length $\pi$ shows that their number is at most
+$\pi/\arcsin(R^{-2})\leq\pi R^2$. Each direction contributes only
+the two opposite primitive vectors. The displayed bound covers both
+cases without rounding conventions.
+\end{proof}
+
+Rotation of the flat charts fixes the underlying conformal surface and
+the intrinsic pole-to-pole arcs. Consequently
+\[
+ \Theta\ell_m=0,
+\]
+and differentiation of~\eqref{eq:polearcobservable} under rotation
+only replaces $f$ by $D_Jf$. Set
+\[
+ C_*=1+\pi,\qquad
+ N_{f,h}=C_*\|h\|_\infty
+             \bigl(\|f\|_\infty^2+\|D_Jf\|_\infty^2\bigr)^{1/2}.
+\]
+The primitive-vector bound proves, uniformly in $R\geq1$ and $L>0$,
+\begin{equation}
+ \mathcal S_1(\mathcal F_{\delta;f,h}^{R,L})\leq N_{f,h}.
+ \label{eq:polearcuniformS1}
+\end{equation}
+This is global, including the modular cusp. Although the curve labels
+can jump as a regular mark crosses a selected arc, the exceptional walls
+are $SL_2$-invariant. Along almost every group orbit the labels are fixed
+under the natural marking, and the preceding derivatives are legitimate.
+Uniform bounds on the difference quotients give the corresponding strong
+$L^2$ generator statements.
+
+In particular, Theorem~\ref{thm:markedtorusmixing} now applies to two
+observables of the form~\eqref{eq:polearcobservable}, with
+\begin{equation}
+ |\operatorname{Corr}_t(\mathcal F,\mathcal G)|
+ \leq4\coth\pi\,(1+t)e^{-t}\,N_{f,h}N_{\widetilde f,\widetilde h},
+ \label{eq:polearccorrelation}
+\end{equation}
+uniformly in their two flat cutoffs and two hyperbolic-length scales.
+The hyperbolic weight may be the sharp cutoff
+$h(s)=\mathbf1_{s\leq1}$: its discontinuity costs no rotation derivative.
+If the flat weight is radial as well, the whole observable is
+$K$-invariant. In that case a sharp disk cutoff is also allowed directly,
+and the single-$K$-type matrix-coefficient bound gives the sharper estimate
+\begin{equation}
+ |\operatorname{Corr}_t(F,G)|
+ \leq\Xi(a_t)\|F^\circ\|_2\|G^\circ\|_2
+ \leq\frac4\pi(1+t)e^{-t}\|F^\circ\|_2\|G^\circ\|_2.
+ \label{eq:polearcKfixedcorrelation}
+\end{equation}
+No rotational smoothing is needed for these radial tests.
+
+\subsection{Control of the terminal derivative}
+\label{subsec:polearcterminal}
+
+For the derivative counting converse, require $h\in C^1$ and
+\[
+ H_0=\|h\|_\infty<\infty,\qquad
+ H_1=\sup_{s>0}s|h'(s)|<\infty.
+\]
+Wolpert's quasiconformal length inequality gives
+\begin{equation}
+ |V\ell_m|\leq2\ell_m,
+ \qquad |\Theta V\ell_m|\leq4\ell_m.
+ \label{eq:polearclengthderivatives}
+\end{equation}
+For completeness, the first inequality follows by lifting a
+$K$-quasiconformal map to the cyclic annular covers associated with the
+curve. Their conformal moduli are $\pi/\ell_X$ and $\pi/\ell_Y$;
+modulus distortion gives $K^{-1}\leq\ell_Y/\ell_X\leq K$.
+The map associated with $a_t$ has dilatation $e^{2|t|}$.
+For the second inequality use $\Theta\ell_m=0$ and
+$[\Theta,V]=\pm2W$, where $W$ is the generator of a rotated diagonal
+subgroup. The same first inequality applies to $W$.
+See also~\cite[Equation~(1.1)]{ShigaHyperbolicQC} for the quasiconformal
+inequality and its attribution to Wolpert.
+
+Let $F=\mathcal F_{\delta;f,h}^{R,L}$, and abbreviate
+\[
+ f_0=\|f\|_\infty,\quad f_K=\|D_Jf\|_\infty,\quad
+ f_A=\|D_Af\|_\infty,\quad f_{KA}=\|D_JD_Af\|_\infty.
+\]
+Direct differentiation and~\eqref{eq:polearclengthderivatives} give
+\begin{align}
+ \|VF\|_\infty
+  &\leq C_*\bigl(f_AH_0+2f_0H_1\bigr),\notag\\
+ \|\Theta VF\|_\infty
+  &\leq C_*\bigl(f_{KA}H_0+2f_KH_1+4f_0H_1\bigr).
+ \label{eq:polearcVnorms}
+\end{align}
+These constants are again independent of $R\geq1$ and $L>0$.
+No second derivative of $h$ occurs, because rotation fixes $\ell_m$.
+Thus $\mathcal S_1(VF)$, and hence $\mathcal S_1((4+V)F)$, have explicit
+uniform bounds. In particular the terminal identity extends to these
+observables:
+\begin{equation}
+ \int_1^T e^{4t}\operatorname{Corr}_t(F,(4+V)G)\,\dd t
+ =e^{4T}\operatorname{Corr}_T(F,G)
+   -e^4\operatorname{Corr}_1(F,G).
+ \label{eq:polearcterminalidentity}
+\end{equation}
+Here $G$ has a smooth length weight as above; invariance of probability
+measure gives $\mu(VG)=0$. This proves applicability of the integrated
+counting converse to these endpoints. It does not identify an individual
+curve sum with the finite affine return sum of the preceding section.
+Sharp cutoffs require a separate smoothing or boundary argument when
+the terminal derivative is used.
+
+\subsection{What the bridge retains}
+\label{subsec:polearcscope}
+
+For $h\equiv1$, the observable reduces to a primitive parity Siegel
+transform on the modular base and has no nonzero marked-point Fourier
+mode. For a disk cutoff and fixed $g$, elementary lattice counting and
+M\"obius inversion give
+\[
+ \frac12\#\{m\ \mathrm{primitive}:m\equiv\delta\ (2),\ |gm|\leq R\}
+ =\frac{\pi}{6\zeta(2)}R^2+O_g(R\log R)
+ =\frac1\pi R^2+O_g(R\log R).
+\]
+Indeed, only odd common divisors occur in a nonzero parity class, and
+$\sum_{d\ \mathrm{odd}}\mu(d)/d^2=4/(3\zeta(2))$. Adding the hyperbolic
+weight $h(\ell_m/L)$ can retain dependence on the two regular marks and
+uses the simple-curve first-atom data. For $h\equiv1$ the exact mean is
+\[
+ \mu(\mathcal F_{\delta;f,1}^{R,L})
+ =\frac1{6\zeta(2)}\int_{\RR^2}f(x)\,\dd x,
+\]
+by the primitive Siegel formula and the equal densities of the three
+nonzero parity classes.
+
+There is a useful fixed-surface sparsity bound. On a fixed compact
+$(X,q_X)$ put
+\[
+ C(X,q_X)=\sup_X\frac{|q_X|^{1/2}}{\dd s_{\rm hyp}}<\infty.
+\]
+The selected flat geodesic minimizes flat length in its free homotopy
+class, so comparison with the hyperbolic geodesic gives
+\[
+ |gm|=\ell_{q_X}(\alpha_m)
+ \leq C(X,q_X)\ell_X(\alpha_m).
+\]
+Consequently the whole selected family with hyperbolic length at most
+$L$ lies in the flat window $R=C(X,q_X)L$ and has size
+$O_{X,q_X}(L^2)$. It is a sparse family relative to the full genus-two
+$L^6$ simple-curve count. The bound is for a fixed surface and
+differential; no uniform comparison constant over moduli is asserted.
+
+Equations~\eqref{eq:polearccoefficientweight}--\eqref{eq:polearcVnorms}
+are a norm-controlled bridge for this selected family. They do not
+identify the full connected-simple-curve count with an affine return
+sum. Nor do they prove uniform stability of extracting first atoms from
+perturbed spectral or coefficient data: the shrinking-gap issue of
+Section~\ref{subsec:countnearcollision} remains. The output observables
+have controlled geometric norms, while the quantitative conditioning of
+the nonlinear coefficient extraction is a different question.
+
+\subsection{Affine displacement sums: an exact isometric model}
+\label{subsec:affinedisplacements}
+
+The homogeneous calculation can be tested on explicit geometric sums.
+These are the relative-period Siegel--Veech transforms discussed in
+\cite[Section~6.1]{AthreyaLagaceMollerRaum}.
+On the marked-torus model write a point as $(g,v_1,v_2)$, with the
+physical marked points understood modulo $g\ZZ^2$. For
+$f\in\mathscr S(\RR^2)$ define
+\[
+ S_{f,j}(g,v_1,v_2)=\sum_{m\in\ZZ^2}f(gm+v_j),\qquad
+ F_{f,j}=S_{f,j}-\int_{\RR^2}f(x)\,\dd x.
+\]
+The summands test the displacement vectors of straight segments from
+the torus origin to its $j$th marked point. These are flat geometric
+observables; a hyperbolic simple-curve interpretation requires a
+separate choice of a lift and of curve weights.
+
+Use the Fourier transform
+$\widehat f(\xi)=\int f(x)e^{-2\pi i x\cdot\xi}\dd x$.
+With $v_j=gu_j$, Poisson summation gives
+\[
+ F_{f,j}(g,u_1,u_2)=
+ \sum_{n\in\ZZ^2\setminus\{0\}}
+       \widehat f(g^{-T}n)e^{2\pi i n\cdot u_j}.
+\]
+Fiber Parseval followed by the usual Siegel mean formula for all
+nonzero lattice vectors gives the exact identity
+\begin{equation}
+ \|F_{f,j}\|_{L^2(Y_2)}^2=\|f\|_{L^2(\RR^2)}^2.
+ \label{eq:affinesiegelisometry}
+\end{equation}
+This is also the one-relative-mark case of
+\cite[Proposition~6.11]{AthreyaLagaceMollerRaum}.
+The level-two probability cover changes neither side: the integrand
+descends to the full modular quotient. By polarization and equivariance,
+\begin{equation}
+ \boxed{
+ \int_{Y_2}\overline{F_{f,j}(x)}F_{h,j}(a_tx)\,\dd\mu(x)
+ =\int_{\RR^2}\overline{f(x)}h(a_tx)\,\dd x.
+ }
+ \label{eq:affinesiegelexactcorr}
+\end{equation}
+Indeed the Fourier-side integral is
+$\int\overline{\widehat f(\xi)}\widehat h(a_{-t}\xi)\dd\xi$.
+These identities extend by density to $L^2$ tests, using the isometric
+definition of the centered transform when the original sum is unavailable.
+For indicator tests the variance identity is also
+\cite[Lemma~4]{AthreyaAffineLattices}; the mean is Lemma~3 there.
+For different relative marks, the analogous centered cross-correlation
+vanishes by integration in the two independent torus fibers.
+
+For the Gaussian $f(x)=e^{-\pi|x|^2}$, the formula becomes
+\begin{equation}
+ \int_{Y_2}\overline{F_{f,j}}F_{f,j}\circ a_t\,\dd\mu
+ =\frac1{\sqrt{(1+e^{2t})(1+e^{-2t})}}
+ =\frac1{2\cosh t}.
+ \label{eq:affinegaussiancorr}
+\end{equation}
+Thus an $e^{-t}$ correlation rate is attained by a natural smooth
+observable. More generally, substitution $x_1=e^{-t}u$ in
+\eqref{eq:affinesiegelexactcorr} gives, for Schwartz tests,
+\[
+ e^t\int\overline f(x)h(a_tx)\,\dd x
+ \longrightarrow
+ \left(\int_\RR\overline{f(0,y)}\,\dd y\right)
+ \left(\int_\RR h(u,0)\,\dd u\right).
+\]
+Schwartz domination justifies the limit.
+
+\subsection{Two marks: the rank-one divergence and its removal}
+\label{subsec:affineranktwo}
+
+The raw product $F_{f_1,1}F_{f_2,2}$ need not be in $L^2$, even for
+smooth rapidly decreasing tests. Its conditional squared norm is
+\[
+ A_1(g)A_2(g),\qquad
+ A_j(g)=\sum_{n\ne0}|\widehat f_j(g^{-T}n)|^2.
+\]
+For Gaussians $f_1=f_2=e^{-\pi|x|^2}$ the divergence can be seen
+exactly. Write the collinear frequency pairs as $(an,bn)$, where
+$n$ is primitive modulo sign and $a,b\in\ZZ\setminus\{0\}$.
+Primitive Siegel unfolding gives the rank-one contribution
+\[
+ \frac1{2\zeta(2)}\sum_{a,b\ne0}
+       \int_{\RR^2}e^{-2\pi(a^2+b^2)|x|^2}\,\dd x
+ =\frac1{4\zeta(2)}\sum_{a,b\ne0}\frac1{a^2+b^2}
+ =\infty.
+\]
+The divergence is logarithmic. More generally, if both $\int f_j$ are
+nonzero, Fourier continuity gives $A_j(g)\gg\varepsilon^{-1}$ when
+the dual lattice has a primitive vector of length $\varepsilon\ll1$;
+the cusp measure is comparable to $\varepsilon\dd\varepsilon$.
+Centering has removed zero frequencies but leaves precisely this
+collinear-frequency obstruction.
+
+There is an explicit $L^2$ replacement. Retain only the full-rank
+frequency matrices:
+\begin{equation}
+ H_{f_1,f_2}^{(2)}(g,u_1,u_2)
+ =\sum_{\substack{n_1,n_2\in\ZZ^2\\\det(n_1,n_2)\ne0}}
+ \widehat f_1(g^{-T}n_1)\widehat f_2(g^{-T}n_2)
+ e^{2\pi i(n_1\cdot u_1+n_2\cdot u_2)}.
+ \label{eq:affineranktwoobservable}
+\end{equation}
+The series is absolutely convergent on each fixed torus fiber.
+The rank restriction is invariant under the modular transition and
+under the $SL_2$ action. It is a fiber Fourier projection, not a
+positivity-preserving deletion of physical segments. It is defined
+fiberwise before global integrability has been proved; no orthogonal
+projection on the global $L^2$ space is being applied to the raw product.
+
+Here is a norm computation which proves global integrability. Put
+$a_j=|\widehat f_j|^2$ and let $\sigma_1(k)=\sum_{d\mid k}d$.
+Hermite normal form gives $\sigma_1(|k|)$ full-modular orbits of
+integer matrices of determinant $k\ne0$, each with trivial stabilizer.
+Thus Parseval and unfolding give
+\begin{equation}
+ \|H_{f_1,f_2}^{(2)}\|_2^2
+ =\sum_{k\ne0}\sigma_1(|k|)I_k(a_1,a_2),
+ \label{eq:affineranktwonorm}
+\end{equation}
+where, with probability-covolume Haar normalization,
+\[
+ I_k(a_1,a_2)
+ =\frac1{|k|\zeta(2)}
+  \int_{\RR^2\setminus\{0\}}\int_\RR
+  a_1(x)a_2\left(\frac{kJx}{|x|^2}+sx\right)
+  \,\dd s\,\dd x,
+ \qquad J(x_1,x_2)=(-x_2,x_1).
+\]
+For completeness the Haar-coordinate formula behind this expression is
+\[
+ g=\left[x,\frac{Jx}{|x|^2}+sx\right],\qquad
+ \dd g=\frac1{\zeta(2)}\,\dd x\,\dd s.
+\]
+The normalization follows by unfolding the primitive first-column
+Siegel transform: the stabilizer shifts $s$ by integers, and its mean
+is $\zeta(2)^{-1}\int f$. At level two each full-rank modular orbit
+splits into six orbits while Haar measure is divided by six, leaving
+\eqref{eq:affineranktwonorm} unchanged.
+
+An explicit Schwartz bound is convenient. Define
+\[
+ A(f)=\sup_{\xi\in\RR^2}
+       (1+|\xi|^2)^{3/2}|\widehat f(\xi)|.
+\]
+For $k>0$ the orbit integral is bounded by
+\[
+ I_{\pm k}\leq
+ A(f_1)^2A(f_2)^2
+ \int_G(1+k\operatorname{tr}(g^Tg))^{-3}\,\dd g
+ =\frac{\pi^2 A(f_1)^2A(f_2)^2}
+        {2\zeta(2)k(1+2k)^2}.
+\]
+One way to verify the last integral is the Gaussian identity
+\[
+ \int_G e^{-\alpha k\operatorname{tr}(g^Tg)}\,\dd g
+ =\frac{\pi^2}{\alpha k\zeta(2)}e^{-2\alpha k},
+ \qquad \alpha,k>0,
+\]
+followed by the Laplace representation of $(1+u)^{-3}$.
+Since $\sum_{k\geq1}\sigma_1(k)k^{-3}=\zeta(3)\zeta(2)$,
+\begin{equation}
+ \boxed{
+ \|H_{f_1,f_2}^{(2)}\|_2
+ \leq\frac\pi2\sqrt{\zeta(3)}\,A(f_1)A(f_2).
+ }
+ \label{eq:affineranktwoschwartz}
+\end{equation}
+
+Let $Df(x)=(Jx)\cdot\nabla f(x)$ and set $B(f)=A(f)+A(Df)$.
+Rotation commutes with the rank projection, so
+\[
+ \Theta H_{f_1,f_2}^{(2)}
+ =H_{Df_1,f_2}^{(2)}+H_{f_1,Df_2}^{(2)}.
+\]
+Therefore
+\begin{equation}
+ \mathcal S_1(H_{f_1,f_2}^{(2)})
+ \leq\frac\pi2\sqrt{\zeta(3)}\,B(f_1)B(f_2).
+ \label{eq:affineranktwoKnorm}
+\end{equation}
+The preceding mixing theorem now applies, with constants controlled
+explicitly by the four test functions. In particular,
+\[
+ \left|\left\langle H_{f_1,f_2}^{(2)},
+       H_{h_1,h_2}^{(2)}\circ a_t\right\rangle\right|
+ \leq\pi^2\zeta(3)\coth\pi\,(1+t)e^{-t}
+       B(f_1)B(f_2)B(h_1)B(h_2).
+\]
+The mean is zero because every retained fiber frequency is nonzero.
+
+\subsection{An exact Gaussian two-mark correlation}
+\label{subsec:affineranktwogaussian}
+
+Take $f_1=f_2=f=e^{-\pi|x|^2}$ and write $H^{(2)}=H_{f,f}^{(2)}$.
+The determinant-orbit calculation can be done at every time:
+\begin{equation}
+ \boxed{
+ \left\langle H^{(2)},H^{(2)}\circ a_t\right\rangle
+ =\frac{\pi}{\zeta(2)\cosh t}
+       \sum_{k=1}^\infty\frac{\sigma_1(k)}k
+                         e^{-4\pi k\cosh t}.
+ }
+ \label{eq:affineranktwogaussiancorr}
+\end{equation}
+To see this, the product of the Fourier coefficients is
+\[
+ \exp\bigl[-\pi\operatorname{tr}(Z^TC_tZ)\bigr],
+ \qquad C_t=I+a_{-2t},\qquad \det Z=k.
+\]
+Since $\sqrt{\det C_t}=2\cosh t$, an $SL_2$ change of variables
+reduces this to the radial Gaussian integral with
+$\alpha=2\pi\cosh t$. Summing the positive and negative determinant
+orbits gives~\eqref{eq:affineranktwogaussiancorr}. At $t=0$ this gives
+the exact squared norm. The identity
+\[
+ \sum_{k\geq1}\frac{\sigma_1(k)}k q^k
+ =-\sum_{n\geq1}\log(1-q^n),\qquad 0<q<1,
+\]
+also expresses the answer by the ordinary partition Euler product.
+The resulting correlation decays faster than exponentially in $t$.
+This strong decay is a feature of these particular Gaussian tests;
+it is consistent with the $e^{-t}$ one-mark example and the uniform
+tempered bound.
+For a finite evaluation, put $q=e^{-4\pi\cosh t}$. The elementary bound
+$\sigma_1(k)/k\leq k$ gives the explicit truncation estimate
+\[
+ 0\leq\sum_{k>N}\frac{\sigma_1(k)}kq^k
+ \leq\frac{q^{N+1}((N+1)-Nq)}{(1-q)^2}.
+\]
+This controls truncation of the analytic series. Floating-point
+evaluation of this bound is not an interval enclosure of the total
+computational error, and checking finitely many times is not a proof
+of the general mixing theorem.
+
+\subsection{Sharp boundaries and the rotation norm}
+\label{subsec:affinesharprotation}
+
+The exact isometry also displays a regularity cost of sharp cutoffs.
+For a bounded convex body $B\subset\RR^2$,
+\[
+ \|F_{\mathbf1_B,j}\circ k_\theta-F_{\mathbf1_B,j}\|_2^2
+ =\operatorname{area}(B\mathbin\triangle k_\theta B).
+\]
+The first variation of area under rotation, interpreted using the
+almost-everywhere outer normal of a convex boundary, gives
+\[
+ \operatorname{area}(B\mathbin\triangle k_\theta B)
+ =|\theta|\int_{\partial B}|Jx\cdot n(x)|\,\dd s+o(|\theta|).
+\]
+Unless $B$ is rotationally invariant, this rules out a finite
+$L^2$ rotation derivative. Equivalently, the sharp transform has
+angular Sobolev regularity of order $s<1/2$, but not $s\geq1/2$.
+The direct summation of tempered $K$-type estimates requires an
+order greater than $1/2$; the earlier theorem uses order one.
+
+This is a generic boundary-regularity phenomenon. It is not by
+itself the more specific arithmetic obstruction from the unusually
+flat McShane--Rivin norm ball. It explains why a smooth correlation
+bound cannot be applied to a sharp norm-ball count while leaving
+the observable norm unchanged. Here the body $B$ is held fixed in
+physical Euclidean coordinates. A cutoff depending only on the
+hyperbolic length $\ell_X(\alpha)$ is unchanged when the quadratic
+differential is rotated over the same conformal surface $X$, and
+does not incur this particular rotation loss. These two kinds of
+cutoffs must be distinguished. The fixed-surface primitive-lattice
+count, its M\"obius inversion, and its unsmoothing error remain
+distinct from the affine mean-square identities proved here.
+
+\paragraph{Finite computational companion.}
+The companion \path{experiments/counting_mixing/} checks exact finite
+algebra and selected one- and two-mark Gaussian formulas at $60$ and
+$90$ decimal working digits, including rank-two series/orbit comparisons.
+Analytic truncation bounds do not certify quadrature or roundoff.
+These fixtures prove neither general mixing nor the nonsquare genus-two
+model hypotheses; finite collinear growth does not prove divergence.
+Its README links results, review and generation records.
+

@@ -1,0 +1,851 @@
+\section{Filling-pair coefficients and a weighted mixing converse}
+\label{sec:pairconverse}
+
+The preceding converse criteria suggest retaining two independent
+sets of curve data.  This section carries that proposal through three
+concrete steps.  First, a tensor product of the coefficient construction
+recovers marked filling pairs, hence square-tiled differentials.
+Second, an exactly weighted count of Teichm\"uller orbit segments
+unfolds into a time integral of correlations.  Third, an elementary
+de-averaging argument converts an assumed counting remainder into
+a mixing rate.  An arithmetic torus calculation illustrates the
+additional cancellation needed to prove such a remainder.  The
+identities and conditional implications below do not constitute a new
+proof of Teichm\"uller mixing.
+
+\subsection{Two independent character variables retain the pair}
+\label{subsec:paircoefficients}
+
+Keep a closed marked hyperbolic surface $X$ as an auxiliary device,
+and let $\rho,\sigma$ be independent rank-two character variables.
+The length-valued product of Section~\ref{sec:globalfilters} can be
+tensored with itself, retaining two separate length coordinates:
+\[
+ \mathbf E_X(\rho)\boxtimes\mathbf E_X(\sigma)
+ =\sum_{C,D} T_C(\rho)T_D(\sigma)\,
+       (\nu_C^X\boxtimes\nu_D^X).
+\]
+Here $\boxtimes$ is the external product of locally finite discrete
+measures, and both $C$ and $D$ range over integral weighted
+multicurves.  The two variables are essential: multiplication in
+one character algebra would resolve crossings between $C$ and $D$,
+whereas their ordered pair is precisely the information required here.
+
+\begin{proposition}[The first corner of a pair coefficient]
+\label{prop:pairfirstcorner}
+The coefficient of $T_C(\rho)T_D(\sigma)$ is supported in
+\[
+ [\ell_X(C),\infty)\times[\ell_X(D),\infty),
+\]
+and has an isolated atom of mass one at
+$(\ell_X(C),\ell_X(D))$.  Its remaining support misses this corner.
+\end{proposition}
+
+\begin{proof}
+The one-variable unit-diagonal identity
+\eqref{eq:globaldiagonal} gives
+\[
+ \nu_C^X=\delta_{\ell_X(C)}+\tau_C^X,
+ \qquad \operatorname{supp}\tau_C^X
+        \subset(\ell_X(C),\infty),
+\]
+and similarly for $D$.  Expanding the external product proves the
+claim; local finiteness isolates the corner.  Each finite rectangle
+of source lengths involves only finitely many source configurations,
+so the argument also applies before taking any transform.
+\end{proof}
+
+After this extraction, the marked labels retain $i(C,D)$ and the
+topological filling condition.  Thus one can restrict to filling
+pairs and apply weights to their associated flat differentials.
+The auxiliary lengths $\ell_X$ provide the triangular extraction;
+the area of the resulting differential will be $i(C,D)$, a different
+quantity.  In particular, a bound on area is not a bound on both
+auxiliary hyperbolic lengths on the marked space.  Passing to an
+area cutoff and a mapping-class quotient is an additional operation,
+whose quantitative cost is not supplied by fixed-coefficient
+convergence.
+
+
+\subsection{Filling pairs as actual coordinates for the flow}
+\label{subsec:pairgeometry}
+
+For definiteness let $S$ be closed, oriented, and of genus $g\geq2$.
+A pair $(A,B)$ of nonzero measured foliations is \emph{filling} if
+\[
+ i(A,C)+i(B,C)>0\qquad\text{for every nonzero measured foliation }C.
+\]
+The condition is stronger than $i(A,B)>0$.  The realization theorem of
+Gardiner--Masur, also proved by Wentworth using harmonic maps, identifies
+filling pairs with marked nonzero holomorphic quadratic differentials
+\cite[Theorem~1.6 and Corollary~1.7]{WentworthGardiner}; see also
+\cite[Theorem~1.6]{AranaHerreraSquare2020} for the equivariant
+homeomorphism and its integral interpretation.
+Use the convention that $A=\mathcal V(q)$ is the vertical foliation
+with transverse measure $|dx|$, and $B=\mathcal H(q)$ is the horizontal
+foliation with transverse measure $|dy|$, in coordinates $q=dz^2$.
+Write $q(A,B)$ for the resulting differential.  Then
+\begin{align}
+ \operatorname{Area}(q(A,B))&=i(A,B),\\
+ g_tq(A,B)&=q(e^tA,e^{-t}B),
+ \qquad g_t=\operatorname{diag}(e^t,e^{-t}).
+ \label{eq:pairgeometryflow}
+\end{align}
+In particular
+\[
+ \widehat q(A,B):=
+ q\left(\frac{A}{\sqrt{i(A,B)}},
+         \frac{B}{\sqrt{i(A,B)}}\right)
+\]
+has unit area.  This is a genuine parametrization of points of the
+flow space; the two foliations are the stable and unstable data of a
+single differential, rather than two unrelated curves.
+
+For an integral pair
+$A=\sum_i a_i\alpha_i$, $B=\sum_j b_j\beta_j$ in minimal position,
+there is a concrete realization.  Put a rectangle of horizontal width
+$a_i$ and vertical height $b_j$ at each intersection of $\alpha_i$
+with $\beta_j$, and glue the sides in the cyclic orders supplied by
+the embedded curves.  The filling condition makes the complementary
+regions disks.  Minimal position excludes bigons.  A complementary
+$2k$-gon yields total angle $k\pi$, hence a zero of order $k-2$;
+$k=2$ gives a regular point.  Integral side lengths subdivide the
+rectangles into unit squares, with edge identifications by translations
+or half-turns.  The total number of squares is
+\[
+ \sum_{i,j}a_i b_j i(\alpha_i,\beta_j)=i(A,B).
+\]
+Thus the discrete objects suggested by the pair coefficients are
+precisely square-tiled half-translation surfaces.  Translation surfaces
+form the subcollection in which the half-translation structure has
+trivial linear holonomy.  Formula~\eqref{eq:pairgeometryflow} is then
+visible by stretching and contracting the rectangles.
+
+\subsection{The correct quotient and the two different counting scales}
+\label{subsec:pairquotient}
+
+Let $\Gamma=\operatorname{Mod}(S)$.  Equivariance of the pair
+parametrization identifies the stabilizer of the measured pair with
+the finite automorphism group of its differential:
+\[
+ \operatorname{Stab}_\Gamma(A,B)
+ =\operatorname{Stab}_\Gamma(A)\cap\operatorname{Stab}_\Gamma(B).
+\]
+For integral pairs, finiteness also follows by acting on the finite
+filling graph $A\cup B$ and then on its complementary disks; for
+general measured foliations it follows from the realized conformal
+automorphism group. It matters here that
+one fixes the measured foliations, including their scales.  Stabilizers
+of projective foliations can contain nontrivial flow translations.
+
+One simultaneous $\Gamma$-orbit of a filling pair represents just one
+point in moduli space and has constant intersection number.  To obtain
+a growing family, prescribe the two curve types separately and take
+the diagonal quotient:
+\[
+ \bigl(\Gamma\alpha\times\Gamma\beta\bigr)_{\mathrm{fill}}/\Gamma.
+\]
+If $\Gamma_\alpha=\operatorname{Stab}_\Gamma(\alpha)$ and
+$\Gamma_\beta=\operatorname{Stab}_\Gamma(\beta)$, its classes are the
+relevant double cosets in
+$\Gamma_\alpha\backslash\Gamma/\Gamma_\beta$, represented by
+$(\alpha,\phi\beta)$.  For an orbifold volume comparison the natural
+weight of such a class is
+\[
+ \frac{1}{|\Gamma_\alpha\cap
+                \phi\Gamma_\beta\phi^{-1}|}.
+\]
+This is the same stabilizer factor appearing in the square-tiled
+count of \cite[Section~1 and Section~3]{AranaHerreraSquare2020}.
+
+Fix a connected component $\mathcal Q$ of a stratum and put
+$h=\dim_{\mathbb C}\mathcal Q$.  The real period-coordinate dimension
+of its cone is $2h$, and the unit-area locus has real dimension $2h-1$.
+If $D_r$ multiplies every period by $r$, then area is multiplied by
+$r^2$.  With the appropriate period lattice and its covolume fixed,
+Lebesgue measure $\nu$ scales by
+\[
+ \nu(D_r E)=r^{2h}\nu(E).
+\]
+Consequently an \emph{area} cutoff $L$ has natural count exponent $h$,
+whereas a common \emph{linear} scale $R=\sqrt L$ has exponent $2h$.
+These conventions must not be interchanged when converting powers
+into rates in flow time.
+
+For the closed principal quadratic stratum $h=6g-6$.  For a
+quadratic stratum with $n$ specified singularities, including marked
+regular points, $h=2g-2+n$ when the differential is not a square;
+the corresponding square locus has $h=2g-1+n$.
+Lower-dimensional strata require their own period-coordinate lattice
+and Masur--Veech measure.  The ambient product of two full-dimensional
+Thurston measures cannot serve as their volume form.  Likewise,
+counting all square-tiled surfaces in a stratum does not by itself
+approximate an arbitrary affine invariant measure on a smaller locus.
+
+\subsection{The existing square-tiled counting theorem and the new target}
+\label{subsec:pairliterature}
+
+The passage from pairs to square tilings is established mathematics,
+not a new consequence of the coefficient construction.
+Arana-Herrera's effective theorem counts square-tiled surfaces in a
+fixed connected component with prescribed horizontal and vertical
+multicurve types, with a power-saving error in the area cutoff
+\cite[Theorem~1.1]{AranaHerreraSquareEffective}.  Its proof explicitly
+passes through Eskin--Mirzakhani--Mohammadi orbit counting and effective
+horosphere equidistribution, using exponential Teichm\"uller mixing
+\cite[Theorem~3.2 and its proof]{AranaHerreraSquareEffective}.
+Using that estimate to recover mixing would therefore not provide an
+independent proof of mixing.
+
+There is a useful distinction already visible in that paper.
+When one foliation type is fixed and the other is unrestricted,
+standard lattice counting replaces the mapping-class-orbit estimate
+\cite[Theorem~3.9]{AranaHerreraSquareEffective}.
+This provides a tractable elementary benchmark.  It does not control
+arbitrary initial and terminal observables at long times: their weights
+must still be tracked through the reciprocal scaling in
+\eqref{eq:pairgeometryflow}.
+
+
+\subsection{What refining the coefficient mesh actually proves}
+
+There are two independent limiting operations: approximation of a phase-space
+integral by rational points, and factorization of that integral under a long
+flow.  The first can be effective without implying the second.
+Here is a precise local calculation.  Put
+\[
+ A_t=\operatorname{diag}(e^t I_d,e^{-t}I_d),\qquad
+ H_t(x)=F(x)G(A_tx),
+\]
+where $F\in C_c^1(\mathbb R^{2d})$ has support in a fixed compact set $K$ and
+$G\in C_b^1(\mathbb R^{2d})$.  For $R\geq1$ define
+\[
+ Q_R(t)=R^{-2d}\sum_{k\in\mathbb Z^{2d}}H_t(k/R),\qquad
+ I(t)=\int_{\mathbb R^{2d}}H_t(x)\,dx.
+\]
+Then, for $t\geq0$,
+\begin{equation}\label{eq:pairquadrature}
+ |Q_R(t)-I(t)|\leq C_K R^{-1}e^t
+       \|F\|_{C^1}\|G\|_{C^1}.
+\end{equation}
+Indeed, partition space into cubes of side $R^{-1}$, compare the value at one
+corner with the integral on its cube, and use
+\[
+ \|\nabla H_t\|_\infty
+ \leq \|\nabla F\|_\infty\|G\|_\infty
+       +e^t\|F\|_\infty\|\nabla G\|_\infty.
+\]
+Only $O_K(R^{2d})$ cubes contribute.  A fixed smooth density can be absorbed
+in $F$.  To model unit-area data by an ambient lattice, one can first use a
+smooth radial cutoff in a compact area shell bounded away from area zero;
+radial normalization is then smooth.  This local argument does not supply
+uniform estimates across arbitrarily many period-coordinate charts, their
+boundaries, or the cusp.
+
+At the diagonal scale $R=e^t$, the displayed error has no decay.
+Taking $R=e^{\sigma t}$, with $\sigma>1$, gives a quadrature error
+$O(e^{-(\sigma-1)t})$.  This removes the resolution obstruction in this
+particular local model.  It does not evaluate the remaining integral $I(t)$.
+For Schwartz data, Poisson summation makes the distinction exact:
+\begin{equation}\label{eq:pairpoissonzero}
+ Q_R(t)=\sum_{n\in\mathbb Z^{2d}}\widehat H_t(Rn)
+       =I(t)+\sum_{n\ne0}\widehat H_t(Rn).
+\end{equation}
+The zero Poisson frequency is the two-time integral itself, not the product
+of its one-time means.  Suppressing the nonzero Poisson frequencies therefore
+proves accurate quadrature, not mixing.  On the quotient, one must still
+analyze the sum over changes of marking that returns $A_tK$ to a chosen
+collection of charts.
+
+Even exact sampling identities do not force mixing.  On
+$\mathbb R/\mathbb Z$, with $g_t(x)=x+t$ and
+$F(x)=G(x)=\cos(2\pi x)$,
+\[
+ \int_0^1F(x)G(g_tx)\,dx=\tfrac12\cos(2\pi t).
+\]
+For every integer $R\geq3$, the corresponding equal-mesh average is exactly
+this integral, by finite Fourier orthogonality.  Both means vanish, while the
+correlation does not decay.  This example isolates the logical issue; it is
+not a model of the full geometry of a stratum.
+
+
+
+\subsection{An exact weighted bisector kernel}
+\label{subsec:twopointkernel}
+
+There is a concrete discrete count whose remainder does imply mixing.
+The necessary weight can be specified exactly, and the passage from a
+cumulative count to a correlation has an elementary quantitative proof.
+This construction uses the full unit cotangent bundle, with its
+Masur--Veech measure supported on the principal stratum; it is not an
+automatic statement for an arbitrary lower-dimensional stratum or
+affine invariant measure.
+
+Let $S$ be closed of genus $g\geq2$, put $h=6g-6$, and replace the
+mapping class group by a torsion-free finite-index subgroup $\Gamma$.
+This removes stabilizer factors. Write
+\[
+ Y=\Gamma\backslash Q^1\T(S),\qquad
+ B=\Gamma\backslash\T(S),
+\]
+and normalize the invariant measure $\mu$ on $Y$ to have mass one.
+Its projection $m$ to $B$ also has mass one. Use the same notation for
+the lifted measures, and disintegrate
+\[
+ \dd\mu(q)=\dd s_x(q)\,\dd m(x),\qquad q\in S(x),
+\]
+where $S(x)=\pi^{-1}(x)$ and $s_x$ is a probability measure. The
+Teichm\"uller polar-coordinate Jacobian $J_x(q,t)>0$ is defined almost
+everywhere by
+\begin{equation}
+ \dd m\bigl(\pi(g_tq)\bigr)
+   =J_x(q,t)\,\dd s_x(q)\,\dd t.
+ \label{eq:twopointpolar}
+\end{equation}
+This is the polar-coordinate formula of
+\cite[Section 2.4, equation (2.3)]{ABEMPolar}. We use the conventional
+Teichm\"uller time $g_t=\diag(e^t,e^{-t})$.
+The equality is an equality of measures under the map
+$(q,t)\mapsto\pi(g_tq)$ on the marked universal space, with $t>0$;
+it is not a claim that this map is one-to-one on the quotient $B$.
+
+Let $D\subset\T(S)$ be a measurable fundamental domain. For $x,y\in D$
+and $\gamma\in\Gamma$, let
+\[
+ \ell_\gamma=d_{\T}(x,\gamma y),\qquad
+ q_\gamma=q_s(x,\gamma y)\in S(x)
+\]
+be the length and initial unit quadratic differential of the unique
+Teichm\"uller segment. Its terminal differential, transported to
+$S(y)$, is $\gamma^{-1}g_{\ell_\gamma}q_\gamma$.
+For bounded observables $F,G$ on $Y$, understood through their
+$\Gamma$-invariant lifts, define
+\begin{equation}
+ \begin{split}
+ K_T^{F,G}(x,y)
+  =\sum_{\substack{\gamma\in\Gamma\\1\leq\ell_\gamma\leq T}}
+   \frac{e^{h\ell_\gamma}}{J_x(q_\gamma,\ell_\gamma)}\,
+   F(q_\gamma)\,
+   G\bigl(\gamma^{-1}g_{\ell_\gamma}q_\gamma\bigr).
+ \end{split}
+ \label{eq:twopointkernel}
+\end{equation}
+The lower cutoff avoids the polar singularity at zero. The sum is
+finite for fixed $x,y,T$. Define it for $m\times m$-almost every
+$(x,y)$ where the polar data are regular for all contributing
+$\gamma$. Such a set has full measure, since $\Gamma$ is
+countable; values on its complement can be assigned arbitrarily.
+This convention makes no assertion about an exceptional prescribed
+pair of basepoints.
+
+\begin{proposition}[Exact unfolding of the weighted discrete count]
+\label{prop:twopointunfolding}
+For bounded $F,G$ and $T\geq1$,
+\begin{equation}
+ \begin{split}
+ A_{F,G}(T)
+ &:=\int_D\int_D K_T^{F,G}(x,y)\,\dd m(y)\,\dd m(x)\\
+ &=\int_1^T e^{ht}
+      \left(\int_Y F(q)G(g_tq)\,\dd\mu(q)\right)\dd t.
+ \end{split}
+ \label{eq:twopointexact}
+\end{equation}
+The same identity holds for $F,G\in L^2(\mu)$ whenever the
+almost-everywhere kernel is interpreted through the corresponding
+absolutely integrable unfolded expression.
+\end{proposition}
+
+\begin{proof}
+First use nonnegative functions, so Tonelli's theorem applies.
+The $y$-integral over $D$ and the sum over $\gamma$ unfold to an
+integral over $\T(S)$. Substitute $z=\pi(g_tq)$ with $q\in S(x)$.
+The factor $J_x(q,t)$ from~\eqref{eq:twopointpolar} cancels its
+reciprocal in~\eqref{eq:twopointkernel}, giving
+\[
+ \int_D\int_1^T\int_{S(x)}
+     e^{ht}F(q)G(g_tq)\,\dd s_x(q)\,\dd t\,\dd m(x).
+\]
+Disintegration gives~\eqref{eq:twopointexact}. The integral of the
+absolute value is finite for bounded functions, and for $L^2$
+functions it is at most
+\[
+ \|F\|_2\|G\|_2\int_1^T e^{ht}\,\dd t
+\]
+by invariance and Cauchy--Schwarz. Thus the signed or complex-valued
+identity follows as well.
+\end{proof}
+
+The count is genuinely discrete before the basepoint integrals are
+taken. It records both the initial and the terminal differential,
+and its geometric weight is explicit. The identity does not prove
+its asymptotic: that is the new counting theorem one would need.
+
+\subsection{Removing the time average with a controlled loss}
+\label{subsec:twopointdeaverage}
+
+The next lemma applies to any probability-preserving flow. Write
+$U_tG=G\circ g_t$ for its strongly continuous unitary action on
+$L^2(\mu)$, and let $V$ be the infinitesimal generator, so that
+$\partial_tU_tG=U_tVG$ on its domain. Put
+\[
+ C_{F,G}(t)=\int_Y F\,(G\circ g_t)\,\dd\mu,
+ \qquad M_{F,G}=\mu(F)\mu(G).
+\]
+There is no complex conjugation in this notation; the usual
+Hermitian correlation is obtained by replacing $F$ by $\overline F$.
+
+\begin{theorem}[A cumulative counting converse]
+\label{thm:twopointconverse}
+Suppose, for some $\delta>0$, that
+\begin{equation}
+ \left|\int_1^T e^{ht}C_{F,G}(t)\,\dd t
+       -M_{F,G}\frac{e^{hT}-e^h}{h}\right|
+ \leq A(F,G)e^{(h-\delta)T},\qquad T\geq1.
+ \label{eq:twopointcountassumption}
+\end{equation}
+Let $k\geq1$, $F\in L^2(\mu)$, and
+$G\in\operatorname{Dom}(V^k)$. Then, for $t\geq2$,
+\begin{equation}
+ \begin{split}
+ |C_{F,G}(t)-M_{F,G}|
+ &\leq C_{h,\delta,k}
+    \bigl(A(F,G)+\|F\|_2\|V^kG\|_2\bigr)
+       e^{-\delta k t/(k+1)}.
+ \end{split}
+ \label{eq:twopointmixrate}
+\end{equation}
+Consequently a norm-controlled remainder for the discrete kernel
+\eqref{eq:twopointkernel} gives a norm-controlled mixing estimate.
+For one flow derivative the exponent is $\delta/2$. With arbitrarily
+many controlled flow derivatives one obtains every exponent
+$\eta<\delta$, at the cost of a higher regularity norm. No endpoint
+rate $\delta$ follows from this single-test estimate alone;
+Theorem~\ref{thm:twopointfullrate} below gives a stronger conclusion
+for generator-differentiated endpoint weights.
+\end{theorem}
+
+\begin{proof}
+Let $E(T)$ be the expression inside absolute values
+in~\eqref{eq:twopointcountassumption}, and set
+$R(T)=e^{-hT}E(T)$. Then $|R(T)|\leq A(F,G)e^{-\delta T}$ and,
+distributionally (in fact continuously here),
+\begin{equation}
+ R'(T)+hR(T)=C_{F,G}(T)-M_{F,G}.
+ \label{eq:twopointderivative}
+\end{equation}
+Choose a smooth, compactly supported kernel $\rho$ on $(-1,1)$ with
+\[
+ \int\rho(u)\,\dd u=1,\qquad
+ \int u^j\rho(u)\,\dd u=0\quad(1\leq j<k),
+\]
+and put $\rho_\varepsilon(u)=\varepsilon^{-1}\rho(u/\varepsilon)$.
+For $k>1$ this kernel need not be nonnegative. Integration by parts
+in~\eqref{eq:twopointderivative} gives, for $0<\varepsilon\leq1$,
+\[
+ \left|\int\rho_\varepsilon(u)
+       \bigl(C_{F,G}(t+u)-M_{F,G}\bigr)\,\dd u\right|
+ \leq C_{h,\delta,k}A(F,G)\varepsilon^{-1}e^{-\delta t}.
+\]
+On the other hand,
+\[
+ C_{F,G}^{(k)}(t)
+   =\int F\,U_tV^kG\,\dd\mu,
+ \qquad |C_{F,G}^{(k)}(t)|
+   \leq\|F\|_2\|V^kG\|_2.
+\]
+Taylor's formula and the vanishing moments therefore bound the
+difference between the smoothed correlation and its value at $t$
+by $C_k\varepsilon^k\|F\|_2\|V^kG\|_2$. Choosing
+\[
+ \varepsilon=e^{-\delta t/(k+1)}
+\]
+proves~\eqref{eq:twopointmixrate}.
+\end{proof}
+
+Only derivatives along the flow enter this last step. In particular,
+it does not differentiate the spatially stretched observable
+$G\circ g_t$ in an expanding transverse direction. This removes the
+aliasing difficulty from the \emph{de-averaging step}; the difficulty
+of proving the weighted count itself remains.
+
+A convenient sufficient counting hypothesis is the almost-everywhere
+bisector estimate
+\begin{equation}
+ \begin{split}
+ K_T^{F,G}(x,y)
+  &=\frac{e^{hT}-e^h}{h}\,
+      f_F(x)f_G(y)+\mathcal E_T^{F,G}(x,y),\\
+ f_F(x)&=\int_{S(x)}F\,\dd s_x,\qquad
+ f_G(y)=\int_{S(y)}G\,\dd s_y,\\
+ |\mathcal E_T^{F,G}(x,y)|
+  &\leq C(x,y)\,\mathcal N(F)\mathcal N(G)
+          e^{(h-\delta)T},\qquad
+ C\in L^1(D\times D,m\times m).
+ \end{split}
+ \label{eq:twopointpointwise}
+\end{equation}
+Integrating gives~\eqref{eq:twopointcountassumption} with
+$A(F,G)=\|C\|_1\mathcal N(F)\mathcal N(G)$. A direct estimate
+for the averaged kernel is sufficient and is weaker than this
+pointwise hypothesis. Uniformity over the observables, the two
+basepoints, and all large real values of $T$ is part of the assertion;
+one unweighted total count does not supply it.
+
+
+A flow eigenfunction checks that the weighted hypothesis detects an
+actual spectral obstruction. If an admissible nonzero test $G$ satisfies
+$U_tG=e^{i\omega t}G$, $\mu(G)=0$, and $\|G\|_2=1$, take
+$F=\overline G$. Then exact unfolding gives
+\[
+ A_{F,G}(T)
+ =\frac{e^{(h+i\omega)T}-e^{h+i\omega}}{h+i\omega},
+\]
+whose size is comparable to $e^{hT}$ for large $T$. It violates
+every positive-saving estimate in
+\eqref{eq:twopointcountassumption}. This test is available only if
+the asserted counting estimate covers the relevant observables;
+an unweighted count does not test this eigenmode.
+
+\subsection{A derivative endpoint weight preserves the full exponent}
+\label{subsec:twopointderivativeweight}
+
+For a counting estimate uniform over endpoint observables, there is
+a stronger converse than temporal smoothing. One can differentiate
+the \emph{endpoint test} inside the discrete count and use an exact
+identity, without differentiating an asymptotic formula.
+
+\begin{theorem}[A counting converse with no exponent loss]
+\label{thm:twopointfullrate}
+Use the notation of Proposition~\ref{prop:twopointunfolding}. Let
+$F\in L^2(\mu)$ and $G\in\operatorname{Dom}(V)$, and suppose that
+\[
+ H_G=(h+V)G
+\]
+is an admissible terminal test for the weighted counting estimate.
+Assume, for some $0<\delta\leq h$, that
+\begin{equation}
+ \left| A_{F,H_G}(T)
+       -\mu(F)\mu(H_G)\frac{e^{hT}-e^h}{h}\right|
+ \leq A(F,H_G)e^{(h-\delta)T},\qquad T\geq1.
+ \label{eq:twopointderivativecount}
+\end{equation}
+Then the centered correlation
+$\operatorname{Corr}_{F,G}(T)=C_{F,G}(T)-\mu(F)\mu(G)$ satisfies
+\begin{equation}
+ \begin{split}
+ |\operatorname{Corr}_{F,G}(T)|
+ &\leq A(F,(h+V)G)e^{-\delta T}\\
+ &\quad+e^{-h(T-1)}
+       |\operatorname{Corr}_{F,G}(1)|.
+ \end{split}
+ \label{eq:twopointfullrate}
+\end{equation}
+In particular, the counting saving $\delta$ gives the same
+mixing exponent $\delta$.
+\end{theorem}
+
+\begin{proof}
+Invariance of $\mu$ gives $\mu(VG)=0$, because the integral is a
+continuous functional on $L^2(\mu)$ and
+$\partial_tU_tG=U_tVG$. Hence $\mu(H_G)=h\mu(G)$.
+The exact unfolding and the fundamental theorem of calculus give
+\begin{align}
+ A_{F,(h+V)G}(T)
+  &=\int_1^T e^{ht}
+       \bigl(hC_{F,G}(t)+C_{F,G}'(t)\bigr)\,\dd t\notag\\
+  &=e^{hT}C_{F,G}(T)-e^h C_{F,G}(1).
+ \label{eq:twopointfundamental}
+\end{align}
+Subtracting the main term in~\eqref{eq:twopointderivativecount}
+therefore gives exactly
+\begin{equation}
+ E_{F,(h+V)G}(T)
+  =e^{hT}\operatorname{Corr}_{F,G}(T)
+       -e^h\operatorname{Corr}_{F,G}(1).
+ \label{eq:twopointfullidentity}
+\end{equation}
+Divide by $e^{hT}$ and use the counting remainder.
+\end{proof}
+
+For example, if the count is uniform in a norm $\mathcal N$ with
+\[
+ A(F,H)\leq C\mathcal N(F)\mathcal N(H),
+\]
+the norm cost is explicit:
+\begin{equation}
+ \begin{split}
+ |\operatorname{Corr}_{F,G}(T)|
+ &\leq C\mathcal N(F)
+       \bigl(h\mathcal N(G)+\mathcal N(VG)\bigr)e^{-\delta T}\\
+ &\quad+e^{-h(T-1)}
+       \|F-\mu(F)\|_2\|G-\mu(G)\|_2.
+ \end{split}
+ \label{eq:twopointfullnorm}
+\end{equation}
+For a suitable smooth norm on compactly supported observables,
+this is one additional derivative along the flow in the terminal
+test. On a noncompact space, any growth of the coefficients of
+$V$ in the chosen norm must be retained in that estimate.
+The terminal weight $(h+V)G$ can have either sign, so the counting
+hypothesis must accommodate signed weights with a quantitative
+norm bound.
+
+The distinction from Theorem~\ref{thm:twopointconverse} is precise.
+If only the primitive estimate for the particular pair $(F,G)$ is
+available, temporal smoothing gives $\delta k/(k+1)$ with $k$
+flow derivatives. If the same weighted counting theorem also
+applies to $(F,(h+V)G)$, the exact identity above preserves
+$\delta$. Thus exponent loss is not intrinsic to the converse
+for a sufficiently rich family of endpoint weights.
+
+In operator notation, the weighted time integral is governed by
+$h+V$; inserting $(h+V)G$ removes this integral by an exact
+boundary evaluation. No spectral gap is needed for this
+algebraic step. The unresolved input is the norm-controlled
+remainder for the corresponding discrete weighted count.
+
+There is a corresponding improvement of the conditional cusp
+calculation. Suppose bounded observables can be cut off at height
+$H$ with correlation and mean errors $O(e^{-aH})$. Suppose the
+counting bound for the cutoff pair
+\[
+ \bigl(F_H,(h+V)G_H\bigr)
+\]
+has constant $O(e^{bH})$, including the derivative of the cutoff.
+Then~\eqref{eq:twopointfullrate} gives, after controlling the
+boundary term,
+\[
+ |\operatorname{Corr}_{F,G}(t)|
+   \ll e^{bH-\delta t}+e^{-aH}+e^{-ht}.
+\]
+For $a>0$, $b\geq0$, and $0<\delta\leq h$, choose
+$H=\delta t/(a+b)$ to obtain
+\begin{equation}
+ \eta=\frac{\delta a}{a+b}.
+ \label{eq:twopointfullcusprate}
+\end{equation}
+As before, unbounded observables require a norm-controlled tail
+estimate in place of a bound on discarded measure alone.
+
+
+\subsection{Comparison with the usual bisector count}
+\label{subsec:twopointjacobian}
+
+The exact weight $e^{ht}/J_x(q,t)$ cannot simply be omitted.
+To compare normalizations, let $\mu_0$ be the local-product
+normalization of~\cite[Section 2.2]{ABEMPolar} and put
+$V_0=\mu_0(Y)$. Our probability normalization is
+$\mu=\mu_0/V_0$. The conditional probability measures $s_x$ are
+unchanged, whereas $m=m_0/V_0$ and $J_x=J_{0,x}/V_0$.
+Use the canonical Hubbard--Masur factors $\lambda^\pm$ belonging
+to $\mu_0$. For endpoints in a fixed compact subset of the principal
+stratum, and for segments spending at least half their time in a
+suitable larger compact set,
+\cite[Proposition 2.5]{ABEMPolar} then gives
+\begin{equation}
+ J_x(q,t)
+   =V_0^{-1}e^{ht}\lambda^-(q)\lambda^+(g_tq)
+       +O(e^{(h-\alpha)t}).
+ \label{eq:twopointHM}
+\end{equation}
+If the endpoint factors are bounded away from zero on the sets
+under consideration, then, uniformly there for sufficiently large $t$,
+the relative error in~\eqref{eq:twopointHM} is less than $1/2$.
+Taking the reciprocal yields
+\begin{equation}
+ \frac{e^{ht}}{J_x(q,t)}
+   =\frac{V_0}{\lambda^-(q)\lambda^+(g_tq)}
+      +O(e^{-\alpha t}).
+ \label{eq:twopointinverseHM}
+\end{equation}
+Thus the natural approximation is an ordinary bisector count with
+the two endpoint observables divided by the corresponding
+Hubbard--Masur factors, with the factor $V_0$. Usual bisector counts
+often use the direction pointing back from the terminal point;
+that convention replaces the terminal differential here by its
+negative and requires the corresponding substitution in $G$.
+There are three distinct estimates to check:
+the weighted bisector remainder, the accumulated error in replacing
+the exact Jacobian, and the contribution of segments failing the
+recurrence or compactness conditions. Formula~\eqref{eq:twopointHM}
+is not a global uniform asymptotic.
+
+This optional comparison also has a dependency worth making
+explicit: the proof of~\cite[Proposition 2.5 and Section 3.2]{ABEMPolar}
+uses Forni's contraction estimate for the Hodge norm of the
+Kontsevich--Zorich cocycle, quoted there as Theorem 3.3. The exact
+Jacobian unfolding and the elementary de-averaging theorem above
+do not use that estimate. Invoking the Hubbard--Masur asymptotic
+would, however, retain this part of the existing cocycle machinery.
+
+Effective bisector counts are already part of
+\cite[Section 10]{AranaHerreraLattice}; those results are obtained
+from exponential mixing. They locate the strength of the required
+counting statement, but do not give an independent proof of mixing
+when inserted into the converse above. An independent derivation
+from coefficient distributions or a different counting mechanism
+would have to establish the required weights and uniformity.
+
+For completeness, the noncompact loss for the single-test smoothing
+argument of Theorem~\ref{thm:twopointconverse} can also be computed. For bounded
+observables, a discarded mass $O(e^{-aH})$ gives a correlation cutoff
+error of the same order by invariance. For general $L^2$ observables
+one must instead assume a corresponding norm-controlled tail estimate.
+Suppose cutoffs at height $H$ have this error, the counting
+constant for cutoff observables grows as $e^{bH}$, and their $k$th
+flow-derivative bounds are uniform. That smoothing proof gives an
+error of the form
+\[
+ \varepsilon^k+
+      \varepsilon^{-1}e^{bH-\delta t}+e^{-aH}.
+\]
+Balancing the three terms yields
+\begin{equation}
+ \eta_k=\frac{\delta}{1+b/a+1/k}.
+ \label{eq:twopointcusprate}
+\end{equation}
+This last formula is conditional on the stated cutoff estimates.
+If the product of the relevant $k$th derivative norm and source
+$L^2$ norm grows instead as $e^{dH}$, the same calculation gives
+\[
+ \eta_k=\frac{\delta}{1+b/a+(1+d/a)/k}.
+\]
+For fixed growth rates with $d=0$, increasing $k$ approaches
+$\delta a/(a+b)$. These formulae do not establish any of the
+required cusp or cutoff estimates.
+
+
+\subsection{A completely explicit arithmetic two-endpoint calculation}
+
+
+The modular case exhibits the additional cancellation that a two-endpoint
+count must detect.  If
+\[
+ \gamma=\begin{pmatrix}a&b\\c&d\end{pmatrix}\in\mathrm{SL}_2(\mathbb Z),
+ \qquad c>0,
+\]
+then
+\begin{equation}\label{eq:pairbruhat}
+ \gamma=
+ \begin{pmatrix}1&a/c\\0&1\end{pmatrix}
+ \begin{pmatrix}0&-1/c\\c&0\end{pmatrix}
+ \begin{pmatrix}1&d/c\\0&1\end{pmatrix}.
+\end{equation}
+Modulo left and right integral unipotents, the two coordinates are
+$a/c,d/c\pmod1$, with the coupled congruence $ad\equiv1\pmod c$.
+They are initial and terminal horocyclic coordinates; the corresponding
+cusp images are $\gamma\infty=a/c$ and
+$\gamma^{-1}\infty=-d/c$.  They should not be identified, without an
+additional unfolding argument, with arbitrary phase-space flow boxes.
+
+Let $e(x)=e^{2\pi ix}$ and, for periodic test functions $f,g$ with
+absolutely summable Fourier coefficients (in particular $C^2$ tests), set
+\[
+ D_c(f,g)=\frac1{\varphi(c)}
+       \sum_{\substack{a\bmod c\\(a,c)=1}}
+           f(a/c)g(\overline a/c),\qquad
+ a\overline a\equiv1\pmod c.
+\]
+Writing $f(x)=\sum_m\widehat f(m)e(mx)$ and similarly for $g$ gives the exact
+identity
+\begin{equation}\label{eq:pairkloosterman}
+ D_c(f,g)-\widehat f(0)\widehat g(0)
+ =\frac1{\varphi(c)}
+   \sum_{(m,n)\ne(0,0)}\widehat f(m)\widehat g(n)S(m,n;c),
+\end{equation}
+where
+\[
+ S(m,n;c)=\sum_{a\bmod c}^{*}e\bigl((ma+n\overline a)/c\bigr).
+\]
+The classical bound \cite[Section~1.1 and equation~(3.2)]{HumphriesModular}
+\[
+ |S(m,n;c)|\leq\tau(c)c^{1/2}(m,n,c)^{1/2}
+\]
+therefore supplies an actual product main term and a nontrivial remainder.
+For example, defining
+\[
+ \mathcal A(f)=\sum_{m\in\mathbb Z}(1+|m|)^{1/2}|\widehat f(m)|,
+\]
+one obtains
+\begin{equation}\label{eq:pairkloostermansmooth}
+ |D_c(f,g)-(\int f)(\int g)|
+ \leq\frac{\tau(c)c^{1/2}}{\varphi(c)}\mathcal A(f)\mathcal A(g)
+ \ll_\epsilon c^{-1/2+\epsilon}\|f\|_{C^2}\|g\|_{C^2}.
+\end{equation}
+Here $(m,n)\ne(0,0)$ implies
+$(m,n,c)^{1/2}\leq(1+|m|)^{1/2}(1+|n|)^{1/2}$, and two integrations by
+parts bound $\mathcal A(f)$ by a constant times $\|f\|_{C^2}$.
+For trigonometric polynomials supported on $|m|,|n|\leq M$, the sharper
+explicit estimate is
+\[
+ |D_c(f,g)-(\int f)(\int g)|
+ \leq\frac{\tau(c)\sqrt{cM}}{\varphi(c)}
+             \|\widehat f\|_{\ell^1}\|\widehat g\|_{\ell^1},
+ \qquad M\geq1.
+\]
+For a prime $c=p$ and $M<p$, the numerator $\tau(c)\sqrt{cM}$ can be
+replaced by $2\sqrt p$; a frequency with exactly one zero coordinate gives
+the Ramanujan sum $-1$.
+
+Uniformity cannot be omitted: for $f_c(x)=g_c(x)=e(cx)$, both continuous
+means vanish but $D_c(f_c,g_c)=1$.  The growth of the test norms in
+\eqref{eq:pairkloostermansmooth} correctly prevents a false conclusion.
+This is the arithmetic counterpart of the expanding-frequency problem.
+The result is a rigorous benchmark for endpoint-residue decorrelation.  A
+proof of mixing of the modular geodesic flow still requires the appropriate
+unfolding, radial/time weights, and cusp estimates; no higher-genus analogue
+of the displayed Kloosterman bound has been established here.
+
+For comparison, fix two primitive oriented torus curve types.
+In the corresponding matrix model, with positive oriented intersection
+$c$, the remaining residue is $a\pmod c$, $(a,c)=1$, so there are exactly
+$\varphi(c)$ possibilities.  Thus the unweighted count already has the
+power-saving asymptotic
+\[
+ \sum_{c\leq L}\varphi(c)
+   =\frac{3}{\pi^2}L^2+O(L\log L).
+\]
+Indeed, substitute $\varphi(c)=c\sum_{d\mid c}\mu(d)/d$ and sum first over
+$c=dk$; the leading term is
+$\tfrac12L^2\sum_{d\leq L}\mu(d)/d^2$
+and the remainder is $O(L\log L)$.
+These constants belong to this oriented matrix model; no unmentioned
+quotient by signs or orbifold automorphism weight is being included.
+The exact formula $\varphi(c)$ by itself says nothing about the values of
+$S(m,n;c)$ for $(m,n)\ne(0,0)$.
+
+
+\subsection*{The remaining independent estimate}
+
+We have obtained an exact encoding of the filling-pair data, an exact
+weighted orbit-counting identity, and a quantitative implication from
+a remainder for that count to mixing.  What has not been established
+is a norm-controlled estimate of the form
+\eqref{eq:twopointcountassumption} from the coefficient distributions.
+The tensor product and the first-corner extraction do not by themselves
+estimate a sum over returning mapping classes.
+In particular, an exact or quantitative comparison between the resulting
+square-tiled sums and the bisector kernel has not yet been supplied.
+
+The next analytic target can now be stated without referring vaguely
+to a good scalar counting error: construct that comparison and control
+the nonconstant two-endpoint weights in \eqref{eq:twopointkernel}, with the exact inverse Jacobian
+or with a proved replacement and a controlled discarded contribution.
+The modular calculation shows what success looks like.  Its scalar
+count determines the zero mode, while the Kloosterman estimate controls
+the coupled nonzero modes. No analogous estimate for the principal
+higher-genus kernel is proved here. Section~\ref{sec:genus2markedtorus}
+does close a different, explicitly defined return calculation on the
+exceptional marked-torus model of the nonsquare genus-two $(2,2)$ stratum.
+
+An independent proof of the displayed remainder would yield a new
+route to mixing for the specified Masur--Veech measure, with the full rate
+in \eqref{eq:twopointfullrate} when derivative endpoint weights are
+controlled, and the cutoff rate~\eqref{eq:twopointfullcusprate}.
+The single-test estimate~\eqref{eq:twopointmixrate} remains an
+alternative under its weaker hypothesis.  It would not by itself classify invariant
+measures or orbit closures, nor would it establish spectral properties
+of a separate cocycle.  Those require additional information beyond
+correlations of the base flow.
+
+
