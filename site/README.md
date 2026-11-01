@@ -137,3 +137,58 @@ python -m unittest discover -s site/tests -v
 PYTHONPATH=packages/volume-toolkit python -m unittest discover -s experiments/section9/tests -v
 PYTHONPATH=packages/volume-toolkit python -m pytest packages/volume-toolkit/tests/test_variational.py
 ```
+
+## Reading preview export
+
+`build_preview.py` owns the buildless reading frontend for the reviewed Section 9
+edition. It consumes the exact 44 site assets and two numerical reports in the
+barrier checkpoint's `final-artifact-manifest.json`. Changed, missing or extra
+canonical assets are rejected. It neither reruns the numerical experiments nor
+converts or edits the PDF. A later scientific edition needs a separately reviewed
+input checkpoint before this exporter can adopt it.
+
+The exporter adds a landing page, the six canonical subsection links, local
+passage search, and a shared navigation bar in the three derived HTML pages.
+Removing the two explicitly marked navigation/style insertions recovers each
+original HTML byte for byte. The PDF, numerical records, code, figures and ZIPs
+are copied unchanged. The output manifest separates the current research/build
+commit from the earlier numerical source commit, records every input/output hash,
+and describes this as a presentation export, not a new computation or proof review.
+
+The search index is generated from the chapter and both companions, omitting
+scripts, navigation and duplicate TeX annotations. It is both downloadable and
+embedded with HTML-safe JSON escaping. The deferred classic script searches that
+embedded data without a fetch, external dependency, or numerical backend; a local
+file opening therefore does not depend on module or fetch permissions. Browser
+rendering and interaction still require their own verification.
+
+Generate into a derived publishing checkout outside this canonical research repo:
+
+```sh
+python site/build_preview.py \
+  --output-dir ../publishing/polyhedra-reading-preview-20261101/dist \
+  --require-clean
+node site/tests/test_preview_search.cjs \
+  ../publishing/polyhedra-reading-preview-20261101/dist/search-index.json
+```
+
+Omit `--require-clean` only for an explicitly recorded author preview. The builder
+refuses symlinks, foreign files and modified prior output when refreshing an
+existing export. Only header-recognized AppleDouble or Finder metadata is omitted
+from its asset inventory; unknown files with metadata-like names are rejected.
+The final packaging step must exclude those recognized platform sidecars too.
+It does not initialize Git, set Site identity, handle credentials,
+push source, or deploy. The Sites owner manages `.openai/hosting.json` and the
+official source/package/publication workflow in the derived checkout. Never run
+that source helper at the canonical research root. Registration, local packaging,
+source synchronization and deployment success are distinct states.
+The maintained `preview/source.gitignore` is copied to the publishing checkout's
+root. Its archive patterns apply only to that root, so the reproduction ZIPs
+under `dist/` remain tracked; Site identity is not ignored.
+
+`preview/` contains the maintained landing template, stylesheet and browser-local
+search code. `tests/test_build_preview.py` checks byte preservation, safe output
+ownership, source mismatch rejection, safe embedded JSON and local targets;
+`tests/test_preview_search.cjs` checks search behavior and actual edition queries.
+No browser/server is started by these checks. The scope remains a Section 9
+working edition, while the complete LaTeX download is explicitly the broader draft.

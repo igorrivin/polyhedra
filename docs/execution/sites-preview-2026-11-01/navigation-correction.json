@@ -1,0 +1,12 @@
+{
+  "finding": "Directory URLs in new navigation are unsuitable for the server-free file opening handoff",
+  "changes": {
+    "landing_brand": "./ -> index.html",
+    "derived_home": "../ -> ../index.html",
+    "derived_contents": "../#contents -> ../index.html#contents",
+    "derived_search": "../#search -> ../index.html#search"
+  },
+  "scope": "New presentation-only links and a regression test; no scientific input changed",
+  "validation": "All authored href/src targets resolve to existing files under both file: and https: URL bases; full static fragment checks also pass",
+  "new_test": "test_authored_navigation_resolves_to_files_locally_and_when_hosted"
+}

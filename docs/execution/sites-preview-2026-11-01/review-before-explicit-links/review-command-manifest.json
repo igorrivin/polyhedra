@@ -1,0 +1,71 @@
+[
+  {
+    "name": "review-unit-tests",
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "site/tests",
+      "-v"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "returncode": 0,
+    "elapsed_seconds": 0.7776412499370053,
+    "log": "review-unit-tests.log",
+    "log_sha256": "ac4fc8dfa4808a4620f083c896f36910a004ce8d2eda78a9a459ddab903f2f90"
+  },
+  {
+    "name": "review-fresh-build",
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "site/build_preview.py",
+      "--output-dir",
+      "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-sites-independent-td053q6w/dist"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "returncode": 0,
+    "elapsed_seconds": 0.3658026249613613,
+    "log": "review-fresh-build.log",
+    "log_sha256": "de278e0b96099af7fca14a8537f0b542f938a5e6a310e6df23f487563d06954f"
+  },
+  {
+    "name": "review-search-tests",
+    "argv": [
+      "node",
+      "site/tests/test_preview_search.cjs",
+      "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-sites-independent-td053q6w/dist/search-index.json"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "returncode": 0,
+    "elapsed_seconds": 0.07443854189477861,
+    "log": "review-search-tests.log",
+    "log_sha256": "82ae7b7cca159dfb865bdf65fbc687cd7741e4afc2576b7f504d021731b9b370"
+  },
+  {
+    "name": "review-js-syntax",
+    "argv": [
+      "node",
+      "--check",
+      "site/preview/search.js"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "returncode": 0,
+    "elapsed_seconds": 0.06612041604239494,
+    "log": "review-js-syntax.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

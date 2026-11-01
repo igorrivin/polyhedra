@@ -1,0 +1,30 @@
+{
+  "phase": "Initial author tests before path-normalization correction",
+  "command": [
+    "/tmp/polyhedra-baseline-20261031/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "site/tests",
+    "-p",
+    "test_build_preview.py",
+    "-v"
+  ],
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "returncode": 1,
+  "observed_result": "10 tests, 2 failures and 1 error in 0.644s",
+  "affected_tests": [
+    "test_missing_fragment_rejected",
+    "test_mutated_or_extra_input_rejected",
+    "test_offline_index_and_targets_match"
+  ],
+  "diagnosis": "The public load_inputs and validate_export helpers compared resolved /private/var paths against unnormalized /var TemporaryDirectory paths. build itself already normalized its paths. The two expected rejection tests therefore saw path errors before their intended mutation/fragment checks.",
+  "source_sha256": {
+    "site/build_preview.py": "65ae6346c5ae7e08c019659f539bd9a637c580d1a3850950212b4066a5a19d28",
+    "site/tests/test_build_preview.py": "539131bb64507619591fbbfe0d02855296391e5482f06b90b69f0d52ade3cada"
+  },
+  "status": "Initial failure retained; no canonical artifact was modified"
+}

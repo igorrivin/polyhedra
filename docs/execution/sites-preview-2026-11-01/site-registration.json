@@ -1,0 +1,37 @@
+{
+  "status": "registered_owner_private_not_deployed",
+  "source": "Native Sites observations and the failed source-helper call recorded by the parent agent",
+  "project_id": "appgprj_6ae6b5b94abc8191aa00dfe244adcf37",
+  "title": "Polyhedra, Moduli, and Quantum Geometry",
+  "slug": "polyhedra-moduli-quantum-geometry",
+  "created_at": "2026-11-01T03:44:57.582143+00:00",
+  "expected_url": "https://polyhedra-moduli-quantum-geometry.ig-riv.chatgpt.site",
+  "expected_url_is_verified_live": false,
+  "current_user_role": "owner",
+  "access_mode": "custom",
+  "allowed_user_roles": [
+    "owner"
+  ],
+  "allowed_group_count": 0,
+  "latest_version_number": 0,
+  "current_live_url": null,
+  "source_commit": null,
+  "saved_version_id": null,
+  "deployment_id": null,
+  "source_open_attempt": {
+    "argv": [
+      "node",
+      "/Users/igorrivin/.codex/plugins/cache/openai-curated-remote/sites/1.1.2/scripts/site-workflow.mjs",
+      "--project-id",
+      "appgprj_6ae6b5b94abc8191aa00dfe244adcf37"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/publishing/polyhedra-reading-preview-20261101",
+    "mode": "open; no archive or build commands supplied",
+    "credential_transport": "hidden stdin; credential not retained in this record",
+    "returncode": 128,
+    "error": "fatal: unable to access 'https://git.chatgpt-team.site/7ae148ba-74b8-450e-b2a4-951aca23fb81/appgprj_6ae6b5b94abc8191aa00dfe244adcf37.git/': Could not resolve host: git.chatgpt-team.site",
+    "effect": "Helper initialized the derived checkout, then failed before source synchronization; no push or publication occurred."
+  },
+  "continuation": "Reuse this project ID after actual network recovery. Read current Site access, obtain a fresh source write credential, and use the supported source helper to commit/push/package before saving or deploying the exact resulting source/archive. Do not substitute the canonical research commit for the Sites source commit.",
+  "secrets": "No token, credential, bypass secret or authentication header is stored."
+}

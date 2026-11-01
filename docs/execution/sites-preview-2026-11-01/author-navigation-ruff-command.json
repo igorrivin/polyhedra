@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/opt/anaconda3/bin/ruff",
+    "check",
+    "--select",
+    "E9,F63,F7,F82,F401,F841",
+    "site/build_preview.py",
+    "site/tests/test_build_preview.py"
+  ],
+  "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "returncode": 0
+}

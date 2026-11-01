@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A working edition of Section 9 of Polyhedra, Moduli, and Quantum Geometry, with reviewed mathematics and reproducible computational companions.">
+  <title>Polyhedra, Moduli, and Quantum Geometry — Working edition</title>
+  <link rel="stylesheet" href="assets/preview.css">
+  <script defer src="assets/search.js"></script>
+</head>
+<body class="edition-home">
+  <a class="edition-skip" href="#main">Skip to content</a>
+  <header class="edition-masthead">
+    <a class="edition-brand" href="index.html">Polyhedra, Moduli, and Quantum Geometry</a>
+    <nav aria-label="Edition navigation"><a href="#contents">Contents</a><a href="#computations">Computations</a><a href="#search">Search</a></nav>
+  </header>
+  <main id="main">
+    <section class="edition-introduction" aria-labelledby="chapter-title">
+      <div>
+        <p class="edition-eyebrow">Chapter 09 <span>Working edition</span></p>
+        <h1 id="chapter-title">Volume Hessians, finite elements, and computational complexity</h1>
+        <p class="edition-deck">On a triangulated disk, prescribed angle coordinates connect the second variation of ideal volume to a discrete Dirichlet problem.</p>
+        <p class="edition-actions"><a class="edition-primary" href="section9/chapter.html">Read the chapter <span aria-hidden="true">↗</span></a><a href="section9/downloads/section9.pdf">Download the chapter PDF</a></p>
+      </div>
+      <figure class="edition-figure">
+        <img src="section9/assets/section9-figure-1.png" alt="Two triangles sharing an edge, with the signed dual edge and the cotangent identities linking finite-element energy to the volume Hessian.">
+        <figcaption><span>One local weight, several roles</span>The same cotangent form appears in finite elements, electrical networks, and the volume Hessian. <a href="section9/chapter.html#fig:mono-cotangent-hessian">Figure 3 in the chapter</a></figcaption>
+      </figure>
+    </section>
+
+    <section class="edition-search" id="search" aria-labelledby="search-heading">
+      <div><p class="edition-eyebrow">Find a passage</p><h2 id="search-heading">Search this edition</h2></div>
+      <form id="edition-search-form" role="search">
+        <label for="edition-query">Chapter and computational companions</label>
+        <div class="edition-search-controls"><input id="edition-query" name="q" type="search" placeholder="Try “barrier”, “Schur”, or “boundary”" autocomplete="off" disabled><button type="submit" disabled>Search</button></div>
+      </form>
+      <p id="edition-search-status" role="status" aria-live="polite">Loading the local search index…</p>
+      <noscript><p>Search needs JavaScript. The full chapter, contents, and downloads remain available below.</p></noscript>
+      <ol id="edition-search-results" class="edition-search-results" hidden></ol>
+    </section>
+
+    <div class="edition-reading-grid">
+      <section id="contents" aria-labelledby="contents-heading">
+        <p class="edition-eyebrow">The mathematical thread</p>
+        <h2 id="contents-heading">Inside the chapter</h2>
+        <ol class="edition-contents">
+{{CONTENTS}}
+        </ol>
+        <p class="edition-small"><a href="section9/chapter.html#references">References</a> <span aria-hidden="true">·</span> <a href="section9/chapter.html#claim-ledger">Claim status and computational coverage</a></p>
+      </section>
+      <section id="computations" aria-labelledby="computations-heading">
+        <p class="edition-eyebrow">From formulas to evidence</p>
+        <h2 id="computations-heading">Two computational companions</h2>
+        <article class="edition-example">
+          <span class="edition-example-number" aria-hidden="true">01</span>
+          <div><h3><a href="section9/index.html">A grid, a Hessian, and boundary currents</a></h3><p>A twelve-triangle rectangle connects the cotangent matrix, Schur elimination, and a rooted-forest determinant. Vary the boundary voltage in the companion.</p><a class="edition-text-link" href="section9/index.html">Explore the grid <span aria-hidden="true">→</span></a></div>
+        </article>
+        <article class="edition-example">
+          <span class="edition-example-number" aria-hidden="true">02</span>
+          <div><h3><a href="section9/barrier.html">Following the log-sine barrier path</a></h3><p>Three fixed angle domains exercise initial centering and the short-step schedule, with independent high-precision reference comparisons.</p><a class="edition-text-link" href="section9/barrier.html">Inspect the examples <span aria-hidden="true">→</span></a></div>
+        </article>
+        <p class="edition-small">Computed gaps are numerical estimates. The exact-arithmetic arguments and their hypotheses remain in the chapter.</p>
+      </section>
+    </div>
+
+    <section class="edition-downloads" id="downloads" aria-labelledby="downloads-heading">
+      <div><p class="edition-eyebrow">Read and reproduce</p><h2 id="downloads-heading">Take the work with you</h2></div>
+      <ul>
+        <li><a href="section9/downloads/section9.pdf">Chapter PDF</a><span>The reviewed Section 9 text, figures, and references.</span></li>
+        <li><a href="section9/downloads/section9-reproduction.zip">Grid reproduction package</a><span>Code, fixed input, requirements, and original computation provenance.</span></li>
+        <li><a href="section9/downloads/barrier-reproduction.zip">Barrier reproduction package</a><span>The dense solver, three fixtures, and independent reference calculations.</span></li>
+        <li><a href="section9/downloads/monograph-source.zip">Complete monograph LaTeX source</a><span>The broader draft; the review described here is limited to Section 9.</span></li>
+      </ul>
+    </section>
+
+    <section class="edition-about" aria-labelledby="about-heading">
+      <p class="edition-eyebrow">About this working edition</p>
+      <h2 id="about-heading">A chapter with its computational trail</h2>
+      <p>Section 9 has a bounded mathematical review and a separate review of its computational addendum. The claim ledger distinguishes proofs, external theorem inputs, finite checks, and open questions. The remaining monograph is a broader draft; this edition does not extend Section 9’s review to the whole book.</p>
+      <p>The companions expose their inputs, methods, precision, results, and runnable archives. They do not provide a rigorous floating-point certificate or a global geometric realization algorithm.</p>
+    </section>
+  </main>
+  <footer class="edition-footer"><p>Polyhedra, Moduli, and Quantum Geometry <span>Section 9 working edition</span></p><a href="preview-manifest.json">Edition and source record</a></footer>
+  <script type="application/json" id="edition-search-data">{{SEARCH_INDEX}}</script>
+</body>
+</html>

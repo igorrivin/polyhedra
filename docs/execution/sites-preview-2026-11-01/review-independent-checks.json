@@ -1,0 +1,128 @@
+{
+  "status": "passed",
+  "source_sha256": {
+    "site/build_preview.py": "d68aca41430476139464c2b4cd636024d5a0462e66161dfc372f3202049557c9",
+    "site/preview/index.html": "f676a3b424ce18184270c1d18a3b6b763a136de1bea4ac8028c55486abfd0188",
+    "site/preview/preview.css": "e0ad7df605f6c74342e865b205f1b01cb5fc31a993be55e496d45ee6066c1c0b",
+    "site/preview/search.js": "7310cac3305f8daf354516eeb56d04c40f7d73a0b8d8a355fd380548ffd6e181",
+    "site/preview/source.gitignore": "4bbdfb7c1b09fba067f4b171500576097771d266838d344b04904afb1f3e6587",
+    "site/tests/test_build_preview.py": "7244f03e4dacfb31cc94ac4de48d4fe749695e4c900e38ec8d4595d4a91b1b42",
+    "site/tests/test_preview_search.cjs": "bde8bb79268e9fbf5c51aa5d423d20979c2cbd7542b09a8bc9972b4ad8e91424",
+    "site/README.md": "9d4f924fca8b0cc37d77bc43043f238c9e6752559157a26798266b149dc84cb7",
+    "INTEGRATION_PLAN.md": "c6210cff5128626f4987043e7593ad10744060b7c94ea8e3d9e1faa5d5ba1d24"
+  },
+  "review_output": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-sites-final-review-zxlr4mw6/dist",
+  "source_checkpoint_inputs_verified": 46,
+  "output_files": 49,
+  "scientific_html_exactly_recovered": [
+    "section9/barrier.html",
+    "section9/chapter.html",
+    "section9/index.html"
+  ],
+  "unchanged_nonhtml_assets": 41,
+  "local_links_and_search_targets": 473,
+  "chapter_mathml_nodes": 209,
+  "chapter_ids": 43,
+  "chapter_figures": 2,
+  "subsections": [
+    [
+      "h2",
+      "subsec:ipolyCoordinates",
+      "9.1 The cotangent form and the correct deformation coordinates"
+    ],
+    [
+      "h2",
+      "subsec:ipolyResponse",
+      "9.2 Boundary response, Schur complements, and a Gaussian factor"
+    ],
+    [
+      "h2",
+      "subsec:ipolyBarrierComplexity",
+      "9.3 Why the nonlinear iteration needs a barrier"
+    ],
+    [
+      "h2",
+      "subsec:ipolyFlips",
+      "9.4 Flips connect the local matrix to mapping-class geometry"
+    ],
+    [
+      "h2",
+      "subsec:ipolyThreeManifolds",
+      "9.5 The three-manifold extension and the remaining questions"
+    ],
+    [
+      "h2",
+      "subsec:ipolyComputation",
+      "9.6 Reproducible computational examples"
+    ]
+  ],
+  "search_passages": 204,
+  "actual_search_queries": {
+    "Schur": {
+      "count": 12,
+      "sources": [
+        "Chapter 9",
+        "Grid companion"
+      ]
+    },
+    "asymmetric": {
+      "count": 20,
+      "sources": [
+        "Barrier examples",
+        "Chapter 9"
+      ]
+    },
+    "flat triangle": {
+      "count": 23,
+      "sources": [
+        "Barrier examples",
+        "Chapter 9"
+      ]
+    },
+    "Casson": {
+      "count": 3,
+      "sources": [
+        "Chapter 9"
+      ]
+    },
+    "\u03bb": {
+      "count": 8,
+      "sources": [
+        "Barrier examples",
+        "Chapter 9"
+      ]
+    },
+    "rooted forest": {
+      "count": 7,
+      "sources": [
+        "Grid companion",
+        "Chapter 9"
+      ]
+    }
+  },
+  "archives": {
+    "monograph-source.zip": {
+      "entries": 8,
+      "sha256": "ac294eb06ba3e9bf400aeda84347922721f265220658af58eb332d52ba94b324"
+    },
+    "section9-reproduction.zip": {
+      "entries": 10,
+      "sha256": "0f2f6f343c9900762a6d8171065ab05141f79cacf37eae528c347c16b7a36fa9"
+    },
+    "barrier-reproduction.zip": {
+      "entries": 11,
+      "sha256": "3927145433f4039b03f3649f6cf3c2e2db3f1b01456b0cd5ff530e383dc9955d"
+    }
+  },
+  "symlink_regressions": {
+    "matching-file": "rejected; outside bytes unchanged",
+    "dangling-file": "rejected; outside bytes unchanged",
+    "directory": "rejected; outside bytes unchanged",
+    "output-root": "rejected; outside bytes unchanged"
+  },
+  "author_and_reviewer_assets_identical": true,
+  "source_preview_dirty": true,
+  "browser_qa": "not performed",
+  "deployment": "not performed; registered Site is not a live deployment",
+  "packaging_boundary": "Site tar still needs physical archive inventory verification; ordinary assets may omit recognized metadata"
+}

@@ -1,0 +1,112 @@
+{
+  "status": "author_frozen_for_independent_review",
+  "baseline": "800219f78bdacaf77639cf4d38ff27d4b7342faa",
+  "source_sha256": {
+    "site/build_preview.py": "d68aca41430476139464c2b4cd636024d5a0462e66161dfc372f3202049557c9",
+    "site/preview/index.html": "f676a3b424ce18184270c1d18a3b6b763a136de1bea4ac8028c55486abfd0188",
+    "site/preview/preview.css": "e0ad7df605f6c74342e865b205f1b01cb5fc31a993be55e496d45ee6066c1c0b",
+    "site/preview/search.js": "7310cac3305f8daf354516eeb56d04c40f7d73a0b8d8a355fd380548ffd6e181",
+    "site/preview/source.gitignore": "4bbdfb7c1b09fba067f4b171500576097771d266838d344b04904afb1f3e6587",
+    "site/tests/test_build_preview.py": "7244f03e4dacfb31cc94ac4de48d4fe749695e4c900e38ec8d4595d4a91b1b42",
+    "site/tests/test_preview_search.cjs": "bde8bb79268e9fbf5c51aa5d423d20979c2cbd7542b09a8bc9972b4ad8e91424",
+    "site/README.md": "9d4f924fca8b0cc37d77bc43043f238c9e6752559157a26798266b149dc84cb7",
+    "INTEGRATION_PLAN.md": "c6210cff5128626f4987043e7593ad10744060b7c94ea8e3d9e1faa5d5ba1d24"
+  },
+  "commands": [
+    {
+      "name": "author-navigation-unit-tests",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "site/tests",
+        "-v"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "returncode": 0,
+      "log_sha256": "111af33b0337267665b6b8a0ea01ae219fafa073d85951f915b6ccae9ddb484f"
+    },
+    {
+      "name": "author-navigation-preview-build",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "site/build_preview.py",
+        "--output-dir",
+        "/Volumes/Lexar/lambda/devel/polyhedra/publishing/polyhedra-reading-preview-20261101/dist"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "returncode": 0,
+      "log_sha256": "e84e8a6329af5637a87209b41368faa975e21b5692e18e023a5d581e270a213e"
+    },
+    {
+      "name": "author-navigation-search-tests",
+      "argv": [
+        "node",
+        "site/tests/test_preview_search.cjs",
+        "/Volumes/Lexar/lambda/devel/polyhedra/publishing/polyhedra-reading-preview-20261101/dist/search-index.json"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "returncode": 0,
+      "log_sha256": "82ae7b7cca159dfb865bdf65fbc687cd7741e4afc2576b7f504d021731b9b370"
+    },
+    {
+      "name": "author-navigation-js-syntax",
+      "argv": [
+        "node",
+        "--check",
+        "site/preview/search.js"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "returncode": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "author-navigation-ruff",
+      "argv": [
+        "/opt/anaconda3/bin/ruff",
+        "check",
+        "--select",
+        "E9,F63,F7,F82,F401,F841",
+        "site/build_preview.py",
+        "site/tests/test_build_preview.py"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "returncode": 0,
+      "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    }
+  ],
+  "mirror": "/Volumes/Lexar/lambda/devel/polyhedra/publishing/polyhedra-reading-preview-20261101",
+  "preview_manifest_sha256": "027c1763b3c51f523e103708ec20e0e3da9f1ec202d2f413cbc4fd418fa7bf76",
+  "output_file_count": 49,
+  "validation": {
+    "local_links_and_search_targets_checked": 473,
+    "html_pages": 4,
+    "chapter_mathml_count": 209,
+    "search_passages": 204,
+    "browser_verification": "not performed; static checks do not establish browser rendering or interaction"
+  },
+  "pdf_sha256": "9db08eec8405c637c8ac79ad0afcaaa4b4bf810435463dbb3361fee7616975f0",
+  "mirror_gitignore_sha256": "4bbdfb7c1b09fba067f4b171500576097771d266838d344b04904afb1f3e6587",
+  "metadata_entries_present": 68,
+  "publication": "not performed; root owns native Sites source/publication workflow",
+  "browser_verification": "not performed; no server/browser/file URL attempted",
+  "whitespace": "tracked diff and all nine authored source files clean",
+  "failures_preserved": "author-initial-test-result.json and exact preceding exporter source; reviewer owns initial symlink finding evidence; parent navigation correction and prior freeze retained under before-explicit-index-links names"
+}
