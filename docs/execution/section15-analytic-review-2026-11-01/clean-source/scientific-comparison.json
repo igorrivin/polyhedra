@@ -1,0 +1,132 @@
+{
+  "status": "clean_full_run_scientific_comparison_passed",
+  "input_sha256": {
+    "baseline": "bfb7bf75aa4522e794f2c6000863df786988a67bf92354d41d7075dfcee37a83",
+    "candidate": "b8d600a6ca3797f45e616bc324d0d1620066e9c203c085229d4c544f6e245009",
+    "approval": "8d6e476224516cc2d042bae3a799c3c65ed091d52de1711b58fc9786a6ee4d2d"
+  },
+  "candidate_commit": "9f5b17aa34dd3ede7ae0b26d80b3b14d52111042",
+  "candidate_sources_clean_and_stable": true,
+  "identical_scientific_rows": 21,
+  "identical_comparisons": 7,
+  "shared_component_checks": [
+    {
+      "dps": 40,
+      "identical_named_records": 27
+    },
+    {
+      "dps": 60,
+      "identical_named_records": 27
+    }
+  ],
+  "added_component_checks_validated_separately": [
+    {
+      "name": "D_alternate_method_and_panels_argument_3",
+      "absolute_residual": "6.266797245992709825478062266740011651698e-45",
+      "threshold": "1.0e-28",
+      "details": {
+        "z": {
+          "real": "0.9745280658454468243358028762796064391924",
+          "imag": "-0.01581806769321405327400806532941251729734"
+        },
+        "method": "tanh-sinh",
+        "direct_value": {
+          "real": "0.0001839119461645846799384824212290716572157",
+          "imag": "-0.00011488688213906428295504077032848719507"
+        },
+        "panels": [
+          0,
+          "1/2",
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096,
+          8192,
+          16384,
+          "infinity"
+        ],
+        "integration_domain": [
+          "0",
+          "infinity"
+        ],
+        "quadrature_error_estimate": "1.001120037025933015735576030178887757659e-42",
+        "tail_cutoff": 8192,
+        "tail_strip_epsilon_exact": "1/50",
+        "tail_bound_role": "separate bound for the exact [8192,infinity) tail, which is included in quadrature; not an omitted-tail error",
+        "direct_D_tail_bound_exact": "1/209976069579169144739760213803291651073904265365748393896873978215355487923140088629457264994213167104"
+      }
+    },
+    {
+      "name": "D_alternate_method_and_panels_argument_3",
+      "absolute_residual": "3.82189229360520307813361845792260685205537207386641216587324e-64",
+      "threshold": "1.0e-48",
+      "details": {
+        "z": {
+          "real": "0.974528065845446824335802876279606439192458780202702920165482",
+          "imag": "-0.0158180676932140532740080653294125172973385301873933941630906"
+        },
+        "method": "tanh-sinh",
+        "direct_value": {
+          "real": "0.000183911946164584679938482421229071657215764086069658460724541",
+          "imag": "-0.000114886882139064282955040770328487195070039314700459280992538"
+        },
+        "panels": [
+          0,
+          "1/2",
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096,
+          8192,
+          16384,
+          "infinity"
+        ],
+        "integration_domain": [
+          "0",
+          "infinity"
+        ],
+        "quadrature_error_estimate": "1.00000100100000000100020001101968222671136362834371762114394e-66",
+        "tail_cutoff": 8192,
+        "tail_strip_epsilon_exact": "1/50",
+        "tail_bound_role": "separate bound for the exact [8192,infinity) tail, which is included in quadrature; not an omitted-tail error",
+        "direct_D_tail_bound_exact": "1/209976069579169144739760213803291651073904265365748393896873978215355487923140088629457264994213167104"
+      }
+    }
+  ],
+  "excluded_scientific_JSON_paths": [
+    "rows[*].elapsed_seconds",
+    "independent_double_sine_checks[*].elapsed_seconds"
+  ],
+  "expected_metadata_changes": {
+    "created_at_utc": {
+      "baseline": "2026-11-01T18:55:13.469563+00:00",
+      "candidate": "2026-11-01T19:17:32.117241+00:00"
+    },
+    "elapsed_seconds": {
+      "baseline": 427.2917858749861,
+      "candidate": 418.11435445805546
+    },
+    "source_at_start_and_finish": "candidate clean, stable, and matched to approved code/chapter hashes; baseline retained separately",
+    "conventions.direct_D_quadrature": "Gauss-Legendre panels 0,1,4,16,64,256,1024,2048,4096,8192,infinity; nearest-strip check also uses tanh-sinh with 0,1/2,powers of 2 through16384,infinity"
+  },
+  "limitations": "Exact equality of these finite numerical records is not an interval certificate or a proof of the global asymptotic.",
+  "comparison_script_sha256": "d75d127fb65ec954d3cee5809157080e1f24cfec584784212c7b619b4cd1e7f6"
+}

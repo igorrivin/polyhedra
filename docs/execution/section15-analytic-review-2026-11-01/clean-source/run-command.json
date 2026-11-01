@@ -1,0 +1,63 @@
+{
+  "started_at_utc": "2026-11-01T19:10:33.948231+00:00",
+  "finished_at_utc": "2026-11-01T19:17:32.274085+00:00",
+  "command": [
+    "/tmp/polyhedra-baseline-20261031/bin/python",
+    "-B",
+    "-u",
+    "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/section15_quantum/check.py",
+    "--profile",
+    "full",
+    "--output",
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/section15-analytic-review-2026-11-01/clean-source/result.json"
+  ],
+  "cwd": "/private/tmp",
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "GIT_OPTIONAL_LOCKS": "0"
+  },
+  "source_commit": "9f5b17aa34dd3ede7ae0b26d80b3b14d52111042",
+  "source_before": {
+    "commit": "9f5b17aa34dd3ede7ae0b26d80b3b14d52111042",
+    "dirty_status": "",
+    "sha256": {
+      "experiments/section15_quantum/evaluate.py": "fee7dae3a298deaf0520fe09ceb0d584306c63937fa923ba4d03729a6cdacf81",
+      "experiments/section15_quantum/check.py": "e0966000c16b3f34ed36102a8c38d00aa602e8e7fd3e5e605341bc7bf43896ba",
+      "experiments/section15_quantum/test_evaluate.py": "4ad45d1e359216715207aaafa4e6f9399f013ab585799b1db84164edbb110921",
+      "experiments/section15_quantum/README.md": "72be417c8d03f743ae056a2bb4b8b4a4f73047e3c368980c54f16569bb203322",
+      "experiments/section15/historical-table.json": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011",
+      "book/chapters/14-normalized-quantum-comparison.tex": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+      "book/chapters/15-quantum-airy.tex": "efee2c699923ab31e4d7d48eeac57c60bf2ea088ea4ff17e617b9ed97202d6dd"
+    }
+  },
+  "source_after": {
+    "commit": "9f5b17aa34dd3ede7ae0b26d80b3b14d52111042",
+    "dirty_status": "",
+    "sha256": {
+      "experiments/section15_quantum/evaluate.py": "fee7dae3a298deaf0520fe09ceb0d584306c63937fa923ba4d03729a6cdacf81",
+      "experiments/section15_quantum/check.py": "e0966000c16b3f34ed36102a8c38d00aa602e8e7fd3e5e605341bc7bf43896ba",
+      "experiments/section15_quantum/test_evaluate.py": "4ad45d1e359216715207aaafa4e6f9399f013ab585799b1db84164edbb110921",
+      "experiments/section15_quantum/README.md": "72be417c8d03f743ae056a2bb4b8b4a4f73047e3c368980c54f16569bb203322",
+      "experiments/section15/historical-table.json": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011",
+      "book/chapters/14-normalized-quantum-comparison.tex": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+      "book/chapters/15-quantum-airy.tex": "efee2c699923ab31e4d7d48eeac57c60bf2ea088ea4ff17e617b9ed97202d6dd"
+    }
+  },
+  "clean_before": true,
+  "clean_after": true,
+  "returncode": 0,
+  "elapsed_seconds": 418.21237808302976,
+  "stdout": {
+    "sha256": "f9761fae2c7b123242d80115aa34e5afc9bc48661933a3dc9de21f81d60b317c",
+    "bytes": 1779
+  },
+  "stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "result": {
+    "sha256": "b8d600a6ca3797f45e616bc324d0d1620066e9c203c085229d4c544f6e245009",
+    "bytes": 130686
+  },
+  "scope": "Fresh full run after source commit, output exclusively outside checkout. No canonical artifact copy or publication."
+}

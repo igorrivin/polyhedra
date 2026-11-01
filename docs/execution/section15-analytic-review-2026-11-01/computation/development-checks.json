@@ -1,0 +1,26 @@
+{
+  "status": "development_record_not_final_evidence",
+  "failed_smoke_attempt": {
+    "output_written": false,
+    "check": "full convergent log S real integral at z=0.2+0.03i,b=1/80,30dps",
+    "absolute_residual": "4.90927311347458287921795880639e-9",
+    "acceptance_threshold": "1e-18",
+    "cause": "Gauss-Legendre infinite-panel convergence for explicit algebraic subtraction tail",
+    "repair": "Integrate -a/(2*b^2*s^2) exactly on [16,infinity), then numerically integrate only the exponentially decaying remainder."
+  },
+  "post_repair_smoke": {
+    "independent_checks": 27,
+    "working_dps": 30,
+    "elapsed_seconds": 0.61,
+    "result_file": "smoke-v1.json"
+  },
+  "focused_tests": {
+    "command": "/tmp/polyhedra-baseline-20261031/bin/python -m pytest experiments/section15_quantum/test_evaluate.py -q",
+    "passed": 12
+  },
+  "ruff": {
+    "command": "/opt/anaconda3/bin/ruff check experiments/section15_quantum",
+    "status": "passed"
+  },
+  "scope": "No full toolkit suite or build was run."
+}

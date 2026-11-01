@@ -1,0 +1,28 @@
+{
+  "status": "all_final_commands_passed",
+  "commands": [
+    {
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "command": "PYTHONDONTWRITEBYTECODE=1 /tmp/polyhedra-baseline-20261031/bin/python -m pytest experiments/section15_quantum/test_evaluate.py -q",
+      "exit_code": 0,
+      "result": "26 passed in 1.27s"
+    },
+    {
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "command": "/opt/anaconda3/bin/ruff check experiments/section15_quantum",
+      "exit_code": 0,
+      "result": "All checks passed!"
+    },
+    {
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/section15-analytic-review-2026-11-01/computation-review",
+      "command": "/opt/anaconda3/bin/ruff check independent_reference.py independent_algebra.py review_acceptance.py compare_full_runs.py",
+      "exit_code": 0,
+      "result": "All checks passed!"
+    }
+  ],
+  "final_smoke_row_identical_to_initial_smoke_excluding_only_elapsed_seconds": true,
+  "acceptance_shared_component_records_identical_to_full_v1": {
+    "40dps": 27,
+    "60dps": 27
+  }
+}

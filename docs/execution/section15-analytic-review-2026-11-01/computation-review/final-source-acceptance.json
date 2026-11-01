@@ -1,0 +1,773 @@
+{
+  "status": "targeted_independent_acceptance_passed",
+  "source_at_start": {
+    "commit": "3ddf610dbe4578c7828e55f4e9cd92aacaba6df6",
+    "dirty_status": "M book/chapters/15-quantum-airy.tex\n M book/claims/section15.json\n?? experiments/section15_quantum/README.md\n?? experiments/section15_quantum/check.py\n?? experiments/section15_quantum/evaluate.py\n?? experiments/section15_quantum/test_evaluate.py",
+    "sha256": {
+      "experiments/section15_quantum/evaluate.py": "fee7dae3a298deaf0520fe09ceb0d584306c63937fa923ba4d03729a6cdacf81",
+      "experiments/section15_quantum/check.py": "e0966000c16b3f34ed36102a8c38d00aa602e8e7fd3e5e605341bc7bf43896ba",
+      "experiments/section15_quantum/test_evaluate.py": "4ad45d1e359216715207aaafa4e6f9399f013ab585799b1db84164edbb110921",
+      "experiments/section15_quantum/README.md": "72be417c8d03f743ae056a2bb4b8b4a4f73047e3c368980c54f16569bb203322",
+      "experiments/section15/historical-table.json": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011",
+      "book/chapters/14-normalized-quantum-comparison.tex": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+      "book/chapters/15-quantum-airy.tex": "efee2c699923ab31e4d7d48eeac57c60bf2ea088ea4ff17e617b9ed97202d6dd"
+    }
+  },
+  "source_at_finish": {
+    "commit": "3ddf610dbe4578c7828e55f4e9cd92aacaba6df6",
+    "dirty_status": "M book/chapters/15-quantum-airy.tex\n M book/claims/section15.json\n?? experiments/section15_quantum/README.md\n?? experiments/section15_quantum/check.py\n?? experiments/section15_quantum/evaluate.py\n?? experiments/section15_quantum/test_evaluate.py",
+    "sha256": {
+      "experiments/section15_quantum/evaluate.py": "fee7dae3a298deaf0520fe09ceb0d584306c63937fa923ba4d03729a6cdacf81",
+      "experiments/section15_quantum/check.py": "e0966000c16b3f34ed36102a8c38d00aa602e8e7fd3e5e605341bc7bf43896ba",
+      "experiments/section15_quantum/test_evaluate.py": "4ad45d1e359216715207aaafa4e6f9399f013ab585799b1db84164edbb110921",
+      "experiments/section15_quantum/README.md": "72be417c8d03f743ae056a2bb4b8b4a4f73047e3c368980c54f16569bb203322",
+      "experiments/section15/historical-table.json": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011",
+      "book/chapters/14-normalized-quantum-comparison.tex": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+      "book/chapters/15-quantum-airy.tex": "efee2c699923ab31e4d7d48eeac57c60bf2ea088ea4ff17e617b9ed97202d6dd"
+    }
+  },
+  "checks": [
+    {
+      "check": "quiet_package_import_preserves_precision",
+      "passed": true
+    },
+    {
+      "check": "optimized_python_injected_polynomial_failure",
+      "passed": true,
+      "stdout": "optimized executable polynomial check rejected injected fault",
+      "stderr": ""
+    },
+    {
+      "check": "source_drift_rejected",
+      "source": "commit",
+      "passed": true
+    },
+    {
+      "check": "source_drift_rejected",
+      "source": "experiments/section15_quantum/evaluate.py",
+      "passed": true
+    },
+    {
+      "check": "source_drift_rejected",
+      "source": "experiments/section15_quantum/check.py",
+      "passed": true
+    },
+    {
+      "check": "source_drift_rejected",
+      "source": "experiments/section15_quantum/test_evaluate.py",
+      "passed": true
+    },
+    {
+      "check": "source_drift_rejected",
+      "source": "experiments/section15_quantum/README.md",
+      "passed": true
+    },
+    {
+      "check": "source_drift_rejected",
+      "source": "experiments/section15/historical-table.json",
+      "passed": true
+    },
+    {
+      "check": "source_drift_rejected",
+      "source": "book/chapters/14-normalized-quantum-comparison.tex",
+      "passed": true
+    },
+    {
+      "check": "source_drift_rejected",
+      "source": "book/chapters/15-quantum-airy.tex",
+      "passed": true
+    },
+    {
+      "check": "overwrite_and_missing_parent_rejected_before_computation",
+      "passed": true
+    },
+    {
+      "check": "nonfinite_quadrature_result_rejected",
+      "passed": true
+    },
+    {
+      "check": "odd_cutoff_real_quadrature_and_independent_shorter_integral",
+      "passed": true,
+      "partition": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "accounting_residual": "2.388980679063151348195022639327514335944e-32",
+      "full_reference_difference": "3.494648604293855487447191024643416660456e-13",
+      "short_reference_difference": "3.495115354135392885124451019366426135298e-13"
+    }
+  ],
+  "direct_double_sine_checks": [
+    {
+      "working_dps": 40,
+      "records": [
+        {
+          "name": "first_D_coefficient",
+          "absolute_residual": "3.503246160812042677309323958224790328201e-46",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "Lobachevsky_midpoint",
+          "absolute_residual": "1.317220556465328046668305808292521163403e-43",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "Lobachevsky_derivative",
+          "absolute_residual": "1.147943701974890144500719274631099294745e-41",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "D_real_integral_argument_1",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-28",
+          "details": {
+            "z": {
+              "real": "0.1133680122004640809204804625540399277825",
+              "imag": "0.01581806769321405327400806532941251729734"
+            },
+            "direct_value": {
+              "real": "-0.00005388291982753077853266896757298732975473",
+              "imag": "0.000008207230985857691181527787825310265225557"
+            },
+            "quadrature_error_estimate": "1.0011000000000000000002e-49",
+            "series_log_bound_for_one_factor_exact": "19839860035376005625/7295633471478769396836465162120426214425756061038205781697135378432"
+          }
+        },
+        {
+          "name": "S_reflection_argument_1",
+          "absolute_residual": "2.628485275605620679184193847763669783077e-38",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "S_b_shift_argument_1",
+          "absolute_residual": "1.606515698773739646798615719843203494284e-38",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "D_real_integral_argument_2",
+          "absolute_residual": "3.530509188025504746288608580640534818879e-46",
+          "threshold": "1.0e-28",
+          "details": {
+            "z": {
+              "real": "0.1905624617842322839940917578347446165592",
+              "imag": "-0.01581806769321405327400806532941251729734"
+            },
+            "direct_value": {
+              "real": "-0.00002975016625172100843925156809369737900548",
+              "imag": "-0.000003180931530312027848620458142799702490651"
+            },
+            "quadrature_error_estimate": "1.000001185123913253126603280879919380329e-43",
+            "series_log_bound_for_one_factor_exact": "19839860035376005625/7295633471478769396836465162120426214425756061038205781697135378432"
+          }
+        },
+        {
+          "name": "S_reflection_argument_2",
+          "absolute_residual": "7.346839692639296924804603357639035486367e-40",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "S_b_shift_argument_2",
+          "absolute_residual": "1.276993738004366864815230518341860183694e-38",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "D_real_integral_argument_3",
+          "absolute_residual": "6.266797245992709825478062266740011651698e-45",
+          "threshold": "1.0e-28",
+          "details": {
+            "z": {
+              "real": "0.9745280658454468243358028762796064391924",
+              "imag": "-0.01581806769321405327400806532941251729734"
+            },
+            "direct_value": {
+              "real": "0.0001839119461645846799384824212290716572157",
+              "imag": "-0.00011488688213906428295504077032848719507"
+            },
+            "quadrature_error_estimate": "2.335011503525628015749098681629586626793e-49",
+            "series_log_bound_for_one_factor_exact": "19839860035376005625/7295633471478769396836465162120426214425756061038205781697135378432"
+          }
+        },
+        {
+          "name": "S_reflection_argument_3",
+          "absolute_residual": "5.877471754111437539843682686111228389093e-39",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "S_b_shift_argument_3",
+          "absolute_residual": "1.257476044943714656559444172949047509204e-38",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "D_real_integral_argument_4",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-28",
+          "details": {
+            "z": "0.9120257969540890947437166611663536330251",
+            "direct_value": "0.00007210975447373279530571571540998590034182",
+            "quadrature_error_estimate": "1.000010000001000000000100000000100014688e-49",
+            "series_log_bound_for_one_factor_exact": "19839860035376005625/7295633471478769396836465162120426214425756061038205781697135378432"
+          }
+        },
+        {
+          "name": "S_reflection_argument_4",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "S_b_shift_argument_4",
+          "absolute_residual": "2.15813415971279347166135223630646667412e-39",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "D_real_integral_argument_5",
+          "absolute_residual": "1.7516230804060213386546619791123951641e-46",
+          "threshold": "1.0e-28",
+          "details": {
+            "z": "0.3040085989846963649145722203887845443417",
+            "direct_value": "-0.00001447004047690823052493957919392537369042",
+            "quadrature_error_estimate": "1.01000100000000000000000100000030635408e-47",
+            "series_log_bound_for_one_factor_exact": "19839860035376005625/7295633471478769396836465162120426214425756061038205781697135378432"
+          }
+        },
+        {
+          "name": "S_reflection_argument_5",
+          "absolute_residual": "1.175494350822287507968736537222245677819e-38",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "S_b_shift_argument_5",
+          "absolute_residual": "1.177790238226237288257737975771507876408e-38",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "D_alternate_method_and_panels_argument_3",
+          "absolute_residual": "6.266797245992709825478062266740011651698e-45",
+          "threshold": "1.0e-28",
+          "details": {
+            "z": {
+              "real": "0.9745280658454468243358028762796064391924",
+              "imag": "-0.01581806769321405327400806532941251729734"
+            },
+            "method": "tanh-sinh",
+            "direct_value": {
+              "real": "0.0001839119461645846799384824212290716572157",
+              "imag": "-0.00011488688213906428295504077032848719507"
+            },
+            "panels": [
+              0,
+              "1/2",
+              1,
+              2,
+              4,
+              8,
+              16,
+              32,
+              64,
+              128,
+              256,
+              512,
+              1024,
+              2048,
+              4096,
+              8192,
+              16384,
+              "infinity"
+            ],
+            "integration_domain": [
+              "0",
+              "infinity"
+            ],
+            "quadrature_error_estimate": "1.001120037025933015735576030178887757659e-42",
+            "tail_cutoff": 8192,
+            "tail_strip_epsilon_exact": "1/50",
+            "tail_bound_role": "separate bound for the exact [8192,infinity) tail, which is included in quadrature; not an omitted-tail error",
+            "direct_D_tail_bound_exact": "1/209976069579169144739760213803291651073904265365748393896873978215355487923140088629457264994213167104"
+          }
+        },
+        {
+          "name": "full_log_S_real_integral_1",
+          "absolute_residual": "1.102025953895894538720690503645855322955e-39",
+          "threshold": "1.0e-28",
+          "details": {
+            "z": {
+              "real": "0.2",
+              "imag": "0.03"
+            },
+            "direct_value": {
+              "real": "-1028.29750170051975922282309911816907171",
+              "imag": "31.87458266693082507107682793516308904214"
+            },
+            "quadrature_error_estimate": "1.000012794593161111845523513719156846663e-43"
+          }
+        },
+        {
+          "name": "full_log_S_real_integral_2",
+          "absolute_residual": "1.971363956704215509388145385822752337307e-38",
+          "threshold": "1.0e-28",
+          "details": {
+            "z": {
+              "real": "0.9745280658454468243358028762796064391924",
+              "imag": "-0.01581806769321405327400806532941251729734"
+            },
+            "direct_value": {
+              "real": "491.3866884067377667093585864279739268527",
+              "imag": "179.7208859823445235330036375034372889151"
+            },
+            "quadrature_error_estimate": "1.000197229893837445224938998528111895991e-44"
+          }
+        },
+        {
+          "name": "integrand_conjugation",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "original_to_centered_argument_1",
+          "absolute_residual": "7.174648137343063403129495466444370592155e-42",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "original_to_centered_argument_2",
+          "absolute_residual": "2.869859254937225361251798186577748236862e-42",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "original_to_centered_argument_3",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "original_to_centered_argument_4",
+          "absolute_residual": "1.147943701974890144500719274631099294745e-41",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "original_to_centered_argument_5",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-28",
+          "details": {}
+        },
+        {
+          "name": "D_series_extra_terms",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-28",
+          "details": {}
+        }
+      ],
+      "elapsed_seconds": 0.7114010840887204,
+      "evidence_status": "independent_formulas_same_mpmath_backend_not_intervals"
+    },
+    {
+      "working_dps": 60,
+      "records": [
+        {
+          "name": "first_D_coefficient",
+          "absolute_residual": "2.37389193643994968686831056739048928855524145840498624156994e-66",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "Lobachevsky_midpoint",
+          "absolute_residual": "3.94445884158862039970038483877603700186338920728572513899262e-62",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "Lobachevsky_derivative",
+          "absolute_residual": "8.69692824144828433779738955758388759223266889697601346189823e-62",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "D_real_integral_argument_1",
+          "absolute_residual": "1.18694596821997484343415528369524464427762072920249312078497e-66",
+          "threshold": "1.0e-48",
+          "details": {
+            "z": {
+              "real": "0.113368012200464080920480462554039927782484193956397510766425",
+              "imag": "0.0158180676932140532740080653294125172973385301873933941630906"
+            },
+            "direct_value": {
+              "real": "-0.0000538829198275307785326689675729873297547287853760908476406385",
+              "imag": "0.00000820723098585769118152778782531026522555544545534892844469363"
+            },
+            "quadrature_error_estimate": "2.00000000000000000000000010010000000066794171820728365402984e-71",
+            "series_log_bound_for_one_factor_exact": "18367627149302806989283582132656764453125/286315617815917888214454758226840415544131837542032504473871617648655218250306602444493579096079025657872384"
+          }
+        },
+        {
+          "name": "S_reflection_argument_1",
+          "absolute_residual": "1.64212155522905103230198653447775577115070268959153901466794e-58",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "S_b_shift_argument_1",
+          "absolute_residual": "8.04584912031551453624004422044991671097670844079559763477361e-59",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "D_real_integral_argument_2",
+          "absolute_residual": "2.96736492054993710858538820923811161069405182300623280196243e-67",
+          "threshold": "1.0e-48",
+          "details": {
+            "z": {
+              "real": "0.190562461784232283994091757834744616559201481323902345589606",
+              "imag": "-0.0158180676932140532740080653294125172973385301873933941630906"
+            },
+            "direct_value": {
+              "real": "-0.0000297501662517210084392515680936973790054837161606321179192796",
+              "imag": "-0.00000318093153031202784862045814279970249065117178591126189680377"
+            },
+            "quadrature_error_estimate": "1.100000000000000000000000010010000000001001e-70",
+            "series_log_bound_for_one_factor_exact": "18367627149302806989283582132656764453125/286315617815917888214454758226840415544131837542032504473871617648655218250306602444493579096079025657872384"
+          }
+        },
+        {
+          "name": "S_reflection_argument_2",
+          "absolute_residual": "1.61242156645005164593431348398218475257235361029794629513343e-58",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "S_b_shift_argument_2",
+          "absolute_residual": "1.98432248194791070224330586073932362526107295943836435126803e-59",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "D_real_integral_argument_3",
+          "absolute_residual": "3.82189229360520307813361845792260685205537207386641216587324e-64",
+          "threshold": "1.0e-48",
+          "details": {
+            "z": {
+              "real": "0.974528065845446824335802876279606439192458780202702920165482",
+              "imag": "-0.0158180676932140532740080653294125172973385301873933941630906"
+            },
+            "direct_value": {
+              "real": "0.000183911946164584679938482421229071657215764086069658460724541",
+              "imag": "-0.000114886882139064282955040770328487195070039314700459280992538"
+            },
+            "quadrature_error_estimate": "1.00000000000000000100000019029975435847461750082715899106497e-71",
+            "series_log_bound_for_one_factor_exact": "18367627149302806989283582132656764453125/286315617815917888214454758226840415544131837542032504473871617648655218250306602444493579096079025657872384"
+          }
+        },
+        {
+          "name": "S_reflection_argument_3",
+          "absolute_residual": "6.43429687077084810154736602721647216139385321483765664394692e-58",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "S_b_shift_argument_3",
+          "absolute_residual": "2.39797537852669405012889076867940016967941093412194185636579e-58",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "D_real_integral_argument_4",
+          "absolute_residual": "2.84867032372793962424197268086858714626628975008598348988393e-65",
+          "threshold": "1.0e-48",
+          "details": {
+            "z": "0.912025796954089094743716661166353633025057025840899569068093",
+            "direct_value": "0.0000721097544737327953057157154099859003418145900154501888181291",
+            "quadrature_error_estimate": "1.00000000100014687852737974935662507074719072979057065000171e-71",
+            "series_log_bound_for_one_factor_exact": "18367627149302806989283582132656764453125/286315617815917888214454758226840415544131837542032504473871617648655218250306602444493579096079025657872384"
+          }
+        },
+        {
+          "name": "S_reflection_argument_4",
+          "absolute_residual": "1.59309191113245227702888039776771180559110455519261878607389e-58",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "S_b_shift_argument_4",
+          "absolute_residual": "1.19404105643960656505826729031906133866325463487337394366378e-58",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "D_real_integral_argument_5",
+          "absolute_residual": "1.18694596821997484343415528369524464427762072920249312078497e-66",
+          "threshold": "1.0e-48",
+          "details": {
+            "z": "0.304008598984696364914572220388784544341685675280299856356031",
+            "direct_value": "-0.0000144700404769082305249395791939253736904159603010482569925148",
+            "quadrature_error_estimate": "1.00000030635408014476844807705794798264916653213464525416854e-71",
+            "series_log_bound_for_one_factor_exact": "18367627149302806989283582132656764453125/286315617815917888214454758226840415544131837542032504473871617648655218250306602444493579096079025657872384"
+          }
+        },
+        {
+          "name": "S_reflection_argument_5",
+          "absolute_residual": "7.96545955566226138514440198883855902795552277596309393036943e-59",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "S_b_shift_argument_5",
+          "absolute_residual": "1.89413027519898500711197449636932531572965800385450524613765e-58",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "D_alternate_method_and_panels_argument_3",
+          "absolute_residual": "3.82189229360520307813361845792260685205537207386641216587324e-64",
+          "threshold": "1.0e-48",
+          "details": {
+            "z": {
+              "real": "0.974528065845446824335802876279606439192458780202702920165482",
+              "imag": "-0.0158180676932140532740080653294125172973385301873933941630906"
+            },
+            "method": "tanh-sinh",
+            "direct_value": {
+              "real": "0.000183911946164584679938482421229071657215764086069658460724541",
+              "imag": "-0.000114886882139064282955040770328487195070039314700459280992538"
+            },
+            "panels": [
+              0,
+              "1/2",
+              1,
+              2,
+              4,
+              8,
+              16,
+              32,
+              64,
+              128,
+              256,
+              512,
+              1024,
+              2048,
+              4096,
+              8192,
+              16384,
+              "infinity"
+            ],
+            "integration_domain": [
+              "0",
+              "infinity"
+            ],
+            "quadrature_error_estimate": "1.00000100100000000100020001101968222671136362834371762114394e-66",
+            "tail_cutoff": 8192,
+            "tail_strip_epsilon_exact": "1/50",
+            "tail_bound_role": "separate bound for the exact [8192,infinity) tail, which is included in quadrature; not an omitted-tail error",
+            "direct_D_tail_bound_exact": "1/209976069579169144739760213803291651073904265365748393896873978215355487923140088629457264994213167104"
+          }
+        },
+        {
+          "name": "full_log_S_real_integral_1",
+          "absolute_residual": "4.97841222228891336571525124302409939247220173497693370648089e-60",
+          "threshold": "1.0e-48",
+          "details": {
+            "z": {
+              "real": "0.2",
+              "imag": "0.03"
+            },
+            "direct_value": {
+              "real": "-1028.29750170051975922282309911816907171041105709108429310515",
+              "imag": "31.8745826669308250710768279351630890421441055786607430048573"
+            },
+            "quadrature_error_estimate": "1.00100000000000000011000000010000000001e-64"
+          }
+        },
+        {
+          "name": "full_log_S_real_integral_2",
+          "absolute_residual": "6.18285928390473451065815323500883516585414795247010917848773e-58",
+          "threshold": "1.0e-48",
+          "details": {
+            "z": {
+              "real": "0.974528065845446824335802876279606439192458780202702920165482",
+              "imag": "-0.0158180676932140532740080653294125172973385301873933941630906"
+            },
+            "direct_value": {
+              "real": "491.386688406737766709358586427973926852575038238648046563217",
+              "imag": "179.720885982344523533003637503437288915161678780791859543971"
+            },
+            "quadrature_error_estimate": "1.00000000000000001110000000011210923863905398289389417081289e-66"
+          }
+        },
+        {
+          "name": "integrand_conjugation",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "original_to_centered_argument_1",
+          "absolute_residual": "9.72346137165803391741260008403144412592226901362682364547049e-62",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "original_to_centered_argument_2",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "original_to_centered_argument_3",
+          "absolute_residual": "1.55575381946528542678601601344503106014756304218029178327528e-61",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "original_to_centered_argument_4",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "original_to_centered_argument_5",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-48",
+          "details": {}
+        },
+        {
+          "name": "D_series_extra_terms",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-48",
+          "details": {}
+        }
+      ],
+      "elapsed_seconds": 1.2561789160827175,
+      "evidence_status": "independent_formulas_same_mpmath_backend_not_intervals"
+    }
+  ],
+  "odd_cutoff_result": {
+    "parameters": {
+      "b": "1/80",
+      "zeta": "0",
+      "contour_real": "2",
+      "cutoff": 5,
+      "digits": 30,
+      "extra_terms": 0
+    },
+    "Q": "0.4590864887360789569770622405076244805003",
+    "Airy_Q1": "0.4641636394869792760875394798310982145285",
+    "Q_minus_Q1": "-0.005077150750900319110477239323473734028158",
+    "scaled_remainder": "-0.5139885713049203784044367219262960820422",
+    "h": "0.0009817477042468103870195760572746838090619",
+    "lambda": "0.09938785051797463418595273072748685083108",
+    "eta": "1.230959417340774682134929178248086349465",
+    "centered_real_arguments": [
+      "0.118640701431535432011816484330481627169",
+      "0.1852897725531609329027557360583194962212",
+      "0.9692553766143754732444668545032569976234",
+      "0.9120257969540890947437166611662845479967",
+      "0.3040085989846963649145722203887286467945"
+    ],
+    "centered_strip_epsilon_exact": "1/100",
+    "D_terms": 11,
+    "D_full_log_remainder_bound_exact": "871751555675/9999728715137889003435745583513499467240404156416",
+    "D_full_log_remainder_bound_decimal": "8.717752056166447497148455051455362507538e-38",
+    "D_propagated_error_estimate": "2.956780258116365782227087245099231892689e-37",
+    "normalized_absolute_integral_estimate": "3.391677394661512223305937864705395831895",
+    "quadrature_internal_error_estimate": "1.414712034119003187420128350009370322478e-38",
+    "absolute_quadrature_internal_error_estimate": "1.55759637639268235273895620359186732316e-45",
+    "quadrature_acceptance_threshold": "1.00000000000000000000000000000000340769e-15",
+    "cutoff_comparison": {
+      "shorter_cutoff": 3,
+      "Q_at_shorter_cutoff": "0.4590841351574183737450973964336495986678",
+      "extension_contribution": "0.000002353578660583231964844073998771639273287",
+      "shorter_tail_diagnostic": {
+        "positive_numerator_coefficients": [
+          "4.467149743401403106239325811829700139326",
+          "1537.427308704327238633947212705464553488",
+          "5535.843834014709561312823675600063567249"
+        ],
+        "psi_at_cutoff": "0.2575727621973564988141291335910340147586",
+        "global_real_D_majorant": "0.0007446047032754223066211755041760514233238",
+        "normalized_two_sided_tail_majorant_estimate": "0.00000253151406834302234651702262753965145371",
+        "status": "analytic_formula_evaluated_without_outward_rounding"
+      }
+    },
+    "tail_diagnostic": {
+      "positive_numerator_coefficients": [
+        "4.467149743401403106239325811829700139326",
+        "1537.427308704327238633947212705464553488",
+        "5535.843834014709561312823675600063567249"
+      ],
+      "psi_at_cutoff": "0.5016364560308220815667168809403110372526",
+      "global_real_D_majorant": "0.0007446047032754223066211755041760514233238",
+      "normalized_two_sided_tail_majorant_estimate": "1.371543734396330656062906556403636180234e-17",
+      "status": "analytic_formula_evaluated_without_outward_rounding"
+    },
+    "panels": [
+      0,
+      2,
+      3,
+      4,
+      5
+    ],
+    "integrand_evaluations": 228,
+    "elapsed_seconds": 1.1529211659217253,
+    "evidence_status": "uncertified_multiprecision_exact_integrand_quadrature"
+  },
+  "independent_odd_cutoff_references": [
+    {
+      "b": "1/80",
+      "zeta": "0",
+      "contour": "2",
+      "cutoff": 5,
+      "Q": 0.4590864887357295,
+      "outer_internal_error_estimate": 2.3931404716919074e-14,
+      "max_inner_log_internal_error_estimate": 1.0895351753929908e-08,
+      "max_original_argument_linear_identity_residual": 4.27440458765e-46,
+      "integration_warnings": [],
+      "integrand_evaluations": 105,
+      "elapsed_seconds": 0.6384327090345323,
+      "unit_panel_contributions_normalized": [
+        0.7460025370300969,
+        -0.2896109005598474,
+        0.002692498686819426,
+        2.353568218020091e-06,
+        1.0442561028235219e-11
+      ],
+      "evidence_status": "independent_whole_Barnes_log_QUADPACK_double_precision_not_interval"
+    },
+    {
+      "b": "1/80",
+      "zeta": "0",
+      "contour": "2",
+      "cutoff": 3,
+      "Q": 0.45908413515706886,
+      "outer_internal_error_estimate": 2.393137858693316e-14,
+      "max_inner_log_internal_error_estimate": 1.0895351753929908e-08,
+      "max_original_argument_linear_identity_residual": 4.27335298804e-46,
+      "integration_warnings": [],
+      "integrand_evaluations": 63,
+      "elapsed_seconds": 0.3896268750540912,
+      "unit_panel_contributions_normalized": [
+        0.7460025370300969,
+        -0.2896109005598474,
+        0.002692498686819426
+      ],
+      "evidence_status": "independent_whole_Barnes_log_QUADPACK_double_precision_not_interval"
+    }
+  ],
+  "runner_sha256": "ad144973e0c8c39f78da80f533eae08a7cba1749d2985ffdbbdc81283427248d",
+  "scope": "Targeted corrected-source replay and failure paths; not the full21-setting matrix or an interval certificate."
+}

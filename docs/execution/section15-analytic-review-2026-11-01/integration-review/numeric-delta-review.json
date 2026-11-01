@@ -1,0 +1,191 @@
+{
+  "generated_at_utc": "2026-11-01T19:04:53.540666+00:00",
+  "decision": "approved_for_recorded_finite_evidence_scope",
+  "analytic_approval_manifest_sha256": "665b232d100dc1491f50f3ac34f575f938b28e5946ec9cd758421ff2014d7d66",
+  "approved_analytic_sha256": {
+    "book/chapters/15-quantum-airy.tex": "2688ef6862492f93cd49de4c50017eb33496ad0d1b77cd8f4220150910a2ef1e",
+    "book/claims/section15.json": "8d5ba46372dda6a108bf913e30b661f87e16b4985b444ed8107d9feefb4c6c3d"
+  },
+  "reviewed_final_sha256": {
+    "book/chapters/15-quantum-airy.tex": "efee2c699923ab31e4d7d48eeac57c60bf2ea088ea4ff17e617b9ed97202d6dd",
+    "book/claims/section15.json": "2a53176d95601bd09448326a34b203f1e05bd46dc6eee182226af36b24a2fb96"
+  },
+  "chapter_delta_confined_to_numerical_subsection": true,
+  "analytic_prefix_and_interpretation_suffix_byte_identical": true,
+  "ledger_old_analytic_proofs_statuses_and_source_pins_preserved": true,
+  "ledger_claim_count": 14,
+  "ledger_claim_field_changes": {
+    "s15.normalization": [
+      "computation"
+    ],
+    "s15.uniform_transition": [],
+    "s15.strip_estimate": [
+      "computation"
+    ],
+    "s15.phase": [],
+    "s15.fold_algebra": [],
+    "s15.contour": [],
+    "s15.first_correction": [],
+    "s15.airy_column": [
+      "computation"
+    ],
+    "s15.reported_quantum_column": [
+      "computation",
+      "coverage_gap",
+      "hypotheses"
+    ],
+    "s15.phase_constant": [],
+    "s15.integrated_remainder": [],
+    "s15.orientation": [],
+    "s15.resonance_noncancellation": []
+  },
+  "ledger_top_level_changes": [
+    "computational_companion",
+    "revision_scope",
+    "status_definitions"
+  ],
+  "full_v1_sha256": "bfb7bf75aa4522e794f2c6000863df786988a67bf92354d41d7075dfcee37a83",
+  "full_v1_source_start_finish_equal": true,
+  "full_v1_source_identities": {
+    "commit": "3ddf610dbe4578c7828e55f4e9cd92aacaba6df6",
+    "dirty_status": "M book/chapters/15-quantum-airy.tex\n M book/claims/section15.json\n?? experiments/section15_quantum/README.md\n?? experiments/section15_quantum/check.py\n?? experiments/section15_quantum/evaluate.py\n?? experiments/section15_quantum/test_evaluate.py",
+    "sha256": {
+      "experiments/section15_quantum/evaluate.py": "be91bb65792c9ae3299bfccc38b32b31d561ee714a6b0f717426207a4af39e47",
+      "experiments/section15_quantum/check.py": "6b5eb533682bc9eff896e274a4b3444aee3ee038d981af21bd74b6887ce8a8e6",
+      "experiments/section15_quantum/test_evaluate.py": "c71c7e144a961745f2a8248c1129ce891b32f547d9a2c4b8c1139e6e99c13aaf",
+      "experiments/section15_quantum/README.md": "606f4eae6ee9c6f6280991894d22dce864cc5e7af006716bbeda35976520c072",
+      "experiments/section15/historical-table.json": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011",
+      "book/chapters/14-normalized-quantum-comparison.tex": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+      "book/chapters/15-quantum-airy.tex": "2688ef6862492f93cd49de4c50017eb33496ad0d1b77cd8f4220150910a2ef1e"
+    }
+  },
+  "full_v1_rows": 21,
+  "parameter_pairs": 7,
+  "table_rows": [
+    {
+      "b": "0.0125",
+      "zeta": "0",
+      "Q_90dps_C1": "0.459086488736078952059515470701087300478756472206679647022641744501716816685047700268477605",
+      "rounded_Q": "0.459086",
+      "rounded_Airy_Q1": "0.464164",
+      "historical_Q": "0.459087",
+      "historical_rounding_agrees": false
+    },
+    {
+      "b": "0.00625",
+      "zeta": "0",
+      "Q_90dps_C1": "0.422571994628146576785631699546624899496389496027843174555075187823244149273461074064702723",
+      "rounded_Q": "0.422572",
+      "rounded_Airy_Q1": "0.423779",
+      "historical_Q": "0.422572",
+      "historical_rounding_agrees": true
+    },
+    {
+      "b": "0.003125",
+      "zeta": "0",
+      "Q_90dps_C1": "0.398046859852248542516039732683715447537548907719402214371626321388817849529933270539979944",
+      "rounded_Q": "0.398047",
+      "rounded_Airy_Q1": "0.398339",
+      "historical_Q": "0.398047",
+      "historical_rounding_agrees": true
+    },
+    {
+      "b": "0.0125",
+      "zeta": "1",
+      "Q_90dps_C1": "0.214332994864176464696403585740773765662942651126668104103498396934667199965571828779635697",
+      "rounded_Q": "0.214333",
+      "rounded_Airy_Q1": "0.202400",
+      "historical_Q": "0.214333",
+      "historical_rounding_agrees": true
+    },
+    {
+      "b": "0.00625",
+      "zeta": "1",
+      "Q_90dps_C1": "0.182315948954197635072926465200338684568373049445632191879771669416955009902538761118333426",
+      "rounded_Q": "0.182316",
+      "rounded_Airy_Q1": "0.177567",
+      "historical_Q": "0.182316",
+      "historical_rounding_agrees": true
+    },
+    {
+      "b": "0.003125",
+      "zeta": "1",
+      "Q_90dps_C1": "0.163804559064012743633008100417840437521164209973033758979853826152867014961534679757182226",
+      "rounded_Q": "0.163805",
+      "rounded_Airy_Q1": "0.161924",
+      "historical_Q": "0.163805",
+      "historical_rounding_agrees": true
+    }
+  ],
+  "maximum_serialized_60_90_difference": "3.967277229822320472205035476670398E-57",
+  "maximum_serialized_contour_order_difference": "0E-90",
+  "maximum_recorded_before_Q_serialization_60_90_difference": "3.96705306793319084462867951488734130322067120517265167717522780004000069938827373621162553E-57",
+  "maximum_recorded_before_Q_serialization_contour_order_difference": "1.22727336632443163827394298874656891074380387812486239127788727929677631368042896411502447E-91",
+  "comparison_precision_note": "The declared bounds are checked against the runner comparisons computed before Q serialization; rounded serialized Q differences are recorded separately.",
+  "zeta1_scaled_remainders_rounded": [
+    "1.208081684",
+    "1.211366819",
+    "1.208878763"
+  ],
+  "negative_zeta_Q": "0.517966671856531011413677895359942125005538260412253146086420722770177679527794964523329602",
+  "independent_reference_sha256": "183f963fef33d642a83c771de942acd3ee5c7bcb99874ccb54455743db3e1045",
+  "maximum_independent_observed_difference": "1.797583214368300453375100503610503972156825444924812176755850726538925935297277E-12",
+  "independent_comparisons": [
+    {
+      "b": "1/80",
+      "zeta": "0",
+      "reference_Q": "0.45908648873519403",
+      "Q_90dps_C1": "0.459086488736078952059515470701087300478756472206679647022641744501716816685047700268477605",
+      "observed_absolute_difference": "8.84922059515470701087300478756472206679647022641744501716816685047700268477605E-13"
+    },
+    {
+      "b": "1/160",
+      "zeta": "0",
+      "reference_Q": "0.42257199462994416",
+      "Q_90dps_C1": "0.422571994628146576785631699546624899496389496027843174555075187823244149273461074064702723",
+      "observed_absolute_difference": "1.797583214368300453375100503610503972156825444924812176755850726538925935297277E-12"
+    },
+    {
+      "b": "1/320",
+      "zeta": "0",
+      "reference_Q": "0.3980468598513712",
+      "Q_90dps_C1": "0.398046859852248542516039732683715447537548907719402214371626321388817849529933270539979944",
+      "observed_absolute_difference": "8.77342516039732683715447537548907719402214371626321388817849529933270539979944E-13"
+    },
+    {
+      "b": "1/80",
+      "zeta": "1",
+      "reference_Q": "0.21433299486419644",
+      "Q_90dps_C1": "0.214332994864176464696403585740773765662942651126668104103498396934667199965571828779635697",
+      "observed_absolute_difference": "1.9975303596414259226234337057348873331895896501603065332800034428171220364303E-14"
+    },
+    {
+      "b": "1/160",
+      "zeta": "1",
+      "reference_Q": "0.18231594895377196",
+      "Q_90dps_C1": "0.182315948954197635072926465200338684568373049445632191879771669416955009902538761118333426",
+      "observed_absolute_difference": "4.25675072926465200338684568373049445632191879771669416955009902538761118333426E-13"
+    },
+    {
+      "b": "1/320",
+      "zeta": "1",
+      "reference_Q": "0.16380455906554142",
+      "Q_90dps_C1": "0.163804559064012743633008100417840437521164209973033758979853826152867014961534679757182226",
+      "observed_absolute_difference": "1.528676366991899582159562478835790026966241020146173847132985038465320242817774E-12"
+    },
+    {
+      "b": "1/160",
+      "zeta": "-1",
+      "reference_Q": "0.5179666718562037",
+      "Q_90dps_C1": "0.517966671856531011413677895359942125005538260412253146086420722770177679527794964523329602",
+      "observed_absolute_difference": "3.27311413677895359942125005538260412253146086420722770177679527794964523329602E-13"
+    }
+  ],
+  "limitations": [
+    "The full-v1 run belongs to its recorded earlier source hashes, not the final corrected code.",
+    "Final clean-source full replay remains a separate post-source-commit gate.",
+    "Observed numerical agreements do not certify achieved digits or interval quadrature.",
+    "Original historical evaluator, raw output and rounding convention remain unrecovered.",
+    "No enlargement to arbitrary shapes, unbounded zeta, fixed-volume limits or global invariants."
+  ]
+}

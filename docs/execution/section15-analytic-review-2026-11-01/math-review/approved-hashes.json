@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "review_date": "2026-11-01",
+  "reviewer": "airy_proof_review",
+  "decision": "approved_with_stated_scope",
+  "baseline_commit": "3ddf610dbe4578c7828e55f4e9cd92aacaba6df6",
+  "repository_root": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+  "snapshot_type": "frozen author analytic chapter and ledger before any numerical supplementation",
+  "approved_sha256": {
+    "book/chapters/15-quantum-airy.tex": "2688ef6862492f93cd49de4c50017eb33496ad0d1b77cd8f4220150910a2ef1e",
+    "book/claims/section15.json": "8d5ba46372dda6a108bf913e30b661f87e16b4985b444ed8107d9feefb4c6c3d"
+  },
+  "chapter_label_count": 21,
+  "chapter_label_order_preserved": true,
+  "ledger_unique_claim_count": 13,
+  "scope": [
+    "Specified cleared equal-label regular-family Barnes integral with upward dw/i",
+    "Fixed bounded real zeta, additive Airy expansion and first correction",
+    "Exact phase constant via real Murakami-Yano specialization and shrinking-volume limit",
+    "Whole-contour relocation, uniform global tails, Gaussian localization and integrated remainder",
+    "Pole noncancellation for sufficiently small b in fixed bounded physical windows"
+  ],
+  "external_inputs": "TV special-function and equal-label statements; Murakami-Yano real volume statement; DLMF Airy representation were independently source-checked, not fully reproved.",
+  "exclusions": [
+    "Numerical evaluator implementation and quadrature certification",
+    "Historical quantum column provenance recovery",
+    "General tetrahedral shapes",
+    "Unbounded zeta or fixed nonzero volume matching limits",
+    "Global quantum invariant or cone-metric measure identification"
+  ],
+  "evidence_sha256": {
+    "analytic-review.md": "9e68bb8bddf936f6ec2e2a8179266eaf4e587aca67e2980af7efcfcca55e1457",
+    "independent_algebra.py": "2898f6f1cc57e25c1bc61cb83cb569e31d8dda845aa6e2f4dd8f58111e7e24cc",
+    "independent-algebra-result.json": "5ab2d5be6f377b9232f4baa17b2c7b95a789c63e20388d7820b5907e97d87649",
+    "initial-revised-source-check.json": "182b48e17bf81317d45dfe5742f6198166e376eed97812c9c20df739fb12e9fe"
+  },
+  "carryover_rule": "Any change to an approved canonical file requires a delta review and a fresh approval manifest."
+}

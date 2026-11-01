@@ -1,0 +1,118 @@
+{
+  "status": "all_seven_independent_reference_comparisons_passed_1e-10_threshold",
+  "production_artifact": "../computation/full-v1.json",
+  "production_artifact_sha256": "bfb7bf75aa4522e794f2c6000863df786988a67bf92354d41d7075dfcee37a83",
+  "reference_artifact_sha256": "183f963fef33d642a83c771de942acd3ee5c7bcb99874ccb54455743db3e1045",
+  "production_start_finish_equal": true,
+  "production_source_sha256": {
+    "experiments/section15_quantum/evaluate.py": "be91bb65792c9ae3299bfccc38b32b31d561ee714a6b0f717426207a4af39e47",
+    "experiments/section15_quantum/check.py": "6b5eb533682bc9eff896e274a4b3444aee3ee038d981af21bd74b6887ce8a8e6",
+    "experiments/section15_quantum/test_evaluate.py": "c71c7e144a961745f2a8248c1129ce891b32f547d9a2c4b8c1139e6e99c13aaf",
+    "experiments/section15_quantum/README.md": "606f4eae6ee9c6f6280991894d22dce864cc5e7af006716bbeda35976520c072",
+    "experiments/section15/historical-table.json": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011",
+    "book/chapters/14-normalized-quantum-comparison.tex": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+    "book/chapters/15-quantum-airy.tex": "2688ef6862492f93cd49de4c50017eb33496ad0d1b77cd8f4220150910a2ef1e"
+  },
+  "maximum_observed_difference": "0.000000000001797581942220555195549509833501708806141",
+  "records": [
+    {
+      "b": "1/80",
+      "zeta": "0",
+      "production_Q": "0.459086488736078952059515470701087300478756472206679647022641744501716816685047700268477605",
+      "independent_Q": 0.45908648873519403,
+      "absolute_difference": "8.849205076593287416538566344380823141015e-13",
+      "reference_max_inner_log_error_estimate": 1.1320871611792177e-08,
+      "reference_outer_error_estimate": 5.0970641963409334e-15,
+      "cutoffs": {
+        "production": 14,
+        "reference": 8
+      },
+      "scaled_remainder": "-0.513988571304920876235397933739847838467489529551747617948231000104687374166591682443660589"
+    },
+    {
+      "b": "1/160",
+      "zeta": "0",
+      "production_Q": "0.422571994628146576785631699546624899496389496027843174555075187823244149273461074064702723",
+      "independent_Q": 0.42257199462994416,
+      "absolute_difference": "0.000000000001797581942220555195549509833501708806141",
+      "reference_max_inner_log_error_estimate": 4.286419036070355e-08,
+      "reference_outer_error_estimate": 4.692357464700215e-15,
+      "cutoffs": {
+        "production": 14,
+        "reference": 8
+      },
+      "scaled_remainder": "-0.307946437873556272562272915328130034329635721123454233505047426856384048689957534011472505"
+    },
+    {
+      "b": "1/320",
+      "zeta": "0",
+      "production_Q": "0.398046859852248542516039732683715447537548907719402214371626321388817849529933270539979944",
+      "independent_Q": 0.3980468598513712,
+      "absolute_difference": "8.773161251582578844717142506913027389335e-13",
+      "reference_max_inner_log_error_estimate": 1.711950453172269e-07,
+      "reference_outer_error_estimate": 4.436951674953877e-15,
+      "cutoffs": {
+        "production": 14,
+        "reference": 8
+      },
+      "scaled_remainder": "-0.187493637626470640263535712021723048724882075578298875231519465417837038696690536070019063"
+    },
+    {
+      "b": "1/80",
+      "zeta": "1",
+      "production_Q": "0.214332994864176464696403585740773765662942651126668104103498396934667199965571828779635697",
+      "independent_Q": 0.21433299486419644,
+      "absolute_difference": "1.997083962650848581566073533463158817565e-14",
+      "reference_max_inner_log_error_estimate": 1.1293660487394721e-08,
+      "reference_outer_error_estimate": 2.3892181377698884e-15,
+      "cutoffs": {
+        "production": 14,
+        "reference": 8
+      },
+      "scaled_remainder": "1.20808168380169893189727361139041811916149169969287997054349640907551713504575472170568115"
+    },
+    {
+      "b": "1/160",
+      "zeta": "1",
+      "production_Q": "0.182315948954197635072926465200338684568373049445632191879771669416955009902538761118333426",
+      "independent_Q": 0.18231594895377196,
+      "absolute_difference": "4.256793190045357008550172543204676585228e-13",
+      "reference_max_inner_log_error_estimate": 4.283353089883175e-08,
+      "reference_outer_error_estimate": 2.0396427415002352e-15,
+      "cutoffs": {
+        "production": 14,
+        "reference": 8
+      },
+      "scaled_remainder": "1.21136681940883860308826718278832868190367842981747243683966697615055127331482856725787772"
+    },
+    {
+      "b": "1/320",
+      "zeta": "1",
+      "production_Q": "0.163804559064012743633008100417840437521164209973033758979853826152867014961534679757182226",
+      "independent_Q": 0.16380455906554142,
+      "absolute_difference": "0.000000000001528678236474873798385119508083073962513",
+      "reference_max_inner_log_error_estimate": 1.711614539049985e-07,
+      "reference_outer_error_estimate": 1.849529717738866e-15,
+      "cutoffs": {
+        "production": 14,
+        "reference": 8
+      },
+      "scaled_remainder": "1.20887876272777215014661435116123171396431520569008498321627254495284934867260111314823753"
+    },
+    {
+      "b": "1/160",
+      "zeta": "-1",
+      "production_Q": "0.517966671856531011413677895359942125005538260412253146086420722770177679527794964523329602",
+      "independent_Q": 0.5179666718562037,
+      "absolute_difference": "3.273027566152610581045912931511754513156e-13",
+      "reference_max_inner_log_error_estimate": 4.2896106868793055e-08,
+      "reference_outer_error_estimate": 8.850087615484027e-15,
+      "cutoffs": {
+        "production": 14,
+        "reference": 8
+      },
+      "scaled_remainder": "-5.17675056001440178907649784558016104499407972312061734142013570063075227917911641332592389"
+    }
+  ],
+  "limitations": "Observed differences against an uncertified90dps reference are not true errors or interval bounds. QUADPACK outer errors omit inner error. The production matrix predates diagnostic/provenance repairs and retains its original source hashes."
+}

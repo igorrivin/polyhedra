@@ -1,0 +1,51 @@
+{
+  "access_date": "2026-11-01",
+  "pin_kind": "Primary document versions/equation pins; no local downloaded-byte hash claim",
+  "sources": [
+    {
+      "source": "TeschnerVartanov",
+      "url": "https://arxiv.org/pdf/1202.4698v3",
+      "version": "arXiv:1202.4698v3, 2013-04-30",
+      "pins": [
+        "Equation (2.27) and its following contour prescription, printed p. 7",
+        "Appendix A (A.1), printed p. 22; (A.11), (A.13), (A.15), (A.16) and Gamma quotient, printed pp. 22-23"
+      ],
+      "checked": "Equal-label integrand and trivalent product; printed dw versus explicit dw/i; functional/reflection identities and fixed-b vertical asymptotics. The factor-two subtraction typo in (A.1) is corrected explicitly by the small-u expansion."
+    },
+    {
+      "source": "MurakamiYano",
+      "url": "https://intlpress.com/site/pub/files/_fulltext/journals/cag/2005/0013/0002/CAG-2005-0013-0002-a005.pdf",
+      "version": "Communications in Analysis and Geometry 13(2), 379-400 (2005), DOI 10.4310/CAG.2005.v13.n2.a5",
+      "pins": [
+        "Theorem 2 and equations (0.4)-(0.8), pp. 381-382",
+        "Section 1.2, equations (1.14)-(1.18) and following absolute-value statement, pp. 385-386"
+      ],
+      "checked": "Real Lobachevsky specialization fixes G=2(U_Lambda+Delta_Lambda) at the regular saddles without an unshown complex branch convention. The Euclidean collision has volume zero."
+    },
+    {
+      "source": "DLMF",
+      "url": "https://dlmf.nist.gov/9.5.E4",
+      "version": "DLMF 1.2.8, released 2026-09-15; accessed 2026-11-01",
+      "pin": "9.5.4",
+      "checked": "Lower-to-upper Airy contour orientation. The chapter proves the deformation to a positive vertical line and retains the signed dw/i Jacobian."
+    },
+    {
+      "source": "Verlinde-Zhang",
+      "title": "SYK correlators from 2D Liouville-de Sitter gravity",
+      "url": "https://doi.org/10.1007/JHEP05(2025)053",
+      "pdf_url": "https://scoap3-prod-backend.s3.cern.ch/media/harvested_files/10.1007/JHEP05%282025%29053/13130_2025_Article_26128.pdf",
+      "version": "JHEP05(2025)053, published 2025-05-07",
+      "pin": "Appendix A.4, printed p.23",
+      "checked": "Independent primary-source corroboration of convergent Gamma subtraction -(Q-2x)/(2t); not added as a manuscript bibliography dependency."
+    },
+    {
+      "source": "DLMF positivity",
+      "urls": [
+        "https://dlmf.nist.gov/9.2.E3",
+        "https://dlmf.nist.gov/9.9.i"
+      ],
+      "version": "1.2.8, released 2026-09-15",
+      "checked": "Ai(0)>0 and all real Airy zeros negative imply Ai is positive on [0,infinity); continuity supplies the compact positive minimum."
+    }
+  ]
+}

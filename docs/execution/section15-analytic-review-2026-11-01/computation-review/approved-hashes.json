@@ -1,0 +1,59 @@
+{
+  "decision": "approved_for_corrected_source_and_bounded_finite_numerical_evidence",
+  "date": "2026-11-01",
+  "reviewer": "airy_code_review",
+  "baseline_commit": "3ddf610dbe4578c7828e55f4e9cd92aacaba6df6",
+  "approved_code_sha256": {
+    "experiments/section15_quantum/evaluate.py": "fee7dae3a298deaf0520fe09ceb0d584306c63937fa923ba4d03729a6cdacf81",
+    "experiments/section15_quantum/check.py": "e0966000c16b3f34ed36102a8c38d00aa602e8e7fd3e5e605341bc7bf43896ba",
+    "experiments/section15_quantum/test_evaluate.py": "4ad45d1e359216715207aaafa4e6f9399f013ab585799b1db84164edbb110921",
+    "experiments/section15_quantum/README.md": "72be417c8d03f743ae056a2bb4b8b4a4f73047e3c368980c54f16569bb203322"
+  },
+  "review_context_sha256": {
+    "experiments/section15_quantum/evaluate.py": "fee7dae3a298deaf0520fe09ceb0d584306c63937fa923ba4d03729a6cdacf81",
+    "experiments/section15_quantum/check.py": "e0966000c16b3f34ed36102a8c38d00aa602e8e7fd3e5e605341bc7bf43896ba",
+    "experiments/section15_quantum/test_evaluate.py": "4ad45d1e359216715207aaafa4e6f9399f013ab585799b1db84164edbb110921",
+    "experiments/section15_quantum/README.md": "72be417c8d03f743ae056a2bb4b8b4a4f73047e3c368980c54f16569bb203322",
+    "experiments/section15/historical-table.json": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011",
+    "book/chapters/14-normalized-quantum-comparison.tex": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+    "book/chapters/15-quantum-airy.tex": "efee2c699923ab31e4d7d48eeac57c60bf2ea088ea4ff17e617b9ed97202d6dd",
+    "book/claims/section15.json": "2a53176d95601bd09448326a34b203f1e05bd46dc6eee182226af36b24a2fb96"
+  },
+  "preserved_historical_sha256": {
+    "experiments/section15/check.py": "56175063c8debbd150f1a3dc617d04367696dce7b713379aa8723ab3289d7ad0",
+    "experiments/section15/historical-table.json": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011",
+    "artifacts/section15/checks.json": "1b275fb776a7a203cfada670bf37d4a5c428a463e24edafb38ed0e8c258f8404"
+  },
+  "review_and_evidence_sha256": {
+    "computational-review.md": "039e5fc34ee4ae6c8082cac9981798470b07264483633a33927551f3d16455e7",
+    "independent_reference.py": "17eaf0ec27418f27ebeb47a3472c4ade5e6ab44f1bce07f1ebd4b23103e553ba",
+    "independent_algebra.py": "e998a28229316375482df6c2e73d4c1975889eba3414a0edd7d143f01993f949",
+    "review_acceptance.py": "ad144973e0c8c39f78da80f533eae08a7cba1749d2985ffdbbdc81283427248d",
+    "compare_full_runs.py": "d75d127fb65ec954d3cee5809157080e1f24cfec584784212c7b619b4cd1e7f6",
+    "independent-algebra-result.json": "94e5996f48ed6030e56f950de5deea79b28f65ee27a1d743385b0a295706a9ae",
+    "initial-source-audit.json": "72bcedb27891fb16fb29a8a5c643f850fa4702a5fb1a884db70f601c79c1044f",
+    "tail-and-real-part-probes.json": "dc418f5c3e76199443934ba7578f1204e96b6eb2b5f0397142f419acc0f72619",
+    "independent-whole-q.json": "ed65ed81773edb1d42eae8a0cadccbb2d9094c0b0f39a592bd2c15014f500750",
+    "independent-whole-q-matrix.json": "183f963fef33d642a83c771de942acd3ee5c7bcb99874ccb54455743db3e1045",
+    "independent-matrix-comparison.json": "9efe72bf58e6ce7b09894f5aae5e305f4546065910807b8df0e57343e12118a2",
+    "final-source-acceptance.json": "be0ae486f5eddf705057f6fb6758de399cac24704b4988bbb3b5996395fe9d77",
+    "final-source-smoke.json": "9bd52a58fc758f39ebbad0b9abb6b3600787557c249dcbe089a8d27bb5771337",
+    "validation-commands.json": "8dc7e8c05bfb927b21be085ab9119fb49b1492e9ef2988c06141e57b6e1bd852",
+    "../computation/full-v1.json": "bfb7bf75aa4522e794f2c6000863df786988a67bf92354d41d7075dfcee37a83",
+    "../computation/direct-D-refinement.json": "e6e09a506c5b432543a8ea73549c4ba56d29b138118f1da43a12721636af8c37",
+    "../computation/direct-D-development-failure.json": "401e5b898c9230922d17397b5d70969fd90734f4ac0fb9027c6b76260b589818"
+  },
+  "scope": [
+    "Exact cleared integral normalization, centered arguments, branches, finite D series and analytic bounds reviewed.",
+    "26 focused tests and Ruff passed; independent final-source smoke and targeted acceptance passed.",
+    "28 direct checks at40 and60dps plus13 failure/contract checks passed.",
+    "All7 independent whole-integral QUADPACK references agree with pre-repair full-v1 within1.80e-12.",
+    "Pre-repair21-setting full matrix and final-source targeted replay retain their actual distinct source identities."
+  ],
+  "limitations": [
+    "No interval enclosure, outward-rounded quadrature, guaranteed correct-digit count, or new proof of the global theorem.",
+    "Exact rational bounds are conditional on stated strip hypotheses and do not enclose floating-point arithmetic or full quadrature.",
+    "Later clean-source full replay and canonical artifact are not covered yet; compare_full_runs.py provides the strict follow-up gate."
+  ],
+  "performed_actions": "Read canonical sources and outputs; wrote only outer computation-review files. No canonical edits, commits, builds, installs, uploads, or deployment by this reviewer."
+}

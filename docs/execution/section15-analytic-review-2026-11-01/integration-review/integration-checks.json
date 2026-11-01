@@ -1,0 +1,138 @@
+{
+  "generated_at_utc": "2026-11-01T19:04:53.540666+00:00",
+  "checks_passed": true,
+  "baseline_commit": "3ddf610dbe4578c7828e55f4e9cd92aacaba6df6",
+  "source_paths": 12,
+  "modified_baseline_paths": 8,
+  "new_paths": 4,
+  "source_identities": [
+    {
+      "path": "INTEGRATION_PLAN.md",
+      "sha256": "4f4c6a6143a5ed6cc2267af89ae056c05c36037d61f2a6e9f0f90c3db6b290fe",
+      "bytes": 45918
+    },
+    {
+      "path": "README.md",
+      "sha256": "4f21707e9a49a6e9a0abcf9a5fd1b3713756ceb605e311e851eb88ed956cddfc",
+      "bytes": 8458
+    },
+    {
+      "path": "book/README.md",
+      "sha256": "99e57ebd20426c01a5fd62396eee82c3c6e3b3cd43020b36db3be1731e5ad17f",
+      "bytes": 7532
+    },
+    {
+      "path": "book/chapters/15-quantum-airy.tex",
+      "sha256": "efee2c699923ab31e4d7d48eeac57c60bf2ea088ea4ff17e617b9ed97202d6dd",
+      "bytes": 24972
+    },
+    {
+      "path": "book/claims/section15.json",
+      "sha256": "2a53176d95601bd09448326a34b203f1e05bd46dc6eee182226af36b24a2fb96",
+      "bytes": 25504
+    },
+    {
+      "path": "book/computational-status.md",
+      "sha256": "cb29c145ee8674315a48428e9e179c486edcef5814d0ff1774f13feca9a46606",
+      "bytes": 25820
+    },
+    {
+      "path": "docs/INTEGRATION_STATUS.md",
+      "sha256": "43096c06e180e44581bdef5886af1067968b33868ce2c0b8606dd91b697c2d42",
+      "bytes": 4562
+    },
+    {
+      "path": "experiments/section15/README.md",
+      "sha256": "37849f959764bb6801c68c5af94edd369224c42152625b6876b9437e58d40387",
+      "bytes": 3353
+    },
+    {
+      "path": "experiments/section15_quantum/README.md",
+      "sha256": "72be417c8d03f743ae056a2bb4b8b4a4f73047e3c368980c54f16569bb203322",
+      "bytes": 8690
+    },
+    {
+      "path": "experiments/section15_quantum/check.py",
+      "sha256": "e0966000c16b3f34ed36102a8c38d00aa602e8e7fd3e5e605341bc7bf43896ba",
+      "bytes": 13708
+    },
+    {
+      "path": "experiments/section15_quantum/evaluate.py",
+      "sha256": "fee7dae3a298deaf0520fe09ceb0d584306c63937fa923ba4d03729a6cdacf81",
+      "bytes": 15971
+    },
+    {
+      "path": "experiments/section15_quantum/test_evaluate.py",
+      "sha256": "4ad45d1e359216715207aaafa4e6f9399f013ab585799b1db84164edbb110921",
+      "bytes": 4602
+    }
+  ],
+  "baseline_tracked_paths": 1851,
+  "protected_baseline_paths": 1843,
+  "protected_lfs_files": 412,
+  "protected_inventory_sha256": "58cb0c1ea81fc401fc3111fd5399372860d0f7dcbf4ac358226547c58d236978",
+  "original_repositories": [
+    {
+      "path": "ideal_poly_volume_toolkit",
+      "head": "cc6b689652ce735f2098bb0a3235089210d764df",
+      "verified_files": 925
+    },
+    {
+      "path": "ipoly",
+      "head": "30ef40e23005509bd94d26f27dc48ea778832a50",
+      "verified_files": 28
+    }
+  ],
+  "original_archive_sha256": "8f28b07686ea579a7dfb7b88ccef5c12bdd50b6e328737d5a8a79f6e06ba92dc",
+  "supplied_reference_pdf_sha256": "40dd069bd2653f9a78666a31f53910d74b7f8de2a4a75d5a5dd62466032a6cd5",
+  "historical_table_sha256": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011",
+  "prior_section15_result_sha256": "1b275fb776a7a203cfada670bf37d4a5c428a463e24edafb38ed0e8c258f8404",
+  "labels_preserved_in_order": 607,
+  "chapter_labels_preserved_in_order": 21,
+  "bibliography_keys_preserved_in_order": 129,
+  "section15_ledger_claims": 14,
+  "section15_ledger_unique_labels": 21,
+  "section15_ledger_label_multiplicities": {
+    "eq:realregularsymbol": 1,
+    "eq:externalpoleclearing": 2,
+    "eq:clearedregularsymbol": 3,
+    "prop:regularquantumAiry": 1,
+    "eq:quantumAirytheorem": 3,
+    "lem:stripdoubleSine": 1,
+    "eq:uniformstripSb": 1,
+    "eq:stripSbexactremainder": 1,
+    "eq:Sbremainderintegral": 1,
+    "eq:regularstripangles": 1,
+    "eq:fullsmoothquantumphase": 1,
+    "eq:clearedphaseamplitude": 1,
+    "eq:regularAiryamplitude": 1,
+    "eq:regularAiryderivatives": 2,
+    "eq:verticalphasegap": 1,
+    "eq:verticalphasepositivity": 1,
+    "eq:AiryGaussianbound": 2,
+    "eq:Airyweightedexpansion": 2,
+    "eq:Airyscaledquantum": 3,
+    "eq:Airycorrectionpolynomial": 1,
+    "sec:quantumAiry": 3
+  },
+  "local_links_checked": 162,
+  "planned_missing_targets": [
+    "docs/execution/section15-analytic-review-2026-11-01/README.md"
+  ],
+  "status_porcelain": [
+    " M INTEGRATION_PLAN.md",
+    " M README.md",
+    " M book/README.md",
+    " M book/chapters/15-quantum-airy.tex",
+    " M book/claims/section15.json",
+    " M book/computational-status.md",
+    " M docs/INTEGRATION_STATUS.md",
+    " M experiments/section15/README.md",
+    "?? experiments/section15_quantum/README.md",
+    "?? experiments/section15_quantum/check.py",
+    "?? experiments/section15_quantum/evaluate.py",
+    "?? experiments/section15_quantum/test_evaluate.py"
+  ],
+  "diff_check_passed": true,
+  "scope": "Independent source preservation, numerical delta, label coverage and local links. Final PDF review and clean-source numerical generation are separate gates."
+}

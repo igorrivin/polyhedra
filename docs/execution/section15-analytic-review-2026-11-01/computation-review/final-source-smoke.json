@@ -1,0 +1,424 @@
+{
+  "schema_version": "1.0",
+  "profile": "smoke",
+  "status": "all_declared_checks_passed",
+  "created_at_utc": "2026-11-01T19:00:31.872956+00:00",
+  "runtime": {
+    "python": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+    "executable": "/tmp/polyhedra-baseline-20261031/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "mpmath": "1.3.0"
+  },
+  "source_at_start": {
+    "commit": "3ddf610dbe4578c7828e55f4e9cd92aacaba6df6",
+    "dirty_status": "M book/chapters/15-quantum-airy.tex\n M book/claims/section15.json\n?? experiments/section15_quantum/README.md\n?? experiments/section15_quantum/check.py\n?? experiments/section15_quantum/evaluate.py\n?? experiments/section15_quantum/test_evaluate.py",
+    "sha256": {
+      "experiments/section15_quantum/evaluate.py": "fee7dae3a298deaf0520fe09ceb0d584306c63937fa923ba4d03729a6cdacf81",
+      "experiments/section15_quantum/check.py": "e0966000c16b3f34ed36102a8c38d00aa602e8e7fd3e5e605341bc7bf43896ba",
+      "experiments/section15_quantum/test_evaluate.py": "4ad45d1e359216715207aaafa4e6f9399f013ab585799b1db84164edbb110921",
+      "experiments/section15_quantum/README.md": "72be417c8d03f743ae056a2bb4b8b4a4f73047e3c368980c54f16569bb203322",
+      "experiments/section15/historical-table.json": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011",
+      "book/chapters/14-normalized-quantum-comparison.tex": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+      "book/chapters/15-quantum-airy.tex": "efee2c699923ab31e4d7d48eeac57c60bf2ea088ea4ff17e617b9ed97202d6dd"
+    }
+  },
+  "source_at_finish": {
+    "commit": "3ddf610dbe4578c7828e55f4e9cd92aacaba6df6",
+    "dirty_status": "M book/chapters/15-quantum-airy.tex\n M book/claims/section15.json\n?? experiments/section15_quantum/README.md\n?? experiments/section15_quantum/check.py\n?? experiments/section15_quantum/evaluate.py\n?? experiments/section15_quantum/test_evaluate.py",
+    "sha256": {
+      "experiments/section15_quantum/evaluate.py": "fee7dae3a298deaf0520fe09ceb0d584306c63937fa923ba4d03729a6cdacf81",
+      "experiments/section15_quantum/check.py": "e0966000c16b3f34ed36102a8c38d00aa602e8e7fd3e5e605341bc7bf43896ba",
+      "experiments/section15_quantum/test_evaluate.py": "4ad45d1e359216715207aaafa4e6f9399f013ab585799b1db84164edbb110921",
+      "experiments/section15_quantum/README.md": "72be417c8d03f743ae056a2bb4b8b4a4f73047e3c368980c54f16569bb203322",
+      "experiments/section15/historical-table.json": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011",
+      "book/chapters/14-normalized-quantum-comparison.tex": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+      "book/chapters/15-quantum-airy.tex": "efee2c699923ab31e4d7d48eeac57c60bf2ea088ea4ff17e617b9ed97202d6dd"
+    }
+  },
+  "conventions": {
+    "Q": "4*b/(3*lambda) * cleared_R; h=2*pi*b^2; lambda=h^(1/3)",
+    "eta": "acos(1/3)-lambda^2*zeta/(6*sqrt(2))",
+    "contour": "v=4*pi-5*acos(1/3)+lambda*(C+i*t)/3; upward; C>0",
+    "measure": "dw/i; Q=4/(9*pi)*integral_0^infinity Re(F(t)) dt",
+    "F": "S_b(w-3*alpha)^4*S_b(4*alpha-w)^3*S_b(2*Q_barnes-w)*S_b(3*alpha-b)^2/S_b(alpha)^6",
+    "centered_log_S": "-Lambda(pi*z)/(pi*b^2)+D_b(z), x=z/b+b/2",
+    "branches": "principal Li2 pair on 0<Re(z)<1; primitive vanishes at z=1/2; log S fixed by convergent real integral; all factors combined before exp",
+    "outer_quadrature": "mpmath Gauss-Legendre on explicit panels, real half-contour",
+    "direct_D_quadrature": "Gauss-Legendre panels 0,1,4,16,64,256,1024,2048,4096,8192,infinity; nearest-strip check also uses tanh-sinh with 0,1/2,powers of 2 through16384,infinity",
+    "Airy_use": "comparison column only, never used in the quantum integrand"
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/1202.4698v3",
+      "scope": "equation 2.27 and Appendix A; linear subtraction corrected as in README"
+    },
+    {
+      "url": "https://dlmf.nist.gov/4.36.E5",
+      "scope": "csch partial fractions, retrieved 2026-11-01"
+    }
+  ],
+  "independent_double_sine_checks": [
+    {
+      "working_dps": 30,
+      "records": [
+        {
+          "name": "first_D_coefficient",
+          "absolute_residual": "3.00926553810505602039996553529e-36",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "Lobachevsky_midpoint",
+          "absolute_residual": "5.86445668065913317255545283517e-32",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "Lobachevsky_derivative",
+          "absolute_residual": "1.10246663054137572371849809925e-31",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "D_real_integral_argument_1",
+          "absolute_residual": "2.83995073246883681981188357682e-28",
+          "threshold": "1.0e-18",
+          "details": {
+            "z": {
+              "real": "0.113368012200464080920480462554",
+              "imag": "0.0158180676932140532740080653294"
+            },
+            "direct_value": {
+              "real": "-0.0000538829198275307785326692482632",
+              "imag": "0.00000820723098585769118152774462601"
+            },
+            "quadrature_error_estimate": "1.011000000000010011e-35",
+            "series_log_bound_for_one_factor_exact": "871751555675/159995659442206224054971929336215991475846466502656"
+          }
+        },
+        {
+          "name": "S_reflection_argument_1",
+          "absolute_residual": "3.19308443847758190990199396428e-28",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "S_b_shift_argument_1",
+          "absolute_residual": "7.06688138968644352873864994597e-29",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "D_real_integral_argument_2",
+          "absolute_residual": "6.12341172760470646900139246101e-36",
+          "threshold": "1.0e-18",
+          "details": {
+            "z": {
+              "real": "0.190562461784232283994091757835",
+              "imag": "-0.0158180676932140532740080653294"
+            },
+            "direct_value": {
+              "real": "-0.0000297501662517210084392515680937",
+              "imag": "-0.0000031809315303120278486204581428"
+            },
+            "quadrature_error_estimate": "1.00001001000001185123913253127e-35",
+            "series_log_bound_for_one_factor_exact": "871751555675/159995659442206224054971929336215991475846466502656"
+          }
+        },
+        {
+          "name": "S_reflection_argument_2",
+          "absolute_residual": "2.06723705743023173803933805899e-28",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "S_b_shift_argument_2",
+          "absolute_residual": "1.35290919449752798662817074173e-28",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "D_real_integral_argument_3",
+          "absolute_residual": "7.43185022975973891308180298119e-34",
+          "threshold": "1.0e-18",
+          "details": {
+            "z": {
+              "real": "0.97452806584544682433580287628",
+              "imag": "-0.0158180676932140532740080653294"
+            },
+            "direct_value": {
+              "real": "0.000183911946164584679938482421229",
+              "imag": "-0.000114886882139064282955040770329"
+            },
+            "quadrature_error_estimate": "1.1100000000002335011503525628e-36",
+            "series_log_bound_for_one_factor_exact": "871751555675/159995659442206224054971929336215991475846466502656"
+          }
+        },
+        {
+          "name": "S_reflection_argument_3",
+          "absolute_residual": "1.13455641736981129282290021594e-27",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "S_b_shift_argument_3",
+          "absolute_residual": "1.19444053945528414590662181445e-27",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "D_real_integral_argument_4",
+          "absolute_residual": "2.12870003413458768941808678829e-28",
+          "threshold": "1.0e-18",
+          "details": {
+            "z": "0.912025796954089094743716661166",
+            "direct_value": "0.0000721097544737327953057159282799",
+            "quadrature_error_estimate": "1.20000000000001000010000001e-35",
+            "series_log_bound_for_one_factor_exact": "871751555675/159995659442206224054971929336215991475846466502656"
+          }
+        },
+        {
+          "name": "S_reflection_argument_4",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "S_b_shift_argument_4",
+          "absolute_residual": "1.15370907388572976541465302673e-29",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "D_real_integral_argument_5",
+          "absolute_residual": "3.00926553810505602039996553529e-36",
+          "threshold": "1.0e-18",
+          "details": {
+            "z": "0.304008598984696364914572220389",
+            "direct_value": "-0.0000144700404769082305249395791939",
+            "quadrature_error_estimate": "1.100000000001010001e-35",
+            "series_log_bound_for_one_factor_exact": "871751555675/159995659442206224054971929336215991475846466502656"
+          }
+        },
+        {
+          "name": "S_reflection_argument_5",
+          "absolute_residual": "1.00974195868289511092701256356e-28",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "S_b_shift_argument_5",
+          "absolute_residual": "1.89326617253042833298814855668e-29",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "D_alternate_method_and_panels_argument_3",
+          "absolute_residual": "7.43185022975973891308180298119e-34",
+          "threshold": "1.0e-18",
+          "details": {
+            "z": {
+              "real": "0.97452806584544682433580287628",
+              "imag": "-0.0158180676932140532740080653294"
+            },
+            "method": "tanh-sinh",
+            "direct_value": {
+              "real": "0.000183911946164584679938482421229",
+              "imag": "-0.000114886882139064282955040770329"
+            },
+            "panels": [
+              0,
+              "1/2",
+              1,
+              2,
+              4,
+              8,
+              16,
+              32,
+              64,
+              128,
+              256,
+              512,
+              1024,
+              2048,
+              4096,
+              8192,
+              16384,
+              "infinity"
+            ],
+            "integration_domain": [
+              "0",
+              "infinity"
+            ],
+            "quadrature_error_estimate": "1.01001001001120037025933015736e-34",
+            "tail_cutoff": 8192,
+            "tail_strip_epsilon_exact": "1/50",
+            "tail_bound_role": "separate bound for the exact [8192,infinity) tail, which is included in quadrature; not an omitted-tail error",
+            "direct_D_tail_bound_exact": "1/209976069579169144739760213803291651073904265365748393896873978215355487923140088629457264994213167104"
+          }
+        },
+        {
+          "name": "full_log_S_real_integral_1",
+          "absolute_residual": "2.0204697528735511758167153107e-28",
+          "threshold": "1.0e-18",
+          "details": {
+            "z": {
+              "real": "0.2",
+              "imag": "0.03"
+            },
+            "direct_value": {
+              "real": "-1028.29750170051975922282309912",
+              "imag": "31.8745826669308250710768279352"
+            },
+            "quadrature_error_estimate": "1.00001000010000127945931611118e-33"
+          }
+        },
+        {
+          "name": "full_log_S_real_integral_2",
+          "absolute_residual": "1.12581700311239705117135459863e-27",
+          "threshold": "1.0e-18",
+          "details": {
+            "z": {
+              "real": "0.97452806584544682433580287628",
+              "imag": "-0.0158180676932140532740080653294"
+            },
+            "direct_value": {
+              "real": "491.386688406737766709358586427",
+              "imag": "179.720885982344523533003637504"
+            },
+            "quadrature_error_estimate": "1.01100010001972298938374452249e-37"
+          }
+        },
+        {
+          "name": "integrand_conjugation",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "original_to_centered_argument_1",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "original_to_centered_argument_2",
+          "absolute_residual": "2.46519032881566189191165176651e-32",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "original_to_centered_argument_3",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "original_to_centered_argument_4",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "original_to_centered_argument_5",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-18",
+          "details": {}
+        },
+        {
+          "name": "D_series_extra_terms",
+          "absolute_residual": "0.0",
+          "threshold": "1.0e-18",
+          "details": {}
+        }
+      ],
+      "elapsed_seconds": 0.4142197499750182,
+      "evidence_status": "independent_formulas_same_mpmath_backend_not_intervals"
+    }
+  ],
+  "rows": [
+    {
+      "parameters": {
+        "b": "0.0125",
+        "zeta": "0",
+        "contour_real": "1",
+        "cutoff": 12,
+        "digits": 40,
+        "extra_terms": 0
+      },
+      "Q": "0.4590864887360789520595154707010873004952",
+      "Airy_Q1": "0.4641636394869792760875394798310948083553",
+      "Q_minus_Q1": "-0.00507715075090032402802400913000750786016",
+      "scaled_remainder": "-0.5139885713049208762353979337398478368036",
+      "h": "0.0009817477042468103870195760572748446513116",
+      "lambda": "0.09938785051797463418595273072748171705762",
+      "eta": "1.23095941734077468213492917824798737571",
+      "centered_real_arguments": [
+        "0.1133680122004640809204804625540399277825",
+        "0.1905624617842322839940917578347446165592",
+        "0.9745280658454468243358028762796064391924",
+        "0.9120257969540890947437166611663536330251",
+        "0.3040085989846963649145722203887845443417"
+      ],
+      "centered_strip_epsilon_exact": "1/100",
+      "D_terms": 15,
+      "D_full_log_remainder_bound_exact": "19839860035376005625/455977091967423087302279072632526638401609753814887861356070961152",
+      "D_full_log_remainder_bound_decimal": "4.351065083066376566683212244278723349559e-47",
+      "D_propagated_error_estimate": "2.445195400124014751460681751509980239436e-47",
+      "normalized_absolute_integral_estimate": "0.5619762870567736563936094515200856859748",
+      "quadrature_internal_error_estimate": "1.411627112857151777751498779602679776961e-44",
+      "absolute_quadrature_internal_error_estimate": "1.393270654110522085271594384227378507889e-44",
+      "quadrature_acceptance_threshold": "1.0e-25",
+      "cutoff_comparison": {
+        "shorter_cutoff": 10,
+        "Q_at_shorter_cutoff": "0.4590864887360789520595154707010873004952",
+        "extension_contribution": "-1.954760271997239757351008506827225547799e-79",
+        "shorter_tail_diagnostic": {
+          "positive_numerator_coefficients": [
+            "2.679911836924746616624363198706508682264",
+            "2293.706789845846497223278840104508418649",
+            "8339.860177839269031145394678840992562632"
+          ],
+          "psi_at_cutoff": "1.254198414969345943882268743717265797054",
+          "global_real_D_majorant": "0.00079594415616939505517391634952186573838",
+          "normalized_two_sided_tail_majorant_estimate": "3.190704510631331706029181241685192495507e-76",
+          "status": "analytic_formula_evaluated_without_outward_rounding"
+        }
+      },
+      "tail_diagnostic": {
+        "positive_numerator_coefficients": [
+          "2.679911836924746616624363198706508682264",
+          "2293.706789845846497223278840104508418649",
+          "8339.860177839269031145394678840992562632"
+        ],
+        "psi_at_cutoff": "1.598615808156865820787069611872201463743",
+        "global_real_D_majorant": "0.00079594415616939505517391634952186573838",
+        "normalized_two_sided_tail_majorant_estimate": "3.750882672102506674902144442621297020583e-118",
+        "status": "analytic_formula_evaluated_without_outward_rounding"
+      },
+      "panels": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      "integrand_evaluations": 390,
+      "elapsed_seconds": 2.842696000006981,
+      "evidence_status": "uncertified_multiprecision_exact_integrand_quadrature",
+      "setting": "40dps_C1_T12"
+    }
+  ],
+  "comparisons": [],
+  "elapsed_seconds": 3.544958792044781,
+  "limitations": [
+    "No interval arithmetic or outward-rounded quadrature was performed.",
+    "The exact rational D bound controls the series truncation in the log, conditional on the declared centered strip; it does not bound floating-point evaluation error.",
+    "Propagated D error uses a numerical absolute-integral estimate.",
+    "Quadrature error estimates, tail formula evaluations, and sign checks are numerical diagnostics, not certificates.",
+    "Agreement between precisions, contours, cutoffs, and independent formulas is finite numerical evidence and does not prove the asymptotic theorem.",
+    "Historical values retain their original provenance and unknown rounding convention."
+  ]
+}

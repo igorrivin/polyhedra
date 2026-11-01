@@ -1,0 +1,33 @@
+{
+  "status": "failed_attempt_preserved_no_successful_output",
+  "profile": "full",
+  "working_dps": 60,
+  "check": "D_real_integral_argument_3",
+  "absolute_residual": "3.57668167262709464526624771575707667710313018785946548100174e-40",
+  "acceptance_threshold": "1e-48",
+  "quadrature_panels_before": [
+    0,
+    1,
+    4,
+    16,
+    64,
+    256,
+    1024,
+    "infinity"
+  ],
+  "quadrature_panels_after": [
+    0,
+    1,
+    4,
+    16,
+    64,
+    256,
+    1024,
+    2048,
+    4096,
+    8192,
+    "infinity"
+  ],
+  "provisional_diagnosis": "Inadequate far-panel convergence in independent real D quadrature; finite controlled D-series was unchanged. Requires further panel/tail comparison before treating diagnosis as settled.",
+  "subsequent_checks": "27 independent checks passed at40dps and60dps after panel refinement; details to appear in successful full-v1 output."
+}

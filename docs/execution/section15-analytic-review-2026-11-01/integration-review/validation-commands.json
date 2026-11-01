@@ -1,0 +1,38 @@
+{
+  "recorded_at_utc": "2026-11-01T19:09:30.057573+00:00",
+  "site_tests": {
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "site/tests"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "tests_passed": 25,
+    "stdout": "site-tests.stdout",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr": "site-tests.stderr",
+    "stderr_sha256": "f34dc87864c2b1b30d913303d814634cea9df2b5038e1b3f06f50c52426a4c11",
+    "scope": "Existing site/build unit suite, not browser or hosted publication verification."
+  },
+  "integration_check": {
+    "script": "verify_integration.py",
+    "script_sha256": "837ed8047f224234d72c12cf40ffb0ef326c5f4cfabd6982166ba6abb18c84c6",
+    "returncode": 0,
+    "stdout": "verify-integration.stdout",
+    "stderr": "verify-integration.stderr"
+  },
+  "pdf_build": {
+    "receipt": "full-book-build-command.json",
+    "returncode": 0
+  },
+  "marker": {
+    "receipt": "pdf-operation-marker-command.json",
+    "successful_invocations": 1,
+    "immediately_before_first_latexmk_build": true
+  }
+}

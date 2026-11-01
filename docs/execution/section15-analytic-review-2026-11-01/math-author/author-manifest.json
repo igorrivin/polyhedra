@@ -1,0 +1,20 @@
+{
+  "scope": "Section15 analytic author freeze only; no builds, commits, numerical replay or publication",
+  "baseline_commit": "3ddf610dbe4578c7828e55f4e9cd92aacaba6df6",
+  "baseline_sha256": {
+    "book/chapters/15-quantum-airy.tex": "e042499f66436b1aafc1219efbef3c9db945f6a99bc60738ac913ebfa78a0d9e",
+    "book/claims/section15.json": "1e60b5dc77094bccbcb54fbc3130ad877b70e83613fe015cd88cd62220b856bc"
+  },
+  "owned_final_sha256": {
+    "book/chapters/15-quantum-airy.tex": "2688ef6862492f93cd49de4c50017eb33496ad0d1b77cd8f4220150910a2ef1e",
+    "book/claims/section15.json": "8d5ba46372dda6a108bf913e30b661f87e16b4985b444ed8107d9feefb4c6c3d"
+  },
+  "checks": {
+    "json_parse": true,
+    "ordered_all607_labels": true,
+    "ordered_section15_labels": true,
+    "ledger_covers_all_section15_labels": true,
+    "historical_numerical_subsection_unchanged": true
+  },
+  "independent_review": "separate review record; not assigned by this author manifest"
+}

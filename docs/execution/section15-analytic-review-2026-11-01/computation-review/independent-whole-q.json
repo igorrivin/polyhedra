@@ -1,0 +1,108 @@
+{
+  "reference_source_sha256": "17eaf0ec27418f27ebeb47a3472c4ade5e6ab44f1bce07f1ebd4b23103e553ba",
+  "scipy": "1.18.1",
+  "mpmath": "1.3.0",
+  "point_probes": [
+    {
+      "t": 0,
+      "log": {
+        "real": 1.3820589702639552,
+        "imag": 0.0
+      },
+      "internal_error_estimate": 1.118828281667601e-08,
+      "warnings": [],
+      "original_linear_identity_residual": "4.27300239732e-46",
+      "elapsed_seconds": 0.003405416035093367
+    },
+    {
+      "t": 1,
+      "log": {
+        "real": 0.6098258248398047,
+        "imag": 0.8969278227813553
+      },
+      "internal_error_estimate": 1.1287602413390071e-08,
+      "warnings": [],
+      "original_linear_identity_residual": "4.27309004769e-46",
+      "elapsed_seconds": 0.006284708972088993
+    },
+    {
+      "t": 3,
+      "log": {
+        "real": -7.0147103365827315,
+        "imag": -1.6130651896799932
+      },
+      "internal_error_estimate": 1.1072016718151787e-08,
+      "warnings": [],
+      "original_linear_identity_residual": "4.27335298804e-46",
+      "elapsed_seconds": 0.006422457983717322
+    },
+    {
+      "t": 8,
+      "log": {
+        "real": -95.15383193731752,
+        "imag": -49.4972151418393
+      },
+      "internal_error_estimate": 8.42239795972797e-09,
+      "warnings": [],
+      "original_linear_identity_residual": "4.2786084015e-46",
+      "elapsed_seconds": 0.007033000001683831
+    }
+  ],
+  "limitations": [
+    "No interval enclosure; QUADPACK errors are heuristics.",
+    "Local 21-term Taylor cancellation series is unvalidated floating point.",
+    "Parameters and local coefficients share the mpmath backend with the author.",
+    "No finite-cutoff tail is included in the reported Q value."
+  ],
+  "whole_Q": [
+    {
+      "b": "1/80",
+      "zeta": "0",
+      "contour": "1",
+      "cutoff": 8,
+      "Q": 0.45908648873519403,
+      "outer_internal_error_estimate": 5.0970641963409334e-15,
+      "max_inner_log_internal_error_estimate": 1.1320871611792177e-08,
+      "max_original_argument_linear_identity_residual": 4.2786084015e-46,
+      "integration_warnings": [],
+      "integrand_evaluations": 168,
+      "elapsed_seconds": 1.0454307080945,
+      "unit_panel_contributions_normalized": [
+        0.3909472547495554,
+        0.06400269094576864,
+        0.004144372589069305,
+        -7.831608157122003e-06,
+        2.0589582002822695e-09,
+        -3.81341152441313e-16,
+        7.615918229340542e-23,
+        -4.073414526352053e-33
+      ],
+      "evidence_status": "independent_whole_Barnes_log_QUADPACK_double_precision_not_interval"
+    },
+    {
+      "b": "1/80",
+      "zeta": "0",
+      "contour": "5/4",
+      "cutoff": 8,
+      "Q": 0.45908648873566593,
+      "outer_internal_error_estimate": 5.183453326382945e-15,
+      "max_inner_log_internal_error_estimate": 1.1167091694680058e-08,
+      "max_original_argument_linear_identity_residual": 5.15346731134e-46,
+      "integration_warnings": [],
+      "integrand_evaluations": 168,
+      "elapsed_seconds": 1.0384839579928666,
+      "unit_panel_contributions_normalized": [
+        0.45390549357064947,
+        0.004836237814630917,
+        0.0003376294768149246,
+        7.128215596736811e-06,
+        -3.4202559178831946e-10,
+        -5.563709433119584e-16,
+        1.4335757234811103e-23,
+        -3.105225732839079e-34
+      ],
+      "evidence_status": "independent_whole_Barnes_log_QUADPACK_double_precision_not_interval"
+    }
+  ],
+  "elapsed_seconds": 2.1072059579892084
+}

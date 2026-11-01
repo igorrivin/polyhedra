@@ -1,0 +1,61 @@
+{
+  "scope": "Section15 numerical subsection and claim ledger integration; six shared documentation updates; no builds, commits or publication",
+  "allowlist": [
+    "book/chapters/15-quantum-airy.tex",
+    "book/claims/section15.json",
+    "README.md",
+    "book/README.md",
+    "book/computational-status.md",
+    "docs/INTEGRATION_STATUS.md",
+    "INTEGRATION_PLAN.md",
+    "experiments/section15/README.md"
+  ],
+  "owned_final_sha256": {
+    "book/chapters/15-quantum-airy.tex": "efee2c699923ab31e4d7d48eeac57c60bf2ea088ea4ff17e617b9ed97202d6dd",
+    "book/claims/section15.json": "2a53176d95601bd09448326a34b203f1e05bd46dc6eee182226af36b24a2fb96",
+    "README.md": "4f21707e9a49a6e9a0abcf9a5fd1b3713756ceb605e311e851eb88ed956cddfc",
+    "book/README.md": "99e57ebd20426c01a5fd62396eee82c3c6e3b3cd43020b36db3be1731e5ad17f",
+    "book/computational-status.md": "cb29c145ee8674315a48428e9e179c486edcef5814d0ff1774f13feca9a46606",
+    "docs/INTEGRATION_STATUS.md": "43096c06e180e44581bdef5886af1067968b33868ce2c0b8606dd91b697c2d42",
+    "INTEGRATION_PLAN.md": "4f4c6a6143a5ed6cc2267af89ae056c05c36037d61f2a6e9f0f90c3db6b290fe",
+    "experiments/section15/README.md": "37849f959764bb6801c68c5af94edd369224c42152625b6876b9437e58d40387"
+  },
+  "approved_analytic_snapshot": {
+    "path": "math-author/integration-baseline/",
+    "kind": "Copied exact bytes before numerical edits; no reconstruction",
+    "sha256": {
+      "book/chapters/15-quantum-airy.tex": "2688ef6862492f93cd49de4c50017eb33496ad0d1b77cd8f4220150910a2ef1e",
+      "book/claims/section15.json": "8d5ba46372dda6a108bf913e30b661f87e16b4985b444ed8107d9feefb4c6c3d"
+    }
+  },
+  "numerical_sources": {
+    "computation/full-v1.json": "bfb7bf75aa4522e794f2c6000863df786988a67bf92354d41d7075dfcee37a83",
+    "computation-review/independent-whole-q-matrix.json": "183f963fef33d642a83c771de942acd3ee5c7bcb99874ccb54455743db3e1045"
+  },
+  "verification": {
+    "all607_book_labels_and_order_unchanged": true,
+    "section15_labels_and_order_unchanged": true,
+    "section15_label_count": 21,
+    "all_section15_labels_in_ledger": true,
+    "claim_count": 14,
+    "numerical_subsection_is_only_chapter_delta_from_approved_analytic_bytes": true,
+    "all_six_table_rows_match_90dps_C1_rounding": true,
+    "preserved_prior_files": {
+      "experiments/section15/historical-table.json": {
+        "before_sha256": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011",
+        "after_sha256": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011",
+        "unchanged": true
+      },
+      "artifacts/section15/checks.json": {
+        "before_sha256": "1b275fb776a7a203cfada670bf37d4a5c428a463e24edafb38ed0e8c258f8404",
+        "after_sha256": "1b275fb776a7a203cfada670bf37d4a5c428a463e24edafb38ed0e8c258f8404",
+        "unchanged": true
+      }
+    }
+  },
+  "boundaries": [
+    "The full-v1 source-recorded run supplies the displayed numerical values. Final code/source freeze and clean replay remain separately recorded gates.",
+    "All rational bounds mentioned control correction-series truncation; no total interval quadrature certificate is claimed.",
+    "Independent review of the numerical/doc delta belongs to a separate reviewer."
+  ]
+}
