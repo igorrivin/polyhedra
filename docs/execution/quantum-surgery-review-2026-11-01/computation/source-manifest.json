@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-11-01T17:47:22.812562+00:00",
+  "baseline_commit": "bf260eaab047d9047602ece652e5a7e43625d3f6",
+  "code_frozen": true,
+  "source_files": [
+    {
+      "path": "experiments/quantum_surgery/README.md",
+      "sha256": "2c9c712cb99788bb331ebf40cd7e440bfa04666add75c9238a2646f12198edce",
+      "bytes": 6825
+    },
+    {
+      "path": "experiments/quantum_surgery/__init__.py",
+      "sha256": "1925c77c6e7cfff79798b2eab36ecb21b06bac8825c399743937da5da05f1d37",
+      "bytes": 85
+    },
+    {
+      "path": "experiments/quantum_surgery/algebra.py",
+      "sha256": "c03d19471ba817dd8b9af234dd54418c3d411cb0d222803dfe2a93333c8d0ed4",
+      "bytes": 16988
+    },
+    {
+      "path": "experiments/quantum_surgery/exact.py",
+      "sha256": "1c9b6ce9fbf39dc4033e62451f83039616b1a1fa79fddcc7bd990aa5d9ec4f97",
+      "bytes": 8138
+    },
+    {
+      "path": "experiments/quantum_surgery/fixture.json",
+      "sha256": "c6f5f162a72331f48db888106a9fd7870005883838136603bf53b2f4eba62198",
+      "bytes": 680
+    },
+    {
+      "path": "experiments/quantum_surgery/periods.py",
+      "sha256": "f7eb0bb3d6db34e29558120fd715ef110b9a01b761ebf918460a30d9e45d080f",
+      "bytes": 16666
+    },
+    {
+      "path": "experiments/quantum_surgery/run.py",
+      "sha256": "24aa7025bfae88e4e601aee1cbcbf60f3e43220880662ff592917c79be21c192",
+      "bytes": 7140
+    },
+    {
+      "path": "experiments/quantum_surgery/tests/test_quantum_surgery.py",
+      "sha256": "224f7900c8b6943815b9cc3330dbdc1a789782d0cf3e46a1003459318e4016ef",
+      "bytes": 10812
+    }
+  ],
+  "chapter_and_main_at_run": [
+    {
+      "path": "book/polyhedral_volumes_and_geodesic_identities.tex",
+      "sha256": "103fc19086b2c5280bc16794b033673763b903ede94fb812601e92ad94da5ab4",
+      "bytes": 353909
+    },
+    {
+      "path": "book/chapters/12-quantum-boundary-measure.tex",
+      "sha256": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+      "bytes": 18683
+    },
+    {
+      "path": "book/chapters/13-four-point-fusion.tex",
+      "sha256": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+      "bytes": 24410
+    },
+    {
+      "path": "book/chapters/14-normalized-quantum-comparison.tex",
+      "sha256": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+      "bytes": 21763
+    },
+    {
+      "path": "book/chapters/16-dehn-filling-response.tex",
+      "sha256": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+      "bytes": 42117
+    }
+  ],
+  "initial_run": {
+    "path": "initial-result.json",
+    "sha256": "5095889a2defad7991e76cc6f4124d30bfca3179eaa0340f8285abee6b9afc5c",
+    "bytes": 121681
+  },
+  "observed_verification": {
+    "exact_identities": 192,
+    "numerical_checks": 300,
+    "precision_comparisons": 72,
+    "max_scaled_residual_by_precision": {
+      "60": 1.99900150636e-60,
+      "90": 2.33422819083e-90
+    },
+    "max_observed_cross_precision_difference": 4.31446206296e-60,
+    "elapsed_seconds": 4.2352992920205,
+    "unit_tests": 15,
+    "unit_test_elapsed_seconds": 5.155,
+    "unit_test_command": "/tmp/polyhedra-baseline-20261031/bin/python -m unittest discover -s experiments/quantum_surgery/tests -v",
+    "unit_test_status": "passed in tool output before initial run",
+    "ruff_command": "/opt/anaconda3/bin/ruff check experiments/quantum_surgery",
+    "ruff_status": "All checks passed"
+  },
+  "status": "author source frozen for fresh independent review; dirty-tree initial evidence, not final canonical artifact"
+}

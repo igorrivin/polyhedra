@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "approved_at_utc": "2026-11-01T18:02:30.308713+00:00",
+  "decision": "approved_for_bounded_local_integration_and_pdf_review",
+  "baseline_commit": "bf260eaab047d9047602ece652e5a7e43625d3f6",
+  "source_approval": {
+    "path": "integration-review/approved-source-manifest.json",
+    "sha256": "7ef377bd9f6f219cedb0a54db88eadce5e0dffc7807f5f08201d423c73ca2638",
+    "bytes": 7612
+  },
+  "independent_approvals": {
+    "quantum_mathematics": {
+      "path": "quantum-review/approved-hashes.json",
+      "sha256": "dcf67e8ee5a9c0cf11df70d963afdf5e1d7a379be66c0ef066a8c059ff1314c7",
+      "bytes": 2301
+    },
+    "surgery_mathematics": {
+      "path": "surgery-review/approved-file-hashes.json",
+      "sha256": "1c89527a7f4fd439d4f0699860e382e299b65ed7ecbba7797f5ae32e0acef1b4",
+      "bytes": 1892
+    },
+    "companion_implementation": {
+      "path": "computation-review/approval-manifest.json",
+      "sha256": "a9fe2053ec561fa30b2be85d840bbc5fa8d528891cd238f35be17ac95f768222",
+      "bytes": 12110
+    }
+  },
+  "evidence": [
+    {
+      "path": "integration-review/review.md",
+      "sha256": "72b140d2b3a6955c9db327c19d9a2ac10e5b9b1145b811553a6dc01cca7f74b8",
+      "bytes": 4449
+    },
+    {
+      "path": "integration-review/approved-source-manifest.json",
+      "sha256": "7ef377bd9f6f219cedb0a54db88eadce5e0dffc7807f5f08201d423c73ca2638",
+      "bytes": 7612
+    },
+    {
+      "path": "integration-review/integration-checks.json",
+      "sha256": "3ef24b0ade05924baf567fae96bac77f906188605b5599a99c574b730335b372",
+      "bytes": 6934
+    },
+    {
+      "path": "integration-review/final-source-preflight.json",
+      "sha256": "7f2fa188bb5e4c9564b94de3648512042bc9496e2bc056b4c3823f9300ba89eb",
+      "bytes": 892
+    },
+    {
+      "path": "integration-review/docs-link-preservation.json",
+      "sha256": "48b0fd6034e87948d91f3466091eca748d9da60b53cffbcd0ff928538820fbb2",
+      "bytes": 1461
+    },
+    {
+      "path": "integration-review/pdf-inputs.json",
+      "sha256": "3bec05dc8a3f2319ae84c8b3ade2df91c330c5d2e34d00f139a421b2c760e798",
+      "bytes": 2311
+    },
+    {
+      "path": "integration-review/pdf-build-review.json",
+      "sha256": "12ba8f8c0de0716f426ea8db7d5cf9b9c8844b501ea975a8418942b16dc416c4",
+      "bytes": 10341
+    },
+    {
+      "path": "integration-review/visual-review.json",
+      "sha256": "32b49c73e16360772e3ed7f79b3e1a107dd202b8a35890ac13181cc134011908",
+      "bytes": 2464
+    },
+    {
+      "path": "integration-review/site-tests-command.json",
+      "sha256": "849ee97f9cfee94d5b64118f6d2a2d05947f755a47f62f590d62ec590bc52ac1",
+      "bytes": 338
+    },
+    {
+      "path": "integration-review/site-tests.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "integration-review/site-tests.stderr",
+      "sha256": "25754a462b5e9cde73fad0e888606a52d191f397e03f7d4ffd21163af64db2b5",
+      "bytes": 3752
+    },
+    {
+      "path": "integration-review/pdf-operation-marker-command.json",
+      "sha256": "f62443264c1b8aa28f0725408f15596d1fe975cb7cd5378cfc3387501ee5bbe3",
+      "bytes": 621
+    },
+    {
+      "path": "integration-review/pdf-operation-marker.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "integration-review/pdf-operation-marker.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "integration-review/full-book-build-command.json",
+      "sha256": "9b32522d1b5ff57ca14effbdd95930d98534cbc49b27a443ee1cc70599c0ebb2",
+      "bytes": 631
+    },
+    {
+      "path": "integration-review/full-book-build.stdout",
+      "sha256": "7f18bbdd10ee06c32db5939b90f47fca80d8d6e7f322debab1425a852512d1f8",
+      "bytes": 115410
+    },
+    {
+      "path": "integration-review/full-book-build.stderr",
+      "sha256": "7a416c1263270ca140b5e436507d96f9bd8a15eebdefdbd37def30237302f699",
+      "bytes": 194
+    },
+    {
+      "path": "integration-review/verify_integration.py",
+      "sha256": "03091699921bdd0955ce61a2ba1105aec8a7802b5504d39be6d71c190a7d4b05",
+      "bytes": 8187
+    },
+    {
+      "path": "integration-review/build_review.py",
+      "sha256": "3a7bda79aef5a8ade4313d77a051a756dfc1a8f69f5932f2ea65bb720bf735a5",
+      "bytes": 6279
+    },
+    {
+      "path": "integration-review/finalize_review.py",
+      "sha256": "b0e474890f270a70e902c768566aede0e365a35f0129906895f03df63722652c",
+      "bytes": 11664
+    }
+  ],
+  "pdf": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/integration-review/build/main.pdf",
+    "sha256": "f62a96cc99b6ccfd173b5667d97f6baa7d921f040058b6b7c2a5345b609e9846",
+    "bytes": 1431560,
+    "pages": 186
+  },
+  "rendered_pages": 56,
+  "all_selected_pages_visually_inspected": true,
+  "protected_baseline_paths": 1776,
+  "protected_lfs_files": 412,
+  "protected_original_files": 953,
+  "site_tests_passed": 25,
+  "no_canonical_mutations_by_reviewer": true,
+  "future_target_exception": [
+    "docs/execution/quantum-surgery-review-2026-11-01/README.md"
+  ],
+  "limits": "Exact source identities, preservation, static integration, focused site tests, full-book build/reference convergence, and selected-page visual review. Mathematics and companion implementation inherit only the explicit scopes of their separately bound independent approvals. No whole-book proof or publication approval."
+}

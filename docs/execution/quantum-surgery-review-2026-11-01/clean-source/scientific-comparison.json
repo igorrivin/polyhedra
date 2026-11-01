@@ -1,0 +1,24 @@
+{
+  "generated_at_utc": "2026-11-01T18:03:41.624387+00:00",
+  "source_commit": "514bc30b0d86a0a38b2ede1cb9dfb261a6b2995a",
+  "clean_result_sha256": "accdcaae347f363f20761cc2ffc7a2a252c2199787a277e519cef9978c5578cf",
+  "independent_replay_path": "computation-review/replay-result-final.json",
+  "independent_replay_sha256": "140015b209307488766f069de489d0a86260651cdde46736125104a3287ae744",
+  "scientific_fields_equal": true,
+  "excluded_json_paths": [
+    "/generated_at_utc",
+    "/elapsed_seconds",
+    "/source",
+    "/source_at_completion"
+  ],
+  "exclusion_reasons": {
+    "/generated_at_utc": "Run timestamp",
+    "/elapsed_seconds": "Runtime metadata",
+    "/source": "Originating commit and truthful pre-run worktree state; all 13 file hashes checked separately",
+    "/source_at_completion": "Truthful post-run state; all 13 hashes and clean source commit checked separately"
+  },
+  "clean_source_record_verified": true,
+  "approved_recorded_source_hash_count": 13,
+  "clean_before_and_after": true,
+  "source_status": "No result or artifact was copied into the checkout before this run completed."
+}

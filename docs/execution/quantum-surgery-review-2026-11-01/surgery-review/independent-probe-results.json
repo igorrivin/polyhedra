@@ -1,0 +1,247 @@
+{
+  "evidence_status": "finite exact symbolic and rational fixtures; structural checks",
+  "arithmetic": "Python standard-library fractions.Fraction; no floating point",
+  "independence": "New review code; no import or execution of author companion",
+  "passed": true,
+  "check_count": 36,
+  "checks": [
+    {
+      "name": "inverse_degree5",
+      "statement": "A*u+q*c3*u^3+q*c5*u^5=a modulo a^7",
+      "passed": true
+    },
+    {
+      "name": "action_degree6",
+      "statement": "Critical action through degree six, before a=i*theta",
+      "passed": true
+    },
+    {
+      "name": "envelope_degree5",
+      "statement": "d S*/da=-u/q through degree five",
+      "passed": true
+    },
+    {
+      "name": "covariance_degree5",
+      "statement": "SL2 determinant-one transformed coefficients",
+      "passed": true
+    },
+    {
+      "name": "canonical_u_derivative",
+      "statement": "G_u=-v/2",
+      "passed": true
+    },
+    {
+      "name": "canonical_a_derivative",
+      "statement": "G_a=b/2",
+      "passed": true
+    },
+    {
+      "name": "canonical_invariant",
+      "statement": "G=(a*b-u*v)/4 on the canonical relation",
+      "passed": true
+    },
+    {
+      "name": "canonical_symplectic",
+      "statement": "p*sigma-q*rho=1",
+      "passed": true
+    },
+    {
+      "name": "critical_volume_factor",
+      "statement": "2(V-V0)=Im(S*) under the angular filling equation",
+      "passed": true
+    },
+    {
+      "name": "half_density_squared",
+      "statement": "(-G_ua)*D*=(Phi+G)_uu, hence squared ratio=1/D*",
+      "passed": true
+    },
+    {
+      "name": "figure8_eliminant",
+      "statement": "Resultant relation yielding cosh(v/2)=1+cosh(u)-cosh(2u)",
+      "passed": true
+    },
+    {
+      "name": "figure8_c3",
+      "statement": "f cubic coefficient is 1/3",
+      "passed": true
+    },
+    {
+      "name": "figure8_c5",
+      "statement": "f quintic coefficient is 23/180",
+      "passed": true
+    },
+    {
+      "name": "figure8_cosh_degree6",
+      "statement": "All cosh coefficients through u^6 agree exactly",
+      "passed": true
+    },
+    {
+      "name": "boundary_hessian_determinant",
+      "statement": "det(g)=1/4 identically",
+      "passed": true
+    },
+    {
+      "name": "boundary_complex_structure",
+      "statement": "J^2=-I identically",
+      "passed": true
+    },
+    {
+      "name": "boundary_compatibility",
+      "statement": "omega_ang J=g and pullback g=Im(T)|du|^2/2",
+      "passed": true
+    },
+    {
+      "name": "figure8_K",
+      "statement": "K0=E^T E equals the displayed integer matrix",
+      "passed": true
+    },
+    {
+      "name": "figure8_K_positive",
+      "statement": "Exact positive leading principal minors",
+      "passed": true
+    },
+    {
+      "name": "figure8_response",
+      "statement": "P K0^-1 P^T=diag(1/3,4)",
+      "passed": true
+    },
+    {
+      "name": "e_17_3",
+      "statement": "Independent inverse-Hessian response equals stated e",
+      "passed": true
+    },
+    {
+      "name": "quartic_17_3",
+      "statement": "Cubic vanishes and corrected quartic/sqrt(3) has stated value",
+      "passed": true
+    },
+    {
+      "name": "e_13_-4",
+      "statement": "Independent inverse-Hessian response equals stated e",
+      "passed": true
+    },
+    {
+      "name": "quartic_13_-4",
+      "statement": "Cubic vanishes and corrected quartic/sqrt(3) has stated value",
+      "passed": true
+    },
+    {
+      "name": "e_2_1",
+      "statement": "Independent inverse-Hessian response equals stated e",
+      "passed": true
+    },
+    {
+      "name": "quartic_2_1",
+      "statement": "Cubic vanishes and corrected quartic/sqrt(3) has stated value",
+      "passed": true
+    },
+    {
+      "name": "e_1_0",
+      "statement": "Independent inverse-Hessian response equals stated e",
+      "passed": true
+    },
+    {
+      "name": "quartic_1_0",
+      "statement": "Cubic vanishes and corrected quartic/sqrt(3) has stated value",
+      "passed": true
+    },
+    {
+      "name": "e_0_1",
+      "statement": "Independent inverse-Hessian response equals stated e",
+      "passed": true
+    },
+    {
+      "name": "quartic_0_1",
+      "statement": "Cubic vanishes and corrected quartic/sqrt(3) has stated value",
+      "passed": true
+    },
+    {
+      "name": "e_-19_5",
+      "statement": "Independent inverse-Hessian response equals stated e",
+      "passed": true
+    },
+    {
+      "name": "quartic_-19_5",
+      "statement": "Cubic vanishes and corrected quartic/sqrt(3) has stated value",
+      "passed": true
+    },
+    {
+      "name": "multicusp_2",
+      "statement": "Block Hessian symmetric positive definite with determinant 4^-h",
+      "passed": true
+    },
+    {
+      "name": "multicusp_3",
+      "statement": "Block Hessian symmetric positive definite with determinant 4^-h",
+      "passed": true
+    },
+    {
+      "name": "labels",
+      "statement": "All 53 labels preserved in exact original order",
+      "passed": true
+    },
+    {
+      "name": "ledger",
+      "statement": "26 unique claim IDs cover exactly the 53 chapter labels",
+      "passed": true
+    }
+  ],
+  "figure8_f_coefficients": {
+    "u3": "1/3",
+    "u5": "23/180"
+  },
+  "figure8_fixtures": [
+    {
+      "p": 17,
+      "q": 3,
+      "chi_over_sqrt3": "397/3",
+      "quartic_over_sqrt3": "-184174/24840596881"
+    },
+    {
+      "p": 13,
+      "q": -4,
+      "chi_over_sqrt3": "361/3",
+      "quartic_over_sqrt3": "-258526/16983563041"
+    },
+    {
+      "p": 2,
+      "q": 1,
+      "chi_over_sqrt3": "16/3",
+      "quartic_over_sqrt3": "-1/256"
+    },
+    {
+      "p": 1,
+      "q": 0,
+      "chi_over_sqrt3": "1/3",
+      "quartic_over_sqrt3": "2"
+    },
+    {
+      "p": 0,
+      "q": 1,
+      "chi_over_sqrt3": "4",
+      "quartic_over_sqrt3": "1/72"
+    },
+    {
+      "p": -19,
+      "q": 5,
+      "chi_over_sqrt3": "661/3",
+      "quartic_over_sqrt3": "-858958/190899960241"
+    }
+  ],
+  "label_count": 53,
+  "claim_count": 26,
+  "intentional_label_overlap": {
+    "eq:dehncone": 2,
+    "eq:dehnconeloss": 2
+  },
+  "frozen_files": {
+    "book/chapters/16-dehn-filling-response.tex": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+    "book/claims/section16.json": "dc24ca2ca1514446b5bd862f7632942a36f5e5d2bf07065a40b959bed3ce6531"
+  },
+  "limitations": [
+    "No analytic remainder certificate",
+    "No geometric cone completion or manifold computation",
+    "No torsion or quantum-invariant evaluation",
+    "No global contour, noncancellation or simultaneous slope/level estimate"
+  ]
+}

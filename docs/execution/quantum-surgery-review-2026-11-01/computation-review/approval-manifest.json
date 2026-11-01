@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "approved_at_utc": "2026-11-01T18:01:08.402210+00:00",
+  "verdict": "approved_after_nonfinite_matrix_guard_correction",
+  "scope": "Bounded finite companion, independent scientific checks and code/anti-pattern review; no global quantum or filled-manifold certification.",
+  "baseline_commit": "bf260eaab047d9047602ece652e5a7e43625d3f6",
+  "actual_git_dirty": true,
+  "original_author_manifest": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation/source-manifest.json",
+    "sha256": "add353794e52560250ef4bc3f876d5c0e4974e84f2233d6c48f61645dbee8598",
+    "bytes": 3543
+  },
+  "corrected_author_manifest": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation/nonfinite-guard-correction/final-source-manifest.json",
+    "sha256": "bf83071d4af17033c8a1a9c53f3a634d6f8b3b9bc3acb444f4a00659c7d56dba",
+    "bytes": 4426
+  },
+  "approved_source_files": [
+    {
+      "path": "experiments/quantum_surgery/README.md",
+      "sha256": "2c9c712cb99788bb331ebf40cd7e440bfa04666add75c9238a2646f12198edce",
+      "bytes": 6825
+    },
+    {
+      "path": "experiments/quantum_surgery/__init__.py",
+      "sha256": "1925c77c6e7cfff79798b2eab36ecb21b06bac8825c399743937da5da05f1d37",
+      "bytes": 85
+    },
+    {
+      "path": "experiments/quantum_surgery/algebra.py",
+      "sha256": "c03d19471ba817dd8b9af234dd54418c3d411cb0d222803dfe2a93333c8d0ed4",
+      "bytes": 16988
+    },
+    {
+      "path": "experiments/quantum_surgery/exact.py",
+      "sha256": "1c9b6ce9fbf39dc4033e62451f83039616b1a1fa79fddcc7bd990aa5d9ec4f97",
+      "bytes": 8138
+    },
+    {
+      "path": "experiments/quantum_surgery/fixture.json",
+      "sha256": "c6f5f162a72331f48db888106a9fd7870005883838136603bf53b2f4eba62198",
+      "bytes": 680
+    },
+    {
+      "path": "experiments/quantum_surgery/periods.py",
+      "sha256": "a18044e87b1c49c0232dec5b56e94cc417e6faebda7dc3f0748858d9b12acdc3",
+      "bytes": 16872
+    },
+    {
+      "path": "experiments/quantum_surgery/run.py",
+      "sha256": "24aa7025bfae88e4e601aee1cbcbf60f3e43220880662ff592917c79be21c192",
+      "bytes": 7140
+    },
+    {
+      "path": "experiments/quantum_surgery/tests/test_quantum_surgery.py",
+      "sha256": "a929d97ab2790a394cfa0e3a1874248de5ea54da42611f52c07bb0f7b6b58727",
+      "bytes": 12181
+    }
+  ],
+  "chapter_and_main_at_replay": [
+    {
+      "path": "book/polyhedral_volumes_and_geodesic_identities.tex",
+      "sha256": "103fc19086b2c5280bc16794b033673763b903ede94fb812601e92ad94da5ab4",
+      "bytes": 353909
+    },
+    {
+      "path": "book/chapters/12-quantum-boundary-measure.tex",
+      "sha256": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+      "bytes": 18683
+    },
+    {
+      "path": "book/chapters/13-four-point-fusion.tex",
+      "sha256": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+      "bytes": 24410
+    },
+    {
+      "path": "book/chapters/14-normalized-quantum-comparison.tex",
+      "sha256": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+      "bytes": 21763
+    },
+    {
+      "path": "book/chapters/16-dehn-filling-response.tex",
+      "sha256": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+      "bytes": 42117
+    }
+  ],
+  "final_independent_replay": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/replay-result-final.json",
+    "sha256": "140015b209307488766f069de489d0a86260651cdde46736125104a3287ae744",
+    "bytes": 122004
+  },
+  "historical_independent_replay": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/replay-result.json",
+    "sha256": "1e174dd68efeccc8e26c160104d4f604077963f3cdfadc28c98e010a2cc2b0d3",
+    "bytes": 122005
+  },
+  "final_independent_probes": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/independent-probes-result-final.json",
+    "sha256": "57763f10ca325798608bcb49d368748488126032542a2d3dafefb0af69735f03",
+    "bytes": 15070
+  },
+  "resolved_findings": [
+    {
+      "id": "COMP-001",
+      "severity": "blocking before correction",
+      "problem": "A later matrix NaN could be ignored by max and falsely record zero residual.",
+      "resolution": "Reject every nonfinite actual/expected/difference entry before scaling.",
+      "original_invalid_cases_accepted": 6,
+      "final_nonfinite_cases_rejected": 24
+    }
+  ],
+  "verification": {
+    "exact_identities": 192,
+    "numerical_checks": 300,
+    "precision_comparisons": 72,
+    "focused_tests": 15,
+    "focused_test_elapsed_seconds": 5.449,
+    "ruff": "passed",
+    "independent_exact_and_guard_checks": 96,
+    "independent_numerical_checks": 34,
+    "extra_branch_points": 2,
+    "extra_branch_numeric_checks": 26,
+    "max_scaled_residual_by_precision": {
+      "60": 1.99900150636e-60,
+      "90": 2.33422819083e-90
+    },
+    "max_observed_cross_precision_difference": 4.31446206296e-60,
+    "scientific_sections_identical_across_initial_and_corrected_author_and_reviewer_results": [
+      "fixture",
+      "arithmetic",
+      "conventions",
+      "exact",
+      "nonresonant_periods",
+      "balanced_periods",
+      "screened_Gram",
+      "coverage_limits"
+    ],
+    "source_hashes_stable_during_final_driver_and_independent_probes": true
+  },
+  "environment": {
+    "python_executable": "/tmp/polyhedra-baseline-20261031/bin/python",
+    "python_version": "3.12.11",
+    "mpmath_version": "1.3.0",
+    "sympy_version": "1.14.0"
+  },
+  "reviewer_evidence": [
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/review.md",
+      "sha256": "f58d9e53788ca0e0d0db354f1f6b26c18f6a30904d6c5417356be49178819010",
+      "bytes": 7970
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/commands.json",
+      "sha256": "19dd30c33a32a42e7edd87566eb3461463f5d7b828596df556e9caf05febfce8",
+      "bytes": 4803
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/replay-result.json",
+      "sha256": "1e174dd68efeccc8e26c160104d4f604077963f3cdfadc28c98e010a2cc2b0d3",
+      "bytes": 122005
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/replay-result-final.json",
+      "sha256": "140015b209307488766f069de489d0a86260651cdde46736125104a3287ae744",
+      "bytes": 122004
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/independent_probes-initial.py",
+      "sha256": "8b7135c31040c9f64622c72eae846b45f05ee5095ba38953080b74bd86ffd3d0",
+      "bytes": 13165
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/independent_probes.py",
+      "sha256": "4cd67cc543d2c89ce2e3b7af4c81c1727fb346e8a2880dad29119caa2f79a7ee",
+      "bytes": 13956
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/independent-probes-result.json",
+      "sha256": "2797ffc57ec8d8d94a469a5f44737182c51201c4d7d3a0a2dfb48e7aa20678a3",
+      "bytes": 12463
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/independent-probes-result-final.json",
+      "sha256": "57763f10ca325798608bcb49d368748488126032542a2d3dafefb0af69735f03",
+      "bytes": 15070
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/nonfinite_probe.py",
+      "sha256": "147ef47aa53cb07df898f5fed1994a582a09aa5194f45da803b51a0a984ad6b9",
+      "bytes": 2384
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/nonfinite-before.json",
+      "sha256": "46e1ea3aea2b54ad81a0612c80dedc236677bf8a0a462269bee712123f4d3e43",
+      "bytes": 7476
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/nonfinite-after.json",
+      "sha256": "e884915eb84dc5c75a88b0cbc4dacb56355d81656a2064fa70d2f1cdcd25c4d8",
+      "bytes": 4332
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/replay.log",
+      "sha256": "9dd435117898a9f38eac379201c7e4178f3b8320ebc9068eedd2731bf8b0f612",
+      "bytes": 66
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/replay-final.log",
+      "sha256": "b19d4c2ea2ff13c20cb2a01a27566c51c310bb9656e3d99d1ddb85ae60ae196d",
+      "bytes": 72
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/focused-tests.log",
+      "sha256": "00a1f0604e55e485f0b8d3732b29f783ace1517c0949e1c75de1d8f202acef50",
+      "bytes": 2124
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/focused-tests-final.log",
+      "sha256": "b8eeadac13d3708234ae3b55e90edaa6b8655b86798b2f2e535f7f04037be847",
+      "bytes": 2124
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/ruff.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/ruff-final.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/independent-probes.log",
+      "sha256": "2f37f4279bdbaf16bf64a157efaaafcb76a2b3fbe4d0faaa5ce83c34ec818440",
+      "bytes": 85
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/independent-probes-final.log",
+      "sha256": "2f37f4279bdbaf16bf64a157efaaafcb76a2b3fbe4d0faaa5ce83c34ec818440",
+      "bytes": 85
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/nonfinite-before.log",
+      "sha256": "c9887342b32217730c91c79adc0833e83ee2a833bbaf0c511e52b8727a3b9c61",
+      "bytes": 269
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/nonfinite-after.log",
+      "sha256": "a046ed256884b1d9ea5bd61d967d4e9e63e6cad87e7762a6b2f23fe71823442c",
+      "bytes": 299
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/source-preflight.json",
+      "sha256": "e95364edcb67200e33729906275e30fb46051051732904c8ae62b6f7b18bbf22",
+      "bytes": 1884
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/initial-executable-replay-failure.log",
+      "sha256": "c348e1676bb8feb16c2fee59e16260ad2bc68ce5ea22422c9a68c1c7f627a258",
+      "bytes": 85
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/initial-executable-tests-failure.log",
+      "sha256": "c348e1676bb8feb16c2fee59e16260ad2bc68ce5ea22422c9a68c1c7f627a258",
+      "bytes": 85
+    },
+    {
+      "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review/finalize_review.py",
+      "sha256": "46f978fa1e9391bf1a13ef231cb39681693d4562c73d115bdaa55693e69ac061",
+      "bytes": 18455
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-11-01T17:51:26.469501+00:00",
+  "baseline_commit": "bf260eaab047d9047602ece652e5a7e43625d3f6",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "2f70a6bb21b91838ef55bd41bb9b717980d5a4915dc3f3937226cd948c16247c",
+      "bytes": 6851,
+      "git_blob": "2166b1d36b83ded29225fcb98e520f43ea14b7fb",
+      "after_sha256": "6cb6a836b26e522ed28a30dc76e6aafdf8d71fd18139f95f5c97d66aa21e4fed",
+      "after_bytes": 7609
+    },
+    {
+      "path": "book/README.md",
+      "sha256": "8550cd2f15fe65dcf5a100ea57f12543817c616020512629924930ea2bd27cc9",
+      "bytes": 5154,
+      "git_blob": "e031330156791722ecd791aa8b554a75d9e8de7a",
+      "after_sha256": "25aeef4654d7bfdfd2dcf9d4f6ed91698c03b104c28c811de884beb27dc22975",
+      "after_bytes": 6483
+    },
+    {
+      "path": "book/computational-status.md",
+      "sha256": "9edc907757cf65776a5a5b0e5100e63c0be34527e93a16628613187757e1c026",
+      "bytes": 20132,
+      "git_blob": "dafa04e70475be1713402c9c24db73b87b6d9d03",
+      "after_sha256": "db9cff40a6f1964973b42c1c8994a9b968a7ea5d2ce5df683df2a0035547acd4",
+      "after_bytes": 24292
+    },
+    {
+      "path": "docs/INTEGRATION_STATUS.md",
+      "sha256": "38c737799f2e11b637b007283d2efeaa40e5a1c1f2148046c7a3398d2a75fb3f",
+      "bytes": 3556,
+      "git_blob": "b8ca4fddcc123ff4a6c6567a7233b7798cdaa16f",
+      "after_sha256": "cd6099ee37b51ac9ac80fcd0d2b17f7337ca2bc3665a5b428657963e70903e89",
+      "after_bytes": 4191
+    },
+    {
+      "path": "INTEGRATION_PLAN.md",
+      "sha256": "9e75532ba6c164d3192529820075502ce80e5b90bdb9f9459a64ec122f5211d3",
+      "bytes": 43633,
+      "git_blob": "2ac8e200e4ba864d85ccc892c817c0f7d495ecbf",
+      "after_sha256": "e8b4f8cb6e6c14f55573205daedfe7318677d8ad759e28ec76ac2446b9cb9e50",
+      "after_bytes": 44930
+    }
+  ],
+  "checks": {
+    "git_diff_check": "passed",
+    "prior_checkpoint_links_preserved": true,
+    "computational_source_manifest_unchanged": true
+  },
+  "planned_link_exceptions": [
+    {
+      "source": "README.md",
+      "target": "docs/execution/quantum-surgery-review-2026-11-01/README.md",
+      "status": "Parent-owned current checkpoint landing page to be created at closeout"
+    },
+    {
+      "source": "book/README.md",
+      "target": "docs/execution/quantum-surgery-review-2026-11-01/README.md",
+      "status": "Parent-owned current checkpoint landing page to be created at closeout"
+    },
+    {
+      "source": "book/computational-status.md",
+      "target": "docs/execution/quantum-surgery-review-2026-11-01/README.md",
+      "status": "Parent-owned current checkpoint landing page to be created at closeout"
+    },
+    {
+      "source": "docs/INTEGRATION_STATUS.md",
+      "target": "docs/execution/quantum-surgery-review-2026-11-01/README.md",
+      "status": "Parent-owned current checkpoint landing page to be created at closeout"
+    },
+    {
+      "source": "INTEGRATION_PLAN.md",
+      "target": "docs/execution/quantum-surgery-review-2026-11-01/README.md",
+      "status": "Parent-owned current checkpoint landing page to be created at closeout"
+    }
+  ]
+}

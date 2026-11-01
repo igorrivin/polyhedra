@@ -1,0 +1,443 @@
+{
+  "generated_at_utc": "2026-11-01T17:59:08.707337+00:00",
+  "exact_check_count": 96,
+  "exact_checks": [
+    "Fricke from sine through A4, symbolic X,Y,Z",
+    "Fricke implicit derivative 0",
+    "Fricke density leading 0",
+    "Fricke density correction 0",
+    "Fricke implicit derivative 1",
+    "Fricke density leading 1",
+    "Fricke density correction 1",
+    "Fricke implicit derivative 2",
+    "Fricke density leading 2",
+    "Fricke density correction 2",
+    "regular area ell0",
+    "regular dihedral ell0",
+    "regular area ell2",
+    "regular dihedral ell2",
+    "regular area ell4",
+    "regular dihedral ell4",
+    "regular Schlaefli volume ell3",
+    "regular Schlaefli volume ell5",
+    "regular volume area relative correction",
+    "regular saddle symbolic division remainder",
+    "regular saddle symbolic discriminant",
+    "regular fold double root, symbolic quotient",
+    "regular fold derivative, symbolic quotient",
+    "regular fold S_vv from potential",
+    "regular fold S_vvv from potential",
+    "regular fold S_veta from potential",
+    "figure-eight c3 recovered from cosh",
+    "figure-eight c5 recovered from cosh",
+    "inverse independent symbolic solve 0 a1",
+    "inverse independent symbolic solve 0 a3",
+    "inverse independent symbolic solve 0 a5",
+    "action from integrated envelope 0 theta2",
+    "action from integrated envelope 0 theta4",
+    "action from integrated envelope 0 theta6",
+    "inverse independent symbolic solve 1 a1",
+    "inverse independent symbolic solve 1 a3",
+    "inverse independent symbolic solve 1 a5",
+    "action from integrated envelope 1 theta2",
+    "action from integrated envelope 1 theta4",
+    "action from integrated envelope 1 theta6",
+    "inverse independent symbolic solve 2 a1",
+    "inverse independent symbolic solve 2 a3",
+    "inverse independent symbolic solve 2 a5",
+    "action from integrated envelope 2 theta2",
+    "action from integrated envelope 2 theta4",
+    "action from integrated envelope 2 theta6",
+    "inverse independent symbolic solve 3 a1",
+    "inverse independent symbolic solve 3 a3",
+    "inverse independent symbolic solve 3 a5",
+    "action from integrated envelope 3 theta2",
+    "action from integrated envelope 3 theta4",
+    "action from integrated envelope 3 theta6",
+    "inverse independent symbolic solve 4 a1",
+    "inverse independent symbolic solve 4 a3",
+    "inverse independent symbolic solve 4 a5",
+    "action from integrated envelope 4 theta2",
+    "action from integrated envelope 4 theta4",
+    "action from integrated envelope 4 theta6",
+    "inverse independent symbolic solve 5 a1",
+    "inverse independent symbolic solve 5 a3",
+    "inverse independent symbolic solve 5 a5",
+    "action from integrated envelope 5 theta2",
+    "action from integrated envelope 5 theta4",
+    "action from integrated envelope 5 theta6",
+    "inverse independent symbolic solve 6 a1",
+    "inverse independent symbolic solve 6 a3",
+    "inverse independent symbolic solve 6 a5",
+    "constrained Lobachevsky theta2 0",
+    "constrained Lobachevsky theta3 0",
+    "constrained Lobachevsky theta4 0",
+    "constrained Lobachevsky theta2 1",
+    "constrained Lobachevsky theta3 1",
+    "constrained Lobachevsky theta4 1",
+    "constrained Lobachevsky theta2 2",
+    "constrained Lobachevsky theta3 2",
+    "constrained Lobachevsky theta4 2",
+    "constrained Lobachevsky theta2 3",
+    "constrained Lobachevsky theta3 3",
+    "constrained Lobachevsky theta4 3",
+    "constrained Lobachevsky theta2 4",
+    "constrained Lobachevsky theta3 4",
+    "constrained Lobachevsky theta4 4",
+    "constrained Lobachevsky theta2 5",
+    "constrained Lobachevsky theta3 5",
+    "constrained Lobachevsky theta4 5",
+    "constrained Lobachevsky theta2 6",
+    "constrained Lobachevsky theta3 6",
+    "constrained Lobachevsky theta4 6",
+    "balanced path singular fusion ['1/5', '0'] 1",
+    "balanced path singular t_basis ['1/5', '0'] 1",
+    "balanced path singular fusion ['1/5', '0'] -1",
+    "balanced path singular t_basis ['1/5', '0'] -1",
+    "balanced path singular fusion ['1/4', '1/5'] 1",
+    "balanced path singular t_basis ['1/4', '1/5'] 1",
+    "balanced path singular fusion ['1/4', '1/5'] -1",
+    "balanced path singular t_basis ['1/4', '1/5'] -1"
+  ],
+  "numerical_check_count": 34,
+  "numerical_checks": [
+    {
+      "name": "direct rational Taylor f0 delta0-positive ['1/3', '0']",
+      "scaled_residual": "2.77356524287585955e-101",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "direct rational Taylor f1 delta0-positive ['1/3', '0']",
+      "scaled_residual": "2.14310135865426559e-101",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "density direct 5-point real Laplacian delta0-positive ['1/3', '0']",
+      "scaled_residual": "2.28529993252959793e-35",
+      "tolerance": "1e-32"
+    },
+    {
+      "name": "direct rational Taylor f0 delta0-positive ['2/5', '1/4']",
+      "scaled_residual": "2.16163031111628169e-102",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "direct rational Taylor f1 delta0-positive ['2/5', '1/4']",
+      "scaled_residual": "8.61878822872101617e-101",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "density direct 5-point real Laplacian delta0-positive ['2/5', '1/4']",
+      "scaled_residual": "2.33991963370039724e-36",
+      "tolerance": "1e-32"
+    },
+    {
+      "name": "direct rational Taylor f0 delta0-positive ['2/5', '-1/4']",
+      "scaled_residual": "2.16163031111628169e-102",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "direct rational Taylor f1 delta0-positive ['2/5', '-1/4']",
+      "scaled_residual": "8.61878822872101617e-101",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "density direct 5-point real Laplacian delta0-positive ['2/5', '-1/4']",
+      "scaled_residual": "2.33991963370039724e-36",
+      "tolerance": "1e-32"
+    },
+    {
+      "name": "direct rational Taylor f0 delta0-negative ['1/3', '0']",
+      "scaled_residual": "2.56861725334174523e-101",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "direct rational Taylor f1 delta0-negative ['1/3', '0']",
+      "scaled_residual": "1.39472127310731102e-100",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "density direct 5-point real Laplacian delta0-negative ['1/3', '0']",
+      "scaled_residual": "4.85205661072199363e-35",
+      "tolerance": "1e-32"
+    },
+    {
+      "name": "direct rational Taylor f0 delta0-negative ['2/5', '1/4']",
+      "scaled_residual": "7.15590887159920549e-102",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "direct rational Taylor f1 delta0-negative ['2/5', '1/4']",
+      "scaled_residual": "7.14705980201618875e-103",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "density direct 5-point real Laplacian delta0-negative ['2/5', '1/4']",
+      "scaled_residual": "4.68461483156011964e-36",
+      "tolerance": "1e-32"
+    },
+    {
+      "name": "direct rational Taylor f0 delta0-negative ['2/5', '-1/4']",
+      "scaled_residual": "7.15590887159920549e-102",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "direct rational Taylor f1 delta0-negative ['2/5', '-1/4']",
+      "scaled_residual": "7.14705980201618875e-103",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "density direct 5-point real Laplacian delta0-negative ['2/5', '-1/4']",
+      "scaled_residual": "4.68461483156011964e-36",
+      "tolerance": "1e-32"
+    },
+    {
+      "name": "balanced cancellation h0 ['1/5', '0'] 1",
+      "scaled_residual": "1.38629436107750774e-10",
+      "tolerance": "1e-8"
+    },
+    {
+      "name": "balanced cancellation h1 ['1/5', '0'] 1",
+      "scaled_residual": "1.3862943609700923e-10",
+      "tolerance": "1e-8"
+    },
+    {
+      "name": "balanced logarithmic difference ['1/5', '0'] 1",
+      "scaled_residual": "8.04718956175326457e-11",
+      "tolerance": "1e-8"
+    },
+    {
+      "name": "balanced limiting area ['1/5', '0'] 1",
+      "scaled_residual": "1.60943791198628424e-10",
+      "tolerance": "1e-8"
+    },
+    {
+      "name": "balanced cancellation h0 ['1/5', '0'] -1",
+      "scaled_residual": "1.3862943609700923e-10",
+      "tolerance": "1e-8"
+    },
+    {
+      "name": "balanced cancellation h1 ['1/5', '0'] -1",
+      "scaled_residual": "1.38629436107750774e-10",
+      "tolerance": "1e-8"
+    },
+    {
+      "name": "balanced logarithmic difference ['1/5', '0'] -1",
+      "scaled_residual": "8.04718956194016658e-11",
+      "tolerance": "1e-8"
+    },
+    {
+      "name": "balanced limiting area ['1/5', '0'] -1",
+      "scaled_residual": "1.60943791262288747e-10",
+      "tolerance": "1e-8"
+    },
+    {
+      "name": "balanced cancellation h0 ['1/4', '1/5'] 1",
+      "scaled_residual": "1.38629436107750774e-10",
+      "tolerance": "1e-8"
+    },
+    {
+      "name": "balanced cancellation h1 ['1/4', '1/5'] 1",
+      "scaled_residual": "1.3862943609700923e-10",
+      "tolerance": "1e-8"
+    },
+    {
+      "name": "balanced logarithmic difference ['1/4', '1/5'] 1",
+      "scaled_residual": "6.61905181475596388e-11",
+      "tolerance": "1e-8"
+    },
+    {
+      "name": "balanced limiting area ['1/4', '1/5'] 1",
+      "scaled_residual": "1.13894623988236109e-10",
+      "tolerance": "1e-8"
+    },
+    {
+      "name": "balanced cancellation h0 ['1/4', '1/5'] -1",
+      "scaled_residual": "1.3862943609700923e-10",
+      "tolerance": "1e-8"
+    },
+    {
+      "name": "balanced cancellation h1 ['1/4', '1/5'] -1",
+      "scaled_residual": "1.38629436107750774e-10",
+      "tolerance": "1e-8"
+    },
+    {
+      "name": "balanced logarithmic difference ['1/4', '1/5'] -1",
+      "scaled_residual": "6.61905181485364025e-11",
+      "tolerance": "1e-8"
+    },
+    {
+      "name": "balanced limiting area ['1/4', '1/5'] -1",
+      "scaled_residual": "1.13894624039159324e-10",
+      "tolerance": "1e-8"
+    }
+  ],
+  "balanced_path": [
+    {
+      "z": [
+        "1/5",
+        "0"
+      ],
+      "delta": "1/10000000000",
+      "delta1": "0",
+      "delta_infinity": "0"
+    },
+    {
+      "z": [
+        "1/5",
+        "0"
+      ],
+      "delta": "-1/10000000000",
+      "delta1": "0",
+      "delta_infinity": "0"
+    },
+    {
+      "z": [
+        "1/4",
+        "1/5"
+      ],
+      "delta": "1/10000000000",
+      "delta1": "0",
+      "delta_infinity": "0"
+    },
+    {
+      "z": [
+        "1/4",
+        "1/5"
+      ],
+      "delta": "-1/10000000000",
+      "delta1": "0",
+      "delta_infinity": "0"
+    }
+  ],
+  "extra_branch_probes": [
+    {
+      "z": [
+        "-1/3",
+        "1/10"
+      ],
+      "check_count": 13,
+      "max_scaled_residual": "9.53494342542e-61"
+    },
+    {
+      "z": [
+        "5/4",
+        "-1/5"
+      ],
+      "check_count": 13,
+      "max_scaled_residual": "1.46828578354e-60"
+    }
+  ],
+  "source_before": [
+    {
+      "path": "experiments/quantum_surgery/README.md",
+      "sha256": "2c9c712cb99788bb331ebf40cd7e440bfa04666add75c9238a2646f12198edce"
+    },
+    {
+      "path": "experiments/quantum_surgery/__init__.py",
+      "sha256": "1925c77c6e7cfff79798b2eab36ecb21b06bac8825c399743937da5da05f1d37"
+    },
+    {
+      "path": "experiments/quantum_surgery/algebra.py",
+      "sha256": "c03d19471ba817dd8b9af234dd54418c3d411cb0d222803dfe2a93333c8d0ed4"
+    },
+    {
+      "path": "experiments/quantum_surgery/exact.py",
+      "sha256": "1c9b6ce9fbf39dc4033e62451f83039616b1a1fa79fddcc7bd990aa5d9ec4f97"
+    },
+    {
+      "path": "experiments/quantum_surgery/fixture.json",
+      "sha256": "c6f5f162a72331f48db888106a9fd7870005883838136603bf53b2f4eba62198"
+    },
+    {
+      "path": "experiments/quantum_surgery/periods.py",
+      "sha256": "a18044e87b1c49c0232dec5b56e94cc417e6faebda7dc3f0748858d9b12acdc3"
+    },
+    {
+      "path": "experiments/quantum_surgery/run.py",
+      "sha256": "24aa7025bfae88e4e601aee1cbcbf60f3e43220880662ff592917c79be21c192"
+    },
+    {
+      "path": "experiments/quantum_surgery/tests/test_quantum_surgery.py",
+      "sha256": "a929d97ab2790a394cfa0e3a1874248de5ea54da42611f52c07bb0f7b6b58727"
+    }
+  ],
+  "source_after": [
+    {
+      "path": "experiments/quantum_surgery/README.md",
+      "sha256": "2c9c712cb99788bb331ebf40cd7e440bfa04666add75c9238a2646f12198edce"
+    },
+    {
+      "path": "experiments/quantum_surgery/__init__.py",
+      "sha256": "1925c77c6e7cfff79798b2eab36ecb21b06bac8825c399743937da5da05f1d37"
+    },
+    {
+      "path": "experiments/quantum_surgery/algebra.py",
+      "sha256": "c03d19471ba817dd8b9af234dd54418c3d411cb0d222803dfe2a93333c8d0ed4"
+    },
+    {
+      "path": "experiments/quantum_surgery/exact.py",
+      "sha256": "1c9b6ce9fbf39dc4033e62451f83039616b1a1fa79fddcc7bd990aa5d9ec4f97"
+    },
+    {
+      "path": "experiments/quantum_surgery/fixture.json",
+      "sha256": "c6f5f162a72331f48db888106a9fd7870005883838136603bf53b2f4eba62198"
+    },
+    {
+      "path": "experiments/quantum_surgery/periods.py",
+      "sha256": "a18044e87b1c49c0232dec5b56e94cc417e6faebda7dc3f0748858d9b12acdc3"
+    },
+    {
+      "path": "experiments/quantum_surgery/run.py",
+      "sha256": "24aa7025bfae88e4e601aee1cbcbf60f3e43220880662ff592917c79be21c192"
+    },
+    {
+      "path": "experiments/quantum_surgery/tests/test_quantum_surgery.py",
+      "sha256": "a929d97ab2790a394cfa0e3a1874248de5ea54da42611f52c07bb0f7b6b58727"
+    }
+  ],
+  "review_script_sha256": "4cd67cc543d2c89ce2e3b7af4c81c1727fb346e8a2880dad29119caa2f79a7ee",
+  "source_checks_at_completion": [
+    {
+      "path": "experiments/quantum_surgery/README.md",
+      "sha256": "2c9c712cb99788bb331ebf40cd7e440bfa04666add75c9238a2646f12198edce",
+      "matches_initial_manifest": true
+    },
+    {
+      "path": "experiments/quantum_surgery/__init__.py",
+      "sha256": "1925c77c6e7cfff79798b2eab36ecb21b06bac8825c399743937da5da05f1d37",
+      "matches_initial_manifest": true
+    },
+    {
+      "path": "experiments/quantum_surgery/algebra.py",
+      "sha256": "c03d19471ba817dd8b9af234dd54418c3d411cb0d222803dfe2a93333c8d0ed4",
+      "matches_initial_manifest": true
+    },
+    {
+      "path": "experiments/quantum_surgery/exact.py",
+      "sha256": "1c9b6ce9fbf39dc4033e62451f83039616b1a1fa79fddcc7bd990aa5d9ec4f97",
+      "matches_initial_manifest": true
+    },
+    {
+      "path": "experiments/quantum_surgery/fixture.json",
+      "sha256": "c6f5f162a72331f48db888106a9fd7870005883838136603bf53b2f4eba62198",
+      "matches_initial_manifest": true
+    },
+    {
+      "path": "experiments/quantum_surgery/periods.py",
+      "sha256": "a18044e87b1c49c0232dec5b56e94cc417e6faebda7dc3f0748858d9b12acdc3",
+      "matches_initial_manifest": false
+    },
+    {
+      "path": "experiments/quantum_surgery/run.py",
+      "sha256": "24aa7025bfae88e4e601aee1cbcbf60f3e43220880662ff592917c79be21c192",
+      "matches_initial_manifest": true
+    },
+    {
+      "path": "experiments/quantum_surgery/tests/test_quantum_surgery.py",
+      "sha256": "a929d97ab2790a394cfa0e3a1874248de5ea54da42611f52c07bb0f7b6b58727",
+      "matches_initial_manifest": false
+    }
+  ],
+  "scope": "Independent bounded symbolic derivations and finite numerical probes; no interval, global quantum, or filled-manifold certificate."
+}

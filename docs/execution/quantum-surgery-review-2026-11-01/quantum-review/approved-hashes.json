@@ -1,0 +1,56 @@
+{
+  "status": "independently_approved_with_explicit_scope_limits",
+  "reviewed_utc": "2026-11-01T17:50:04.094331+00:00",
+  "baseline_commit": "bf260eaab047d9047602ece652e5a7e43625d3f6",
+  "scope": "All 30 ledger groups in Sections 12-14: finite mathematics and primary-source statement hypotheses. Existing Section15 global analytic assertions, external proofs in full, and companion implementation excluded.",
+  "files": {
+    "book/chapters/12-quantum-boundary-measure.tex": {
+      "sha256": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+      "bytes": 18683
+    },
+    "book/chapters/13-four-point-fusion.tex": {
+      "sha256": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+      "bytes": 24410
+    },
+    "book/chapters/14-normalized-quantum-comparison.tex": {
+      "sha256": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+      "bytes": 21763
+    },
+    "book/claims/sections12-14.json": {
+      "sha256": "fecb43e3327f9f659afbd841f8b9ee10a2c75fa0b3a7694655beabc7675d53c7",
+      "bytes": 30454
+    }
+  },
+  "initial_ledger_sha256": "7c4e57ae5adb487e2f624199bf65b77756128d3ebf7b25a71a92eaf1694d2e9e",
+  "ledger_delta": "Only computational_companion.code changed check.py to run.py; inverse replacement exactly reproduces frozen hash.",
+  "label_counts": {
+    "book/chapters/12-quantum-boundary-measure.tex": 25,
+    "book/chapters/13-four-point-fusion.tex": 34,
+    "book/chapters/14-normalized-quantum-comparison.tex": 29
+  },
+  "all_labels": 88,
+  "claim_labels": 85,
+  "chapter_labels": 3,
+  "claim_groups": 30,
+  "label_order_preserved": true,
+  "missing_or_duplicate_labels": false,
+  "canonical_edits_by_reviewer": false,
+  "evidence_files": {
+    "independent-review.md": {
+      "sha256": "4c686d5580b72dd6ae850915599f6768ffd4335120664f01de28404d36dba8e2",
+      "bytes": 8984
+    },
+    "source-pins.json": {
+      "sha256": "705acbff065b9d6deece892d1c956005605b879bab5e8929a06148da95c90851",
+      "bytes": 4198
+    },
+    "independent_probes.py": {
+      "sha256": "29da6fbb32eb691f97bb4d8e3254cbea5e78f35708349528ba6addb09a1b03f4",
+      "bytes": 9400
+    },
+    "independent-probe-results.json": {
+      "sha256": "1a54f571010918c8fc45d1c15c05ff9ed67233280c3d7542d7ed6e7af7ec6380",
+      "bytes": 8092
+    }
+  }
+}

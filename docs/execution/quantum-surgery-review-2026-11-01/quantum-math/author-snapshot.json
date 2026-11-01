@@ -1,0 +1,46 @@
+{
+  "status": "author_approved_for_fresh_independent_review",
+  "frozen_utc": "2026-11-01T17:42:37.095669+00:00",
+  "baseline_commit": "bf260eaab047d9047602ece652e5a7e43625d3f6",
+  "author_scope": "Sections12-14 finite mathematics, primary-source statements and explicit analytic dependencies. No self-awarded independent approval.",
+  "files": {
+    "book/chapters/12-quantum-boundary-measure.tex": {
+      "sha256": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+      "bytes": 18683
+    },
+    "book/chapters/13-four-point-fusion.tex": {
+      "sha256": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+      "bytes": 24410
+    },
+    "book/chapters/14-normalized-quantum-comparison.tex": {
+      "sha256": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+      "bytes": 21763
+    },
+    "book/claims/sections12-14.json": {
+      "sha256": "7c4e57ae5adb487e2f624199bf65b77756128d3ebf7b25a71a92eaf1694d2e9e",
+      "bytes": 30456
+    }
+  },
+  "evidence_files": {
+    "author-review.md": {
+      "sha256": "48c4aec60bacebcf754e70f1b6836078d83bed7cb82f9f23d97fb7e2b79ef2bc",
+      "bytes": 3391
+    },
+    "source-pins.json": {
+      "sha256": "c3022003a38614ae968c33df533bbea75b88acd0fd1dd85213f371e0b21b5376",
+      "bytes": 4262
+    },
+    "label-check.json": {
+      "sha256": "80e56c183b906dbe016fa1516f07d1824646f72ea15c5a5418c6011222cda453",
+      "bytes": 1237
+    },
+    "chapters.patch": {
+      "sha256": "9109ed748fc020076ed9da52f069291c94942ce743407506118069642870b88d",
+      "bytes": 6408
+    },
+    "write_ledger.py": {
+      "sha256": "87972f80ecc1b936a3b98555b0a89d17b877b777024d3e26d1635a7defa7f9eb",
+      "bytes": 24539
+    }
+  }
+}

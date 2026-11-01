@@ -1,0 +1,81 @@
+[
+  {
+    "purpose": "Original driver replay, from outside repository",
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review",
+    "command": "PYTHONDONTWRITEBYTECODE=1 /tmp/polyhedra-baseline-20261031/bin/python /Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/quantum_surgery/run.py --output replay-result.json > replay.log 2>&1",
+    "exit_code": 0
+  },
+  {
+    "purpose": "Original focused tests",
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review",
+    "command": "PYTHONDONTWRITEBYTECODE=1 /tmp/polyhedra-baseline-20261031/bin/python -m unittest discover -s /Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/quantum_surgery/tests -v > focused-tests.log 2>&1",
+    "exit_code": 0
+  },
+  {
+    "purpose": "Original independent probes",
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review",
+    "command": "PYTHONDONTWRITEBYTECODE=1 /tmp/polyhedra-baseline-20261031/bin/python independent_probes.py > independent-probes.log 2>&1",
+    "exit_code": 0,
+    "script_snapshot": "independent_probes-initial.py"
+  },
+  {
+    "purpose": "Final corrected driver replay, from outside repository",
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review",
+    "command": "PYTHONDONTWRITEBYTECODE=1 /tmp/polyhedra-baseline-20261031/bin/python /Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/quantum_surgery/run.py --output replay-result-final.json > replay-final.log 2>&1",
+    "exit_code": 0
+  },
+  {
+    "purpose": "Final focused tests",
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review",
+    "command": "PYTHONDONTWRITEBYTECODE=1 /tmp/polyhedra-baseline-20261031/bin/python -m unittest discover -s /Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/quantum_surgery/tests -v > focused-tests-final.log 2>&1",
+    "exit_code": 0
+  },
+  {
+    "purpose": "Ruff, original and final source",
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "command": "/opt/anaconda3/bin/ruff check --no-cache experiments/quantum_surgery",
+    "exit_code": 0,
+    "logs": [
+      "ruff.log",
+      "ruff-final.log"
+    ]
+  },
+  {
+    "purpose": "Final independent probes",
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review",
+    "command": "PYTHONDONTWRITEBYTECODE=1 /tmp/polyhedra-baseline-20261031/bin/python independent_probes.py --output independent-probes-result-final.json > independent-probes-final.log 2>&1",
+    "exit_code": 0
+  },
+  {
+    "purpose": "Independent original-code regression sweep using preserved original bytes",
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review",
+    "command": "PYTHONDONTWRITEBYTECODE=1 /tmp/polyhedra-baseline-20261031/bin/python nonfinite_probe.py --source ../computation/nonfinite-guard-correction/before-periods.py --output nonfinite-before.json > nonfinite-before.log 2>&1",
+    "exit_code": 0,
+    "observed": "6 of 24 nonfinite matrix cases incorrectly accepted"
+  },
+  {
+    "purpose": "Independent corrected-code regression sweep",
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review",
+    "command": "PYTHONDONTWRITEBYTECODE=1 /tmp/polyhedra-baseline-20261031/bin/python nonfinite_probe.py --output nonfinite-after.json --require-rejection > nonfinite-after.log 2>&1",
+    "exit_code": 0,
+    "observed": "24 of 24 nonfinite matrix cases rejected; finite complex matrix accepted"
+  },
+  {
+    "purpose": "Anti-pattern search, inspected manually",
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "command": "rg -n 'assert |TODO|FIXME|except|eval\\(|exec\\(|pickle|requests|urllib|subprocess|random|mp\\.dps|setdefault' experiments/quantum_surgery",
+    "exit_code": 0,
+    "observed": "Only intended Git provenance subprocess, isolated driver test subprocess, equality coercion exception and test precision reads matched."
+  },
+  {
+    "purpose": "Initial executable typo in delegation",
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/computation-review",
+    "command": "/tmp/polyhedra-baseline-20261031/bin/python3.12.11 ...",
+    "exit_code": 127,
+    "observed": "Nonexistent filename joined interpreter name and version; existing bin/python is CPython 3.12.11. Corrected before checks. No dependency or project defect.",
+    "logs": [
+      "initial-executable-replay-failure.log",
+      "initial-executable-tests-failure.log"
+    ]
+  }
+]

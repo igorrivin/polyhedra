@@ -1,0 +1,205 @@
+{
+  "generated_at_utc": "2026-11-01T17:52:29.647462+00:00",
+  "checks_passed": true,
+  "baseline_commit": "bf260eaab047d9047602ece652e5a7e43625d3f6",
+  "source_paths": 20,
+  "modified_baseline_paths": 6,
+  "new_paths": 14,
+  "source_identities": [
+    {
+      "path": "INTEGRATION_PLAN.md",
+      "sha256": "e8b4f8cb6e6c14f55573205daedfe7318677d8ad759e28ec76ac2446b9cb9e50",
+      "bytes": 44930
+    },
+    {
+      "path": "README.md",
+      "sha256": "6cb6a836b26e522ed28a30dc76e6aafdf8d71fd18139f95f5c97d66aa21e4fed",
+      "bytes": 7609
+    },
+    {
+      "path": "book/README.md",
+      "sha256": "25aeef4654d7bfdfd2dcf9d4f6ed91698c03b104c28c811de884beb27dc22975",
+      "bytes": 6483
+    },
+    {
+      "path": "book/computational-status.md",
+      "sha256": "db9cff40a6f1964973b42c1c8994a9b968a7ea5d2ce5df683df2a0035547acd4",
+      "bytes": 24292
+    },
+    {
+      "path": "book/polyhedral_volumes_and_geodesic_identities.tex",
+      "sha256": "103fc19086b2c5280bc16794b033673763b903ede94fb812601e92ad94da5ab4",
+      "bytes": 353909
+    },
+    {
+      "path": "docs/INTEGRATION_STATUS.md",
+      "sha256": "cd6099ee37b51ac9ac80fcd0d2b17f7337ca2bc3665a5b428657963e70903e89",
+      "bytes": 4191
+    },
+    {
+      "path": "book/chapters/12-quantum-boundary-measure.tex",
+      "sha256": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+      "bytes": 18683
+    },
+    {
+      "path": "book/chapters/13-four-point-fusion.tex",
+      "sha256": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+      "bytes": 24410
+    },
+    {
+      "path": "book/chapters/14-normalized-quantum-comparison.tex",
+      "sha256": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+      "bytes": 21763
+    },
+    {
+      "path": "book/chapters/16-dehn-filling-response.tex",
+      "sha256": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+      "bytes": 42117
+    },
+    {
+      "path": "book/claims/section16.json",
+      "sha256": "dc24ca2ca1514446b5bd862f7632942a36f5e5d2bf07065a40b959bed3ce6531",
+      "bytes": 29199
+    },
+    {
+      "path": "book/claims/sections12-14.json",
+      "sha256": "fecb43e3327f9f659afbd841f8b9ee10a2c75fa0b3a7694655beabc7675d53c7",
+      "bytes": 30454
+    },
+    {
+      "path": "experiments/quantum_surgery/README.md",
+      "sha256": "2c9c712cb99788bb331ebf40cd7e440bfa04666add75c9238a2646f12198edce",
+      "bytes": 6825
+    },
+    {
+      "path": "experiments/quantum_surgery/__init__.py",
+      "sha256": "1925c77c6e7cfff79798b2eab36ecb21b06bac8825c399743937da5da05f1d37",
+      "bytes": 85
+    },
+    {
+      "path": "experiments/quantum_surgery/algebra.py",
+      "sha256": "c03d19471ba817dd8b9af234dd54418c3d411cb0d222803dfe2a93333c8d0ed4",
+      "bytes": 16988
+    },
+    {
+      "path": "experiments/quantum_surgery/exact.py",
+      "sha256": "1c9b6ce9fbf39dc4033e62451f83039616b1a1fa79fddcc7bd990aa5d9ec4f97",
+      "bytes": 8138
+    },
+    {
+      "path": "experiments/quantum_surgery/fixture.json",
+      "sha256": "c6f5f162a72331f48db888106a9fd7870005883838136603bf53b2f4eba62198",
+      "bytes": 680
+    },
+    {
+      "path": "experiments/quantum_surgery/periods.py",
+      "sha256": "f7eb0bb3d6db34e29558120fd715ef110b9a01b761ebf918460a30d9e45d080f",
+      "bytes": 16666
+    },
+    {
+      "path": "experiments/quantum_surgery/run.py",
+      "sha256": "24aa7025bfae88e4e601aee1cbcbf60f3e43220880662ff592917c79be21c192",
+      "bytes": 7140
+    },
+    {
+      "path": "experiments/quantum_surgery/tests/test_quantum_surgery.py",
+      "sha256": "224f7900c8b6943815b9cc3330dbdc1a789782d0cf3e46a1003459318e4016ef",
+      "bytes": 10812
+    }
+  ],
+  "frozen_extraction_exact": true,
+  "full_expansion_sha256": "75a096adc2162b10510d090b7e602ea3b790dab8ce95f59c80255d05b5aeac0c",
+  "main_changes_beyond_extraction": [
+    "TeschnerVartanov version pin",
+    "PortiTorsionSurvey bibliography addition"
+  ],
+  "labels_preserved_in_order": 607,
+  "baseline_tracked_paths": 1782,
+  "protected_baseline_paths": 1776,
+  "protected_lfs_files": 412,
+  "protected_inventory_sha256": "d6520a7d08c149a0fe542d1060bedd45c1d5773d8b3cd536012c74065aca8ebd",
+  "original_repositories": [
+    {
+      "path": "ideal_poly_volume_toolkit",
+      "head": "cc6b689652ce735f2098bb0a3235089210d764df",
+      "verified_files": 925
+    },
+    {
+      "path": "ipoly",
+      "head": "30ef40e23005509bd94d26f27dc48ea778832a50",
+      "verified_files": 28
+    }
+  ],
+  "original_archive_sha256": "8f28b07686ea579a7dfb7b88ccef5c12bdd50b6e328737d5a8a79f6e06ba92dc",
+  "supplied_reference_pdf_sha256": "40dd069bd2653f9a78666a31f53910d74b7f8de2a4a75d5a5dd62466032a6cd5",
+  "ledgers": [
+    {
+      "path": "book/claims/sections12-14.json",
+      "claims": 30,
+      "unique_source_labels": 88,
+      "ledger_label_occurrences": 88,
+      "legitimate_overlapping_claim_labels": {}
+    },
+    {
+      "path": "book/claims/section16.json",
+      "claims": 26,
+      "unique_source_labels": 53,
+      "ledger_label_occurrences": 55,
+      "legitimate_overlapping_claim_labels": {
+        "eq:dehncone": 2,
+        "eq:dehnconeloss": 2
+      }
+    }
+  ],
+  "claim_groups": 56,
+  "reviewed_chapter_labels": 141,
+  "local_links_checked": 147,
+  "planned_missing_targets": [
+    "docs/execution/quantum-surgery-review-2026-11-01/README.md"
+  ],
+  "new_source_whitespace_inventory": [
+    {
+      "path": "book/chapters/12-quantum-boundary-measure.tex",
+      "line": 464,
+      "kind": "blank_line_at_eof"
+    },
+    {
+      "path": "book/chapters/13-four-point-fusion.tex",
+      "line": 642,
+      "kind": "blank_line_at_eof"
+    },
+    {
+      "path": "book/chapters/14-normalized-quantum-comparison.tex",
+      "line": 610,
+      "kind": "blank_line_at_eof"
+    },
+    {
+      "path": "book/chapters/16-dehn-filling-response.tex",
+      "line": 1010,
+      "kind": "blank_line_at_eof"
+    }
+  ],
+  "status_porcelain": [
+    " M INTEGRATION_PLAN.md",
+    " M README.md",
+    " M book/README.md",
+    " M book/computational-status.md",
+    " M book/polyhedral_volumes_and_geodesic_identities.tex",
+    " M docs/INTEGRATION_STATUS.md",
+    "?? book/chapters/12-quantum-boundary-measure.tex",
+    "?? book/chapters/13-four-point-fusion.tex",
+    "?? book/chapters/14-normalized-quantum-comparison.tex",
+    "?? book/chapters/16-dehn-filling-response.tex",
+    "?? book/claims/section16.json",
+    "?? book/claims/sections12-14.json",
+    "?? experiments/quantum_surgery/README.md",
+    "?? experiments/quantum_surgery/__init__.py",
+    "?? experiments/quantum_surgery/algebra.py",
+    "?? experiments/quantum_surgery/exact.py",
+    "?? experiments/quantum_surgery/fixture.json",
+    "?? experiments/quantum_surgery/periods.py",
+    "?? experiments/quantum_surgery/run.py",
+    "?? experiments/quantum_surgery/tests/test_quantum_surgery.py"
+  ],
+  "scope": "Preservation, structure, frozen source and links; mathematical and code review approvals remain separate."
+}

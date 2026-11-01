@@ -1,0 +1,3655 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-11-01T17:59:07.377488+00:00",
+  "status": "all fixed checks passed; author computation, not independent review",
+  "checks_passed": true,
+  "source": {
+    "git_commit": "bf260eaab047d9047602ece652e5a7e43625d3f6",
+    "git_dirty": true,
+    "git_status_porcelain": [
+      " M INTEGRATION_PLAN.md",
+      " M README.md",
+      " M book/README.md",
+      " M book/computational-status.md",
+      " M book/polyhedral_volumes_and_geodesic_identities.tex",
+      " M docs/INTEGRATION_STATUS.md",
+      "?? book/chapters/12-quantum-boundary-measure.tex",
+      "?? book/chapters/13-four-point-fusion.tex",
+      "?? book/chapters/14-normalized-quantum-comparison.tex",
+      "?? book/chapters/16-dehn-filling-response.tex",
+      "?? book/claims/section16.json",
+      "?? book/claims/sections12-14.json",
+      "?? experiments/quantum_surgery/README.md",
+      "?? experiments/quantum_surgery/__init__.py",
+      "?? experiments/quantum_surgery/algebra.py",
+      "?? experiments/quantum_surgery/exact.py",
+      "?? experiments/quantum_surgery/fixture.json",
+      "?? experiments/quantum_surgery/periods.py",
+      "?? experiments/quantum_surgery/run.py",
+      "?? experiments/quantum_surgery/tests/test_quantum_surgery.py"
+    ],
+    "sources": [
+      {
+        "path": "experiments/quantum_surgery/README.md",
+        "sha256": "2c9c712cb99788bb331ebf40cd7e440bfa04666add75c9238a2646f12198edce",
+        "bytes": 6825
+      },
+      {
+        "path": "experiments/quantum_surgery/__init__.py",
+        "sha256": "1925c77c6e7cfff79798b2eab36ecb21b06bac8825c399743937da5da05f1d37",
+        "bytes": 85
+      },
+      {
+        "path": "experiments/quantum_surgery/algebra.py",
+        "sha256": "c03d19471ba817dd8b9af234dd54418c3d411cb0d222803dfe2a93333c8d0ed4",
+        "bytes": 16988
+      },
+      {
+        "path": "experiments/quantum_surgery/exact.py",
+        "sha256": "1c9b6ce9fbf39dc4033e62451f83039616b1a1fa79fddcc7bd990aa5d9ec4f97",
+        "bytes": 8138
+      },
+      {
+        "path": "experiments/quantum_surgery/fixture.json",
+        "sha256": "c6f5f162a72331f48db888106a9fd7870005883838136603bf53b2f4eba62198",
+        "bytes": 680
+      },
+      {
+        "path": "experiments/quantum_surgery/periods.py",
+        "sha256": "a18044e87b1c49c0232dec5b56e94cc417e6faebda7dc3f0748858d9b12acdc3",
+        "bytes": 16872
+      },
+      {
+        "path": "experiments/quantum_surgery/run.py",
+        "sha256": "24aa7025bfae88e4e601aee1cbcbf60f3e43220880662ff592917c79be21c192",
+        "bytes": 7140
+      },
+      {
+        "path": "experiments/quantum_surgery/tests/test_quantum_surgery.py",
+        "sha256": "a929d97ab2790a394cfa0e3a1874248de5ea54da42611f52c07bb0f7b6b58727",
+        "bytes": 12181
+      },
+      {
+        "path": "book/polyhedral_volumes_and_geodesic_identities.tex",
+        "sha256": "103fc19086b2c5280bc16794b033673763b903ede94fb812601e92ad94da5ab4",
+        "bytes": 353909
+      },
+      {
+        "path": "book/chapters/12-quantum-boundary-measure.tex",
+        "sha256": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+        "bytes": 18683
+      },
+      {
+        "path": "book/chapters/13-four-point-fusion.tex",
+        "sha256": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+        "bytes": 24410
+      },
+      {
+        "path": "book/chapters/14-normalized-quantum-comparison.tex",
+        "sha256": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+        "bytes": 21763
+      },
+      {
+        "path": "book/chapters/16-dehn-filling-response.tex",
+        "sha256": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+        "bytes": 42117
+      }
+    ]
+  },
+  "source_at_completion": {
+    "git_commit": "bf260eaab047d9047602ece652e5a7e43625d3f6",
+    "git_dirty": true,
+    "git_status_porcelain": [
+      " M INTEGRATION_PLAN.md",
+      " M README.md",
+      " M book/README.md",
+      " M book/computational-status.md",
+      " M book/polyhedral_volumes_and_geodesic_identities.tex",
+      " M docs/INTEGRATION_STATUS.md",
+      "?? book/chapters/12-quantum-boundary-measure.tex",
+      "?? book/chapters/13-four-point-fusion.tex",
+      "?? book/chapters/14-normalized-quantum-comparison.tex",
+      "?? book/chapters/16-dehn-filling-response.tex",
+      "?? book/claims/section16.json",
+      "?? book/claims/sections12-14.json",
+      "?? experiments/quantum_surgery/README.md",
+      "?? experiments/quantum_surgery/__init__.py",
+      "?? experiments/quantum_surgery/algebra.py",
+      "?? experiments/quantum_surgery/exact.py",
+      "?? experiments/quantum_surgery/fixture.json",
+      "?? experiments/quantum_surgery/periods.py",
+      "?? experiments/quantum_surgery/run.py",
+      "?? experiments/quantum_surgery/tests/test_quantum_surgery.py"
+    ],
+    "sources": [
+      {
+        "path": "experiments/quantum_surgery/README.md",
+        "sha256": "2c9c712cb99788bb331ebf40cd7e440bfa04666add75c9238a2646f12198edce",
+        "bytes": 6825
+      },
+      {
+        "path": "experiments/quantum_surgery/__init__.py",
+        "sha256": "1925c77c6e7cfff79798b2eab36ecb21b06bac8825c399743937da5da05f1d37",
+        "bytes": 85
+      },
+      {
+        "path": "experiments/quantum_surgery/algebra.py",
+        "sha256": "c03d19471ba817dd8b9af234dd54418c3d411cb0d222803dfe2a93333c8d0ed4",
+        "bytes": 16988
+      },
+      {
+        "path": "experiments/quantum_surgery/exact.py",
+        "sha256": "1c9b6ce9fbf39dc4033e62451f83039616b1a1fa79fddcc7bd990aa5d9ec4f97",
+        "bytes": 8138
+      },
+      {
+        "path": "experiments/quantum_surgery/fixture.json",
+        "sha256": "c6f5f162a72331f48db888106a9fd7870005883838136603bf53b2f4eba62198",
+        "bytes": 680
+      },
+      {
+        "path": "experiments/quantum_surgery/periods.py",
+        "sha256": "a18044e87b1c49c0232dec5b56e94cc417e6faebda7dc3f0748858d9b12acdc3",
+        "bytes": 16872
+      },
+      {
+        "path": "experiments/quantum_surgery/run.py",
+        "sha256": "24aa7025bfae88e4e601aee1cbcbf60f3e43220880662ff592917c79be21c192",
+        "bytes": 7140
+      },
+      {
+        "path": "experiments/quantum_surgery/tests/test_quantum_surgery.py",
+        "sha256": "a929d97ab2790a394cfa0e3a1874248de5ea54da42611f52c07bb0f7b6b58727",
+        "bytes": 12181
+      },
+      {
+        "path": "book/polyhedral_volumes_and_geodesic_identities.tex",
+        "sha256": "103fc19086b2c5280bc16794b033673763b903ede94fb812601e92ad94da5ab4",
+        "bytes": 353909
+      },
+      {
+        "path": "book/chapters/12-quantum-boundary-measure.tex",
+        "sha256": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+        "bytes": 18683
+      },
+      {
+        "path": "book/chapters/13-four-point-fusion.tex",
+        "sha256": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+        "bytes": 24410
+      },
+      {
+        "path": "book/chapters/14-normalized-quantum-comparison.tex",
+        "sha256": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+        "bytes": 21763
+      },
+      {
+        "path": "book/chapters/16-dehn-filling-response.tex",
+        "sha256": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+        "bytes": 42117
+      }
+    ]
+  },
+  "fixture": {
+    "schema_version": 1,
+    "scope": "Fixed finite checks for Sections 12-14 and 16, not quantum spectral or geometric filling evaluation",
+    "precisions": [
+      60,
+      90
+    ],
+    "b_values": [
+      "1/4",
+      "2/3"
+    ],
+    "heron_chart": [
+      [
+        "1/2",
+        "2/3"
+      ],
+      [
+        "3/2",
+        "4/5"
+      ],
+      [
+        "2",
+        "3"
+      ]
+    ],
+    "period_weights": [
+      {
+        "id": "delta0-positive",
+        "mu": [
+          "1/5",
+          "3/10",
+          "3/5",
+          "9/10"
+        ]
+      },
+      {
+        "id": "delta0-negative",
+        "mu": [
+          "11/20",
+          "3/10",
+          "13/20",
+          "1/2"
+        ]
+      }
+    ],
+    "period_z": [
+      [
+        "1/3",
+        "0"
+      ],
+      [
+        "2/5",
+        "1/4"
+      ],
+      [
+        "2/5",
+        "-1/4"
+      ]
+    ],
+    "balanced_z": [
+      [
+        "1/5",
+        "0"
+      ],
+      [
+        "1/4",
+        "1/5"
+      ]
+    ],
+    "gram_h_over_pi": "1/40",
+    "slopes": [
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        2,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        0,
+        1
+      ],
+      [
+        -1,
+        1,
+        -1,
+        0
+      ],
+      [
+        5,
+        2,
+        2,
+        1
+      ],
+      [
+        1,
+        -1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "python_version": "3.12.11",
+  "python_executable": "/tmp/polyhedra-baseline-20261031/bin/python",
+  "mpmath_version": "1.3.0",
+  "arithmetic": {
+    "exact": "fractions.Fraction and explicit quadratic fields with radicands -3,-2,2,3",
+    "numerical": "cloned local mpmath contexts; independent integral formulas share the mpmath backend",
+    "precision": [
+      60,
+      90
+    ],
+    "tolerance": "10^(-(dps-15)); observed residuals and cross-precision differences recorded separately"
+  },
+  "conventions": {
+    "period_branch": "principal cut plane C minus ((-infinity,0] union [1,infinity))",
+    "period_weights": "four rational mu_i in (0,1), sum=2; nonresonant s/t requires delta0*delta1!=0",
+    "density": "curvature -1: -4*d_z*d_zbar log(area)",
+    "surgery": "multiplier logs u,v; a=pu+qv; formal a=i*theta; q!=0 for the action chart",
+    "quadratic_encoding": "a+b*sqrt(radicand), exact rational a,b"
+  },
+  "exact": {
+    "section12": {
+      "status": "exact finite identities passed",
+      "check_count": 38,
+      "zero_residual_identities": [
+        "heron-0-fricke-A0-A4",
+        "heron-0-quadric",
+        "heron-0-orientation",
+        "heron-0-jacobian",
+        "heron-0-implicit-first-correction",
+        "heron-0-goldman-leading",
+        "heron-0-goldman-linear",
+        "heron-1-fricke-A0-A4",
+        "heron-1-quadric",
+        "heron-1-orientation",
+        "heron-1-jacobian",
+        "heron-1-implicit-first-correction",
+        "heron-1-goldman-leading",
+        "heron-1-goldman-linear",
+        "heron-2-fricke-A0-A4",
+        "heron-2-quadric",
+        "heron-2-orientation",
+        "heron-2-jacobian",
+        "heron-2-implicit-first-correction",
+        "heron-2-goldman-leading",
+        "heron-2-goldman-linear",
+        "delta0-positive-1/4-screening",
+        "delta0-positive-1/4-shifted",
+        "delta0-positive-1/4-kernel-weights",
+        "delta0-positive-1/4-heavy-path",
+        "delta0-positive-2/3-screening",
+        "delta0-positive-2/3-shifted",
+        "delta0-positive-2/3-kernel-weights",
+        "delta0-positive-2/3-heavy-path",
+        "delta0-negative-1/4-screening",
+        "delta0-negative-1/4-shifted",
+        "delta0-negative-1/4-kernel-weights",
+        "delta0-negative-1/4-heavy-path",
+        "delta0-negative-2/3-screening",
+        "delta0-negative-2/3-shifted",
+        "delta0-negative-2/3-kernel-weights",
+        "delta0-negative-2/3-heavy-path",
+        "auxiliary-full-rank-determinant"
+      ],
+      "heron_fixtures": [
+        {
+          "u": "1/2",
+          "v": "2/3",
+          "X": "3/4",
+          "Y": "25/48",
+          "Z0": "25/48",
+          "Z1": "7/512",
+          "WP_over_A_leading": "9/8",
+          "WP_over_A_linear": "-183/1024"
+        },
+        {
+          "u": "3/2",
+          "v": "4/5",
+          "X": "5/8",
+          "Y": "289/160",
+          "Z0": "89/160",
+          "Z1": "-139/2048",
+          "WP_over_A_leading": "25/32",
+          "WP_over_A_linear": "-1945/8192"
+        },
+        {
+          "u": "2",
+          "v": "3",
+          "X": "1/6",
+          "Y": "13/6",
+          "Z0": "5/3",
+          "Z1": "-11/144",
+          "WP_over_A_leading": "1/18",
+          "WP_over_A_linear": "-7/432"
+        }
+      ],
+      "charges": [
+        {
+          "weights_id": "delta0-positive",
+          "b": "1/4",
+          "pure_s": "-1",
+          "unshifted_dictionary_s": "1"
+        },
+        {
+          "weights_id": "delta0-positive",
+          "b": "2/3",
+          "pure_s": "-1",
+          "unshifted_dictionary_s": "1"
+        },
+        {
+          "weights_id": "delta0-negative",
+          "b": "1/4",
+          "pure_s": "-1",
+          "unshifted_dictionary_s": "1"
+        },
+        {
+          "weights_id": "delta0-negative",
+          "b": "2/3",
+          "pure_s": "-1",
+          "unshifted_dictionary_s": "1"
+        }
+      ],
+      "auxiliary_gram_determinant": "56/75"
+    },
+    "regular_section14": {
+      "status": "exact finite identities passed",
+      "check_count": 15,
+      "zero_residual_identities": [
+        "regular-face-area-Taylor",
+        "regular-dihedral-Taylor",
+        "Schlaefli-ell3",
+        "Schlaefli-ell5",
+        "area-to-volume-relative-correction",
+        "regular-Euclidean-det",
+        "regular-Euclidean-principal-minor",
+        "regular-saddle-factor-0",
+        "regular-discriminant-0",
+        "regular-saddle-factor-1",
+        "regular-discriminant-1",
+        "regular-fold-root",
+        "regular-fold-polynomial",
+        "regular-fold-first-derivative",
+        "screened-saddle-cancellation"
+      ],
+      "area_in_ell_squared": [
+        {
+          "a": "0",
+          "b": "0",
+          "radicand": 3
+        },
+        {
+          "a": "0",
+          "b": "1",
+          "radicand": 3
+        },
+        {
+          "a": "0",
+          "b": "-1/8",
+          "radicand": 3
+        }
+      ],
+      "dihedral_defect_in_ell_squared": [
+        {
+          "a": "0",
+          "b": "0",
+          "radicand": 2
+        },
+        {
+          "a": "0",
+          "b": "1/24",
+          "radicand": 2
+        },
+        {
+          "a": "0",
+          "b": "-23/2304",
+          "radicand": 2
+        }
+      ],
+      "fold": {
+        "a_E": {
+          "a": "1/3",
+          "b": "2/3",
+          "radicand": -2
+        },
+        "u_E": {
+          "a": "241/243",
+          "b": "22/243",
+          "radicand": -2
+        },
+        "quadratic_coefficient": {
+          "a": "-114226/59049",
+          "b": "21208/59049",
+          "radicand": -2
+        }
+      }
+    },
+    "formal_section16": {
+      "status": "exact finite identities passed",
+      "check_count": 77,
+      "zero_residual_identities": [
+        "figure-eight-local-curve-through-u6",
+        "slope-1-1-inverse",
+        "slope-1-1-filling-residual-through-a6",
+        "slope-1-1-basis-covariance",
+        "slope-1-1-positive-imaginary-transform",
+        "slope-1-1-stationary-action-through-theta6",
+        "slope-1-1-envelope",
+        "slope-1-1-Gaussian-Jacobian-through-a4",
+        "slope-1-1-canonical-G",
+        "slope-1-1-dGdu-2/3",
+        "slope-1-1-dGda-2/3",
+        "slope-1-1-dGdu--1/2",
+        "slope-1-1-dGda--1/2",
+        "slope-2-1-inverse",
+        "slope-2-1-filling-residual-through-a6",
+        "slope-2-1-basis-covariance",
+        "slope-2-1-positive-imaginary-transform",
+        "slope-2-1-stationary-action-through-theta6",
+        "slope-2-1-envelope",
+        "slope-2-1-Gaussian-Jacobian-through-a4",
+        "slope-2-1-canonical-G",
+        "slope-2-1-dGdu-2/3",
+        "slope-2-1-dGda-2/3",
+        "slope-2-1-dGdu--1/2",
+        "slope-2-1-dGda--1/2",
+        "slope-1-2-inverse",
+        "slope-1-2-filling-residual-through-a6",
+        "slope-1-2-basis-covariance",
+        "slope-1-2-positive-imaginary-transform",
+        "slope-1-2-stationary-action-through-theta6",
+        "slope-1-2-envelope",
+        "slope-1-2-Gaussian-Jacobian-through-a4",
+        "slope-1-2-canonical-G",
+        "slope-1-2-dGdu-2/3",
+        "slope-1-2-dGda-2/3",
+        "slope-1-2-dGdu--1/2",
+        "slope-1-2-dGda--1/2",
+        "slope--1-1-inverse",
+        "slope--1-1-filling-residual-through-a6",
+        "slope--1-1-basis-covariance",
+        "slope--1-1-positive-imaginary-transform",
+        "slope--1-1-stationary-action-through-theta6",
+        "slope--1-1-envelope",
+        "slope--1-1-Gaussian-Jacobian-through-a4",
+        "slope--1-1-canonical-G",
+        "slope--1-1-dGdu-2/3",
+        "slope--1-1-dGda-2/3",
+        "slope--1-1-dGdu--1/2",
+        "slope--1-1-dGda--1/2",
+        "slope-5-2-inverse",
+        "slope-5-2-filling-residual-through-a6",
+        "slope-5-2-basis-covariance",
+        "slope-5-2-positive-imaginary-transform",
+        "slope-5-2-stationary-action-through-theta6",
+        "slope-5-2-envelope",
+        "slope-5-2-Gaussian-Jacobian-through-a4",
+        "slope-5-2-canonical-G",
+        "slope-5-2-dGdu-2/3",
+        "slope-5-2-dGda-2/3",
+        "slope-5-2-dGdu--1/2",
+        "slope-5-2-dGda--1/2",
+        "slope-1--1-inverse",
+        "slope-1--1-filling-residual-through-a6",
+        "slope-1--1-basis-covariance",
+        "slope-1--1-positive-imaginary-transform",
+        "slope-1--1-stationary-action-through-theta6",
+        "slope-1--1-envelope",
+        "slope-1--1-Gaussian-Jacobian-through-a4",
+        "slope-1--1-canonical-G",
+        "slope-1--1-dGdu-2/3",
+        "slope-1--1-dGda-2/3",
+        "slope-1--1-dGdu--1/2",
+        "slope-1--1-dGda--1/2",
+        "slope-1-0-inverse",
+        "slope-1-0-filling-residual-through-a6",
+        "slope-1-0-basis-covariance",
+        "slope-1-0-positive-imaginary-transform"
+      ],
+      "tau": {
+        "a": "0",
+        "b": "2",
+        "radicand": -3
+      },
+      "c3": {
+        "a": "0",
+        "b": "2/3",
+        "radicand": -3
+      },
+      "c5": {
+        "a": "0",
+        "b": "23/90",
+        "radicand": -3
+      },
+      "slopes": [
+        {
+          "basis": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "u_in_a": [
+            "0",
+            {
+              "a": "1/13",
+              "b": "-2/13",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "176/28561",
+              "b": "-146/85683",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "16670/62748517",
+              "b": "560113/5647366530",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ],
+          "b_in_a": [
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "12/13",
+              "b": "2/13",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-176/28561",
+              "b": "146/85683",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-16670/62748517",
+              "b": "-560113/5647366530",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ],
+          "action_in_theta": [
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "1/26",
+              "b": "-1/13",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-44/28561",
+              "b": "73/171366",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "8335/188245551",
+              "b": "560113/33884199180",
+              "radicand": -3
+            }
+          ],
+          "u_theta_divided_by_i": [
+            "0",
+            {
+              "a": "1/13",
+              "b": "-2/13",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-176/28561",
+              "b": "146/85683",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "16670/62748517",
+              "b": "560113/5647366530",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ]
+        },
+        {
+          "basis": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "u_in_a": [
+            "0",
+            {
+              "a": "1/8",
+              "b": "-1/8",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "1/256",
+              "b": "1/768",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-1/8192",
+              "b": "11/184320",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ],
+          "b_in_a": [
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "7/8",
+              "b": "1/8",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-1/256",
+              "b": "-1/768",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "1/8192",
+              "b": "-11/184320",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ],
+          "action_in_theta": [
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "1/16",
+              "b": "-1/16",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-1/1024",
+              "b": "-1/3072",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-1/49152",
+              "b": "11/1105920",
+              "radicand": -3
+            }
+          ],
+          "u_theta_divided_by_i": [
+            "0",
+            {
+              "a": "1/8",
+              "b": "-1/8",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-1/256",
+              "b": "-1/768",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-1/8192",
+              "b": "11/184320",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ]
+        },
+        {
+          "basis": [
+            1,
+            2,
+            0,
+            1
+          ],
+          "u_in_a": [
+            "0",
+            {
+              "a": "1/49",
+              "b": "-4/49",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "3008/5764801",
+              "b": "-8068/17294403",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "7244312/678223072849",
+              "b": "-97478903/30520038278205",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ],
+          "b_in_a": [
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "24/49",
+              "b": "2/49",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-1504/5764801",
+              "b": "4034/17294403",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-3622156/678223072849",
+              "b": "97478903/61040076556410",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ],
+          "action_in_theta": [
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "1/196",
+              "b": "-1/49",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-376/5764801",
+              "b": "2017/34588806",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "1811078/2034669218547",
+              "b": "-97478903/366240459338460",
+              "radicand": -3
+            }
+          ],
+          "u_theta_divided_by_i": [
+            "0",
+            {
+              "a": "1/49",
+              "b": "-4/49",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-3008/5764801",
+              "b": "8068/17294403",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "7244312/678223072849",
+              "b": "-97478903/30520038278205",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ]
+        },
+        {
+          "basis": [
+            -1,
+            1,
+            -1,
+            0
+          ],
+          "u_in_a": [
+            "0",
+            {
+              "a": "-1/13",
+              "b": "-2/13",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-176/28561",
+              "b": "-146/85683",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-16670/62748517",
+              "b": "560113/5647366530",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ],
+          "b_in_a": [
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "1/13",
+              "b": "2/13",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "176/28561",
+              "b": "146/85683",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "16670/62748517",
+              "b": "-560113/5647366530",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ],
+          "action_in_theta": [
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-1/26",
+              "b": "-1/13",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "44/28561",
+              "b": "73/171366",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-8335/188245551",
+              "b": "560113/33884199180",
+              "radicand": -3
+            }
+          ],
+          "u_theta_divided_by_i": [
+            "0",
+            {
+              "a": "-1/13",
+              "b": "-2/13",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "176/28561",
+              "b": "146/85683",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-16670/62748517",
+              "b": "560113/5647366530",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ]
+        },
+        {
+          "basis": [
+            5,
+            2,
+            2,
+            1
+          ],
+          "u_in_a": [
+            "0",
+            {
+              "a": "5/73",
+              "b": "-4/73",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "7360/28398241",
+              "b": "17084/85194723",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-35812808/11047398519097",
+              "b": "-79513367/497132933359365",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ],
+          "b_in_a": [
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "34/73",
+              "b": "2/73",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-3680/28398241",
+              "b": "-8542/85194723",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "17906404/11047398519097",
+              "b": "79513367/994265866718730",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ],
+          "action_in_theta": [
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "5/292",
+              "b": "-1/73",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-920/28398241",
+              "b": "-4271/170389446",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-8953202/33142195557291",
+              "b": "-79513367/5965595200312380",
+              "radicand": -3
+            }
+          ],
+          "u_theta_divided_by_i": [
+            "0",
+            {
+              "a": "5/73",
+              "b": "-4/73",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-7360/28398241",
+              "b": "-17084/85194723",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-35812808/11047398519097",
+              "b": "-79513367/497132933359365",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ]
+        },
+        {
+          "basis": [
+            1,
+            -1,
+            0,
+            1
+          ],
+          "u_in_a": [
+            "0",
+            {
+              "a": "1/13",
+              "b": "2/13",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "176/28561",
+              "b": "146/85683",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "16670/62748517",
+              "b": "-560113/5647366530",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ],
+          "b_in_a": [
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-12/13",
+              "b": "2/13",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "176/28561",
+              "b": "146/85683",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "16670/62748517",
+              "b": "-560113/5647366530",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ],
+          "action_in_theta": [
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-1/26",
+              "b": "-1/13",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "44/28561",
+              "b": "73/171366",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-8335/188245551",
+              "b": "560113/33884199180",
+              "radicand": -3
+            }
+          ],
+          "u_theta_divided_by_i": [
+            "0",
+            {
+              "a": "1/13",
+              "b": "2/13",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "-176/28561",
+              "b": "-146/85683",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "16670/62748517",
+              "b": "-560113/5647366530",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ]
+        },
+        {
+          "basis": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "u_in_a": [
+            "0",
+            {
+              "a": "1",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ],
+          "b_in_a": [
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "2",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "2/3",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "23/90",
+              "radicand": -3
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "radicand": -3
+            }
+          ]
+        }
+      ],
+      "convention": "u,v are multiplier logs; a=pu+qv; a=i*theta only after formal inversion"
+    },
+    "figure_eight_tensors": {
+      "status": "exact finite identities passed",
+      "check_count": 52,
+      "zero_residual_identities": [
+        "angle-Hessian-from-tetrahedron-angles",
+        "figure-eight-peripheral-response",
+        "figure-eight-response-determinant",
+        "tensor-1-1-susceptibility",
+        "tensor-1-1-constrained-direction",
+        "tensor-1-1-constraint",
+        "tensor-1-1-projected-inverse",
+        "tensor-1-1-odd-cubic",
+        "tensor-1-1-quartic-Schur-correction",
+        "tensor-1-1-quartic-NZ-match",
+        "tensor-2-1-susceptibility",
+        "tensor-2-1-constrained-direction",
+        "tensor-2-1-constraint",
+        "tensor-2-1-projected-inverse",
+        "tensor-2-1-odd-cubic",
+        "tensor-2-1-quartic-Schur-correction",
+        "tensor-2-1-quartic-NZ-match",
+        "tensor-1-2-susceptibility",
+        "tensor-1-2-constrained-direction",
+        "tensor-1-2-constraint",
+        "tensor-1-2-projected-inverse",
+        "tensor-1-2-odd-cubic",
+        "tensor-1-2-quartic-Schur-correction",
+        "tensor-1-2-quartic-NZ-match",
+        "tensor--1-1-susceptibility",
+        "tensor--1-1-constrained-direction",
+        "tensor--1-1-constraint",
+        "tensor--1-1-projected-inverse",
+        "tensor--1-1-odd-cubic",
+        "tensor--1-1-quartic-Schur-correction",
+        "tensor--1-1-quartic-NZ-match",
+        "tensor-5-2-susceptibility",
+        "tensor-5-2-constrained-direction",
+        "tensor-5-2-constraint",
+        "tensor-5-2-projected-inverse",
+        "tensor-5-2-odd-cubic",
+        "tensor-5-2-quartic-Schur-correction",
+        "tensor-5-2-quartic-NZ-match",
+        "tensor-1--1-susceptibility",
+        "tensor-1--1-constrained-direction",
+        "tensor-1--1-constraint",
+        "tensor-1--1-projected-inverse",
+        "tensor-1--1-odd-cubic",
+        "tensor-1--1-quartic-Schur-correction",
+        "tensor-1--1-quartic-NZ-match",
+        "tensor-1-0-susceptibility",
+        "tensor-1-0-constrained-direction",
+        "tensor-1-0-constraint",
+        "tensor-1-0-projected-inverse",
+        "tensor-1-0-odd-cubic",
+        "tensor-1-0-quartic-Schur-correction",
+        "tensor-1-0-quartic-NZ-match"
+      ],
+      "K": [
+        [
+          {
+            "a": "0",
+            "b": "4/3",
+            "radicand": 3
+          },
+          {
+            "a": "0",
+            "b": "-1/3",
+            "radicand": 3
+          },
+          {
+            "a": "0",
+            "b": "1",
+            "radicand": 3
+          }
+        ],
+        [
+          {
+            "a": "0",
+            "b": "-1/3",
+            "radicand": 3
+          },
+          {
+            "a": "0",
+            "b": "4/3",
+            "radicand": 3
+          },
+          {
+            "a": "0",
+            "b": "-1",
+            "radicand": 3
+          }
+        ],
+        [
+          {
+            "a": "0",
+            "b": "1",
+            "radicand": 3
+          },
+          {
+            "a": "0",
+            "b": "-1",
+            "radicand": 3
+          },
+          {
+            "a": "0",
+            "b": "2",
+            "radicand": 3
+          }
+        ]
+      ],
+      "peripheral_response": [
+        [
+          {
+            "a": "0",
+            "b": "1/3",
+            "radicand": 3
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "radicand": 3
+          }
+        ],
+        [
+          {
+            "a": "0",
+            "b": "0",
+            "radicand": 3
+          },
+          {
+            "a": "0",
+            "b": "4",
+            "radicand": 3
+          }
+        ]
+      ],
+      "slopes": [
+        {
+          "slope": [
+            1,
+            1
+          ],
+          "chi": {
+            "a": "0",
+            "b": "13/3",
+            "radicand": 3
+          },
+          "cubic": {
+            "a": "0",
+            "b": "0",
+            "radicand": 3
+          },
+          "corrected_quartic": {
+            "a": "0",
+            "b": "146/28561",
+            "radicand": 3
+          }
+        },
+        {
+          "slope": [
+            2,
+            1
+          ],
+          "chi": {
+            "a": "0",
+            "b": "16/3",
+            "radicand": 3
+          },
+          "cubic": {
+            "a": "0",
+            "b": "0",
+            "radicand": 3
+          },
+          "corrected_quartic": {
+            "a": "0",
+            "b": "-1/256",
+            "radicand": 3
+          }
+        },
+        {
+          "slope": [
+            1,
+            2
+          ],
+          "chi": {
+            "a": "0",
+            "b": "49/3",
+            "radicand": 3
+          },
+          "cubic": {
+            "a": "0",
+            "b": "0",
+            "radicand": 3
+          },
+          "corrected_quartic": {
+            "a": "0",
+            "b": "4034/5764801",
+            "radicand": 3
+          }
+        },
+        {
+          "slope": [
+            -1,
+            1
+          ],
+          "chi": {
+            "a": "0",
+            "b": "13/3",
+            "radicand": 3
+          },
+          "cubic": {
+            "a": "0",
+            "b": "0",
+            "radicand": 3
+          },
+          "corrected_quartic": {
+            "a": "0",
+            "b": "146/28561",
+            "radicand": 3
+          }
+        },
+        {
+          "slope": [
+            5,
+            2
+          ],
+          "chi": {
+            "a": "0",
+            "b": "73/3",
+            "radicand": 3
+          },
+          "cubic": {
+            "a": "0",
+            "b": "0",
+            "radicand": 3
+          },
+          "corrected_quartic": {
+            "a": "0",
+            "b": "-8542/28398241",
+            "radicand": 3
+          }
+        },
+        {
+          "slope": [
+            1,
+            -1
+          ],
+          "chi": {
+            "a": "0",
+            "b": "13/3",
+            "radicand": 3
+          },
+          "cubic": {
+            "a": "0",
+            "b": "0",
+            "radicand": 3
+          },
+          "corrected_quartic": {
+            "a": "0",
+            "b": "146/28561",
+            "radicand": 3
+          }
+        },
+        {
+          "slope": [
+            1,
+            0
+          ],
+          "chi": {
+            "a": "0",
+            "b": "1/3",
+            "radicand": 3
+          },
+          "cubic": {
+            "a": "0",
+            "b": "0",
+            "radicand": 3
+          },
+          "corrected_quartic": {
+            "a": "0",
+            "b": "2",
+            "radicand": 3
+          }
+        }
+      ]
+    },
+    "peripheral_Hessians": {
+      "status": "exact finite identities passed",
+      "check_count": 10,
+      "zero_residual_identities": [
+        "NZ-row-pairing",
+        "one-cusp-Schur",
+        "one-cusp-Hessian-determinant",
+        "one-cusp-complex-structure",
+        "one-cusp-compatible-metric",
+        "one-cusp-log-coordinate-metric",
+        "two-cusp-block-Schur",
+        "two-cusp-determinant",
+        "two-cusp-complex-structure",
+        "two-cusp-compatible-metric"
+      ],
+      "one_cusp_metric": [
+        [
+          "1261/1050",
+          "-3/35"
+        ],
+        [
+          "-3/35",
+          "3/14"
+        ]
+      ],
+      "two_cusp_A": [
+        [
+          "1/3",
+          "1/5"
+        ],
+        [
+          "1/5",
+          "-2/7"
+        ]
+      ],
+      "two_cusp_B": [
+        [
+          "2",
+          "1/3"
+        ],
+        [
+          "1/3",
+          "3/2"
+        ]
+      ],
+      "two_cusp_metric": [
+        [
+          "207/200",
+          "703/4200",
+          "-3/40",
+          "-1/20"
+        ],
+        [
+          "703/4200",
+          "101313/127400",
+          "-249/3640",
+          "201/1820"
+        ],
+        [
+          "-3/40",
+          "-249/3640",
+          "27/104",
+          "-3/52"
+        ],
+        [
+          "-1/20",
+          "201/1820",
+          "-3/52",
+          "9/26"
+        ]
+      ],
+      "two_cusp_determinant": "1/16",
+      "scope": "Conditional matrix algebra at fixed rational data, not a manifold construction"
+    }
+  },
+  "nonresonant_periods": [
+    {
+      "id": "delta0-positive",
+      "z": [
+        "1/3",
+        "0"
+      ],
+      "runs": [
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 60,
+          "scaled_tolerance": "1.0e-45",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 13,
+          "max_scaled_residual": "1.21381139564e-60",
+          "scaled_residuals": {
+            "hypergeometric-fusion": "7.55036276524e-62",
+            "connection-determinant": "1.55575381947e-61",
+            "Hermitian-congruence": "7.09593520558e-61",
+            "independent-s-Euler-arcs": "0.0",
+            "independent-t-Euler-arcs": "1.12246030368e-61",
+            "sine-arc-connection": "6.83351026166e-61",
+            "beta-normalization-of-fusion": "5.68178155445e-61",
+            "area-channel-invariance": "1.10346490513e-61",
+            "Euler-area-normalization": "1.21381139564e-60",
+            "Wronskian": "7.77876909733e-62",
+            "period-derivative": "1.55575381947e-61",
+            "density-scalar": "8.64241089952e-62",
+            "density-from-Hermitian-derivatives": "7.77876909733e-62"
+          },
+          "id": "delta0-positive",
+          "mu": [
+            "1/5",
+            "3/10",
+            "3/5",
+            "9/10"
+          ],
+          "z": [
+            "1/3",
+            "0"
+          ],
+          "delta0": "1/5",
+          "delta1": "1/10",
+          "volume_over_pi": "2/5",
+          "observables": {
+            "f0": {
+              "real": "1.03025104080220956311323771352172781702674674745966906231761",
+              "imag": "0.0"
+            },
+            "f1": {
+              "real": "0.868587337733516492765933737478315839124015370923647477363114",
+              "imag": "0.0"
+            },
+            "g0": {
+              "real": "1.06981172495814776913559370821987106072124976903905771497634",
+              "imag": "0.0"
+            },
+            "g1": {
+              "real": "1.09107154118273100330126807101276804114075736232609051877269",
+              "imag": "0.0"
+            },
+            "S0": {
+              "real": "10.9279390057158831789734285047674436723849744678488519766382",
+              "imag": "0.0"
+            },
+            "S1": {
+              "real": "2.44299427618928713768227697260588883601977099354218961185793",
+              "imag": "0.0"
+            },
+            "T0": {
+              "real": "11.0881699022833594188380800775425916560889244877195052664581",
+              "imag": "0.0"
+            },
+            "T1": {
+              "real": "3.30216325045578326224101658179398587746117567729117940342822",
+              "imag": "0.0"
+            },
+            "area": {
+              "real": "45.1161808514675789782653355188442526232353703088883309594596",
+              "imag": "0.0"
+            },
+            "density": {
+              "real": "0.340525437414850293841059027147447364962129535818850631209987",
+              "imag": "0.0"
+            }
+          },
+          "quadrature": "Independent beta-weight Euler arcs, endpoint-denominator substitutions, mpmath tanh-sinh"
+        },
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 90,
+          "scaled_tolerance": "1.0e-75",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 13,
+          "max_scaled_residual": "1.22727336632e-90",
+          "scaled_residuals": {
+            "hypergeometric-fusion": "7.14742320688e-91",
+            "connection-determinant": "1.22727336632e-90",
+            "Hermitian-congruence": "1.11954117393e-90",
+            "independent-s-Euler-arcs": "1.79689636362e-91",
+            "independent-t-Euler-arcs": "1.77093010246e-91",
+            "sine-arc-connection": "3.59379272723e-91",
+            "beta-normalization-of-fusion": "1.99206015125e-91",
+            "area-channel-invariance": "3.48192129575e-91",
+            "Euler-area-normalization": "1.04457638872e-90",
+            "Wronskian": "1.22727336632e-91",
+            "period-derivative": "4.60227512372e-92",
+            "density-scalar": "1.3635320171e-91",
+            "density-from-Hermitian-derivatives": "1.22727336632e-91"
+          },
+          "id": "delta0-positive",
+          "mu": [
+            "1/5",
+            "3/10",
+            "3/5",
+            "9/10"
+          ],
+          "z": [
+            "1/3",
+            "0"
+          ],
+          "delta0": "1/5",
+          "delta1": "1/10",
+          "volume_over_pi": "2/5",
+          "observables": {
+            "f0": {
+              "real": "1.03025104080220956311323771352172781702674674745966906231760933491754310202215317203003883",
+              "imag": "0.0"
+            },
+            "f1": {
+              "real": "0.868587337733516492765933737478315839124015370923647477363114072372197234704260295589896285",
+              "imag": "0.0"
+            },
+            "g0": {
+              "real": "1.06981172495814776913559370821987106072124976903905771497633859433917814127399933246127337",
+              "imag": "0.0"
+            },
+            "g1": {
+              "real": "1.09107154118273100330126807101276804114075736232609051877268601597545352470715850904073043",
+              "imag": "0.0"
+            },
+            "S0": {
+              "real": "10.9279390057158831789734285047674436723849744678488519766382369477594314265661677900613110",
+              "imag": "0.0"
+            },
+            "S1": {
+              "real": "2.44299427618928713768227697260588883601977099354218961185793089864769655352096403187564114",
+              "imag": "0.0"
+            },
+            "T0": {
+              "real": "11.0881699022833594188380800775425916560889244877195052664580834969830089165340137315886186",
+              "imag": "0.0"
+            },
+            "T1": {
+              "real": "3.30216325045578326224101658179398587746117567729117940342822113726961990168664892573801075",
+              "imag": "0.0"
+            },
+            "area": {
+              "real": "45.1161808514675789782653355188442526232353703088883309594596183463885332679112130708558626",
+              "imag": "0.0"
+            },
+            "density": {
+              "real": "0.340525437414850293841059027147447364962129535818850631209987020356831636317680467196791313",
+              "imag": "0.0"
+            }
+          },
+          "quadrature": "Independent beta-weight Euler arcs, endpoint-denominator substitutions, mpmath tanh-sinh"
+        }
+      ],
+      "precision_comparison": {
+        "status": "numerical agreement, not certified",
+        "decimal_digits": 90,
+        "scaled_tolerance": "1.0e-45",
+        "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+        "check_count": 10,
+        "max_scaled_residual": "3.65147874919e-60",
+        "scaled_residuals": {
+          "f0": "6.45553783066e-61",
+          "f1": "7.23721972347e-62",
+          "g0": "1.31393289965e-60",
+          "g1": "3.65147874919e-60",
+          "S0": "3.38103638866e-60",
+          "S1": "3.67846828506e-61",
+          "T0": "1.48834452723e-60",
+          "T1": "3.4440139195e-61",
+          "area": "4.06647641423e-61",
+          "density": "2.03568316363e-62"
+        },
+        "precisions": [
+          60,
+          90
+        ],
+        "interpretation": "Observed agreement of serialized independent precision runs; not a rigorous error bound"
+      }
+    },
+    {
+      "id": "delta0-positive",
+      "z": [
+        "2/5",
+        "1/4"
+      ],
+      "runs": [
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 60,
+          "scaled_tolerance": "1.0e-45",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 13,
+          "max_scaled_residual": "1.12063569998e-60",
+          "scaled_residuals": {
+            "hypergeometric-fusion": "5.27588912656e-61",
+            "connection-determinant": "1.55575381947e-61",
+            "Hermitian-congruence": "7.09593520558e-61",
+            "independent-s-Euler-arcs": "1.13839291573e-61",
+            "independent-t-Euler-arcs": "1.14404516322e-61",
+            "sine-arc-connection": "7.10251998342e-61",
+            "beta-normalization-of-fusion": "5.68178155445e-61",
+            "area-channel-invariance": "1.12063569998e-61",
+            "Euler-area-normalization": "1.12063569998e-60",
+            "Wronskian": "0.0",
+            "period-derivative": "1.94469227433e-62",
+            "density-scalar": "8.64241089952e-62",
+            "density-from-Hermitian-derivatives": "0.0"
+          },
+          "id": "delta0-positive",
+          "mu": [
+            "1/5",
+            "3/10",
+            "3/5",
+            "9/10"
+          ],
+          "z": [
+            "2/5",
+            "1/4"
+          ],
+          "delta0": "1/5",
+          "delta1": "1/10",
+          "volume_over_pi": "2/5",
+          "observables": {
+            "f0": {
+              "real": "1.03232279838497468433007526887581745001896344988629588164914",
+              "imag": "0.0292732620708579104343298180757744863863209771951794019438360"
+            },
+            "f1": {
+              "real": "0.921356555684099182343332858757230873746034885937360113530104",
+              "imag": "0.173373563563796389657606081092896018412764012000114152046959"
+            },
+            "g0": {
+              "real": "1.04956003136941190684530048188510550156979182449200677603183",
+              "imag": "-0.0348911949944269996499649925968657750116296320402728322068431"
+            },
+            "g1": {
+              "real": "1.04584950345114159692436542402826495874066844499169137984474",
+              "imag": "-0.107182172331216601330874309475678316356423524502286710531707"
+            },
+            "S0": {
+              "real": "10.9499142715515360620786258814770340881722339186992196918265",
+              "imag": "0.310503372226232059498357517136625571074717527872893471373384"
+            },
+            "S1": {
+              "real": "2.59141331456560954455196911363835848283869396900233869754022",
+              "imag": "0.487631588705982152316678603004042551580910025101145358897928"
+            },
+            "T0": {
+              "real": "10.8782692122066352412817661753892923131818211637235051924314",
+              "imag": "-0.361633256736871548627205398698444539514502210123999005597372"
+            },
+            "T1": {
+              "real": "3.16529729302635224751459988689044075971998466078779617565079",
+              "imag": "-0.324390305508743869690115332898172488545830662436022777137988"
+            },
+            "area": {
+              "real": "44.4248940345113571614170073804726624232646963300242800397591",
+              "imag": "0.0"
+            },
+            "density": {
+              "real": "0.210908988107584839736033668772136575084233341537341111132094",
+              "imag": "0.0"
+            }
+          },
+          "quadrature": "Independent beta-weight Euler arcs, endpoint-denominator substitutions, mpmath tanh-sinh"
+        },
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 90,
+          "scaled_tolerance": "1.0e-75",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 13,
+          "max_scaled_residual": "1.22727336632e-90",
+          "scaled_residuals": {
+            "hypergeometric-fusion": "7.1305998144e-91",
+            "connection-determinant": "1.22727336632e-90",
+            "Hermitian-congruence": "1.11954117393e-90",
+            "independent-s-Euler-arcs": "1.12035601989e-92",
+            "independent-t-Euler-arcs": "1.81201515936e-91",
+            "sine-arc-connection": "3.58557687602e-91",
+            "beta-normalization-of-fusion": "1.99206015125e-91",
+            "area-channel-invariance": "1.76805138542e-91",
+            "Euler-area-normalization": "7.07220554167e-91",
+            "Wronskian": "0.0",
+            "period-derivative": "6.32522215108e-92",
+            "density-scalar": "1.3635320171e-91",
+            "density-from-Hermitian-derivatives": "3.06818341581e-92"
+          },
+          "id": "delta0-positive",
+          "mu": [
+            "1/5",
+            "3/10",
+            "3/5",
+            "9/10"
+          ],
+          "z": [
+            "2/5",
+            "1/4"
+          ],
+          "delta0": "1/5",
+          "delta1": "1/10",
+          "volume_over_pi": "2/5",
+          "observables": {
+            "f0": {
+              "real": "1.03232279838497468433007526887581745001896344988629588164913554430698078771388760268129353",
+              "imag": "0.0292732620708579104343298180757744863863209771951794019438359884872056616441838162669882992"
+            },
+            "f1": {
+              "real": "0.921356555684099182343332858757230873746034885937360113530103811263192716964762098270461589",
+              "imag": "0.173373563563796389657606081092896018412764012000114152046959093922005968579424690623260392"
+            },
+            "g0": {
+              "real": "1.04956003136941190684530048188510550156979182449200677603182917085146328239486995868756410",
+              "imag": "-0.0348911949944269996499649925968657750116296320402728322068431091061084932209495090935739008"
+            },
+            "g1": {
+              "real": "1.04584950345114159692436542402826495874066844499169137984474031737668976094602063572557008",
+              "imag": "-0.107182172331216601330874309475678316356423524502286710531706936772311784806505076120407504"
+            },
+            "S0": {
+              "real": "10.9499142715515360620786258814770340881722339186992196918264791358225614148748078609963779",
+              "imag": "0.310503372226232059498357517136625571074717527872893471373384305126277229287619662510160278"
+            },
+            "S1": {
+              "real": "2.59141331456560954455196911363835848283869396900233869754022143601211528218927575671401169",
+              "imag": "0.487631588705982152316678603004042551580910025101145358897928050170101333327236052655053072"
+            },
+            "T0": {
+              "real": "10.8782692122066352412817661753892923131818211637235051924314416547960770365472296072087535",
+              "imag": "-0.361633256736871548627205398698444539514502210123999005597372179682793622676889039470898029"
+            },
+            "T1": {
+              "real": "3.16529729302635224751459988689044075971998466078779617565078627627655496308118551337386358",
+              "imag": "-0.324390305508743869690115332898172488545830662436022777137988367729204725722247738874923479"
+            },
+            "area": {
+              "real": "44.4248940345113571614170073804726624232646963300242800397590970050495616120252317554212248",
+              "imag": "0.0"
+            },
+            "density": {
+              "real": "0.210908988107584839736033668772136575084233341537341111132094252874845456936926612352109620",
+              "imag": "0.0"
+            }
+          },
+          "quadrature": "Independent beta-weight Euler arcs, endpoint-denominator substitutions, mpmath tanh-sinh"
+        }
+      ],
+      "precision_comparison": {
+        "status": "numerical agreement, not certified",
+        "decimal_digits": 90,
+        "scaled_tolerance": "1.0e-45",
+        "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+        "check_count": 10,
+        "max_scaled_residual": "4.31446206296e-60",
+        "scaled_residuals": {
+          "f0": "4.31446206296e-60",
+          "f1": "2.10814908459e-61",
+          "g0": "7.89607743863e-61",
+          "g1": "3.07814220863e-61",
+          "S0": "1.90485730229e-60",
+          "S1": "5.44917049557e-61",
+          "T0": "3.82709643138e-60",
+          "T1": "1.17598434953e-60",
+          "area": "6.74160401162e-62",
+          "density": "2.52874845457e-61"
+        },
+        "precisions": [
+          60,
+          90
+        ],
+        "interpretation": "Observed agreement of serialized independent precision runs; not a rigorous error bound"
+      }
+    },
+    {
+      "id": "delta0-positive",
+      "z": [
+        "2/5",
+        "-1/4"
+      ],
+      "runs": [
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 60,
+          "scaled_tolerance": "1.0e-45",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 13,
+          "max_scaled_residual": "1.12063569998e-60",
+          "scaled_residuals": {
+            "hypergeometric-fusion": "5.27588912656e-61",
+            "connection-determinant": "1.55575381947e-61",
+            "Hermitian-congruence": "7.09593520558e-61",
+            "independent-s-Euler-arcs": "1.13839291573e-61",
+            "independent-t-Euler-arcs": "1.14404516322e-61",
+            "sine-arc-connection": "7.10251998342e-61",
+            "beta-normalization-of-fusion": "5.68178155445e-61",
+            "area-channel-invariance": "1.12063569998e-61",
+            "Euler-area-normalization": "1.12063569998e-60",
+            "Wronskian": "0.0",
+            "period-derivative": "1.94469227433e-62",
+            "density-scalar": "8.64241089952e-62",
+            "density-from-Hermitian-derivatives": "0.0"
+          },
+          "id": "delta0-positive",
+          "mu": [
+            "1/5",
+            "3/10",
+            "3/5",
+            "9/10"
+          ],
+          "z": [
+            "2/5",
+            "-1/4"
+          ],
+          "delta0": "1/5",
+          "delta1": "1/10",
+          "volume_over_pi": "2/5",
+          "observables": {
+            "f0": {
+              "real": "1.03232279838497468433007526887581745001896344988629588164914",
+              "imag": "-0.0292732620708579104343298180757744863863209771951794019438360"
+            },
+            "f1": {
+              "real": "0.921356555684099182343332858757230873746034885937360113530104",
+              "imag": "-0.173373563563796389657606081092896018412764012000114152046959"
+            },
+            "g0": {
+              "real": "1.04956003136941190684530048188510550156979182449200677603183",
+              "imag": "0.0348911949944269996499649925968657750116296320402728322068431"
+            },
+            "g1": {
+              "real": "1.04584950345114159692436542402826495874066844499169137984474",
+              "imag": "0.107182172331216601330874309475678316356423524502286710531707"
+            },
+            "S0": {
+              "real": "10.9499142715515360620786258814770340881722339186992196918265",
+              "imag": "-0.310503372226232059498357517136625571074717527872893471373384"
+            },
+            "S1": {
+              "real": "2.59141331456560954455196911363835848283869396900233869754022",
+              "imag": "-0.487631588705982152316678603004042551580910025101145358897928"
+            },
+            "T0": {
+              "real": "10.8782692122066352412817661753892923131818211637235051924314",
+              "imag": "0.361633256736871548627205398698444539514502210123999005597372"
+            },
+            "T1": {
+              "real": "3.16529729302635224751459988689044075971998466078779617565079",
+              "imag": "0.324390305508743869690115332898172488545830662436022777137988"
+            },
+            "area": {
+              "real": "44.4248940345113571614170073804726624232646963300242800397591",
+              "imag": "0.0"
+            },
+            "density": {
+              "real": "0.210908988107584839736033668772136575084233341537341111132094",
+              "imag": "0.0"
+            }
+          },
+          "quadrature": "Independent beta-weight Euler arcs, endpoint-denominator substitutions, mpmath tanh-sinh"
+        },
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 90,
+          "scaled_tolerance": "1.0e-75",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 13,
+          "max_scaled_residual": "1.22727336632e-90",
+          "scaled_residuals": {
+            "hypergeometric-fusion": "7.1305998144e-91",
+            "connection-determinant": "1.22727336632e-90",
+            "Hermitian-congruence": "1.11954117393e-90",
+            "independent-s-Euler-arcs": "1.12035601989e-92",
+            "independent-t-Euler-arcs": "1.81201515936e-91",
+            "sine-arc-connection": "3.58557687602e-91",
+            "beta-normalization-of-fusion": "1.99206015125e-91",
+            "area-channel-invariance": "1.76805138542e-91",
+            "Euler-area-normalization": "7.07220554167e-91",
+            "Wronskian": "0.0",
+            "period-derivative": "6.32522215108e-92",
+            "density-scalar": "1.3635320171e-91",
+            "density-from-Hermitian-derivatives": "3.06818341581e-92"
+          },
+          "id": "delta0-positive",
+          "mu": [
+            "1/5",
+            "3/10",
+            "3/5",
+            "9/10"
+          ],
+          "z": [
+            "2/5",
+            "-1/4"
+          ],
+          "delta0": "1/5",
+          "delta1": "1/10",
+          "volume_over_pi": "2/5",
+          "observables": {
+            "f0": {
+              "real": "1.03232279838497468433007526887581745001896344988629588164913554430698078771388760268129353",
+              "imag": "-0.0292732620708579104343298180757744863863209771951794019438359884872056616441838162669882992"
+            },
+            "f1": {
+              "real": "0.921356555684099182343332858757230873746034885937360113530103811263192716964762098270461589",
+              "imag": "-0.173373563563796389657606081092896018412764012000114152046959093922005968579424690623260392"
+            },
+            "g0": {
+              "real": "1.04956003136941190684530048188510550156979182449200677603182917085146328239486995868756410",
+              "imag": "0.0348911949944269996499649925968657750116296320402728322068431091061084932209495090935739008"
+            },
+            "g1": {
+              "real": "1.04584950345114159692436542402826495874066844499169137984474031737668976094602063572557008",
+              "imag": "0.107182172331216601330874309475678316356423524502286710531706936772311784806505076120407504"
+            },
+            "S0": {
+              "real": "10.9499142715515360620786258814770340881722339186992196918264791358225614148748078609963779",
+              "imag": "-0.310503372226232059498357517136625571074717527872893471373384305126277229287619662510160278"
+            },
+            "S1": {
+              "real": "2.59141331456560954455196911363835848283869396900233869754022143601211528218927575671401169",
+              "imag": "-0.487631588705982152316678603004042551580910025101145358897928050170101333327236052655053072"
+            },
+            "T0": {
+              "real": "10.8782692122066352412817661753892923131818211637235051924314416547960770365472296072087535",
+              "imag": "0.361633256736871548627205398698444539514502210123999005597372179682793622676889039470898029"
+            },
+            "T1": {
+              "real": "3.16529729302635224751459988689044075971998466078779617565078627627655496308118551337386358",
+              "imag": "0.324390305508743869690115332898172488545830662436022777137988367729204725722247738874923479"
+            },
+            "area": {
+              "real": "44.4248940345113571614170073804726624232646963300242800397590970050495616120252317554212248",
+              "imag": "0.0"
+            },
+            "density": {
+              "real": "0.210908988107584839736033668772136575084233341537341111132094252874845456936926612352109620",
+              "imag": "0.0"
+            }
+          },
+          "quadrature": "Independent beta-weight Euler arcs, endpoint-denominator substitutions, mpmath tanh-sinh"
+        }
+      ],
+      "precision_comparison": {
+        "status": "numerical agreement, not certified",
+        "decimal_digits": 90,
+        "scaled_tolerance": "1.0e-45",
+        "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+        "check_count": 10,
+        "max_scaled_residual": "4.31446206296e-60",
+        "scaled_residuals": {
+          "f0": "4.31446206296e-60",
+          "f1": "2.10814908459e-61",
+          "g0": "7.89607743863e-61",
+          "g1": "3.07814220863e-61",
+          "S0": "1.90485730229e-60",
+          "S1": "5.44917049557e-61",
+          "T0": "3.82709643138e-60",
+          "T1": "1.17598434953e-60",
+          "area": "6.74160401162e-62",
+          "density": "2.52874845457e-61"
+        },
+        "precisions": [
+          60,
+          90
+        ],
+        "interpretation": "Observed agreement of serialized independent precision runs; not a rigorous error bound"
+      }
+    },
+    {
+      "id": "delta0-negative",
+      "z": [
+        "1/3",
+        "0"
+      ],
+      "runs": [
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 60,
+          "scaled_tolerance": "1.0e-45",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 13,
+          "max_scaled_residual": "1.86919012828e-60",
+          "scaled_residuals": {
+            "hypergeometric-fusion": "1.86919012828e-60",
+            "connection-determinant": "1.1668153646e-60",
+            "Hermitian-congruence": "1.23347237277e-60",
+            "independent-s-Euler-arcs": "1.08565916539e-61",
+            "independent-t-Euler-arcs": "1.27278055772e-61",
+            "sine-arc-connection": "4.34263666155e-61",
+            "beta-normalization-of-fusion": "1.15136426674e-61",
+            "area-channel-invariance": "3.87959109244e-61",
+            "Euler-area-normalization": "7.75918218487e-61",
+            "Wronskian": "0.0",
+            "period-derivative": "1.55575381947e-61",
+            "density-scalar": "1.29795172947e-61",
+            "density-from-Hermitian-derivatives": "7.77876909733e-62"
+          },
+          "id": "delta0-negative",
+          "mu": [
+            "11/20",
+            "3/10",
+            "13/20",
+            "1/2"
+          ],
+          "z": [
+            "1/3",
+            "0"
+          ],
+          "delta0": "-1/5",
+          "delta1": "1/20",
+          "volume_over_pi": "6/5",
+          "observables": {
+            "f0": {
+              "real": "1.11245397674104605887354917836286446568943894283135626030950",
+              "imag": "0.0"
+            },
+            "f1": {
+              "real": "1.33170300521456980451776003092227608443249047792510317518133",
+              "imag": "0.0"
+            },
+            "g0": {
+              "real": "1.43469540122755314709154109090695141968763617689826965065972",
+              "imag": "0.0"
+            },
+            "g1": {
+              "real": "1.44015261664076640174184417329026433831148938563446661830972",
+              "imag": "0.0"
+            },
+            "S0": {
+              "real": "2.78758225380030961159982223896252336421643628216777663822907",
+              "imag": "0.0"
+            },
+            "S1": {
+              "real": "5.73201560514307415848800868059679238203475035305452922468136",
+              "imag": "0.0"
+            },
+            "T0": {
+              "real": "4.85221749485201948767834484843069491664223414864987293185401",
+              "imag": "0.0"
+            },
+            "T1": {
+              "real": "4.88930730449646683787717764574012369703144332467973044224462",
+              "imag": "0.0"
+            },
+            "area": {
+              "real": "38.4969351434625203170703525184818115438067597861448905337509",
+              "imag": "0.0"
+            },
+            "density": {
+              "real": "0.780988080119918513941916476482054958884702016632241214217740",
+              "imag": "0.0"
+            }
+          },
+          "quadrature": "Independent beta-weight Euler arcs, endpoint-denominator substitutions, mpmath tanh-sinh"
+        },
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 90,
+          "scaled_tolerance": "1.0e-75",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 13,
+          "max_scaled_residual": "2.33422819083e-90",
+          "scaled_residuals": {
+            "hypergeometric-fusion": "5.52949131234e-91",
+            "connection-determinant": "1.22727336632e-91",
+            "Hermitian-congruence": "2.33422819083e-90",
+            "independent-s-Euler-arcs": "8.56434071968e-92",
+            "independent-t-Euler-arcs": "0.0",
+            "sine-arc-connection": "5.13860443181e-91",
+            "beta-normalization-of-fusion": "3.63306503081e-91",
+            "area-channel-invariance": "2.04030516071e-91",
+            "Euler-area-normalization": "6.12091548213e-91",
+            "Wronskian": "4.46826686641e-91",
+            "period-derivative": "1.22727336632e-91",
+            "density-scalar": "0.0",
+            "density-from-Hermitian-derivatives": "9.8181869306e-91"
+          },
+          "id": "delta0-negative",
+          "mu": [
+            "11/20",
+            "3/10",
+            "13/20",
+            "1/2"
+          ],
+          "z": [
+            "1/3",
+            "0"
+          ],
+          "delta0": "-1/5",
+          "delta1": "1/20",
+          "volume_over_pi": "6/5",
+          "observables": {
+            "f0": {
+              "real": "1.11245397674104605887354917836286446568943894283135626030950315427049533669046825835785770",
+              "imag": "0.0"
+            },
+            "f1": {
+              "real": "1.33170300521456980451776003092227608443249047792510317518132884390346295313153154929786404",
+              "imag": "0.0"
+            },
+            "g0": {
+              "real": "1.43469540122755314709154109090695141968763617689826965065972153558406161809647911150783574",
+              "imag": "0.0"
+            },
+            "g1": {
+              "real": "1.44015261664076640174184417329026433831148938563446661830972300762931281583954876564699010",
+              "imag": "0.0"
+            },
+            "S0": {
+              "real": "2.78758225380030961159982223896252336421643628216777663822906840085213014394535017059452532",
+              "imag": "0.0"
+            },
+            "S1": {
+              "real": "5.73201560514307415848800868059679238203475035305452922468135807373119170089781300532322707",
+              "imag": "0.0"
+            },
+            "T0": {
+              "real": "4.85221749485201948767834484843069491664223414864987293185401416001537098253875347412820381",
+              "imag": "0.0"
+            },
+            "T1": {
+              "real": "4.88930730449646683787717764574012369703144332467973044224461794971196025799879713227327472",
+              "imag": "0.0"
+            },
+            "area": {
+              "real": "38.4969351434625203170703525184818115438067597861448905337509065252344512584940116858125330",
+              "imag": "0.0"
+            },
+            "density": {
+              "real": "0.780988080119918513941916476482054958884702016632241214217739750766095526740553154895011751",
+              "imag": "0.0"
+            }
+          },
+          "quadrature": "Independent beta-weight Euler arcs, endpoint-denominator substitutions, mpmath tanh-sinh"
+        }
+      ],
+      "precision_comparison": {
+        "status": "numerical agreement, not certified",
+        "decimal_digits": 90,
+        "scaled_tolerance": "1.0e-45",
+        "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+        "check_count": 10,
+        "max_scaled_residual": "2.83541662063e-60",
+        "scaled_residuals": {
+          "f0": "2.83541662063e-60",
+          "f1": "8.68133910129e-61",
+          "g0": "1.07032061321e-60",
+          "g1": "2.08841012964e-60",
+          "S0": "5.73668406619e-61",
+          "S1": "3.3605435522e-61",
+          "T0": "8.57343137523e-61",
+          "T1": "4.19341209716e-61",
+          "area": "1.69500102461e-61",
+          "density": "2.49233904473e-61"
+        },
+        "precisions": [
+          60,
+          90
+        ],
+        "interpretation": "Observed agreement of serialized independent precision runs; not a rigorous error bound"
+      }
+    },
+    {
+      "id": "delta0-negative",
+      "z": [
+        "2/5",
+        "1/4"
+      ],
+      "runs": [
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 60,
+          "scaled_tolerance": "1.0e-45",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 13,
+          "max_scaled_residual": "1.99900150636e-60",
+          "scaled_residuals": {
+            "hypergeometric-fusion": "1.99900150636e-60",
+            "connection-determinant": "1.1668153646e-60",
+            "Hermitian-congruence": "1.23347237277e-60",
+            "independent-s-Euler-arcs": "1.15716910244e-61",
+            "independent-t-Euler-arcs": "1.7841760882e-62",
+            "sine-arc-connection": "6.94640393125e-61",
+            "beta-normalization-of-fusion": "1.15136426674e-61",
+            "area-channel-invariance": "1.5365623779e-61",
+            "Euler-area-normalization": "3.0731247558e-61",
+            "Wronskian": "8.01817165639e-62",
+            "period-derivative": "5.500420378e-62",
+            "density-scalar": "1.29795172947e-61",
+            "density-from-Hermitian-derivatives": "2.3336307292e-61"
+          },
+          "id": "delta0-negative",
+          "mu": [
+            "11/20",
+            "3/10",
+            "13/20",
+            "1/2"
+          ],
+          "z": [
+            "2/5",
+            "1/4"
+          ],
+          "delta0": "-1/5",
+          "delta1": "1/20",
+          "volume_over_pi": "6/5",
+          "observables": {
+            "f0": {
+              "real": "1.11744259907878439449316936593372712718143329605291915185064",
+              "imag": "0.112347330006670104169076228659057914322634215722775976772628"
+            },
+            "f1": {
+              "real": "1.24793270516652728555562810442186898309306237571400444123083",
+              "imag": "-0.0606850148883127548822854127038715459742632149332274719388602"
+            },
+            "g0": {
+              "real": "1.26799684109117590162610135058157825952508325737308035660102",
+              "imag": "-0.231643625492390624005192925656376929761254525967517610727822"
+            },
+            "g1": {
+              "real": "1.25542360793344237923312231459087244832112558875338453526996",
+              "imag": "-0.270359000129116070282188575330425101964382918884546605333513"
+            },
+            "S0": {
+              "real": "2.80008272158624862877467630072118788093736318453875743378960",
+              "imag": "0.281519442544400352482974956803024980995270004527072786486627"
+            },
+            "S1": {
+              "real": "5.37144521877112944979420431265025206519458665315496378985470",
+              "imag": "-0.261204976617216388853876130453874123738626979725089527261322"
+            },
+            "T0": {
+              "real": "4.28843394249080271368186274668857995164179062517222274439065",
+              "imag": "-0.783431278321115061470553734599400869679625340870060445324457"
+            },
+            "T1": {
+              "real": "4.26215370897555170201752913737414033866783141183808691828995",
+              "imag": "-0.917866772516774870946209493600940180565308610729512825953798"
+            },
+            "area": {
+              "real": "32.3996753655132309454503914577700121407831220445087551970658",
+              "imag": "0.0"
+            },
+            "density": {
+              "real": "0.502828168895674955550126923674983718505955656787335092605751",
+              "imag": "0.0"
+            }
+          },
+          "quadrature": "Independent beta-weight Euler arcs, endpoint-denominator substitutions, mpmath tanh-sinh"
+        },
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 90,
+          "scaled_tolerance": "1.0e-75",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 13,
+          "max_scaled_residual": "2.33422819083e-90",
+          "scaled_residuals": {
+            "hypergeometric-fusion": "1.04908021999e-90",
+            "connection-determinant": "1.22727336632e-91",
+            "Hermitian-congruence": "2.33422819083e-90",
+            "independent-s-Euler-arcs": "1.83989885711e-91",
+            "independent-t-Euler-arcs": "2.81493352803e-92",
+            "sine-arc-connection": "9.03742943729e-91",
+            "beta-normalization-of-fusion": "3.63306503081e-91",
+            "area-channel-invariance": "0.0",
+            "Euler-area-normalization": "0.0",
+            "Wronskian": "1.7356266394e-91",
+            "period-derivative": "6.13636683162e-92",
+            "density-scalar": "0.0",
+            "density-from-Hermitian-derivatives": "2.45454673265e-91"
+          },
+          "id": "delta0-negative",
+          "mu": [
+            "11/20",
+            "3/10",
+            "13/20",
+            "1/2"
+          ],
+          "z": [
+            "2/5",
+            "1/4"
+          ],
+          "delta0": "-1/5",
+          "delta1": "1/20",
+          "volume_over_pi": "6/5",
+          "observables": {
+            "f0": {
+              "real": "1.11744259907878439449316936593372712718143329605291915185064390298467614468157844411001551",
+              "imag": "0.112347330006670104169076228659057914322634215722775976772628370367908033248884552511432569"
+            },
+            "f1": {
+              "real": "1.24793270516652728555562810442186898309306237571400444123082646245732641215045548141341401",
+              "imag": "-0.0606850148883127548822854127038715459742632149332274719388602279647555070292594628768126758"
+            },
+            "g0": {
+              "real": "1.26799684109117590162610135058157825952508325737308035660101758616957733443294969518346773",
+              "imag": "-0.231643625492390624005192925656376929761254525967517610727821988536306681184606422464011779"
+            },
+            "g1": {
+              "real": "1.25542360793344237923312231459087244832112558875338453526995622928575009210172379349731170",
+              "imag": "-0.270359000129116070282188575330425101964382918884546605333513349236223554922515357099120169"
+            },
+            "S0": {
+              "real": "2.80008272158624862877467630072118788093736318453875743378959567673238434188126522090510828",
+              "imag": "0.281519442544400352482974956803024980995270004527072786486627423104068290433791793123499359"
+            },
+            "S1": {
+              "real": "5.37144521877112944979420431265025206519458665315496378985470363298828094764641960963280572",
+              "imag": "-0.261204976617216388853876130453874123738626979725089527261321659489458393323696138954863341"
+            },
+            "T0": {
+              "real": "4.28843394249080271368186274668857995164179062517222274439064854820524729362979488746697546",
+              "imag": "-0.783431278321115061470553734599400869679625340870060445324457389630462043482070525613093004"
+            },
+            "T1": {
+              "real": "4.26215370897555170201752913737414033866783141183808691828995261600188871582892019424470845",
+              "imag": "-0.917866772516774870946209493600940180565308610729512825953798288503902640377116038118485017"
+            },
+            "area": {
+              "real": "32.3996753655132309454503914577700121407831220445087551970658378407259124851627209494607355",
+              "imag": "0.0"
+            },
+            "density": {
+              "real": "0.502828168895674955550126923674983718505955656787335092605751401606236796090995698565632832",
+              "imag": "0.0"
+            }
+          },
+          "quadrature": "Independent beta-weight Euler arcs, endpoint-denominator substitutions, mpmath tanh-sinh"
+        }
+      ],
+      "precision_comparison": {
+        "status": "numerical agreement, not certified",
+        "decimal_digits": 90,
+        "scaled_tolerance": "1.0e-45",
+        "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+        "check_count": 10,
+        "max_scaled_residual": "3.49087485101e-60",
+        "scaled_residuals": {
+          "f0": "3.49087485101e-60",
+          "f1": "2.83146503461e-60",
+          "g0": "1.87268520926e-60",
+          "g1": "2.948791331e-60",
+          "S0": "1.54357316737e-60",
+          "S1": "6.78514650108e-61",
+          "T0": "3.44810639832e-61",
+          "T1": "6.0365671445e-61",
+          "area": "1.1679353415e-60",
+          "density": "4.01606236796e-61"
+        },
+        "precisions": [
+          60,
+          90
+        ],
+        "interpretation": "Observed agreement of serialized independent precision runs; not a rigorous error bound"
+      }
+    },
+    {
+      "id": "delta0-negative",
+      "z": [
+        "2/5",
+        "-1/4"
+      ],
+      "runs": [
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 60,
+          "scaled_tolerance": "1.0e-45",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 13,
+          "max_scaled_residual": "1.99900150636e-60",
+          "scaled_residuals": {
+            "hypergeometric-fusion": "1.99900150636e-60",
+            "connection-determinant": "1.1668153646e-60",
+            "Hermitian-congruence": "1.23347237277e-60",
+            "independent-s-Euler-arcs": "1.15716910244e-61",
+            "independent-t-Euler-arcs": "1.7841760882e-62",
+            "sine-arc-connection": "6.94640393125e-61",
+            "beta-normalization-of-fusion": "1.15136426674e-61",
+            "area-channel-invariance": "1.5365623779e-61",
+            "Euler-area-normalization": "3.0731247558e-61",
+            "Wronskian": "8.01817165639e-62",
+            "period-derivative": "5.500420378e-62",
+            "density-scalar": "1.29795172947e-61",
+            "density-from-Hermitian-derivatives": "2.3336307292e-61"
+          },
+          "id": "delta0-negative",
+          "mu": [
+            "11/20",
+            "3/10",
+            "13/20",
+            "1/2"
+          ],
+          "z": [
+            "2/5",
+            "-1/4"
+          ],
+          "delta0": "-1/5",
+          "delta1": "1/20",
+          "volume_over_pi": "6/5",
+          "observables": {
+            "f0": {
+              "real": "1.11744259907878439449316936593372712718143329605291915185064",
+              "imag": "-0.112347330006670104169076228659057914322634215722775976772628"
+            },
+            "f1": {
+              "real": "1.24793270516652728555562810442186898309306237571400444123083",
+              "imag": "0.0606850148883127548822854127038715459742632149332274719388602"
+            },
+            "g0": {
+              "real": "1.26799684109117590162610135058157825952508325737308035660102",
+              "imag": "0.231643625492390624005192925656376929761254525967517610727822"
+            },
+            "g1": {
+              "real": "1.25542360793344237923312231459087244832112558875338453526996",
+              "imag": "0.270359000129116070282188575330425101964382918884546605333513"
+            },
+            "S0": {
+              "real": "2.80008272158624862877467630072118788093736318453875743378960",
+              "imag": "-0.281519442544400352482974956803024980995270004527072786486627"
+            },
+            "S1": {
+              "real": "5.37144521877112944979420431265025206519458665315496378985470",
+              "imag": "0.261204976617216388853876130453874123738626979725089527261322"
+            },
+            "T0": {
+              "real": "4.28843394249080271368186274668857995164179062517222274439065",
+              "imag": "0.783431278321115061470553734599400869679625340870060445324457"
+            },
+            "T1": {
+              "real": "4.26215370897555170201752913737414033866783141183808691828995",
+              "imag": "0.917866772516774870946209493600940180565308610729512825953798"
+            },
+            "area": {
+              "real": "32.3996753655132309454503914577700121407831220445087551970658",
+              "imag": "0.0"
+            },
+            "density": {
+              "real": "0.502828168895674955550126923674983718505955656787335092605751",
+              "imag": "0.0"
+            }
+          },
+          "quadrature": "Independent beta-weight Euler arcs, endpoint-denominator substitutions, mpmath tanh-sinh"
+        },
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 90,
+          "scaled_tolerance": "1.0e-75",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 13,
+          "max_scaled_residual": "2.33422819083e-90",
+          "scaled_residuals": {
+            "hypergeometric-fusion": "1.04908021999e-90",
+            "connection-determinant": "1.22727336632e-91",
+            "Hermitian-congruence": "2.33422819083e-90",
+            "independent-s-Euler-arcs": "1.83989885711e-91",
+            "independent-t-Euler-arcs": "2.81493352803e-92",
+            "sine-arc-connection": "9.03742943729e-91",
+            "beta-normalization-of-fusion": "3.63306503081e-91",
+            "area-channel-invariance": "0.0",
+            "Euler-area-normalization": "0.0",
+            "Wronskian": "1.7356266394e-91",
+            "period-derivative": "6.13636683162e-92",
+            "density-scalar": "0.0",
+            "density-from-Hermitian-derivatives": "2.45454673265e-91"
+          },
+          "id": "delta0-negative",
+          "mu": [
+            "11/20",
+            "3/10",
+            "13/20",
+            "1/2"
+          ],
+          "z": [
+            "2/5",
+            "-1/4"
+          ],
+          "delta0": "-1/5",
+          "delta1": "1/20",
+          "volume_over_pi": "6/5",
+          "observables": {
+            "f0": {
+              "real": "1.11744259907878439449316936593372712718143329605291915185064390298467614468157844411001551",
+              "imag": "-0.112347330006670104169076228659057914322634215722775976772628370367908033248884552511432569"
+            },
+            "f1": {
+              "real": "1.24793270516652728555562810442186898309306237571400444123082646245732641215045548141341401",
+              "imag": "0.0606850148883127548822854127038715459742632149332274719388602279647555070292594628768126758"
+            },
+            "g0": {
+              "real": "1.26799684109117590162610135058157825952508325737308035660101758616957733443294969518346773",
+              "imag": "0.231643625492390624005192925656376929761254525967517610727821988536306681184606422464011779"
+            },
+            "g1": {
+              "real": "1.25542360793344237923312231459087244832112558875338453526995622928575009210172379349731170",
+              "imag": "0.270359000129116070282188575330425101964382918884546605333513349236223554922515357099120169"
+            },
+            "S0": {
+              "real": "2.80008272158624862877467630072118788093736318453875743378959567673238434188126522090510828",
+              "imag": "-0.281519442544400352482974956803024980995270004527072786486627423104068290433791793123499359"
+            },
+            "S1": {
+              "real": "5.37144521877112944979420431265025206519458665315496378985470363298828094764641960963280572",
+              "imag": "0.261204976617216388853876130453874123738626979725089527261321659489458393323696138954863341"
+            },
+            "T0": {
+              "real": "4.28843394249080271368186274668857995164179062517222274439064854820524729362979488746697546",
+              "imag": "0.783431278321115061470553734599400869679625340870060445324457389630462043482070525613093004"
+            },
+            "T1": {
+              "real": "4.26215370897555170201752913737414033866783141183808691828995261600188871582892019424470845",
+              "imag": "0.917866772516774870946209493600940180565308610729512825953798288503902640377116038118485017"
+            },
+            "area": {
+              "real": "32.3996753655132309454503914577700121407831220445087551970658378407259124851627209494607355",
+              "imag": "0.0"
+            },
+            "density": {
+              "real": "0.502828168895674955550126923674983718505955656787335092605751401606236796090995698565632832",
+              "imag": "0.0"
+            }
+          },
+          "quadrature": "Independent beta-weight Euler arcs, endpoint-denominator substitutions, mpmath tanh-sinh"
+        }
+      ],
+      "precision_comparison": {
+        "status": "numerical agreement, not certified",
+        "decimal_digits": 90,
+        "scaled_tolerance": "1.0e-45",
+        "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+        "check_count": 10,
+        "max_scaled_residual": "3.49087485101e-60",
+        "scaled_residuals": {
+          "f0": "3.49087485101e-60",
+          "f1": "2.83146503461e-60",
+          "g0": "1.87268520926e-60",
+          "g1": "2.948791331e-60",
+          "S0": "1.54357316737e-60",
+          "S1": "6.78514650108e-61",
+          "T0": "3.44810639832e-61",
+          "T1": "6.0365671445e-61",
+          "area": "1.1679353415e-60",
+          "density": "4.01606236796e-61"
+        },
+        "precisions": [
+          60,
+          90
+        ],
+        "interpretation": "Observed agreement of serialized independent precision runs; not a rigorous error bound"
+      }
+    }
+  ],
+  "balanced_periods": [
+    {
+      "z": [
+        "1/5",
+        "0"
+      ],
+      "runs": [
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 60,
+          "scaled_tolerance": "1.0e-45",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 17,
+          "max_scaled_residual": "2.94458079831e-61",
+          "scaled_residuals": {
+            "elliptic-f": "0.0",
+            "elliptic-g": "0.0",
+            "balanced-Euler-f": "0.0",
+            "balanced-Euler-g": "0.0",
+            "balanced-logarithmic-Frobenius-series": "9.8152693277e-62",
+            "balanced-series-two-truncations": "0.0",
+            "balanced-logarithmic-fusion": "2.94458079831e-61",
+            "balanced-fusion-square": "7.77876909733e-62",
+            "balanced-fusion-determinant": "1.55575381947e-61",
+            "balanced-Hermitian-congruence": "1.42887927728e-61",
+            "balanced-elliptic-area": "0.0",
+            "balanced-logarithmic-area": "0.0",
+            "balanced-Wronskian": "2.34602148961e-61",
+            "balanced-tau-derivative": "8.72951630031e-62",
+            "balanced-Poincare-density": "0.0",
+            "balanced-monodromy-Hermitian-0": "0.0",
+            "balanced-monodromy-Hermitian-1": "0.0"
+          },
+          "z": [
+            "1/5",
+            "0"
+          ],
+          "terms": [
+            140,
+            280
+          ],
+          "truncation_note": "Observed difference of two finite sums, not a certified tail bound",
+          "observables": {
+            "f": {
+              "real": "1.05654919756330052407864766452463154616202082787251821490550",
+              "imag": "0.0"
+            },
+            "g": {
+              "real": "1.43698154134758390437453051065872765717812780865947846303274",
+              "imag": "0.0"
+            },
+            "ell0": {
+              "real": "-1.58503426398620972175952261297403600111147837028617656567452",
+              "imag": "0.0"
+            },
+            "area": {
+              "real": "29.9688898184102248014035776878693397806848269385684548449933",
+              "imag": "0.0"
+            },
+            "density": {
+              "real": "1.71703228558205272548710181858056852856290477000405213352802",
+              "imag": "0.0"
+            },
+            "tau": {
+              "real": "0.0",
+              "imag": "1.36007063813182321800666110543891316692195394469895407192365"
+            }
+          },
+          "basis": "Separate balanced logarithmic/elliptic basis; no singular nonresonant substitution"
+        },
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 90,
+          "scaled_tolerance": "1.0e-75",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 17,
+          "max_scaled_residual": "3.09715289873e-91",
+          "scaled_residuals": {
+            "elliptic-f": "0.0",
+            "elliptic-g": "0.0",
+            "balanced-Euler-f": "1.47897796507e-91",
+            "balanced-Euler-g": "0.0",
+            "balanced-logarithmic-Frobenius-series": "0.0",
+            "balanced-series-two-truncations": "0.0",
+            "balanced-logarithmic-fusion": "3.09715289873e-91",
+            "balanced-fusion-square": "0.0",
+            "balanced-fusion-determinant": "0.0",
+            "balanced-Hermitian-congruence": "5.11344659698e-93",
+            "balanced-elliptic-area": "0.0",
+            "balanced-logarithmic-area": "0.0",
+            "balanced-Wronskian": "0.0",
+            "balanced-tau-derivative": "1.37727482616e-91",
+            "balanced-Poincare-density": "0.0",
+            "balanced-monodromy-Hermitian-0": "0.0",
+            "balanced-monodromy-Hermitian-1": "0.0"
+          },
+          "z": [
+            "1/5",
+            "0"
+          ],
+          "terms": [
+            200,
+            400
+          ],
+          "truncation_note": "Observed difference of two finite sums, not a certified tail bound",
+          "observables": {
+            "f": {
+              "real": "1.05654919756330052407864766452463154616202082787251821490549680403947125569235795159374858",
+              "imag": "0.0"
+            },
+            "g": {
+              "real": "1.43698154134758390437453051065872765717812780865947846303274090095685799699289494397111893",
+              "imag": "0.0"
+            },
+            "ell0": {
+              "real": "-1.58503426398620972175952261297403600111147837028617656567452396850561536039296648645067736",
+              "imag": "0.0"
+            },
+            "area": {
+              "real": "29.9688898184102248014035776878693397806848269385684548449933097215803169014175540020861790",
+              "imag": "0.0"
+            },
+            "density": {
+              "real": "1.71703228558205272548710181858056852856290477000405213352802275310987792151304647157923324",
+              "imag": "0.0"
+            },
+            "tau": {
+              "real": "0.0",
+              "imag": "1.36007063813182321800666110543891316692195394469895407192365169906518889621150600439126297"
+            }
+          },
+          "basis": "Separate balanced logarithmic/elliptic basis; no singular nonresonant substitution"
+        }
+      ],
+      "precision_comparison": {
+        "status": "numerical agreement, not certified",
+        "decimal_digits": 90,
+        "scaled_tolerance": "1.0e-45",
+        "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+        "check_count": 6,
+        "max_scaled_residual": "3.02490460086e-60",
+        "scaled_residuals": {
+          "f": "3.02490460086e-60",
+          "g": "6.26978727334e-61",
+          "ell0": "2.50373490689e-60",
+          "area": "3.2438907066e-61",
+          "density": "1.60341182926e-60",
+          "tau": "1.24924775321e-60"
+        },
+        "precisions": [
+          60,
+          90
+        ],
+        "interpretation": "Observed agreement of serialized independent precision runs; not a rigorous error bound"
+      }
+    },
+    {
+      "z": [
+        "1/4",
+        "1/5"
+      ],
+      "runs": [
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 60,
+          "scaled_tolerance": "1.0e-45",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 17,
+          "max_scaled_residual": "3.39740162118e-61",
+          "scaled_residuals": {
+            "elliptic-f": "0.0",
+            "elliptic-g": "0.0",
+            "balanced-Euler-f": "5.80993225115e-63",
+            "balanced-Euler-g": "0.0",
+            "balanced-logarithmic-Frobenius-series": "0.0",
+            "balanced-series-two-truncations": "0.0",
+            "balanced-logarithmic-fusion": "3.39740162118e-61",
+            "balanced-fusion-square": "7.77876909733e-62",
+            "balanced-fusion-determinant": "1.55575381947e-61",
+            "balanced-Hermitian-congruence": "1.42887927728e-61",
+            "balanced-elliptic-area": "1.84424937533e-61",
+            "balanced-logarithmic-area": "1.84424937533e-61",
+            "balanced-Wronskian": "0.0",
+            "balanced-tau-derivative": "0.0",
+            "balanced-Poincare-density": "3.11150763893e-61",
+            "balanced-monodromy-Hermitian-0": "0.0",
+            "balanced-monodromy-Hermitian-1": "0.0"
+          },
+          "z": [
+            "1/4",
+            "1/5"
+          ],
+          "terms": [
+            140,
+            280
+          ],
+          "truncation_note": "Observed difference of two finite sums, not a certified tail bound",
+          "observables": {
+            "f": {
+              "real": "1.06332279432159598562617986124931152791021141175287832877348",
+              "imag": "0.0671714030456603038416501481119777319237249259243098845826084"
+            },
+            "g": {
+              "real": "1.29807334235841446334225820244933370858791709077644670031707",
+              "imag": "-0.189462631583227138589027312486459316492825980759411511467788"
+            },
+            "ell0": {
+              "real": "-1.12986088853739592466493689973011249500154980197204837048754",
+              "imag": "0.781453086053076567303326559354832880799689726467531217296780"
+            },
+            "area": {
+              "real": "26.9942464878848192606109390847416401402511773370303133842833",
+              "imag": "0.0"
+            },
+            "density": {
+              "real": "0.877276309865537669983044726842737701000264703324598954886704",
+              "imag": "0.0"
+            },
+            "tau": {
+              "real": "0.254282630104282581480137945667903983018658046660320750709042",
+              "imag": "1.20470738346340771239735995492967998208695072255568152922432"
+            }
+          },
+          "basis": "Separate balanced logarithmic/elliptic basis; no singular nonresonant substitution"
+        },
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 90,
+          "scaled_tolerance": "1.0e-75",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 17,
+          "max_scaled_residual": "5.36015463657e-91",
+          "scaled_residuals": {
+            "elliptic-f": "2.30378187488e-91",
+            "elliptic-g": "0.0",
+            "balanced-Euler-f": "0.0",
+            "balanced-Euler-g": "0.0",
+            "balanced-logarithmic-Frobenius-series": "3.57343642438e-91",
+            "balanced-series-two-truncations": "0.0",
+            "balanced-logarithmic-fusion": "5.36015463657e-91",
+            "balanced-fusion-square": "0.0",
+            "balanced-fusion-determinant": "0.0",
+            "balanced-Hermitian-congruence": "5.11344659698e-93",
+            "balanced-elliptic-area": "1.45485623168e-91",
+            "balanced-logarithmic-area": "1.45485623168e-91",
+            "balanced-Wronskian": "0.0",
+            "balanced-tau-derivative": "1.08765594134e-91",
+            "balanced-Poincare-density": "1.22727336632e-91",
+            "balanced-monodromy-Hermitian-0": "0.0",
+            "balanced-monodromy-Hermitian-1": "0.0"
+          },
+          "z": [
+            "1/4",
+            "1/5"
+          ],
+          "terms": [
+            200,
+            400
+          ],
+          "truncation_note": "Observed difference of two finite sums, not a certified tail bound",
+          "observables": {
+            "f": {
+              "real": "1.06332279432159598562617986124931152791021141175287832877348046432237294041214952948819794",
+              "imag": "0.0671714030456603038416501481119777319237249259243098845826083996080029589503813458084479342"
+            },
+            "g": {
+              "real": "1.29807334235841446334225820244933370858791709077644670031707447274749838697108579193483551",
+              "imag": "-0.189462631583227138589027312486459316492825980759411511467788183560255365950211725881326547"
+            },
+            "ell0": {
+              "real": "-1.12986088853739592466493689973011249500154980197204837048754003253478899061869004597212733",
+              "imag": "0.781453086053076567303326559354832880799689726467531217296780496264790743165475388723518304"
+            },
+            "area": {
+              "real": "26.9942464878848192606109390847416401402511773370303133842832749600491145970008856147797786",
+              "imag": "0.0"
+            },
+            "density": {
+              "real": "0.877276309865537669983044726842737701000264703324598954886703555661267492772656277061792213",
+              "imag": "0.0"
+            },
+            "tau": {
+              "real": "0.254282630104282581480137945667903983018658046660320750709041709344792560730769111218145924",
+              "imag": "1.20470738346340771239735995492967998208695072255568152922432394161919421779217377960808848"
+            }
+          },
+          "basis": "Separate balanced logarithmic/elliptic basis; no singular nonresonant substitution"
+        }
+      ],
+      "precision_comparison": {
+        "status": "numerical agreement, not certified",
+        "decimal_digits": 90,
+        "scaled_tolerance": "1.0e-45",
+        "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+        "check_count": 6,
+        "max_scaled_residual": "3.41242557617e-60",
+        "scaled_residuals": {
+          "f": "4.35802600072e-61",
+          "g": "3.41242557617e-60",
+          "ell0": "3.62017468729e-61",
+          "area": "9.27603254147e-61",
+          "density": "4.44338732507e-61",
+          "tau": "3.21000386203e-60"
+        },
+        "precisions": [
+          60,
+          90
+        ],
+        "interpretation": "Observed agreement of serialized independent precision runs; not a rigorous error bound"
+      }
+    }
+  ],
+  "screened_Gram": [
+    {
+      "id": "delta0-positive",
+      "runs": [
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 60,
+          "scaled_tolerance": "1.0e-45",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 19,
+          "max_scaled_residual": "9.92096918077e-62",
+          "scaled_residuals": {
+            "screened-planar-Gram": "7.77876909733e-62",
+            "screened-two-dimensional-factorization": "7.77876909733e-62",
+            "screened-rank2-determinant": "9.72346137166e-63",
+            "screened-00-zero-principal-1": "8.75111523449e-62",
+            "screened-00-zero-principal-2": "2.9170384115e-62",
+            "screened-00-determinant": "4.55787251796e-64",
+            "screened-00-off-diagonal-cofactor": "2.43086534291e-62",
+            "screened-01-zero-principal-1": "8.75111523449e-62",
+            "screened-01-zero-principal-2": "7.77876909733e-62",
+            "screened-01-determinant": "9.92096918077e-62",
+            "screened-01-off-diagonal-cofactor": "1.94469227433e-62",
+            "screened-10-zero-principal-1": "0.0",
+            "screened-10-zero-principal-2": "2.9170384115e-62",
+            "screened-10-determinant": "8.65995778413e-63",
+            "screened-10-off-diagonal-cofactor": "4.86173068583e-62",
+            "screened-11-zero-principal-1": "0.0",
+            "screened-11-zero-principal-2": "7.77876909733e-62",
+            "screened-11-determinant": "5.64416546808e-62",
+            "screened-11-off-diagonal-cofactor": "4.01092781581e-62"
+          },
+          "id": "delta0-positive",
+          "mu": [
+            "1/5",
+            "3/10",
+            "3/5",
+            "9/10"
+          ],
+          "h_over_pi": "1/40",
+          "determinants": [
+            {
+              "real": "-0.000668059526768357488678224182723894271375087617076892288527115",
+              "imag": "0.0"
+            },
+            {
+              "real": "-0.00147260625106351537764028430234809855623467671011395509886785",
+              "imag": "0.0"
+            },
+            {
+              "real": "-0.00154662460072166176884353945734686892003647527901077213200780",
+              "imag": "0.0"
+            },
+            {
+              "real": "-0.000794728271535474229767418322952954901624615566947056383082193",
+              "imag": "0.0"
+            }
+          ],
+          "scope": "Numerical fixed trigonometric identities; no tetrahedron realization or rank certification"
+        },
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 90,
+          "scaled_tolerance": "1.0e-75",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 19,
+          "max_scaled_residual": "2.45454673265e-91",
+          "scaled_residuals": {
+            "screened-planar-Gram": "2.45454673265e-91",
+            "screened-two-dimensional-factorization": "6.13636683162e-92",
+            "screened-rank2-determinant": "1.53409170791e-92",
+            "screened-00-zero-principal-1": "7.67045853953e-92",
+            "screened-00-zero-principal-2": "1.38068253711e-91",
+            "screened-00-determinant": "5.51314207529e-93",
+            "screened-00-off-diagonal-cofactor": "1.91761463488e-92",
+            "screened-01-zero-principal-1": "7.67045853953e-92",
+            "screened-01-zero-principal-2": "0.0",
+            "screened-01-determinant": "2.49289902535e-92",
+            "screened-01-off-diagonal-cofactor": "8.0539814665e-92",
+            "screened-10-zero-principal-1": "0.0",
+            "screened-10-zero-principal-2": "1.38068253711e-91",
+            "screened-10-determinant": "1.39985868346e-91",
+            "screened-10-off-diagonal-cofactor": "2.14772839107e-91",
+            "screened-11-zero-principal-1": "0.0",
+            "screened-11-zero-principal-2": "0.0",
+            "screened-11-determinant": "9.8157899123e-92",
+            "screened-11-off-diagonal-cofactor": "1.72585317139e-92"
+          },
+          "id": "delta0-positive",
+          "mu": [
+            "1/5",
+            "3/10",
+            "3/5",
+            "9/10"
+          ],
+          "h_over_pi": "1/40",
+          "determinants": [
+            {
+              "real": "-0.000668059526768357488678224182723894271375087617076892288527116733331278954651333567525412377",
+              "imag": "0.0"
+            },
+            {
+              "real": "-0.00147260625106351537764028430234809855623467671011395509886794715853390030098331642267425681",
+              "imag": "0.0"
+            },
+            {
+              "real": "-0.00154662460072166176884353945734686892003647527901077213200780722085879614473459283392273138",
+              "imag": "0.0"
+            },
+            {
+              "real": "-0.000794728271535474229767418322952954901624615566947056383082248379940646767857978002185693002",
+              "imag": "0.0"
+            }
+          ],
+          "scope": "Numerical fixed trigonometric identities; no tetrahedron realization or rank certification"
+        }
+      ]
+    },
+    {
+      "id": "delta0-negative",
+      "runs": [
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 60,
+          "scaled_tolerance": "1.0e-45",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 19,
+          "max_scaled_residual": "6.99481502424e-61",
+          "scaled_residuals": {
+            "screened-planar-Gram": "2.3336307292e-61",
+            "screened-two-dimensional-factorization": "7.77876909733e-62",
+            "screened-rank2-determinant": "1.70160574004e-62",
+            "screened-00-zero-principal-1": "2.28501342234e-61",
+            "screened-00-zero-principal-2": "1.94469227433e-62",
+            "screened-00-determinant": "1.17289252796e-61",
+            "screened-00-off-diagonal-cofactor": "3.35459417322e-61",
+            "screened-01-zero-principal-1": "2.28501342234e-61",
+            "screened-01-zero-principal-2": "9.78423300523e-62",
+            "screened-01-determinant": "8.5080287002e-62",
+            "screened-01-off-diagonal-cofactor": "3.59768070751e-61",
+            "screened-10-zero-principal-1": "6.99481502424e-61",
+            "screened-10-zero-principal-2": "1.94469227433e-62",
+            "screened-10-determinant": "3.09935331222e-62",
+            "screened-10-off-diagonal-cofactor": "2.23639611548e-61",
+            "screened-11-zero-principal-1": "6.99481502424e-61",
+            "screened-11-zero-principal-2": "9.78423300523e-62",
+            "screened-11-determinant": "1.31266728517e-61",
+            "screened-11-off-diagonal-cofactor": "3.30597686636e-61"
+          },
+          "id": "delta0-negative",
+          "mu": [
+            "11/20",
+            "3/10",
+            "13/20",
+            "1/2"
+          ],
+          "h_over_pi": "1/40",
+          "determinants": [
+            {
+              "real": "-0.00488706780857206124950983567856884717632593892112943984038506",
+              "imag": "0.0"
+            },
+            {
+              "real": "-0.00415804440729400028479355226521880480232547434514130154063100",
+              "imag": "0.0"
+            },
+            {
+              "real": "-0.00388167949615990212667277572769335053380943556281930884470758",
+              "imag": "0.0"
+            },
+            {
+              "real": "-0.00466446347290218100961264479586075236588324796477684544271155",
+              "imag": "0.0"
+            }
+          ],
+          "scope": "Numerical fixed trigonometric identities; no tetrahedron realization or rank certification"
+        },
+        {
+          "status": "numerical agreement, not certified",
+          "decimal_digits": 90,
+          "scaled_tolerance": "1.0e-75",
+          "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+          "check_count": 19,
+          "max_scaled_residual": "7.16229066128e-91",
+          "scaled_residuals": {
+            "screened-planar-Gram": "2.40788218468e-91",
+            "screened-two-dimensional-factorization": "1.22727336632e-91",
+            "screened-rank2-determinant": "1.91761463488e-93",
+            "screened-00-zero-principal-1": "4.02699073325e-91",
+            "screened-00-zero-principal-2": "3.06818341581e-92",
+            "screened-00-determinant": "2.10937609837e-92",
+            "screened-00-off-diagonal-cofactor": "4.60227512372e-92",
+            "screened-01-zero-principal-1": "4.02699073325e-91",
+            "screened-01-zero-principal-2": "2.78054122058e-92",
+            "screened-01-determinant": "2.30113756186e-92",
+            "screened-01-off-diagonal-cofactor": "1.99431922028e-91",
+            "screened-10-zero-principal-1": "7.16229066128e-91",
+            "screened-10-zero-principal-2": "3.06818341581e-92",
+            "screened-10-determinant": "1.12659859799e-91",
+            "screened-10-off-diagonal-cofactor": "1.6875008787e-91",
+            "screened-11-zero-principal-1": "7.16229066128e-91",
+            "screened-11-zero-principal-2": "2.78054122058e-92",
+            "screened-11-determinant": "1.22727336632e-91",
+            "screened-11-off-diagonal-cofactor": "3.2215925866e-91"
+          },
+          "id": "delta0-negative",
+          "mu": [
+            "11/20",
+            "3/10",
+            "13/20",
+            "1/2"
+          ],
+          "h_over_pi": "1/40",
+          "determinants": [
+            {
+              "real": "-0.00488706780857206124950983567856884717632593892112943984038493542762725662779656192667685215",
+              "imag": "0.0"
+            },
+            {
+              "real": "-0.00415804440729400028479355226521880480232547434514130154063090849759950026849623792229899992",
+              "imag": "0.0"
+            },
+            {
+              "real": "-0.00388167949615990212667277572769335053380943556281930884470754391645328227945347165963871948",
+              "imag": "0.0"
+            },
+            {
+              "real": "-0.00466446347290218100961264479586075236588324796477684544271142713660741647512062119800801395",
+              "imag": "0.0"
+            }
+          ],
+          "scope": "Numerical fixed trigonometric identities; no tetrahedron realization or rank certification"
+        }
+      ]
+    }
+  ],
+  "coverage_limits": [
+    "Finite exact algebra checks use the printed geometric identities as inputs; they do not prove their geometric hypotheses.",
+    "Euler quadrature and special-function evaluations are independent formulas using the same mpmath arithmetic library.",
+    "Numerical tolerances, two-precision agreement, and finite-series differences are not interval certificates or rigorous tail bounds.",
+    "Balanced periods use a separate logarithmic basis, never substitution into a singular nonresonant connection matrix.",
+    "No full double-sine or DOZZ evaluation, spectral integral, quantum tail estimate, global Airy claim, or arbitrary rank/intersection engine.",
+    "Formal filling and fixed Hessian tensors do not compute a filled manifold, a verified filling volume, or a torsion invariant.",
+    "The two-cusp example is conditional matrix algebra, not the construction of a manifold or deformation family.",
+    "Regular fold polynomial/Taylor checks come directly from Section14; no code or numerical outputs from the previous Section15 companion are reused."
+  ],
+  "elapsed_seconds": 4.62822966708336
+}

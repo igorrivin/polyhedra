@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-11-01T17:57:48.118184+00:00",
+  "baseline_commit": "bf260eaab047d9047602ece652e5a7e43625d3f6",
+  "supersedes_for_current_code": "../source-manifest.json",
+  "original_manifest_preserved_sha256": "add353794e52560250ef4bc3f876d5c0e4974e84f2233d6c48f61645dbee8598",
+  "changed_files": [
+    {
+      "path": "experiments/quantum_surgery/periods.py",
+      "before_sha256": "f7eb0bb3d6db34e29558120fd715ef110b9a01b761ebf918460a30d9e45d080f",
+      "before_snapshot": "before-periods.py",
+      "bytes": 16666,
+      "after_sha256": "a18044e87b1c49c0232dec5b56e94cc417e6faebda7dc3f0748858d9b12acdc3",
+      "after_bytes": 16872
+    },
+    {
+      "path": "experiments/quantum_surgery/tests/test_quantum_surgery.py",
+      "before_sha256": "224f7900c8b6943815b9cc3330dbdc1a789782d0cf3e46a1003459318e4016ef",
+      "before_snapshot": "before-test_quantum_surgery.py",
+      "bytes": 10812,
+      "after_sha256": "a929d97ab2790a394cfa0e3a1874248de5ea54da42611f52c07bb0f7b6b58727",
+      "after_bytes": 12181
+    }
+  ],
+  "source_files": [
+    {
+      "path": "experiments/quantum_surgery/README.md",
+      "sha256": "2c9c712cb99788bb331ebf40cd7e440bfa04666add75c9238a2646f12198edce",
+      "bytes": 6825
+    },
+    {
+      "path": "experiments/quantum_surgery/__init__.py",
+      "sha256": "1925c77c6e7cfff79798b2eab36ecb21b06bac8825c399743937da5da05f1d37",
+      "bytes": 85
+    },
+    {
+      "path": "experiments/quantum_surgery/algebra.py",
+      "sha256": "c03d19471ba817dd8b9af234dd54418c3d411cb0d222803dfe2a93333c8d0ed4",
+      "bytes": 16988
+    },
+    {
+      "path": "experiments/quantum_surgery/exact.py",
+      "sha256": "1c9b6ce9fbf39dc4033e62451f83039616b1a1fa79fddcc7bd990aa5d9ec4f97",
+      "bytes": 8138
+    },
+    {
+      "path": "experiments/quantum_surgery/fixture.json",
+      "sha256": "c6f5f162a72331f48db888106a9fd7870005883838136603bf53b2f4eba62198",
+      "bytes": 680
+    },
+    {
+      "path": "experiments/quantum_surgery/periods.py",
+      "sha256": "a18044e87b1c49c0232dec5b56e94cc417e6faebda7dc3f0748858d9b12acdc3",
+      "bytes": 16872
+    },
+    {
+      "path": "experiments/quantum_surgery/run.py",
+      "sha256": "24aa7025bfae88e4e601aee1cbcbf60f3e43220880662ff592917c79be21c192",
+      "bytes": 7140
+    },
+    {
+      "path": "experiments/quantum_surgery/tests/test_quantum_surgery.py",
+      "sha256": "a929d97ab2790a394cfa0e3a1874248de5ea54da42611f52c07bb0f7b6b58727",
+      "bytes": 12181
+    }
+  ],
+  "chapter_and_main_at_run": [
+    {
+      "path": "book/polyhedral_volumes_and_geodesic_identities.tex",
+      "sha256": "103fc19086b2c5280bc16794b033673763b903ede94fb812601e92ad94da5ab4",
+      "bytes": 353909
+    },
+    {
+      "path": "book/chapters/12-quantum-boundary-measure.tex",
+      "sha256": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+      "bytes": 18683
+    },
+    {
+      "path": "book/chapters/13-four-point-fusion.tex",
+      "sha256": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+      "bytes": 24410
+    },
+    {
+      "path": "book/chapters/14-normalized-quantum-comparison.tex",
+      "sha256": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+      "bytes": 21763
+    },
+    {
+      "path": "book/chapters/16-dehn-filling-response.tex",
+      "sha256": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+      "bytes": 42117
+    }
+  ],
+  "author_result": {
+    "path": "author-result.json",
+    "sha256": "d911df4a839925bdbfb98c8bca8d5b5151b34b4a19993543a103f71ca7d7dae6",
+    "actual_git_dirty": true,
+    "elapsed_seconds": 4.278077583061531
+  },
+  "verification": {
+    "tests": 15,
+    "tests_elapsed_seconds": 4.997,
+    "tests_command": "/tmp/polyhedra-baseline-20261031/bin/python -m unittest discover -s experiments/quantum_surgery/tests -v",
+    "tests_status": "passed",
+    "ruff_command": "/opt/anaconda3/bin/ruff check experiments/quantum_surgery",
+    "ruff_status": "passed",
+    "exact_identities": 192,
+    "numerical_checks": 300,
+    "precision_comparisons": 72,
+    "scientific_result_sections_identical_to_initial": [
+      "fixture",
+      "arithmetic",
+      "conventions",
+      "exact",
+      "nonresonant_periods",
+      "balanced_periods",
+      "screened_Gram",
+      "coverage_limits"
+    ]
+  },
+  "status": "Nonfinite guard corrected; author tests and replay passed; independent targeted recheck pending"
+}

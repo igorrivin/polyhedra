@@ -1,0 +1,306 @@
+{
+  "scope": "Independent bounded exact algebra and floating-point checks; no companion import, spectral evaluation, rigorous interval enclosure or global Airy proof.",
+  "python": "3.12.11",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "dps": 80,
+  "exact_checks": [
+    "Fricke coefficients through A^2",
+    "Heron quadric",
+    "Z1 implicit coefficient",
+    "Heron coordinate Jacobian",
+    "WP first correction",
+    "Virasoro level 1 channel 0",
+    "Virasoro level 2 channel 0",
+    "Virasoro level 1 channel 1",
+    "Virasoro level 2 channel 1",
+    "Gram zero cofactor first 00",
+    "Gram zero cofactor second 00",
+    "Gram determinant 00",
+    "Gram off diagonal cofactor 00",
+    "Gram zero cofactor first 01",
+    "Gram zero cofactor second 01",
+    "Gram determinant 01",
+    "Gram off diagonal cofactor 01",
+    "Gram zero cofactor first 10",
+    "Gram zero cofactor second 10",
+    "Gram determinant 10",
+    "Gram off diagonal cofactor 10",
+    "Gram zero cofactor first 11",
+    "Gram zero cofactor second 11",
+    "Gram determinant 11",
+    "Gram off diagonal cofactor 11",
+    "Regular saddle polynomial factorization",
+    "Regular saddle discriminant",
+    "Fold root lift",
+    "Fold double root",
+    "Fold double root derivative",
+    "Fold second derivative",
+    "Fold cubic derivative 54i",
+    "Fold mixed derivative 18sqrt2i",
+    "Regular area Taylor",
+    "Regular dihedral Taylor",
+    "Schlafli volume Taylor"
+  ],
+  "numerical_checks": [
+    {
+      "name": "Fusion determinant 0",
+      "absolute_residual": "3.37350334183e-80",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Hermitian congruence 0",
+      "absolute_residual": "8.18718771168e-79",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Period connection 0 z0",
+      "absolute_residual": "7.68049043844e-81",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Wronskian 0 z0",
+      "absolute_residual": "4.21893769788e-81",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Period connection 0 z1",
+      "absolute_residual": "1.80496660502e-80",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Wronskian 0 z1",
+      "absolute_residual": "1.05421979432e-81",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "TV analytic finite matrix 0",
+      "absolute_residual": "1.26506375319e-80",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "TV absolute-root matrix 0",
+      "absolute_residual": "8.69331912922e-81",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "TV indefinite congruence 0",
+      "absolute_residual": "3.57814063405e-80",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Fusion determinant 1",
+      "absolute_residual": "1.2439793573e-79",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Hermitian congruence 1",
+      "absolute_residual": "5.87179099671e-78",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Period connection 1 z0",
+      "absolute_residual": "2.63945256241e-80",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Wronskian 1 z0",
+      "absolute_residual": "7.90664845742e-82",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Period connection 1 z1",
+      "absolute_residual": "1.55525336113e-80",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Wronskian 1 z1",
+      "absolute_residual": "1.3177747429e-82",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "TV analytic finite matrix 1",
+      "absolute_residual": "1.46076979689e-80",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "TV absolute-root matrix 1",
+      "absolute_residual": "2.06584045827e-80",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "TV indefinite congruence 1",
+      "absolute_residual": "9.83988674364e-80",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Fusion determinant 2",
+      "absolute_residual": "0.0",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Hermitian congruence 2",
+      "absolute_residual": "2.9521018325e-79",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Period connection 2 z0",
+      "absolute_residual": "4.23331931441e-81",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Wronskian 2 z0",
+      "absolute_residual": "1.3177747429e-82",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Period connection 2 z1",
+      "absolute_residual": "4.21687917729e-81",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Wronskian 2 z1",
+      "absolute_residual": "0.0",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "TV analytic finite matrix 2",
+      "absolute_residual": "6.32531876594e-81",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "TV absolute-root matrix 2",
+      "absolute_residual": "8.94535158512e-81",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "TV indefinite congruence 2",
+      "absolute_residual": "5.96356772342e-81",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Fusion determinant 3",
+      "absolute_residual": "0.0",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Hermitian congruence 3",
+      "absolute_residual": "2.9521018325e-79",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Period connection 3 z0",
+      "absolute_residual": "4.85837295154e-81",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Wronskian 3 z0",
+      "absolute_residual": "5.27109897162e-82",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Period connection 3 z1",
+      "absolute_residual": "2.68774365143e-81",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Wronskian 3 z1",
+      "absolute_residual": "1.3177747429e-81",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "TV analytic finite matrix 3",
+      "absolute_residual": "4.71461424666e-81",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "TV absolute-root matrix 3",
+      "absolute_residual": "8.94535158512e-81",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "TV indefinite congruence 3",
+      "absolute_residual": "5.96356772342e-81",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Balanced derivative block",
+      "absolute_residual": "2.47205589824e-51",
+      "tolerance": "1e-47",
+      "passed": true
+    },
+    {
+      "name": "Logarithmic involution",
+      "absolute_residual": "0.0",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Logarithmic Hermitian congruence",
+      "absolute_residual": "6.29733807167e-81",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Fold first derivative on principal local branch",
+      "absolute_residual": "2.828768548e-80",
+      "tolerance": "1e-65",
+      "passed": true
+    },
+    {
+      "name": "Quantum sine quotient limit",
+      "b": "0.01",
+      "absolute_error_to_classical": "0.00625197367055",
+      "status": "observed convergence, not a tail bound"
+    },
+    {
+      "name": "Quantum sine quotient limit",
+      "b": "0.003",
+      "absolute_error_to_classical": "0.000560060783485",
+      "status": "observed convergence, not a tail bound"
+    },
+    {
+      "name": "Quantum sine quotient limit",
+      "b": "0.001",
+      "absolute_error_to_classical": "6.22035393035e-5",
+      "status": "observed convergence, not a tail bound"
+    }
+  ],
+  "script_sha256": "29da6fbb32eb691f97bb4d8e3254cbea5e78f35708349528ba6addb09a1b03f4"
+}

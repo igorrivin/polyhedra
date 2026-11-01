@@ -1,0 +1,47 @@
+{
+  "review_date": "2026-11-01",
+  "decision": "approved_with_explicit_scope_limits",
+  "canonical_files": {
+    "book/chapters/16-dehn-filling-response.tex": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+    "book/claims/section16.json": "dc24ca2ca1514446b5bd862f7632942a36f5e5d2bf07065a40b959bed3ce6531"
+  },
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "finding": "Initial author evidence called NZ figure-eight section Section7; correct Section6.",
+      "status": "resolved_by_structure_agent_with_supplement"
+    }
+  ],
+  "approval_scope": "Independent mathematical review of local derivations, conventions and bounded claim classification in the exact canonical hashes. External statement audit; no full reproof of every external theorem.",
+  "checks": {
+    "exact_probe_count": 36,
+    "passed": true,
+    "ordered_original_labels_preserved": 53,
+    "claim_groups": 26,
+    "unique_covered_labels": 53
+  },
+  "evidence": {
+    "review.md": "8ea1aec76516db5a70ae756ccadcf834f202b7478f1b6a2f88250240fa8e4a65",
+    "source-pins.json": "65816b26168d7a458a222639137f3ce80402d9b5453fc56ac37c76a505c2cf45",
+    "independent_probes.py": "cd3ba3c0fe03c07144c15afc3fb9fb9bb90bbdd86ff17eb5b07ec8632cd26dff",
+    "independent-probe-results.json": "bd62c9aec706ae4d9aab99d0049eacf5a78c4ce42b3f2061fd2f247501cf399a"
+  },
+  "command": "python3 execution/quantum-surgery-review-2026-11-01/surgery-review/independent_probes.py",
+  "python": "3.15.0",
+  "no_actions": [
+    "canonical edits",
+    "build",
+    "commit",
+    "install",
+    "upload",
+    "push",
+    "deploy"
+  ],
+  "limitations": [
+    "Finite exact identities and fixtures are not geometric certificates",
+    "General quantum transfer remains conditional",
+    "No companion implementation review",
+    "No global external theorem reproof",
+    "No build or publication validation"
+  ]
+}

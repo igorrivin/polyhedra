@@ -1,0 +1,74 @@
+{
+  "review_date": "2026-11-01",
+  "access": "Independent primary-source retrieval using web tools; extracted statements and local arguments inspected. No downloaded PDF-byte hash is claimed.",
+  "sources": [
+    {
+      "key": "NeumannZagier",
+      "url": "https://people.mpim-bonn.mpg.de/zagier/files/doi/10.1016/0040-9383(85)90004-7/fulltext.pdf",
+      "version": "Topology 24 (1985), 307-332; author-hosted journal PDF",
+      "pins": [
+        "pp.309-310: eigenvalue-ratio log convention; Theorem 3 reciprocity and even potential",
+        "pp.314-315: Theorem 2.2 (21), Proposition 2.3, Corollary 2.4",
+        "pp.322-323: (32), Lemma 4.2, parity and local Dehn surgery discussion",
+        "p.326: (49)-(50), dPhi_NZ=2 sum(v_i du_i)",
+        "Section 6 (Examples), p.327: (52)-(53), local one-cusp volume",
+        "Section 6, pp.329-331: (64)-(68), figure-eight shapes and coefficients"
+      ],
+      "scope": "Convention, local theorem statements and relevant arguments. Full proof of all external deformation theorems was not repeated. Exact coefficient algebra was independently probed."
+    },
+    {
+      "key": "FuterGueritaud",
+      "url": "https://arxiv.org/pdf/1004.0440v2",
+      "version": "arXiv:1004.0440v2, 9 November 2010",
+      "pins": [
+        "p.12: Lemma 4.4, angular holonomy/intersection factor two",
+        "pp.15-16: Proposition 4.6, full angle-tangent span",
+        "pp.17-18: Lemma 5.3 and Proposition 5.4",
+        "p.19: (6.1) and Theorem 6.1, smooth 2pi filling"
+      ],
+      "scope": "Supports the full angle-space stationarity and smooth-filling use. Not cited as a theorem constructing arbitrary-angle cone manifolds."
+    },
+    {
+      "key": "WongYangDehn",
+      "url": "https://ems.press/content/serial-article-files/51093",
+      "version": "Quantum Topology 16 (2025), 419-491, DOI 10.4171/QT/240",
+      "pins": [
+        "pp.420-421: Theorems 1.1-1.2",
+        "p.456: unnumbered Yoshida filling identity immediately preceding (5.9); (5.9) defines the potential normalization",
+        "p.459: (5.16), peripheral torsion change",
+        "p.461: (5.23), surgery factor, citing Porti 1997 Theorem 4.1(iii)"
+      ],
+      "scope": "Leading RT asymptotic, inverse-square-root torsion amplitude and figure-eight RT/TV limits inspected as external results; global estimates were not re-proved."
+    },
+    {
+      "key": "PortiTorsionSurvey",
+      "url": "https://arxiv.org/pdf/1511.00400v2",
+      "version": "arXiv:1511.00400v2; archive header 26 May 2016, internal date 6 November 2018",
+      "pins": [
+        "p.34: Proposition 4.23(b), sufficiently long filling slopes; specialize to (k1,k2)=(2,0)",
+        "p.39: Definition 5.10 and following paragraph permit repeated eigenvalues for the chosen curve when another peripheral element has distinct eigenvalues",
+        "p.40: Propositions 5.13-5.14, local logarithmic parameter and torsion Jacobian; complete cusp exception immediately following"
+      ],
+      "scope": "Regularity and torsion-basis domain checked. Proposition 4.23 explicitly has a sufficiently-long-slope hypothesis; no universal sign or square-root phase is fixed by this review."
+    },
+    {
+      "key": "ChenYang",
+      "url": "https://arxiv.org/pdf/1503.02547v4",
+      "version": "arXiv:1503.02547v4, 9 July 2018",
+      "pins": ["p.2: Conjectures 1.1-1.2; odd r, root exp(2pi i/r), respective 2pi/r and 4pi/r factors"],
+      "scope": "The general closed-manifold claim is a conjecture; its absolute-growth consequence is the chapter's formulation."
+    },
+    {
+      "key": "GangRomoYamazaki",
+      "url": "https://arxiv.org/pdf/1704.00918v2",
+      "version": "arXiv:1704.00918v2, 12 September 2018",
+      "pins": ["p.6: (12)-(14), explicit normalized filling kernel", "p.7: footnote 16, integration-contour issue", "abstract and introduction: conjectural relation to WRT"],
+      "scope": "Kernel and perturbative input; not a theorem that arbitrary quantum surgery integrals equal RT or have a surviving global geometric cycle."
+    }
+  ],
+  "historical_metadata_correction": {
+    "issue": "Initial author evidence said NZ Section 7 instead of Section 6.",
+    "resolution": "Structure agent corrected source-pins.json and wrote source-pin-correction.json; canonical chapter and ledger unchanged.",
+    "corrected_author_source_pins_sha256": "3d1fe58c827d4cd51a2a00a1e771780b5570ae57f1d552847c166662f81d3e38"
+  }
+}

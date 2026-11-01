@@ -1,0 +1,245 @@
+{
+  "generated_at_utc": "2026-11-01T18:13:48.374384+00:00",
+  "baseline_commit": "bf260eaab047d9047602ece652e5a7e43625d3f6",
+  "source_commit": "514bc30b0d86a0a38b2ede1cb9dfb261a6b2995a",
+  "approved_source_sha256": {
+    "INTEGRATION_PLAN.md": "e8b4f8cb6e6c14f55573205daedfe7318677d8ad759e28ec76ac2446b9cb9e50",
+    "README.md": "6cb6a836b26e522ed28a30dc76e6aafdf8d71fd18139f95f5c97d66aa21e4fed",
+    "book/README.md": "25aeef4654d7bfdfd2dcf9d4f6ed91698c03b104c28c811de884beb27dc22975",
+    "book/computational-status.md": "db9cff40a6f1964973b42c1c8994a9b968a7ea5d2ce5df683df2a0035547acd4",
+    "book/polyhedral_volumes_and_geodesic_identities.tex": "103fc19086b2c5280bc16794b033673763b903ede94fb812601e92ad94da5ab4",
+    "docs/INTEGRATION_STATUS.md": "cd6099ee37b51ac9ac80fcd0d2b17f7337ca2bc3665a5b428657963e70903e89",
+    "book/chapters/12-quantum-boundary-measure.tex": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+    "book/chapters/13-four-point-fusion.tex": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+    "book/chapters/14-normalized-quantum-comparison.tex": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+    "book/chapters/16-dehn-filling-response.tex": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+    "book/claims/section16.json": "dc24ca2ca1514446b5bd862f7632942a36f5e5d2bf07065a40b959bed3ce6531",
+    "book/claims/sections12-14.json": "fecb43e3327f9f659afbd841f8b9ee10a2c75fa0b3a7694655beabc7675d53c7",
+    "experiments/quantum_surgery/README.md": "2c9c712cb99788bb331ebf40cd7e440bfa04666add75c9238a2646f12198edce",
+    "experiments/quantum_surgery/__init__.py": "1925c77c6e7cfff79798b2eab36ecb21b06bac8825c399743937da5da05f1d37",
+    "experiments/quantum_surgery/algebra.py": "c03d19471ba817dd8b9af234dd54418c3d411cb0d222803dfe2a93333c8d0ed4",
+    "experiments/quantum_surgery/exact.py": "1c9b6ce9fbf39dc4033e62451f83039616b1a1fa79fddcc7bd990aa5d9ec4f97",
+    "experiments/quantum_surgery/fixture.json": "c6f5f162a72331f48db888106a9fd7870005883838136603bf53b2f4eba62198",
+    "experiments/quantum_surgery/periods.py": "a18044e87b1c49c0232dec5b56e94cc417e6faebda7dc3f0748858d9b12acdc3",
+    "experiments/quantum_surgery/run.py": "24aa7025bfae88e4e601aee1cbcbf60f3e43220880662ff592917c79be21c192",
+    "experiments/quantum_surgery/tests/test_quantum_surgery.py": "a929d97ab2790a394cfa0e3a1874248de5ea54da42611f52c07bb0f7b6b58727"
+  },
+  "files": {
+    "artifacts/quantum-surgery-review-2026-11-01/monograph-working-draft.pdf": {
+      "bytes": 1431560,
+      "sha256": "f62a96cc99b6ccfd173b5667d97f6baa7d921f040058b6b7c2a5345b609e9846"
+    },
+    "artifacts/quantum_surgery/result.json": {
+      "bytes": 120085,
+      "sha256": "accdcaae347f363f20761cc2ffc7a2a252c2199787a277e519cef9978c5578cf"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/README.md": {
+      "sha256": "90012eb94a6afc3c4fcb0263ad669169935e7e70c0d8786873e44bd0b570d2a4",
+      "bytes": 5041
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/bibliography-addition.json": {
+      "bytes": 662,
+      "sha256": "cf6e77973a17cfe901cde7e5a137cc7886f1d8050ada90a3e4fd07824d95e5dc"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/bibliography-tv-version-pin.json": {
+      "bytes": 574,
+      "sha256": "343be8e7b35cd151abb4f8eecbc8eb0fe1eaf040cc999bca71d68f9a42e89560"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/checkpoint/source-checkpoint.json": {
+      "bytes": 6493,
+      "sha256": "474f6de4038ebc24d87a119ccc58e290cd0e5f7dd5d21456cec40105a38727c5"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/checkpoint/source-stage.json": {
+      "bytes": 3513,
+      "sha256": "c4fb2f792ff2a7dbdb628992b8caf195edadac62e51d9508d147f63e4d04cad0"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/checkpoint/source-whitespace-exceptions.json": {
+      "bytes": 2195,
+      "sha256": "07ab9bfba43c133aad18b495fcf142ae62b1d96e30114de5c9ece0d76b25331f"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/clean-source/run-command.json": {
+      "bytes": 608,
+      "sha256": "f40392aa289dca3008ca9b9e0ffe687079839ba19f41606b3803fb8ec7bc5738"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/clean-source/scientific-comparison.json": {
+      "bytes": 1111,
+      "sha256": "898d94b7eb6bf486509ec5ced607847fbc03275c1838c728d557cb0425dc1b46"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/closeout.md": {
+      "sha256": "bfea5477d411d821c05e8640d6ae600a5ccc0f7588afe3ce8b2d00c078ae2fc4",
+      "bytes": 7666
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/computation/nonfinite-guard-correction/final-source-manifest.json": {
+      "bytes": 4426,
+      "sha256": "bf83071d4af17033c8a1a9c53f3a634d6f8b3b9bc3acb444f4a00659c7d56dba"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/computation/nonfinite-guard-correction/report.md": {
+      "bytes": 1871,
+      "sha256": "9d8a7465714e8bd6b6db5c75b8e1c051e4721da8911adc6a6e470409bb748930"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/computation/nonfinite-guard-correction/source-20-path-manifest.json": {
+      "bytes": 5672,
+      "sha256": "8cc7e0195650fd5e7994f2b56eb86550755f61377f851d5847002e033fe4afed"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/computation/source-manifest.json": {
+      "bytes": 3543,
+      "sha256": "add353794e52560250ef4bc3f876d5c0e4974e84f2233d6c48f61645dbee8598"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/computation-review/approval-manifest.json": {
+      "bytes": 12110,
+      "sha256": "a9fe2053ec561fa30b2be85d840bbc5fa8d528891cd238f35be17ac95f768222"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/computation-review/commands.json": {
+      "bytes": 4803,
+      "sha256": "19dd30c33a32a42e7edd87566eb3461463f5d7b828596df556e9caf05febfce8"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/computation-review/independent-probes-result-final.json": {
+      "bytes": 15070,
+      "sha256": "57763f10ca325798608bcb49d368748488126032542a2d3dafefb0af69735f03"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/computation-review/independent_probes.py": {
+      "bytes": 13956,
+      "sha256": "4cd67cc543d2c89ce2e3b7af4c81c1727fb346e8a2880dad29119caa2f79a7ee"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/computation-review/nonfinite-after.json": {
+      "bytes": 4332,
+      "sha256": "e884915eb84dc5c75a88b0cbc4dacb56355d81656a2064fa70d2f1cdcd25c4d8"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/computation-review/nonfinite-before.json": {
+      "bytes": 7476,
+      "sha256": "46e1ea3aea2b54ad81a0612c80dedc236677bf8a0a462269bee712123f4d3e43"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/computation-review/replay-result-final.json": {
+      "bytes": 122004,
+      "sha256": "140015b209307488766f069de489d0a86260651cdde46736125104a3287ae744"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/computation-review/review.md": {
+      "bytes": 7970,
+      "sha256": "f58d9e53788ca0e0d0db354f1f6b26c18f6a30904d6c5417356be49178819010"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/evidence-copy-manifest.json": {
+      "bytes": 9707,
+      "sha256": "e76027fe7e561cb421c0b8fe659303a126f57186772adabc439a8ec566c996e1"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/integration-review/approved-source-manifest.json": {
+      "bytes": 7612,
+      "sha256": "7ef377bd9f6f219cedb0a54db88eadce5e0dffc7807f5f08201d423c73ca2638"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/integration-review/final-source-preflight.json": {
+      "bytes": 892,
+      "sha256": "7f2fa188bb5e4c9564b94de3648512042bc9496e2bc056b4c3823f9300ba89eb"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/integration-review/full-book-build-command.json": {
+      "bytes": 631,
+      "sha256": "9b32522d1b5ff57ca14effbdd95930d98534cbc49b27a443ee1cc70599c0ebb2"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/integration-review/integration-checks.json": {
+      "bytes": 6934,
+      "sha256": "3ef24b0ade05924baf567fae96bac77f906188605b5599a99c574b730335b372"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/integration-review/pdf-build-review.json": {
+      "bytes": 10341,
+      "sha256": "12ba8f8c0de0716f426ea8db7d5cf9b9c8844b501ea975a8418942b16dc416c4"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/integration-review/pdf-inputs.json": {
+      "bytes": 2311,
+      "sha256": "3bec05dc8a3f2319ae84c8b3ade2df91c330c5d2e34d00f139a421b2c760e798"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/integration-review/review-manifest.json": {
+      "bytes": 5519,
+      "sha256": "b3ad4436f38dcb0697052628a802f6cdbca28061635a6abd899d0dba3e8b8968"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/integration-review/review.md": {
+      "bytes": 4449,
+      "sha256": "72b140d2b3a6955c9db327c19d9a2ac10e5b9b1145b811553a6dc01cca7f74b8"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/integration-review/site-tests-command.json": {
+      "bytes": 338,
+      "sha256": "849ee97f9cfee94d5b64118f6d2a2d05947f755a47f62f590d62ec590bc52ac1"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/integration-review/visual-review.json": {
+      "bytes": 2464,
+      "sha256": "32b49c73e16360772e3ed7f79b3e1a107dd202b8a35890ac13181cc134011908"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/path-pointer-correction.json": {
+      "bytes": 629,
+      "sha256": "05f2ae4e26435c2ac59173e58628ff14d17f0ef3fefd2e9268081ed262891c48"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/quantum-math/author-snapshot.json": {
+      "bytes": 1712,
+      "sha256": "b8eb487b4f3293cbbf7f63aa08f04b219f4383dfb95ce0d8ca59a660fcd6c06f"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/quantum-review/approved-hashes.json": {
+      "bytes": 2301,
+      "sha256": "dcf67e8ee5a9c0cf11df70d963afdf5e1d7a379be66c0ef066a8c059ff1314c7"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/quantum-review/independent-probe-results.json": {
+      "bytes": 8092,
+      "sha256": "1a54f571010918c8fc45d1c15c05ff9ed67233280c3d7542d7ed6e7af7ec6380"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/quantum-review/independent-review.md": {
+      "bytes": 8984,
+      "sha256": "4c686d5580b72dd6ae850915599f6768ffd4335120664f01de28404d36dba8e2"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/quantum-review/independent_probes.py": {
+      "bytes": 9400,
+      "sha256": "29da6fbb32eb691f97bb4d8e3254cbea5e78f35708349528ba6addb09a1b03f4"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/quantum-review/source-pins.json": {
+      "bytes": 4198,
+      "sha256": "705acbff065b9d6deece892d1c956005605b879bab5e8929a06148da95c90851"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/shared-docs/manifest.json": {
+      "bytes": 3113,
+      "sha256": "bfa44ce98303fdefd36673901aa6343b0a507a3017f95c77c647ed821e521147"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/shared-docs/report.md": {
+      "bytes": 1804,
+      "sha256": "9ed080c3bb645aa3d3828836e2fffd4269068b608678cc53c3bb1c7a9d03caab"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/shared-docs/source-20-path-manifest.json": {
+      "bytes": 3708,
+      "sha256": "927ac01ff05a0b864d7ea0fc0274d52d411a7132e1363adc79b75adbc5d96349"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/structure/extraction.json": {
+      "bytes": 9018,
+      "sha256": "0c448bd1ecdaa7cb41f206e788a8506cf701de8613f7821e8197fad748f66155"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/structure/structure-manifest.json": {
+      "bytes": 1404,
+      "sha256": "114b5d4de34c8802e3bde024bc27dc9bfed5415632f7934dbf205379b648583c"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/surgery-math/author-manifest.json": {
+      "bytes": 1063,
+      "sha256": "629bd712150a441ef20e2a62bd3530be336ce41ec776cd003ae3f98695e4dc94"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/surgery-math/source-pin-correction.json": {
+      "bytes": 743,
+      "sha256": "d50ca02bcfdb3cf2cd13ceb85b235284710201c60818f6e19d8c23a39af8cb0f"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/surgery-review/approved-file-hashes.json": {
+      "bytes": 1892,
+      "sha256": "1c89527a7f4fd439d4f0699860e382e299b65ed7ecbba7797f5ae32e0acef1b4"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/surgery-review/independent-probe-results.json": {
+      "bytes": 6514,
+      "sha256": "bd62c9aec706ae4d9aab99d0049eacf5a78c4ce42b3f2061fd2f247501cf399a"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/surgery-review/independent_probes.py": {
+      "bytes": 11401,
+      "sha256": "cd3ba3c0fe03c07144c15afc3fb9fb9bb90bbdd86ff17eb5b07ec8632cd26dff"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/surgery-review/review.md": {
+      "bytes": 6684,
+      "sha256": "8ea1aec76516db5a70ae756ccadcf834f202b7478f1b6a2f88250240fa8e4a65"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/surgery-review/source-pins.json": {
+      "bytes": 4419,
+      "sha256": "65816b26168d7a458a222639137f3ce80402d9b5453fc56ac37c76a505c2cf45"
+    },
+    "docs/execution/quantum-surgery-review-2026-11-01/verify_checkpoint.py": {
+      "sha256": "2f31a41b1b70ee81a6f6c0ab856273b1f3a23f63b501e6036311e88c79ccab9c",
+      "bytes": 25212
+    }
+  }
+}

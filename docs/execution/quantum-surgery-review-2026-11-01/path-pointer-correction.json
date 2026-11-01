@@ -1,0 +1,12 @@
+{
+  "path": "book/claims/sections12-14.json",
+  "before_sha256": "7c4e57ae5adb487e2f624199bf65b77756128d3ebf7b25a71a92eaf1694d2e9e",
+  "after_sha256": "fecb43e3327f9f659afbd841f8b9ee10a2c75fa0b3a7694655beabc7675d53c7",
+  "exact_replacement": {
+    "before": "experiments/quantum_surgery/check.py",
+    "after": "experiments/quantum_surgery/run.py",
+    "count": 1
+  },
+  "chapter_search": "No matching stale check.py path in chapters12,13,14; no chapter bytes changed",
+  "initial_run_impact": "Ledger is not in runtime source manifest; computation source and all hashed chapter/main bytes remain unchanged by this correction"
+}

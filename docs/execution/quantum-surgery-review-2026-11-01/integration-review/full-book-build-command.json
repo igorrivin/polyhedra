@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/Library/TeX/texbin/latexmk",
+    "-norc",
+    "-pdf",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-file-line-error",
+    "-no-shell-escape",
+    "-outdir=/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/integration-review/build",
+    "main.tex"
+  ],
+  "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/quantum-surgery-review-2026-11-01/integration-review/source/book",
+  "returncode": 0,
+  "elapsed_seconds": 11.065868458012119,
+  "stdout": "full-book-build.stdout",
+  "stderr": "full-book-build.stderr",
+  "ended_utc": "2026-11-01T17:53:20.251567+00:00"
+}

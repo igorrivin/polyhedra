@@ -1,0 +1,237 @@
+{
+  "source_path": "../computation/nonfinite-guard-correction/before-periods.py",
+  "source_sha256": "f7eb0bb3d6db34e29558120fd715ef110b9a01b761ebf918460a30d9e45d080f",
+  "cases": [
+    {
+      "nonfinite": "nan",
+      "operand": "actual",
+      "slot": 0,
+      "rejected": true,
+      "error": "numerical check failed: injected nonfinite matrix entry, scaled residual nan, tolerance 1.0e-35"
+    },
+    {
+      "nonfinite": "nan",
+      "operand": "actual",
+      "slot": 1,
+      "rejected": false,
+      "incorrect_success": {
+        "status": "numerical agreement, not certified",
+        "decimal_digits": 50,
+        "scaled_tolerance": "1.0e-35",
+        "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+        "check_count": 1,
+        "max_scaled_residual": "0.0",
+        "scaled_residuals": {
+          "injected nonfinite matrix entry": "0.0"
+        }
+      }
+    },
+    {
+      "nonfinite": "nan",
+      "operand": "actual",
+      "slot": 2,
+      "rejected": false,
+      "incorrect_success": {
+        "status": "numerical agreement, not certified",
+        "decimal_digits": 50,
+        "scaled_tolerance": "1.0e-35",
+        "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+        "check_count": 1,
+        "max_scaled_residual": "0.0",
+        "scaled_residuals": {
+          "injected nonfinite matrix entry": "0.0"
+        }
+      }
+    },
+    {
+      "nonfinite": "nan",
+      "operand": "actual",
+      "slot": 3,
+      "rejected": false,
+      "incorrect_success": {
+        "status": "numerical agreement, not certified",
+        "decimal_digits": 50,
+        "scaled_tolerance": "1.0e-35",
+        "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+        "check_count": 1,
+        "max_scaled_residual": "0.0",
+        "scaled_residuals": {
+          "injected nonfinite matrix entry": "0.0"
+        }
+      }
+    },
+    {
+      "nonfinite": "nan",
+      "operand": "expected",
+      "slot": 0,
+      "rejected": true,
+      "error": "numerical check failed: injected nonfinite matrix entry, scaled residual nan, tolerance 1.0e-35"
+    },
+    {
+      "nonfinite": "nan",
+      "operand": "expected",
+      "slot": 1,
+      "rejected": false,
+      "incorrect_success": {
+        "status": "numerical agreement, not certified",
+        "decimal_digits": 50,
+        "scaled_tolerance": "1.0e-35",
+        "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+        "check_count": 1,
+        "max_scaled_residual": "0.0",
+        "scaled_residuals": {
+          "injected nonfinite matrix entry": "0.0"
+        }
+      }
+    },
+    {
+      "nonfinite": "nan",
+      "operand": "expected",
+      "slot": 2,
+      "rejected": false,
+      "incorrect_success": {
+        "status": "numerical agreement, not certified",
+        "decimal_digits": 50,
+        "scaled_tolerance": "1.0e-35",
+        "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+        "check_count": 1,
+        "max_scaled_residual": "0.0",
+        "scaled_residuals": {
+          "injected nonfinite matrix entry": "0.0"
+        }
+      }
+    },
+    {
+      "nonfinite": "nan",
+      "operand": "expected",
+      "slot": 3,
+      "rejected": false,
+      "incorrect_success": {
+        "status": "numerical agreement, not certified",
+        "decimal_digits": 50,
+        "scaled_tolerance": "1.0e-35",
+        "residual_scaling": "abs(actual-expected)/max(1,abs(actual),abs(expected)); matrix max-entry norm",
+        "check_count": 1,
+        "max_scaled_residual": "0.0",
+        "scaled_residuals": {
+          "injected nonfinite matrix entry": "0.0"
+        }
+      }
+    },
+    {
+      "nonfinite": "inf",
+      "operand": "actual",
+      "slot": 0,
+      "rejected": true,
+      "error": "numerical check failed: injected nonfinite matrix entry, scaled residual nan, tolerance 1.0e-35"
+    },
+    {
+      "nonfinite": "inf",
+      "operand": "actual",
+      "slot": 1,
+      "rejected": true,
+      "error": "numerical check failed: injected nonfinite matrix entry, scaled residual nan, tolerance 1.0e-35"
+    },
+    {
+      "nonfinite": "inf",
+      "operand": "actual",
+      "slot": 2,
+      "rejected": true,
+      "error": "numerical check failed: injected nonfinite matrix entry, scaled residual nan, tolerance 1.0e-35"
+    },
+    {
+      "nonfinite": "inf",
+      "operand": "actual",
+      "slot": 3,
+      "rejected": true,
+      "error": "numerical check failed: injected nonfinite matrix entry, scaled residual nan, tolerance 1.0e-35"
+    },
+    {
+      "nonfinite": "inf",
+      "operand": "expected",
+      "slot": 0,
+      "rejected": true,
+      "error": "numerical check failed: injected nonfinite matrix entry, scaled residual nan, tolerance 1.0e-35"
+    },
+    {
+      "nonfinite": "inf",
+      "operand": "expected",
+      "slot": 1,
+      "rejected": true,
+      "error": "numerical check failed: injected nonfinite matrix entry, scaled residual nan, tolerance 1.0e-35"
+    },
+    {
+      "nonfinite": "inf",
+      "operand": "expected",
+      "slot": 2,
+      "rejected": true,
+      "error": "numerical check failed: injected nonfinite matrix entry, scaled residual nan, tolerance 1.0e-35"
+    },
+    {
+      "nonfinite": "inf",
+      "operand": "expected",
+      "slot": 3,
+      "rejected": true,
+      "error": "numerical check failed: injected nonfinite matrix entry, scaled residual nan, tolerance 1.0e-35"
+    },
+    {
+      "nonfinite": "-inf",
+      "operand": "actual",
+      "slot": 0,
+      "rejected": true,
+      "error": "numerical check failed: injected nonfinite matrix entry, scaled residual nan, tolerance 1.0e-35"
+    },
+    {
+      "nonfinite": "-inf",
+      "operand": "actual",
+      "slot": 1,
+      "rejected": true,
+      "error": "numerical check failed: injected nonfinite matrix entry, scaled residual nan, tolerance 1.0e-35"
+    },
+    {
+      "nonfinite": "-inf",
+      "operand": "actual",
+      "slot": 2,
+      "rejected": true,
+      "error": "numerical check failed: injected nonfinite matrix entry, scaled residual nan, tolerance 1.0e-35"
+    },
+    {
+      "nonfinite": "-inf",
+      "operand": "actual",
+      "slot": 3,
+      "rejected": true,
+      "error": "numerical check failed: injected nonfinite matrix entry, scaled residual nan, tolerance 1.0e-35"
+    },
+    {
+      "nonfinite": "-inf",
+      "operand": "expected",
+      "slot": 0,
+      "rejected": true,
+      "error": "numerical check failed: injected nonfinite matrix entry, scaled residual nan, tolerance 1.0e-35"
+    },
+    {
+      "nonfinite": "-inf",
+      "operand": "expected",
+      "slot": 1,
+      "rejected": true,
+      "error": "numerical check failed: injected nonfinite matrix entry, scaled residual nan, tolerance 1.0e-35"
+    },
+    {
+      "nonfinite": "-inf",
+      "operand": "expected",
+      "slot": 2,
+      "rejected": true,
+      "error": "numerical check failed: injected nonfinite matrix entry, scaled residual nan, tolerance 1.0e-35"
+    },
+    {
+      "nonfinite": "-inf",
+      "operand": "expected",
+      "slot": 3,
+      "rejected": true,
+      "error": "numerical check failed: injected nonfinite matrix entry, scaled residual nan, tolerance 1.0e-35"
+    }
+  ],
+  "rejected_count": 18,
+  "incorrectly_accepted_count": 6,
+  "finite_complex_matrix_passed": true
+}
