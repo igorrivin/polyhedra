@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "scope": "Fixed finite checks for Sections 12-14 and 16, not quantum spectral or geometric filling evaluation",
+  "precisions": [60, 90],
+  "b_values": ["1/4", "2/3"],
+  "heron_chart": [["1/2", "2/3"], ["3/2", "4/5"], ["2", "3"]],
+  "period_weights": [
+    {"id": "delta0-positive", "mu": ["1/5", "3/10", "3/5", "9/10"]},
+    {"id": "delta0-negative", "mu": ["11/20", "3/10", "13/20", "1/2"]}
+  ],
+  "period_z": [["1/3", "0"], ["2/5", "1/4"], ["2/5", "-1/4"]],
+  "balanced_z": [["1/5", "0"], ["1/4", "1/5"]],
+  "gram_h_over_pi": "1/40",
+  "slopes": [[1, 1, 0, 1], [2, 1, 1, 1], [1, 2, 0, 1], [-1, 1, -1, 0], [5, 2, 2, 1], [1, -1, 0, 1], [1, 0, 0, 1]]
+}

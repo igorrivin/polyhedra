@@ -1,0 +1,642 @@
+\section{The four-point residue: fusion, area, and an explicit density}
+\label{sec:screenedfusion}
+
+The one-screening calculation can be completed at the level of
+four-point residues. Two intermediate Virasoro channels contribute,
+their change of basis is an explicit hypergeometric connection
+matrix, and the invariant Hermitian pairing is exactly the flat
+area. This gives both a density and an evaluation of its total
+volume for arbitrary four deficit weights. At balanced weights,
+the two ordinary blocks coalesce and must be replaced by a
+regularized logarithmic basis.
+
+\subsection{The two spectral pinches and their coefficients}
+
+Put the fields with charges $\alpha_1,\alpha_2,\alpha_3,\alpha_4$
+at $0,1,z,\infty$, respectively. Throughout this section
+\begin{equation}
+ 0<b<1,\qquad Q=b+b^{-1},\qquad
+ \alpha_i=\frac{\mu_i}{2b},\qquad
+ 0<\mu_i<1,\qquad \sum_i\mu_i=2.
+ \label{eq:screeningparameters}
+\end{equation}
+To take a transverse residue, vary the charges near this locus
+and write
+\begin{equation}
+ \varepsilon=\sum_i\alpha_i-Q+b,\qquad
+ a_s=\alpha_1+\alpha_3.
+ \label{eq:screeningtransverse}
+\end{equation}
+The $s$-channel pairs the marks $0,z$; its spectral integrand
+contains
+\[
+ C(\alpha_1,\alpha_3,Q-\alpha)
+ C(\alpha,\alpha_2,\alpha_4)
+ \mathcal F_\alpha(z)\mathcal F_\alpha(\bar z).
+\]
+For real charges the last product is the absolute square.
+For continuation in complex charges, both chiral factors are
+continued analytically, rather than conjugating the variable
+charges. We use the DOZZ/KRV normalization fixed in
+Section~\ref{sec:quantummeasure}.
+
+The bootstrap identity is established in an initial convergence
+domain by~\cite[Theorem~1.1]{GKRVBootstrap}. Its continuation
+requires the discrete terms created by crossing poles, as the
+paragraph following that theorem also explains. The relevant
+contour mechanism and pole families are described in
+\cite[Section~7.2, eqs.~(87)--(90)]{TeschnerRevisited}.
+
+\paragraph{Analytic input for the spectral derivation.}
+The infinite integral requires a separate continuation statement.
+In the present charge convention and ordering, the initial real
+bootstrap domain has $\alpha_i<Q/2$,
+$\alpha_1+\alpha_3>Q/2$, and $\alpha_2+\alpha_4>Q/2$.
+The one-screening locus $\sum_i\alpha_i=Q-b$ lies outside that
+domain. Meromorphic dependence of each integrand factor alone
+does not justify continuing the integral. The spectral derivation
+below uses the following sufficient input, at fixed $0<b<1$.
+
+Continue from the initial domain along a specified path of complex
+charges, retaining every residue of a pole crossed by the contour.
+Locally, the deformed contours are required to coincide with
+$Q/2+i\RR$ outside a fixed compact set. Near a generic target point,
+separate the finitely many pinch contributions, including their
+reflected partners, and write the remaining term using a locally
+fixed contour $\Gamma_{\rm reg}$ avoiding all poles. Its integrand
+$\mathcal I_{\rm reg}(\alpha;\varepsilon,\eta,z)$ must be holomorphic
+in the charge coordinates through $\varepsilon=0$; here $\eta$
+denotes the remaining charge coordinates. Any additional discrete
+terms left in this remainder must also be holomorphic there.
+Require normal absolute convergence: on every compact set $K$ of
+these complex charge parameters and of noncolliding $z$ in the
+chosen branch chart, there is $G_K\in L^1(\RR)$ such that on the
+common contour ends
+\begin{equation}
+ \sup_{(\varepsilon,\eta,z)\in K}
+ \left|\mathcal I_{\rm reg}(Q/2+iP;\varepsilon,\eta,z)\right|
+ \le G_K(P).
+ \label{eq:screeningtailinput}
+\end{equation}
+The same normal-convergence requirement is imposed on compact
+continuation neighborhoods along the path, after their crossed-pole
+terms are separated. If another contour prescription moves the ends,
+the connecting pieces at infinity must additionally have integrals
+tending to zero uniformly on those parameter sets.
+
+Under these conditions, the truncated regular integrals are
+holomorphic in $\varepsilon$ and converge locally uniformly as the
+spectral cutoff tends to infinity. Their limit is therefore
+holomorphic through $\varepsilon=0$, and Cauchy's residue integral
+in that parameter commutes with removal of the cutoff. The regular
+term contributes no residue; only the finite pinch terms do.
+
+This is an additional analytic input for the contour proof. No
+estimate~\eqref{eq:screeningtailinput} is proved here, and the cited
+bootstrap theorem in its initial domain is not being used as such
+an estimate at the one-screening locus. The residue identity below
+also has an independent first-moment and period derivation. The
+curvature identity and finite fusion formulas use that derivation.
+Balanced limits are taken in the finite period expressions; no
+uniform spectral estimate through further pole coalescences or as
+$b\to0$ is asserted.
+
+\paragraph{The local pinch calculation.}
+Two opposite pole families are
+\begin{align}
+ \alpha&=a_s+mb+n/b,\notag\\
+ \alpha&=Q-\alpha_2-\alpha_4-m'b-n'/b
+        =a_s+b-\varepsilon-m'b-n'/b,
+ \label{eq:screeningpolefamilies}
+\end{align}
+with nonnegative integer indices. At $\varepsilon=0$ they collide
+only if
+\[
+ (m+m'-1)b^2+(n+n')=0.
+\]
+Since $0<b^2<1$, this forces $m+m'=1$ and $n=n'=0$.
+Thus the two intermediate charges are
+\begin{equation}
+ \boxed{\quad \alpha_s^{(0)}=a_s,\qquad
+                 \alpha_s^{(1)}=a_s+b.\quad}
+ \label{eq:twoscreeningchannels}
+\end{equation}
+Their reflected partners $Q-\alpha_s^{(j)}$ are included in the
+usual unfolded contour. We first work at generic weights and
+then take the regularized limits at coincident poles.
+
+The coefficients require only elementary special-function
+identities. Define
+\begin{equation}
+ \mathfrak g(x)=\frac{\Gamma(x)}{\Gamma(1-x)}.
+ \label{eq:gammaratio}
+\end{equation}
+For a three-point function with $\Sigma=\alpha_1+\alpha_2+\alpha_3$,
+the zero- and one-screening residues, with respect to the
+displayed sum coordinate, are
+\begin{align}
+ \operatorname*{Res}_{\Sigma=Q}C&=1,\notag\\
+ \operatorname*{Res}_{\Sigma=Q-b}C
+  &=-\frac{\pi\Lambda_L}
+       {\prod_{j=1}^3\mathfrak g(2b\alpha_j)}.
+ \label{eq:threepointscreeningresidues}
+\end{align}
+For completeness these follow directly from DOZZ. Its denominator
+is $\Upsilon_b(\Sigma-Q)\prod_j\Upsilon_b(\Sigma-2\alpha_j)$;
+use
+\[
+ \Upsilon_b(Q-x)=\Upsilon_b(x),\qquad
+ \Upsilon_b(x+b)=\mathfrak g(bx)b^{1-2bx}\Upsilon_b(x).
+\]
+At $\Sigma=Q$ reflection cancels the other factors. At
+$\Sigma=Q-b=1/b$, the product of shifted ratios is
+$b/\prod_j\mathfrak g(2b\alpha_j)$. Combining it with the
+DOZZ prefactor and
+$\mathfrak g(b^2)\mathfrak g(-b^2)=-b^{-4}$ proves the
+second identity. These are the conventions of
+\cite[eqs.~(9), (11), (13)]{TeschnerRevisited}.
+
+Set
+\begin{equation}
+ \delta_0=1-\mu_1-\mu_3,\qquad
+ \delta_1=1-\mu_2-\mu_3,\qquad
+ \delta_\infty=1-\mu_3-\mu_4,
+ \label{eq:screeningexponentdifferences}
+\end{equation}
+and, initially assuming $\delta_0\ne0$, define
+\begin{equation}
+ h_0=\frac{\pi\mathfrak g(\delta_0)}
+              {\mathfrak g(\mu_2)\mathfrak g(\mu_4)},
+ \qquad
+ h_1=\frac{\pi\mathfrak g(-\delta_0)}
+              {\mathfrak g(\mu_1)\mathfrak g(\mu_3)}.
+ \label{eq:screeningHermitiancoefficients}
+\end{equation}
+At $\alpha=a_s$, the left three-point function has its
+zero-screening pole and the right one its one-screening pole,
+with coefficient $-\Lambda_Lh_0$. At $\alpha=a_s+b$ their
+roles reverse, with coefficient $-\Lambda_Lh_1$.
+In the local coordinate $x=\alpha-\alpha_s^{(j)}$ the singular
+product is
+\[
+ \frac{\Lambda_Lh_j}{x(x+\varepsilon)}.
+\]
+The contour separating $x=-\varepsilon$ and $x=0$ gives the
+coefficient $-\Lambda_Lh_j/\varepsilon$. In the unfolded
+$1/(4\pi i)$ spectral normalization the reflection partner
+supplies the other half of the local $1/(2\pi i)$ residue.
+Under the continuation and tail-control input above, the remaining
+contour integral is holomorphic in $\varepsilon$ and contributes
+no residue. The contour calculation therefore gives
+\begin{equation}
+ \boxed{\quad
+ \operatorname*{Res}_{\varepsilon=0}C_4(z)
+  =-\Lambda_L\left(
+      h_0|\mathcal F_0(z)|^2+h_1|\mathcal F_1(z)|^2\right).
+ \quad}
+ \label{eq:spectralonescreeningresidue}
+\end{equation}
+The identity itself also follows without continuing the infinite
+spectral integral: combine the first-moment residue
+\eqref{eq:onescreeningresidue}, in the transverse coordinate
+$\varepsilon=b(s+1)$, with the independently proved period pairing
+\eqref{eq:screeningareapairing} and the block factorization
+\eqref{eq:screeningVirasoroblocks}. This fixes the normalization
+and sign independently of the conditional contour derivation.
+Conventions for the overall normalization of correlations differ
+in the literature; the bootstrap normalization is calibrated by
+\eqref{eq:threepointscreeningresidues}.
+
+\subsection{Why the screening integrals are the Virasoro blocks}
+
+Let $F(a,b;c;z)={}_2F_1(a,b;c;z)$ and take branches positive
+for $0<z<1$, continued first to
+$\CC\setminus(({-\infty},0]\cup[1,\infty))$.
+The normalized $s$-channel periods are
+\begin{align}
+ f_0(z)&=F(1-\mu_4,\mu_3;\mu_1+\mu_3;z),\notag\\
+ f_1(z)&=z^{\delta_0}
+        F(\mu_2,1-\mu_1;1+\delta_0;z).
+ \label{eq:screeningsbasis}
+\end{align}
+The full normalized chiral blocks are
+\begin{equation}
+ \mathcal F_j(z)=E_b(z)f_j(z),\qquad
+ E_b(z)=z^{-\mu_1\mu_3/(2b^2)}
+                  (1-z)^{-\mu_2\mu_3/(2b^2)}.
+ \label{eq:screeningVirasoroblocks}
+\end{equation}
+Here the conformal weight is $\Delta(\alpha)=\alpha(Q-\alpha)$
+and the central charge is $c_L=1+6Q^2$.
+
+To verify the block identification, the screening field has
+weight $\Delta(b)=b(Q-b)=1$. Integration over a closed twisted
+cycle therefore commutes with the Virasoro action: its Ward
+commutator is a total derivative. A screening outside a circle
+separating $0,z$ from $1,\infty$ gives intermediate charge
+$a_s$, while a screening inside gives $a_s+b$.
+The corresponding Euler arc integrals are
+\begin{align}
+ S_0&=\int_1^\infty
+   w^{-\mu_1}(w-1)^{-\mu_2}(w-z)^{-\mu_3}\dd w
+       =B(1-\mu_2,1-\mu_4)f_0(z),\notag\\
+ S_1&=\int_0^z
+   w^{-\mu_1}(1-w)^{-\mu_2}(z-w)^{-\mu_3}\dd w
+       =B(1-\mu_1,1-\mu_3)f_1(z).
+ \label{eq:screeningEulerarcs}
+\end{align}
+The positive arc branches are phase-normalized versions of
+the twisted periods; closed Pochhammer contours justify the
+Ward-identity argument, with the same normalized functions.
+Dividing out the beta constants sets the leading coefficient
+to one. The leading exponents agree because
+\[
+ \Delta(a_s)-\Delta(\alpha_1)-\Delta(\alpha_3)
+   =-2\alpha_1\alpha_3,
+ \qquad
+ \Delta(a_s+b)-\Delta(a_s)=\delta_0.
+\]
+The screened intertwiner construction and uniqueness of the
+normalized Ward solution identify the functions at every
+level; see~\cite[Section~18.1, eq.~(224)]{TeschnerRevisited}.
+Here $0<a_s,a_s+b<Q$, so these internal weights are positive
+and avoid the degenerate Verma weights at $c_L>25$.
+No external degenerate field is assumed.
+
+The two blocks solve a second-order hypergeometric equation
+after removal of the common factor $E_b$. This reduction is a
+consequence of the specified one-screening charge locus, not
+a general second-order equation for arbitrary four-point
+Liouville blocks.
+
+\subsection{The finite fusion matrix}
+
+For $\delta_1\ne0$, the normalized $t$-channel periods, pairing
+$z,1$, are
+\begin{align}
+ g_0(z)&=F(1-\mu_4,\mu_3;\mu_2+\mu_3;1-z),\notag\\
+ g_1(z)&=(1-z)^{\delta_1}
+        F(1-\mu_2,\mu_1;1+\delta_1;1-z).
+ \label{eq:screeningtbasis}
+\end{align}
+Their internal charges are $\alpha_2+\alpha_3$ and
+$\alpha_2+\alpha_3+b$, and their full chiral blocks are
+$E_b g_j$. Thus the same matrix relates periods and normalized
+screened Virasoro blocks:
+\begin{equation}
+ \begin{pmatrix}f_0\\f_1\end{pmatrix}
+  =\mathsf M\begin{pmatrix}g_0\\g_1\end{pmatrix},
+ \label{eq:screeningfusionrelation}
+\end{equation}
+where
+\begin{equation}
+ \boxed{\quad
+ \mathsf M=\begin{pmatrix}
+ \dfrac{\Gamma(1-\delta_0)\Gamma(\delta_1)}
+       {\Gamma(\mu_1)\Gamma(1-\mu_2)}
+ &\dfrac{\Gamma(1-\delta_0)\Gamma(-\delta_1)}
+       {\Gamma(\mu_3)\Gamma(1-\mu_4)}\\[10pt]
+ \dfrac{\Gamma(1+\delta_0)\Gamma(\delta_1)}
+       {\Gamma(1-\mu_3)\Gamma(\mu_4)}
+ &\dfrac{\Gamma(1+\delta_0)\Gamma(-\delta_1)}
+       {\Gamma(1-\mu_1)\Gamma(\mu_2)}
+ \end{pmatrix}.
+ \quad}
+ \label{eq:screeningfusionmatrix}
+\end{equation}
+This is the Gauss connection formula, obtained by substituting
+$a=1-\mu_4$, $b=\mu_3$, $c=\mu_1+\mu_3$ in
+\cite[eqs.~15.10.21--22]{DLMF}. The Wronskians give
+\begin{equation}
+ \det\mathsf M=-\frac{\delta_0}{\delta_1}.
+ \label{eq:fusiondeterminant}
+\end{equation}
+The matrix is independent of the Liouville parameter $b$ when
+the deficits $\mu_i$ are fixed. All $b$-dependence in these
+blocks is then in the common factor $E_b$ and in the overall
+correlation normalization.
+
+There is a simpler expression in actual arc coordinates.
+For real $0<z<1$, put
+\begin{align*}
+ T_0&=\int_{-\infty}^0
+  (-w)^{-\mu_1}(1-w)^{-\mu_2}(z-w)^{-\mu_3}\dd w
+       =B(1-\mu_1,1-\mu_4)g_0,\\
+ T_1&=\int_z^1
+  w^{-\mu_1}(1-w)^{-\mu_2}(w-z)^{-\mu_3}\dd w
+       =B(1-\mu_2,1-\mu_3)g_1.
+\end{align*}
+Gamma reflection reduces~\eqref{eq:screeningfusionmatrix} to
+\begin{equation}
+ \boxed{\quad
+ \begin{pmatrix}S_0\\S_1\end{pmatrix}
+ =\frac1{\sin(\pi\delta_1)}
+ \begin{pmatrix}
+ \sin(\pi\mu_1)&-\sin(\pi\mu_3)\\
+ \sin(\pi\mu_4)&-\sin(\pi\mu_2)
+ \end{pmatrix}
+ \begin{pmatrix}T_0\\T_1\end{pmatrix}.
+ \quad}
+ \label{eq:screeningsinefusion}
+\end{equation}
+These arc pairs cease to be bases at the corresponding
+balanced weights. The divergent coefficients in this formula
+cannot be specialized there without first changing basis.
+
+\subsection{The Hermitian pairing and its direct verification}
+
+We now prove the area pairing directly from periods:
+\begin{equation}
+ \boxed{\quad
+ \mathcal A_\mu(z)=h_0|f_0(z)|^2+h_1|f_1(z)|^2.
+ \quad}
+ \label{eq:screeningareapairing}
+\end{equation}
+Together with the first-moment residue, this supplies an
+independent derivation of~\eqref{eq:spectralonescreeningresidue}.
+The complex beta integral is
+\begin{equation}
+ \int_{\CC}|w|^{-2p}|1-w|^{-2q}\dd^2w
+ =\pi\frac{\Gamma(1-p)\Gamma(1-q)\Gamma(p+q-1)}
+             {\Gamma(p)\Gamma(q)\Gamma(2-p-q)},
+ \label{eq:complexbetaintegral}
+\end{equation}
+for $0<p,q<1$ and $p+q>1$. Introduce positive Laplace
+parameters for the two powers, perform the Gaussian integral
+in $w$, and then use their sum and ratio as variables. The
+remaining integrals are an ordinary Gamma integral and
+$B(1-q,1-p)$, proving the formula.
+
+The area is a constant Hermitian form in the period basis.
+For $\delta_0\ne0$, local monodromy has distinct eigenvalues
+$1,e^{2\pi i\delta_0}$, so the form is diagonal in
+$(f_0,f_1)$. If $\delta_0>0$, sending $z\to0$ in the area
+integral and using~\eqref{eq:complexbetaintegral} gives $h_0$.
+If $\delta_0<0$, rescaling $w=zu$ gives the leading
+coefficient $h_1$. To determine the other coefficient, first
+assume also $\delta_1\ne0$. Monodromy at $1$ makes the
+Hermitian form diagonal in $(g_0,g_1)$, so the off-diagonal
+entry after the real connection matrix vanishes:
+\[
+ h_0\mathsf M_{00}\mathsf M_{01}
+       +h_1\mathsf M_{10}\mathsf M_{11}=0.
+\]
+Every matrix entry here is nonzero at these real nonresonant
+weights. Hence either already determined coefficient fixes
+the other; Gamma reflection gives precisely
+\eqref{eq:screeningHermitiancoefficients}. Continuity at
+$\delta_1=0$, with $\delta_0\ne0$ fixed, completes this
+argument without crossing the singular $s$-channel basis.
+For this continuity the area integrals are locally dominated:
+on compact sets of admissible weights their singular exponents
+stay below $2$, and their decay at infinity stays faster than
+$|w|^{-2}$.
+
+The signs of $h_0,h_1$ are opposite. The pairing has signature
+$(1,1)$; the positive value of $\mathcal A_\mu$ on the period
+line is compatible with that indefinite signature. It is not
+a positive probability decomposition into two channels.
+In arc coordinates it becomes
+\begin{equation}
+ \mathcal A_\mu=
+ \frac{\sin(\pi\mu_2)\sin(\pi\mu_4)|S_0|^2
+       -\sin(\pi\mu_1)\sin(\pi\mu_3)|S_1|^2}
+      {\sin(\pi\delta_0)}.
+ \label{eq:screeningarcarea}
+\end{equation}
+Define $H_s=\diag(h_0,h_1)$ and
+\[
+ H_t=\diag\left(
+   \frac{\pi\mathfrak g(\delta_1)}
+        {\mathfrak g(\mu_1)\mathfrak g(\mu_4)},
+   \frac{\pi\mathfrak g(-\delta_1)}
+        {\mathfrak g(\mu_2)\mathfrak g(\mu_3)}\right).
+\]
+The connection preserves the area exactly:
+\begin{equation}
+ \mathsf M^*H_s\mathsf M=H_t.
+ \label{eq:fusionHermitianidentity}
+\end{equation}
+This follows either from the two area decompositions or
+directly from Gamma recurrence and reflection. On the
+specified real branch $\mathsf M^*=\mathsf M^T$.
+
+\subsection{A closed formula for the four-point density and total volume}
+
+The area expression gives an explicit density in the conformal
+cross-ratio. For a holomorphic column $\boldsymbol f=(f_0,f_1)^T$
+and constant Hermitian matrix $H$, differentiation gives
+\begin{equation}
+ \partial_z\partial_{\bar z}\log(\boldsymbol f^*H\boldsymbol f)
+ =\frac{\det H\,|f_0f_1'-f_0'f_1|^2}
+        {(\boldsymbol f^*H\boldsymbol f)^2}.
+ \label{eq:HermitianWronskian}
+\end{equation}
+The hypergeometric equation yields
+\begin{equation}
+ W(f_0,f_1)=\delta_0
+      z^{-(\mu_1+\mu_3)}(1-z)^{-(\mu_2+\mu_3)},
+ \qquad
+ -h_0h_1\delta_0^2
+       =\frac{\pi^2}{\prod_i\mathfrak g(\mu_i)}.
+ \label{eq:screeningWronskian}
+\end{equation}
+Using $\dd z\wedge\dd\bar z=-2i\dd x\wedge\dd y$ and
+the curvature-$-1$ convention therefore gives
+\begin{equation}
+ \boxed{\quad
+ \omega_{\mathrm{DM},\mu}
+ =\frac{4\pi^2}{\prod_{i=1}^4\mathfrak g(\mu_i)}
+  \frac{|z|^{-2(\mu_1+\mu_3)}
+        |1-z|^{-2(\mu_2+\mu_3)}}{\mathcal A_\mu(z)^2}
+       \dd x\wedge\dd y,\qquad z=x+iy.
+ \quad}
+ \label{eq:general4DMdensity}
+\end{equation}
+The area in the denominator is explicitly the hypergeometric
+combination~\eqref{eq:screeningareapairing}. Although that
+diagonal basis is singular at balanced weights, the density
+extends through them by its logarithmic limit.
+
+Its integral can also be evaluated. At $z=0$, if $\delta_0>0$
+then $\mathcal A_\mu\to h_0$, while if $\delta_0<0$ then
+$\mathcal A_\mu\sim h_1|z|^{2\delta_0}$. In both cases
+the metric density has the form
+$\text{const.}\,|z|^{-2(1-|\delta_0|)}$, giving cone
+angle $2\pi|\delta_0|$. At $\delta_0=0$ the area has
+logarithmic growth and the end is a cusp. The same argument
+at $1,\infty$ gives the other two angles
+$2\pi|\delta_1|$ and $2\pi|\delta_\infty|$.
+This agrees with the three-ended cone-sphere completion
+described in~\cite[Section~5]{Kojima}.
+
+Gauss--Bonnet, retaining the labels, gives the integral
+\begin{equation}
+ \boxed{\quad
+ V_{\mathrm{DM}}(\mu)
+ =2\pi\bigl(1-|\delta_0|-|\delta_1|-|\delta_\infty|\bigr)
+ =4\pi\min_{1\le i\le4}\{\mu_i,1-\mu_i\}.
+ \quad}
+ \label{eq:general4DMvolume}
+\end{equation}
+For the last equality, order the weights as
+$x_1\le x_2\le x_3\le x_4$ and put $r=1-x_4$.
+The sum constraint forces $x_2,x_3\ge r$. The three absolute
+bipartition differences have sum
+\[
+ \sum_{j=1}^3|r-x_j|
+   =1-r-x_1+|r-x_1|=1-2\min(r,x_1).
+\]
+This proves the stated minimum formula. Equal weights give
+$V_{\mathrm{DM}}=2\pi$; for example
+$\mu=(1/4,1/2,1/2,3/4)$ gives $V_{\mathrm{DM}}=\pi$.
+
+The integral here is of the smooth curvature on the open
+moduli space, with its cone/cusp completion. If one instead
+extends $\partial\bar\partial\log C_b^{\mathrm{uv}}$ as a
+distribution to the compactified sphere, the explicit
+pairwise powers have delta masses at collisions. Their
+logarithms are pluriharmonic only off those collisions.
+
+\subsection{Four equal weights: the logarithmic fusion calculation}
+
+When all $\mu_i=1/2$, both $\delta_0$ and $\delta_1$ vanish.
+The functions $f_0,f_1$ coincide. On the representation side,
+$a_s+b=Q-a_s$, so the two intermediate charges have the
+same Virasoro weight. The second solution is a regularized
+logarithmic, or parameter-derivative, block; it is not a
+second independent ordinary normalized highest-weight block
+at the same weight.
+
+Use the independent periods
+\begin{equation}
+ f(z)=F(1/2,1/2;1;z)=\frac2\pi K(z),\qquad
+ g(z)=F(1/2,1/2;1;1-z)=\frac2\pi K(1-z).
+ \label{eq:equalweightfg}
+\end{equation}
+Here $K$ uses the parameter convention of
+\eqref{eq:ellipticperiodratio}. Put $L=\log16$ and define
+\begin{equation}
+ \ell_0=Lf-\pi g,\qquad \ell_1=Lg-\pi f.
+ \label{eq:equalweightlogsolutions}
+\end{equation}
+The logarithmic expansion~\cite[Sections~15.10 and 19.12]{DLMF}
+gives
+\[
+ \ell_0(z)=f(z)\log z+
+   4\sum_{m\ge1}
+    \left(\frac{(1/2)_m}{m!}\right)^2
+       (H_{2m}-H_m)z^m,
+\]
+where $H_m$ is a harmonic number. Thus the holomorphic part
+has zero constant term. The analogous statement for
+$\ell_1$ uses $\log(1-z)$.
+Solving~\eqref{eq:equalweightlogsolutions} gives the finite
+connection matrix
+\begin{equation}
+ \boxed{\quad
+ \begin{pmatrix}f\\\ell_0\end{pmatrix}
+ =\frac1\pi
+ \begin{pmatrix}L&-1\\L^2-\pi^2&-L\end{pmatrix}
+ \begin{pmatrix}g\\\ell_1\end{pmatrix}.
+ \quad}
+ \label{eq:equalweightlogfusion}
+\end{equation}
+It has determinant $-1$ and its square is the identity.
+
+The limiting area pairing is
+\begin{align}
+ \mathcal A(z)
+   &=2\pi^2\operatorname{Re}(f\overline g)
+     =8\operatorname{Re}(\overline{K(z)}K(1-z)),
+       \label{eq:equalweightareaexact}\\
+   &=2\pi L|f|^2-2\pi\operatorname{Re}(f\overline{\ell_0}).
+       \notag
+\end{align}
+The Hermitian matrices in the two displayed bases are
+\begin{equation}
+ H_{fg}=\pi^2\begin{pmatrix}0&1\\1&0\end{pmatrix},\qquad
+ H_{\log}=\begin{pmatrix}2\pi L&-\pi\\-\pi&0\end{pmatrix}.
+ \label{eq:equalweightHermitian}
+\end{equation}
+The connection~\eqref{eq:equalweightlogfusion} preserves
+$H_{\log}$ exactly.
+
+One can see the cancellation rather than just substitute
+into a singular formula. Take
+$\mu_1=\mu_3=(1-\delta)/2$ and
+$\mu_2=\mu_4=(1+\delta)/2$. Then
+\[
+ h_0=\frac\pi\delta+\pi L+O(\delta),\qquad
+ h_1=-\frac\pi\delta+\pi L+O(\delta),\qquad
+ f_1-f_0=\delta\ell_0+O(\delta^2).
+\]
+The pole terms cancel in~\eqref{eq:screeningareapairing},
+leaving~\eqref{eq:equalweightareaexact}. This explains
+precisely how the regularized residue sector survives the
+coincidence of the ordinary blocks.
+
+For counterclockwise loops about $0$ and $1$, respectively,
+the period column $(f,g)^T$ has monodromies
+\[
+ \begin{pmatrix}1&0\\-2i&1\end{pmatrix},\qquad
+ \begin{pmatrix}1&-2i\\0&1\end{pmatrix}.
+\]
+In the oriented torus-period basis
+$\Omega_1=4K(z)$, $\Omega_2=4iK(1-z)$, these become
+\begin{equation}
+ N_0=\begin{pmatrix}1&0\\2&1\end{pmatrix},\qquad
+ N_1=\begin{pmatrix}1&-2\\0&1\end{pmatrix}.
+ \label{eq:equalweightmonodromy}
+\end{equation}
+They give the expected projective $\Gamma(2)$ monodromy.
+The channel exchange $z\leftrightarrow1-z$ swaps $f,g$ and
+acts on $\tau=\Omega_2/\Omega_1$ by $\tau\mapsto-1/\tau$.
+For oriented integral cycles this is a symplectic swap up
+to a common phase of the developing differential.
+
+Finally,
+\begin{equation}
+ \boxed{\quad
+ \omega_{\mathrm{DM}}
+ =\frac{4\pi^2}{|z(1-z)|^2\mathcal A(z)^2}\dd x\wedge\dd y,
+ \qquad
+ \mathcal A(z)=8\operatorname{Re}(\overline{K(z)}K(1-z)).
+ \quad}
+ \label{eq:equalweightdensityexplicit}
+\end{equation}
+Indeed $W(f,g)=-1/[\pi z(1-z)]$, or equivalently
+$\tau'=-i\pi/[4z(1-z)K(z)^2]$.
+Near $z=0$,
+\[
+ \mathcal A(z)=2\pi\log\frac{16}{|z|}
+          +O\left(|z|\log\frac1{|z|}\right),\qquad
+ \omega_{\mathrm{DM}}\sim
+ \frac{\dd x\wedge\dd y}
+      {|z|^2\log^2(16/|z|)}.
+\]
+This gives the integrable cusp density directly in the
+cross-ratio coordinate.
+
+\subsection{What the calculation establishes}
+
+The first-moment residue, the screened Virasoro blocks, and the
+independently computed Hermitian period pairing agree with all
+constants fixed. Under~\eqref{eq:screeningtailinput} and the stated
+contour-continuation conditions, the infinite spectral representation
+gives the same answer through its two pinches. The finite fusion
+transformation on the two-dimensional one-screening residue sector
+is the period connection matrix
+\eqref{eq:screeningfusionmatrix}, with
+\eqref{eq:equalweightlogfusion} at the fully balanced point.
+Its independent derivation requires no infinite-contour interchange.
+Matrix entries are not
+being identified with unspecified pointwise values of a
+bare $b$-$6j$ function.
+
+This completes the finite four-point residue calculation.
+Section~\ref{sec:normalizedsixj} matches its quantum-group
+normalization explicitly, strengthens the Gram-matrix
+obstruction, and computes a classical cubic saddle for the
+separate compact-tetrahedron degeneration.
+

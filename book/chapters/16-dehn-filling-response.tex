@@ -1,0 +1,1010 @@
+\section{Dehn filling, variational response, and quantum surgery}
+\label{sec:dehnresponse}
+
+There is a second route from volume optimization to a quantum-volume
+comparison: perturb a complete cusped structure by prescribing peripheral
+holonomy. This route has a particularly explicit answer. The critical-value
+response of the real concave optimization recovers the Euclidean cusp
+quadratic form. After passage to a holomorphic boundary potential, the
+local volume response is exactly the imaginary part of a Legendre
+critical value, and gives the filled volume when the geometric completion exists.
+Its Taylor coefficients reproduce the Neumann--Zagier expansion, and its
+Hessian is the derivative entering the torsion surgery formula.
+These are deductions from the established variational, deformation, and
+torsion identities cited below; no novelty claim is made.
+
+\subsection{Peripheral conventions and the two small parameters}
+
+Let $M$ be an oriented, finite-volume, one-cusped hyperbolic
+three-manifold. Fix an oriented meridian--longitude basis $(\mu,\lambda)$
+and the geometric deformation branch through the complete structure.
+We use logarithms of the $\mathrm{PSL}_2(\CC)$ multipliers, equivalently
+of the eigenvalue ratios, so that
+\begin{equation}
+ u=H(\mu),\qquad v=H(\lambda),\qquad
+ v(u)=\tau u+c_3u^3+c_5u^5+O(u^7),\qquad
+ B=\Im\tau>0.
+ \label{eq:dehnholonomy}
+\end{equation}
+Thus $u$ is twice a local logarithm of an $\mathrm{SL}_2$ eigenvalue,
+after removing its constant sign at the complete representation.
+In particular, the smooth filling equation is $pu+qv=2\pi i$,
+with the branch chosen continuously from the cusp. Using eigenvalue
+logarithms $\widehat u=u/2$, $\widehat v=v/2$ instead gives
+$p\widehat u+q\widehat v=\pi i$ and
+$\widehat v=\tau\widehat u+4c_3\widehat u^3+16c_5\widehat u^5+\cdots$.
+The oddness and the holomorphic potential are those of
+Neumann--Zagier~\cite[Sections 4--6]{NeumannZagier}.
+
+For a primitive slope $(p,q)$ put
+\begin{equation}
+ A=p+q\tau,\qquad Q(p,q)=\frac{|A|^2}{B},\qquad
+ pu+qv(u)=i\theta.
+ \label{eq:dehncone}
+\end{equation}
+Here $\theta$ is an angular holonomy parameter. It is the cone angle
+when the local structure has the corresponding geometric cone completion;
+$\theta=0$ is the complete cusp and $\theta=2\pi$ gives a smooth
+hyperbolic filling when that completion exists. The quantity $Q$ is the squared length of
+the slope on a Euclidean cusp cross section divided by its area.
+For sufficiently long slopes the small solution stays in one fixed
+holonomy neighborhood throughout $0\leq\theta\leq2\pi$. Indeed, put
+$h(u)=v(u)-\tau u=O(u^3)$ and $t=q/A$. Since
+$|t|\leq B^{-1}$, a sufficiently small disk has
+$|t h'(u)|<1/2$ uniformly in the slope. The equation
+$u+t h(u)=i\theta/A$ then has a unique small analytic solution,
+uniformly for bounded $\theta$ and sufficiently large $|A|$, with
+$u=O(|A|^{-1})$. This is an assertion about a holonomy germ;
+the hyperbolic Dehn surgery theorem supplies the smooth geometric
+completion for sufficiently long primitive slopes
+\cite[Section 4]{NeumannZagier}. Geometric completion is a separate
+statement from the analytic existence of this small solution.
+
+Two expansions must be kept distinct: $|A|^{-1}\to0$ is a
+\emph{classical long-slope expansion}, whereas the quantum level
+$r\to\infty$ is a semiclassical expansion. The coefficients $c_3,c_5$
+belong to the first. They are not by themselves quantum two-loop
+or higher-loop coefficients.
+
+\subsection{What the linear term does to real volume optimization}
+
+Suppose a chosen ideal triangulation of the compact core of $M$ has
+a positive complete geometric angle structure, with every ideal vertex
+link a torus. Use independent linear coordinates $x$ on its full angle space,
+with tetrahedral and edge-angle constraints already imposed, and center
+them at the complete maximum $x=0$. Write
+\[
+ \mathscr V(x)=\sum_{\text{tetrahedra}}\Vol(\Delta_x),\qquad
+ V_0=\mathscr V(0),\qquad K=-D^2\mathscr V(0)>0.
+\]
+Peripheral angular holonomies are affine in the angles and vanish
+at $0$ in the selected branches. Thus there is a real linear map $P$
+such that
+\[
+ Px=\binom{\Im u}{\Im v},\qquad
+ L=(p\ \ q)P,\qquad Lx=\theta.
+\]
+The boundary intersection pairing gives $\operatorname{rank}P=2$,
+so $L\ne0$. Together with $K>0$, this makes the constrained
+stationarity system invertible at $0$ and gives a unique nearby
+interior maximizer for sufficiently small $\theta$. These assertions
+use the full constrained angle space, not an arbitrarily restricted
+family of tetrahedral shapes.
+
+At that maximizer, the leading--trailing edge variations impose the
+missing real edge equations; the peripheral variation imposes the
+missing real filling equation. This follows from the angle-holonomy
+pairing and volume derivative in~\cite[Lemma 4.4, Proposition 4.6 and
+Proposition 5.4]{FuterGueritaud}. It first identifies a local edge-glued
+holonomy solution. At $\theta=2\pi$, an interior critical point on
+the corresponding slice gives a complete hyperbolic filling by their
+Theorem 6.1. For other angular slices we retain the local holonomy
+interpretation unless a cone completion is specified.
+For long slopes the small holonomy solution stays in this positive
+geometric neighborhood throughout a bounded angular interval, so the
+same constrained-stationarity identification applies there.
+
+To see the peripheral part directly, on the edge-glued deformation
+space the volume differential is
+\begin{equation}
+ \dd V=\frac12\bigl(\Re v\,\dd\Im u
+                         -\Re u\,\dd\Im v\bigr).
+ \label{eq:dehnvolumedifferential}
+\end{equation}
+Requiring this covector to be proportional to
+$p\,\dd\Im u+q\,\dd\Im v$ gives
+$p\Re u+q\Re v=0$. Hence the single angular condition, together
+with constrained criticality, gives the full complex equation
+\eqref{eq:dehncone}.
+
+The proposed linear perturbation can therefore be written as
+\begin{equation}
+ \mathscr B(j)=\max_x\{\mathscr V(x)+jLx\},\qquad
+ \theta=\mathscr B'(j),\qquad
+ V_{p,q}(\theta)=\mathscr B(j)-j\theta.
+ \label{eq:realdehnlegendre}
+\end{equation}
+All statements here are local near the unique interior complete
+maximum. The envelope theorem gives
+\[
+ V_{p,q}'(\theta)=-j.
+\]
+On a geometric cone branch, the Schlaefli formula gives
+$V_{p,q}'(\theta)=-\ell_{\rm core}/2$,
+so the coefficient of the added real linear term is
+\begin{equation}
+ \boxed{j=\frac{\ell_{\rm core}}2.}
+ \label{eq:dehnsourcecore}
+\end{equation}
+The cone angle is its conjugate variable. In particular, the
+critical value $\mathscr B$ of the biased objective and the physical
+volume $V_{p,q}$ must be distinguished by the Legendre subtraction
+in~\eqref{eq:realdehnlegendre}.
+
+\subsection{The cusp shape in the inverse volume Hessian}
+
+Set
+\[
+ \chi=L K^{-1}L^T.
+\]
+Differentiating the stationary equation for the perturbed objective gives
+\[
+ \left.\frac{\dd x_j}{\dd j}\right|_{j=0}=K^{-1}L^T,
+ \qquad \mathscr B''(0)=\chi.
+\]
+Consequently
+\begin{equation}
+ V_{p,q}(\theta)=V_0-\frac{\theta^2}{2\chi}+O(\theta^4).
+ \label{eq:dehnquadraticresponse}
+\end{equation}
+Evenness follows from the signed-cone continuation $u\mapsto-u$.
+Comparison with the geometric calculation below yields
+\begin{equation}
+ \boxed{L K^{-1}L^T=\frac{2|p+q\tau|^2}{\Im\tau}=2Q(p,q).}
+ \label{eq:cuspHessian}
+\end{equation}
+Equivalently, writing $a=\Re\tau$,
+\begin{equation}
+ \boxed{
+ P K^{-1}P^T=\frac2B
+  \begin{pmatrix}1&a\\a&|\tau|^2\end{pmatrix},\qquad
+ \det(P K^{-1}P^T)=4.}
+ \label{eq:cuspmatrixHessian}
+\end{equation}
+Thus the peripheral response of the angle-volume Hessian determines
+the cusp shape. Although $K$ and $P$ depend on the triangulation,
+this two-by-two matrix depends only on the marked cusp.
+The formula assumes the nondegenerate positive angle maximum above;
+it is not a claim that an arbitrary chosen ideal triangulation has one.
+
+\subsection{An exact holomorphic critical-value identity}
+
+Define
+\begin{equation}
+ F(u)=\int_0^u v(t)\,\dd t
+     =\frac{\tau u^2}{2}+\frac{c_3u^4}{4}
+        +\frac{c_5u^6}{6}+O(u^8).
+ \label{eq:dehnprimitive}
+\end{equation}
+With Neumann--Zagier's convention $\Phi_{\rm NZ}'=2v$,
+this is $F=\Phi_{\rm NZ}/2$, after fixing the additive constant.
+Assume $q\ne0$ and set
+\begin{equation}
+ \boxed{
+ \mathcal S_{p,q}(u;\theta)
+       =F(u)+\frac{p}{2q}u^2-\frac{i\theta}{q}u.}
+ \label{eq:dehnsurgeryaction}
+\end{equation}
+The quadratic term implements the change of peripheral polarization;
+the final term is linear in the boundary coordinate. Its critical
+equation is exactly $pu+qv=i\theta$. Let $u_\theta$ denote the small
+critical solution, and write
+$\mathcal S^*(\theta)=\mathcal S_{p,q}(u_\theta;\theta)$.
+
+\begin{proposition}[Local filling critical value]
+\label{prop:dehncriticalvalue}
+On the local geometric deformation branch through the complete cusp,
+with $V_{p,q}$ interpreted as its volume germ (or the volume of its
+geometric completion when this exists),
+\begin{equation}
+ \boxed{V_{p,q}(\theta)-V_0=\frac12\Im\mathcal S^*(\theta).}
+ \label{eq:dehnexactcriticalvolume}
+\end{equation}
+Moreover,
+\begin{equation}
+ \frac{\dd\mathcal S^*}{\dd\theta}=-\frac{i u_\theta}{q},\qquad
+ \frac{\dd^2\mathcal S^*}{\dd\theta^2}
+       =\frac{1}{q\bigl(p+qv'(u_\theta)\bigr)}.
+ \label{eq:dehnenvelope}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Choose integers $\rho,\sigma$ with $p\sigma-q\rho=1$.
+The complementary peripheral holonomy is
+\[
+ w=\rho u+\sigma v=\frac{i\sigma\theta-u}{q}.
+\]
+When a geometric cone completion exists, in these orientation conventions
+the physical core complex length
+has positive real part when represented by $-w$, and therefore
+$\ell_{\rm core}=\Re(u/q)$ near the positive cone branch.
+The envelope theorem gives the first identity
+in~\eqref{eq:dehnenvelope}. Its half imaginary part is
+$-\ell_{\rm core}/2$, exactly the Schlaefli derivative of volume.
+Both sides of~\eqref{eq:dehnexactcriticalvolume} vanish at $\theta=0$.
+Differentiating $pu_\theta+qv(u_\theta)=i\theta$ gives the second
+identity in~\eqref{eq:dehnenvelope}.
+
+There is also an algebraic proof valid directly on the local holonomy
+branch. Neumann--Zagier's volume formula is
+\begin{align}
+ V(u)-V_0
+ &=\frac14\Im(u\bar v)
+     +\Im\left(\frac12F(u)-\frac14uv\right)\notag\\
+ &=\frac12\Im F(u)-\frac12\Re u\,\Im v.
+ \label{eq:NZrealvolume}
+\end{align}
+Substituting $\Im v=(\theta-p\Im u)/q$ yields
+\eqref{eq:dehnexactcriticalvolume}. This proof avoids assuming
+an independently constructed cone path.
+\end{proof}
+
+This is an exact identity of analytic germs, so it compares all
+orders of the two classical expansions. For $q=0$, exchange the
+oriented basis to $(\mu',\lambda')=(\lambda,-\mu)$; the new slope
+has $q'=-p\ne0$. The real angle optimization itself needs no such
+basis change. Primitive $q=0$ slopes have $p=\pm1$ and do not
+occur in a long-slope sequence in a fixed basis.
+
+
+% BEGIN INLINE FIGURE: 04_dehn_filling.tex
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\small,line cap=round,>=Latex]
+  \begin{scope}[shift={(-5.6,-1.1)}]
+    \draw[->,mpgray!70] (-.2,0)--(3.7,0) node[below] {$u$};
+    \draw[->,mpgray!70] (0,-.3)--(0,3.0) node[left] {$v$};
+    \draw[mpblue,line width=1.2pt,domain=-.1:3.1,samples=80]
+      plot (\x,{.55*\x+.045*\x*\x*\x});
+    \draw[mpochre,line width=1pt] (.05,2.22682)--(3.3,-.21068);
+    \fill[mpblue] (0,0) circle (2pt) node[below left=3pt,align=right] {complete\\structure};
+    \fill[mpochre] (1.6,1.06432) circle (2.5pt);
+    \draw[mpgray!65,dashed] (1.6,0)--(1.6,1.06432)--(0,1.06432);
+    \node[above left=2pt,text=mpblue] at (2.9,2.697) {$v=v(u)$};
+    \node[above right=2pt,text=mpochre] at (1.6,1.06432) {$u_\theta$};
+    \node[text=mpgray,font=\scriptsize] at (1.8,3.4) {schematic projection of complex curves};
+  \end{scope}
+  \node[align=left,text width=7.0cm,anchor=west] at (-.65,.25) {%
+    \textcolor{mpochre}{$\displaystyle pu+qv=i\theta$}\\[7pt]
+    $\displaystyle F'(u)=v(u)$\\[7pt]
+    $\displaystyle\mathcal S_{p,q}(u;\theta)
+       =F(u)+\frac{p}{2q}u^2-\frac{i\theta}{q}u\quad(q\ne0)$\\[7pt]
+    $\displaystyle\partial_u\mathcal S_{p,q}=0
+       \quad\Longleftrightarrow\quad pu+qv(u)=i\theta$\\[10pt]
+    \textbf{Response at the complete structure}\\[5pt]
+    $\displaystyle\chi=LK^{-1}L^T
+       =\frac{2|p+q\tau|^2}{\Im\tau}$.};
+\end{tikzpicture}
+\caption[Dehn filling in peripheral phase space]{Local Dehn filling as an intersection in the complex peripheral
+holonomy space. The drawing records the intersection condition; it is
+not a real slice of the complex deformation curve. Here $u,v$ are
+logarithms of multipliers, $\theta=0$ is the complete structure, and
+$\theta=2\pi$ gives smooth filling when the branch has that geometric
+completion. The Hessian response formula assumes the
+nondegenerate positive angle maximum specified in the text.}
+\label{fig:mono-dehn-filling}
+\end{figure}
+% END INLINE FIGURE
+
+\subsection{The Neumann--Zagier coefficients through sixth order}
+
+Series inversion of~\eqref{eq:dehncone} gives
+\begin{equation}
+ u_\theta=\frac{i\theta}{A}
+   +\frac{iqc_3\theta^3}{A^4}
+   +i\theta^5\left(\frac{3q^2c_3^2}{A^7}
+                         -\frac{qc_5}{A^6}\right)+\cdots.
+ \label{eq:dehninversion}
+\end{equation}
+Substitution in the action, or integration of the envelope derivative,
+gives
+\begin{equation}
+ \mathcal S^*(\theta)=\frac{\theta^2}{2qA}
+  +\frac{c_3\theta^4}{4A^4}
+  +\frac{\theta^6}{6}
+       \left(\frac{3qc_3^2}{A^7}-\frac{c_5}{A^6}\right)+\cdots.
+ \label{eq:dehncriticalseries}
+\end{equation}
+Taking half its imaginary part yields the volume loss
+\begin{align}
+ V_0-V_{p,q}(\theta)
+ ={}&\frac{B\theta^2}{4|A|^2}
+       -\frac{\theta^4}{8}\Im\frac{c_3}{A^4}\notag\\
+    &-\frac{\theta^6}{12}
+       \Im\left(\frac{3qc_3^2}{A^7}-\frac{c_5}{A^6}\right)
+       +O(|A|^{-8}).
+ \label{eq:dehnconeloss}
+\end{align}
+Here the displayed remainder is a long-slope estimate for bounded
+$\theta$, on the common holonomy neighborhood constructed above.
+The uniform analytic inverse expands in $i\theta/A$ with coefficients
+analytic in the bounded parameter $q/A$; the next volume terms are
+therefore $O(|A|^{-8})$. Since $q/A$ is bounded, the three displayed terms have
+orders $|A|^{-2},|A|^{-4},|A|^{-6}$. For a fixed slope and
+$\theta\to0$, the corresponding Taylor remainder is $O(\theta^8)$.
+
+For the smooth hyperbolic filling $M_{p/q}$ this becomes
+\begin{align}
+ \boxed{\begin{aligned}
+ V_0-\Vol(M_{p/q})
+ ={}&\frac{\pi^2B}{|A|^2}
+       -2\pi^4\Im\frac{c_3}{A^4}\\
+    &-\frac{16\pi^6}{3}
+       \Im\left(\frac{3qc_3^2}{A^7}-\frac{c_5}{A^6}\right)
+       +O(|A|^{-8}).
+ \end{aligned}}
+ \label{eq:dehnsmoothloss}
+\end{align}
+These are the Neumann--Zagier coefficients, with the multiplier
+normalization fixed explicitly~\cite[Section 6]{NeumannZagier}.
+In particular the leading loss is $\pi^2/Q(p,q)$, and the quartic
+term detects the first nonlinear deformation coefficient $c_3$.
+
+\subsection{Computing the quartic coefficient from angle-volume derivatives}
+
+The comparison supplies a more detailed computational identity.
+Keep $K,L,\chi$ as above, and write
+\[
+ T_3=D^3\mathscr V(0),\qquad T_4=D^4\mathscr V(0),\qquad
+ e=\frac{K^{-1}L^T}{\chi},\qquad
+ R=K^{-1}-\frac{K^{-1}L^TLK^{-1}}{\chi}.
+\]
+Let $t=T_3(e,e,\cdot)$ be the resulting column covector. Solving
+the constrained stationary equation to second order gives
+\[
+ x_\theta=\theta e+\frac{\theta^2}{2}Rt+O(\theta^3).
+\]
+Indeed $Le=1$, $LR=0$, and $RK$ is the identity on
+$\ker L$. Inserting this expression into the Taylor expansion of
+$\mathscr V$ gives
+\begin{align}
+ V_{p,q}(\theta)={}&V_0-\frac{\theta^2}{2\chi}
+  +\frac{\theta^3}{6}T_3[e,e,e]\notag\\
+  &+\frac{\theta^4}{24}
+       \left(T_4[e,e,e,e]+3t^TRt\right)+O(\theta^5).
+ \label{eq:dehnquartictensors}
+\end{align}
+The cross term with the unknown cubic displacement vanishes because
+that displacement is in $\ker L$ and $Ke=L^T/\chi$.
+The remaining quadratic-displacement terms combine to $t^TRt/8$.
+Evenness of the geometric branch then removes the odd coefficients
+and improves the remainder to $O(\theta^6)$. Comparison with
+\eqref{eq:dehnconeloss} yields
+\begin{equation}
+ \boxed{T_3[e,e,e]=0,\qquad
+ T_4[e,e,e,e]+3t^TRt
+      =3\Im\frac{c_3}{(p+q\tau)^4}.}
+ \label{eq:dehnquarticdictionary}
+\end{equation}
+Thus $c_3$ can be accessed from derivatives of the angle-volume
+functional by varying the slope. The correction $3t^TRt$ accounts
+for readjustment of all other angles. Keeping only the raw fourth
+derivative would miss that response.
+
+\subsection{The closed quantum-volume statement and its local consequence}
+
+A precise closed-manifold analogue is the Chen--Yang volume conjecture.
+At the specified root $\zeta_r=e^{2\pi i/r}$, with $r$ odd, its
+absolute-growth statements are
+\begin{equation}
+ \frac{4\pi}{r}\log|\mathrm{RT}_r(N;\zeta_r)|\longrightarrow\Vol(N),
+ \qquad
+ \frac{2\pi}{r}\log\mathrm{TV}_r(N;\zeta_r)\longrightarrow\Vol(N).
+ \label{eq:closedquantumvolume}
+\end{equation}
+The root and normalization matter; these are the Chen--Yang versions
+for hyperbolic manifolds~\cite{ChenYang}. We use absolute growth
+to avoid mixing the different Chern--Simons sign conventions in
+the literature.
+
+For a boundary state whose geometric semiclassical phase satisfies
+\[
+ \Phi(u)=\Phi_0+\frac12F(u),\qquad \Im\Phi_0=V_0,
+\]
+the filling phase is
+\begin{equation}
+ \mathcal T_\theta(u)=\Phi_0+\frac12\mathcal S_{p,q}(u;\theta).
+ \label{eq:dehnquantumphase}
+\end{equation}
+Possible real framing constants do not alter its imaginary part.
+With $\hbar_r=4\pi i/r$, Proposition~\ref{prop:dehncriticalvalue}
+immediately gives
+\begin{equation}
+ \left|e^{\mathcal T_\theta(u_\theta)/\hbar_r}\right|
+   =\exp\left(\frac{r}{4\pi}V_{p,q}(\theta)\right).
+ \label{eq:dehnquantumexponent}
+\end{equation}
+In particular, the deformation of the geometric exponential is
+\begin{equation}
+ \log\left|\frac{e^{\mathcal T_\theta(u_\theta)/\hbar_r}}
+                         {e^{\Phi_0/\hbar_r}}\right|
+       =-\frac{r}{4\pi}\bigl(V_0-V_{p,q}(\theta)\bigr).
+ \label{eq:dehnquantumresponse}
+\end{equation}
+Every classical coefficient in~\eqref{eq:dehnconeloss} therefore
+appears with precisely the required quantum exponential coefficient.
+At $\theta=2\pi$, Yoshida's complex-volume formula has this
+normalization; see the unnumbered filling formula and the potential
+normalization (5.9) on~\cite[p.~456]{WongYangDehn}.
+Quadratic and linear filling kernels also appear explicitly
+in~\cite[equations (12)--(14)]{GangRomoYamazaki}; their boundary
+coordinates and level conventions must be converted before numerical
+coefficients are compared.
+
+\begin{proposition}[Conditional local quantum transfer]
+\label{prop:dehnquantumconditional}
+Suppose an exact surgery representation for a specified quantum
+invariant has, near the geometric branch, phase
+$\mathcal T_\theta$ and a uniform classical-symbol expansion of
+its amplitude. Suppose the geometric critical point is nondegenerate,
+its steepest-descent cycle occurs with nonzero coefficient in the
+specified integration cycle, the net leading stationary-phase
+coefficient of that geometric sector is uniformly bounded away
+from zero, and the remaining integral or sum is
+exponentially smaller, uniformly on a chosen compact deformation
+interval. Then stationary phase gives the volume exponent
+\eqref{eq:dehnquantumexponent} for the full invariant, with a
+uniform expansion on that interval. Without the last global
+condition, the same statement holds for the specified local
+geometric contribution.
+\end{proposition}
+
+\begin{proof}
+At the geometric critical point,
+\[
+ \mathcal T_\theta''(u_\theta)
+   =\frac{p+qv'(u_\theta)}{2q}\ne0.
+\]
+Uniform stationary phase on the stipulated cycle gives a nonzero
+amplitude times $e^{\mathcal T_\theta(u_\theta)/\hbar_r}$,
+with powers of $r^{-1}$ and a Gaussian power of $r$ according
+to the normalization of the kernel. Such powers contribute only
+$O(\log r/r)$ to normalized logarithmic growth. The exponential
+gap permits the addition of the remaining terms without changing
+the leading growth. The critical-value proposition identifies the
+exponent with the geometric volume.
+\end{proof}
+
+For a general knot this proposition identifies the needed analytic
+input; it does not establish that input from a complete-point
+Kashaev asymptotic alone. A value at $u=0$ does not provide a
+uniform boundary-state expansion near $0$, and a local critical
+point does not by itself specify its coefficient in the global
+surgery sum. The regular tetrahedral Airy formula in
+Section~\ref{sec:quantumAiry} concerns a different integral and
+does not supply that missing manifold-level information.
+
+\subsection{The Gaussian factor and the torsion surgery formula}
+
+The derivative of the filling map is
+\begin{equation}
+ D_*:=p+qv'(u_\theta),\qquad
+ \frac{\dd u_\theta}{\dd\theta}=\frac{i}{D_*},\qquad
+ \mathcal S_{uu}(u_\theta;\theta)=\frac{D_*}{q}.
+ \label{eq:dehnjacobian}
+\end{equation}
+Thus the same quantity controls the classical susceptibility and
+the Gaussian surgery integral. With the usual square-root
+normalization of the boundary Fourier kernel, its contribution
+has dependence $D_*^{-1/2}$, up to the common normalization and
+phase choices. A full amplitude also contains the boundary-state
+torsion and a solid-torus factor.
+
+More precisely, suppose $\theta=2\pi$ gives a smooth hyperbolic filled
+manifold and the representation is its holonomy. Assume its adjoint
+representation is acyclic and its restriction to the compact core is
+regular for both $\mu$ and $p\mu+q\lambda$: the peripheral invariant
+vector paired with either curve supplies a basis of the one-dimensional
+twisted $H_1$, with the compatible boundary basis in $H_2$.
+In the local holonomy chart this requires $D_*\ne0$; the core is
+loxodromic, so $\sinh(w/2)\ne0$. The change-of-peripheral-curve
+and surgery formulas for adjoint Reidemeister torsion then give
+\begin{align}
+ \operatorname{Tor}_{p\mu+q\lambda}(M_u)
+   &=\bigl(p+qv'(u)\bigr)\operatorname{Tor}_\mu(M_u),\notag\\
+ \operatorname{Tor}(M_{p/q})
+   &=\frac{\operatorname{Tor}_{p\mu+q\lambda}(M_u)}
+               {4\sinh^2(w/2)},\qquad
+ w=\rho u+\sigma v.
+ \label{eq:dehntorsionsurgery}
+\end{align}
+These are understood up to the standard torsion signs and
+consistent choices of square root. They are the identities
+used in~\cite[equations (5.16) and (5.23)]{WongYangDehn}.
+For the general regularity and change-of-curve statements, see
+\cite[Propositions 5.13--5.14]{PortiTorsionSurvey}; its
+Proposition 4.23(b), specialized to the adjoint representation
+$(k_1,k_2)=(2,0)$, gives the surgery factor up to the torsion sign.
+Consequently the expected full geometric amplitude is proportional to
+\begin{equation}
+ \boxed{
+ \frac{2\sinh(w/2)}
+      {\sqrt{\bigl(p+qv'(u)\bigr)\operatorname{Tor}_\mu(M_u)}}
+       =\frac{1}{\sqrt{\operatorname{Tor}(M_{p/q})}}.}
+ \label{eq:dehngaussiantorsion}
+\end{equation}
+The identity shows what must accompany the boundary Hessian.
+Matching the Gaussian factor alone would leave out both the cusp
+torsion and the solid-torus amplitude. This one-loop comparison
+uses more information than the classical volume exponent.
+The closed-manifold torsion in this formula is evaluated at smooth
+filling; it is not being assigned to a generic cone holonomy.
+At the cusp endpoint $\theta=0$ the solid-torus factor vanishes,
+so a uniform quantum statement including that endpoint requires
+a separate normalization and analysis. The compact parameter
+interval in Proposition~\ref{prop:dehnquantumconditional} is
+subject to its nonvanishing-amplitude hypothesis.
+
+\subsection{A figure-eight benchmark and the scope of the conclusion}
+
+For the figure-eight knot complement, in the standard peripheral
+basis Neumann--Zagier compute~\cite[equation (68)]{NeumannZagier}
+\begin{equation}
+ v(u)=2\sqrt3\,i\left(u+\frac{u^3}{3}
+                    +\frac{23u^5}{180}+O(u^7)\right).
+ \label{eq:figureeightNZcoefficients}
+\end{equation}
+Thus $\tau=2\sqrt3\,i$, $c_3=2i/\sqrt3$, and
+$c_5=23i/(30\sqrt3)$. The first two volume-loss terms are
+\begin{align}
+ V_0-\Vol(M_{p/q})={}&\frac{2\sqrt3\,\pi^2}{p^2+12q^2}\notag\\
+ &-\frac{4\pi^4}{\sqrt3}
+  \frac{p^4-72p^2q^2+144q^4}{(p^2+12q^2)^4}
+  +O\bigl((p^2+q^2)^{-3}\bigr).
+ \label{eq:figureeightfillingloss}
+\end{align}
+This agrees directly with the expansion following equation (68)
+in~\cite{NeumannZagier}. The angle-Hessian response is correspondingly
+\[
+ \chi=\frac{p^2+12q^2}{\sqrt3}.
+\]
+
+An independent calculation starts with the two regular ideal tetrahedra
+and their Lobachevsky volume. In the Neumann--Zagier presentation their
+shapes $z_1,z_2$ satisfy
+\[
+ z_1z_2(z_1-1)(z_2-1)=1,\qquad
+ u=\log\bigl(z_2(1-z_1)\bigr),\qquad
+ v=2\log\bigl(z_1(1-z_1)\bigr).
+\]
+Eliminating the shapes from these equations gives the local peripheral
+relation
+\[
+ \cosh(v/2)=1+\cosh u-\cosh(2u).
+\]
+Equivalently, with the eigenvalue variables
+$m=e^{u/2}$ and $l=-e^{v/2}$, it is
+$l+l^{-1}=m^4-m^2-2-m^{-2}+m^{-4}$, the nonabelian
+figure-eight $A$-polynomial relation in this choice of signs.
+The sign in $l$ is essential: its complete value is $-1$ whereas
+$v(0)=0$. The equation and the chosen tangent $v'(0)=2\sqrt3\,i$
+recover the cubic and quintic coefficients above. This is a local
+branch calculation, not a classification of the global curve or of fillings.
+
+Use $\alpha_i=\arg z_i$, $\beta_i=-\arg(1-z_i)$, and
+$\gamma_i=\pi-\alpha_i-\beta_i$. Choose the independent variations
+$\xi=(\delta\alpha_1,\delta\beta_1,\delta\alpha_2)$.
+The edge equation then makes the six angle variations
+\[
+ E\xi=(\xi_1,\xi_2,-\xi_1-\xi_2,
+       \xi_3,\xi_1-\xi_2+\xi_3,-\xi_1+\xi_2-2\xi_3).
+\]
+At the complete structure all six angles are $\pi/3$.
+Since $\Lambda''(\alpha)=-\cot\alpha$, direct differentiation gives
+\begin{equation}
+ K=\frac1{\sqrt3}
+ \begin{pmatrix}4&-1&3\\-1&4&-3\\3&-3&6\end{pmatrix},\qquad
+ P=\begin{pmatrix}0&-1&1\\2&-2&0\end{pmatrix},\qquad
+ P K^{-1}P^T=\frac1{\sqrt3}
+ \begin{pmatrix}1&0\\0&12\end{pmatrix}.
+ \label{eq:figureeightdirectHessian}
+\end{equation}
+This recovers the cusp shape directly from the optimizer.
+Put $D_0=p^2+12q^2$. The unit angular-response vector is
+\[
+ e=\frac{(6q-p,-6q-p,p-6q)^T}{2D_0}.
+\]
+Using
+\[
+ \Lambda'''(\pi/3)=\frac43,\qquad
+ \Lambda''''(\pi/3)=-\frac8{3\sqrt3},
+\]
+the six entries of $Ee$ occur in opposite pairs, so
+$T_3[e,e,e]=0$. Direct contraction of the fourth derivative and
+the constrained inverse-Hessian correction gives
+\begin{equation}
+ T_4[e,e,e,e]+3t^TRt
+   =\frac{2\sqrt3\,(p^4-72p^2q^2+144q^4)}{D_0^4}.
+ \label{eq:figureeightdirectquartic}
+\end{equation}
+Multiplying by $\theta^4/24$ and setting $\theta=2\pi$ gives
+the quartic filled-volume term in~\eqref{eq:figureeightfillingloss}
+with the opposite sign, as required for volume rather than volume loss.
+Thus the real optimization and the holomorphic series agree in a
+calculation made directly from the tetrahedral volume derivatives.
+
+For this example there is also a theorem about the actual quantum
+invariants: Wong--Yang prove the leading RT asymptotic with relative
+error $O(r^{-1})$, and the
+RT/TV volume conjectures for every hyperbolic rational Dehn filling
+of the figure-eight knot~\cite[Theorems 1.1 and 1.2]{WongYangDehn}.
+Their leading amplitude is the inverse square root of adjoint torsion,
+with their specified overall constant. Thus the local consistency
+calculation above is contained in a stronger result in that example.
+The present discussion reorganizes the comparison around volume
+optimization and its derivatives; it does not produce a new case
+of the quantum-volume conjecture.
+
+For a general knot, the unconditional results here are the classical
+critical-value identity and its coefficient dictionary. The quantum
+conclusion for a specified local geometric contribution follows under
+the stated stationary-phase hypotheses. Passing to the full invariant
+requires control of its exact surgery representation and all competing
+contributions. One should first keep the filling slope fixed while
+taking $r\to\infty$, and then study the long-slope coefficients.
+A simultaneous limit in which the slope grows with $r$ requires
+uniform estimates not supplied by separate fixed-slope expansions.
+
+The computational companion in
+\path{experiments/quantum_surgery/README.md}, with output at
+\path{artifacts/quantum_surgery/result.json}, checks finite formal
+series, canonical-coordinate identities, and the figure-eight
+angle-Hessian contractions in exact arithmetic. These fixtures
+check the displayed coefficient algebra. They do not compute a
+filled hyperbolic manifold or an exact quantum invariant, and do
+not establish convergence, a global integration cycle, or its
+noncancellation.
+
+\subsection{The symplectic pairing behind the calculation}
+\label{sec:NZsymplectic}
+
+The pairing in Neumann--Zagier is the structure behind the preceding
+formulas. It identifies the peripheral variables as conjugate coordinates,
+makes the geometric deformation locus Lagrangian, and fixes the canonical
+transformation for Dehn filling. We record the normalization explicitly,
+since interchanging meridian and longitude or using eigenvalue rather
+than multiplier logarithms changes the displayed signs or factors.
+
+\subsubsection{From the tetrahedra to the boundary intersection form}
+
+For $n$ ideal tetrahedra introduce independent ambient coordinates
+\[
+ Z_j=\log z_j,\qquad W_j=\log(1-z_j),\qquad
+ \Omega_{\rm tet}=\sum_{j=1}^n\dd Z_j\wedge\dd W_j.
+\]
+The actual shapes satisfy $e^{Z_j}+e^{W_j}=1$. Their product is a
+complex Lagrangian of dimension $n$ in this $2n$-dimensional phase space.
+The logarithmic edge equations and peripheral holonomies are affine
+linear functions of $X=(Z_1,\ldots,Z_n,W_1,\ldots,W_n)^T$.
+
+Let $C_\lambda,C_\mu$ be the longitude and meridian coefficient rows,
+let $R_E$ be the edge-equation matrix, and set
+\[
+ J_{2n}=\begin{pmatrix}0&I_n\\-I_n&0\end{pmatrix},\qquad
+ U=\begin{pmatrix}C_\lambda\\C_\mu\\R_E\end{pmatrix}.
+\]
+For a triangulated manifold with $h$ torus cusps, the original matrix identity is
+\begin{equation}
+ \boxed{U J_{2n}U^T
+ =2\begin{pmatrix}0&I_h&0\\-I_h&0&0\\0&0&0\end{pmatrix}.}
+ \label{eq:NZmatrixpairing}
+\end{equation}
+This is~\cite[Theorem 2.2, equation (21)]{NeumannZagier}, in their
+longitude--meridian row order. They normalize the coefficient-row
+pairing as $\langle a,b\rangle=\tfrac12aJ_{2n}b^T$.
+Equivalently, the unnormalized coefficient pairing of peripheral curves
+is twice their oriented intersection number; edge rows pair to zero
+with one another and with all peripheral rows. The topological
+interpretation is proved in their Section 3. A geometric construction
+of symplectic bases is given in~\cite{MathewsPurcellSymplectic}.
+
+The vanishing edge-edge pairings say that the linear constraints
+Poisson-commute. Since $\operatorname{rank}R_E=n-h$, their
+coisotropic reduction has complex dimension $2h$. Corollary 2.4 of
+\cite{NeumannZagier} identifies the reduced form as
+\begin{equation}
+ \boxed{\Omega_\partial=\frac12\sum_{i=1}^h
+                   \dd v_i\wedge\dd u_i,\qquad
+ \alpha_\partial=\frac12\sum_{i=1}^h v_i\,\dd u_i,
+ \qquad \dd\alpha_\partial=\Omega_\partial.}
+ \label{eq:NZboundarysymplectic}
+\end{equation}
+Locally near the regular geometric point, imposing the edge equations
+on the tetrahedral Lagrangian and reducing gives the geometric
+deformation Lagrangian $\mathcal L_M$ in boundary holonomy space.
+For a modern formulation of the reduction, see~\cite{DimofteVeen}.
+The symplectic form lives on the ambient boundary phase space;
+its pullback to $\mathcal L_M$ is zero.
+
+\subsubsection{The potential and the volume primitive}
+
+Writing $v=v(u)$ on the geometric branch, Lagrangianity gives
+\begin{equation}
+ \sum_i\dd v_i\wedge\dd u_i=0
+ \quad\Longleftrightarrow\quad
+ \frac{\partial v_i}{\partial u_j}
+       =\frac{\partial v_j}{\partial u_i}.
+ \label{eq:NZreciprocity}
+\end{equation}
+Thus $\sum_i v_i\,\dd u_i=\dd F$ locally, and
+$\alpha_\partial|_{\mathcal L_M}=\dd(F/2)$.
+This is the reciprocity and potential statement of
+\cite[Theorem 3]{NeumannZagier}. For one cusp the existence of a
+primitive is automatic once $v=v(u)$; the substantial content is
+the triangulation-level pairing and, for several cusps, the
+symmetry of the mixed derivatives. In the original normalization,
+$\Phi_{\rm NZ}=2F$, whereas the complex-volume phase used above is
+$\Phi=\Phi_0+F/2$.
+
+For one cusp write
+\[
+ u=x+iy,\qquad v=r+is.
+\]
+The real volume one-form is an exact modification of the imaginary
+part of the symplectic primitive:
+\begin{equation}
+ \beta=\frac12(r\,\dd y-x\,\dd s)
+       =\Im\alpha_\partial-\frac12\dd(xs),\qquad
+ \dd\beta=\Im\Omega_\partial.
+ \label{eq:NZvolumeprimitive}
+\end{equation}
+It is therefore closed on $\mathcal L_M$. Integrating it gives exactly
+\eqref{eq:NZrealvolume}. The factor $1/2$ can also be seen from
+the leading--trailing angle variations: angular holonomy varies by
+twice the boundary intersection number, while volume varies by the
+real holonomy~\cite[Lemma 4.4 and Proposition 5.4]{FuterGueritaud}.
+The same pairing thus supplies the real optimization differential
+and the holomorphic generating function.
+
+\subsubsection{Filling as a canonical transformation}
+
+Choose $\rho,\sigma\in\ZZ$ with $p\sigma-q\rho=1$ and use
+the filling slope as the new meridian:
+\begin{equation}
+ a=pu+qv,\qquad b=\rho u+\sigma v,\qquad
+ \frac12\dd b\wedge\dd a=\frac12\dd v\wedge\dd u.
+ \label{eq:NZcanonicalfilling}
+\end{equation}
+For $q\ne0$, the type-I generating function is
+\begin{equation}
+ \boxed{G(u,a)=\frac{p}{4q}u^2-\frac{ua}{2q}
+                         +\frac{\sigma}{4q}a^2.}
+ \label{eq:NZcanonicalkernel}
+\end{equation}
+Indeed, $v=(a-pu)/q$ and $b=(\sigma a-u)/q$ give the exact identity
+\begin{equation}
+ \dd G=\frac12b\,\dd a-\frac12v\,\dd u.
+ \label{eq:NZgeneratingidentity}
+\end{equation}
+Thus
+\[
+ \widetilde\Phi(a)=\operatorname{crit}_u\bigl(\Phi(u)+G(u,a)\bigr)
+ \quad\text{satisfies}\quad
+ \widetilde\Phi'(a)=\frac b2.
+\]
+The stationary equation is $a=pu+qv$. Setting $a=i\theta$ gives
+\begin{equation}
+ \widetilde\Phi(i\theta)
+ =\Phi_0+\frac12\mathcal S^*_{p,q}(\theta)
+          -\frac{\sigma\theta^2}{4q}.
+ \label{eq:NZcanonicalaction}
+\end{equation}
+The last term is real, hence invisible to the volume. At
+$\theta=2\pi$ it is $-\pi^2\sigma/q$, the framing term in
+the Yoshida normalization used in~\cite[p.~456, formula preceding (5.9)]{WongYangDehn}.
+The quadratic and linear terms of the surgery action are therefore
+fixed by a symplectic change of coordinates.
+
+The complementary core holonomy $b$ is conjugate to the filling
+holonomy $a$. Along $a=i\theta$,
+\[
+ \dd\Im\widetilde\Phi
+   =\Im\left(\frac12b\,i\dd\theta\right)
+   =\frac12\Re b\,\dd\theta
+   =-\frac12\ell_{\rm core}\,\dd\theta.
+\]
+This gives Schlaefli and the real source
+$j=\ell_{\rm core}/2$ in the canonical coordinates.
+
+On the canonical relation, $G=(ab-uv)/4$, so
+\begin{equation}
+ \boxed{\widetilde\Phi-\frac{ab}{4}
+                  =\Phi-\frac{uv}{4}.}
+ \label{eq:NZinvariantpotential}
+\end{equation}
+Equivalently $\widetilde\Phi_{\rm NZ}-ab=\Phi_{\rm NZ}-uv$,
+where $\widetilde\Phi_{\rm NZ}=4(\widetilde\Phi-\Phi_0)$.
+The equality is local with consistently fixed logarithmic branches
+and additive constants. It explains why the combination of potential
+and peripheral product occurs in the complex-volume formula.
+The differential of the boxed expression is the invariant one-form
+$\tfrac14(v\,\dd u-u\,\dd v)$.
+
+\subsubsection{Covariance of the filling coefficients}
+
+The powers of $p+q\tau$ in~\eqref{eq:dehnsmoothloss} also have
+a canonical-coordinate interpretation. Write the same geometric
+Lagrangian in the new coordinates as
+\[
+ b(a)=\widetilde\tau a+\widetilde c_3a^3
+                         +\widetilde c_5a^5+O(a^7).
+\]
+Using the inverse series of $a=pu+qv(u)$ gives, with $A=p+q\tau$,
+\begin{align}
+ \widetilde\tau&=\frac{\rho+\sigma\tau}{p+q\tau},
+ &\Im\widetilde\tau&=\frac{\Im\tau}{|p+q\tau|^2},\notag\\
+ \widetilde c_3&=\frac{c_3}{A^4},
+ &\widetilde c_5&=\frac{c_5}{A^6}-\frac{3qc_3^2}{A^7}.
+ \label{eq:NZcoefficientcovariance}
+\end{align}
+The cancellation in the cubic coefficient is
+\[
+ \sigma A-q(\rho+\sigma\tau)=1.
+\]
+It is exactly the symplectic determinant condition. Let
+$\widetilde F(0)=0$ and $\widetilde F'=b$.
+Since $\Re a=0$ on the cone locus, the real boundary correction
+in the new coordinates vanishes. Therefore
+\begin{equation}
+ V_{p,q}(\theta)-V_0
+  =\frac12\Im\widetilde F(i\theta)
+  =-\frac{\theta^2}{4}\Im\widetilde\tau
+    +\frac{\theta^4}{8}\Im\widetilde c_3
+    -\frac{\theta^6}{12}\Im\widetilde c_5+\cdots.
+ \label{eq:NZvolumenewpolarization}
+\end{equation}
+This is the previously computed volume expansion in filling
+coordinates. The cubic coefficient has a weight-$-4$ covariance
+law under a peripheral basis change; this alone does not assert
+that it is a modular form as a function of cusp shape.
+The pairing fixes the transformation laws, while the actual values
+of $c_3,c_5,\ldots$ describe nonlinear geometry of $\mathcal L_M$.
+
+\subsubsection{An exact Hessian and Monge--Ampere identity}
+
+There is a useful strengthening of~\eqref{eq:cuspmatrixHessian}.
+Eliminate internal angles at fixed peripheral angular holonomies,
+writing
+\[
+ \overline V(y,s)=\max_{P\xi=(y,s)}\mathscr V(\xi).
+\]
+All statements are local in the positive geometric neighborhood,
+where the maximum is interior and nondegenerate. Let
+$K(\xi)=-D^2\mathscr V(\xi)>0$ at the maximizing point.
+The boundary intersection pairing gives $\operatorname{rank}P=2$,
+so the constrained implicit-function theorem supplies a unique nearby
+interior maximizer for every sufficiently small $(y,s)$.
+Stationarity in the internal directions enforces real edge gluing,
+so this maximizer lies on the same deformation branch $v=v(u)$.
+The map $u=x+iy\mapsto(y,\Im v(u))$ is locally invertible because
+$\Im v'(0)=B>0$. It therefore identifies the angular boundary
+parameters with that geometric branch, rather than with an unrelated
+constrained family.
+The Schur-complement identity for the linear constraints is
+\begin{equation}
+ -D^2\overline V=(P K(\xi)^{-1}P^T)^{-1}.
+ \label{eq:NZreducedHessian}
+\end{equation}
+Set $T=v'(u)=A_0+iB_0$, with $B_0>0$ near the complete point.
+The volume differential and Cauchy--Riemann equations give
+\[
+ \overline V_y=\frac r2,\qquad
+ \overline V_s=-\frac x2,\qquad
+ \dd s=B_0\dd x+A_0\dd y,\qquad
+ \dd r=A_0\dd x-B_0\dd y.
+\]
+Solving these two linear differential equations yields
+\begin{equation}
+ \boxed{-D^2\overline V
+ =\frac1{2B_0}\begin{pmatrix}|T|^2&-A_0\\-A_0&1\end{pmatrix},
+ \qquad \det(-D^2\overline V)=\frac14.}
+ \label{eq:NZMongeAmpere}
+\end{equation}
+Equivalently,
+\begin{equation}
+ P K(\xi)^{-1}P^T
+  =\frac2{\Im v'(u)}
+       \begin{pmatrix}1&\Re v'(u)\\
+                       \Re v'(u)&|v'(u)|^2\end{pmatrix}.
+ \label{eq:NZnonlinearresponse}
+\end{equation}
+The determinant-$4$ identity holds throughout this local branch.
+At $u=0$ it reduces to the cusp formula already derived.
+For a filling path it gives the exact response
+\begin{equation}
+ V_{p,q}''(\theta)
+   =-\frac{\Im v'(u_\theta)}
+            {2|p+qv'(u_\theta)|^2},
+ \label{eq:NZexactcurvature}
+\end{equation}
+in agreement with~\eqref{eq:dehnenvelope}.
+
+For a geometric interpretation of the positive Hessian metric
+$g=-D^2\overline V$, multiplication by $i$ in the $u$-coordinate
+induces, in coordinates $(y,s)$,
+\[
+ J_T=\frac1{B_0}
+      \begin{pmatrix}-A_0&1\\-|T|^2&A_0\end{pmatrix},
+ \qquad J_T^2=-I.
+\]
+Then
+\begin{equation}
+ \omega_{\rm ang}=-\frac12\dd y\wedge\dd s,\qquad
+ g(X,Y)=\omega_{\rm ang}(X,J_TY),\qquad
+ g=\frac{B_0}{2}(\dd x^2+\dd y^2).
+ \label{eq:NZcompatiblemetric}
+\end{equation}
+This real area form comes from the angular polarization and the
+positive complex tangent. It is not the pullback of
+$\Omega_\partial$, which vanishes on the geometric Lagrangian.
+Nor has it been identified with the earlier
+Thurston--Deligne--Mostow complex hyperbolic metric.
+
+For completeness, assume the same positive complete triangulation and
+regular deformation hypotheses with $h$ torus cusps, and use all $2h$
+peripheral angular constraints. Their matrix $P$ has rank $2h$ by the
+boundary intersection pairing. Let
+$T=(\partial v_i/\partial u_j)=A_0+iB_0$.
+It is symmetric, and $B_0>0$ near the complete point. In coordinates
+$(y,s)=(\Im u,\Im v)$ the same calculation gives
+\begin{equation}
+ -D^2\overline V
+  =\frac12\begin{pmatrix}
+   B_0+A_0B_0^{-1}A_0&-A_0B_0^{-1}\\
+   -B_0^{-1}A_0&B_0^{-1}
+   \end{pmatrix},\qquad
+ \det(-D^2\overline V)=4^{-h}.
+ \label{eq:NZmulticuspHessian}
+\end{equation}
+At the complete structure $T$ is diagonal, with the individual cusp
+shapes on the diagonal. Coupling between distinct cusps appears in
+higher derivatives of the even Neumann--Zagier potential, for example
+through terms $u_i^2u_j^2$.
+
+\subsubsection{The quantum Gaussian as a half-density transformation}
+
+Let a geometric boundary state have leading form
+$A_0(u)e^{\Phi(u)/\hbar}$, with $\Phi'=v/2$.
+A quantization of the canonical transformation uses the exponential
+kernel $e^{G(u,a)/\hbar}$ and its mixed-derivative normalization.
+The relevant derivatives are
+\[
+ -G_{ua}=\frac1{2q},\qquad
+ (\Phi+G)_{uu}=\frac{p+qv'(u)}{2q}.
+\]
+The kernel normalization divided by the stationary Gaussian therefore
+has the dependence
+\begin{equation}
+ \boxed{\sqrt{\frac{-G_{ua}}{(\Phi+G)_{uu}}}
+    =\frac1{\sqrt{p+qv'(u)}}
+    =\sqrt{\frac{\dd u}{\dd a}}.}
+ \label{eq:NZhalfdensity}
+\end{equation}
+Universal powers of $\hbar$, phases, and square-root branches are
+fixed by the chosen integral convention. The displayed dependence is
+the transformation law for a half-density along $\mathcal L_M$.
+It is exactly the law obeyed by the inverse square root of peripheral
+torsion in~\eqref{eq:dehntorsionsurgery}. The extra
+$2\sinh(b/2)$ factor comes from the solid torus and is additional
+input. Explicit quantum filling kernels appear
+in~\cite[equations (12)--(14)]{GangRomoYamazaki}.
+
+The symplectic structure fixes the conjugate variables, the canonical
+generating function, and this Gaussian Jacobian. It does not select
+the integration cycle or prove that the geometric contribution
+survives cancellation in the exact quantum invariant. The analytic
+hypotheses in Proposition~\ref{prop:dehnquantumconditional} remain
+necessary for that conclusion.
+
+

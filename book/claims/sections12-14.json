@@ -1,0 +1,698 @@
+{
+  "schema_version": "1.0",
+  "chapter_sources": [
+    "book/chapters/12-quantum-boundary-measure.tex",
+    "book/chapters/13-four-point-fusion.tex",
+    "book/chapters/14-normalized-quantum-comparison.tex"
+  ],
+  "chapter_labels": [
+    "sec:quantummeasure",
+    "sec:screenedfusion",
+    "sec:normalizedsixj"
+  ],
+  "review_date": "2026-11-01",
+  "baseline_commit": "bf260eaab047d9047602ece652e5a7e43625d3f6",
+  "revision_review": "Dated mathematical-author and primary-source statement checks. Independent review and the exact reviewed snapshot are recorded separately in the quantum-surgery-review-2026-11-01 execution evidence; this author ledger does not award itself independent approval.",
+  "author_review": {
+    "status": "completed_for_independent_review",
+    "date": "2026-11-01",
+    "scope": "Sections12-14 statements, finite derivations, normalizations and explicit analytic dependencies; not full external-proof re-refereeing."
+  },
+  "independent_review": {
+    "status": "separate_review_record",
+    "record_directory": "docs/execution/quantum-surgery-review-2026-11-01/",
+    "author_is_independent_reviewer": false
+  },
+  "status_definitions": {
+    "derived_in_chapter": "General finite derivation author-checked in the chapter; independent review is separate.",
+    "derived_from_external_statements": "Author-checked consequence of cited primary statements or explicitly identified previously reviewed dependencies.",
+    "external_statement_and_derived_normalization": "Primary statement and conventions checked; manuscript normalization conversion author-checked, not full external-proof re-refereeing.",
+    "conditional_analytic_statement": "The implication is retained with its stated analytic hypotheses; their applicability is not established by finite algebra.",
+    "explicit_unproved_analytic_input": "The manuscript explicitly requires this analytic input and does not prove it.",
+    "inherited_analytic_dependency_not_audited": "Dependency outside this increment; no approval or disproof of its full inherited analytic argument is claimed."
+  },
+  "computational_companion": {
+    "code": "experiments/quantum_surgery/run.py",
+    "readme": "experiments/quantum_surgery/README.md",
+    "result": "artifacts/quantum_surgery/result.json",
+    "scope": "Named exact finite fixtures and multiprecision period/Euler-arc comparisons. The companion execution record, not this author statement, records replay success and precision.",
+    "exclusions": [
+      "No DOZZ/double-sine spectral integration engine",
+      "No spectral-tail majorant",
+      "No global quantum Airy certificate"
+    ]
+  },
+  "sources": [
+    {
+      "key": "KRV",
+      "url": "https://arxiv.org/pdf/1707.08785v3",
+      "pins": [
+        "Equations (2.11)-(2.15), printed pp. 8-9",
+        "Theorem 6.1 and (6.1), printed p. 20"
+      ],
+      "checked": "First-moment convention, strict moment domain and charge analyticity, including the factor 2/gamma. No b-uniform claim imported."
+    },
+    {
+      "key": "HeusenerPorti",
+      "url": "https://arxiv.org/pdf/1804.07504v2",
+      "pins": [
+        "Proposition 2, printed p. 2",
+        "Theorem 3 and following homogeneity paragraph, printed p. 3"
+      ],
+      "checked": "Good boundary-regular domain, B=-tr peripheral coefficient, and simultaneous scaling of symplectic, peripheral and torsion forms."
+    },
+    {
+      "key": "MondelloCones",
+      "url": "https://arxiv.org/pdf/0812.1602v2",
+      "pins": [
+        "Theorems 1.1-1.2, printed p. 2"
+      ],
+      "checked": "Local holonomy, injectivity at openings at most pi and Poisson comparison for openings below 2pi. The source factor 1/8 belongs to its own pairing convention; the manuscript calibrates by Appendix A."
+    },
+    {
+      "key": "GKRVBootstrap",
+      "url": "https://arxiv.org/pdf/2005.11530v2",
+      "pins": [
+        "Equation (1.16), Theorem 1.1 and footnote 8, printed p. 7",
+        "Paragraph after Theorem 1.1, printed p. 8"
+      ],
+      "checked": "Initial pair-sum domain and the need for discrete terms beyond it. The manuscript uses half the source charge variables and its own KRV/DOZZ overall correlation normalization."
+    },
+    {
+      "key": "TeschnerRevisited",
+      "url": "https://arxiv.org/pdf/hep-th/0104158v3",
+      "pins": [
+        "Equations (9), (11), (13), printed pp. 8-9",
+        "Section 7.2 equations (87)-(90), printed pp. 27-28",
+        "Section 18.1 equation (224), printed p. 63"
+      ],
+      "checked": "DOZZ normalization and shifts, contour pole families, screened chiral intertwiners. The full infinite continued operator is not re-proved."
+    },
+    {
+      "key": "TeschnerVartanov",
+      "url": "https://arxiv.org/pdf/1202.4698v3",
+      "pins": [
+        "Equations (2.9), (2.18), printed pp. 4-5",
+        "Equation (2.27) and contour prescription, printed p. 7",
+        "Equations (3.1)-(3.4) and (3.10)-(3.11), printed pp. 8-9",
+        "Equations (4.5)-(4.6), (4.10)-(4.11), printed pp. 10-11",
+        "Equation (5.14), printed p. 16",
+        "Appendix A equations (A.2)-(A.3), (A.15)-(A.17), printed pp. 22-23"
+      ],
+      "checked": "Normalization factors, reflected-field convention, classical potential and volume factor, length/charge convention, Gamma and sine shifts. The original integration formula, not a blindly imported shifted variable, fixes the local fold coordinate."
+    },
+    {
+      "key": "DLMF",
+      "url": "https://dlmf.nist.gov/15.10",
+      "additional_urls": [
+        "https://dlmf.nist.gov/19.12",
+        "https://dlmf.nist.gov/36.12"
+      ],
+      "pins": [
+        "Equations 15.10.2-5 and 15.10.21-22",
+        "Equations 19.12.1 and 19.12.3",
+        "Section 36.12, smooth amplitude and coalescing-saddle setup"
+      ],
+      "checked": "Gauss connection and Wronskian identities, elliptic logarithmic series after modulus-to-parameter conversion, and the conditional scope of a canonical Airy approximation."
+    },
+    {
+      "key": "BellettiYang",
+      "url": "https://londmathsoc.onlinelibrary.wiley.com/doi/full/10.1112/topo.70033",
+      "pins": [
+        "Section 2 Gram convention and Theorem 2.1"
+      ],
+      "checked": "The ordinary hyperbolic tetrahedron criterion requires signature (3,1) and positive off-diagonal cofactors, not signature alone."
+    },
+    {
+      "key": "MurakamiYano",
+      "url": "https://murakami.w.waseda.jp/papers/tetrahedronrev3.pdf",
+      "pins": [
+        "Equation (0.1), printed p. 3",
+        "Theorem 2 and equations (0.4)-(0.8), printed p. 4"
+      ],
+      "checked": "Geometric volume from the suitably chosen saddle roots; its potential is one half of TV convention. No full branch re-refereeing beyond the stated local geometric use."
+    }
+  ],
+  "claims": [
+    {
+      "id": "s12.first_moment",
+      "labels": [
+        "eq:Liouvilleflatparameters",
+        "eq:LiouvilleGMC",
+        "eq:GMCfirstmoment",
+        "eq:unitvolumeLiouville",
+        "eq:exactLiouvilleDM"
+      ],
+      "statement": "At fixed b in (0,1), the unit-volume correlation on total deficit two is exactly (1/b) times the pairwise power factor and the flat-area integral.",
+      "status": "derived_from_external_statements",
+      "source_keys": [
+        "KRV"
+      ],
+      "hypotheses": [
+        "Distinct marked points; 0 < mu_i < 1; sum mu_i = 2; gamma=2b and KRV charge beta_i=mu_i/b.",
+        "The GMC first moment uses the source reference measure |w|_+^(-4) d^2w."
+      ],
+      "dependencies": [],
+      "scope_limit": "The correlation itself is not the complex-hyperbolic volume density."
+    },
+    {
+      "id": "s12.curvature",
+      "labels": [
+        "eq:exactLiouvillecurvature"
+      ],
+      "statement": "The curvature-minus-one form is -2i times the area-logarithm Hessian; the pairwise factors are pluriharmonic off collisions.",
+      "status": "derived_from_external_statements",
+      "source_keys": [],
+      "hypotheses": [
+        "A local holomorphic normalization of the developing differential; noncolliding configurations."
+      ],
+      "dependencies": [
+        "book/claims/sections7-8.json"
+      ],
+      "scope_limit": "The top exterior power, not the raw correlation, gives the volume. Collision delta terms are excluded from the open moduli chart."
+    },
+    {
+      "id": "s12.charge_continuation",
+      "labels": [
+        "eq:flatSeibergbounds",
+        "eq:onescreeningresidue"
+      ],
+      "statement": "Strict extended Seiberg inequalities hold at s=-1, and KRV charge analyticity gives the simple residue; changing from s to t=b(s+1) changes its coefficient by b.",
+      "status": "derived_from_external_statements",
+      "source_keys": [
+        "KRV"
+      ],
+      "hypotheses": [
+        "Fixed b in (0,1); fixed distinct insertion positions; a charge neighborhood inside the strict moment inequalities."
+      ],
+      "dependencies": [],
+      "scope_limit": "This is charge continuation of the probabilistic/unit-volume expression, not a spectral-tail bound or a b-uniform limit."
+    },
+    {
+      "id": "s12.screening_periods",
+      "labels": [
+        "eq:screeningDMperiods"
+      ],
+      "statement": "The one-screening integrands are the flat developing periods after the stated charge substitution.",
+      "status": "derived_in_chapter",
+      "source_keys": [
+        "TeschnerRevisited"
+      ],
+      "hypotheses": [],
+      "dependencies": [
+        "book/claims/sections7-8.json"
+      ],
+      "scope_limit": "Twisted-cycle or branch conventions must be retained; an arbitrary real arc is not a global single-valued block."
+    },
+    {
+      "id": "s12.four_point_area",
+      "labels": [
+        "eq:fourpointLiouville",
+        "eq:fourpointareaintegral",
+        "eq:fourpointquantumDMdensity"
+      ],
+      "statement": "Fixing 0,1,z,infinity gives the stated area integral; equal-half weights give half the torus period area and the upper-half-plane density of labeled volume 2pi.",
+      "status": "derived_in_chapter",
+      "source_keys": [],
+      "hypotheses": [
+        "The elliptic K notation uses the parameter, not modulus, convention.",
+        "Curvature is -1 and labels are retained."
+      ],
+      "dependencies": [
+        "s12.first_moment",
+        "book/claims/sections7-8.json"
+      ],
+      "scope_limit": "No quotient by a permutation group and no cusp-WP normalization is implicit."
+    },
+    {
+      "id": "s12.relative_torsion",
+      "labels": [
+        "eq:torsionGoldman"
+      ],
+      "statement": "Heusener-Porti torsion disintegrates into the Goldman top power and peripheral forms; all three rescale together when B is rescaled.",
+      "status": "external_statement_and_derived_normalization",
+      "source_keys": [
+        "HeusenerPorti"
+      ],
+      "hypotheses": [
+        "Good, boundary-regular SL2(C) representation of an n-holed sphere.",
+        "B -> lambda^2 B, omega -> lambda^2 omega, nu_i -> lambda nu_i, Omega -> lambda^(2d+n) Omega; a common complex square-root choice is used."
+      ],
+      "dependencies": [],
+      "scope_limit": "The coefficient sqrt(2) in nu_i is specific to B=-tr. Pulling the unrestricted top form directly to a fixed-trace leaf gives zero."
+    },
+    {
+      "id": "s12.torsion_flat_limit",
+      "labels": [
+        "eq:torsionDMlimit"
+      ],
+      "statement": "The consistently WP-calibrated relative density has the local rescaled CH limit on controlled positive-area families.",
+      "status": "derived_from_external_statements",
+      "source_keys": [
+        "MondelloCones"
+      ],
+      "hypotheses": [
+        "Cone openings in (0,2pi); a local geometric holonomy component; the positive trace-coordinate density fixes the orientation.",
+        "Global marked holonomy injectivity is used only when every opening is at most pi."
+      ],
+      "dependencies": [
+        "s12.relative_torsion",
+        "book/claims/sections7-8.json",
+        "app:fricke"
+      ],
+      "scope_limit": "Neither a global character-variety identification nor an unrescaled Euclidean Goldman measure is asserted."
+    },
+    {
+      "id": "s12.fricke_blowup",
+      "labels": [
+        "eq:equalFricke",
+        "eq:Frickeblowup",
+        "eq:Frickeexpanded",
+        "eq:Frickeperiodchart",
+        "eq:Frickefirstcorrection"
+      ],
+      "statement": "The equal-trace Fricke blowup yields the Heron quadric and the displayed first correction to the WP density.",
+      "status": "derived_in_chapter",
+      "source_keys": [],
+      "hypotheses": [
+        "a=-2sin(A/8); x,y,z=-2-A(X,Y,Z); chart u>0,v>0; positive density orientation."
+      ],
+      "dependencies": [
+        "app:fricke"
+      ],
+      "scope_limit": "A local compact-chart expansion in blown-up character coordinates; its first correction cannot be integrated termwise over the cusp."
+    },
+    {
+      "id": "s12.wkb_measure",
+      "labels": [
+        "eq:normalizedWKBkernel",
+        "eq:kernelLiouvillemeasure"
+      ],
+      "statement": "A branchwise half-density WKB kernel gives the Liouville measure at leading order with the displayed 2pi*hbar normalization.",
+      "status": "conditional_analytic_statement",
+      "source_keys": [],
+      "hypotheses": [
+        "One nondegenerate phase branch and the specified normalization, spectral measure and polarization."
+      ],
+      "dependencies": [],
+      "scope_limit": "Multiple-branch interference and elliptic continuation are not established by this conditional calculation."
+    },
+    {
+      "id": "s12.quantum_dictionary",
+      "labels": [
+        "eq:b6jparameterdictionary",
+        "eq:auxiliaryGramobstruction",
+        "eq:areaLiouvillecharge"
+      ],
+      "statement": "The length/charge dictionary, unshifted versus pure-heavy openings, and s=A/(4pi b^2)-1 distinguish the first-moment locus from the joint semiclassical regime.",
+      "status": "derived_in_chapter",
+      "source_keys": [
+        "TeschnerVartanov"
+      ],
+      "hypotheses": [
+        "TV alpha=Q/2+i*ell/(4pi b); actual hyperbolic area uses 2pi(sum deficits-2)."
+      ],
+      "dependencies": [],
+      "scope_limit": "The auxiliary tetrahedral angle Gram matrix is not automatically a compact geometric tetrahedron; fixed-b residue and A proportional to b^(4/3) are different limits."
+    },
+    {
+      "id": "s13.parameters",
+      "labels": [
+        "eq:screeningparameters",
+        "eq:screeningtransverse",
+        "eq:gammaratio",
+        "eq:screeningexponentdifferences"
+      ],
+      "statement": "The real weight domain, transverse residue coordinate and exponent differences are fixed explicitly.",
+      "status": "derived_in_chapter",
+      "source_keys": [],
+      "hypotheses": [
+        "0<b<1; 0<mu_i<1; sum mu_i=2; fields at 0,1,z,infinity."
+      ],
+      "dependencies": [],
+      "scope_limit": "Complex charge continuation keeps both chiral factors analytic rather than conjugating charge variables."
+    },
+    {
+      "id": "s13.spectral_continuation",
+      "labels": [
+        "eq:screeningtailinput"
+      ],
+      "statement": "A continued infinite spectral derivation requires a specified residue-retaining path, locally fixed tails and locally uniform integrable majorants.",
+      "status": "explicit_unproved_analytic_input",
+      "source_keys": [
+        "GKRVBootstrap",
+        "TeschnerRevisited"
+      ],
+      "hypotheses": [
+        "Finite pinches and any extra discrete terms are separated; the regular remainder is holomorphic through epsilon=0.",
+        "Contours coincide with Q/2+iR outside a fixed compact set, or connecting integrals vanish uniformly."
+      ],
+      "dependencies": [],
+      "scope_limit": "No required majorant is proved here. The initial bootstrap theorem does not cover the one-screening locus and does not itself justify this continuation. No uniform b->0 or extra coalescence estimate is claimed."
+    },
+    {
+      "id": "s13.two_pinches",
+      "labels": [
+        "eq:screeningpolefamilies",
+        "eq:twoscreeningchannels",
+        "eq:threepointscreeningresidues",
+        "eq:screeningHermitiancoefficients",
+        "eq:spectralonescreeningresidue"
+      ],
+      "statement": "Finite DOZZ residue algebra gives two channels and their coefficients; the resulting residue identity also follows independently from the first moment and period area.",
+      "status": "derived_in_chapter",
+      "source_keys": [
+        "TeschnerRevisited"
+      ],
+      "hypotheses": [
+        "Generic noncoincident weights first; sum-coordinate residues; reflection partners and the unfolded-contour factor are retained."
+      ],
+      "dependencies": [
+        "s12.charge_continuation",
+        "s13.area_pairing"
+      ],
+      "scope_limit": "The infinite-contour proof is conditional on s13.spectral_continuation; the first-moment/period proof is not. These are two different routes to the same finite formula."
+    },
+    {
+      "id": "s13.screened_blocks",
+      "labels": [
+        "eq:screeningsbasis",
+        "eq:screeningVirasoroblocks",
+        "eq:screeningEulerarcs"
+      ],
+      "statement": "Euler periods times the common charge factor are the normalized one-screening Virasoro blocks via weight-one screening Ward identities.",
+      "status": "derived_from_external_statements",
+      "source_keys": [
+        "TeschnerRevisited"
+      ],
+      "hypotheses": [
+        "Branches positive on (0,1), continued to C minus ((-infinity,0] union [1,infinity)).",
+        "Closed twisted/Pochhammer cycles justify the Ward argument; internal weights are positive at c>25."
+      ],
+      "dependencies": [],
+      "scope_limit": "This does not give a second-order equation for arbitrary four-point blocks; the second ordinary period coalesces at a balanced exponent."
+    },
+    {
+      "id": "s13.fusion",
+      "labels": [
+        "eq:screeningtbasis",
+        "eq:screeningfusionrelation",
+        "eq:screeningfusionmatrix",
+        "eq:fusiondeterminant",
+        "eq:screeningsinefusion"
+      ],
+      "statement": "Gauss connection formulas give the Gamma matrix, determinant -delta0/delta1 and the beta-rescaled sine matrix.",
+      "status": "derived_in_chapter",
+      "source_keys": [
+        "DLMF"
+      ],
+      "hypotheses": [
+        "delta0*delta1 is nonzero for both displayed pairs to be bases; the same branch chart and ordering are used."
+      ],
+      "dependencies": [],
+      "scope_limit": "A balanced specialization requires a logarithmic basis, not entrywise substitution into the singular matrix."
+    },
+    {
+      "id": "s13.area_pairing",
+      "labels": [
+        "eq:screeningareapairing",
+        "eq:complexbetaintegral",
+        "eq:screeningarcarea",
+        "eq:fusionHermitianidentity"
+      ],
+      "statement": "The complex beta integral fixes one diagonal area coefficient and monodromy at the other puncture fixes the second; Gamma reflection gives the stated indefinite Hermitian pairing and its congruence.",
+      "status": "derived_in_chapter",
+      "source_keys": [
+        "DLMF"
+      ],
+      "hypotheses": [
+        "For the beta integral, 0<p,q<1 and p+q>1.",
+        "First delta0*delta1 != 0; continuity at delta1=0 keeps delta0 != 0 and uses a uniform local integral dominator."
+      ],
+      "dependencies": [
+        "book/claims/sections7-8.json",
+        "s13.fusion"
+      ],
+      "scope_limit": "The signature is (1,1), so the two terms are not positive probability channels. This proof needs no infinite spectral integration."
+    },
+    {
+      "id": "s13.density",
+      "labels": [
+        "eq:HermitianWronskian",
+        "eq:screeningWronskian",
+        "eq:general4DMdensity"
+      ],
+      "statement": "The two-dimensional Hermitian determinant identity and hypergeometric Wronskian yield the positive curvature-minus-one density.",
+      "status": "derived_in_chapter",
+      "source_keys": [
+        "DLMF"
+      ],
+      "hypotheses": [
+        "The area is positive on the period line; x=Re z,y=Im z; d^2z=dx dy."
+      ],
+      "dependencies": [
+        "s13.area_pairing"
+      ],
+      "scope_limit": "Finite formulas and their local derivatives do not certify any quantum spectral tail."
+    },
+    {
+      "id": "s13.total_volume",
+      "labels": [
+        "eq:general4DMvolume"
+      ],
+      "statement": "Collision cone angles 2pi|delta_nu| and balanced cusps give the labeled Gauss-Bonnet volume 2pi(1-sum|delta_nu|)=4pi min_i(mu_i,1-mu_i).",
+      "status": "derived_from_external_statements",
+      "source_keys": [],
+      "hypotheses": [
+        "Curvature -1; three labeled four-point boundary partitions; balanced ends treated as cusps."
+      ],
+      "dependencies": [
+        "book/claims/sections7-8.json",
+        "s13.density"
+      ],
+      "scope_limit": "No integration of a nonuniform character-coordinate correction is used."
+    },
+    {
+      "id": "s13.balanced_logarithmic",
+      "labels": [
+        "eq:equalweightfg",
+        "eq:equalweightlogsolutions",
+        "eq:equalweightlogfusion",
+        "eq:equalweightareaexact",
+        "eq:equalweightHermitian",
+        "eq:equalweightmonodromy",
+        "eq:equalweightdensityexplicit"
+      ],
+      "statement": "At four equal half-weights, the logarithmic basis, finite involution, indefinite area form, Gamma(2) monodromy and explicit cusp density arise from the elliptic/logarithmic limit.",
+      "status": "derived_in_chapter",
+      "source_keys": [
+        "DLMF"
+      ],
+      "hypotheses": [
+        "K uses parameter z; L=log(16); counterclockwise puncture loops and oriented periods Omega1=4K(z),Omega2=4iK(1-z)."
+      ],
+      "dependencies": [
+        "s13.area_pairing",
+        "s13.density"
+      ],
+      "scope_limit": "The second solution is a logarithmic/parameter-derivative block, not a second independent ordinary block of the same weight. Numerical convergence in weights would not establish spectral coalescence bounds."
+    },
+    {
+      "id": "s14.tv_normalization",
+      "labels": [
+        "eq:TVnormalization",
+        "eq:TVunitarykernel",
+        "eq:TVreflectedlabels"
+      ],
+      "statement": "TV normalization uses the displayed double-Gamma/trivalent factors, reflected infinity charge and square roots of both Plancherel factors.",
+      "status": "external_statement_and_derived_normalization",
+      "source_keys": [
+        "TeschnerVartanov"
+      ],
+      "hypotheses": [
+        "External ordering (alpha1,alpha3,alpha2,Q-alpha4); square-root branches inherited by continuation."
+      ],
+      "dependencies": [],
+      "scope_limit": "Principal-contour normalization identities do not alone establish the full continued infinite operator at the screened locus."
+    },
+    {
+      "id": "s14.finite_double_gamma",
+      "labels": [
+        "eq:TVscreeningN",
+        "eq:TVfiniteN",
+        "eq:analytic6jscreening",
+        "eq:analytic6jpairing"
+      ],
+      "statement": "The double-Gamma shift reduces each screened trivalent product to a common b-dependent scalar times ordinary Gamma factors, giving the finite sine matrix and rescaled pairing.",
+      "status": "derived_in_chapter",
+      "source_keys": [
+        "TeschnerVartanov"
+      ],
+      "hypotheses": [
+        "Generic real nonbalanced weights; common scalar K_b removed consistently."
+      ],
+      "dependencies": [
+        "s13.fusion",
+        "s13.area_pairing"
+      ],
+      "scope_limit": "This is an exactly normalized finite period operator. Identifying it with the residue of the infinite TV operator still requires s13.spectral_continuation; it is not a bare Barnes integral value."
+    },
+    {
+      "id": "s14.residue_square_roots",
+      "labels": [
+        "eq:regularizedTVvector",
+        "eq:symmetric6jscreening"
+      ],
+      "statement": "Local pinch regularization fixes analytic square roots and the complex-orthogonal or real-indefinite normalized finite matrix.",
+      "status": "derived_in_chapter",
+      "source_keys": [],
+      "hypotheses": [
+        "alpha_s=s_j+epsilon*xi with xi != 0,-1; generic auxiliary factors; a common infinity reflection factor is canceled."
+      ],
+      "dependencies": [
+        "s13.two_pinches",
+        "s14.tv_normalization"
+      ],
+      "scope_limit": "Analytic square roots and absolute square roots give different pairings. Balanced limits require the logarithmic basis."
+    },
+    {
+      "id": "s14.plancherel",
+      "labels": [
+        "eq:continuedPlancherel",
+        "eq:screenedPlancherel"
+      ],
+      "statement": "Double-sine shifts give the analytically continued sine product, oscillation in small real b and vanishing at balanced weights.",
+      "status": "derived_in_chapter",
+      "source_keys": [
+        "TeschnerVartanov"
+      ],
+      "hypotheses": [],
+      "dependencies": [],
+      "scope_limit": "Division of a finite operator by pointwise Plancherel values does not define a limiting bare symbol."
+    },
+    {
+      "id": "s14.screened_gram",
+      "labels": [
+        "eq:screenedangleGram",
+        "eq:screenedplanarGram",
+        "eq:screenedranktwo",
+        "eq:screenedzerocofactors"
+      ],
+      "statement": "The reflected screening Gram family has a rank-two planar limit, two exactly zero principal cofactors and explicit negative off-diagonal cofactor for fixed interior weights and sufficiently small positive h.",
+      "status": "derived_in_chapter",
+      "source_keys": [
+        "BellettiYang"
+      ],
+      "hypotheses": [
+        "theta_i=pi*mu_i, sum theta_i=2pi, h=2pi*b^2; the specified outward-normal angle Gram convention is retained."
+      ],
+      "dependencies": [],
+      "scope_limit": "The formal angle matrix is not an existence assertion. Lorentzian signature alone does not imply an ordinary convex hyperbolic tetrahedron; this family cannot have a nondegenerate shrinking compact rank-three limit."
+    },
+    {
+      "id": "s14.screened_saddle",
+      "labels": [
+        "eq:screenedclassicalpotential"
+      ],
+      "statement": "At b=0 the reflected screening potential cancels to four dilogarithms and its reduced saddle equation has no nonzero regular solution when both exponent differences are nonzero.",
+      "status": "derived_in_chapter",
+      "source_keys": [
+        "TeschnerVartanov"
+      ],
+      "hypotheses": [
+        "P=exp(2pi i delta0),R=exp(2pi i delta1); consistent branches; canceled dilogarithm branch factors excluded."
+      ],
+      "dependencies": [],
+      "scope_limit": "An apparent double branch root before cancellation is not a regular classical fold. Balanced P=1 or R=1 makes the reduced potential constant on a consistent branch."
+    },
+    {
+      "id": "s14.compact_regular_geometry",
+      "labels": [
+        "eq:actualtetrahedralcharges",
+        "eq:regulartetrahedrongeometry",
+        "eq:regularareadihedral",
+        "eq:regularvolumebyarea"
+      ],
+      "statement": "The genuine regular compact family has edge-dihedral charges, a rank-three Euclidean Gram limit and the displayed area, angle and volume Taylor coefficients.",
+      "status": "derived_in_chapter",
+      "source_keys": [],
+      "hypotheses": [
+        "Six equal actual interior edge dihedrals; ell tends to zero; W(0)=0; dW=-3 ell d eta."
+      ],
+      "dependencies": [
+        "Schlafli formula in the monograph"
+      ],
+      "scope_limit": "Intrinsic cone deficits and edge dihedrals encode different data; these charges are not the reflected screened labels."
+    },
+    {
+      "id": "s14.classical_fold",
+      "labels": [
+        "eq:regularsaddlequadratic",
+        "eq:regularcubicfold",
+        "eq:regularAiryvariable"
+      ],
+      "statement": "Exact polynomial factorization and local derivatives at the regular Euclidean root give a nondegenerate cubic classical fold and zeta=6sqrt(2)t/h^(2/3).",
+      "status": "derived_in_chapter",
+      "source_keys": [
+        "TeschnerVartanov"
+      ],
+      "hypotheses": [
+        "a_E=(1+2sqrt(2)i)/3; u_E=a_E^(-5); h=2pi b^2; local dilogarithm branches fixed away from branch divisors."
+      ],
+      "dependencies": [],
+      "scope_limit": "A local classical normal form and its scale do not prove a uniform quantum integral asymptotic or specify its global contour."
+    },
+    {
+      "id": "s14.volume_exponent",
+      "labels": [
+        "eq:TVvolumehbar"
+      ],
+      "statement": "The doubled TV potential convention has imaginary saddle actions plus/minus twice the geometric volume, hence hbar_vol=pi b^2=h/2.",
+      "status": "derived_from_external_statements",
+      "source_keys": [
+        "TeschnerVartanov",
+        "MurakamiYano"
+      ],
+      "hypotheses": [
+        "The source geometric root and branch choices for compact tetrahedra; the v-independent scalar convention is retained."
+      ],
+      "dependencies": [],
+      "scope_limit": "This normalizes the classical volume action; it does not choose or justify the complete quantum contour contribution."
+    },
+    {
+      "id": "s14.integration_coordinate",
+      "labels": [
+        "eq:regularquantumintegrand",
+        "eq:correctquantumcoordinate",
+        "eq:exactintegrandquotient",
+        "eq:correctfoldarguments"
+      ],
+      "statement": "The equal-label exact TV integrand and shift quotient fix u=exp(2pi i b w), and the correct saddle lift keeps the three argument types inside the fundamental strip at small b.",
+      "status": "derived_in_chapter",
+      "source_keys": [
+        "TeschnerVartanov"
+      ],
+      "hypotheses": [
+        "Original TV equation (2.27) integration variable w; w_*=(4pi-5 eta_E)/(2pi b)."
+      ],
+      "dependencies": [],
+      "scope_limit": "The earlier Q/2-shift would match the wrong variable. Local pole separation does not control global tails or external parameter poles."
+    },
+    {
+      "id": "s14.uniform_quantum_dependency",
+      "labels": [],
+      "statement": "The uniform exact quantum Airy assertion requires additional strip, contour and tail arguments beyond the finite calculations reviewed here.",
+      "status": "inherited_analytic_dependency_not_audited",
+      "source_keys": [],
+      "hypotheses": [],
+      "dependencies": [
+        "book/claims/section15.json",
+        "s15.strip_estimate",
+        "s15.phase",
+        "s15.contour",
+        "s15.uniform_transition"
+      ],
+      "scope_limit": "Section15 was read only for dependencies. Its global analytic proof and historical exact-integral numerical values are not approved or disproved by this author pass."
+    }
+  ]
+}

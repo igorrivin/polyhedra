@@ -1,0 +1,610 @@
+\section{The normalized quantum-group comparison and the compact limit}
+\label{sec:normalizedsixj}
+
+The further comparison has two distinct outcomes. The finite
+screening operator can be matched explicitly to a specified
+$b$-$6j$ normalization: its double-Gamma factors reduce to
+ordinary Gamma factors and its analytic quantum-group matrix
+is a sine matrix. Here the operator is fixed by the independent
+period calculation in Section~\ref{sec:screenedfusion}; its
+interpretation through a continued infinite spectral representation
+retains the analytic input specified there. Its auxiliary angle Gram matrix
+approaches rank two, whereas a nondegenerate shrinking compact
+tetrahedron approaches rank three. A direct calculation for
+the regular compact family gives a cubic classical saddle
+and fixes the proposed joint scale. The exact integration coordinate
+requires care: a previously stated pole accumulation at the saddle
+came from an incorrect shift. The corrected dictionary below and
+the local pole-free strip identify the candidate quantum fold.
+A uniform quantum Airy formula additionally requires the
+exact-integral contour and tail analysis discussed in
+Section~\ref{sec:quantumAiry}, after removal of an explicit
+external scalar pole factor.
+
+\subsection{Fixing the Teschner--Vartanov normalization}
+
+Write $R^{\mathrm{an}}$ for the analytic $b$-$6j$ symbol and
+$R$ for the symmetric symbol in~\cite{TeschnerVartanov}.
+Their equations (4.5)--(4.6) give the standard Virasoro fusion
+kernel as $F_{st}=(N_s/N_t)m(t)R^{\mathrm{an}}_{st}$, where
+\begin{equation}
+ N(z,y,x)=
+ \frac{\Gamma_b(2Q-2z)\Gamma_b(2y)\Gamma_b(2x)}
+ {\Gamma_b(2Q-x-y-z)\Gamma_b(Q-x-y+z)
+  \Gamma_b(x+z-y)\Gamma_b(y+z-x)}.
+ \label{eq:TVnormalization}
+\end{equation}
+Here $N_s$ and $N_t$ are products of the two trivalent
+normalizations in each channel. On the principal contour,
+$m(a)=|S_b(2a)|^2$ is the Plancherel density. The trivalent
+factor distinguishing the symmetric symbol is
+\[
+ D(z,y,x)=
+ \bigl[S_b(2Q-x-y-z)S_b(Q-x-y+z)
+ S_b(x+z-y)S_b(y+z-x)\bigr]^{-1/2}.
+\]
+If $D_s,D_t$ are its channel products, then
+$R=(D_s/D_t)R^{\mathrm{an}}$. Equivalently, equations
+(4.10)--(4.11) of that paper read
+\begin{equation}
+ G_{st}=\sqrt{\frac{C_s}{C_t}}\,F_{st}
+       =\sqrt{m(s)m(t)}\,R_{st},
+ \label{eq:TVunitarykernel}
+\end{equation}
+where $C_s,C_t$ are the corresponding products of DOZZ
+three-point functions. These identities specify the scalar
+factors that were left open in Section~\ref{sec:screenedfusion}.
+
+For our ordering of fields, use TV's external labels
+\begin{equation}
+ (p,q,r,d_{\mathrm{out}})
+   =(\alpha_1,\alpha_3,\alpha_2,Q-\alpha_4).
+ \label{eq:TVreflectedlabels}
+\end{equation}
+Reflecting the infinity charge preserves its Virasoro weight.
+At the one-screening resonance,
+\[
+ d_{\mathrm{out}}=p+q+r+b,\qquad
+ s_j=p+q+jb,\qquad t_k=q+r+kb,\qquad j,k\in\{0,1\}.
+\]
+Consequently each channel contains one zero-screening and one
+one-screening trivalent vertex. Explicitly,
+\[
+ N_{s,j}=N(s_j,q,p)N(d_{\mathrm{out}},r,s_j),\qquad
+ N_{t,k}=N(t_k,r,q)N(d_{\mathrm{out}},t_k,p).
+\]
+The reflection convention matters for the analytic symbol,
+and is retained throughout the following formulas. Initially
+the weights and auxiliary factors are generic, with
+$\delta_0\delta_1\ne0$; balanced limits are taken afterward.
+
+\subsection{The double-Gamma factors and the finite sine matrix}
+
+The shift identity
+\[
+ \frac{\Gamma_b(x+b)}{\Gamma_b(x)}
+       =\frac{\sqrt{2\pi}\,b^{bx-1/2}}{\Gamma(bx)}
+\]
+immediately gives
+\begin{align}
+ N(x+y,y,x)&=\Gamma_b(Q)^{-1},\notag\\
+ N(x+y+b,y,x)&=
+ \frac{\Gamma(1+b^2)\Gamma(2bx)\Gamma(2by)
+                 \Gamma(2-2b(x+y))}
+      {(2\pi)^2b^{1+b^2}\Gamma_b(Q)}.
+ \label{eq:TVscreeningN}
+\end{align}
+Thus
+\[
+ N_{s,j}=\mathcal K_b n_{s,j},\qquad
+ N_{t,k}=\mathcal K_b n_{t,k},\qquad
+ \mathcal K_b=
+ \frac{\Gamma(1+b^2)}
+      {(2\pi)^2b^{1+b^2}\Gamma_b(Q)^2},
+\]
+with
+\begin{align}
+ n_{s,0}&=\Gamma(1-\delta_0)\Gamma(\mu_2)\Gamma(\mu_4),
+ &n_{s,1}&=\Gamma(1+\delta_0)\Gamma(\mu_1)\Gamma(\mu_3),
+ \notag\\
+ n_{t,0}&=\Gamma(1-\delta_1)\Gamma(\mu_1)\Gamma(\mu_4),
+ &n_{t,1}&=\Gamma(1+\delta_1)\Gamma(\mu_2)\Gamma(\mu_3).
+ \label{eq:TVfiniteN}
+\end{align}
+All $b$-dependence in these normalization products is in the
+same scalar $\mathcal K_b$.
+
+Rescale the screened channel vectors by
+$e_{s,j}=\mathcal F_{s,j}/N_{s,j}$ and
+$e_{t,k}=\mathcal F_{t,k}/N_{t,k}$. Their matrix is
+$\mathsf B_{jk}=(n_{t,k}/n_{s,j})\mathsf M_{jk}$, where
+$\mathsf M$ is~\eqref{eq:screeningfusionmatrix}. Gamma reflection
+gives the explicit answer
+\begin{equation}
+ \boxed{\quad
+ \mathsf B=
+ \frac1{\sin(\pi\delta_1)}
+ \begin{pmatrix}
+ \sin(\pi\mu_2)&-\sin(\pi\mu_4)\\
+ \sin(\pi\mu_3)&-\sin(\pi\mu_1)
+ \end{pmatrix}.
+ \quad}
+ \label{eq:analytic6jscreening}
+\end{equation}
+For example its upper-left entry is
+\[
+ \frac{n_{t,0}}{n_{s,0}}\mathsf M_{00}
+ =\frac{\Gamma(1-\delta_1)\Gamma(\delta_1)}
+        {\Gamma(\mu_2)\Gamma(1-\mu_2)}
+ =\frac{\sin(\pi\mu_2)}{\sin(\pi\delta_1)}.
+\]
+This is the induced finite action of $m(t)R^{\mathrm{an}}$
+in the specified convention, understood through the exact
+normalization identity on the screened period space. Identifying
+it with the residue of the full infinite spectral operator
+retains the continuation input of Section~\ref{sec:screenedfusion};
+no pointwise substitution into a singular Barnes integral is
+being made. Its determinant is
+$-\sin(\pi\delta_0)/\sin(\pi\delta_1)$.
+
+For reference, put
+$\sigma_i=\sin(\pi\mu_i)$ and
+$d_\nu=\sin(\pi\delta_\nu)$. After removing the common
+$E_b/\mathcal K_b$ from these vectors, their Hermitian matrices
+are
+\begin{equation}
+ H_s^{\mathrm{an}}=
+ \frac{\pi^4}{d_0}
+ \diag\left(\frac1{\sigma_2\sigma_4},
+            -\frac1{\sigma_1\sigma_3}\right),\qquad
+ H_t^{\mathrm{an}}=
+ \frac{\pi^4}{d_1}
+ \diag\left(\frac1{\sigma_1\sigma_4},
+            -\frac1{\sigma_2\sigma_3}\right).
+ \label{eq:analytic6jpairing}
+\end{equation}
+They follow from $H_s^{\mathrm{an}}=\diag(h_jn_{s,j}^2)$,
+and satisfy $\mathsf B^*H_s^{\mathrm{an}}\mathsf B
+=H_t^{\mathrm{an}}$.
+
+\subsection{Symmetric normalization and the residue prescription}
+
+The square roots in~\eqref{eq:TVunitarykernel} also have a
+concrete interpretation at a pinch. Write
+$\alpha_s=s_j+\varepsilon\xi$, with fixed
+$\xi\ne0,-1$. The product of three-point factors has the form
+\[
+ C_s\sim\frac{\Lambda_*h_{s,j}}
+                {\varepsilon^2\xi(\xi+1)}.
+\]
+The common $\Lambda_*$ includes the infinity reflection factor
+and cancels in channel ratios. With square-root branches fixed
+by continuation, the DOZZ-normalized vector
+$\mathcal G_s=\sqrt{C_s}\mathcal F_s$ obeys
+\begin{equation}
+ \lim_{\varepsilon\to0}
+ \varepsilon\sqrt{\frac{\xi(\xi+1)}{\Lambda_*}}\,
+ \mathcal G_s(s_j+\varepsilon\xi;\varepsilon)
+       =\sqrt{h_{s,j}}\mathcal F_{s,j}.
+ \label{eq:regularizedTVvector}
+\end{equation}
+Hence its finite analytic matrix is
+\[
+ \mathsf O=\diag(\sqrt{h_s})\mathsf M
+                 \diag(\sqrt{h_t})^{-1},
+ \qquad \mathsf O^T\mathsf O=I.
+\]
+This is complex orthogonality: negative Hermitian coefficients
+give factors of $i$ in analytic square roots.
+
+Using absolute square roots instead gives a real matrix with
+an indefinite pairing:
+\begin{equation}
+ \boxed{\quad
+ \mathsf U=
+ \frac{\operatorname{sgn}(d_1)}{\sqrt{|d_0d_1|}}
+ \begin{pmatrix}
+ \sqrt{\sigma_1\sigma_2}&-\sqrt{\sigma_3\sigma_4}\\
+ \sqrt{\sigma_3\sigma_4}&-\sqrt{\sigma_1\sigma_2}
+ \end{pmatrix}.
+ \quad}
+ \label{eq:symmetric6jscreening}
+\end{equation}
+Indeed,
+\[
+ \sigma_1\sigma_2-\sigma_3\sigma_4=d_0d_1,\qquad
+ \mathsf U^T J_s\mathsf U=J_t.
+\]
+\[
+ J_s=\operatorname{sgn}(d_0)\diag(1,-1),\quad
+ J_t=\operatorname{sgn}(d_1)\diag(1,-1).
+\]
+Equations~\eqref{eq:analytic6jscreening} and
+\eqref{eq:symmetric6jscreening} are fully normalized finite
+operator comparisons. The logarithmic basis of
+Section~\ref{sec:screenedfusion} supplies the balanced limits;
+one cannot set $d_0=d_1=0$ in the displayed matrices.
+
+There is a separate reason to retain the operator prescription.
+The analytic continuation of the Plancherel factor is
+\begin{align}
+ m(a)&=S_b(2a)S_b(2Q-2a)\notag\\
+ &=-4\sin\bigl(\pi b(2a-Q)\bigr)
+        \sin\bigl(\pi(2a-Q)/b\bigr).
+ \label{eq:continuedPlancherel}
+\end{align}
+The two $S_b$ shift equations prove the second equality.
+At the screened labels this becomes
+\begin{equation}
+ m(s_j)=
+ 4\sin\bigl(\pi[\delta_0-(2j-1)b^2]\bigr)
+       \sin(\pi\delta_0/b^2),
+ \label{eq:screenedPlancherel}
+\end{equation}
+with the analogous formula for $t_k,\delta_1$. These factors
+oscillate for small real $b$ and vanish at balanced weights.
+The trivalent symmetric normalizations also encounter
+$S_b(Q+jb)=0$. Thus dividing a finite matrix by pointwise
+Plancherel values does not define a bare-symbol limit.
+
+\subsection{The actual screened Gram matrix has rank two at the limit}
+
+The tetrahedral dictionary of~\cite[Section~3]{TeschnerVartanov}
+is
+\[
+ A_e=\exp(\pi i-2\pi ib\alpha_e)=e^{i\eta_e}.
+\]
+The vertex triples are $(1,2,s),(3,4,s),(1,4,t),(2,3,t)$;
+compare the original convention in~\cite{MurakamiYano}.
+Here $A_e$ is an exponentiated angle, distinct from surface area.
+Put
+\[
+ \vartheta_i=\pi\mu_i,\qquad h=2\pi b^2,\qquad
+ \sum_i\vartheta_i=2\pi.
+\]
+With the reflected labels~\eqref{eq:TVreflectedlabels}, a
+face ordering gives the formal angle Gram matrix
+\begin{equation}
+ \mathbf G_{jk}(h)=
+ \begin{pmatrix}
+ 1&\cos(\vartheta_2+\vartheta_3+kh)&\cos\vartheta_2&
+                                      \cos(\vartheta_4-h)\\
+ \cos(\vartheta_2+\vartheta_3+kh)&1&\cos\vartheta_3&\cos\vartheta_1\\
+ \cos\vartheta_2&\cos\vartheta_3&1&
+                                      \cos(\vartheta_1+\vartheta_3+jh)\\
+ \cos(\vartheta_4-h)&\cos\vartheta_1&
+                    \cos(\vartheta_1+\vartheta_3+jh)&1
+ \end{pmatrix}.
+ \label{eq:screenedangleGram}
+\end{equation}
+Calling this a formal Gram matrix does not assert that the
+angle data are realized by a convex tetrahedron.
+
+At $h=0$ it is the Euclidean planar Gram matrix
+\begin{equation}
+ (\mathbf G_0)_{ab}=\cos(\phi_a-\phi_b),\qquad
+ (\phi_1,\phi_2,\phi_3,\phi_4)=
+ (0,\vartheta_2+\vartheta_3,\vartheta_2,
+                       \vartheta_1+\vartheta_2+\vartheta_3).
+ \label{eq:screenedplanarGram}
+\end{equation}
+Since $0<\vartheta_2<\pi$, these unit vectors span a plane.
+Therefore
+\begin{equation}
+ \boxed{\qquad \operatorname{rank}\mathbf G_0=2.\qquad}
+ \label{eq:screenedranktwo}
+\end{equation}
+For equal half-weights it is
+\[
+ \mathbf G_0=
+ \begin{pmatrix}1&-1&0&0\\-1&1&0&0\\
+                 0&0&1&-1\\0&0&-1&1\end{pmatrix}.
+\]
+By contrast, the outward normals of a nondegenerate Euclidean
+tetrahedron span three dimensions. This difference holds for
+every four-weight choice on the screening locus, and remains
+under varying such weights because rank at most two is closed.
+
+There is already a finite-$b$ obstruction. If $\mathcal C_{ab}$
+denotes the cofactor matrix, then
+\begin{equation}
+ \mathcal C_{1+j,1+j}=0,\qquad
+ \mathcal C_{4-k,4-k}=0.
+ \label{eq:screenedzerocofactors}
+\end{equation}
+Each identity is the determinant of three planar unit vectors.
+At a finite vertex of a compact hyperbolic tetrahedron, the
+three incident face normals lie in the positive-definite
+orthogonal complement of a timelike vertex vector and are
+independent. Their Gram determinant is positive. Thus
+\eqref{eq:screenedzerocofactors} excludes compact tetrahedra
+already before taking the limit.
+
+For completeness, the determinant and orientation checks are
+also explicit. Each $\mathbf G_{jk}$ is a planar rank-two
+Gram matrix perturbed in a single symmetric off-diagonal entry.
+The entry, its increment $\epsilon$, and a positive factor $q$
+are
+\[
+\begin{array}{c|c|c|c}
+(j,k)&\text{entry}&\epsilon&q\\ \hline
+(0,0)&14&\cos(\vartheta_4-h)-\cos\vartheta_4&
+                                      \sin^2\vartheta_3\\
+(0,1)&13&\cos\vartheta_2-\cos(\vartheta_2+h)&
+                                      \sin^2\vartheta_1\\
+(1,0)&24&\cos\vartheta_1-\cos(\vartheta_1+h)&
+                                      \sin^2\vartheta_2\\
+(1,1)&23&\cos\vartheta_3-\cos(\vartheta_3+h)&
+                                      \sin^2(\vartheta_4-h)
+\end{array}
+\]
+In every row, $\det\mathbf G=-q\epsilon^2$ and the cofactor
+at that off-diagonal entry is $-q\epsilon$. For fixed interior
+weights and small positive $h$, $\epsilon>0$. Hence the matrices
+have Lorentz signature but fail the positive off-diagonal
+cofactor condition for an ordinary convex hyperbolic
+tetrahedron; see~\cite[Theorem~2.1]{BellettiYang}.
+The zero principal cofactors therefore do not justify calling
+these configurations tetrahedra with two ideal vertices.
+
+\subsection{The screened classical saddle also degenerates}
+
+The dilogarithmic potential gives an independent check. At
+$b=0$, write $X=A_1,Y=A_2,Z=A_3$. The reflected screening
+labels satisfy
+\[
+ A_4=XYZ,\qquad A_s=-XY,\qquad A_t=-YZ.
+\]
+Set
+$P=X^2Y^2=e^{2\pi i\delta_0}$ and
+$R=Y^2Z^2=e^{2\pi i\delta_1}$.
+Substitution into~\cite[eq.~(3.1)]{TeschnerVartanov} cancels
+two pairs of dilogarithms and leaves
+\begin{equation}
+ U(u)=\operatorname{Li}_2(u)+\operatorname{Li}_2(PRu)
+       -\operatorname{Li}_2(Pu)-\operatorname{Li}_2(Ru).
+ \label{eq:screenedclassicalpotential}
+\end{equation}
+The exponentiated saddle equation $uU_u=-2\pi i$ becomes
+\[
+ (1-Pu)(1-Ru)=(1-u)(1-PRu),
+ \qquad (1-P)(1-R)u=0.
+\]
+For nonbalanced weights there is no nonzero regular saddle.
+Before cancellation, the equation contains the factor
+$(1-(XYZ)^2u)^2$; its double root is at the very branch
+factors that cancel in~\eqref{eq:screenedclassicalpotential}.
+This is not a regular double critical point of the reduced
+phase. If $P=1$ or $R=1$, the reduced potential itself vanishes
+on a consistent local branch. Thus the finite screening
+operator survives in a singular pole/branch collision regime,
+rather than in the ordinary compact Euclidean saddle regime.
+
+\subsection{A genuine compact family: the regular tetrahedron}
+
+For comparison, prescribe the actual six interior dihedral
+angles $\eta_e$ of a small compact tetrahedron and set
+\begin{equation}
+ \alpha_e=\frac{\pi-\eta_e}{2\pi b}.
+ \label{eq:actualtetrahedralcharges}
+\end{equation}
+These quantum labels encode edge dihedrals. The $\mu_i$ of the
+flat boundary metric encode intrinsic vertex deficits, so the
+two kinds of data must be related geometrically before they
+can be identified.
+
+For a regular tetrahedron of edge length $\ell$, let $\beta$
+be a face angle and $\eta$ an interior dihedral. Hyperbolic
+trigonometry gives
+\begin{equation}
+ \cos\beta=\frac{\cosh\ell}{1+\cosh\ell},\qquad
+ \cos\eta=\frac{\cosh\ell}{1+2\cosh\ell},\qquad
+ A=4\pi-12\beta.
+ \label{eq:regulartetrahedrongeometry}
+\end{equation}
+At the Euclidean limit
+$\eta_{\mathrm E}=\arccos(1/3)$. Its angle Gram has
+\[
+ \det G=(1+\cos\eta)^3(1-3\cos\eta),
+\]
+and rank three at $\eta_{\mathrm E}$.
+All six limiting heavy edge weights are
+\[
+ 2b\alpha_e=1-\eta_{\mathrm E}/\pi\simeq0.608173.
+\]
+In the reflected screening convention,
+$2bd_{\mathrm{out}}\to2-\mu_4>1$, whereas this geometric
+prescription gives the same number below one for all six
+labels. Moreover the screened internal charges are sums of
+pairs of external charges. The rank obstruction is independent
+of reflected representatives; these explicit prescriptions
+already differ at leading order $1/b$, beyond an order-$b$
+normalization shift.
+
+Expansion of~\eqref{eq:regulartetrahedrongeometry} gives
+\begin{align}
+ A&=\sqrt3\,\ell^2-\frac{\sqrt3}{8}\ell^4+O(\ell^6),
+ \notag\\
+ t:=\eta_{\mathrm E}-\eta
+   &=\frac{\ell^2}{12\sqrt2}
+       -\frac{23\ell^4}{1152\sqrt2}+O(\ell^6)
+     =\frac{A}{12\sqrt6}+O(A^2).
+ \label{eq:regularareadihedral}
+\end{align}
+Using $\dd W=-3\ell\,\dd\eta$ and $W(0)=0$,
+\begin{equation}
+ \boxed{\quad
+ W(A)=\frac{A^{3/2}}{6\sqrt2\,3^{3/4}}
+       \left(1-\frac{A}{10\sqrt3}+O(A^2)\right).
+ \quad}
+ \label{eq:regularvolumebyarea}
+\end{equation}
+In edge length this is
+$W=\ell^3/(6\sqrt2)-23\ell^5/(480\sqrt2)+O(\ell^7)$.
+
+\subsection{The regular classical fold and its scale}
+
+Put all six exponentiated angles equal to $a=e^{i\eta}$.
+The TV potential becomes
+\[
+ U(u,\eta)=\operatorname{Li}_2(u)
+          +3\operatorname{Li}_2(a^4u)
+          -4\operatorname{Li}_2(-a^3u).
+\]
+Exponentiating the saddle equation gives
+$(1+a^3u)^4=(1-u)(1-a^4u)^3$. After removing
+$u(a+1)^2$, the quadratic is
+\begin{equation}
+ P_\eta(u)=a^8(a^2-2a+3)u^2
+              -3a^4(a-1)^2u+(3a^2-2a+1).
+ \label{eq:regularsaddlequadratic}
+\end{equation}
+Its discriminant is
+\[
+ -a^8(a+1)^2(3a^2-2a+3),\qquad
+ 3a^2-2a+3=2a(3\cos\eta-1).
+\]
+Thus the saddles merge simply at the Euclidean angle.
+The double root and its real logarithmic lift are
+\[
+ a_{\mathrm E}=\frac{1+2\sqrt2\,i}{3},\qquad
+ u_{\mathrm E}=a_{\mathrm E}^{-5}
+   =\frac{241+22\sqrt2\,i}{243},\qquad
+ v_{\mathrm E}=2\pi-5\eta_{\mathrm E}.
+\]
+None of the dilogarithm arguments is $1$ at this point.
+
+For $u=e^{iv}$ the action, including a term independent of
+$v$, is $S(v,\eta)=U(e^{iv},\eta)-2\pi v+\text{const.}$
+Choose the local branches satisfying the saddle equation.
+Direct differentiation at the fold yields
+\[
+ S_v=S_{vv}=0,\qquad
+ S_{vvv}=54i,\qquad S_{v\eta}=18\sqrt2\,i.
+\]
+For example,
+\[
+ S_{v\eta}=-12\left(\frac{a^3u}{1+a^3u}
+                         +\frac{a^4u}{1-a^4u}\right).
+\]
+Writing $x=v-v_{\mathrm E}$ gives the concrete normal form
+\begin{equation}
+ \boxed{\quad
+ S(v_{\mathrm E}+x,\eta_{\mathrm E}-t)
+       -S(v_{\mathrm E},\eta_{\mathrm E}-t)
+ =i(9x^3-18\sqrt2\,t x)
+       +O(x^4+t x^2+t^2|x|).
+ \quad}
+ \label{eq:regularcubicfold}
+\end{equation}
+
+Use the saddle exponential preceding
+\cite[eq.~(3.11)]{TeschnerVartanov}, namely $e^{S/(ih)}$
+with $h=2\pi b^2$. Rescaling $x=(h/27)^{1/3}y$ gives
+$y^3/3-\zeta y$ as the leading exponent, where
+\begin{equation}
+ \boxed{\quad
+ \zeta=\frac{6\sqrt2\,t}{h^{2/3}}
+       =\frac{A}{2\sqrt3\,h^{2/3}}
+          +O\left(\frac{A^2}{h^{2/3}}\right).
+ \quad}
+ \label{eq:regularAiryvariable}
+\end{equation}
+This proves the cubic normal form of the \emph{classical}
+phase and derives the scale $A\asymp b^{4/3}$ with its
+normalization. A smooth-amplitude integral on a specified
+Airy contour has the corresponding uniform asymptotic; see
+\cite[Section~36.12]{DLMF}. Section~\ref{sec:quantumAiry}
+studies the corresponding assertion for the exact regular-family
+integral with an explicit scalar regularization. The local
+classical calculation here does not establish the required
+uniform contour and tail estimates for that quantum integral.
+
+With TV's choice $\Delta-5\pi^2/3$ for the term independent of
+$v$, the volume formula of~\cite{MurakamiYano}, in TV's doubled
+potential convention, gives
+$\operatorname{Im}S_\pm=\pm2W$. Thus the two saddle
+exponentials contain $e^{\pm2W/h}$. If the volume exponent
+is written as $W/\hbar_{\mathrm{vol}}$, its parameter is
+\begin{equation}
+ \hbar_{\mathrm{vol}}=\pi b^2=h/2.
+ \label{eq:TVvolumehbar}
+\end{equation}
+The leading cubic saddle values agree:
+$(2/3)\zeta^{3/2}\sim2W/h$.
+
+\subsection{Correction of the integration-coordinate dictionary}
+
+An earlier version of this monograph placed a dense pole lattice at the
+classical fold. That conclusion was incorrect: the logarithmic coordinate
+of the dilogarithm potential was matched to the wrong shifted integration
+variable. The exact integral fixes the dictionary without an asymptotic
+choice of branch.
+
+With all six charges $\alpha=(\pi-\eta)/(2\pi b)$, write the
+original integration variable in~\cite[eq.~(2.27)]{TeschnerVartanov}
+as $w$. Its integrand is
+\begin{equation}
+ I_b(w,\eta)=S_b(w-3\alpha)^4
+             S_b(4\alpha-w)^3S_b(2Q-w).
+ \label{eq:regularquantumintegrand}
+\end{equation}
+Set $a=e^{i\eta}$. Directly,
+\[
+ e^{2\pi ib(w-3\alpha)}=-a^3e^{2\pi ibw}.
+\]
+Thus the variable $u$ in the classical potential is
+\begin{equation}
+ u=e^{2\pi ibw},\qquad v=2\pi bw.
+ \label{eq:correctquantumcoordinate}
+\end{equation}
+The $Q/2$-shift used previously is incompatible with this
+identification. A second check is the exact shift quotient
+\begin{align}
+ \frac{I_b(w+b,\eta)}{I_b(w,\eta)}
+ &=
+ \frac{[2\sin\pi b(w-3\alpha)]^4}
+ {[2\sin\pi b(4\alpha-w-b)]^3
+  [2\sin\pi b(2Q-w-b)]}\notag\\
+ &\longrightarrow
+ \frac{(1+a^3u)^4}{(1-a^4u)^3(1-u)}.
+ \label{eq:exactintegrandquotient}
+\end{align}
+The limit reproduces the saddle polynomial
+\eqref{eq:regularsaddlequadratic}.
+
+The lift of the double root lying in the separating contour strip is
+\[
+ v_*=4\pi-5\eta_{\mathrm E},\qquad
+ w_*=\frac{v_*}{2\pi b}.
+\]
+It differs by $2\pi$ from the logarithmic lift used in the classical
+calculation; all its local derivatives remain the same. At this lift,
+\begin{equation}
+ \begin{aligned}
+ w_*-3\alpha_{\mathrm E}
+       &=\frac{\pi-2\eta_{\mathrm E}}{2\pi b},\\
+ 4\alpha_{\mathrm E}-w_*&=\frac{\eta_{\mathrm E}}{2\pi b},\\
+ 2Q-w_*&=\frac{5\eta_{\mathrm E}}{2\pi b}+2b.
+ \end{aligned}
+ \label{eq:correctfoldarguments}
+\end{equation}
+All three arguments lie in $0<\operatorname{Re}z<Q$ for
+sufficiently small $b$, a fixed scaled distance from its boundary.
+There is therefore no integration-pole accumulation at the fold.
+The external trivalent factors do have parameter poles; their
+regularization and the further analytic requirements for a uniform
+transition are treated in the next section. Pole separation in
+this local strip alone does not control the complete integration
+contour or its tails.
+
+\paragraph{Computational companion.}
+The reproducible checks are described in
+\path{experiments/quantum_surgery/README.md}, with results in
+\path{artifacts/quantum_surgery/result.json}. Exact finite algebra
+checks support the stated character and Gram identities;
+multiprecision comparisons independently evaluate the finite
+period formulas and Euler arcs. These checks supply neither
+the infinite-spectral estimate~\eqref{eq:screeningtailinput}
+nor a global quantum Airy certificate.
+

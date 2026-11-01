@@ -1,0 +1,464 @@
+\section{An exact quantum comparison and the boundary measure}
+\label{sec:quantummeasure}
+
+The preceding question has a concrete partial answer. A special
+\emph{unit-volume Liouville correlation} gives the Deligne--Mostow
+K\"ahler potential exactly, at finite quantum parameter. Independently,
+the boundary Reidemeister-torsion measure reduces to the Goldman measure,
+whose rescaled flat limit is the Deligne--Mostow measure. Neither
+statement identifies an arbitrary tetrahedral quantum amplitude with
+the model integral~\eqref{eq:modelpartition}. The distinction between a
+correlation, a K\"ahler potential, and a volume density is essential.
+
+\subsection{A first-moment identity at the flat weights}
+
+Fix the weights~\eqref{eq:flatweights}, all marked points finite in the
+chosen coordinate, and a Liouville parameter $0<b<1$. Set
+\begin{equation}
+ \gamma=2b,\qquad Q=b+b^{-1},\qquad
+ \beta_i=\frac{\mu_i}{b},\qquad
+ s=\frac{\sum_i\beta_i-2Q}{\gamma}=-1.
+ \label{eq:Liouvilleflatparameters}
+\end{equation}
+Here $\beta_i$ are the charge conventions of
+Kupiainen--Rhodes--Vargas; in the physics convention
+$V_{\alpha_i}=e^{2\alpha_i\phi}$, one has $\beta_i=2\alpha_i$.
+Write $\Lambda_L>0$ for the cosmological constant, to distinguish it
+from both the deficit weights and the geometric area.
+
+The exact correlation formula of~\cite[eqs.~(2.11)--(2.15)]{KRV}
+is
+\begin{align}
+ C_b(\boldsymbol\beta;\boldsymbol p)
+   &=\frac1b\Lambda_L^{-s}\Gamma(s)
+      P_b(\boldsymbol p)\,\mathbb E[Z_{\boldsymbol\beta}^{-s}],
+       \label{eq:LiouvilleGMC}\\
+ P_b(\boldsymbol p)
+   &=\prod_{i<j}|p_i-p_j|^{-\beta_i\beta_j},\notag\\
+ Z_{\boldsymbol\beta}
+   &=\int_{\CC}\prod_i
+       \left(\frac{|w|_+}{|w-p_i|}\right)^{\gamma\beta_i}
+       M_\gamma(\dd^2w),\qquad |w|_+=\max(1,|w|),\notag
+\end{align}
+where $M_\gamma$ is the normalized Gaussian multiplicative-chaos
+measure in their reference metric. The only probabilistic property
+needed for the following calculation is its first moment,
+\begin{equation}
+ \mathbb E[M_\gamma(\dd^2w)]=|w|_+^{-4}\dd^2w.
+ \label{eq:GMCfirstmoment}
+\end{equation}
+The standard unit-volume normalization removes the zero-mode
+Gamma factor:
+\begin{equation}
+ C_b^{\mathrm{uv}}
+       :=\frac{\Lambda_L^s}{\Gamma(s)}C_b
+        =\frac1b P_b\,\mathbb E[Z_{\boldsymbol\beta}^{-s}].
+ \label{eq:unitvolumeLiouville}
+\end{equation}
+The right side defines the continuation at $s=-1$.
+
+\begin{proposition}[An exact Liouville--area identity]
+For every $0<b<1$ and the fixed weights~\eqref{eq:flatweights},
+\begin{equation}
+ \boxed{\quad
+ C_b^{\mathrm{uv}}(\boldsymbol p)
+   =\frac1b\prod_{i<j}|p_i-p_j|^{-\mu_i\mu_j/b^2}
+       \mathcal A_\mu(\boldsymbol p),\qquad
+ \mathcal A_\mu=\int_{\CC}\prod_i|w-p_i|^{-2\mu_i}\dd^2w.
+ \quad}
+ \label{eq:exactLiouvilleDM}
+\end{equation}
+Consequently, on the configuration space away from collisions,
+\begin{equation}
+ \boxed{\quad
+ -2i\,\partial\bar\partial\log C_b^{\mathrm{uv}}
+       =\omega_{\mathrm{CH},\mu},\qquad
+ \dd V_{\mathrm{CH},\mu}
+       =\frac1{d!}\left(-2i\,\partial\bar\partial
+                            \log C_b^{\mathrm{uv}}\right)^d,
+ \quad d=n-3.}
+ \label{eq:exactLiouvillecurvature}
+\end{equation}
+The form descends to $\M_{0,n}$ with its fixed weights and the
+holomorphic-sectional-curvature-$-1$ convention.
+\end{proposition}
+
+\begin{proof}
+At~\eqref{eq:Liouvilleflatparameters}, the exponent $-s$ is $1$.
+Moreover, $\gamma\beta_i=2\mu_i$ and
+$\gamma\sum_i\beta_i=4$. Applying~\eqref{eq:GMCfirstmoment}
+therefore cancels the reference-metric factors exactly:
+\[
+ \mathbb E[Z_{\boldsymbol\beta}]
+ =\int_{\CC}
+    \prod_i\left(\frac{|w|_+}{|w-p_i|}\right)^{2\mu_i}
+    |w|_+^{-4}\dd^2w
+ =\mathcal A_\mu(\boldsymbol p).
+\]
+This integral is finite because each $\mu_i<1$ and, when all
+marks are finite, the integrand is $O(|w|^{-4})$ at infinity.
+It is exactly the area in~\eqref{eq:DMarea}.
+Each $\log|p_i-p_j|$ is pluriharmonic off the diagonals.
+Taking $-2i\partial\bar\partial\log$ consequently removes
+$P_b/b$, leaving~\eqref{eq:CHpotential}. A change of the
+M\"obius normalization changes the potential by a pluriharmonic
+function, so its curvature descends.
+\end{proof}
+
+This is a deduction from the established correlation formula and
+the area interpretation of the period pairing; it does not use
+the main DOZZ structure-constant theorem. It is also an exact
+finite-$b$ identity, rather than an interchange of a semiclassical
+limit with two moduli derivatives. The raw expression
+$C_b^{\mathrm{uv}}\dd^{2d}p$ is \emph{not} the moduli-space
+volume density: the density is the top exterior power of its
+logarithmic curvature.
+
+\subsection{Analytic continuation and the equivalent residue}
+
+The original unconstrained zero-mode integral is not convergent
+at $s=-1$. The unit-volume function, however, is positive and
+finite there. Indeed, the extended Seiberg bounds of
+\cite[eq.~(2.14)]{KRV} require
+\[
+ -s<\min\left\{\frac4{\gamma^2},
+       \min_i\frac2\gamma(Q-\beta_i)\right\},\qquad \beta_i<Q.
+\]
+At our parameters these inequalities reduce to
+\begin{equation}
+ 1<b^{-2},\qquad
+ 1<1+\frac{1-\mu_i}{b^2},\qquad \beta_i<Q,
+ \label{eq:flatSeibergbounds}
+\end{equation}
+and are strict. In particular, the positive moment has some
+integrability beyond order one. Theorem~6.1 of~\cite{KRV}
+gives holomorphic continuation in the charges of the unit-volume
+$n$-point correlation to a complex neighborhood of this real
+domain. Thus the pole in~\eqref{eq:LiouvilleGMC} is an actual
+meromorphic pole, not just a formal screening calculation.
+
+Since $\operatorname{Res}_{s=-1}\Gamma(s)=-1$,
+\begin{equation}
+ \operatorname*{Res}_{s=-1}C_b
+      =-\frac{\Lambda_L}{b}P_b\mathcal A_\mu.
+ \label{eq:onescreeningresidue}
+\end{equation}
+This residue means the coefficient of $(s+1)^{-1}$ with the
+other charge coordinates fixed. With the transverse physics
+coordinate $t=\sum_i\alpha_i-Q+b=b(s+1)$, it becomes
+$\operatorname{Res}_{t=0}C_b=-\Lambda_LP_b\mathcal A_\mu$.
+Consequently the logarithmic curvature of the absolute residue
+also equals~\eqref{eq:exactLiouvillecurvature}.
+
+In Coulomb-gas terminology this is the one-screening resonance
+$\sum_i\alpha_i=Q-b$; see also
+\cite[Section~3.4]{TeschnerRevisited}. Its chiral contour integrals are
+\begin{equation}
+ \int_\gamma\prod_i(w-p_i)^{-\mu_i}\dd w,
+ \label{eq:screeningDMperiods}
+\end{equation}
+precisely the Deligne--Mostow periods~\eqref{eq:DMperiods}.
+Their Hermitian pairing is the area. Section~\ref{sec:screenedfusion}
+gives an independent finite period calculation of the four-point
+residue and fusion matrix, and states the additional continuation
+and tail-control input for the spectral-contour derivation. A pointwise
+identification with an unnormalized modular-double $6j$ function
+would still require its normalization and contour to be specified.
+Section~\ref{sec:normalizedsixj} fixes these normalizations
+for the induced finite operator and examines the geometric
+meaning of that specialization.
+
+\subsection{Four points: the exact quantum potential and its measure}
+
+Put the marks at $(0,1,z,\infty)$, with the standard primary-field
+normalization at infinity. Then~\eqref{eq:exactLiouvilleDM} reads
+\begin{align}
+ C_b^{\mathrm{uv}}(z)
+   &=\frac1b |z|^{-\mu_1\mu_3/b^2}
+              |1-z|^{-\mu_2\mu_3/b^2}\mathcal A_\mu(z),
+              \label{eq:fourpointLiouville}\\
+ \mathcal A_\mu(z)
+   &=\int_{\CC}|w|^{-2\mu_1}|w-1|^{-2\mu_2}
+                         |w-z|^{-2\mu_3}\dd^2w.\notag
+\end{align}
+The condition at infinity is now
+$\mu_1+\mu_2+\mu_3=2-\mu_4>1$. The ordinary field
+normalization at infinity cancels the corresponding area scaling;
+there is no additional moduli-dependent factor.
+
+For equal weights $\mu_i=1/2$, the area is
+\begin{equation}
+ \mathcal A(z)=\int_{\CC}\frac{\dd^2w}{|w(w-1)(w-z)|}.
+ \label{eq:fourpointareaintegral}
+\end{equation}
+Let $\Omega_1,\Omega_2$ be oriented lattice periods of
+$\dd w/y$ on the elliptic curve~\eqref{eq:ellipticDM}, and put
+$\tau=\Omega_2/\Omega_1=u+iv\in\HH$. The pillowcase has
+half the area of its double cover, so
+\[
+ \mathcal A(z)=\frac12\operatorname{Im}
+       (\overline{\Omega_1}\Omega_2)
+             =\frac12|\Omega_1|^2v.
+\]
+Locally $\Omega_1$ is nonzero and holomorphic. Hence
+\begin{equation}
+ \boxed{\quad
+ -2i\partial\bar\partial\log C_b^{\mathrm{uv}}
+    =\frac{\dd u\wedge\dd v}{v^2}
+    =\frac{|\tau'(z)|^2}{(\operatorname{Im}\tau(z))^2}
+                         \dd(\operatorname{Re}z)\wedge
+                         \dd(\operatorname{Im}z).
+ \quad}
+ \label{eq:fourpointquantumDMdensity}
+\end{equation}
+The elliptic-integral expression for $\tau$ is
+\eqref{eq:ellipticperiodratio}. Integrating this form over the
+labeled moduli space gives $2\pi$, as in
+Section~\ref{sec:thurstonDM}. This is the flat equal-deficit
+Deligne--Mostow area; the cusped hyperbolic WP area is the
+different quantity $V_{0,4}(0)=2\pi^2$.
+
+\subsection{An actual boundary torsion measure}
+
+There is also a measure comparison on the representation side.
+For a good, boundary-regular $\mathrm{SL}_2(\CC)$ representation
+of an $n$-holed sphere, Heusener--Porti prove
+\begin{equation}
+ \Omega_S=\pm\frac{\omega_G^d}{d!}
+                  \wedge\nu_1\wedge\cdots\wedge\nu_n,
+                  \qquad d=n-3,
+ \label{eq:torsionGoldman}
+\end{equation}
+where $\Omega_S$ is the holomorphic Reidemeister-torsion volume
+form, $\omega_G$ is the Goldman form on the fixed-conjugacy
+leaf, and the $\nu_i$ are the peripheral volume forms
+\cite[Theorem~3]{HeusenerPorti}. With invariant pairing
+$B(U,V)=-\tr(UV)$ their peripheral formula is
+$\nu_i=\pm\sqrt2\,\dd\tr\rho(\partial_i)$
+\cite[Proposition~2]{HeusenerPorti}.
+The pairing must be the same in all three kinds of form.
+For $B\mapsto\lambda^2B$, with $\lambda\in\CC^*$,
+the homogeneity stated after that theorem is, in our notation,
+\[
+ \omega_G\mapsto\lambda^2\omega_G,\qquad
+ \nu_i\mapsto\lambda\nu_i,\qquad
+ \Omega_S\mapsto\lambda^{2d+n}\Omega_S.
+\]
+Thus the displayed $\sqrt2$ belongs specifically to $B=-\tr$;
+it is not retained unchanged when the Goldman form is recalibrated.
+If the scale of $B$ is negative on the real form, choose its
+complex square root consistently in the holomorphic forms,
+then take the positive density on the real leaf.
+
+One must disintegrate by the peripheral forms \emph{before}
+fixing the conjugacy classes. Simply pulling the unrestricted
+top-degree form back to a fixed-trace leaf gives zero. After
+this disintegration, and on the relevant real component, the
+torsion density is the Goldman Liouville density, with the
+chosen normalization of $B$.
+
+Mondello identifies the cone WP and Goldman Poisson structures
+up to a specified constant for openings in $(0,2\pi)$
+\cite[Theorems~1.1--1.2]{MondelloCones}. We calibrate $B$ and
+the torsion and peripheral forms together so that the symplectic
+form on our real leaf is $\omega_{\WP}$, with the positive
+trace-coordinate density fixed in Appendix~\ref{app:fricke}.
+The holonomy statement is local in general; it is globally
+injective on marked cone metrics when every opening is at
+most $\pi$. Combining~\eqref{eq:torsionGoldman}
+with~\eqref{eq:localWPCHlimit} gives, locally on a controlled
+family,
+\begin{equation}
+ \boxed{\quad
+ \left(\frac2A\right)^d
+        \dd V_{\mathrm{torsion,relative}}
+    \longrightarrow \dd V_{\mathrm{CH},\mu}.
+ \quad}
+ \label{eq:torsionDMlimit}
+\end{equation}
+Apply the torsion theorem for $A>0$ and then take the rescaled
+limit. At the Euclidean endpoint the affine holonomies become
+reducible, and their ordinary characters discard translational
+shape data. The limiting twisted periods or a blowup retaining
+their scale are indispensable. In particular, an unqualified
+ordinary Goldman construction for the Euclidean isometry group
+would miss the needed nondegenerate pairing.
+
+\subsection{The four-point character surface, including a correction}
+
+The preceding measure limit can be calculated directly. Give
+the four cone points the common opening
+$\theta=\pi-A/4$, so their total hyperbolic area is $A$.
+Choose equal peripheral traces
+$a=-2\cos(\theta/2)=-2\sin(A/8)$. The Fricke relation
+of Appendix~\ref{app:fricke} becomes
+\begin{equation}
+ \Phi=x^2+y^2+z^2+xyz-2a^2(x+y+z)+4a^2+a^4-4=0.
+ \label{eq:equalFricke}
+\end{equation}
+Blow up the limiting character by
+\begin{equation}
+ x=-2-AX,\qquad y=-2-AY,\qquad z=-2-AZ.
+ \label{eq:Frickeblowup}
+\end{equation}
+Direct substitution gives
+\begin{align}
+ \frac\Phi{A^2}
+  ={}&X^2+Y^2+Z^2-2XY-2XZ-2YZ+1\notag\\
+     &+A\left(-XYZ+\frac{X+Y+Z}{8}\right)
+       -\frac{A^2}{768}+O(A^3).
+ \label{eq:Frickeexpanded}
+\end{align}
+On a chart with $u>0$, $v>0$, parametrize the limiting quadric by
+\begin{equation}
+ X=\frac1{2v},\qquad
+ Y=\frac{u^2+v^2}{2v},\qquad
+ Z_0=\frac{(u-1)^2+v^2}{2v}.
+ \label{eq:Frickeperiodchart}
+\end{equation}
+These are squared side lengths of a Euclidean triangle of area
+$1/4$; the quadric equation is Heron's identity. Since
+\[
+ X+Y-Z_0=\frac uv,\qquad
+ \dd X\wedge\dd Y=\frac{u}{2v^3}\dd u\wedge\dd v,
+\]
+the calibrated density~\eqref{eq:frickedensity} yields
+$A^{-1}\omega_{\WP}\to\frac12\dd u\wedge\dd v/v^2$,
+with the positive orientation on this chart.
+
+In fact, the implicit-function expansion is
+\[
+ Z=Z_0+AZ_1+O(A^2),\qquad
+ Z_1=\frac{(1-u)[v^2-u(1-u)]}{16v^2}.
+\]
+Using
+$\Phi_z=2A(X+Y-Z)+A^2(XY-1/8)+O(A^4)$ gives
+\begin{equation}
+ \boxed{\quad
+ \frac{\omega_{\WP}}A
+  =\frac1{2v^2}\left[
+       1-\frac{A(1+u^2+v^2)}{16v}+O(A^2)\right]
+                    \dd u\wedge\dd v.
+ \quad}
+ \label{eq:Frickefirstcorrection}
+\end{equation}
+This is an explicit first correction in a fixed \emph{blown-up
+character chart}. Here $\tau=u+iv$ is the limiting flat period
+coordinate, not the exact period ratio or conformal cross-ratio
+of the finite-$A$ surface. The error is local on compact subsets
+of the chart. In particular, the displayed correction is not
+termwise integrable at $v=\infty$; it cannot be integrated
+naively to recover the global polynomial of
+\eqref{eq:exactWPvolumeflat}.
+
+\subsection{What a normalized quantum kernel would have to produce}
+
+The phase-space measure of a unitary change of polarization is
+more constrained than a bare scalar $6j$ prefactor. In one
+degree of freedom, let $S(q,Q)$ generate a canonical relation,
+$p=\partial_qS$, away from its caustic. A branchwise normalized
+semiclassical kernel has the leading form
+\begin{equation}
+ K_\hbar(q,Q)\sim
+  \frac{|\partial_q\partial_QS|^{1/2}}{\sqrt{2\pi\hbar}}
+       \exp\left(\frac{iS}{\hbar}+\frac{i\pi m}{4}\right).
+ \label{eq:normalizedWKBkernel}
+\end{equation}
+The amplitude follows by applying unitarity to the leading
+phase difference $(q-q')p$ and changing variables from $Q$ to
+$p$. Thus
+\begin{equation}
+ 2\pi\hbar|K_\hbar|^2\dd q\dd Q
+     \sim |\partial_q\partial_QS|\dd q\dd Q
+     =|\dd q\wedge\dd p|.
+ \label{eq:kernelLiouvillemeasure}
+\end{equation}
+This is a branchwise assertion. Several stationary branches
+produce interference; a pointwise square of an oscillatory
+cosine need not converge without averaging.
+
+Teschner--Vartanov's Fenchel--Nielsen transition kernel contains
+the factors $\sqrt{M(\alpha_s)M(\alpha_t)}$ multiplying the
+$b$-$6j$ symbol~\cite[eq.~(5.14)]{TeschnerVartanov}.
+Consequently a proposed measure comparison must include the
+spectral measure, label Jacobians, and polarization. If a
+normalized kernel quantizes our cone WP leaf, its classical
+measure is constrained by~\eqref{eq:kernelLiouvillemeasure},
+and its rescaled flat measure by~\eqref{eq:torsionDMlimit}.
+This conditional argument does not by itself establish the
+elliptic continuation of that kernel.
+
+\subsection{The auxiliary tetrahedron and the order of limits}
+
+There is a concrete reason not to identify the auxiliary
+tetrahedron in a fusion kernel with the convex realization of
+our cone sphere without further work. In the conventions of
+\cite[Sections~3--5]{TeschnerVartanov}, the parameters satisfy
+\begin{equation}
+ \alpha_k=\frac Q2+\frac{i\ell_k}{4\pi b},\qquad
+ A_k=e^{-2\pi ib\alpha_k+\pi i}
+           =e^{\ell_k/2-\pi ib^2}.
+ \label{eq:b6jparameterdictionary}
+\end{equation}
+Here $A_k$ is the paper's exponentiated tetrahedral parameter,
+not our geometric area $A$. Continuing a boundary length by
+$\ell_i=i\theta_i$ gives an auxiliary dihedral parameter
+$\eta_i=\theta_i/2-\pi b^2$, modulo the chosen branch.
+Thus at the equal-angle Euclidean endpoint, and as $b\to0$,
+the four external auxiliary dihedrals tend to $\pi/2$.
+The internal $s,t$ edges are opposite. After reordering faces,
+the limiting angle Gram matrix would be
+\begin{equation}
+ G=\begin{pmatrix}
+ 1&-\cos\eta_s&0&0\\
+ -\cos\eta_s&1&0&0\\
+ 0&0&1&-\cos\eta_t\\
+ 0&0&-\cos\eta_t&1
+ \end{pmatrix},\qquad
+ \det G=\sin^2\eta_s\sin^2\eta_t.
+ \label{eq:auxiliaryGramobstruction}
+\end{equation}
+For interior angles $\eta_s,\eta_t\in(0,\pi)$ this is
+nonsingular. A nondegenerate Euclidean tetrahedron has a
+rank-three angle Gram matrix. Hence this real slice cannot
+converge to the generic Euclidean tetrahedron realizing our
+flat cone metric. An additional degeneration, a different
+real slice, or a different geometric identification is needed.
+This is an obstruction to the proposed identification, not
+to the existence of Liouville theory with cone charges.
+
+There is also a finite-$b$ shift in the charge convention.
+At a fixed classical opening $\theta_i=2\pi(1-\mu_i)$, the
+exact dictionary~\eqref{eq:b6jparameterdictionary} gives
+\[
+ \alpha_i=\frac{\mu_i}{2b}+\frac b2,
+\]
+whereas~\eqref{eq:Liouvilleflatparameters} uses
+$\alpha_i=\mu_i/(2b)$. The latter corresponds in that
+dictionary to the shifted opening $\theta_i+2\pi b^2$.
+For unshifted flat openings the zero-mode parameter would be
+$s=n/2-1$, not $-1$. Thus the exact correlation identity is
+a specified charge specialization; it is not an identification
+with the finite-$b$ kernel at unshifted classical cone angles.
+Indeed, treating the shifted openings as hyperbolic cone data
+would give the negative Gauss--Bonnet area $-2\pi n b^2$.
+
+There is a second, independent distinction. Along a heavy-charge
+path with deficit weights $a_i(A)$, set
+$\alpha_i(A)=a_i(A)/(2b)$ and
+$A=2\pi(\sum_i a_i(A)-2)$. Then exactly
+\begin{equation}
+ \boxed{\quad s=\frac{A}{4\pi b^2}-1.\quad}
+ \label{eq:areaLiouvillecharge}
+\end{equation}
+The finite-$b$ flat endpoint of this pure-heavy charge path is
+$s=-1$, the resonance used
+above. The original zero-mode convergence region $s>0$
+requires $A>4\pi b^2$. In contrast, under the proposed joint
+scaling $A\asymp\hbar^{2/3}$ with $\hbar\asymp b^2$, one
+has $A/b^2\to\infty$ and hence $s\to+\infty$.
+The exact residue identity therefore establishes a quantum
+origin for the Deligne--Mostow curvature without proving the
+uniform quantum degeneration proposed in
+Section~\ref{sec:quantumdegeneration}.
+
