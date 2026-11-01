@@ -1,0 +1,20 @@
+{
+  "source_sha256": "1ce64d4f3ca09fbf702ea9ba6e1a8f116d4e140259e227750ceeaab20886a4a8",
+  "t": 2,
+  "determinant": 3,
+  "decimal_precision": 60,
+  "actual_quadrature": "2.13380186114507921903226159352258445185283012896694303425291e-63",
+  "closed_formula": "2.14189744282248461911787926484100940896046450050993959264601e-63",
+  "absolute_error": "8.09558167740540008561767131842495710763437154299655839309956e-66",
+  "relative_error": "0.00377963086166135485583065095021494161139306168028602797688073",
+  "reported_tail_majorant": "4.57099822147234696136411489216080853611079697296652222272201e-177",
+  "wrong_mutants_accepted": [
+    "zero",
+    "wrong_sign",
+    "half",
+    "double"
+  ],
+  "zero_low_precision_accepted_against_positive_high_precision": true,
+  "status": "revise",
+  "minimal_repair": "Scale exp(-2*alpha*k) out of radial quadrature; compare/observe the nonzero scaled integral, or enforce relative checks for this family. Add a small-signal regression rejecting zero, sign, and factor errors."
+}

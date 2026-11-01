@@ -1,0 +1,173 @@
+{
+  "status": "pass",
+  "comparison": "Strict JSON equality at every nonexcluded path, including numerical strings, residuals, observations, formulas, precision data, counts, source hashes, HEAD, runtime versions, and limits.",
+  "declared_exclusions": [
+    "/elapsed_seconds",
+    "/generated_at_utc",
+    "/source/git_dirty",
+    "/source/git_status_porcelain",
+    "/source_at_completion/git_dirty",
+    "/source_at_completion/git_status_porcelain"
+  ],
+  "excluded_differences": [
+    {
+      "path": "/elapsed_seconds",
+      "author": 1.7443523750407621,
+      "reviewer": 1.5769552079727873
+    },
+    {
+      "path": "/generated_at_utc",
+      "author": "2026-11-01T20:24:10.736270+00:00",
+      "reviewer": "2026-11-01T20:33:27.874684+00:00"
+    }
+  ],
+  "scientific_differences": [],
+  "label_checks": [
+    {
+      "label": "eq:coeffChebyshev",
+      "present": true
+    },
+    {
+      "label": "eq:coeffsimplepowers",
+      "present": true
+    },
+    {
+      "label": "eq:coeffpowergenerating",
+      "present": true
+    },
+    {
+      "label": "eq:coefffigurepowers",
+      "present": true
+    },
+    {
+      "label": "eq:coefffigurecancellation",
+      "present": true
+    },
+    {
+      "label": "eq:coeffAdamsobstruction",
+      "present": true
+    },
+    {
+      "label": "eq:globalobstruction",
+      "present": true
+    },
+    {
+      "label": "eq:globalmoments",
+      "present": true
+    },
+    {
+      "label": "eq:globalweightseries",
+      "present": true
+    },
+    {
+      "label": "eq:globalonecrossing",
+      "present": true
+    },
+    {
+      "label": "eq:countonesupport",
+      "present": true
+    },
+    {
+      "label": "eq:countsupportmobius",
+      "present": true
+    },
+    {
+      "label": "eq:countsupportfourier",
+      "present": true
+    },
+    {
+      "label": "eq:globalEuler",
+      "present": true
+    },
+    {
+      "label": "eq:globaldiagonal",
+      "present": true
+    },
+    {
+      "label": "eq:globalEulerinput",
+      "present": true
+    },
+    {
+      "label": "subsec:countmixscalar",
+      "present": true
+    },
+    {
+      "label": "prop:countmixfinite",
+      "present": true
+    },
+    {
+      "label": "eq:twopointfullidentity",
+      "present": true
+    },
+    {
+      "label": "eq:pairbruhat",
+      "present": true
+    },
+    {
+      "label": "eq:pairkloosterman",
+      "present": true
+    },
+    {
+      "label": "lem:polearcprimitivebound",
+      "present": true
+    },
+    {
+      "label": "eq:polearcflatlength",
+      "present": true
+    },
+    {
+      "label": "eq:affinesiegelexactcorr",
+      "present": true
+    },
+    {
+      "label": "eq:affinegaussiancorr",
+      "present": true
+    },
+    {
+      "label": "eq:affineranktwogaussiancorr",
+      "present": true
+    },
+    {
+      "label": "sec:sharpdiagnostics",
+      "present": true
+    },
+    {
+      "label": "sec:arithmeticgeometry",
+      "present": true
+    },
+    {
+      "label": "eq:primitiveexactnormalizedmobius",
+      "present": true
+    },
+    {
+      "label": "eq:dyadicerrorinverse",
+      "present": true
+    },
+    {
+      "label": "eq:dyadicblockmetrics",
+      "present": true
+    },
+    {
+      "label": "eq:primitiveRHbalancedpower",
+      "present": true
+    }
+  ],
+  "contract_hash_checks": [
+    {
+      "path": "algebra-author/companion-fixtures.md",
+      "expected": "492677ee47840e8be336927547b60c068735b904808d63a9ffdec3737e147d51",
+      "actual": "492677ee47840e8be336927547b60c068735b904808d63a9ffdec3737e147d51"
+    },
+    {
+      "path": "dynamics-author/companion-fixtures.md",
+      "expected": "55bc53431ccd7e979d1a7ca751605c05ec0f5d9a009edfbdd9352f164e4d8ca0",
+      "actual": "55bc53431ccd7e979d1a7ca751605c05ec0f5d9a009edfbdd9352f164e4d8ca0"
+    },
+    {
+      "path": "arithmetic-author/campaign-contract.md",
+      "expected": "5091ff284d0e07b4eae4e9597a4afb924664ea55e4a8e46bb0dcd49c4b77981f",
+      "actual": "5091ff284d0e07b4eae4e9597a4afb924664ea55e4a8e46bb0dcd49c4b77981f"
+    }
+  ],
+  "reviewer_result_sha256": "8fbd2f82ca41d9ce2ac5be7e6ab17ce47bc435cce4c5bdd640df2c6a0f1d9cb3"
+}

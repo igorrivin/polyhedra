@@ -1,0 +1,363 @@
+{
+  "decision": "approve",
+  "reviewed_claims": 57,
+  "section30_claims": 32,
+  "section31_claims": 25,
+  "frozen_source_sha256": {
+    "book/chapters/30-sharp-diagnostics.tex": "19cf3bf6e9d25ef6066bb0592e4e5321d4cc30b1ec58c3ee2795a8e98ef6cccc",
+    "book/claims/section30.json": "fc021133751fabce8bd85cdc4786c4ed39fac35a62978827354221f721e7c22b",
+    "book/chapters/31-arithmetic-remainder.tex": "0b52042d87727aaf3e3c2fda1d83bca5c891472f3dc25c5660a158a9e0eb2688",
+    "book/claims/section31.json": "0f296ac8b8d9ef2bd9f2d891152107b1757436ce6857ad8928b65fd093969c2e"
+  },
+  "claims": [
+    {
+      "id": "s30.normalization",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.normalized_mobius",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.dini_comparison",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.dini_linear",
+      "author_status": "conditional_bound",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve implication under every stated hypothesis; numerical evidence does not discharge the hypothesis."
+    },
+    {
+      "id": "s30.chord_sobolev",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.fourier_decay",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.poisson_little_o",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.strict_convex_primitive",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.polygon_comparison",
+      "author_status": "external_statement_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve external statement and hypotheses as checked against pinned primary source; external proof not re-refereed."
+    },
+    {
+      "id": "s30.square_totients",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.polygon_approximation",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.dyadic_inversion",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.block_events",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.inverse_width",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.prime_row_count",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.row_discrepancy",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.microscopic_row",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.infinite_flatness_scope",
+      "author_status": "conditional_bound",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve implication under every stated hypothesis; numerical evidence does not discharge the hypothesis."
+    },
+    {
+      "id": "s30.flatness_models",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.exact_row_divisors",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.local_row_statistic",
+      "author_status": "conditional_bound",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve implication under every stated hypothesis; numerical evidence does not discharge the hypothesis."
+    },
+    {
+      "id": "s30.height_precision",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.curve_markoff_identification",
+      "author_status": "external_statement_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve external statement and hypotheses as checked against pinned primary source; external proof not re-refereed."
+    },
+    {
+      "id": "s30.exact_roots",
+      "author_status": "exact_finite_check",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.sector_pruning",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.log_recursion",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.slope_box_coverage",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s30.bounded_replacement",
+      "author_status": "numerical_check",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve preserved bounded evidence status; old artifact bytes match baseline. No retroactive proof certification."
+    },
+    {
+      "id": "s30.bounded_conditional_sensitivity",
+      "author_status": "conditional_bound",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve implication under every stated hypothesis; numerical evidence does not discharge the hypothesis."
+    },
+    {
+      "id": "s30.historical_long_run",
+      "author_status": "reported_unreplayed",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve as historical report only; original provenance not recovered by a matching new campaign."
+    },
+    {
+      "id": "s30.recent_flatness_preprint",
+      "author_status": "conditional_external_statement_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve pinned statement attribution and explicit conditional status; full preprint proof and formalization not audited."
+    },
+    {
+      "id": "s30.surface_flat_point",
+      "author_status": "open_target",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve as an explicit unresolved target, not as an established geometric input."
+    },
+    {
+      "id": "s31.conventions",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s31.large_divisor_identity",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s31.reciprocal_lattice_bound",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s31.mobius_area_tail",
+      "author_status": "conditional_bound",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve implication under every stated hypothesis; numerical evidence does not discharge the hypothesis."
+    },
+    {
+      "id": "s31.master_transfer",
+      "author_status": "conditional_bound",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve implication under every stated hypothesis; numerical evidence does not discharge the hypothesis."
+    },
+    {
+      "id": "s31.modulus_comparison",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s31.dini_pnt",
+      "author_status": "conditional_bound",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve implication under every stated hypothesis; numerical evidence does not discharge the hypothesis."
+    },
+    {
+      "id": "s31.zero_free_to_mertens",
+      "author_status": "conditional_bound",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve implication under every stated hypothesis; numerical evidence does not discharge the hypothesis."
+    },
+    {
+      "id": "s31.mertens_to_zero_free",
+      "author_status": "conditional_bound",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve implication under every stated hypothesis; numerical evidence does not discharge the hypothesis."
+    },
+    {
+      "id": "s31.openai_september",
+      "author_status": "conditional_external_statement_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve pinned statement attribution and explicit conditional status; full preprint proof and formalization not audited."
+    },
+    {
+      "id": "s31.openai_october",
+      "author_status": "conditional_external_statement_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve pinned statement attribution and explicit conditional status; full preprint proof and formalization not audited."
+    },
+    {
+      "id": "s31.log_geometric_power_arithmetic",
+      "author_status": "conditional_bound",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve implication under every stated hypothesis; numerical evidence does not discharge the hypothesis."
+    },
+    {
+      "id": "s31.vk_input",
+      "author_status": "external_statement_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve external statement and hypotheses as checked against pinned primary source; external proof not re-refereed."
+    },
+    {
+      "id": "s31.vk_log_table",
+      "author_status": "conditional_bound",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve implication under every stated hypothesis; numerical evidence does not discharge the hypothesis."
+    },
+    {
+      "id": "s31.balanced_power",
+      "author_status": "conditional_bound",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve implication under every stated hypothesis; numerical evidence does not discharge the hypothesis."
+    },
+    {
+      "id": "s31.vk_power_geometry",
+      "author_status": "conditional_bound",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve implication under every stated hypothesis; numerical evidence does not discharge the hypothesis."
+    },
+    {
+      "id": "s31.zhai_benchmark",
+      "author_status": "external_statement_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve external statement and hypotheses as checked against pinned primary source; external proof not re-refereed."
+    },
+    {
+      "id": "s31.baker_benchmark",
+      "author_status": "external_statement_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve external statement and hypotheses as checked against pinned primary source; external proof not re-refereed."
+    },
+    {
+      "id": "s31.qualitative_obstruction",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s31.gauge_zeta",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s31.flat_primitive_obstruction",
+      "author_status": "conditional_bound",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve implication under every stated hypothesis; numerical evidence does not discharge the hypothesis."
+    },
+    {
+      "id": "s31.all_point_width_compatibility",
+      "author_status": "conditional_bound",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve implication under every stated hypothesis; numerical evidence does not discharge the hypothesis."
+    },
+    {
+      "id": "s31.geometric_target",
+      "author_status": "open_target",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve as an explicit unresolved target, not as an established geometric input."
+    },
+    {
+      "id": "s31.all_point_dyadic",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    },
+    {
+      "id": "s31.all_point_from_primitive_lengths",
+      "author_status": "derivation_checked",
+      "decision": "approve_in_stated_scope",
+      "review_scope": "Approve derivation or exact finite statement in the stated scope."
+    }
+  ],
+  "all_dependencies_and_labels_resolve": true,
+  "not_verified": [
+    "Recent preprint complete proofs",
+    "Lean proof or correspondence",
+    "Every-node torus error bounds",
+    "Asymptotic remainder from finite counts"
+  ]
+}

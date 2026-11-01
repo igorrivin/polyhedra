@@ -1,0 +1,104 @@
+{
+  "baseline_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+  "review_status": "author_complete_independent_review_pending",
+  "scope": "Sections 26-29 only",
+  "canonical_files": [
+    {
+      "path": "book/chapters/26-counting-to-mixing.tex",
+      "sha256": "64562ebf631c59b84b9c991a632926107b3e24cb5b08b29c21e263bd50a9e901",
+      "bytes": 17201
+    },
+    {
+      "path": "book/chapters/27-weighted-mixing-converse.tex",
+      "sha256": "79fb4660fe87a5723eea0d410e55e954913b0386057a31542473d6486492dcc1",
+      "bytes": 35331
+    },
+    {
+      "path": "book/chapters/28-genus-two-model.tex",
+      "sha256": "18c05143e86fb9630868bb2824ddf44643c1ee1c84a40dc77a8c9d5354663fb4",
+      "bytes": 34521
+    },
+    {
+      "path": "book/chapters/29-controlled-observables.tex",
+      "sha256": "79dd4ae151f95aa445cbf9f67fb512ec5dbc6df8922c43aa05591a8ef48b273f",
+      "bytes": 31959
+    },
+    {
+      "path": "book/claims/sections26-29.json",
+      "sha256": "0585f7efdb6f703eaea3a76e2d3f970cc71e033fc4977ab265bc7f43a57ec514",
+      "bytes": 85671
+    }
+  ],
+  "outer_provenance_files": [
+    {
+      "path": "baseline.json",
+      "sha256": "5775ac1b2eb1f384905ba890c5bf4b23f88a8b9f2747ac1b5647d6db17878ff9",
+      "bytes": 6006
+    },
+    {
+      "path": "bibliography-proposal.tex",
+      "sha256": "a5ab2fa84a59448c79f4ce7c06b306fe3e888ec32fc7953d2d710c59b296f8cd",
+      "bytes": 1217
+    },
+    {
+      "path": "build-ledger.py",
+      "sha256": "07d7b93a9d51df4ea4c3b5b3b2b31d6c6f0821bec5cc08d2d4e7094e8865062e",
+      "bytes": 45305
+    },
+    {
+      "path": "check-revision.py",
+      "sha256": "5c920eb3574cd14fc44062e462c83053ea95d715772d7fdda645b28c7578b4d9",
+      "bytes": 3672
+    },
+    {
+      "path": "label-check.json",
+      "sha256": "84b0fc0bbc3be6ebb94f73c780cc8a1e6f3ebfc4d0026e7277bd2bddd2f3d518",
+      "bytes": 7065
+    },
+    {
+      "path": "author-revision.diff",
+      "sha256": "da0d40dd03a9cdaca2911a9192e1c364f4a9fe85025b1f435d07a6d51acf51de",
+      "bytes": 10963
+    },
+    {
+      "path": "source-pins.json",
+      "sha256": "86ea07f7757f565328f4d6b3ce6768ecb28e3a7f345f46a4ea1a78cb7fb6c73d",
+      "bytes": 12221
+    },
+    {
+      "path": "companion-fixtures.md",
+      "sha256": "55bc53431ccd7e979d1a7ca751605c05ec0f5d9a009edfbdd9352f164e4d8ca0",
+      "bytes": 5434
+    },
+    {
+      "path": "author-scratch-checks.py",
+      "sha256": "973afd279d8643bd38d68ee13c283933d19a0327ceb2dcffb5b07702fe4c50c9",
+      "bytes": 1429
+    },
+    {
+      "path": "author-scratch-result.json",
+      "sha256": "0e5085a646083990e6bb3fb1dab83859967ad4f23c4094c452c66a048c5a62d3",
+      "bytes": 516
+    },
+    {
+      "path": "author-report.md",
+      "sha256": "890ac37f0e6666e827ef392f89ba325389d3ac5e5b3d53d6c6504185904e0089",
+      "bytes": 6027
+    }
+  ],
+  "preserved_label_count": 125,
+  "claim_count": 59,
+  "source_pin_count": 24,
+  "verification": [
+    "focused source-integrity checks passed",
+    "288 exact finite matrix identities and 3 symbolic author probes passed"
+  ],
+  "not_performed": [
+    "independent mathematical acceptance",
+    "root-owned counting_mixing companion",
+    "PDF build",
+    "commit",
+    "upload",
+    "deployment"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "recorded_utc": "2026-11-01T21:13:39.449431+00:00",
+  "authority": "/root",
+  "approved": true,
+  "approved_source_manifest_sha256": "0fe9b4a314efdd5d1d8c33f448b49d36d998200bcad2d09a0dd12ede5cbf7a2d",
+  "decision": "Preserve the exact approved source bytes and accept only the five existing blank-at-eof warnings.",
+  "reason": "Blank lines at EOF do not affect TeX semantics; preserving independently approved source hashes is preferable to an unrelated formatting delta at this gate.",
+  "root_message": "Accept the explicit whitespace-only exception for those five approved TeX files: blank lines at EOF do not affect TeX semantics, and preserving independently approved source hashes is preferable to an unrelated formatting delta at this gate. Do NOT edit them. Record exact five diagnostics, root decision and reason in source receipt. Run staged whitespace check with ONLY blank-at-eof disabled (retain trailing-whitespace/space-before-tab checks) and require no other diagnostics; then proceed with authorized source commit and all postcommit checks. This is a bounded root workflow exception, not a user permission question or blanket bypass.",
+  "diagnostics": [
+    "book/chapters/25-global-coefficient-filters.tex:361: new blank line at EOF.",
+    "book/chapters/27-weighted-mixing-converse.tex:850: new blank line at EOF.",
+    "book/chapters/28-genus-two-model.tex:769: new blank line at EOF.",
+    "book/chapters/29-controlled-observables.tex:772: new blank line at EOF.",
+    "book/chapters/31-arithmetic-remainder.tex:415: new blank line at EOF."
+  ],
+  "required_followup": "Require check success and no diagnostics with only blank-at-eof disabled; retain all other whitespace checks.",
+  "source_edits_authorized": false,
+  "original_command_output": "command-outputs/0040-stage.stdout",
+  "original_command_returncode": 2
+}

@@ -1,0 +1,139 @@
+{
+  "role": "fresh independent reviewer",
+  "baseline_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+  "frozen_files": [
+    {
+      "path": "book/chapters/26-counting-to-mixing.tex",
+      "sha256": "64562ebf631c59b84b9c991a632926107b3e24cb5b08b29c21e263bd50a9e901",
+      "bytes": 17201,
+      "label_count": 21,
+      "baseline_labels_identical": true
+    },
+    {
+      "path": "book/chapters/27-weighted-mixing-converse.tex",
+      "sha256": "79fb4660fe87a5723eea0d410e55e954913b0386057a31542473d6486492dcc1",
+      "bytes": 35331,
+      "label_count": 35,
+      "baseline_labels_identical": true
+    },
+    {
+      "path": "book/chapters/28-genus-two-model.tex",
+      "sha256": "18c05143e86fb9630868bb2824ddf44643c1ee1c84a40dc77a8c9d5354663fb4",
+      "bytes": 34521,
+      "label_count": 33,
+      "baseline_labels_identical": true
+    },
+    {
+      "path": "book/chapters/29-controlled-observables.tex",
+      "sha256": "79dd4ae151f95aa445cbf9f67fb512ec5dbc6df8922c43aa05591a8ef48b273f",
+      "bytes": 31959,
+      "label_count": 36,
+      "baseline_labels_identical": true
+    },
+    {
+      "path": "book/claims/sections26-29.json",
+      "sha256": "0585f7efdb6f703eaea3a76e2d3f970cc71e033fc4977ab265bc7f43a57ec514",
+      "bytes": 85671
+    }
+  ],
+  "label_audit": {
+    "preserved_labels": 125,
+    "ledger_labels": 125,
+    "claim_count": 59,
+    "exact_once_coverage": true
+  },
+  "exact_probes": {
+    "positive_integer_jordan_matrix": [
+      [
+        5,
+        4,
+        1
+      ],
+      [
+        2,
+        3,
+        5
+      ],
+      [
+        3,
+        3,
+        4
+      ]
+    ],
+    "jordan_n_values": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "jordan_identity": "tr(A^n)=10^n+2; P^n-Pi=10^-n[(I-Pi)+nN]",
+    "bruhat_factorizations": 2889,
+    "smoothing_cusp_balances": [
+      {
+        "delta": "1/3",
+        "a": "2",
+        "b": "3",
+        "d": "0",
+        "k": 1,
+        "eta": "2/21"
+      },
+      {
+        "delta": "2/5",
+        "a": "3",
+        "b": "1/2",
+        "d": "2",
+        "k": 4,
+        "eta": "24/95"
+      },
+      {
+        "delta": "1",
+        "a": "1",
+        "b": "0",
+        "d": "0",
+        "k": 5,
+        "eta": "5/6"
+      }
+    ]
+  },
+  "evidence_limits": [
+    "These finite exact probes are independently authored sanity checks, not proofs of general mixing.",
+    "The chapter proofs and external theorem applications were reviewed separately.",
+    "No floating-point certification, root-owned companion execution, build, publication, or upload is asserted."
+  ]
+}

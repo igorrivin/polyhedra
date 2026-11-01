@@ -1,0 +1,52 @@
+{
+  "decision": "approve",
+  "scope": "Final integration delta; existing mathematical/code reviews retain their stated scope.",
+  "checks": [
+    {
+      "pattern": "Finite numerical evidence promoted to a proof or true-spectrum certificate",
+      "result": "absent",
+      "evidence": "Chapters 25/29/30/31 and all four ledgers retain explicit finite, sampled and conditional limitations."
+    },
+    {
+      "pattern": "Historical provenance or rejected v1 acceptance silently upgraded",
+      "result": "absent",
+      "evidence": "Historical torus precision/sensitivity provenance remains unrecovered; finite v1 approval remains false; v2 and final v3 replay identities remain separate."
+    },
+    {
+      "pattern": "Hyperbolic and unit-shortest length units conflated",
+      "result": "absent",
+      "evidence": "Section31 states lambda=ell/systole and A_B(L)=A_hyp(systole*L). Stored binary64 comparisons are distinguished from true lengths."
+    },
+    {
+      "pattern": "Recent preprint statement inspection presented as proof/formalization validation",
+      "result": "absent",
+      "evidence": "Bibliography patch and status/ledger prose explicitly keep preprint applications conditional."
+    },
+    {
+      "pattern": "Approved experiment code changed during prose integration",
+      "result": "absent",
+      "evidence": "All 14 source hashes match the independent code approvals."
+    },
+    {
+      "pattern": "Proof blocks, hypotheses, IDs or proof statuses lost during integration",
+      "result": "absent",
+      "evidence": "All 52 formal blocks and all 168 protected claim records match the approved before-integration snapshots."
+    },
+    {
+      "pattern": "Missing links blanket-exempted",
+      "result": "absent",
+      "evidence": "411 local references checked; only 3 explicit future artifact paths and 13 explicit checkpoint targets are allowed absent."
+    },
+    {
+      "pattern": "Stale PDF presented as current or postcommit",
+      "result": "absent",
+      "evidence": "Initial 192-page PDF is superseded. Final 191-page PDF has a 26-input precommit freeze and exact hash; postcommit copy requires all 26 source hashes to match."
+    },
+    {
+      "pattern": "Unrelated historical files, originals or previous artifacts edited",
+      "result": "absent",
+      "evidence": "1906 unaffected baseline paths, 412 materialized LFS files, 925+28 original tracked files, original heads/archive members, and the prior 187-page PDF are preserved."
+    }
+  ],
+  "required_repairs_remaining": []
+}

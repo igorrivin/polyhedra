@@ -1,0 +1,213 @@
+{
+  "status": "author revision v2 frozen; independent delta review pending",
+  "source": {
+    "git_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+    "git_dirty": true,
+    "git_status_porcelain": [
+      " M book/chapters/30-sharp-diagnostics.tex",
+      " M book/claims/section30.json",
+      " M book/polyhedral_volumes_and_geodesic_identities.tex",
+      "?? book/chapters/23-trace-coefficients.tex",
+      "?? book/chapters/24-quantitative-counting.tex",
+      "?? book/chapters/25-global-coefficient-filters.tex",
+      "?? book/chapters/26-counting-to-mixing.tex",
+      "?? book/chapters/27-weighted-mixing-converse.tex",
+      "?? book/chapters/28-genus-two-model.tex",
+      "?? book/chapters/29-controlled-observables.tex",
+      "?? book/chapters/31-arithmetic-remainder.tex",
+      "?? book/claims/section31.json",
+      "?? book/claims/sections23-25.json",
+      "?? book/claims/sections26-29.json",
+      "?? experiments/counting_mixing/README.md",
+      "?? experiments/counting_mixing/__init__.py",
+      "?? experiments/counting_mixing/algebra.py",
+      "?? experiments/counting_mixing/arithmetic.py",
+      "?? experiments/counting_mixing/dynamics.py",
+      "?? experiments/counting_mixing/exact.py",
+      "?? experiments/counting_mixing/fixture.json",
+      "?? experiments/counting_mixing/numerics.py",
+      "?? experiments/counting_mixing/run.py",
+      "?? experiments/counting_mixing/tests/test_counting_mixing.py",
+      "?? experiments/torus_campaign/README.md",
+      "?? experiments/torus_campaign/campaign.cpp",
+      "?? experiments/torus_campaign/run.py",
+      "?? experiments/torus_campaign/tests/test_campaign.py"
+    ],
+    "source_set_sha256": "4b1f8f22f155c464f0ecda6ab95c581926db157bae4ee7583e67fbc6448ded63",
+    "sources": [
+      {
+        "path": "experiments/counting_mixing/README.md",
+        "sha256": "225d070e6eab3f61992c04c62f50361fd1f494a78ada8e2cf4d7b9dee61c4745",
+        "bytes": 9434
+      },
+      {
+        "path": "experiments/counting_mixing/__init__.py",
+        "sha256": "6fc28e861807e61233bed8d0ca6c66001b4792c95d539dcc11d50e7060804715",
+        "bytes": 78
+      },
+      {
+        "path": "experiments/counting_mixing/algebra.py",
+        "sha256": "36399bd0068d0a0faa454b7df8c01a9e9cd7b03e138ca9c61fd3ad8716c8deb4",
+        "bytes": 12899
+      },
+      {
+        "path": "experiments/counting_mixing/arithmetic.py",
+        "sha256": "5a3d249be1fd9c3cbe2079426c3fd75e18aca1a339cf7684f7f61e76860bae9f",
+        "bytes": 10659
+      },
+      {
+        "path": "experiments/counting_mixing/dynamics.py",
+        "sha256": "bb1cdbff6b64971ef5ef317f6be068baa55a2ea65cbad291a8631639f253c378",
+        "bytes": 11318
+      },
+      {
+        "path": "experiments/counting_mixing/exact.py",
+        "sha256": "12bfa97e4debfbb8695480efea45319ad52e824ed88721f09ea5aad062227e99",
+        "bytes": 4891
+      },
+      {
+        "path": "experiments/counting_mixing/fixture.json",
+        "sha256": "538c23145ba1ded0f57c7f67a68412a35644ea85c1dd8c4470d902e11e57be33",
+        "bytes": 4392
+      },
+      {
+        "path": "experiments/counting_mixing/numerics.py",
+        "sha256": "b87a7eaf165a391dd183b0a22bc8ff747540c15b291ff53b7cf102d7472f6de7",
+        "bytes": 18219
+      },
+      {
+        "path": "experiments/counting_mixing/run.py",
+        "sha256": "c079ee98ac182709cd9511a30a3a1a560b7b22311af6aaa4da06a427d19c1014",
+        "bytes": 15214
+      },
+      {
+        "path": "experiments/counting_mixing/tests/test_counting_mixing.py",
+        "sha256": "4fb1744e6be2a4c28a6c1ecbcdd26f4d9e29e7c84900246a7ed26cacf1e8a52d",
+        "bytes": 16546
+      }
+    ],
+    "scope": "Companion code, tests, README, and pinned formula/input data only; no manuscript source freeze claimed."
+  },
+  "source_before": {
+    "git_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+    "git_dirty": true,
+    "git_status_porcelain": [
+      " M book/chapters/30-sharp-diagnostics.tex",
+      " M book/claims/section30.json",
+      " M book/polyhedral_volumes_and_geodesic_identities.tex",
+      "?? book/chapters/23-trace-coefficients.tex",
+      "?? book/chapters/24-quantitative-counting.tex",
+      "?? book/chapters/25-global-coefficient-filters.tex",
+      "?? book/chapters/26-counting-to-mixing.tex",
+      "?? book/chapters/27-weighted-mixing-converse.tex",
+      "?? book/chapters/28-genus-two-model.tex",
+      "?? book/chapters/29-controlled-observables.tex",
+      "?? book/chapters/31-arithmetic-remainder.tex",
+      "?? book/claims/section31.json",
+      "?? book/claims/sections23-25.json",
+      "?? book/claims/sections26-29.json",
+      "?? experiments/counting_mixing/README.md",
+      "?? experiments/counting_mixing/__init__.py",
+      "?? experiments/counting_mixing/algebra.py",
+      "?? experiments/counting_mixing/arithmetic.py",
+      "?? experiments/counting_mixing/dynamics.py",
+      "?? experiments/counting_mixing/exact.py",
+      "?? experiments/counting_mixing/fixture.json",
+      "?? experiments/counting_mixing/numerics.py",
+      "?? experiments/counting_mixing/run.py",
+      "?? experiments/counting_mixing/tests/test_counting_mixing.py",
+      "?? experiments/torus_campaign/README.md",
+      "?? experiments/torus_campaign/campaign.cpp",
+      "?? experiments/torus_campaign/run.py",
+      "?? experiments/torus_campaign/tests/test_campaign.py"
+    ],
+    "source_set_sha256": "cf76209e2f187c248174635f073f7a12b7f0240c15be8fe9d7b52bfe11faa8c3",
+    "sources": [
+      {
+        "path": "experiments/counting_mixing/README.md",
+        "sha256": "aec39c2522fc941890486d8ad98f82193160ad0dd40aa188af5b5784f9ca428d",
+        "bytes": 8398
+      },
+      {
+        "path": "experiments/counting_mixing/__init__.py",
+        "sha256": "6fc28e861807e61233bed8d0ca6c66001b4792c95d539dcc11d50e7060804715",
+        "bytes": 78
+      },
+      {
+        "path": "experiments/counting_mixing/algebra.py",
+        "sha256": "36399bd0068d0a0faa454b7df8c01a9e9cd7b03e138ca9c61fd3ad8716c8deb4",
+        "bytes": 12899
+      },
+      {
+        "path": "experiments/counting_mixing/arithmetic.py",
+        "sha256": "5a3d249be1fd9c3cbe2079426c3fd75e18aca1a339cf7684f7f61e76860bae9f",
+        "bytes": 10659
+      },
+      {
+        "path": "experiments/counting_mixing/dynamics.py",
+        "sha256": "bb1cdbff6b64971ef5ef317f6be068baa55a2ea65cbad291a8631639f253c378",
+        "bytes": 11318
+      },
+      {
+        "path": "experiments/counting_mixing/exact.py",
+        "sha256": "12bfa97e4debfbb8695480efea45319ad52e824ed88721f09ea5aad062227e99",
+        "bytes": 4891
+      },
+      {
+        "path": "experiments/counting_mixing/fixture.json",
+        "sha256": "538c23145ba1ded0f57c7f67a68412a35644ea85c1dd8c4470d902e11e57be33",
+        "bytes": 4392
+      },
+      {
+        "path": "experiments/counting_mixing/numerics.py",
+        "sha256": "1ce64d4f3ca09fbf702ea9ba6e1a8f116d4e140259e227750ceeaab20886a4a8",
+        "bytes": 13668
+      },
+      {
+        "path": "experiments/counting_mixing/run.py",
+        "sha256": "7494704c0b9c20d1e759c9a45354107071e58ace5a66aeda1377adea3dd3f875",
+        "bytes": 15085
+      },
+      {
+        "path": "experiments/counting_mixing/tests/test_counting_mixing.py",
+        "sha256": "8478bc092c8572f0bad3f32560035e414502526e02bf7fdf0027e7cb47b65fb4",
+        "bytes": 12808
+      }
+    ],
+    "scope": "Companion code, tests, README, and pinned formula/input data only; no manuscript source freeze claimed."
+  },
+  "result_path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/computation/revision-v2/author-result-60-90-v2.json",
+  "result_sha256": "2a5680cf8e91db3668099ffdb5e19bc3bb984f89cd121395fbcd856a6da7fc71",
+  "source_patch_sha256": "02f5f3e65923f14ef993fffb30fca95db596fb3e3e6f49d6d77ac998af447090",
+  "correction_evidence_sha256": "34e35b0ee2f4df3211d185d23004f94599a29f1d6cdb9a2aa4cac4388535cf0b",
+  "command_receipts_sha256": "d1dfdc5299fe98adeeedac3c138a7ed45d5342a958b2fb17c211b6805b426020",
+  "audit_source_sha256": "9ee5d6e6dd685c4f43e7f876c634f5ebf59f6af4347f88441b6d0a900f7ccec3",
+  "changed_source_files": [
+    {
+      "path": "experiments/counting_mixing/README.md",
+      "before_sha256": "aec39c2522fc941890486d8ad98f82193160ad0dd40aa188af5b5784f9ca428d",
+      "after_sha256": "225d070e6eab3f61992c04c62f50361fd1f494a78ada8e2cf4d7b9dee61c4745"
+    },
+    {
+      "path": "experiments/counting_mixing/numerics.py",
+      "before_sha256": "1ce64d4f3ca09fbf702ea9ba6e1a8f116d4e140259e227750ceeaab20886a4a8",
+      "after_sha256": "b87a7eaf165a391dd183b0a22bc8ff747540c15b291ff53b7cf102d7472f6de7"
+    },
+    {
+      "path": "experiments/counting_mixing/run.py",
+      "before_sha256": "7494704c0b9c20d1e759c9a45354107071e58ace5a66aeda1377adea3dd3f875",
+      "after_sha256": "c079ee98ac182709cd9511a30a3a1a560b7b22311af6aaa4da06a427d19c1014"
+    },
+    {
+      "path": "experiments/counting_mixing/tests/test_counting_mixing.py",
+      "before_sha256": "8478bc092c8572f0bad3f32560035e414502526e02bf7fdf0027e7cb47b65fb4",
+      "after_sha256": "4fb1744e6be2a4c28a6c1ecbcdd26f4d9e29e7c84900246a7ed26cacf1e8a52d"
+    }
+  ],
+  "check_counts": {
+    "exact": 4054,
+    "numerical_formula_comparisons": 354,
+    "cross_precision_observations": 297
+  },
+  "manuscript_hash_freeze_claimed": false
+}

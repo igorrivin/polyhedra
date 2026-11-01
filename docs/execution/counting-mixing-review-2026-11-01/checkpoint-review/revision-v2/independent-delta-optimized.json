@@ -1,0 +1,236 @@
+{
+  "generated_at_utc": "2026-11-01T21:21:07.555528+00:00",
+  "python_optimized": 1,
+  "scope": "Original v1 counterexamples rerun against exact repaired v2 scripts; synthetic fixtures only",
+  "fixture_adapter": "Only add the now-required unresolved: [] to otherwise successful v1 replay specifications; redirect temporary files to reviewer-owned subject directory",
+  "wrapper_probes": [
+    {
+      "mode": "success",
+      "rejected": false,
+      "receipt_written": true,
+      "receipt_checks_passed": true,
+      "actual_spec_before": {
+        "sha256": "f7c928ca50b05580804c51507b5ff23596bad331efcb0fe0b19138049e6b9d44",
+        "bytes": 8621
+      },
+      "actual_spec_after": {
+        "sha256": "f7c928ca50b05580804c51507b5ff23596bad331efcb0fe0b19138049e6b9d44",
+        "bytes": 8621
+      },
+      "receipt_spec_identity": {
+        "sha256": "f7c928ca50b05580804c51507b5ff23596bad331efcb0fe0b19138049e6b9d44",
+        "bytes": 8621
+      },
+      "receipt_failure": null,
+      "source_before_after_equal": true
+    },
+    {
+      "mode": "command_failure",
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "replay command failed",
+      "receipt_written": true,
+      "receipt_checks_passed": false,
+      "actual_spec_before": {
+        "sha256": "9ca19fc1f757ac5f774fcaa9e9bae545867ae78b4f01bbc3e8d37daf51623471",
+        "bytes": 8621
+      },
+      "actual_spec_after": {
+        "sha256": "9ca19fc1f757ac5f774fcaa9e9bae545867ae78b4f01bbc3e8d37daf51623471",
+        "bytes": 8621
+      },
+      "receipt_spec_identity": {
+        "sha256": "9ca19fc1f757ac5f774fcaa9e9bae545867ae78b4f01bbc3e8d37daf51623471",
+        "bytes": 8621
+      },
+      "receipt_failure": "CheckpointError: replay command failed",
+      "source_before_after_equal": true
+    },
+    {
+      "mode": "source_drift",
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "clean-source stage has nonempty Git status",
+      "receipt_written": true,
+      "receipt_checks_passed": false,
+      "actual_spec_before": {
+        "sha256": "a04cc6ef47bad727192da1c30724a92ad6ef86462a6802519e47cd99c9b57032",
+        "bytes": 8621
+      },
+      "actual_spec_after": {
+        "sha256": "a04cc6ef47bad727192da1c30724a92ad6ef86462a6802519e47cd99c9b57032",
+        "bytes": 8621
+      },
+      "receipt_spec_identity": {
+        "sha256": "a04cc6ef47bad727192da1c30724a92ad6ef86462a6802519e47cd99c9b57032",
+        "bytes": 8621
+      },
+      "receipt_failure": "CheckpointError: clean-source stage has nonempty Git status",
+      "source_before_after_equal": false
+    },
+    {
+      "mode": "head_drift",
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "HEAD differs from final source commit",
+      "receipt_written": true,
+      "receipt_checks_passed": false,
+      "actual_spec_before": {
+        "sha256": "6d5226bec45ac4809384a96d26b248dab967a257abf4a962feaca14030b73ced",
+        "bytes": 8621
+      },
+      "actual_spec_after": {
+        "sha256": "6d5226bec45ac4809384a96d26b248dab967a257abf4a962feaca14030b73ced",
+        "bytes": 8621
+      },
+      "receipt_spec_identity": {
+        "sha256": "6d5226bec45ac4809384a96d26b248dab967a257abf4a962feaca14030b73ced",
+        "bytes": 8621
+      },
+      "receipt_failure": "CheckpointError: HEAD differs from final source commit",
+      "source_before_after_equal": false
+    },
+    {
+      "mode": "dirty_before",
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "clean-source stage has nonempty Git status",
+      "receipt_written": true,
+      "receipt_checks_passed": false,
+      "actual_spec_before": {
+        "sha256": "13d1763a61178d224b24260ed6531b4fae2c3e5f6e256cca8f29b619e9ded17a",
+        "bytes": 8621
+      },
+      "actual_spec_after": {
+        "sha256": "13d1763a61178d224b24260ed6531b4fae2c3e5f6e256cca8f29b619e9ded17a",
+        "bytes": 8621
+      },
+      "receipt_spec_identity": {
+        "sha256": "13d1763a61178d224b24260ed6531b4fae2c3e5f6e256cca8f29b619e9ded17a",
+        "bytes": 8621
+      },
+      "receipt_failure": "CheckpointError: clean-source stage has nonempty Git status",
+      "source_before_after_equal": true
+    },
+    {
+      "mode": "spec_drift",
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "replay specification identity changed during operation",
+      "receipt_written": true,
+      "receipt_checks_passed": false,
+      "actual_spec_before": {
+        "sha256": "2769994673f061a138ceeb785c81038a9c15b1b5be51b701d3435db071f6032c",
+        "bytes": 8621
+      },
+      "actual_spec_after": {
+        "sha256": "d3ab34822ac20e8199968a389574b25cb5011bc25f73b92d37064983606b9a17",
+        "bytes": 8625
+      },
+      "receipt_spec_identity": {
+        "sha256": "2769994673f061a138ceeb785c81038a9c15b1b5be51b701d3435db071f6032c",
+        "bytes": 8621
+      },
+      "receipt_failure": "CheckpointError: replay specification identity changed during operation",
+      "source_before_after_equal": false
+    }
+  ],
+  "manifest_drift_probe": {
+    "rejected": true,
+    "exception": "CheckpointError",
+    "message": "frozen checkpoint control docs/execution/counting-mixing-review-2026-11-01/candidate-artifact-manifest.json identity changed during operation",
+    "scope": "Actual main/Git/artifact-copy-manifest gates; unrelated scientific, preservation and approval functions substituted in synthetic fixture",
+    "manifest_before": {
+      "sha256": "b6b7fe773151e879b56ad16165b23b3507902ba3b81f35db74f50067c23f481e",
+      "bytes": 1214
+    },
+    "manifest_after": {
+      "sha256": "11b3cae869dfb9448f3bcf3613691df12fdb9512024b326f3b40e8733426d9ae",
+      "bytes": 1214
+    },
+    "receipt_written": true,
+    "receipt_checks_passed": false,
+    "receipt_manifest_sha256": "b6b7fe773151e879b56ad16165b23b3507902ba3b81f35db74f50067c23f481e"
+  },
+  "unresolved_contract_probe": {
+    "unresolved": [
+      "Independent final PDF review is still required"
+    ],
+    "rejected": true,
+    "exception": "CheckpointError",
+    "message": "checkpoint contract requires explicit empty unresolved list"
+  },
+  "comparison_probes": [
+    {
+      "mode": "success",
+      "rejected": false,
+      "receipt_checks_passed": true,
+      "exit_status": 0,
+      "initial_input_identities_retained": true,
+      "failure_stage": null,
+      "failure": null
+    },
+    {
+      "mode": "mismatch",
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "scientific JSON differs outside enumerated provenance/timing exclusions",
+      "receipt_checks_passed": false,
+      "exit_status": 1,
+      "initial_input_identities_retained": true,
+      "failure_stage": "scientific_comparison",
+      "failure": "CheckpointError: scientific JSON differs outside enumerated provenance/timing exclusions"
+    },
+    {
+      "mode": "candidate_drift",
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "comparison candidate identity changed during operation",
+      "receipt_checks_passed": false,
+      "exit_status": 1,
+      "initial_input_identities_retained": true,
+      "failure_stage": "final_input_identity_guards",
+      "failure": "CheckpointError: comparison candidate identity changed during operation"
+    },
+    {
+      "mode": "reference_drift",
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "comparison reference identity changed during operation",
+      "receipt_checks_passed": false,
+      "exit_status": 1,
+      "initial_input_identities_retained": true,
+      "failure_stage": "final_input_identity_guards",
+      "failure": "CheckpointError: comparison reference identity changed during operation"
+    }
+  ],
+  "torus_wrapper_probes": [
+    {
+      "mode": "success",
+      "rejected": false,
+      "receipt_checks_passed": true,
+      "command_executed": true,
+      "returncode": 0,
+      "exit_status": 0,
+      "initial_preflight_identity_retained": true,
+      "failure_stage": null,
+      "failure": null,
+      "scope": "Synthetic torus branch: no compiler, enumeration, high-precision work or scientific replay"
+    },
+    {
+      "mode": "preflight_drift",
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "preflight identity changed during operation",
+      "receipt_checks_passed": false,
+      "command_executed": true,
+      "returncode": 0,
+      "exit_status": 1,
+      "initial_preflight_identity_retained": true,
+      "failure_stage": "postlaunch_identity_guards",
+      "failure": "CheckpointError: preflight identity changed during operation",
+      "scope": "Synthetic torus branch: no compiler, enumeration, high-precision work or scientific replay"
+    }
+  ],
+  "all_expected_controls_and_rejections_observed": true
+}

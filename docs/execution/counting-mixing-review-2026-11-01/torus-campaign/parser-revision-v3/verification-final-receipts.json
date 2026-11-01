@@ -1,0 +1,53 @@
+[
+  {
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/torus_campaign/tests",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 1.6021615419303998,
+    "stdout": "",
+    "stderr": "test_campaign_parser_rejects_before_creating_outputs (test_campaign.NativeCampaignTests.test_campaign_parser_rejects_before_creating_outputs) ... ok\ntest_direct_flag_requires_exact_zero_or_one (test_campaign.NativeCampaignTests.test_direct_flag_requires_exact_zero_or_one) ... ok\ntest_equal_root_multiplicity_and_exclusive_outputs (test_campaign.NativeCampaignTests.test_equal_root_multiplicity_and_exclusive_outputs) ... ok\ntest_four_stream_exact_fractions_match_python_oracle (test_campaign.NativeCampaignTests.test_four_stream_exact_fractions_match_python_oracle) ... ok\ntest_hand_computed_simultaneous_events (test_campaign.NativeCampaignTests.test_hand_computed_simultaneous_events) ... ok\ntest_initial_external_left_limit_is_excluded (test_campaign.NativeCampaignTests.test_initial_external_left_limit_is_excluded) ... ok\ntest_length_input_read_failure_creates_no_result (test_campaign.NativeCampaignTests.test_length_input_read_failure_creates_no_result) ... ok\ntest_nearby_unequal_events_are_never_tolerance_merged (test_campaign.NativeCampaignTests.test_nearby_unequal_events_are_never_tolerance_merged) ... ok\ntest_nonfinite_nonpositive_and_range_inputs_fail (test_campaign.NativeCampaignTests.test_nonfinite_nonpositive_and_range_inputs_fail) ... ok\ntest_numeric_tokens_require_complete_consumption (test_campaign.NativeCampaignTests.test_numeric_tokens_require_complete_consumption) ... ok\ntest_path_reconstruction_and_independent_traces (test_campaign.NativeCampaignTests.test_path_reconstruction_and_independent_traces) ... ok\ntest_prejump_and_terminal_value_both_count (test_campaign.NativeCampaignTests.test_prejump_and_terminal_value_both_count) ... ok\ntest_root_and_cutoff_gates (test_campaign.NativeCampaignTests.test_root_and_cutoff_gates) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 1.518s\n\nOK\n"
+  },
+  {
+    "argv": [
+      "/opt/anaconda3/bin/ruff",
+      "--version"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 0.019543333910405636,
+    "stdout": "ruff 0.12.0\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/anaconda3/bin/ruff",
+      "check",
+      "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/torus_campaign/run.py",
+      "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/torus_campaign/tests/test_campaign.py"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 0.047102833981625736,
+    "stdout": "All checks passed!\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/torus_campaign/run.py",
+      "--cutoff",
+      "512",
+      "--output-dir",
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/parser-revision-v3/preflight512-v3-final"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 6.862428292050026,
+    "stdout": "{\"surface\": \"modular\", \"cutoff\": 512, \"count\": 71106, \"checks_passed\": true, \"native_seconds\": 0.113446, \"peak_rss_bytes\": 4915200}\n{\"surface\": \"asymmetric\", \"cutoff\": 512, \"count\": 72222, \"checks_passed\": true, \"native_seconds\": 0.134030625, \"peak_rss_bytes\": 4898816}\n{\"result\": \"/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/parser-revision-v3/preflight512-v3-final/result.json\", \"checks_passed\": true}\n",
+    "stderr": ""
+  }
+]

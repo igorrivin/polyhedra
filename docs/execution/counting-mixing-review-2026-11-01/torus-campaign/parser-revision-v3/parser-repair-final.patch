@@ -1,0 +1,142 @@
+--- a/experiments/torus_campaign/campaign.cpp
++++ b/experiments/torus_campaign/campaign.cpp
+@@ -283,24 +283,45 @@
+ }
+ void write_text(const std::string& path,const std::string& text){File f(path);f.bytes(text.data(),text.size());f.close();}
+ void validate_lengths(const std::vector<double>& lengths){for(double x:lengths)require(std::isfinite(x)&&x>=1&&x<=8193,"length list must be finite and in [1,8193]");}
++void validate_numeric_token(const std::string& token,const std::string& name) {
++    require(!token.empty()&&token.find_first_of(" \t\n\r\f\v")==std::string::npos,
++            name+" must be a nonempty numeric token without whitespace");
++}
++double parse_double_token(const std::string& token,const std::string& name) {
++    validate_numeric_token(token,name);size_t consumed=0;
++    double value=std::stod(token,&consumed);
++    require(consumed==token.size(),name+" contains trailing characters");return value;
++}
++int parse_integer_token(const std::string& token,const std::string& name) {
++    validate_numeric_token(token,name);size_t consumed=0;
++    int value=std::stoi(token,&consumed);
++    require(consumed==token.size(),name+" contains trailing characters");return value;
++}
++bool parse_flag(const std::string& token,const std::string& name) {
++    require(token=="0"||token=="1",name+" must be exactly 0 or 1");return token=="1";
++}
+ int main(int argc,char** argv) {try {
+     require(sizeof(double)==8&&std::numeric_limits<double>::is_iec559&&std::numeric_limits<double>::digits==53,"binary64 required");
+     uint16_t endian=1;require(*reinterpret_cast<unsigned char*>(&endian)==1,"little-endian host required");
+     require(argc>=2,"expected campaign or metrics subcommand");std::string mode=argv[1];
+     if(mode=="metrics") {
+         require(argc==7,"metrics LENGTHS T OUTPUT EPSILON(0|1e-6) DIRECT(0|1)");
++        require(std::filesystem::is_regular_file(argv[2]),"length input must be a regular file");
+         std::ifstream in(argv[2]);require(bool(in),"cannot open lengths file");std::vector<double> lengths;std::string token;
+-        while(in>>token)lengths.push_back(std::stod(token));validate_lengths(lengths);std::sort(lengths.begin(),lengths.end());
+-        int T=std::stoi(argv[3]);I epsilon=std::string(argv[5])=="0"?0:EPS;
++        while(in>>token)lengths.push_back(parse_double_token(token,"length"));
++        require(in.eof()&&!in.bad(),"length input read failure");
++        validate_lengths(lengths);std::sort(lengths.begin(),lengths.end());
++        int T=parse_integer_token(argv[3],"T");I epsilon=std::string(argv[5])=="0"?0:EPS;
+         require(std::string(argv[5])=="0"||std::string(argv[5])=="1e-6","unsupported epsilon");
+-        auto block=metrics(lengths,T,std::string(argv[6])=="1");auto bounds=sensitivity(lengths,T,epsilon);
++        bool direct=parse_flag(argv[6],"DIRECT");
++        auto block=metrics(lengths,T,direct);auto bounds=sensitivity(lengths,T,epsilon);
+         write_text(argv[4],"{\"block\":"+block.json()+",\"sensitivity\":"+bounds.json()+"}\n");return 0;
+     }
+     require(mode=="campaign"&&argc==9,"campaign SURFACE CUTOFF PREFIX X Y Z RECORD_LENGTHS(0|1)");
+-    std::string surface=argv[2],prefix=argv[4];int cutoff=std::stoi(argv[3]);
++    std::string surface=argv[2],prefix=argv[4];int cutoff=parse_integer_token(argv[3],"CUTOFF");
+     require(cutoff>=16&&cutoff<=8192&&(cutoff&(cutoff-1))==0,"cutoff must be dyadic, 16..8192");
+-    std::array<double,3> roots{std::stod(argv[5]),std::stod(argv[6]),std::stod(argv[7])};
+-    bool record_lengths=std::string(argv[8])=="1";Clock::time_point total=Clock::now(),stage=total;
++    std::array<double,3> roots{parse_double_token(argv[5],"X"),parse_double_token(argv[6],"Y"),parse_double_token(argv[7],"Z")};
++    bool record_lengths=parse_flag(argv[8],"RECORD_LENGTHS");Clock::time_point total=Clock::now(),stage=total;
+     File identities(prefix+".slopes.i32le");File* records=record_lengths?new File(prefix+".curves.i32-i32-f64le"):nullptr;
+     std::vector<double> lengths;lengths.reserve(size_t(0.29*(cutoff+1)*(cutoff+1)));
+     std::map<Slope,Curve> samples;std::map<Slope,std::set<std::string>> reasons;
+--- a/experiments/torus_campaign/README.md
++++ b/experiments/torus_campaign/README.md
+@@ -27,6 +27,13 @@
+ 512 preflight with identical campaign source and fixed input hashes. A final
+ `--phase clean_replay` additionally requires a clean source checkout. Source
+ and input hashes and the Git commit are checked again after computation.
++Native numeric arguments and length-file tokens must be consumed completely;
++suffixes such as `1.5junk` are rejected. The native `DIRECT` and
++`RECORD_LENGTHS` flags accept exactly `0` or `1`. Malformed arguments fail
++before any result is emitted; malformed campaign arguments create no streams.
++Length input must be a regular file, and reads must reach EOF without an I/O
++error. A readable empty file is allowed; a directory or a failed read is
++rejected without a result.
+ Author runs in a dirty checkout are explicitly marked. Independent code review
+ and a clean-source replay are required before incorporating the new scientific
+ results into the chapter. Raw streams stay in external execution evidence;
+--- a/experiments/torus_campaign/tests/test_campaign.py
++++ b/experiments/torus_campaign/tests/test_campaign.py
+@@ -31,13 +31,13 @@
+     def tearDownClass(cls):
+         cls.temp.cleanup()
+ 
+-    def metric(self, lengths, start, epsilon="1e-6", expect_success=True):
++    def metric(self, lengths, start, epsilon="1e-6", expect_success=True, direct="1"):
+         type(self).serial += 1
+         path = self.folder / str(self.serial)
+         path.write_text("\n".join(map(str, lengths)))
+         output = path.with_suffix(".json")
+         completed = subprocess.run([str(self.binary), "metrics", str(path), str(start),
+-                                    str(output), epsilon, "1"], text=True, capture_output=True)
++                                    str(output), epsilon, direct], text=True, capture_output=True)
+         if not expect_success:
+             self.assertNotEqual(completed.returncode, 0)
+             self.assertFalse(output.exists())
+@@ -93,6 +93,53 @@
+         self.metric([1, 2], 0, expect_success=False)
+         self.metric([1, 2], 4096, expect_success=False)
+ 
++    def test_numeric_tokens_require_complete_consumption(self):
++        for length in ("1.5junk", "1e0tail", "2.0#"):
++            with self.subTest(length=length):
++                self.metric([length], 1, expect_success=False)
++        for start in ("1junk", "1.0", "1e0", "", " 1", "1 ", "9999999999999999999999"):
++            with self.subTest(start=start):
++                self.metric([1, 2], start, expect_success=False)
++
++    def test_length_input_read_failure_creates_no_result(self):
++        output = self.folder / "directory-input-result.json"
++        completed = subprocess.run([str(self.binary), "metrics", str(self.folder), "1",
++                                    str(output), "1e-6", "1"], capture_output=True)
++        self.assertNotEqual(completed.returncode, 0)
++        self.assertFalse(output.exists())
++        # A readable, empty ordinary file is different from a failed read.
++        empty = self.metric([], 1)
++        self.assertEqual(empty["block"]["M"]["value"], 0)
++        self.assertEqual(empty["block"]["Q_squared"], 0)
++
++    def test_direct_flag_requires_exact_zero_or_one(self):
++        for direct in ("", "2", "-1", "true", "01", "1junk", " 1", "1 "):
++            with self.subTest(direct=direct):
++                self.metric([1, 2], 1, expect_success=False, direct=direct)
++        # Both valid flags preserve the independently known simultaneous-event
++        # result; ordinary decimal scientific notation remains a valid number.
++        for direct in ("0", "1"):
++            row = self.metric(["2e0", "2.0", "4", "5", "8"], 2, "0", direct=direct)
++            self.assertEqual(row["block"]["M"]["value"], 2.5)
++            self.assertAlmostEqual(row["block"]["Q_squared"], 49/20, places=14)
++
++    def test_campaign_parser_rejects_before_creating_outputs(self):
++        cases = [("64junk", ["3", "3", "3"], "0"),
++                 ("64.0", ["3", "3", "3"], "0"),
++                 ("64", ["3junk", "3", "3"], "0"),
++                 ("64", ["3", "3e0tail", "3"], "0"),
++                 ("64", ["3", "3", "3.0#"], "0")]
++        cases.extend(("64", ["3", "3", "3"], flag)
++                     for flag in ("", "2", "-1", "true", "01", "1junk", " 1", "1 "))
++        for cutoff, roots, flag in cases:
++            with self.subTest(cutoff=cutoff, roots=roots, record_lengths=flag):
++                type(self).serial += 1
++                prefix = self.folder / ("malformed-"+str(self.serial))
++                completed = subprocess.run([str(self.binary), "campaign", "modular", cutoff,
++                                            str(prefix), *roots, flag], capture_output=True)
++                self.assertNotEqual(completed.returncode, 0)
++                self.assertEqual(list(self.folder.glob(prefix.name+".*")), [])
++
+     def test_root_and_cutoff_gates(self):
+         for roots, cutoff in (([3, 3, 4], 64), ([float("nan"), 3, 3], 64),
+                               ([3, 3, 3], 63), ([3, 3, 3], 16384)):

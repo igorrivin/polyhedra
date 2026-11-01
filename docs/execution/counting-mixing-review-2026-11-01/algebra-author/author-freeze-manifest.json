@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "freeze_utc": "2026-11-01T20:11:36.155771+00:00",
+  "scope": "Sections 23-25 mathematical author freeze; not independent review or full manuscript build",
+  "baseline_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+  "files": {
+    "book/chapters/23-trace-coefficients.tex": {
+      "sha256": "5520b28607f96a3e65ea32e7c4dab267f6556dbbe8975d29b4186b9b27e429c9",
+      "bytes": 35208
+    },
+    "book/chapters/24-quantitative-counting.tex": {
+      "sha256": "4099f91c4abddf5f2a13831e48d7d52ac4d90af137068b969ca612fc6b273c58",
+      "bytes": 27440
+    },
+    "book/chapters/25-global-coefficient-filters.tex": {
+      "sha256": "7b2a7af525bfb556c4ca9da88bec560ce2f985906d62448d86ede7210f07b608",
+      "bytes": 13760
+    },
+    "book/claims/sections23-25.json": {
+      "sha256": "4517eab9acf6dc6d11a87cd5476cddc6efbc13761753f99b2bf0b4e6426cdfad",
+      "bytes": 77226
+    }
+  },
+  "validation": {
+    "23-trace-coefficients.tex": {
+      "labels_preserved_in_order": 39,
+      "environment_nesting_valid": true,
+      "all_citations_resolve_existing_bibliography": true,
+      "added_chapter_citation_keys": [],
+      "removed_chapter_citation_keys": [],
+      "baseline_sha256": "12b97d419d2bff932ded4a410369227bbace7d1ff707a8c53e58784fbc236848"
+    },
+    "24-quantitative-counting.tex": {
+      "labels_preserved_in_order": 36,
+      "environment_nesting_valid": true,
+      "all_citations_resolve_existing_bibliography": true,
+      "added_chapter_citation_keys": [],
+      "removed_chapter_citation_keys": [],
+      "baseline_sha256": "2faacb79c3c1f71f82c852c69389ed2b373e9a819ea4df994437cce6bc05f7fb"
+    },
+    "25-global-coefficient-filters.tex": {
+      "labels_preserved_in_order": 16,
+      "environment_nesting_valid": true,
+      "all_citations_resolve_existing_bibliography": true,
+      "added_chapter_citation_keys": [
+        "RivinFigures"
+      ],
+      "removed_chapter_citation_keys": [],
+      "baseline_sha256": "792b33ab38960c0974e371e03d936581b3fb7b4acfe8f535664795c8bfb8d065"
+    },
+    "ledger": {
+      "valid_json": true,
+      "claims": 52,
+      "source_records": 14,
+      "unique_substantive_labels": 80,
+      "all_91_labels_accounted_for": true,
+      "independent_review": "pending_separate_reviewer"
+    }
+  },
+  "computation": {
+    "author_scratch_exact_identities": 471,
+    "author_scratch_status": "passed; bounded exact algebra only",
+    "maintained_companion": "planned; not implemented or executed by this author",
+    "fixtures": "companion-fixtures.md"
+  },
+  "forbidden_actions_not_performed": [
+    "build",
+    "commit",
+    "upload",
+    "edit outside owned canonical files",
+    "rerun historical numerical artifacts"
+  ]
+}

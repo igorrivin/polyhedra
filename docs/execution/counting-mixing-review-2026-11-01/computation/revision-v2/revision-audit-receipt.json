@@ -1,0 +1,12 @@
+{
+  "generated_at_utc": "2026-11-01T20:45:47.583435+00:00",
+  "command": [
+    "/tmp/polyhedra-baseline-20261031/bin/python",
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/computation/revision-v2/revision-audit.py"
+  ],
+  "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+  "returncode": 0,
+  "elapsed_seconds": 0.44981862499844283,
+  "stdout": "{\"check_counts\": {\"cross_precision_observations\": 297, \"exact\": 4054, \"numerical_formula_comparisons\": 354}, \"comparison_mutants_rejected\": 256, \"cross_precision_mutants_rejected\": 288, \"result_sha256\": \"2a5680cf8e91db3668099ffdb5e19bc3bb984f89cd121395fbcd856a6da7fc71\", \"source_set_sha256\": \"4b1f8f22f155c464f0ecda6ab95c581926db157bae4ee7583e67fbc6448ded63\", \"strictly_identical_non_rank_two_groups\": [\"affine_Gaussian\", \"endpoint_Fourier\", \"terminal_family\"]}\n",
+  "stderr": ""
+}

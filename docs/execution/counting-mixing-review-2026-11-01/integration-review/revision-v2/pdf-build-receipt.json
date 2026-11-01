@@ -1,0 +1,77 @@
+{
+  "build_status": "approved_precommit_frozen_source_build",
+  "pdf": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/integration-review/revision-v2/pdf-build/main.pdf",
+  "pdf_sha256": "60708f3059284875e611eec6f910fd1086fd74880d84a1f4fc51f6bd356583a3",
+  "pages": 191,
+  "command": [
+    "/Library/TeX/texbin/latexmk",
+    "-norc",
+    "-pdf",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-file-line-error",
+    "-no-shell-escape",
+    "-outdir=../../pdf-build",
+    "main.tex"
+  ],
+  "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/integration-review/revision-v2/frozen-source/book",
+  "returncode": 0,
+  "actual_tex_input_count": 26,
+  "actual_tex_input_paths": [
+    "book/chapters/01-volume-normalization.tex",
+    "book/chapters/02-ideal-angle-cells.tex",
+    "book/chapters/03-ideal-tetrahedron.tex",
+    "book/chapters/04-hyperideal-integrand.tex",
+    "book/chapters/05-boundary-cone-continuation.tex",
+    "book/chapters/06-torus-sphere.tex",
+    "book/chapters/07-euclidean-periods.tex",
+    "book/chapters/08-wp-flat-limit.tex",
+    "book/chapters/09-volume-hessians.tex",
+    "book/chapters/12-quantum-boundary-measure.tex",
+    "book/chapters/13-four-point-fusion.tex",
+    "book/chapters/14-normalized-quantum-comparison.tex",
+    "book/chapters/15-quantum-airy.tex",
+    "book/chapters/16-dehn-filling-response.tex",
+    "book/chapters/23-trace-coefficients.tex",
+    "book/chapters/24-quantitative-counting.tex",
+    "book/chapters/25-global-coefficient-filters.tex",
+    "book/chapters/26-counting-to-mixing.tex",
+    "book/chapters/27-weighted-mixing-converse.tex",
+    "book/chapters/28-genus-two-model.tex",
+    "book/chapters/29-controlled-observables.tex",
+    "book/chapters/30-sharp-diagnostics.tex",
+    "book/chapters/31-arithmetic-remainder.tex",
+    "book/chapters/appendix-a-fricke.tex",
+    "book/main.tex",
+    "book/polyhedral_volumes_and_geodesic_identities.tex"
+  ],
+  "source_freeze_unchanged_after_build": true,
+  "freeze_matches_live_source_at_final_review": true,
+  "compiled_unique_labels": 607,
+  "compiled_unique_bibliography_keys": 129,
+  "overfull_count": 0,
+  "undefined_references_or_citations": false,
+  "underfull_count": 1,
+  "underfull_scope": "Existing unchanged Section9 paragraph at lines131-143; present in preliminary build.",
+  "no_shell_escape_warning_expected": true,
+  "versions": {
+    "latexmk": [
+      "Latexmk, John Collins, 27 Dec. 2024. Version 4.86a"
+    ],
+    "pdflatex": [
+      "pdfTeX 3.141592653-2.6-1.40.27 (TeX Live 2025)",
+      "kpathsea version 6.4.1",
+      "Copyright 2025 Han The Thanh (pdfTeX) et al."
+    ],
+    "ghostscript": [
+      "10.04.0"
+    ]
+  },
+  "prior_187_page_section15_pdf": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/artifacts/section15-analytic-review-2026-11-01/monograph-working-draft.pdf",
+    "sha256": "d299e1883c2aaae5e4b4cfabae42368c1e6fd645a04563e85a53d94f5d31d7ed",
+    "pages": 187
+  },
+  "artifact_marker": "Not rerun. Root successful exactly-once marker immediately preceded parent preliminary build.",
+  "claim_limit": "Exact reviewed precommit 26-input build. Copy after source commit only if all 26 committed source input hashes match; this is not a postcommit build or numerical replay."
+}

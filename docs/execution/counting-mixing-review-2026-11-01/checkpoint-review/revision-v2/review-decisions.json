@@ -1,0 +1,116 @@
+{
+  "generated_at_utc": "2026-11-01T21:23:04.208545+00:00",
+  "decision": "approve_repaired_preparation_machinery",
+  "approved": true,
+  "scope": "Targeted R1-R4 code-quality/verification review at exact author v2 freeze; suitable for parent-authorized execution with an independently bound finalized replay specification.",
+  "author_freeze": {
+    "sha256": "fe139f4c5f65073fb3693745e57d2566cb4fb94f60d73d2f3b4f087b740345c2",
+    "bytes": 7344
+  },
+  "production_scripts": {
+    "checkpoint_lib.py": {
+      "sha256": "c29512500065509e68f2efb2bd47351e61ab3034721ecb9e213c4a96a219b466",
+      "bytes": 17531
+    },
+    "compare_replays.py": {
+      "sha256": "faea75531a95443e756a31ab36a84ecf524daa59311c77aaf9438ab5a17cf301",
+      "bytes": 2830
+    },
+    "run_clean_replay.py": {
+      "sha256": "eb04b09e50859baacc1a1736eb18b22a31af3b68e68d333059cc7249d99dea68",
+      "bytes": 8518
+    },
+    "verify_checkpoint.py": {
+      "sha256": "6f3218fb814810a564f3402418db8fe2ddd4abe944ef814ca214a3f56b9d7ff8",
+      "bytes": 27237
+    }
+  },
+  "test_scripts": {
+    "test_checkpoint.py": {
+      "sha256": "308a35faa6ee877cbc0a5afe3d51947b44337cc3dcfd867919104c96d309162f",
+      "bytes": 8042
+    },
+    "test_checkpoint_revision.py": {
+      "sha256": "c6fa74899989c54aa1b48321c1acc4d8a1521537c58c738c72b60636b35d49f2",
+      "bytes": 21164
+    }
+  },
+  "replay_spec_template": {
+    "sha256": "a6d892dff6d19938fb9d2d58670394b2199c14adb6c670f4f13944f31c30f2cb",
+    "bytes": 3469
+  },
+  "closed_findings": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "remaining_machinery_findings": [],
+  "validation": {
+    "supplied_tests_normal": 45,
+    "supplied_tests_optimized": 45,
+    "subject_ruff": "passed",
+    "independent_cases_per_mode": 14,
+    "independent_normal": "all expected controls and rejections observed",
+    "independent_optimized": "all expected controls and rejections observed"
+  },
+  "source_only_head_observed": "5e34f23d981631605783cbe0f74247659f12a10a",
+  "source_only_status_observed": "",
+  "source_integrity_metadata_recovery_reverified_by_this_review": false,
+  "actual_scientific_replays_performed": [],
+  "candidate_approved": false,
+  "concrete_source_receipt_EOF_exception_adapter_approved": false,
+  "artifact_commit_approved": false,
+  "pending_candidate_requirements": [
+    "Bind the actual final integration approval/source map, PDF build/recorder/visual evidence and precise reviewed scope.",
+    "Adapt source receipts against their actual schema, preserve the exact five-path blank-at-eof exception and original failed/adjusted diagnostics, and bind actual source/integrity/sidecar evidence.",
+    "Finalize an explicit-unresolved-empty replay specification without altering independent approvals; preserve source-only and artifact-only boundaries.",
+    "Obtain actual guarded finite and full-length-8192 clean-source replays, strict comparisons and freshly checked reference/replay native/raw byte identities.",
+    "Complete exact curation/copied-byte manifest, omissions, local and ledger links, and a no-self-hash candidate manifest.",
+    "Independently review the populated candidate and any verifier adapter delta before artifact commit; independently verify the resulting artifact-only direct child and clean state afterward."
+  ],
+  "original_withheld_decision": {
+    "sha256": "97b8b7dabd53b7fec0809d9a91a7ca12cb8a7ca4cca7b805dd983e352cf339ab",
+    "bytes": 4936
+  },
+  "original_v1_evidence_preserved": true,
+  "canonical_edits": [],
+  "commits": [],
+  "PDF_builds_or_markers": [],
+  "remote_operations": [],
+  "evidence": {
+    "reviewed-author-freeze.json": {
+      "sha256": "fe139f4c5f65073fb3693745e57d2566cb4fb94f60d73d2f3b4f087b740345c2",
+      "bytes": 7344
+    },
+    "review.md": {
+      "sha256": "6d4f58288b95888d5ca8fcb20d750cdf474f07552cb0e12e055ab10a42526567",
+      "bytes": 4927
+    },
+    "execution-receipts.json": {
+      "sha256": "d3306249b6fe8024656b6f58ce3fd4b37d487b6f5286fc6997a3c178e417af1c",
+      "bytes": 17476
+    },
+    "independent_delta_probes.py": {
+      "sha256": "46e26eb6e32a50303b572ffc5ad89f64ec545733017b948051995b33ea3fd605",
+      "bytes": 9536
+    },
+    "independent-delta-normal.json": {
+      "sha256": "331e11acf8129ea2e3195c9ce5b130d687121cb6e72cecb0262705ac7c191fbb",
+      "bytes": 8799
+    },
+    "independent-delta-optimized.json": {
+      "sha256": "07438efec8de70e27ac3e72c6099ebf1783949c478172a4b1b9c05bad04674c0",
+      "bytes": 8799
+    },
+    "executed-test-launcher.py": {
+      "sha256": "447ffd5c2da308d4d0404da7ec8ed4ec8ee74ef9817432a559d00ce4e49f9c4a",
+      "bytes": 650
+    },
+    "run_supplied_tests.py": {
+      "sha256": "ff6e9be2c5bf241d4ea996d14656051ada8b4f30d278c3d1204748c3ac4af155",
+      "bytes": 752
+    }
+  },
+  "self_hash_excluded": true
+}

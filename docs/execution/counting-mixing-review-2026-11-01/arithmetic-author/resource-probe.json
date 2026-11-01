@@ -1,0 +1,54 @@
+{
+  "status": "read_only_resource_probe_not_campaign_validation",
+  "measurements": [
+    {
+      "surface": "modular",
+      "cutoff": 256,
+      "count": 17772,
+      "elapsed_seconds": 0.021070249960757792,
+      "peak_rss_bytes_macos": 31293440,
+      "traversal": {
+        "visited_outward_nodes": 35541,
+        "pruned_nodes": 17772,
+        "maximum_subtraction_ratio": 0.3333333333333333
+      }
+    },
+    {
+      "surface": "modular",
+      "cutoff": 512,
+      "count": 71106,
+      "elapsed_seconds": 0.08570887497626245,
+      "peak_rss_bytes_macos": 41861120,
+      "traversal": {
+        "visited_outward_nodes": 142209,
+        "pruned_nodes": 71106,
+        "maximum_subtraction_ratio": 0.3333333333333333
+      }
+    },
+    {
+      "surface": "asymmetric",
+      "cutoff": 256,
+      "count": 18054,
+      "elapsed_seconds": 0.021929875016212463,
+      "peak_rss_bytes_macos": 41861120,
+      "traversal": {
+        "visited_outward_nodes": 36105,
+        "pruned_nodes": 18054,
+        "maximum_subtraction_ratio": 0.4787999924622166
+      }
+    },
+    {
+      "surface": "asymmetric",
+      "cutoff": 512,
+      "count": 72222,
+      "elapsed_seconds": 0.086190624977462,
+      "peak_rss_bytes_macos": 43827200,
+      "traversal": {
+        "visited_outward_nodes": 144441,
+        "pruned_nodes": 72222,
+        "maximum_subtraction_ratio": 0.4787999924622166
+      }
+    }
+  ],
+  "clang": "/usr/bin/clang++"
+}

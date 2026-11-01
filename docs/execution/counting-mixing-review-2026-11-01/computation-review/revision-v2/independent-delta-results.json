@@ -1,0 +1,876 @@
+{
+  "decision": "approve",
+  "R1_resolved": true,
+  "assertion_count": 1086,
+  "assertions_by_group": {
+    "v1_receipts_preserved": 17,
+    "v1_withheld_decision_preserved": 1,
+    "v2_source_freeze": 20,
+    "bounded_source_delta": 1,
+    "strict_author_replay_equality": 1,
+    "unchanged_fixture_and_exact": 2,
+    "unchanged_other_numerical_families": 3,
+    "positive_family_policy": 4,
+    "unchanged_divisor_and_orbit_series": 16,
+    "independent_positive_series": 24,
+    "independent_transformed_radial": 48,
+    "independent_tail_accounting": 96,
+    "whole_positive_comparison_coverage": 2,
+    "positive_formula_mutants": 320,
+    "reported_tail_budget": 64,
+    "reported_relative_acceptance": 64,
+    "precision_policy": 2,
+    "positive_precision_mutants": 360,
+    "positive_comparison_domains": 9,
+    "positive_observation_domains": 4,
+    "cross_precision_policy_domains": 3,
+    "radial_domain_refusal": 10,
+    "visible_radial_tail": 1,
+    "tail_budget_enforced": 4,
+    "genuine_zero_policy": 1,
+    "bounded_domain_edges": 2,
+    "historical_files_unchanged": 7
+  },
+  "changed_source_files": [
+    "experiments/counting_mixing/README.md",
+    "experiments/counting_mixing/numerics.py",
+    "experiments/counting_mixing/run.py",
+    "experiments/counting_mixing/tests/test_counting_mixing.py"
+  ],
+  "strict_scientific_comparison": {
+    "declared_exclusions": [
+      "/elapsed_seconds",
+      "/generated_at_utc",
+      "/source/git_dirty",
+      "/source/git_status_porcelain",
+      "/source_at_completion/git_dirty",
+      "/source_at_completion/git_status_porcelain"
+    ],
+    "actual_excluded_differences": [
+      "/elapsed_seconds",
+      "/generated_at_utc"
+    ],
+    "differences": []
+  },
+  "independent_reference_precision": 120,
+  "independent_reference_rows": [
+    {
+      "dps": 60,
+      "t": "0",
+      "field": "k_series",
+      "relative_error": "3.06877550489062400831103501180093167113564258041734608024905414106608666356555870484844168813158885239801095174946851308e-61"
+    },
+    {
+      "dps": 60,
+      "t": "0",
+      "field": "log_series",
+      "relative_error": "3.06877550489062400831103501180093167113564258041734608024905525007128706361611106751157971628013814922287599749928091138e-61"
+    },
+    {
+      "dps": 60,
+      "t": "0",
+      "field": "two_sign_orbit_sum",
+      "relative_error": "3.06877550489062400831103501180093167113564258041734608024905414106608666356555870484844168813158885239801095174946851308e-61"
+    },
+    {
+      "dps": 60,
+      "t": "0",
+      "k": 1,
+      "field": "scaled_quadrature",
+      "relative_error": "6.73907027701175573478467607843277229927890394951726125305700126105709378910135257180929416007299576383145928194628968644e-62"
+    },
+    {
+      "dps": 60,
+      "t": "0",
+      "k": 1,
+      "field": "quadrature",
+      "relative_error": "2.83410602320517476603076223765843274426326940749922814229450687572415175474479284055849409397616907984059112140868132835e-61"
+    },
+    {
+      "dps": 60,
+      "t": "0",
+      "k": 2,
+      "field": "scaled_quadrature",
+      "relative_error": "6.73907027701175573478467607843277229927890394951726125305700126105709378910135257180929416007299576383145928194628968644e-62"
+    },
+    {
+      "dps": 60,
+      "t": "0",
+      "k": 2,
+      "field": "quadrature",
+      "relative_error": "3.80669055055473779437008598411251897504318704640618598748347319306399586642499738482641512516788654865995821051990904299e-61"
+    },
+    {
+      "dps": 60,
+      "t": "0",
+      "k": 3,
+      "field": "scaled_quadrature",
+      "relative_error": "9.79806848426480188806367700308839905072934093629862661127744858977982645706619742097162685585050648017295367820449727744e-61"
+    },
+    {
+      "dps": 60,
+      "t": "0",
+      "k": 3,
+      "field": "quadrature",
+      "relative_error": "2.37979228507885435172069088469595144299989769861495785190370925820839785534243889579689196737843951140361625259445419182e-60"
+    },
+    {
+      "dps": 60,
+      "t": "1/2",
+      "field": "k_series",
+      "relative_error": "2.77016718631042303915913953178259912779183158323375959444529489987656020138021350371057044750266016836873410454255851546e-60"
+    },
+    {
+      "dps": 60,
+      "t": "1/2",
+      "field": "log_series",
+      "relative_error": "2.77016718631042303915913953178259912779183158323375959444529521075447174018368644040827434562310137167975701598147661567e-60"
+    },
+    {
+      "dps": 60,
+      "t": "1/2",
+      "field": "two_sign_orbit_sum",
+      "relative_error": "2.77016718631042303915913953178259912779183158323375959444529489987656020138021350371057044750266016836873410454255851546e-60"
+    },
+    {
+      "dps": 60,
+      "t": "1/2",
+      "k": 1,
+      "field": "scaled_quadrature",
+      "relative_error": "5.20668923020760407584584707791301413688886159870769800380887054060863891931791516777212092694622718505598599426495981809e-61"
+    },
+    {
+      "dps": 60,
+      "t": "1/2",
+      "k": 1,
+      "field": "quadrature",
+      "relative_error": "1.70386378572563710617233295468599098480019380806373220812602224849159587596758496842101783754358062045309998090207453154e-60"
+    },
+    {
+      "dps": 60,
+      "t": "1/2",
+      "k": 2,
+      "field": "scaled_quadrature",
+      "relative_error": "6.60178226409061483542320379936307412605731344549914293406037657142353358774090774465429458969659967104280639230226213691e-61"
+    },
+    {
+      "dps": 60,
+      "t": "1/2",
+      "k": 2,
+      "field": "quadrature",
+      "relative_error": "7.67582154228452288968171036785304778791997728637736640440997936598228844734616262376003127908538033877548464596481064004e-62"
+    },
+    {
+      "dps": 60,
+      "t": "1/2",
+      "k": 3,
+      "field": "scaled_quadrature",
+      "relative_error": "1.70151607245058229871148979551891023998350366429145389416781176526408114263767380801985364435890540411547783808321817731e-60"
+    },
+    {
+      "dps": 60,
+      "t": "1/2",
+      "k": 3,
+      "field": "quadrature",
+      "relative_error": "2.58272292142525020365620485137248182165663988021469579913289506422067431418490530689843404564259318528275930781416671883e-60"
+    },
+    {
+      "dps": 60,
+      "t": "1",
+      "field": "k_series",
+      "relative_error": "8.98312599573562392420847509556080847829732121221594214414174907313382048323549139891247538837143155822730197266104244904e-61"
+    },
+    {
+      "dps": 60,
+      "t": "1",
+      "field": "log_series",
+      "relative_error": "8.98312599573562392420847509556080847829732121221594214414174753536864388437769668303069208043618760555933175717287588906e-61"
+    },
+    {
+      "dps": 60,
+      "t": "1",
+      "field": "two_sign_orbit_sum",
+      "relative_error": "8.98312599573562392420847509556080847829732121221594214414174907313382048323549139891247538837143155822730197266104244904e-61"
+    },
+    {
+      "dps": 60,
+      "t": "1",
+      "k": 1,
+      "field": "scaled_quadrature",
+      "relative_error": "3.23215760360636799575018782153140749741612779770349648299126465410401789799056710547769799849929319135711436403321641376e-61"
+    },
+    {
+      "dps": 60,
+      "t": "1",
+      "k": 1,
+      "field": "quadrature",
+      "relative_error": "1.09969437462483748520275133547166236240187972399599881857880176551511974868245254664272874300605088732101817878510008838e-60"
+    },
+    {
+      "dps": 60,
+      "t": "1",
+      "k": 2,
+      "field": "scaled_quadrature",
+      "relative_error": "3.23215760360636799575018782153140749741612779770349648299126465410401789799056710547769799849929319135711436403321641376e-61"
+    },
+    {
+      "dps": 60,
+      "t": "1",
+      "k": 2,
+      "field": "quadrature",
+      "relative_error": "8.61590220345200502753966523283958970887299190426110108437343410224521707513405763137322950526051038932079181945978861333e-61"
+    },
+    {
+      "dps": 60,
+      "t": "1",
+      "k": 3,
+      "field": "scaled_quadrature",
+      "relative_error": "1.29269450171677799765392189332340438261767714671790548209742478461443296966609329584624522449615465180452299931736491657e-60"
+    },
+    {
+      "dps": 60,
+      "t": "1",
+      "k": 3,
+      "field": "quadrature",
+      "relative_error": "1.31599919404246899449084789290570258503257293417681729499552346658964673469786528562026154274311761165066336176005157535e-60"
+    },
+    {
+      "dps": 60,
+      "t": "2",
+      "field": "k_series",
+      "relative_error": "2.55221667021858696011881315701167793762099746607931761969023677628903797714589974419669981531673860614228860068614491184e-60"
+    },
+    {
+      "dps": 60,
+      "t": "2",
+      "field": "log_series",
+      "relative_error": "2.5522166702185869601188131570116779376209974660793176196902368863201251375422581103717598091548772490353183028664313116e-60"
+    },
+    {
+      "dps": 60,
+      "t": "2",
+      "field": "two_sign_orbit_sum",
+      "relative_error": "2.55221667021858696011881315701167793762099746607931761969023677628903797714589974419669981531673860614228860068614491184e-60"
+    },
+    {
+      "dps": 60,
+      "t": "2",
+      "k": 1,
+      "field": "scaled_quadrature",
+      "relative_error": "1.80257430382141578070394567683548417814515514619355340846618417053533866893245073715633941471779281692649961095433700566e-60"
+    },
+    {
+      "dps": 60,
+      "t": "2",
+      "k": 1,
+      "field": "quadrature",
+      "relative_error": "1.73583878090961379047849163622050868747790743971193678803781006292967515818125537467006260598620681374927338630161148977e-60"
+    },
+    {
+      "dps": 60,
+      "t": "2",
+      "k": 2,
+      "field": "scaled_quadrature",
+      "relative_error": "1.80257430382141578070394567683548417814515514619355340846618417053533866893245073715633941471779281692649961095433700566e-60"
+    },
+    {
+      "dps": 60,
+      "t": "2",
+      "k": 2,
+      "field": "quadrature",
+      "relative_error": "1.79626160982575881899373889679136915251898494477799327159858534383910492639618880387142020355529179182699660399044504962e-60"
+    },
+    {
+      "dps": 60,
+      "t": "2",
+      "k": 3,
+      "field": "scaled_quadrature",
+      "relative_error": "5.61282965073686575755001148886104273966092159511097111657958131498346482055284581795238496618358046197774262018213570926e-61"
+    },
+    {
+      "dps": 60,
+      "t": "2",
+      "k": 3,
+      "field": "quadrature",
+      "relative_error": "1.20532134428730244550178880179017956722978870197646421049249455135278905076826247323984118078290116751532291314725668818e-59"
+    },
+    {
+      "dps": 90,
+      "t": "0",
+      "field": "k_series",
+      "relative_error": "1.02345898067305264957722724573546784635845582794216281889980486606206984406117991063705485645025966732953263018648784404e-91"
+    },
+    {
+      "dps": 90,
+      "t": "0",
+      "field": "log_series",
+      "relative_error": "1.02345898067305264957722724573435884115805577738980015576177671751277301919613416082465655169286809695257960466828331588e-91"
+    },
+    {
+      "dps": 90,
+      "t": "0",
+      "field": "two_sign_orbit_sum",
+      "relative_error": "1.02345898067305264957722724573546784635845582794216281889980486606206984406117991063705485645025966732953263018648784404e-91"
+    },
+    {
+      "dps": 90,
+      "t": "0",
+      "k": 1,
+      "field": "scaled_quadrature",
+      "relative_error": "4.21477624722775105788604834888328129269582847770460328068144320807916807782039632436873913267185836288492815322609087265e-91"
+    },
+    {
+      "dps": 90,
+      "t": "0",
+      "k": 1,
+      "field": "quadrature",
+      "relative_error": "1.00455574281107228345094780368639311824826045597449271250265724834414727778334923439179990584787353698237770304006472351e-90"
+    },
+    {
+      "dps": 90,
+      "t": "0",
+      "k": 2,
+      "field": "scaled_quadrature",
+      "relative_error": "6.25719926473822640365609626204834683317554913237740208420258392289929749658288624708452337985305534756681776129931738761e-91"
+    },
+    {
+      "dps": 90,
+      "t": "0",
+      "k": 2,
+      "field": "quadrature",
+      "relative_error": "3.29195704933260363486431399760863423484130341384869919415602328786781513836702174201651675221100211513990419000770795075e-91"
+    },
+    {
+      "dps": 90,
+      "t": "0",
+      "k": 3,
+      "field": "scaled_quadrature",
+      "relative_error": "1.46867517591937285194281929598154163396634578314705522707061047553506331521692151166151192231635163269871512291301621553e-90"
+    },
+    {
+      "dps": 90,
+      "t": "0",
+      "k": 3,
+      "field": "quadrature",
+      "relative_error": "4.48060646211646889999392253347667646594533519973100074313871404012904402102303647144991809096573817589594863665856017713e-91"
+    },
+    {
+      "dps": 90,
+      "t": "1/2",
+      "field": "k_series",
+      "relative_error": "3.90797951345078583038573975965968086315202295679835203949150689060524336911090115633429216699992312422715444644312256351e-91"
+    },
+    {
+      "dps": 90,
+      "t": "1/2",
+      "field": "log_series",
+      "relative_error": "3.90797951345078583038573975966278964226741099152771901653048809501727647934001554551529423451288599966061395137252197127e-91"
+    },
+    {
+      "dps": 90,
+      "t": "1/2",
+      "field": "two_sign_orbit_sum",
+      "relative_error": "3.90797951345078583038573975965968086315202295679835203949150689060524336911090115633429216699992312422715444644312256351e-91"
+    },
+    {
+      "dps": 90,
+      "t": "1/2",
+      "k": 1,
+      "field": "scaled_quadrature",
+      "relative_error": "4.59599952484952651740393149306129448284355266735925949725866121551703869796024424418527390018242908822471742809333640675e-91"
+    },
+    {
+      "dps": 90,
+      "t": "1/2",
+      "k": 1,
+      "field": "quadrature",
+      "relative_error": "1.03800888707803416880271400484157545751986486886670526171083865751670275265038504255603570419627290312946389713939961844e-90"
+    },
+    {
+      "dps": 90,
+      "t": "1/2",
+      "k": 2,
+      "field": "scaled_quadrature",
+      "relative_error": "4.59599952484952651740393149306129448284355266735925949725866121551703869796024424418527390018242908822471742809333640675e-91"
+    },
+    {
+      "dps": 90,
+      "t": "1/2",
+      "k": 2,
+      "field": "quadrature",
+      "relative_error": "3.1199538417168537130083047349325465875788830972984282200206728278338000050163320414366393183435278692951326226793797323e-90"
+    },
+    {
+      "dps": 90,
+      "t": "1/2",
+      "k": 3,
+      "field": "scaled_quadrature",
+      "relative_error": "7.21247196944869239386511938421588271429663346620062943451052446796978955787714853285070537755471659045267977970768745803e-91"
+    },
+    {
+      "dps": 90,
+      "t": "1/2",
+      "k": 3,
+      "field": "quadrature",
+      "relative_error": "4.35484559685310351258222666699258153083134064871704256409167356503921542196166309579400135177023724185175570786742249515e-90"
+    },
+    {
+      "dps": 90,
+      "t": "1",
+      "field": "k_series",
+      "relative_error": "2.17502707422996219831005629626123450750669677655545730880871036383013263029137737387350997267982072325022212812563827758e-90"
+    },
+    {
+      "dps": 90,
+      "t": "1",
+      "field": "log_series",
+      "relative_error": "2.17502707422996219831005629626138828402435666233492889698704115735452789708839892269016597049234046761513736652145840095e-90"
+    },
+    {
+      "dps": 90,
+      "t": "1",
+      "field": "two_sign_orbit_sum",
+      "relative_error": "2.17502707422996219831005629626123450750669677655545730880871036383013263029137737387350997267982072325022212812563827758e-90"
+    },
+    {
+      "dps": 90,
+      "t": "1",
+      "k": 1,
+      "field": "scaled_quadrature",
+      "relative_error": "3.98820969675514022566501683730346682075339210426128622188925110308561021510592383610049613083582686008875121221781566257e-92"
+    },
+    {
+      "dps": 90,
+      "t": "1",
+      "k": 1,
+      "field": "quadrature",
+      "relative_error": "2.82478588499792223346200919930993982621044336799806472207187274340516802106025433462318250202600925436613945772516606764e-90"
+    },
+    {
+      "dps": 90,
+      "t": "1",
+      "k": 2,
+      "field": "scaled_quadrature",
+      "relative_error": "1.65579235904496619948559084384957236989507139231273960610572558778776532388738873964499190033452490777191305027683833277e-90"
+    },
+    {
+      "dps": 90,
+      "t": "1",
+      "k": 2,
+      "field": "quadrature",
+      "relative_error": "6.13671954603871884029366259997886087985486058005019842459705095168729570893145797593494333330290889408476164839161345252e-90"
+    },
+    {
+      "dps": 90,
+      "t": "1",
+      "k": 3,
+      "field": "scaled_quadrature",
+      "relative_error": "3.98820969675514022566501683730346682075339210426128622188925110308561021510592383610049613083582686008875121221781566257e-92"
+    },
+    {
+      "dps": 90,
+      "t": "1",
+      "k": 3,
+      "field": "quadrature",
+      "relative_error": "1.70252871434083932945954311680907673436382960796238972248023316207933181238961941473892237755243125041937490295815448629e-90"
+    },
+    {
+      "dps": 90,
+      "t": "2",
+      "field": "k_series",
+      "relative_error": "2.79607670262813325901553308748511789299141251966706431340035932196986278855789057205426662076169591855802825597386154777e-90"
+    },
+    {
+      "dps": 90,
+      "t": "2",
+      "field": "log_series",
+      "relative_error": "2.7960767026281332590155330874850078619042521233086981383403654838312198955281883917678668582474299520297427889359774276e-90"
+    },
+    {
+      "dps": 90,
+      "t": "2",
+      "field": "two_sign_orbit_sum",
+      "relative_error": "3.91270038394725576262595169294201712499021661628456396205665071304613490052887970661055040162313176428956937029087168318e-90"
+    },
+    {
+      "dps": 90,
+      "t": "2",
+      "k": 1,
+      "field": "scaled_quadrature",
+      "relative_error": "1.82138658633045665859320136106236653637066359953566837303724103725830452187254718675234392551831297895115731781948439201e-90"
+    },
+    {
+      "dps": 90,
+      "t": "2",
+      "k": 1,
+      "field": "quadrature",
+      "relative_error": "2.82941611352183345836944281029745667321068414178303350540385215581792324097592439214661428576217483315707946422103297037e-91"
+    },
+    {
+      "dps": 90,
+      "t": "2",
+      "k": 2,
+      "field": "scaled_quadrature",
+      "relative_error": "2.11837552849471393550504334847359610037529751749299271184341681509253255876656552213871669197229590349702800588700598535e-90"
+    },
+    {
+      "dps": 90,
+      "t": "2",
+      "k": 2,
+      "field": "quadrature",
+      "relative_error": "6.28268297008067028404166419384681102569085369264438735392688662447955844135410329656699465545707836458000400464887241518e-91"
+    },
+    {
+      "dps": 90,
+      "t": "2",
+      "k": 3,
+      "field": "scaled_quadrature",
+      "relative_error": "2.45481740400388420953903477248095909854121414777611834066122509294212662693191364009880139058021223565215989669445654891e-91"
+    },
+    {
+      "dps": 90,
+      "t": "2",
+      "k": 3,
+      "field": "quadrature",
+      "relative_error": "1.72840694547127960573605655414942633484015659648814350403729947534652525762044638258108901769410649054618319157545046111e-89"
+    }
+  ],
+  "whole_positive_family_mutation_rows": [
+    {
+      "dps": 60,
+      "kind": "orbit_sum",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "log_series",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "orbit_sum",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "log_series",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "orbit_sum",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "log_series",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "orbit_sum",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "log_series",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 60,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "orbit_sum",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "log_series",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "orbit_sum",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "log_series",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "orbit_sum",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "log_series",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "orbit_sum",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "log_series",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "unscaled_radial",
+      "five_mutants_rejected": true
+    },
+    {
+      "dps": 90,
+      "kind": "scaled_radial",
+      "five_mutants_rejected": true
+    }
+  ],
+  "cross_precision_result": {
+    "status": "uncertified cross-precision agreement",
+    "comparison_count": 36,
+    "decimal_precisions": [
+      60,
+      90
+    ],
+    "maximum_absolute_difference": "4.80309432447760934543874250607005679272297448058845403676618357994741926262388827916537089e-61",
+    "maximum_scaled_difference": "1.20532134428730244550178880178845744686499923700836024167705024180972732436551508261908143e-59",
+    "worst_scaled_observation": "orbit-k-3-t-2",
+    "scaled_tolerance": "1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e-45",
+    "observation_policy": "strictly_positive_relative",
+    "comparison_scaling": "abs(low-high)/high with low>0 and high>0",
+    "maximum_relative_difference": "1.20532134428730244550178880178845744686499923700836024167705024180972732436551508261908143e-59"
+  },
+  "evidence_limit": "Independent transformed quadrature and positive double series share mpmath; no interval or quadrature-error certificate."
+}

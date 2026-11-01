@@ -1,0 +1,29 @@
+--- before/book/claims/sections26-29.json
++++ after/book/claims/sections26-29.json
+@@ -61,7 +61,7 @@
+     "GNDiscrepancy": {
+       "url": "https://jtnb.centre-mersenne.org/item/10.5802/jtnb.1275.pdf",
+       "version": "J. Theor. Nombres Bordeaux 36 (2024), 127-174, publisher PDF",
+-      "pin": "Section 1.3 and Theorem 1.4, pages 131-132; Section 5, Theorem 5.2, page 148",
++      "pin": "Section 1.3 and Theorem 1.4, pages 131-132; Section 5, Theorem 5.2, printed page 147 (proof page 148 onward)",
+       "checked": "Exact factor 2 times congruence index times real-ball volume inverse; simply connected K-simple group, noncompact real factor, unramified S, bounded positive-measure hyperspecial bi-invariant set, discretely embedded irreducible representation, representation-dependent small radius."
+     },
+     "SharpZeta": {
+@@ -91,7 +91,7 @@
+     "AranaHerreraSquare2020": {
+       "url": "https://arxiv.org/pdf/1902.05626v1",
+       "version": "arXiv v1, 14 February 2019, 27 pages; journal citation is J. Mod. Dyn. 16 (2020)",
+-      "pin": "Theorem 1.6, PDF page 4; unfolding stabilizer denominator in equation (1.4), pages 4-5, and Section 3",
++      "pin": "Theorem 1.6, PDF page 4; stabilizer denominator in the unnumbered display in the Sketch of proof of Theorem 1.1, printed/PDF page 5, immediately after Theorem 1.8; Section 3",
+       "checked": "Equivariant homeomorphism to filling pairs, integral pairs to square tilings, and area to intersection; simultaneous-quotient weights retain pair stabilizers."
+     },
+     "AranaHerreraSquareEffective": {
+@@ -428,7 +428,7 @@
+       "status": "derived_in_chapter",
+       "statement": "Independent character variables preserve a marked ordered filling pair through its unit first corner.",
+       "hypotheses": [
+-        "The locally finite discrete unit-diagonal coefficient statement eq:globaldiagonal from Section 24.",
++        "The locally finite discrete unit-diagonal coefficient statement eq:globaldiagonal from Section 25.",
+         "Two independent character variables and external product of measures; finite rectangles of source lengths."
+       ],
+       "derivation_or_dependency": "Tensor the two isolated first-atom decompositions. The first corner has mass one, with no claim about convergence uniform over moving labels.",

@@ -1,0 +1,2100 @@
+{
+  "total_claims": 168,
+  "files": {
+    "book/claims/sections23-25.json": {
+      "count": 52,
+      "protected_claim_fields": [
+        {
+          "id": "23.01",
+          "labels": [],
+          "status": "derived_geometric",
+          "hypotheses": [
+            "Fixed closed hyperbolic surface of curvature -1; equal time subdivision within injectivity radius.",
+            "Hessian is evaluated on periodic normal fields along a unit-speed closed geodesic."
+          ],
+          "source_pins": [
+            {
+              "source_key": "CdVPeriodic",
+              "pins": [
+                "Introduction pp. 159-160; Section 1 pp. 160-162; Propositions (1.1)-(1.2) p. 162"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "23.02",
+          "labels": [
+            "eq:coeffuncrossing"
+          ],
+          "status": "derived_geometric",
+          "hypotheses": [
+            "A small embedded convex hyperbolic disk centered at a transverse crossing; radius r>0 and angle in (0,pi)."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "23.03",
+          "labels": [
+            "eq:coeffbasis",
+            "eq:coeffcurveexpansion"
+          ],
+          "status": "external_statement_and_derived_normalization",
+          "hypotheses": [
+            "Closed marked oriented surface, genus at least two.",
+            "Unnegated traces; parallel copies allowed; empty multicurve is the unit."
+          ],
+          "source_pins": [
+            {
+              "source_key": "CharlesMarche",
+              "pins": [
+                "Introduction pp. 1-2; Theorem 1.1 and skein discussion p. 4"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "23.04",
+          "labels": [
+            "eq:coefftwistedSelberg",
+            "eq:coeffdistribution"
+          ],
+          "status": "external_statement_and_derived_normalization",
+          "hypotheses": [
+            "Rank-two unitary twists and even smooth compactly supported length tests.",
+            "Unoriented primitive labels; inverse-invariant characters; compact surface without cusps or boundary."
+          ],
+          "source_pins": [
+            {
+              "source_key": "NaudTwisted",
+              "pins": [
+                "Fourier convention p. 2; Theorem 2.2 and definition of primitive conjugacy classes p. 6"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "23.05",
+          "labels": [
+            "lem:coefftriangularity"
+          ],
+          "status": "derived_geometric",
+          "hypotheses": [
+            "Primitive orbital support delta, positive iterate k, and a fixed hyperbolic metric."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "23.06",
+          "labels": [
+            "prop:coefffirstatom",
+            "eq:coefffirstatom"
+          ],
+          "status": "derived_geometric",
+          "hypotheses": [
+            "Fixed simple primitive alpha, positive integer m, and a fixed marked metric or compact marked family."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "23.07",
+          "labels": [
+            "eq:coeffmomentratio"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "A fixed smooth cutoff equal to one at the first atom and disjoint from the other orbital lengths in a local metric neighborhood."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "23.08",
+          "labels": [
+            "eq:coeffbraceletpositive"
+          ],
+          "status": "external_statement_and_derived_normalization",
+          "hypotheses": [
+            "Skein parameter +1, canonical twisted Fuchsian evaluation, and sign-coherent bracelet expansion.",
+            "Simple support curves are distinct and disjoint; windings enter bracelet length."
+          ],
+          "source_pins": [
+            {
+              "source_key": "DThurstonPositive",
+              "pins": [
+                "Definition 1.1, spin identification, and Theorem 2 p. 1",
+                "Proposition 4.4, Definition 4.9 and Proposition 4.10 p. 5"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "23.09",
+          "labels": [
+            "prop:coeffgrowth",
+            "eq:coeffexponentialbound",
+            "eq:coeffMrbound"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "Fixed target multicurve C and a fixed metric with all support lengths positive."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "23.10",
+          "labels": [
+            "cor:coeffmeasuregrowth",
+            "eq:coeffmeasuregrowth"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "Positive systole and compact hyperbolic quotient; fixed C."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "23.11",
+          "labels": [
+            "eq:coeffheatdefinition",
+            "eq:coeffLaplacedefinition"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "Fixed coefficient C; Re(t)>0 for the Gaussian transform; Re(s)>1 for the Laplace transform."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "23.12",
+          "labels": [
+            "eq:coeffallchannelbound",
+            "eq:coefffullheatexpansion"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "Weighted l1 coefficient norm uses 2 to the number of copies, not an L2 function norm.",
+            "Unitary characters, fixed surface, Re(t)>0."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "23.13",
+          "labels": [
+            "prop:coeffheatfirst",
+            "eq:coeffheatfirst",
+            "eq:coeffLaplacefirst",
+            "eq:coefflengthlimits"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "Fixed simple alpha and a positive orbital gap b>ell(alpha).",
+            "t decreases to zero through positive reals; s increases to positive infinity."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "23.14",
+          "labels": [
+            "eq:coeffChebyshev",
+            "eq:coeffsimplepowers",
+            "eq:coeffoddpowers"
+          ],
+          "status": "derived_exact_algebra",
+          "hypotheses": [
+            "k>=1, positive target multiplicity m, simple primitive alpha; P0=2 and P1=x."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "23.15",
+          "labels": [
+            "eq:coeffpowergenerating",
+            "eq:coeffpowerLaplace",
+            "eq:coeffpowerheat"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "Positive simple length; m>=1; Re(s)>-1/2 only for the one fixed primitive family."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "23.16",
+          "labels": [
+            "eq:coefffigurepowers",
+            "eq:coefffigurecancellation"
+          ],
+          "status": "derived_exact_algebra",
+          "hypotheses": [
+            "Embedded pants with three distinct essential cuff classes for the displayed coefficient indexing.",
+            "Unnegated unitary traces satisfy T_gamma=xy-z; gamma is the selected primitive figure-eight."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "23.17",
+          "labels": [
+            "eq:coeffmetricvariation"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "Fixed topological target and compactly supported smooth test function; smooth marked metric variation."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "23.18",
+          "labels": [
+            "eq:coeffWolpert"
+          ],
+          "status": "derived_geometric",
+          "hypotheses": [
+            "Twisting curve beta is simple; displacement twist and intersection-angle sign conventions are consistent.",
+            "Closed delta may be immersed; passages through beta count with multiplicity."
+          ],
+          "source_pins": [
+            {
+              "source_key": "WolpertTwist",
+              "pins": [
+                "First-variation formula (1.1) p. 132; Section 2 and deformation (2.1) p. 133"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "23.19",
+          "labels": [
+            "eq:coeffheatvariation"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "Fixed simple alpha, a compact local metric neighborhood, and a bounded tangent direction."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "23.20",
+          "labels": [
+            "eq:coeffunorientedproduct",
+            "eq:coeffproductderivative"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "Unitary rank-two twists; Re(v)>1 for the product; Re(s)>1 for its fixed-coefficient derivative at v=s+1/2."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "23.21",
+          "labels": [
+            "eq:coeffAdamsobstruction"
+          ],
+          "status": "derived_exact_algebra",
+          "hypotheses": [
+            "Arbitrary SL(2) matrices A,B; unnegated traces and P2(x)=x^2-2."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "23.22",
+          "labels": [],
+          "status": "derived_exact_algebra",
+          "hypotheses": [
+            "Spectra for symmetric-power twists are supplied as additional data; virtual twists are handled additively.",
+            "Locally finite positive-length measures and inverse-invariant characters."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "23.23",
+          "labels": [],
+          "status": "external_statement",
+          "hypotheses": [
+            "Unmarked scalar length/Laplace spectra, without a labelled holonomy family."
+          ],
+          "source_pins": [
+            {
+              "source_key": "AougabLahnLovingMiller",
+              "pins": [
+                "Theorem 1 and Corollary 2 p. 2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "23.24",
+          "labels": [],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "Thurston measure normalized by the actual integral multicurve lattice; all weighted multicurves counted."
+          ],
+          "source_pins": [
+            {
+              "source_key": "MirzSimple",
+              "pins": [
+                "Integral lattice and length normalization p. 105; Proposition 3.1 and proof p. 106"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "24.01",
+          "labels": [
+            "eq:countEMM"
+          ],
+          "status": "external_statement",
+          "hypotheses": [
+            "Fixed nonzero rational multicurve and fixed compact negatively curved metric; genus g>=2."
+          ],
+          "source_pins": [
+            {
+              "source_key": "EMMEffective",
+              "pins": [
+                "Theorem 1.1 p. 2",
+                "Lemma 5.1 and integral train-track points p. 27",
+                "Theorem 5.1 and Lemma 5.6 pp. 29-30",
+                "End of proof of Theorem 1.1, Section 8 p. 45"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "24.02",
+          "labels": [
+            "eq:countsandwich",
+            "eq:countcellerror"
+          ],
+          "status": "derived_geometric",
+          "hypotheses": [
+            "Full lattice with covolume v and a fundamental cell inside the radius-rho ball.",
+            "Compact convex K with positive inradius r about x0; R>=rho/r for the stated boundary-error coefficient."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "24.03",
+          "labels": [
+            "prop:countall",
+            "eq:countall"
+          ],
+          "status": "derived_from_external_statements",
+          "hypotheses": [
+            "Fixed closed hyperbolic X; d=6g-6; actual integral chart lattices, including parity constraints.",
+            "Finite rational cone subdivision subordinate to train tracks."
+          ],
+          "source_pins": [
+            {
+              "source_key": "EMMEffective",
+              "pins": [
+                "Theorem 1.1 p. 2",
+                "Lemma 5.1 and integral train-track points p. 27",
+                "Theorem 5.1 and Lemma 5.6 pp. 29-30",
+                "End of proof of Theorem 1.1, Section 8 p. 45"
+              ]
+            },
+            {
+              "source_key": "MirzSimple",
+              "pins": [
+                "Integral lattice and length normalization p. 105; Proposition 3.1 and proof p. 106"
+              ]
+            },
+            {
+              "source_key": "LuoStongLengths",
+              "pins": [
+                "Theorem 1.1, equations (1.1)-(1.2), p. 497; Corollary 1.2 p. 498"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "24.04",
+          "labels": [
+            "eq:countprimitive"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "Nonzero integral laminations; primitive means gcd of support multiplicities is one; d>2."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "24.05",
+          "labels": [
+            "eq:counttorus"
+          ],
+          "status": "derived_from_external_statements",
+          "hypotheses": [
+            "Complete once-punctured torus; full centrally symmetric McShane-Rivin norm ball; primitive vectors modulo sign."
+          ],
+          "source_pins": [
+            {
+              "source_key": "McShaneRivinTori",
+              "pins": [
+                "Abstract p. 1 and norm construction Section 2",
+                "Theorem 4.1 and its preceding paragraph p. 8"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "24.06",
+          "labels": [
+            "prop:countnearcollision",
+            "eq:countpantsgap"
+          ],
+          "status": "derived_geometric",
+          "hypotheses": [
+            "Any fixed closed hyperbolic surface of genus at least two.",
+            "Two disjoint nonseparating cuffs with connected complement; an interior twist curve meeting the third cuff."
+          ],
+          "source_pins": [
+            {
+              "source_key": "RivinFigures",
+              "pins": [
+                "Theorem 1.1 p. 4; Theorem 1.3, equation (1), p. 5; punctured-torus cuff identification p. 7"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "24.07",
+          "labels": [
+            "eq:countnormalizedpants",
+            "eq:countnecessarytime"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "The sequence and fixed positive constant A of the near-collision proposition; desired error R^(-M), M>0."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "24.08",
+          "labels": [
+            "eq:counttracegapconstant",
+            "lem:counttracegap",
+            "eq:counttracegap",
+            "eq:countactiongap"
+          ],
+          "status": "derived_from_external_statements",
+          "hypotheses": [
+            "Positive systole epsilon; simple target alpha; contributing orbital label other than (alpha,1)."
+          ],
+          "source_pins": [
+            {
+              "source_key": "DThurstonPositive",
+              "pins": [
+                "Definition 1.1, spin identification, and Theorem 2 p. 1",
+                "Proposition 4.4, Definition 4.9 and Proposition 4.10 p. 5"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "24.09",
+          "labels": [
+            "eq:countuniformconstants"
+          ],
+          "status": "derived_geometric",
+          "hypotheses": [
+            "Fixed surface with systole epsilon>0 and diameter D; basepoint orbit in the hyperbolic plane."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "24.10",
+          "labels": [
+            "prop:countuniformisolation",
+            "eq:countuniformisolation",
+            "eq:countcertifiedtime"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "R>=epsilon; all simple targets of length at most R; 0<t<=epsilon/4.",
+            "The later orbital label (alpha,3) ensures b_alpha exists even if its net atom cancels."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "24.11",
+          "labels": [
+            "eq:countsupportpartition",
+            "eq:countonesupport"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "All weighted simple multicurves; r(C) counts distinct supports, and r(0)=0; Re(s)>0."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "24.12",
+          "labels": [
+            "eq:countsupportmobius"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "Re(s)>0 and positive systole; unoriented simple supports."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "24.13",
+          "labels": [
+            "eq:countsupportfourier"
+          ],
+          "status": "derived_exact_algebra",
+          "hypotheses": [
+            "Degree at most 3g-3, q=3g-2, and all qth roots of unity."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "24.14",
+          "labels": [
+            "eq:countsupportconditional"
+          ],
+          "status": "conditional_analytic_statement",
+          "hypotheses": [
+            "Assumed common small-positive-s expansion at every Fourier sample; specified 0<eta<d-1.",
+            "Leading A_X is a polynomial of degree at most 3g-3."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "24.15",
+          "labels": [],
+          "status": "external_statement_and_derived_normalization",
+          "hypotheses": [
+            "Normal curve input for AHT; for one-support selection first compute the valid primitive integral divisor in an integral-lamination chart."
+          ],
+          "source_pins": [
+            {
+              "source_key": "AHTComponents",
+              "pins": [
+                "Theorem 12 p. 14; Corollary 13 and proof p. 18"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "24.16",
+          "labels": [
+            "eq:countshell"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "R>=2; 0<=Delta<=R/2; simple curves are a subset of all positive weighted multicurves."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "24.17",
+          "labels": [
+            "prop:countdesmooth",
+            "eq:countsmoothhypothesis",
+            "eq:countsharpconditional"
+          ],
+          "status": "conditional_analytic_statement",
+          "hypotheses": [
+            "Assumed uniform smoothed connected-count error O(h^-m R^(d-eta)); eta>0 and m>=0.",
+            "Smooth 0<=f_h<=1 equals one below 1-h and zero above 1+h."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "24.18",
+          "labels": [],
+          "status": "scope_boundary",
+          "hypotheses": [
+            "First-atom t decreases to zero; positive simple-curve partition s decreases to zero; Gaussian lengths of order R correspond to t of order R squared."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "25.01",
+          "labels": [
+            "eq:globalmoments",
+            "eq:globalbounded"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "v=2cos(theta), theta in [0,pi]; unordered roots of u^2-u=v; Lambda is defined on the multicurve basis."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "25.02",
+          "labels": [
+            "eq:globalweightseries"
+          ],
+          "status": "derived_exact_algebra",
+          "hypotheses": [
+            "The branch of the square root equals one at q=0; |q|<1/2."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "25.03",
+          "labels": [
+            "prop:globalonecrossing",
+            "eq:globalonecrossing"
+          ],
+          "status": "derived_from_external_statements",
+          "hypotheses": [
+            "Primitive closed geodesic with one transverse self-intersection on a closed surface.",
+            "Pants cuff traces remain essential variables; identify equal cuff images only after forming the polynomial."
+          ],
+          "source_pins": [
+            {
+              "source_key": "RivinFigures",
+              "pins": [
+                "Theorem 1.1 p. 4; Theorem 1.3, equation (1), p. 5; punctured-torus cuff identification p. 7"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "25.04",
+          "labels": [
+            "eq:globalfilteredheat",
+            "eq:globalresidual"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "Re(t)>0; weighted coefficient norm convergence.",
+            "Primitive residual formula additionally requires higher twisting spectra for Adams extraction."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "25.05",
+          "labels": [
+            "eq:globalobstruction",
+            "eq:globalobstructionbound"
+          ],
+          "status": "derived_exact_algebra",
+          "hypotheses": [
+            "Embedded geodesic pants with distinct essential cuffs; the same linear functional is applied to all four trace functions."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "25.06",
+          "labels": [
+            "eq:globalEuler"
+          ],
+          "status": "derived_exact_algebra",
+          "hypotheses": [
+            "Positive systole; finitely many primitive labels below each cutoff; measures supported on nonnegative lengths.",
+            "Each factor is the scalar trace geometric series, not a determinant or a Chebyshev series."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "25.07",
+          "labels": [
+            "prop:globaldiagonal",
+            "eq:globaldiagonal"
+          ],
+          "status": "derived_geometric",
+          "hypotheses": [
+            "Every integral weighted multicurve, including zero; geometric primitive input multiset on the fixed surface."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "25.08",
+          "labels": [
+            "eq:globalEulerbound",
+            "eq:globalEulerhalfplane"
+          ],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "Fixed C, positive systole epsilon, real s greater than max(3/2,log(2cosh(epsilon/2))/epsilon)."
+          ],
+          "source_pins": [
+            {
+              "source_key": "DThurstonPositive",
+              "pins": [
+                "Definition 1.1, spin identification, and Theorem 2 p. 1",
+                "Proposition 4.4, Definition 4.9 and Proposition 4.10 p. 5"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "25.09",
+          "labels": [
+            "eq:globalEulerinput"
+          ],
+          "status": "derived_exact_algebra",
+          "hypotheses": [
+            "All required higher symmetric-power twisting spectra are additional input; tensor powers are decomposed into SU(2) symmetric powers."
+          ],
+          "source_pins": []
+        },
+        {
+          "id": "25.10",
+          "labels": [],
+          "status": "derived_analytic",
+          "hypotheses": [
+            "All coefficient measures nu_C and their isolated unit first atoms are available; Re(s)>0."
+          ],
+          "source_pins": []
+        }
+      ]
+    },
+    "book/claims/sections26-29.json": {
+      "count": 59,
+      "protected_claim_fields": [
+        {
+          "id": "s26.scope",
+          "labels": [
+            "sec:countmixing"
+          ],
+          "status": "open_comparison",
+          "statement": "Scalar simple-curve counting has no established identification with a complete trace or two-endpoint transition operator.",
+          "hypotheses": [
+            "Counts must retain the operator or sufficiently uniform initial and terminal data."
+          ]
+        },
+        {
+          "id": "s26.selberg_converse",
+          "labels": [
+            "subsec:countmixselberg",
+            "prop:countmixselberg",
+            "eq:countmixselbergcount",
+            "eq:countmixselberggap",
+            "eq:countmixselbergmixing",
+            "eq:countmixselberglogderivative"
+          ],
+          "status": "conditional_implication",
+          "statement": "A leading-only prime-class remainder with saving delta in (0,1/2) excludes lambda_1<delta(1-delta) and yields every mixing rate r<delta.",
+          "hypotheses": [
+            "Closed connected oriented curvature -1 surface.",
+            "Primitive conjugacy classes count inverse classes separately.",
+            "Assumed remainder holds through all large real lengths; exceptional eigenvalue main terms have not been subtracted.",
+            "Finite Sobolev norms and normalized Liouville measure; unit-speed time diag(exp(t/2),exp(-t/2))."
+          ]
+        },
+        {
+          "id": "s26.arithmetic_discrepancy",
+          "labels": [
+            "eq:countmixGN"
+          ],
+          "status": "external_theorem_statement_checked",
+          "statement": "Localized L2 discrepancy bounds a discretely embedded averaging operator with the displayed factor 2.",
+          "hypotheses": [
+            "Standing Gorodnik-Nevo simply connected Q-simple group and congruence hypotheses.",
+            "Noncompact real factor; unramified S; bounded positive-measure hyperspecial bi-invariant B.",
+            "Irreducible representation discretely embedded in the mean-zero automorphic spectrum; radius at most r0(pi)."
+          ]
+        },
+        {
+          "id": "s26.finite_trace",
+          "labels": [
+            "subsec:countmixfinite",
+            "prop:countmixfinite",
+            "eq:countmixtrace",
+            "eq:countmixgap"
+          ],
+          "status": "conditional_implication",
+          "statement": "A trace remainder for an irreducible integer adjacency matrix bounds all non-Perron eigenvalues in modulus.",
+          "hypotheses": [
+            "Finite irreducible nonnegative integer matrix, Perron eigenvalue lambda>0.",
+            "Fixed-point edge sequences, including repetitions and a distinguished start; not primitive orbits.",
+            "A bound for every positive integer n."
+          ]
+        },
+        {
+          "id": "s26.parry_decay",
+          "labels": [
+            "eq:countmixparry",
+            "eq:countmixmatrixconstant"
+          ],
+          "status": "derived_in_chapter",
+          "statement": "Perron normalization gives a stochastic chain, an explicit resolvent bound, and a stated two-sided Holder decay rate.",
+          "hypotheses": [
+            "The preceding trace gap; positive left/right Perron vectors normalized by sum l_i*r_i=1.",
+            "0<kappa_prime<kappa; resolvent radius exp(-kappa)<r<1.",
+            "Holder metric theta^N with 0<theta<1 and beta>0."
+          ]
+        },
+        {
+          "id": "s26.scalar_and_roof_obstructions",
+          "labels": [
+            "subsec:countmixscalar"
+          ],
+          "status": "exact_counterexample",
+          "statement": "An exact total-path count need not mix; a mixing base with roof one need not have a mixing suspension.",
+          "hypotheses": [
+            "A=[[0,m],[m,0]], integer m>=2; stationary probability (1/2,1/2).",
+            "Full m-shift with Bernoulli measure and constant roof one; F=exp(2*pi*i*u)."
+          ]
+        },
+        {
+          "id": "s26.geodesic_nonarithmeticity",
+          "labels": [],
+          "status": "conditional_implication",
+          "statement": "A full exponential primitive-orbit asymptotic through all real cutoffs forces a nonarithmetic spectrum and hence qualitative mixing in Babillot's setting.",
+          "hypotheses": [
+            "Complete simply connected curvature bounded above by a negative constant; non-elementary discrete isometry group.",
+            "Finite nonzero quasi-product flow measure, normalized to probability.",
+            "Finite primitive count at each cutoff and asymptotic C*exp(h*T)/T with C,h>0."
+          ]
+        },
+        {
+          "id": "s26.localized_converse",
+          "labels": [
+            "subsec:countmixlocalized",
+            "prop:countmixlocalized",
+            "eq:countmixentry",
+            "eq:countmixrate"
+          ],
+          "status": "conditional_implication",
+          "statement": "Uniform transition-cell errors yield rate kappa*beta/(m+2D+beta).",
+          "hypotheses": [
+            "Compact metric probability space and measure-preserving flow.",
+            "Partitions of diameter <=h with at most B*h^-D cells.",
+            "Actual joint masses satisfy the uniform stated entrywise error for every i,j,h,t.",
+            "Bounded beta-Holder endpoint tests, 0<beta<=1."
+          ]
+        },
+        {
+          "id": "s26.cusp_converse",
+          "labels": [
+            "subsec:countmixnoncompact",
+            "eq:countmixcusprate"
+          ],
+          "status": "conditional_implication",
+          "statement": "A declared exponential tail and localization cost give the displayed cusp-loss rate.",
+          "hypotheses": [
+            "Tail <=C exp(-aH), a>0.",
+            "At most B exp(bH)h^-D retained cells; entrywise cost A exp(cH)h^-m exp(-kappa*t).",
+            "Bounded global beta-Holder observables; nonnegative b,c,m."
+          ]
+        },
+        {
+          "id": "s27.tensor_first_corner",
+          "labels": [
+            "sec:pairconverse",
+            "subsec:paircoefficients",
+            "prop:pairfirstcorner"
+          ],
+          "status": "derived_in_chapter",
+          "statement": "Independent character variables preserve a marked ordered filling pair through its unit first corner.",
+          "hypotheses": [
+            "The locally finite discrete unit-diagonal coefficient statement eq:globaldiagonal from Section 25.",
+            "Two independent character variables and external product of measures; finite rectangles of source lengths."
+          ]
+        },
+        {
+          "id": "s27.pair_realization",
+          "labels": [
+            "subsec:pairgeometry",
+            "eq:pairgeometryflow"
+          ],
+          "status": "external_theorem_statement_checked",
+          "statement": "Filling measured-foliation pairs uniquely parameterize marked nonzero quadratic differentials, with area equal to intersection.",
+          "hypotheses": [
+            "Closed oriented genus g>=2; both measured foliations nonzero.",
+            "Filling means i(A,C)+i(B,C)>0 for every nonzero measured foliation C.",
+            "Vertical transverse measure |dx|, horizontal |dy|, time diag(exp(t),exp(-t))."
+          ]
+        },
+        {
+          "id": "s27.quotient_scales",
+          "labels": [
+            "subsec:pairquotient"
+          ],
+          "status": "derived_in_chapter",
+          "statement": "The growing family is a diagonal quotient of independently prescribed types, and area L has exponent h while linear scale sqrt(L) has exponent 2h.",
+          "hypotheses": [
+            "Measured stabilizers fix actual scales; integral filling graph only for integral pairs.",
+            "Appropriate fixed stratum lattice/covolume and intrinsic Masur-Veech measure.",
+            "Complex dimension h; square and nonsquare loci use different dimensions."
+          ]
+        },
+        {
+          "id": "s27.existing_count_dependency",
+          "labels": [
+            "subsec:pairliterature"
+          ],
+          "status": "external_theorem_statement_checked",
+          "statement": "The existing two-type square-tiled power saving uses exponential mixing; the one-type count has a lattice-counting route.",
+          "hypotheses": [
+            "Fixed connected stratum component and prescribed integral horizontal/vertical types; area cutoff.",
+            "Constants and saving depend on the geometric component and types."
+          ]
+        },
+        {
+          "id": "s27.mesh_quadrature",
+          "labels": [
+            "eq:pairquadrature",
+            "eq:pairpoissonzero"
+          ],
+          "status": "exact_identity_and_bound",
+          "statement": "A finer mesh controls quadrature error but leaves the correlation as the zero Poisson mode.",
+          "hypotheses": [
+            "F in C_c^1 with fixed compact support, G in C_b^1, R>=1,t>=0.",
+            "Poisson identity additionally assumes Schwartz data."
+          ]
+        },
+        {
+          "id": "s27.polar_kernel",
+          "labels": [
+            "subsec:twopointkernel",
+            "eq:twopointpolar",
+            "eq:twopointkernel"
+          ],
+          "status": "exact_definition_external_input",
+          "statement": "An a.e. exact inverse-Jacobian kernel is a finite discrete two-endpoint count before basepoint averaging.",
+          "hypotheses": [
+            "Closed genus g>=2, h=6g-6; torsion-free finite-index subgroup.",
+            "Full unit cotangent bundle with principal Masur-Veech probability measure; probability conditional fiber measures.",
+            "Fundamental domain in marked Teichmuller space, lower time cutoff one, a.e. regular polar data for all countably many group elements."
+          ]
+        },
+        {
+          "id": "s27.unfolding",
+          "labels": [
+            "prop:twopointunfolding",
+            "eq:twopointexact"
+          ],
+          "status": "exact_identity_and_bound",
+          "statement": "Averaged discrete kernel equals the exponential time integral of the two-time correlation.",
+          "hypotheses": [
+            "Kernel hypotheses above.",
+            "Bounded tests, or L2 tests interpreted by the absolutely integrable unfolded expression."
+          ]
+        },
+        {
+          "id": "s27.deaveraging",
+          "labels": [
+            "subsec:twopointdeaverage",
+            "thm:twopointconverse",
+            "eq:twopointcountassumption",
+            "eq:twopointmixrate",
+            "eq:twopointderivative"
+          ],
+          "status": "conditional_implication",
+          "statement": "A single-test cumulative remainder saving delta plus k flow derivatives yields decay delta*k/(k+1).",
+          "hypotheses": [
+            "Strongly continuous probability-preserving unitary flow; F in L2 and G in Dom(V^k), k>=1.",
+            "Assumed cumulative bound through all T>=1, with A(F,G) quantitative.",
+            "Correlation notation here is bilinear; replace F by its conjugate for Hermitian covariance."
+          ]
+        },
+        {
+          "id": "s27.pointwise_sufficient_count",
+          "labels": [
+            "eq:twopointpointwise"
+          ],
+          "status": "conditional_implication",
+          "statement": "An a.e. bisector remainder with an integrable basepoint constant implies the required averaged bound.",
+          "hypotheses": [
+            "Uniform signed/complex endpoint test norm N.",
+            "C(x,y) in L1(DxD); uniformity through all large real T.",
+            "Leading factors are conditional-fiber averages with probability base measure."
+          ]
+        },
+        {
+          "id": "s27.full_rate",
+          "labels": [
+            "subsec:twopointderivativeweight",
+            "thm:twopointfullrate",
+            "eq:twopointderivativecount",
+            "eq:twopointfullrate",
+            "eq:twopointfundamental",
+            "eq:twopointfullidentity",
+            "eq:twopointfullnorm"
+          ],
+          "status": "conditional_implication",
+          "statement": "A remainder for terminal weight (h+V)G recovers the full exponent delta with an explicit lower-cutoff boundary term.",
+          "hypotheses": [
+            "F in L2; G in Dom(V); (h+V)G an admissible signed terminal test.",
+            "0<delta<=h, h>0; norm-controlled bound for that differentiated endpoint, not just for G."
+          ]
+        },
+        {
+          "id": "s27.full_rate_cusp",
+          "labels": [
+            "eq:twopointfullcusprate"
+          ],
+          "status": "conditional_implication",
+          "statement": "Cutoff tails exp(-aH) and differentiated-count cost exp(bH) yield delta*a/(a+b).",
+          "hypotheses": [
+            "Bounded observables with norm-controlled correlation and mean cutoff errors.",
+            "a>0,b>=0; cost includes V of the cutoff; 0<delta<=h.",
+            "Uniform control of the lower-time boundary correlation."
+          ]
+        },
+        {
+          "id": "s27.jacobian_comparison",
+          "labels": [
+            "subsec:twopointjacobian",
+            "eq:twopointHM",
+            "eq:twopointinverseHM"
+          ],
+          "status": "conditional_external_comparison",
+          "statement": "Hubbard-Masur endpoint factors approximate the inverse polar weight only in the stated recurrent compact regime.",
+          "hypotheses": [
+            "Compact principal-stratum endpoints; segment spends at least half its time in a larger compact principal-stratum set.",
+            "External local-product measure mu0 of total mass V0; mu=mu0/V0, same fiber probabilities, J=J0/V0.",
+            "Endpoint factors bounded below; time sufficiently large for relative error <1/2."
+          ]
+        },
+        {
+          "id": "s27.smoothing_cusp",
+          "labels": [
+            "eq:twopointcusprate"
+          ],
+          "status": "conditional_implication",
+          "statement": "Single-test smoothing with cutoffs gives delta/[1+b/a+1/k], or delta/[1+b/a+(1+d/a)/k] with derivative growth.",
+          "hypotheses": [
+            "Cutoff correlation error exp(-aH); counting constant exp(bH); kth derivative product exp(dH).",
+            "a>0, b,d>=0; bounded endpoints or a norm-controlled substitute for the tail."
+          ]
+        },
+        {
+          "id": "s27.residue_endpoint_arithmetic",
+          "labels": [
+            "eq:pairbruhat",
+            "eq:pairkloosterman",
+            "eq:pairkloostermansmooth"
+          ],
+          "status": "derived_in_chapter_external_inputs",
+          "statement": "The inverse-residue endpoint statistic has a norm-controlled product main term via Kloosterman cancellation.",
+          "hypotheses": [
+            "c positive integer; matrix determinant one; Fourier coefficients absolutely summable for the exact identity.",
+            "C2 tests for the displayed smooth estimate; prime-frequency improvement requires bandwidth M<p.",
+            "Explicit oriented matrix model without hidden signs or orbifold weights."
+          ]
+        },
+        {
+          "id": "s27.totient_count",
+          "labels": [],
+          "status": "derived_in_chapter",
+          "statement": "The chosen oriented torus matrix model has phi(c) residue classes and leading cumulative coefficient 3/pi^2.",
+          "hypotheses": [
+            "Primitive oriented torus types and positive oriented intersection c.",
+            "No quotient by sign or additional automorphism weights."
+          ]
+        },
+        {
+          "id": "s27.remaining_comparison",
+          "labels": [],
+          "status": "open_comparison",
+          "statement": "A uniform comparison between coefficient-extracted square tilings and the full weighted bisector kernel is not established.",
+          "hypotheses": [
+            "Independent initial and terminal weights, including derivative tests for the full-rate converse."
+          ]
+        },
+        {
+          "id": "s28.hyperelliptic_polyhedron",
+          "labels": [
+            "sec:genus2markedtorus",
+            "subsec:genus2compact"
+          ],
+          "status": "derived_in_chapter_external_inputs",
+          "statement": "A genus-two hyperbolic surface descends to a six-angle-pi cone sphere of area 2*pi with unique compact convex polyhedral realization.",
+          "hypotheses": [
+            "Closed genus-two surface; curvature -1 normalization; marked hyperelliptic quotient.",
+            "Convex realization includes the doubled-polygon degenerate case."
+          ]
+        },
+        {
+          "id": "s28.quadratic_formula",
+          "labels": [
+            "subsec:genus2quadraticformula",
+            "eq:genus2curve",
+            "eq:genus2qformula",
+            "eq:genus2order"
+          ],
+          "status": "derived_in_chapter",
+          "statement": "Every genus-two holomorphic quadratic differential is P2(z) dz^2/y^2, degree P2<=2, and is hyperelliptic invariant.",
+          "hypotheses": [
+            "Six distinct finite branch values after a coordinate choice; y^2=B6(z).",
+            "Basis dz/y and z dz/y for holomorphic one-forms."
+          ]
+        },
+        {
+          "id": "s28.nonsquare_classification",
+          "labels": [
+            "subsec:genus2twodouble",
+            "eq:genus2cancel",
+            "eq:genus2pillowmark"
+          ],
+          "status": "derived_in_chapter",
+          "statement": "Nonsquare Q_2(2,2) consists exactly of P2 with two distinct roots at branch values, yielding Q_0(-1^4,0,0).",
+          "hypotheses": [
+            "Global squares excluded explicitly; six branch values distinct.",
+            "Regular marks b1,b2 retained; fixed X has fifteen unordered choices."
+          ]
+        },
+        {
+          "id": "s28.torus_cover",
+          "labels": [
+            "subsec:genus2ellipticcover",
+            "eq:genus2toruscover",
+            "eq:genus2torusadmissible",
+            "eq:genus2equalareas"
+          ],
+          "status": "derived_in_chapter",
+          "statement": "The four-pole sphere orientation cover is an equal-area elliptic differential with two pairs of admissible regular marks.",
+          "hypotheses": [
+            "p,q not in E[2] and p!=q,-q; an origin chosen over a pole.",
+            "Double cover X branches at all six values; orientation torus cover branches at only four."
+          ]
+        },
+        {
+          "id": "s28.cover_figure",
+          "labels": [
+            "fig:mono-double-covers"
+          ],
+          "status": "illustration",
+          "statement": "Diagram records the two distinct double covers and regular-mark lifts.",
+          "hypotheses": [
+            "Schematic flat geometry only."
+          ]
+        },
+        {
+          "id": "s28.homogeneous_model",
+          "labels": [
+            "subsec:genus2homogeneous",
+            "eq:genus2Y2",
+            "eq:genus2homflow"
+          ],
+          "status": "derived_in_chapter",
+          "statement": "The admissible conull invariant open subset of the affine quotient is a finite labeled model of nonsquare unit-area Q_2(2,2).",
+          "hypotheses": [
+            "G2=SL2(R) semidirect two physical vectors; right quotient by Gamma(2) semidirect Z^4.",
+            "Finite origin, level-two, ordering, and sign choices; collision and 2-torsion loci removed."
+          ]
+        },
+        {
+          "id": "s28.haar_period_measure",
+          "labels": [
+            "subsec:genus2haarmeasure"
+          ],
+          "status": "derived_in_chapter_external_inputs",
+          "statement": "Probability-normalized intrinsic stratum measure agrees with Haar measure on the finite model.",
+          "hypotheses": [
+            "Local marked periods and paths fixed; commensurable, not necessarily identical, integral lattices.",
+            "Equal torus/genus-two area and finite cover conventions."
+          ]
+        },
+        {
+          "id": "s28.fiber_fourier",
+          "labels": [
+            "subsec:markedtorusconverse",
+            "eq:markedtorusfourier",
+            "eq:markedtorusequivariance",
+            "eq:markedtorusinduction"
+          ],
+          "status": "exact_identity_and_bound",
+          "statement": "Fiber Fourier orbit summands are L2(G/Gamma_M) under the stated transpose convention.",
+          "hypotheses": [
+            "L2 on affine Haar probability quotient; u=g^-1 v modulo Z^4.",
+            "Gamma initially Gamma(2); count all its frequency orbits, without assuming primitive-vector transitivity."
+          ]
+        },
+        {
+          "id": "s28.tempered_nonzero_modes",
+          "labels": [],
+          "status": "derived_in_chapter_external_inputs",
+          "statement": "All nonzero-frequency summands and their full Hilbert direct sum are tempered.",
+          "hypotheses": [
+            "Closed amenable rank-one stabilizers or trivial rank-two stabilizers."
+          ]
+        },
+        {
+          "id": "s28.tempered_base",
+          "labels": [
+            "eq:markedtorusalltempered"
+          ],
+          "status": "derived_in_chapter_external_inputs",
+          "statement": "The entire mean-zero affine L2 representation is tempered for Gamma(2) or SL2(Z).",
+          "hypotheses": [
+            "Base Gamma(2) gives the thrice-punctured sphere, with -I acting trivially in the base.",
+            "All positive residual/cuspidal small eigenvalues excluded by Otal-Rosas.",
+            "PSL2(R) nontrivial non-tempered spectrum is spherical complementary series."
+          ]
+        },
+        {
+          "id": "s28.rotation_spherical_bounds",
+          "labels": [
+            "eq:markedtorusKnorm",
+            "eq:markedtorusXi"
+          ],
+          "status": "derived_in_chapter_external_inputs",
+          "statement": "One angular derivative controls the K-type l1 norm, and Xi(a_t)<=4/pi*(1+t)*exp(-t).",
+          "hypotheses": [
+            "K=SO2 with ordinary matrix angle; nth character derivative i*n.",
+            "S1^2=||F||2^2+||Theta F||2^2; a_t=diag(exp(t),exp(-t))."
+          ]
+        },
+        {
+          "id": "s28.global_correlation",
+          "labels": [
+            "thm:markedtorusmixing",
+            "eq:markedtorusexplicitmix"
+          ],
+          "status": "derived_in_chapter_external_inputs",
+          "statement": "The explicit global bound is 4*coth(pi)*(1+t)*exp(-t) times centered S1 norms.",
+          "hypotheses": [
+            "The proven level-two or full-modular tempered representation.",
+            "F,G in the L2 rotation-generator domain; probability normalization."
+          ]
+        },
+        {
+          "id": "s28.finite_return_unfolding",
+          "labels": [
+            "eq:markedtorusweight",
+            "eq:markedtorusweightcoordinates",
+            "eq:markedtorusexactcount"
+          ],
+          "status": "exact_identity_and_bound",
+          "statement": "Two periodized compact smooth weights have an exact finite lattice overlap sum for their covariance plus product of means.",
+          "hypotheses": [
+            "phi,psi in C_c^infty of the full affine group; Haar covolume one.",
+            "For each fixed time only lattice elements in K_phi^-1 a_-t K_psi contribute."
+          ]
+        },
+        {
+          "id": "s28.return_remainder",
+          "labels": [
+            "eq:markedtoruscountremainder"
+          ],
+          "status": "derived_in_chapter_external_inputs",
+          "statement": "The exp(4t)-normalized cumulative return sum has explicit O((1+T)exp(3T)) remainder.",
+          "hypotheses": [
+            "Compact smooth periodized tests as above; time T>=1.",
+            "The exponent four is the affine unstable Jacobian: weights 2,1,1."
+          ]
+        },
+        {
+          "id": "s28.return_derivative",
+          "labels": [
+            "eq:markedtorusderivativeweight"
+          ],
+          "status": "exact_identity_and_bound",
+          "statement": "Terminal test (4+V)psi gives the exact boundary evaluation for the cumulative affine return sum.",
+          "hypotheses": [
+            "Compact smooth original tests; periodization commutes with V.",
+            "The norm includes S1(VG) and hence Theta V G."
+          ]
+        },
+        {
+          "id": "s28.scope",
+          "labels": [
+            "subsec:genus2torusscope"
+          ],
+          "status": "open_comparison",
+          "statement": "Affine calculation settles the stated weighted statistic only on nonsquare Q_2(2,2).",
+          "hypotheses": [
+            "Seven-dimensional unit stratum; affine exponent four.",
+            "Full genus-two principal unit locus has dimension eleven and polar exponent six."
+          ]
+        },
+        {
+          "id": "s29.normball_upper",
+          "labels": [
+            "sec:coefficientobservables",
+            "subsec:normballbarrier",
+            "eq:normballall",
+            "eq:normballprimitive"
+          ],
+          "status": "derived_in_chapter_external_inputs",
+          "statement": "Fixed once-punctured torus simple-curve lengths give O(L) all-lattice and O(L log L) oriented-primitive remainders.",
+          "hypotheses": [
+            "Fixed complete finite-area hyperbolic once-punctured torus; McShane-Rivin norm ball.",
+            "All-lattice count includes origin; unoriented simple count is half the oriented primitive count."
+          ]
+        },
+        {
+          "id": "s29.flat_primitive_row",
+          "labels": [
+            "prop:normballflatrow",
+            "eq:normballlowerpower"
+          ],
+          "status": "derived_in_chapter",
+          "statement": "Infinite graph-flatness with rational support normal and irrational radial direction forbids every fixed primitive-count exponent below one.",
+          "hypotheses": [
+            "Strictly convex compact body with origin interior.",
+            "At the indicated boundary point, each N has f(s)<=C_N |s|^N near zero.",
+            "Arbitrarily large prime row indices n."
+          ]
+        },
+        {
+          "id": "s29.fourier_flatness",
+          "labels": [
+            "subsec:normballspectral",
+            "eq:normballfinitephase"
+          ],
+          "status": "derived_in_chapter",
+          "statement": "A localized finite-type flat boundary has Fourier scale r^(-1-1/k); the norm multiplier realizes the counting function spectrally.",
+          "hypotheses": [
+            "Smooth localized arc, f(x)=a x^k+O(x^(k+1)), a>0, k even >=2.",
+            "Cutoff equal one at the isolated support point; fixed physical normal.",
+            "Auxiliary torus Fourier multiplier is defined spectrally, not by a smooth pseudodifferential symbol."
+          ]
+        },
+        {
+          "id": "s29.primitive_pole_arcs",
+          "labels": [
+            "subsec:primitivepolebridge",
+            "lem:primitivepolearcs",
+            "eq:polearcflatlength"
+          ],
+          "status": "derived_in_chapter",
+          "statement": "Primitive nonzero parity directions modulo sign yield distinct nonseparating simple regular flat geodesics of length |g*m|.",
+          "hypotheses": [
+            "Nonsquare genus-two finite labeled torus model; nonzero delta mod2.",
+            "Remove the countable SL2-invariant null set of marks on rational circles and all inadmissible collisions."
+          ]
+        },
+        {
+          "id": "s29.coefficient_weight",
+          "labels": [
+            "eq:polearccoefficientweight"
+          ],
+          "status": "derived_in_chapter",
+          "statement": "A selected hyperbolic curve-length weight is exactly recovered from its isolated first coefficient atom.",
+          "hypotheses": [
+            "Section 23 prop:coefffirstatom for the indicated simple curve.",
+            "Cutoff equals one near the first atom and vanishes on all remaining support; bounded length weight."
+          ]
+        },
+        {
+          "id": "s29.observable_definition",
+          "labels": [
+            "eq:polearcobservable"
+          ],
+          "status": "exact_definition_external_input",
+          "statement": "The parity-restricted primitive sum defines a measurable bounded L2 observable after assigning zero on the invariant exceptional null set.",
+          "hypotheses": [
+            "Even f in C_c^2 supported in the unit disk; bounded Borel h; R>=1,L>0.",
+            "Factor 1/2 for opposite vectors; basis changes in Gamma(2)."
+          ]
+        },
+        {
+          "id": "s29.primitive_bound",
+          "labels": [
+            "subsec:polearcnorms",
+            "lem:polearcprimitivebound",
+            "eq:polearcprimitivebound"
+          ],
+          "status": "derived_in_chapter",
+          "statement": "Every unimodular lattice has at most 2+2*pi*R^2 primitive vectors in a radius-R disk.",
+          "hypotheses": [
+            "R>0; oriented primitive vectors include both signs."
+          ]
+        },
+        {
+          "id": "s29.rotation_norm",
+          "labels": [
+            "eq:polearcuniformS1",
+            "eq:polearccorrelation",
+            "eq:polearcKfixedcorrelation"
+          ],
+          "status": "derived_in_chapter_external_inputs",
+          "statement": "The geometric observable has a global uniform S1 bound, allowing a sharp hyperbolic cutoff; radial flat tests have the sharper K-fixed bound.",
+          "hypotheses": [
+            "Bounded h; even compact flat f as above; invariant conull set.",
+            "Rotation fixes the conformal base and the selected topological arc, so Theta*l_m=0."
+          ]
+        },
+        {
+          "id": "s29.length_derivatives",
+          "labels": [
+            "subsec:polearcterminal",
+            "eq:polearclengthderivatives"
+          ],
+          "status": "derived_in_chapter_external_inputs",
+          "statement": "|V*l_m|<=2*l_m and |Theta V*l_m|<=4*l_m.",
+          "hypotheses": [
+            "Closed hyperbolic surface along the Teichmuller diagonal flow; fixed marked curve along its SL2 orbit.",
+            "Ordinary matrix rotation generator."
+          ]
+        },
+        {
+          "id": "s29.terminal_norm",
+          "labels": [
+            "eq:polearcVnorms",
+            "eq:polearcterminalidentity"
+          ],
+          "status": "derived_in_chapter",
+          "statement": "Smooth hyperbolic weights with bounded s*h prime have explicit global S1(VF) and terminal identity bounds.",
+          "hypotheses": [
+            "h in C1, H0=||h||infinity finite, H1=sup s|h prime(s)| finite.",
+            "f in C_c^2; R>=1,L>0; all geometric conventions above."
+          ]
+        },
+        {
+          "id": "s29.parity_mean_and_scope",
+          "labels": [
+            "subsec:polearcscope"
+          ],
+          "status": "derived_in_chapter_external_inputs",
+          "statement": "Unweighted parity transform has mean (6*zeta(2))^-1 integral f; the selected hyperbolic family has O_(X,q)(L^2) size.",
+          "hypotheses": [
+            "Nonzero parity delta; h=1 for mean/count.",
+            "Fixed compact genus-two (X,q) for the metric comparison constant."
+          ]
+        },
+        {
+          "id": "s29.affine_isometry",
+          "labels": [
+            "subsec:affinedisplacements",
+            "eq:affinesiegelisometry",
+            "eq:affinesiegelexactcorr"
+          ],
+          "status": "exact_identity_and_bound",
+          "statement": "The centered one-mark affine transform is an L2 isometry with correlation exactly equal to the Euclidean test correlation.",
+          "hypotheses": [
+            "Schwartz tests initially; Haar probability, one specified relative mark, Fourier convention exp(-2*pi*i*x.dot(xi)).",
+            "Level-two cover does not change base-invariant integrals."
+          ]
+        },
+        {
+          "id": "s29.one_mark_gaussian",
+          "labels": [
+            "eq:affinegaussiancorr"
+          ],
+          "status": "exact_identity_and_bound",
+          "statement": "The radial Gaussian covariance is 1/(2*cosh t), attaining an exp(-t) asymptotic scale.",
+          "hypotheses": [
+            "f(x)=exp(-pi|x|^2); a_t=diag(exp(t),exp(-t)).",
+            "General asymptotic uses Schwartz source and terminal tests."
+          ]
+        },
+        {
+          "id": "s29.raw_two_mark_divergence",
+          "labels": [
+            "subsec:affineranktwo"
+          ],
+          "status": "derived_in_chapter_external_inputs",
+          "statement": "The raw product of two centered affine Gaussian transforms is not in L2 because of collinear frequencies.",
+          "hypotheses": [
+            "Two relative marks; both Gaussian tests, or both Fourier transforms nonzero at zero for the broader cusp statement."
+          ]
+        },
+        {
+          "id": "s29.rank_two_definition_and_norm",
+          "labels": [
+            "eq:affineranktwoobservable",
+            "eq:affineranktwonorm"
+          ],
+          "status": "exact_identity_and_bound",
+          "statement": "Retaining determinant-nonzero frequencies yields the stated orbit-unfolded norm with factor sigma_1(|k|).",
+          "hypotheses": [
+            "Schwartz tests and fiberwise series before global L2 is proved.",
+            "Right quotient convention; Haar volume one for SL2(Z); J(x1,x2)=(-x2,x1)."
+          ]
+        },
+        {
+          "id": "s29.rank_two_schwartz_norms",
+          "labels": [
+            "eq:affineranktwoschwartz",
+            "eq:affineranktwoKnorm"
+          ],
+          "status": "derived_in_chapter",
+          "statement": "Full-rank transforms satisfy the displayed Schwartz L2 bound and rotation norm bound with pi*sqrt(zeta(3))/2.",
+          "hypotheses": [
+            "A(f)=sup(1+|xi|^2)^(3/2)|fhat(xi)|; B(f)=A(f)+A(D_J f)."
+          ]
+        },
+        {
+          "id": "s29.two_mark_gaussian",
+          "labels": [
+            "subsec:affineranktwogaussian",
+            "eq:affineranktwogaussiancorr"
+          ],
+          "status": "exact_identity_and_bound",
+          "statement": "The full-rank Gaussian covariance is the positive divisor series with cosh(t), and decays faster than exponentially for these tests.",
+          "hypotheses": [
+            "Both tests exp(-pi|x|^2); t>=0; Haar probability and the determinant-orbit normalization above."
+          ]
+        },
+        {
+          "id": "s29.sharp_rotation",
+          "labels": [
+            "subsec:affinesharprotation"
+          ],
+          "status": "derived_in_chapter",
+          "statement": "A nonrotationally invariant convex-body affine indicator has angular Sobolev regularity exactly below one half.",
+          "hypotheses": [
+            "Fixed bounded convex body in physical Euclidean coordinates, with nonempty interior.",
+            "Ordinary rotation about the origin; use the L2 extension of the affine transform."
+          ]
+        }
+      ]
+    },
+    "book/claims/section30.json": {
+      "count": 32,
+      "protected_claim_fields": [
+        {
+          "id": "s30.normalization",
+          "labels": [
+            "subsec:mobiusmodulus"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "B is a fixed convex body with zero in its interior."
+          ]
+        },
+        {
+          "id": "s30.normalized_mobius",
+          "labels": [
+            "eq:primitiveexactnormalizedmobius"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "L>=2; M=floor(L)."
+          ]
+        },
+        {
+          "id": "s30.dini_comparison",
+          "labels": [
+            "eq:primitiveDini"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "omega(u)=sup(v>=u)|D(v)|/v."
+          ]
+        },
+        {
+          "id": "s30.dini_linear",
+          "labels": [
+            "eq:primitiveDini"
+          ],
+          "status": "conditional_bound",
+          "hypotheses": [
+            "Integral of omega(u)/u from one to infinity is finite."
+          ]
+        },
+        {
+          "id": "s30.chord_sobolev",
+          "labels": [
+            "prop:strictconvexlittleo"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "B is strictly convex, compact, with nonempty interior."
+          ]
+        },
+        {
+          "id": "s30.fourier_decay",
+          "labels": [
+            "prop:strictconvexlittleo"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "Fourier convention exp(-2*pi*i*x.xi)."
+          ]
+        },
+        {
+          "id": "s30.poisson_little_o",
+          "labels": [
+            "prop:strictconvexlittleo"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "Choose r0 disk contained in B and a fixed nonnegative smooth unit-mass mollifier supported in epsilon disk."
+          ]
+        },
+        {
+          "id": "s30.strict_convex_primitive",
+          "labels": [
+            "prop:strictconvexlittleo"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": []
+        },
+        {
+          "id": "s30.polygon_comparison",
+          "labels": [
+            "subsec:rationalpolygonbenchmark"
+          ],
+          "status": "external_statement_checked",
+          "hypotheses": [
+            "Rational vertices; the lower theorem additionally requires origin-star-shapedness."
+          ]
+        },
+        {
+          "id": "s30.square_totients",
+          "labels": [
+            "subsec:rationalpolygonbenchmark"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "Closed square; zero excluded."
+          ]
+        },
+        {
+          "id": "s30.polygon_approximation",
+          "labels": [
+            "subsec:rationalpolygonbenchmark"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "This is a necessary accuracy comparison, not a sufficient lattice approximation theorem."
+          ]
+        },
+        {
+          "id": "s30.dyadic_inversion",
+          "labels": [
+            "subsec:dyadicdiagnostic",
+            "eq:dyadicerrorinverse"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "N(L)/L^2 tends to a fixed c; E=N-cL^2."
+          ]
+        },
+        {
+          "id": "s30.block_events",
+          "labels": [
+            "eq:dyadicblockmetrics"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "Locally finite positive lengths with multiplicities; N counts <=L; [T,2T] needs the spectrum through 4T."
+          ]
+        },
+        {
+          "id": "s30.inverse_width",
+          "labels": [
+            "subsec:inverseflatness",
+            "eq:inverseflatwidth"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "B strictly convex and contains zero; unique top point (alpha,h), h>0; alpha/h irrational; two-sided local upper graph over an open x interval; L=n/h; delta>0 and delta=o(L)."
+          ]
+        },
+        {
+          "id": "s30.prime_row_count",
+          "labels": [
+            "prop:inverseflatrow"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "The row width is eventually <n; alpha/h is irrational."
+          ]
+        },
+        {
+          "id": "s30.row_discrepancy",
+          "labels": [
+            "eq:inverseflatdiscrepancy"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "Same contact and prime-row hypotheses."
+          ]
+        },
+        {
+          "id": "s30.microscopic_row",
+          "labels": [
+            "eq:inverseflatmicroscopic",
+            "fig:mono-flat-row"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": []
+        },
+        {
+          "id": "s30.infinite_flatness_scope",
+          "labels": [
+            "prop:inverseflatrow"
+          ],
+          "status": "conditional_bound",
+          "hypotheses": [
+            "For every N, f(\u00b1s)<=C_N*s^N near zero, in addition to the supporting-row hypotheses."
+          ]
+        },
+        {
+          "id": "s30.flatness_models",
+          "labels": [
+            "subsec:flatnessmodels",
+            "eq:exponentialflatrow"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "Model inequalities hold two-sided locally; beta>0, gamma>1; use the contact hypotheses for discrepancy implications."
+          ]
+        },
+        {
+          "id": "s30.exact_row_divisors",
+          "labels": [
+            "eq:primitiveintervalexact"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "n>=1 integer; real a<=b."
+          ]
+        },
+        {
+          "id": "s30.local_row_statistic",
+          "labels": [
+            "subsec:rowdiagnostic"
+          ],
+          "status": "conditional_bound",
+          "hypotheses": [
+            "The same verified rational supporting normal and irrational radial contact; n prime; enough coordinate precision."
+          ]
+        },
+        {
+          "id": "s30.height_precision",
+          "labels": [
+            "subsec:rowdiagnostic"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "Approximate height h+e remains positive."
+          ]
+        },
+        {
+          "id": "s30.curve_markoff_identification",
+          "labels": [
+            "subsec:torustraceexperiment"
+          ],
+          "status": "external_statement_checked",
+          "hypotheses": [
+            "Complete finite-area once-punctured hyperbolic torus; positive real trace convention."
+          ]
+        },
+        {
+          "id": "s30.exact_roots",
+          "labels": [
+            "eq:diagnostictracetriples"
+          ],
+          "status": "exact_finite_check",
+          "hypotheses": [
+            "Only the two specified fixture triples."
+          ]
+        },
+        {
+          "id": "s30.sector_pruning",
+          "labels": [
+            "subsec:torustraceexperiment"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "Reduced positive root triple; determinant-one sector bases."
+          ]
+        },
+        {
+          "id": "s30.log_recursion",
+          "labels": [
+            "subsec:torustraceexperiment"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "Exact reduced positive outward recursion; numerical errors remain a separate issue."
+          ]
+        },
+        {
+          "id": "s30.slope_box_coverage",
+          "labels": [
+            "subsec:torustraceexperiment"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "Minimum root trace>=5/2; outward subtraction ratio<=1/2."
+          ]
+        },
+        {
+          "id": "s30.bounded_replacement",
+          "labels": [
+            "subsec:torustraceexperiment",
+            "eq:dyadicblockmetrics"
+          ],
+          "status": "numerical_check",
+          "hypotheses": [
+            "Frozen prior source/result and their recorded decimal/binary64 precision conventions."
+          ]
+        },
+        {
+          "id": "s30.bounded_conditional_sensitivity",
+          "labels": [
+            "subsec:torustraceexperiment"
+          ],
+          "status": "conditional_bound",
+          "hypotheses": [
+            "Every stored length has error<=1e-10; fixed membership. Applying it to the complete spectrum also assumes no omitted curve can enter any threshold through 4T."
+          ]
+        },
+        {
+          "id": "s30.historical_long_run",
+          "labels": [
+            "subsec:torustraceexperiment"
+          ],
+          "status": "reported_unreplayed",
+          "hypotheses": []
+        },
+        {
+          "id": "s30.recent_flatness_preprint",
+          "labels": [
+            "subsec:recentflatnessqualification"
+          ],
+          "status": "conditional_external_statement_checked",
+          "hypotheses": []
+        },
+        {
+          "id": "s30.surface_flat_point",
+          "labels": [
+            "subsec:rowdiagnostic",
+            "subsec:torustraceexperiment"
+          ],
+          "status": "open_target",
+          "hypotheses": []
+        }
+      ]
+    },
+    "book/claims/section31.json": {
+      "count": 25,
+      "protected_claim_fields": [
+        {
+          "id": "s31.conventions",
+          "labels": [
+            "sec:arithmeticgeometry"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "Fixed convex body containing zero; shortest nonzero lattice gauge one."
+          ]
+        },
+        {
+          "id": "s31.large_divisor_identity",
+          "labels": [
+            "prop:primitiveRHtransfer"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "D is integer, 1<=D<=L; M is defined with floor cutoff."
+          ]
+        },
+        {
+          "id": "s31.reciprocal_lattice_bound",
+          "labels": [
+            "prop:primitiveRHtransfer"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "U>=1; lattice minimum one."
+          ]
+        },
+        {
+          "id": "s31.mobius_area_tail",
+          "labels": [
+            "prop:primitiveRHtransfer"
+          ],
+          "status": "conditional_bound",
+          "hypotheses": [
+            "|M(x)|<=C*x*eta(x); eta>=0 and nonincreasing."
+          ]
+        },
+        {
+          "id": "s31.master_transfer",
+          "labels": [
+            "eq:primitiveRHmaster",
+            "eq:primitiveRHpowerM"
+          ],
+          "status": "conditional_bound",
+          "hypotheses": [
+            "Same Mertens/envelope hypothesis; 0<=theta<1 for the power form."
+          ]
+        },
+        {
+          "id": "s31.modulus_comparison",
+          "labels": [
+            "eq:primitiveRHmodulus"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "L/(D+1)>=1; decreasing geometric envelope."
+          ]
+        },
+        {
+          "id": "s31.dini_pnt",
+          "labels": [
+            "eq:primitiveDiniPNT"
+          ],
+          "status": "conditional_bound",
+          "hypotheses": [
+            "Integral_1^infinity omega(u)/u du is finite."
+          ]
+        },
+        {
+          "id": "s31.zero_free_to_mertens",
+          "labels": [
+            "eq:zeroFreeMertens"
+          ],
+          "status": "conditional_bound",
+          "hypotheses": [
+            "1/2<=theta0<1; the pole at one is excluded from the nonvanishing statement."
+          ]
+        },
+        {
+          "id": "s31.mertens_to_zero_free",
+          "labels": [
+            "eq:zeroFreeMertens"
+          ],
+          "status": "conditional_bound",
+          "hypotheses": [
+            "For every epsilon>0, M(x)=O_epsilon(x^(theta0+epsilon))."
+          ]
+        },
+        {
+          "id": "s31.openai_september",
+          "labels": [
+            "subsec:quasiRHapplication"
+          ],
+          "status": "conditional_external_statement_checked",
+          "hypotheses": []
+        },
+        {
+          "id": "s31.openai_october",
+          "labels": [
+            "subsec:quasiRHapplication"
+          ],
+          "status": "conditional_external_statement_checked",
+          "hypotheses": []
+        },
+        {
+          "id": "s31.log_geometric_power_arithmetic",
+          "labels": [
+            "eq:primitiveRHgeometry",
+            "eq:primitiveRHlogresult"
+          ],
+          "status": "conditional_bound",
+          "hypotheses": [
+            "Geometric estimate for all u>=3; beta>0; M(x)<<x^theta, theta<1."
+          ]
+        },
+        {
+          "id": "s31.vk_input",
+          "labels": [],
+          "status": "external_statement_checked",
+          "hypotheses": []
+        },
+        {
+          "id": "s31.vk_log_table",
+          "labels": [
+            "eq:primitiveRHgeometry"
+          ],
+          "status": "conditional_bound",
+          "hypotheses": [
+            "Same geometric logarithmic bound; classical VK Mertens bound."
+          ]
+        },
+        {
+          "id": "s31.balanced_power",
+          "labels": [
+            "eq:primitiveRHbalancedpower"
+          ],
+          "status": "conditional_bound",
+          "hypotheses": [
+            "0<=alpha<1; 0<=theta<1; both geometric and Mertens bounds hold."
+          ]
+        },
+        {
+          "id": "s31.vk_power_geometry",
+          "labels": [],
+          "status": "conditional_bound",
+          "hypotheses": [
+            "|Delta_B(u)|<<u^alpha, 0<=alpha<1; VK Mertens bound."
+          ]
+        },
+        {
+          "id": "s31.zhai_benchmark",
+          "labels": [],
+          "status": "external_statement_checked",
+          "hypotheses": [
+            "Finite nonzero curvature everywhere; one-to-one C4 Gauss map; zero is interior."
+          ]
+        },
+        {
+          "id": "s31.baker_benchmark",
+          "labels": [],
+          "status": "external_statement_checked",
+          "hypotheses": [
+            "RH and all of (H1)-(H4): positive continuous radial graph, piecewise C4 nonzero-curvature arcs, no tangent through zero, no single arc containing both horizontal/vertical tangents, C4 reciprocal arcs, rational endpoint tangent slopes."
+          ]
+        },
+        {
+          "id": "s31.qualitative_obstruction",
+          "labels": [],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "Same geometric envelope; choose the fixed cutoff exponent used above."
+          ]
+        },
+        {
+          "id": "s31.gauge_zeta",
+          "labels": [],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "Gauge minimum one; all-point discrepancy O(u), in particular o(u) under strict convexity."
+          ]
+        },
+        {
+          "id": "s31.flat_primitive_obstruction",
+          "labels": [],
+          "status": "conditional_bound",
+          "hypotheses": [
+            "All hypotheses of prop:normballflatrow and the local graph-flatness bounds."
+          ]
+        },
+        {
+          "id": "s31.all_point_width_compatibility",
+          "labels": [],
+          "status": "conditional_bound",
+          "hypotheses": [
+            "Same rational supporting normal, two-sided upper graph, irrational alpha/h, and L=n/h; now every sufficiently large integer n is allowed."
+          ]
+        },
+        {
+          "id": "s31.geometric_target",
+          "labels": [
+            "eq:primitiveRHgeometry"
+          ],
+          "status": "open_target",
+          "hypotheses": []
+        },
+        {
+          "id": "s31.all_point_dyadic",
+          "labels": [
+            "eq:allPointLogDiagnostic"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "Fixed body; large L>1; statement concerns a uniform infinite range."
+          ]
+        },
+        {
+          "id": "s31.all_point_from_primitive_lengths",
+          "labels": [
+            "eq:allPointLogDiagnostic"
+          ],
+          "status": "derivation_checked",
+          "hypotheses": [
+            "Lengths use the same gauge normalization as B; divide hyperbolic lengths by the systole when imposing unit shortest vector."
+          ]
+        }
+      ]
+    }
+  },
+  "formal_blocks_preserved": {
+    "book/chapters/23-trace-coefficients.tex": 10,
+    "book/chapters/24-quantitative-counting.tex": 10,
+    "book/chapters/25-global-coefficient-filters.tex": 4,
+    "book/chapters/26-counting-to-mixing.tex": 6,
+    "book/chapters/27-weighted-mixing-converse.tex": 8,
+    "book/chapters/28-genus-two-model.tex": 2,
+    "book/chapters/29-controlled-observables.tex": 6,
+    "book/chapters/30-sharp-diagnostics.tex": 4,
+    "book/chapters/31-arithmetic-remainder.tex": 2
+  }
+}

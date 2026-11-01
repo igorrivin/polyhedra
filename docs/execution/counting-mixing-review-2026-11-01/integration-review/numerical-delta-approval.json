@@ -1,0 +1,140 @@
+{
+  "decision": "approve_prose_and_ledger_delta_against_reviewed_author_evidence",
+  "finite_author_result": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/computation/revision-v2/author-result-60-90-v2.json",
+    "sha256": "2a5680cf8e91db3668099ffdb5e19bc3bb984f89cd121395fbcd856a6da7fc71",
+    "counts": {
+      "exact": 4054,
+      "numerical_formula_comparisons": 354,
+      "cross_precision_observations": 297
+    },
+    "focused_independent_tests": 38,
+    "rejected_v1_preserved": true
+  },
+  "torus_author_result": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/full8192-author-v2/result.json",
+    "sha256": "770315039a907e3adab3169081e1f3e84d07d7301e29a26fcf0b7e281af73521",
+    "phase": "author",
+    "source_state": "original v2 author run, not relabeled as final v3 clean-source replay",
+    "surfaces": [
+      {
+        "surface": "modular",
+        "count": 18191508,
+        "blocks": 10,
+        "sample_count": 151,
+        "near8192_distinct_samples": 36,
+        "worst_sampled_binary64_difference": "5.528106449035665780715559315646196740903468514080107730701640258806042103416001585332759696563535251848196012666700096990641780E-10",
+        "maximum_conditional_M_width_exact": "58028439341502200385896448000000/47127618242318505021953441422249480307",
+        "maximum_conditional_M_width_approx": 1.2313043074473736e-06,
+        "all_point_rows": 12,
+        "fixed64_count": 1104
+      },
+      {
+        "surface": "asymmetric",
+        "count": 18486116,
+        "blocks": 10,
+        "sample_count": 126,
+        "near8192_distinct_samples": 36,
+        "worst_sampled_binary64_difference": "1.1940411540803776261375694157944503655506119600240943175734417852889603904485400411236978281165335682634243282170489418222574088E-9",
+        "maximum_conditional_M_width_exact": "4951760157141521099596496896000000/8823406897758289305342509762359253734569",
+        "maximum_conditional_M_width_approx": 5.612072767945888e-07,
+        "all_point_rows": 12,
+        "fixed64_count": 1127
+      }
+    ],
+    "four_printed_rows_at_four_decimals": [
+      {
+        "surface": "modular",
+        "T": 32,
+        "M_Q_printed": [
+          "2.1686",
+          "0.6015"
+        ]
+      },
+      {
+        "surface": "modular",
+        "T": 128,
+        "M_Q_printed": [
+          "1.1130",
+          "0.3501"
+        ]
+      },
+      {
+        "surface": "modular",
+        "T": 512,
+        "M_Q_printed": [
+          "0.7415",
+          "0.1697"
+        ]
+      },
+      {
+        "surface": "modular",
+        "T": 2048,
+        "M_Q_printed": [
+          "0.4342",
+          "0.0950"
+        ]
+      },
+      {
+        "surface": "asymmetric",
+        "T": 32,
+        "M_Q_printed": [
+          "0.8134",
+          "0.2734"
+        ]
+      },
+      {
+        "surface": "asymmetric",
+        "T": 128,
+        "M_Q_printed": [
+          "0.5285",
+          "0.1494"
+        ]
+      },
+      {
+        "surface": "asymmetric",
+        "T": 512,
+        "M_Q_printed": [
+          "0.3756",
+          "0.0950"
+        ]
+      },
+      {
+        "surface": "asymmetric",
+        "T": 2048,
+        "M_Q_printed": [
+          "0.2492",
+          "0.0612"
+        ]
+      }
+    ]
+  },
+  "finite_result_groups_resolve": [
+    "exact.Bruhat_residues",
+    "exact.Gaussian_algebra",
+    "exact.Mobius_lattice",
+    "exact.SL2_words",
+    "exact.dyadic_events",
+    "exact.finite_Euler_convolution",
+    "exact.finite_support",
+    "exact.global_filter",
+    "exact.primitive_parity",
+    "exact.row_and_balance",
+    "exact.scalar_trace_mixing",
+    "exact.terminal_exponential_algebra",
+    "exact.trace_coefficients",
+    "numerical.affine_Gaussian",
+    "numerical.endpoint_Fourier",
+    "numerical.rank_two_Gaussian",
+    "numerical.terminal_family"
+  ],
+  "bibliography_delta_matches_reviewed_six_entry_patch": true,
+  "limits": [
+    "No new numerical replay performed in integration review.",
+    "Final clean-source finite and full8192 repaired-parser replays remain postcommit gates.",
+    "Exact stored-binary64 arithmetic does not certify the true spectrum, event order, pruning or completeness.",
+    "Sensitivity is conditional on uniform listed-length error and completeness/no-entry.",
+    "Hyperbolic units and systole rescaling are explicit.",
+    "No recovered historical precision provenance, asymptotic inference, or recent-preprint proof/formalization approval."
+  ]
+}

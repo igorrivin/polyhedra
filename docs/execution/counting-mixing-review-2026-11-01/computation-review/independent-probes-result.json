@@ -1,0 +1,108 @@
+{
+  "status": "pass",
+  "assertion_count": 2207,
+  "assertions_by_group": {
+    "polynomial_matrix_evaluation": 289,
+    "figure_matrix_evaluation": 243,
+    "weight_algebraic_equation": 33,
+    "weight_normalization": 2,
+    "new_SL2_words": 48,
+    "Euler_reciprocal_and_derivative": 210,
+    "Euler_constant_atom": 1,
+    "Euler_wrong_Adams": 1,
+    "support_vs_copies": 32,
+    "enumerated_periodic_paths": 12,
+    "Bruhat_independent_congruence": 216,
+    "Bruhat_adaptive_scope": 37,
+    "physical_lattice_oracle": 6,
+    "independent_ellipse_oracle": 24,
+    "dyadic_pairwise_integral": 504,
+    "dyadic_nearby_and_boundary": 3,
+    "row_independent_gcd": 200,
+    "lattice_gauge_independent_box": 60,
+    "extra_Mobius_fractional_cases": 28,
+    "conditional_balance_intersection": 16,
+    "polar_Gaussian_oracle": 18,
+    "scaled_radial_oracle": 12,
+    "scaled_radial_mutants_detected": 48,
+    "analytic_tail_finite_lower_tests": 18,
+    "log_series_coefficient_identity": 60,
+    "Gaussian_visible_tail": 4,
+    "exact_invalid_inputs": 12,
+    "fixture_invalid_domains": 17,
+    "fixture_invalid_schema": 4,
+    "fixture_missing_keys": 28,
+    "numeric_invalid_inputs": 7,
+    "precision_mismatch": 3,
+    "context_isolation": 1,
+    "exclusive_output": 4,
+    "serialization_nonfinite": 6
+  },
+  "notes": {
+    "polynomial_oracle": "Trace of independently multiplied companion matrix at 17 distinct exact x values; no coefficient formula or Chebyshev recurrence in oracle.",
+    "scaled_radial_relative_errors": [
+      {
+        "t": "0",
+        "k": 1,
+        "relative_error": "0.0"
+      },
+      {
+        "t": "0",
+        "k": 2,
+        "relative_error": "0.0"
+      },
+      {
+        "t": "0",
+        "k": 3,
+        "relative_error": "2.12057614537518727032308522040171175026928633449691220521240199046626802451884375727209203e-90"
+      },
+      {
+        "t": "1/2",
+        "k": 1,
+        "relative_error": "0.0"
+      },
+      {
+        "t": "1/2",
+        "k": 2,
+        "relative_error": "0.0"
+      },
+      {
+        "t": "1/2",
+        "k": 3,
+        "relative_error": "1.95645004586371800226498727663849556107248864756512462383262525533954314895778938531768931e-90"
+      },
+      {
+        "t": "1",
+        "k": 1,
+        "relative_error": "0.0"
+      },
+      {
+        "t": "1",
+        "k": 2,
+        "relative_error": "1.9831636270179434244028217476165747440783635864581929085435092762494744560844511850881029e-91"
+      },
+      {
+        "t": "1",
+        "k": 3,
+        "relative_error": "4.01590634471133543441571403892356385675868626257784063980060628440518577357101364980340837e-90"
+      },
+      {
+        "t": "2",
+        "k": 1,
+        "relative_error": "2.41758255658947454693275845376117615116675035676667611214899229612548943551884826715334611e-91"
+      },
+      {
+        "t": "2",
+        "k": 2,
+        "relative_error": "0.0"
+      },
+      {
+        "t": "2",
+        "k": 3,
+        "relative_error": "4.17102928204385327850205852566382135734011653774526798465644709974702877451960161012584258e-53"
+      }
+    ],
+    "maximum_polar_scaled_error": "4.90909346529772655309577195498627564297521551249944956511154911718710525472171585646009788e-91",
+    "numerical_evidence_limit": "Transformed independent integrands share mpmath; no interval or quadrature error certification."
+  }
+}

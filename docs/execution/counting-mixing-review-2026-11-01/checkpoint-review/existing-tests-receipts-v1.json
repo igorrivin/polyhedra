@@ -1,0 +1,41 @@
+{
+  "scope": "Independent re-execution of exact copied preparation scripts only; no scientific replay or candidate verification.",
+  "commands": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "normal",
+        "cmd": "/tmp/polyhedra-baseline-20261031/bin/python -B -m unittest -v test_checkpoint",
+        "chunk_id": "9f197b",
+        "wall_time_seconds": 2.892490375,
+        "exit_code": 0,
+        "original_token_count": 820,
+        "output": "test_clean_source_accepts (test_checkpoint.DirectSourceMutationTests.test_clean_source_accepts) ... ok\ntest_file_mutation_rejected_directly_even_without_status_gate (test_checkpoint.DirectSourceMutationTests.test_file_mutation_rejected_directly_even_without_status_gate) ... ok\ntest_forged_expected_digest_rejected_against_git_blob (test_checkpoint.DirectSourceMutationTests.test_forged_expected_digest_rejected_against_git_blob) ... ok\ntest_head_mutation_rejected_even_when_source_bytes_match (test_checkpoint.DirectSourceMutationTests.test_head_mutation_rejected_even_when_source_bytes_match) ... ok\ntest_untracked_output_breaks_clean_source_requirement (test_checkpoint.DirectSourceMutationTests.test_untracked_output_breaks_clean_source_requirement) ... ok\ntest_acceptance_programs_have_no_removable_assert_gates (test_checkpoint.InputBoundaryTests.test_acceptance_programs_have_no_removable_assert_gates) ... ok\ntest_conflicting_hash_domains_rejected (test_checkpoint.InputBoundaryTests.test_conflicting_hash_domains_rejected) ... ok\ntest_duplicate_and_nonfinite_JSON_rejected (test_checkpoint.InputBoundaryTests.test_duplicate_and_nonfinite_JSON_rejected) ... ok\ntest_path_traversal_and_sidecar_rejected (test_checkpoint.InputBoundaryTests.test_path_traversal_and_sidecar_rejected) ... ok\ntest_unfinished_contract_cannot_claim_success (test_checkpoint.InputBoundaryTests.test_unfinished_contract_cannot_claim_success) ... ok\ntest_false_success_type_rejected (test_checkpoint.ScientificMutationTests.test_false_success_type_rejected) ... ok\ntest_finite_count_mutation_rejected (test_checkpoint.ScientificMutationTests.test_finite_count_mutation_rejected) ... ok\ntest_finite_exact_self_comparison (test_checkpoint.ScientificMutationTests.test_finite_exact_self_comparison) ... ok\ntest_missing_allowed_field_rejected (test_checkpoint.ScientificMutationTests.test_missing_allowed_field_rejected) ... ok\ntest_only_declared_elapsed_field_may_change (test_checkpoint.ScientificMutationTests.test_only_declared_elapsed_field_may_change) ... ok\ntest_pointer_exclusion_cannot_be_missing_or_overlap (test_checkpoint.ScientificMutationTests.test_pointer_exclusion_cannot_be_missing_or_overlap) ... ok\ntest_torus_conditional_envelope_mutation_rejected (test_checkpoint.ScientificMutationTests.test_torus_conditional_envelope_mutation_rejected) ... ok\ntest_torus_exact_self_comparison (test_checkpoint.ScientificMutationTests.test_torus_exact_self_comparison) ... ok\ntest_torus_scientific_count_mutation_rejected (test_checkpoint.ScientificMutationTests.test_torus_scientific_count_mutation_rejected) ... ok\ntest_torus_stream_hash_mutation_rejected (test_checkpoint.ScientificMutationTests.test_torus_stream_hash_mutation_rejected) ... ok\ntest_torus_unknown_provenance_field_not_dropped (test_checkpoint.ScientificMutationTests.test_torus_unknown_provenance_field_not_dropped) ... ok\ntest_torus_unknown_timing_key_rejected_even_on_both_sides (test_checkpoint.ScientificMutationTests.test_torus_unknown_timing_key_rejected_even_on_both_sides) ... ok\ntest_unexpected_source_state_field_rejected (test_checkpoint.ScientificMutationTests.test_unexpected_source_state_field_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 23 tests in 2.853s\n\nOK\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "optimized",
+        "cmd": "/tmp/polyhedra-baseline-20261031/bin/python -O -B -m unittest -v test_checkpoint",
+        "chunk_id": "0fbb06",
+        "wall_time_seconds": 3.009046,
+        "exit_code": 0,
+        "original_token_count": 820,
+        "output": "test_clean_source_accepts (test_checkpoint.DirectSourceMutationTests.test_clean_source_accepts) ... ok\ntest_file_mutation_rejected_directly_even_without_status_gate (test_checkpoint.DirectSourceMutationTests.test_file_mutation_rejected_directly_even_without_status_gate) ... ok\ntest_forged_expected_digest_rejected_against_git_blob (test_checkpoint.DirectSourceMutationTests.test_forged_expected_digest_rejected_against_git_blob) ... ok\ntest_head_mutation_rejected_even_when_source_bytes_match (test_checkpoint.DirectSourceMutationTests.test_head_mutation_rejected_even_when_source_bytes_match) ... ok\ntest_untracked_output_breaks_clean_source_requirement (test_checkpoint.DirectSourceMutationTests.test_untracked_output_breaks_clean_source_requirement) ... ok\ntest_acceptance_programs_have_no_removable_assert_gates (test_checkpoint.InputBoundaryTests.test_acceptance_programs_have_no_removable_assert_gates) ... ok\ntest_conflicting_hash_domains_rejected (test_checkpoint.InputBoundaryTests.test_conflicting_hash_domains_rejected) ... ok\ntest_duplicate_and_nonfinite_JSON_rejected (test_checkpoint.InputBoundaryTests.test_duplicate_and_nonfinite_JSON_rejected) ... ok\ntest_path_traversal_and_sidecar_rejected (test_checkpoint.InputBoundaryTests.test_path_traversal_and_sidecar_rejected) ... ok\ntest_unfinished_contract_cannot_claim_success (test_checkpoint.InputBoundaryTests.test_unfinished_contract_cannot_claim_success) ... ok\ntest_false_success_type_rejected (test_checkpoint.ScientificMutationTests.test_false_success_type_rejected) ... ok\ntest_finite_count_mutation_rejected (test_checkpoint.ScientificMutationTests.test_finite_count_mutation_rejected) ... ok\ntest_finite_exact_self_comparison (test_checkpoint.ScientificMutationTests.test_finite_exact_self_comparison) ... ok\ntest_missing_allowed_field_rejected (test_checkpoint.ScientificMutationTests.test_missing_allowed_field_rejected) ... ok\ntest_only_declared_elapsed_field_may_change (test_checkpoint.ScientificMutationTests.test_only_declared_elapsed_field_may_change) ... ok\ntest_pointer_exclusion_cannot_be_missing_or_overlap (test_checkpoint.ScientificMutationTests.test_pointer_exclusion_cannot_be_missing_or_overlap) ... ok\ntest_torus_conditional_envelope_mutation_rejected (test_checkpoint.ScientificMutationTests.test_torus_conditional_envelope_mutation_rejected) ... ok\ntest_torus_exact_self_comparison (test_checkpoint.ScientificMutationTests.test_torus_exact_self_comparison) ... ok\ntest_torus_scientific_count_mutation_rejected (test_checkpoint.ScientificMutationTests.test_torus_scientific_count_mutation_rejected) ... ok\ntest_torus_stream_hash_mutation_rejected (test_checkpoint.ScientificMutationTests.test_torus_stream_hash_mutation_rejected) ... ok\ntest_torus_unknown_provenance_field_not_dropped (test_checkpoint.ScientificMutationTests.test_torus_unknown_provenance_field_not_dropped) ... ok\ntest_torus_unknown_timing_key_rejected_even_on_both_sides (test_checkpoint.ScientificMutationTests.test_torus_unknown_timing_key_rejected_even_on_both_sides) ... ok\ntest_unexpected_source_state_field_rejected (test_checkpoint.ScientificMutationTests.test_unexpected_source_state_field_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 23 tests in 2.789s\n\nOK\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "ruff",
+        "cmd": "/opt/anaconda3/bin/ruff check --no-cache checkpoint_lib.py verify_checkpoint.py run_clean_replay.py compare_replays.py test_checkpoint.py",
+        "chunk_id": "c90d6a",
+        "wall_time_seconds": 0.000009292,
+        "exit_code": 0,
+        "original_token_count": 5,
+        "output": "All checks passed!\n"
+      }
+    }
+  ]
+}

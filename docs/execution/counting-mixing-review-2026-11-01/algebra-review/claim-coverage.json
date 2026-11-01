@@ -1,0 +1,551 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/counting_algebra_reviewer",
+  "decision": "approve_with_stated_scope_limits",
+  "claims": [
+    {
+      "id": "23.01",
+      "title": "Broken-geodesic energy and positive normal Hessian",
+      "labels": [],
+      "author_status": "derived_geometric",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: equal-time energy and periodic normal index form; Hessian positivity does not select simplicity."
+    },
+    {
+      "id": "23.02",
+      "title": "Strict reconnection shortening",
+      "labels": [
+        "eq:coeffuncrossing"
+      ],
+      "author_status": "derived_geometric",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: hyperbolic chord formula and strict surgery saving."
+    },
+    {
+      "id": "23.03",
+      "title": "Finite integral multicurve expansion",
+      "labels": [
+        "eq:coeffbasis",
+        "eq:coeffcurveexpansion"
+      ],
+      "author_status": "external_statement_and_derived_normalization",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve using the Charles\u2013March\u00e9 basis theorem; integral skein coefficients and basis sign conversion agree."
+    },
+    {
+      "id": "23.04",
+      "title": "Twisted Selberg normalization and coefficient measure",
+      "labels": [
+        "eq:coefftwistedSelberg",
+        "eq:coeffdistribution"
+      ],
+      "author_status": "external_statement_and_derived_normalization",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve using the twisted trace formula; rank, inverse grouping, primitive numerator, and finite cutoff are consistent."
+    },
+    {
+      "id": "23.05",
+      "title": "Length triangularity for primitive curves, iterates, and products",
+      "labels": [
+        "lem:coefftriangularity"
+      ],
+      "author_status": "derived_geometric",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: strict resolution inequality, product inequality, and power equality cases cover nonsimple primitives and iterates."
+    },
+    {
+      "id": "23.06",
+      "title": "First simple-support atom and local compact-set gap",
+      "labels": [
+        "prop:coefffirstatom",
+        "eq:coefffirstatom"
+      ],
+      "author_status": "derived_geometric",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: unique first label, positive mass, compact marked-family gap, and possible vanishing of nonparallel targets."
+    },
+    {
+      "id": "23.07",
+      "title": "Localized moment recovery",
+      "labels": [
+        "eq:coeffmomentratio"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: local cutoff moments recover the length exactly without a limiting interchange."
+    },
+    {
+      "id": "23.08",
+      "title": "Bracelet evaluation with sign-convention conversion",
+      "labels": [
+        "eq:coeffbraceletpositive"
+      ],
+      "author_status": "external_statement_and_derived_normalization",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve using sign coherence; spin and Chebyshev parity preserve absolute coefficients."
+    },
+    {
+      "id": "23.09",
+      "title": "Fixed target exponential coefficient bound",
+      "labels": [
+        "prop:coeffgrowth",
+        "eq:coeffexponentialbound",
+        "eq:coeffMrbound"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: polynomial winding growth divided by exponential trace growth; fixed-target qualification retained."
+    },
+    {
+      "id": "23.10",
+      "title": "Signed coefficient measure growth",
+      "labels": [
+        "cor:coeffmeasuregrowth",
+        "eq:coeffmeasuregrowth"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: each orbital mass is O(L), and packing gives the total-variation growth bound."
+    },
+    {
+      "id": "23.11",
+      "title": "Heat and Laplace transforms in their proved domains",
+      "labels": [
+        "eq:coeffheatdefinition",
+        "eq:coeffLaplacedefinition"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: Gaussian and Laplace domains and local uniform derivative majorants."
+    },
+    {
+      "id": "23.12",
+      "title": "Weighted coefficient norm and entire heat expansion",
+      "labels": [
+        "eq:coeffallchannelbound",
+        "eq:coefffullheatexpansion"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: weighted coefficient convergence and spectral cutoff limit; no arbitrary infinite-expansion uniqueness."
+    },
+    {
+      "id": "23.13",
+      "title": "First-atom heat and large-Laplace asymptotics",
+      "labels": [
+        "prop:coeffheatfirst",
+        "eq:coeffheatfirst",
+        "eq:coeffLaplacefirst",
+        "eq:coefflengthlimits"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: fixed-parameter tail majorization retains the exact endpoint exponent; eventual real logarithms are justified."
+    },
+    {
+      "id": "23.14",
+      "title": "Chebyshev coefficient formula and simple iterates",
+      "labels": [
+        "eq:coeffChebyshev",
+        "eq:coeffsimplepowers",
+        "eq:coeffoddpowers"
+      ],
+      "author_status": "derived_exact_algebra",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: recurrence, factorial coefficients, parity, and primitive-length masses."
+    },
+    {
+      "id": "23.15",
+      "title": "Simple-iterate generating and transform formulas",
+      "labels": [
+        "eq:coeffpowergenerating",
+        "eq:coeffpowerLaplace",
+        "eq:coeffpowerheat"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: generating function, csch expansion, sech/tanh conversion, and one-family half-plane."
+    },
+    {
+      "id": "23.16",
+      "title": "Figure-eight coefficients and full-iterate cancellation",
+      "labels": [
+        "eq:coefffigurepowers",
+        "eq:coefffigurecancellation"
+      ],
+      "author_status": "derived_exact_algebra",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: figure-eight polynomial and all-iterate cancellation; distinct cuff indexing and identification warning are correct."
+    },
+    {
+      "id": "23.17",
+      "title": "Smooth metric variation of discrete measures",
+      "labels": [
+        "eq:coeffmetricvariation"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: atom-location derivative sign and smooth local finite sums."
+    },
+    {
+      "id": "23.18",
+      "title": "Twist derivative including immersed orbital curves",
+      "labels": [
+        "eq:coeffWolpert"
+      ],
+      "author_status": "derived_geometric",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: endpoint first variation extends to immersed curves; original cosine formula was independently recovered."
+    },
+    {
+      "id": "23.19",
+      "title": "Differentiated leading heat response",
+      "labels": [
+        "eq:coeffheatvariation"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: differentiating the mass and action gives the stated leading response; local uniform tail control suffices."
+    },
+    {
+      "id": "23.20",
+      "title": "Unoriented determinant product and coefficient derivative",
+      "labels": [
+        "eq:coeffunorientedproduct",
+        "eq:coeffproductderivative"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: determinant logarithmic derivative, orientation factor two, and separate coefficient convergence domain."
+    },
+    {
+      "id": "23.21",
+      "title": "Obstruction to a multiplicative Chebyshev substitution",
+      "labels": [
+        "eq:coeffAdamsobstruction"
+      ],
+      "author_status": "derived_exact_algebra",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: exact Fricke/Adams defect; arbitrary Chebyshev substitution is not multiplicative."
+    },
+    {
+      "id": "23.22",
+      "title": "Primitive extraction with higher twisting data",
+      "labels": [],
+      "author_status": "derived_exact_algebra",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve with additional higher twisting spectra: locally finite Adams/divisor inversion."
+    },
+    {
+      "id": "23.23",
+      "title": "Scalar spectral limitation",
+      "labels": [],
+      "author_status": "external_statement",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve as an external example theorem: scalar unmarked data differ from the labelled twist family."
+    },
+    {
+      "id": "23.24",
+      "title": "All-multicurve Laplace benchmark",
+      "labels": [],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: positive multicurve lattice asymptotic and partial summation give Gamma(d+1)."
+    },
+    {
+      "id": "24.01",
+      "title": "Existing effective fixed-orbit count",
+      "labels": [
+        "eq:countEMM"
+      ],
+      "author_status": "external_statement",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve as the EMM external theorem for a fixed nonzero rational multicurve; no numerical exponent inferred."
+    },
+    {
+      "id": "24.02",
+      "title": "Convex-body lattice sandwich and explicit boundary error",
+      "labels": [
+        "eq:countsandwich",
+        "eq:countcellerror"
+      ],
+      "author_status": "derived_geometric",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: translated inball homotheties, lattice-cell sandwich, and explicit volume error."
+    },
+    {
+      "id": "24.03",
+      "title": "Total weighted multicurve O(R^(d-1)) error",
+      "labels": [
+        "prop:countall",
+        "eq:countall"
+      ],
+      "author_status": "derived_from_external_statements",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve using train-track convexity and finite overlap partition; actual lattices and faces give O(R^(d-1))."
+    },
+    {
+      "id": "24.04",
+      "title": "Primitive integral laminations differ from connected curves",
+      "labels": [
+        "eq:countprimitive"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: primitive integral divisor inversion and distinction from connectedness."
+    },
+    {
+      "id": "24.05",
+      "title": "Unoriented punctured-torus benchmark",
+      "labels": [
+        "eq:counttorus"
+      ],
+      "author_status": "derived_from_external_statements",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: primitive torus lattice count divided by two for unoriented curves."
+    },
+    {
+      "id": "24.06",
+      "title": "Fixed-surface exponentially close pants contributions",
+      "labels": [
+        "prop:countnearcollision",
+        "eq:countpantsgap"
+      ],
+      "author_status": "derived_geometric",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: fixed-surface twist construction and pants inverse-cosh expansion."
+    },
+    {
+      "id": "24.07",
+      "title": "Necessary time scale for one absolute-valued remainder term",
+      "labels": [
+        "eq:countnormalizedpants",
+        "eq:countnecessarytime"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: necessary scale for one absolute orbital contribution; equal-length signed cancellation remains possible."
+    },
+    {
+      "id": "24.08",
+      "title": "Quantitative trace and action gaps",
+      "labels": [
+        "eq:counttracegapconstant",
+        "lem:counttracegap",
+        "eq:counttracegap",
+        "eq:countactiongap"
+      ],
+      "author_status": "derived_from_external_statements",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve using bracelet positivity: integer trace excess and decreasing action gap."
+    },
+    {
+      "id": "24.09",
+      "title": "Explicit orbit-packing and uniform recovery constants",
+      "labels": [
+        "eq:countuniformconstants"
+      ],
+      "author_status": "derived_geometric",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: disk packing and the exact odd-winding series produce the constants."
+    },
+    {
+      "id": "24.10",
+      "title": "Uniform fixed-cutoff recovery and sufficient time",
+      "labels": [
+        "prop:countuniformisolation",
+        "eq:countuniformisolation",
+        "eq:countcertifiedtime"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: later orbital label exists, shell estimate and sufficient time follow; target enumeration is not supplied."
+    },
+    {
+      "id": "24.11",
+      "title": "Positive support partition and one-support coefficient",
+      "labels": [
+        "eq:countsupportpartition",
+        "eq:countonesupport"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: positive support polynomial, degree bound, and one-support interpretation."
+    },
+    {
+      "id": "24.12",
+      "title": "Support Mobius inversion without an extra factor",
+      "labels": [
+        "eq:countsupportmobius"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: absolutely convergent divisor inversion with no factor 1/k."
+    },
+    {
+      "id": "24.13",
+      "title": "Stable finite Fourier support extraction",
+      "labels": [
+        "eq:countsupportfourier"
+      ],
+      "author_status": "derived_exact_algebra",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: degree below q eliminates aliasing and Fourier extraction preserves the common error bound."
+    },
+    {
+      "id": "24.14",
+      "title": "Conditional transfer of a support-partition remainder",
+      "labels": [
+        "eq:countsupportconditional"
+      ],
+      "author_status": "conditional_analytic_statement",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve as conditional: assumed sample expansion and d-eta>1 give the transferred Laplace remainder."
+    },
+    {
+      "id": "24.15",
+      "title": "Algorithmic connectivity and the unresolved selector average",
+      "labels": [],
+      "author_status": "external_statement_and_derived_normalization",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve at the stated algorithmic scope: components after valid integral division select one support; average remains unproved."
+    },
+    {
+      "id": "24.16",
+      "title": "Shell count inherited from all multicurves",
+      "labels": [
+        "eq:countshell"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: positive total counts bound the shell, including endpoint atoms."
+    },
+    {
+      "id": "24.17",
+      "title": "Quantitative desmoothing criterion",
+      "labels": [
+        "prop:countdesmooth",
+        "eq:countsmoothhypothesis",
+        "eq:countsharpconditional"
+      ],
+      "author_status": "conditional_analytic_statement",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve as conditional: shell loss plus smoothing error gives the displayed exponent."
+    },
+    {
+      "id": "24.18",
+      "title": "Distinct minimum-recovery and large-length limits",
+      "labels": [],
+      "author_status": "scope_boundary",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve the scope boundary: minimum recovery and growing-length counting are different regimes."
+    },
+    {
+      "id": "25.01",
+      "title": "Root-sum weights and bounded coefficient functional",
+      "labels": [
+        "eq:globalmoments",
+        "eq:globalbounded"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: root bounds and weighted coefficient functional norm; empty weight is two."
+    },
+    {
+      "id": "25.02",
+      "title": "Integer moment sequence and generating series",
+      "labels": [
+        "eq:globalweightseries"
+      ],
+      "author_status": "derived_exact_algebra",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: recurrence, exact arcsine moments, branch normalization, and generating series."
+    },
+    {
+      "id": "25.03",
+      "title": "Global one-crossing filter including coincident cuff images",
+      "labels": [
+        "prop:globalonecrossing",
+        "eq:globalonecrossing"
+      ],
+      "author_status": "derived_from_external_statements",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve using the one-crossing pants input: total degree survives cuff identification and cosine averaging kills all iterates."
+    },
+    {
+      "id": "25.04",
+      "title": "Convergent filtered heat aggregate and primitive residual",
+      "labels": [
+        "eq:globalfilteredheat",
+        "eq:globalresidual"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: the functional acts on the convergent weighted sum; the surviving residual is signed and unestimated."
+    },
+    {
+      "id": "25.05",
+      "title": "Exact obstruction to a universal fixed linear selector",
+      "labels": [
+        "eq:globalobstruction",
+        "eq:globalobstructionbound"
+      ],
+      "author_status": "derived_exact_algebra",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: exact trace identity plus nonperipheral, indivisible-homology word topology; fixed-functional obstruction only."
+    },
+    {
+      "id": "25.06",
+      "title": "Formal length-convolution Euler product",
+      "labels": [
+        "eq:globalEuler"
+      ],
+      "author_status": "derived_exact_algebra",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: positive length and finite orbital cutoffs define the formal convolution product."
+    },
+    {
+      "id": "25.07",
+      "title": "Unit first atom for every weighted multicurve",
+      "labels": [
+        "prop:globaldiagonal",
+        "eq:globaldiagonal"
+      ],
+      "author_status": "derived_geometric",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: strict shortening leaves one disjoint-simple multiset at the target length, with unit mass."
+    },
+    {
+      "id": "25.08",
+      "title": "Euler coefficient half-plane and Gaussian holomorphy",
+      "labels": [
+        "eq:globalEulerbound",
+        "eq:globalEulerhalfplane"
+      ],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: coefficient majorization, ratio condition, half-plane, and complex Gaussian majorant."
+    },
+    {
+      "id": "25.09",
+      "title": "Higher tensor-twist reconstruction of the Euler logarithm",
+      "labels": [
+        "eq:globalEulerinput"
+      ],
+      "author_status": "derived_exact_algebra",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve with higher twisting data: ordinary tensor powers reconstruct the scalar-trace Euler logarithm."
+    },
+    {
+      "id": "25.10",
+      "title": "Nonlinear reconstruction of the positive support partition",
+      "labels": [],
+      "author_status": "derived_analytic",
+      "decision": "approve_at_stated_scope",
+      "review_note": "Approve: unit first atoms give the nonlinear reconstruction; no conditioning or remainder bound follows."
+    }
+  ],
+  "claim_count": 52,
+  "substantive_label_count": 80,
+  "total_label_count": 91
+}

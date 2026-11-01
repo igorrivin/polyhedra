@@ -1,0 +1,98 @@
+[
+  {
+    "case": "trailing_length",
+    "argv": [
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/parser-revision-v3/preflight512-v3-final/torus_campaign",
+      "metrics",
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/trailing_length.txt",
+      "1",
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/parser-revision-v3/rejected-trailing_length.json",
+      "1e-6",
+      "1"
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "campaign error: length contains trailing characters\n",
+    "result_created": false
+  },
+  {
+    "case": "trailing_T",
+    "argv": [
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/parser-revision-v3/preflight512-v3-final/torus_campaign",
+      "metrics",
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/trailing_T.txt",
+      "1junk",
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/parser-revision-v3/rejected-trailing_T.json",
+      "1e-6",
+      "1"
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "campaign error: T contains trailing characters\n",
+    "result_created": false
+  },
+  {
+    "case": "invalid_direct_flag",
+    "argv": [
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/parser-revision-v3/preflight512-v3-final/torus_campaign",
+      "metrics",
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/invalid_direct_flag.txt",
+      "1",
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/parser-revision-v3/rejected-invalid_direct_flag.json",
+      "1e-6",
+      "2"
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "campaign error: DIRECT must be exactly 0 or 1\n",
+    "result_created": false
+  },
+  {
+    "case": "missing_token",
+    "argv": [
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/parser-revision-v3/preflight512-v3-final/torus_campaign",
+      "metrics",
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/missing_token.txt",
+      "1",
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/parser-revision-v3/rejected-missing_token.json",
+      "1e-6",
+      "1"
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "campaign error: stod: no conversion\n",
+    "result_created": false
+  },
+  {
+    "case": "nan",
+    "argv": [
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/parser-revision-v3/preflight512-v3-final/torus_campaign",
+      "metrics",
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/nan.txt",
+      "1",
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/parser-revision-v3/rejected-nan.json",
+      "1e-6",
+      "1"
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "campaign error: length list must be finite and in [1,8193]\n",
+    "result_created": false
+  },
+  {
+    "case": "directory_input",
+    "argv": [
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/parser-revision-v3/preflight512-v3-final/torus_campaign",
+      "metrics",
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/arithmetic-review",
+      "1",
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/parser-revision-v3/rejected-directory.json",
+      "1e-6",
+      "1"
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "campaign error: length input must be a regular file\n",
+    "result_created": false
+  }
+]

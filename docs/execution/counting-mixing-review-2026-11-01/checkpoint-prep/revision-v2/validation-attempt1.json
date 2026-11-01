@@ -1,0 +1,22 @@
+{
+  "scope": "First R1-R4 development check; diagnostic excerpts copied from actual tool output. Final source freeze is recorded separately.",
+  "tests": {
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "test_checkpoint",
+      "test_checkpoint_revision"
+    ],
+    "returncode": 0,
+    "test_count": 42,
+    "summary_excerpt": "Ran 42 tests in 19.936s\n\nOK\n"
+  },
+  "ruff": {
+    "returncode": 1,
+    "diagnostic": "run_clean_replay.py:14:38: F401 [*] `checkpoint_lib.identity` imported but unused",
+    "resolution": "Removed only the unused import before the final validation run."
+  }
+}

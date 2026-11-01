@@ -1,0 +1,220 @@
+{
+  "generated_at_utc": "2026-11-01T21:17:42.657428+00:00",
+  "status": "R1-R4 repaired; ready for independent targeted review",
+  "scope": "Outer preparation repair only. No canonical mutation, commit, PDF work, scientific replay or metadata cleanup by this task.",
+  "before_snapshot_verified": true,
+  "original_templates_and_evidence_unchanged": true,
+  "files": {
+    "PREP-HANDOFF.json": {
+      "before": {
+        "sha256": "2c39e3da0f1591b7757ba2716fe1333f84ff437192685cebe9535a988ff6fd18",
+        "bytes": 3051
+      },
+      "after": {
+        "sha256": "2c39e3da0f1591b7757ba2716fe1333f84ff437192685cebe9535a988ff6fd18",
+        "bytes": 3051
+      },
+      "status": "unchanged"
+    },
+    "README.md": {
+      "before": {
+        "sha256": "bdac609941ddfaa70dafb2dfde88df82afbe66d63a938d5fa7e12fd6758cfa76",
+        "bytes": 13711
+      },
+      "after": {
+        "sha256": "44ee764780842fe04f63e4b1378f1e07ff5824896c4c6159a00098a70ce5c456",
+        "bytes": 15727
+      },
+      "status": "modified"
+    },
+    "checkpoint-contract.template.json": {
+      "before": {
+        "sha256": "03be3a35775d5259dcd8d3ad4f38839972ea929dc4142f9bb0414581a456b1ae",
+        "bytes": 6392
+      },
+      "after": {
+        "sha256": "03be3a35775d5259dcd8d3ad4f38839972ea929dc4142f9bb0414581a456b1ae",
+        "bytes": 6392
+      },
+      "status": "unchanged"
+    },
+    "checkpoint_lib.py": {
+      "before": {
+        "sha256": "30c7f7812721d8e4f912cb283ac089e9806a07df74a40ad2af2eba97dca7987a",
+        "bytes": 14384
+      },
+      "after": {
+        "sha256": "c29512500065509e68f2efb2bd47351e61ab3034721ecb9e213c4a96a219b466",
+        "bytes": 17531
+      },
+      "status": "modified"
+    },
+    "compare_replays.py": {
+      "before": {
+        "sha256": "3ae0d56ecd3929da86016e5c52def7e8f921b6133870cbde044b69c9b11f0b95",
+        "bytes": 2256
+      },
+      "after": {
+        "sha256": "faea75531a95443e756a31ab36a84ecf524daa59311c77aaf9438ab5a17cf301",
+        "bytes": 2830
+      },
+      "status": "modified"
+    },
+    "comparison-exclusions.json": {
+      "before": {
+        "sha256": "853149f8e6c0869c715f503c4824cd90298ffdf74e2ee3c604ca76e4f0c93fb3",
+        "bytes": 2611
+      },
+      "after": {
+        "sha256": "853149f8e6c0869c715f503c4824cd90298ffdf74e2ee3c604ca76e4f0c93fb3",
+        "bytes": 2611
+      },
+      "status": "unchanged"
+    },
+    "consistency-check.json": {
+      "before": {
+        "sha256": "605c9f1992639a9cb402a8b4e2c4f196b4f20aa00fc4e5258940f750f238c9de",
+        "bytes": 790
+      },
+      "after": {
+        "sha256": "605c9f1992639a9cb402a8b4e2c4f196b4f20aa00fc4e5258940f750f238c9de",
+        "bytes": 790
+      },
+      "status": "unchanged"
+    },
+    "curation-plan.json": {
+      "before": {
+        "sha256": "3a0fbc4c6b50591fe60c0bc19de87bcd4ff3f25ccdd357658b48c60f8bc8d6ff",
+        "bytes": 55938
+      },
+      "after": {
+        "sha256": "3a0fbc4c6b50591fe60c0bc19de87bcd4ff3f25ccdd357658b48c60f8bc8d6ff",
+        "bytes": 55938
+      },
+      "status": "unchanged"
+    },
+    "replay-spec-v2.template.json": {
+      "before": null,
+      "after": {
+        "sha256": "a6d892dff6d19938fb9d2d58670394b2199c14adb6c670f4f13944f31c30f2cb",
+        "bytes": 3469
+      },
+      "status": "added"
+    },
+    "replay-spec.template.json": {
+      "before": {
+        "sha256": "45c5db5e43f8522e6dbfaa4630a8c176fc693c930627c8550e6d9470906b8b67",
+        "bytes": 3077
+      },
+      "after": {
+        "sha256": "45c5db5e43f8522e6dbfaa4630a8c176fc693c930627c8550e6d9470906b8b67",
+        "bytes": 3077
+      },
+      "status": "unchanged"
+    },
+    "run_clean_replay.py": {
+      "before": {
+        "sha256": "b5943680092c3bca9b2f11d80301914bf33a7e705086027d70824ecec8a87f13",
+        "bytes": 6818
+      },
+      "after": {
+        "sha256": "eb04b09e50859baacc1a1736eb18b22a31af3b68e68d333059cc7249d99dea68",
+        "bytes": 8518
+      },
+      "status": "modified"
+    },
+    "test_checkpoint.py": {
+      "before": {
+        "sha256": "308a35faa6ee877cbc0a5afe3d51947b44337cc3dcfd867919104c96d309162f",
+        "bytes": 8042
+      },
+      "after": {
+        "sha256": "308a35faa6ee877cbc0a5afe3d51947b44337cc3dcfd867919104c96d309162f",
+        "bytes": 8042
+      },
+      "status": "unchanged"
+    },
+    "test_checkpoint_revision.py": {
+      "before": null,
+      "after": {
+        "sha256": "c6fa74899989c54aa1b48321c1acc4d8a1521537c58c738c72b60636b35d49f2",
+        "bytes": 21164
+      },
+      "status": "added"
+    },
+    "validation-receipts.json": {
+      "before": {
+        "sha256": "abd92ca693b766b222e5bdbaff2269e8ef4642a24abd55d8049bd12da27655fa",
+        "bytes": 7663
+      },
+      "after": {
+        "sha256": "abd92ca693b766b222e5bdbaff2269e8ef4642a24abd55d8049bd12da27655fa",
+        "bytes": 7663
+      },
+      "status": "unchanged"
+    },
+    "verify_checkpoint.py": {
+      "before": {
+        "sha256": "0a297730931c48716ad8dc03c408a17dd4b408f12507735f638b326610f1d41a",
+        "bytes": 25536
+      },
+      "after": {
+        "sha256": "6f3218fb814810a564f3402418db8fe2ddd4abe944ef814ca214a3f56b9d7ff8",
+        "bytes": 27237
+      },
+      "status": "modified"
+    }
+  },
+  "review_inputs": {
+    "prep-review-v1.md": {
+      "sha256": "05de7d1ed42a364301be2641fb1bbd347da728c44690f6adeefe69b272717439",
+      "bytes": 7029
+    },
+    "independent-probes-normal-v1.json": {
+      "sha256": "c232f97255b8e2ba2e163c7d89dfc9fa6bcddc0188d0c419c3ee064c62932764",
+      "bytes": 7750
+    },
+    "independent-probes-optimized-v1.json": {
+      "sha256": "3bd386e0f6df473f9a322979c75fd11dfaf92a802e0a2abbad37288d219c72c8",
+      "bytes": 7750
+    },
+    "comparison-input-drift-normal-v1.json": {
+      "sha256": "c03d4598fc6aba753a5158e81ec51f924234dc85b39fbf428e5a9403e0066f4e",
+      "bytes": 909
+    },
+    "comparison-input-drift-optimized-v1.json": {
+      "sha256": "dd2ee86b512c9fc0ad9329c4d40175690119d1b58fba1731ec820e6bddb89acf",
+      "bytes": 909
+    }
+  },
+  "repair_patch_identity": {
+    "sha256": "eff752432a22fb411e5acd7e675c3224a1d45012a00f3104d5679de7ee19a65c",
+    "bytes": 61995
+  },
+  "repair_report_identity": {
+    "sha256": "d81a5652d868fbda130c2a957416c6d07527a7975580d0274abd46d08c24a04d",
+    "bytes": 5621
+  },
+  "validation_receipt_identity": {
+    "sha256": "f6824c75063043c67e4b2d4a53e6f722c7eeaad542cc67c2f2c62f8d1bf84194",
+    "bytes": 14596
+  },
+  "validation": {
+    "normal_tests": 45,
+    "optimized_tests": 45,
+    "ruff": "passed"
+  },
+  "pending_concrete_candidate_work": [
+    "Bind exact final integration approval/PDF/source checkpoint receipts.",
+    "Adapt the final source receipt schema and the exact five-path blank-at-eof exception; preserve original default diagnostics and scoped root authorization.",
+    "Populate a new finalized replay specification with explicit unresolved: [] after root authorization.",
+    "Execute actual clean-source scientific replays only after targeted machinery approval.",
+    "Curate and independently review the actual candidate before artifact commit."
+  ],
+  "source_checkpoint_reported_by_root": {
+    "source_commit": "5e34f23d981631605783cbe0f74247659f12a10a",
+    "source_receipt_sha256": "06513002e97910d2a2f4d267fb2ce79db5ee792c5d1602ed8ff480d0c0fc4f2e",
+    "receipt_not_independently_verified_by_this_repair_task": true
+  },
+  "self_hash_excluded": true
+}

@@ -1,0 +1,1088 @@
+--- before/README.md
++++ after/README.md
+@@ -1,4 +1,35 @@
+ # Counting and mixing checkpoint preparation
++
++Revision v2 repairs the independent preparation review's R1–R4 findings.
++The original 13 preparation files, templates, and validation evidence remain
++unchanged in `revision-v2/before/`; the original root-level template and
++receipt files are also retained. Use the new
++[v2 replay specification](replay-spec-v2.template.json) for finalization.
++The [repair report](revision-v2/repair-report.md) and versioned validation
++receipts describe the exact revised scope. Forty-five focused tests pass
++normally and under `python -O`, and Ruff passes.
++
++Specification, approval and report JSON now parse the same initial bytes
++whose identities are recorded. Native/raw comparison input identities are
++retained and checked again before successful receipts. The verifier freezes
++its contract, both manifests and exact path set throughout verification.
++Finalized contracts and replay specifications require `unresolved: []`.
++Once a safe exclusive outer receipt is established, failed guards, launches,
++comparisons and verification leave `checks_passed: false`, an explicit
++exit status, failure stage and available command/input details. Invalid
++routing data or unsafe/existing receipt paths are rejected before reservation;
++they cannot authorize writes to an unknown or existing destination.
++
++The source checkpoint was made by a separate agent while these repairs ran.
++It requires a concrete receipt-schema adaptation later: the root accepted
++only five recorded `blank-at-eof` warnings in Sections 25/27/28/29/31 to
++preserve reviewed bytes. The original default whitespace check failed;
++the bounded adjusted check must retain all other whitespace rules. Keep its
++exact original diagnostics, root exception and adjusted result. The old
++Section 15-style `whitespace_exceptions: []` template assertion below must
++not be populated falsely or used to erase that exception. The actual source
++receipt and any validated sidecar-recovery evidence must be bound in the
++concrete candidate adapter and reviewed before candidate verification.
+ 
+ This directory prepares the local Sections 23–31 checkpoint. It has not staged
+ or committed source, executed a clean-source experiment, copied anything into
+--- before/checkpoint_lib.py
++++ after/checkpoint_lib.py
+@@ -6,6 +6,8 @@
+ from __future__ import annotations
+ 
+ import copy
++from contextlib import contextmanager
++from datetime import datetime, timezone
+ from hashlib import sha256
+ import json
+ import math
+@@ -49,15 +51,19 @@
+     return result
+ 
+ 
+-def load_json(path):
++def parse_json(data):
+     def bad_constant(value):
+         raise CheckpointError("nonfinite JSON constant: " + value)
+     def finite_float(value):
+         parsed = float(value)
+         require(math.isfinite(parsed), "nonfinite JSON number: " + value)
+         return parsed
+-    return json.loads(Path(path).read_text(), object_pairs_hook=object_pairs,
++    return json.loads(data, object_pairs_hook=object_pairs,
+                       parse_constant=bad_constant, parse_float=finite_float)
++
++
++def load_json(path):
++    return parse_json(Path(path).read_bytes())
+ 
+ 
+ def encode(value):
+@@ -76,6 +82,20 @@
+     path = Path(path)
+     require(path.is_file() and not path.is_symlink(), "expected ordinary file: " + str(path))
+     return {"sha256": digest(path), "bytes": path.stat().st_size}
++
++
++def json_snapshot(path):
++    """Bind parsed data to the SAME initial read, then check its live identity."""
++    path = Path(path)
++    require(path.is_file() and not path.is_symlink(), "expected ordinary JSON file: " + str(path))
++    data = path.read_bytes()
++    frozen_identity = {"sha256": sha256(data).hexdigest(), "bytes": len(data)}
++    require(identity(path) == frozen_identity, "JSON changed during snapshot: " + str(path))
++    return parse_json(data), frozen_identity
++
++
++def require_unchanged(path, frozen_identity, description):
++    require(identity(path) == frozen_identity, description + " identity changed during operation")
+ 
+ 
+ def relative_path(base, name):
+@@ -94,6 +114,37 @@
+         require(p.resolve().is_relative_to(Path(outer).resolve()), "path is outside execution evidence: " + name)
+         return p
+     return relative_path(outer, name)
++
++
++@contextmanager
++def receipt_record(outer, name, report):
++    """Reserve a new outer receipt before audited work; retain success or failure.
++
++Path/root safety checks belong before this reservation. No existing path is
++ever overwritten. Once the exclusive file is opened, guard, launch, comparison
++and verification failures leave checks_passed=false and an explicit exit status.
++"""
++    receipt = outer_path(outer, str(name))
++    require(receipt.parent.is_dir(), "receipt parent must already exist")
++    require(not receipt.exists() and not receipt.is_symlink(), "receipt path already exists")
++    report.update({"checks_passed": False, "exit_status": None,
++                   "started_at_utc": datetime.now(timezone.utc).isoformat()})
++    with receipt.open("x") as handle:
++        try:
++            yield report
++            require(report["checks_passed"] is True, "operation did not complete all acceptance gates")
++            report["exit_status"] = 0
++        except BaseException as exc:
++            report["checks_passed"] = False
++            report["exit_status"] = (130 if isinstance(exc, KeyboardInterrupt) else
++                                     exc.code if isinstance(exc, SystemExit) and type(exc.code) is int else 1)
++            report["failure"] = type(exc).__name__ + ": " + str(exc)
++            report["failure_stage"] = report.get("stage", "unspecified")
++            raise
++        finally:
++            report["finished_at_utc"] = datetime.now(timezone.utc).isoformat()
++            json.dump(report, handle, indent=2, allow_nan=False)
++            handle.write("\n")
+ 
+ 
+ def git(root, *args):
+@@ -273,14 +324,23 @@
+ 
+ def torus_raw_comparison(before, after, outer):
+     rows = []
++    external_inputs = {}
++
++    def retain_input(path, frozen_identity):
++        name = str(path)
++        require(name not in external_inputs or external_inputs[name] == frozen_identity,
++                "external comparison input changed between uses: " + name)
++        external_inputs[name] = frozen_identity
++
+     native_exclusions = ["/raw_peak_rss"] + ["/timing_seconds/" + key for key in TIMING_KEYS]
+     for old, new in zip(before["surfaces"], after["surfaces"], strict=True):
+         native = []
+         for report in (old, new):
+             record = report["raw_native_report"]
+             p = outer_path(outer, record["path"])
+-            require(digest(p) == record["sha256"], "native report identity mismatch")
+-            payload = load_json(p)
++            payload, initial_identity = json_snapshot(p)
++            require(initial_identity["sha256"] == record["sha256"], "native report identity mismatch")
++            retain_input(p, initial_identity)
+             require(set(payload["timing_seconds"]) == set(TIMING_KEYS), "native report timing schema")
+             native.append(payload)
+         strict_equal(*native, native_exclusions)
+@@ -289,10 +349,19 @@
+             expected = {"sha256": a["sha256"], "bytes": a["bytes"]}
+             require(expected == {"sha256": b["sha256"], "bytes": b["bytes"]}, "raw stream identity changed")
+             for record in (a, b):
+-                require(identity(outer_path(outer, record["path"])) == expected, "raw stream bytes changed")
++                path = outer_path(outer, record["path"])
++                observed = identity(path)
++                require(observed == expected, "raw stream bytes changed")
++                retain_input(path, observed)
+             rows.append({"name": Path(a["path"]).name, **expected})
++    external_inputs_unchanged(external_inputs)
+     return {"native_reports_identical_except_exact_pointers": native_exclusions,
+-            "four_raw_streams_verified_both_runs": rows}
++            "four_raw_streams_verified_both_runs": rows, "external_input_identities": external_inputs}
++
++
++def external_inputs_unchanged(identities):
++    for name, frozen_identity in identities.items():
++        require_unchanged(Path(name), frozen_identity, "external native/raw comparison input " + name)
+ 
+ 
+ def fsck(root):
+--- before/compare_replays.py
++++ after/compare_replays.py
+@@ -1,17 +1,16 @@
+ #!/usr/bin/env python3
+-"""Compare two preserved reports strictly, retaining both actual identities.
++"""Compare preserved reports with frozen input identities and failure receipts.
+ 
+-This checks scientific equality and, for the torus campaign, native reports
+-and raw stream bytes. Clean-source provenance is a separate verifier gate.
++This is scientific equality plus native/raw identity for torus. Clean-source
++provenance is a separate verifier gate; this command performs no replay.
+ """
+ from argparse import ArgumentParser
+-from datetime import datetime, timezone
+ import json
+ from pathlib import Path
+ 
+ from checkpoint_lib import (
+-    counting_comparison, identity, load_json, outer_path, require,
+-    torus_raw_comparison, torus_report_comparison,
++    counting_comparison, external_inputs_unchanged, json_snapshot, outer_path, receipt_record, require,
++    require_unchanged, torus_raw_comparison, torus_report_comparison,
+ )
+ 
+ 
+@@ -24,23 +23,33 @@
+     parser.add_argument("--receipt", required=True)
+     args = parser.parse_args()
+     outer = args.outer.resolve()
+-    a, b, receipt = (outer_path(outer, name) for name in (args.reference, args.candidate, args.receipt))
+-    require(a.resolve() != b.resolve(), "comparison requires two distinct run artifacts")
+-    require(not receipt.exists() and not receipt.is_symlink() and receipt.parent.is_dir(), "receipt must be a new outer path")
+-    before, after = load_json(a), load_json(b)
+-    if args.kind == "counting":
+-        comparison = counting_comparison(before, after)
+-    else:
+-        comparison = torus_report_comparison(before, after)
+-        comparison.update(torus_raw_comparison(before, after, outer))
+-    report = {"generated_at_utc": datetime.now(timezone.utc).isoformat(), "checks_passed": True,
+-              "kind": args.kind, "reference": {"path": str(a), **identity(a)},
+-              "candidate": {"path": str(b), **identity(b)}, **comparison,
+-              "scope": "Strict finite scientific equality, including native/raw identity for torus; not a new replay, independent mathematical approval, interval proof or historical provenance recovery."}
+-    with receipt.open("x") as handle:
+-        json.dump(report, handle, indent=2, allow_nan=False)
+-        handle.write("\n")
+-    print(json.dumps({"checks_passed": True, "kind": args.kind, "receipt": str(receipt)}))
++    report = {"kind": args.kind, "reference": {"path": args.reference},
++              "candidate": {"path": args.candidate}, "stage": "input_snapshot_guards",
++              "scope": "Strict finite scientific equality, including native/raw identity for torus; not a replay, independent mathematical approval, interval proof or historical provenance recovery."}
++    with receipt_record(outer, args.receipt, report):
++        a, b = (outer_path(outer, name) for name in (args.reference, args.candidate))
++        require(a.resolve() != b.resolve(), "comparison requires two distinct run artifacts")
++        before, before_identity = json_snapshot(a)
++        report["reference"] = {"path": str(a), **before_identity}
++        after, after_identity = json_snapshot(b)
++        report["candidate"] = {"path": str(b), **after_identity}
++        require_unchanged(a, before_identity, "comparison reference")
++        require_unchanged(b, after_identity, "comparison candidate")
++        report["stage"] = "scientific_comparison"
++        if args.kind == "counting":
++            comparison = counting_comparison(before, after)
++        else:
++            comparison = torus_report_comparison(before, after)
++            report["stage"] = "native_and_raw_comparison"
++            comparison.update(torus_raw_comparison(before, after, outer))
++        report.update(comparison)
++        report["stage"] = "final_input_identity_guards"
++        require_unchanged(a, before_identity, "comparison reference")
++        require_unchanged(b, after_identity, "comparison candidate")
++        if args.kind == "torus":
++            external_inputs_unchanged(comparison["external_input_identities"])
++        report.update({"checks_passed": True, "stage": "complete"})
++    print(json.dumps({"checks_passed": True, "kind": args.kind, "receipt": str(args.receipt)}))
+ 
+ 
+ if __name__ == "__main__":
+--- before/replay-spec-v2.template.json
++++ after/replay-spec-v2.template.json
+@@ -0,0 +1,55 @@
++{
++  "schema_version": 1,
++  "ready": false,
++  "root": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
++  "outer": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01",
++  "python": "/tmp/polyhedra-baseline-20261031/bin/python",
++  "baseline_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
++  "source_commit": null,
++  "source_approval": {
++    "path": "integration-review/approved-source-manifest.json",
++    "identity": null,
++    "source_sha256_pointer": "/approved_source_sha256",
++    "required_values": null
++  },
++  "approved_source_sha256": {},
++  "pdf_input_sha256": {},
++  "replay_guard_sha256": {},
++  "replays": {
++    "counting": {
++      "output": "clean-source/counting/result.json",
++      "runtime_sha256": {
++        "experiments/counting_mixing/README.md": "225d070e6eab3f61992c04c62f50361fd1f494a78ada8e2cf4d7b9dee61c4745",
++        "experiments/counting_mixing/__init__.py": "6fc28e861807e61233bed8d0ca6c66001b4792c95d539dcc11d50e7060804715",
++        "experiments/counting_mixing/algebra.py": "36399bd0068d0a0faa454b7df8c01a9e9cd7b03e138ca9c61fd3ad8716c8deb4",
++        "experiments/counting_mixing/arithmetic.py": "5a3d249be1fd9c3cbe2079426c3fd75e18aca1a339cf7684f7f61e76860bae9f",
++        "experiments/counting_mixing/dynamics.py": "bb1cdbff6b64971ef5ef317f6be068baa55a2ea65cbad291a8631639f253c378",
++        "experiments/counting_mixing/exact.py": "12bfa97e4debfbb8695480efea45319ad52e824ed88721f09ea5aad062227e99",
++        "experiments/counting_mixing/fixture.json": "538c23145ba1ded0f57c7f67a68412a35644ea85c1dd8c4470d902e11e57be33",
++        "experiments/counting_mixing/numerics.py": "b87a7eaf165a391dd183b0a22bc8ff747540c15b291ff53b7cf102d7472f6de7",
++        "experiments/counting_mixing/run.py": "c079ee98ac182709cd9511a30a3a1a560b7b22311af6aaa4da06a427d19c1014",
++        "experiments/counting_mixing/tests/test_counting_mixing.py": "4fb1744e6be2a4c28a6c1ecbcdd26f4d9e29e7c84900246a7ed26cacf1e8a52d"
++      }
++    },
++    "torus": {
++      "output": "clean-source/torus8192",
++      "runtime_sha256": {
++        "experiments/torus_campaign/README.md": "cb32059b9558a946c955981346fdb9ee72c3f305e7a8760e134b99c4c8ce3de4",
++        "experiments/torus_campaign/campaign.cpp": "b17839d5b657f143ab90535c8d3432a1e5a9bdb51a477dea3b414702f88de9c3",
++        "experiments/torus_campaign/run.py": "f80154b6d7c9b60e2fa2c74a898fa096d0e03e3f36719df6c7802382441cb8fe",
++        "experiments/torus_campaign/tests/test_campaign.py": "0009b84e4a7b1c65e10e34f22ec910282b5b37dff3662d498698f3c32389a680",
++        "experiments/section30/run.py": "3dc50d531d2b7a3eac8cb608772e14cd2649c724b65e8d117b04ca8735e8e34d",
++        "experiments/section30/fixture.json": "ef8869c5e4729605d630a81f5bd9f8dc9f34363facd84aeead4d15de238dd196",
++        "artifacts/section30/result.json": "762b07184f76893c810f3e9832fd44dc7e4b292c1a64aae61aa26832e02884a1"
++      },
++      "accepted_preflight": "torus-campaign/parser-revision-v3/preflight512-v3-final/result.json",
++      "accepted_preflight_sha256": "74f3a6ce473b1417d54c2a746fd40ab387c3eb12e8e900fe86013cbcc93fc68f"
++    }
++  },
++  "unresolved": [
++    "Final integration approval identity and exact reviewed source map must be bound in a new execution specification.",
++    "Actual source-only checkpoint receipt and source HEAD must be supplied.",
++    "Final 26 PDF input hashes and exact merged replay guard must be supplied.",
++    "Execution of either scientific replay is not yet authorized for this preparation."
++  ]
++}
+--- before/run_clean_replay.py
++++ after/run_clean_replay.py
+@@ -1,20 +1,18 @@
+ #!/usr/bin/env python3
+-"""Execute ONE actually authorized clean-source replay into new outer evidence.
++"""Execute one authorized clean-source replay, binding inputs before launch.
+ 
+-Run only after the independently approved source-only commit. This driver does
+-not stage, commit, copy canonical evidence, perform metadata cleanup, or build a
+-PDF. An unsuccessful command/source guard leaves an explicit failure receipt.
++No staging, commit, canonical evidence copy, metadata cleanup or PDF build occurs.
++After a safe exclusive outer receipt is reserved, failures are retained as such.
+ """
+ from argparse import ArgumentParser
+-from datetime import datetime, timezone
+ import json
+ from pathlib import Path
+ import subprocess
+ import time
+ 
+ from checkpoint_lib import (
+-    BASELINE, ENV, digest, get_pointer, git, identity, load_json, merge_hashes, outer_path,
+-    repository, require, source_state,
++    BASELINE, ENV, get_pointer, git, json_snapshot, merge_hashes,
++    outer_path, receipt_record, repository, require, require_unchanged, source_state,
+ )
+ 
+ 
+@@ -24,66 +22,86 @@
+     parser.add_argument("--kind", choices=("counting", "torus"), required=True)
+     parser.add_argument("--receipt", type=Path, required=True)
+     args = parser.parse_args()
+-    spec = load_json(args.spec)
+-    require(spec["ready"] is True, "replay specification is unfinished")
+-    root, outer = repository(spec["root"]), Path(spec["outer"]).resolve()
++    # Parse exactly the bytes whose initial identity is retained. These routing
++    # fields must exist before any safe outer receipt can be established.
++    spec, spec_identity = json_snapshot(args.spec)
++    root, outer = Path(spec["root"]).resolve(), Path(spec["outer"]).resolve()
+     require(not outer.is_relative_to(root), "replay evidence must be outside canonical")
+-    source = spec["source_commit"]
+-    require(spec["baseline_commit"] == BASELINE and
+-            git(root, "rev-list", "--parents", "-n", "1", source).decode().split() == [source, BASELINE],
+-            "expected final source-only direct-child commit")
+-    approval = spec["source_approval"]
+-    approval_path = outer_path(outer, approval["path"])
+-    require(identity(approval_path) == approval["identity"], "integration approval identity")
+-    approved = load_json(approval_path)
+-    require(get_pointer(approved, approval["source_sha256_pointer"]) == spec["approved_source_sha256"],
+-            "replay source allowlist differs from integration review")
+-    require(approval["required_values"], "approval decision predicates missing")
+-    for pointer, value in approval["required_values"].items():
+-        require(get_pointer(approved, pointer) == value, "source checkpoint not approved: " + pointer)
+-    changed = set(git(root, "diff", "--no-renames", "--name-only", BASELINE, source).decode().splitlines())
+-    require(changed == set(spec["approved_source_sha256"]), "source commit changes differ from approval")
+-    guards = merge_hashes(spec["approved_source_sha256"], spec["pdf_input_sha256"],
+-                         spec["replays"]["counting"]["runtime_sha256"], spec["replays"]["torus"]["runtime_sha256"])
+-    require(guards == spec["replay_guard_sha256"] and len(spec["pdf_input_sha256"]) == 26,
+-            "all reviewed code/manuscript inputs must be guarded")
+-    receipt = outer_path(outer, str(args.receipt.resolve()))
+-    require(receipt.parent.is_dir() and not receipt.exists() and not receipt.is_symlink(), "receipt must be a new outer path")
+-    task = spec["replays"][args.kind]
+-    output = outer_path(outer, task["output"])
+-    require(not output.exists() and not output.is_symlink() and output.parent.is_dir(), "output must be a new outer path")
+-    command = [spec["python"], "-B", str(root / ("experiments/counting_mixing/run.py" if args.kind == "counting" else "experiments/torus_campaign/run.py"))]
+-    preflight = None
+-    if args.kind == "counting":
+-        command += ["--output", str(output)]
+-        result_path = output
+-    else:
+-        preflight = outer_path(outer, task["accepted_preflight"])
+-        require(digest(preflight) == task["accepted_preflight_sha256"], "approved512 preflight identity")
+-        p = load_json(preflight)
+-        require(p["cutoff"] == 512 and p["checks_passed"] is True
+-                and p["provenance"]["source_sha256"] == task["runtime_sha256"], "same-source preflight required")
+-        command += ["--cutoff", "8192", "--preflight", str(preflight), "--phase", "clean_replay", "--output-dir", str(output)]
+-        result_path = output / "result.json"
+-    before = source_state(root, source, guards)
+-    started = datetime.now(timezone.utc).isoformat()
+-    tick = time.perf_counter()
+-    completed = subprocess.run(command, cwd=root, env=ENV, capture_output=True, text=True, check=False)
+-    report = {"schema_version": 1, "kind": args.kind, "source_commit": source,
+-              "spec_identity": identity(args.spec), "source_approval_identity": identity(approval_path),
+-              "started_at_utc": started, "finished_at_utc": datetime.now(timezone.utc).isoformat(),
+-              "elapsed_seconds": time.perf_counter() - tick, "argv": command, "cwd": str(root),
+-              "returncode": completed.returncode, "stdout": completed.stdout, "stderr": completed.stderr,
+-              "source_before": before, "source_after": None, "output_path": str(result_path),
+-              "result": None, "checks_passed": False, "scope": "Actual command execution with direct clean source HEAD/file guards before and after; not independent scientific approval."}
+-    error = None
+-    try:
++    report = {"schema_version": 1, "kind": args.kind, "source_commit": spec.get("source_commit"),
++              "spec_identity": spec_identity, "source_approval_identity": None,
++              "argv": None, "cwd": str(root), "returncode": None, "command_executed": False,
++              "stdout": "", "stderr": "", "source_before": None, "source_after": None,
++              "output_path": None, "result": None, "stage": "specification_guards",
++              "scope": "Actual command execution with frozen specification/approval and direct clean source HEAD/file guards; not independent scientific approval."}
++    with receipt_record(outer, args.receipt, report):
++        require(spec["ready"] is True, "replay specification is unfinished")
++        require(type(spec.get("unresolved")) is list and spec["unresolved"] == [],
++                "replay specification requires explicit empty unresolved list")
++        repository(root)
++        source = spec["source_commit"]
++        require(spec["baseline_commit"] == BASELINE and
++                git(root, "rev-list", "--parents", "-n", "1", source).decode().split() == [source, BASELINE],
++                "expected final source-only direct-child commit")
++        report["stage"] = "approval_guards"
++        approval = spec["source_approval"]
++        approval_path = outer_path(outer, approval["path"])
++        approved, approval_identity = json_snapshot(approval_path)
++        report["source_approval_identity"] = approval_identity
++        require(approval_identity == approval["identity"], "integration approval identity")
++        require(get_pointer(approved, approval["source_sha256_pointer"]) == spec["approved_source_sha256"],
++                "replay source allowlist differs from integration review")
++        require(approval["required_values"], "approval decision predicates missing")
++        for pointer, value in approval["required_values"].items():
++            require(get_pointer(approved, pointer) == value, "source checkpoint not approved: " + pointer)
++        changed = set(git(root, "diff", "--no-renames", "--name-only", BASELINE, source).decode().splitlines())
++        require(changed == set(spec["approved_source_sha256"]), "source commit changes differ from approval")
++        guards = merge_hashes(spec["approved_source_sha256"], spec["pdf_input_sha256"],
++                             spec["replays"]["counting"]["runtime_sha256"], spec["replays"]["torus"]["runtime_sha256"])
++        require(guards == spec["replay_guard_sha256"] and len(spec["pdf_input_sha256"]) == 26,
++                "all reviewed code/manuscript inputs must be guarded")
++        report["stage"] = "output_and_preflight_guards"
++        task = spec["replays"][args.kind]
++        output = outer_path(outer, task["output"])
++        require(not output.exists() and not output.is_symlink() and output.parent.is_dir(), "output must be a new outer path")
++        command = [spec["python"], "-B", str(root / ("experiments/counting_mixing/run.py" if args.kind == "counting" else "experiments/torus_campaign/run.py"))]
++        preflight = None
++        if args.kind == "counting":
++            command += ["--output", str(output)]
++            result_path = output
++        else:
++            preflight = outer_path(outer, task["accepted_preflight"])
++            preflight_data, preflight_identity = json_snapshot(preflight)
++            report["preflight_identity"] = preflight_identity
++            require(preflight_identity["sha256"] == task["accepted_preflight_sha256"], "approved512 preflight identity")
++            require(preflight_data["cutoff"] == 512 and preflight_data["checks_passed"] is True
++                    and preflight_data["provenance"]["source_sha256"] == task["runtime_sha256"], "same-source preflight required")
++            command += ["--cutoff", "8192", "--preflight", str(preflight), "--phase", "clean_replay", "--output-dir", str(output)]
++            result_path = output / "result.json"
++        report.update({"argv": command, "output_path": str(result_path), "stage": "prelaunch_source_guards"})
++        before = source_state(root, source, guards)
++        report["source_before"] = before
++        require_unchanged(args.spec, spec_identity, "replay specification")
++        require_unchanged(approval_path, approval_identity, "source approval")
++        if preflight:
++            require_unchanged(preflight, preflight_identity, "preflight")
++        report["stage"] = "subprocess_launch"
++        tick = time.perf_counter()
++        completed = subprocess.run(command, cwd=root, env=ENV, capture_output=True, text=True, check=False)
++        report.update({"elapsed_seconds": time.perf_counter() - tick, "returncode": completed.returncode,
++                       "command_executed": True, "stdout": completed.stdout, "stderr": completed.stderr,
++                       "stage": "postlaunch_identity_guards"})
++        # Never replace the retained before identities with hashes calculated
++        # after the command. Detect even changes to unused specification fields.
++        require_unchanged(args.spec, spec_identity, "replay specification")
++        require_unchanged(approval_path, approval_identity, "source approval")
++        if preflight:
++            require_unchanged(preflight, preflight_identity, "preflight")
+         report["source_after"] = source_state(root, source, guards)
+         require(report["source_after"] == before, "source changed during replay")
+         require(completed.returncode == 0, "replay command failed")
+-        if preflight:
+-            require(digest(preflight) == task["accepted_preflight_sha256"], "preflight changed during replay")
+-        data = load_json(result_path)
++        report["stage"] = "result_guards"
++        data, result_identity = json_snapshot(result_path)
++        report["result"] = result_identity
+         require(data["checks_passed"] is True, "replay result checks failed")
+         if args.kind == "counting":
+             state = data["source"]
+@@ -91,22 +109,20 @@
+                     and state["git_dirty"] is False and state["git_status_porcelain"] == [], "finite internal source guard")
+             require({r["path"]: r["sha256"] for r in state["sources"]} == task["runtime_sha256"], "finite runtime identity")
+         else:
+-            p = data["provenance"]
+-            require(data["phase"] == "clean_replay" and p["source_commit"] == source
+-                    and p["repository_dirty_at_start"] is False and p["git_status_porcelain_at_start"] == []
++            provenance = data["provenance"]
++            require(data["phase"] == "clean_replay" and provenance["source_commit"] == source
++                    and provenance["repository_dirty_at_start"] is False and provenance["git_status_porcelain_at_start"] == []
+                     and data["source_input_immutability_gate_passed"] is True, "torus internal source guard")
+-            require(p["source_sha256"] == task["runtime_sha256"], "torus runtime identity")
+-        report["result"] = identity(result_path)
+-        report["checks_passed"] = True
+-    except Exception as exc:
+-        error = exc
+-        report["failure"] = type(exc).__name__ + ": " + str(exc)
+-    with receipt.open("x") as handle:
+-        json.dump(report, handle, indent=2, allow_nan=False)
+-        handle.write("\n")
+-    print(json.dumps({"checks_passed": report["checks_passed"], "receipt": str(receipt), "output": str(result_path)}))
+-    if error:
+-        raise error
++            require(provenance["source_sha256"] == task["runtime_sha256"], "torus runtime identity")
++        report["stage"] = "final_identity_guards"
++        require_unchanged(args.spec, spec_identity, "replay specification")
++        require_unchanged(approval_path, approval_identity, "source approval")
++        require_unchanged(result_path, result_identity, "result")
++        if preflight:
++            require_unchanged(preflight, preflight_identity, "preflight")
++        require(source_state(root, source, guards) == before, "source changed before receipt completion")
++        report.update({"checks_passed": True, "stage": "complete"})
++    print(json.dumps({"checks_passed": True, "receipt": str(args.receipt), "output": report["output_path"]}))
+ 
+ 
+ if __name__ == "__main__":
+--- before/test_checkpoint_revision.py
++++ after/test_checkpoint_revision.py
+@@ -0,0 +1,411 @@
++"""R1-R4 regressions using synthetic commands and disposable Git fixtures.
++
++Adapted from checkpoint-review/independent_probes_v1.py's demonstrated cases.
++No synthetic driver output is mathematical evidence or a scientific replay.
++The verifier probes retain real main/Git/manifest/copy gates and substitute
++only unrelated mathematical, preservation, PDF and approval work.
++"""
++import contextlib
++import copy
++import io
++import json
++import os
++from pathlib import Path
++import subprocess
++import sys
++import tempfile
++import unittest
++from unittest.mock import patch
++
++import checkpoint_lib as lib
++import compare_replays as compare
++import run_clean_replay as replay
++import verify_checkpoint as verifier
++
++HERE = Path(__file__).resolve().parent
++OUTER = HERE.parent
++FIXTURE_ENV = {
++    **os.environ, "GIT_CONFIG_NOSYSTEM": "1", "GIT_CONFIG_GLOBAL": os.devnull,
++    "GIT_AUTHOR_NAME": "Checkpoint regression fixture", "GIT_AUTHOR_EMAIL": "fixture@example.invalid",
++    "GIT_COMMITTER_NAME": "Checkpoint regression fixture", "GIT_COMMITTER_EMAIL": "fixture@example.invalid",
++}
++DRIVER = '''from pathlib import Path
++from hashlib import sha256
++import json, subprocess, sys
++root=Path.cwd()
++output=Path(sys.argv[sys.argv.index("--output")+1])
++outer=output.parent
++mode=json.loads((outer/"control.json").read_text())["mode"]
++if mode == "command_failure":
++    sys.exit(7)
++head=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip()
++status=subprocess.check_output(["git","status","--porcelain=v1","--untracked-files=all"],text=True).splitlines()
++name="experiments/counting_mixing/run.py"
++source={"git_commit":head,"git_dirty":bool(status),"git_status_porcelain":status,
++        "sources":[{"path":name,"sha256":sha256((root/name).read_bytes()).hexdigest()}]}
++if mode in ("spec_drift", "approval_drift"):
++    path=outer/("replay-spec.json" if mode=="spec_drift" else "approval.json")
++    data=json.loads(path.read_text());data["unused_note"]="changed after launch"
++    path.write_text(json.dumps(data,indent=2)+"\\n")
++output.write_text(json.dumps({"checks_passed":True,"source":source,"source_at_completion":source})+"\\n")
++'''
++
++
++def dump(path, value):
++    path.parent.mkdir(parents=True, exist_ok=True)
++    path.write_text(json.dumps(value, indent=2) + "\n")
++
++
++def fixture_git(root, *args):
++    return subprocess.check_output(["git", *args], cwd=root, env=FIXTURE_ENV, text=True).strip()
++
++
++class RevisionTests(unittest.TestCase):
++    def setUp(self):
++        self.temp = tempfile.TemporaryDirectory(prefix="revision-gate-test-", dir=HERE)
++        self.base = Path(self.temp.name)
++        self.root, self.outer = self.base / "repo", self.base / "evidence"
++        self.root.mkdir()
++        self.outer.mkdir()
++
++    def tearDown(self):
++        self.temp.cleanup()
++
++    def source_fixture(self):
++        root, outer = self.root, self.outer
++        fixture_git(root, "init", "-q")
++        (root / "README.md").write_text("Synthetic fixture only.\n")
++        fixture_git(root, "add", "README.md")
++        fixture_git(root, "commit", "-qm", "fixture baseline")
++        baseline = fixture_git(root, "rev-parse", "HEAD")
++        driver = root / "experiments/counting_mixing/run.py"
++        driver.parent.mkdir(parents=True)
++        driver.write_text(DRIVER)
++        inputs = {}
++        for i in range(26):
++            name = f"book/input{i}.tex"
++            path = root / name
++            path.parent.mkdir(exist_ok=True)
++            path.write_text(f"synthetic manuscript input {i}\n")
++            inputs[name] = lib.digest(path)
++        runtime = {str(driver.relative_to(root)): lib.digest(driver)}
++        approved = inputs | runtime
++        fixture_git(root, "add", ".")
++        fixture_git(root, "commit", "-qm", "fixture source")
++        source = fixture_git(root, "rev-parse", "HEAD")
++        approval_path = outer / "approval.json"
++        dump(approval_path, {"decision": "approve", "approved_source_sha256": approved, "unused_note": "original"})
++        spec = {"schema_version": 1, "ready": True, "unresolved": [], "root": str(root), "outer": str(outer),
++                "python": sys.executable, "baseline_commit": baseline, "source_commit": source,
++                "source_approval": {"path": "approval.json", "identity": lib.identity(approval_path),
++                                    "source_sha256_pointer": "/approved_source_sha256", "required_values": {"/decision": "approve"}},
++                "approved_source_sha256": approved, "pdf_input_sha256": inputs, "replay_guard_sha256": approved,
++                "replays": {"counting": {"output": "result.json", "runtime_sha256": runtime}, "torus": {"runtime_sha256": {}}},
++                "unused_note": "original"}
++        dump(outer / "replay-spec.json", spec)
++        return baseline, source, approved, spec
++
++    def replay_case(self, mode, should_fail, *, unresolved="empty"):
++        baseline, _, _, spec = self.source_fixture()
++        if unresolved == "nonempty":
++            spec["unresolved"] = ["Independent review pending"]
++        elif unresolved == "missing":
++            del spec["unresolved"]
++        dump(self.outer / "replay-spec.json", spec)
++        dump(self.outer / "control.json", {"mode": mode})
++        if mode == "dirty_before":
++            (self.root / "unexpected.json").write_text("{}\n")
++        spec_path, approval_path = self.outer / "replay-spec.json", self.outer / "approval.json"
++        initial_spec, initial_approval = lib.identity(spec_path), lib.identity(approval_path)
++        receipt = self.outer / "receipt.json"
++        argv = ["run_clean_replay.py", "--spec", str(spec_path), "--kind", "counting", "--receipt", str(receipt)]
++        with patch.object(replay, "BASELINE", baseline), patch.object(sys, "argv", argv), contextlib.redirect_stdout(io.StringIO()):
++            if should_fail:
++                with self.assertRaises(lib.CheckpointError):
++                    replay.main()
++            else:
++                replay.main()
++        report = lib.load_json(receipt)
++        self.assertEqual(report["checks_passed"], not should_fail)
++        self.assertEqual(report["exit_status"], 1 if should_fail else 0)
++        self.assertEqual(report["spec_identity"], initial_spec)
++        if report["source_approval_identity"] is not None:
++            self.assertEqual(report["source_approval_identity"], initial_approval)
++        if should_fail:
++            self.assertTrue(report["failure"])
++            self.assertTrue(report["failure_stage"])
++        return report, initial_spec, initial_approval
++
++    def test_R1_real_wrapper_success_control(self):
++        report, _, _ = self.replay_case("success", False)
++        self.assertTrue(report["command_executed"])
++        self.assertEqual(report["source_before"], report["source_after"])
++
++    def test_R1_changed_unused_spec_rejected_with_original_identity(self):
++        report, original, _ = self.replay_case("spec_drift", True)
++        self.assertNotEqual(lib.identity(self.outer / "replay-spec.json"), original)
++        self.assertEqual(report["returncode"], 0)
++        self.assertIn("replay specification identity changed", report["failure"])
++
++    def test_R1_changed_unused_approval_rejected_with_original_identity(self):
++        report, _, original = self.replay_case("approval_drift", True)
++        self.assertNotEqual(lib.identity(self.outer / "approval.json"), original)
++        self.assertEqual(report["returncode"], 0)
++        self.assertIn("source approval identity changed", report["failure"])
++
++    def test_R4_dirty_prelaunch_guard_leaves_failure_receipt(self):
++        report, _, _ = self.replay_case("dirty_before", True)
++        self.assertFalse(report["command_executed"])
++        self.assertIsNone(report["returncode"])
++        self.assertEqual(report["failure_stage"], "prelaunch_source_guards")
++        self.assertFalse((self.outer / "result.json").exists())
++
++    def test_R4_command_failure_retains_actual_exit_code(self):
++        report, _, _ = self.replay_case("command_failure", True)
++        self.assertEqual(report["returncode"], 7)
++        self.assertEqual(report["exit_status"], 1)
++
++    def test_R3_nonempty_unresolved_spec_leaves_failure_before_launch(self):
++        report, _, _ = self.replay_case("success", True, unresolved="nonempty")
++        self.assertFalse(report["command_executed"])
++        self.assertFalse((self.outer / "result.json").exists())
++
++    def test_R3_missing_unresolved_spec_leaves_failure_before_launch(self):
++        report, _, _ = self.replay_case("success", True, unresolved="missing")
++        self.assertFalse(report["command_executed"])
++
++    def test_R3_ready_contract_requires_explicit_empty_unresolved(self):
++        for fields in ({}, {"unresolved": ["pending"]}, {"unresolved": None}):
++            with self.subTest(fields=fields), self.assertRaisesRegex(lib.CheckpointError, "explicit empty unresolved"):
++                verifier.approved_contract(self.root, {"schema_version": 1, "ready": True, **fields})
++
++    def comparison_case(self, mode):
++        before = lib.load_json(OUTER / "computation/revision-v2/author-result-60-90-v2.json")
++        after = copy.deepcopy(before)
++        if mode == "mismatch":
++            after["check_counts"]["exact"] += 1
++        a, b, receipt = (self.outer / name for name in ("reference.json", "candidate.json", "comparison.json"))
++        dump(a, before)
++        dump(b, after)
++        initial = {"reference": lib.identity(a), "candidate": lib.identity(b)}
++        real_compare = compare.counting_comparison
++
++        def mutate_after_comparison(first, second):
++            result = real_compare(first, second)
++            target = a if mode == "reference_drift" else b
++            changed = lib.load_json(target)
++            changed["check_counts"]["exact"] += 1
++            dump(target, changed)
++            return result
++
++        argv = ["compare_replays.py", "--kind", "counting", "--outer", str(self.outer), "--reference", str(a),
++                "--candidate", str(b), "--receipt", str(receipt)]
++        with contextlib.ExitStack() as stack:
++            stack.enter_context(patch.object(sys, "argv", argv))
++            stack.enter_context(contextlib.redirect_stdout(io.StringIO()))
++            if mode in ("reference_drift", "candidate_drift"):
++                stack.enter_context(patch.object(compare, "counting_comparison", mutate_after_comparison))
++            if mode == "success":
++                compare.main()
++            else:
++                with self.assertRaises(lib.CheckpointError):
++                    compare.main()
++        report = lib.load_json(receipt)
++        self.assertEqual(report["checks_passed"], mode == "success")
++        self.assertEqual(report["exit_status"], 0 if mode == "success" else 1)
++        for name in initial:
++            self.assertEqual({k: report[name][k] for k in ("sha256", "bytes")}, initial[name])
++        return report
++
++    def test_R1_comparison_success_control(self):
++        self.comparison_case("success")
++
++    def test_R1_candidate_changed_after_comparison_leaves_failure(self):
++        report = self.comparison_case("candidate_drift")
++        self.assertIn("comparison candidate identity changed", report["failure"])
++
++    def test_R1_reference_changed_after_comparison_leaves_failure(self):
++        report = self.comparison_case("reference_drift")
++        self.assertIn("comparison reference identity changed", report["failure"])
++
++    def test_R4_scientific_mismatch_leaves_false_receipt(self):
++        report = self.comparison_case("mismatch")
++        self.assertEqual(report["failure_stage"], "scientific_comparison")
++
++    def test_R4_existing_receipt_is_never_overwritten(self):
++        receipt = self.outer / "existing.json"
++        receipt.write_text("preserved receipt bytes\n")
++        before = lib.identity(receipt)
++        with self.assertRaises(lib.CheckpointError), lib.receipt_record(self.outer, receipt, {}):
++            self.fail("existing receipt should not enter audited work")
++        self.assertEqual(lib.identity(receipt), before)
++
++    def test_R4_receipt_escape_writes_nothing(self):
++        path = self.root / "forbidden.json"
++        with self.assertRaises(lib.CheckpointError), lib.receipt_record(self.outer, path, {}):
++            self.fail("unsafe receipt should not enter audited work")
++        self.assertFalse(path.exists())
++
++    def external_comparison_case(self, changed_kind):
++        reference = lib.load_json(OUTER / "torus-campaign/full8192-author-v2/result.json")
++        candidate = copy.deepcopy(reference)
++        target = None
++        for label, report in (("reference", reference), ("candidate", candidate)):
++            directory = self.outer / label
++            directory.mkdir()
++            for surface in report["surfaces"]:
++                rows = []
++                for suffix in ("lengths.f64le", "slopes.i32le"):
++                    path = directory / (surface["surface"] + "." + suffix)
++                    path.write_bytes(b"12345678")
++                    rows.append({"path": str(path), **lib.identity(path)})
++                    if label == "candidate" and changed_kind == "raw":
++                        target = path
++                surface["raw_streams"] = rows
++                path = directory / (surface["surface"] + ".native.json")
++                dump(path, {"surface": surface["surface"], "raw_peak_rss": 1,
++                            "timing_seconds": {key: 0.0 for key in lib.TIMING_KEYS}, "count": 1})
++                surface["raw_native_report"] = {"path": str(path), "sha256": lib.digest(path)}
++                if label == "candidate" and changed_kind == "native":
++                    target = path
++        a, b = self.outer / "reference.json", self.outer / "candidate.json"
++        dump(a, reference)
++        dump(b, candidate)
++        initial = lib.identity(target)
++        actual_raw_comparison = compare.torus_raw_comparison
++
++        def mutate_after_raw_comparison(*args):
++            result = actual_raw_comparison(*args)
++            if changed_kind == "raw":
++                target.write_bytes(b"12345679")
++            else:
++                record = lib.load_json(target)
++                record["count"] = 2
++                dump(target, record)
++            return result
++
++        receipt = self.outer / "external-drift-receipt.json"
++        argv = ["compare_replays.py", "--kind", "torus", "--outer", str(self.outer),
++                "--reference", str(a), "--candidate", str(b), "--receipt", str(receipt)]
++        with patch.object(sys, "argv", argv), contextlib.redirect_stdout(io.StringIO()), \
++                patch.object(compare, "torus_raw_comparison", mutate_after_raw_comparison), self.assertRaises(lib.CheckpointError):
++            compare.main()
++        report = lib.load_json(receipt)
++        self.assertFalse(report["checks_passed"])
++        self.assertEqual(report["exit_status"], 1)
++        self.assertEqual(report["external_input_identities"][str(target)], initial)
++        self.assertNotEqual(lib.identity(target), initial)
++        self.assertIn("external native/raw comparison input", report["failure"])
++
++    def test_R1_raw_stream_changed_after_comparison_is_rejected(self):
++        self.external_comparison_case("raw")
++
++    def test_R1_native_report_changed_after_comparison_is_rejected(self):
++        self.external_comparison_case("native")
++
++    def verifier_case(self, mode):
++        baseline, source, approved, _ = self.source_fixture()
++        config = {"pdf": {"input_sha256": {}}, "replays": {"counting": {"runtime_sha256": {}},
++                  "torus": {"runtime_sha256": {}}}, "replay_guard_sha256": approved, "unused_note": "original"}
++        payloads = {verifier.CONTRACT: json.dumps(config).encode(), lib.PDF: b"synthetic PDF fixture only\n",
++                    **{path: b"{}\n" for path in lib.RESULTS.values()}, lib.REL + "/note.txt": b"version one\n"}
++        for name, value in payloads.items():
++            path = self.root / name
++            path.parent.mkdir(parents=True, exist_ok=True)
++            path.write_bytes(value)
++
++        def remake_manifests():
++            copies = []
++            for i, name in enumerate(payloads):
++                destination = self.outer / "copies" / str(i)
++                destination.parent.mkdir(exist_ok=True)
++                destination.write_bytes((self.root / name).read_bytes())
++                copies.append({"path": name, "outer_source": str(destination.relative_to(self.outer)), **lib.identity(destination)})
++            dump(self.root / verifier.COPY_MANIFEST, {"baseline_commit": baseline, "source_commit": source,
++                                                     "omissions": ["Synthetic fixture only"], "files": copies})
++            files = {name: lib.identity(self.root / name) for name in [*payloads, verifier.COPY_MANIFEST]}
++            dump(self.root / verifier.MANIFEST, {"baseline_commit": baseline, "source_commit": source, "files": files})
++
++        remake_manifests()
++        original = {p: lib.identity(self.root / p) for p in (verifier.CONTRACT, verifier.MANIFEST, verifier.COPY_MANIFEST)}
++
++        def scientific_hook(*_args):
++            if mode == "payload_and_manifests":
++                (self.root / lib.REL / "note.txt").write_text("replaced payload and consistent new manifests\n")
++                remake_manifests()
++            elif mode == "contract_and_manifests":
++                changed = lib.load_json(self.root / verifier.CONTRACT)
++                changed["unused_note"] = "replaced during verification"
++                dump(self.root / verifier.CONTRACT, changed)
++                remake_manifests()
++            elif mode == "copy_and_manifest":
++                changed = lib.load_json(self.root / verifier.COPY_MANIFEST)
++                changed["omissions"].append("new content during verification")
++                dump(self.root / verifier.COPY_MANIFEST, changed)
++                candidate = lib.load_json(self.root / verifier.MANIFEST)
++                candidate["files"][verifier.COPY_MANIFEST] = lib.identity(self.root / verifier.COPY_MANIFEST)
++                dump(self.root / verifier.MANIFEST, candidate)
++            elif mode == "new_path_and_manifests":
++                name = lib.REL + "/added-during-verification.txt"
++                payloads[name] = b"new path\n"
++                (self.root / name).write_bytes(payloads[name])
++                remake_manifests()
++            external = {}
++            if mode == "external_drift":
++                path = self.outer / "external.raw"
++                path.write_bytes(b"12345678")
++                external[str(path)] = lib.identity(path)
++            return {"synthetic_gate_only": True, "torus": {"external_input_identities": external}}
++
++        def PDF_hook(*_args):
++            if mode == "external_drift":
++                (self.outer / "external.raw").write_bytes(b"12345679")
++            return {"synthetic_gate_only": True}
++
++        receipt = self.outer / "verification.json"
++        argv = ["verify_checkpoint.py", "--root", str(self.root), "--outer", str(self.outer), "--candidate", "--receipt", str(receipt)]
++        with contextlib.ExitStack() as stack:
++            for name, value in {
++                "BASELINE": baseline, "approved_contract": lambda *_: (source, approved),
++                "source_checkpoint_receipts": lambda *_: None, "preservation": lambda *_: {"synthetic_gate_only": True},
++                "scientific_results": scientific_hook, "manuscript_pdf_links": PDF_hook,
++                "fsck": lambda *_: {"synthetic_gate_only": True},
++            }.items():
++                stack.enter_context(patch.object(verifier, name, value))
++            stack.enter_context(patch.object(sys, "argv", argv))
++            stack.enter_context(contextlib.redirect_stdout(io.StringIO()))
++            if mode == "success":
++                verifier.main()
++            else:
++                with self.assertRaises(lib.CheckpointError):
++                    verifier.main()
++        report = lib.load_json(receipt)
++        self.assertEqual(report["checks_passed"], mode == "success")
++        self.assertEqual(report["exit_status"], 0 if mode == "success" else 1)
++        self.assertEqual(report["frozen_control_identities"], original)
++        self.assertEqual(report["candidate_manifest_sha256"], original[verifier.MANIFEST]["sha256"])
++        return report
++
++    def test_R2_verifier_unchanged_candidate_control(self):
++        self.verifier_case("success")
++
++    def test_R2_consistent_replaced_payload_and_manifests_rejected(self):
++        self.verifier_case("payload_and_manifests")
++
++    def test_R2_consistent_replaced_contract_and_manifests_rejected(self):
++        self.verifier_case("contract_and_manifests")
++
++    def test_R2_consistent_replaced_copy_and_candidate_manifests_rejected(self):
++        self.verifier_case("copy_and_manifest")
++
++    def test_R2_replaced_path_set_rejected(self):
++        report = self.verifier_case("new_path_and_manifests")
++        self.assertNotIn(lib.REL + "/added-during-verification.txt", report["frozen_artifact_paths"])
++
++    def test_R1_verifier_rechecks_external_native_raw_inputs_before_success(self):
++        report = self.verifier_case("external_drift")
++        self.assertIn("external native/raw comparison input", report["failure"])
++
++
++if __name__ == "__main__":
++    unittest.main()
+--- before/verify_checkpoint.py
++++ after/verify_checkpoint.py
+@@ -8,7 +8,6 @@
+ Patterns: docs/execution/section15-analytic-review-2026-11-01/verify_checkpoint.py.
+ """
+ from argparse import ArgumentParser
+-from datetime import datetime, timezone
+ from hashlib import sha256
+ import json
+ import os
+@@ -19,8 +18,9 @@
+ 
+ from checkpoint_lib import (
+     BASELINE, ENV, PDF, REL, RESULTS, commit_blob, counting_comparison, digest,
+-    encode, fsck, get_pointer, git, identity, load_json, merge_hashes, outer_path, relative_path,
+-    repository, require, torus_raw_comparison, torus_report_comparison,
++    encode, external_inputs_unchanged, fsck, get_pointer, git, identity, json_snapshot, load_json, merge_hashes,
++    outer_path, receipt_record, relative_path, repository, require, require_unchanged,
++    torus_raw_comparison, torus_report_comparison,
+ )
+ 
+ MANIFEST = REL + "/candidate-artifact-manifest.json"
+@@ -31,6 +31,8 @@
+ def approved_contract(root, config):
+     require(config["schema_version"] == 1 and config["ready"] is True,
+             "checkpoint contract is unfinished; final approvals/replays are required")
++    require(type(config.get("unresolved")) is list and config["unresolved"] == [],
++            "checkpoint contract requires explicit empty unresolved list")
+     require(config["baseline_commit"] == BASELINE, "wrong baseline")
+     source = config["source_commit"]
+     require(isinstance(source, str) and re.fullmatch(r"[0-9a-f]{40}", source), "missing source commit")
+@@ -158,11 +160,27 @@
+             "source_tracked_files": len(current), "materialized_LFS_files": lfs, "original_files": n}
+ 
+ 
+-def artifacts(root, outer, source, approved, config, candidate):
+-    manifest = load_json(root / MANIFEST)
++def freeze_controls(root):
++    frozen = {}
++    for name in (CONTRACT, MANIFEST, COPY_MANIFEST):
++        data, frozen_identity = json_snapshot(root / name)
++        frozen[name] = {"data": data, "identity": frozen_identity}
++    frozen["paths"] = frozenset(frozen[MANIFEST]["data"]["files"]) | {MANIFEST}
++    controls_unchanged(root, frozen)
++    return frozen
++
++
++def controls_unchanged(root, frozen):
++    for name in (CONTRACT, MANIFEST, COPY_MANIFEST):
++        require_unchanged(root / name, frozen[name]["identity"], "frozen checkpoint control " + name)
++
++
++def artifacts(root, outer, source, approved, config, candidate, frozen):
++    controls_unchanged(root, frozen)
++    manifest = frozen[MANIFEST]["data"]
+     require(manifest["baseline_commit"] == BASELINE and manifest["source_commit"] == source, "candidate manifest ancestry")
+     require(MANIFEST not in manifest["files"], "candidate manifest may not hash itself")
+-    paths = set(manifest["files"]) | {MANIFEST}
++    paths = frozen["paths"]
+     expected = {str(p.relative_to(root)) for p in (root / REL).rglob("*")
+                 if p.is_file() and not p.name.startswith("._")}
+     expected.update({*RESULTS.values(), PDF})
+@@ -187,7 +205,7 @@
+         if not candidate:
+             require(head_tree[p][0] == "100644", "artifact file mode")
+             require(commit_blob(root, head, p) == path.read_bytes(), "committed artifact bytes differ: " + p)
+-    copies = load_json(root / COPY_MANIFEST)
++    copies = frozen[COPY_MANIFEST]["data"]
+     require(copies["source_commit"] == source and copies["baseline_commit"] == BASELINE, "copy manifest source identity")
+     require(copies["omissions"], "copy manifest must describe omitted outer evidence")
+     copy_paths = [row["path"] for row in copies["files"]]
+@@ -345,39 +363,51 @@
+     parser.add_argument("--candidate", action="store_true")
+     parser.add_argument("--receipt", type=Path, required=True)
+     args = parser.parse_args()
+-    root, outer = repository(args.root), args.outer.resolve()
++    root, outer = args.root.resolve(), args.outer.resolve()
+     require(not outer.is_relative_to(root), "outer evidence must be outside canonical")
+-    config = load_json(root / CONTRACT)
+-    source, approved = approved_contract(root, config)
+-    source_checkpoint_receipts(root, source, approved, config)
+-    require(config["replay_guard_sha256"] == merge_hashes(approved, config["pdf"]["input_sha256"],
+-            config["replays"]["counting"]["runtime_sha256"], config["replays"]["torus"]["runtime_sha256"]),
+-            "replay guard must bind all reviewed and active inputs")
+-    head, artifact_paths = artifacts(root, outer, source, approved, config, args.candidate)
+-    # Current HEAD/source file checks also happen after the expensive read-only gates.
+-    report = {"generated_at_utc": datetime.now(timezone.utc).isoformat(),
+-              "mode": "candidate" if args.candidate else "postcommit", "baseline_commit": BASELINE,
+-              "source_commit": source, "head": head, "source_paths": len(approved),
+-              "artifact_paths": len(artifact_paths), "candidate_manifest_sha256": digest(root / MANIFEST),
+-              "preservation": preservation(root, outer, source, approved, config),
+-              "scientific_comparison": scientific_results(root, outer, source, config),
+-              "manuscript_PDF_links": manuscript_pdf_links(root, outer, source, approved, config),
+-              "git_integrity": fsck(root),
+-              "scope": "Identity, source/run provenance, strict finite-result comparison, preservation and links only; no new replay, PDF build, visual review, publication or metadata cleanup."}
+-    require(git(root, "rev-parse", "HEAD").decode().strip() == head, "HEAD drifted during verification")
+-    for name, expected in config["replay_guard_sha256"].items():
+-        require(digest(root / name) == sha256(commit_blob(root, source, name)).hexdigest()
+-                == sha256(commit_blob(root, head, name)).hexdigest() == expected, "source drift during verification: " + name)
+-    artifacts(root, outer, source, approved, config, args.candidate)
+-    receipt = outer_path(outer, str(args.receipt.resolve()))
+-    require(not receipt.exists() and not receipt.is_symlink(), "receipt path already exists")
+-    require(receipt.parent.is_dir(), "create outer receipt parent before verification")
+-    report["checks_passed"] = True
+-    with receipt.open("x") as handle:
+-        json.dump(report, handle, indent=2, allow_nan=False)
+-        handle.write("\n")
+-    print(json.dumps({"checks_passed": True, "mode": report["mode"], "head": head,
+-                      "receipt": str(receipt), "scope": report["scope"]}, indent=2))
++    report = {"mode": "candidate" if args.candidate else "postcommit", "baseline_commit": BASELINE,
++              "stage": "repository_guards", "source_commit": None, "head": None,
++              "scope": "Identity, source/run provenance, strict finite-result comparison, preservation and links only; no replay, PDF build, visual review, publication or metadata cleanup."}
++    with receipt_record(outer, args.receipt, report):
++        repository(root)
++        report["stage"] = "freeze_control_inputs"
++        frozen = freeze_controls(root)
++        config = frozen[CONTRACT]["data"]
++        report["frozen_control_identities"] = {name: frozen[name]["identity"] for name in (CONTRACT, MANIFEST, COPY_MANIFEST)}
++        report["candidate_manifest_sha256"] = frozen[MANIFEST]["identity"]["sha256"]
++        report["frozen_artifact_paths"] = sorted(frozen["paths"])
++        report["stage"] = "approval_and_source_checkpoint_guards"
++        source, approved = approved_contract(root, config)
++        report["source_commit"] = source
++        source_checkpoint_receipts(root, source, approved, config)
++        require(config["replay_guard_sha256"] == merge_hashes(approved, config["pdf"]["input_sha256"],
++                config["replays"]["counting"]["runtime_sha256"], config["replays"]["torus"]["runtime_sha256"]),
++                "replay guard must bind all reviewed and active inputs")
++        report["stage"] = "initial_artifact_guards"
++        head, artifact_paths = artifacts(root, outer, source, approved, config, args.candidate, frozen)
++        report.update({"head": head, "source_paths": len(approved), "artifact_paths": len(artifact_paths)})
++        report["stage"] = "preservation_guards"
++        report["preservation"] = preservation(root, outer, source, approved, config)
++        report["stage"] = "scientific_comparison_guards"
++        report["scientific_comparison"] = scientific_results(root, outer, source, config)
++        report["stage"] = "manuscript_PDF_link_guards"
++        report["manuscript_PDF_links"] = manuscript_pdf_links(root, outer, source, approved, config)
++        report["stage"] = "Git_integrity_guards"
++        report["git_integrity"] = fsck(root)
++        report["stage"] = "final_source_and_artifact_guards"
++        require(git(root, "rev-parse", "HEAD").decode().strip() == head, "HEAD drifted during verification")
++        for name, expected in config["replay_guard_sha256"].items():
++            require(identity(root / name)["sha256"] == sha256(commit_blob(root, source, name)).hexdigest()
++                    == sha256(commit_blob(root, head, name)).hexdigest() == expected, "source drift during verification: " + name)
++        final_head, final_paths = artifacts(root, outer, source, approved, config, args.candidate, frozen)
++        require(final_head == head and final_paths == artifact_paths == frozen["paths"], "verification path set or HEAD drift")
++        external_inputs_unchanged(report["scientific_comparison"]["torus"]["external_input_identities"])
++        # Recheck the ORIGINAL three identities after all other work. A newly
++        # consistent replacement manifest/copy/payload set is not this candidate.
++        controls_unchanged(root, frozen)
++        report.update({"checks_passed": True, "stage": "complete"})
++    print(json.dumps({"checks_passed": True, "mode": report["mode"], "head": report["head"],
++                      "receipt": str(args.receipt), "scope": report["scope"]}, indent=2))
+ 
+ 
+ if __name__ == "__main__":

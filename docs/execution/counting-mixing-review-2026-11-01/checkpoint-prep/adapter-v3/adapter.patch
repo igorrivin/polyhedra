@@ -1,0 +1,332 @@
+--- before/run_clean_replay.py
++++ after/run_clean_replay.py
+@@ -14,6 +14,7 @@
+     BASELINE, ENV, get_pointer, git, json_snapshot, merge_hashes,
+     outer_path, receipt_record, repository, require, require_unchanged, source_state,
+ )
++from source_approval_adapter import approved_source_map
+ 
+ 
+ def main():
+@@ -48,7 +49,7 @@
+         approved, approval_identity = json_snapshot(approval_path)
+         report["source_approval_identity"] = approval_identity
+         require(approval_identity == approval["identity"], "integration approval identity")
+-        require(get_pointer(approved, approval["source_sha256_pointer"]) == spec["approved_source_sha256"],
++        require(approved_source_map(approved, approval) == spec["approved_source_sha256"],
+                 "replay source allowlist differs from integration review")
+         require(approval["required_values"], "approval decision predicates missing")
+         for pointer, value in approval["required_values"].items():
+--- before/verify_checkpoint.py
++++ after/verify_checkpoint.py
+@@ -22,6 +22,8 @@
+     outer_path, receipt_record, relative_path, repository, require, require_unchanged,
+     torus_raw_comparison, torus_report_comparison,
+ )
++from source_approval_adapter import approved_source_map
++from candidate_receipt_adapter import verify_source_receipts, verify_pdf_receipts
+ 
+ MANIFEST = REL + "/candidate-artifact-manifest.json"
+ COPY_MANIFEST = REL + "/evidence-copy-manifest.json"
+@@ -53,7 +55,7 @@
+         for pointer, expected in pin["required_values"].items():
+             require(encode(get_pointer(record, pointer)) == encode(expected), "approval condition failed: " + pointer)
+         if pin["role"] == "integration":
+-            require(get_pointer(record, pin["source_sha256_pointer"]) == approved, "final integrated source approval differs")
++            require(approved_source_map(record, pin) == approved, "final integrated source approval differs")
+     for path, expected in approved.items():
+         require(digest(relative_path(root, path)) == sha256(commit_blob(root, source, path)).hexdigest() == expected,
+                 "approved working/source-commit bytes differ: " + path)
+@@ -61,25 +63,8 @@
+ 
+ 
+ def source_checkpoint_receipts(root, source, approved, config):
+-    stage = load_json(root / REL / "checkpoint/source-stage.json")
+-    checkpoint = load_json(root / REL / "checkpoint/source-checkpoint.json")
+-    integrity = load_json(root / REL / "checkpoint/source-integrity.json")
+-    require(stage["baseline_commit"] == BASELINE and set(stage["staged_paths"]) == set(approved)
+-            and stage["staged_source_sha256"] == approved and stage["diff_check_passed"] is True
+-            and stage["whitespace_exceptions"] == [], "source stage identity/whitespace gate")
+-    require(checkpoint["baseline_commit"] == BASELINE and checkpoint["source_commit"] == source
+-            and checkpoint["approved_source_sha256"] == approved
+-            and checkpoint["index_clean"] is True and checkpoint["worktree_clean"] is True
+-            and checkpoint["no_remotes"] is True and checkpoint["tracked_files"] == len(tree(root, source)),
+-            "source checkpoint clean state/identity")
+-    pins = {row["path"]: row["identity"] for row in config["approval_pins"]}
+-    require(checkpoint["source_approvals"] == stage["source_approvals"] == pins, "staged/source independent approval bindings")
+-    require(integrity["source_commit"] == source and integrity["returncode"] == 0
+-            and integrity["stderr"] == "" and integrity["source_status_porcelain"] == ""
+-            and integrity["no_remotes"] is True and integrity["tracked_files"] == len(tree(root, source)),
+-            "source integrity receipt")
+-    from checkpoint_lib import KNOWN_DANGLING
+-    require(set(integrity["stdout"].splitlines()) <= KNOWN_DANGLING, "unexplained source fsck output")
++    outer = root.parent / "execution/counting-mixing-review-2026-11-01"
++    return verify_source_receipts(root, outer, source, approved, config)
+ 
+ 
+ def tree(root, commit):
+@@ -321,25 +306,7 @@
+     pdf = identity(root / PDF)
+     require(pdf == config["pdf"]["identity"] == identity(outer_path(outer, config["pdf"]["reviewed_outer_pdf"])), "PDF differs from exact precommit reviewed output")
+     require(config["pdf"]["build_timing_claim"] == "actual independently reviewed precommit build copied byte-for-byte", "PDF build chronology must remain explicit")
+-    build = load_json(root / REL / config["pdf"]["build_review"])
+-    visual = load_json(root / REL / config["pdf"]["visual_review"])
+-    require(build["pdf_sha256"] == visual["pdf_sha256"] == pdf["sha256"], "build/visual/PDF identity")
+-    require(build["input_sha256"] == inputs and build["actual_recorded_manuscript_input_count"] == 26
+-            and build["actual_recorded_manuscript_inputs_match_frozen_graph"] is True, "actual TeX recorder inputs not bound to approved graph")
+-    require(build["compiled_labels"] == 607 and build["compiled_citations"] == 129
+-            and build["undefined_or_duplicate_labels"] == [] and build["overfull_boxes"] == [], "PDF convergence/reference gate")
+-    require(visual["decision"] == "passed_for_stated_visual_scope" and visual["new_visual_defects"] == [], "visual review not passed")
+-    pages = visual["inspected_pages"]
+-    require(len(pages) == len(set(pages)) == visual["inspected_page_count"] and pages,
+-            "actual inspected page scope missing/duplicated")
+-    require(visual["pdf_pages"] == config["pdf"]["pages"] and all(1 <= p <= visual["pdf_pages"] for p in pages), "PDF page scope")
+-    require([row["page"] for row in visual["images"]] == pages == build["selected_pages"], "reviewed rendered-image scope mismatch")
+-    for row in visual["images"]:
+-        require(row["finding"] == "pass" and row["sha256"] == build["rendered_sha256"][row["path"]], "rendered image review identity")
+-        require(digest(outer_path(outer, config["pdf"]["image_outer_paths"][row["path"]])) == row["sha256"], "retained reviewed image bytes differ")
+-    for key in ("build_command_receipt", "marker_receipt"):
+-        require(digest(root / REL / "integration-review" / build[key]) == build[key + "_sha256"],
+-                "PDF build command/once-only marker receipt identity")
++    pdf_scope = verify_pdf_receipts(root, outer, source, config, inputs, pdf)
+     docs = {root / p for p in approved if p.endswith(".md")} | set((root / REL).rglob("*.md"))
+     links = 0
+     for p in docs:
+@@ -352,7 +319,7 @@
+             require((p.parent / unquote(parsed.path)).resolve().exists(), "missing local link: " + str(p) + " -> " + target)
+             links += 1
+     return {"claims": n, "labels": 607, "bibliography_keys": 129, "PDF_inputs": 26,
+-            "PDF_pages": visual["pdf_pages"], "actually_visually_reviewed_pages": len(pages),
++            **pdf_scope,
+             "local_links": links, "ledger_paths": len(ledger_paths)}
+ 
+ 
+@@ -379,7 +346,7 @@
+         report["stage"] = "approval_and_source_checkpoint_guards"
+         source, approved = approved_contract(root, config)
+         report["source_commit"] = source
+-        source_checkpoint_receipts(root, source, approved, config)
++        report["source_checkpoint"] = source_checkpoint_receipts(root, source, approved, config)
+         require(config["replay_guard_sha256"] == merge_hashes(approved, config["pdf"]["input_sha256"],
+                 config["replays"]["counting"]["runtime_sha256"], config["replays"]["torus"]["runtime_sha256"]),
+                 "replay guard must bind all reviewed and active inputs")
+--- before/source_approval_adapter.py
++++ after/source_approval_adapter.py
+@@ -0,0 +1,25 @@
++"""Normalize an explicitly declared approval schema without rewriting evidence."""
++import re
++
++from checkpoint_lib import get_pointer, require
++
++
++def approved_source_map(record, pin):
++    value = get_pointer(record, pin["source_sha256_pointer"])
++    shape = pin.get("source_sha256_shape", "mapping")
++    if shape == "mapping":
++        require(isinstance(value, dict), "source approval must contain a hash mapping")
++        result = dict(value)
++    elif shape == "path-record-list":
++        require(isinstance(value, list) and value, "source approval must contain a nonempty path-record list")
++        result = {}
++        for row in value:
++            require(isinstance(row, dict) and "path" in row and "sha256" in row, "invalid approval path record")
++            require(row["path"] not in result, "duplicate approval source path")
++            result[row["path"]] = row["sha256"]
++    else:
++        raise RuntimeError("unsupported explicitly declared approval schema: " + str(shape))
++    require(result and all(isinstance(p, str) and isinstance(h, str)
++                           and re.fullmatch(r"[0-9a-f]{64}", h) for p, h in result.items()),
++            "invalid or empty approval source map")
++    return result
+--- before/candidate_receipt_adapter.py
++++ after/candidate_receipt_adapter.py
+@@ -0,0 +1,189 @@
++"""Validate actual final source/PDF receipt schemas without rewriting evidence.
++
++This adapter reads the retained original receipts, including the failed default
++whitespace check. It performs no build, inspection, cleanup, replay or mutation.
++"""
++from pathlib import Path
++import struct
++import subprocess
++
++from checkpoint_lib import (
++    BASELINE, ENV, KNOWN_DANGLING, REL, digest, encode, git, identity,
++    load_json, outer_path, parse_json, require,
++)
++from source_approval_adapter import approved_source_map
++
++SOURCE_SHA = "06513002e97910d2a2f4d267fb2ce79db5ee792c5d1602ed8ff480d0c0fc4f2e"
++INTEGRATION_SHA = "0fe9b4a314efdd5d1d8c33f448b49d36d998200bcad2d09a0dd12ede5cbf7a2d"
++EXCEPTION_SHA = "9e35561bf07b707f298b559aab86d4f642209e13a58663b33fd2835ed0ef04fa"
++EOF_DIAGNOSTICS = [
++    "book/chapters/25-global-coefficient-filters.tex:361: new blank line at EOF.",
++    "book/chapters/27-weighted-mixing-converse.tex:850: new blank line at EOF.",
++    "book/chapters/28-genus-two-model.tex:769: new blank line at EOF.",
++    "book/chapters/29-controlled-observables.tex:772: new blank line at EOF.",
++    "book/chapters/31-arithmetic-remainder.tex:415: new blank line at EOF.",
++]
++
++
++def whitespace_record(row, exception, expected_command):
++    require(exception["authority"] == "/root" and exception["approved"] is True
++            and exception["source_edits_authorized"] is False, "wrong whitespace exception authority/scope")
++    require(exception["approved_source_manifest_sha256"] == INTEGRATION_SHA
++            and exception["diagnostics"] == EOF_DIAGNOSTICS
++            and exception["original_command_returncode"] == 2, "original failed default check must remain explicit")
++    require(row["original_command"] == expected_command and row["original_diagnostics"] == EOF_DIAGNOSTICS,
++            "whitespace exception changed the exact command/diagnostic scope")
++    require(row["adjusted_core_whitespace"] == "-blank-at-eof" and row["prior_core_whitespace"] is None
++            and row["only_blank_at_eof_disabled"] is True, "whitespace waiver disabled an extra rule")
++    require(row["adjusted_check_returncode"] == 0 and row["adjusted_check_output"] == "",
++            "effective whitespace check must pass without diagnostics")
++    require(row["exception_sha256"] == EXCEPTION_SHA and row["root_decision"] == exception["decision"]
++            and row["root_reason"] == exception["reason"], "whitespace exception binding")
++
++
++def verify_source_receipts(root, outer, source, approved, config):
++    base = root / REL
++    path = base / "source-checkpoint/source-checkpoint.json"
++    require(digest(path) == SOURCE_SHA == config["source_checkpoint_identity"]["sha256"], "actual source receipt identity")
++    record = load_json(path)
++    require(record["passed"] is True and record["source_commit"] == source
++            and record["baseline_commit"] == record["parent_commit"] == BASELINE,
++            "actual source checkpoint ancestry/status")
++    require(record["git_status_porcelain"] == "" and record["index_clean"] is True
++            and record["tracked_path_count"] == 1939 and record["changed_path_count"] == 33
++            and record["modified_existing_count"] == 8 and record["new_count"] == 25,
++            "actual source checkpoint clean counts")
++    require(all(record[k] is False for k in ("artifact_generation_performed", "canonical_docs_generated",
++                                            "numerical_replay_performed", "remote_operation_performed")),
++            "source and artifact/replay boundaries were conflated")
++    for item in record["receipt_files"]:
++        require(digest(base / item["path"]) == item["sha256"], "retained source receipt dependency: " + item["path"])
++    stage = load_json(base / "source-checkpoint/stage.json")
++    require(stage["passed"] is True and stage["phase"] == "stage" and stage["baseline_commit"] == BASELINE,
++            "actual staging receipt status")
++    for rows in (stage["staged_files"], record["committed_files"]):
++        require(len(rows) == len({r["path"] for r in rows}) == 33
++                and {r["path"]: r["sha256"] for r in rows} == approved
++                and all(r["materialized_identical"] is True for r in rows), "reviewed/staged/committed source maps differ")
++        for row in rows:
++            require(identity(root / row["path"]) == {"sha256": row["sha256"], "bytes": row["bytes"]}, "actual source receipt byte count")
++    require(stage["staged_tree"] == record["source_tree"] == git(root, "rev-parse", source + "^{tree}").decode().strip(),
++            "staged/source tree identity")
++    pin = next(p for p in config["approval_pins"] if p["role"] == "integration")
++    final_approval = load_json(base / pin["path"])
++    require(pin["identity"]["sha256"] == INTEGRATION_SHA == record["approval"]["manifest_sha256"]
++            and approved_source_map(final_approval, pin) == approved, "source receipt independent approval identity")
++    require(stage["approval"] == record["approval"], "staged and final approval context differs")
++    review_directory = (base / pin["path"]).parent
++    for item in record["approval"]["independent_receipts"]:
++        p = Path(item["path"])
++        require(item["passed"] is True and digest(review_directory / p.name) == item["sha256"],
++                "final integration dependency identity")
++    parent = base / "parent-source-approval.json"
++    require(digest(parent) == record["approval"]["parent_approval_sha256"] and load_json(parent)["all_passed"] is True,
++            "parent source approval binding")
++    exception_path = base / "source-checkpoint/root-whitespace-exception.json"
++    require(digest(exception_path) == EXCEPTION_SHA, "exact EOF exception identity")
++    exception = load_json(exception_path)
++    require(len(stage["whitespace_checks"]) == len(record["whitespace_checks"]) == 1, "exactly one bounded whitespace rule exception")
++    whitespace_record(stage["whitespace_checks"][0], exception, ["git", "diff", "--cached", "--check"])
++    whitespace_record(record["whitespace_checks"][0], exception, ["git", "diff-tree", "--check", source + "^", source])
++    commands = [parse_json(line) for line in (base / "source-checkpoint/commands.jsonl").read_bytes().splitlines()]
++    by_sequence = {r["sequence"]: r for r in commands}
++    require(len(by_sequence) == len(commands), "duplicate source command sequence")
++    for sequence in (40, 47, 49, 90, 92, 180, 182):
++        command = by_sequence[sequence]
++        adjusted = sequence in (49, 92, 182)
++        suffix = ["diff-tree", "--check", source + "^", source] if sequence in (180, 182) else ["diff", "--cached", "--check"]
++        expected = ["git"] + (["-c", "core.whitespace=-blank-at-eof"] if adjusted else []) + suffix
++        require(command["argv"] == expected and command["returncode"] == (0 if adjusted else 2), "actual whitespace command/exit status")
++        for stream in ("stdout", "stderr"):
++            row = command[stream]
++            p = base / "source-checkpoint" / row["path"]
++            require(identity(p) == {"sha256": row["sha256"], "bytes": row["bytes"]}, "whitespace command output bytes")
++            require(p.read_text().splitlines() == ([] if adjusted or stream == "stderr" else EOF_DIAGNOSTICS), "whitespace command diagnostics")
++    current = []
++    for options in ([], ["-c", "core.whitespace=-blank-at-eof"]):
++        process = subprocess.run(["git", *options, "diff-tree", "--check", source + "^", source], cwd=root,
++                                 env=ENV, capture_output=True, text=True, check=False)
++        require(process.returncode == (0 if options else 2) and process.stderr == ""
++                and process.stdout.splitlines() == ([] if options else EOF_DIAGNOSTICS), "current committed-source whitespace scope differs")
++        current.append({"returncode": process.returncode, "stdout": process.stdout, "stderr": process.stderr})
++    integrity = record["fsck"]
++    require(integrity["returncode"] == 0 and set(integrity["output"]) == KNOWN_DANGLING
++            and integrity["unexpected_findings"] == [] and integrity["cleanup_performed"] is True, "actual source integrity receipt")
++    recovery = integrity["sidecar_recovery"]
++    removal_path = base / "source-checkpoint/git-sidecar-recovery/removal.json"
++    require(digest(removal_path) == recovery["sha256"], "sidecar removal receipt identity")
++    removal = load_json(removal_path)
++    require(removal == recovery["details"] and removal["source_commit"] == source
++            and removal["removed_count"] == 45 and removal["all_genuine_counterparts_unchanged"] is True
++            and removal["only_exact_fsck_reported_confirmed_appledouble_sidecars_removed"] is True, "sidecar cleanup scope")
++    inspection_path = base / "source-checkpoint" / removal["inspection_path"]
++    require(digest(inspection_path) == removal["inspection_sha256"], "sidecar inspection binding")
++    inspection = load_json(inspection_path)
++    require(inspection["all_headers_backups_counterparts_validated"] is True and inspection["deletion_performed"] is False
++            and inspection["reported_count"] == len(inspection["files"]) == 45, "sidecar inspection count/scope")
++    require({r["reported_path"] for r in inspection["files"]} == {r["path"] for r in removal["removed"]}
++            and all(r["genuine_counterpart_unchanged"] is True for r in removal["removed"]), "exact inspected/removal path set")
++    for row in inspection["files"]:
++        backup = outer_path(outer, "source-checkpoint/" + row["backup_path"])
++        require(identity(backup) == {"sha256": row["sidecar_sha256"], "bytes": row["sidecar_bytes"]}
++                and row["backup_sha256"] == row["sidecar_sha256"] and row["backup_byte_for_byte_verified"] is True
++                and row["genuine_counterpart"]["git_validated"] is True, "sidecar exact backup/counterpart evidence")
++        data = backup.read_bytes()
++        require(len(data) >= 26, "short AppleDouble backup")
++        magic, version = struct.unpack(">II", data[:8])
++        count = struct.unpack(">H", data[24:26])[0]
++        require(magic == 0x00051607 and version == 0x00020000 and 26 + 12 * count <= len(data), "AppleDouble header/entry-table bounds")
++        for i in range(count):
++            _, offset, size = struct.unpack(">III", data[26 + 12*i:38 + 12*i])
++            require(offset >= 26 + 12*count and offset + size <= len(data), "AppleDouble entry bounds")
++    return {"source_receipt_sha256": SOURCE_SHA, "source_tracked_files": 1939, "default_whitespace_check_passed": False,
++            "accepted_blank_at_eof_paths": [s.split(":", 1)[0] for s in EOF_DIAGNOSTICS],
++            "effective_whitespace_check_passed": True, "current_source_whitespace_recheck": current,
++            "recorded_validated_sidecar_removals": 45, "sidecar_backups_verified": 45,
++            "metadata_cleanup_by_this_verifier": False}
++
++
++def verify_pdf_receipts(root, outer, source, config, inputs, pdf_identity):
++    base = root / REL / "integration-review/revision-v2"
++    approval = load_json(base / "approved-source-manifest.json")
++    freeze = load_json(base / "tex-input-freeze.json")
++    build = load_json(base / "pdf-build-receipt.json")
++    visual = load_json(base / "pdf-visual-approval.json")
++    render = load_json(base / "pdf-render-manifest.json")
++    for row in approval["receipts"]:
++        require(digest(base / row["path"]) == row["sha256"], "independent PDF/integration receipt binding")
++    require(freeze["count"] == 26 and {p: r["sha256"] for p, r in freeze["files"].items()} == inputs,
++            "actual reviewed PDF input freeze differs")
++    require(approval["reviewed_pdf"]["precommit"] is True
++            and approval["reviewed_pdf"]["sha256"] == build["pdf_sha256"] == visual["source_pdf_sha256"]
++            == render["source_pdf_sha256"] == pdf_identity["sha256"], "precommit PDF approval identity")
++    require(build["build_status"] == "approved_precommit_frozen_source_build" and build["returncode"] == 0
++            and build["actual_tex_input_count"] == 26 and set(build["actual_tex_input_paths"]) == set(inputs)
++            and build["source_freeze_unchanged_after_build"] is True and build["freeze_matches_live_source_at_final_review"] is True,
++            "actual precommit build input/command status")
++    require(build["compiled_unique_labels"] == 607 and build["compiled_unique_bibliography_keys"] == 129
++            and build["overfull_count"] == 0 and build["undefined_references_or_citations"] is False,
++            "actual PDF convergence counts")
++    require(build["pages"] == visual["source_pdf_pages"] == render["pdf_page_count"] == config["pdf"]["pages"] == 191,
++            "reviewed PDF page count")
++    require(visual["decision"] == "approve" and visual["open_findings"] == [], "actual visual approval")
++    pages = visual["inspected_pages"]
++    require(len(pages) == len(set(pages)) == visual["inspected_page_count"] == 94
++            and all(1 <= p <= 191 for p in pages) and render["rendered_page_coverage"] == pages,
++            "actual 94-page inspection scope")
++    require(visual["images"] == render["images"] and visual["contact_sheets"] == render["contact_sheets"]
++            and [r["page"] for r in visual["images"]] == pages, "render/inspection image identities")
++    require(len(visual["full_page_legibility_checks"]) == 10 and set(visual["full_page_legibility_checks"]) <= set(pages),
++            "full-page legibility scope")
++    for row in visual["images"] + visual["contact_sheets"]:
++        path = outer_path(outer, "integration-review/revision-v2/" + row["path"])
++        require(digest(path) == row["sha256"], "retained reviewed image changed")
++    marker = load_json(root / REL / "parent-preliminary-build/build-command.json")
++    require(marker["pdf_operation_marker_run_before_this_build"] is True and build["artifact_marker"].startswith("Not rerun."),
++            "once-only marker provenance")
++    require(encode(config["pdf"]["input_sha256"]) == encode(inputs), "PDF contract input identity")
++    return {"PDF_pages": 191, "actually_visually_reviewed_pages": 94, "full_page_legibility_checks": 10,
++            "PDF_build_timing": "reviewed precommit build copied byte-for-byte", "marker_reexecuted": False}

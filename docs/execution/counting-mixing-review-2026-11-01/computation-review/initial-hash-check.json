@@ -1,0 +1,106 @@
+{
+  "head": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+  "head_matches": true,
+  "checks": [
+    {
+      "path": "consolidated/experiments/counting_mixing/README.md",
+      "sha256": "aec39c2522fc941890486d8ad98f82193160ad0dd40aa188af5b5784f9ca428d",
+      "bytes": 8398,
+      "matches": true
+    },
+    {
+      "path": "consolidated/experiments/counting_mixing/__init__.py",
+      "sha256": "6fc28e861807e61233bed8d0ca6c66001b4792c95d539dcc11d50e7060804715",
+      "bytes": 78,
+      "matches": true
+    },
+    {
+      "path": "consolidated/experiments/counting_mixing/algebra.py",
+      "sha256": "36399bd0068d0a0faa454b7df8c01a9e9cd7b03e138ca9c61fd3ad8716c8deb4",
+      "bytes": 12899,
+      "matches": true
+    },
+    {
+      "path": "consolidated/experiments/counting_mixing/arithmetic.py",
+      "sha256": "5a3d249be1fd9c3cbe2079426c3fd75e18aca1a339cf7684f7f61e76860bae9f",
+      "bytes": 10659,
+      "matches": true
+    },
+    {
+      "path": "consolidated/experiments/counting_mixing/dynamics.py",
+      "sha256": "bb1cdbff6b64971ef5ef317f6be068baa55a2ea65cbad291a8631639f253c378",
+      "bytes": 11318,
+      "matches": true
+    },
+    {
+      "path": "consolidated/experiments/counting_mixing/exact.py",
+      "sha256": "12bfa97e4debfbb8695480efea45319ad52e824ed88721f09ea5aad062227e99",
+      "bytes": 4891,
+      "matches": true
+    },
+    {
+      "path": "consolidated/experiments/counting_mixing/fixture.json",
+      "sha256": "538c23145ba1ded0f57c7f67a68412a35644ea85c1dd8c4470d902e11e57be33",
+      "bytes": 4392,
+      "matches": true
+    },
+    {
+      "path": "consolidated/experiments/counting_mixing/numerics.py",
+      "sha256": "1ce64d4f3ca09fbf702ea9ba6e1a8f116d4e140259e227750ceeaab20886a4a8",
+      "bytes": 13668,
+      "matches": true
+    },
+    {
+      "path": "consolidated/experiments/counting_mixing/run.py",
+      "sha256": "7494704c0b9c20d1e759c9a45354107071e58ace5a66aeda1377adea3dd3f875",
+      "bytes": 15085,
+      "matches": true
+    },
+    {
+      "path": "consolidated/experiments/counting_mixing/tests/test_counting_mixing.py",
+      "sha256": "8478bc092c8572f0bad3f32560035e414502526e02bf7fdf0027e7cb47b65fb4",
+      "bytes": 12808,
+      "matches": true
+    },
+    {
+      "path": "execution/counting-mixing-review-2026-11-01/computation/author-result-60-90.json",
+      "sha256": "c99165f92234f36a68d90dd49efd3c8c4322f292807b70c7d22c86a6667dcdf4",
+      "bytes": 391662,
+      "matches": true
+    },
+    {
+      "path": "execution/counting-mixing-review-2026-11-01/computation/author-run.log",
+      "sha256": "9b684899dcd97c08ee5c763b0c9087dece1208e14f44e49c37bb8a59e745e46a",
+      "bytes": 452,
+      "matches": true
+    },
+    {
+      "path": "execution/counting-mixing-review-2026-11-01/computation/command-receipts.json",
+      "sha256": "0390880099a5220bf04a1e485aab7c4755b818699bf6a6e609f9ed4931ad49e7",
+      "bytes": 6564,
+      "matches": true
+    },
+    {
+      "path": "execution/counting-mixing-review-2026-11-01/computation/existing-section30-tests.json",
+      "sha256": "8ffb95056794412a32d285621196ada61cd4738d0491208d811dd0ebe571ed2d",
+      "bytes": 2362,
+      "matches": true
+    },
+    {
+      "path": "execution/counting-mixing-review-2026-11-01/computation/focused-tests.log",
+      "sha256": "991211da213ce564f13945c9aec37ca072839f4a1efca3ebd7dd687b92882972",
+      "bytes": 4689,
+      "matches": true
+    },
+    {
+      "path": "execution/counting-mixing-review-2026-11-01/computation/ruff.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19,
+      "matches": true
+    }
+  ],
+  "all_hashes_match": true,
+  "git_status_porcelain": " M book/chapters/30-sharp-diagnostics.tex\n M book/claims/section30.json\n M book/polyhedral_volumes_and_geodesic_identities.tex\n?? book/chapters/23-trace-coefficients.tex\n?? book/chapters/24-quantitative-counting.tex\n?? book/chapters/25-global-coefficient-filters.tex\n?? book/chapters/26-counting-to-mixing.tex\n?? book/chapters/27-weighted-mixing-converse.tex\n?? book/chapters/28-genus-two-model.tex\n?? book/chapters/29-controlled-observables.tex\n?? book/chapters/31-arithmetic-remainder.tex\n?? book/claims/section31.json\n?? book/claims/sections23-25.json\n?? book/claims/sections26-29.json\n?? experiments/counting_mixing/README.md\n?? experiments/counting_mixing/__init__.py\n?? experiments/counting_mixing/algebra.py\n?? experiments/counting_mixing/arithmetic.py\n?? experiments/counting_mixing/dynamics.py\n?? experiments/counting_mixing/exact.py\n?? experiments/counting_mixing/fixture.json\n?? experiments/counting_mixing/numerics.py\n?? experiments/counting_mixing/run.py\n?? experiments/counting_mixing/tests/test_counting_mixing.py\n?? experiments/torus_campaign/README.md\n?? experiments/torus_campaign/campaign.cpp\n?? experiments/torus_campaign/run.py\n?? experiments/torus_campaign/tests/test_campaign.py\n",
+  "source_set_sha256": "cf76209e2f187c248174635f073f7a12b7f0240c15be8fe9d7b52bfe11faa8c3",
+  "aggregate_matches": true
+}

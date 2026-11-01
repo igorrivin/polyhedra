@@ -1,0 +1,35 @@
+{
+  "scope": "Actual approval schema and synthetic wrapper regressions only.",
+  "results": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "d53b82",
+        "wall_time_seconds": 4.509388583,
+        "exit_code": 0,
+        "original_token_count": 293,
+        "output": "test_actual_final_33_path_approval (adapter-v3.test_approval_shape.ApprovalShapeTests.test_actual_final_33_path_approval) ... ok\ntest_bad_digest_is_rejected (adapter-v3.test_approval_shape.ApprovalShapeTests.test_bad_digest_is_rejected) ... ok\ntest_duplicate_path_is_rejected (adapter-v3.test_approval_shape.ApprovalShapeTests.test_duplicate_path_is_rejected) ... ok\ntest_empty_or_unknown_shape_is_rejected (adapter-v3.test_approval_shape.ApprovalShapeTests.test_empty_or_unknown_shape_is_rejected) ... ok\ntest_legacy_mapping_retains_exact_values (adapter-v3.test_approval_shape.ApprovalShapeTests.test_legacy_mapping_retains_exact_values) ... ok\ntest_wrong_explicit_shape_is_rejected (adapter-v3.test_approval_shape.ApprovalShapeTests.test_wrong_explicit_shape_is_rejected) ... ok\ntest_R1_real_wrapper_success_control (test_checkpoint_revision.RevisionTests.test_R1_real_wrapper_success_control) ... ok\ntest_R1_changed_unused_spec_rejected_with_original_identity (test_checkpoint_revision.RevisionTests.test_R1_changed_unused_spec_rejected_with_original_identity) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 4.234s\n\nOK\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "83118f",
+        "wall_time_seconds": 4.5879534589999995,
+        "exit_code": 0,
+        "original_token_count": 293,
+        "output": "test_actual_final_33_path_approval (adapter-v3.test_approval_shape.ApprovalShapeTests.test_actual_final_33_path_approval) ... ok\ntest_bad_digest_is_rejected (adapter-v3.test_approval_shape.ApprovalShapeTests.test_bad_digest_is_rejected) ... ok\ntest_duplicate_path_is_rejected (adapter-v3.test_approval_shape.ApprovalShapeTests.test_duplicate_path_is_rejected) ... ok\ntest_empty_or_unknown_shape_is_rejected (adapter-v3.test_approval_shape.ApprovalShapeTests.test_empty_or_unknown_shape_is_rejected) ... ok\ntest_legacy_mapping_retains_exact_values (adapter-v3.test_approval_shape.ApprovalShapeTests.test_legacy_mapping_retains_exact_values) ... ok\ntest_wrong_explicit_shape_is_rejected (adapter-v3.test_approval_shape.ApprovalShapeTests.test_wrong_explicit_shape_is_rejected) ... ok\ntest_R1_real_wrapper_success_control (test_checkpoint_revision.RevisionTests.test_R1_real_wrapper_success_control) ... ok\ntest_R1_changed_unused_spec_rejected_with_original_identity (test_checkpoint_revision.RevisionTests.test_R1_changed_unused_spec_rejected_with_original_identity) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 4.150s\n\nOK\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "e07e85",
+        "wall_time_seconds": 0.001761583,
+        "exit_code": 0,
+        "original_token_count": 5,
+        "output": "All checks passed!\n"
+      }
+    }
+  ]
+}

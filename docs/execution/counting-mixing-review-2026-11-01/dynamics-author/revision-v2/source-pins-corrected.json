@@ -1,0 +1,157 @@
+{
+  "review_date": "2026-11-01",
+  "scope": "Primary theorem statements, displayed formulas, conventions and required hypotheses inspected. The complete external proofs are not re-proved by this author audit. PDF-page counts distinguish the inspected version from the journal citation.",
+  "sources": {
+    "PollicottSharpZeta": {
+      "url": "https://arxiv.org/pdf/2203.15741v2",
+      "version": "arXiv v2, 8 January 2024, 23 pages",
+      "pin": "Section 2.1, PDF pages 2-3; equation (1.1), Theorem 2.1",
+      "checked": "Selberg product is over all primitive conjugacy classes, with no quotient by inversion; compact oriented genus at least two. The chapter supplies the continuation argument from its assumed remainder."
+    },
+    "BJPZeta": {
+      "url": "https://ems.press/content/serial-article-files/43056",
+      "version": "Comment. Math. Helv. 80 (2005), 483-515, publisher PDF",
+      "pin": "Theorem 1.1, page 483; Theorem 4.1 and equation (4.2), page 494",
+      "checked": "Spectral zeros are resonances with multiplicity. In the compact case positive Laplace eigenvalues below 1/4 supply zeros s in (1/2,1). No cusp pole occurs there."
+    },
+    "EdwardsOhMixing": {
+      "url": "https://bpb-us-w2.wpmucdn.com/campuspress.yale.edu/dist/5/5177/files/2025/11/Exp_Mixing.pdf",
+      "version": "Author PDF corresponding to Duke Math. J. 170 (2021), 3417-3458",
+      "pin": "Theorem 1.1 and Remark 1.1, author pages 2-3; non-tempered unitary-dual description, page 4",
+      "checked": "Finite-volume specialization with critical exponent d=1 has every Sobolev rate below 1-s1. The nontrivial non-tempered PSL2(R) representations are spherical complementary series."
+    },
+    "GNDiscrepancy": {
+      "url": "https://jtnb.centre-mersenne.org/item/10.5802/jtnb.1275.pdf",
+      "version": "J. Theor. Nombres Bordeaux 36 (2024), 127-174, publisher PDF",
+      "pin": "Section 1.3 and Theorem 1.4, pages 131-132; Section 5, Theorem 5.2, printed page 147 (proof page 148 onward)",
+      "checked": "Exact factor 2 times congruence index times real-ball volume inverse; simply connected K-simple group, noncompact real factor, unramified S, bounded positive-measure hyperspecial bi-invariant set, discretely embedded irreducible representation, representation-dependent small radius."
+    },
+    "SharpZeta": {
+      "url": "https://warwick.ac.uk/fac/sci/maths/people/staff/richard_sharp/p2/zeta-infinite-convergence-revised.pdf",
+      "version": "12-page author's revised version cited in the bibliography",
+      "pin": "Section 4, PDF page 8; definitions in Section 1",
+      "checked": "Fixed-point trace and reciprocal determinant identities. Extension from a zero-one state graph to an integer adjacency matrix uses its edge shift, as explained in the chapter."
+    },
+    "BabillotMixing": {
+      "url": "https://www.math.utah.edu/~chaika/Babillot-Mixing",
+      "version": "13-page full-text PDF of the cited 2002 paper",
+      "pin": "Quasi-product definition and Theorem 1, PDF page 6; finite-measure discussion, page 7",
+      "checked": "Simply connected complete negative-curvature cover with curvature bounded above by a negative constant; non-elementary discrete group. Current equivalent to a product of boundary probability measures. Nonarithmeticity yields mixing; the chapter assumes a finite nonzero measure."
+    },
+    "DolgopyatMixing": {
+      "url": "https://www.math.umd.edu/~dolgop/aapl.pdf",
+      "version": "Author PDF, Ann. of Math. 147 (1998), 357-390",
+      "pin": "Section 1, PDF pages 1-2",
+      "checked": "Discussion explicitly distinguishes suspension/roof obstructions from discrete-time mixing. The chapter's constant-roof counterexample is derived independently."
+    },
+    "WentworthGardiner": {
+      "url": "https://math.umd.edu/~raw/papers/gardiner.pdf",
+      "version": "9-page author's version",
+      "pin": "Theorem 1.6 and Corollary 1.7, PDF page 3",
+      "checked": "Filling pair iff a unique marked conformal structure and holomorphic quadratic differential realizes it; intersection equals flat area."
+    },
+    "AranaHerreraSquare2020": {
+      "url": "https://arxiv.org/pdf/1902.05626v1",
+      "version": "arXiv v1, 14 February 2019, 27 pages; journal citation is J. Mod. Dyn. 16 (2020)",
+      "pin": "Theorem 1.6, PDF page 4; stabilizer denominator in the unnumbered display in the Sketch of proof of Theorem 1.1, printed/PDF page 5, immediately after Theorem 1.8; Section 3",
+      "checked": "Equivariant homeomorphism to filling pairs, integral pairs to square tilings, and area to intersection; simultaneous-quotient weights retain pair stabilizers."
+    },
+    "AranaHerreraSquareEffective": {
+      "url": "https://arxiv.org/pdf/2207.04091v1",
+      "version": "arXiv v1, 8 July 2022, 13 pages; journal reference 45 (2025), 649-662",
+      "pin": "Theorem 1.1 and Remark 1.2, PDF page 3; Theorem 3.2 and proof, pages 8-9; Theorem 3.9, page 12",
+      "checked": "Area exponent is complex stratum dimension. The two-type effective count uses existing exponential mixing. One unrestricted foliation type permits ordinary lattice counting. The baseline citation to Section 3.2 was corrected to Theorem 3.2."
+    },
+    "ABEMPolar": {
+      "url": "https://arxiv.org/pdf/math/0610715v5",
+      "version": "arXiv v5 header dated 17 September 2011; served 45-page PDF has title-page compilation date 26 November 2024",
+      "pin": "Section 2.2; Section 2.4, equation (2.3), Proposition 2.5, PDF page 9; Theorem 3.3 and Section 3.2, pages 15-16",
+      "checked": "Polar Jacobian and conditional fiber measure; asymptotic requires compact principal-stratum endpoints and at least half-time recurrence to a compact principal-stratum set. Forni's contraction enters the asymptotic, not the exact unfolding. Probability rescaling is derived in the chapter."
+    },
+    "AranaHerreraLattice": {
+      "url": "https://arxiv.org/pdf/2010.03123v2",
+      "version": "arXiv v2, 3 April 2021, 51 pages",
+      "pin": "Introduction, pages 1-3; Section 10, pages 47-50; Theorem 3.2, page 10",
+      "checked": "Effective bisector counts are proved using exponential mixing; cited as a dependency warning, not an independent input establishing the proposed converse remainder."
+    },
+    "HumphriesModular": {
+      "url": "https://arxiv.org/pdf/2003.09955",
+      "version": "11-page arXiv PDF inspected; corresponding journal paper Quart. J. Math. 73 (2022), 1-16",
+      "pin": "Section 1.1, PDF page 1; equation (3.2), page 6",
+      "checked": "Inverse-residue Fourier coefficient and Weil bound tau(c)*sqrt(c*gcd(m,n,c)); smoothing estimates in the chapter are then elementary."
+    },
+    "BenirschkeServan": {
+      "url": "https://math.uchicago.edu/~cservan/isom_embeddings.pdf",
+      "version": "20-page author's original corresponding to Advances in Mathematics 452 (2024), 109817",
+      "pin": "Corollary 1.2(3), PDF page 2",
+      "checked": "Only the classical hyperelliptic isometry T(2,0)=T(0,6) is used. The general embedding classification is not required for the polynomial Q(2,2) argument.",
+      "erratum": {
+        "url": "https://math.uchicago.edu/~cservan/erratum_2.pdf",
+        "doi": "10.1016/j.aim.2026.110831",
+        "journal": "Advances in Mathematics 489 (April 2026), 110831",
+        "pin": "3-page author's erratum, page 1 and final paragraph on page 3",
+        "checked": "Repairs original Remark 5.2 and the holomorphic-map argument; says results unchanged. Also narrows the wording about totally geodesic complex submanifolds. No impact on the classical isometry used here."
+      }
+    },
+    "FillastreIzmestievCusps": {
+      "url": "https://msp.org/gt/2009/13-1/gt-v13-n1-p11-p.pdf",
+      "version": "Geometry & Topology 13 (2009), 457-492, publisher PDF",
+      "pin": "Theorem 1.1, page 459; reformulation, page 460",
+      "checked": "Constant-curvature sphere cone metric with positive singular curvature has unique convex polyhedral realization in the matching space form. The chapter uses K=-1 and six angle-pi vertices."
+    },
+    "LanneauComponents": {
+      "url": "https://www.numdam.org/article/ASENS_2008_4_41_1_1_0.pdf",
+      "version": "Ann. Sci. ENS 41 (2008), 1-56, publisher PDF with cover sheet",
+      "pin": "Sections 1.1.1-1.1.2, printed pages 3-6; Section 1.1.3, printed pages 7-8",
+      "checked": "Quadratic Q notation excludes global squares; period-coordinate and invariant measure conventions; marked regular points allowed; pullback order/covering construction. The chapter proves its particular genus-two classification directly."
+    },
+    "StrombergssonVishe": {
+      "url": "https://arxiv.org/pdf/1811.10340v1",
+      "version": "arXiv v1, 26 November 2018, 54 pages",
+      "pin": "Section 4, especially Lemma 4.3, PDF page 12",
+      "checked": "Rank-one unipotent and rank-two trivial frequency stabilizer types. The chapter independently unfolds using its right-quotient and transpose conventions."
+    },
+    "BenoistKobayashi": {
+      "url": "https://www.ms.u-tokyo.ac.jp/~toshi/texpdf/tk2017e-temperedII.pdf",
+      "version": "34-page author PDF of Tempered homogeneous spaces II",
+      "pin": "Lemma 2.3 and Remark 2.4, PDF page 11; Proposition 2.6, page 12",
+      "checked": "Induction preserves temperedness; amenable groups have tempered trivial representation; K-finite matrix-coefficient bound with square roots of K-span dimensions."
+    },
+    "CowlingHaagerupHowe": {
+      "url": "https://doi.org/10.1515/crll.1988.387.97",
+      "version": "J. reine angew. Math. 387 (1988), 97-110",
+      "pin": "Exact theorem statement inspected through BenoistKobayashi Proposition 2.6, which cites original Theorems 1, 2 and Corollary",
+      "checked": "Historical attribution retained. Original full-text endpoints were unavailable (404/access failure); no claim of inspecting or re-proving the original proof. The operative statement was verified in the primary research text Benoist-Kobayashi."
+    },
+    "OtalRosas": {
+      "url": "https://arxiv.org/pdf/0905.0506v1",
+      "version": "arXiv v1, 5 May 2009, 11 pages",
+      "pin": "Discrete spectrum definition, PDF page 2; Theorem 2, page 3",
+      "checked": "Finite-area type (g,n), lambda_0=0, residual and cuspidal eigenvalues both included. lambda_(2g-2+n)>1/4; at type (0,3) no positive small eigenvalue. This is not asserted for arbitrary congruence covers."
+    },
+    "AthreyaLagaceMollerRaum": {
+      "url": "https://ems.press/content/serial-article-files/50718",
+      "version": "J. Spectr. Theory 15 (2025), 895-959, publisher PDF; arXiv 2404.06597v1 also inspected",
+      "pin": "Section 6.1; Proposition 6.11, printed page 954 (also arXiv v1 page 47); genuine-part decomposition in Section 1 and Proposition 3.9",
+      "checked": "One relative marked vector, not the two-relative-mark model of this chapter. M=1 affine mean/variance isometry and absence of complementary series in the genuine part; the chapter supplies its own two-mark rank decomposition."
+    },
+    "AthreyaAffineLattices": {
+      "url": "https://arxiv.org/pdf/1409.6355v1",
+      "version": "arXiv v1, 22 September 2014, 6 pages",
+      "pin": "Lemma 3, PDF page 3; Lemma 4, page 4",
+      "checked": "Affine lattice point counts in bounded measurable regions have mean equal to volume and variance equal to volume. Used as a corroborating indicator-test special case."
+    },
+    "McShaneRivinTori": {
+      "url": "https://arxiv.org/pdf/math/0005220v1",
+      "version": "arXiv v1, 23 May 2000, 9 pages",
+      "pin": "Length norm in Sections 1-2; Theorems 4.1-4.2 and Conjecture 4.3, PDF pages 7-8",
+      "checked": "Fixed once-punctured hyperbolic torus; primitive lattice count, dense-moduli flat-point obstruction, modular-torus conjecture. The chapter separately proves only the stated exponent-one obstruction, not literal Omega(L)."
+    },
+    "ShigaHyperbolicQC": {
+      "url": "https://integraali.com/courses/kleinian_groups/shiga2005.pdf",
+      "version": "Publisher reprint, Complex Variables 50 (2005), 123-130, with cover sheet",
+      "pin": "Equation (1.1), printed page 123",
+      "checked": "Wolpert inequality K^-1*l_X <= l_Y <= K*l_X for closed geodesic classes under K-quasiconformal maps; chapter also supplies annular-cover proof and Lie-bracket derivative argument."
+    }
+  }
+}

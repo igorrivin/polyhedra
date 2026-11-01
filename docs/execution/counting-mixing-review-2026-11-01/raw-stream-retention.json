@@ -1,0 +1,79 @@
+{
+  "scope": "Raw streams retained outside Git. Exact v2/final identities are in the successful strict comparison; v1 record identities do not recover missing source.",
+  "records": [
+    {
+      "outer_source": "torus-campaign/full8192-author-v1/modular.lengths.f64le",
+      "bytes": 145532064,
+      "sha256": "dfa0c8dcc7ba670031558ac4ab53417daf4833a1bed2f8060e1fa3c6def04c8d",
+      "identity_status": "recorded historical report identity only; v1 source snapshot unavailable"
+    },
+    {
+      "outer_source": "torus-campaign/full8192-author-v1/modular.slopes.i32le",
+      "bytes": 145532064,
+      "sha256": "9690e75183eeb4817e28939bf910c1262fc58b3ad85dca61d42ecc0dfab23ace",
+      "identity_status": "recorded historical report identity only; v1 source snapshot unavailable"
+    },
+    {
+      "outer_source": "torus-campaign/full8192-author-v1/asymmetric.lengths.f64le",
+      "bytes": 147888928,
+      "sha256": "a5aa23db37dcb96b326d246beba2eec76a7825e2bbcb8a7e403fb081fdd507f2",
+      "identity_status": "recorded historical report identity only; v1 source snapshot unavailable"
+    },
+    {
+      "outer_source": "torus-campaign/full8192-author-v1/asymmetric.slopes.i32le",
+      "bytes": 147888928,
+      "sha256": "d9382639af881468450770406bd778fb2eabb45aa57d6d7d88d2ddaf357d2ea2",
+      "identity_status": "recorded historical report identity only; v1 source snapshot unavailable"
+    },
+    {
+      "outer_source": "torus-campaign/full8192-author-v2/modular.lengths.f64le",
+      "bytes": 145532064,
+      "sha256": "dfa0c8dcc7ba670031558ac4ab53417daf4833a1bed2f8060e1fa3c6def04c8d",
+      "identity_status": "freshly hashed and rechecked by successful strict comparator"
+    },
+    {
+      "outer_source": "torus-campaign/full8192-author-v2/modular.slopes.i32le",
+      "bytes": 145532064,
+      "sha256": "9690e75183eeb4817e28939bf910c1262fc58b3ad85dca61d42ecc0dfab23ace",
+      "identity_status": "freshly hashed and rechecked by successful strict comparator"
+    },
+    {
+      "outer_source": "torus-campaign/full8192-author-v2/asymmetric.lengths.f64le",
+      "bytes": 147888928,
+      "sha256": "a5aa23db37dcb96b326d246beba2eec76a7825e2bbcb8a7e403fb081fdd507f2",
+      "identity_status": "freshly hashed and rechecked by successful strict comparator"
+    },
+    {
+      "outer_source": "torus-campaign/full8192-author-v2/asymmetric.slopes.i32le",
+      "bytes": 147888928,
+      "sha256": "d9382639af881468450770406bd778fb2eabb45aa57d6d7d88d2ddaf357d2ea2",
+      "identity_status": "freshly hashed and rechecked by successful strict comparator"
+    },
+    {
+      "outer_source": "clean-source/torus8192/modular.lengths.f64le",
+      "bytes": 145532064,
+      "sha256": "dfa0c8dcc7ba670031558ac4ab53417daf4833a1bed2f8060e1fa3c6def04c8d",
+      "identity_status": "freshly hashed and rechecked by successful strict comparator"
+    },
+    {
+      "outer_source": "clean-source/torus8192/modular.slopes.i32le",
+      "bytes": 145532064,
+      "sha256": "9690e75183eeb4817e28939bf910c1262fc58b3ad85dca61d42ecc0dfab23ace",
+      "identity_status": "freshly hashed and rechecked by successful strict comparator"
+    },
+    {
+      "outer_source": "clean-source/torus8192/asymmetric.lengths.f64le",
+      "bytes": 147888928,
+      "sha256": "a5aa23db37dcb96b326d246beba2eec76a7825e2bbcb8a7e403fb081fdd507f2",
+      "identity_status": "freshly hashed and rechecked by successful strict comparator"
+    },
+    {
+      "outer_source": "clean-source/torus8192/asymmetric.slopes.i32le",
+      "bytes": 147888928,
+      "sha256": "d9382639af881468450770406bd778fb2eabb45aa57d6d7d88d2ddaf357d2ea2",
+      "identity_status": "freshly hashed and rechecked by successful strict comparator"
+    }
+  ],
+  "strict_comparison_outer_path": "clean-source/torus/scientific-comparison.json",
+  "strict_comparison_sha256": "02cb77e8f1b6afad5cb7878b6844f5b32476b199bf4cc7ba7bb106bfd5fd5f55"
+}

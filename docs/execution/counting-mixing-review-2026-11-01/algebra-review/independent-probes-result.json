@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "arithmetic": "Python integer and fractions.Fraction only; no numerical tolerances",
+  "exact_checks": 487,
+  "groups": {
+    "dense_chart": 8,
+    "word_combinatorics": 6,
+    "chebyshev_polynomials": 24,
+    "fixed_power_generating": 300,
+    "figure_eight_polynomials": 24,
+    "figure_eight_pair_cancellation": 24,
+    "root_sum_filter": 24,
+    "coincident_cuff_filter": 24,
+    "weight_generating_identity": 1,
+    "finite_euler": 1,
+    "finite_euler_first_atom": 40,
+    "finite_euler_log": 1,
+    "ordinary_vs_adams": 2,
+    "coverage": 4,
+    "frozen_bytes": 4
+  },
+  "chebyshev_order": 24,
+  "root_weight_order": 48,
+  "finite_euler_formal_lengths": [
+    3,
+    4,
+    5,
+    9
+  ],
+  "finite_euler_cutoff": 18,
+  "first_weights": [
+    2,
+    1,
+    1,
+    1,
+    5,
+    11,
+    19,
+    29,
+    53,
+    109,
+    221,
+    419,
+    779
+  ],
+  "hashes": {
+    "book/chapters/23-trace-coefficients.tex": {
+      "sha256": "5520b28607f96a3e65ea32e7c4dab267f6556dbbe8975d29b4186b9b27e429c9",
+      "bytes": 35208
+    },
+    "book/chapters/24-quantitative-counting.tex": {
+      "sha256": "4099f91c4abddf5f2a13831e48d7d52ac4d90af137068b969ca612fc6b273c58",
+      "bytes": 27440
+    },
+    "book/chapters/25-global-coefficient-filters.tex": {
+      "sha256": "7b2a7af525bfb556c4ca9da88bec560ce2f985906d62448d86ede7210f07b608",
+      "bytes": 13760
+    },
+    "book/claims/sections23-25.json": {
+      "sha256": "4517eab9acf6dc6d11a87cd5476cddc6efbc13761753f99b2bf0b4e6426cdfad",
+      "bytes": 77226
+    }
+  },
+  "scope": "Independent bounded algebra and structural probes. Dense-chart checks establish symbolic Laurent identities; extension to all SL(2) pairs uses the open-dense conjugacy argument in the review. No geometric enumeration, analytic tail computation, external theorem proof audit, companion code approval, or manuscript build is claimed."
+}

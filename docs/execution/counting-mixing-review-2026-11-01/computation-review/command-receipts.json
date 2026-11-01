@@ -1,0 +1,154 @@
+{
+  "generated_at_utc": "2026-11-01T20:33:27.993491+00:00",
+  "commands": [
+    {
+      "name": "focused-tests",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/counting_mixing/tests",
+        "-v"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "env_overrides": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.15482733398675919,
+      "stdout": "",
+      "stderr": "test_cuff_identification_collects_degrees (test_counting_mixing.AlgebraTests.test_cuff_identification_collects_degrees) ... ok\ntest_direct_noncommuting_word_oracle (test_counting_mixing.AlgebraTests.test_direct_noncommuting_word_oracle) ... ok\ntest_finite_euler_empty_atom_and_wrong_adams (test_counting_mixing.AlgebraTests.test_finite_euler_empty_atom_and_wrong_adams) ... ok\ntest_global_functional_is_not_common_trace_evaluation (test_counting_mixing.AlgebraTests.test_global_functional_is_not_common_trace_evaluation) ... ok\ntest_length_convolution_accumulates_before_support (test_counting_mixing.AlgebraTests.test_length_convolution_accumulates_before_support) ... ok\ntest_support_counts_parallel_copies (test_counting_mixing.AlgebraTests.test_support_counts_parallel_copies) ... ok\ntest_trace_polynomial_normalization_and_coefficients (test_counting_mixing.AlgebraTests.test_trace_polynomial_normalization_and_coefficients) ... ok\ntest_actual_value_at_block_end_is_included (test_counting_mixing.ArithmeticTests.test_actual_value_at_block_end_is_included) ... ok\ntest_exact_power_balance (test_counting_mixing.ArithmeticTests.test_exact_power_balance) ... ok\ntest_external_left_limit_at_block_start_is_excluded (test_counting_mixing.ArithmeticTests.test_external_left_limit_at_block_start_is_excluded) ... ok\ntest_grouped_events_and_exact_integral (test_counting_mixing.ArithmeticTests.test_grouped_events_and_exact_integral) ... ok\ntest_mobius_square_and_cutoff_boundary (test_counting_mixing.ArithmeticTests.test_mobius_square_and_cutoff_boundary) ... ok\ntest_nearby_events_are_never_tolerance_merged (test_counting_mixing.ArithmeticTests.test_nearby_events_are_never_tolerance_merged) ... ok\ntest_row_zero_negative_and_fractional_endpoints (test_counting_mixing.ArithmeticTests.test_row_zero_negative_and_fractional_endpoints) ... ok\ntest_signed_multiples_keep_equal_length_classes (test_counting_mixing.ArithmeticTests.test_signed_multiples_keep_equal_length_classes) ... ok\ntest_simultaneous_events_have_no_intermediate_state (test_counting_mixing.ArithmeticTests.test_simultaneous_events_have_no_intermediate_state) ... ok\ntest_bruhat_c5_exact_residue_multiplicity (test_counting_mixing.DynamicsTests.test_bruhat_c5_exact_residue_multiplicity) ... ok\ntest_gaussian_algebra_and_signed_rank_one_factor (test_counting_mixing.DynamicsTests.test_gaussian_algebra_and_signed_rank_one_factor) ... ok\ntest_primitive_ellipse_boundary_and_signs (test_counting_mixing.DynamicsTests.test_primitive_ellipse_boundary_and_signs) ... ok\ntest_proved_coordinate_box_finds_large_shear_vectors (test_counting_mixing.DynamicsTests.test_proved_coordinate_box_finds_large_shear_vectors) ... ok\ntest_scalar_count_does_not_imply_mixing (test_counting_mixing.DynamicsTests.test_scalar_count_does_not_imply_mixing) ... ok\ntest_terminal_formal_algebra_keeps_rate_zero_separate (test_counting_mixing.DynamicsTests.test_terminal_formal_algebra_keeps_rate_zero_separate) ... ok\ntest_affine_gaussian_normalization_and_rotation (test_counting_mixing.NumericalTests.test_affine_gaussian_normalization_and_rotation) ... ok\ntest_analytic_tail_formulas_dominate_known_finite_tails (test_counting_mixing.NumericalTests.test_analytic_tail_formulas_dominate_known_finite_tails) ... ok\ntest_nonfinite_comparisons_fail_and_context_is_local (test_counting_mixing.NumericalTests.test_nonfinite_comparisons_fail_and_context_is_local) ... ok\ntest_rank_two_keeps_both_determinant_signs (test_counting_mixing.NumericalTests.test_rank_two_keeps_both_determinant_signs) ... ok\ntest_removable_terminal_case (test_counting_mixing.NumericalTests.test_removable_terminal_case) ... ok\ntest_exact_input_rejects_float_bool_nonfinite_and_bad_denominator (test_counting_mixing.ValidationAndProvenanceTests.test_exact_input_rejects_float_bool_nonfinite_and_bad_denominator) ... ok\ntest_exclusive_writer_and_nonfinite_serialization (test_counting_mixing.ValidationAndProvenanceTests.test_exclusive_writer_and_nonfinite_serialization) ... ok\ntest_invalid_geometric_and_arithmetic_domains_fail (test_counting_mixing.ValidationAndProvenanceTests.test_invalid_geometric_and_arithmetic_domains_fail) ... ok\ntest_malformed_fixture_rejected_before_computation (test_counting_mixing.ValidationAndProvenanceTests.test_malformed_fixture_rejected_before_computation) ... ok\ntest_shipped_fixture_validates (test_counting_mixing.ValidationAndProvenanceTests.test_shipped_fixture_validates) ... ok\ntest_source_input_or_head_drift_refuses_success (test_counting_mixing.ValidationAndProvenanceTests.test_source_input_or_head_drift_refuses_success) ... ok\n\n----------------------------------------------------------------------\nRan 33 tests in 0.047s\n\nOK\n"
+    },
+    {
+      "name": "ruff",
+      "argv": [
+        "/opt/anaconda3/bin/ruff",
+        "check",
+        "--no-cache",
+        "experiments/counting_mixing"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "env_overrides": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.057962374994531274,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "name": "fresh-replay",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/counting_mixing/run.py",
+        "--output",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/computation-review/reviewer-result-60-90.json"
+      ],
+      "cwd": "/private/tmp",
+      "env_overrides": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 1.6469535409705713,
+      "stdout": "{\"check_counts\": {\"cross_precision_observations\": 277, \"exact\": 4054, \"numerical_formula_comparisons\": 330}, \"elapsed_seconds\": 1.5769552079727873, \"output\": \"/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/computation-review/reviewer-result-60-90.json\", \"source_set_sha256\": \"cf76209e2f187c248174635f073f7a12b7f0240c15be8fe9d7b52bfe11faa8c3\", \"status\": \"all fixed checks passed; author computation, not independent approval\"}\n",
+      "stderr": ""
+    },
+    {
+      "name": "existing-section30-tests",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/section30/tests",
+        "-v"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "env_overrides": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.08254191605374217,
+      "stdout": "",
+      "stderr": "test_algebraic_signs_without_float (test_diagnostic.DiagnosticTests.test_algebraic_signs_without_float) ... ok\ntest_block_start_excludes_external_left_limit (test_diagnostic.DiagnosticTests.test_block_start_excludes_external_left_limit) ... ok\ntest_canonical_unoriented_slopes (test_diagnostic.DiagnosticTests.test_canonical_unoriented_slopes) ... ok\ntest_conditional_bounds_cover_endpoint_perturbations (test_diagnostic.DiagnosticTests.test_conditional_bounds_cover_endpoint_perturbations) ... ok\ntest_conditional_bounds_zero_radius (test_diagnostic.DiagnosticTests.test_conditional_bounds_zero_radius) ... ok\ntest_direct_counts_match_all_event_intervals (test_diagnostic.DiagnosticTests.test_direct_counts_match_all_event_intervals) ... ok\ntest_equal_root_traces_are_three_curves (test_diagnostic.DiagnosticTests.test_equal_root_traces_are_three_curves) ... ok\ntest_exact_asymmetric_root (test_diagnostic.DiagnosticTests.test_exact_asymmetric_root) ... ok\ntest_independent_box_small_cutoff (test_diagnostic.DiagnosticTests.test_independent_box_small_cutoff) ... ok\ntest_invalid_roots_fail (test_diagnostic.DiagnosticTests.test_invalid_roots_fail) ... ok\ntest_log_length_does_not_overflow (test_diagnostic.DiagnosticTests.test_log_length_does_not_overflow) ... ok\ntest_modular_short_spectrum_exact_values (test_diagnostic.DiagnosticTests.test_modular_short_spectrum_exact_values) ... ok\ntest_precision_context_restored (test_diagnostic.DiagnosticTests.test_precision_context_restored) ... ok\ntest_prejump_limit_and_exact_integral (test_diagnostic.DiagnosticTests.test_prejump_limit_and_exact_integral) ... ok\ntest_quadratic_cancellation_is_rationalized (test_diagnostic.DiagnosticTests.test_quadratic_cancellation_is_rationalized) ... ok\ntest_simultaneous_half_and_full_events (test_diagnostic.DiagnosticTests.test_simultaneous_half_and_full_events) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.010s\n\nOK\n"
+    },
+    {
+      "name": "strict_compare",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/computation-review/strict_compare.py"
+      ],
+      "cwd": "/private/tmp",
+      "env_overrides": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.04979670897591859,
+      "stdout": "{\"status\": \"pass\", \"scientific_differences\": 0, \"excluded_differences\": 2, \"labels\": 32, \"contracts\": 3}\n",
+      "stderr": ""
+    },
+    {
+      "name": "independent_probes",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/computation-review/independent_probes.py"
+      ],
+      "cwd": "/private/tmp",
+      "env_overrides": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 7.165110542089678,
+      "stdout": "polynomial_and_matrix_probes passed\neuler_probes passed\ndynamics_probes passed\narithmetic_probes passed\nnumerical_probes passed\nvalidation_probes passed\n{\"status\": \"pass\", \"assertions\": 2207}\n",
+      "stderr": ""
+    },
+    {
+      "name": "runtime_probes",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/computation-review/runtime_probes.py"
+      ],
+      "cwd": "/private/tmp",
+      "env_overrides": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 1.9693978329887614,
+      "stdout": "{\"status\": \"pass\", \"historical_files_unchanged\": 7, \"module_replay\": \"pass\", \"main_drift_fault_injections\": 3}\n",
+      "stderr": ""
+    },
+    {
+      "name": "positive-signal-audit",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/computation-review/positive_signal_audit.py"
+      ],
+      "cwd": "/private/tmp",
+      "env_overrides": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.059362958068959415,
+      "stdout": "{\n  \"comparisons\": 40,\n  \"cross_precision\": 16,\n  \"rows_accepting_wrong_mutants\": [\n    {\n      \"dps\": 60,\n      \"t\": \"2\",\n      \"check\": \"radial k=3\",\n      \"positive_signal\": \"2.14189744282248461911787926484100940896046450050993959264601e-63\",\n      \"actual_relative_error\": \"0.00377963086166135485583065095021494161139306168028602797688093765677913556805129167377373713005938343373876910446815023991\",\n      \"relative_threshold_without_tail\": \"466875761652831679.791324459698374471453475851936606195819701777143237575804819598330132597997645902776141897161521386583\",\n      \"wrong_mutants_accepted\": [\n        \"zero\",\n        \"sign\",\n        \"half\",\n        \"double\"\n      ]\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "radial-acceptance-defect-reproduction",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/computation-review/radial_acceptance_defect.py"
+      ],
+      "cwd": "/private/tmp",
+      "env_overrides": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.05647270800545812,
+      "stdout": "{\n  \"source_sha256\": \"1ce64d4f3ca09fbf702ea9ba6e1a8f116d4e140259e227750ceeaab20886a4a8\",\n  \"t\": 2,\n  \"determinant\": 3,\n  \"decimal_precision\": 60,\n  \"actual_quadrature\": \"2.13380186114507921903226159352258445185283012896694303425291e-63\",\n  \"closed_formula\": \"2.14189744282248461911787926484100940896046450050993959264601e-63\",\n  \"absolute_error\": \"8.09558167740540008561767131842495710763437154299655839309956e-66\",\n  \"relative_error\": \"0.00377963086166135485583065095021494161139306168028602797688073\",\n  \"reported_tail_majorant\": \"4.57099822147234696136411489216080853611079697296652222272201e-177\",\n  \"wrong_mutants_accepted\": [\n    \"zero\",\n    \"wrong_sign\",\n    \"half\",\n    \"double\"\n  ],\n  \"zero_low_precision_accepted_against_positive_high_precision\": true,\n  \"status\": \"revise\",\n  \"minimal_repair\": \"Scale exp(-2*alpha*k) out of radial quadrature; compare/observe the nonzero scaled integral, or enforce relative checks for this family. Add a small-signal regression rejecting zero, sign, and factor errors.\"\n}\n",
+      "stderr": ""
+    }
+  ]
+}

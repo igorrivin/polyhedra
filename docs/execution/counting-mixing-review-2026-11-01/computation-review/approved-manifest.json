@@ -1,0 +1,166 @@
+{
+  "generated_at_utc": "2026-11-01T20:41:03.881858+00:00",
+  "decision": "revise",
+  "approved": false,
+  "approved_source_set_sha256": null,
+  "approved_sources": [],
+  "reviewed_git_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+  "reviewed_source_set_sha256": "cf76209e2f187c248174635f073f7a12b7f0240c15be8fe9d7b52bfe11faa8c3",
+  "reviewed_sources": [
+    {
+      "path": "experiments/counting_mixing/README.md",
+      "sha256": "aec39c2522fc941890486d8ad98f82193160ad0dd40aa188af5b5784f9ca428d",
+      "bytes": 8398
+    },
+    {
+      "path": "experiments/counting_mixing/__init__.py",
+      "sha256": "6fc28e861807e61233bed8d0ca6c66001b4792c95d539dcc11d50e7060804715",
+      "bytes": 78
+    },
+    {
+      "path": "experiments/counting_mixing/algebra.py",
+      "sha256": "36399bd0068d0a0faa454b7df8c01a9e9cd7b03e138ca9c61fd3ad8716c8deb4",
+      "bytes": 12899
+    },
+    {
+      "path": "experiments/counting_mixing/arithmetic.py",
+      "sha256": "5a3d249be1fd9c3cbe2079426c3fd75e18aca1a339cf7684f7f61e76860bae9f",
+      "bytes": 10659
+    },
+    {
+      "path": "experiments/counting_mixing/dynamics.py",
+      "sha256": "bb1cdbff6b64971ef5ef317f6be068baa55a2ea65cbad291a8631639f253c378",
+      "bytes": 11318
+    },
+    {
+      "path": "experiments/counting_mixing/exact.py",
+      "sha256": "12bfa97e4debfbb8695480efea45319ad52e824ed88721f09ea5aad062227e99",
+      "bytes": 4891
+    },
+    {
+      "path": "experiments/counting_mixing/fixture.json",
+      "sha256": "538c23145ba1ded0f57c7f67a68412a35644ea85c1dd8c4470d902e11e57be33",
+      "bytes": 4392
+    },
+    {
+      "path": "experiments/counting_mixing/numerics.py",
+      "sha256": "1ce64d4f3ca09fbf702ea9ba6e1a8f116d4e140259e227750ceeaab20886a4a8",
+      "bytes": 13668
+    },
+    {
+      "path": "experiments/counting_mixing/run.py",
+      "sha256": "7494704c0b9c20d1e759c9a45354107071e58ace5a66aeda1377adea3dd3f875",
+      "bytes": 15085
+    },
+    {
+      "path": "experiments/counting_mixing/tests/test_counting_mixing.py",
+      "sha256": "8478bc092c8572f0bad3f32560035e414502526e02bf7fdf0027e7cb47b65fb4",
+      "bytes": 12808
+    }
+  ],
+  "author_result_sha256": "c99165f92234f36a68d90dd49efd3c8c4322f292807b70c7d22c86a6667dcdf4",
+  "open_findings": [
+    {
+      "id": "R1",
+      "severity": "P2",
+      "summary": "Unscaled tiny positive radial quadrature and absolute acceptance/cross-precision thresholds permit gross relative errors.",
+      "locations": [
+        "experiments/counting_mixing/numerics.py:165",
+        "experiments/counting_mixing/numerics.py:198",
+        "experiments/counting_mixing/numerics.py:258"
+      ]
+    }
+  ],
+  "review_receipts": [
+    {
+      "path": "review.md",
+      "sha256": "e6d7dbd172875f002fe138ac452d512153736efb6c587d99934104cbcdbb486e",
+      "bytes": 9279
+    },
+    {
+      "path": "initial-hash-check.json",
+      "sha256": "56f424095f3d6f54987c027fd8101a940ebde8004b9d9666618403d7486a7a80",
+      "bytes": 5017
+    },
+    {
+      "path": "final-hash-check-v1.json",
+      "sha256": "7c5acd325922bfb78dbff6f7d383c63a7e2e603621d21e6f3b9875cc1e44c74e",
+      "bytes": 4134
+    },
+    {
+      "path": "command-receipts.json",
+      "sha256": "9b2217cc612cf05d03552aaf90907109cbc6471e17aae97b7fbc9ea74f218aa4",
+      "bytes": 13954
+    },
+    {
+      "path": "reviewer-result-60-90.json",
+      "sha256": "8fbd2f82ca41d9ce2ac5be7e6ab17ce47bc435cce4c5bdd640df2c6a0f1d9cb3",
+      "bytes": 391662
+    },
+    {
+      "path": "reviewer-module-result-60-90.json",
+      "sha256": "a7662f4b4760a94505a2866af5a8d3161b227420f6f671d81e85f39a1af02033",
+      "bytes": 391660
+    },
+    {
+      "path": "strict-comparison.json",
+      "sha256": "9deaf48e64a5f83d8f0d433e10305966874baf4b6f0056f8eb52f67b0c2595a3",
+      "bytes": 4061
+    },
+    {
+      "path": "strict_compare.py",
+      "sha256": "bb76895e22b03b3adc6db9090573c73ef04ae5daec25c11817e99530f4f9462f",
+      "bytes": 3121
+    },
+    {
+      "path": "independent-probes-result.json",
+      "sha256": "f9723c0a9e1664227b999c6545c85060ba0d532481846ea35f24fc8363913417",
+      "bytes": 3355
+    },
+    {
+      "path": "independent_probes.py",
+      "sha256": "be8221b640becfe5cbd3b32c4bb6b032415201346771af801235488b70133773",
+      "bytes": 19771
+    },
+    {
+      "path": "runtime-probes-result.json",
+      "sha256": "fca4ffcdec95f3ad5fec729399e5d9372244937c9cef2bfa44f8f311e45d959d",
+      "bytes": 3541
+    },
+    {
+      "path": "runtime_probes.py",
+      "sha256": "80d17f0fff575ae6c089064d149ae74ed21528c65d2902b574f22d6a16a7e9aa",
+      "bytes": 5365
+    },
+    {
+      "path": "radial-acceptance-defect-v1.json",
+      "sha256": "b24fae5889c869cf3bc031cbd1a6eebeb62507f8d677bf48cc047a9a4d1e3d1c",
+      "bytes": 1017
+    },
+    {
+      "path": "radial_acceptance_defect.py",
+      "sha256": "cbd490bbe009a9238d0c0d69bb3aca449e783be1e92ca118031c6652151fcdc8",
+      "bytes": 2086
+    },
+    {
+      "path": "positive-signal-audit-v1.json",
+      "sha256": "ca8c6ee84ce62cd11e9af8f02e43994b44f6a8f5fdc62ed3d90a1175756f914a",
+      "bytes": 27604
+    },
+    {
+      "path": "positive_signal_audit.py",
+      "sha256": "6b44f754ea94d7e98b62bc7a4e9040abc64ce7e61ac313dd19c1358c6a2bcf2b",
+      "bytes": 3481
+    },
+    {
+      "path": "historical-inventory-before.json",
+      "sha256": "af303e8bd8ee55a364033a7bb18d1f51c7db449b51bc9093ff2a13f9d439b63f",
+      "bytes": 1176
+    }
+  ],
+  "evidence_limits": [
+    "Finite formula and executable review only.",
+    "Numerical observations and independent transformed quadratures share mpmath, without interval certification.",
+    "A clean-source canonical replay is reserved for the post-commit checkpoint."
+  ]
+}

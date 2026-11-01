@@ -1,0 +1,186 @@
+{
+  "generated_at_utc": "2026-11-01T21:39:58.501156+00:00",
+  "decision": "approve_concrete_source_approval_and_receipt_adapter",
+  "approved": true,
+  "author_freeze": {
+    "sha256": "40629ac7d9abfe25f20bcc8922c0667b40bba095ae531bd2938579f4b4aa60a0",
+    "bytes": 2882
+  },
+  "production_scripts": {
+    "checkpoint_lib.py": {
+      "sha256": "c29512500065509e68f2efb2bd47351e61ab3034721ecb9e213c4a96a219b466",
+      "bytes": 17531
+    },
+    "run_clean_replay.py": {
+      "sha256": "b990ede70c6ef9aaa2cf62666d73849a87b301fef95ee9cbf34d9eb8ef3adea3",
+      "bytes": 8557
+    },
+    "compare_replays.py": {
+      "sha256": "faea75531a95443e756a31ab36a84ecf524daa59311c77aaf9438ab5a17cf301",
+      "bytes": 2830
+    },
+    "verify_checkpoint.py": {
+      "sha256": "9824dc523fd3ca3a66d98f47d186e544b637b26f2f6fbe41d8256f8cd96a97ea",
+      "bytes": 24118
+    },
+    "source_approval_adapter.py": {
+      "sha256": "23f81e38c87d51fc0d255614929a553b3bedf5a7f87a1314a03db743c33e4736",
+      "bytes": 1214
+    },
+    "candidate_receipt_adapter.py": {
+      "sha256": "3c129c34d04a65b738eeadd518e33bfac1041ab801b0c152999dd1cea6fa7a8a",
+      "bytes": 14182
+    }
+  },
+  "scope": [
+    "Explicit final independent source-approval path-record-list schema conversion",
+    "Actual source/stage/checkpoint/command and exact five-path EOF-exception receipt binding",
+    "Read-only validation of recorded 45-sidecar removal scope and retained backup bytes",
+    "Actual 26-input reviewed precommit PDF/build/render/94-page visual receipt binding",
+    "Independent identity and strict comparison verification of retained actual clean-source outputs"
+  ],
+  "open_findings": [],
+  "validation": {
+    "normal_tests": 59,
+    "optimized_tests": 59,
+    "production_ruff": "passed",
+    "direct_actual_adapter_controls": "passed normally and under -O",
+    "independent_argument_mutations_rejected_per_mode": 6,
+    "native_raw_input_identities_freshly_rehashed_per_mode": 12,
+    "production_removable_assert_gates": 0
+  },
+  "source_commit": "5e34f23d981631605783cbe0f74247659f12a10a",
+  "source_checkpoint_identity": {
+    "sha256": "06513002e97910d2a2f4d267fb2ce79db5ee792c5d1602ed8ff480d0c0fc4f2e",
+    "bytes": 101218
+  },
+  "integration_approval_identity": {
+    "sha256": "0fe9b4a314efdd5d1d8c33f448b49d36d998200bcad2d09a0dd12ede5cbf7a2d",
+    "bytes": 12125
+  },
+  "whitespace_exception_identity": {
+    "sha256": "9e35561bf07b707f298b559aab86d4f642209e13a58663b33fd2835ed0ef04fa",
+    "bytes": 1848
+  },
+  "default_whitespace_check_passed": false,
+  "only_accepted_whitespace_rule": "blank-at-eof at the exact five recorded approved TeX paths",
+  "effective_whitespace_check_passed": true,
+  "recorded_sidecar_removals": 45,
+  "backup_files_reverified": 45,
+  "reviewed_precommit_pdf": {
+    "sha256": "60708f3059284875e611eec6f910fd1086fd74880d84a1f4fc51f6bd356583a3",
+    "bytes": 1463523
+  },
+  "PDF_inputs": 26,
+  "PDF_pages": 191,
+  "prior_independent_visual_scope": {
+    "inspected_pages": 94,
+    "full_page_legibility_checks": 10
+  },
+  "actual_replay_evidence": {
+    "counting": {
+      "result_identity": {
+        "sha256": "04e9807ae5d3af8a8f2a2926a44ebc25f79a9e8151424ae39429655396b7567b",
+        "bytes": 438646
+      },
+      "reference_identity": {
+        "sha256": "2a5680cf8e91db3668099ffdb5e19bc3bb984f89cd121395fbcd856a6da7fc71",
+        "bytes": 441561
+      },
+      "comparison_receipt_identity": {
+        "sha256": "cfdbb41c938ef13867e4843292500562822b8b06bbc744c7faa6defe76028984",
+        "bytes": 14607
+      },
+      "fresh_comparison_matches_retained_receipt": true,
+      "counts": {
+        "exact": 4054,
+        "numerical_formula_comparisons": 354,
+        "cross_precision_observations": 297
+      },
+      "blocks": null,
+      "external_native_raw_files_freshly_rehashed": 0
+    },
+    "torus": {
+      "result_identity": {
+        "sha256": "51414cf7c3e72c2020e3267f3abbb6cf6e2c9c0f78b9b6ee3921ceced70bcece",
+        "bytes": 434757
+      },
+      "reference_identity": {
+        "sha256": "770315039a907e3adab3169081e1f3e84d07d7301e29a26fcf0b7e281af73521",
+        "bytes": 435597
+      },
+      "comparison_receipt_identity": {
+        "sha256": "02cb77e8f1b6afad5cb7878b6844f5b32476b199bf4cc7ba7bb106bfd5fd5f55",
+        "bytes": 20746
+      },
+      "fresh_comparison_matches_retained_receipt": true,
+      "counts": {
+        "modular": 18191508,
+        "asymmetric": 18486116
+      },
+      "blocks": 20,
+      "external_native_raw_files_freshly_rehashed": 12
+    }
+  },
+  "actual_replay_specification": {
+    "sha256": "77d849c3c5ad1e90f07812450f17882b2afbd036a0ad248b499c62866e3dc18c",
+    "bytes": 17004
+  },
+  "actual_replay_machinery_matches_reviewed_freeze": true,
+  "prior_machinery_approval": {
+    "sha256": "53636fbbdd53c67b56924bf80e53b3c5059584ec6e015c2f329af93594e4c635",
+    "bytes": 4774
+  },
+  "candidate_approved": false,
+  "artifact_commit_approved": false,
+  "pending": [
+    "Final curation and exact copy identities",
+    "Frozen complete candidate manifest and links",
+    "Full candidate normal/-O verification and independent pre-artifact approval",
+    "Independent artifact-only postcommit verification"
+  ],
+  "canonical_edits": [],
+  "scientific_experiments_run_by_this_review": [],
+  "PDF_builds_or_marker_invocations": [],
+  "metadata_cleanups": [],
+  "commits_or_remote_operations": [],
+  "evidence": {
+    "reviewed-author-freeze.json": {
+      "sha256": "40629ac7d9abfe25f20bcc8922c0667b40bba095ae531bd2938579f4b4aa60a0",
+      "bytes": 2882
+    },
+    "review.md": {
+      "sha256": "76becbb202ff91e55de962d34afc3bc37ea4a7ccaf2abf1a42a18ed12a05aa6b",
+      "bytes": 4436
+    },
+    "execution-receipts.json": {
+      "sha256": "d3284a468f95a31a317b787ab71898b44ba773d02c7ddd64bea6615601e9d6ac",
+      "bytes": 26537
+    },
+    "run_tests.py": {
+      "sha256": "621ded1eaec4eb6ab74a6f4164f69444090f22ec45ac8027235fe74ca02c05aa",
+      "bytes": 1316
+    },
+    "audit_actual_receipts.py": {
+      "sha256": "bf72e74a1a1ac198922cc9cca113f8e2a022502806430f55e8db74501529e05a",
+      "bytes": 10688
+    },
+    "actual-receipt-audit-normal.json": {
+      "sha256": "c4df8a0878825c750d15c837f56d112b598e806420c2ff74fed9eec015d60300",
+      "bytes": 10858
+    },
+    "actual-receipt-audit-optimized.json": {
+      "sha256": "becd65f1fab5c4e8dcfe7d17e3784641fba99173188af4a1c901f89b5e351d47",
+      "bytes": 10858
+    },
+    "adapter-tests/test_approval_shape.py": {
+      "sha256": "a93021b1fb520f7a78c2400036fa208e856987424f73b6c2628e738a760004a4",
+      "bytes": 1972
+    },
+    "adapter-tests/test_receipt_adapter.py": {
+      "sha256": "1dbf98d19d3a576392c741453780ee9d477a5bd8d866f00f1c4135bdaac000f1",
+      "bytes": 2342
+    }
+  },
+  "self_hash_excluded": true
+}

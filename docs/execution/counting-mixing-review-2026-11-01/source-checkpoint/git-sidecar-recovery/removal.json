@@ -1,0 +1,2230 @@
+{
+  "all_genuine_counterparts_unchanged": true,
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "5e34f23d981631605783cbe0f74247659f12a10a\n",
+      "stdout_bytes": 41,
+      "stdout_sha256": "67624d5427274a76af5dcdf420c2e3b1cba9efa8409728f1dfc28755d4bff803"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "refs/heads/main"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "5e34f23d981631605783cbe0f74247659f12a10a\n",
+      "stdout_bytes": 41,
+      "stdout_sha256": "67624d5427274a76af5dcdf420c2e3b1cba9efa8409728f1dfc28755d4bff803"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "5e34f23d981631605783cbe0f74247659f12a10a"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "commit\n",
+      "stdout_bytes": 7,
+      "stdout_sha256": "50836eee574ecff79dea3b4fd40673d7d000f7a5f177d8a6a3000b59c78383b8"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "02bac8d9426f8442c730e77341fdec5c8b4230d3"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "02bac8d9426f8442c730e77341fdec5c8b4230d3"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "12899\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "7fa89d0954afee2fc09225079a40f2627e470f171c1821ce9f4da5859f94a5c5"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "02bac8d9426f8442c730e77341fdec5c8b4230d3"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 12899,
+      "stdout_sha256": "36399bd0068d0a0faa454b7df8c01a9e9cd7b03e138ca9c61fd3ad8716c8deb4"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "036ad17e0d4dd0d571ba892fa374c69a8b08469d"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "tree\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "f27e01fe7624cca3e69811a0bf9a4efd9dca9fd39f7a3a8f939cae0cfe8cdfb8"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "036ad17e0d4dd0d571ba892fa374c69a8b08469d"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "317\n",
+      "stdout_bytes": 4,
+      "stdout_sha256": "26b0edadf5975dd29702b4cd6f5cd560905dba04e4f41e70537c4119a3ed1471"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "tree",
+        "036ad17e0d4dd0d571ba892fa374c69a8b08469d"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 317,
+      "stdout_sha256": "1b368d44096347508df403a435d7d7dd6891b47a683848cb42339b2f218307fb"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "16301b013110c260477de037b6a9dc5921566c66"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "16301b013110c260477de037b6a9dc5921566c66"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "32832\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "24f21c99b691aef45ca18806212afd96a6e0b3213ab4197d261f4d202ff870b9"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "16301b013110c260477de037b6a9dc5921566c66"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 32832,
+      "stdout_sha256": "23d92f42eeacbe7e6c967e9b35e48228e96458356a5d659333713bf79200bd33"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "1e70af75fd631a1778c1a69c68d58295147b02cb"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "tree\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "f27e01fe7624cca3e69811a0bf9a4efd9dca9fd39f7a3a8f939cae0cfe8cdfb8"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "1e70af75fd631a1778c1a69c68d58295147b02cb"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "85\n",
+      "stdout_bytes": 3,
+      "stdout_sha256": "ff393127b5a059b172af9b9eed820368071cf24d46df1b8326623c8e79178379"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "tree",
+        "1e70af75fd631a1778c1a69c68d58295147b02cb"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "100644 INTEGRATION_STATUS.md\u0000\ufffd_\ufffd\ufffd\u0617\ufffdH\ufffd\ufffde\ufffd}o\u4ce8\ufffd\u001b\ufffd40000 execution\u0000G?\ufffd\ufff3,/\ufffd\ufffd\u0007\"\u001c\u0018\"\u0666\ufffd\ufffd?",
+      "stdout_bytes": 85,
+      "stdout_sha256": "bbd16eabae3b910c95c77c6a018dca662d062be621d4cffe002839d19d6cdc8d"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "20144d3faf3f3a9190ace7fa779d2dccd8a0d71a"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "20144d3faf3f3a9190ace7fa779d2dccd8a0d71a"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "18304\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "476bf48fe415b1e69ee232c5cea6df9fda69b52c28a6aea11c2e5b408e15485c"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "20144d3faf3f3a9190ace7fa779d2dccd8a0d71a"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 18304,
+      "stdout_sha256": "7b065510eee82c535484ddcab44da4722c7b738b64d0d0e2aaec598407d2ba69"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "2f7b49270295cd9ebdce537f7d4618567893a701"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "tree\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "f27e01fe7624cca3e69811a0bf9a4efd9dca9fd39f7a3a8f939cae0cfe8cdfb8"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "2f7b49270295cd9ebdce537f7d4618567893a701"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "51\n",
+      "stdout_bytes": 3,
+      "stdout_sha256": "9e62e6489fcc4bc58be7cb23e74d25cbfcc3732c1f70e8c37f12a756d1db9381"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "tree",
+        "2f7b49270295cd9ebdce537f7d4618567893a701"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "100644 test_counting_mixing.py\u0000Y\ufffdW\ufffd\ufffd\u001c\ufffdk)G\ufffd\u000b\ufffd6\ufffd\u000fK>\ufffd\ufffd",
+      "stdout_bytes": 51,
+      "stdout_sha256": "46a2433d1a5845533e38f3f2c65bd350ff3c53f6801fe54f64f9a2e1ec74343b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "30e2766cb08081cba8a19da77b04e4bd92a4dd48"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "tree\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "f27e01fe7624cca3e69811a0bf9a4efd9dca9fd39f7a3a8f939cae0cfe8cdfb8"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "30e2766cb08081cba8a19da77b04e4bd92a4dd48"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "143\n",
+      "stdout_bytes": 4,
+      "stdout_sha256": "9d9b18720961e9b4689fd763b85e7b6f36160ccd3a8a1c9ddc5103bb0f66c396"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "tree",
+        "30e2766cb08081cba8a19da77b04e4bd92a4dd48"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "100644 README.md\u0000\u06cfA\ufffd9y\u0003\u0012\u001f\u03dd\ufffd\ufffd\ufffd3\ufffd]\ufffdya100644 campaign.cpp\u0000\ufffd\u000e\u007f\u0014s|\ufffd\ufffdE\ufffd\u001cc/8+\ufffd\u000e\ufffdH1100644 run.py\u0000Sk\u001e\ufffde8v]\ufffdw\ufffd\u0017\ufffd=a\ufffd\ufffd#\ufffd\ufffd40000 tests\u0000\ufffd\ufffd\ufffdw\ufffdK|\u2743?L\ufffd\u0002?\ufffd5LP\ufffd",
+      "stdout_bytes": 143,
+      "stdout_sha256": "0df1b68e40941572932346010d428f06fa07c26599b7fd9645f7546d98c03a95"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "3e742d3fbc1684b71a0a9455babc11f3b389e992"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "3e742d3fbc1684b71a0a9455babc11f3b389e992"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "35208\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "4c92ebd8f519f07be3f10064c71adc91ae8f70cb280e6cbf384b3ca0a21ba04d"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "3e742d3fbc1684b71a0a9455babc11f3b389e992"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 35208,
+      "stdout_sha256": "5520b28607f96a3e65ea32e7c4dab267f6556dbbe8975d29b4186b9b27e429c9"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "440ede8ea54b689c53aadac90b2f9d82d0e74a68"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "440ede8ea54b689c53aadac90b2f9d82d0e74a68"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "95857\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "7c1cdbad4c3840455a6fca072d110317328985c2b83e2af1727c18160b805a22"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "440ede8ea54b689c53aadac90b2f9d82d0e74a68"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 95857,
+      "stdout_sha256": "61af82e0e0cf8b7e658803255f5bcd38849cde0f27539ef901b7f027816667db"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "47183b3cca377e9fb8e8c9da30c2aed609c4dee7"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "47183b3cca377e9fb8e8c9da30c2aed609c4dee7"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "11318\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "8def420d9a04802f4175e55bc558b3c5a71f99c74268a89644dc15fc630277bc"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "47183b3cca377e9fb8e8c9da30c2aed609c4dee7"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 11318,
+      "stdout_sha256": "bb1cdbff6b64971ef5ef317f6be068baa55a2ea65cbad291a8631639f253c378"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "536b1ee16538765ddd77cf17d43d61ffe92392e4"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "536b1ee16538765ddd77cf17d43d61ffe92392e4"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "25244\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "36502f8f2ca4d4f6e1823239d9fe47003671d0df98ce5db64f9b45c6425c8c3c"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "536b1ee16538765ddd77cf17d43d61ffe92392e4"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 25244,
+      "stdout_sha256": "f80154b6d7c9b60e2fa2c74a898fa096d0e03e3f36719df6c7802382441cb8fe"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "59fa57bd9d1cd96b2947c90b9836de0f4b3ebacb"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "59fa57bd9d1cd96b2947c90b9836de0f4b3ebacb"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "16546\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "02f5a7120904930e51599b3f736743c1e53636afb6d8696bfa1706539a59244e"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "59fa57bd9d1cd96b2947c90b9836de0f4b3ebacb"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 16546,
+      "stdout_sha256": "4fb1744e6be2a4c28a6c1ecbcdd26f4d9e29e7c84900246a7ed26cacf1e8a52d"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "5e34f23d981631605783cbe0f74247659f12a10a"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "commit\n",
+      "stdout_bytes": 7,
+      "stdout_sha256": "50836eee574ecff79dea3b4fd40673d7d000f7a5f177d8a6a3000b59c78383b8"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "5e34f23d981631605783cbe0f74247659f12a10a"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "275\n",
+      "stdout_bytes": 4,
+      "stdout_sha256": "357069575c5f247d2a84a756314a3383d601591ee1691bd0baf26af74d0cf2fc"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "commit",
+        "5e34f23d981631605783cbe0f74247659f12a10a"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "tree af0e1367f06b25e906f13074873a4e9007d64d4c\nparent 9c8b61790aaa674902b9d60e80122c318a578bcc\nauthor Igor Rivin <rivin@temple.edu> 1793567629 -0500\ncommitter Igor Rivin <rivin@temple.edu> 1793567629 -0500\n\nReview counting and mixing chapters and add reproducible diagnostics\n",
+      "stdout_bytes": 275,
+      "stdout_sha256": "a79823636d6203e3d410876c4946eb3072b1a5513d8ef32df607899a44a71068"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "6a1fa468d1e0d7232580015e04bd9af382adffa7"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "6a1fa468d1e0d7232580015e04bd9af382adffa7"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "17201\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "4ff39c76f120e07e745e60ba6e854d45a76f28effee181947430c2a0ffa55eb2"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "6a1fa468d1e0d7232580015e04bd9af382adffa7"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 17201,
+      "stdout_sha256": "64562ebf631c59b84b9c991a632926107b3e24cb5b08b29c21e263bd50a9e901"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "764b339c366d57320901696071fb21246cc1b9d9"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "764b339c366d57320901696071fb21246cc1b9d9"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "15214\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "4146d5ff179defa5abf13ace816d70fc2009edb0ea695152e35fd25b6327410f"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "764b339c366d57320901696071fb21246cc1b9d9"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 15214,
+      "stdout_sha256": "c079ee98ac182709cd9511a30a3a1a560b7b22311af6aaa4da06a427d19c1014"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "7e94cf90ecdb860e12b76b3a4a2407ad2ea8e432"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "7e94cf90ecdb860e12b76b3a4a2407ad2ea8e432"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "152233\n",
+      "stdout_bytes": 7,
+      "stdout_sha256": "c498480683faa0c3d710b6ad074288a51fde0000f82735666c4556ba1a5a0bf7"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "7e94cf90ecdb860e12b76b3a4a2407ad2ea8e432"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 152233,
+      "stdout_sha256": "087fd8690a43fc023b0feb370dc07a1421e06f770d98abaf4234bc88116d6a07"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "8301e79e073919ce794ffb088467a0a1de52cb24"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "8301e79e073919ce794ffb088467a0a1de52cb24"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "9530\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "f1139f80ce8f3e0d885136ab8589d5b5d881e69e017e3c5ff804cd3fd512a742"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "8301e79e073919ce794ffb088467a0a1de52cb24"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 9530,
+      "stdout_sha256": "2e9610b545ab83d0340c19173128cc99a2599fb72837a04ece9d93cb008680fa"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "83bee485337a424c266cda8c91d5f553c50b2fb0"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "83bee485337a424c266cda8c91d5f553c50b2fb0"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "4392\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "b758eb6cfb8642b1674dc3f99afaea6d0d2ada225e641c738fc3dbad3ec029b1"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "83bee485337a424c266cda8c91d5f553c50b2fb0"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 4392,
+      "stdout_sha256": "538c23145ba1ded0f57c7f67a68412a35644ea85c1dd8c4470d902e11e57be33"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "86bba1359255f24c3efa084447977730e814e6c0"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "86bba1359255f24c3efa084447977730e814e6c0"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "14508\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "8b9e453736c5ab837ea59a8c155a63b6624852cac969c6a66485ae07768e89fd"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "86bba1359255f24c3efa084447977730e814e6c0"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 14508,
+      "stdout_sha256": "c876c43ce0d738ea4fa4780713753c3c9c48efdcf788cc9e305ac5011af732e2"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "8e0bb9220d092168a4300a2dc751c5e35d2703a7"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "tree\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "f27e01fe7624cca3e69811a0bf9a4efd9dca9fd39f7a3a8f939cae0cfe8cdfb8"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "8e0bb9220d092168a4300a2dc751c5e35d2703a7"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "1295\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "3e1c1797690994d714f0a8ed54502f56eb9f66b79d58ec0c31ce2834a0ecb6cf"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "tree",
+        "8e0bb9220d092168a4300a2dc751c5e35d2703a7"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 1295,
+      "stdout_sha256": "df487cd2ed7c65e247b736b2f409e8c0eb2788431d9e8194b4ee83bc812238d5"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "8eff295890bf1ed538ecf39c9c6d5324f730e873"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "tree\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "f27e01fe7624cca3e69811a0bf9a4efd9dca9fd39f7a3a8f939cae0cfe8cdfb8"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "8eff295890bf1ed538ecf39c9c6d5324f730e873"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "438\n",
+      "stdout_bytes": 4,
+      "stdout_sha256": "a97d621ec6b93d9b869e8cdb134516925f2baf2fa1c8186a387f6fc35ffb77ad"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "tree",
+        "8eff295890bf1ed538ecf39c9c6d5324f730e873"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 438,
+      "stdout_sha256": "cc055ee818179ac0c12675726c9ad6db9296482d6db7e4c9386f6367fbab4576"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "9d81b930efe76bf99ccc198204eb97088905994c"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "9d81b930efe76bf99ccc198204eb97088905994c"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "9784\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "0425020bdfb26825a3af0a0feafcb1b2c23655ffa298724883cc5d89cc221149"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "9d81b930efe76bf99ccc198204eb97088905994c"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 9784,
+      "stdout_sha256": "0009b84e4a7b1c65e10e34f22ec910282b5b37dff3662d498698f3c32389a680"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "9e5dd428f70c34fcf56ab22c248caadb89d48732"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "9e5dd428f70c34fcf56ab22c248caadb89d48732"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "9434\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "56104d880e7ec42ff31ec31daeddb06b4b4a8237e0c962f01dddc3bcc0d8f670"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "9e5dd428f70c34fcf56ab22c248caadb89d48732"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 9434,
+      "stdout_sha256": "225d070e6eab3f61992c04c62f50361fd1f494a78ada8e2cf4d7b9dee61c4745"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "a4d263f6829c9734ea64b6c0d78b90dcbf29b58f"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "tree\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "f27e01fe7624cca3e69811a0bf9a4efd9dca9fd39f7a3a8f939cae0cfe8cdfb8"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "a4d263f6829c9734ea64b6c0d78b90dcbf29b58f"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "435\n",
+      "stdout_bytes": 4,
+      "stdout_sha256": "4b8d29b54798f8d1f1b7c74fd2f76104fd933a6139b3a878702901f10e0e1921"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "tree",
+        "a4d263f6829c9734ea64b6c0d78b90dcbf29b58f"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 435,
+      "stdout_sha256": "bb5c4fbe20949a812f7113e8b90c1d144ba00e525ba00a49f59e10d75fb46c7c"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "a6d0273c80085b5f382ab9f08d6ec2d38b1b0b66"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "a6d0273c80085b5f382ab9f08d6ec2d38b1b0b66"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "30061\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "8c539e8bf552aa1c0dec149c9506894055e5d9145237308a69caab265866d6c5"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "a6d0273c80085b5f382ab9f08d6ec2d38b1b0b66"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 30061,
+      "stdout_sha256": "d763007813449b0c677615cb0b3d9f9d7bc77ee62bba4622217c06d4890a9838"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "a799d47a886ab766ecb0122d05f53704b3321a67"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "a799d47a886ab766ecb0122d05f53704b3321a67"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "27440\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "95135d55db8a5f2e45d2af08bca302c89e0af16063fd993efa8a4b57c1b8febb"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "a799d47a886ab766ecb0122d05f53704b3321a67"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 27440,
+      "stdout_sha256": "4099f91c4abddf5f2a13831e48d7d52ac4d90af137068b969ca612fc6b273c58"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "aabd8639812308fa355f0be36d3611d8c84d3c2b"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "aabd8639812308fa355f0be36d3611d8c84d3c2b"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "32478\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "f0656f3780f55613c5df218cb8893658e916df3c6a7718534847a84f8ad7e19f"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "aabd8639812308fa355f0be36d3611d8c84d3c2b"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 32478,
+      "stdout_sha256": "8c26fb3e18186d95ead2ae71eebd601966855d1bf0f9f7ed662f9996ab3b49f1"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "ab129f8bb4f02b1684a4c08ace6a4c7f63df815e"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "ab129f8bb4f02b1684a4c08ace6a4c7f63df815e"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "4891\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "b879c3207ab0f3cc6977604c5b989a5dbc2dbc23336380818184938e659b9362"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ab129f8bb4f02b1684a4c08ace6a4c7f63df815e"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 4891,
+      "stdout_sha256": "12bfa97e4debfbb8695480efea45319ad52e824ed88721f09ea5aad062227e99"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "af0e1367f06b25e906f13074873a4e9007d64d4c"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "tree\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "f27e01fe7624cca3e69811a0bf9a4efd9dca9fd39f7a3a8f939cae0cfe8cdfb8"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "af0e1367f06b25e906f13074873a4e9007d64d4c"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "534\n",
+      "stdout_bytes": 4,
+      "stdout_sha256": "5bb74f76025135a88f193adbfd87034f0e6af973dbaeeab8b18605baab9ec1d8"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "tree",
+        "af0e1367f06b25e906f13074873a4e9007d64d4c"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 534,
+      "stdout_sha256": "513fa112f1f15bff10fdc2e601dad871e97c637b6ee9b8df898c75c8fb63bdab"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "bd5fb2f5d8978b4886da65807d6fe4b3a8991bf8"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "bd5fb2f5d8978b4886da65807d6fe4b3a8991bf8"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "6177\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "39d97fab7af991cd6b4094977dd6e13970b82feaef44c816b84bbf839b127550"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "bd5fb2f5d8978b4886da65807d6fe4b3a8991bf8"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 6177,
+      "stdout_sha256": "e479af58af6af49dbc1106db779262fd7b03b12bc2a016491e5d2243924d8b76"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "bd275fe565ac6c69bdac704ae80df9222137cfe3"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "bd275fe565ac6c69bdac704ae80df9222137cfe3"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "35331\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "8b8a08be4fdf17fea0bfacdf10eb19a5e4ef90dcddb350358ea06af8c59cc1ec"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "bd275fe565ac6c69bdac704ae80df9222137cfe3"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 35331,
+      "stdout_sha256": "79fb4660fe87a5723eea0d410e55e954913b0386057a31542473d6486492dcc1"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "bda89477d44b7ce29d833f4cd4023fc0354c5088"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "tree\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "f27e01fe7624cca3e69811a0bf9a4efd9dca9fd39f7a3a8f939cae0cfe8cdfb8"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "bda89477d44b7ce29d833f4cd4023fc0354c5088"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "44\n",
+      "stdout_bytes": 3,
+      "stdout_sha256": "b1ce0aa6fdf3cf349d773243dab9fbbe09d30619f38b0c1e8977e28c4f0bc495"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "tree",
+        "bda89477d44b7ce29d833f4cd4023fc0354c5088"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "100644 test_campaign.py\u0000\ufffd\ufffd\ufffd0\ufffd\ufffdk\ufffd\ufffd\ufffd\u0019\ufffd\u0004\ufffd\b\ufffd\u0005\ufffdL",
+      "stdout_bytes": 44,
+      "stdout_sha256": "72f3c174ff325cb6b99632d2464c71f5bfa9c2a141b3223da3fb12b54cb6780c"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "bf80a578c17be1e513f645df03acce9dcd58b68c"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "bf80a578c17be1e513f645df03acce9dcd58b68c"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "9028\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "c358b41e179231af31fc74bd709ef75c42670b90d2ef115ab8dc6037b452ab4c"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "bf80a578c17be1e513f645df03acce9dcd58b68c"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 9028,
+      "stdout_sha256": "d0f611c2631f82100cec3f941294374af275798708f3073adc5b3642902a840d"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "c9f9d763782f6d738a405680d9178ab4e218af38"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "c9f9d763782f6d738a405680d9178ab4e218af38"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "47691\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "a62d4f53edc9d39a0137334f35570f92d6825259bc019816d393e5b7def31814"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "c9f9d763782f6d738a405680d9178ab4e218af38"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 47691,
+      "stdout_sha256": "9a568e4e37af32e1d23f42eac38c84b25e6b0e1da89bef7c819457da2336fead"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "d85ca97f2d76856b2b0b87c66a09d42a4382a87f"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "d85ca97f2d76856b2b0b87c66a09d42a4382a87f"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "34521\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "535a86636c2e3c0541bfd6d31d5ed0e9a7519f165b65d202176b8325261132b3"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "d85ca97f2d76856b2b0b87c66a09d42a4382a87f"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 34521,
+      "stdout_sha256": "18c05143e86fb9630868bb2824ddf44643c1ee1c84a40dc77a8c9d5354663fb4"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "db8f41bb397903121fcf9da9929133af5de07961"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "db8f41bb397903121fcf9da9929133af5de07961"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "7369\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "c40486120c84c09d834e302c3b53b9692281f15d9f2c8b1a7c5ed549ebc54080"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "db8f41bb397903121fcf9da9929133af5de07961"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 7369,
+      "stdout_sha256": "cb32059b9558a946c955981346fdb9ee72c3f305e7a8760e134b99c4c8ce3de4"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "ddde3ac224aa0deae6d12d9731887869df058257"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "ddde3ac224aa0deae6d12d9731887869df058257"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "78\n",
+      "stdout_bytes": 3,
+      "stdout_sha256": "b03c70ff0d641a363f1a021413a098dce02e4c68b75f3a47aa10044f42ee1784"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ddde3ac224aa0deae6d12d9731887869df058257"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "\"\"\"Bounded formula companions for Sections 23--31; no global certificates.\"\"\"\n",
+      "stdout_bytes": 78,
+      "stdout_sha256": "6fc28e861807e61233bed8d0ca6c66001b4792c95d539dcc11d50e7060804715"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "dd0e7f14737ca8b845d91c632f382bbc0ec04831"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "dd0e7f14737ca8b845d91c632f382bbc0ec04831"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "26106\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "bf41b8207dde0d9e8a72849c8c4e918670cfb0348432bfef9cf16290ec408e09"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "dd0e7f14737ca8b845d91c632f382bbc0ec04831"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 26106,
+      "stdout_sha256": "b17839d5b657f143ab90535c8d3432a1e5a9bdb51a477dea3b414702f88de9c3"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "de65f36c033eeb74932ca699b5560cbdc8f63b2d"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "de65f36c033eeb74932ca699b5560cbdc8f63b2d"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "18219\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "91ad760e047b5ab3194979e2df181a4656b7c8701e578c7c14e7570fcea62853"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "de65f36c033eeb74932ca699b5560cbdc8f63b2d"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 18219,
+      "stdout_sha256": "b87a7eaf165a391dd183b0a22bc8ff747540c15b291ff53b7cf102d7472f6de7"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "deb08b56f4d0b1c81f5f28022b2e073188f77b82"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "tree\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "f27e01fe7624cca3e69811a0bf9a4efd9dca9fd39f7a3a8f939cae0cfe8cdfb8"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "deb08b56f4d0b1c81f5f28022b2e073188f77b82"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "375\n",
+      "stdout_bytes": 4,
+      "stdout_sha256": "72ffd3dda6d495c7a2675d95d685803ed9869f53d121ae2a5af75a82b07c0352"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "tree",
+        "deb08b56f4d0b1c81f5f28022b2e073188f77b82"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 375,
+      "stdout_sha256": "4635d3aa185e5808df41fcf7620132022322a6c623279d185f6fda4a9e84b877"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "ea31fb0b399a1aea4e7da650dd6bfaf429d25612"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "ea31fb0b399a1aea4e7da650dd6bfaf429d25612"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "26963\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "472c14b01e58c6372b7b9c58b3a1fd1abdbcc2054fb79db6a2085c58db9ada3e"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ea31fb0b399a1aea4e7da650dd6bfaf429d25612"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 26963,
+      "stdout_sha256": "6cd4a0d185cda2e8dc2852ce6ddf81d0f0fc75a4a19d3866c1f84e3ad835f6b9"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "f5d3002d4648557d18e41e93548150a1af48c63a"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "f5d3002d4648557d18e41e93548150a1af48c63a"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "10659\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "2590b4a27c50645cfa5e75ffb491484438d2a65004e932f96bc4163a5431d929"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "f5d3002d4648557d18e41e93548150a1af48c63a"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 10659,
+      "stdout_sha256": "5a3d249be1fd9c3cbe2079426c3fd75e18aca1a339cf7684f7f61e76860bae9f"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "fac7c5c7e9ee56b8726184560ee409793e50b5c3"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "fac7c5c7e9ee56b8726184560ee409793e50b5c3"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "93703\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "bb677b7edb8bfcb57473aada7bc278d56bae7482d3392283d31cd102718885f2"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "fac7c5c7e9ee56b8726184560ee409793e50b5c3"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 93703,
+      "stdout_sha256": "d139ca58e77c234e7c9e5d1bce69caf85b0038c1d4ef586a0b9ea0972371629c"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-t",
+        "fc0a637bdc7199d45f0215cfb89df82b5ac6696c"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "blob\n",
+      "stdout_bytes": 5,
+      "stdout_sha256": "bc103b4a84971ef6459b294a2b98568a2bfb72cded09d4acd1e16366a401f95b"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-s",
+        "fc0a637bdc7199d45f0215cfb89df82b5ac6696c"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "30573\n",
+      "stdout_bytes": 6,
+      "stdout_sha256": "aef156c78fc1f00b2eb0320f9e44caa3f52fc54741c6f14b9a65e127f6d7a2c5"
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "fc0a637bdc7199d45f0215cfb89df82b5ac6696c"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": null,
+      "stdout_bytes": 30573,
+      "stdout_sha256": "5b19adfa2a45ab5fc22d760564f5576c5134f02d1827f8c94e3fa2e4c2bb852a"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "5e34f23d981631605783cbe0f74247659f12a10a\n",
+      "stdout_bytes": 41,
+      "stdout_sha256": "67624d5427274a76af5dcdf420c2e3b1cba9efa8409728f1dfc28755d4bff803"
+    }
+  ],
+  "inspection_path": "git-sidecar-recovery/inspection.json",
+  "inspection_sha256": "4b7ec5bf755e802d71282cea3b73b11426fa030f0b97f779519b3b6763e5b652",
+  "only_exact_fsck_reported_confirmed_appledouble_sidecars_removed": true,
+  "phase": "remove_confirmed_sidecars",
+  "recorded_utc": "2026-11-01T21:15:38.410133+00:00",
+  "removed": [
+    {
+      "backup_path": "git-sidecar-recovery/backups/01-heads-main.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/refs/heads/._main",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/02-02-bac8d9426f8442c730e77341fdec5c8b4230d3.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/02/._bac8d9426f8442c730e77341fdec5c8b4230d3",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/03-03-6ad17e0d4dd0d571ba892fa374c69a8b08469d.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/03/._6ad17e0d4dd0d571ba892fa374c69a8b08469d",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/04-16-301b013110c260477de037b6a9dc5921566c66.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/16/._301b013110c260477de037b6a9dc5921566c66",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/05-1e-70af75fd631a1778c1a69c68d58295147b02cb.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/1e/._70af75fd631a1778c1a69c68d58295147b02cb",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/06-20-144d3faf3f3a9190ace7fa779d2dccd8a0d71a.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/20/._144d3faf3f3a9190ace7fa779d2dccd8a0d71a",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/07-2f-7b49270295cd9ebdce537f7d4618567893a701.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/2f/._7b49270295cd9ebdce537f7d4618567893a701",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/08-30-e2766cb08081cba8a19da77b04e4bd92a4dd48.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/30/._e2766cb08081cba8a19da77b04e4bd92a4dd48",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/09-3e-742d3fbc1684b71a0a9455babc11f3b389e992.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/3e/._742d3fbc1684b71a0a9455babc11f3b389e992",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/10-44-0ede8ea54b689c53aadac90b2f9d82d0e74a68.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/44/._0ede8ea54b689c53aadac90b2f9d82d0e74a68",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/11-47-183b3cca377e9fb8e8c9da30c2aed609c4dee7.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/47/._183b3cca377e9fb8e8c9da30c2aed609c4dee7",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/12-53-6b1ee16538765ddd77cf17d43d61ffe92392e4.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/53/._6b1ee16538765ddd77cf17d43d61ffe92392e4",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/13-59-fa57bd9d1cd96b2947c90b9836de0f4b3ebacb.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/59/._fa57bd9d1cd96b2947c90b9836de0f4b3ebacb",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/14-5e-34f23d981631605783cbe0f74247659f12a10a.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/5e/._34f23d981631605783cbe0f74247659f12a10a",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/15-6a-1fa468d1e0d7232580015e04bd9af382adffa7.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/6a/._1fa468d1e0d7232580015e04bd9af382adffa7",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/16-76-4b339c366d57320901696071fb21246cc1b9d9.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/76/._4b339c366d57320901696071fb21246cc1b9d9",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/17-7e-94cf90ecdb860e12b76b3a4a2407ad2ea8e432.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/7e/._94cf90ecdb860e12b76b3a4a2407ad2ea8e432",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/18-83-01e79e073919ce794ffb088467a0a1de52cb24.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/83/._01e79e073919ce794ffb088467a0a1de52cb24",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/19-83-bee485337a424c266cda8c91d5f553c50b2fb0.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/83/._bee485337a424c266cda8c91d5f553c50b2fb0",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/20-86-bba1359255f24c3efa084447977730e814e6c0.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/86/._bba1359255f24c3efa084447977730e814e6c0",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/21-8e-0bb9220d092168a4300a2dc751c5e35d2703a7.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/8e/._0bb9220d092168a4300a2dc751c5e35d2703a7",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/22-8e-ff295890bf1ed538ecf39c9c6d5324f730e873.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/8e/._ff295890bf1ed538ecf39c9c6d5324f730e873",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/23-9d-81b930efe76bf99ccc198204eb97088905994c.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/9d/._81b930efe76bf99ccc198204eb97088905994c",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/24-9e-5dd428f70c34fcf56ab22c248caadb89d48732.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/9e/._5dd428f70c34fcf56ab22c248caadb89d48732",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/25-a4-d263f6829c9734ea64b6c0d78b90dcbf29b58f.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/a4/._d263f6829c9734ea64b6c0d78b90dcbf29b58f",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/26-a6-d0273c80085b5f382ab9f08d6ec2d38b1b0b66.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/a6/._d0273c80085b5f382ab9f08d6ec2d38b1b0b66",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/27-a7-99d47a886ab766ecb0122d05f53704b3321a67.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/a7/._99d47a886ab766ecb0122d05f53704b3321a67",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/28-aa-bd8639812308fa355f0be36d3611d8c84d3c2b.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/aa/._bd8639812308fa355f0be36d3611d8c84d3c2b",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/29-ab-129f8bb4f02b1684a4c08ace6a4c7f63df815e.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/ab/._129f8bb4f02b1684a4c08ace6a4c7f63df815e",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/30-af-0e1367f06b25e906f13074873a4e9007d64d4c.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/af/._0e1367f06b25e906f13074873a4e9007d64d4c",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/31-bd-5fb2f5d8978b4886da65807d6fe4b3a8991bf8.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/bd/._5fb2f5d8978b4886da65807d6fe4b3a8991bf8",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/32-bd-275fe565ac6c69bdac704ae80df9222137cfe3.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/bd/._275fe565ac6c69bdac704ae80df9222137cfe3",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/33-bd-a89477d44b7ce29d833f4cd4023fc0354c5088.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/bd/._a89477d44b7ce29d833f4cd4023fc0354c5088",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/34-bf-80a578c17be1e513f645df03acce9dcd58b68c.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/bf/._80a578c17be1e513f645df03acce9dcd58b68c",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/35-c9-f9d763782f6d738a405680d9178ab4e218af38.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/c9/._f9d763782f6d738a405680d9178ab4e218af38",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/36-d8-5ca97f2d76856b2b0b87c66a09d42a4382a87f.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/d8/._5ca97f2d76856b2b0b87c66a09d42a4382a87f",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/37-db-8f41bb397903121fcf9da9929133af5de07961.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/db/._8f41bb397903121fcf9da9929133af5de07961",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/38-dd-de3ac224aa0deae6d12d9731887869df058257.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/dd/._de3ac224aa0deae6d12d9731887869df058257",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/39-dd-0e7f14737ca8b845d91c632f382bbc0ec04831.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/dd/._0e7f14737ca8b845d91c632f382bbc0ec04831",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/40-de-65f36c033eeb74932ca699b5560cbdc8f63b2d.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/de/._65f36c033eeb74932ca699b5560cbdc8f63b2d",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/41-de-b08b56f4d0b1c81f5f28022b2e073188f77b82.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/de/._b08b56f4d0b1c81f5f28022b2e073188f77b82",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/42-ea-31fb0b399a1aea4e7da650dd6bfaf429d25612.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/ea/._31fb0b399a1aea4e7da650dd6bfaf429d25612",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/43-f5-d3002d4648557d18e41e93548150a1af48c63a.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/f5/._d3002d4648557d18e41e93548150a1af48c63a",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/44-fa-c7c5c7e9ee56b8726184560ee409793e50b5c3.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/fa/._c7c5c7e9ee56b8726184560ee409793e50b5c3",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    },
+    {
+      "backup_path": "git-sidecar-recovery/backups/45-fc-0a637bdc7199d45f0215cfb89df82b5ac6696c.appledouble.bin",
+      "genuine_counterpart_unchanged": true,
+      "operation": "Path.unlink",
+      "path": ".git/objects/fc/._0a637bdc7199d45f0215cfb89df82b5ac6696c",
+      "sidecar_sha256": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2"
+    }
+  ],
+  "removed_count": 45,
+  "source_commit": "5e34f23d981631605783cbe0f74247659f12a10a"
+}

@@ -1,0 +1,146 @@
+{
+  "generated_at_utc": "2026-11-01T21:08:34.310531+00:00",
+  "decision": "revise_preparation_machinery",
+  "approved": false,
+  "scope": "Independent initial review at exact original preparation hashes; no concrete candidate reviewed or approved.",
+  "baseline_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+  "reviewed_scripts": {
+    "checkpoint_lib.py": {
+      "sha256": "30c7f7812721d8e4f912cb283ac089e9806a07df74a40ad2af2eba97dca7987a",
+      "bytes": 14384
+    },
+    "compare_replays.py": {
+      "sha256": "3ae0d56ecd3929da86016e5c52def7e8f921b6133870cbde044b69c9b11f0b95",
+      "bytes": 2256
+    },
+    "run_clean_replay.py": {
+      "sha256": "b5943680092c3bca9b2f11d80301914bf33a7e705086027d70824ecec8a87f13",
+      "bytes": 6818
+    },
+    "verify_checkpoint.py": {
+      "sha256": "0a297730931c48716ad8dc03c408a17dd4b408f12507735f638b326610f1d41a",
+      "bytes": 25536
+    },
+    "test_checkpoint.py": {
+      "sha256": "308a35faa6ee877cbc0a5afe3d51947b44337cc3dcfd867919104c96d309162f",
+      "bytes": 8042
+    }
+  },
+  "reviewed_contract": {
+    "sha256": "03be3a35775d5259dcd8d3ad4f38839972ea929dc4142f9bb0414581a456b1ae",
+    "bytes": 6392
+  },
+  "reviewed_replay_spec": {
+    "sha256": "45c5db5e43f8522e6dbfaa4630a8c176fc693c930627c8550e6d9470906b8b67",
+    "bytes": 3077
+  },
+  "reviewed_exclusions": {
+    "sha256": "853149f8e6c0869c715f503c4824cd90298ffdf74e2ee3c604ca76e4f0c93fb3",
+    "bytes": 2611
+  },
+  "reviewed_curation_plan": {
+    "sha256": "3a0fbc4c6b50591fe60c0bc19de87bcd4ff3f25ccdd357658b48c60f8bc8d6ff",
+    "bytes": 55938
+  },
+  "blocking_findings": [
+    {
+      "id": "R1",
+      "summary": "Replay specification and comparison report identity drift can produce successful receipts for bytes not used.",
+      "affected": [
+        "run_clean_replay.py",
+        "compare_replays.py"
+      ]
+    },
+    {
+      "id": "R2",
+      "summary": "Manifest/payload drift can produce successful verification receipt with stale candidate manifest identity.",
+      "affected": [
+        "verify_checkpoint.py"
+      ]
+    },
+    {
+      "id": "R3",
+      "summary": "Explicit nonempty unresolved list does not prevent ready:true contract acceptance.",
+      "affected": [
+        "verify_checkpoint.py",
+        "checkpoint-contract.template.json",
+        "replay-spec.template.json"
+      ]
+    },
+    {
+      "id": "R4",
+      "summary": "Pre-command source failure and scientific mismatch do not retain the documented exclusive failure receipts.",
+      "affected": [
+        "run_clean_replay.py",
+        "compare_replays.py"
+      ]
+    }
+  ],
+  "existing_tests": {
+    "normal": 23,
+    "optimized": 23,
+    "ruff": "passed"
+  },
+  "independent_probes": "Both Python modes reproduce all findings; full details and synthetic-fixture limits retained in evidence.",
+  "curation": {
+    "fresh_identity_matches": 161,
+    "bytes": 5651136,
+    "duplicate_destinations": 0,
+    "uncovered_markdown_links": 0,
+    "raw_full_streams_freshly_rehashed_by_this_review": false
+  },
+  "future_required_reviews": [
+    "Exact repaired script delta freeze",
+    "Actual populated candidate before artifact commit",
+    "Actual postcommit identity/ancestry/clean-status check"
+  ],
+  "canonical_edits": [],
+  "canonical_commits": [],
+  "scientific_replays": [],
+  "PDF_builds": [],
+  "PDF_marker_invocations": [],
+  "remote_operations": [],
+  "evidence": {
+    "reviewed-prep-identities-v1.json": {
+      "sha256": "5f8f9d3ab4042530f1548590c18522a2211e47cd68da4505a67023b54b25a90d",
+      "bytes": 2191
+    },
+    "prep-review-v1.md": {
+      "sha256": "05de7d1ed42a364301be2641fb1bbd347da728c44690f6adeefe69b272717439",
+      "bytes": 7029
+    },
+    "existing-tests-receipts-v1.json": {
+      "sha256": "5f486496bb19d99240996ce7a1f7c3505f57fbeaea54ffad761c864f9aff6fa2",
+      "bytes": 7870
+    },
+    "execution-log-v1.json": {
+      "sha256": "26ecc3f923eb5cdaa42ad129801344212a277c487af6754ccb01b412af148324",
+      "bytes": 40885
+    },
+    "independent_probes_v1.py": {
+      "sha256": "a32ae57e43e70e6223ff94fde64d19bfab6cdd4627087bbcba86641e5d0c3aad",
+      "bytes": 15873
+    },
+    "independent-probes-normal-v1.json": {
+      "sha256": "c232f97255b8e2ba2e163c7d89dfc9fa6bcddc0188d0c419c3ee064c62932764",
+      "bytes": 7750
+    },
+    "independent-probes-optimized-v1.json": {
+      "sha256": "3bd386e0f6df473f9a322979c75fd11dfaf92a802e0a2abbad37288d219c72c8",
+      "bytes": 7750
+    },
+    "comparison_input_drift_probe.py": {
+      "sha256": "9c62fe03d36f4305c5e35ff3fe1c5a41d420c2461258b1a4f08d9b1b79a04754",
+      "bytes": 2800
+    },
+    "comparison-input-drift-normal-v1.json": {
+      "sha256": "c03d4598fc6aba753a5158e81ec51f924234dc85b39fbf428e5a9403e0066f4e",
+      "bytes": 909
+    },
+    "comparison-input-drift-optimized-v1.json": {
+      "sha256": "dd2ee86b512c9fc0ad9329c4d40175690119d1b58fba1731ec820e6bddb89acf",
+      "bytes": 909
+    }
+  },
+  "self_hash_excluded": true
+}

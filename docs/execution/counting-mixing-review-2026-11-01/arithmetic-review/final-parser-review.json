@@ -1,0 +1,46 @@
+{
+  "approved_source_sha256": {
+    "campaign.cpp": "b17839d5b657f143ab90535c8d3432a1e5a9bdb51a477dea3b414702f88de9c3",
+    "run.py": "f80154b6d7c9b60e2fa2c74a898fa096d0e03e3f36719df6c7802382441cb8fe",
+    "README.md": "cb32059b9558a946c955981346fdb9ee72c3f305e7a8760e134b99c4c8ce3de4",
+    "tests/test_campaign.py": "0009b84e4a7b1c65e10e34f22ec910282b5b37dff3662d498698f3c32389a680"
+  },
+  "malformed_rejections": [
+    {
+      "case": "suffix_length",
+      "returncode": 2,
+      "stderr": "campaign error: length contains trailing characters\n",
+      "result_created": false
+    },
+    {
+      "case": "suffix_T",
+      "returncode": 2,
+      "stderr": "campaign error: T contains trailing characters\n",
+      "result_created": false
+    },
+    {
+      "case": "invalid_flag",
+      "returncode": 2,
+      "stderr": "campaign error: DIRECT must be exactly 0 or 1\n",
+      "result_created": false
+    },
+    {
+      "case": "nan",
+      "returncode": 2,
+      "stderr": "campaign error: length list must be finite and in [1,8193]\n",
+      "result_created": false
+    },
+    {
+      "case": "directory",
+      "returncode": 2,
+      "stderr": "campaign error: length input must be a regular file\n",
+      "result_created": false
+    }
+  ],
+  "independent_valid_metric_cases_unchanged": 272,
+  "scientific_source_regions_byte_identical": true,
+  "preflight512_scientific_fields_and_six_streams_independently_compared_equal": true,
+  "final_preflight_sha256": "74f3a6ce473b1417d54c2a746fd40ab387c3eb12e8e900fe86013cbcc93fc68f",
+  "decision": "approve_source_for_clean_full_replay",
+  "full_v3_8192_replay_performed": false
+}

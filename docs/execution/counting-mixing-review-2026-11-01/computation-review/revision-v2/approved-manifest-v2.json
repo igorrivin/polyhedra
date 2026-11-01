@@ -1,0 +1,128 @@
+{
+  "generated_at_utc": "2026-11-01T20:50:43.053579+00:00",
+  "decision": "approve",
+  "approved": true,
+  "approved_source_set_sha256": "4b1f8f22f155c464f0ecda6ab95c581926db157bae4ee7583e67fbc6448ded63",
+  "approved_sources": [
+    {
+      "path": "experiments/counting_mixing/README.md",
+      "sha256": "225d070e6eab3f61992c04c62f50361fd1f494a78ada8e2cf4d7b9dee61c4745",
+      "bytes": 9434
+    },
+    {
+      "path": "experiments/counting_mixing/__init__.py",
+      "sha256": "6fc28e861807e61233bed8d0ca6c66001b4792c95d539dcc11d50e7060804715",
+      "bytes": 78
+    },
+    {
+      "path": "experiments/counting_mixing/algebra.py",
+      "sha256": "36399bd0068d0a0faa454b7df8c01a9e9cd7b03e138ca9c61fd3ad8716c8deb4",
+      "bytes": 12899
+    },
+    {
+      "path": "experiments/counting_mixing/arithmetic.py",
+      "sha256": "5a3d249be1fd9c3cbe2079426c3fd75e18aca1a339cf7684f7f61e76860bae9f",
+      "bytes": 10659
+    },
+    {
+      "path": "experiments/counting_mixing/dynamics.py",
+      "sha256": "bb1cdbff6b64971ef5ef317f6be068baa55a2ea65cbad291a8631639f253c378",
+      "bytes": 11318
+    },
+    {
+      "path": "experiments/counting_mixing/exact.py",
+      "sha256": "12bfa97e4debfbb8695480efea45319ad52e824ed88721f09ea5aad062227e99",
+      "bytes": 4891
+    },
+    {
+      "path": "experiments/counting_mixing/fixture.json",
+      "sha256": "538c23145ba1ded0f57c7f67a68412a35644ea85c1dd8c4470d902e11e57be33",
+      "bytes": 4392
+    },
+    {
+      "path": "experiments/counting_mixing/numerics.py",
+      "sha256": "b87a7eaf165a391dd183b0a22bc8ff747540c15b291ff53b7cf102d7472f6de7",
+      "bytes": 18219
+    },
+    {
+      "path": "experiments/counting_mixing/run.py",
+      "sha256": "c079ee98ac182709cd9511a30a3a1a560b7b22311af6aaa4da06a427d19c1014",
+      "bytes": 15214
+    },
+    {
+      "path": "experiments/counting_mixing/tests/test_counting_mixing.py",
+      "sha256": "4fb1744e6be2a4c28a6c1ecbcdd26f4d9e29e7c84900246a7ed26cacf1e8a52d",
+      "bytes": 16546
+    }
+  ],
+  "reviewed_git_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+  "resolved_findings": [
+    "R1"
+  ],
+  "open_findings": [],
+  "author_result_sha256": "2a5680cf8e91db3668099ffdb5e19bc3bb984f89cd121395fbcd856a6da7fc71",
+  "reviewer_result_sha256": "72b31444854a6637f5e2c3fac987d19b74110e65916bf8cc05cb3b0cf02afe65",
+  "review_receipts": [
+    {
+      "path": "review-v2.md",
+      "sha256": "56fc88804fccc34546c3f6a2f311c028a7cb1cd3c17c73c701c49ef15345b9e7",
+      "bytes": 6855
+    },
+    {
+      "path": "initial-hash-check.json",
+      "sha256": "34928033fb48ad5bf953826e4b0149d74dd52c350259f69e2a367e0075325144",
+      "bytes": 3471
+    },
+    {
+      "path": "final-hash-check.json",
+      "sha256": "4bd36a5349b82f3fc3cdbdcbb6f11c18d16aaa9ef7fb87f66f20abca978d5b8a",
+      "bytes": 2000
+    },
+    {
+      "path": "command-receipts.json",
+      "sha256": "db53646f73d23bf2a5ce938efdc4763d3a14fc775fb6963e1ed374a5146b9c0b",
+      "bytes": 8225
+    },
+    {
+      "path": "reviewer-result-60-90-v2.json",
+      "sha256": "72b31444854a6637f5e2c3fac987d19b74110e65916bf8cc05cb3b0cf02afe65",
+      "bytes": 441561
+    },
+    {
+      "path": "delta_review.py",
+      "sha256": "d47ff37a1de470ba1d040fab8bf4b395f200a5706cd3fad1281438bdb73c678f",
+      "bytes": 13418
+    },
+    {
+      "path": "independent-delta-results.json",
+      "sha256": "f28f59d98531d72cd1b6d0258925c50805a2d84f53d8ab91098aa463dedaab8f",
+      "bytes": 26335
+    },
+    {
+      "path": "focused-tests.log",
+      "sha256": "cbf45e514a55eb25d615fea6e14b842005b2b1fdbddd0447043b387379a7d46e",
+      "bytes": 5482
+    },
+    {
+      "path": "ruff.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    {
+      "path": "fresh-replay.log",
+      "sha256": "fd20267b02ec9d9d7119d59fd0b1ab35919f1b9059d7cb92a543131f2f114e91",
+      "bytes": 476
+    },
+    {
+      "path": "independent-delta-review.log",
+      "sha256": "503a8d1e18e9dab86b81c4ed540680fbc10aca66671fef4c60cbbe264d63242e",
+      "bytes": 141
+    }
+  ],
+  "prior_decision_preserved": "../approved-manifest.json remains approved=false for v1; all its 17 receipt hashes were checked unchanged.",
+  "evidence_limits": [
+    "Approval covers exact frozen companion bytes and finite fixture behavior, not global mathematical or torus-campaign claims.",
+    "Transformed reference quadratures and positive double series share mpmath and do not provide interval certification.",
+    "Final clean-source canonical replay remains a post-commit integration responsibility."
+  ]
+}

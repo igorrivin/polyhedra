@@ -1,0 +1,91 @@
+{
+  "status": "pass",
+  "fresh_import_no_output_or_working_directory_writes": true,
+  "guarded_module_replay_no_author_contract_runtime_reads": true,
+  "module_and_absolute_scientific_equality": true,
+  "output_refusals": [
+    "missing parent",
+    "inside source",
+    "existing file",
+    "dangling symlink"
+  ],
+  "main_drift_fault_injections": [
+    {
+      "simulated_drift": "source",
+      "successful_output_refused": true
+    },
+    {
+      "simulated_drift": "fixture",
+      "successful_output_refused": true
+    },
+    {
+      "simulated_drift": "HEAD",
+      "successful_output_refused": true
+    }
+  ],
+  "historical_file_checks": [
+    {
+      "path": "experiments/section30/README.md",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/section30/__pycache__/run.cpython-312.pyc",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/section30/fixture.json",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/section30/run.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/section30/tests/__pycache__/test_diagnostic.cpython-312.pyc",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/section30/tests/test_diagnostic.py",
+      "unchanged": true
+    },
+    {
+      "path": "artifacts/section30/result.json",
+      "unchanged": true
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "-c",
+        "import experiments.counting_mixing.run"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/computation-review/tmpobq8kcf9",
+      "returncode": 0,
+      "elapsed_seconds": 0.054501457954756916,
+      "stdout": "",
+      "stderr": "",
+      "env_overrides": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated"
+      }
+    },
+    {
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "-c",
+        "import runpy, sys\ndef audit(event, args):\n    if event == \"open\" and isinstance(args[0], (str, bytes)):\n        path = str(args[0])\n        if any(piece in path for piece in (\"algebra-author\", \"dynamics-author\", \"arithmetic-author\")):\n            raise AssertionError(\"External author contract opened: \" + path)\nsys.addaudithook(audit)\nsys.argv = [\"experiments.counting_mixing.run\", \"--output\", sys.argv[1]]\nrunpy.run_module(\"experiments.counting_mixing.run\", run_name=\"__main__\")\n",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/computation-review/reviewer-module-result-60-90.json"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/computation-review/tmpobq8kcf9",
+      "returncode": 0,
+      "elapsed_seconds": 1.6543104999000207,
+      "stdout": "{\"check_counts\": {\"cross_precision_observations\": 277, \"exact\": 4054, \"numerical_formula_comparisons\": 330}, \"elapsed_seconds\": 1.58732241706457, \"output\": \"/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/computation-review/reviewer-module-result-60-90.json\", \"source_set_sha256\": \"cf76209e2f187c248174635f073f7a12b7f0240c15be8fe9d7b52bfe11faa8c3\", \"status\": \"all fixed checks passed; author computation, not independent approval\"}\n",
+      "stderr": "",
+      "env_overrides": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated"
+      }
+    }
+  ]
+}

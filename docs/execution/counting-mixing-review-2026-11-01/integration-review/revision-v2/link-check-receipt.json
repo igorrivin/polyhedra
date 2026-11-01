@@ -1,0 +1,112 @@
+{
+  "decision": "pass_with_explicit_postcommit_targets",
+  "references_checked": 411,
+  "current_existing_references": 274,
+  "missing_targets": [
+    "artifacts/counting-mixing-review-2026-11-01/monograph-working-draft.pdf",
+    "artifacts/counting_mixing/result.json",
+    "artifacts/torus_campaign/result.json",
+    "docs/execution/counting-mixing-review-2026-11-01",
+    "docs/execution/counting-mixing-review-2026-11-01/README.md",
+    "docs/execution/counting-mixing-review-2026-11-01/algebra-review/approved-hash-manifest.json",
+    "docs/execution/counting-mixing-review-2026-11-01/algebra-review/review-report.md",
+    "docs/execution/counting-mixing-review-2026-11-01/algebra-review/source-audit.md",
+    "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/analytic-claim-review.json",
+    "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/review-decisions.json",
+    "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/review.md",
+    "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/approved-manifest-v2.json",
+    "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/review-v2.md",
+    "docs/execution/counting-mixing-review-2026-11-01/dynamics-review/review-report.md",
+    "docs/execution/counting-mixing-review-2026-11-01/dynamics-review/targeted-acceptance-v2.json",
+    "docs/execution/counting-mixing-review-2026-11-01/dynamics-review/targeted-acceptance-v2.md"
+  ],
+  "allowed_future_artifact_paths": [
+    "artifacts/counting_mixing/result.json",
+    "artifacts/torus_campaign/result.json",
+    "artifacts/counting-mixing-review-2026-11-01/monograph-working-draft.pdf"
+  ],
+  "allowed_future_checkpoint_targets": [
+    "docs/execution/counting-mixing-review-2026-11-01",
+    "docs/execution/counting-mixing-review-2026-11-01/README.md",
+    "docs/execution/counting-mixing-review-2026-11-01/algebra-review/approved-hash-manifest.json",
+    "docs/execution/counting-mixing-review-2026-11-01/algebra-review/review-report.md",
+    "docs/execution/counting-mixing-review-2026-11-01/algebra-review/source-audit.md",
+    "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/analytic-claim-review.json",
+    "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/review-decisions.json",
+    "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/review.md",
+    "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/approved-manifest-v2.json",
+    "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/review-v2.md",
+    "docs/execution/counting-mixing-review-2026-11-01/dynamics-review/review-report.md",
+    "docs/execution/counting-mixing-review-2026-11-01/dynamics-review/targeted-acceptance-v2.json",
+    "docs/execution/counting-mixing-review-2026-11-01/dynamics-review/targeted-acceptance-v2.md"
+  ],
+  "existing_checkpoint_source_evidence": [
+    {
+      "future_path": "docs/execution/counting-mixing-review-2026-11-01/algebra-review/approved-hash-manifest.json",
+      "existing_outer_source": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/algebra-review/approved-hash-manifest.json",
+      "sha256": "00d9f746fffbcf2d56c8822ac5e79f8f8a04f1b14beeabc82d93a58f4407db95"
+    },
+    {
+      "future_path": "docs/execution/counting-mixing-review-2026-11-01/algebra-review/review-report.md",
+      "existing_outer_source": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/algebra-review/review-report.md",
+      "sha256": "d2955e2b0adaf51bb10a1de9158bbee8990e827c92dac9c1e2dfe817e6d1c5da"
+    },
+    {
+      "future_path": "docs/execution/counting-mixing-review-2026-11-01/algebra-review/source-audit.md",
+      "existing_outer_source": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/algebra-review/source-audit.md",
+      "sha256": "8ee06a7ad3d07a82dc407e1d83c97c7f29f3e94f93a158b883b6df376371c772"
+    },
+    {
+      "future_path": "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/analytic-claim-review.json",
+      "existing_outer_source": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/arithmetic-review/analytic-claim-review.json",
+      "sha256": "a0fb688e54014c772158314a6c3a9454c107e4e76b5a29fea2ed4cd226c2fb20"
+    },
+    {
+      "future_path": "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/review-decisions.json",
+      "existing_outer_source": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/arithmetic-review/review-decisions.json",
+      "sha256": "6b9d400c9e2af485a73a423b6d66a0827b4217d815c13df4c06b68ecca53d7fe"
+    },
+    {
+      "future_path": "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/review.md",
+      "existing_outer_source": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/arithmetic-review/review.md",
+      "sha256": "74b3a7812ca025a14af4200b909208181fb9fe1db6dae5769b5b22e22740e3ea"
+    },
+    {
+      "future_path": "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/approved-manifest-v2.json",
+      "existing_outer_source": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/approved-manifest-v2.json",
+      "sha256": "c059cf9591f534bb6517486389b111c79fdff77531b192cbfab846021bd6536e"
+    },
+    {
+      "future_path": "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/review-v2.md",
+      "existing_outer_source": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/review-v2.md",
+      "sha256": "56fc88804fccc34546c3f6a2f311c028a7cb1cd3c17c73c701c49ef15345b9e7"
+    },
+    {
+      "future_path": "docs/execution/counting-mixing-review-2026-11-01/dynamics-review/review-report.md",
+      "existing_outer_source": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/dynamics-review/review-report.md",
+      "sha256": "6e4fb391fe89a2fa8750bfa99e4c513d6fa5b7137d4ee3121d9e2c1d68bf7d95"
+    },
+    {
+      "future_path": "docs/execution/counting-mixing-review-2026-11-01/dynamics-review/targeted-acceptance-v2.json",
+      "existing_outer_source": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/dynamics-review/targeted-acceptance-v2.json",
+      "sha256": "786501cfbdd081b01fef3094616c584b89f3d08bc3e90127edf6ced5175f9db2"
+    },
+    {
+      "future_path": "docs/execution/counting-mixing-review-2026-11-01/dynamics-review/targeted-acceptance-v2.md",
+      "existing_outer_source": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/dynamics-review/targeted-acceptance-v2.md",
+      "sha256": "b4d9cf8c470229641099aaa0a294e3b5e7032ae3ed9b1084fe38c736bd6fe85e"
+    }
+  ],
+  "unexpected_missing_targets": [],
+  "scope": "Markdown local links and inline repository path literals, chapter TeX path references, repository-relative ledger path fields. External URLs not refetched; expected final artifacts remain absent.",
+  "legacy_package_relative_literal_resolution": {
+    "source": "INTEGRATION_PLAN.md",
+    "resolved_base": "packages/volume-toolkit",
+    "unchanged_literals": [
+      "docs/GEOMETRIC_REALIZATION_README.md:5\u201313",
+      "docs/architecture.md",
+      "docs/release-0.4.0.md"
+    ],
+    "reason": "Existing integration-plan references refer to the imported toolkit; all three target files exist. This is not a future-link exception."
+  }
+}

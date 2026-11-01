@@ -1,0 +1,15 @@
+{
+  "focused_site_tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 /tmp/polyhedra-baseline-20261031/bin/python -m unittest discover -s site/tests -v",
+    "exitcode": 0,
+    "tests": 25,
+    "log": "../site-tests.log",
+    "log_sha256": "24fdee5c3f333e02794b7c7bfe4098d9e4821c96b2325318da19a9be548b23c4"
+  },
+  "git_diff_check": {
+    "command": "git diff --check",
+    "exitcode": 0
+  },
+  "optional_dependency_full_suite": "Not rerun; prior failures/collection limitations retain historical status.",
+  "application_to_final_revision": "The only follow-up changes are companion prose and ledger snapshot metadata; no site build/test code changed. Source/labels/links and fullPDF were rechecked after the revision. Focused tests were not redundantly rerun."
+}

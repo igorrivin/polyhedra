@@ -1,0 +1,69 @@
+--- a/book/polyhedral_volumes_and_geodesic_identities.tex
++++ b/book/polyhedral_volumes_and_geodesic_identities.tex
+@@ -2649,7 +2649,7 @@
+ G. McShane and I. Rivin,
+ \emph{Simple curves on hyperbolic tori},
+ C. R. Acad. Sci. Paris S\'er. I Math. \textbf{320} (1995), 1523--1528.
+-\href{https://arxiv.org/abs/math/0005220}{arXiv:math/0005220}.
++\href{https://arxiv.org/abs/math/0005220v1}{arXiv:math/0005220v1}.
+ 
+ \bibitem{RivinSimpleAsymptotics}
+ I. Rivin,
+@@ -3181,6 +3181,10 @@
+ Advances in Mathematics \textbf{452} (2024), 109817.
+ \href{https://doi.org/10.1016/j.aim.2024.109817}{Journal article}.
+ For the classical genus-two exception see Corollary~1.2(3).
++See also the authors' erratum, \emph{Advances in Mathematics}
++\textbf{489} (2026), 110831,
++\href{https://doi.org/10.1016/j.aim.2026.110831}{doi:10.1016/j.aim.2026.110831};
++the classical genus-two isometry used here is unchanged.
+ 
+ \bibitem{FillastreIzmestievCusps}
+ F.~Fillastre and I.~Izmestiev,
+@@ -3264,7 +3268,7 @@
+ \emph{Primitive points in rational polygons},
+ Canadian Mathematical Bulletin \textbf{63} (2020), 850--870.
+ \href{https://doi.org/10.4153/S0008439520000090}{doi:10.4153/S0008439520000090};
+-\href{https://arxiv.org/abs/1509.02201}{arXiv:1509.02201}.
++\href{https://arxiv.org/abs/1509.02201v2}{arXiv:1509.02201v2}.
+ 
+ \bibitem{BowditchMarkoff}
+ B.~H.~Bowditch,
+@@ -3277,7 +3281,8 @@
+ \emph{Stable-norm boundary geometry on once-punctured tori},
+ preprint, version~3, 9 October 2026.
+ \href{https://arxiv.org/abs/2605.14574v3}{arXiv:2605.14574v3}.
+-The local flatness refinement is discussed in Section~4.2 of that preprint.
++The local statements checked are Theorem~4.7 (p.~23) and Lemma~4.8
++(pp.~25--26); the complete preprint proof has not been independently audited.
+ 
+ 
+ \bibitem{ZhaiPrimitive2003}
+@@ -3299,16 +3304,21 @@
+ OpenAI,
+ \emph{The Quasi-Riemann Hypothesis: A Zero-Free Half-Plane
+ $\Re s>7/8$}, manuscript dated 30 September 2026.
+-\href{https://github.com/openai/math/blob/main/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf}{Official manuscript}.
+-The claim in Theorem~1.1 is used only conditionally in this monograph;
+-its proof and formalization have not been independently verified here.
++\href{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf}{Initial-release manuscript}.
++Theorem~1.1 was checked in the
++\href{https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex}{TeX source at the same revision}.
++It is used only conditionally; its proof and formalization have not been
++independently verified here.
+ 
+ \bibitem{OpenAIQuasiRHOctober}
+ OpenAI,
+ \emph{The Quasi-Riemann Hypothesis}, manuscript dated 5 October 2026.
+-\href{https://github.com/openai/math/blob/main/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/paper2.pdf}{Official manuscript}.
+-Theorem~1.1 claims a zero-free half-plane $\Re s>11/12$ and is
+-described there as an intermediate result toward the September claim.
++\href{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/paper2.pdf}{Initial-release manuscript}.
++Theorem~1.1 and the following paragraph in the
++\href{https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex}{TeX source at the same revision}
++claim a zero-free half-plane $\Re s>11/12$ and describe it as an intermediate
++result toward the September claim. Its use here is conditional; its proof
++and formalization have not been independently verified.
+ 
+ % References used by the canonical Section 9 chapter. The review ledger
+ % records which theorem statements and source texts were checked.

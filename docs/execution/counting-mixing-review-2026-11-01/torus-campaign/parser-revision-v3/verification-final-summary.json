@@ -1,0 +1,68 @@
+{
+  "checks_passed": true,
+  "scope": "CLI token/flag and input-read rejection only; scientific routines unchanged",
+  "all_native_arithmetic_and_traversal_function_source_bytes_unchanged": true,
+  "all_native_campaign_enumeration_and_sample_selection_source_bytes_unchanged": true,
+  "python_driver_source_bytes_unchanged": true,
+  "all_512_scientific_report_fields_identical_to_v2": true,
+  "all_512_native_scientific_fields_identical_to_v2": true,
+  "allowed_comparison_differences": [
+    "source/compiler provenance",
+    "command/output paths",
+    "timings",
+    "peak RSS"
+  ],
+  "all_six_review_failure_probes_rejected_without_results": true,
+  "tests_passed": 13,
+  "ruff_passed": true,
+  "full_v1_v2_reports_and_freeze_unchanged": true,
+  "frozen64_result_unchanged": true,
+  "new_source_sha256": {
+    "campaign.cpp": "b17839d5b657f143ab90535c8d3432a1e5a9bdb51a477dea3b414702f88de9c3",
+    "run.py": "f80154b6d7c9b60e2fa2c74a898fa096d0e03e3f36719df6c7802382441cb8fe",
+    "README.md": "cb32059b9558a946c955981346fdb9ee72c3f305e7a8760e134b99c4c8ce3de4",
+    "tests/test_campaign.py": "0009b84e4a7b1c65e10e34f22ec910282b5b37dff3662d498698f3c32389a680"
+  },
+  "v2_preflight": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/preflight512-v2/result.json",
+    "sha256": "8b97f33f57ed62d25d02ff460f1ebd63496e0785000ed91e0d3e2637a6464b4e"
+  },
+  "repaired_preflight": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/parser-revision-v3/preflight512-v3-final/result.json",
+    "sha256": "74f3a6ce473b1417d54c2a746fd40ab387c3eb12e8e900fe86013cbcc93fc68f"
+  },
+  "patch_sha256": "9fe8848cbf318474e6c2e1f486ac567b1a7112b1730aa49b67225833be904c7b",
+  "streams": [
+    {
+      "name": "modular.curves.i32-i32-f64le",
+      "sha256": "2d1031f029c90c7aa75dad0296a4a1904fa7ce4549e174d3772c1dc68db381fe",
+      "v2_and_parser_repair_identical": true
+    },
+    {
+      "name": "modular.lengths.f64le",
+      "sha256": "8fac181dbd3b9b4e7c2c0a81eb5c1eb969e0944132ea4d89dbc432333c86b946",
+      "v2_and_parser_repair_identical": true
+    },
+    {
+      "name": "modular.slopes.i32le",
+      "sha256": "24e8883b939499b3eccbeb93819ea539fd73483e8bb5740259d2af3b7dc984b5",
+      "v2_and_parser_repair_identical": true
+    },
+    {
+      "name": "asymmetric.curves.i32-i32-f64le",
+      "sha256": "90df5d15c78e5648004351bb1ecb8d56049e1809fe18bd3d050372a74b3e1501",
+      "v2_and_parser_repair_identical": true
+    },
+    {
+      "name": "asymmetric.lengths.f64le",
+      "sha256": "9f693e29b92c638375195a3d2627d4ff20a4a8404a091af58c465767d6b2efcf",
+      "v2_and_parser_repair_identical": true
+    },
+    {
+      "name": "asymmetric.slopes.i32le",
+      "sha256": "4eec87f464f41416dbc909ca10172e7146dcbe5afd6d8d556ed1b135765d5c49",
+      "v2_and_parser_repair_identical": true
+    }
+  ],
+  "full_replay_status": "not rerun for parser-only repair; final clean-source8192 replay remains required"
+}

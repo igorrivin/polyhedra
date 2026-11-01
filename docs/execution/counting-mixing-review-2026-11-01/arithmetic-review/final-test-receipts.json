@@ -1,0 +1,50 @@
+[
+  {
+    "status": "fulfilled",
+    "value": {
+      "name": "campaign_tests",
+      "command": "PYTHONDONTWRITEBYTECODE=1 /tmp/polyhedra-baseline-20261031/bin/python -m unittest discover -s experiments/torus_campaign/tests -v",
+      "chunk_id": "250b63",
+      "wall_time_seconds": 1.857282334,
+      "exit_code": 0,
+      "original_token_count": 467,
+      "output": "test_campaign_parser_rejects_before_creating_outputs (test_campaign.NativeCampaignTests.test_campaign_parser_rejects_before_creating_outputs) ... ok\ntest_direct_flag_requires_exact_zero_or_one (test_campaign.NativeCampaignTests.test_direct_flag_requires_exact_zero_or_one) ... ok\ntest_equal_root_multiplicity_and_exclusive_outputs (test_campaign.NativeCampaignTests.test_equal_root_multiplicity_and_exclusive_outputs) ... ok\ntest_four_stream_exact_fractions_match_python_oracle (test_campaign.NativeCampaignTests.test_four_stream_exact_fractions_match_python_oracle) ... ok\ntest_hand_computed_simultaneous_events (test_campaign.NativeCampaignTests.test_hand_computed_simultaneous_events) ... ok\ntest_initial_external_left_limit_is_excluded (test_campaign.NativeCampaignTests.test_initial_external_left_limit_is_excluded) ... ok\ntest_length_input_read_failure_creates_no_result (test_campaign.NativeCampaignTests.test_length_input_read_failure_creates_no_result) ... ok\ntest_nearby_unequal_events_are_never_tolerance_merged (test_campaign.NativeCampaignTests.test_nearby_unequal_events_are_never_tolerance_merged) ... ok\ntest_nonfinite_nonpositive_and_range_inputs_fail (test_campaign.NativeCampaignTests.test_nonfinite_nonpositive_and_range_inputs_fail) ... ok\ntest_numeric_tokens_require_complete_consumption (test_campaign.NativeCampaignTests.test_numeric_tokens_require_complete_consumption) ... ok\ntest_path_reconstruction_and_independent_traces (test_campaign.NativeCampaignTests.test_path_reconstruction_and_independent_traces) ... ok\ntest_prejump_and_terminal_value_both_count (test_campaign.NativeCampaignTests.test_prejump_and_terminal_value_both_count) ... ok\ntest_root_and_cutoff_gates (test_campaign.NativeCampaignTests.test_root_and_cutoff_gates) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 1.820s\n\nOK\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "name": "old_tests",
+      "command": "PYTHONDONTWRITEBYTECODE=1 /tmp/polyhedra-baseline-20261031/bin/python -m unittest discover -s experiments/section30/tests -v",
+      "chunk_id": "ac1f72",
+      "wall_time_seconds": 0.045714583,
+      "exit_code": 0,
+      "original_token_count": 490,
+      "output": "test_algebraic_signs_without_float (test_diagnostic.DiagnosticTests.test_algebraic_signs_without_float) ... ok\ntest_block_start_excludes_external_left_limit (test_diagnostic.DiagnosticTests.test_block_start_excludes_external_left_limit) ... ok\ntest_canonical_unoriented_slopes (test_diagnostic.DiagnosticTests.test_canonical_unoriented_slopes) ... ok\ntest_conditional_bounds_cover_endpoint_perturbations (test_diagnostic.DiagnosticTests.test_conditional_bounds_cover_endpoint_perturbations) ... ok\ntest_conditional_bounds_zero_radius (test_diagnostic.DiagnosticTests.test_conditional_bounds_zero_radius) ... ok\ntest_direct_counts_match_all_event_intervals (test_diagnostic.DiagnosticTests.test_direct_counts_match_all_event_intervals) ... ok\ntest_equal_root_traces_are_three_curves (test_diagnostic.DiagnosticTests.test_equal_root_traces_are_three_curves) ... ok\ntest_exact_asymmetric_root (test_diagnostic.DiagnosticTests.test_exact_asymmetric_root) ... ok\ntest_independent_box_small_cutoff (test_diagnostic.DiagnosticTests.test_independent_box_small_cutoff) ... ok\ntest_invalid_roots_fail (test_diagnostic.DiagnosticTests.test_invalid_roots_fail) ... ok\ntest_log_length_does_not_overflow (test_diagnostic.DiagnosticTests.test_log_length_does_not_overflow) ... ok\ntest_modular_short_spectrum_exact_values (test_diagnostic.DiagnosticTests.test_modular_short_spectrum_exact_values) ... ok\ntest_precision_context_restored (test_diagnostic.DiagnosticTests.test_precision_context_restored) ... ok\ntest_prejump_limit_and_exact_integral (test_diagnostic.DiagnosticTests.test_prejump_limit_and_exact_integral) ... ok\ntest_quadratic_cancellation_is_rationalized (test_diagnostic.DiagnosticTests.test_quadratic_cancellation_is_rationalized) ... ok\ntest_simultaneous_half_and_full_events (test_diagnostic.DiagnosticTests.test_simultaneous_half_and_full_events) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.011s\n\nOK\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "name": "ruff",
+      "command": "/opt/anaconda3/bin/ruff check --no-cache experiments/torus_campaign/run.py experiments/torus_campaign/tests/test_campaign.py",
+      "chunk_id": "4d138f",
+      "wall_time_seconds": 0.000008083,
+      "exit_code": 0,
+      "original_token_count": 5,
+      "output": "All checks passed!\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "name": "compile",
+      "command": "/usr/bin/clang++ -O3 -std=c++17 -Wall -Wextra -Werror -fno-fast-math -ffp-contract=off experiments/torus_campaign/campaign.cpp -o /Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/arithmetic-review/campaign-reviewed-v3",
+      "chunk_id": "0d08eb",
+      "wall_time_seconds": 1.403867917,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    }
+  }
+]

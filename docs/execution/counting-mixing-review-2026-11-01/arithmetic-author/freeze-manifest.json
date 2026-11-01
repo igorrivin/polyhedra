@@ -1,0 +1,105 @@
+{
+  "baseline_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+  "scope": "author_freeze_for_independent_review",
+  "owned_files": [
+    {
+      "path": "book/chapters/30-sharp-diagnostics.tex",
+      "sha256": "19cf3bf6e9d25ef6066bb0592e4e5321d4cc30b1ec58c3ee2795a8e98ef6cccc",
+      "bytes": 30238,
+      "labels": [
+        "sec:sharpdiagnostics",
+        "subsec:mobiusmodulus",
+        "eq:primitiveexactnormalizedmobius",
+        "eq:primitiveDini",
+        "prop:strictconvexlittleo",
+        "subsec:rationalpolygonbenchmark",
+        "subsec:dyadicdiagnostic",
+        "eq:dyadicerrorinverse",
+        "eq:dyadicblockmetrics",
+        "subsec:inverseflatness",
+        "prop:inverseflatrow",
+        "eq:inverseflatwidth",
+        "eq:inverseflatdiscrepancy",
+        "eq:inverseflatmicroscopic",
+        "fig:mono-flat-row",
+        "subsec:flatnessmodels",
+        "eq:exponentialflatrow",
+        "subsec:rowdiagnostic",
+        "eq:primitiveintervalexact",
+        "subsec:torustraceexperiment",
+        "eq:diagnostictracetriples",
+        "subsec:recentflatnessqualification"
+      ],
+      "labels_preserved_in_order": true
+    },
+    {
+      "path": "book/claims/section30.json",
+      "sha256": "fc021133751fabce8bd85cdc4786c4ed39fac35a62978827354221f721e7c22b",
+      "bytes": 24489,
+      "claims": 32
+    },
+    {
+      "path": "book/chapters/31-arithmetic-remainder.tex",
+      "sha256": "0b52042d87727aaf3e3c2fda1d83bca5c891472f3dc25c5660a158a9e0eb2688",
+      "bytes": 17073,
+      "labels": [
+        "sec:arithmeticgeometry",
+        "subsec:primitiveRHtransfer",
+        "prop:primitiveRHtransfer",
+        "eq:primitiveRHmaster",
+        "eq:primitiveRHpowerM",
+        "eq:primitiveRHmodulus",
+        "eq:primitiveDiniPNT",
+        "subsec:quasiRHapplication",
+        "eq:zeroFreeMertens",
+        "eq:primitiveRHgeometry",
+        "eq:primitiveRHlogresult",
+        "eq:primitiveRHbalancedpower",
+        "eq:allPointLogDiagnostic"
+      ],
+      "labels_preserved_in_order": true
+    },
+    {
+      "path": "book/claims/section31.json",
+      "sha256": "0f296ac8b8d9ef2bd9f2d891152107b1757436ce6857ad8928b65fd093969c2e",
+      "bytes": 21146,
+      "claims": 25
+    }
+  ],
+  "frozen_section30_files": [
+    {
+      "path": "artifacts/section30/result.json",
+      "sha256": "762b07184f76893c810f3e9832fd44dc7e4b292c1a64aae61aa26832e02884a1",
+      "matches_baseline": true
+    },
+    {
+      "path": "experiments/section30/README.md",
+      "sha256": "43f5c6dff6040f1946a961668bad19b80cf54248115bb910d55ea656dfef6724",
+      "matches_baseline": true
+    },
+    {
+      "path": "experiments/section30/fixture.json",
+      "sha256": "ef8869c5e4729605d630a81f5bd9f8dc9f34363facd84aeead4d15de238dd196",
+      "matches_baseline": true
+    },
+    {
+      "path": "experiments/section30/run.py",
+      "sha256": "3dc50d531d2b7a3eac8cb608772e14cd2649c724b65e8d117b04ca8735e8e34d",
+      "matches_baseline": true
+    },
+    {
+      "path": "experiments/section30/tests/test_diagnostic.py",
+      "sha256": "decb663edd303c9e4687df0a8b8feb652eb099b01ba0288ad83921ce4f5883c4",
+      "matches_baseline": true
+    }
+  ],
+  "verification": {
+    "labels_retained": 35,
+    "claims": 57,
+    "all_claim_dependencies_resolve": true,
+    "all_claim_labels_present": true,
+    "frozen_old_files": 5,
+    "finite_checks": 5956,
+    "no_build_or_full_campaign_run": true
+  }
+}

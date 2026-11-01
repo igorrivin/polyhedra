@@ -1,0 +1,119 @@
+{
+  "review_date_utc": "2026-11-01T20:44:12.698858+00:00",
+  "baseline_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+  "analytic_decision": "approve_in_stated_scope",
+  "analytic_claim_count": 57,
+  "computational_decision": "approve_repaired_source_for_clean_full_replay",
+  "mandatory_unresolved_source_defects": [],
+  "resolved_defects": [
+    {
+      "id": "native-partial-token-and-flag-parsing",
+      "v2_location": "campaign.cpp:293-303",
+      "repair": "Complete numeric consumption and exact0/1 flags; syntactically malformed campaign arguments rejected before stream creation.",
+      "evidence": [
+        "malformed-probes.json",
+        "final-parser-review.json",
+        "final-test-receipts.json"
+      ]
+    },
+    {
+      "id": "failed-length-read-treated-as-empty",
+      "v2_location": "campaign.cpp:292-293",
+      "repair": "Require regular input file and EOF without bad stream state. Valid empty ordinary files remain supported.",
+      "evidence": [
+        "io-error-probes.json",
+        "final-parser-review.json",
+        "final-test-receipts.json"
+      ]
+    }
+  ],
+  "approved_exact_source_sha256": {
+    "book/chapters/30-sharp-diagnostics.tex": "19cf3bf6e9d25ef6066bb0592e4e5321d4cc30b1ec58c3ee2795a8e98ef6cccc",
+    "book/claims/section30.json": "fc021133751fabce8bd85cdc4786c4ed39fac35a62978827354221f721e7c22b",
+    "book/chapters/31-arithmetic-remainder.tex": "0b52042d87727aaf3e3c2fda1d83bca5c891472f3dc25c5660a158a9e0eb2688",
+    "book/claims/section31.json": "0f296ac8b8d9ef2bd9f2d891152107b1757436ce6857ad8928b65fd093969c2e",
+    "experiments/torus_campaign/campaign.cpp": "b17839d5b657f143ab90535c8d3432a1e5a9bdb51a477dea3b414702f88de9c3",
+    "experiments/torus_campaign/run.py": "f80154b6d7c9b60e2fa2c74a898fa096d0e03e3f36719df6c7802382441cb8fe",
+    "experiments/torus_campaign/README.md": "cb32059b9558a946c955981346fdb9ee72c3f305e7a8760e134b99c4c8ce3de4",
+    "experiments/torus_campaign/tests/test_campaign.py": "0009b84e4a7b1c65e10e34f22ec910282b5b37dff3662d498698f3c32389a680"
+  },
+  "approved_sources_match_live_at_final_review": {
+    "book/chapters/30-sharp-diagnostics.tex": {
+      "approved": "19cf3bf6e9d25ef6066bb0592e4e5321d4cc30b1ec58c3ee2795a8e98ef6cccc",
+      "current": "19cf3bf6e9d25ef6066bb0592e4e5321d4cc30b1ec58c3ee2795a8e98ef6cccc"
+    },
+    "book/claims/section30.json": {
+      "approved": "fc021133751fabce8bd85cdc4786c4ed39fac35a62978827354221f721e7c22b",
+      "current": "fc021133751fabce8bd85cdc4786c4ed39fac35a62978827354221f721e7c22b"
+    },
+    "book/chapters/31-arithmetic-remainder.tex": {
+      "approved": "0b52042d87727aaf3e3c2fda1d83bca5c891472f3dc25c5660a158a9e0eb2688",
+      "current": "0b52042d87727aaf3e3c2fda1d83bca5c891472f3dc25c5660a158a9e0eb2688"
+    },
+    "book/claims/section31.json": {
+      "approved": "0f296ac8b8d9ef2bd9f2d891152107b1757436ce6857ad8928b65fd093969c2e",
+      "current": "0f296ac8b8d9ef2bd9f2d891152107b1757436ce6857ad8928b65fd093969c2e"
+    },
+    "experiments/torus_campaign/campaign.cpp": {
+      "approved": "b17839d5b657f143ab90535c8d3432a1e5a9bdb51a477dea3b414702f88de9c3",
+      "current": "b17839d5b657f143ab90535c8d3432a1e5a9bdb51a477dea3b414702f88de9c3"
+    },
+    "experiments/torus_campaign/run.py": {
+      "approved": "f80154b6d7c9b60e2fa2c74a898fa096d0e03e3f36719df6c7802382441cb8fe",
+      "current": "f80154b6d7c9b60e2fa2c74a898fa096d0e03e3f36719df6c7802382441cb8fe"
+    },
+    "experiments/torus_campaign/README.md": {
+      "approved": "cb32059b9558a946c955981346fdb9ee72c3f305e7a8760e134b99c4c8ce3de4",
+      "current": "cb32059b9558a946c955981346fdb9ee72c3f305e7a8760e134b99c4c8ce3de4"
+    },
+    "experiments/torus_campaign/tests/test_campaign.py": {
+      "approved": "0009b84e4a7b1c65e10e34f22ec910282b5b37dff3662d498698f3c32389a680",
+      "current": "0009b84e4a7b1c65e10e34f22ec910282b5b37dff3662d498698f3c32389a680"
+    }
+  },
+  "reviewed_author_full_v2": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/full8192-author-v2/result.json",
+    "sha256": "770315039a907e3adab3169081e1f3e84d07d7301e29a26fcf0b7e281af73521",
+    "scope": "Original v2 dirty-author run with independently audited raw hashes, all stored N/A/Delta rows, and independent matrix-word checks; not relabeled as final v3 replay."
+  },
+  "accepted_same_source_preflight": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/parser-revision-v3/preflight512-v3-final/result.json",
+    "sha256": "74f3a6ce473b1417d54c2a746fd40ab387c3eb12e8e900fe86013cbcc93fc68f"
+  },
+  "independently_executed": {
+    "final_campaign_tests": 13,
+    "frozen_section30_tests": 16,
+    "ruff": "pass",
+    "fraction_metric_envelope_cases": 272,
+    "exact_perturbation_enclosures": 3063,
+    "finite_analytic_identities": 11576,
+    "nonpruned_matrix_box_slopes": 15728,
+    "long_matrix_words_100_160_digits": 78,
+    "full_binary64_lengths_examined": 36677624,
+    "all_full_dyadic_N_A_Delta_rows": "exact match for stored binary64 values",
+    "independent_full_traversal_replay": false,
+    "PDF_build": false
+  },
+  "remaining_integration_gate": "Checkpoint exact approved source, perform clean-source full8192 replay using accepted same-source512 preflight, and compare/capture resulting scientific fields and raw identities before new numerical prose/artifact integration.",
+  "limitations": [
+    "No asymptotic conclusion from finite counts.",
+    "No every-node numerical error enclosure or certified true-spectrum completeness.",
+    "Conditional sensitivity requires listed-length error and completeness/no-entry assumptions.",
+    "New full run agreement does not recover missing historical provenance.",
+    "No recent preprint full proof, Lean checking, or proof/formalization correspondence audited.",
+    "Hyperbolic length units in campaign are not silently replaced by unit-shortest-vector gauge normalization."
+  ],
+  "evidence_files": [
+    "review.md",
+    "analytic-claim-review.json",
+    "source-statement-review.json",
+    "initial-hash-check.json",
+    "frozen-old-baseline-comparison.json",
+    "independent_checks.py",
+    "independent-results/summary.json",
+    "full_stream_arithmetic.py",
+    "full-stream-arithmetic.json",
+    "final-parser-review.json",
+    "final-test-receipts.json"
+  ]
+}

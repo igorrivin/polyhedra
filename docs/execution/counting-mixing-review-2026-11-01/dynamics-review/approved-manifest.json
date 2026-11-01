@@ -1,0 +1,219 @@
+{
+  "review_date": "2026-11-01",
+  "reviewer_role": "independent mathematical verification and overclaim audit",
+  "baseline_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+  "decision": "approve_chapters_revise_ledger_source_metadata",
+  "analytic_proof_gap_found": false,
+  "approved_canonical_files": [
+    {
+      "path": "book/chapters/26-counting-to-mixing.tex",
+      "sha256": "64562ebf631c59b84b9c991a632926107b3e24cb5b08b29c21e263bd50a9e901",
+      "bytes": 17201,
+      "label_count": 21,
+      "baseline_labels_identical": true,
+      "decision": "approve_analytic_content_at_this_hash"
+    },
+    {
+      "path": "book/chapters/27-weighted-mixing-converse.tex",
+      "sha256": "79fb4660fe87a5723eea0d410e55e954913b0386057a31542473d6486492dcc1",
+      "bytes": 35331,
+      "label_count": 35,
+      "baseline_labels_identical": true,
+      "decision": "approve_analytic_content_at_this_hash"
+    },
+    {
+      "path": "book/chapters/28-genus-two-model.tex",
+      "sha256": "18c05143e86fb9630868bb2824ddf44643c1ee1c84a40dc77a8c9d5354663fb4",
+      "bytes": 34521,
+      "label_count": 33,
+      "baseline_labels_identical": true,
+      "decision": "approve_analytic_content_at_this_hash"
+    },
+    {
+      "path": "book/chapters/29-controlled-observables.tex",
+      "sha256": "79dd4ae151f95aa445cbf9f67fb512ec5dbc6df8922c43aa05591a8ef48b273f",
+      "bytes": 31959,
+      "label_count": 36,
+      "baseline_labels_identical": true,
+      "decision": "approve_analytic_content_at_this_hash"
+    }
+  ],
+  "reviewed_not_yet_approved_ledger": {
+    "path": "book/claims/sections26-29.json",
+    "sha256": "0585f7efdb6f703eaea3a76e2d3f970cc71e033fc4977ab265bc7f43a57ec514",
+    "bytes": 85671,
+    "decision": "revise_metadata_then_targeted_delta_review",
+    "required_repairs": [
+      "R1",
+      "R2",
+      "R3"
+    ]
+  },
+  "claims_reviewed": [
+    "s26.scope",
+    "s26.selberg_converse",
+    "s26.arithmetic_discrepancy",
+    "s26.finite_trace",
+    "s26.parry_decay",
+    "s26.scalar_and_roof_obstructions",
+    "s26.geodesic_nonarithmeticity",
+    "s26.localized_converse",
+    "s26.cusp_converse",
+    "s27.tensor_first_corner",
+    "s27.pair_realization",
+    "s27.quotient_scales",
+    "s27.existing_count_dependency",
+    "s27.mesh_quadrature",
+    "s27.polar_kernel",
+    "s27.unfolding",
+    "s27.deaveraging",
+    "s27.pointwise_sufficient_count",
+    "s27.full_rate",
+    "s27.full_rate_cusp",
+    "s27.jacobian_comparison",
+    "s27.smoothing_cusp",
+    "s27.residue_endpoint_arithmetic",
+    "s27.totient_count",
+    "s27.remaining_comparison",
+    "s28.hyperelliptic_polyhedron",
+    "s28.quadratic_formula",
+    "s28.nonsquare_classification",
+    "s28.torus_cover",
+    "s28.cover_figure",
+    "s28.homogeneous_model",
+    "s28.haar_period_measure",
+    "s28.fiber_fourier",
+    "s28.tempered_nonzero_modes",
+    "s28.tempered_base",
+    "s28.rotation_spherical_bounds",
+    "s28.global_correlation",
+    "s28.finite_return_unfolding",
+    "s28.return_remainder",
+    "s28.return_derivative",
+    "s28.scope",
+    "s29.normball_upper",
+    "s29.flat_primitive_row",
+    "s29.fourier_flatness",
+    "s29.primitive_pole_arcs",
+    "s29.coefficient_weight",
+    "s29.observable_definition",
+    "s29.primitive_bound",
+    "s29.rotation_norm",
+    "s29.length_derivatives",
+    "s29.terminal_norm",
+    "s29.parity_mean_and_scope",
+    "s29.affine_isometry",
+    "s29.one_mark_gaussian",
+    "s29.raw_two_mark_divergence",
+    "s29.rank_two_definition_and_norm",
+    "s29.rank_two_schwartz_norms",
+    "s29.two_mark_gaussian",
+    "s29.sharp_rotation"
+  ],
+  "label_audit": {
+    "preserved_labels": 125,
+    "ledger_labels": 125,
+    "claim_count": 59,
+    "exact_once_coverage": true
+  },
+  "required_repairs": [
+    {
+      "id": "R1",
+      "location": "book/claims/sections26-29.json:431, s27.tensor_first_corner.hypotheses",
+      "repair": "Change Section 24 to Section 25 for eq:globaldiagonal."
+    },
+    {
+      "id": "R2",
+      "location": "GNDiscrepancy source pin in ledger and outer source-pins.json",
+      "repair": "Theorem 5.2 is printed p. 147; proof begins p. 148."
+    },
+    {
+      "id": "R3",
+      "location": "AranaHerreraSquare2020 source pin in ledger and outer source-pins.json",
+      "repair": "Replace equation (1.4) denominator pin with the unnumbered display in Sketch of proof of Theorem 1.1, printed/PDF p. 5, immediately after Theorem 1.8."
+    }
+  ],
+  "verified_author_provenance": [
+    {
+      "path": "../dynamics-author/baseline.json",
+      "sha256": "5775ac1b2eb1f384905ba890c5bf4b23f88a8b9f2747ac1b5647d6db17878ff9",
+      "bytes": 6006
+    },
+    {
+      "path": "../dynamics-author/bibliography-proposal.tex",
+      "sha256": "a5ab2fa84a59448c79f4ce7c06b306fe3e888ec32fc7953d2d710c59b296f8cd",
+      "bytes": 1217
+    },
+    {
+      "path": "../dynamics-author/build-ledger.py",
+      "sha256": "07d7b93a9d51df4ea4c3b5b3b2b31d6c6f0821bec5cc08d2d4e7094e8865062e",
+      "bytes": 45305
+    },
+    {
+      "path": "../dynamics-author/check-revision.py",
+      "sha256": "5c920eb3574cd14fc44062e462c83053ea95d715772d7fdda645b28c7578b4d9",
+      "bytes": 3672
+    },
+    {
+      "path": "../dynamics-author/label-check.json",
+      "sha256": "84b0fc0bbc3be6ebb94f73c780cc8a1e6f3ebfc4d0026e7277bd2bddd2f3d518",
+      "bytes": 7065
+    },
+    {
+      "path": "../dynamics-author/author-revision.diff",
+      "sha256": "da0d40dd03a9cdaca2911a9192e1c364f4a9fe85025b1f435d07a6d51acf51de",
+      "bytes": 10963
+    },
+    {
+      "path": "../dynamics-author/source-pins.json",
+      "sha256": "86ea07f7757f565328f4d6b3ce6768ecb28e3a7f345f46a4ea1a78cb7fb6c73d",
+      "bytes": 12221
+    },
+    {
+      "path": "../dynamics-author/companion-fixtures.md",
+      "sha256": "55bc53431ccd7e979d1a7ca751605c05ec0f5d9a009edfbdd9352f164e4d8ca0",
+      "bytes": 5434
+    },
+    {
+      "path": "../dynamics-author/author-scratch-checks.py",
+      "sha256": "973afd279d8643bd38d68ee13c283933d19a0327ceb2dcffb5b07702fe4c50c9",
+      "bytes": 1429
+    },
+    {
+      "path": "../dynamics-author/author-scratch-result.json",
+      "sha256": "0e5085a646083990e6bb3fb1dab83859967ad4f23c4094c452c66a048c5a62d3",
+      "bytes": 516
+    },
+    {
+      "path": "../dynamics-author/author-report.md",
+      "sha256": "890ac37f0e6666e827ef392f89ba325389d3ac5e5b3d53d6c6504185904e0089",
+      "bytes": 6027
+    }
+  ],
+  "review_artifacts": [
+    {
+      "path": "review-report.md",
+      "sha256": "6e4fb391fe89a2fa8750bfa99e4c513d6fa5b7137d4ee3121d9e2c1d68bf7d95",
+      "bytes": 35998
+    },
+    {
+      "path": "independent-checks.py",
+      "sha256": "07e6e43340d6b7cdf7fac32f3965ec090181ea43f6ada35a3e2e6a1453f93092",
+      "bytes": 6214
+    },
+    {
+      "path": "independent-checks.json",
+      "sha256": "294867d4453d4c3df4d2fa9b91c72d5e506292669b688bf3423d9243388549d7",
+      "bytes": 2914
+    }
+  ],
+  "scope_limits": [
+    "All four chapters and all 59 ledger rows reviewed, not only the author diff.",
+    "External statement scope checked; external proofs not independently reproved.",
+    "Original CHH full text not independently accessed; precise statement checked in Benoist-Kobayashi Proposition 2.6.",
+    "Arana-Herrera effective square-tiled v1 endpoint failed; accessible unversioned 13-page PDF statement checked without asserting byte identity.",
+    "No general mixing claim follows from finite exact probes.",
+    "No bounded coefficient extraction or coefficient-to-kernel approximation was established.",
+    "Companion numerics, bibliography integration, builds, commits and uploads are outside this review approval."
+  ]
+}

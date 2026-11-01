@@ -1,0 +1,82 @@
+[
+  {
+    "case": "trailing_length",
+    "argv": [
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/campaign-reviewed",
+      "metrics",
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/trailing_length.txt",
+      "1",
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/trailing_length.json",
+      "1e-6",
+      "1"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "result_created": true
+  },
+  {
+    "case": "trailing_T",
+    "argv": [
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/campaign-reviewed",
+      "metrics",
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/trailing_T.txt",
+      "1junk",
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/trailing_T.json",
+      "1e-6",
+      "1"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "result_created": true
+  },
+  {
+    "case": "invalid_direct_flag",
+    "argv": [
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/campaign-reviewed",
+      "metrics",
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/invalid_direct_flag.txt",
+      "1",
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/invalid_direct_flag.json",
+      "1e-6",
+      "2"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "result_created": true
+  },
+  {
+    "case": "missing_token",
+    "argv": [
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/campaign-reviewed",
+      "metrics",
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/missing_token.txt",
+      "1",
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/missing_token.json",
+      "1e-6",
+      "1"
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "campaign error: stod: no conversion\n",
+    "result_created": false
+  },
+  {
+    "case": "nan",
+    "argv": [
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/campaign-reviewed",
+      "metrics",
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/nan.txt",
+      "1",
+      "execution/counting-mixing-review-2026-11-01/arithmetic-review/nan.json",
+      "1e-6",
+      "1"
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "campaign error: length list must be finite and in [1,8193]\n",
+    "result_created": false
+  }
+]

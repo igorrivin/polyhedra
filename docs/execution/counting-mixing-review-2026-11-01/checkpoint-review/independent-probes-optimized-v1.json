@@ -1,0 +1,234 @@
+{
+  "generated_at_utc": "2026-11-01T21:06:50.141967+00:00",
+  "scope": "Independent preparation probes only; synthetic Git repositories and driver outputs do not represent scientific evidence or a final candidate.",
+  "python_optimized": 1,
+  "wrapper_probes": [
+    {
+      "mode": "success",
+      "rejected": false,
+      "receipt_written": true,
+      "receipt_checks_passed": true,
+      "actual_spec_before": {
+        "sha256": "feb6ada1d15dc34bcd510bbc157bd83511909a9637ad4fc41b62473bc13bbf2f",
+        "bytes": 8561
+      },
+      "actual_spec_after": {
+        "sha256": "feb6ada1d15dc34bcd510bbc157bd83511909a9637ad4fc41b62473bc13bbf2f",
+        "bytes": 8561
+      },
+      "receipt_spec_identity": {
+        "sha256": "feb6ada1d15dc34bcd510bbc157bd83511909a9637ad4fc41b62473bc13bbf2f",
+        "bytes": 8561
+      },
+      "receipt_failure": null,
+      "source_before_after_equal": true
+    },
+    {
+      "mode": "command_failure",
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "replay command failed",
+      "receipt_written": true,
+      "receipt_checks_passed": false,
+      "actual_spec_before": {
+        "sha256": "886eff15dd720c6bb404b1e24cac6500a46db14c388492747ae0bee65e9944d2",
+        "bytes": 8561
+      },
+      "actual_spec_after": {
+        "sha256": "886eff15dd720c6bb404b1e24cac6500a46db14c388492747ae0bee65e9944d2",
+        "bytes": 8561
+      },
+      "receipt_spec_identity": {
+        "sha256": "886eff15dd720c6bb404b1e24cac6500a46db14c388492747ae0bee65e9944d2",
+        "bytes": 8561
+      },
+      "receipt_failure": "CheckpointError: replay command failed",
+      "source_before_after_equal": true
+    },
+    {
+      "mode": "source_drift",
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "clean-source stage has nonempty Git status",
+      "receipt_written": true,
+      "receipt_checks_passed": false,
+      "actual_spec_before": {
+        "sha256": "fba4ec650c58f27ac73eae9affe79cf079105344f89d0e0d90f71f490da2c6ed",
+        "bytes": 8561
+      },
+      "actual_spec_after": {
+        "sha256": "fba4ec650c58f27ac73eae9affe79cf079105344f89d0e0d90f71f490da2c6ed",
+        "bytes": 8561
+      },
+      "receipt_spec_identity": {
+        "sha256": "fba4ec650c58f27ac73eae9affe79cf079105344f89d0e0d90f71f490da2c6ed",
+        "bytes": 8561
+      },
+      "receipt_failure": "CheckpointError: clean-source stage has nonempty Git status",
+      "source_before_after_equal": false
+    },
+    {
+      "mode": "head_drift",
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "HEAD differs from final source commit",
+      "receipt_written": true,
+      "receipt_checks_passed": false,
+      "actual_spec_before": {
+        "sha256": "8c0a283a1168b7617ab5d82328a3c682a4e7352a4e29da36094f7f8409864bf6",
+        "bytes": 8561
+      },
+      "actual_spec_after": {
+        "sha256": "8c0a283a1168b7617ab5d82328a3c682a4e7352a4e29da36094f7f8409864bf6",
+        "bytes": 8561
+      },
+      "receipt_spec_identity": {
+        "sha256": "8c0a283a1168b7617ab5d82328a3c682a4e7352a4e29da36094f7f8409864bf6",
+        "bytes": 8561
+      },
+      "receipt_failure": "CheckpointError: HEAD differs from final source commit",
+      "source_before_after_equal": false
+    },
+    {
+      "mode": "dirty_before",
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "clean-source stage has nonempty Git status",
+      "receipt_written": false,
+      "receipt_checks_passed": null,
+      "actual_spec_before": {
+        "sha256": "6ab98be61b46b2cf0d6f84e23bacecf6bca1b442c937ccaf9fdf991915f396e0",
+        "bytes": 8561
+      },
+      "actual_spec_after": {
+        "sha256": "6ab98be61b46b2cf0d6f84e23bacecf6bca1b442c937ccaf9fdf991915f396e0",
+        "bytes": 8561
+      },
+      "receipt_spec_identity": null,
+      "receipt_failure": null,
+      "source_before_after_equal": null
+    },
+    {
+      "mode": "spec_drift",
+      "rejected": false,
+      "receipt_written": true,
+      "receipt_checks_passed": true,
+      "actual_spec_before": {
+        "sha256": "64e249b001bfe4969b6e90ccbfcefb5e68851c29facf6f341f4ee46f2d20fb45",
+        "bytes": 8561
+      },
+      "actual_spec_after": {
+        "sha256": "e1905c4bda153f9738676bb5d73527bc8ce016769ea3934b3053d83a96db76b7",
+        "bytes": 8565
+      },
+      "receipt_spec_identity": {
+        "sha256": "e1905c4bda153f9738676bb5d73527bc8ce016769ea3934b3053d83a96db76b7",
+        "bytes": 8565
+      },
+      "receipt_failure": null,
+      "source_before_after_equal": true
+    }
+  ],
+  "unresolved_contract_probe": {
+    "unresolved": [
+      "Independent final PDF review is still required"
+    ],
+    "rejected": false
+  },
+  "manifest_drift_probe": {
+    "rejected": false,
+    "scope": "Actual main/Git/artifact-copy-manifest gates; unrelated scientific, preservation and approval functions substituted in synthetic fixture",
+    "manifest_before": {
+      "sha256": "8a70f6bcd35de824ed3cdb971f0fd84771a35387147f13ac6c72c917a66ce444",
+      "bytes": 1214
+    },
+    "manifest_after": {
+      "sha256": "444a8f9523852ca79ee465a925c00632c50637d7b28f39b4ffca67105ee970f6",
+      "bytes": 1214
+    },
+    "receipt_written": true,
+    "receipt_checks_passed": true,
+    "receipt_manifest_sha256": "8a70f6bcd35de824ed3cdb971f0fd84771a35387147f13ac6c72c917a66ce444"
+  },
+  "mismatch_receipt_probe": {
+    "returncode": 1,
+    "receipt_written": false,
+    "rejection_message_present": true
+  },
+  "raw_tamper_probe": {
+    "original_control": {
+      "rejected": false
+    },
+    "same_size_one_byte_raw_tamper": {
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "raw stream bytes changed"
+    }
+  },
+  "curation_audit": {
+    "rows": 161,
+    "bytes": 5651136,
+    "identity_failures": [],
+    "duplicate_destinations": 0,
+    "torus_pointer_list_matches_code": true,
+    "counting_pointer_list_matches_code": true,
+    "markdown_links": [
+      {
+        "source": "algebra-review/review-report.md",
+        "target": "source-audit.md",
+        "covered_by_existing_or_planned": true
+      },
+      {
+        "source": "arithmetic-review/review.md",
+        "target": "review-decisions.json",
+        "covered_by_existing_or_planned": true
+      },
+      {
+        "source": "arithmetic-review/review.md",
+        "target": "analytic-claim-review.json",
+        "covered_by_existing_or_planned": true
+      },
+      {
+        "source": "arithmetic-review/review.md",
+        "target": "malformed-probes.json",
+        "covered_by_existing_or_planned": true
+      },
+      {
+        "source": "arithmetic-review/review.md",
+        "target": "io-error-probes.json",
+        "covered_by_existing_or_planned": true
+      },
+      {
+        "source": "arithmetic-review/review.md",
+        "target": "final-parser-review.json",
+        "covered_by_existing_or_planned": true
+      },
+      {
+        "source": "arithmetic-review/review.md",
+        "target": "final-test-receipts.json",
+        "covered_by_existing_or_planned": true
+      },
+      {
+        "source": "arithmetic-review/review.md",
+        "target": "full-stream-arithmetic.json",
+        "covered_by_existing_or_planned": true
+      },
+      {
+        "source": "arithmetic-review/review.md",
+        "target": "independent_checks.py",
+        "covered_by_existing_or_planned": true
+      },
+      {
+        "source": "arithmetic-review/review.md",
+        "target": "independent-results/summary.json",
+        "covered_by_existing_or_planned": true
+      },
+      {
+        "source": "arithmetic-review/review.md",
+        "target": "full_stream_arithmetic.py",
+        "covered_by_existing_or_planned": true
+      }
+    ],
+    "uncovered_markdown_links": []
+  }
+}

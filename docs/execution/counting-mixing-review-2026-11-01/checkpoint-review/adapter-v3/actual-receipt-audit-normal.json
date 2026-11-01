@@ -1,0 +1,226 @@
+{
+  "generated_at_utc": "2026-11-01T21:38:34.157068+00:00",
+  "python_optimized": 0,
+  "checks_passed": true,
+  "scope": "Frozen adapter and retained actual evidence audit through read-only path routing; no real replay, candidate verification, build, visual reinspection or cleanup",
+  "source_commit": "5e34f23d981631605783cbe0f74247659f12a10a",
+  "approved_source_paths": 33,
+  "replay_guard_paths": 52,
+  "source_receipt_adapter": {
+    "source_receipt_sha256": "06513002e97910d2a2f4d267fb2ce79db5ee792c5d1602ed8ff480d0c0fc4f2e",
+    "source_tracked_files": 1939,
+    "default_whitespace_check_passed": false,
+    "accepted_blank_at_eof_paths": [
+      "book/chapters/25-global-coefficient-filters.tex",
+      "book/chapters/27-weighted-mixing-converse.tex",
+      "book/chapters/28-genus-two-model.tex",
+      "book/chapters/29-controlled-observables.tex",
+      "book/chapters/31-arithmetic-remainder.tex"
+    ],
+    "effective_whitespace_check_passed": true,
+    "current_source_whitespace_recheck": [
+      {
+        "returncode": 2,
+        "stdout": "book/chapters/25-global-coefficient-filters.tex:361: new blank line at EOF.\nbook/chapters/27-weighted-mixing-converse.tex:850: new blank line at EOF.\nbook/chapters/28-genus-two-model.tex:769: new blank line at EOF.\nbook/chapters/29-controlled-observables.tex:772: new blank line at EOF.\nbook/chapters/31-arithmetic-remainder.tex:415: new blank line at EOF.\n",
+        "stderr": ""
+      },
+      {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "recorded_validated_sidecar_removals": 45,
+    "sidecar_backups_verified": 45,
+    "metadata_cleanup_by_this_verifier": false
+  },
+  "PDF_receipt_adapter": {
+    "PDF_pages": 191,
+    "actually_visually_reviewed_pages": 94,
+    "full_page_legibility_checks": 10,
+    "PDF_build_timing": "reviewed precommit build copied byte-for-byte",
+    "marker_reexecuted": false
+  },
+  "argument_mutation_probes": {
+    "source_path_omission": {
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "reviewed/staged/committed source maps differ"
+    },
+    "wrong_source_commit": {
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "actual source checkpoint ancestry/status"
+    },
+    "wrong_source_receipt_identity": {
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "actual source receipt identity"
+    },
+    "wrong_pdf_page_count": {
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "reviewed PDF page count"
+    },
+    "omitted_pdf_input": {
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "actual reviewed PDF input freeze differs"
+    },
+    "different_pdf_hash": {
+      "rejected": true,
+      "exception": "CheckpointError",
+      "message": "precommit PDF approval identity"
+    }
+  },
+  "actual_replay_evidence": {
+    "counting": {
+      "result_identity": {
+        "sha256": "04e9807ae5d3af8a8f2a2926a44ebc25f79a9e8151424ae39429655396b7567b",
+        "bytes": 438646
+      },
+      "reference_identity": {
+        "sha256": "2a5680cf8e91db3668099ffdb5e19bc3bb984f89cd121395fbcd856a6da7fc71",
+        "bytes": 441561
+      },
+      "comparison_receipt_identity": {
+        "sha256": "cfdbb41c938ef13867e4843292500562822b8b06bbc744c7faa6defe76028984",
+        "bytes": 14607
+      },
+      "fresh_comparison_matches_retained_receipt": true,
+      "counts": {
+        "exact": 4054,
+        "numerical_formula_comparisons": 354,
+        "cross_precision_observations": 297
+      },
+      "blocks": null,
+      "external_native_raw_files_freshly_rehashed": 0
+    },
+    "torus": {
+      "result_identity": {
+        "sha256": "51414cf7c3e72c2020e3267f3abbb6cf6e2c9c0f78b9b6ee3921ceced70bcece",
+        "bytes": 434757
+      },
+      "reference_identity": {
+        "sha256": "770315039a907e3adab3169081e1f3e84d07d7301e29a26fcf0b7e281af73521",
+        "bytes": 435597
+      },
+      "comparison_receipt_identity": {
+        "sha256": "02cb77e8f1b6afad5cb7878b6844f5b32476b199bf4cc7ba7bb106bfd5fd5f55",
+        "bytes": 20746
+      },
+      "fresh_comparison_matches_retained_receipt": true,
+      "counts": {
+        "modular": 18191508,
+        "asymmetric": 18486116
+      },
+      "blocks": 20,
+      "external_native_raw_files_freshly_rehashed": 12
+    }
+  },
+  "current_canonical_status_at_source_identity_read": "",
+  "current_status_is_not_used_as_a_historical_clean_replay_claim": true,
+  "watched_input_identities": {
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/integration-review/revision-v2/approved-source-manifest.json": {
+      "sha256": "0fe9b4a314efdd5d1d8c33f448b49d36d998200bcad2d09a0dd12ede5cbf7a2d",
+      "bytes": 12125
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/source-checkpoint/source-checkpoint.json": {
+      "sha256": "06513002e97910d2a2f4d267fb2ce79db5ee792c5d1602ed8ff480d0c0fc4f2e",
+      "bytes": 101218
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/integration-review/revision-v2/tex-input-freeze.json": {
+      "sha256": "f5217db961c573c053d669f57b01c79918620cf60efaf9a44df6bbac4df05fd4",
+      "bytes": 4568
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/integration-review/revision-v2/pdf-build/main.pdf": {
+      "sha256": "60708f3059284875e611eec6f910fd1086fd74880d84a1f4fc51f6bd356583a3",
+      "bytes": 1463523
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/clean-source/replay-spec.json": {
+      "sha256": "77d849c3c5ad1e90f07812450f17882b2afbd036a0ad248b499c62866e3dc18c",
+      "bytes": 17004
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/clean-source/counting/run-command.json": {
+      "sha256": "f5b5a6eb55db3effd6caac04b9afa9c900a02f2b17543934aefbee5005605ca1",
+      "bytes": 14064
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/clean-source/counting/scientific-comparison.json": {
+      "sha256": "cfdbb41c938ef13867e4843292500562822b8b06bbc744c7faa6defe76028984",
+      "bytes": 14607
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/computation/revision-v2/author-result-60-90-v2.json": {
+      "sha256": "2a5680cf8e91db3668099ffdb5e19bc3bb984f89cd121395fbcd856a6da7fc71",
+      "bytes": 441561
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/clean-source/counting/result.json": {
+      "sha256": "04e9807ae5d3af8a8f2a2926a44ebc25f79a9e8151424ae39429655396b7567b",
+      "bytes": 438646
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/clean-source/torus/run-command.json": {
+      "sha256": "691f8f8c50fc65944794e986f833d47f5731938c7134ff8badc5cce870f5776b",
+      "bytes": 14431
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/clean-source/torus/scientific-comparison.json": {
+      "sha256": "02cb77e8f1b6afad5cb7878b6844f5b32476b199bf4cc7ba7bb106bfd5fd5f55",
+      "bytes": 20746
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/full8192-author-v2/result.json": {
+      "sha256": "770315039a907e3adab3169081e1f3e84d07d7301e29a26fcf0b7e281af73521",
+      "bytes": 435597
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/clean-source/torus8192/result.json": {
+      "sha256": "51414cf7c3e72c2020e3267f3abbb6cf6e2c9c0f78b9b6ee3921ceced70bcece",
+      "bytes": 434757
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/full8192-author-v2/modular.native.json": {
+      "sha256": "acb8e05d5cb9d99faea062e0d21df6ff8a489989edb4fd854e73279aa0f15f84",
+      "bytes": 117779
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/clean-source/torus8192/modular.native.json": {
+      "sha256": "b56fd35822ad9a58dc9d7780e3c8e5e6e209701923bc87309257b90e2a205a8f",
+      "bytes": 117774
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/full8192-author-v2/modular.lengths.f64le": {
+      "sha256": "dfa0c8dcc7ba670031558ac4ab53417daf4833a1bed2f8060e1fa3c6def04c8d",
+      "bytes": 145532064
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/clean-source/torus8192/modular.lengths.f64le": {
+      "sha256": "dfa0c8dcc7ba670031558ac4ab53417daf4833a1bed2f8060e1fa3c6def04c8d",
+      "bytes": 145532064
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/full8192-author-v2/modular.slopes.i32le": {
+      "sha256": "9690e75183eeb4817e28939bf910c1262fc58b3ad85dca61d42ecc0dfab23ace",
+      "bytes": 145532064
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/clean-source/torus8192/modular.slopes.i32le": {
+      "sha256": "9690e75183eeb4817e28939bf910c1262fc58b3ad85dca61d42ecc0dfab23ace",
+      "bytes": 145532064
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/full8192-author-v2/asymmetric.native.json": {
+      "sha256": "b7be44b16c0efff4986ff9b06947e33532c2b1d335c83abc138e70adb305990f",
+      "bytes": 116586
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/clean-source/torus8192/asymmetric.native.json": {
+      "sha256": "6101888a34de3c92f37ad85a833803661335a41117d09d6002f0516538fdf4a0",
+      "bytes": 116590
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/full8192-author-v2/asymmetric.lengths.f64le": {
+      "sha256": "a5aa23db37dcb96b326d246beba2eec76a7825e2bbcb8a7e403fb081fdd507f2",
+      "bytes": 147888928
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/clean-source/torus8192/asymmetric.lengths.f64le": {
+      "sha256": "a5aa23db37dcb96b326d246beba2eec76a7825e2bbcb8a7e403fb081fdd507f2",
+      "bytes": 147888928
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/torus-campaign/full8192-author-v2/asymmetric.slopes.i32le": {
+      "sha256": "d9382639af881468450770406bd778fb2eabb45aa57d6d7d88d2ddaf357d2ea2",
+      "bytes": 147888928
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/counting-mixing-review-2026-11-01/clean-source/torus8192/asymmetric.slopes.i32le": {
+      "sha256": "d9382639af881468450770406bd778fb2eabb45aa57d6d7d88d2ddaf357d2ea2",
+      "bytes": 147888928
+    }
+  },
+  "canonical_mutations": []
+}

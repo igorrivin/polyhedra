@@ -1,0 +1,142 @@
+{
+  "review_date": "2026-11-01",
+  "decision": "approve_metadata_delta_preserve_all_four_chapter_proof_approvals",
+  "closed_repairs": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "remaining_required_dynamics_repairs": [],
+  "approved_canonical_files": [
+    {
+      "path": "book/chapters/26-counting-to-mixing.tex",
+      "sha256": "64562ebf631c59b84b9c991a632926107b3e24cb5b08b29c21e263bd50a9e901",
+      "bytes": 17201,
+      "label_count": 21,
+      "baseline_labels_identical": true,
+      "decision": "approve_analytic_content_at_this_hash"
+    },
+    {
+      "path": "book/chapters/27-weighted-mixing-converse.tex",
+      "sha256": "79fb4660fe87a5723eea0d410e55e954913b0386057a31542473d6486492dcc1",
+      "bytes": 35331,
+      "label_count": 35,
+      "baseline_labels_identical": true,
+      "decision": "approve_analytic_content_at_this_hash"
+    },
+    {
+      "path": "book/chapters/28-genus-two-model.tex",
+      "sha256": "18c05143e86fb9630868bb2824ddf44643c1ee1c84a40dc77a8c9d5354663fb4",
+      "bytes": 34521,
+      "label_count": 33,
+      "baseline_labels_identical": true,
+      "decision": "approve_analytic_content_at_this_hash"
+    },
+    {
+      "path": "book/chapters/29-controlled-observables.tex",
+      "sha256": "79dd4ae151f95aa445cbf9f67fb512ec5dbc6df8922c43aa05591a8ef48b273f",
+      "bytes": 31959,
+      "label_count": 36,
+      "baseline_labels_identical": true,
+      "decision": "approve_analytic_content_at_this_hash"
+    },
+    {
+      "path": "book/claims/sections26-29.json",
+      "sha256": "8e462191ee8571f262d2c7ee9a90365a41eb526e9b1aaf4369fdb601897d506f",
+      "bytes": 85775,
+      "decision": "approve_reviewed_claim_ledger_after_R1_R2_R3"
+    }
+  ],
+  "verified_ledger_leaf_deltas": [
+    {
+      "path": "/source_pins/GNDiscrepancy/pin",
+      "before": "Section 1.3 and Theorem 1.4, pages 131-132; Section 5, Theorem 5.2, page 148",
+      "after": "Section 1.3 and Theorem 1.4, pages 131-132; Section 5, Theorem 5.2, printed page 147 (proof page 148 onward)"
+    },
+    {
+      "path": "/source_pins/AranaHerreraSquare2020/pin",
+      "before": "Theorem 1.6, PDF page 4; unfolding stabilizer denominator in equation (1.4), pages 4-5, and Section 3",
+      "after": "Theorem 1.6, PDF page 4; stabilizer denominator in the unnumbered display in the Sketch of proof of Theorem 1.1, printed/PDF page 5, immediately after Theorem 1.8; Section 3"
+    },
+    {
+      "path": "/claims/9/hypotheses/0",
+      "before": "The locally finite discrete unit-diagonal coefficient statement eq:globaldiagonal from Section 24.",
+      "after": "The locally finite discrete unit-diagonal coefficient statement eq:globaldiagonal from Section 25."
+    }
+  ],
+  "verified_corrected_source_pin_deltas": [
+    {
+      "path": "/sources/GNDiscrepancy/pin",
+      "before": "Section 1.3 and Theorem 1.4, pages 131-132; Section 5, Theorem 5.2, page 148",
+      "after": "Section 1.3 and Theorem 1.4, pages 131-132; Section 5, Theorem 5.2, printed page 147 (proof page 148 onward)"
+    },
+    {
+      "path": "/sources/AranaHerreraSquare2020/pin",
+      "before": "Theorem 1.6, PDF page 4; unfolding stabilizer denominator in equation (1.4), pages 4-5, and Section 3",
+      "after": "Theorem 1.6, PDF page 4; stabilizer denominator in the unnumbered display in the Sketch of proof of Theorem 1.1, printed/PDF page 5, immediately after Theorem 1.8; Section 3"
+    }
+  ],
+  "corrected_source_pin_file": {
+    "path": "../dynamics-author/revision-v2/source-pins-corrected.json",
+    "sha256": "1b6575b6df5ffd0906d7752a7657a175ee2a568c5491fe6e320d6f7887a85403"
+  },
+  "inspected_delta_files": [
+    {
+      "path": "../dynamics-author/revision-v2/handoff.md",
+      "sha256": "0210b994e81078c46bbd7cde414f016bbcbbc7097dd9aafc21533e8538752804"
+    },
+    {
+      "path": "../dynamics-author/revision-v2/delta-manifest.json",
+      "sha256": "bf68f0f59373bbad50d4430962161a7b308f654a468e4572d3067a193c1942ac"
+    },
+    {
+      "path": "../dynamics-author/revision-v2/ledger-only.diff",
+      "sha256": "20e222c363ca01545f7083db816345e9ba03bdb8d3ec472f090995cf4cb2a513"
+    },
+    {
+      "path": "../dynamics-author/revision-v2/bibliography-only.diff",
+      "sha256": "8bd3dbde444b8a49ccabe143b9db6c4dea9fdc7e5e7b8730b264d62f498c282f"
+    },
+    {
+      "path": "../dynamics-author/revision-v2/ledger-before.json",
+      "sha256": "0585f7efdb6f703eaea3a76e2d3f970cc71e033fc4977ab265bc7f43a57ec514"
+    },
+    {
+      "path": "../dynamics-author/revision-v2/ledger-after.json",
+      "sha256": "8e462191ee8571f262d2c7ee9a90365a41eb526e9b1aaf4369fdb601897d506f"
+    }
+  ],
+  "preserved_prior_review_files": [
+    {
+      "path": "review-report.md",
+      "sha256": "6e4fb391fe89a2fa8750bfa99e4c513d6fa5b7137d4ee3121d9e2c1d68bf7d95"
+    },
+    {
+      "path": "independent-checks.py",
+      "sha256": "07e6e43340d6b7cdf7fac32f3965ec090181ea43f6ada35a3e2e6a1453f93092"
+    },
+    {
+      "path": "independent-checks.json",
+      "sha256": "294867d4453d4c3df4d2fa9b91c72d5e506292669b688bf3423d9243388549d7"
+    },
+    {
+      "path": "approved-manifest.json",
+      "sha256": "c272dcb97e0b4ed945c5c91887a1da51591ee9ac8fd3818742390ad601d5ddba"
+    }
+  ],
+  "original_author_evidence_hashes_verified": 21,
+  "bibliography_scope": {
+    "main_sha256_inspected": "087fd8690a43fc023b0feb370dc07a1421e06f770d98abaf4234bc88116d6a07",
+    "accepted_dynamics_delta": "Benirschke-Servan 2026 erratum and unchanged classical genus-two isometry; McShane-Rivin v1 pin",
+    "full_main_or_bibliography_approval": false
+  },
+  "acceptance_report": {
+    "path": "targeted-acceptance-v2.md",
+    "sha256": "b4d9cf8c470229641099aaa0a294e3b5e7032ae3ed9b1084fe38c736bd6fe85e"
+  },
+  "scope_limits": [
+    "Targeted metadata delta only; original full mathematical review governs analytic content.",
+    "No build, companion replay, canonical edit, commit, upload, or full bibliography audit.",
+    "Previously stated external theorem access and proof-reproduction limits remain."
+  ]
+}

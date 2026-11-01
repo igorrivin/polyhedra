@@ -1,0 +1,79 @@
+{
+  "status": "Concrete adapter frozen for independent review; candidate verification pending curation",
+  "files": {
+    "checkpoint_lib.py": {
+      "before": {
+        "sha256": "c29512500065509e68f2efb2bd47351e61ab3034721ecb9e213c4a96a219b466",
+        "bytes": 17531
+      },
+      "after": {
+        "sha256": "c29512500065509e68f2efb2bd47351e61ab3034721ecb9e213c4a96a219b466",
+        "bytes": 17531
+      }
+    },
+    "run_clean_replay.py": {
+      "before": {
+        "sha256": "eb04b09e50859baacc1a1736eb18b22a31af3b68e68d333059cc7249d99dea68",
+        "bytes": 8518
+      },
+      "after": {
+        "sha256": "b990ede70c6ef9aaa2cf62666d73849a87b301fef95ee9cbf34d9eb8ef3adea3",
+        "bytes": 8557
+      }
+    },
+    "compare_replays.py": {
+      "before": {
+        "sha256": "faea75531a95443e756a31ab36a84ecf524daa59311c77aaf9438ab5a17cf301",
+        "bytes": 2830
+      },
+      "after": {
+        "sha256": "faea75531a95443e756a31ab36a84ecf524daa59311c77aaf9438ab5a17cf301",
+        "bytes": 2830
+      }
+    },
+    "verify_checkpoint.py": {
+      "before": {
+        "sha256": "6f3218fb814810a564f3402418db8fe2ddd4abe944ef814ca214a3f56b9d7ff8",
+        "bytes": 27237
+      },
+      "after": {
+        "sha256": "9824dc523fd3ca3a66d98f47d186e544b637b26f2f6fbe41d8256f8cd96a97ea",
+        "bytes": 24118
+      }
+    },
+    "source_approval_adapter.py": {
+      "before": null,
+      "after": {
+        "sha256": "23f81e38c87d51fc0d255614929a553b3bedf5a7f87a1314a03db743c33e4736",
+        "bytes": 1214
+      }
+    },
+    "candidate_receipt_adapter.py": {
+      "before": null,
+      "after": {
+        "sha256": "3c129c34d04a65b738eeadd518e33bfac1041ab801b0c152999dd1cea6fa7a8a",
+        "bytes": 14182
+      }
+    }
+  },
+  "normal_adapter_tests": 14,
+  "optimized_adapter_tests": 14,
+  "production_Ruff": "passed",
+  "test_receipt": {
+    "sha256": "85a3f14747c81cfc595fb820b910595b0066dee8fdaf446eee38ee0f509eb386",
+    "bytes": 4668
+  },
+  "patch": {
+    "sha256": "03717c65bd87a03db99e2699d71531f0e0eb789d9b9685e742b0106ce31175d1",
+    "bytes": 23398
+  },
+  "scope": [
+    "Explicit path-record-list conversion for unchanged integration approval in wrapper and verifier.",
+    "Actual original source-stage/source-checkpoint/command receipts, exact five EOF diagnostics and root exception; effective check with only blank-at-eof disabled; original failure retained.",
+    "Read-only validation of original45sidecar recovery records and retained backups, no cleanup.",
+    "Actual final precommit PDF/build/input/render/visual schemas;26inputs,191pages,94inspectedpages,10full-pagechecks."
+  ],
+  "actual_replays": "Both source-clean replays and strict comparisons already passed outside canonical; no rerun needed.",
+  "pending": "Full candidate normal/-O verification and independent candidate approval before artifact commit.",
+  "self_hash_excluded": true
+}

@@ -1,0 +1,2125 @@
+--- a/INTEGRATION_PLAN.md
++++ b/INTEGRATION_PLAN.md
+@@ -10,23 +10,25 @@
+ 
+ This completes the bounded mathematical-review portion of Phase 4 for Section 9, not the whole phase for the book. The current converter pilot uses the strict Pandoc/LaTeX workflow described in the [build guide](site/README.md); the converter alternatives below remain planning context. Its Section 9 exports, reading preview and broader source download remain frozen checkpoints and have not been regenerated for the subsequent manuscript revisions.
+ 
+-The [prior Airy and torus checkpoint](docs/execution/monograph-revision-2026-11-01/README.md) made Sections 15 and 30 modular and corrected their computational-evidence descriptions. The Section 15 companion checks finite fold/correction algebra and the six-row Airy approximation column; it does not evaluate the exact quantum integral. The Section 30 companion supplies a bounded replacement trace/counting calculation; it does not reproduce the historical length-8192 run. That checkpoint did not designate either whole chapter mathematically reviewed. Its artifacts remain frozen. The later Section 15 increment below supplies a separate analytic review and new exact-integrand evidence; the original quantum evaluator remains unrecovered. The length-8192 torus evidence, broader chapter review and computational coverage, browser verification and publication metadata/licensing remain outstanding. No Site has been published.
++The [prior Airy and torus checkpoint](docs/execution/monograph-revision-2026-11-01/README.md) made Sections 15 and 30 modular and corrected their computational-evidence descriptions. The Section 15 companion checks finite fold/correction algebra and the six-row Airy approximation column; it does not evaluate the exact quantum integral. The Section 30 companion supplies a bounded replacement trace/counting calculation; it does not reproduce the historical length-8192 run. That checkpoint did not designate either whole chapter mathematically reviewed. Its artifacts remain frozen. The later Section 15 increment below supplies a separate analytic review and new exact-integrand evidence; the original quantum evaluator remains unrecovered. The later counting/mixing increment below supplies local review and a new full torus replacement campaign. The original long-run precision archive, remaining chapter coverage, browser verification and publication metadata/licensing remain outstanding. No Site has been published.
+ 
+ The [prior normalization checkpoint](docs/execution/normalization-review-2026-11-01/README.md) covers Sections 1–8 and Appendix A with 41 claims and an [exact finite companion](experiments/normalizations/README.md). Extraction preserved all 607 labels and the expanded source before revision. The fixed arithmetic checks cover measure factors, strict cone walls and balanced weights, n=4/5 compactification and partition formulas, Gram/Pfaffian densities and trace identities. Independent review passed 497 rational weight vectors, 1,491 class evaluations, 512 SL₂ triples, 195 F-curve probes and 11 tests. These are bounded checks conditional on the stated mathematical inputs; the checkpoint records mathematical review and integrated PDF verification separately. Its output paths are `artifacts/normalizations/result.json` and `artifacts/normalization-review-2026-11-01/monograph-working-draft.pdf`, with generation and verification documented in the checkpoint reports. Those artifacts and prior Site exports, downloads, PDFs and Section 15/30 outputs remain frozen.
+ 
+ The [prior quantum and surgery increment](docs/execution/quantum-surgery-review-2026-11-01/README.md) extracts Sections 12–14 and 16 with byte-preserving expansion and all 607 labels retained before revision. Its two claim ledgers distinguish first moments and finite periods from spectral-continuation hypotheses, a classical fold from a uniform quantum asymptotic, and local peripheral identities from conditional global quantum transfer. The [companion](experiments/quantum_surgery/README.md) initially passes 192 exact finite identities, 300 numerical checks across 60/90 digits and 72 cross-precision comparisons, with 15 focused tests and Ruff passing. Euler-arc integrals provide independent formulas within the same arithmetic backend; their agreement is not certified. Formal filling and fixed Hessian tensors do not compute a filled manifold. Independent review, final generation and integrated PDF verification have separate checkpoint records. The new output paths are `artifacts/quantum_surgery/result.json` and `artifacts/quantum-surgery-review-2026-11-01/monograph-working-draft.pdf`. This increment does not complete the book's mathematical review or publication gates.
+ 
+-The [current Section 15 checkpoint](docs/execution/section15-analytic-review-2026-11-01/README.md) closes the regular-family analytic review: the real normalization, phase constant, separating-contour continuation, uniform global tails, Gaussian localization and integrated first correction have independent proof review. The [new companion](experiments/section15_quantum/README.md) evaluates the exact cleared integrand at six table inputs and one negative transition parameter under three 60/90-digit settings, with independent direct Barnes-integral comparison. The new first quantum value rounds to `0.459086`, correcting `0.459087`; original historical inputs and earlier artifacts remain frozen. The result path is `artifacts/section15_quantum/result.json`; code review, final clean generation and integrated PDF checks have separate checkpoint records. Correction-series truncation bounds do not certify the total numerical quadrature, and the theorem remains restricted to the specified regular family and bounded real transition parameters.
++The [Section 15 checkpoint](docs/execution/section15-analytic-review-2026-11-01/README.md) closes the regular-family analytic review: the real normalization, phase constant, separating-contour continuation, uniform global tails, Gaussian localization and integrated first correction have independent proof review. The [new companion](experiments/section15_quantum/README.md) evaluates the exact cleared integrand at six table inputs and one negative transition parameter under three 60/90-digit settings, with independent direct Barnes-integral comparison. The new first quantum value rounds to `0.459086`, correcting `0.459087`; original historical inputs and earlier artifacts remain frozen. The result path is `artifacts/section15_quantum/result.json`; code review, final clean generation and integrated PDF checks have separate checkpoint records. Correction-series truncation bounds do not certify the total numerical quadrature, and the theorem remains restricted to the specified regular family and bounded real transition parameters.
++
++The [counting, mixing and arithmetic checkpoint](docs/execution/counting-mixing-review-2026-11-01/README.md) completes the bounded local review of Sections 23–31. All nine chapters and 168 claims have independent analytic review, with 607 labels and 129 bibliography keys preserved. The [finite companion](experiments/counting_mixing/README.md) implements exact fixtures and selected 60/90-digit formulas; the [full torus campaign](experiments/torus_campaign/README.md) reproduces both length-8192 counts and every printed M/Q row, recording all twenty block rows, signed all-point diagnostics, selected precision comparisons and conditional rational sensitivity. The checkpoint distinguishes rejected initial quadrature acceptance, repaired code approval, author evidence, final source generation and integrated PDF verification. The result paths are `artifacts/counting_mixing/result.json` and `artifacts/torus_campaign/result.json`; the working PDF is `artifacts/counting-mixing-review-2026-11-01/monograph-working-draft.pdf`. These finite checks do not prove general mixing or asymptotic rates, certify all transcendental events, identify a flat supporting point on the example tori, or validate the recent preprints' proofs/formalizations. The all-point logarithmic target retains its explicit row-width compatibility condition. The original torus precision archive and all frozen predecessor artifacts retain their separate status.
+ 
+ On 1 November 2026 the user directed that revision continue and upload be the last step. The [Section 9 reading preview](docs/execution/sites-preview-2026-11-01/closeout.md) remains a completed local presentation checkpoint; its unsuccessful source upload is historical evidence, not a prerequisite for further chapter work. Complete the manuscript, computational evidence, local web/PDF edition and release checks before the final Sites upload and deployment. The existing private Site registration is retained for that final step; no further upload attempt is part of the current revision work.
+ 
+ ### Next revision sequence
+ 
+-After closing the current Section 15 numerical-integration and local-evidence gates:
+-
+-1. Review the counting and mixing dependencies in Sections 23–31, including endpoint weights, the genus-two restriction, sharp cutoffs and geometric versus arithmetic inputs. Recover or separately replace the missing Section 30 length-8192 archive as part of its computational coverage. Extend the claim ledger and computational coverage with each bounded chapter revision.
+-2. Apply the same claim, convention and computation review to the remaining Sections 10–11, 17–22 and 32 and Appendix B before the full-publication gate. Revisit Appendix A only as new cross-chapter dependencies require. Keep the introductory explanations consistent with the revised mathematical claims and leave open research questions explicit.
+-3. Reconcile cross-chapter notation, references, figures, introductions and computational links; resolve authorship, credits and licensing; then run the local edition and complete-release gates below. Upload and deploy only after those gates are satisfied. Open research questions remain explicit rather than becoming implicit publication requirements.
++With the Sections 23–31 local analytic and computational review gates closed:
++
++1. Apply the same claim, convention and computation review to Sections 10–11, 17–22 and 32 and Appendix B before the full-publication gate. Revisit Appendix A only as new cross-chapter dependencies require. Keep introductory explanations consistent with the revised claims and leave open research questions explicit.
++2. Reconcile cross-chapter notation, references, figures, introductions and computational links; resolve authorship, credits and licensing; then run the local edition and complete-release gates below. Earlier optional-dependency full-suite limitations remain separate from the focused companion checks.
++3. Upload and deploy only after those gates are satisfied. The existing Section 9 exports and Sites preview remain frozen until the final edition is generated and verified. Open research questions remain explicit rather than becoming implicit publication requirements.
+ 
+ ## Recommendation
+ 
+@@ -152,7 +154,7 @@
+ 4. Peripheral conventions, local analytic-germ identity, sixth-order coefficients, and the conditional transfer to global quantum invariants (Section 16).
+ 5. Endpoint weights in the counting-to-mixing converse, the nonsquare genus-two `(2,2)` restriction, and the distinct geometric/arithmetic hypotheses in sharp counting (Sections 27–31).
+ 
+-Preserve the recent-source qualifications already in the book. The cited OpenAI quasi-RH preprints exist; their correctness and formalization coverage were not verified here. Pin cited versions and keep uses conditional. The official [OpenAI math repository](https://github.com/openai/math) itself distinguishes verification stages. Audit the recent Doan–Li–Nguyen version and the remaining foundational references by exact statement and hypothesis before upgrading any source status.
++Preserve the recent-source qualifications already in the book. The Sections 23–31 increment pins and independently checks the relevant OpenAI quasi-RH and Doan–Li–Nguyen theorem statements and their stated hypotheses. Their complete proofs and formalization coverage were not audited; applications remain conditional. The official [OpenAI math repository](https://github.com/openai/math) itself distinguishes verification stages. Further source-status upgrades require their own evidence rather than following from statement inspection or finite computations.
+ 
+ ## Computational support to add
+ 
+@@ -162,15 +164,15 @@
+ | --- | --- | --- |
+ | P0, Section 9 | `ipoly` v1/v5/v7/v9/v10/v13/v14, toolkit Rivin modules | One reproducible fixed-dihedral example with volume, gradient, constrained Hessian, FEM identity, boundary Schur response and rooted-forest determinant. Compare independent matrix assembly, finite differences, and exact small-graph determinants. |
+ | P0, Section 15 | Formula and six-row table only | Recover or implement log-double-sine evaluation and exact contour quadrature; regenerate all six rows with precision, contour, tail and convergence studies. Compare with the Airy first correction without substituting the asymptotic model for the purported exact integrand. |
+-| P0, Section 30 | Reported 18-million-curve enumerations but missing archive | Markoff/Farey enumerator preserving slope multiplicity, stable logarithmic recurrence, dyadic event statistics and sensitivity calculation. Start with small exact/high-precision cross-checks; then replay length 8192 with checkpointed inputs, raw counts, precision evidence and full block tables. |
++| P0, Section 30 | New `experiments/torus_campaign/` length-8192 campaign, all twenty block rows and separately hashed raw streams; frozen length-64 predecessor | Retain the new campaign's reviewed source/generation identity, sampled 100/140-digit and independent matrix-word checks, signed all-point diagnostics and conditional rational envelopes. Original precision provenance remains missing; no every-node certificate or asymptotic claim follows. |
+ | P0, retained companion claims | v8/v11/v17/v18/v21, original benchmarks | Named optional SnapPy experiments and full-residual solver comparisons; recover missing hexagon/Rippa/stretch/clique experiments or qualify their claimed reproducibility. Every retained numerical table needs an executable recipe and provenance. |
+ | P1, Sections 1–3, 5–8, Appendix A | Geometry primitives plus explicit formulas | Exact normalization fixtures, tetrahedral WP integral, chamber-aware cone/WP polynomial examples, flat-limit partition sum, torus–sphere factor, Fricke/Poisson check. Use independent formulas, rational arithmetic where possible, and convergence-controlled quadrature. |
+ | P1, Sections 7, 12–14 | Maintained finite period/Euler-arc, Hermitian, balanced-basis and screened-Gram fixtures in `experiments/quantum_surgery/` | Retain branch, precision and numerical-versus-exact distinctions. The connection formulas and monodromy matrix identities do not supply numerical loop continuation or the separate spectral-tail assumption. Extend computational scope only with separately declared checks. |
+ | P1, Section 16 | Maintained exact inverse/action series, peripheral covariance, figure-eight local-curve/Hessian tensors and conditional two-cusp matrix fixture | Optional independent geometric filling comparisons remain additional work, with pinned peripheral conventions and increasing slopes. Formal quartic/sixth-order coefficients are not a verified filled-manifold volume or global quantum invariant. |
+ | P1, Sections 18–22 | Explicit trace, length and integral formulas | Pants trace and twist-length calculator, torus twist integral, cusp-arc and gap examples. Check derivatives independently and give truncation errors for infinite sums. Distinguish figure-eight surface curves from the knot complement. |
+-| P1, Sections 23–25 | Finite algebraic identities | Trace/skein polynomial examples, bracelet coefficients, selector obstruction, first atoms and finite Euler-product examples. Exact arithmetic for small cases; finite truncations retain explicit limitations. |
+-| P1, Sections 26–29 | Explicit finite models/formulas | Finite Markov count-versus-mixing example, marked-torus endpoint-weight lattice sums, Gaussian two-mark correlation. Check explicit formulas and norms without claiming a numerical proof of general mixing. |
+-| P1, Sections 30–31 | Torus enumerator after recovery | Möbius inversion and main-term-free discrepancy diagnostics that show geometric and arithmetic contributions separately. No inference of an asymptotic bound from a finite plot. |
++| P1, Sections 23–25 | Maintained exact trace, word, global-filter, support-selector and finite Euler fixtures in `experiments/counting_mixing/` | Completed bounded coverage; retain formal-length and finite-truncation limitations. General geometry, infinite products and asymptotic counting rest on separate mathematical arguments. |
++| P1, Sections 26–29 | Maintained matrix, endpoint-residue, primitive-parity and Gaussian fixtures in `experiments/counting_mixing/` | Completed declared finite checks with reviewed quadrature repair and explicit analytic-tail/numerical-error distinction. Optional rectangle clipping and geometric length-derivative illustrations remain omitted; no numerical proof of general mixing is claimed. |
++| P1, Sections 30–31 | Maintained finite Möbius/row/dyadic identities and the full torus signed-multiple extension | Completed bounded formula and diagnostic coverage. Hyperbolic versus unit-shortest gauge units and the geometric/arithmetic hypotheses remain explicit. No uniform bound follows from the finite range. |
+ | P2, Section 4 | Hyperideal formulas; ideal code is insufficient | Admissibility, truncation lengths, fixed-boundary leaf solve and local Pfaffian density quadrature. Start with a documented small cell; a complete global integration algorithm remains research. |
+ | P2, Sections 10–11, 14 and 32 | Local formulas and open program | Compact-family experiments, bounded quantum sums, broader gluing and degeneration prototypes. Define each finite target; do not promise general quantum asymptotics or resolve open questions through simulation. |
+ | P2, geometry extensions | Existing floating audits and experimental H4 | Validated root enclosures with strict support/embedding inequalities; robust non-simplicial H4 cell computation. These are substantial numerical-method projects, not merely cleanup. |
+--- a/README.md
++++ b/README.md
+@@ -7,14 +7,15 @@
+ ## Contents
+ 
+ - [Volume toolkit](packages/volume-toolkit/README.md): existing Python package and API, tests, examples, and historical results.
+-- [Monograph source](book/README.md): canonical LaTeX with normalization and hypothesis reviews of Sections 1–8 and Appendix A, a separately reviewed Section 9, the finite-period and local-surgery revision of Sections 12–14 and 16, a reviewed regular-family quantum Airy theorem in Section 15, and bounded computational evidence for Section 30. Each increment retains its own review status and evidence limits.
++- [Monograph source](book/README.md): canonical LaTeX with normalization and hypothesis reviews of Sections 1–8 and Appendix A, a separately reviewed Section 9, the finite-period and local-surgery revision of Sections 12–14 and 16, a reviewed regular-family quantum Airy theorem in Section 15, and the locally reviewed counting, mixing and arithmetic arguments of Sections 23–31 with finite companions. Each increment retains its own review status and evidence limits.
+ - [Historical ipoly study](research/ipoly/README.md): original manuscript and verification scripts, retained unchanged.
+ - [Complete Section 9 chapter](site/section9/chapter.html): reviewed text with proofs and computational coverage; [chapter PDF](site/section9/downloads/section9.pdf) and [monograph LaTeX source snapshot](site/section9/downloads/monograph-source.zip). The [generation checkpoint](docs/execution/section9-barrier-2026-10-31/README.md) records artifact provenance; these frozen downloads do not include the later Sections 15/30 or normalization revisions.
+ - [Section 9 companion](site/section9/index.html): the first worked text, computation and result example; [runnable reproduction archive](site/section9/downloads/section9-reproduction.zip) and [instructions](experiments/section9/README.md).
+ - [Section 9 chapter checkpoint](docs/execution/section9-chapter-2026-10-31/README.md): mathematical corrections, independent proof review, publishing-build evidence and remaining validation; [claim ledger](book/claims/section9.json), [historical companion reconciliation](book/companion-reconciliation.md) and [chapter build guide](site/README.md).
+ - [Section 9 dense barrier checkpoint](docs/execution/section9-barrier-2026-10-31/README.md): executable centering and short-step schedule, independent numerical references, and the separate computational-addendum and export review. Floating-point gap estimates are not formal certificates.
+ - [Sites reading preview](docs/execution/sites-preview-2026-11-01/README.md): frozen Section 9 presentation checkpoint with reviewed navigation, passage search and an inspected offline candidate. Its source upload failed; further upload is deferred until manuscript revision and local release verification are complete.
+-- [Current Section 15 checkpoint](docs/execution/section15-analytic-review-2026-11-01/README.md): the regular-family quantum Airy proof, including normalization, global contour/tail bounds and the uniform first correction, has an independent analytic review. The [new exact-integrand companion](experiments/section15_quantum/README.md) evaluates seven parameter pairs under three precision/contour settings and has a separate direct Barnes-integral reference. It corrects the first printed quantum value from `0.459087` to `0.459086`; original historical inputs remain preserved. These numerical comparisons are not total interval quadrature certificates.
++- [Counting, mixing and arithmetic checkpoint](docs/execution/counting-mixing-review-2026-11-01/README.md): nine modular chapters, 168 independently reviewed claims, an [exact finite and 60/90-digit formula companion](experiments/counting_mixing/README.md), and a [new full torus campaign](experiments/torus_campaign/README.md). The new campaign reproduces both length-8192 counts and the four printed M/Q rows, and records all twenty block rows, signed all-point diagnostics, selected precision checks and conditional sensitivity. Finite agreement does not prove general mixing, asymptotic bounds or every-node accuracy; the original torus precision archive remains unrecovered.
++- [Section 15 checkpoint](docs/execution/section15-analytic-review-2026-11-01/README.md): the regular-family quantum Airy proof, including normalization, global contour/tail bounds and the uniform first correction, has an independent analytic review. The [new exact-integrand companion](experiments/section15_quantum/README.md) evaluates seven parameter pairs under three precision/contour settings and has a separate direct Barnes-integral reference. It corrects the first printed quantum value from `0.459087` to `0.459086`; original historical inputs remain preserved. These numerical comparisons are not total interval quadrature certificates.
+ - [Prior quantum and surgery increment](docs/execution/quantum-surgery-review-2026-11-01/README.md): Sections 12–14 and 16, with two claim ledgers and a [bounded computational companion](experiments/quantum_surgery/README.md). Its initial author run passes 192 exact finite identities, period and Euler-arc comparisons at 60/90 digits, and 15 focused tests. Independent review, final artifact generation and integrated PDF verification have separate records; finite computations do not establish spectral tails or global quantum-invariant asymptotics.
+ - [Prior normalization review](docs/execution/normalization-review-2026-11-01/README.md): Sections 1–8 and Appendix A, with 41 recorded claims and an [exact finite companion](experiments/normalizations/README.md). Independent computational review passed; the checkpoint records mathematical review and integrated PDF verification separately. This is a bounded increment, not a full-book proof review.
+ - [Prior Airy and torus checkpoint](docs/execution/monograph-revision-2026-11-01/README.md): corrected evidence descriptions, finite Airy checks and a bounded replacement torus computation, with inherited theorem claims and unreplayed original results kept distinct. Its artifacts remain frozen.
+@@ -26,7 +27,7 @@
+ - [Provenance](provenance/README.md): source identities, restoration checks and path mapping.
+ - [Audit](audit/2026-10-31/): the evidence used to plan this integration.
+ 
+-The current exact-integrand result path is `artifacts/section15_quantum/result.json`; the [Section 15 checkpoint](docs/execution/section15-analytic-review-2026-11-01/README.md) records source identities, numerical review, final generation and integrated PDF verification separately. The earlier quantum/surgery and normalization results and PDFs, Site downloads, and Section 15/30 outputs retain their own source identities. The counting/mixing chapters and the other unrevised sections specified in the plan remain next. Section 15's theorem is for its specified regular family and bounded real transition parameter; no arbitrary-shape, fixed-volume or global-invariant result is claimed. The whole book is not yet publication-ready. Upload and deployment remain the final publication step.
++The new result paths are `artifacts/counting_mixing/result.json` and `artifacts/torus_campaign/result.json`; the [counting/mixing checkpoint](docs/execution/counting-mixing-review-2026-11-01/README.md) records independent reviews, final generation, source identities and the integrated PDF separately. The Section 15 exact-integrand result remains `artifacts/section15_quantum/result.json`; the [Section 15 checkpoint](docs/execution/section15-analytic-review-2026-11-01/README.md) records source identities, numerical review, final generation and integrated PDF verification separately. The earlier quantum/surgery and normalization results and PDFs, Site downloads, and Section 15/30 outputs retain their own source identities. The remaining chapter reviews are Sections 10–11, 17–22, 32 and Appendix B, followed by cross-chapter and local-release checks. Section 15's theorem is for its specified regular family and bounded real transition parameter; no arbitrary-shape, fixed-volume or global-invariant result is claimed. The whole book is not yet publication-ready. Upload and deployment remain the final publication step.
+ 
+ ## Development
+ 
+--- a/book/README.md
++++ b/book/README.md
+@@ -2,13 +2,15 @@
+ 
+ The canonical text is [Polyhedra, Moduli, and Quantum Geometry](polyhedral_volumes_and_geodesic_identities.tex). It was imported byte-for-byte from the supplied 30 October 2026 archive. [Section 9](chapters/09-volume-hessians.tex) was revised following two independent mathematical audits, with its original labels and numbered formulas preserved, expanded coordinate and positivity proofs, explicit finite-centering guarantees, and precise geometric hypotheses.
+ 
+-The [current Section 15 checkpoint](../docs/execution/section15-analytic-review-2026-11-01/README.md) reviews the [regular-family quantum Airy chapter](chapters/15-quantum-airy.tex), with a [claim ledger](claims/section15.json) separating analytic arguments from numerical evidence. The independent analytic review covers the corrected real double-sine normalization, phase constant, arbitrary separating-contour relocation, uniform tails and integrated first correction for bounded real transition parameters. The [new exact-integrand evaluator](../experiments/section15_quantum/README.md) computes all six displayed quantum values plus one negative-parameter point at 60/90 digits, with contour/cutoff comparisons and an independent whole-Barnes reference. The first quantum value now rounds to `0.459086`, correcting the supplied `0.459087`; the original table and earlier finite-check artifact remain frozen. Correction-series truncation has a rational bound, while total quadrature errors remain uncertified.
++The [counting, mixing and arithmetic checkpoint](../docs/execution/counting-mixing-review-2026-11-01/README.md) records independent local review of Sections 23–31 and all 168 claims in four ledgers: [23–25](claims/sections23-25.json), [26–29](claims/sections26-29.json), [30](claims/section30.json) and [31](claims/section31.json). The [finite companion](../experiments/counting_mixing/README.md) checks exact algebra and selected 60/90-digit formulas; the [new full torus campaign](../experiments/torus_campaign/README.md) reproduces both length-8192 counts and all four printed M/Q rows, and adds all-block, signed all-point and conditional sensitivity records. The chapter proofs retain their hypotheses; finite evidence supplies no general mixing or asymptotic theorem, every-node error certificate, or validation of the recent preprints' complete proofs and formalizations. The all-point O(L/log L) target now explicitly requires compatibility with the local row widths.
++
++The [Section 15 checkpoint](../docs/execution/section15-analytic-review-2026-11-01/README.md) reviews the [regular-family quantum Airy chapter](chapters/15-quantum-airy.tex), with a [claim ledger](claims/section15.json) separating analytic arguments from numerical evidence. The independent analytic review covers the corrected real double-sine normalization, phase constant, arbitrary separating-contour relocation, uniform tails and integrated first correction for bounded real transition parameters. The [new exact-integrand evaluator](../experiments/section15_quantum/README.md) computes all six displayed quantum values plus one negative-parameter point at 60/90 digits, with contour/cutoff comparisons and an independent whole-Barnes reference. The first quantum value now rounds to `0.459086`, correcting the supplied `0.459087`; the original table and earlier finite-check artifact remain frozen. Correction-series truncation has a rational bound, while total quadrature errors remain uncertified.
+ 
+ The [prior quantum and surgery increment](../docs/execution/quantum-surgery-review-2026-11-01/README.md) separates Sections 12–14 and 16 into chapter files, with ledgers for [Sections 12–14](claims/sections12-14.json) and [Section 16](claims/section16.json). It distinguishes finite periods and first moments from additional spectral continuation, a classical fold from a uniform quantum asymptotic, and local peripheral deformation identities from conditional statements about global quantum invariants. The [bounded companion](../experiments/quantum_surgery/README.md) supplies 192 exact finite checks and period/Euler-arc comparisons at 60/90 digits; its initial author run and all 15 focused tests pass. Consult the checkpoint for independent-review, final-artifact and integrated-build status. Finite arithmetic and numerical agreement do not prove the external geometric inputs or missing global analytic hypotheses.
+ 
+ The [prior normalization checkpoint](../docs/execution/normalization-review-2026-11-01/README.md) separates Sections 1–8 and Appendix A into chapter files and reviews their measure conventions, geometric hypotheses, cone walls and flat limits. Its ledgers cover 41 claims: [Sections 1–6 and Appendix A](claims/sections1-6.json) and [Sections 7–8](claims/sections7-8.json). The [exact companion](../experiments/normalizations/README.md) checks fixed normalization, compactification, partition, Gram/Pfaffian and trace identities. Independent computational review passed; the checkpoint records mathematical review and integrated PDF verification separately. Finite arithmetic agreement does not prove external geometric results or analytic convergence.
+ 
+-The [prior Airy and torus checkpoint](../docs/execution/monograph-revision-2026-11-01/README.md) separated [Section 15](chapters/15-quantum-airy.tex) and [Section 30](chapters/30-sharp-diagnostics.tex) and corrected their computational-evidence descriptions. Its companions check the [finite Airy algebra and approximation column](../experiments/section15/README.md) and a [bounded replacement torus diagnostic](../experiments/section30/README.md). That checkpoint did not approve either whole analytic chapter or reproduce either original calculation. Its artifacts remain frozen. The current Section 15 increment supplies a separate analytic review and new exact-integrand evidence; the original quantum evaluator remains unrecovered. Section 30's length-8192 report and broader proof dependencies remain outstanding.
++The [prior Airy and torus checkpoint](../docs/execution/monograph-revision-2026-11-01/README.md) separated [Section 15](chapters/15-quantum-airy.tex) and [Section 30](chapters/30-sharp-diagnostics.tex) and corrected their computational-evidence descriptions. Its companions check the [finite Airy algebra and approximation column](../experiments/section15/README.md) and a [bounded replacement torus diagnostic](../experiments/section30/README.md). That checkpoint did not approve either whole analytic chapter or reproduce either original calculation. Its artifacts remain frozen. The current Section 15 increment supplies a separate analytic review and new exact-integrand evidence; the original quantum evaluator remains unrecovered. The later counting/mixing increment supplies Section 30's local analytic review and a separately identified full replacement campaign; the original long-run precision archive remains unrecovered.
+ 
+ The [Section 9 claim ledger](claims/section9.json) connects each statement to hypotheses, review evidence, code, computations and remaining gaps. The [companion reconciliation](companion-reconciliation.md) records corrections to the preserved [historical companion](../research/ipoly/README.md). Historical source bytes and the supplied reference PDF remain unchanged.
+ 
+@@ -18,12 +20,12 @@
+ latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex
+ ```
+ 
+-The wrapper `main.tex` delegates to the canonical source, which inputs the separate Sections 1–9, 12–16, 30 and Appendix A. The latest extraction preserved the expanded source byte-for-byte and all 607 labels before mathematical edits; part headings and the existing Section 15 input remain in the main source. The [reference PDF](reference/polyhedral_volumes_and_geodesic_identities.pdf) is the supplied PDF, not a newly reviewed release. New full-book build outputs go to the ignored `build/` directory. At the repository root, the current exact-integrand result path is `artifacts/section15_quantum/result.json`; its checkpoint records final generation, source identities and integrated PDF verification separately. The previous quantum/surgery and normalization results and PDFs retain their earlier identities.
++The wrapper `main.tex` delegates to the canonical source, which inputs the separate Sections 1–9, 12–16, 23–31 and Appendix A. The latest extraction preserved the expanded source byte-for-byte and all 607 labels before mathematical edits; part headings and the existing Section 15 input remain in the main source. The [reference PDF](reference/polyhedral_volumes_and_geodesic_identities.pdf) is the supplied PDF, not a newly reviewed release. New full-book build outputs go to the ignored `build/` directory. At the repository root, the new result paths are `artifacts/counting_mixing/result.json` and `artifacts/torus_campaign/result.json`, with the working PDF at `artifacts/counting-mixing-review-2026-11-01/monograph-working-draft.pdf`. The checkpoint records final generation, source identities and integrated PDF verification separately. The exact-integrand result `artifacts/section15_quantum/result.json` retains its earlier identity. The previous quantum/surgery and normalization results and PDFs retain their earlier identities.
+ 
+ The TikZ figures remain inline in the canonical TeX files, with editable copies in `figures/`. Editing only a separate figure copy does not change the PDF. Their captions and labels are retained.
+ 
+-The [chapter publishing build](../site/README.md) produces a complete Section 9 HTML chapter and PDF alongside the grid and dense barrier [computational examples](../experiments/section9/README.md). It keeps the claim ledger and source archive with the generated chapter. The barrier implementation extends computational coverage while preserving the reviewed proof mathematics; its numerical gap estimates are not interval certificates. The [barrier checkpoint](../docs/execution/section9-barrier-2026-10-31/README.md) records that implementation and export review separately from the earlier [chapter proof and build evidence](../docs/execution/section9-chapter-2026-10-31/README.md). These existing Section 9 exports, the [reading preview](../docs/execution/sites-preview-2026-11-01/README.md), and their broader monograph-source downloads remain frozen historical checkpoints. They have not been regenerated for the later Sections 15/30 or normalization revisions. A successful conversion is not a full-monograph proof review or public deployment.
++The [chapter publishing build](../site/README.md) produces a complete Section 9 HTML chapter and PDF alongside the grid and dense barrier [computational examples](../experiments/section9/README.md). It keeps the claim ledger and source archive with the generated chapter. The barrier implementation extends computational coverage while preserving the reviewed proof mathematics; its numerical gap estimates are not interval certificates. The [barrier checkpoint](../docs/execution/section9-barrier-2026-10-31/README.md) records that implementation and export review separately from the earlier [chapter proof and build evidence](../docs/execution/section9-chapter-2026-10-31/README.md). These existing Section 9 exports, the [reading preview](../docs/execution/sites-preview-2026-11-01/README.md), and their broader monograph-source downloads remain frozen historical checkpoints. They have not been regenerated for the later manuscript revisions, including Sections 23–31. A successful conversion is not a full-monograph proof review or public deployment.
+ 
+ Original source hashes and duplicate mappings are in [provenance](../provenance/README.md). The [original package README](../provenance/monograph/README.source.md) records mathematical qualifications and the unavailable numerical replays. The [computational-status ledger](computational-status.md) distinguishes newly executable finite checks from missing original calculations, and records the remaining review work.
+ 
+-Sections 23–31's counting and mixing dependencies, the original long torus calculation, and the remaining Sections 10–11, 17–22, 32 and Appendix B still need the review and evidence work specified in the [plan](../INTEGRATION_PLAN.md). Authorship metadata and text licensing require an explicit publication decision. Manuscript revision, computational checks and local release verification precede the final upload and deployment step. No full-book review or public book/Site publication is claimed by this increment.
++Sections 23–31 have completed their bounded local analytic review; the new full campaign replaces the missing numerical coverage without recovering the original torus implementation or precision archive. Sections 10–11, 17–22, 32 and Appendix B still need the review and evidence work specified in the [plan](../INTEGRATION_PLAN.md). Cross-chapter consistency and the complete local release remain later gates. Authorship metadata and text licensing require an explicit publication decision. Manuscript revision, computational checks and local release verification precede the final upload and deployment step. No full-book review or public book/Site publication is claimed by this increment.
+--- a/book/chapters/25-global-coefficient-filters.tex
++++ b/book/chapters/25-global-coefficient-filters.tex
+@@ -344,5 +344,18 @@
+ nonlinear diagonal extraction from $\mathbf E_X$. Neither follows
+ from fixed-coefficient convergence alone.
+ 
++\paragraph{Finite computational companion.}
++The maintained recipe \path{experiments/counting_mixing/run.py} checks
++the trace recurrences through power $12$, four rational $SL_2$ word
++fixtures, the global weights, finite support selectors, and a formal
++length-valued Euler product through length $14$. Its result is
++\path{artifacts/counting_mixing/result.json}; the input ranges and
++independent review are recorded with the recipe and the checkpoint
++\path{docs/execution/counting-mixing-review-2026-11-01/}.
++These are exact finite algebraic checks. The formal lengths are not
++asserted to come from one hyperbolic metric, and the checks do not
++establish the infinite-product convergence, geometric first-atom
++theorem, or a sharp counting remainder.
++
+ \clearpage
+ 
+--- a/book/chapters/29-controlled-observables.tex
++++ b/book/chapters/29-controlled-observables.tex
+@@ -761,6 +761,18 @@
+ count, its M\"obius inversion, and its unsmoothing error remain
+ distinct from the affine mean-square identities proved here.
+ 
+-
+-
+-
++\paragraph{Finite computational companion.}
++The companion \path{experiments/counting_mixing/run.py} records exact
++finite matrix, inverse-residue, primitive-parity and Fourier checks,
++together with one- and two-mark Gaussian comparisons at $60$ and $90$
++decimal working digits. It compares the rank-two divisor and logarithm
++series with determinant-orbit quadrature and records analytic truncation
++bounds separately from measured numerical residuals. The result is
++\path{artifacts/counting_mixing/result.json}; its reviewed source and
++generation records are in
++\path{docs/execution/counting-mixing-review-2026-11-01/}.
++These selected formula checks do not certify quadrature or roundoff,
++prove the general mixing theorem, or establish the geometric hypotheses
++of the nonsquare genus-two model. The finite increase of collinear sums
++is an illustration, not the proof of divergence above.
++
+--- a/book/chapters/30-sharp-diagnostics.tex
++++ b/book/chapters/30-sharp-diagnostics.tex
+@@ -8,9 +8,10 @@
+ criterion for $O(L)$. An exact dyadic inversion removes the leading area
+ constant from the numerical test, and an inverse-flatness formula measures
+ the contribution of a particular supporting row. Finally we describe the
+-dyadic diagnostic using hyperbolic trace recursion on two tori, distinguish
+-the supplied draft's unreplayed numerical report from a new bounded
+-replacement calculation, and provide the latter's computational recipe.
++dyadic diagnostic using hyperbolic trace recursion on two tori. A new
++full campaign reproduces the supplied draft's counts and rounded block
++values through length $8192$, with its own precision and provenance
++records; the historical implementation remains unrecovered.
+ The proofs and the exploratory numerical observations are stated separately.
+ 
+ \subsection{The normalized all-point discrepancy and the logarithmic loss}
+@@ -498,7 +499,7 @@
+ 
+ 
+ 
+-\subsection{A trace diagnostic: retained report and bounded replacement}
++\subsection{A trace diagnostic: historical report and new full campaign}
+ \label{subsec:torustraceexperiment}
+ 
+ The count here is $N_X(L)$ for unoriented essential simple closed
+@@ -546,17 +547,19 @@
+ so this computation avoids catastrophic cancellation. The supplied draft
+ describes extended-precision arithmetic for this recursion and double
+ precision for sorting the resulting lengths. That reported implementation
+-was not included in the supplied materials. The bounded replacement below
+-uses binary64 logarithmic recursion and a separate exact-trace oracle.
+-Neither calculation provides an interval certificate of every event location.
+-
+-\paragraph{Retained numerical report, awaiting reproduction.}
++was not included in the supplied materials. Both maintained replacement
++calculations below use binary64 logarithmic recursion, with separate
++multiprecision trace checks. Neither provides an interval certificate
++of every event location.
++
++\paragraph{Historical report and reproduced printed values.}
+ The supplied draft reports enumeration through hyperbolic length $8192$, obtaining
+ $18\,191\,508$ curves for the modular torus and $18\,486\,116$ for
+ the asymmetric torus. Such a cutoff permits evaluating the dyadic block statistics
+ through $T=2048$, because the largest count used in a block is $N_X(4T)$.
+-The following selected values are retained verbatim from that report;
+-all entries are rounded and have not been reproduced for this edition.
++The following selected values are retained verbatim from that report.
++The new full campaign below matches both integer counts and every
++displayed entry at four decimal places.
+ 
+ \begin{center}
+ \begin{tabular}{r r r r r}
+@@ -589,9 +592,11 @@
+ sensitivity check, not a proof that every computed length has that error
+ bound. The advertised source, full block table, precision report, and
+ sensitivity tables were not found in the supplied archive or repositories.
+-Consequently these counts, table entries, precision comparisons, and
+-sensitivity bounds remain unreplayed reported results. This edition does
+-not claim that the advertised diagnostic archive accompanies the book.
++The new campaign reproduces the counts and rounded table entries, but
++does not recover that implementation, its selected precision comparisons,
++or its sensitivity construction. Those historical precision and
++sensitivity claims remain unverified historical reports. This edition
++does not claim that the original diagnostic archive accompanies the book.
+ 
+ The displayed finite-range normalized excursions decrease overall;
+ they do not establish an asymptotic linear or sublinear bound. The modular
+@@ -599,17 +604,55 @@
+ \cite[Conjecture~4.3]{McShaneRivinTori}. Neither example is asserted to
+ have a verified lattice-rational supporting normal at an infinitely flat
+ irrational point. Sparse resonances can occur beyond the tested range.
+-The stability claims for this reported long run remain awaiting their
+-computational evidence.
+-
+-\paragraph{A bounded replacement calculation.}
+-The maintained recipe \path{experiments/section30/run.py} performs a new
++The historical stability claims remain distinct from the new evidence.
++
++\paragraph{A new full campaign through length $8192$.}
++The maintained recipe \path{experiments/torus_campaign/run.py} gives
++new counts $18\,191\,508$ and $18\,486\,116$ for the two ordered trace
++triples. It records every dyadic count and all ten blocks
++$T=4,8,\ldots,2048$ for each surface, including the full/half event
++sweep, both relevant one-sided limits and simultaneous multiplicities.
++The compact result \path{artifacts/torus_campaign/result.json} retains
++all twenty block rows, selected paths, residuals, conditional sensitivity
++rows and source/input identities. The recipe describes the separately
++hashed slope and sorted-length streams and their regeneration. The
++checkpoint \path{docs/execution/counting-mixing-review-2026-11-01/}
++records independent review and final source/generation identities.
++
++The full campaign is supported by a complete exact-trace comparison
++through length $64$, an independent direct-trace traversal and membership
++probes through $512$, and selected long-path references. The latter use
++$100$ and $140$ decimal digits on $151$ modular and $126$ asymmetric
++samples, including $36$ distinct curves near length $8192$ on each
++surface. The largest observed difference from binary64 is below
++$1.2\times10^{-9}$; this is a sampled residual, not a bound at every
++node. Independent review additionally checked long samples by matrix
++words at $100$ and $160$ digits and recomputed every dyadic primitive
++and signed all-point count from the full stored length streams.
++Exact arithmetic on stored binary64 values does not certify membership
++or ordering for the true transcendental lengths.
++
++The new sensitivity calculation gives exact rational envelopes for
++$M(T)$ conditional on an error at most $10^{-6}$ in each listed length.
++Its maximum envelope widths across all ten blocks are below
++$1.232\times10^{-6}$ and $5.613\times10^{-7}$, respectively.
++These conservative bounds differ from the historical reported
++construction and must not be substituted for its claimed width.
++Application to the complete true spectrum also requires completeness
++and exclusion of entry by omitted curves under perturbation. The
++sampled precision checks certify neither hypothesis. The result also
++records signed all-point counts and their dyadic differences, in
++hyperbolic length units, as used at the end of
++Section~\ref{sec:arithmeticgeometry}.
++
++\paragraph{The frozen length-$64$ predecessor.}
++The earlier recipe \path{experiments/section30/run.py} records a frozen
+ calculation through length $64$ for the same two exact trace triples.
+-It finds $1104$ modular and $1127$ asymmetric curves. This is a replacement
+-experiment, not a reconstruction of the missing length-$8192$ run.
++It finds $1104$ modular and $1127$ asymmetric curves. This was the first bounded replacement
++experiment; its code, README and result retain their earlier bytes.
+ Its complete slope list, exact traces, numerical lengths, and block
+ statistics are recorded in \path{artifacts/section30/result.json}, with
+-the source identity and precision settings. The new block values are
++that run's source identity and precision settings. Its block values are
+ \begin{center}
+ \begin{tabular}{r r r r r}
+ \toprule
+--- a/book/chapters/31-arithmetic-remainder.tex
++++ b/book/chapters/31-arithmetic-remainder.tex
+@@ -393,6 +393,23 @@
+ curve types. No finite numerical range proves the uniform bound
+ in~\eqref{eq:allPointLogDiagnostic}.
+ 
+-
+-
+-
++The full campaign \path{experiments/torus_campaign/run.py} implements
++this signed-multiple diagnostic at its dyadic cutoffs, with the all-point
++rows and differences in \path{artifacts/torus_campaign/result.json}.
++The floor comparisons use exact rational representations of the stored
++binary64 lengths. Membership for the true geodesic lengths remains
++numerical; the exact identity does not certify the required length or
++completeness assumptions. The campaign uses hyperbolic lengths
++$\ell_\gamma$ without rescaling. If
++$s_X$ is the shortest hyperbolic length, the unit-shortest-vector gauge
++uses $\lambda_\gamma=\ell_\gamma/s_X$ and hence
++$A_B(L)=A_{\rm hyp}(s_XL)$. The campaign's hyperbolic dyadic rows must
++be interpreted with that change of units; they do not establish a
++uniform logarithmic bound. The separate finite companion
++\path{experiments/counting_mixing/run.py} checks rational examples of
++M\"obius inversion, signed multiples, row selectors, finite dyadic
++identities and conditional balance exponents. These finite checks do
++not supply either the required geometric modulus or an arithmetic
++hypothesis. Source, independent-review and generation records are in
++\path{docs/execution/counting-mixing-review-2026-11-01/}.
++
+--- a/book/claims/section30.json
++++ b/book/claims/section30.json
+@@ -4,16 +4,16 @@
+   "chapter_label": "sec:sharpdiagnostics",
+   "review_date": "2026-11-01",
+   "baseline_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+-  "review_scope": "Author audit of the complete local analytic argument and primary-source theorem statements in this chapter; independent review is a separate phase. Historical numerical evidence and preprint conditional inputs keep their distinct status.",
++  "review_scope": "Author audit followed by independent analytic approval of the complete local argument and pinned primary-source statements in Chapters 30-31. Numerical and integration review have separate records; recent preprint applications remain conditional.",
+   "path_convention": "Paths are relative to the research repository; outer execution evidence is identified in the integration checkpoint.",
+   "status_definitions": {
+-    "derivation_checked": "Author checked the displayed mathematical derivation under explicit hypotheses; independent reviewer acceptance is a separate gate.",
++    "derivation_checked": "Local mathematical derivation checked by author and independent reviewer under the written hypotheses.",
+     "external_statement_checked": "The stated theorem/convention was checked in the pinned primary source; the external proof was not re-refereed.",
+     "conditional_external_statement_checked": "A preprint statement was checked in its pinned source; it is retained only as an explicit hypothetical input.",
+     "exact_finite_check": "Exact rational/algebraic arithmetic checks the stated finite fixture, not transcendental evaluation or an asymptotic theorem.",
+-    "numerical_check": "Bounded numerical evidence from the preserved prior result, with precision and residual limits; no fresh numerical replay in this analytic increment.",
++    "numerical_check": "Finite numerical evidence tied to its own source/result and measured residuals; no interval certification or asymptotic conclusion.",
+     "conditional_bound": "A proved implication under an error or analytic hypothesis not established by the finite computation.",
+-    "reported_unreplayed": "Historical report retained verbatim; original executable/raw evidence remains unavailable.",
++    "reported_unreplayed": "Historical implementation or precision/sensitivity report remains unrecovered; any reproduced numerical values are identified separately.",
+     "open_target": "An unproved target or unverified geometric instantiation, not a publication-ready theorem."
+   },
+   "source_pins": {
+@@ -50,7 +50,7 @@
+       "verification": "Primary-source statement inspection through web retrieval; not a local byte download or full proof audit."
+     }
+   },
+-  "computational_boundary": "The old length-64 experiment and output are frozen. No full length-8192 run, numerical replay, interval certification, RH proof or flat-normal identification is claimed by this ledger. Any new full campaign needs its own source/result and review record.",
++  "computational_boundary": "The prior length-64 source/result remain frozen. A new length-8192 campaign reproduces counts and printed M/Q rows with its own provenance, sampled precision checks and conditional rational sensitivity. True-spectrum membership, every-node errors, asymptotic bounds, recent preprint proofs/formalizations and a flat-normal identification remain unverified.",
+   "claims": [
+     {
+       "id": "s30.normalization",
+@@ -80,7 +80,15 @@
+         "s30.normalization"
+       ],
+       "source_keys": [],
+-      "proof_notes": "Each nonzero lattice vector has a unique positive gcd and signed primitive part. A0(u)=0 for u<1. L*sum(d^-2,d>M)<=L/M<=2."
++      "proof_notes": "Each nonzero lattice vector has a unique positive gcd and signed primitive part. A0(u)=0 for u<1. L*sum(d^-2,d>M)<=L/M<=2.",
++      "finite_computation": {
++        "status": "implemented_finite_examples",
++        "result_groups": [
++          "exact.Mobius_lattice"
++        ],
++        "result_path": "artifacts/counting_mixing/result.json",
++        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
++      }
+     },
+     {
+       "id": "s30.dini_comparison",
+@@ -180,7 +188,7 @@
+         "subsec:rationalpolygonbenchmark"
+       ],
+       "status": "external_statement_checked",
+-      "scope": "The rational-polygon upper bound and origin-star-shaped rational-polygon Omega_\u00b1 lower bound apply to polygons, not automatically to strictly convex norm balls.",
++      "scope": "The rational-polygon upper bound and origin-star-shaped rational-polygon Omega_± lower bound apply to polygons, not automatically to strictly convex norm balls.",
+       "hypotheses": [
+         "Rational vertices; the lower theorem additionally requires origin-star-shapedness."
+       ],
+@@ -201,7 +209,15 @@
+       ],
+       "dependencies": [],
+       "source_keys": [],
+-      "proof_notes": "Partition by the maximum absolute coordinate; the N=1 shell also has eight points."
++      "proof_notes": "Partition by the maximum absolute coordinate; the N=1 shell also has eight points.",
++      "finite_computation": {
++        "status": "implemented_finite_examples",
++        "result_groups": [
++          "exact.Mobius_lattice"
++        ],
++        "result_path": "artifacts/counting_mixing/result.json",
++        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
++      }
+     },
+     {
+       "id": "s30.polygon_approximation",
+@@ -229,7 +245,15 @@
+       ],
+       "dependencies": [],
+       "source_keys": [],
+-      "proof_notes": "At k steps the remaining term is 4^-k E(2^k L), which tends to zero. Under each displayed bound the inverse series converges absolutely. Finite blocks do not supply the infinite-range hypothesis."
++      "proof_notes": "At k steps the remaining term is 4^-k E(2^k L), which tends to zero. Under each displayed bound the inverse series converges absolutely. Finite blocks do not supply the infinite-range hypothesis.",
++      "finite_computation": {
++        "status": "implemented_finite_examples",
++        "result_groups": [
++          "exact.dyadic_events"
++        ],
++        "result_path": "artifacts/counting_mixing/result.json",
++        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
++      }
+     },
+     {
+       "id": "s30.block_events",
+@@ -247,7 +271,15 @@
+       "code_paths": [
+         "experiments/section30/run.py",
+         "experiments/section30/tests/test_diagnostic.py"
+-      ]
++      ],
++      "finite_computation": {
++        "status": "implemented_finite_examples",
++        "result_groups": [
++          "exact.dyadic_events"
++        ],
++        "result_path": "artifacts/counting_mixing/result.json",
++        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
++      }
+     },
+     {
+       "id": "s30.inverse_width",
+@@ -319,7 +351,7 @@
+       "status": "conditional_bound",
+       "scope": "An explicitly infinitely flat graph gives W(u)>>_N u^(1/N), hence Omega(L^(1-epsilon)) for every epsilon>0 along contact scales; not Omega(L).",
+       "hypotheses": [
+-        "For every N, f(\u00b1s)<=C_N*s^N near zero, in addition to the supporting-row hypotheses."
++        "For every N, f(±s)<=C_N*s^N near zero, in addition to the supporting-row hypotheses."
+       ],
+       "dependencies": [
+         "s30.microscopic_row"
+@@ -356,7 +388,15 @@
+       ],
+       "dependencies": [],
+       "source_keys": [],
+-      "proof_notes": "Use sum(mu(d),d|gcd(k,n)) and count multiples in [a,b]. Each squarefree-divisor rounding error is bounded by one."
++      "proof_notes": "Use sum(mu(d),d|gcd(k,n)) and count multiples in [a,b]. Each squarefree-divisor rounding error is bounded by one.",
++      "finite_computation": {
++        "status": "implemented_finite_examples",
++        "result_groups": [
++          "exact.row_and_balance"
++        ],
++        "result_path": "artifacts/counting_mixing/result.json",
++        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
++      }
+     },
+     {
+       "id": "s30.local_row_statistic",
+@@ -418,9 +458,10 @@
+       "source_keys": [],
+       "code_paths": [
+         "experiments/section30/run.py",
+-        "experiments/section30/fixture.json"
+-      ],
+-      "evidence_scope": "Preserved bounded-companion exact checks; not a fresh replay in this increment."
++        "experiments/section30/fixture.json",
++        "experiments/torus_campaign/run.py"
++      ],
++      "evidence_scope": "Preserved bounded checks plus fresh campaign exact-root checks for the same two inputs; generation identities are in the checkpoint."
+     },
+     {
+       "id": "s30.sector_pruning",
+@@ -486,7 +527,7 @@
+         "experiments/section30/run.py",
+         "experiments/section30/tests/test_diagnostic.py"
+       ],
+-      "coverage_gap": "No fresh replay here; no original length-8192 archive, uniform event error bound, all-point asymptotic or RH evidence."
++      "coverage_gap": "Frozen earlier length-64 result; the new full campaign is separate evidence, not recovery of the original archive or a uniform true-length error certificate."
+     },
+     {
+       "id": "s30.bounded_conditional_sensitivity",
+@@ -510,11 +551,26 @@
+         "subsec:torustraceexperiment"
+       ],
+       "status": "reported_unreplayed",
+-      "scope": "Retain original 18191508/18486116 counts through 8192, the four printed M/Q rows and the stated 100-digit, long-path, cutoff-distance and sensitivity comparisons.",
++      "scope": "The historical implementation and its 100-digit, long-path, cutoff-distance and sensitivity comparisons remain unrecovered. The new full campaign separately reproduces the 18191508/18486116 counts and every printed M/Q entry at four decimals.",
+       "hypotheses": [],
+       "dependencies": [],
+       "source_keys": [],
+-      "coverage_gap": "Original source/full spectrum/full block and precision/sensitivity records were absent. A new campaign is separate evidence and cannot recover missing original provenance."
++      "coverage_gap": "Original source/full spectrum/full block and precision/sensitivity records were absent. A new campaign is separate evidence and cannot recover missing original provenance.",
++      "new_reproduction": {
++        "status": "new_finite_campaign_separate_provenance",
++        "result_path": "artifacts/torus_campaign/result.json",
++        "reproduced": [
++          "Both length-8192 integer counts",
++          "All four historically printed M/Q rows at four decimal places"
++        ],
++        "new_evidence": [
++          "All ten dyadic blocks per surface",
++          "151/126 selected 100/140-digit samples including 36 near-8192 curves per surface",
++          "Independent 100/160-digit matrix-word samples and full stored-stream dyadic count arithmetic",
++          "Exact rational M envelopes conditional on epsilon=1e-6 and completeness/no-entry"
++        ],
++        "limit": "The worst sampled binary64 difference is below 1.2e-9, not the historical 7.5e-13 claim. Across all blocks the new envelope widths are below 1.232e-6 and 5.613e-7; neither certifies the length-error or membership hypotheses."
++      }
+     },
+     {
+       "id": "s30.recent_flatness_preprint",
+@@ -546,5 +602,43 @@
+         "McShaneRivinTori"
+       ]
+     }
+-  ]
++  ],
++  "independent_review": {
++    "status": "approved_with_written_hypotheses",
++    "records": [
++      "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/review.md",
++      "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/review-decisions.json",
++      "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/analytic-claim-review.json"
++    ],
++    "scope": "All 57 claims in the frozen analytic chapters and ledgers; not a full audit of cited preprint proofs/formalizations, interval certification, or asymptotic inference from finite data."
++  },
++  "computational_companion": {
++    "code_path": "experiments/counting_mixing/",
++    "result_path": "artifacts/counting_mixing/result.json",
++    "checkpoint": "docs/execution/counting-mixing-review-2026-11-01/",
++    "review_record": "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/review-v2.md",
++    "approval_manifest": "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/approved-manifest-v2.json",
++    "approval_manifest_sha256": "c059cf9591f534bb6517486389b111c79fdff77531b192cbfab846021bd6536e",
++    "approved_source_set_sha256": "4b1f8f22f155c464f0ecda6ab95c581926db157bae4ee7583e67fbc6448ded63",
++    "independent_review_status": "approved_v2_R1_resolved_no_open_findings",
++    "reviewer_replay_counts": {
++      "exact": 4054,
++      "numerical_formula_comparisons": 354,
++      "cross_precision_observations": 297,
++      "focused_tests": 38
++    },
++    "prior_v1_status": "Initial numerical acceptance was rejected for R1 and is not retroactively approved; its evidence remains frozen.",
++    "scope": "Exact finite fixtures and selected 60/90-digit formula comparisons; analytic truncation bounds are separate from uncertified quadrature and roundoff.",
++    "generation_status": "Final generation and source identities are recorded separately in the checkpoint; author and reviewer runs retain their own provenance."
++  },
++  "torus_campaign": {
++    "code_path": "experiments/torus_campaign/",
++    "result_path": "artifacts/torus_campaign/result.json",
++    "review_record": "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/review-decisions.json",
++    "generation_record": "docs/execution/counting-mixing-review-2026-11-01/",
++    "scope": "New full campaign through hyperbolic length 8192; 18191508 modular and 18486116 asymmetric curves, all twenty block rows, dyadic signed all-point counts and conditional sensitivity.",
++    "units": "Hyperbolic length. For unit-shortest gauge, lambda=ell/systole and A_B(L)=A_hyp(systole*L).",
++    "historical_boundary": "No recovery of the historical extended-precision implementation, sample selection or sensitivity construction. The length-64 predecessor retains its prior bytes and source identity.",
++    "generation_status": "Final repaired-source replay and source identities are recorded separately by the checkpoint; the reviewed v2 author run is not relabeled as a v3 or clean-source run."
++  }
+ }
+--- a/book/claims/section31.json
++++ b/book/claims/section31.json
+@@ -4,16 +4,16 @@
+   "chapter_label": "sec:arithmeticgeometry",
+   "review_date": "2026-11-01",
+   "baseline_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+-  "review_scope": "Author audit of the complete local analytic argument and primary-source theorem statements in this chapter; independent review is a separate phase. Historical numerical evidence and preprint conditional inputs keep their distinct status.",
++  "review_scope": "Author audit followed by independent analytic approval of the complete local argument and pinned primary-source statements in Chapters 30-31. Numerical and integration review have separate records; recent preprint applications remain conditional.",
+   "path_convention": "Paths are relative to the research repository; outer execution evidence is identified in the integration checkpoint.",
+   "status_definitions": {
+-    "derivation_checked": "Author checked the displayed mathematical derivation under explicit hypotheses; independent reviewer acceptance is a separate gate.",
++    "derivation_checked": "Local mathematical derivation checked by author and independent reviewer under the written hypotheses.",
+     "external_statement_checked": "The stated theorem/convention was checked in the pinned primary source; the external proof was not re-refereed.",
+     "conditional_external_statement_checked": "A preprint statement was checked in its pinned source; it is retained only as an explicit hypothetical input.",
+     "exact_finite_check": "Exact rational/algebraic arithmetic checks the stated finite fixture, not transcendental evaluation or an asymptotic theorem.",
+-    "numerical_check": "Bounded numerical evidence from the preserved prior result, with precision and residual limits; no fresh numerical replay in this analytic increment.",
++    "numerical_check": "Finite numerical evidence tied to its own source/result and measured residuals; no interval certification or asymptotic conclusion.",
+     "conditional_bound": "A proved implication under an error or analytic hypothesis not established by the finite computation.",
+-    "reported_unreplayed": "Historical report retained verbatim; original executable/raw evidence remains unavailable.",
++    "reported_unreplayed": "Historical implementation or precision/sensitivity report remains unrecovered; any reproduced numerical values are identified separately.",
+     "open_target": "An unproved target or unverified geometric instantiation, not a publication-ready theorem."
+   },
+   "source_pins": {
+@@ -52,7 +52,7 @@
+       "verification": "Primary-source statement inspection through web retrieval; not a local byte download or full proof audit."
+     }
+   },
+-  "computational_boundary": "The old length-64 experiment and output are frozen. No full length-8192 run, numerical replay, interval certification, RH proof or flat-normal identification is claimed by this ledger. Any new full campaign needs its own source/result and review record.",
++  "computational_boundary": "The prior length-64 source/result remain frozen. A new length-8192 campaign reproduces counts and printed M/Q rows with its own provenance, sampled precision checks and conditional rational sensitivity. True-spectrum membership, every-node errors, asymptotic bounds, recent preprint proofs/formalizations and a flat-normal identification remain unverified.",
+   "claims": [
+     {
+       "id": "s31.conventions",
+@@ -83,7 +83,15 @@
+         "s31.conventions"
+       ],
+       "source_keys": [],
+-      "proof_notes": "For each m, the permitted integers are D<d<=L/r(m). Boundary terms with floor(L/r)=D vanish; no upper cutoff is omitted because A_B(u)=0 below one."
++      "proof_notes": "For each m, the permitted integers are D<d<=L/r(m). Boundary terms with floor(L/r)=D vanish; no upper cutoff is omitted because A_B(u)=0 below one.",
++      "finite_computation": {
++        "status": "implemented_finite_examples",
++        "result_groups": [
++          "exact.Mobius_lattice"
++        ],
++        "result_path": "artifacts/counting_mixing/result.json",
++        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
++      }
+     },
+     {
+       "id": "s31.reciprocal_lattice_bound",
+@@ -111,7 +119,15 @@
+       ],
+       "dependencies": [],
+       "source_keys": [],
+-      "proof_notes": "The tail is -M(D)/D^2+2*integral_D^infinity M(t)/t^3 dt; bounded eta makes the endpoint at infinity vanish."
++      "proof_notes": "The tail is -M(D)/D^2+2*integral_D^infinity M(t)/t^3 dt; bounded eta makes the endpoint at infinity vanish.",
++      "finite_computation": {
++        "status": "implemented_finite_examples",
++        "result_groups": [
++          "exact.Mobius_lattice"
++        ],
++        "result_path": "artifacts/counting_mixing/result.json",
++        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
++      }
+     },
+     {
+       "id": "s31.master_transfer",
+@@ -283,7 +299,15 @@
+         "s31.master_transfer"
+       ],
+       "source_keys": [],
+-      "proof_notes": "The cutoff exponent lies in (0,1). At alpha=2/3, theta=1/2,7/8,11/12 gives 10/11,34/35,50/51. Epsilon losses are renamed; none of these assigns alpha=2/3 to a torus norm ball."
++      "proof_notes": "The cutoff exponent lies in (0,1). At alpha=2/3, theta=1/2,7/8,11/12 gives 10/11,34/35,50/51. Epsilon losses are renamed; none of these assigns alpha=2/3 to a torus norm ball.",
++      "finite_computation": {
++        "status": "implemented_finite_examples",
++        "result_groups": [
++          "exact.row_and_balance"
++        ],
++        "result_path": "artifacts/counting_mixing/result.json",
++        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
++      }
+     },
+     {
+       "id": "s31.vk_power_geometry",
+@@ -412,7 +436,20 @@
+         "s30.dyadic_inversion"
+       ],
+       "source_keys": [],
+-      "proof_notes": "Forward implication uses log(2L)~log L. Reverse implication bounds each inverse term by 2^-j L/log L and sums the geometric series."
++      "proof_notes": "Forward implication uses log(2L)~log L. Reverse implication bounds each inverse term by 2^-j L/log L and sums the geometric series.",
++      "finite_computation": {
++        "status": "implemented_finite_examples",
++        "result_groups": [
++          "exact.dyadic_events"
++        ],
++        "result_path": "artifacts/counting_mixing/result.json",
++        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
++      },
++      "campaign_computation": {
++        "result_path": "artifacts/torus_campaign/result.json",
++        "scope": "Signed A_hyp(L)=2 sum floor(L/ell) and A_hyp(2L)-4 A_hyp(L) at finite dyadic hyperbolic cutoffs, using exact comparisons of stored binary64 rationals.",
++        "limit": "Unit-shortest gauge needs lambda=ell/systole. Stored-length arithmetic does not certify true threshold membership or a uniform asymptotic bound."
++      }
+     },
+     {
+       "id": "s31.all_point_from_primitive_lengths",
+@@ -428,7 +465,58 @@
+         "s31.conventions"
+       ],
+       "source_keys": [],
+-      "proof_notes": "Each nonzero integral vector has a unique primitive signed ray and positive integer multiple. This exact identity does not validate an infinite-range geometric bound from a finite list."
++      "proof_notes": "Each nonzero integral vector has a unique primitive signed ray and positive integer multiple. This exact identity does not validate an infinite-range geometric bound from a finite list.",
++      "finite_computation": {
++        "status": "implemented_finite_examples",
++        "result_groups": [
++          "exact.dyadic_events"
++        ],
++        "result_path": "artifacts/counting_mixing/result.json",
++        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
++      },
++      "campaign_computation": {
++        "result_path": "artifacts/torus_campaign/result.json",
++        "scope": "Signed A_hyp(L)=2 sum floor(L/ell) and A_hyp(2L)-4 A_hyp(L) at finite dyadic hyperbolic cutoffs, using exact comparisons of stored binary64 rationals.",
++        "limit": "Unit-shortest gauge needs lambda=ell/systole. Stored-length arithmetic does not certify true threshold membership or a uniform asymptotic bound."
++      }
+     }
+-  ]
++  ],
++  "independent_review": {
++    "status": "approved_with_written_hypotheses",
++    "records": [
++      "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/review.md",
++      "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/review-decisions.json",
++      "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/analytic-claim-review.json"
++    ],
++    "scope": "All 57 claims in the frozen analytic chapters and ledgers; not a full audit of cited preprint proofs/formalizations, interval certification, or asymptotic inference from finite data."
++  },
++  "computational_companion": {
++    "code_path": "experiments/counting_mixing/",
++    "result_path": "artifacts/counting_mixing/result.json",
++    "checkpoint": "docs/execution/counting-mixing-review-2026-11-01/",
++    "review_record": "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/review-v2.md",
++    "approval_manifest": "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/approved-manifest-v2.json",
++    "approval_manifest_sha256": "c059cf9591f534bb6517486389b111c79fdff77531b192cbfab846021bd6536e",
++    "approved_source_set_sha256": "4b1f8f22f155c464f0ecda6ab95c581926db157bae4ee7583e67fbc6448ded63",
++    "independent_review_status": "approved_v2_R1_resolved_no_open_findings",
++    "reviewer_replay_counts": {
++      "exact": 4054,
++      "numerical_formula_comparisons": 354,
++      "cross_precision_observations": 297,
++      "focused_tests": 38
++    },
++    "prior_v1_status": "Initial numerical acceptance was rejected for R1 and is not retroactively approved; its evidence remains frozen.",
++    "scope": "Exact finite fixtures and selected 60/90-digit formula comparisons; analytic truncation bounds are separate from uncertified quadrature and roundoff.",
++    "generation_status": "Final generation and source identities are recorded separately in the checkpoint; author and reviewer runs retain their own provenance."
++  },
++  "torus_campaign": {
++    "code_path": "experiments/torus_campaign/",
++    "result_path": "artifacts/torus_campaign/result.json",
++    "review_record": "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/review-decisions.json",
++    "generation_record": "docs/execution/counting-mixing-review-2026-11-01/",
++    "scope": "New full campaign through hyperbolic length 8192; 18191508 modular and 18486116 asymmetric curves, all twenty block rows, dyadic signed all-point counts and conditional sensitivity.",
++    "units": "Hyperbolic length. For unit-shortest gauge, lambda=ell/systole and A_B(L)=A_hyp(systole*L).",
++    "historical_boundary": "No recovery of the historical extended-precision implementation, sample selection or sensitivity construction. The length-64 predecessor retains its prior bytes and source identity.",
++    "generation_status": "Final repaired-source replay and source identities are recorded separately by the checkpoint; the reviewed v2 author run is not relabeled as a v3 or clean-source run."
++  }
+ }
+--- a/book/claims/sections23-25.json
++++ b/book/claims/sections23-25.json
+@@ -12,16 +12,22 @@
+   ],
+   "review_date": "2026-11-01",
+   "baseline_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+-  "revision_review": "Bounded mathematical-author review of Sections 23-25; exact structural extraction was separately verified before edits. This ledger does not award itself independent review.",
++  "revision_review": "Author audit followed by independent mathematical approval of the frozen Chapters 23-25 and all 52 claims; integration adds computational prose and evidence metadata without changing proof statements.",
+   "author_review": {
+     "status": "completed_for_independent_review",
+     "scope": "Every displayed theorem/proposition/lemma/corollary and substantive algebraic or analytic assertion in Sections 23-25, with explicit external inputs and unproved aggregate-counting boundaries.",
+     "no_claim_of_full_external_proof_refereeing": true
+   },
+   "independent_review": {
+-    "status": "pending_separate_reviewer",
++    "status": "approved_with_written_hypotheses",
+     "record_directory": "docs/execution/counting-mixing-review-2026-11-01/",
+-    "author_is_independent_reviewer": false
++    "records": [
++      "docs/execution/counting-mixing-review-2026-11-01/algebra-review/review-report.md",
++      "docs/execution/counting-mixing-review-2026-11-01/algebra-review/approved-hash-manifest.json",
++      "docs/execution/counting-mixing-review-2026-11-01/algebra-review/source-audit.md"
++    ],
++    "author_is_independent_reviewer": false,
++    "scope": "Local derivations, external theorem statements and convention conversions; not complete external-proof, companion-code or PDF approval."
+   },
+   "status_definitions": {
+     "derived_exact_algebra": "General finite algebraic derivation author-checked; bounded symbolic examples are separate evidence.",
+@@ -55,7 +61,25 @@
+       "No implemented twisted spectral solver or higher-twist spectrum",
+       "No infinite-product numerical convergence certificate",
+       "No connected-simple-curve exponent or mixing theorem inferred from finite algebra"
+-    ]
++    ],
++    "code_path": "experiments/counting_mixing/",
++    "result_path": "artifacts/counting_mixing/result.json",
++    "checkpoint": "docs/execution/counting-mixing-review-2026-11-01/",
++    "review_record": "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/review-v2.md",
++    "approval_manifest": "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/approved-manifest-v2.json",
++    "approval_manifest_sha256": "c059cf9591f534bb6517486389b111c79fdff77531b192cbfab846021bd6536e",
++    "approved_source_set_sha256": "4b1f8f22f155c464f0ecda6ab95c581926db157bae4ee7583e67fbc6448ded63",
++    "independent_review_status": "approved_v2_R1_resolved_no_open_findings",
++    "reviewer_replay_counts": {
++      "exact": 4054,
++      "numerical_formula_comparisons": 354,
++      "cross_precision_observations": 297,
++      "focused_tests": 38
++    },
++    "prior_v1_status": "Initial numerical acceptance was rejected for R1 and is not retroactively approved; its evidence remains frozen.",
++    "scope": "Exact finite fixtures and selected 60/90-digit formula comparisons; analytic truncation bounds are separate from uncertified quadrature and roundoff.",
++    "generation_status": "Final generation and source identities are recorded separately in the checkpoint; author and reviewer runs retain their own provenance.",
++    "implementation_status": "Implemented finite fixture groups are recorded per claim; optional numerical gap illustrations were omitted."
+   },
+   "sources": [
+     {
+@@ -182,7 +206,13 @@
+         "First-variation formula (1.1) p. 132; Section 2 and deformation (2.1) p. 133"
+       ],
+       "checked": "Smooth closed-geodesic first variation and displacement twist construction; manuscript also gives the cut-arc endpoint derivation of the cosine sum, including immersed curves.",
+-      "verification": "Primary first-page text and p. 133 OCR read through web tools. The final-page cosine formula was not independently recovered from the scan by these tools; it is not assigned a fabricated theorem/page pin."
++      "verification": "Primary first-page text and p. 133 OCR read through web tools. The final-page cosine formula was not independently recovered from the scan by these tools; it is not assigned a fabricated theorem/page pin.",
++      "independent_review_supplement": {
++        "url": "https://gdz.sub.uni-goettingen.de/download/pdf/PPN358147735_0056/LOG_0014.pdf#page=1",
++        "pin": "Section 3, printed page 134 (cosine sum and signed angles); page 135 (local contribution argument)",
++        "record": "docs/execution/counting-mixing-review-2026-11-01/algebra-review/source-audit.md",
++        "scope": "The independent reviewer recovered the final formula; the author's earlier access-limit note above remains historical."
++      }
+     },
+     {
+       "key": "AougabLahnLovingMiller",
+@@ -227,8 +257,11 @@
+       ],
+       "computational_coverage": {
+         "planned_fixture_groups": [],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "No approximation algorithm for full loop space or numerical Hessian is supplied; positivity cannot select simplicity."
+     },
+@@ -249,8 +282,11 @@
+         "planned_fixture_groups": [
+           6
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "Finite function evaluation does not certify embedded disks or classify all crossings on an unspecified surface."
+     },
+@@ -281,8 +317,11 @@
+           1,
+           2
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "The general basis theorem is external. Matrix samples do not prove linear independence of all multicurve functions."
+     },
+@@ -312,8 +351,11 @@
+       ],
+       "computational_coverage": {
+         "planned_fixture_groups": [],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "No twisted spectral solver or entire labelled spectral family is computed. Scalar spectra alone do not supply these coefficients."
+     },
+@@ -337,8 +379,11 @@
+         "planned_fixture_groups": [
+           1
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "Exact polynomial fixtures exercise finite examples only; strict geometric shortening is proved analytically."
+     },
+@@ -363,8 +408,11 @@
+         "planned_fixture_groups": [
+           1
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "No uniform gap over all simple supports or all moduli is asserted. Nonparallel coefficients may vanish after cancellation."
+     },
+@@ -385,8 +433,11 @@
+       "source_pins": [],
+       "computational_coverage": {
+         "planned_fixture_groups": [],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "The cutoff requires local isolation. There is no uniform-norm stable coefficient-extraction assertion."
+     },
+@@ -416,8 +467,11 @@
+         "planned_fixture_groups": [
+           1
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "Positive twisted Fuchsian evaluation is auxiliary and does not define a unitary Laplacian twist. General sign coherence is an external theorem."
+     },
+@@ -442,8 +496,11 @@
+         "planned_fixture_groups": [
+           1
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "The constant depends on target multiplicities and metric. No uniform bound over all growing supports follows."
+     },
+@@ -465,8 +522,11 @@
+       "source_pins": [],
+       "computational_coverage": {
+         "planned_fixture_groups": [],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "No prime-geodesic asymptotic, net later-atom nonvanishing, or sharp orbit count is used."
+     },
+@@ -488,8 +548,11 @@
+       "source_pins": [],
+       "computational_coverage": {
+         "planned_fixture_groups": [],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "No meromorphic continuation of individual coefficients beyond Re(s)>1 is established."
+     },
+@@ -516,8 +579,11 @@
+         "planned_fixture_groups": [
+           1
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "This does not establish uniqueness of arbitrary infinite continuous-function expansions. Coefficient extraction is unbounded for the SU(2) uniform norm."
+     },
+@@ -545,8 +611,11 @@
+         "planned_fixture_groups": [
+           6
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "The recovery limit is for fixed support and is not a large-length counting asymptotic."
+     },
+@@ -571,8 +640,13 @@
+         "planned_fixture_groups": [
+           1
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "finite_examples_recorded_separately",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [
++          "exact.trace_coefficients"
++        ],
++        "evidence_record": "artifacts/counting_mixing/result.json",
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "The individual primitive family is exact; subtracting it does not remove nonsimple primitive powers that resolve to the same target."
+     },
+@@ -598,8 +672,13 @@
+           1,
+           6
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "finite_examples_recorded_separately",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [
++          "exact.trace_coefficients"
++        ],
++        "evidence_record": "artifacts/counting_mixing/result.json",
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "The wider family half-plane does not apply to the full coefficient Laplace transform. No global analytic continuation is inferred."
+     },
+@@ -625,8 +704,13 @@
+         "planned_fixture_groups": [
+           1
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "finite_examples_recorded_separately",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [
++          "exact.trace_coefficients"
++        ],
++        "evidence_record": "artifacts/counting_mixing/result.json",
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "Cuff identifications require collecting equal monomials first. Other primitive classes can contribute, so the complete signed measures need not cancel."
+     },
+@@ -647,8 +731,11 @@
+       "source_pins": [],
+       "computational_coverage": {
+         "planned_fixture_groups": [],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "No real analyticity for arbitrary smooth test functions is asserted; no derivative of an infinite unweighted coefficient sum is taken."
+     },
+@@ -677,8 +764,11 @@
+       ],
+       "computational_coverage": {
+         "planned_fixture_groups": [],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "The original scan final cosine display was not recovered; the chapter includes the first-variation argument instead of inventing a source pin. No numerical twist family is evaluated."
+     },
+@@ -702,8 +792,11 @@
+       "source_pins": [],
+       "computational_coverage": {
+         "planned_fixture_groups": [],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "No uniform derivative estimate over growing supports or degenerating metrics is claimed."
+     },
+@@ -729,8 +822,11 @@
+         "planned_fixture_groups": [
+           1
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "No individual coefficient continuation follows from Selberg-product continuation. The scalar-trace Euler product of Section 25 is a different product."
+     },
+@@ -751,8 +847,13 @@
+         "planned_fixture_groups": [
+           2
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "finite_examples_recorded_separately",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [
++          "exact.SL2_words"
++        ],
++        "evidence_record": "artifacts/counting_mixing/result.json",
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "Finite matrix samples alone would not establish the polynomial identity; the symbolic identity and algebraic derivation are supplied."
+     },
+@@ -775,8 +876,13 @@
+         "planned_fixture_groups": [
+           4
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "finite_examples_recorded_separately",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [
++          "exact.finite_support"
++        ],
++        "evidence_record": "artifacts/counting_mixing/result.json",
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "No claim that rank-two spectra determine higher symmetric-power spectra. No higher-twist spectra are computed."
+     },
+@@ -800,8 +906,11 @@
+       ],
+       "computational_coverage": {
+         "planned_fixture_groups": [],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "External example theorem is not re-proved; no numerical isospectral pair is constructed."
+     },
+@@ -825,8 +934,11 @@
+       ],
+       "computational_coverage": {
+         "planned_fixture_groups": [],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "This is a separate positive counting measure, not a consequence of the signed coefficient heat expansion."
+     },
+@@ -855,8 +967,11 @@
+       ],
+       "computational_coverage": {
+         "planned_fixture_groups": [],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "No numerical exponent, certified constant, or improvement of the external theorem is established."
+     },
+@@ -877,8 +992,11 @@
+       "source_pins": [],
+       "computational_coverage": {
+         "planned_fixture_groups": [],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "Computing certified body inputs for a particular surface is separate; no such body is constructed by the algebra companion."
+     },
+@@ -923,8 +1041,11 @@
+       ],
+       "computational_coverage": {
+         "planned_fixture_groups": [],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "Certified numerical inradii, outer radii, covolumes and diameters are not supplied. Constants need not remain bounded near degeneration."
+     },
+@@ -947,8 +1068,14 @@
+         "planned_fixture_groups": [
+           4
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "finite_examples_recorded_separately",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [
++          "exact.finite_support",
++          "exact.Mobius_lattice"
++        ],
++        "evidence_record": "artifacts/counting_mixing/result.json",
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "No connected-simple-curve asymptotic follows from this primitive-lamination count; coordinate gcd without admissibility is not used."
+     },
+@@ -977,8 +1104,13 @@
+         "planned_fixture_groups": [
+           4
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "finite_examples_recorded_separately",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [
++          "exact.Mobius_lattice"
++        ],
++        "evidence_record": "artifacts/counting_mixing/result.json",
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "This independent cusp example does not extend the compact twisted Selberg formula across a cusp."
+     },
+@@ -1008,8 +1140,11 @@
+         "planned_fixture_groups": [
+           6
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "The result concerns individual orbital labels. Equal-length cancellations can erase their net atom."
+     },
+@@ -1033,8 +1168,11 @@
+         "planned_fixture_groups": [
+           6
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "This is not a lower bound for the net signed remainder and does not exclude cancellation-based recovery."
+     },
+@@ -1069,8 +1207,11 @@
+         "planned_fixture_groups": [
+           6
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "The gap is for orbital labels before equal-length cancellation. It is not a surface-independent gap in ordinary length."
+     },
+@@ -1093,8 +1234,11 @@
+         "planned_fixture_groups": [
+           6
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "The companion may evaluate constants at supplied numbers; it does not certify the geometric systole or diameter of a surface."
+     },
+@@ -1122,8 +1266,11 @@
+         "planned_fixture_groups": [
+           6
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "Summing this over target curves presupposes their list and lengths. It is recovery, not a new counting argument or an implemented orbit enumerator."
+     },
+@@ -1147,8 +1294,13 @@
+         "planned_fixture_groups": [
+           4
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "finite_examples_recorded_separately",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [
++          "exact.finite_support"
++        ],
++        "evidence_record": "artifacts/counting_mixing/result.json",
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "No equality with the signed coefficient heat expansion is asserted; orbital and resolved lengths differ."
+     },
+@@ -1171,8 +1323,13 @@
+         "planned_fixture_groups": [
+           4
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "finite_examples_recorded_separately",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [
++          "exact.finite_support"
++        ],
++        "evidence_record": "artifacts/counting_mixing/result.json",
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "Finite divisor checks do not verify large-length asymptotics; no 1/k is present."
+     },
+@@ -1195,8 +1352,13 @@
+         "planned_fixture_groups": [
+           4
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "finite_examples_recorded_separately",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [
++          "exact.finite_support"
++        ],
++        "evidence_record": "artifacts/counting_mixing/result.json",
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "This bounded finite-degree operation does not make arbitrary trace-coefficient extraction uniformly bounded."
+     },
+@@ -1219,8 +1381,11 @@
+       "source_pins": [],
+       "computational_coverage": {
+         "planned_fixture_groups": [],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "The Fourier-sample expansions are not proved. A positive-axis Laplace remainder alone does not provide the same sharp counting error."
+     },
+@@ -1246,8 +1411,13 @@
+         "planned_fixture_groups": [
+           4
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "finite_examples_recorded_separately",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [
++          "exact.finite_support"
++        ],
++        "evidence_record": "artifacts/counting_mixing/result.json",
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "No AHT implementation, coordinate-conversion complexity claim, or asymptotic average of the selector is supplied."
+     },
+@@ -1268,8 +1438,11 @@
+       "source_pins": [],
+       "computational_coverage": {
+         "planned_fixture_groups": [],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "This does not estimate a signed coefficient shell, where positivity is absent."
+     },
+@@ -1293,8 +1466,11 @@
+       "source_pins": [],
+       "computational_coverage": {
+         "planned_fixture_groups": [],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "The smoothed hypothesis is explicitly unproved by the coefficient machinery. No improved simple-curve exponent is claimed."
+     },
+@@ -1315,8 +1491,11 @@
+       "source_pins": [],
+       "computational_coverage": {
+         "planned_fixture_groups": [],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "Construction and analysis of the connected-support observable remain open in this program."
+     },
+@@ -1341,8 +1520,13 @@
+         "planned_fixture_groups": [
+           3
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "finite_examples_recorded_separately",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [
++          "exact.global_filter"
++        ],
++        "evidence_record": "artifacts/counting_mixing/result.json",
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "Lambda is not an algebra homomorphism, representation evaluation, or uniform-norm bounded character functional."
+     },
+@@ -1365,8 +1549,13 @@
+         "planned_fixture_groups": [
+           3
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "finite_examples_recorded_separately",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [
++          "exact.global_filter"
++        ],
++        "evidence_record": "artifacts/counting_mixing/result.json",
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "Finite Taylor coefficients verify examples; analytic convergence follows from the root bound, not the truncation."
+     },
+@@ -1400,8 +1589,13 @@
+           1,
+           3
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "finite_examples_recorded_separately",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [
++          "exact.global_filter"
++        ],
++        "evidence_record": "artifacts/counting_mixing/result.json",
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "Primitives with more intersections are not removed. Peripheral trace specialization is outside the assertion."
+     },
+@@ -1429,8 +1623,11 @@
+         "planned_fixture_groups": [
+           3
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "The residual is signed and has no proved smaller-order counting bound. The identity contribution must receive Lambda(1)=2."
+     },
+@@ -1453,8 +1650,14 @@
+           2,
+           3
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "finite_examples_recorded_separately",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [
++          "exact.SL2_words",
++          "exact.global_filter"
++        ],
++        "evidence_record": "artifacts/counting_mixing/result.json",
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "The result excludes fixed linear selectors of traces, not length-dependent or nonlinear operations. Generic symbolic checks verify polynomials but not the topological word assertions."
+     },
+@@ -1478,8 +1681,13 @@
+         "planned_fixture_groups": [
+           5
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "finite_examples_recorded_separately",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [
++          "exact.finite_Euler_convolution"
++        ],
++        "evidence_record": "artifacts/counting_mixing/result.json",
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "The full character-valued completion is defined by length cutoffs; no Banach-norm convergence is asserted here."
+     },
+@@ -1504,8 +1712,13 @@
+         "planned_fixture_groups": [
+           5
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "finite_examples_recorded_separately",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [
++          "exact.finite_Euler_convolution"
++        ],
++        "evidence_record": "artifacts/counting_mixing/result.json",
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "The first-atom extraction is nonlinear. Finite formal-length examples do not prove the geometric statement for all multicurves."
+     },
+@@ -1540,8 +1753,11 @@
+           5,
+           6
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "Only fixed-coefficient convergence and holomorphy are proved; finite products do not verify the infinite bound or a global extraction norm."
+     },
+@@ -1566,8 +1782,13 @@
+           2,
+           5
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "finite_examples_recorded_separately",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [
++          "exact.finite_Euler_convolution"
++        ],
++        "evidence_record": "artifacts/counting_mixing/result.json",
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "No actual higher-twist spectra or inverse reconstruction algorithm is implemented. Coincident-length aggregate rank-two data do not directly furnish individual power sums."
+     },
+@@ -1589,8 +1810,11 @@
+         "planned_fixture_groups": [
+           5
+         ],
+-        "maintained_companion_execution": "pending_separate_record",
+-        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation."
++        "maintained_companion_execution": "no_direct_finite_check_for_this_claim",
++        "author_scratch": "Exact finite scratch results are reported separately; their scope does not upgrade this claim to a global computation.",
++        "implemented_result_groups": [],
++        "evidence_record": null,
++        "limit": "Finite examples do not prove the general geometric, convergence, source-theorem or asymptotic claim. Planned fixture numbers retain the author's specification provenance."
+       },
+       "coverage_gaps": "No conditioning bound or counting remainder is obtained for the nonlinear first-support operation; residual cancellation and uniform extraction estimates remain open."
+     }
+@@ -1626,5 +1850,6 @@
+       "sha256": "7b2a7af525bfb556c4ca9da88bec560ce2f985906d62448d86ede7210f07b608",
+       "bytes": 13760
+     }
+-  }
++  },
++  "snapshot_scope": "The snapshot below is the mathematically approved author freeze, before computational integration prose; final integrated source identities are in the checkpoint."
+ }
+--- a/book/claims/sections26-29.json
++++ b/book/claims/sections26-29.json
+@@ -24,8 +24,8 @@
+       "label_count": 36
+     }
+   ],
+-  "revision_scope": "Author mathematical audit of all statements and proofs in Sections 26-29. External theorem statements and hypotheses checked against primary sources; complete external proofs remain cited inputs. Independent review is separately required.",
+-  "review_status": "author_complete_independent_review_pending",
++  "revision_scope": "Author mathematical audit followed by independent approval of all four chapters and 59 claims; three source/section metadata corrections were independently accepted. External proofs remain cited inputs. Integration changes computational prose and records only.",
++  "review_status": "independently_approved_with_written_hypotheses",
+   "path_convention": "Canonical code/artifact paths are relative to consolidated repository root. dynamics-author paths are outer execution provenance, not published computational artifacts.",
+   "status_definitions": {
+     "derived_in_chapter": "Explicit derivation author-audited in the chapter; independent acceptance not asserted.",
+@@ -192,7 +192,7 @@
+       "checked": "Wolpert inequality K^-1*l_X <= l_Y <= K*l_X for closed geodesic classes under K-quasiconformal maps; chapter also supplies annular-cover proof and Lie-bracket derivative argument."
+     }
+   },
+-  "computation_status": "Companion paths are planned contracts. This ledger does not claim a completed experiments/counting_mixing run, artifact, certificate, or numerical proof of mixing.",
++  "computation_status": "Maintained finite checks are implemented for the groups recorded per claim. They do not prove general mixing, classify geometric strata, certify numerical errors, or implement every optional author fixture.",
+   "claims": [
+     {
+       "id": "s26.scope",
+@@ -289,12 +289,17 @@
+       ],
+       "coverage_gap": "No finite computation is a proof of the general statement.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "2",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "exact.scalar_trace_mixing"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -315,12 +320,17 @@
+       "source_keys": [],
+       "coverage_gap": "No finite computation is a proof of the general statement.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "2",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "exact.scalar_trace_mixing"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -341,12 +351,17 @@
+       ],
+       "coverage_gap": "No finite computation is a proof of the general statement.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "1",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "exact.scalar_trace_mixing"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -647,12 +662,18 @@
+       "source_keys": [],
+       "coverage_gap": "Norm cost includes N(VG), cutoff derivatives, and any noncompact coefficient growth.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "2",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "exact.terminal_exponential_algebra",
++          "numerical.terminal_family"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -743,12 +764,18 @@
+       ],
+       "coverage_gap": "This is endpoint-residue decorrelation, not a modular or higher-genus phase-space flow-box comparison.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "3",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "exact.Bruhat_residues",
++          "numerical.endpoint_Fourier"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -765,12 +792,17 @@
+       "source_keys": [],
+       "coverage_gap": "The zero-frequency totient identity does not bound nonzero Kloosterman modes.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "3",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "exact.Bruhat_residues"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -1062,12 +1094,18 @@
+       ],
+       "coverage_gap": "No compact support needed. This is a proof from external representation inputs, not a consequence of finite Gaussian samples or a theorem for the principal stratum.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "5,7",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "numerical.affine_Gaussian",
++          "numerical.rank_two_Gaussian"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -1131,12 +1169,18 @@
+       "source_keys": [],
+       "coverage_gap": "Theta and V do not commute; no mixed derivative is suppressed.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "2",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "exact.terminal_exponential_algebra",
++          "numerical.terminal_family"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -1246,12 +1290,17 @@
+       "source_keys": [],
+       "coverage_gap": "Finite lattice arithmetic alone does not prove the topology or generic null-set claim.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "4",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "exact.primitive_parity"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -1311,12 +1360,17 @@
+       "source_keys": [],
+       "coverage_gap": "No finite computation is a proof of the general statement.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "4",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "exact.primitive_parity"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -1339,12 +1393,18 @@
+       ],
+       "coverage_gap": "No rotational derivative is charged to the hyperbolic cutoff; this does not address flow derivatives or fixed-surface unsmoothing.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "4,5",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "exact.Gaussian_algebra",
++          "numerical.affine_Gaussian"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -1366,12 +1426,12 @@
+       ],
+       "coverage_gap": "No uniform transverse smoothness across the exceptional marking walls is asserted.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "optional_fixture_not_implemented",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "5",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "The author specification is retained as provenance. No direct maintained finite check of this claim was implemented; its analytic review is separate."
+       }
+     },
+     {
+@@ -1391,12 +1451,18 @@
+       "source_keys": [],
+       "coverage_gap": "Sharp h needs a separate boundary/smoothing argument for V; individual curve sum is not identified with a finite affine return sum.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "2,5",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "exact.terminal_exponential_algebra",
++          "numerical.terminal_family"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -1417,12 +1483,17 @@
+       ],
+       "coverage_gap": "The selected family is sparse relative to genus-two L^6 growth; first-atom conditioning remains open.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "4",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "exact.primitive_parity"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -1446,12 +1517,18 @@
+       ],
+       "coverage_gap": "Pointwise sums need not represent every L2 extension. Different-mark covariance is zero by independent fiber integration, not independence of full functions.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "5",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "exact.Gaussian_algebra",
++          "numerical.affine_Gaussian"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -1470,12 +1547,17 @@
+       "source_keys": [],
+       "coverage_gap": "No finite computation is a proof of the general statement.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "5",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "numerical.affine_Gaussian"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -1495,12 +1577,17 @@
+       ],
+       "coverage_gap": "Centering removes zero frequency but not rank one; finite truncations of the raw product do not justify global L2 projection.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "6",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "exact.Gaussian_algebra"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -1520,12 +1607,18 @@
+       "source_keys": [],
+       "coverage_gap": "Fourier rank deletion is not a positive selection of physical segments.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "7",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "exact.Gaussian_algebra",
++          "numerical.rank_two_Gaussian"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -1544,12 +1637,19 @@
+       "source_keys": [],
+       "coverage_gap": "The ensuing correlation bound uses the external tempered theorem; finite integration checks do not prove it.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "5,7",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "exact.Gaussian_algebra",
++          "numerical.affine_Gaussian",
++          "numerical.rank_two_Gaussian"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -1568,12 +1668,17 @@
+       "source_keys": [],
+       "coverage_gap": "The analytic tail bounds only truncation. Floating-point quadrature/roundoff require separate estimates, and sampled t values do not prove mixing.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "implemented_finite_examples",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "7",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "Only the finite fixtures and selected Gaussian formulas are checked. This is not the proof of the full claim, its geometric hypotheses or its analytic tails; numerical residuals do not enclose quadrature or roundoff.",
++        "result_groups": [
++          "numerical.rank_two_Gaussian"
++        ],
++        "code_path": "experiments/counting_mixing/",
++        "result_path": "artifacts/counting_mixing/result.json"
+       }
+     },
+     {
+@@ -1592,13 +1697,42 @@
+       "source_keys": [],
+       "coverage_gap": "A rotation-invariant body has no such cost; hyperbolic-length cutoffs over a fixed conformal base are rotation invariant and are a different case.",
+       "finite_computation": {
+-        "status": "planned_not_executed_in_this_ledger",
++        "status": "optional_fixture_not_implemented",
+         "fixture_specification": "dynamics-author/companion-fixtures.md",
+         "fixture": "8",
+         "planned_code_path": "experiments/counting_mixing/",
+         "planned_result_path": "artifacts/counting_mixing/result.json",
+-        "limit": "A specification is not a completed companion run. Any later acceptance must identify exact inputs, bounds and artifact hashes."
++        "limit": "The author specification is retained as provenance. No direct maintained finite check of this claim was implemented; its analytic review is separate."
+       }
+     }
+-  ]
++  ],
++  "independent_review": {
++    "status": "approved_after_targeted_metadata_repair",
++    "records": [
++      "docs/execution/counting-mixing-review-2026-11-01/dynamics-review/review-report.md",
++      "docs/execution/counting-mixing-review-2026-11-01/dynamics-review/targeted-acceptance-v2.json",
++      "docs/execution/counting-mixing-review-2026-11-01/dynamics-review/targeted-acceptance-v2.md"
++    ],
++    "scope": "All 59 claims and all four unchanged analytic chapters; no claim of complete external-proof, companion-code or PDF review."
++  },
++  "chapter_source_hash_scope": "Chapter hashes above identify the independently approved analytic freeze, before added computational integration prose; final integrated identities are in the checkpoint.",
++  "computational_companion": {
++    "code_path": "experiments/counting_mixing/",
++    "result_path": "artifacts/counting_mixing/result.json",
++    "checkpoint": "docs/execution/counting-mixing-review-2026-11-01/",
++    "review_record": "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/review-v2.md",
++    "approval_manifest": "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/approved-manifest-v2.json",
++    "approval_manifest_sha256": "c059cf9591f534bb6517486389b111c79fdff77531b192cbfab846021bd6536e",
++    "approved_source_set_sha256": "4b1f8f22f155c464f0ecda6ab95c581926db157bae4ee7583e67fbc6448ded63",
++    "independent_review_status": "approved_v2_R1_resolved_no_open_findings",
++    "reviewer_replay_counts": {
++      "exact": 4054,
++      "numerical_formula_comparisons": 354,
++      "cross_precision_observations": 297,
++      "focused_tests": 38
++    },
++    "prior_v1_status": "Initial numerical acceptance was rejected for R1 and is not retroactively approved; its evidence remains frozen.",
++    "scope": "Exact finite fixtures and selected 60/90-digit formula comparisons; analytic truncation bounds are separate from uncertified quadrature and roundoff.",
++    "generation_status": "Final generation and source identities are recorded separately in the checkpoint; author and reviewer runs retain their own provenance."
++  }
+ }
+--- a/book/computational-status.md
++++ b/book/computational-status.md
+@@ -1,6 +1,6 @@
+ # Computational status of the monograph
+ 
+-This ledger records the maintained numerical foundations and computational coverage of the [canonical source](polyhedral_volumes_and_geodesic_identities.tex). The [current Section 15 checkpoint](../docs/execution/section15-analytic-review-2026-11-01/README.md) supplies an independently reviewed regular-family quantum Airy proof and new exact-integrand numerical evidence, with separate source and error limits. The [prior quantum and surgery increment](../docs/execution/quantum-surgery-review-2026-11-01/README.md) covers finite period formulas and local peripheral/surgery identities in Sections 12–14 and 16. The [prior normalization checkpoint](../docs/execution/normalization-review-2026-11-01/README.md) covers Sections 1–8 and Appendix A with 41 claims and an exact finite companion; Section 9 retains its separate bounded mathematical review. Each checkpoint records its independent reviews, source identities and integrated build verification separately. The [prior Airy and torus checkpoint](../docs/execution/monograph-revision-2026-11-01/README.md) introduced finite checks and a bounded replacement experiment without designating either whole chapter mathematically reviewed. The original source snapshot and supplied reference PDF retain their original bytes. A reproduced finite example does not audit a general proof, and missing computational evidence does not by itself disprove a mathematical statement. Historical line references refer to the monolithic source at `26b3c134d9308d345cb76f1240db9de982b2e5a6`; stable labels identify the current text.
++This ledger records the maintained numerical foundations and computational coverage of the [canonical source](polyhedral_volumes_and_geodesic_identities.tex). The [counting/mixing checkpoint](../docs/execution/counting-mixing-review-2026-11-01/README.md) adds independently reviewed Sections 23–31, finite formula checks and a new full torus diagnostic with its own provenance. The [Section 15 checkpoint](../docs/execution/section15-analytic-review-2026-11-01/README.md) supplies an independently reviewed regular-family quantum Airy proof and new exact-integrand numerical evidence, with separate source and error limits. The [prior quantum and surgery increment](../docs/execution/quantum-surgery-review-2026-11-01/README.md) covers finite period formulas and local peripheral/surgery identities in Sections 12–14 and 16. The [prior normalization checkpoint](../docs/execution/normalization-review-2026-11-01/README.md) covers Sections 1–8 and Appendix A with 41 claims and an exact finite companion; Section 9 retains its separate bounded mathematical review. Each checkpoint records its independent reviews, source identities and integrated build verification separately. The [prior Airy and torus checkpoint](../docs/execution/monograph-revision-2026-11-01/README.md) introduced finite checks and a bounded replacement experiment without designating either whole chapter mathematically reviewed. The original source snapshot and supplied reference PDF retain their original bytes. A reproduced finite example does not audit a general proof, and missing computational evidence does not by itself disprove a mathematical statement. Historical line references refer to the monolithic source at `26b3c134d9308d345cb76f1240db9de982b2e5a6`; stable labels identify the current text.
+ 
+ ## H³ numerical foundations
+ 
+@@ -90,20 +90,37 @@
+ 
+ The new result path is `artifacts/section15_quantum/result.json`. Its [checkpoint](../docs/execution/section15-analytic-review-2026-11-01/README.md) records the source snapshots, independent analytic and computational reviews, final clean generation and integrated PDF verification separately. Finite numerical agreement supports the seven evaluations; the chapter's uniform theorem rests on the analytic argument.
+ 
+-## Section 30: bounded replacement diagnostic and an unavailable original archive
++## Sections 23–31: counting, mixing and arithmetic
+ 
+-The [sharp-diagnostics chapter](chapters/30-sharp-diagnostics.tex), `sec:sharpdiagnostics`, retains the historical length-8192 report at `subsec:torustraceexperiment`, with its two trace triples at `eq:diagnostictracetriples`. The counts, selected table rows, direct-trace and long-path precision comparisons and sensitivity bounds are now explicitly attributed to the supplied draft and labelled unreplayed. The chapter corrects the former availability claim: the advertised source, full block table, precision report and sensitivity tables were not found, and this edition does not claim that the original archive accompanies the book.
++The four ledgers cover 168 independently reviewed claims: [52 in Sections 23–25](claims/sections23-25.json), [59 in Sections 26–29](claims/sections26-29.json), [32 in Section 30](claims/section30.json), and [25 in Section 31](claims/section31.json). They retain the distinction between local derivations, external theorem statements, conditional implications and open comparisons. The nonsquare genus-two restriction, endpoint weights and observable norms remain explicit. The all-point `O(L/log L)` target requires the compatible local row-width condition; infinite flatness alone does not provide it. The pinned recent OpenAI and Doan–Li–Nguyen statements were checked, but their complete proofs and formalizations were not audited.
+ 
+-The [bounded companion](../experiments/section30/README.md) is a replacement calculation for the same two trace triples through hyperbolic length 64. It gives explicit unoriented primitive-slope representatives, root/sector coverage, equal-length multiplicities and the outward-pruning convention. Binary64 logarithmic trace recursion is compared against a separate finite primitive-slope-box oracle using exact integer or `Q(sqrt(11))` traces and multiprecision length evaluation. The [replacement result](../artifacts/section30/result.json) records the inputs, methods, counts, event statistics, precision comparisons and evidence limits. This bounded experiment does not reproduce the missing length-8192 run or its reported long-path precision and sensitivity tables.
++The [finite companion](../experiments/counting_mixing/README.md) supplies these bounded checks:
+ 
+-The new sensitivity bounds assume a stated position-error bound for a fixed supplied curve list. Applying them to the full spectrum additionally requires that no omitted curve can enter the relevant thresholds through `4T`. These are conditional stability calculations, not a certification of either the error assumption or spectrum completeness.
++| Source formulas | Implemented evidence | Limit |
++| --- | --- | --- |
++| Sections 23–25 trace and coefficient filters | Exact recurrences through power 12, four rational SL₂ word fixtures, global weights, support selectors and finite length-valued Euler convolution. | Formal lengths need not come from one hyperbolic metric; no infinite-product or general first-atom proof follows from the fixture. |
++| Sections 26–28 counting and endpoint models | Exact periodic/aperiodic matrix examples, terminal exponential identities, inverse-residue characters and finite Fourier checks. | No general mixing theorem, spectrum, geometric classification or square-tiling/bisector comparison is computed. |
++| Section 29 observables | Exact rational primitive/parity counts and Gaussian algebra; one- and two-mark Gaussian formulas, divisor/logarithm series and determinant-orbit quadrature at 60/90 working digits. | Analytic series/integral truncation bounds are separate from uncertified quadrature and roundoff. Finite collinear growth does not prove divergence. Optional rectangle clipping and geometric length-derivative illustrations were not implemented. |
++| Sections 30–31 arithmetic | Exact square/diamond Möbius inversion, finite dyadic telescopes and event sweeps, signed multiples, closed row selectors and conditional balance exponents. | No geometric modulus, arithmetic hypothesis or uniform infinite-range estimate is established. |
+ 
+-The [historical torus-bundle script](../research/ipoly/v8_torus_bundles.py) concerns angle structures and three-dimensional bundle volumes; it is not the missing Markoff/Farey length-counting experiment. Recovery still requires the original source and full output archive, or a separately identified full replacement run with the declared coverage, precision and sensitivity records. Rounded historical table rows cannot recover missing raw evidence.
++The result path is `artifacts/counting_mixing/result.json`. Independent review found and required repair of the initial rank-two radial quadrature acceptance, where a tiny signal could pass an absolute tolerance despite poor relative accuracy. The corrected v2 source has independent approval with no open findings: the reviewer's fresh replay passes 4054 exact checks, 354 numerical comparisons and 297 cross-precision observations, and all 38 focused tests pass. The [targeted review](../docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/review-v2.md) and its [approved manifest](../docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/approved-manifest-v2.json) preserve that source identity. This approval does not extend to the rejected v1 numerical acceptance. The final canonical replay and its generation identity have a separate checkpoint record. Neither the earlier nominal pass count nor the repaired comparisons is a total error certificate.
+ 
+-The general counting arguments retain their inherited proof status. Finite event calculations and precision agreement do not supply interval-certified event positions, a theorem about every cutoff or an asymptotic linear or sublinear remainder bound. The long-range conclusions remain subject to the hypotheses and limitations stated in the chapter.
++## Section 30: new full torus campaign and frozen predecessor
++
++The [new full campaign](../experiments/torus_campaign/README.md) uses the same two exact trace triples as the [sharp-diagnostics chapter](chapters/30-sharp-diagnostics.tex). It obtains 18,191,508 modular and 18,486,116 asymmetric curves through hyperbolic length 8192 and matches every historically printed M/Q entry at four decimals. The result path `artifacts/torus_campaign/result.json` records all twenty block rows, dyadic primitive counts, signed all-point `A(L)=2 sum floor(L/ell)` and `A(2L)-4A(L)`, selected precision checks and exact rational conditional sensitivity envelopes. Slope identity streams and sorted binary64 length streams have separate hashes and are not index-aligned; the recipe and checkpoint record their retention and regeneration.
++
++The campaign compares the complete length-64 list with an exact-trace oracle at 100/140 digits, validates a moderate length-512 traversal independently, and retains 151/126 selected long samples, including 36 near-8192 curves per surface. The worst selected binary64 residual is below `1.2e-9`. Independent review additionally used 100/160-digit matrix-word samples and recomputed every dyadic primitive and all-point count from all 36,677,624 stored lengths. These are finite sampled comparisons and exact operations on stored binary64 values; they do not certify all true lengths, threshold membership, event order or numerical pruning.
++
++The new rational sensitivity envelopes assume length error at most `1e-6` for each listed curve. Their maximum widths across all ten blocks per surface are below `1.232e-6` and `5.613e-7`. Applying them to the true spectrum also requires completeness and no entry by omitted curves under perturbation. The historical `7.5e-13` long-path precision and `7.1e-7` sensitivity claims retain their historical status; their implementation, sample choice and bound construction remain unrecovered. Reproducing the counts and rounded rows does not reconstruct that missing archive.
++
++The [length-64 predecessor](../experiments/section30/README.md) and its [result](../artifacts/section30/result.json) retain their earlier source and artifact bytes. They record 1104/1127 curves and their own oracle, metric and sensitivity checks. The [historical torus-bundle script](../research/ipoly/v8_torus_bundles.py) concerns three-dimensional bundle volumes and is not the missing counting experiment.
++
++The Section 31 signed-multiple extension uses hyperbolic length units. For systole `s_X`, the unit-shortest gauge is `lambda=ell/s_X`, so `A_B(L)=A_hyp(s_X L)`. The campaign's dyadic cutoffs must be interpreted with that scaling. No finite diagnostic proves an asymptotic linear, sublinear or logarithmic remainder, identifies the required flat rational-normal point, or validates a recent preprint proof.
++
++The [checkpoint](../docs/execution/counting-mixing-review-2026-11-01/README.md) records the analytic and computational approvals, required numerical/parser repairs, final source generation, raw-stream identities and integrated PDF verification separately. The working PDF path is `artifacts/counting-mixing-review-2026-11-01/monograph-working-draft.pdf`. Reviewed author runs retain their actual source states and are not relabeled as final clean replays.
+ 
+ ## Further editorial and release work
+ 
+-The remaining claims and proof dependencies are tracked in the [full audit](../audit/2026-10-31/monograph-audit.md) and [plan](../INTEGRATION_PLAN.md). Sections 1–8 and Appendix A have modular sources, claim ledgers and bounded exact checks; Section 9 has a reviewed chapter and conversion workflow. The prior quantum/surgery increment adds modular Sections 12–14 and 16, local/source-hypothesis reviews and the finite companion described above. Section 15 now has the bounded regular-family analytic review and exact-integrand evidence described above; its original evaluator remains unrecovered. Section 30 retains its earlier bounded replacement computation and still requires review of its broader counting dependencies and missing length-8192 evidence. The counting/mixing dependencies in Sections 23–31 and the remaining Sections 10–11, 17–22, 32 and Appendix B still need their corresponding review, modularization and evidence coverage. Revisit Appendix A as new cross-chapter dependencies require; do not infer a complete book audit from these increments.
++The remaining claims and proof dependencies are tracked in the [full audit](../audit/2026-10-31/monograph-audit.md) and [plan](../INTEGRATION_PLAN.md). Sections 1–8 and Appendix A have modular sources, claim ledgers and bounded exact checks; Section 9 has a reviewed chapter and conversion workflow. The prior quantum/surgery increment adds modular Sections 12–14 and 16, local/source-hypothesis reviews and the finite companion described above. Section 15 now has the bounded regular-family analytic review and exact-integrand evidence described above; its original evaluator remains unrecovered. Sections 23–31 now have their bounded local analytic reviews and the finite companions described above. The original torus precision archive remains unrecovered. Sections 10–11, 17–22, 32 and Appendix B still need their corresponding review, modularization and evidence coverage, followed by cross-chapter consistency and complete local-release checks. Revisit Appendix A as new cross-chapter dependencies require; do not infer a complete book audit from these increments.
+ 
+ Existing Section 9 site files, its broader monograph-source ZIP and the reading-preview bundle remain frozen earlier checkpoints. They have not been refreshed for this manuscript revision. The supplied reference PDF and its earlier visual sample do not verify a new build. The earlier full-suite failures and collection errors associated with unavailable optional dependencies also remain unresolved; focused companion tests are not a replacement for that suite. Manuscript revision, computational evidence, local edition checks, authorship/credits and text/companion licensing precede the final upload/deployment step. No Site has been published by this revision.
+--- a/docs/INTEGRATION_STATUS.md
++++ b/docs/INTEGRATION_STATUS.md
+@@ -1,12 +1,16 @@
+ # Integration status
+ 
+-The [current Section 15 checkpoint](execution/section15-analytic-review-2026-11-01/README.md) records independent analytic review of the uniform regular-family quantum Airy theorem, including normalization, phase constant, global contour/tail control, integrated remainder, first correction and physical-window resonance scope. All 607 manuscript labels and all 21 Section 15 labels retain their order. The theorem remains limited to the specified regular family and fixed bounded real transition parameters; it does not establish arbitrary-shape, fixed-volume or global-invariant asymptotics.
++The [counting, mixing and arithmetic checkpoint](execution/counting-mixing-review-2026-11-01/README.md) records completed independent local review of Sections 23–31: nine modular chapters and 168 claims in four ledgers. All 607 labels and 129 bibliography keys are retained. The [finite companion](../experiments/counting_mixing/README.md) checks exact fixtures and selected 60/90-digit formulas; the [new full torus campaign](../experiments/torus_campaign/README.md) reproduces the length-8192 counts 18,191,508/18,486,116 and all four printed M/Q rows, with all twenty block rows and signed all-point diagnostics. The checkpoint records the required rank-two quadrature and native-parser repairs, independent acceptance, final generation and PDF verification separately. The new result paths are `artifacts/counting_mixing/result.json` and `artifacts/torus_campaign/result.json`.
++
++The new campaign's selected 100/140-digit references have a worst binary64 difference below `1.2e-9`; independent matrix-word and full stored-stream count checks provide separate evidence. Conditional rational sensitivity assumes a uniform listed-length error and completeness/no-entry. Neither finite agreement nor exact stored-value arithmetic supplies an every-node certificate or an asymptotic theorem. The original torus implementation/precision archive remains unrecovered; the length-64 predecessor remains frozen. Recent preprint statements are pinned, while their complete proofs and formalizations remain unaudited and their uses conditional.
++
++The [Section 15 checkpoint](execution/section15-analytic-review-2026-11-01/README.md) records independent analytic review of the uniform regular-family quantum Airy theorem, including normalization, phase constant, global contour/tail control, integrated remainder, first correction and physical-window resonance scope. All 607 manuscript labels and all 21 Section 15 labels retain their order. The theorem remains limited to the specified regular family and fixed bounded real transition parameters; it does not establish arbitrary-shape, fixed-volume or global-invariant asymptotics.
+ 
+ The [new exact-integrand companion](../experiments/section15_quantum/README.md) evaluates seven inputs under three precision/contour settings, with correction-series, cutoff and special-function checks. The source-recorded full matrix has 21 quadratures at 60/90 digits; a separate whole-Barnes QUADPACK computation agrees on all seven values within `2e-12`. The first printed quantum value changes from `0.459087` to `0.459086`; the original historical JSON and prior finite-check result remain frozen. Rational bounds control correction-series truncation, while total quadrature errors remain uncertified. The new result path is `artifacts/section15_quantum/result.json`; the checkpoint records code review, final clean generation, source identities and integrated PDF verification separately.
+ 
+ The [prior quantum and surgery increment](execution/quantum-surgery-review-2026-11-01/README.md) covers Sections 12–14 and 16, with two claim ledgers and a [bounded companion](../experiments/quantum_surgery/README.md). Its finite periods, formal filling coefficients and Hessian identities do not supply spectral-tail bounds or a filled-manifold volume. Its result and PDF remain frozen, as do the [normalization checkpoint](execution/normalization-review-2026-11-01/README.md), earlier Site exports/downloads and prior Section 15/30 results. Their recorded source identities are not verification of the current manuscript bytes.
+ 
+-The [prior Airy and torus checkpoint](execution/monograph-revision-2026-11-01/README.md) supplied finite Airy checks and a length-64 replacement torus computation. The current quantum-integral evidence is a new calculation, not recovery of the original evaluator. The length-8192 torus archive remains unavailable. The next substantive reviews address counting/mixing dependencies in Sections 23–31 and the remaining Sections 10–11, 17–22, 32 and Appendix B. Optional-dependency full-suite failures and collection errors retain their recorded status; focused new checks do not replace them. Upload and deployment remain the final publication step after manuscript and local-release verification.
++The [prior Airy and torus checkpoint](execution/monograph-revision-2026-11-01/README.md) supplied finite Airy checks and a length-64 replacement torus computation. The current quantum-integral evidence is a new calculation, not recovery of the original evaluator. The original length-8192 torus archive remains unavailable; the new full campaign supplies separate reproducible numerical evidence. The next substantive reviews address Sections 10–11, 17–22, 32 and Appendix B, followed by cross-chapter consistency and full local-release checks. Optional-dependency full-suite failures and collection errors retain their recorded status; focused new checks do not replace them. Upload and deployment remain the final publication step after manuscript and local-release verification.
+ 
+ The [computational-status ledger](../book/computational-status.md) and [integration plan](../INTEGRATION_PLAN.md) record the remaining scope. No full-monograph proof review or public Site publication is claimed.
+ 
