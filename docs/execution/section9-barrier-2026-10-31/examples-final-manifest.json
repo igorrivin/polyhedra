@@ -1,0 +1,100 @@
+{
+  "status": "author source freeze for independent review; dirty TMP preview, not canonical generation",
+  "owned_source_sha256": {
+    "experiments/section9/barrier_run.py": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60",
+    "experiments/section9/barrier-fixtures.json": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+    "experiments/section9/barrier-page.html": "e4de74a735bf9d7bbdabae7f59fa368cef972297639a4cb2719d97d92ce3fb90",
+    "experiments/section9/tests/test_barrier_examples.py": "6f8bc34af91a85a22a312926ae1dd5d416ed287d6e3eba8c7525433710deba3f",
+    "experiments/section9/README.md": "a69e69a7135107b04481f26a84e62336086d7002bad5c75f7c29f3d79664fd36"
+  },
+  "imported_source_sha256": {
+    "experiment.driver": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60",
+    "experiment.fixture": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+    "experiment.template": "e4de74a735bf9d7bbdabae7f59fa368cef972297639a4cb2719d97d92ce3fb90",
+    "toolkit.angle_barrier": "ea73137fbbfa2fc9b96a4925001dc317b83e5c1eb96fd6ddf0cdc6c29c3add9a",
+    "toolkit.variational": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+    "toolkit.geometry": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73",
+    "book.chapter": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00"
+  },
+  "preview_directory": "/tmp/polyhedra-barrier-preview-reviewed",
+  "preview_result_sha256": "5f2f66a8f3202016bb5486dcfd7ae90ee146922b8dfe57d17a0a0aa2543f39e5",
+  "preview_html_sha256": "b6b27ca8fd5360a148a5500d97ae0efebbcdb25fffc13984895063545f02eb0b",
+  "preview_archive_sha256": "84903244b6fcc6893f36340c82005dd2a1f6c8cfdc93d638536fa03b63748e53",
+  "bundle_payload_count": 10,
+  "bundle_payloads_verified": true,
+  "numerical_summary": [
+    {
+      "id": "regular-triangle",
+      "centering_steps": 4,
+      "path_steps": 375,
+      "evaluations": 756,
+      "backtracks": 0,
+      "final_decrement": 0.0,
+      "minimum_final_angle": 1.0471975511965976,
+      "gap_bound_estimate": 7.058823529411764e-05,
+      "conservative_gap_bound_estimate": 0.0001,
+      "exact_space_maximum": "1.0149416064096536250212025542745202859416893075302997920174891068",
+      "exact_space_gap": "2.362078509240844538499988623193427235229759601625650745294842016e-33",
+      "initial_decrement_reference": "1.1600122064943735519983443498405827128664056948058132818029266418",
+      "maximum_representation_difference": "0.00000000000000012825583404184113724508352355302436319783991577804973241637706914",
+      "checks_passed": 18,
+      "checks_total": 18
+    },
+    {
+      "id": "asymmetric-disk",
+      "centering_steps": 3,
+      "path_steps": 841,
+      "evaluations": 1687,
+      "backtracks": 0,
+      "final_decrement": 5.5955674372394325e-15,
+      "minimum_final_angle": 0.16514948477716887,
+      "gap_bound_estimate": 7.058823529411776e-05,
+      "conservative_gap_bound_estimate": 0.0001,
+      "exact_space_maximum": "3.0062866417470506525050027983572778475653682538807032900869601879",
+      "exact_space_gap": "0.0000000000044324708385520379228669830361235032636632152749660907721438219566",
+      "initial_decrement_reference": "0.88169477430509489346672247808378533113589771374433320235928441826",
+      "maximum_representation_difference": "0.00000000000000002941098213769395141623412106282833297430635000723634656577726355",
+      "checks_passed": 18,
+      "checks_total": 18
+    },
+    {
+      "id": "boundary-maximum",
+      "centering_steps": 2,
+      "path_steps": 562,
+      "evaluations": 1128,
+      "backtracks": 0,
+      "final_decrement": 0.0003411538864913114,
+      "minimum_final_angle": 4.7303989202301944e-05,
+      "gap_bound_estimate": 7.059807123005772e-05,
+      "conservative_gap_bound_estimate": 0.0001,
+      "exact_space_maximum": "0.3160358446012942861798335805775719456118860120729091191292577588",
+      "exact_space_gap": "0.000035270098608987922172648301390448467702508178065327130082326246585",
+      "initial_decrement_reference": "0.96817166447554046356560796023420515771558702525974139688022144479",
+      "maximum_representation_difference": "0.0000000000000071445410538978681119508323026234103632999066175719042775871847998",
+      "checks_passed": 18,
+      "checks_total": 18
+    }
+  ],
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=packages/volume-toolkit PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 /tmp/polyhedra-baseline-20261031/bin/python -m pytest -q experiments/section9/tests",
+    "exit_code": 0,
+    "result": "15 passed, 8 subtests passed in 4.06s"
+  },
+  "lint": {
+    "command": "/opt/anaconda3/bin/ruff check experiments/section9/barrier_run.py experiments/section9/tests/test_barrier_examples.py",
+    "exit_code": 0,
+    "result": "All checks passed!"
+  },
+  "fresh_preview": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=packages/volume-toolkit /tmp/polyhedra-baseline-20261031/bin/python experiments/section9/barrier_run.py --output /tmp/polyhedra-barrier-preview-reviewed/barrier-result.json --site-dir /tmp/polyhedra-barrier-preview-reviewed/site/section9",
+    "exit_code": 0,
+    "all_checks_passed": true,
+    "elapsed_seconds_observed_by_command_tool": 2.588430791
+  },
+  "review_work_remaining": [
+    "Independent source review",
+    "Fresh detached minimal-environment execution",
+    "Installed-wheel check",
+    "Final clean-commit generation by root"
+  ]
+}

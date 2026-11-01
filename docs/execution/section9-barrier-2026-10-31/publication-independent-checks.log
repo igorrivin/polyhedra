@@ -1,0 +1,107 @@
+{
+  "labels": {
+    "unchanged": true,
+    "count": 26
+  },
+  "display_math": {
+    "unchanged": true,
+    "count": 15
+  },
+  "numbered_math_environments": {
+    "unchanged": true,
+    "count": 15
+  },
+  "proof_environments": {
+    "unchanged": true,
+    "count": 2
+  },
+  "proposition_environments": {
+    "unchanged": true,
+    "count": 2
+  },
+  "tikz_figures": {
+    "unchanged": true,
+    "count": 2
+  },
+  "citations": {
+    "unchanged": true,
+    "count": 13
+  },
+  "inline_math": {
+    "unchanged": true,
+    "count": 204
+  },
+  "claims": {
+    "count": 26,
+    "proof_status_hypotheses_labels_and_review_evidence_unchanged": true
+  },
+  "static_html": {
+    "index.html": {
+      "local_links_and_resources": 14,
+      "mathml": 0,
+      "figures": 0,
+      "unique_ids": 17
+    },
+    "barrier.html": {
+      "local_links_and_resources": 7,
+      "mathml": 0,
+      "figures": 0,
+      "unique_ids": 5
+    },
+    "chapter.html": {
+      "local_links_and_resources": 193,
+      "mathml": 209,
+      "figures": 2,
+      "unique_ids": 43
+    }
+  },
+  "independent_references": {
+    "method": "90-digit complex Bloch-Wigner values using direct geometric shapes; exact rational cotangent derivative; no imports from driver or toolkit",
+    "maxima": {
+      "regular-triangle": {
+        "independent_Bloch_Wigner_maximum": "1.01494160640965362502120255427452028594168930753029979201748910677659747626",
+        "difference_from_report": "2.3402523741755977864e-65"
+      },
+      "asymmetric-disk": {
+        "independent_Bloch_Wigner_maximum": "3.00628664174705065250500279835727784756536825388070329008696018793033902888",
+        "difference_from_report": "3.0339028879001700517e-65"
+      },
+      "boundary-maximum": {
+        "independent_Bloch_Wigner_maximum": "0.316035844601294286179833580577571945611886012072909119129257758802296215321",
+        "difference_from_report": "2.296215320771699445e-66"
+      }
+    },
+    "disk_barrier_derivative_exact": "-28/15",
+    "boundary_right_derivative": "-0.74535420818028405918242345507887943784194992689642428123093113513887810781",
+    "interpretation": "multiprecision numerical comparisons, not interval enclosures"
+  },
+  "visual_review": {
+    "pdf_sha256": "05fa1d1c52b68df1ea3c46f04ca8452d30148340e26ac963f840f9ca86bbcb4d",
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "observations": "All ten rendered pages independently opened and visually inspected; no observed clipping, collisions, unreadable formulas, or missing glyphs. Computational addendum is legible on page 9.",
+    "page_sha256": {
+      "page-001.png": "5600fe0895c8541681a774acb3c860c6c8430f16c7cfb6443fe8b602cb0d15ed",
+      "page-002.png": "dfb40a1469bda851a08fa9e3f184bad814a413e790c33aee5df514b2e11d5b81",
+      "page-003.png": "871731176bdd74f542745b6b32a907cdcdc700ac89c2c1261be8e624d322e638",
+      "page-004.png": "735cfd2353489fa0b222a1e343c39841849e5c702c2892152a83eee84ac4a06c",
+      "page-005.png": "ea3cc9c399a3e632ed3b9589c6629017a22c5ae945152d864544ca448aefd202",
+      "page-006.png": "01cc798042b62386634989e7244f21da2c8370754bfc0fb97faf8da26eaa091f",
+      "page-007.png": "be9f9c4c73ed2bb56cfb8d6d777499034b4f3fb619e0c9aa0471040f398bd9fb",
+      "page-008.png": "51fb192dc7f0438b947590f09b440346ffa15fe6e73a0ef72d276ea894bc6ec6",
+      "page-009.png": "66b234de85fd8354bc4917355d59b7fc1541e7efec3c03f5b38fc3d0e68c09f3",
+      "page-010.png": "1b8661cf4a52e16e989de98fa83c51824928bade4af2472cc66580235771d57e"
+    }
+  },
+  "scope": "Independent dirty-preview review. Core fix and strict final export still pending at the time of this script; old preview source and PDF hashes retained."
+}

@@ -1,0 +1,569 @@
+{
+  "python": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+  "command": [
+    "/tmp/polyhedra-baseline-20261031/bin/python",
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/section9-barrier-2026-10-31/review_numerical_probes.py"
+  ],
+  "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+  "pythonpath": "packages/volume-toolkit",
+  "module_path": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py",
+  "module_sha256": "d782aff2a23c9073c6f7cf02666cc0ec3f4446f28185c7474116fcf42edbbd07",
+  "mp_dps": 80,
+  "scope": "finite independently differentiated numerical checks; no interval certification",
+  "probes": {
+    "independent_multidimensional_reference": {
+      "passed": true,
+      "detail": {
+        "solver": {
+          "status": "converged",
+          "converged": true,
+          "parameters": [
+            0.5864927217061675,
+            0.08251947475717444
+          ],
+          "angles": [
+            [
+              1.3718908851036158,
+              0.7108380054751331,
+              1.0588637630110442
+            ],
+            [
+              0.8926926702302875,
+              1.182076903513602,
+              1.0668230798459035
+            ]
+          ],
+          "volume": 1.951675306364613,
+          "t": 849999.9999999999,
+          "newton_decrement": 1.688530987025404e-13,
+          "gap_bound_estimate": 7.058823529412253e-06,
+          "conservative_gap_bound_estimate": 1e-05,
+          "finite_gap_available": true,
+          "centered": true,
+          "target_reached": true,
+          "target_t": 849999.9999999999,
+          "centering_steps": 4,
+          "path_steps": 676,
+          "backtracks": 0,
+          "evaluations": 1358,
+          "condition_estimate": 4.231109836353894,
+          "relative_linear_residual": 0.0,
+          "failure_phase": null,
+          "failure_at_t": null,
+          "certified": false
+        },
+        "barrier_derivative_errors": {
+          "value": "4.2479104652126780022e-16",
+          "gradient_max_abs": "4.0386473664820235393e-16",
+          "hessian_max_abs": "8.0133111907828573045e-15"
+        },
+        "stationary_parameters": [
+          "0.5864928053691088784640344157353654082236848931455153684219567328",
+          "0.082519507481870145761279294544494937310291463657490637926244295296"
+        ],
+        "stationary_residual": "9.5727322573305667785e-88",
+        "reference_maximum": "1.9516753063646192691607991468350403533725884058794738664793382964",
+        "mathematical_gap": "6.2014799167417128261491090767603787e-15",
+        "exact_vs_binary64_lift_value_shift": "1.3341708792943372575e-16",
+        "binary64_value_error_vs_lifted_clausen": "1.405033775818059083e-16",
+        "independently_differentiated_trace": [
+          {
+            "iteration": 0,
+            "phase": "initial",
+            "t": 1.0,
+            "reported_decrement": 1.514514885604182,
+            "independent_decrement": "1.51451488560418217947941220714",
+            "absolute_error": "2.7537979340209267247e-16"
+          },
+          {
+            "iteration": 5,
+            "phase": "path",
+            "t": 1.0204124145231932,
+            "reported_decrement": 0.00473465481656851,
+            "independent_decrement": "0.00473465481656861922786607552682",
+            "absolute_error": "1.0890353998436141376e-16"
+          },
+          {
+            "iteration": 340,
+            "phase": "path",
+            "t": 888.4776654989818,
+            "reported_decrement": 7.663214016845989e-11,
+            "independent_decrement": "7.66312761420272148937060865497e-11",
+            "absolute_error": "8.6402643267185579802e-16"
+          },
+          {
+            "iteration": 680,
+            "phase": "path",
+            "t": 849999.9999999999,
+            "reported_decrement": 1.688530987025404e-13,
+            "independent_decrement": "1.17333213789809357982748362828e-13",
+            "absolute_error": "5.1519884912731047348e-14"
+          }
+        ],
+        "evidence_limit": "The stationary solve and comparisons use 80-digit arithmetic, not interval enclosures."
+      }
+    },
+    "coordinate_changes": {
+      "passed": true,
+      "detail": [
+        {
+          "name": "mixing",
+          "angle_max_abs_error": 2.220446049250313e-16,
+          "solver": {
+            "status": "converged",
+            "converged": true,
+            "parameters": [
+              0.23956244126803225,
+              0.10735955907944686
+            ],
+            "angles": [
+              [
+                1.3718826050129596,
+                0.710834766688267,
+                1.0588752818885665
+              ],
+              [
+                0.8926908677133637,
+                1.182073664726736,
+                1.0668281211496935
+              ]
+            ],
+            "volume": 1.9516753063026422,
+            "t": 8500.0,
+            "newton_decrement": 1.4760481834153714e-12,
+            "gap_bound_estimate": 0.0007058823529416018,
+            "conservative_gap_bound_estimate": 0.001,
+            "finite_gap_available": true,
+            "centered": true,
+            "target_reached": true,
+            "target_t": 8500.0,
+            "centering_steps": 4,
+            "path_steps": 448,
+            "backtracks": 0,
+            "evaluations": 902,
+            "condition_estimate": 6.904555835381916,
+            "relative_linear_residual": 4.703410015556918e-16,
+            "failure_phase": null,
+            "failure_at_t": null,
+            "certified": false
+          }
+        },
+        {
+          "name": "scale_small",
+          "angle_max_abs_error": 2.220446049250313e-16,
+          "solver": {
+            "status": "converged",
+            "converged": true,
+            "parameters": [
+              5.864844416155116e+59,
+              8.251623597030833e+58
+            ],
+            "angles": [
+              [
+                1.37188260501296,
+                0.710834766688267,
+                1.0588752818885663
+              ],
+              [
+                0.8926908677133639,
+                1.1820736647267358,
+                1.0668281211496933
+              ]
+            ],
+            "volume": 1.951675306302642,
+            "t": 8500.0,
+            "newton_decrement": 1.51353486841867e-12,
+            "gap_bound_estimate": 0.0007058823529416126,
+            "conservative_gap_bound_estimate": 0.001,
+            "finite_gap_available": true,
+            "centered": true,
+            "target_reached": true,
+            "target_t": 8500.0,
+            "centering_steps": 4,
+            "path_steps": 448,
+            "backtracks": 0,
+            "evaluations": 902,
+            "condition_estimate": 4.230921542696941,
+            "relative_linear_residual": 8.874912012409614e-17,
+            "failure_phase": null,
+            "failure_at_t": null,
+            "certified": false
+          }
+        },
+        {
+          "name": "scale_large",
+          "angle_max_abs_error": 2.220446049250313e-16,
+          "solver": {
+            "status": "converged",
+            "converged": true,
+            "parameters": [
+              5.864844416155116e-61,
+              8.251623597030838e-62
+            ],
+            "angles": [
+              [
+                1.37188260501296,
+                0.710834766688267,
+                1.0588752818885663
+              ],
+              [
+                0.8926908677133638,
+                1.182073664726736,
+                1.0668281211496933
+              ]
+            ],
+            "volume": 1.9516753063026422,
+            "t": 8500.0,
+            "newton_decrement": 1.5163935574573196e-12,
+            "gap_bound_estimate": 0.0007058823529416135,
+            "conservative_gap_bound_estimate": 0.001,
+            "finite_gap_available": true,
+            "centered": true,
+            "target_reached": true,
+            "target_t": 8500.0,
+            "centering_steps": 4,
+            "path_steps": 448,
+            "backtracks": 0,
+            "evaluations": 902,
+            "condition_estimate": 4.230921542696945,
+            "relative_linear_residual": 2.1457907792227376e-16,
+            "failure_phase": null,
+            "failure_at_t": null,
+            "certified": false
+          }
+        },
+        {
+          "name": "unrepresentable_derivatives_scale_1e-200",
+          "solver": {
+            "status": "ill_conditioned",
+            "converged": false,
+            "parameters": [
+              0.0,
+              0.0
+            ],
+            "angles": [
+              [
+                0.7853981633974483,
+                0.6283185307179586,
+                1.7278759594743862
+              ],
+              [
+                0.47123889803846897,
+                1.0995574287564276,
+                1.5707963267948966
+              ]
+            ],
+            "volume": null,
+            "t": 1.0,
+            "newton_decrement": null,
+            "gap_bound_estimate": null,
+            "conservative_gap_bound_estimate": null,
+            "finite_gap_available": false,
+            "centered": false,
+            "target_reached": false,
+            "target_t": 85000.0,
+            "centering_steps": 0,
+            "path_steps": 0,
+            "backtracks": 0,
+            "evaluations": 1,
+            "condition_estimate": null,
+            "relative_linear_residual": null,
+            "failure_phase": "initial",
+            "failure_at_t": 1.0,
+            "certified": false
+          }
+        },
+        {
+          "name": "unrepresentable_derivatives_scale_1e+200",
+          "solver": {
+            "status": "numerical_failure",
+            "converged": false,
+            "parameters": [
+              0.0,
+              0.0
+            ],
+            "angles": [
+              [
+                0.7853981633974483,
+                0.6283185307179586,
+                1.7278759594743862
+              ],
+              [
+                0.47123889803846897,
+                1.0995574287564276,
+                1.5707963267948966
+              ]
+            ],
+            "volume": null,
+            "t": 1.0,
+            "newton_decrement": null,
+            "gap_bound_estimate": null,
+            "conservative_gap_bound_estimate": null,
+            "finite_gap_available": false,
+            "centered": false,
+            "target_reached": false,
+            "target_t": 85000.0,
+            "centering_steps": 0,
+            "path_steps": 0,
+            "backtracks": 0,
+            "evaluations": 1,
+            "condition_estimate": null,
+            "relative_linear_residual": null,
+            "failure_phase": "initial",
+            "failure_at_t": 1.0,
+            "certified": false
+          }
+        }
+      ]
+    },
+    "failure_flags_and_ownership": {
+      "passed": true,
+      "detail": {
+        "finite_uncentered_budget_limit": {
+          "status": "centering_limit",
+          "converged": false,
+          "parameters": [
+            0.15,
+            -0.05
+          ],
+          "angles": [
+            [
+              1.1971975511965975,
+              0.9971975511965976,
+              0.9471975511965977
+            ]
+          ],
+          "volume": 1.0053013095238106,
+          "t": 1.0,
+          "newton_decrement": 0.25769426101641546,
+          "gap_bound_estimate": 3.690747569542208,
+          "conservative_gap_bound_estimate": null,
+          "finite_gap_available": true,
+          "centered": false,
+          "target_reached": false,
+          "target_t": 42500.0,
+          "centering_steps": 0,
+          "path_steps": 0,
+          "backtracks": 0,
+          "evaluations": 1,
+          "condition_estimate": 3.51644962574231,
+          "relative_linear_residual": 1.7558584199101082e-16,
+          "failure_phase": "centering",
+          "failure_at_t": 1.0,
+          "certified": false
+        },
+        "centered_unfinished_target": {
+          "status": "path_limit",
+          "converged": false,
+          "parameters": [
+            0.0,
+            0.0
+          ],
+          "angles": [
+            [
+              1.0471975511965976,
+              1.0471975511965976,
+              1.0471975511965976
+            ]
+          ],
+          "volume": 1.0149416064096537,
+          "t": 1.0,
+          "newton_decrement": 0.0,
+          "gap_bound_estimate": 3.0,
+          "conservative_gap_bound_estimate": 4.25,
+          "finite_gap_available": true,
+          "centered": true,
+          "target_reached": false,
+          "target_t": 42500.0,
+          "centering_steps": 0,
+          "path_steps": 0,
+          "backtracks": 0,
+          "evaluations": 1,
+          "condition_estimate": 3.000000000000001,
+          "relative_linear_residual": 0.0,
+          "failure_phase": "path",
+          "failure_at_t": 1.0,
+          "certified": false
+        },
+        "target_reached_not_centered": {
+          "status": "centering_limit",
+          "converged": false,
+          "parameters": [
+            0.15,
+            -0.05
+          ],
+          "angles": [
+            [
+              1.1971975511965975,
+              0.9971975511965976,
+              0.9471975511965977
+            ]
+          ],
+          "volume": 1.0053013095238106,
+          "t": 100000.0,
+          "newton_decrement": 44.95891500302958,
+          "gap_bound_estimate": null,
+          "conservative_gap_bound_estimate": null,
+          "finite_gap_available": false,
+          "centered": false,
+          "target_reached": true,
+          "target_t": 42500.0,
+          "centering_steps": 0,
+          "path_steps": 0,
+          "backtracks": 0,
+          "evaluations": 1,
+          "condition_estimate": 3.876452692085882,
+          "relative_linear_residual": 2.65327714920761e-16,
+          "failure_phase": "centering",
+          "failure_at_t": 100000.0,
+          "certified": false
+        },
+        "fixed_domain_tiny_t0_corrected": [
+          {
+            "status": "fixed_domain",
+            "converged": true,
+            "parameters": [],
+            "angles": [
+              [
+                1.0471975511965976,
+                1.0471975511965976,
+                1.0471975511965976
+              ]
+            ],
+            "volume": 1.0149416064096537,
+            "t": 1.0,
+            "newton_decrement": 0.0,
+            "gap_bound_estimate": 0.0,
+            "conservative_gap_bound_estimate": 0.0,
+            "finite_gap_available": true,
+            "centered": true,
+            "target_reached": true,
+            "target_t": 1.0,
+            "centering_steps": 0,
+            "path_steps": 0,
+            "backtracks": 0,
+            "evaluations": 1,
+            "condition_estimate": 1.0,
+            "relative_linear_residual": 0.0,
+            "failure_phase": null,
+            "failure_at_t": null,
+            "certified": false
+          },
+          {
+            "status": "fixed_domain",
+            "converged": true,
+            "parameters": [],
+            "angles": [
+              [
+                1.0471975511965976,
+                1.0471975511965976,
+                1.0471975511965976
+              ]
+            ],
+            "volume": 1.0149416064096537,
+            "t": 1e-310,
+            "newton_decrement": 0.0,
+            "gap_bound_estimate": 0.0,
+            "conservative_gap_bound_estimate": 0.0,
+            "finite_gap_available": true,
+            "centered": true,
+            "target_reached": true,
+            "target_t": 1e-310,
+            "centering_steps": 0,
+            "path_steps": 0,
+            "backtracks": 0,
+            "evaluations": 1,
+            "condition_estimate": 1.0,
+            "relative_linear_residual": 0.0,
+            "failure_phase": null,
+            "failure_at_t": null,
+            "certified": false
+          },
+          {
+            "status": "fixed_domain",
+            "converged": true,
+            "parameters": [],
+            "angles": [
+              [
+                1.0471975511965976,
+                1.0471975511965976,
+                1.0471975511965976
+              ]
+            ],
+            "volume": 1.0149416064096537,
+            "t": 5e-324,
+            "newton_decrement": 0.0,
+            "gap_bound_estimate": 0.0,
+            "conservative_gap_bound_estimate": 0.0,
+            "finite_gap_available": true,
+            "centered": true,
+            "target_reached": true,
+            "target_t": 5e-324,
+            "centering_steps": 0,
+            "path_steps": 0,
+            "backtracks": 0,
+            "evaluations": 1,
+            "condition_estimate": 1.0,
+            "relative_linear_residual": 0.0,
+            "failure_phase": null,
+            "failure_at_t": null,
+            "certified": false
+          }
+        ],
+        "readonly_inputs_and_detached_snapshot": true
+      }
+    },
+    "malformed_slices": {
+      "passed": true,
+      "detail": [
+        {
+          "name": "empty_domain",
+          "exception": "angles must be a nonempty finite (M, 3) array"
+        },
+        {
+          "name": "no_tangent",
+          "exception": "incidence columns must sum to zero in every triangle"
+        },
+        {
+          "name": "numerically_dependent",
+          "exception": "incidence must have numerically independent columns"
+        },
+        {
+          "name": "zero_column",
+          "exception": "incidence must have numerically independent columns"
+        },
+        {
+          "name": "impossible_rank_dimension",
+          "exception": "independent triangle-angle tangents have at most 2*M coordinates"
+        },
+        {
+          "name": "complex_data",
+          "exception": "incidence must be real"
+        },
+        {
+          "name": "wrong_sum",
+          "exception": "each triangle's angles must sum to pi within binary64 roundoff"
+        }
+      ]
+    },
+    "source_precision_boundary": {
+      "passed": true,
+      "detail": {
+        "angles": [
+          [
+            3.141592653587793,
+            1e-12,
+            1e-12
+          ]
+        ],
+        "reported_volume": 1.3865024895434277e-12,
+        "lifted_triangle_sum_minus_real_pi": "-3.002658445967987716421613144186406e-16",
+        "lifted_clausen_volume": "1.3784139886134122167477877769361455e-12",
+        "independent_bw_volume": "1.3865024895434913127082883437606752e-12",
+        "clausen_vs_bw_discrepancy": "-8.088500930079095960500567e-15",
+        "scope": "documents accepted source-rounding sensitivity; not a solver certificate or a new defect"
+      }
+    }
+  },
+  "all_passed": true
+}

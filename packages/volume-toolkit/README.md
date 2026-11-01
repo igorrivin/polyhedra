@@ -151,6 +151,17 @@ kernel. These checks concern the supplied finite angle program; geometric
 realization and embedding require their own checks. The monograph's Section 9
 fixed-dihedral coordinates are a separate feasible family.
 
+### `ideal_poly_volume_toolkit.angle_barrier` - Dense Angle Barrier Path
+
+`solve_angle_barrier(base_angles, incidence, initial_u, epsilon=...)` implements
+the monograph's short-step schedule on a supplied affine triangle-angle slice.
+It separates initial centering from path work, checks positive endpoints, and
+returns numerical finite-gap estimates with explicit failure states and traces.
+`log_sine_barrier` exposes the corresponding barrier value and derivatives.
+The [solver contract](docs/angle-barrier.md) distinguishes these numerical
+estimates from interval certificates, geometric realization and nearly-linear
+solver claims. Existing `variational` operators retain their original API.
+
 ### `ideal_poly_volume_toolkit.rivin_holonomy` - Penner-Rivin Algorithm
 
 - **Holonomy computation**: `generators_from_triangulation()` - Compute Fuchsian group generators

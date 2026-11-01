@@ -1,0 +1,1 @@
+The detached subprocess exited 0. The review wrapper then failed its unnormalized path assertion: assert all(Path(row["path"]).is_relative_to(bundle) for row in actual.values()). Module paths used /private/var while tempfile returned /var. Corrected only by resolving the expected bundle root; no product source changed and no numerical rerun was needed.

@@ -1,0 +1,5 @@
+{
+  "attempt_1": "Greedy escaped-character regex mispaired inline dollar delimiters and captured ordinary prose.",
+  "attempt_2": "Non-greedy regex still misclassified an opening dollar after a doubled TeX linebreak as escaped.",
+  "correction": "Scan dollar delimiters with preceding-backslash parity; compare paired literal math bytes. No source mathematics was changed."
+}

@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "scope": "Section 9 dense barrier numerical subset",
+  "origin_provenance": {
+    "source_commit": "014d1c4e70dfdfc852fa542f3a9c469f08dbd618",
+    "execution_context": "git-checkout",
+    "repository_dirty_at_start": true,
+    "git_status_porcelain_at_start": [
+      " M README.md",
+      " M book/README.md",
+      " M book/chapters/09-volume-hessians.tex",
+      " M book/claims/section9.json",
+      " M book/companion-reconciliation.md",
+      " M book/computational-status.md",
+      " M experiments/section9/README.md",
+      " M packages/volume-toolkit/README.md",
+      " M packages/volume-toolkit/docs/architecture.md",
+      " M packages/volume-toolkit/docs/implementation-status.md",
+      " M packages/volume-toolkit/docs/module-index.md",
+      " M site/README.md",
+      " M site/build_section9.py",
+      " M site/tests/test_build_section9.py",
+      "?? docs/execution/section9-barrier-2026-10-31/",
+      "?? experiments/section9/barrier-fixtures.json",
+      "?? experiments/section9/barrier-page.html",
+      "?? experiments/section9/barrier_run.py",
+      "?? experiments/section9/tests/test_barrier_examples.py",
+      "?? packages/volume-toolkit/docs/angle-barrier.md",
+      "?? packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py",
+      "?? packages/volume-toolkit/tests/test_angle_barrier.py"
+    ],
+    "input_sha256": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+    "source_files": [
+      {
+        "role": "experiment.driver",
+        "path": "experiments/section9/barrier_run.py",
+        "location_kind": "project-relative",
+        "required": true,
+        "available": true,
+        "sha256": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60"
+      },
+      {
+        "role": "experiment.fixture",
+        "path": "experiments/section9/barrier-fixtures.json",
+        "location_kind": "project-relative",
+        "required": true,
+        "available": true,
+        "sha256": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a"
+      },
+      {
+        "role": "experiment.template",
+        "path": "experiments/section9/barrier-page.html",
+        "location_kind": "project-relative",
+        "required": true,
+        "available": true,
+        "sha256": "e4de74a735bf9d7bbdabae7f59fa368cef972297639a4cb2719d97d92ce3fb90"
+      },
+      {
+        "role": "toolkit.angle_barrier",
+        "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py",
+        "location_kind": "project-relative",
+        "required": true,
+        "available": true,
+        "sha256": "ea73137fbbfa2fc9b96a4925001dc317b83e5c1eb96fd6ddf0cdc6c29c3add9a"
+      },
+      {
+        "role": "toolkit.variational",
+        "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+        "location_kind": "project-relative",
+        "required": true,
+        "available": true,
+        "sha256": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b"
+      },
+      {
+        "role": "toolkit.geometry",
+        "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py",
+        "location_kind": "project-relative",
+        "required": true,
+        "available": true,
+        "sha256": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+      },
+      {
+        "role": "book.chapter",
+        "path": "book/chapters/09-volume-hessians.tex",
+        "location_kind": "project-relative",
+        "required": false,
+        "available": true,
+        "sha256": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00"
+      }
+    ],
+    "source_sha256": {
+      "experiment.driver": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60",
+      "experiment.fixture": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+      "experiment.template": "e4de74a735bf9d7bbdabae7f59fa368cef972297639a4cb2719d97d92ce3fb90",
+      "toolkit.angle_barrier": "ea73137fbbfa2fc9b96a4925001dc317b83e5c1eb96fd6ddf0cdc6c29c3add9a",
+      "toolkit.variational": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+      "toolkit.geometry": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73",
+      "book.chapter": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00"
+    },
+    "bundle_origin": null,
+    "bundle_payload_hashes_match": null,
+    "bundle_payload_mismatches": [],
+    "python": "3.12.11",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "mpmath": "1.3.0",
+    "generated_at_utc": "2026-11-01T02:54:26.289627+00:00"
+  },
+  "payload_sha256": {
+    "experiments/section9/barrier_run.py": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60",
+    "experiments/section9/barrier-page.html": "e4de74a735bf9d7bbdabae7f59fa368cef972297639a4cb2719d97d92ce3fb90",
+    "experiments/section9/barrier-fixtures.json": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py": "ea73137fbbfa2fc9b96a4925001dc317b83e5c1eb96fd6ddf0cdc6c29c3add9a",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/__init__.py": "e5a100bd13fe3ca712c41ed50eb01faeb270c745275ebd08438ffabea336030b",
+    "LICENSES/volume-toolkit-MIT.txt": "14c0fc10e8db2ba14a669b9939a69f22e729cdaecec1e8bde47d2b959ac5be38",
+    "requirements.txt": "5c964bd9d0418628350e89cffb914f12bd25d7308510ce615ca907857e9069ca",
+    "README.md": "2f3d98c7b2fcad0474913b82286b66310bc196514a2a1350d23cd5ab19886afd"
+  }
+}

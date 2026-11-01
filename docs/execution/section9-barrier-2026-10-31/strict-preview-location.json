@@ -1,0 +1,90 @@
+{
+  "started_at_utc": "2026-11-01T03:05:46.543941+00:00",
+  "preview_root": "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-strict-preview-20261031-n4c7be9k",
+  "site_dir": "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-strict-preview-20261031-n4c7be9k/site/section9",
+  "scope": "Strict evidence-complete dirty-source preview; final clean-source generation follows source commit",
+  "fixed_core_sha256": "d782aff2a23c9073c6f7cf02666cc0ec3f4446f28185c7474116fcf42edbbd07",
+  "commands": [
+    {
+      "name": "grid-run",
+      "command": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "experiments/section9/run.py",
+        "--output",
+        "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-strict-preview-20261031-n4c7be9k/result.json",
+        "--site-dir",
+        "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-strict-preview-20261031-n4c7be9k/site/section9"
+      ],
+      "returncode": 0,
+      "log": "/Volumes/Lexar/lambda/devel/polyhedra/execution/section9-barrier-2026-10-31/strict-preview-grid-run.log"
+    },
+    {
+      "name": "barrier-run",
+      "command": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "experiments/section9/barrier_run.py",
+        "--output",
+        "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-strict-preview-20261031-n4c7be9k/barrier-result.json",
+        "--site-dir",
+        "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-strict-preview-20261031-n4c7be9k/site/section9"
+      ],
+      "returncode": 0,
+      "log": "/Volumes/Lexar/lambda/devel/polyhedra/execution/section9-barrier-2026-10-31/strict-preview-barrier-run.log"
+    },
+    {
+      "name": "chapter-build",
+      "command": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "site/build_section9.py",
+        "--output-dir",
+        "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-strict-preview-20261031-n4c7be9k/site/section9",
+        "--computation-result",
+        "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-strict-preview-20261031-n4c7be9k/result.json",
+        "--barrier-result",
+        "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-strict-preview-20261031-n4c7be9k/barrier-result.json",
+        "--work-dir",
+        "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-strict-preview-20261031-n4c7be9k/chapter-build"
+      ],
+      "returncode": 0,
+      "log": "/Volumes/Lexar/lambda/devel/polyhedra/execution/section9-barrier-2026-10-31/strict-preview-chapter-build.log"
+    },
+    {
+      "name": "grid-render-only",
+      "command": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "experiments/section9/run.py",
+        "--render-result",
+        "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-strict-preview-20261031-n4c7be9k/result.json",
+        "--site-dir",
+        "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-strict-preview-20261031-n4c7be9k/site/section9",
+        "--chapter-page",
+        "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-strict-preview-20261031-n4c7be9k/site/section9/chapter.html",
+        "--book-source-archive",
+        "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-strict-preview-20261031-n4c7be9k/site/section9/downloads/monograph-source.zip"
+      ],
+      "returncode": 0,
+      "log": "/Volumes/Lexar/lambda/devel/polyhedra/execution/section9-barrier-2026-10-31/strict-preview-grid-render-only.log"
+    },
+    {
+      "name": "barrier-render-only",
+      "command": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "experiments/section9/barrier_run.py",
+        "--render-result",
+        "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-strict-preview-20261031-n4c7be9k/barrier-result.json",
+        "--site-dir",
+        "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-strict-preview-20261031-n4c7be9k/site/section9",
+        "--chapter-page",
+        "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-strict-preview-20261031-n4c7be9k/site/section9/chapter.html"
+      ],
+      "returncode": 0,
+      "log": "/Volumes/Lexar/lambda/devel/polyhedra/execution/section9-barrier-2026-10-31/strict-preview-barrier-render-only.log"
+    }
+  ],
+  "both_reports_preserved_by_render_only": true,
+  "report_sha256": {
+    "result.json": "fc9e263d6212b199b9ebd5f95650ccf13b1f399b327f148b8b84bf1d76d7955c",
+    "barrier-result.json": "59a27bbdf0c7b1d1311d52f949cf7ae00ac7f3ff2eb82e9df5ce5341d9fc9e28"
+  },
+  "completed_at_utc": "2026-11-01T03:06:11.534933+00:00"
+}

@@ -13,6 +13,7 @@ from datetime import datetime, timezone
 from hashlib import sha256
 from html import escape
 from html.parser import HTMLParser
+from io import BytesIO
 import json
 from pathlib import Path
 import re
@@ -27,6 +28,16 @@ MAIN = Path('book/polyhedral_volumes_and_geodesic_identities.tex')
 CHAPTER = Path('book/chapters/09-volume-hessians.tex')
 LEDGER = Path('book/claims/section9.json')
 EXTERNAL_LABELS = ('eq:cuspHessian', 'eq:cuspmatrixHessian')
+BARRIER_SOURCES = {
+    'experiment.driver': 'experiments/section9/barrier_run.py',
+    'experiment.template': 'experiments/section9/barrier-page.html',
+    'experiment.fixture': 'experiments/section9/barrier-fixtures.json',
+    'toolkit.angle_barrier': 'packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py',
+    'toolkit.variational': 'packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py',
+    'toolkit.geometry': 'packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py',
+}
+BARRIER_ASSETS = ('barrier.html', 'downloads/barrier-result.json',
+                  'downloads/barrier-fixtures.json', 'downloads/barrier-reproduction.zip')
 LABEL_RE = re.compile(r'\\label\{([^{}]+)\}')
 ENVIRONMENTS = {'equation', 'equation*', 'align', 'align*', 'aligned',
                 'proposition', 'proof', 'figure', 'pmatrix', 'bmatrix',
@@ -448,8 +459,9 @@ def claims_html(ledger, labels, evidence_links=None, pending=()):
                                    for key, child in value.items()) + '</dl>'
         value = str(value)
         if value in evidence_links:
-            role = ('complete numerical bundle' if value.endswith('section9-reproduction.zip') else
-                    'computation record' if value == 'artifacts/section9/result.json' else 'inspection copy')
+            role = ('complete numerical bundle' if value.endswith(('section9-reproduction.zip', 'barrier-reproduction.zip')) else
+                    'computation record' if value in ('artifacts/section9/result.json', 'artifacts/section9/barrier-result.json')
+                    else 'inspection copy')
             return '<a href="' + escape(evidence_links[value]) + '">' + escape(value) + ' (' + role + ')</a>'
         if value in pending:
             return escape(value) + ' <strong>(pending review evidence; preliminary build)</strong>'
@@ -517,7 +529,97 @@ def validate_companion(output_dir, result_bytes, report):
                 raise BuildError(f'existing numerical ZIP source differs: {role}')
 
 
-def build(root, output_dir, result_path, workdir, *, allow_pending_evidence=False):
+def validate_barrier_companion(root, output_dir, result_path, *, required):
+    """Freeze a matching barrier report/export and its actual maintained sources.
+
+    This validates identity and the driver's reported disposition, not the
+    mathematical accuracy of a floating-point result. No numerical package is
+    imported by the publishing tool.
+    """
+    if result_path is None:
+        if required:
+            raise BuildError('the chapter/ledger references the barrier example; supply --barrier-result')
+        return None
+    root, output_dir, result_path = map(lambda p: Path(p).resolve(), (root, output_dir, result_path))
+    if not result_path.is_file():
+        raise BuildError(f'missing explicit barrier result: {result_path}')
+    result_bytes = result_path.read_bytes()
+    try:
+        report = json.loads(result_bytes, parse_constant=lambda x: (_ for _ in ()).throw(
+            BuildError(f'nonfinite barrier JSON: {x}')))
+    except (UnicodeError, json.JSONDecodeError) as error:
+        raise BuildError(f'invalid explicit barrier result: {error}') from error
+    if (not isinstance(report, dict) or type(report.get('schema_version')) is not int
+            or report.get('schema_version') != 1
+            or report.get('experiment_id') != 'section9-barrier-fixtures-v1'
+            or report.get('all_checks_passed') is not True
+            or not isinstance(report.get('cases'), list) or not report['cases']):
+        raise BuildError('barrier result must be a passing schema-1 report with cases')
+    assets = {}
+    for name in BARRIER_ASSETS:
+        path = output_dir / name
+        if not path.is_file():
+            raise BuildError(f'missing barrier companion asset: {name}; run barrier_run.py first')
+        assets[name] = path.read_bytes()
+    if assets['downloads/barrier-result.json'] != result_bytes:
+        raise BuildError('barrier downloaded result differs from explicit report')
+    try:
+        provenance = report['provenance']
+        source_records = {row['role']: row for row in provenance['source_files']}
+        if len(source_records) != len(provenance['source_files']):
+            raise BuildError('barrier report has duplicate source roles')
+        fixture_bytes = assets['downloads/barrier-fixtures.json']
+        fixture = json.loads(fixture_bytes)
+        if (digest(fixture_bytes) != provenance['input_sha256']
+                or fixture.get('id') != report.get('experiment_id')):
+            raise BuildError('barrier fixture differs from explicit report/input')
+        marker = '\nconst barrierData = '
+        page = assets['barrier.html'].decode('utf-8')
+        if page.count(marker) != 1:
+            raise BuildError('cannot identify the embedded barrier report')
+        embedded, _ = json.JSONDecoder().raw_decode(page.split(marker, 1)[1])
+        if embedded.get('report') != report or embedded.get('fixture') != fixture:
+            raise BuildError('barrier HTML differs from explicit report/input')
+        source_bytes = {}
+        for role, name in {**BARRIER_SOURCES, 'book.chapter': str(CHAPTER)}.items():
+            path = root / name
+            if not path.is_file():
+                raise BuildError(f'missing maintained barrier input: {name}')
+            data = path.read_bytes()
+            if provenance['source_sha256'].get(role) != digest(data):
+                raise BuildError(f'barrier report source differs from current {role}')
+            record = source_records.get(role, {})
+            if record.get('available') is not True or record.get('sha256') != digest(data):
+                raise BuildError(f'barrier report source record differs: {role}')
+            source_bytes[name] = data
+        if provenance['source_sha256']['experiment.fixture'] != digest(fixture_bytes):
+            raise BuildError('barrier downloaded fixture differs from recorded source')
+        with zipfile.ZipFile(BytesIO(assets['downloads/barrier-reproduction.zip'])) as archive:
+            prefix, manifest_name = 'barrier-reproduction/', 'barrier-bundle.json'
+            manifest = json.loads(archive.read(prefix + manifest_name))
+            if manifest.get('origin_provenance') != provenance:
+                raise BuildError('barrier ZIP origin differs from explicit report')
+            payload = manifest['payload_sha256']
+            if not isinstance(payload, dict) or any(Path(name).is_absolute() or '..' in Path(name).parts for name in payload):
+                raise BuildError('barrier ZIP has invalid payload paths')
+            names = archive.namelist()
+            expected = {prefix + name for name in payload} | {prefix + manifest_name}
+            if len(names) != len(set(names)) or set(names) != expected:
+                raise BuildError('barrier ZIP has duplicate or unmanifested payloads')
+            for name, expected_hash in payload.items():
+                if digest(archive.read(prefix + name)) != expected_hash:
+                    raise BuildError(f'barrier ZIP payload hash mismatch: {name}')
+            for role, name in BARRIER_SOURCES.items():
+                if digest(archive.read(prefix + name)) != provenance['source_sha256'][role]:
+                    raise BuildError(f'barrier ZIP source differs: {role}')
+    except (AttributeError, KeyError, TypeError, UnicodeError, json.JSONDecodeError, zipfile.BadZipFile) as error:
+        raise BuildError(f'malformed barrier report/export: {error}') from error
+    return {'path': result_path, 'result_bytes': result_bytes, 'report': report,
+            'assets': assets, 'source_bytes': source_bytes}
+
+
+def build(root, output_dir, result_path, workdir, *, allow_pending_evidence=False,
+          barrier_result_path=None):
     root, output_dir, result_path, workdir = [Path(p).resolve() for p in (root, output_dir, result_path, workdir)]
     if workdir == root or workdir.is_relative_to(root / 'book/chapters'):
         raise BuildError('unsafe build directory')
@@ -549,6 +651,18 @@ def build(root, output_dir, result_path, workdir, *, allow_pending_evidence=Fals
             raise BuildError(f'computation report does not identify the current {role}')
     canonical = sources[str(MAIN)].decode()
     chapter = sources[str(CHAPTER)].decode()
+    ledger = json.loads(extra_inputs[str(LEDGER)])
+    evidence_paths = set(ledger_paths(ledger))
+    barrier_evidence = {
+        BARRIER_SOURCES[role] for role in
+        ('experiment.driver', 'experiment.template', 'experiment.fixture', 'toolkit.angle_barrier')
+    } | {'artifacts/section9/barrier-result.json', 'site/section9/barrier.html',
+         'site/section9/downloads/barrier-reproduction.zip'}
+    barrier_required = ('barrier.html' in chapter or 'barrier_run.py' in chapter
+                        or bool(evidence_paths & barrier_evidence))
+    barrier = validate_barrier_companion(root, output_dir, barrier_result_path, required=barrier_required)
+    if barrier is not None and barrier['source_bytes'][str(CHAPTER)] != sources[str(CHAPTER)]:
+        raise BuildError('chapter changed between grid and barrier input snapshots')
     chapter_labels = LABEL_RE.findall(uncomment(chapter))
     if len(chapter_labels) != len(set(chapter_labels)):
         raise BuildError('duplicate chapter label')
@@ -580,6 +694,17 @@ def build(root, output_dir, result_path, workdir, *, allow_pending_evidence=Fals
                 '../site/section9/downloads/section9-reproduction.zip': 'downloads/section9-reproduction.zip',
                 'claims/section9.json': 'downloads/section9-claims.json'}
     copied = {}
+    if barrier is not None:
+        copied.update(barrier['source_bytes'])
+        link_map.update({
+            '../site/section9/barrier.html': 'barrier.html',
+            '../artifacts/section9/barrier-result.json': 'downloads/barrier-result.json',
+            '../site/section9/downloads/barrier-reproduction.zip': 'downloads/barrier-reproduction.zip',
+        })
+        for name in (BARRIER_SOURCES['experiment.driver'], BARRIER_SOURCES['toolkit.angle_barrier']):
+            target = 'downloads/' + Path(name).name
+            (output_dir / target).write_bytes(barrier['source_bytes'][name])
+            link_map['../' + name] = target
     source_roles = {'experiments/section9/run.py': 'experiment.driver',
                     'experiments/section9/fixture.json': 'experiment.fixture',
                     'packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py': 'toolkit.variational'}
@@ -721,24 +846,35 @@ def build(root, output_dir, result_path, workdir, *, allow_pending_evidence=Fals
             info = zipfile.ZipInfo('monograph-source/' + name, (1980, 1, 1, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             archive.writestr(info, data)
-    ledger = json.loads(extra_inputs[str(LEDGER)])
     evidence_links, pending_evidence = {}, []
-    for name in sorted(set(ledger_paths(ledger))):
+    barrier_targets = {'artifacts/section9/barrier-result.json': 'downloads/barrier-result.json',
+                       'site/section9/downloads/barrier-reproduction.zip': 'downloads/barrier-reproduction.zip',
+                       'site/section9/barrier.html': 'barrier.html'}
+    for name in sorted(evidence_paths):
         if name == 'artifacts/section9/result.json':
             evidence_links[name] = 'downloads/result.json'
             continue
         if name == 'site/section9/downloads/section9-reproduction.zip':
             evidence_links[name] = 'downloads/section9-reproduction.zip'
             continue
+        if name in barrier_targets:
+            if barrier is None:
+                raise BuildError(f'barrier evidence requires --barrier-result: {name}')
+            evidence_links[name] = barrier_targets[name]
+            continue
         path = (root / name).resolve()
         if not path.is_relative_to(root):
             raise BuildError(f'external ledger evidence path: {name}')
         if not path.is_file():
-            if allow_pending_evidence and name.startswith('docs/execution/section9-chapter-2026-10-31/'):
+            if allow_pending_evidence and name.startswith(('docs/execution/section9-chapter-2026-10-31/',
+                                                         'docs/execution/section9-barrier-2026-10-31/')):
                 pending_evidence.append(name)
                 continue
             raise BuildError(f'missing ledger evidence: {name}')
         data = path.read_bytes()
+        frozen = copied.get(name, sources.get(name, extra_inputs.get(name)))
+        if frozen is not None and data != frozen:
+            raise BuildError(f'input changed before ledger inspection copy: {name}')
         copied[name] = data
         destination = downloads / 'inspection' / name
         destination.parent.mkdir(parents=True, exist_ok=True)
@@ -748,7 +884,9 @@ def build(root, output_dir, result_path, workdir, *, allow_pending_evidence=Fals
     html = ('<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
             '<title>Section 9 — Volume Hessians</title><link rel="stylesheet" href="assets/section9.css"></head><body>'
             '<header class="masthead"><p>Polyhedra, Moduli, and Quantum Geometry</p><nav aria-label="Chapter resources">'
-            '<a href="index.html">Computational companion</a><a href="downloads/section9.pdf">Chapter PDF</a>'
+            '<a href="index.html">Grid companion</a>'
+            + ('<a href="barrier.html">Barrier solver examples</a>' if barrier is not None else '')
+            + '<a href="downloads/section9.pdf">Chapter PDF</a>'
             '<a href="downloads/monograph-source.zip">Complete LaTeX source</a><a href="#claim-ledger">Claim ledger</a></nav></header>'
             '<main>' + html_body + claims + '</main><footer><p>Built from source commit <code>' + escape(commit)
             + '</code>; source checkout ' + ('dirty (preliminary)' if status else 'clean at build start') + '. '
@@ -764,6 +902,12 @@ def build(root, output_dir, result_path, workdir, *, allow_pending_evidence=Fals
                 'inputs': {name: digest(data) for name, data in {**sources, **extra_inputs, **copied}.items()},
                 'computation_result': {'actual_path': str(result_path), 'sha256': digest(result_bytes),
                                        'provenance': report['provenance']},
+                'barrier_computation_result': ({'actual_path': str(barrier['path']),
+                                               'sha256': digest(barrier['result_bytes']),
+                                               'provenance': barrier['report']['provenance'],
+                                               'asset_hash_scope': 'inputs at chapter-build time, before any optional render-only backlink refresh',
+                                               'asset_sha256': {name: digest(data) for name, data in barrier['assets'].items()}}
+                                              if barrier is not None else None),
                 'tools': tools, 'tool_versions': versions, 'full_monograph_label_count': len(labels),
                 'pending_evidence': pending_evidence,
                 'preliminary': bool(status) or bool(pending_evidence),
@@ -783,6 +927,12 @@ def build(root, output_dir, result_path, workdir, *, allow_pending_evidence=Fals
             raise BuildError(f'input changed during build; rerun from stable sources: {path}')
     if result_path.read_bytes() != result_bytes:
         raise BuildError('computation result changed during build')
+    if barrier is not None:
+        if barrier['path'].read_bytes() != barrier['result_bytes']:
+            raise BuildError('barrier computation result changed during build')
+        for name, data in barrier['assets'].items():
+            if (output_dir / name).read_bytes() != data:
+                raise BuildError(f'barrier companion asset changed during build: {name}')
     (output_dir / 'chapter.html').write_text(html)
     manifest['output_sha256'] = {str(path.relative_to(output_dir)): digest(path.read_bytes())
         for path in [output_dir / 'chapter.html', downloads / 'section9.pdf', downloads / 'monograph-source.zip',
@@ -798,6 +948,8 @@ def main():
     parser.add_argument('--output-dir', type=Path, required=True,
                         help='existing numerical companion output directory; use a temporary path for release builds')
     parser.add_argument('--computation-result', type=Path, required=True)
+    parser.add_argument('--barrier-result', type=Path,
+                        help='explicit matching barrier report; required when chapter/ledger links that example')
     parser.add_argument('--work-dir', type=Path,
                         help='retained snapshot/log/render directory (default: new temporary directory)')
     parser.add_argument('--allow-pending-evidence', action='store_true',
@@ -805,7 +957,8 @@ def main():
     args = parser.parse_args()
     workdir = args.work_dir or Path(tempfile.mkdtemp(prefix='section9-chapter-'))
     manifest = build(args.root, args.output_dir, args.computation_result, workdir,
-                     allow_pending_evidence=args.allow_pending_evidence)
+                     allow_pending_evidence=args.allow_pending_evidence,
+                     barrier_result_path=args.barrier_result)
     print(json.dumps({'source_commit': manifest['source_commit'], 'dirty_at_start': manifest['repository_dirty_at_start'],
                       'pdf_pages': manifest['validation']['pdf_pages'],
                       'chapter': str(args.output_dir / 'chapter.html'), 'work_dir': str(workdir)}, indent=2))

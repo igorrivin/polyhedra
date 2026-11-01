@@ -1,0 +1,20 @@
+..F.....................................                                 [100%]
+=================================== FAILURES ===================================
+____ test_asymmetric_disk_has_nontrivial_center_and_preserves_path_contract ____
+
+    def test_asymmetric_disk_has_nontrivial_center_and_preserves_path_contract():
+        base, matrix = asymmetric_disk()
+        result = barrier.solve_angle_barrier(base, matrix, [-.1], epsilon=1e-4)
+        assert result.converged
+        # This independent 80-digit Clausen value uses exact rational coordinates;
+        # binary64 angles are a nearby, explicitly numerical problem.
+        reference = 3.0062866417470506525050027983572778475653682538807
+        assert abs(result.volume - reference) <= result.gap_bound_estimate + 1e-12
+        centered_start = [row for row in result.history if row.phase == "centering"][-1]
+>       assert centered_start.parameters[0] > .02
+E       assert -0.002759189479892253 > 0.02
+
+packages/volume-toolkit/tests/test_angle_barrier.py:76: AssertionError
+=========================== short test summary info ============================
+FAILED packages/volume-toolkit/tests/test_angle_barrier.py::test_asymmetric_disk_has_nontrivial_center_and_preserves_path_contract
+1 failed, 39 passed in 12.75s

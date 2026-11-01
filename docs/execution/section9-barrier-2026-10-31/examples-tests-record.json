@@ -1,0 +1,13 @@
+{
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=packages/volume-toolkit PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 /tmp/polyhedra-baseline-20261031/bin/python -m pytest -q experiments/section9/tests",
+    "exit_code": 0,
+    "result": "15 passed, 8 subtests passed in 4.06s"
+  },
+  "lint": {
+    "command": "/opt/anaconda3/bin/ruff check experiments/section9/barrier_run.py experiments/section9/tests/test_barrier_examples.py",
+    "exit_code": 0,
+    "result": "All checks passed!"
+  },
+  "note": "Recorded output from the completed focused author validation; no second run was needed."
+}

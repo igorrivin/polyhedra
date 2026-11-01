@@ -1,0 +1,18 @@
+{
+  "archive": "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-integration-preview-20261031-baylv1cs/site/section9/downloads/barrier-reproduction.zip",
+  "archive_sha256": "f60f0bdc3a65a229891f9c5c3d6726694be6f6acf3f9072883945e986f200a24",
+  "temporary_work": "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_",
+  "command": [
+    "/tmp/polyhedra-numerical-core-20261031/bin/python",
+    "-c",
+    "import hashlib,json,runpy,sys\nfrom pathlib import Path\nsource,output,site,imports = sys.argv[1:]\nns=runpy.run_path(source,run_name='detached_review')\nrows={name:{'path':str(Path(ns[name].__file__).resolve()),'sha256':hashlib.sha256(Path(ns[name].__file__).read_bytes()).hexdigest()} for name in ('solver','var','geometry')}\nPath(imports).write_text(json.dumps(rows,indent=2)+'\\n')\nsys.argv=[source,'--output',output,'--site-dir',site]\nraise SystemExit(ns['main']())\n",
+    "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_/barrier-reproduction/experiments/section9/barrier_run.py",
+    "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_/detached-result.json",
+    "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_/detached-site",
+    "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_/actual-imports.json"
+  ],
+  "cwd": "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_/unrelated-working-directory",
+  "exit_code": 0,
+  "stdout": "{\n  \"operation\": \"compute_and_render\",\n  \"all_checks_passed\": true,\n  \"source_commit\": null,\n  \"dirty_at_start\": null,\n  \"result\": \"/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_/detached-result.json\",\n  \"html\": \"/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_/detached-site/barrier.html\"\n}\n",
+  "stderr": ""
+}

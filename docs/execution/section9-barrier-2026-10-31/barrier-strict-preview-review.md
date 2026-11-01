@@ -1,0 +1,7 @@
+# Independent strict combined preview review
+
+Approved the strict combined dirty preview at `/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-strict-preview-20261031-n4c7be9k`. Both independent review reports are present as byte-identical inspection copies and `pending_evidence` is empty. All 17 scoped source hashes still match the frozen publication approval. Both explicit numerical results, embedded page data, fixture copies and numerical/archive provenance agree. All manifested payloads in the three ZIPs pass their hashes; the barrier payloads and all three case records exactly match the previously executed corrected-core detached replay. This identity check is not an additional numerical execution.
+
+All local HTML targets and fragments pass, with 209 chapter MathML nodes and both figures. The chapter PDF has ten pages and no recorded overfull boxes. All ten rendered PNG hashes equal the pages previously opened and visually approved; no new layout was inferred from text extraction. The final site hash inventory records bytes after both render-only backlinks.
+
+This closes the strict preliminary export gate without changing the frozen source-review report. Clean-source final generation, final archive replay and postcommit integrity checks remain separate release gates. Browser review and external publication remain unperformed. Exact hashes and paths are in `barrier-strict-preview-review.json`.

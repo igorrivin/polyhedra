@@ -6,8 +6,8 @@ that file. The builder does not edit either source. It derives the standalone
 preamble and bibliography from the full monograph, compiles the complete book
 for authoritative labels, and checks the excerpt against those numbers.
 
-The published directory contains `chapter.html`, the authored computational
-`index.html`, and local assets/downloads. The HTML includes all chapter prose,
+The published directory contains `chapter.html`, the authored grid companion
+`index.html`, the separate `barrier.html`, and local assets/downloads. The chapter includes all prose,
 proofs, mathematical displays, both figures, selected bibliography, and the claim
 ledger. The two Section 16 equations are explicitly marked reference-only and
 outside this chapter's proof review. The claim ledger is not an automatic proof
@@ -36,7 +36,7 @@ the [experiment guide](../experiments/section9/README.md).
 ## Clean source generation
 
 Review and commit sources first. Keep all generation outside the checkout so
-both generators observe the same clean source commit. From the repository root,
+all generators observe the same clean source commit. From the repository root,
 using the supported Python environment:
 
 ```sh
@@ -44,9 +44,14 @@ PYTHONPATH=packages/volume-toolkit python experiments/section9/run.py \
   --output /tmp/section9-release/result.json \
   --site-dir /tmp/section9-release/site/section9
 
+PYTHONPATH=packages/volume-toolkit python experiments/section9/barrier_run.py \
+  --output /tmp/section9-release/barrier-result.json \
+  --site-dir /tmp/section9-release/site/section9
+
 python site/build_section9.py \
   --output-dir /tmp/section9-release/site/section9 \
   --computation-result /tmp/section9-release/result.json \
+  --barrier-result /tmp/section9-release/barrier-result.json \
   --work-dir /tmp/section9-release/chapter-build
 
 PYTHONPATH=packages/volume-toolkit python experiments/section9/run.py \
@@ -54,13 +59,20 @@ PYTHONPATH=packages/volume-toolkit python experiments/section9/run.py \
   --site-dir /tmp/section9-release/site/section9 \
   --chapter-page /tmp/section9-release/site/section9/chapter.html \
   --book-source-archive /tmp/section9-release/site/section9/downloads/monograph-source.zip
+
+PYTHONPATH=packages/volume-toolkit python experiments/section9/barrier_run.py \
+  --render-result /tmp/section9-release/barrier-result.json \
+  --site-dir /tmp/section9-release/site/section9 \
+  --chapter-page /tmp/section9-release/site/section9/chapter.html
 ```
 
-The last command only renders the existing report. It validates current source
-and fixture identities before creating its reproduction bundle and preserves
-the report's original computation timestamp, numerical values, dependency
-versions and provenance. The chapter tool receives the actual fresh result
-path explicitly and records its path and SHA-256.
+The two `--render-result` commands only render existing reports. They validate current source
+and fixture identities before creating their reproduction bundles and preserve
+each report's original computation timestamp, numerical values, dependency
+versions and provenance. The chapter tool receives both actual fresh result
+paths explicitly and records their paths and SHA-256 values. The barrier input
+is required when the current chapter or ledger references that example; an old
+canonical result is never silently attached instead.
 
 The builder rejects unresolved labels/citations, unknown raw TeX, MathML
 fallback warnings, lost figures, inconsistent equation/bibliography numbers,
@@ -72,6 +84,10 @@ and label commands never changes canonical proof text.
 The existing computational companion must also match the explicit result:
 the embedded HTML report, downloaded result/fixture, ZIP origin and payload
 hashes are checked before a chapter is built.
+For the barrier companion these checks also require the six computational
+source roles and chapter hash to match the current source snapshot. All ZIP
+payloads must be manifested without duplicate or external paths. The barrier
+page and download bytes are frozen as build inputs and rechecked at completion.
 
 All ledger paths become labeled inspection downloads inside the exported
 directory; primary source URLs remain external citations. Missing current audit
@@ -82,11 +98,16 @@ ledger retains repository-relative ownership paths.
 Inspect every PNG under `chapter-build/rendered-pages/` after building. The
 manifest records rendering completion, not a completed visual inspection.
 Perform an independent code/artifact review and record that review separately.
-Static HTML integrity checks are not browser layout checks. Only after both
-generators and reviews pass should the approved `result.json` and complete
+Static HTML integrity checks are not browser layout checks. Only after all
+generators and reviews pass should the approved `result.json`,
+`barrier-result.json` and complete
 `site/section9` output directory be copied into their canonical locations in a
 separate artifact commit. A final artifact manifest must hash the files after
 the last render-only step; the chapter build record describes its own outputs.
+Its barrier asset hashes describe inputs at chapter-build time. A subsequent
+render-only refresh can add the optional chapter backlink to `barrier.html`;
+the final post-refresh manifest owns that page's final bytes. Neither refresh
+changes either numerical result or its computation provenance.
 
 ## Source archive and ownership
 
@@ -105,6 +126,9 @@ reproducible and does not require these monograph assets.
 - `tests/test_build_section9.py`: strict converter and integrity regressions.
 - `../experiments/section9/run.py`: numerical execution and identity-checked
   render-only companion; it does not duplicate the source-graph builder.
+- `../experiments/section9/barrier_run.py`: fixed-fixture dense barrier
+  experiments, independent references, numerical traces, and a separate
+  detached reproduction bundle.
 
 Focused checks:
 

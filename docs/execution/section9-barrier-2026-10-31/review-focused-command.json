@@ -1,0 +1,33 @@
+{
+  "command": [
+    "/tmp/polyhedra-baseline-20261031/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=/Volumes/Lexar/lambda/devel/polyhedra/execution/section9-barrier-2026-10-31/review-focused.xml",
+    "packages/volume-toolkit/tests/test_angle_barrier.py",
+    "packages/volume-toolkit/tests/test_variational.py",
+    "packages/volume-toolkit/tests/test_geometry.py",
+    "packages/volume-toolkit/tests/test_geometry_precision.py",
+    "packages/volume-toolkit/tests/test_correctness_regressions.py"
+  ],
+  "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "packages/volume-toolkit",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "MPLCONFIGDIR": "/tmp/polyhedra-mpl-20261031",
+    "GRADIO_ANALYTICS_ENABLED": "False"
+  },
+  "source_hashes": {
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py": "ea73137fbbfa2fc9b96a4925001dc317b83e5c1eb96fd6ddf0cdc6c29c3add9a",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+  },
+  "started_utc": "2026-11-01T02:57:08.258220+00:00",
+  "returncode": 0,
+  "elapsed_seconds": 19.699777915957384,
+  "finished_utc": "2026-11-01T02:57:27.960178+00:00"
+}

@@ -4,7 +4,7 @@
   "chapter_label": "sec:ipolybridge",
   "review_date": "2026-10-31",
   "baseline_commit": "26b3c134d9308d345cb76f1240db9de982b2e5a6",
-  "revision_review": "Independently approved on 2026-10-31; the report preserves the frozen chapter and pre-status-update ledger identities.",
+  "revision_review": "The mathematical edition was independently approved at the frozen hashes below. Subsequent computational coverage and export integration have separate review records; the earlier hash is not approval of later prose or code.",
   "independent_review_evidence": [
     "docs/execution/section9-chapter-2026-10-31/proof-review.md"
   ],
@@ -12,7 +12,7 @@
     "chapter_sha256": "abe89dd665b10fe808a0c4273f5f8ecdbe9fc9a5c0cd7b92bc3618a1759c2a5e",
     "ledger_sha256_before_status_update": "dc587dd1e862b52b81e555ccd221d30c0de55fe523b2f137bbc0cb7b0e9289af"
   },
-  "path_convention": "All local paths are relative to the repository root; review evidence is preserved under docs/execution/section9-chapter-2026-10-31.",
+  "path_convention": "All local paths are relative to the repository root. Original mathematical review is preserved under docs/execution/section9-chapter-2026-10-31; the barrier implementation and export review are separate records under docs/execution/section9-barrier-2026-10-31.",
   "status_definitions": {
     "proved_in_chapter": "A general derivation is written in the canonical chapter and independently audited; finite computations are supplementary.",
     "external_theorem_statement_checked": "The specific statement and hypotheses were checked against the cited primary material, with access limits recorded; complete proofs are not claimed re-audited.",
@@ -372,16 +372,23 @@
         "docs/execution/section9-chapter-2026-10-31/companion-audit.md"
       ],
       "computation": {
-        "status": "audit_diagnostics_only",
+        "status": "dense_binary64_objective_and_derivatives",
         "code_paths": [
-          "docs/execution/section9-chapter-2026-10-31/companion_reference_probes.py"
+          "packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py",
+          "packages/volume-toolkit/tests/test_angle_barrier.py",
+          "experiments/section9/barrier_run.py"
         ],
         "evidence_paths": [
+          "experiments/section9/barrier-fixtures.json",
+          "artifacts/section9/barrier-result.json",
+          "site/section9/downloads/barrier-reproduction.zip",
+          "docs/execution/section9-barrier-2026-10-31/barrier-review.md",
+          "docs/execution/section9-barrier-2026-10-31/barrier-publication-review.md",
           "docs/execution/section9-chapter-2026-10-31/companion_reference_probes.json"
         ],
-        "description": "The general trianglewise proof is in the chapter and audits. Seeded binary64 probes check identities numerically and do not prove the inequality."
+        "description": "The maintained log-sine barrier and affine-angle derivatives are independently checked numerically. The general compatibility inequality is still supported by the unchanged chapter proof and mathematical audits."
       },
-      "coverage_gap": "No maintained barrier objective, intrinsic constraint basis, or barrier derivative implementation."
+      "coverage_gap": "The caller supplies an independent affine tangent basis and a positive feasible start. Rank, trigonometric evaluations and derivatives are numerical; no automatic full peripheral basis or interval certificate is supplied."
     },
     {
       "id": "s9.finite_centering",
@@ -399,16 +406,23 @@
         "docs/execution/section9-chapter-2026-10-31/companion-audit.md"
       ],
       "computation": {
-        "status": "exact_constant_check_only",
+        "status": "dense_numerical_centering_and_gap_estimate",
         "code_paths": [
-          "docs/execution/section9-chapter-2026-10-31/companion_reference_probes.py"
+          "packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py",
+          "packages/volume-toolkit/tests/test_angle_barrier.py",
+          "experiments/section9/barrier_run.py"
         ],
         "evidence_paths": [
+          "experiments/section9/barrier-fixtures.json",
+          "artifacts/section9/barrier-result.json",
+          "site/section9/downloads/barrier-reproduction.zip",
+          "docs/execution/section9-barrier-2026-10-31/barrier-review.md",
+          "docs/execution/section9-barrier-2026-10-31/barrier-publication-review.md",
           "docs/execution/section9-chapter-2026-10-31/companion_reference_probes.json"
         ],
-        "description": "The proof distinguishes exact-center gap m/t from the finite-center gap [m+(sqrt(m)+lambda)lambda/(1-lambda)]/t, bounded by 17m/(12t)."
+        "description": "The solver separately budgets initial centering, freshly evaluates the endpoint decrement and returns the finite-gap estimate and conservative 17m/(12t) estimate with explicit numerical status. Named examples compare against independent multiprecision volume references."
       },
-      "coverage_gap": "No executable centering or decrement certification routine."
+      "coverage_gap": "Binary64 evaluation of the theorem-derived estimate is not a certified upper bound. Feasibility construction, exact rank, rounding-error enclosure and geometric error remain outside the solver."
     },
     {
       "id": "s9.short_step_iterations",
@@ -425,16 +439,23 @@
         "docs/execution/section9-chapter-2026-10-31/companion-audit.md"
       ],
       "computation": {
-        "status": "exact_constant_check_only",
+        "status": "dense_short_step_path_and_trace_checks",
         "code_paths": [
-          "docs/execution/section9-chapter-2026-10-31/companion_reference_probes.py"
+          "packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py",
+          "packages/volume-toolkit/tests/test_angle_barrier.py",
+          "experiments/section9/barrier_run.py"
         ],
         "evidence_paths": [
+          "experiments/section9/barrier-fixtures.json",
+          "artifacts/section9/barrier-result.json",
+          "site/section9/downloads/barrier-reproduction.zip",
+          "docs/execution/section9-barrier-2026-10-31/barrier-review.md",
+          "docs/execution/section9-barrier-2026-10-31/barrier-publication-review.md",
           "docs/execution/section9-chapter-2026-10-31/companion_reference_probes.json"
         ],
-        "description": "The chapter proves pre-step decrement<=5/16 and post-step decrement<=25/121<1/4; the audit checks the rational constants."
+        "description": "The maintained path uses the specified parameter factor and one full Newton step, checks actual positive angles and fresh decrements, and stops only after the scheduled target and centering condition hold. Iteration traces separate initial centering from path work; exhausted budgets remain unsuccessful."
       },
-      "coverage_gap": "The maintained numerical example does not implement the barrier path or prove a plain-Newton iteration bound.",
+      "coverage_gap": "The dense implementation supplies neither a nearly-linear complexity result nor an unrestricted plain-Newton bound. Floating-point acceptance checks do not validate exact-arithmetic or controlled energy-error hypotheses.",
       "source_evidence": [
         {
           "source": "BoydVandenbergheSlides",
@@ -472,9 +493,9 @@
         "evidence_paths": [
           "docs/execution/section9-chapter-2026-10-31/companion_reference_probes.json"
         ],
-        "description": "The analytical tolerance implies new decrement<=10420/47961<1/4. The source supports a conditional randomized expected arithmetic scale, not bit complexity or observed repository performance."
+        "description": "The analytical tolerance implies new decrement<=10420/47961<1/4. The dense implementation reports numerical linear residuals and conditioning, but these are not certified relative energy-error bounds and do not implement the conditional nearly-linear randomized solver."
       },
-      "coverage_gap": "No nearly-linear solver integration, runtime benchmark of this schedule, failure-probability accounting, finite-precision stability proof, or geometric-error certification.",
+      "coverage_gap": "No nearly-linear solver integration, scaling benchmark, failure-probability accounting, finite-precision stability proof, or geometric-error certification. Dense numerical traces are not evidence for the stated arithmetic-work scale.",
       "source_evidence": [
         {
           "source": "SpielmanTengSolvers",
@@ -761,5 +782,14 @@
       },
       "coverage_gap": "A volume-gap certificate does not imply angle error, geometric embedding, or combinatorial-type certification."
     }
-  ]
+  ],
+  "computational_revision": {
+    "baseline_commit": "014d1c4e70dfdfc852fa542f3a9c469f08dbd618",
+    "scope": "Dense binary64 affine-angle barrier implementation and computational addendum; original proof mathematics and numbering retained.",
+    "review_evidence": [
+      "docs/execution/section9-barrier-2026-10-31/barrier-review.md",
+      "docs/execution/section9-barrier-2026-10-31/barrier-publication-review.md"
+    ],
+    "evidence_boundary": "Review dispositions and exact source identities are recorded in those reports; computations are not formal or interval certification."
+  }
 }

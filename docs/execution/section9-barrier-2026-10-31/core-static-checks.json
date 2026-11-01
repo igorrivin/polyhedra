@@ -1,0 +1,41 @@
+[
+  {
+    "command": [
+      "/opt/anaconda3/bin/ruff",
+      "check",
+      "packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py",
+      "packages/volume-toolkit/tests/test_angle_barrier.py"
+    ],
+    "returncode": 0,
+    "stdout": "All checks passed!\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check",
+      "--",
+      "packages/volume-toolkit"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--exit-code",
+      "--",
+      "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "check": "new authored module/tests/contract have final newlines and no trailing whitespace",
+    "passed": true
+  }
+]

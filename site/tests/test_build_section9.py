@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+import zipfile
 
 ROOT = Path(__file__).resolve().parents[2]
 spec = importlib.util.spec_from_file_location('chapter_builder', ROOT / 'site/build_section9.py')
@@ -103,6 +104,106 @@ class ChapterIntegrityTests(unittest.TestCase):
             (downloads / 'result.json').write_bytes(result)
             with self.assertRaisesRegex(builder.BuildError, 'HTML differs'):
                 builder.validate_companion(root, result, report)
+
+    def test_barrier_evidence_requires_explicit_result(self):
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            self.assertIsNone(builder.validate_barrier_companion(root, root, None, required=False))
+            with self.assertRaisesRegex(builder.BuildError, 'supply --barrier-result'):
+                builder.validate_barrier_companion(root, root, None, required=True)
+            with self.assertRaisesRegex(builder.BuildError, 'missing explicit barrier'):
+                builder.validate_barrier_companion(root, root, root / 'missing.json', required=True)
+
+    def test_barrier_nonreport_or_wrong_experiment_is_rejected(self):
+        for invalid in ([], {'schema_version': True},
+                        {'schema_version': 1, 'all_checks_passed': True,
+                         'cases': [{}], 'experiment_id': 'unrelated-experiment'}):
+            with self.subTest(invalid=invalid), tempfile.TemporaryDirectory() as name:
+                root = Path(name)
+                result = root / 'invalid.json'
+                result.write_text(json.dumps(invalid))
+                with self.assertRaisesRegex(builder.BuildError, 'passing schema-1 report'):
+                    builder.validate_barrier_companion(root, root, result, required=True)
+
+    def barrier_export(self, root):
+        """Synthetic identity fixtures; these deliberately claim no solver accuracy."""
+        site = root / 'export'
+        (site / 'downloads').mkdir(parents=True)
+        fixture = {'id': 'section9-barrier-fixtures-v1', 'cases': [{'id': 'test-identity-only'}]}
+        payload = {}
+        for role, name in builder.BARRIER_SOURCES.items():
+            data = (json.dumps(fixture).encode() if role == 'experiment.fixture'
+                    else ('source role ' + role + '\n').encode())
+            path = root / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(data)
+            payload[name] = data
+        chapter = root / builder.CHAPTER
+        chapter.parent.mkdir(parents=True, exist_ok=True)
+        chapter.write_text('Canonical test chapter\n')
+        provenance = {'input_sha256': builder.digest(payload[builder.BARRIER_SOURCES['experiment.fixture']]),
+                      'source_sha256': {role: builder.digest(payload[name]) for role, name in builder.BARRIER_SOURCES.items()}}
+        provenance['source_sha256']['book.chapter'] = builder.digest(chapter.read_bytes())
+        provenance['source_files'] = [{'role': role, 'available': True, 'sha256': value}
+                                      for role, value in provenance['source_sha256'].items()]
+        report = {'schema_version': 1, 'all_checks_passed': True,
+                  'experiment_id': fixture['id'], 'cases': fixture['cases'], 'provenance': provenance}
+        result = root / 'explicit-barrier.json'
+        result.write_text(json.dumps(report))
+        (site / 'downloads/barrier-result.json').write_bytes(result.read_bytes())
+        (site / 'downloads/barrier-fixtures.json').write_bytes(payload[builder.BARRIER_SOURCES['experiment.fixture']])
+        (site / 'barrier.html').write_text('\nconst barrierData = ' + json.dumps({'report': report, 'fixture': fixture}) + ';\n')
+        manifest = {'origin_provenance': provenance,
+                    'payload_sha256': {name: builder.digest(data) for name, data in payload.items()}}
+        with zipfile.ZipFile(site / 'downloads/barrier-reproduction.zip', 'w') as archive:
+            for name, data in payload.items():
+                archive.writestr('barrier-reproduction/' + name, data)
+            archive.writestr('barrier-reproduction/barrier-bundle.json', json.dumps(manifest))
+        return site, result
+
+    def test_barrier_export_matches_explicit_current_inputs(self):
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            site, result = self.barrier_export(root)
+            snapshot = builder.validate_barrier_companion(root, site, result, required=True)
+            self.assertEqual(snapshot['result_bytes'], result.read_bytes())
+            self.assertEqual(set(snapshot['assets']), set(builder.BARRIER_ASSETS))
+            self.assertEqual(len(snapshot['source_bytes']), 7)
+            (root / builder.BARRIER_SOURCES['toolkit.angle_barrier']).write_text('changed solver\n')
+            with self.assertRaisesRegex(builder.BuildError, 'source differs from current toolkit.angle_barrier'):
+                builder.validate_barrier_companion(root, site, result, required=True)
+
+    def test_barrier_missing_stale_or_mutated_export_is_rejected(self):
+        for mutation, pattern in [('missing', 'missing barrier companion'),
+                                  ('report', 'downloaded result differs'),
+                                  ('fixture', 'fixture differs'),
+                                  ('page', 'HTML differs'),
+                                  ('zip-payload', 'payload hash mismatch'),
+                                  ('zip-extra', 'unmanifested payloads')]:
+            with self.subTest(mutation=mutation), tempfile.TemporaryDirectory() as name:
+                root = Path(name)
+                site, result = self.barrier_export(root)
+                if mutation == 'missing':
+                    (site / 'barrier.html').unlink()
+                elif mutation == 'report':
+                    (site / 'downloads/barrier-result.json').write_text('{}')
+                elif mutation == 'fixture':
+                    (site / 'downloads/barrier-fixtures.json').write_text('{}')
+                elif mutation == 'page':
+                    (site / 'barrier.html').write_text('\nconst barrierData = {};\n')
+                else:
+                    path = site / 'downloads/barrier-reproduction.zip'
+                    with zipfile.ZipFile(path) as archive:
+                        payload = {name: archive.read(name) for name in archive.namelist()}
+                    if mutation == 'zip-payload':
+                        payload['barrier-reproduction/' + builder.BARRIER_SOURCES['toolkit.angle_barrier']] = b'changed'
+                    else:
+                        payload['barrier-reproduction/unrecorded.py'] = b'not in manifest'
+                    with zipfile.ZipFile(path, 'w') as archive:
+                        for name, data in payload.items():
+                            archive.writestr(name, data)
+                with self.assertRaisesRegex(builder.BuildError, pattern):
+                    builder.validate_barrier_companion(root, site, result, required=True)
 
 
 if __name__ == '__main__':

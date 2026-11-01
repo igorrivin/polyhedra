@@ -9,6 +9,13 @@ The consolidated execution order and deferred decisions are recorded in
 
 ## Working
 
+- **Section 9 dense angle barrier (31 October 2026 increment)** —
+  `angle_barrier.solve_angle_barrier` implements separate initial centering and
+  the reviewed short-step schedule on a supplied affine triangle-angle slice.
+  Numerical finite-gap estimates, positive endpoints, trace diagnostics and
+  explicit failures are covered by independent small examples. This does not
+  supply exact/interval certification, a feasibility LP, a complete peripheral
+  coordinate basis or a nearly-linear backend; see [the contract](angle-barrier.md).
 - **H^3 volume via Delaunay** — validated against known cases; correct for generic point sets.
 - **H^3 volume via hull-project-back** — correct for generic point sets.
 - **H^3 optimization service** — `optimization.py` is the canonical owner of

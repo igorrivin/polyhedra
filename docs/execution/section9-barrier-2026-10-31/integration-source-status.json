@@ -1,0 +1,86 @@
+{
+  "baseline_commit": "014d1c4e70dfdfc852fa542f3a9c469f08dbd618",
+  "source_status": "dirty preliminary source, no source or artifact commit created",
+  "owned_source_sha256": {
+    "README.md": "35b5f50ca13b16604534d85463148c3d1746e52123bd0d5f77d766b0fc82268e",
+    "book/README.md": "ee9555bc34b5f9291f49d9085ed48686ca1bef1934b6594b78d3ee94d598438f",
+    "book/chapters/09-volume-hessians.tex": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00",
+    "book/claims/section9.json": "255ed6ebb0c3eb1c7714d238f2829f6115487817408545e40461ef87b47b5c73",
+    "book/companion-reconciliation.md": "f6c4ad1da9c4b0033c78f2ec8b90e914c30269dc8ee118c0f9d36b87bcbd6a9f",
+    "book/computational-status.md": "6c98c13b507ac603548cbe5be60a85e30345dd4d0e7fb47489f6c24981c7fd8c",
+    "site/README.md": "88317bc8412fb43605ff3cdd8a4d3fd82aa54cc4f2a83b03d50a02ed6daf2b20",
+    "site/build_section9.py": "b01681557e5acde91dac749065b9ef787edd03cb3a5b4fa21f77aff9e0cc63a5",
+    "site/tests/test_build_section9.py": "326957ad97294b595b173345e2d088f7eba9e124076c054906114a73ada08565",
+    "docs/execution/section9-barrier-2026-10-31/README.md": "acbeae22464659d0815c500a93358147bb0cc4276e4c287d2b72ff28d2bbda67"
+  },
+  "checks": [
+    {
+      "name": "publisher-tests",
+      "command": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "site/tests",
+        "-p",
+        "test_build_section9.py",
+        "-q"
+      ],
+      "returncode": 0,
+      "log": "publisher-tests.log"
+    },
+    {
+      "name": "publisher-ruff",
+      "command": [
+        "/opt/anaconda3/bin/ruff",
+        "check",
+        "--select",
+        "E9,F63,F7,F82,F401,F841",
+        "site/build_section9.py",
+        "site/tests/test_build_section9.py"
+      ],
+      "returncode": 0,
+      "log": "publisher-ruff.log"
+    },
+    {
+      "name": "source-whitespace",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "log": "source-whitespace.log"
+    }
+  ],
+  "pdf_preview": {
+    "passed": true,
+    "pages": 10,
+    "MathML_expressions": 209,
+    "figures": 2,
+    "all_pages_visually_inspected": true,
+    "preliminary": true,
+    "pending_review_evidence": 2,
+    "preview_root": "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-integration-preview-20261031-baylv1cs"
+  },
+  "staging_scope": [
+    "README.md",
+    "book/README.md",
+    "book/chapters/09-volume-hessians.tex",
+    "book/claims/section9.json",
+    "book/companion-reconciliation.md",
+    "book/computational-status.md",
+    "site/README.md",
+    "site/build_section9.py",
+    "site/tests/test_build_section9.py",
+    "docs/execution/section9-barrier-2026-10-31/README.md"
+  ],
+  "whitespace_exceptions": [
+    {
+      "path": "book/chapters/09-volume-hessians.tex",
+      "reason": "Preserve the pre-existing final blank line from the mathematically reviewed source; git diff --check currently passes."
+    }
+  ],
+  "archival_exceptions": "Any future copied raw logs require named path-by-path review; none is pre-approved by this record."
+}

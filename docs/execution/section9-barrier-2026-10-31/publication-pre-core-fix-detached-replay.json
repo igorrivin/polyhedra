@@ -1,0 +1,222 @@
+{
+  "archive": "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-integration-preview-20261031-baylv1cs/site/section9/downloads/barrier-reproduction.zip",
+  "archive_sha256": "f60f0bdc3a65a229891f9c5c3d6726694be6f6acf3f9072883945e986f200a24",
+  "temporary_work": "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_",
+  "command": [
+    "/tmp/polyhedra-numerical-core-20261031/bin/python",
+    "-c",
+    "import hashlib,json,runpy,sys\nfrom pathlib import Path\nsource,output,site,imports = sys.argv[1:]\nns=runpy.run_path(source,run_name='detached_review')\nrows={name:{'path':str(Path(ns[name].__file__).resolve()),'sha256':hashlib.sha256(Path(ns[name].__file__).read_bytes()).hexdigest()} for name in ('solver','var','geometry')}\nPath(imports).write_text(json.dumps(rows,indent=2)+'\\n')\nsys.argv=[source,'--output',output,'--site-dir',site]\nraise SystemExit(ns['main']())\n",
+    "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_/barrier-reproduction/experiments/section9/barrier_run.py",
+    "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_/detached-result.json",
+    "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_/detached-site",
+    "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_/actual-imports.json"
+  ],
+  "cwd": "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_/unrelated-working-directory",
+  "exit_code": 0,
+  "stdout": "{\n  \"operation\": \"compute_and_render\",\n  \"all_checks_passed\": true,\n  \"source_commit\": null,\n  \"dirty_at_start\": null,\n  \"result\": \"/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_/detached-result.json\",\n  \"html\": \"/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_/detached-site/barrier.html\"\n}\n",
+  "stderr": "",
+  "payloads_verified": 10,
+  "actual_imports": {
+    "solver": {
+      "path": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_/barrier-reproduction/packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py",
+      "sha256": "ea73137fbbfa2fc9b96a4925001dc317b83e5c1eb96fd6ddf0cdc6c29c3add9a"
+    },
+    "var": {
+      "path": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_/barrier-reproduction/packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+      "sha256": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b"
+    },
+    "geometry": {
+      "path": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/section9-barrier-publication-review-0avjgtb_/barrier-reproduction/packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py",
+      "sha256": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+    }
+  },
+  "cases_exactly_equal": true,
+  "recorded_checks_passed": 54,
+  "result_sha256": "85a4b9b4689c75a0b706788ad318bb42dea7c636fea75d8010fbdeafd09bdf0a",
+  "detached_provenance": {
+    "source_commit": null,
+    "execution_context": "detached-bundle",
+    "repository_dirty_at_start": null,
+    "git_status_porcelain_at_start": [],
+    "input_sha256": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+    "source_files": [
+      {
+        "role": "experiment.driver",
+        "path": "experiments/section9/barrier_run.py",
+        "location_kind": "project-relative",
+        "required": true,
+        "available": true,
+        "sha256": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60"
+      },
+      {
+        "role": "experiment.fixture",
+        "path": "experiments/section9/barrier-fixtures.json",
+        "location_kind": "project-relative",
+        "required": true,
+        "available": true,
+        "sha256": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a"
+      },
+      {
+        "role": "experiment.template",
+        "path": "experiments/section9/barrier-page.html",
+        "location_kind": "project-relative",
+        "required": true,
+        "available": true,
+        "sha256": "e4de74a735bf9d7bbdabae7f59fa368cef972297639a4cb2719d97d92ce3fb90"
+      },
+      {
+        "role": "toolkit.angle_barrier",
+        "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py",
+        "location_kind": "project-relative",
+        "required": true,
+        "available": true,
+        "sha256": "ea73137fbbfa2fc9b96a4925001dc317b83e5c1eb96fd6ddf0cdc6c29c3add9a"
+      },
+      {
+        "role": "toolkit.variational",
+        "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+        "location_kind": "project-relative",
+        "required": true,
+        "available": true,
+        "sha256": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b"
+      },
+      {
+        "role": "toolkit.geometry",
+        "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py",
+        "location_kind": "project-relative",
+        "required": true,
+        "available": true,
+        "sha256": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+      },
+      {
+        "role": "book.chapter",
+        "path": "book/chapters/09-volume-hessians.tex",
+        "location_kind": "project-relative",
+        "required": false,
+        "available": false,
+        "reason": "optional chapter source absent in this execution context"
+      }
+    ],
+    "source_sha256": {
+      "experiment.driver": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60",
+      "experiment.fixture": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+      "experiment.template": "e4de74a735bf9d7bbdabae7f59fa368cef972297639a4cb2719d97d92ce3fb90",
+      "toolkit.angle_barrier": "ea73137fbbfa2fc9b96a4925001dc317b83e5c1eb96fd6ddf0cdc6c29c3add9a",
+      "toolkit.variational": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+      "toolkit.geometry": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+    },
+    "bundle_origin": {
+      "source_commit": "014d1c4e70dfdfc852fa542f3a9c469f08dbd618",
+      "execution_context": "git-checkout",
+      "repository_dirty_at_start": true,
+      "git_status_porcelain_at_start": [
+        " M README.md",
+        " M book/README.md",
+        " M book/chapters/09-volume-hessians.tex",
+        " M book/claims/section9.json",
+        " M book/companion-reconciliation.md",
+        " M book/computational-status.md",
+        " M experiments/section9/README.md",
+        " M packages/volume-toolkit/README.md",
+        " M packages/volume-toolkit/docs/architecture.md",
+        " M packages/volume-toolkit/docs/implementation-status.md",
+        " M packages/volume-toolkit/docs/module-index.md",
+        " M site/README.md",
+        " M site/build_section9.py",
+        " M site/tests/test_build_section9.py",
+        "?? docs/execution/section9-barrier-2026-10-31/",
+        "?? experiments/section9/barrier-fixtures.json",
+        "?? experiments/section9/barrier-page.html",
+        "?? experiments/section9/barrier_run.py",
+        "?? experiments/section9/tests/test_barrier_examples.py",
+        "?? packages/volume-toolkit/docs/angle-barrier.md",
+        "?? packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py",
+        "?? packages/volume-toolkit/tests/test_angle_barrier.py"
+      ],
+      "input_sha256": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+      "source_files": [
+        {
+          "role": "experiment.driver",
+          "path": "experiments/section9/barrier_run.py",
+          "location_kind": "project-relative",
+          "required": true,
+          "available": true,
+          "sha256": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60"
+        },
+        {
+          "role": "experiment.fixture",
+          "path": "experiments/section9/barrier-fixtures.json",
+          "location_kind": "project-relative",
+          "required": true,
+          "available": true,
+          "sha256": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a"
+        },
+        {
+          "role": "experiment.template",
+          "path": "experiments/section9/barrier-page.html",
+          "location_kind": "project-relative",
+          "required": true,
+          "available": true,
+          "sha256": "e4de74a735bf9d7bbdabae7f59fa368cef972297639a4cb2719d97d92ce3fb90"
+        },
+        {
+          "role": "toolkit.angle_barrier",
+          "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py",
+          "location_kind": "project-relative",
+          "required": true,
+          "available": true,
+          "sha256": "ea73137fbbfa2fc9b96a4925001dc317b83e5c1eb96fd6ddf0cdc6c29c3add9a"
+        },
+        {
+          "role": "toolkit.variational",
+          "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+          "location_kind": "project-relative",
+          "required": true,
+          "available": true,
+          "sha256": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b"
+        },
+        {
+          "role": "toolkit.geometry",
+          "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py",
+          "location_kind": "project-relative",
+          "required": true,
+          "available": true,
+          "sha256": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+        },
+        {
+          "role": "book.chapter",
+          "path": "book/chapters/09-volume-hessians.tex",
+          "location_kind": "project-relative",
+          "required": false,
+          "available": true,
+          "sha256": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00"
+        }
+      ],
+      "source_sha256": {
+        "experiment.driver": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60",
+        "experiment.fixture": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+        "experiment.template": "e4de74a735bf9d7bbdabae7f59fa368cef972297639a4cb2719d97d92ce3fb90",
+        "toolkit.angle_barrier": "ea73137fbbfa2fc9b96a4925001dc317b83e5c1eb96fd6ddf0cdc6c29c3add9a",
+        "toolkit.variational": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+        "toolkit.geometry": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73",
+        "book.chapter": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00"
+      },
+      "bundle_origin": null,
+      "bundle_payload_hashes_match": null,
+      "bundle_payload_mismatches": [],
+      "python": "3.12.11",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "mpmath": "1.3.0",
+      "generated_at_utc": "2026-11-01T02:54:40.707706+00:00"
+    },
+    "bundle_payload_hashes_match": true,
+    "bundle_payload_mismatches": [],
+    "python": "3.12.11",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "mpmath": "1.3.0",
+    "generated_at_utc": "2026-11-01T02:58:09.669144+00:00"
+  },
+  "harness_path_normalization": "expected bundle root resolved from /var to /private/var; original failed wrapper retained separately"
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Section 9 · Following the log-sine barrier path</title>
+  <meta name="description" content="Three reproducible numerical examples of the volume-compatible log-sine barrier, with independent high-precision references and explicit arithmetic limits.">
+  <style>
+    :root{color-scheme:light;--paper:#fbfaf6;--ink:#25313a;--blue:#234e68;--teal:#267478;--line:#d9dedc;--muted:#55646a}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.6 Georgia,serif}a{color:var(--blue);text-underline-offset:.15em}a:focus-visible{outline:3px solid #965e20;outline-offset:4px}
+    header,main,footer{max-width:1120px;margin:auto;padding:2rem}header{padding-top:3rem;border-bottom:1px solid var(--line)}h1{font-size:clamp(2.1rem,5vw,3.5rem);font-weight:500;line-height:1.14;max-width:22ch}h2{font-size:1.65rem;font-weight:500}p{max-width:82ch}.eyebrow,.meta,nav,table{font-family:system-ui,sans-serif}.eyebrow{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}nav{display:flex;flex-wrap:wrap;gap:1rem;font-size:.9rem}
+    section{padding:1.6rem 0;border-bottom:1px solid var(--line)}.case-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:1.5rem;align-items:start}table{border-collapse:collapse;width:100%;font-size:.85rem}th,td{padding:.45rem .6rem;border-bottom:1px solid var(--line);text-align:left}th{font-weight:500}caption{text-align:left;margin-bottom:.6rem;font-weight:600}.meta{font-size:.83rem;color:var(--muted)}.note{border-left:3px solid var(--teal);padding:.2rem 1rem;color:var(--muted)}code,pre{font:.85rem/1.5 ui-monospace,SFMono-Regular,Consolas,monospace}pre{padding:1rem;background:#eff2f0;white-space:pre-wrap;overflow-wrap:anywhere}.formula{font-size:1.15rem;overflow-x:auto}footer{font-size:.85rem;color:var(--muted)}
+    @media(max-width:800px){header,main,footer{padding:1.3rem}.case-grid{grid-template-columns:1fr}body{font-size:17px}}
+    @media print{body{background:white;font-size:11pt}nav{display:none}section{break-inside:avoid}}
+  </style>
+</head>
+<body>
+<header>
+  <p class="eyebrow">Polyhedra, Moduli, and Quantum Geometry · Section 9</p>
+  <h1>Following the log-sine barrier path</h1>
+  <p>A small dense implementation turns the chapter’s finite-iterate argument into three reproducible computations. Strictly feasible angle data are supplied; the solver first centers them, then follows the prescribed path.</p>
+  <nav aria-label="Barrier resources">__CHAPTER_LINK__ <a href="#reproduce">Reproduce the examples</a></nav>
+</header>
+<main>
+  <section id="method">
+    <h2>The computation and its guarantee</h2>
+    <p>The affine coordinates are α = α₀ + Cu. The solver minimizes Φ<sub>t</sub> = F − tV, with F = −∑ log sin α. It increases t by at most 1 + 1/(20√m), then takes a full Newton step, where m is the corner-angle count.</p>
+    <p class="formula">V* − V(u) ≤ [m + (√m + λ)λ/(1 − λ)]/t ≤ 17m/(12t), when λ ≤ 1/4.</p>
+    <p class="note">The displayed inequality is the chapter’s exact-arithmetic theorem. Here derivatives, linear solves, decrements and the bound are evaluated in binary64. The reported numbers are numerical estimates, not rigorous floating-point certificates. The independent 80-digit comparisons below test these fixed inputs and do not enclose all rounding errors.</p>
+    <p>Initial centering work is counted separately. Positivity, conditioning, linear residuals and endpoint centering are checked explicitly; a numerical or budget failure is reported rather than clipped into apparent success. This dense method makes no nearly-linear complexity claim and does not certify an embedding.</p>
+  </section>
+__CASE_CARDS__
+  <section id="reproduce">
+    <h2>Reproduce and inspect</h2>
+    <p class="meta">__RUN_SUMMARY__</p>
+    <p>Run from the consolidated repository with its toolkit installed, or from the extracted reproduction archive after installing the supplied requirements:</p>
+    <pre>python experiments/section9/barrier_run.py</pre>
+    <p>A source-tree run can use <code>PYTHONPATH=packages/volume-toolkit</code>. The detached archive contains unchanged maintained numerical modules, the fixed inputs, this driver, the page template, the toolkit license and a payload manifest. It requires only NumPy, SciPy and mpmath; optional monograph files are absent. The single Python inspection downloads do not form a standalone program.</p>
+    <nav aria-label="Downloads">
+      <a href="downloads/barrier-reproduction.zip" download>Complete numerical reproduction ZIP</a>
+      <a href="downloads/barrier-result.json" download>Results, traces and provenance</a>
+      <a href="downloads/barrier-fixtures.json" download>Fixed fixture definitions</a>
+      <a href="downloads/barrier_run.py" download>Driver inspection copy</a>
+      <a href="downloads/angle_barrier.py" download>Solver inspection copy</a>
+    </nav>
+    <p>The reference construction distinguishes exact decimal/geometric inputs from high-precision lifts of the actual binary64 angles. This matters especially near a flat boundary maximum, where tiny triangle-sum perturbations change limiting derivatives. Both reference models and their discrepancies are retained in the JSON.</p>
+  </section>
+</main>
+<footer>These are bounded scientific examples with recorded precision and tolerances. They are not a scaling benchmark, interval proof, full-monograph audit, or three-manifold realization algorithm.</footer>
+<script>
+const barrierData = __BARRIER_DATA__;
+</script>
+</body>
+</html>

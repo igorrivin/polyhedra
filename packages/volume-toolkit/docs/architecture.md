@@ -154,6 +154,14 @@ This free-angle problem with dihedral inequalities differs from the prescribed
 dihedral, leading–trailing coordinates owned by `variational` for Section 9.
 Numerical acceptance is not an embedding or global-optimality certificate.
 
+`angle_barrier` implements the separate Section 9 dense barrier path on a
+caller-supplied full-rank affine triangle-angle slice. It reuses `variational`
+volume/derivative operators and owns log-sine barrier derivatives, initial
+centering, the specified short-step schedule and residual-bearing outcomes.
+Its finite-iterate gap is a numerical theorem estimate; topology, completeness
+of a chosen coordinate slice, embedding, interval bounds and a nearly-linear
+backend remain separate. See [the barrier contract](angle-barrier.md).
+
 Other entries are `cone_realization` (Volkov cone method for simplicial
 4-polytopes) and `inscribed_realization`.
 

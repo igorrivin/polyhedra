@@ -1,0 +1,53 @@
+{
+  "status": "Independent source/reference/publication review approved; final strict clean-source export remains a separate release gate",
+  "source_sha256": {
+    "experiments/section9/barrier_run.py": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60",
+    "experiments/section9/barrier-fixtures.json": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+    "experiments/section9/barrier-page.html": "e4de74a735bf9d7bbdabae7f59fa368cef972297639a4cb2719d97d92ce3fb90",
+    "experiments/section9/tests/test_barrier_examples.py": "6f8bc34af91a85a22a312926ae1dd5d416ed287d6e3eba8c7525433710deba3f",
+    "experiments/section9/README.md": "a69e69a7135107b04481f26a84e62336086d7002bad5c75f7c29f3d79664fd36",
+    "site/build_section9.py": "b01681557e5acde91dac749065b9ef787edd03cb3a5b4fa21f77aff9e0cc63a5",
+    "site/tests/test_build_section9.py": "326957ad97294b595b173345e2d088f7eba9e124076c054906114a73ada08565",
+    "site/README.md": "88317bc8412fb43605ff3cdd8a4d3fd82aa54cc4f2a83b03d50a02ed6daf2b20",
+    "book/chapters/09-volume-hessians.tex": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00",
+    "book/claims/section9.json": "255ed6ebb0c3eb1c7714d238f2829f6115487817408545e40461ef87b47b5c73",
+    "book/companion-reconciliation.md": "f6c4ad1da9c4b0033c78f2ec8b90e914c30269dc8ee118c0f9d36b87bcbd6a9f",
+    "book/computational-status.md": "6c98c13b507ac603548cbe5be60a85e30345dd4d0e7fb47489f6c24981c7fd8c",
+    "book/README.md": "ee9555bc34b5f9291f49d9085ed48686ca1bef1934b6594b78d3ee94d598438f",
+    "README.md": "ce31011c41b9ad621523cda37efadf024625c86935358b47a7c26f31960ec2a8",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py": "d782aff2a23c9073c6f7cf02666cc0ec3f4446f28185c7474116fcf42edbbd07",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+  },
+  "focused_tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=packages/volume-toolkit PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 /tmp/polyhedra-baseline-20261031/bin/python -m pytest -q -p no:cacheprovider experiments/section9/tests site/tests/test_build_section9.py",
+    "exit_code": 0,
+    "result": "27 passed, 29 subtests passed in 3.87s",
+    "core_snapshot_at_test_time": "ea73137fbbfa2fc9b96a4925001dc317b83e5c1eb96fd6ddf0cdc6c29c3add9a",
+    "qualification": "After the zero-dimensional status correction, fresh current-source and detached three-fixture runs used d782aff2a23c9073c6f7cf02666cc0ec3f4446f28185c7474116fcf42edbbd07 and matched every previous case record. Core regression tests and installed-wheel checks belong to the numerical reviewer."
+  },
+  "lint": {
+    "command": "/opt/anaconda3/bin/ruff check experiments/section9/barrier_run.py experiments/section9/tests/test_barrier_examples.py site/build_section9.py site/tests/test_build_section9.py",
+    "exit_code": 0,
+    "result": "All checks passed!"
+  },
+  "post_fix_fresh_driver_command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=packages/volume-toolkit /tmp/polyhedra-baseline-20261031/bin/python experiments/section9/barrier_run.py --output /tmp/polyhedra-barrier-publication-fixed/barrier-result.json --site-dir /tmp/polyhedra-barrier-publication-fixed/site/section9",
+  "post_fix_detached_wrapper_command": "PYTHONDONTWRITEBYTECODE=1 SECTION9_REVIEW_PREVIEW=/tmp/polyhedra-barrier-publication-fixed /tmp/polyhedra-baseline-20261031/bin/python ../execution/section9-barrier-2026-10-31/publication-review-run.py",
+  "post_fix_detached_archive_sha256": "89d694e9b6a5a360543cccc379bbabe1aa64a1a2889b528aed6c747d2d68b928",
+  "post_fix_detached_result_sha256": "6699d02520f307825318af734dfa53e80c10e831f9e8b30ef2a1af63a977f284",
+  "independent_evidence_sha256": {
+    "publication-independent-checks.py": "3d344898116e2770bdeef2f6f4567a8a6dc24cc1c3a5a6d2d104ae2675aa8541",
+    "publication-independent-checks.json": "272440217f35aebc14f7886e004ee95541a1b9560be9bc1e272e38370f72ac40",
+    "publication-review-run.py": "28cbb04646601ab023067f32602b0c4453555495052e7f50c42f637e9582b684",
+    "publication-detached-replay.json": "2a4a284bb5dcf1dd1a8a86840130e0c9f7b23752f24f126d00795e27531c236f",
+    "publication-focused-tests.log": "f5409b888304ddf9521c9b96f0246372664c4791493bc6c55c9df8dc27d49412"
+  },
+  "scope_limits": [
+    "No browser or server review",
+    "No external publication",
+    "No dependency resolution or network installation",
+    "No interval proof",
+    "No full-monograph mathematical audit",
+    "Strict combined export and final clean-commit artifacts remain to be generated and verified"
+  ]
+}
