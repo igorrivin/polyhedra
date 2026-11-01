@@ -1,6 +1,14 @@
 # Polyhedra integration and correction plan
 
-Analysis date: 31 October 2026. Scope: combine the two repositories and supplied monograph into one maintained research repository, correct the numerical software, and prepare a reproducible web and PDF monograph for OpenAI Sites. This document is a plan; no repository merge, source correction, remote push, or deployment has been performed.
+Analysis date: 31 October 2026. Scope: combine the two repositories and supplied monograph into one maintained research repository, correct the numerical software, and prepare a reproducible web and PDF monograph for OpenAI Sites. The original analysis and phase gates below are retained as the implementation plan. The progress record here distinguishes completed local increments from the remaining publication work; the planning-baseline observations are not assertions about the current checkout.
+
+## Current execution progress
+
+The [first integration checkpoint](docs/execution/2026-10-31/README.md) records the history-preserving import, reproduced defect corrections, package checks and initial Section 9 computation. The [numerical-correctness checkpoint](docs/execution/numerical-correctness-2026-10-31/README.md) records the precision, angle-solver and result-contract corrections. The original repositories, received archive, historical companion and supplied reference PDF remain preserved. Optional test dependencies are still unavailable; the latest full-suite failures and collection errors have not been relabelled as a pass.
+
+The [Section 9 chapter checkpoint](docs/execution/section9-chapter-2026-10-31/README.md) now records independent approval of the modular chapter, its 26-claim ledger and the historical-companion reconciliation. All 601 original labels remain, with six subsection labels added. The finite-centering and controlled inexact-step arguments are proved with explicit hypotheses; the maintained computation does not yet implement that barrier algorithm. A complete PDF/HTML preview has been built, with native MathML and source-rendered figure images. Implementation review, final clean-source generation and artifact verification have their own status in that checkpoint; a preview is not a released edition.
+
+This completes the bounded mathematical-review portion of Phase 4 for Section 9, not the whole phase for the book. The current converter pilot uses the strict Pandoc/LaTeX workflow described in the [build guide](site/README.md); the converter alternatives below remain planning context. Airy and torus evidence recovery, broader chapter review and computational coverage, browser verification, publication metadata/licensing and Sites deployment remain outstanding. No Site has been published.
 
 ## Recommendation
 
@@ -10,7 +18,7 @@ Keep LaTeX as the mathematical source of truth. Generate both the downloadable P
 
 Correctness and reproducibility come before broad file rearrangement. In particular, repair the two reproduced incorrect-success/certification cases, recover the missing numerical artifacts, and reconcile the older companion's mathematical claims before making them authoritative website content.
 
-## Evidence and current state
+## Planning baseline evidence
 
 Detailed source locations, commands, outputs, and limitations are in the [toolkit audit](audit/2026-10-31/toolkit-audit.md), [ipoly audit](audit/2026-10-31/ipoly-audit.md), and [monograph audit](audit/2026-10-31/monograph-audit.md). The [source inventory](audit/2026-10-31/source-inventory.json) records every tracked source file and archive member with SHA-256 hashes. `M:line` below denotes the main TeX member inside the monograph ZIP, as defined in the monograph audit.
 

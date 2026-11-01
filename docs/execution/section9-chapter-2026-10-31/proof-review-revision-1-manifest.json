@@ -1,0 +1,32 @@
+{
+  "chapter": {
+    "source": "book/chapters/09-volume-hessians.tex",
+    "sha256": "abe89dd665b10fe808a0c4273f5f8ecdbe9fc9a5c0cd7b92bc3618a1759c2a5e",
+    "review_copy": "proof-review-revision-1-chapter.tex"
+  },
+  "ledger": {
+    "source": "book/claims/section9.json",
+    "sha256": "dc587dd1e862b52b81e555ccd221d30c0de55fe523b2f137bbc0cb7b0e9289af",
+    "review_copy": "proof-review-revision-1-ledger.json"
+  },
+  "baseline_labels_retained": 20,
+  "current_labels": 26,
+  "added_labels": [
+    "subsec:ipolyBarrierComplexity",
+    "subsec:ipolyComputation",
+    "subsec:ipolyCoordinates",
+    "subsec:ipolyFlips",
+    "subsec:ipolyResponse",
+    "subsec:ipolyThreeManifolds"
+  ],
+  "claim_count": 26,
+  "claim_status_counts": {
+    "proved_in_chapter": 15,
+    "external_theorem_statement_checked": 5,
+    "conditional_algorithmic_consequence": 2,
+    "exact_finite_check": 1,
+    "numerical_check": 1,
+    "open": 2
+  },
+  "revision_review": "Pending independent re-review of the revised chapter and ledger."
+}

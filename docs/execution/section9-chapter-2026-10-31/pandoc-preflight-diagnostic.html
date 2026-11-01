@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-10-30" />
+  <title>Polyhedra, Moduli, and Quantum Geometry Variational principles, spectral methods, and computation</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title"><strong>Polyhedra, Moduli,<br />
+and Quantum Geometry</strong><br />
+Variational principles, spectral methods, and computation</h1>
+<p class="date">30 October 2026</p>
+</header>
+<h3 id="sec:ipolybridge">Volume Hessians, finite elements, and
+computational complexity</h3>
+<p>The variational description of a polyhedron has a second
+interpretation: its infinitesimal deformation equation can be a discrete
+Dirichlet problem. This is an exact connection to finite elements and
+electrical networks, and it supplies the computational counterpart of
+the volume and symplectic constructions developed above. The companion
+study <em>Duffin’s resistor networks, the volume of ideal polyhedra, and
+nearly-linear-time Laplacian solvers</em> <span class="citation"
+data-cites="IpolyStudy"></span> develops this connection and its
+numerical examples. We incorporate the essential identities here and
+connect them to boundary response, Gaussian integration, flips, and the
+Casson–Rivin program.</p>
+<h4 id="the-cotangent-form-and-the-correct-deformation-coordinates">The
+cotangent form and the correct deformation coordinates</h4>
+<p>Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒯</mi><annotation encoding="application/x-tex">\mathcal T</annotation></semantics></math>
+triangulate a planar disk, with interior vertices
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>
+and boundary vertices
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>.
+For a piecewise affine function
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>
+on a geometric realization, integration over each triangle gives
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∫</mo><mrow><mo stretchy="false" form="prefix">|</mo><mi mathvariant="script">𝒯</mi><mo stretchy="false" form="prefix">|</mo></mrow></msub><mo stretchy="false" form="prefix">|</mo><mi>∇</mi><mi>v</mi><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup><mspace width="0.167em"></mspace><mi>d</mi><mi>A</mi><mo>=</mo><munder><mo>∑</mo><mrow><mi>e</mi><mo>=</mo><mi>i</mi><mi>j</mi></mrow></munder><msub><mi>w</mi><mi>e</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo>−</mo><msub><mi>v</mi><mi>j</mi></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>=</mo><msup><mi>v</mi><mi>T</mi></msup><mi>L</mi><mi>v</mi><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>w</mi><mi>e</mi></msub><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">cot</mi><mo>&#8289;</mo></mrow><msub><mi>α</mi><mi>e</mi></msub><mo>+</mo><mrow><mi mathvariant="normal">cot</mi><mo>&#8289;</mo></mrow><msub><mi>β</mi><mi>e</mi></msub><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation}
+ \int_{|\mathcal T|}|\nabla v|^2\,dA
+ =\sum_{e=ij}w_e(v_i-v_j)^2=v^TLv,
+ \qquad
+ w_e=\frac12(\cot\alpha_e+\cot\beta_e).
+ \label{eq:ipolyFEM}
+\end{equation}</annotation></semantics></math> Here
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mi>e</mi></msub><mo>,</mo><msub><mi>β</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">\alpha_e,\beta_e</annotation></semantics></math>
+are the angles opposite
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math>,
+and the second term is omitted on a boundary edge. To check the
+normalization, the off-diagonal stiffness entry on a triangle is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∫</mo><mi>T</mi></msub><mi>∇</mi><msub><mi>ϕ</mi><mi>i</mi></msub><mo>⋅</mo><mi>∇</mi><msub><mi>ϕ</mi><mi>j</mi></msub><mspace width="0.167em"></mspace><mi>d</mi><mi>A</mi><mo>=</mo><mi>−</mi><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mrow><mi mathvariant="normal">cot</mi><mo>&#8289;</mo></mrow><msub><mi>α</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">\int_T\nabla\phi_i\cdot\nabla\phi_j\,dA=-\tfrac12\cot\alpha_k</annotation></semantics></math>
+for its barycentric functions. Row sums vanish, giving the displayed
+edge form. This is the cotangent network of the finite element and
+electrical interpretations <span class="citation"
+data-cites="DuffinNetworks"></span>.</p>
+<p>The energy is nonnegative on every geometric mesh, even if some edge
+weights are negative. The additional condition for nonnegative
+<em>interior</em> conductances is local Delaunayness:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mi>e</mi></msub><mo>=</mo><mfrac><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>α</mi><mi>e</mi></msub><mo>+</mo><msub><mi>β</mi><mi>e</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>2</mn><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>α</mi><mi>e</mi></msub><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>β</mi><mi>e</mi></msub></mrow></mfrac><mo>≥</mo><mn>0</mn><mspace width="1.0em"></mspace><mo>⇔</mo><mspace width="1.0em"></mspace><msub><mi>α</mi><mi>e</mi></msub><mo>+</mo><msub><mi>β</mi><mi>e</mi></msub><mo>≤</mo><mi>π</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation}
+ w_e=\frac{\sin(\alpha_e+\beta_e)}
+              {2\sin\alpha_e\sin\beta_e}\ge0
+ \quad\Longleftrightarrow\quad \alpha_e+\beta_e\le\pi.
+ \label{eq:ipolyDelaunayweight}
+\end{equation}</annotation></semantics></math> When the relevant weights
+are nonnegative, the grounded matrix
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>L</mi><mrow><mi>I</mi><mi>I</mi></mrow></msub><annotation encoding="application/x-tex">L_{II}</annotation></semantics></math>
+is a positive definite graph Laplacian, and solving a Dirichlet problem
+is solving Kirchhoff’s equations. Boundary-to-boundary edges do not
+enter this Dirichlet system; positivity of their weights is an
+additional condition if the full matrix is used in a different boundary
+problem.</p>
+<p>Now prescribe the sums
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Δ</mi><mi>e</mi></msub><mo>=</mo><msub><mi>α</mi><mi>e</mi></msub><mo>+</mo><msub><mi>β</mi><mi>e</mi></msub><mo>≤</mo><mi>π</mi></mrow><annotation encoding="application/x-tex">\Delta_e=\alpha_e+\beta_e\le\pi</annotation></semantics></math>
+opposite interior edges, and prescribe the single opposite angle on each
+boundary edge. An angle structure assigns positive corner angles, with
+sum
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>π</mi><annotation encoding="application/x-tex">\pi</annotation></semantics></math>
+in every triangle and these prescribed edge sums. Assume this positive
+angle domain is nonempty. For planar realization the data also satisfy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mrow><mi>e</mi><mo>∋</mo><mi>i</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>π</mi><mo>−</mo><msub><mi mathvariant="normal">Δ</mi><mi>e</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>π</mi></mrow><annotation encoding="application/x-tex">\sum_{e\ni i}(\pi-\Delta_e)=2\pi</annotation></semantics></math>
+at each interior vertex; the left-hand side is its total angle in every
+such angle structure. If the intended planar boundary is strictly
+convex, impose also
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><msub><mi>κ</mi><mi>b</mi></msub><mo>:=</mo><munder><mo>∑</mo><mrow><mi>t</mi><mo>∋</mo><mi>b</mi></mrow></munder><msub><mi>α</mi><mrow><mi>t</mi><mo>,</mo><mi>b</mi></mrow></msub><mo>=</mo><munder><mo>∑</mo><mrow><mi>e</mi><mo>∋</mo><mi>b</mi></mrow></munder><mo stretchy="false" form="prefix">(</mo><mi>π</mi><mo>−</mo><msub><mi mathvariant="normal">Δ</mi><mi>e</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>π</mi><mo>&lt;</mo><mi>π</mi><mspace width="2.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo>∈</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">0&lt;\kappa_b:=\sum_{t\ni b}\alpha_{t,b}
+   =\sum_{e\ni b}(\pi-\Delta_e)-\pi&lt;\pi
+ \qquad(b\in B).</annotation></semantics></math> Here
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="normal">Δ</mi><mi>e</mi></msub><annotation encoding="application/x-tex">\Delta_e</annotation></semantics></math>
+denotes the single prescribed opposite angle on a boundary edge. These
+boundary inequalities are needed for the convex polyhedral
+interpretation; the Hessian identities below already hold on the
+abstract positive angle domain. Positive feasibility alone does not
+impose convexity of the developed boundary. Orient the triangles
+consistently. If a corner
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>
+is opposite the directed edge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>→</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i\to j</annotation></semantics></math>,
+set
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mi>c</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msubsup><mi>α</mi><mi>c</mi><mn>0</mn></msubsup><mo>+</mo><msub><mi>u</mi><mi>i</mi></msub><mo>−</mo><msub><mi>u</mi><mi>j</mi></msub><mo>,</mo><mspace width="2.0em"></mspace><mi>u</mi><msub><mo stretchy="false" form="prefix">|</mo><mi>B</mi></msub><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation}
+ \alpha_c(u)=\alpha_c^0+u_i-u_j,\qquad u|_B=0.
+ \label{eq:ipolyAngleCoordinates}
+\end{equation}</annotation></semantics></math> These are
+leading–trailing coordinates, not logarithmic scale factors. Triangle
+sums telescope; increments opposite a shared edge cancel. For a
+triangulated disk they parametrize the entire affine space of solutions:
+the map is injective, and the connected triangle–edge incidence graph
+together with Euler’s formula gives dimension
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">|I|</annotation></semantics></math>.</p>
+<p>Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="normal">Λ</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\Lambda&#39;(a)=-\log(2\sin a)</annotation></semantics></math>
+be the Lobachevsky derivative and put
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">𝒱</mi><mo stretchy="false" form="prefix">(</mo><mi>α</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mo>∑</mo><mi>c</mi></msub><mi mathvariant="normal">Λ</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>α</mi><mi>c</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal V(\alpha)=\sum_c\Lambda(\alpha_c)</annotation></semantics></math>.
+At a geometric configuration this is the sum of the volumes of the ideal
+tetrahedra obtained by adjoining the vertex at infinity to the planar
+triangles. Rivin’s variational principle uses this concave functional to
+impose geometric closure <span class="citation"
+data-cites="RivinEuclidean FuterGueritaud"></span>.</p>
+<div id="prop:ipolyHessian" class="proposition">
+<p><strong>Proposition 1</strong> (The exact finite-element Hessian).
+<em>On the positive angle domain in the coordinates <a
+href="#eq:ipolyAngleCoordinates" data-reference-type="eqref"
+data-reference="eq:ipolyAngleCoordinates">[eq:ipolyAngleCoordinates]</a>,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>∇</mi><mi>u</mi></msub><mi mathvariant="script">𝒱</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><msub><mi>H</mi><mi>i</mi></msub><msub><mo stretchy="false" form="postfix">)</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></msub><mo>,</mo><mspace width="2.0em"></mspace><mo>−</mo><msubsup><mi>D</mi><mi>u</mi><mn>2</mn></msubsup><mi mathvariant="script">𝒱</mi><mo>=</mo><mn>2</mn><msub><mi>L</mi><mrow><mi>I</mi><mi>I</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>α</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">\begin{equation}
+ \nabla_u\mathcal V=(\log H_i)_{i\in I},\qquad
+ -D_u^2\mathcal V=2L_{II}(\alpha),
+ \label{eq:ipolyHessian}
+\end{equation}</annotation></semantics></math> where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mi>i</mi></msub><annotation encoding="application/x-tex">H_i</annotation></semantics></math>
+is the dilation accumulated by developing the incident triangles once
+around
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>.
+In particular, at a geometric critical point the negative volume Hessian
+is twice the finite element stiffness matrix.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> In a positively oriented triangle
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi>j</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">ijk</annotation></semantics></math>,
+differentiation with respect to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mi>i</mi></msub><annotation encoding="application/x-tex">u_i</annotation></semantics></math>
+gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>α</mi><mrow><mi>t</mi><mo>,</mo><mi>j</mi></mrow></msub><mi>/</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>α</mi><mrow><mi>t</mi><mo>,</mo><mi>k</mi></mrow></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\log(\sin\alpha_{t,j}/\sin\alpha_{t,k})</annotation></semantics></math>.
+Summing over the star of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+gives the logarithm of the product of side ratios, which is the dilation
+holonomy by the sine law. Since
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="normal">Λ</mi><mo>″</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mrow><mi mathvariant="normal">cot</mi><mo>&#8289;</mo></mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">\Lambda&#39;&#39;(a)=-\cot a</annotation></semantics></math>,
+the two corners opposite an interior edge contribute
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">cot</mi><mo>&#8289;</mo></mrow><msub><mi>α</mi><mi>e</mi></msub><mo>+</mo><mrow><mi mathvariant="normal">cot</mi><mo>&#8289;</mo></mrow><msub><mi>β</mi><mi>e</mi></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mi>d</mi><msub><mi>u</mi><mi>i</mi></msub><mo>−</mo><mi>d</mi><msub><mi>u</mi><mi>j</mi></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">-(\cot\alpha_e+\cot\beta_e)(du_i-du_j)^2</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>D</mi><mn>2</mn></msup><mi mathvariant="script">𝒱</mi></mrow><annotation encoding="application/x-tex">D^2\mathcal V</annotation></semantics></math>.
+This is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">-2</annotation></semantics></math>
+times the corresponding summand of <a href="#eq:ipolyFEM"
+data-reference-type="eqref"
+data-reference="eq:ipolyFEM">[eq:ipolyFEM]</a>. Boundary increments
+vanish. ◻</p>
+</div>
+<p>For a true interior edge with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><msub><mi mathvariant="normal">Δ</mi><mi>e</mi></msub><mo>&lt;</mo><mi>π</mi></mrow><annotation encoding="application/x-tex">0&lt;\Delta_e&lt;\pi</annotation></semantics></math>,
+the weights satisfy
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mi>e</mi></msub><mo>=</mo><mfrac><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi mathvariant="normal">Δ</mi><mi>e</mi></msub></mrow><mrow><mn>2</mn><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>α</mi><mi>e</mi></msub><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>β</mi><mi>e</mi></msub></mrow></mfrac><mo>≥</mo><mrow><mi mathvariant="normal">cot</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi mathvariant="normal">Δ</mi><mi>e</mi></msub><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>&gt;</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation}
+ w_e=\frac{\sin\Delta_e}{2\sin\alpha_e\sin\beta_e}
+       \ge\cot(\Delta_e/2)&gt;0.
+ \label{eq:ipolyWeightLower}
+\end{equation}</annotation></semantics></math> Thus positivity holds
+throughout the angle domain, before the angles close to form a geometric
+mesh. At
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Δ</mi><mi>e</mi></msub><mo>=</mo><mi>π</mi></mrow><annotation encoding="application/x-tex">\Delta_e=\pi</annotation></semantics></math>
+the weight is zero; such a diagonal subdivides a flat face. The finite
+element interpretation as an actual planar mesh applies at realization,
+whereas the Laplacian identity and positive-network interpretation
+already apply to the intermediate angle structures. Newton’s equation is
+precisely
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>L</mi><mrow><mi>I</mi><mi>I</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>α</mi><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>δ</mi><mi>u</mi><mo>=</mo><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><mi>H</mi><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation}
+ 2L_{II}(\alpha(u))\,\delta u=\log H(u).
+ \label{eq:ipolyNewton}
+\end{equation}</annotation></semantics></math></p>
+<figure id="fig:mono-cotangent-hessian" data-latex-placement="htbp">
+
+<figcaption>The cotangent weight for two adjacent Euclidean triangles.
+The dual segment joins their circumcenters and has signed length
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msup><mi>e</mi><mo>*</mo></msup><msub><mo stretchy="false" form="prefix">|</mo><mo>±</mo></msub></mrow><annotation encoding="application/x-tex">|e^*|_\pm</annotation></semantics></math>;
+in the locally Delaunay configuration shown, its sign is positive. The
+finite-element stiffness matrix is the same cotangent matrix that
+appears as minus one half of the volume Hessian in the coordinates
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mi>c</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msubsup><mi>α</mi><mi>c</mi><mn>0</mn></msubsup><mo>+</mo><msub><mi>u</mi><mi>i</mi></msub><mo>−</mo><msub><mi>u</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">\alpha_c(u)=\alpha_c^0+u_i-u_j</annotation></semantics></math>,
+with fixed edge-angle sums and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">u=0</annotation></semantics></math>
+on the boundary. This identity is specific to that coordinate and
+constraint system.</figcaption>
+</figure>
+<h4
+id="boundary-response-schur-complements-and-a-gaussian-factor">Boundary
+response, Schur complements, and a Gaussian factor</h4>
+<p>For the finite element network, eliminating the interior voltage
+gives
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>I</mi></msub><mo>=</mo><mi>−</mi><msubsup><mi>L</mi><mrow><mi>I</mi><mi>I</mi></mrow><mrow><mi>−</mi><mn>1</mn></mrow></msubsup><msub><mi>L</mi><mrow><mi>I</mi><mi>B</mi></mrow></msub><msub><mi>v</mi><mi>B</mi></msub><mo>,</mo><mspace width="2.0em"></mspace><mi mathvariant="script">𝒩</mi><mo>=</mo><msub><mi>L</mi><mrow><mi>B</mi><mi>B</mi></mrow></msub><mo>−</mo><msub><mi>L</mi><mrow><mi>B</mi><mi>I</mi></mrow></msub><msubsup><mi>L</mi><mrow><mi>I</mi><mi>I</mi></mrow><mrow><mi>−</mi><mn>1</mn></mrow></msubsup><msub><mi>L</mi><mrow><mi>I</mi><mi>B</mi></mrow></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation}
+ v_I=-L_{II}^{-1}L_{IB}v_B,\qquad
+ \mathcal N=L_{BB}-L_{BI}L_{II}^{-1}L_{IB}.
+ \label{eq:ipolyDtN}
+\end{equation}</annotation></semantics></math> The matrix
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒩</mi><annotation encoding="application/x-tex">\mathcal N</annotation></semantics></math>
+maps boundary voltages to boundary currents; it is the discrete
+Dirichlet-to-Neumann operator. It has the constant mode in its kernel.
+Grounding one boundary vertex, or working modulo constants, removes that
+mode.</p>
+<p>The same elimination appears in volume response. For a nondegenerate
+concave maximum, write
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">𝒱</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>V</mi><mn>0</mn></msub><mo>−</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><msup><mi>x</mi><mi>T</mi></msup><mi>K</mi><mi>x</mi><mo>+</mo><mi>O</mi><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">|</mo><mi>x</mi><msup><mo stretchy="false" form="prefix">|</mo><mn>3</mn></msup><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="2.0em"></mspace><mi>K</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo></mrow><annotation encoding="application/x-tex">\mathscr V(x)=V_0-\tfrac12x^TKx+O(|x|^3),\qquad K&gt;0,</annotation></semantics></math>
+and let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">Px</annotation></semantics></math>
+be the selected linear boundary data. Perturbation by a source
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+gives <span class="math display">$$\begin{align}
+\max_x\{\mathscr V(x)+j^TPx\}
+    &amp;=V_0+\tfrac12j^T\chi j+O(|j|^3),
+&amp;\chi&amp;=PK^{-1}P^T,\notag\\
+\max_{Px=b}\mathscr V(x)
+    &amp;=V_0-\tfrac12b^T\chi^{-1}b+O(|b|^3),
+\label{eq:ipolyBoundaryResponse}
+\end{align}$$</span> where the second formula assumes
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>
+has full row rank. The first is the response to a source; the second
+fixes its conjugate boundary variable. They are related by a Legendre
+transform. In the planar problem
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>=</mo><mn>2</mn><msub><mi>L</mi><mrow><mi>I</mi><mi>I</mi></mrow></msub></mrow><annotation encoding="application/x-tex">K=2L_{II}</annotation></semantics></math>;
+in the Dehn filling problem, the same algebra gives <a
+href="#eq:cuspHessian" data-reference-type="eqref"
+data-reference="eq:cuspHessian">[eq:cuspHessian]</a> and <a
+href="#eq:cuspmatrixHessian" data-reference-type="eqref"
+data-reference="eq:cuspmatrixHessian">[eq:cuspmatrixHessian]</a>. This
+identifies an exact common operation without identifying their different
+spaces of boundary data.</p>
+<p>More generally, split
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x=(y,z)</annotation></semantics></math>
+and eliminate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>.
+The effective quadratic form is <span
+class="math display">$$\begin{equation}
+K_{\rm eff}=K_{zz}-K_{zy}K_{yy}^{-1}K_{yz},\qquad
+\det K=\det K_{yy}\det K_{\rm eff}.
+\label{eq:ipolySchur}
+\end{equation}$$</span> Completing the square gives the exact real
+Gaussian identity <span class="math display">$$\begin{equation}
+\int_{\mathbb R^{\dim y}}
+e^{-\frac1{2\hbar}(y,z)^TK(y,z)}\,dy
+=\frac{(2\pi\hbar)^{\dim y/2}}{\sqrt{\det K_{yy}}}
+       e^{-z^TK_{\rm eff}z/(2\hbar)}.
+\label{eq:ipolyGaussian}
+\end{equation}$$</span> Thus elimination in the Dirichlet problem,
+reduction of the classical boundary action, and its leading Gaussian
+integration use the same Schur complement. An oscillatory or complex
+phase requires the specified contour and determinant branch, as in the
+later quantum calculations. The finite-dimensional identity does not
+supply those analytic data or identify an entire quantum invariant by
+itself.</p>
+<p>There is also a combinatorial formula for the planar determinant. Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="fraktur">𝔉</mi><mi>B</mi></msub><annotation encoding="application/x-tex">\mathfrak F_B</annotation></semantics></math>
+be the spanning forests of the weighted graph in which each component
+contains exactly one boundary vertex. Then
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mrow><mi mathvariant="normal">det</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><msubsup><mi>D</mi><mi>u</mi><mn>2</mn></msubsup><mi mathvariant="script">𝒱</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mn>2</mn><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mo stretchy="false" form="prefix">|</mo></mrow></msup><munder><mo>∑</mo><mrow><mi>F</mi><mo>∈</mo><msub><mi mathvariant="fraktur">𝔉</mi><mi>B</mi></msub></mrow></munder><munder><mo>∏</mo><mrow><mi>e</mi><mo>∈</mo><mi>F</mi></mrow></munder><msub><mi>w</mi><mi>e</mi></msub><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">\begin{equation}
+ \boxed{\det(-D_u^2\mathcal V)
+      =2^{|I|}\sum_{F\in\mathfrak F_B}\prod_{e\in F}w_e.}
+ \label{eq:ipolyForestDeterminant}
+\end{equation}</annotation></semantics></math> To prove it, write
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>L</mi><mrow><mi>I</mi><mi>I</mi></mrow></msub><mo>=</mo><msub><mi>C</mi><mi>I</mi></msub><mrow><mi mathvariant="normal">diag</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>w</mi><mi>e</mi></msub><mo stretchy="false" form="postfix">)</mo><msubsup><mi>C</mi><mi>I</mi><mi>T</mi></msubsup></mrow><annotation encoding="application/x-tex">L_{II}=C_I\operatorname{diag}(w_e)C_I^T</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>I</mi></msub><annotation encoding="application/x-tex">C_I</annotation></semantics></math>
+is the incidence matrix with boundary rows removed. Cauchy–Binet expands
+its determinant over
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">|I|</annotation></semantics></math>-edge
+subsets. An incidence minor is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>±</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">\pm1</annotation></semantics></math>
+exactly for a forest rooted at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>,
+and zero otherwise. This rooted-forest formula expresses the local
+Gaussian determinant in geometric conductances. It is a deduction from
+the Hessian identity and finite-dimensional linear algebra.</p>
+<h4 id="why-the-nonlinear-iteration-needs-a-barrier">Why the nonlinear
+iteration needs a barrier</h4>
+<p>A fast linear solve does not by itself bound the number of Newton
+steps. In particular,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi mathvariant="script">𝒱</mi></mrow><annotation encoding="application/x-tex">-\mathcal V</annotation></semantics></math>
+is not uniformly self-concordant: near a vanishing angle, its
+entropy-like behavior makes the normalized third derivative unbounded.
+The companion study supplies a more useful estimate involving the
+barrier
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>α</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><munder><mo>∑</mo><mi>c</mi></munder><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>α</mi><mi>c</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation}
+ F(\alpha)=-\sum_c\log\sin\alpha_c.
+ \label{eq:ipolyBarrier}
+\end{equation}</annotation></semantics></math> The coefficient
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mi mathvariant="normal">csc</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><msub><mi>α</mi><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">\csc^2\alpha_c</annotation></semantics></math>
+occurs in both
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>D</mi><mn>2</mn></msup><mi>F</mi></mrow><annotation encoding="application/x-tex">D^2F</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>D</mi><mn>3</mn></msup><mi mathvariant="script">𝒱</mi></mrow><annotation encoding="application/x-tex">D^3\mathcal V</annotation></semantics></math>,
+but these are tensors of different order. The precise relation needed
+for optimization is the following inequality.</p>
+<div id="prop:ipolyCompatibility" class="proposition">
+<p><strong>Proposition 2</strong> (A barrier compatible with ideal
+volume). <em>For every positive angle structure and tangent vector
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>
+whose coordinates sum to zero in each triangle,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msup><mi>D</mi><mn>3</mn></msup><mi mathvariant="script">𝒱</mi><mo stretchy="false" form="prefix">[</mo><mi>h</mi><mo>,</mo><mi>h</mi><mo>,</mo><mi>h</mi><mo stretchy="false" form="postfix">]</mo><mo stretchy="false" form="prefix">|</mo><mo>≤</mo><msqrt><mn>3</mn></msqrt><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>−</mi><msup><mi>D</mi><mn>2</mn></msup><mi mathvariant="script">𝒱</mi><mo stretchy="false" form="prefix">[</mo><mi>h</mi><mo>,</mo><mi>h</mi><mo stretchy="false" form="postfix">]</mo><mo stretchy="false" form="postfix">)</mo><msqrt><mrow><msup><mi>D</mi><mn>2</mn></msup><mi>F</mi><mo stretchy="false" form="prefix">[</mo><mi>h</mi><mo>,</mo><mi>h</mi><mo stretchy="false" form="postfix">]</mo></mrow></msqrt><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation}
+ |D^3\mathcal V[h,h,h]|
+ \le\sqrt3\,(-D^2\mathcal V[h,h])\sqrt{D^2F[h,h]}.
+ \label{eq:ipolyCompatibility}
+\end{equation}</annotation></semantics></math> Consequently
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>−</mo><mi>t</mi><mi mathvariant="script">𝒱</mi></mrow><annotation encoding="application/x-tex">F-t\mathcal V</annotation></semantics></math>
+is self-concordant with the standard constant for every
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t\ge0</annotation></semantics></math>.
+The barrier
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math>
+has parameter at most the number
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+of corner angles.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> For one triangle set
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>i</mi></msub><mo>=</mo><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>α</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">s_i=\sin\alpha_i</annotation></semantics></math>
+and choose the cyclic side directions
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><msub><mi>α</mi><mn>1</mn></msub><mo>+</mo><msub><mi>α</mi><mn>2</mn></msub><mo>,</mo><mi>π</mi><mo>+</mo><msub><mi>α</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\psi=(0,\alpha_1+\alpha_2,\pi+\alpha_2)</annotation></semantics></math>.
+They satisfy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mi>i</mi></msub><msub><mi>s</mi><mi>i</mi></msub><msup><mi>e</mi><mrow><mi>i</mi><msub><mi>ψ</mi><mi>i</mi></msub></mrow></msup><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sum_i s_i e^{i\psi_i}=0</annotation></semantics></math>.
+Every vector with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>h</mi><mn>1</mn></msub><mo>+</mo><msub><mi>h</mi><mn>2</mn></msub><mo>+</mo><msub><mi>h</mi><mn>3</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">h_1+h_2+h_3=0</annotation></semantics></math>
+can therefore be written
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>h</mi><mi>i</mi></msub><mo>=</mo><mi>λ</mi><msub><mi>s</mi><mi>i</mi></msub><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><msub><mi>φ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">h_i=\lambda s_i\cos\varphi_i</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>φ</mi><mi>i</mi></msub><mo>=</mo><msub><mi>ψ</mi><mi>i</mi></msub><mo>−</mo><mi>τ</mi></mrow><annotation encoding="application/x-tex">\varphi_i=\psi_i-\tau</annotation></semantics></math>.
+The cotangent energy identity and a trigonometric expansion give
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>:=</mo><mi>−</mi><msup><mi>D</mi><mn>2</mn></msup><mi mathvariant="script">𝒱</mi><mo stretchy="false" form="prefix">[</mo><mi>h</mi><mo>,</mo><mi>h</mi><mo stretchy="false" form="postfix">]</mo><mo>=</mo><msup><mi>λ</mi><mn>2</mn></msup><msub><mi>s</mi><mn>1</mn></msub><msub><mi>s</mi><mn>2</mn></msub><msub><mi>s</mi><mn>3</mn></msub><mo>,</mo><mspace width="1.0em"></mspace><mi>B</mi><mo>:=</mo><msup><mi>D</mi><mn>2</mn></msup><mi>F</mi><mo stretchy="false" form="prefix">[</mo><mi>h</mi><mo>,</mo><mi>h</mi><mo stretchy="false" form="postfix">]</mo><mo>=</mo><msup><mi>λ</mi><mn>2</mn></msup><munder><mo>∑</mo><mi>i</mi></munder><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><msub><mi>φ</mi><mi>i</mi></msub><mo>,</mo></mrow><annotation encoding="application/x-tex">A:=-D^2\mathcal V[h,h]=\lambda^2s_1s_2s_3,\quad
+ B:=D^2F[h,h]=\lambda^2\sum_i\cos^2\varphi_i,</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>D</mi><mn>3</mn></msup><mi mathvariant="script">𝒱</mi><mo stretchy="false" form="prefix">[</mo><mi>h</mi><mo>,</mo><mi>h</mi><mo>,</mo><mi>h</mi><mo stretchy="false" form="postfix">]</mo><mo>=</mo><msup><mi>λ</mi><mn>3</mn></msup><msub><mi>s</mi><mn>1</mn></msub><msub><mi>s</mi><mn>2</mn></msub><msub><mi>s</mi><mn>3</mn></msub><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>φ</mi><mn>1</mn></msub><mo>+</mo><msub><mi>φ</mi><mn>2</mn></msub><mo>+</mo><msub><mi>φ</mi><mn>3</mn></msub><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">D^3\mathcal V[h,h,h]
+   =\lambda^3s_1s_2s_3\cos(\varphi_1+\varphi_2+\varphi_3).</annotation></semantics></math>
+For the last identity, use
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>3</mn></msup><mi>x</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>x</mi><mo>+</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>3</mn><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">\cos^3 x=(3\cos x+\cos3x)/4</annotation></semantics></math>
+and the vanishing side-vector sum. Expanding the cosine of the sum shows
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>φ</mi><mn>1</mn></msub><mo>+</mo><msub><mi>φ</mi><mn>2</mn></msub><mo>+</mo><msub><mi>φ</mi><mn>3</mn></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">|</mo><mo>≤</mo><msub><mo>∑</mo><mi>i</mi></msub><mo stretchy="false" form="prefix">|</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><msub><mi>φ</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">|</mo><mo>≤</mo><msqrt><mrow><mn>3</mn><msub><mo>∑</mo><mi>i</mi></msub><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><msub><mi>φ</mi><mi>i</mi></msub></mrow></msqrt></mrow><annotation encoding="application/x-tex">|\cos(\varphi_1+\varphi_2+\varphi_3)|
+\le\sum_i|\cos\varphi_i|\le\sqrt{3\sum_i\cos^2\varphi_i}</annotation></semantics></math>.
+This proves the inequality on one triangle, and summation proves it
+globally since
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><msub><mi>A</mi><mi>T</mi></msub><msqrt><msub><mi>B</mi><mi>T</mi></msub></msqrt><mo>≤</mo><mo stretchy="false" form="prefix">(</mo><mo>∑</mo><msub><mi>A</mi><mi>T</mi></msub><mo stretchy="false" form="postfix">)</mo><msqrt><mrow><mo>∑</mo><msub><mi>B</mi><mi>T</mi></msub></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sum A_T\sqrt{B_T}\le(\sum A_T)\sqrt{\sum B_T}</annotation></semantics></math>.
+Each
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>α</mi><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">-\log\sin\alpha_c</annotation></semantics></math>
+is self-concordant, and, with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>−</mi><mi>t</mi><msup><mi>D</mi><mn>2</mn></msup><mi mathvariant="script">𝒱</mi><mo stretchy="false" form="prefix">[</mo><mi>h</mi><mo>,</mo><mi>h</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">A=-tD^2\mathcal V[h,h]</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><msup><mi>D</mi><mn>2</mn></msup><mi>F</mi><mo stretchy="false" form="prefix">[</mo><mi>h</mi><mo>,</mo><mi>h</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">B=D^2F[h,h]</annotation></semantics></math>,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msup><mi>D</mi><mn>3</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mo>−</mo><mi>t</mi><mi mathvariant="script">𝒱</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">[</mo><mi>h</mi><mo>,</mo><mi>h</mi><mo>,</mo><mi>h</mi><mo stretchy="false" form="postfix">]</mo><mo stretchy="false" form="prefix">|</mo><mo>≤</mo><mn>2</mn><msup><mi>B</mi><mrow><mn>3</mn><mi>/</mi><mn>2</mn></mrow></msup><mo>+</mo><msqrt><mn>3</mn></msqrt><mi>A</mi><msqrt><mi>B</mi></msqrt><mo>≤</mo><mn>2</mn><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>+</mo><mi>B</mi><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>3</mn><mi>/</mi><mn>2</mn></mrow></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">|D^3(F-t\mathcal V)[h,h,h]|
+ \le2B^{3/2}+\sqrt3 A\sqrt B\le2(A+B)^{3/2}.</annotation></semantics></math>
+Finally Cauchy–Schwarz gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>D</mi><mi>F</mi><mo stretchy="false" form="prefix">[</mo><mi>h</mi><mo stretchy="false" form="postfix">]</mo><mo stretchy="false" form="prefix">|</mo><mo>≤</mo><msqrt><mi>m</mi></msqrt><msqrt><mrow><msup><mi>D</mi><mn>2</mn></msup><mi>F</mi><mo stretchy="false" form="prefix">[</mo><mi>h</mi><mo>,</mo><mi>h</mi><mo stretchy="false" form="postfix">]</mo></mrow></msqrt></mrow><annotation encoding="application/x-tex">|DF[h]|\le\sqrt m\sqrt{D^2F[h,h]}</annotation></semantics></math>,
+the required barrier-parameter bound. Restriction to additional affine
+angle constraints preserves these inequalities. ◻</p>
+</div>
+<p>For the central point
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\alpha(t)</annotation></semantics></math>
+minimizing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>−</mo><mi>t</mi><mi mathvariant="script">𝒱</mi></mrow><annotation encoding="application/x-tex">F-t\mathcal V</annotation></semantics></math>,
+the volume gap is at most
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>/</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">m/t</annotation></semantics></math>.
+Indeed, concavity of sine gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>α</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">[</mo><mi>β</mi><mo>−</mo><mi>α</mi><mo stretchy="false" form="postfix">]</mo><mo>≤</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">DF(\alpha)[\beta-\alpha]\le m</annotation></semantics></math>
+for every feasible
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>β</mi><annotation encoding="application/x-tex">\beta</annotation></semantics></math>;
+combine this with stationarity and concavity of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒱</mi><annotation encoding="application/x-tex">\mathcal V</annotation></semantics></math>.
+Increasing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+by a factor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mi>c</mi><mi>/</mi><msqrt><mi>m</mi></msqrt></mrow><annotation encoding="application/x-tex">1+c/\sqrt m</annotation></semantics></math>,
+with fixed sufficiently small
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>,
+gives a bounded Newton decrement: the Hessian of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>−</mo><mi>t</mi><mi mathvariant="script">𝒱</mi></mrow><annotation encoding="application/x-tex">F-t\mathcal V</annotation></semantics></math>
+dominates
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>D</mi><mn>2</mn></msup><mi>F</mi></mrow><annotation encoding="application/x-tex">D^2F</annotation></semantics></math>
+and the barrier gradient has local norm at most
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mi>m</mi></msqrt><annotation encoding="application/x-tex">\sqrt m</annotation></semantics></math>.
+Standard self-concordant Newton analysis therefore gives, starting from
+a centered point at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t_0&gt;0</annotation></semantics></math>,
+<span class="math display">$$\begin{equation}
+O\!\left(\sqrt m\log\max\left\{e,\frac{m}{t_0\varepsilon}\right\}\right)
+\quad\hbox{Newton steps to volume gap at most }\varepsilon.
+\label{eq:ipolyStepBound}
+\end{equation}$$</span> See <span class="citation"
+data-cites="BoydVandenberghe"></span> for the underlying path-following
+analysis. This is a bound for the barrier method, not for unrestricted
+plain Newton iteration.</p>
+<p>In the disk coordinates the Hessian of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>−</mo><mi>t</mi><mi mathvariant="script">𝒱</mi></mrow><annotation encoding="application/x-tex">F-t\mathcal V</annotation></semantics></math>
+is again a grounded planar Laplacian, now with interior conductances
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>t</mi><msub><mi>w</mi><mi>e</mi></msub><mo>+</mo><msup><mrow><mi mathvariant="normal">csc</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><msub><mi>α</mi><mi>e</mi></msub><mo>+</mo><msup><mrow><mi mathvariant="normal">csc</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><msub><mi>β</mi><mi>e</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">2t w_e+\csc^2\alpha_e+\csc^2\beta_e.</annotation></semantics></math>
+Nearly-linear Laplacian solvers approximate a linear solve in its energy
+norm <span class="citation" data-cites="SpielmanTengSolvers"></span>.
+With controlled inexact-Newton tolerances, their combination with <a
+href="#eq:ipolyStepBound" data-reference-type="eqref"
+data-reference="eq:ipolyStepBound">[eq:ipolyStepBound]</a> gives the
+usual
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>O</mi><mo accent="true">̃</mo></mover><mo stretchy="false" form="prefix">(</mo><msup><mi>n</mi><mrow><mn>3</mn><mi>/</mi><mn>2</mn></mrow></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\widetilde O(n^{3/2})</annotation></semantics></math>
+arithmetic-work scale after centering, up to accuracy factors, when
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mi>O</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">m=O(n)</annotation></semantics></math>.
+It does not give a nearly-linear bound for the whole nonlinear
+realization problem. Finding a feasible point, centering it, controlling
+arithmetic precision, and certifying the final geometric error are
+separate costs. The numerical timings in the companion are experiments
+on selected inputs, not bounds for these additional tasks.</p>
+<h4 id="flips-connect-the-local-matrix-to-mapping-class-geometry">Flips
+connect the local matrix to mapping-class geometry</h4>
+<p>A diagonal exchange has two different roles. Among triangulations of
+the convex hull of a fixed planar vertex set, with fixed nodal values,
+Rippa’s theorem says that Delaunay triangulation minimizes the
+piecewise-linear Dirichlet energy; in matrix terms
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo stretchy="false" form="prefix">(</mo><msub><mi mathvariant="script">𝒯</mi><mi>D</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>≼</mo><mi>L</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="script">𝒯</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">L(\mathcal T_D)\preccurlyeq L(\mathcal T)</annotation></semantics></math> <span
+class="citation" data-cites="RippaEnergy"></span>. This is an ordering
+of quadratic forms for the same geometric data. It does not assert
+monotonicity of hyperbolic volume along an arbitrary sequence of
+topological flips.</p>
+<figure id="fig:mono-flip" data-latex-placement="htbp">
+
+<figcaption>A diagonal flip on a fixed Euclidean quadrilateral, shown
+with its actual vertex positions. Rippa’s energy comparison selects the
+Delaunay diagonal for fixed nodal values. The same combinatorial move
+also occurs in flip graphs used in surface topology; the displayed
+energy comparison concerns the fixed Euclidean realization.</figcaption>
+</figure>
+<p>For a connected orientable finite-type marked surface admitting an
+ideal triangulation, with at least one marked point on every boundary
+curve, the graph of ideal triangulations and diagonal exchanges is
+instead a coarse geometric model of its mapping class group. With
+isotopies fixing the marked points, the action is proper and cocompact,
+and an orbit map is a quasi-isometry <span class="citation"
+data-cites="DisarloParlier"></span>. The pants graph is a different
+model, quasi-isometric to Teichmüller space with its WP metric, and
+Brock relates WP distance to convex-core volume <span class="citation"
+data-cites="BrockWPVolumes"></span>. His mapping-torus theorem relates
+WP translation distance and hyperbolic volume for closed pseudo-Anosov
+surface bundles <span class="citation"
+data-cites="BrockMappingTori"></span>. These comparisons have constants
+depending on the surface topology; the flip graph and the pants graph
+should not be identified.</p>
+<p>There is a direct volume estimate when a flip sequence gives a
+layered ideal triangulation of a hyperbolic mapping torus with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+tetrahedra: straightening gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Vol</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mo>≤</mo><mi>N</mi><msub><mi>v</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">\operatorname{Vol}(M)\le Nv_3</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>v</mi><mn>3</mn></msub><annotation encoding="application/x-tex">v_3</annotation></semantics></math>
+is the volume of the regular ideal tetrahedron. This does not require
+the given triangulation to have positive geometric shapes; signed
+straightened volumes still have absolute value at most
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>v</mi><mn>3</mn></msub><annotation encoding="application/x-tex">v_3</annotation></semantics></math>.
+It connects a combinatorial decomposition length to three-dimensional
+volume. Comparing it further to WP geometry requires a theorem for the
+same surface and boundary conventions, rather than transferring the
+closed-surface theorem silently to a punctured surface.</p>
+<h4 id="the-three-manifold-extension-and-the-remaining-questions">The
+three-manifold extension and the remaining questions</h4>
+<p>The Casson–Rivin program uses the same ideal-tetrahedron volume and
+the same angle-sum constraints <span class="citation"
+data-cites="FuterGueritaud"></span>. Its local Hessian is still a
+cotangent quadratic form. For leading–trailing edge variables
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>y</mi><mi>e</mi></msub><annotation encoding="application/x-tex">y_e</annotation></semantics></math>,
+put
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>α</mi></msub><mo>=</mo><msub><mi>y</mi><mi>e</mi></msub><mo>+</mo><msub><mi>y</mi><msup><mi>e</mi><mo>′</mo></msup></msub></mrow><annotation encoding="application/x-tex">p_\alpha=y_e+y_{e&#39;}</annotation></semantics></math>
+for the pair of opposite tetrahedron edges carrying
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>,
+and cyclically for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>,</mo><mi>γ</mi></mrow><annotation encoding="application/x-tex">\beta,\gamma</annotation></semantics></math>.
+Then
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><msup><mi>D</mi><mn>2</mn></msup><mi mathvariant="script">𝒱</mi><mo>=</mo><munder><mo>∑</mo><mi>t</mi></munder><mrow><mo stretchy="true" form="prefix">[</mo><mi mathvariant="normal">cot</mi><msub><mi>α</mi><mi>t</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>d</mi><msub><mi>p</mi><mi>γ</mi></msub><mo>−</mo><mi>d</mi><msub><mi>p</mi><mi>β</mi></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">cot</mi><msub><mi>β</mi><mi>t</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>d</mi><msub><mi>p</mi><mi>α</mi></msub><mo>−</mo><mi>d</mi><msub><mi>p</mi><mi>γ</mi></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">cot</mi><msub><mi>γ</mi><mi>t</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>d</mi><msub><mi>p</mi><mi>β</mi></msub><mo>−</mo><mi>d</mi><msub><mi>p</mi><mi>α</mi></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation}
+ -D^2\mathcal V
+ =\sum_t\left[
+ \cot\alpha_t(dp_\gamma-dp_\beta)^2
+ +\cot\beta_t(dp_\alpha-dp_\gamma)^2
+ +\cot\gamma_t(dp_\beta-dp_\alpha)^2\right].
+ \label{eq:ipolyThreeDimensionalHessian}
+\end{equation}</annotation></semantics></math> This displays the
+Euclidean cusp-link triangle inside the second variation. But a square
+now involves sums of opposite-edge variables, and the assembled matrix
+need not have nonpositive off-diagonal entries or be diagonally
+dominant. Additional peripheral directions and removal of linear
+dependencies must also be included in a full coordinate system. The
+planar positive-Laplacian solver conclusion therefore does not transfer
+automatically to arbitrary three-manifold triangulations. The
+trianglewise barrier estimate does transfer, because it survives affine
+restriction.</p>
+<p>An interior critical point has the geometric interpretation supplied
+by the Casson–Rivin theorem. A boundary maximizer need not realize the
+chosen triangulation by positive ideal tetrahedra. Optimization on a
+given angle polytope therefore does not solve the problem of finding a
+suitable geometric triangulation or yield a polynomial-time
+geometrization algorithm.</p>
+<p>The finite element comparison also does not identify its real
+symmetric Hessian with the alternating WP form. The exact links
+established here are the volume Hessian, its inverse response, its Schur
+complement, and its Gaussian determinant. A continuum limit relating
+appropriately renormalized polyhedral functionals to a WP potential
+would require geometric convergence, a specified normalization, and
+control of second variations. This is a natural question, not a theorem
+asserted here. Likewise, in three dimensions it remains useful to ask
+for an effective bound on the smallest angle at an interior maximum in
+terms of the number of tetrahedra and a quantitative feasible margin.
+Such a bound would connect variational existence to numerical
+certification and complexity. These questions describe how the
+computational strand can extend the monograph’s variational and
+semiclassical program.</p>
+<h1 id="quantum-geometry-degeneration-and-surgery">Quantum geometry,
+degeneration, and surgery</h1>
+<p><em>An introduction to the quantum constructions leads to exact
+period comparisons, a controlled tetrahedral degeneration, and the
+classical and Gaussian data of Dehn filling.</em></p>
+</body>
+</html>

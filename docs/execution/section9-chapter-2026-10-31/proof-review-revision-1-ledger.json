@@ -1,0 +1,758 @@
+{
+  "schema_version": "1.0",
+  "chapter_source": "book/chapters/09-volume-hessians.tex",
+  "chapter_label": "sec:ipolybridge",
+  "review_date": "2026-10-31",
+  "baseline_commit": "26b3c134d9308d345cb76f1240db9de982b2e5a6",
+  "revision_review": "Pending independent re-review of the revised chapter and ledger.",
+  "path_convention": "All local paths are relative to the repository root; review evidence is preserved under docs/execution/section9-chapter-2026-10-31.",
+  "status_definitions": {
+    "proved_in_chapter": "A general derivation is written in the canonical chapter and independently audited; finite computations are supplementary.",
+    "external_theorem_statement_checked": "The specific statement and hypotheses were checked against the cited primary material, with access limits recorded; complete proofs are not claimed re-audited.",
+    "conditional_algorithmic_consequence": "The complexity or iteration consequence holds under the explicit starting-point, arithmetic, accuracy and solver hypotheses.",
+    "exact_finite_check": "An exact integer/rational calculation for the named finite fixture; not a general algorithmic certificate.",
+    "numerical_check": "Finite floating-point or multiprecision comparisons with recorded residuals and tolerances; not exact or interval arithmetic.",
+    "open": "A question retained as unresolved, without a claimed theorem or implementation."
+  },
+  "claims": [
+    {
+      "id": "s9.fem",
+      "labels": [
+        "eq:ipolyFEM"
+      ],
+      "status": "proved_in_chapter",
+      "hypotheses": [
+        "Finite connected simplicial disk with a nondegenerate geometric Euclidean realization.",
+        "Piecewise affine nodal function; count each undirected edge once; omit the second opposite angle at a boundary edge."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/math-audit.md"
+      ],
+      "computation": {
+        "status": "exact_fixture_and_numerical_implementation",
+        "code_paths": [
+          "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+          "experiments/section9/run.py",
+          "packages/volume-toolkit/tests/test_variational.py"
+        ],
+        "evidence_paths": [
+          "experiments/section9/fixture.json",
+          "artifacts/section9/result.json"
+        ],
+        "description": "Barycentric-gradient proof is general. Independent rational FEM assembly is exact only for the integer-grid fixture; maintained assembly uses floating point."
+      }
+    },
+    {
+      "id": "s9.delaunay_weights",
+      "labels": [
+        "eq:ipolyDelaunayweight",
+        "eq:ipolyWeightLower"
+      ],
+      "status": "proved_in_chapter",
+      "hypotheses": [
+        "Positive opposite angles; fixed interior sum Delta in (0,pi].",
+        "Boundary conductances require their own sign condition for a passive full network."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/math-audit.md"
+      ],
+      "computation": {
+        "status": "numerical_implementation_and_exact_scope_check",
+        "code_paths": [
+          "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+          "docs/execution/section9-chapter-2026-10-31/math-audit-checks.py"
+        ],
+        "evidence_paths": [
+          "artifacts/section9/result.json",
+          "docs/execution/section9-chapter-2026-10-31/math-audit-checks.json"
+        ],
+        "description": "Numerical cotangent assembly; exact obtuse-triangle matrix demonstrates signed boundary weights. The trigonometric lower bound is proved independently."
+      },
+      "coverage_gap": "No general interval certification of Delaunay inequalities or boundary-weight signs."
+    },
+    {
+      "id": "s9.coordinates",
+      "labels": [
+        "eq:ipolyAngleCoordinates"
+      ],
+      "status": "proved_in_chapter",
+      "hypotheses": [
+        "Finite connected consistently oriented simplicial disk, nonempty boundary, three distinct vertices per face.",
+        "Nonempty positive angle domain, triangle sums pi, fixed opposite-edge sums, u=0 on all boundary vertices."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/math-audit.md"
+      ],
+      "computation": {
+        "status": "numerical_map_and_exact_finite_rank_checks",
+        "code_paths": [
+          "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+          "packages/volume-toolkit/tests/test_variational.py",
+          "docs/execution/section9-chapter-2026-10-31/math-audit-checks.py"
+        ],
+        "evidence_paths": [
+          "artifacts/section9/result.json",
+          "docs/execution/section9-chapter-2026-10-31/math-audit-checks.json"
+        ],
+        "description": "leading_trailing_matrix and deformed_angles implement the map. General completeness follows from dual incidence rank and Euler characteristic. Exact disk/annulus calculations illustrate why topology matters."
+      },
+      "coverage_gap": "The maintained operator is not a complete topology validator or a coordinate basis for arbitrary surfaces."
+    },
+    {
+      "id": "s9.gradient_hessian",
+      "labels": [
+        "prop:ipolyHessian",
+        "eq:ipolyHessian"
+      ],
+      "status": "proved_in_chapter",
+      "hypotheses": [
+        "The disk coordinate hypotheses and positive angles.",
+        "Dilation uses counterclockwise radial development; arbitrary feasible angles need not form an embedded mesh."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/math-audit.md"
+      ],
+      "computation": {
+        "status": "numerical_implementation_with_independent_derivative_check",
+        "code_paths": [
+          "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+          "experiments/section9/run.py",
+          "packages/volume-toolkit/tests/test_variational.py"
+        ],
+        "evidence_paths": [
+          "experiments/section9/fixture.json",
+          "artifacts/section9/result.json"
+        ],
+        "description": "angle_volume_derivatives computes the gradient and negative Hessian. The fixture's exact matrix is compared with rational FEM; the off-origin comparison uses 50-digit numerical differentiation."
+      },
+      "coverage_gap": "The driver does not construct a global developing map or certify holonomy closure."
+    },
+    {
+      "id": "s9.strictness",
+      "labels": [
+        "prop:ipolyHessian"
+      ],
+      "status": "proved_in_chapter",
+      "hypotheses": [
+        "Positive triangle angles, connected triangulation, grounded nonempty boundary.",
+        "For no interior vertices use the empty-matrix determinant-one convention."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/math-audit.md"
+      ],
+      "computation": {
+        "status": "exact_finite_scope_checks",
+        "code_paths": [
+          "docs/execution/section9-chapter-2026-10-31/math-audit-checks.py",
+          "packages/volume-toolkit/tests/test_variational.py"
+        ],
+        "evidence_paths": [
+          "docs/execution/section9-chapter-2026-10-31/math-audit-checks.json",
+          "artifacts/section9/result.json"
+        ],
+        "description": "The general proof uses the triangle cotangent-form determinant one and injectivity, including zero Delaunay weights. Exact finite matrices illustrate the conclusion."
+      },
+      "coverage_gap": "No claim that sampled eigenvalues prove general strictness or certify numerical conditioning."
+    },
+    {
+      "id": "s9.newton_equation",
+      "labels": [
+        "eq:ipolyNewton"
+      ],
+      "status": "proved_in_chapter",
+      "hypotheses": [
+        "Positive disk angle domain; L_II is the grounded Hessian matrix; the chosen holonomy orientation."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/math-audit.md"
+      ],
+      "computation": {
+        "status": "operators_available_no_iteration_driver",
+        "code_paths": [
+          "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py"
+        ],
+        "evidence_paths": [
+          "artifacts/section9/result.json"
+        ],
+        "description": "The gradient and Hessian needed for the displayed local Newton equation are implemented."
+      },
+      "coverage_gap": "No fixed-dihedral Newton realization driver, feasibility line search, or convergence certificate is supplied by this example."
+    },
+    {
+      "id": "s9.geometric_realization",
+      "labels": [
+        "subsec:ipolyCoordinates",
+        "prop:ipolyHessian"
+      ],
+      "status": "external_theorem_statement_checked",
+      "hypotheses": [
+        "Use the precise prescribed-angle, cone and boundary hypotheses of the cited realization theorem.",
+        "For the stated planar convex interpretation: flat interior total angles 2pi, boundary angles strictly between 0 and pi, closure and a global realization argument."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/math-audit.md",
+        "docs/execution/section9-chapter-2026-10-31/companion-audit.md"
+      ],
+      "computation": {
+        "status": "not_implemented",
+        "code_paths": [],
+        "evidence_paths": [],
+        "description": "The chapter proves abstract differential identities and refers separately to realization theorems."
+      },
+      "coverage_gap": "No constructive embedding certificate, convexity certificate, or general realization solver. A unique closed angle maximum need not be positive.",
+      "source_evidence": [
+        {
+          "source": "RivinOptimization",
+          "url": "https://arxiv.org/pdf/math/9907032v1",
+          "pin": "Definitions 1.1 and Lemma 1.2; Theorems 1.4, 1.6 and 4.11",
+          "access": "Primary theorem statements read; complete proofs not independently audited."
+        },
+        {
+          "source": "RivinEuclidean",
+          "url": "https://annals.math.princeton.edu/1994/139-3/p02",
+          "pin": "Annals 139 (1994), 553-580, DOI metadata",
+          "access": "Metadata verified; original 1994 full theorem/proof text unavailable in this audit."
+        }
+      ]
+    },
+    {
+      "id": "s9.dtn",
+      "labels": [
+        "eq:ipolyDtN"
+      ],
+      "status": "proved_in_chapter",
+      "hypotheses": [
+        "Symmetric cotangent energy with constants as its only kernel and a grounded interior block.",
+        "Full passive resistor interpretation additionally requires nonnegative boundary conductances."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/math-audit.md"
+      ],
+      "computation": {
+        "status": "numerical_dense_schur_and_exact_fixture",
+        "code_paths": [
+          "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+          "experiments/section9/run.py",
+          "packages/volume-toolkit/tests/test_variational.py"
+        ],
+        "evidence_paths": [
+          "artifacts/section9/result.json",
+          "docs/execution/section9-chapter-2026-10-31/math-audit-checks.json"
+        ],
+        "description": "schur_complement and the rectangle harmonic-voltage check implement small dense boundary elimination."
+      },
+      "coverage_gap": "No sparse or nearly-linear boundary-response solver, and no general certified inverse."
+    },
+    {
+      "id": "s9.observable_response",
+      "labels": [
+        "eq:ipolyBoundaryResponse"
+      ],
+      "status": "proved_in_chapter",
+      "hypotheses": [
+        "Smooth function with a nondegenerate local maximum, Hessian -K with K positive definite.",
+        "Local maximizing branches for small sources/observables; P has full row rank when chi inverse is used.",
+        "Px denotes selected linear observables; any geometric boundary identification is separate."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/math-audit.md"
+      ],
+      "computation": {
+        "status": "linear_algebra_only",
+        "code_paths": [
+          "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py"
+        ],
+        "evidence_paths": [
+          "artifacts/section9/result.json"
+        ],
+        "description": "The maintained Schur operator supports the quadratic algebra; the general nonlinear local-response expansion follows from the implicit-function theorem."
+      },
+      "coverage_gap": "No nonlinear observable-constrained maximizing-branch routine or model-specific boundary-data identification."
+    },
+    {
+      "id": "s9.schur",
+      "labels": [
+        "eq:ipolySchur"
+      ],
+      "status": "proved_in_chapter",
+      "hypotheses": [
+        "Real symmetric positive-definite K, partitioned into eliminated and retained variables."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/math-audit.md"
+      ],
+      "computation": {
+        "status": "numerical_implementation_and_exact_fixture",
+        "code_paths": [
+          "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+          "experiments/section9/run.py",
+          "packages/volume-toolkit/tests/test_variational.py"
+        ],
+        "evidence_paths": [
+          "artifacts/section9/result.json"
+        ],
+        "description": "Dense Schur complement; the fixture verifies effective coefficient 15/2 and determinant factorization 8*(15/2)=60 exactly."
+      }
+    },
+    {
+      "id": "s9.gaussian",
+      "labels": [
+        "eq:ipolyGaussian"
+      ],
+      "status": "proved_in_chapter",
+      "hypotheses": [
+        "Real symmetric positive-definite K, hbar>0, integration over the real eliminated variables."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/math-audit.md"
+      ],
+      "computation": {
+        "status": "determinant_inputs_only",
+        "code_paths": [
+          "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+          "experiments/section9/run.py"
+        ],
+        "evidence_paths": [
+          "artifacts/section9/result.json"
+        ],
+        "description": "The determinant and Schur inputs are available; the Gaussian formula is proved by completing the square."
+      },
+      "coverage_gap": "No Gaussian quadrature validation, oscillatory contour selection, complex determinant-branch routine, or full quantum invariant."
+    },
+    {
+      "id": "s9.rooted_forests",
+      "labels": [
+        "eq:ipolyForestDeterminant"
+      ],
+      "status": "proved_in_chapter",
+      "hypotheses": [
+        "Incidence matrix with boundary rows removed; spanning forests have exactly one boundary vertex in each component.",
+        "Signed weights are allowed algebraically; the Delaunay Dirichlet case has nonnegative contributing weights."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/math-audit.md"
+      ],
+      "computation": {
+        "status": "exact_finite_enumeration",
+        "code_paths": [
+          "experiments/section9/run.py",
+          "packages/volume-toolkit/tests/test_variational.py",
+          "docs/execution/section9-chapter-2026-10-31/math-audit-checks.py"
+        ],
+        "evidence_paths": [
+          "artifacts/section9/result.json",
+          "docs/execution/section9-chapter-2026-10-31/math-audit-checks.json"
+        ],
+        "description": "Cauchy-Binet proves the general identity. Enumeration gives fifteen unit-weight terms for the grid and exact determinant sums 196 and 144 for two additional audit graphs."
+      },
+      "coverage_gap": "Exhaustive enumeration is a small-fixture oracle, not an efficient general determinant algorithm."
+    },
+    {
+      "id": "s9.barrier_compatibility",
+      "labels": [
+        "eq:ipolyBarrier",
+        "prop:ipolyCompatibility",
+        "eq:ipolyCompatibility"
+      ],
+      "status": "proved_in_chapter",
+      "hypotheses": [
+        "Positive triangle angle structures, each triangle sum pi; tangent coordinates sum to zero per triangle.",
+        "Intrinsic affine coordinates after dependencies are removed; t>=0.",
+        "The parameter bound m belongs to F; F-tV is a standard self-concordant objective."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/math-audit.md",
+        "docs/execution/section9-chapter-2026-10-31/companion-audit.md"
+      ],
+      "computation": {
+        "status": "audit_diagnostics_only",
+        "code_paths": [
+          "docs/execution/section9-chapter-2026-10-31/companion_reference_probes.py"
+        ],
+        "evidence_paths": [
+          "docs/execution/section9-chapter-2026-10-31/companion_reference_probes.json"
+        ],
+        "description": "The general trianglewise proof is in the chapter and audits. Seeded binary64 probes check identities numerically and do not prove the inequality."
+      },
+      "coverage_gap": "No maintained barrier objective, intrinsic constraint basis, or barrier derivative implementation."
+    },
+    {
+      "id": "s9.finite_centering",
+      "labels": [
+        "subsec:ipolyBarrierComplexity",
+        "eq:ipolyStepBound"
+      ],
+      "status": "proved_in_chapter",
+      "hypotheses": [
+        "Nonempty positive feasible affine domain; compact closure in angle coordinates; continuous volume.",
+        "Intrinsic Hessian H_t and Newton decrement lambda_t; m>=1, t>0.",
+        "For the finite certificate lambda_t<=1/4; stopping requires t>=17m/(12*epsilon)."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/companion-audit.md"
+      ],
+      "computation": {
+        "status": "exact_constant_check_only",
+        "code_paths": [
+          "docs/execution/section9-chapter-2026-10-31/companion_reference_probes.py"
+        ],
+        "evidence_paths": [
+          "docs/execution/section9-chapter-2026-10-31/companion_reference_probes.json"
+        ],
+        "description": "The proof distinguishes exact-center gap m/t from the finite-center gap [m+(sqrt(m)+lambda)lambda/(1-lambda)]/t, bounded by 17m/(12t)."
+      },
+      "coverage_gap": "No executable centering or decrement certification routine."
+    },
+    {
+      "id": "s9.short_step_iterations",
+      "labels": [
+        "eq:ipolyStepBound"
+      ],
+      "status": "conditional_algorithmic_consequence",
+      "hypotheses": [
+        "Initially centered positive point at t0>0 with decrement<=1/4.",
+        "Parameter factor 1+1/(20*sqrt(m)); one full Newton step per change; sufficient terminal parameter 17m/(12*epsilon).",
+        "Exact arithmetic or the explicitly controlled relative energy-norm solve error; no cost included for feasibility or initial centering."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/companion-audit.md"
+      ],
+      "computation": {
+        "status": "exact_constant_check_only",
+        "code_paths": [
+          "docs/execution/section9-chapter-2026-10-31/companion_reference_probes.py"
+        ],
+        "evidence_paths": [
+          "docs/execution/section9-chapter-2026-10-31/companion_reference_probes.json"
+        ],
+        "description": "The chapter proves pre-step decrement<=5/16 and post-step decrement<=25/121<1/4; the audit checks the rational constants."
+      },
+      "coverage_gap": "The maintained numerical example does not implement the barrier path or prove a plain-Newton iteration bound.",
+      "source_evidence": [
+        {
+          "source": "BoydVandenbergheSlides",
+          "url": "https://web.stanford.edu/~boyd/cvxbook/bv_cvxslides.pdf",
+          "pin": "PDF pages 378-382",
+          "access": "Primary authors' slides read for short-step analysis and initial centering."
+        },
+        {
+          "source": "BoydVandenberghe",
+          "url": "https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf",
+          "pin": "Chapter 11",
+          "access": "Bibliographic background retained; book download timed out, so its full text was not read."
+        }
+      ]
+    },
+    {
+      "id": "s9.inexact_arithmetic_work",
+      "labels": [
+        "subsec:ipolyBarrierComplexity",
+        "eq:ipolyStepBound"
+      ],
+      "status": "conditional_algorithmic_consequence",
+      "hypotheses": [
+        "Grounded disk barrier Hessian has positive planar conductances; n=|I|+|B| counts all mesh vertices, and planarity gives m=O(n) and O(n) matrix entries.",
+        "At each new parameter the solve error in the Hessian energy norm is at most one percent of the exact Newton-step norm.",
+        "Exact gradient/Hessian evaluation apart from the stated solve error; randomized solver success and precision controls maintained throughout.",
+        "Feasibility and initial centering excluded; accuracy factors suppressed only in the tilde notation."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/companion-audit.md"
+      ],
+      "computation": {
+        "status": "not_implemented",
+        "code_paths": [],
+        "evidence_paths": [
+          "docs/execution/section9-chapter-2026-10-31/companion_reference_probes.json"
+        ],
+        "description": "The analytical tolerance implies new decrement<=10420/47961<1/4. The source supports a conditional randomized expected arithmetic scale, not bit complexity or observed repository performance."
+      },
+      "coverage_gap": "No nearly-linear solver integration, runtime benchmark of this schedule, failure-probability accounting, finite-precision stability proof, or geometric-error certification.",
+      "source_evidence": [
+        {
+          "source": "SpielmanTengSolvers",
+          "url": "https://arxiv.org/pdf/cs/0607105v5",
+          "pin": "Theorem 5.5 and Section 6",
+          "access": "Primary relative energy-norm guarantee and separate precision scope checked."
+        }
+      ]
+    },
+    {
+      "id": "s9.rippa_energy",
+      "labels": [
+        "subsec:ipolyFlips",
+        "fig:mono-flip"
+      ],
+      "status": "external_theorem_statement_checked",
+      "hypotheses": [
+        "Common fixed planar data sites and nodal values; triangulations of their convex hull.",
+        "Quadratic-form comparison on that common nodal vector space."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/companion-audit.md"
+      ],
+      "computation": {
+        "status": "not_implemented",
+        "code_paths": [],
+        "evidence_paths": [],
+        "description": "The figure illustrates a fixed Euclidean diagonal exchange; no numerical Rippa comparison is supplied by the Section 9 driver."
+      },
+      "coverage_gap": "No inference about volume monotonicity under arbitrary topological flips.",
+      "source_evidence": [
+        {
+          "source": "RippaEnergy",
+          "url": "https://doi.org/10.1016/0167-8396(90)90011-F",
+          "pin": "Primary publisher abstract",
+          "access": "The stated minimization theorem is supported by the abstract; full original proof was not read (403/timeout)."
+        }
+      ]
+    },
+    {
+      "id": "s9.flip_graph",
+      "labels": [
+        "subsec:ipolyFlips"
+      ],
+      "status": "external_theorem_statement_checked",
+      "hypotheses": [
+        "Connected orientable finite-type triangulable marked surface, with a marked point on every boundary component.",
+        "Orientation-preserving mapping classes and isotopies fixing marked points individually; retain the cited marking conventions."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/companion-audit.md"
+      ],
+      "computation": {
+        "status": "not_implemented",
+        "code_paths": [],
+        "evidence_paths": [],
+        "description": "The proper cocompact action and orbit quasi-isometry are external inputs."
+      },
+      "coverage_gap": "No marked-surface triangulation enumerator or mapping-class word metric implementation.",
+      "source_evidence": [
+        {
+          "source": "DisarloParlier",
+          "url": "https://arxiv.org/pdf/1411.4285v1",
+          "pin": "Section 2.1, Lemma 2.3",
+          "access": "Primary theorem statement and relevant scope paragraphs checked; not a complete re-refereeing of the paper."
+        }
+      ]
+    },
+    {
+      "id": "s9.brock_comparisons",
+      "labels": [
+        "subsec:ipolyFlips"
+      ],
+      "status": "external_theorem_statement_checked",
+      "hypotheses": [
+        "Closed oriented surface of genus at least two.",
+        "Convex-core comparison uses quasi-Fuchsian conformal ends X,Y and multiplicative/additive topology-dependent constants.",
+        "Mapping-torus comparison uses pseudo-Anosov monodromy and topology-dependent multiplicative constants."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/companion-audit.md"
+      ],
+      "computation": {
+        "status": "not_implemented",
+        "code_paths": [],
+        "evidence_paths": [],
+        "description": "Pants graph, WP metric and mapping-torus volume comparisons are cited external inputs."
+      },
+      "coverage_gap": "No WP metric/distance evaluator; no unverified extension to punctured or boundary surfaces.",
+      "source_evidence": [
+        {
+          "source": "BrockWPVolumes",
+          "url": "https://arxiv.org/pdf/math/0109048v2",
+          "pin": "Introduction, Theorems 1.1-1.2",
+          "access": "Primary statement and closed-surface scope checked."
+        },
+        {
+          "source": "BrockMappingTori",
+          "url": "https://arxiv.org/pdf/math/0109050v1",
+          "pin": "Theorem 1.1",
+          "access": "Primary statement and closed pseudo-Anosov scope checked."
+        }
+      ]
+    },
+    {
+      "id": "s9.layered_volume_bound",
+      "labels": [
+        "subsec:ipolyFlips"
+      ],
+      "status": "proved_in_chapter",
+      "hypotheses": [
+        "The flip sequence actually supplies an ideal triangulation of the specified finite-volume hyperbolic mapping torus representing its fundamental class.",
+        "N is its tetrahedron count; straightened signed volumes are bounded in absolute value by the regular ideal tetrahedron volume."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/companion-audit.md"
+      ],
+      "computation": {
+        "status": "not_implemented",
+        "code_paths": [],
+        "evidence_paths": [],
+        "description": "Straightening and the ideal-tetrahedron maximum give Vol(M)<=N*v3, independently of positivity of the chosen shapes."
+      },
+      "coverage_gap": "No proof that an arbitrary flip word yields the required triangulation; no WP comparison transferred to a punctured fiber."
+    },
+    {
+      "id": "s9.three_dimensional_hessian",
+      "labels": [
+        "eq:ipolyThreeDimensionalHessian"
+      ],
+      "status": "proved_in_chapter",
+      "hypotheses": [
+        "Positive ideal tetrahedron angles; leading-trailing edge variations with p_alpha the sum of the opposite-edge variables.",
+        "A full angle-space coordinate system also requires peripheral directions and removal of dependencies."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/math-audit.md",
+        "docs/execution/section9-chapter-2026-10-31/companion-audit.md"
+      ],
+      "computation": {
+        "status": "exact_local_counterexample_only",
+        "code_paths": [
+          "docs/execution/section9-chapter-2026-10-31/math-audit-checks.py"
+        ],
+        "evidence_paths": [
+          "docs/execution/section9-chapter-2026-10-31/math-audit-checks.json"
+        ],
+        "description": "The regular-tetrahedron edge-variable matrix is an exact rank-two Gram matrix with positive off-diagonal entries and no diagonal dominance."
+      },
+      "coverage_gap": "No complete peripheral tangent basis, 3-manifold Hessian solver, or general SDD reduction. The local formula does not establish one."
+    },
+    {
+      "id": "s9.casson_rivin",
+      "labels": [
+        "subsec:ipolyThreeManifolds"
+      ],
+      "status": "external_theorem_statement_checked",
+      "hypotheses": [
+        "Ideal triangulation of an orientable compact 3-manifold with nonempty boundary a union of tori.",
+        "Positive angle structures with per-tetrahedron sums pi and global edge sums 2pi.",
+        "Criticality on the full angle-space tangent, including peripheral directions."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/math-audit.md",
+        "docs/execution/section9-chapter-2026-10-31/companion-audit.md"
+      ],
+      "computation": {
+        "status": "not_implemented",
+        "code_paths": [],
+        "evidence_paths": [],
+        "description": "The complete-metric implication is an external theorem; edge-only stationary equations do not impose completeness."
+      },
+      "coverage_gap": "No full angle-space peripheral-holonomy solver or complete hyperbolic metric certification.",
+      "source_evidence": [
+        {
+          "source": "FuterGueritaud",
+          "url": "https://arxiv.org/pdf/1004.0440v2",
+          "pin": "Theorem 1.2; Proposition 2.5; Section 5, Proposition 5.4",
+          "access": "Primary statements and scope/proof paragraphs checked; complete proofs not independently re-audited."
+        }
+      ]
+    },
+    {
+      "id": "s9.fixture_exact",
+      "labels": [
+        "subsec:ipolyComputation",
+        "eq:ipolyForestDeterminant",
+        "eq:ipolySchur"
+      ],
+      "status": "exact_finite_check",
+      "hypotheses": [
+        "The unchanged public 3 by 2 integer-grid fixture, twelve triangles, two interior vertices.",
+        "Independent rational finite-element assembly and exhaustive rooted-forest enumeration; electrical voltage x/3."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/math-audit.md",
+        "docs/execution/2026-10-31/section9-review.md",
+        "docs/execution/2026-10-31/section9-rereview.md"
+      ],
+      "computation": {
+        "status": "implemented_exact_fixture_oracle",
+        "code_paths": [
+          "experiments/section9/run.py",
+          "packages/volume-toolkit/tests/test_variational.py"
+        ],
+        "evidence_paths": [
+          "experiments/section9/fixture.json",
+          "artifacts/section9/result.json"
+        ],
+        "description": "L_II=[[4,-1],[-1,4]], K=2*L_II, determinant 60; fifteen unit-weight forests, Schur coefficient 15/2, harmonic interior values 1/3,2/3 and energy 2/3."
+      },
+      "coverage_gap": "Exact arithmetic is limited to the named finite identities; it is not a general interval implementation."
+    },
+    {
+      "id": "s9.fixture_numerical",
+      "labels": [
+        "subsec:ipolyComputation",
+        "eq:ipolyHessian"
+      ],
+      "status": "numerical_check",
+      "hypotheses": [
+        "The fixed fixture and the specific off-origin angle perturbation recorded in the result.",
+        "Binary64 maintained operators and independent 50-digit numerical differentiation; explicit finite residual tolerances."
+      ],
+      "review_evidence": [
+        "docs/execution/2026-10-31/section9-rereview.md",
+        "docs/execution/numerical-correctness-2026-10-31/closeout.md"
+      ],
+      "computation": {
+        "status": "implemented_floating_point_checks",
+        "code_paths": [
+          "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+          "experiments/section9/run.py",
+          "packages/volume-toolkit/tests/test_variational.py"
+        ],
+        "evidence_paths": [
+          "experiments/section9/fixture.json",
+          "artifacts/section9/result.json",
+          "site/section9/downloads/section9-reproduction.zip"
+        ],
+        "description": "The result compares the volume with 12*Catalan and off-origin derivatives with an independent numerical reference; it records actual source/input hashes and run provenance."
+      },
+      "coverage_gap": "No interval enclosure, general geometric realization, strict convex-polyhedron certificate, or asymptotic benchmark. A regenerated result must carry its own provenance."
+    },
+    {
+      "id": "s9.wp_continuum_limit",
+      "labels": [
+        "subsec:ipolyThreeManifolds"
+      ],
+      "status": "open",
+      "hypotheses": [
+        "A proposed limit must specify the geometric convergence, normalization, and control of second variations."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/math-audit.md",
+        "docs/execution/section9-chapter-2026-10-31/companion-audit.md"
+      ],
+      "computation": {
+        "status": "not_implemented",
+        "code_paths": [],
+        "evidence_paths": [],
+        "description": "No continuum-limit theorem or experiment is supplied."
+      },
+      "coverage_gap": "The real symmetric FEM Hessian is not identified with the alternating WP form."
+    },
+    {
+      "id": "s9.quantitative_angle_bound",
+      "labels": [
+        "subsec:ipolyThreeManifolds"
+      ],
+      "status": "open",
+      "hypotheses": [
+        "Seek a positive interior maximum and a quantitative feasible margin; boundary maxima can have zero angles."
+      ],
+      "review_evidence": [
+        "docs/execution/section9-chapter-2026-10-31/math-audit.md",
+        "docs/execution/section9-chapter-2026-10-31/companion-audit.md"
+      ],
+      "computation": {
+        "status": "not_implemented",
+        "code_paths": [],
+        "evidence_paths": [],
+        "description": "No effective smallest-angle bound in terms of size and feasible margin is established."
+      },
+      "coverage_gap": "A volume-gap certificate does not imply angle error, geometric embedding, or combinatorial-type certification."
+    }
+  ]
+}

@@ -51,6 +51,23 @@ reference PDF are optional and absent from that ZIP: the result explicitly
 records missing optional assets, and its generated page omits unavailable
 book links. This does not verify the complete monograph.
 
+The main TeX download is now an inspection copy: the canonical monograph
+includes a separate chapter file. The [chapter builder](../../site/README.md)
+owns the complete LaTeX source ZIP and the full Section 9 HTML/PDF. Optional
+`--chapter-page` and `--book-source-archive` arguments add links only to actual
+supplied assets; the chapter must be built in the same `--site-dir` with its
+local resources. These assets remain optional for detached numerical replay.
+
+`--render-result existing-result.json` regenerates the companion from an
+existing report without rerunning the computation. It checks source roles,
+source availability, source hashes, fixture identity, and the result file before
+packaging current code. A stale report cannot silently acquire a changed driver,
+template, operator, or chapter. Rendering preserves the original computation
+timestamp and provenance; reproduction requirements retain the recorded
+dependency versions. Missing requested assets are errors. Both generators
+support temporary output directories for generation from one clean source
+commit; see the complete sequence in the publishing guide.
+
 The runner captures Git status before it writes outputs. A preliminary run
 from a modified checkout is marked dirty. A detached run records Git status
 as unavailable (null), retains the bundle's originating provenance, and

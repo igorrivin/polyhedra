@@ -1,0 +1,11 @@
+{
+  "operation": "independent render-only environment attribution probe",
+  "driver_sha256": "50df302d6408deb250b5a4b6deb1869bc98325ca6e9a04c6f00e42438f3ce9b2",
+  "recorded_numerical_python": "3.12.11",
+  "recorded_numerical_numpy": "2.5.4",
+  "origin_provenance_unchanged": true,
+  "requirements": "numpy==98.97.96\nscipy==1.18.1\nmpmath==1.3.0\n",
+  "readme_claims_render_environment_as_captured_run": true,
+  "requirements_use_render_environment": true,
+  "expected": "Capturing a report from another environment must retain that report environment for reproduction requirements and captured-run prose, or explicitly label any changed render environment."
+}

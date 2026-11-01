@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/tmp/polyhedra-baseline-20261031/bin/python",
+    "-m",
+    "pip",
+    "download",
+    "--no-cache-dir",
+    "--disable-pip-version-check",
+    "--retries",
+    "0",
+    "--timeout",
+    "12",
+    "--dest",
+    "/tmp/polyhedra-section9-dependency-download-20261031",
+    "gymnasium",
+    "hypothesis",
+    "pynauty"
+  ],
+  "returncode": 1,
+  "log_sha256": "cc0db343941c0cab870dcc1717ee38c45533bf120f0050c06318487e317f5e0c",
+  "downloaded_files": []
+}

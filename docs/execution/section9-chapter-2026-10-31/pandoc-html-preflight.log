@@ -1,0 +1,42 @@
+[WARNING] Deprecated: --mathml. Use --math-method=mathml instead.
+[WARNING] Could not convert TeX math \begin{align}
+   \max_x\{\mathscr V(x)+j^TPx\}
+      &=V_0+\tfrac12j^T\chi j+O(|j|^3),
+   &\chi&=PK^{-1}P^T,\notag\\
+   \max_{Px=b}\mathscr V(x)
+      &=V_0-\tfrac12b^T\chi^{-1}b+O(|b|^3),
+   \label{eq:ipolyBoundaryResponse}
+  \end{align}, rendering as TeX:
+   &\chi&=PK^{-1}P^T,\notag\\
+                     ^
+  unexpected "\\"
+  expecting "&", "\\\\", white space or "\\end"
+[WARNING] Could not convert TeX math \begin{equation}
+   K_{\rm eff}=K_{zz}-K_{zy}K_{yy}^{-1}K_{yz},\qquad
+   \det K=\det K_{yy}\det K_{\rm eff}.
+   \label{eq:ipolySchur}
+  \end{equation}, rendering as TeX:
+   K_{\rm eff}=K_{zz}-K_{zy}K_{yy}^{-1}K_{
+          ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \begin{equation}
+   \int_{\mathbb R^{\dim y}}
+   e^{-\frac1{2\hbar}(y,z)^TK(y,z)}\,dy
+   =\frac{(2\pi\hbar)^{\dim y/2}}{\sqrt{\det K_{yy}}}
+         e^{-z^TK_{\rm eff}z/(2\hbar)}.
+   \label{eq:ipolyGaussian}
+  \end{equation}, rendering as TeX:
+       e^{-z^TK_{\rm eff}z/(2\hbar)}.
+                     ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \begin{equation}
+   O\!\left(\sqrt m\log\max\left\{e,\frac{m}{t_0\varepsilon}\right\}\right)
+   \quad\hbox{Newton steps to volume gap at most }\varepsilon.
+   \label{eq:ipolyStepBound}
+  \end{equation}, rendering as TeX:
+   \quad\hbox{Newton steps to volume gap a
+             ^
+  unexpected control sequence \hbox
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"

@@ -1,0 +1,1283 @@
+{
+  "source_sha256": "63102e64405a58b8f5d51bfdffe6be43fc5cfe9a232dc0f396f1709733d750dc",
+  "excerpt_sha256": "29f3f98b01ae9364d5a3d0cb9cb521a7c04e6d416807657fb07cdfc22dee6262",
+  "temporary_directory": "/tmp/polyhedra-section9-conversion-preflight-20261031",
+  "commands": [
+    {
+      "format": "json",
+      "command": [
+        "/opt/homebrew/bin/pandoc",
+        "--from=latex",
+        "--to=json",
+        "--output",
+        "/tmp/polyhedra-section9-conversion-preflight-20261031/section9.json",
+        "/tmp/polyhedra-section9-conversion-preflight-20261031/section9-excerpt.tex"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "format": "html",
+      "command": [
+        "/opt/homebrew/bin/pandoc",
+        "--from=latex",
+        "--to=html",
+        "--standalone",
+        "--mathml",
+        "--output",
+        "/tmp/polyhedra-section9-conversion-preflight-20261031/section9.html",
+        "/tmp/polyhedra-section9-conversion-preflight-20261031/section9-excerpt.tex"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "[WARNING] Deprecated: --mathml. Use --math-method=mathml instead.\n[WARNING] Could not convert TeX math \\begin{align}\n   \\max_x\\{\\mathscr V(x)+j^TPx\\}\n      &=V_0+\\tfrac12j^T\\chi j+O(|j|^3),\n   &\\chi&=PK^{-1}P^T,\\notag\\\\\n   \\max_{Px=b}\\mathscr V(x)\n      &=V_0-\\tfrac12b^T\\chi^{-1}b+O(|b|^3),\n   \\label{eq:ipolyBoundaryResponse}\n  \\end{align}, rendering as TeX:\n   &\\chi&=PK^{-1}P^T,\\notag\\\\\n                     ^\n  unexpected \"\\\\\"\n  expecting \"&\", \"\\\\\\\\\", white space or \"\\\\end\"\n[WARNING] Could not convert TeX math \\begin{equation}\n   K_{\\rm eff}=K_{zz}-K_{zy}K_{yy}^{-1}K_{yz},\\qquad\n   \\det K=\\det K_{yy}\\det K_{\\rm eff}.\n   \\label{eq:ipolySchur}\n  \\end{equation}, rendering as TeX:\n   K_{\\rm eff}=K_{zz}-K_{zy}K_{yy}^{-1}K_{\n          ^\n  unexpected control sequence \\rm\n  expecting \"%\", \"\\\\label\", \"\\\\tag\", \"\\\\nonumber\", whitespace or \"\\\\allowbreak\"\n[WARNING] Could not convert TeX math \\begin{equation}\n   \\int_{\\mathbb R^{\\dim y}}\n   e^{-\\frac1{2\\hbar}(y,z)^TK(y,z)}\\,dy\n   =\\frac{(2\\pi\\hbar)^{\\dim y/2}}{\\sqrt{\\det K_{yy}}}\n         e^{-z^TK_{\\rm eff}z/(2\\hbar)}.\n   \\label{eq:ipolyGaussian}\n  \\end{equation}, rendering as TeX:\n       e^{-z^TK_{\\rm eff}z/(2\\hbar)}.\n                     ^\n  unexpected control sequence \\rm\n  expecting \"%\", \"\\\\label\", \"\\\\tag\", \"\\\\nonumber\", whitespace or \"\\\\allowbreak\"\n[WARNING] Could not convert TeX math \\begin{equation}\n   O\\!\\left(\\sqrt m\\log\\max\\left\\{e,\\frac{m}{t_0\\varepsilon}\\right\\}\\right)\n   \\quad\\hbox{Newton steps to volume gap at most }\\varepsilon.\n   \\label{eq:ipolyStepBound}\n  \\end{equation}, rendering as TeX:\n   \\quad\\hbox{Newton steps to volume gap a\n             ^\n  unexpected control sequence \\hbox\n  expecting \"%\", \"\\\\label\", \"\\\\tag\", \"\\\\nonumber\", whitespace or \"\\\\allowbreak\"\n"
+    }
+  ],
+  "ast_node_counts": {
+    "MetaList": 1,
+    "MetaInlines": 2,
+    "Str": 2131,
+    "Space": 1910,
+    "Strong": 3,
+    "LineBreak": 2,
+    "Header": 7,
+    "Para": 24,
+    "SoftBreak": 238,
+    "Emph": 7,
+    "Cite": 10,
+    "NormalCitation": 11,
+    "RawInline": 10,
+    "Math": 113,
+    "InlineMath": 92,
+    "DisplayMath": 21,
+    "Div": 4,
+    "Link": 5,
+    "Figure": 2,
+    "Plain": 2
+  },
+  "raw_tex_nodes": [
+    [
+      "latex",
+      "\\cite{IpolyStudy}"
+    ],
+    [
+      "latex",
+      "\\cite{DuffinNetworks}"
+    ],
+    [
+      "latex",
+      "\\cite{RivinEuclidean,FuterGueritaud}"
+    ],
+    [
+      "latex",
+      "\\cite[Chapter~11]{BoydVandenberghe}"
+    ],
+    [
+      "latex",
+      "\\cite{SpielmanTengSolvers}"
+    ],
+    [
+      "latex",
+      "\\cite{RippaEnergy}"
+    ],
+    [
+      "latex",
+      "\\cite[Section~2.1, Lemma~2.3]{DisarloParlier}"
+    ],
+    [
+      "latex",
+      "\\cite{BrockWPVolumes}"
+    ],
+    [
+      "latex",
+      "\\cite{BrockMappingTori}"
+    ],
+    [
+      "latex",
+      "\\cite{FuterGueritaud}"
+    ]
+  ],
+  "figure_attributes": [
+    [
+      "fig:mono-cotangent-hessian",
+      [],
+      [
+        [
+          "latex-placement",
+          "htbp"
+        ]
+      ]
+    ],
+    [
+      "fig:mono-flip",
+      [],
+      [
+        [
+          "latex-placement",
+          "htbp"
+        ]
+      ]
+    ]
+  ],
+  "reference_links": [
+    [
+      [
+        "",
+        [],
+        [
+          [
+            "reference-type",
+            "eqref"
+          ],
+          [
+            "reference",
+            "eq:ipolyAngleCoordinates"
+          ]
+        ]
+      ],
+      [
+        {
+          "t": "Str",
+          "c": "[eq:ipolyAngleCoordinates]"
+        }
+      ],
+      [
+        "#eq:ipolyAngleCoordinates",
+        ""
+      ]
+    ],
+    [
+      [
+        "",
+        [],
+        [
+          [
+            "reference-type",
+            "eqref"
+          ],
+          [
+            "reference",
+            "eq:ipolyFEM"
+          ]
+        ]
+      ],
+      [
+        {
+          "t": "Str",
+          "c": "[eq:ipolyFEM]"
+        }
+      ],
+      [
+        "#eq:ipolyFEM",
+        ""
+      ]
+    ],
+    [
+      [
+        "",
+        [],
+        [
+          [
+            "reference-type",
+            "eqref"
+          ],
+          [
+            "reference",
+            "eq:cuspHessian"
+          ]
+        ]
+      ],
+      [
+        {
+          "t": "Str",
+          "c": "[eq:cuspHessian]"
+        }
+      ],
+      [
+        "#eq:cuspHessian",
+        ""
+      ]
+    ],
+    [
+      [
+        "",
+        [],
+        [
+          [
+            "reference-type",
+            "eqref"
+          ],
+          [
+            "reference",
+            "eq:cuspmatrixHessian"
+          ]
+        ]
+      ],
+      [
+        {
+          "t": "Str",
+          "c": "[eq:cuspmatrixHessian]"
+        }
+      ],
+      [
+        "#eq:cuspmatrixHessian",
+        ""
+      ]
+    ],
+    [
+      [
+        "",
+        [],
+        [
+          [
+            "reference-type",
+            "eqref"
+          ],
+          [
+            "reference",
+            "eq:ipolyStepBound"
+          ]
+        ]
+      ],
+      [
+        {
+          "t": "Str",
+          "c": "[eq:ipolyStepBound]"
+        }
+      ],
+      [
+        "#eq:ipolyStepBound",
+        ""
+      ]
+    ]
+  ],
+  "source_label_count": 20,
+  "html_ids": [
+    "boundary-response-schur-complements-and-a-gaussian-factor",
+    "fig:mono-cotangent-hessian",
+    "fig:mono-flip",
+    "flips-connect-the-local-matrix-to-mapping-class-geometry",
+    "prop:ipolyCompatibility",
+    "prop:ipolyHessian",
+    "quantum-geometry-degeneration-and-surgery",
+    "sec:ipolybridge",
+    "the-cotangent-form-and-the-correct-deformation-coordinates",
+    "the-three-manifold-extension-and-the-remaining-questions",
+    "title-block-header",
+    "why-the-nonlinear-iteration-needs-a-barrier"
+  ],
+  "missing_source_label_ids": [
+    "eq:ipolyAngleCoordinates",
+    "eq:ipolyBarrier",
+    "eq:ipolyBoundaryResponse",
+    "eq:ipolyCompatibility",
+    "eq:ipolyDelaunayweight",
+    "eq:ipolyDtN",
+    "eq:ipolyFEM",
+    "eq:ipolyForestDeterminant",
+    "eq:ipolyGaussian",
+    "eq:ipolyHessian",
+    "eq:ipolyNewton",
+    "eq:ipolySchur",
+    "eq:ipolyStepBound",
+    "eq:ipolyThreeDimensionalHessian",
+    "eq:ipolyWeightLower"
+  ],
+  "mathml_count": 109,
+  "html_size_bytes": 64334,
+  "unconverted_formula_count": 4,
+  "diagnostic_artifacts_only": true,
+  "figure_content_summary": [
+    [
+      [
+        "fig:mono-cotangent-hessian",
+        [],
+        [
+          [
+            "latex-placement",
+            "htbp"
+          ]
+        ]
+      ],
+      [
+        [
+          {
+            "t": "Str",
+            "c": "The"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "cotangent"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "Hessian"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "and"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "its"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "finite-element"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "interpretation"
+          }
+        ],
+        [
+          {
+            "t": "Plain",
+            "c": [
+              {
+                "t": "Str",
+                "c": "The"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "cotangent"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "weight"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "for"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "two"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "adjacent"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "Euclidean"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "triangles."
+              },
+              {
+                "t": "SoftBreak"
+              },
+              {
+                "t": "Str",
+                "c": "The"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "dual"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "segment"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "joins"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "their"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "circumcenters"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "and"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "has"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "signed"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "length"
+              },
+              {
+                "t": "SoftBreak"
+              },
+              {
+                "t": "Math",
+                "c": [
+                  {
+                    "t": "InlineMath"
+                  },
+                  "|e^*|_\\pm"
+                ]
+              },
+              {
+                "t": "Str",
+                "c": ";"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "in"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "the"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "locally"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "Delaunay"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "configuration"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "shown,"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "its"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "sign"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "is"
+              },
+              {
+                "t": "SoftBreak"
+              },
+              {
+                "t": "Str",
+                "c": "positive."
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "The"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "finite-element"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "stiffness"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "matrix"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "is"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "the"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "same"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "cotangent"
+              },
+              {
+                "t": "SoftBreak"
+              },
+              {
+                "t": "Str",
+                "c": "matrix"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "that"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "appears"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "as"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "minus"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "one"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "half"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "of"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "the"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "volume"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "Hessian"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "in"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "the"
+              },
+              {
+                "t": "SoftBreak"
+              },
+              {
+                "t": "Str",
+                "c": "coordinates"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Math",
+                "c": [
+                  {
+                    "t": "InlineMath"
+                  },
+                  "\\alpha_c(u)=\\alpha_c^0+u_i-u_j"
+                ]
+              },
+              {
+                "t": "Str",
+                "c": ","
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "with"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "fixed"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "edge-angle"
+              },
+              {
+                "t": "SoftBreak"
+              },
+              {
+                "t": "Str",
+                "c": "sums"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "and"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Math",
+                "c": [
+                  {
+                    "t": "InlineMath"
+                  },
+                  "u=0"
+                ]
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "on"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "the"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "boundary."
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "This"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "identity"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "is"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "specific"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "to"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "that"
+              },
+              {
+                "t": "SoftBreak"
+              },
+              {
+                "t": "Str",
+                "c": "coordinate"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "and"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "constraint"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "system."
+              }
+            ]
+          }
+        ]
+      ],
+      []
+    ],
+    [
+      [
+        "fig:mono-flip",
+        [],
+        [
+          [
+            "latex-placement",
+            "htbp"
+          ]
+        ]
+      ],
+      [
+        [
+          {
+            "t": "Str",
+            "c": "A"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "diagonal"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "exchange"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "and"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "the"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "Delaunay"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "energy"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "comparison"
+          }
+        ],
+        [
+          {
+            "t": "Plain",
+            "c": [
+              {
+                "t": "Str",
+                "c": "A"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "diagonal"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "flip"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "on"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "a"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "fixed"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "Euclidean"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "quadrilateral,"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "shown"
+              },
+              {
+                "t": "SoftBreak"
+              },
+              {
+                "t": "Str",
+                "c": "with"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "its"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "actual"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "vertex"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "positions."
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "Rippa\u2019s"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "energy"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "comparison"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "selects"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "the"
+              },
+              {
+                "t": "SoftBreak"
+              },
+              {
+                "t": "Str",
+                "c": "Delaunay"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "diagonal"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "for"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "fixed"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "nodal"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "values."
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "The"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "same"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "combinatorial"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "move"
+              },
+              {
+                "t": "SoftBreak"
+              },
+              {
+                "t": "Str",
+                "c": "also"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "occurs"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "in"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "flip"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "graphs"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "used"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "in"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "surface"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "topology;"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "the"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "displayed"
+              },
+              {
+                "t": "SoftBreak"
+              },
+              {
+                "t": "Str",
+                "c": "energy"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "comparison"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "concerns"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "the"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "fixed"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "Euclidean"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "realization."
+              }
+            ]
+          }
+        ]
+      ],
+      []
+    ]
+  ]
+}

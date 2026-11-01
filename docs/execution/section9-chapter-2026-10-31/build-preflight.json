@@ -1,0 +1,140 @@
+{
+  "scope": "Read-only source/build preflight, not final PDF or HTML validation",
+  "head": "26b3c134d9308d345cb76f1240db9de982b2e5a6",
+  "git_status_at_end": "",
+  "tools": {
+    "latexmk": {
+      "command": [
+        "/Library/TeX/texbin/latexmk",
+        "-version"
+      ],
+      "returncode": 0,
+      "output": "Latexmk, John Collins, 27 Dec. 2024. Version 4.86a\n"
+    },
+    "pdflatex": {
+      "command": [
+        "/Library/TeX/texbin/pdflatex",
+        "--version"
+      ],
+      "returncode": 0,
+      "output": "pdfTeX 3.141592653-2.6-1.40.27 (TeX Live 2025)\nkpathsea version 6.4.1\nCopyright 2025 Han The Thanh (pdfTeX) et al.\nThere is NO warranty.  Redistribution of this software is\ncovered by the terms of both the pdfTeX copyright and\nthe Lesser GNU General Public License.\nFor more information about these matters, see the file\nnamed COPYING and the pdfTeX source.\nPrimary author of pdfTeX: Han The Thanh (pdfTeX) et al.\nCompiled with libpng 1.6.46; using libpng 1.6.46\nCompiled with zlib 1.3.1; using zlib 1.3.1\nCompiled with xpdf version 4.04\n"
+    },
+    "pandoc": {
+      "command": [
+        "/opt/homebrew/bin/pandoc",
+        "--version"
+      ],
+      "returncode": 0,
+      "output": "pandoc 3.12.1\nFeatures: +server +lua\nScripting engine: Lua 5.4\nUser data directory: /Users/igorrivin/.local/share/pandoc\nCopyright (C) 2006-2025 John MacFarlane. Web:  https://pandoc.org\nThis is free software; see the source for copying conditions. There is no\nwarranty, not even for merchantability or fitness for a particular purpose.\n"
+    },
+    "ghostscript": {
+      "command": [
+        "/usr/local/bin/gs",
+        "--version"
+      ],
+      "returncode": 0,
+      "output": "10.04.0\n"
+    },
+    "node": {
+      "command": [
+        "/opt/homebrew/bin/node",
+        "--version"
+      ],
+      "returncode": 0,
+      "output": "v26.12.1\n"
+    }
+  },
+  "pdf_marker": {
+    "path": "/Users/igorrivin/.codex/plugins/cache/openai-primary-runtime/pdf/26.1026.10807/skills/pdf/container_tools/mark_artifact_operation_started.mjs",
+    "sha256": "e0578762dc2a8f44a26323062c8afcf6c72ef197649f349c8b40e9f2a03c8942",
+    "executed": false,
+    "reason": "No PDF authoring performed; marker must be run once immediately before first actual authoring command."
+  },
+  "poppler_paths_checked_absent": [
+    "/opt/anaconda3/bin/pdftoppm",
+    "/opt/anaconda3/bin/pdfinfo",
+    "/opt/anaconda3/bin/pdftotext",
+    "/opt/homebrew/bin/pdfinfo",
+    "/usr/local/bin/pdftoppm",
+    "/opt/homebrew/opt/poppler/bin/pdftoppm"
+  ],
+  "runtime": {
+    "python": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+    "baseline_environment": "/tmp/polyhedra-baseline-20261031",
+    "pypdf_available": true,
+    "reportlab_available_in_anaconda": true
+  },
+  "dependency_installation": {
+    "performed": false,
+    "new_environment_created": false,
+    "download_record": "dependency-download.json",
+    "pypi_dns_error": "gaierror: [Errno 8] nodename nor servname provided, or not known",
+    "local_roots_checked": [
+      "/Users/igorrivin/Library/Caches/pip",
+      "/Users/igorrivin/.cache/uv",
+      "/Users/igorrivin/.local/share/uv/tools",
+      "/opt/homebrew/Cellar",
+      "/Volumes/Lexar/lambda/devel/billiards/.venv",
+      "/Users/igorrivin/devel/*/.venv*/lib/python*/site-packages",
+      "/Volumes/Lexar/lambda/devel/*/.venv*/lib/python*/site-packages"
+    ],
+    "missing_packages": [
+      "gymnasium",
+      "hypothesis",
+      "pynauty"
+    ],
+    "also_not_found": [
+      "cma",
+      "stable_baselines3",
+      "sortedcontainers",
+      "farama_notifications"
+    ],
+    "test_repeated": false
+  },
+  "documentation_sources": [
+    "https://pip.pypa.io/en/stable/topics/dependency-resolution/",
+    "https://pip.pypa.io/en/stable/cli/pip_download/",
+    "https://pip.pypa.io/en/stable/user_guide/",
+    "https://github.com/python/cpython/blob/main/Doc/library/venv.rst",
+    "https://github.com/jgm/pandoc/blob/main/MANUAL.txt",
+    "https://github.com/jgm/pandoc/blob/main/doc/lua-filters.md",
+    "https://github.com/jgm/pandoc/blob/main/test/command/refs.md",
+    "https://github.com/artifexsoftware/ghostpdl/blob/master/doc/src/Use.rst",
+    "https://github.com/debian-tex/latexmk/blob/master/_autodocs/api-reference/files-and-directories.md"
+  ],
+  "pandoc_preflight": "pandoc-preflight.json",
+  "artifacts": {
+    "dependency-download.log": {
+      "sha256": "cc0db343941c0cab870dcc1717ee38c45533bf120f0050c06318487e317f5e0c",
+      "bytes": 147
+    },
+    "dependency-download.json": {
+      "sha256": "f89010dfd196c2d8f19acd3185e26379bd9f5dc346db33bb7b3f60cbbd01aea0",
+      "bytes": 473
+    },
+    "pandoc-json-preflight.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "pandoc-html-preflight.log": {
+      "sha256": "17940852a0676b56f5f7c60b7f8485eb6c8c8814228a16d89e782e2551500706",
+      "bytes": 1744
+    },
+    "pandoc-preflight.json": {
+      "sha256": "69e685cdb7e50a0d10254636c43233377eea096216b202b202d1c75dfc46c174",
+      "bytes": 28417
+    },
+    "pandoc-preflight-ast.json": {
+      "sha256": "9306242bccfcea4b3c06aecd0250bda81fec1e5a181df1f4207250816d6643e4",
+      "bytes": 97861
+    },
+    "pandoc-preflight-diagnostic.html": {
+      "sha256": "77daf1705f1b25fb48607aa4a24b6d41de613d70f850e9fb630bb13062bfff66",
+      "bytes": 64334
+    },
+    "pandoc-preflight-excerpt.tex": {
+      "sha256": "29f3f98b01ae9364d5a3d0cb9cb521a7c04e6d416807657fb07cdfc22dee6262",
+      "bytes": 26231
+    }
+  }
+}

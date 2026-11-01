@@ -1,0 +1,25 @@
+{
+  "status": "approved_metadata_only_update",
+  "source": "book/claims/section9.json",
+  "sha256": "f801da33c5224e04595211c23e7f54b1edc2087bff5ebd6d0bf739ade7f33ab8",
+  "all_26_claim_entries_unchanged": true,
+  "changed_existing_fields": [
+    "revision_review"
+  ],
+  "added_fields": [
+    "independent_review_evidence",
+    "independent_review_source_hashes"
+  ],
+  "final_review_metadata": {
+    "revision_review": "Independently approved on 2026-10-31; the report preserves the frozen chapter and pre-status-update ledger identities.",
+    "independent_review_evidence": [
+      "docs/execution/section9-chapter-2026-10-31/proof-review.md"
+    ],
+    "independent_review_source_hashes": {
+      "chapter_sha256": "abe89dd665b10fe808a0c4273f5f8ecdbe9fc9a5c0cd7b92bc3618a1759c2a5e",
+      "ledger_sha256_before_status_update": "dc587dd1e862b52b81e555ccd221d30c0de55fe523b2f137bbc0cb7b0e9289af"
+    }
+  },
+  "review_copy": "proof-review-final-ledger.json",
+  "check_note": "The first ad hoc comparison assumed two separate top-level source-hash keys and stopped at that assertion; the actual source hashes are grouped under independent_review_source_hashes. Hash and unchanged-claim checks had passed. This corrected comparison uses the observed metadata schema."
+}

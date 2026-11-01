@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "operation": "build_complete_section9_excerpt",
+  "generated_at_utc": "2026-11-01T00:43:41.932169+00:00",
+  "source_commit": "26b3c134d9308d345cb76f1240db9de982b2e5a6",
+  "repository_dirty_at_start": true,
+  "git_status_porcelain_at_start": [
+    " M INTEGRATION_PLAN.md",
+    " M README.md",
+    " M book/README.md",
+    " M book/computational-status.md",
+    " M book/numerical-errata.md",
+    " M book/polyhedral_volumes_and_geodesic_identities.tex",
+    " M experiments/section9/README.md",
+    " M experiments/section9/run.py",
+    "?? book/chapters/",
+    "?? book/claims/",
+    "?? book/companion-reconciliation.md",
+    "?? docs/execution/section9-chapter-2026-10-31/",
+    "?? experiments/section9/tests/",
+    "?? site/README.md",
+    "?? site/build_section9.py",
+    "?? site/section9.css",
+    "?? site/tests/"
+  ],
+  "inputs": {
+    "book/main.tex": "be3c45c0c4e3105d5e5275b2bbfefed5b8a79e088a456b83a8ea81dcce89a99d",
+    "book/polyhedral_volumes_and_geodesic_identities.tex": "3b3b93d26764392353030a30ef4569360d051e0d78d6e5eb7fd6bef1f96de546",
+    "book/chapters/09-volume-hessians.tex": "abe89dd665b10fe808a0c4273f5f8ecdbe9fc9a5c0cd7b92bc3618a1759c2a5e",
+    "book/claims/section9.json": "f801da33c5224e04595211c23e7f54b1edc2087bff5ebd6d0bf739ade7f33ab8",
+    "site/build_section9.py": "b02995dab6d0c1b7b9c5f700a12be0878481a8d372057339daeea40b41afff94",
+    "site/section9.css": "aae27cd011f0d53aeb109ccaafbbe26e5a4c26eb2d9cb28c3aea78ec951f8b01",
+    "experiments/section9/run.py": "91525e17669887d7863834a3322207088c7ff4dbf4b4f8348a67b529a6142a19",
+    "experiments/section9/fixture.json": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1",
+    "experiments/section9/README.md": "e961e12152e3cd024f31a15c39338989c98a7a9539938ffa4b0ee565c932cb5b",
+    "book/companion-reconciliation.md": "e5d67047f552430aba9cfd59a2f99dbd69c8664b77c0384be2df35bd520d51a1",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+    "docs/execution/2026-10-31/section9-rereview.md": "b70f2732abb557b6c57b7498d33cfa56c9e917291793f5de5ac6be05378bba06",
+    "docs/execution/2026-10-31/section9-review.md": "1e25af61ed2c6856272e8f2ce930424ffd17da89d975fe77d33a08edd78871aa",
+    "docs/execution/numerical-correctness-2026-10-31/closeout.md": "5fd344ccb3aa05303021486008c33dd0bfd01f8ed96a773a432d900351840a0c",
+    "docs/execution/section9-chapter-2026-10-31/companion-audit.md": "b6565bf58cd96b2210fd086c44b3cf0a2d90cac727ca7d1a344907d009204b77",
+    "docs/execution/section9-chapter-2026-10-31/companion_reference_probes.json": "a7cd2000192a53f247bdd227178198cd79ada1157fbf9f3fe36cc55be6825e62",
+    "docs/execution/section9-chapter-2026-10-31/companion_reference_probes.py": "c789a44a650ab8778fc9eb4e71ec254ed44103621d035fa4557cb6eaa6c0b82e",
+    "docs/execution/section9-chapter-2026-10-31/math-audit-checks.json": "166eca3c97dfa34d22aa51c11021d3a0f5f7b4bd29e183004abc2d47127b1ce5",
+    "docs/execution/section9-chapter-2026-10-31/math-audit-checks.py": "8b8ed3970a0c15179cc5879616ab371d4763fe956cb27ae10956ad51026bc6bd",
+    "docs/execution/section9-chapter-2026-10-31/math-audit.md": "b35ce184791dfe5fa7ac78364929601039052e6bb5a79e2a50a9da9655c81df3",
+    "docs/execution/section9-chapter-2026-10-31/proof-review.md": "043780260852e24fcda41d3f7e36ee9385d393eb8a62456782c2636f6ff00aef",
+    "packages/volume-toolkit/tests/test_variational.py": "fffdb72c8907749a03e031c572d3bb928976ee6844ff0ca7b79d17b913b8a7fa"
+  },
+  "computation_result": {
+    "actual_path": "/private/tmp/polyhedra-section9-build-v3/result.json",
+    "sha256": "58ba6ca78ba23145f48081e65783a9131262d5002d176277317171e2133f9db1",
+    "provenance": {
+      "source_commit": "26b3c134d9308d345cb76f1240db9de982b2e5a6",
+      "execution_context": "git-checkout",
+      "repository_dirty_at_start": true,
+      "git_status_porcelain_at_start": [
+        " M book/README.md",
+        " M book/computational-status.md",
+        " M book/numerical-errata.md",
+        " M book/polyhedral_volumes_and_geodesic_identities.tex",
+        " M experiments/section9/README.md",
+        " M experiments/section9/run.py",
+        "?? book/chapters/",
+        "?? book/claims/",
+        "?? book/companion-reconciliation.md",
+        "?? docs/execution/section9-chapter-2026-10-31/",
+        "?? experiments/section9/tests/",
+        "?? site/README.md",
+        "?? site/build_section9.py",
+        "?? site/section9.css",
+        "?? site/tests/"
+      ],
+      "input_sha256": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1",
+      "source_files": [
+        {
+          "role": "experiment.driver",
+          "path": "experiments/section9/run.py",
+          "location_kind": "project-relative",
+          "required": true,
+          "available": true,
+          "sha256": "91525e17669887d7863834a3322207088c7ff4dbf4b4f8348a67b529a6142a19"
+        },
+        {
+          "role": "toolkit.variational",
+          "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+          "location_kind": "project-relative",
+          "required": true,
+          "available": true,
+          "sha256": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b"
+        },
+        {
+          "role": "toolkit.geometry",
+          "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py",
+          "location_kind": "project-relative",
+          "required": true,
+          "available": true,
+          "sha256": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+        },
+        {
+          "role": "experiment.fixture",
+          "path": "experiments/section9/fixture.json",
+          "location_kind": "project-relative",
+          "required": true,
+          "available": true,
+          "sha256": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1"
+        },
+        {
+          "role": "experiment.template",
+          "path": "experiments/section9/page.html",
+          "location_kind": "project-relative",
+          "required": true,
+          "available": true,
+          "sha256": "fd3e70a21ef81478124742e43fdcffa55a20a4645528f486f788e6a9eec6982f"
+        },
+        {
+          "role": "book.tex",
+          "path": "book/polyhedral_volumes_and_geodesic_identities.tex",
+          "location_kind": "project-relative",
+          "required": false,
+          "available": true,
+          "sha256": "3b3b93d26764392353030a30ef4569360d051e0d78d6e5eb7fd6bef1f96de546"
+        },
+        {
+          "role": "book.chapter",
+          "path": "book/chapters/09-volume-hessians.tex",
+          "location_kind": "project-relative",
+          "required": false,
+          "available": true,
+          "sha256": "abe89dd665b10fe808a0c4273f5f8ecdbe9fc9a5c0cd7b92bc3618a1759c2a5e"
+        },
+        {
+          "role": "book.reference_pdf",
+          "path": "book/reference/polyhedral_volumes_and_geodesic_identities.pdf",
+          "location_kind": "project-relative",
+          "required": false,
+          "available": true,
+          "sha256": "40dd069bd2653f9a78666a31f53910d74b7f8de2a4a75d5a5dd62466032a6cd5"
+        }
+      ],
+      "source_sha256": {
+        "experiment.driver": "91525e17669887d7863834a3322207088c7ff4dbf4b4f8348a67b529a6142a19",
+        "toolkit.variational": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+        "toolkit.geometry": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73",
+        "experiment.fixture": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1",
+        "experiment.template": "fd3e70a21ef81478124742e43fdcffa55a20a4645528f486f788e6a9eec6982f",
+        "book.tex": "3b3b93d26764392353030a30ef4569360d051e0d78d6e5eb7fd6bef1f96de546",
+        "book.chapter": "abe89dd665b10fe808a0c4273f5f8ecdbe9fc9a5c0cd7b92bc3618a1759c2a5e",
+        "book.reference_pdf": "40dd069bd2653f9a78666a31f53910d74b7f8de2a4a75d5a5dd62466032a6cd5"
+      },
+      "bundle_origin": null,
+      "bundle_payload_hashes_match": null,
+      "bundle_payload_mismatches": [],
+      "python": "3.12.11",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "mpmath": "1.3.0",
+      "generated_at_utc": "2026-11-01T00:42:50.202391+00:00"
+    }
+  },
+  "tools": {
+    "latexmk": "/Library/TeX/texbin/latexmk",
+    "pandoc": "/opt/homebrew/bin/pandoc",
+    "gs": "/usr/local/bin/gs"
+  },
+  "tool_versions": {
+    "latexmk": "Latexmk, John Collins, 27 Dec. 2024. Version 4.86a",
+    "pandoc": "pandoc 3.12.1",
+    "gs": "10.04.0"
+  },
+  "full_monograph_label_count": 607,
+  "pending_evidence": [],
+  "preliminary": true,
+  "chapter_label_map": {
+    "sec:ipolybridge": {
+      "number": "9",
+      "page": "27",
+      "title": "Volume Hessians, finite elements, and computational complexity",
+      "anchor": "section.9"
+    },
+    "subsec:ipolyCoordinates": {
+      "number": "9.1",
+      "page": "27",
+      "title": "The cotangent form and the correct deformation coordinates",
+      "anchor": "subsection.9.1"
+    },
+    "eq:ipolyFEM": {
+      "number": "9.1",
+      "page": "27",
+      "title": "The cotangent form and the correct deformation coordinates",
+      "anchor": "equation.9.1"
+    },
+    "eq:ipolyDelaunayweight": {
+      "number": "9.2",
+      "page": "27",
+      "title": "The cotangent form and the correct deformation coordinates",
+      "anchor": "equation.9.2"
+    },
+    "eq:ipolyAngleCoordinates": {
+      "number": "9.3",
+      "page": "28",
+      "title": "The cotangent form and the correct deformation coordinates",
+      "anchor": "equation.9.3"
+    },
+    "prop:ipolyHessian": {
+      "number": "9.1",
+      "page": "28",
+      "title": "The exact finite-element Hessian",
+      "anchor": "theorem.9.1"
+    },
+    "eq:ipolyHessian": {
+      "number": "9.4",
+      "page": "28",
+      "title": "The exact finite-element Hessian",
+      "anchor": "equation.9.4"
+    },
+    "eq:ipolyWeightLower": {
+      "number": "9.5",
+      "page": "29",
+      "title": "The cotangent form and the correct deformation coordinates",
+      "anchor": "equation.9.5"
+    },
+    "eq:ipolyNewton": {
+      "number": "9.6",
+      "page": "29",
+      "title": "The cotangent form and the correct deformation coordinates",
+      "anchor": "equation.9.6"
+    },
+    "fig:mono-cotangent-hessian": {
+      "number": "3",
+      "page": "29",
+      "title": "The cotangent Hessian and its finite-element interpretation",
+      "anchor": "figure.caption.10"
+    },
+    "subsec:ipolyResponse": {
+      "number": "9.2",
+      "page": "30",
+      "title": "Boundary response, Schur complements, and a Gaussian factor",
+      "anchor": "subsection.9.2"
+    },
+    "eq:ipolyDtN": {
+      "number": "9.7",
+      "page": "30",
+      "title": "Boundary response, Schur complements, and a Gaussian factor",
+      "anchor": "equation.9.7"
+    },
+    "eq:ipolyBoundaryResponse": {
+      "number": "9.8",
+      "page": "30",
+      "title": "Boundary response, Schur complements, and a Gaussian factor",
+      "anchor": "equation.9.8"
+    },
+    "eq:ipolySchur": {
+      "number": "9.9",
+      "page": "30",
+      "title": "Boundary response, Schur complements, and a Gaussian factor",
+      "anchor": "equation.9.9"
+    },
+    "eq:ipolyGaussian": {
+      "number": "9.10",
+      "page": "30",
+      "title": "Boundary response, Schur complements, and a Gaussian factor",
+      "anchor": "equation.9.10"
+    },
+    "eq:ipolyForestDeterminant": {
+      "number": "9.11",
+      "page": "30",
+      "title": "Boundary response, Schur complements, and a Gaussian factor",
+      "anchor": "equation.9.11"
+    },
+    "subsec:ipolyBarrierComplexity": {
+      "number": "9.3",
+      "page": "31",
+      "title": "Why the nonlinear iteration needs a barrier",
+      "anchor": "subsection.9.3"
+    },
+    "eq:ipolyBarrier": {
+      "number": "9.12",
+      "page": "31",
+      "title": "Why the nonlinear iteration needs a barrier",
+      "anchor": "equation.9.12"
+    },
+    "prop:ipolyCompatibility": {
+      "number": "9.2",
+      "page": "31",
+      "title": "A barrier compatible with ideal volume",
+      "anchor": "theorem.9.2"
+    },
+    "eq:ipolyCompatibility": {
+      "number": "9.13",
+      "page": "31",
+      "title": "A barrier compatible with ideal volume",
+      "anchor": "equation.9.13"
+    },
+    "eq:ipolyStepBound": {
+      "number": "9.14",
+      "page": "32",
+      "title": "Why the nonlinear iteration needs a barrier",
+      "anchor": "equation.9.14"
+    },
+    "subsec:ipolyFlips": {
+      "number": "9.4",
+      "page": "33",
+      "title": "Flips connect the local matrix to mapping-class geometry",
+      "anchor": "subsection.9.4"
+    },
+    "fig:mono-flip": {
+      "number": "4",
+      "page": "33",
+      "title": "A diagonal exchange and the Delaunay energy comparison",
+      "anchor": "figure.caption.11"
+    },
+    "subsec:ipolyThreeManifolds": {
+      "number": "9.5",
+      "page": "34",
+      "title": "The three-manifold extension and the remaining questions",
+      "anchor": "subsection.9.5"
+    },
+    "eq:ipolyThreeDimensionalHessian": {
+      "number": "9.15",
+      "page": "34",
+      "title": "The three-manifold extension and the remaining questions",
+      "anchor": "equation.9.15"
+    },
+    "subsec:ipolyComputation": {
+      "number": "9.6",
+      "page": "34",
+      "title": "A reproducible computational example",
+      "anchor": "subsection.9.6"
+    }
+  },
+  "external_reference_only_labels": {
+    "eq:cuspHessian": {
+      "number": "16.7",
+      "page": "76",
+      "title": "The cusp shape in the inverse volume Hessian",
+      "anchor": "equation.16.7"
+    },
+    "eq:cuspmatrixHessian": {
+      "number": "16.8",
+      "page": "76",
+      "title": "The cusp shape in the inverse volume Hessian",
+      "anchor": "equation.16.8"
+    }
+  },
+  "citation_map": {
+    "FuterGueritaud": "37",
+    "IpolyStudy": "116",
+    "DuffinNetworks": "117",
+    "RivinEuclidean": "118",
+    "RivinOptimization": "119",
+    "BoydVandenberghe": "120",
+    "BoydVandenbergheSlides": "121",
+    "SpielmanTengSolvers": "122",
+    "RippaEnergy": "123",
+    "DisarloParlier": "124",
+    "BrockWPVolumes": "125",
+    "BrockMappingTori": "126"
+  },
+  "numbered_equations": [
+    {
+      "label": "eq:ipolyFEM",
+      "number": "9.1"
+    },
+    {
+      "label": "eq:ipolyDelaunayweight",
+      "number": "9.2"
+    },
+    {
+      "label": "eq:ipolyAngleCoordinates",
+      "number": "9.3"
+    },
+    {
+      "label": "eq:ipolyHessian",
+      "number": "9.4"
+    },
+    {
+      "label": "eq:ipolyWeightLower",
+      "number": "9.5"
+    },
+    {
+      "label": "eq:ipolyNewton",
+      "number": "9.6"
+    },
+    {
+      "label": "eq:ipolyDtN",
+      "number": "9.7"
+    },
+    {
+      "label": "eq:ipolyBoundaryResponse",
+      "number": "9.8"
+    },
+    {
+      "label": "eq:ipolySchur",
+      "number": "9.9"
+    },
+    {
+      "label": "eq:ipolyGaussian",
+      "number": "9.10"
+    },
+    {
+      "label": "eq:ipolyForestDeterminant",
+      "number": "9.11"
+    },
+    {
+      "label": "eq:ipolyBarrier",
+      "number": "9.12"
+    },
+    {
+      "label": "eq:ipolyCompatibility",
+      "number": "9.13"
+    },
+    {
+      "label": "eq:ipolyStepBound",
+      "number": "9.14"
+    },
+    {
+      "label": "eq:ipolyThreeDimensionalHessian",
+      "number": "9.15"
+    },
+    {
+      "label": "eq:cuspHessian",
+      "number": "16.7"
+    },
+    {
+      "label": "eq:cuspmatrixHessian",
+      "number": "16.8"
+    }
+  ],
+  "figures": [
+    {
+      "index": 1,
+      "tikz_sha256": "fc455d9fcfcf6462385a5699ed9768a7545f9a0fc2a839e95a3eb71cb8490979",
+      "png_sha256": "ff955ac87063f13e1d698a1085ac18f30f6b643f818db8a57eb8ac6b0528336f",
+      "dpi": 240,
+      "width": 1224,
+      "height": 634
+    },
+    {
+      "index": 2,
+      "tikz_sha256": "26655a8340378d8a21bf1079a4a92752663aa853c6e4ed3d08b9a5eb6be8f5c5",
+      "png_sha256": "cd534d247190d9b257611f6e775a5d6d89d2cdfcaa06f8275baede2fe718197d",
+      "dpi": 240,
+      "width": 1186,
+      "height": 580
+    }
+  ],
+  "validation": {
+    "mathml_count": 209,
+    "figure_count": 2,
+    "anchors": [
+      "sec:ipolybridge",
+      "subsec:ipolyCoordinates",
+      "eq:ipolyFEM",
+      "eq:ipolyDelaunayweight",
+      "eq:ipolyAngleCoordinates",
+      "prop:ipolyHessian",
+      "eq:ipolyHessian",
+      "eq:ipolyWeightLower",
+      "eq:ipolyNewton",
+      "fig:mono-cotangent-hessian",
+      "subsec:ipolyResponse",
+      "eq:ipolyDtN",
+      "eq:ipolyBoundaryResponse",
+      "eq:ipolySchur",
+      "eq:ipolyGaussian",
+      "eq:ipolyForestDeterminant",
+      "subsec:ipolyBarrierComplexity",
+      "eq:ipolyBarrier",
+      "prop:ipolyCompatibility",
+      "eq:ipolyCompatibility",
+      "eq:ipolyStepBound",
+      "subsec:ipolyFlips",
+      "fig:mono-flip",
+      "subsec:ipolyThreeManifolds",
+      "eq:ipolyThreeDimensionalHessian",
+      "subsec:ipolyComputation",
+      "cross-references-outside-this-chapter",
+      "eq:cuspHessian",
+      "eq:cuspmatrixHessian",
+      "references",
+      "ref-FuterGueritaud",
+      "ref-IpolyStudy",
+      "ref-DuffinNetworks",
+      "ref-RivinEuclidean",
+      "ref-RivinOptimization",
+      "ref-BoydVandenberghe",
+      "ref-BoydVandenbergheSlides",
+      "ref-SpielmanTengSolvers",
+      "ref-RippaEnergy",
+      "ref-DisarloParlier",
+      "ref-BrockWPVolumes",
+      "ref-BrockMappingTori",
+      "claim-ledger"
+    ],
+    "local_links_checked": 192,
+    "browser_review": "not performed; static checks are not browser verification",
+    "pdf_pages": 10,
+    "pdf_pages_rendered": 10,
+    "visual_review": "pending human/agent inspection of rendered pages",
+    "chapter_math_nodes_before_bibliography": 208,
+    "full_monograph_overfull_hbox_count": 0,
+    "chapter_overfull_hbox_count": 0
+  },
+  "work_directory": "/private/tmp/polyhedra-section9-build-v3/chapter-build",
+  "rendered_pages": "/private/tmp/polyhedra-section9-build-v3/chapter-build/rendered-pages",
+  "output_sha256": {
+    "chapter.html": "f18d3dfc055b7250c6edbca0e493a33c7049b8da09039548f6a9ce9402e9cf0f",
+    "downloads/section9.pdf": "c486049b6a92dfb4d780972d6e2e33625bd4574196e73eb5c3697cdaa237d4d3",
+    "downloads/monograph-source.zip": "21aa370d9b9d4766e1a5a8c5aff80cc143f7fa77689ddb54e04c3c8c0c5593ac",
+    "downloads/section9-claims.json": "f801da33c5224e04595211c23e7f54b1edc2087bff5ebd6d0bf739ade7f33ab8",
+    "assets/section9-figure-1.png": "ff955ac87063f13e1d698a1085ac18f30f6b643f818db8a57eb8ac6b0528336f",
+    "assets/section9-figure-2.png": "cd534d247190d9b257611f6e775a5d6d89d2cdfcaa06f8275baede2fe718197d",
+    "assets/section9.css": "aae27cd011f0d53aeb109ccaafbbe26e5a4c26eb2d9cb28c3aea78ec951f8b01"
+  }
+}

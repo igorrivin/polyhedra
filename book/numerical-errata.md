@@ -5,12 +5,15 @@ Date: 31 October 2026. Baseline integrated source:
 [numerical-correctness checkpoint](../docs/execution/numerical-correctness-2026-10-31/README.md)
 and the [computational-status ledger](computational-status.md).
 
-These are corrections to maintained software and its result contracts. The
-canonical monograph TeX, supplied PDF, historical `ipoly` sources and existing
-scientific data corpus retain their original bytes. The bounded computations
-below neither audit the entire monograph nor establish a change to one of its
-theorems. A printed historical value requires its own identified replay before
-being replaced or reclassified.
+These are corrections to maintained software and its result contracts. At
+the numerical-correctness checkpoint, the canonical monograph TeX was still
+unchanged. The subsequent [Section 9 revision](chapters/09-volume-hessians.tex)
+adds mathematical proofs and scope corrections recorded in its
+[claim ledger](claims/section9.json) and [companion reconciliation](companion-reconciliation.md).
+The supplied PDF, historical `ipoly` sources and existing scientific data
+corpus retain their original bytes. The bounded computations below do not
+audit the entire monograph. A printed historical value requires its own
+identified replay before being replaced or reclassified.
 
 ## Precision and volume evaluation
 
@@ -152,15 +155,17 @@ No corpus-wide replay, complete proof audit or release is implied. The
 fresh-endpoint contract applies to `optimization.optimize_ideal_polyhedron`;
 the separate historical `refine_geometry_for_volume` path still uses a cached
 solver objective and has not received this boundary audit. H⁴/H⁵ and Torch
-kernels were outside this increment. The Section 9 artifact has been
-regenerated from clean corrected source `9188e0624cdf6d9949af1f620336eff67c8b59d7`,
+kernels were outside the numerical-correctness increment. At that checkpoint,
+the Section 9 artifact was regenerated from clean corrected source `9188e0624cdf6d9949af1f620336eff67c8b59d7`,
 committed as `29440cfbfcdaa23711cfdac4e09bf5f939404273`, and successfully
 replayed from its final detached archive; see the
 [closeout](../docs/execution/numerical-correctness-2026-10-31/closeout.md).
 Older outputs retain their recorded provenance in history and the first
-checkpoint. The integrated
-available-suite attempt reports 393 passes, with the same four failures and
+checkpoint; a regenerated chapter/result must carry its own source hashes.
+That checkpoint's integrated available-suite attempt reported 393 passes, with the same four failures and
 nine collection errors from unavailable optional dependencies as before.
-Optional dependency and platform gates remain outstanding. Airy-table and torus-
-diagnostic evidence remains unavailable, and complete monograph conversion,
-browser validation, licensing and Sites publication remain future work.
+That historical suite result is not a current optional-dependency gate.
+Subsequent build and validation work is recorded in the
+[Section 9 execution evidence](../docs/execution/section9-chapter-2026-10-31/README.md).
+Airy-table and torus-diagnostic evidence remains unavailable; full-monograph
+conversion, licensing and Sites publication remain future work.

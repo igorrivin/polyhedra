@@ -1,0 +1,35 @@
+{
+  "reviewer": "/root/section9_proof_review",
+  "date": "2026-10-31",
+  "status": "approved_with_explicit_scope_limits",
+  "canonical_file_sha256": {
+    "book/chapters/09-volume-hessians.tex": "abe89dd665b10fe808a0c4273f5f8ecdbe9fc9a5c0cd7b92bc3618a1759c2a5e",
+    "book/claims/section9.json": "f801da33c5224e04595211c23e7f54b1edc2087bff5ebd6d0bf739ade7f33ab8",
+    "book/companion-reconciliation.md": "e5d67047f552430aba9cfd59a2f99dbd69c8664b77c0384be2df35bd520d51a1",
+    "book/README.md": "bb920296f4800e8cfd1ab3184ded3c049bd94887d493d6cad68f3eb36c4abc1a",
+    "book/computational-status.md": "34d483e260fdba2fb7c5b7a4c6e4b86553933d460b523f3fc5ef4d9740b2c2ae",
+    "book/numerical-errata.md": "63628db354fafc78e495f0e295bdaa5034cde4472680e171321b9d10fd55e072",
+    "book/polyhedral_volumes_and_geodesic_identities.tex": "3b3b93d26764392353030a30ef4569360d051e0d78d6e5eb7fd6bef1f96de546"
+  },
+  "review_evidence_sha256": {
+    "proof-review.md": "043780260852e24fcda41d3f7e36ee9385d393eb8a62456782c2636f6ff00aef",
+    "proof-review-checks.py": "470729222d9ce76c3c70ed9b638a9efddae509dfa614fb0010483105e02376cf",
+    "proof-review-checks.json": "237b46cdfd36882baa3a2892a1dea6f756eb4e1f255aca4473f49b04a0724ecb",
+    "proof-review-revision-1-chapter.tex": "abe89dd665b10fe808a0c4273f5f8ecdbe9fc9a5c0cd7b92bc3618a1759c2a5e",
+    "proof-review-revision-1-ledger.json": "dc587dd1e862b52b81e555ccd221d30c0de55fe523b2f137bbc0cb7b0e9289af",
+    "proof-review-revision-1-manifest.json": "1df57469616674b6193dea215234619a0a4e2c29eab2ab2d73752d5e52030220",
+    "proof-review-documents-manifest.json": "12142e0c30628fc4f937907e12547db3c0b011225c4b78b7a72f35c728d48168",
+    "proof-review-final-ledger.json": "f801da33c5224e04595211c23e7f54b1edc2087bff5ebd6d0bf739ade7f33ab8",
+    "proof-review-final-ledger-manifest.json": "074f928821bc90baa67dc9deff38ef9d22e251c956dc015d29917f154a8a5e60"
+  },
+  "final_author_evidence_sha256": {
+    "chapter-revision.md": "3d0399808652ce59c29325db387cc65284efc454a03c25b8f8c655db5f696b7f",
+    "chapter-revision-checks.json": "a920e3b2b9467d8eae652d9307eb1d6705e70f4ce532a93a350f191a6e9dd7f9",
+    "chapter-revision-manifest.json": "e3c0b9147afe1e405230edeceec1c3179736df550511474678337a127bd6b838"
+  },
+  "scope": "Independent mathematical and evidence-status review of Section 9 and its reconciliation/current docs. No full-monograph proof audit, formal or interval certification, fresh numerical-suite run, build/render verification or publication approval.",
+  "final_ledger_metadata_only": true,
+  "claim_entries_unchanged": 26,
+  "original_chapter_labels_retained": 20,
+  "unresolved_actionable_mathematical_findings": []
+}

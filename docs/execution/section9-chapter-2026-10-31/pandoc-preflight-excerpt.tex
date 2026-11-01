@@ -1,0 +1,574 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[margin=27mm,headheight=14pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{booktabs,array,longtable}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\definecolor{linkblue}{RGB}{28,65,105}
+\usepackage[colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue,
+ pdfauthor={},pdftitle={Polyhedra, Moduli, and Quantum Geometry}]{hyperref}
+% Merge this preamble into the main document before inlining the figures.
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,positioning}
+\definecolor{mpblue}{RGB}{35,76,110}
+\definecolor{mpteal}{RGB}{33,117,119}
+\definecolor{mpochre}{RGB}{175,108,35}
+\definecolor{mpred}{RGB}{161,65,54}
+\definecolor{mpgray}{RGB}{104,112,120}
+
+\usepackage[font=small,labelfont=bf]{caption}
+\setlength{\textfloatsep}{20pt plus 3pt minus 3pt}
+\setlength{\intextsep}{18pt plus 3pt minus 3pt}
+\renewcommand{\topfraction}{.88}
+\renewcommand{\bottomfraction}{.8}
+\renewcommand{\textfraction}{.1}
+\renewcommand{\floatpagefraction}{.75}
+\newcommand{\monographpart}[2]{%
+  \clearpage\part{#1}%
+  \noindent\textit{#2}\par\medskip}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Polyhedra, Moduli, and Quantum Geometry}
+\fancyhead[R]{\small Research monograph}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{1.25em}
+\setlength{\emergencystretch}{2em}
+\makeatletter
+\renewcommand*\l@subsection{\@dottedtocline{2}{1.5em}{3.1em}}
+\makeatother
+\setlist{itemsep=3pt,topsep=5pt}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\Pf}{Pf}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Vol}{Vol}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\WP}{\mathrm{WP}}
+\newcommand{\M}{\mathcal M}
+\newcommand{\T}{\mathcal T}
+\newcommand{\MM}{\overline{\mathcal M}}
+\newcommand{\HH}{\mathbb H}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\dV}{\dd V_{\WP}}
+\newcommand{\length}{\ell}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\angles}{\boldsymbol\theta}
+\newcommand{\lengths}{\mathbf L}
+\newcommand{\eqtag}[1]{\textnormal{(#1)}}
+
+\title{\textbf{Polyhedra, Moduli,\\and Quantum Geometry}\\[8pt]
+\large Variational principles, spectral methods, and computation}
+\author{}
+\date{30 October 2026}
+
+\begin{document}
+\setcounter{section}{8}
+\section{Volume Hessians, finite elements, and computational complexity}
+\label{sec:ipolybridge}
+
+The variational description of a polyhedron has a second interpretation:
+its infinitesimal deformation equation can be a discrete Dirichlet
+problem. This is an exact connection to finite elements and electrical
+networks, and it supplies the computational counterpart of the volume
+and symplectic constructions developed above. The companion study
+\emph{Duffin's resistor networks, the volume of ideal polyhedra, and
+nearly-linear-time Laplacian solvers}~\cite{IpolyStudy} develops this
+connection and its numerical examples. We incorporate the essential
+identities here and connect them to boundary response, Gaussian
+integration, flips, and the Casson--Rivin program.
+
+\subsection{The cotangent form and the correct deformation coordinates}
+
+Let $\mathcal T$ triangulate a planar disk, with interior vertices $I$
+and boundary vertices $B$. For a piecewise affine function $v$ on a
+geometric realization, integration over each triangle gives
+\begin{equation}
+ \int_{|\mathcal T|}|\nabla v|^2\,dA
+ =\sum_{e=ij}w_e(v_i-v_j)^2=v^TLv,
+ \qquad
+ w_e=\frac12(\cot\alpha_e+\cot\beta_e).
+ \label{eq:ipolyFEM}
+\end{equation}
+Here $\alpha_e,\beta_e$ are the angles opposite $e$, and the second
+term is omitted on a boundary edge. To check the normalization, the
+off-diagonal stiffness entry on a triangle is
+$\int_T\nabla\phi_i\cdot\nabla\phi_j\,dA=-\tfrac12\cot\alpha_k$
+for its barycentric functions. Row sums vanish, giving the displayed
+edge form. This is the cotangent network of the finite element and
+electrical interpretations~\cite{DuffinNetworks}.
+
+The energy is nonnegative on every geometric mesh, even if some edge
+weights are negative. The additional condition for nonnegative
+\emph{interior} conductances is local Delaunayness:
+\begin{equation}
+ w_e=\frac{\sin(\alpha_e+\beta_e)}
+              {2\sin\alpha_e\sin\beta_e}\ge0
+ \quad\Longleftrightarrow\quad \alpha_e+\beta_e\le\pi.
+ \label{eq:ipolyDelaunayweight}
+\end{equation}
+When the relevant weights are nonnegative, the grounded matrix $L_{II}$
+is a positive definite graph Laplacian, and solving a Dirichlet problem
+is solving Kirchhoff's equations. Boundary-to-boundary edges do not enter
+this Dirichlet system; positivity of their weights is an additional
+condition if the full matrix is used in a different boundary problem.
+
+Now prescribe the sums $\Delta_e=\alpha_e+\beta_e\le\pi$ opposite
+interior edges, and prescribe the single opposite angle on each
+boundary edge. An angle structure assigns positive corner angles,
+with sum $\pi$ in every triangle and these prescribed edge sums.
+Assume this positive angle domain is nonempty. For planar realization
+the data also satisfy
+$\sum_{e\ni i}(\pi-\Delta_e)=2\pi$ at each interior vertex; the
+left-hand side is its total angle in every such angle structure.
+If the intended planar boundary is strictly convex, impose also
+\[
+ 0<\kappa_b:=\sum_{t\ni b}\alpha_{t,b}
+   =\sum_{e\ni b}(\pi-\Delta_e)-\pi<\pi
+ \qquad(b\in B).
+\]
+Here $\Delta_e$ denotes the single prescribed opposite angle on a
+boundary edge. These boundary inequalities are needed for the convex
+polyhedral interpretation; the Hessian identities below already hold
+on the abstract positive angle domain. Positive feasibility alone
+does not impose convexity of the developed boundary.
+Orient the triangles consistently. If a corner $c$ is opposite the
+directed edge $i\to j$, set
+\begin{equation}
+ \alpha_c(u)=\alpha_c^0+u_i-u_j,\qquad u|_B=0.
+ \label{eq:ipolyAngleCoordinates}
+\end{equation}
+These are leading--trailing coordinates, not logarithmic scale factors.
+Triangle sums telescope; increments opposite a shared edge cancel.
+For a triangulated disk they parametrize the entire affine space of
+solutions: the map is injective, and the connected triangle--edge
+incidence graph together with Euler's formula gives dimension $|I|$.
+
+Let $\Lambda'(a)=-\log(2\sin a)$ be the Lobachevsky derivative and put
+$\mathcal V(\alpha)=\sum_c\Lambda(\alpha_c)$. At a geometric
+configuration this is the sum of the volumes of the ideal tetrahedra
+obtained by adjoining the vertex at infinity to the planar triangles.
+Rivin's variational principle uses this concave functional to impose
+geometric closure~\cite{RivinEuclidean,FuterGueritaud}.
+
+\begin{proposition}[The exact finite-element Hessian]
+\label{prop:ipolyHessian}
+On the positive angle domain in the coordinates
+\eqref{eq:ipolyAngleCoordinates},
+\begin{equation}
+ \nabla_u\mathcal V=(\log H_i)_{i\in I},\qquad
+ -D_u^2\mathcal V=2L_{II}(\alpha),
+ \label{eq:ipolyHessian}
+\end{equation}
+where $H_i$ is the dilation accumulated by developing the incident
+triangles once around $i$. In particular, at a geometric critical point
+the negative volume Hessian is twice the finite element stiffness matrix.
+\end{proposition}
+
+\begin{proof}
+In a positively oriented triangle $ijk$, differentiation with respect
+to $u_i$ gives
+$\log(\sin\alpha_{t,j}/\sin\alpha_{t,k})$.
+Summing over the star of $i$ gives the logarithm of the product of
+side ratios, which is the dilation holonomy by the sine law.
+Since $\Lambda''(a)=-\cot a$, the two corners opposite an interior
+edge contribute
+$-(\cot\alpha_e+\cot\beta_e)(du_i-du_j)^2$ to $D^2\mathcal V$.
+This is $-2$ times the corresponding summand of
+\eqref{eq:ipolyFEM}. Boundary increments vanish.
+\end{proof}
+
+For a true interior edge with $0<\Delta_e<\pi$, the weights satisfy
+\begin{equation}
+ w_e=\frac{\sin\Delta_e}{2\sin\alpha_e\sin\beta_e}
+       \ge\cot(\Delta_e/2)>0.
+ \label{eq:ipolyWeightLower}
+\end{equation}
+Thus positivity holds throughout the angle domain, before the angles
+close to form a geometric mesh. At $\Delta_e=\pi$ the weight is zero;
+such a diagonal subdivides a flat face. The finite element interpretation
+as an actual planar mesh applies at realization, whereas the Laplacian
+identity and positive-network interpretation already apply to the
+intermediate angle structures. Newton's equation is precisely
+\begin{equation}
+ 2L_{II}(\alpha(u))\,\delta u=\log H(u).
+ \label{eq:ipolyNewton}
+\end{equation}
+
+
+% BEGIN INLINE FIGURE: 03_cotangent_hessian.tex
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\small,line cap=round,>=Latex]
+  \begin{scope}[shift={(-5.3,0)}]
+    \coordinate (fi) at (0,0); \coordinate (fj) at (4,0);
+    \coordinate (fk) at (1.5,2.6); \coordinate (fl) at (2.4,-2.4);
+    \coordinate (fc1) at (2,.5788461538); \coordinate (fc2) at (2,-.4);
+    \draw[mpblue!15] (fc1) circle (2.082081);\draw[mpblue!15] (fc2) circle (2.039608);
+    \fill[mpblue!5] (fi)--(fj)--(fk)--cycle;
+    \fill[mpteal!5] (fi)--(fl)--(fj)--cycle;
+    \draw[mpgray!85] (fi)--(fk)--(fj) (fi)--(fl)--(fj);
+    \draw[mpblue,line width=1.3pt] (fi)--(fj);
+    \draw[mpochre,line width=1.7pt] (fc1)--(fc2);
+    \draw[mpgray!60] (2.12,0)--(2.12,.12)--(2,.12);
+    \pic[draw=mpgray,"$\alpha_e$",angle radius=7mm,angle eccentricity=1.5]
+      {angle=fi--fk--fj};
+    \pic[draw=mpgray,"$\beta_e$",angle radius=7mm,angle eccentricity=1.5]
+      {angle=fj--fl--fi};
+    \foreach \p in {fi,fj,fk,fl}\fill[mpblue] (\p) circle (1.7pt);
+    \fill[mpochre] (fc1) circle (1.7pt) node[right=3pt] {$c_+$};
+    \fill[mpochre] (fc2) circle (1.7pt) node[right=3pt] {$c_-$};
+    \node[left] at (fi) {$i$};\node[right] at (fj) {$j$};
+    \node[above] at (fk) {$k$};\node[below] at (fl) {$l$};
+    \node[below,text=mpblue] at (1,0) {$e$};
+    \node[left,text=mpochre] at (2,.32) {$e^*$};
+  \end{scope}
+  \node[align=left,text width=6.3cm,anchor=west] at (.35,.55) {%
+    \textbf{One local weight, several roles}\\[7pt]
+    $\displaystyle w_e=\frac12(\cot\alpha_e+\cot\beta_e)$\\[6pt]
+    $\displaystyle\hphantom{w_e}=\frac{|e^*|_\pm}{|e|}$\\[9pt]
+    $\displaystyle\int |\nabla u|^2=\sum_{e=ij}w_e(u_i-u_j)^2$\\[9pt]
+    $\displaystyle -D_u^2\mathcal V=2L_{II}$\\[8pt]
+    \textcolor{mpgray}{The last identity uses the specified angle
+    coordinates and fixed boundary values.}};
+\end{tikzpicture}
+\caption[The cotangent Hessian and its finite-element interpretation]{The cotangent weight for two adjacent Euclidean triangles.
+The dual segment joins their circumcenters and has signed length
+$|e^*|_\pm$; in the locally Delaunay configuration shown, its sign is
+positive. The finite-element stiffness matrix is the same cotangent
+matrix that appears as minus one half of the volume Hessian in the
+coordinates $\alpha_c(u)=\alpha_c^0+u_i-u_j$, with fixed edge-angle
+sums and $u=0$ on the boundary. This identity is specific to that
+coordinate and constraint system.}
+\label{fig:mono-cotangent-hessian}
+\end{figure}
+% END INLINE FIGURE
+
+\subsection{Boundary response, Schur complements, and a Gaussian factor}
+
+For the finite element network, eliminating the interior voltage gives
+\begin{equation}
+ v_I=-L_{II}^{-1}L_{IB}v_B,\qquad
+ \mathcal N=L_{BB}-L_{BI}L_{II}^{-1}L_{IB}.
+ \label{eq:ipolyDtN}
+\end{equation}
+The matrix $\mathcal N$ maps boundary voltages to boundary currents;
+it is the discrete Dirichlet-to-Neumann operator. It has the constant
+mode in its kernel. Grounding one boundary vertex, or working modulo
+constants, removes that mode.
+
+The same elimination appears in volume response. For a nondegenerate
+concave maximum, write
+\[
+ \mathscr V(x)=V_0-\tfrac12x^TKx+O(|x|^3),\qquad K>0,
+\]
+and let $Px$ be the selected linear boundary data. Perturbation by a
+source $j$ gives
+\begin{align}
+ \max_x\{\mathscr V(x)+j^TPx\}
+    &=V_0+\tfrac12j^T\chi j+O(|j|^3),
+ &\chi&=PK^{-1}P^T,\notag\\
+ \max_{Px=b}\mathscr V(x)
+    &=V_0-\tfrac12b^T\chi^{-1}b+O(|b|^3),
+ \label{eq:ipolyBoundaryResponse}
+\end{align}
+where the second formula assumes $P$ has full row rank. The first is
+the response to a source; the second fixes its conjugate boundary
+variable. They are related by a Legendre transform. In the planar
+problem $K=2L_{II}$; in the Dehn filling problem, the same algebra gives
+\eqref{eq:cuspHessian} and \eqref{eq:cuspmatrixHessian}. This identifies
+an exact common operation without identifying their different spaces
+of boundary data.
+
+More generally, split $x=(y,z)$ and eliminate $y$. The effective
+quadratic form is
+\begin{equation}
+ K_{\rm eff}=K_{zz}-K_{zy}K_{yy}^{-1}K_{yz},\qquad
+ \det K=\det K_{yy}\det K_{\rm eff}.
+ \label{eq:ipolySchur}
+\end{equation}
+Completing the square gives the exact real Gaussian identity
+\begin{equation}
+ \int_{\mathbb R^{\dim y}}
+ e^{-\frac1{2\hbar}(y,z)^TK(y,z)}\,dy
+ =\frac{(2\pi\hbar)^{\dim y/2}}{\sqrt{\det K_{yy}}}
+       e^{-z^TK_{\rm eff}z/(2\hbar)}.
+ \label{eq:ipolyGaussian}
+\end{equation}
+Thus elimination in the Dirichlet problem, reduction of the classical
+boundary action, and its leading Gaussian integration use the same
+Schur complement. An oscillatory or complex phase requires the specified
+contour and determinant branch, as in the later quantum calculations.
+The finite-dimensional identity does not supply those analytic data
+or identify an entire quantum invariant by itself.
+
+There is also a combinatorial formula for the planar determinant. Let
+$\mathfrak F_B$ be the spanning forests of the weighted graph in which
+each component contains exactly one boundary vertex. Then
+\begin{equation}
+ \boxed{\det(-D_u^2\mathcal V)
+      =2^{|I|}\sum_{F\in\mathfrak F_B}\prod_{e\in F}w_e.}
+ \label{eq:ipolyForestDeterminant}
+\end{equation}
+To prove it, write $L_{II}=C_I\operatorname{diag}(w_e)C_I^T$, where
+$C_I$ is the incidence matrix with boundary rows removed. Cauchy--Binet
+expands its determinant over $|I|$-edge subsets. An incidence minor is
+$\pm1$ exactly for a forest rooted at $B$, and zero otherwise. This
+rooted-forest formula expresses the local Gaussian determinant in
+geometric conductances. It is a deduction from the Hessian identity
+and finite-dimensional linear algebra.
+
+\subsection{Why the nonlinear iteration needs a barrier}
+
+A fast linear solve does not by itself bound the number of Newton
+steps. In particular, $-\mathcal V$ is not uniformly self-concordant:
+near a vanishing angle, its entropy-like behavior makes the normalized
+third derivative unbounded. The companion study supplies a more useful
+estimate involving the barrier
+\begin{equation}
+ F(\alpha)=-\sum_c\log\sin\alpha_c.
+ \label{eq:ipolyBarrier}
+\end{equation}
+The coefficient $\csc^2\alpha_c$ occurs in both $D^2F$ and
+$D^3\mathcal V$, but these are tensors of different order. The precise
+relation needed for optimization is the following inequality.
+
+\begin{proposition}[A barrier compatible with ideal volume]
+\label{prop:ipolyCompatibility}
+For every positive angle structure and tangent vector $h$ whose
+coordinates sum to zero in each triangle,
+\begin{equation}
+ |D^3\mathcal V[h,h,h]|
+ \le\sqrt3\,(-D^2\mathcal V[h,h])\sqrt{D^2F[h,h]}.
+ \label{eq:ipolyCompatibility}
+\end{equation}
+Consequently $F-t\mathcal V$ is self-concordant with the standard
+constant for every $t\ge0$. The barrier $F$ has parameter at most
+the number $m$ of corner angles.
+\end{proposition}
+
+\begin{proof}
+For one triangle set $s_i=\sin\alpha_i$ and choose the cyclic side
+directions $\psi=(0,\alpha_1+\alpha_2,\pi+\alpha_2)$.
+They satisfy $\sum_i s_i e^{i\psi_i}=0$. Every vector with
+$h_1+h_2+h_3=0$ can therefore be written
+$h_i=\lambda s_i\cos\varphi_i$, where $\varphi_i=\psi_i-\tau$.
+The cotangent energy identity and a trigonometric expansion give
+\[
+ A:=-D^2\mathcal V[h,h]=\lambda^2s_1s_2s_3,\quad
+ B:=D^2F[h,h]=\lambda^2\sum_i\cos^2\varphi_i,
+\]
+\[
+ D^3\mathcal V[h,h,h]
+   =\lambda^3s_1s_2s_3\cos(\varphi_1+\varphi_2+\varphi_3).
+\]
+For the last identity, use $\cos^3 x=(3\cos x+\cos3x)/4$ and the
+vanishing side-vector sum. Expanding the cosine of the sum shows
+$|\cos(\varphi_1+\varphi_2+\varphi_3)|
+\le\sum_i|\cos\varphi_i|\le\sqrt{3\sum_i\cos^2\varphi_i}$.
+This proves the inequality on one triangle, and summation proves it
+globally since $\sum A_T\sqrt{B_T}\le(\sum A_T)\sqrt{\sum B_T}$.
+Each $-\log\sin\alpha_c$ is self-concordant, and, with
+$A=-tD^2\mathcal V[h,h]$ and $B=D^2F[h,h]$,
+\[
+ |D^3(F-t\mathcal V)[h,h,h]|
+ \le2B^{3/2}+\sqrt3 A\sqrt B\le2(A+B)^{3/2}.
+\]
+Finally Cauchy--Schwarz gives $|DF[h]|\le\sqrt m\sqrt{D^2F[h,h]}$,
+the required barrier-parameter bound. Restriction to additional affine
+angle constraints preserves these inequalities.
+\end{proof}
+
+For the central point $\alpha(t)$ minimizing $F-t\mathcal V$, the
+volume gap is at most $m/t$. Indeed, concavity of sine gives
+$DF(\alpha)[\beta-\alpha]\le m$ for every feasible $\beta$;
+combine this with stationarity and concavity of $\mathcal V$.
+Increasing $t$ by a factor $1+c/\sqrt m$, with fixed sufficiently
+small $c$, gives a bounded Newton decrement: the Hessian of
+$F-t\mathcal V$ dominates $D^2F$ and the barrier gradient has local
+norm at most $\sqrt m$. Standard self-concordant Newton analysis
+therefore gives, starting from a centered point at $t_0>0$,
+\begin{equation}
+ O\!\left(\sqrt m\log\max\left\{e,\frac{m}{t_0\varepsilon}\right\}\right)
+ \quad\hbox{Newton steps to volume gap at most }\varepsilon.
+ \label{eq:ipolyStepBound}
+\end{equation}
+See~\cite[Chapter~11]{BoydVandenberghe} for the underlying path-following
+analysis. This is a bound for the barrier method, not for unrestricted
+plain Newton iteration.
+
+In the disk coordinates the Hessian of $F-t\mathcal V$ is again a
+grounded planar Laplacian, now with interior conductances
+\[
+ 2t w_e+\csc^2\alpha_e+\csc^2\beta_e.
+\]
+Nearly-linear Laplacian solvers approximate a linear solve in its energy
+norm~\cite{SpielmanTengSolvers}. With controlled inexact-Newton
+tolerances, their combination with \eqref{eq:ipolyStepBound} gives the
+usual $\widetilde O(n^{3/2})$ arithmetic-work scale after centering,
+up to accuracy factors, when $m=O(n)$. It does not give a nearly-linear
+bound for the whole nonlinear realization problem. Finding a feasible
+point, centering it, controlling arithmetic precision, and certifying
+the final geometric error are separate costs. The numerical timings in
+the companion are experiments on selected inputs, not bounds for these
+additional tasks.
+
+\subsection{Flips connect the local matrix to mapping-class geometry}
+
+A diagonal exchange has two different roles. Among triangulations of
+the convex hull of a fixed planar vertex set, with fixed nodal values,
+Rippa's theorem says that Delaunay
+triangulation minimizes the piecewise-linear Dirichlet energy; in matrix
+terms $L(\mathcal T_D)\preccurlyeq L(\mathcal T)$~\cite{RippaEnergy}.
+This is an ordering of quadratic forms for the same geometric data.
+It does not assert monotonicity of hyperbolic volume along an arbitrary
+sequence of topological flips.
+
+
+% BEGIN INLINE FIGURE: 08_flip.tex
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\small,>=Latex,line cap=round,line join=round]
+  \begin{scope}[shift={(-5.3,0)}]
+    \coordinate (fa) at (0,0);\coordinate (fb) at (3.2,0);
+    \coordinate (fc) at (2.7,2);\coordinate (fd) at (.3,1.5);
+    \draw[mpblue!15] (1.6,.6625) circle (1.731735);
+    \fill[mpblue!5] (fa)--(fb)--(fc)--cycle;
+    \fill[mpteal!5] (fa)--(fc)--(fd)--cycle;
+    \draw[mpgray] (fa)--(fb)--(fc)--(fd)--cycle;
+    \draw[mpochre,line width=1.35pt] (fa)--(fc);
+    \foreach \p in {fa,fb,fc,fd}\fill[mpblue] (\p) circle (1.8pt);
+    \node[below left] at (fa) {$A$};\node[below right] at (fb) {$B$};
+    \node[above right] at (fc) {$C$};\node[above left] at (fd) {$D$};
+    \node[font=\bfseries\small] at (1.6,2.85) {The diagonal $AC$};
+    \node[text=mpochre,align=center,font=\scriptsize] at (1.6,-1.35)
+      {Not locally Delaunay\\$D$ lies inside the circle through $A,B,C$};
+  \end{scope}
+  \draw[->,mpgray,line width=.85pt] (-1.1,.85)--(.9,.85)
+    node[midway,above] {flip};
+  \begin{scope}[shift={(1.8,0)}]
+    \coordinate (ga) at (0,0);\coordinate (gb) at (3.2,0);
+    \coordinate (gc) at (2.7,2);\coordinate (gd) at (.3,1.5);
+    \fill[mpblue!5] (ga)--(gb)--(gd)--cycle;
+    \fill[mpteal!5] (gb)--(gc)--(gd)--cycle;
+    \draw[mpgray] (ga)--(gb)--(gc)--(gd)--cycle;
+    \draw[mpteal,line width=1.35pt] (gb)--(gd);
+    \foreach \p in {ga,gb,gc,gd}\fill[mpblue] (\p) circle (1.8pt);
+    \node[below left] at (ga) {$A$};\node[below right] at (gb) {$B$};
+    \node[above right] at (gc) {$C$};\node[above left] at (gd) {$D$};
+    \node[font=\bfseries\small] at (1.6,2.85) {The diagonal $BD$};
+    \node[text=mpteal,align=center,font=\scriptsize] at (1.6,-1.35)
+      {Locally Delaunay\\the planar vertices have not moved};
+  \end{scope}
+  \node[align=center] at (0,-2.35)
+    {For the same nodal values $u$: \quad
+     $D_{\mathcal T_{BD}}(u)\le D_{\mathcal T_{AC}}(u)$.};
+\end{tikzpicture}
+\caption[A diagonal exchange and the Delaunay energy comparison]{A diagonal flip on a fixed Euclidean quadrilateral, shown
+with its actual vertex positions. Rippa's energy comparison selects the
+Delaunay diagonal for fixed nodal values. The same combinatorial move
+also occurs in flip graphs used in surface topology; the displayed
+energy comparison concerns the fixed Euclidean realization.}
+\label{fig:mono-flip}
+\end{figure}
+% END INLINE FIGURE
+
+For a connected orientable finite-type marked surface admitting an ideal
+triangulation, with at least one marked point on every boundary curve,
+the graph of ideal triangulations and diagonal exchanges is instead
+a coarse geometric model of its mapping class group. With isotopies
+fixing the marked points, the action is proper and cocompact, and an
+orbit map is a quasi-isometry~\cite[Section~2.1, Lemma~2.3]{DisarloParlier}.
+The pants graph is a different
+model, quasi-isometric to Teichm\"uller space with its WP metric, and
+Brock relates WP distance to convex-core volume~\cite{BrockWPVolumes}.
+His mapping-torus theorem relates WP translation distance and hyperbolic
+volume for closed pseudo-Anosov surface bundles~\cite{BrockMappingTori}.
+These comparisons have constants depending on the surface topology;
+the flip graph and the pants graph should not be identified.
+
+There is a direct volume estimate when a flip sequence gives a layered
+ideal triangulation of a hyperbolic mapping torus with $N$ tetrahedra:
+straightening gives $\operatorname{Vol}(M)\le Nv_3$, where $v_3$ is the
+volume of the regular ideal tetrahedron. This does not require the
+given triangulation to have positive geometric shapes; signed
+straightened volumes still have absolute value at most $v_3$.
+It connects a combinatorial decomposition length to three-dimensional
+volume. Comparing it further to WP geometry requires a theorem for the
+same surface and boundary conventions, rather than transferring the
+closed-surface theorem silently to a punctured surface.
+
+\subsection{The three-manifold extension and the remaining questions}
+
+The Casson--Rivin program uses the same ideal-tetrahedron volume and the
+same angle-sum constraints~\cite{FuterGueritaud}. Its local Hessian is
+still a cotangent quadratic form. For leading--trailing edge variables
+$y_e$, put $p_\alpha=y_e+y_{e'}$ for the pair of opposite tetrahedron
+edges carrying $\alpha$, and cyclically for $\beta,\gamma$. Then
+\begin{equation}
+ -D^2\mathcal V
+ =\sum_t\left[
+ \cot\alpha_t(dp_\gamma-dp_\beta)^2
+ +\cot\beta_t(dp_\alpha-dp_\gamma)^2
+ +\cot\gamma_t(dp_\beta-dp_\alpha)^2\right].
+ \label{eq:ipolyThreeDimensionalHessian}
+\end{equation}
+This displays the Euclidean cusp-link triangle inside the second
+variation. But a square now involves sums of opposite-edge variables,
+and the assembled matrix need not have nonpositive off-diagonal entries
+or be diagonally dominant. Additional peripheral directions and removal
+of linear dependencies must also be included in a full coordinate
+system. The planar positive-Laplacian solver conclusion therefore does
+not transfer automatically to arbitrary three-manifold triangulations.
+The trianglewise barrier estimate does transfer, because it survives
+affine restriction.
+
+An interior critical point has the geometric interpretation supplied by
+the Casson--Rivin theorem. A boundary maximizer need not realize the
+chosen triangulation by positive ideal tetrahedra. Optimization on a
+given angle polytope therefore does not solve the problem of finding
+a suitable geometric triangulation or yield a polynomial-time
+geometrization algorithm.
+
+The finite element comparison also does not identify its real symmetric
+Hessian with the alternating WP form. The exact links established here
+are the volume Hessian, its inverse response, its Schur complement,
+and its Gaussian determinant. A continuum limit relating appropriately
+renormalized polyhedral functionals to a WP potential would require
+geometric convergence, a specified normalization, and control of second
+variations. This is a natural question, not a theorem asserted here.
+Likewise, in three dimensions it remains useful to ask for an effective
+bound on the smallest angle at an interior maximum in terms of the
+number of tetrahedra and a quantitative feasible margin. Such a bound
+would connect variational existence to numerical certification and
+complexity. These questions describe how the computational strand can
+extend the monograph's variational and semiclassical program.
+
+\monographpart{Quantum geometry, degeneration, and surgery}{An introduction to the quantum constructions leads to exact period comparisons, a controlled tetrahedral degeneration, and the classical and Gaussian data of Dehn filling.}
+
+
+\end{document}

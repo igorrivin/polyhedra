@@ -1,0 +1,40 @@
+{
+  "status": "exact_rational_constant_checks_passed",
+  "scope": "Finite arithmetic illustrations; general proofs are in proof-review.md.",
+  "script_sha256": "470729222d9ce76c3c70ed9b638a9efddae509dfa614fb0010483105e02376cf",
+  "values": {
+    "new_parameter_decrement_upper_bound": {
+      "numerator": 5,
+      "denominator": 16
+    },
+    "exact_step_decrement_upper_bound": {
+      "numerator": 25,
+      "denominator": 121
+    },
+    "exact_step_margin_below_one_quarter": {
+      "numerator": 21,
+      "denominator": 484
+    },
+    "inexact_step_error_upper_bound": {
+      "numerator": 1,
+      "denominator": 320
+    },
+    "inexact_step_norm_upper_bound": {
+      "numerator": 101,
+      "denominator": 320
+    },
+    "inexact_step_decrement_upper_bound": {
+      "numerator": 10420,
+      "denominator": 47961
+    },
+    "inexact_step_margin_below_one_quarter": {
+      "numerator": 6281,
+      "denominator": 191844
+    },
+    "finite_center_gap_factor_at_m_one": {
+      "numerator": 17,
+      "denominator": 12
+    }
+  },
+  "general_m_remainder": "(sqrt(m)-1)*(5*sqrt(m)+1)/12 >= 0 for m>=1"
+}
