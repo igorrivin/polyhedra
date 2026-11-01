@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "chapter_source": "book/chapters/15-quantum-airy.tex",
+  "chapter_label": "sec:quantumAiry",
+  "review_date": "2026-11-01",
+  "baseline_commit": "df952174e55f08a52596d912d9713a9d1e116313",
+  "revision_scope": "Historical numerical-evidence wording corrected; finite algebra and the printed Airy approximation column checked. Mathematical proposition and analytic proof retained without substantive changes. This is not a complete chapter proof audit.",
+  "path_convention": "All local paths are relative to the repository root.",
+  "status_definitions": {
+    "inherited_analytic_claim_not_fully_reviewed": "The statement and argument are retained from the supplied manuscript; this increment does not approve their complete analytic proof.",
+    "finite_exact_algebra_checked": "Exact arithmetic verifies the named finite identity or coefficient at the specified fold, not a uniform asymptotic theorem.",
+    "numerical_approximation_column_checked": "Two working precisions and an independent ODE-series formula agree for the six printed Airy approximation values; no exact-integrand evaluation or interval certificate.",
+    "historical_unreplayed_result": "A reported value is retained with its provenance gap explicit; it is not newly computed output."
+  },
+  "claims": [
+    {
+      "id": "s15.normalization",
+      "labels": ["eq:realregularsymbol", "eq:externalpoleclearing", "eq:clearedregularsymbol"],
+      "status": "inherited_analytic_claim_not_fully_reviewed",
+      "hypotheses": ["b>0 sufficiently small; real eta near acos(1/3).", "Upward separating contour; explicitly normalized measure dw/i; continuation of the pole-cleared expression."],
+      "source_evidence": [{"source": "TeschnerVartanov", "url": "https://arxiv.org/html/1202.4698v3", "pin": "Equation 2.27 and its contour prescription; Appendix A", "access": "Primary equal-label formula and printed dw measure inspected. Complete branch, analytic-continuation and special-function proof not independently audited."}],
+      "computation": {"status": "exact_quantum_integral_not_implemented", "code_paths": [], "evidence_paths": []}
+    },
+    {
+      "id": "s15.uniform_transition",
+      "labels": ["prop:regularquantumAiry", "eq:quantumAirytheorem"],
+      "status": "inherited_analytic_claim_not_fully_reviewed",
+      "hypotheses": ["Fixed Z>0; real |zeta|<=Z; eta=eta_E-h^(2/3)*zeta/(6*sqrt(2)), h=2*pi*b^2, b down to zero.", "Specified regular-family cleared integral and upward contour; additive error in braces."],
+      "dependencies": ["s15.normalization", "s15.strip_estimate", "s15.phase", "s15.contour", "s15.first_correction"],
+      "coverage_gap": "Finite coefficient checks do not verify the entire uniform remainder, analytic continuation or global contour argument. No extension to arbitrary tetrahedral shapes, fixed nonzero volume, unbounded zeta or a global quantum invariant is established."
+    },
+    {
+      "id": "s15.strip_estimate",
+      "labels": ["lem:stripdoubleSine", "eq:uniformstripSb", "eq:stripSbexactremainder", "eq:Sbremainderintegral"],
+      "status": "inherited_analytic_claim_not_fully_reviewed",
+      "hypotheses": ["Scaled argument in the fundamental strip; bounded real shift kappa; compact subsets for complex errors and closed substrips for real-part bounds."],
+      "computation": {"status": "not_implemented", "code_paths": [], "evidence_paths": []},
+      "coverage_gap": "No exact log-double-sine evaluator or rigorous global numerical enclosure supplied by this increment."
+    },
+    {
+      "id": "s15.phase",
+      "labels": ["eq:regularstripangles", "eq:fullsmoothquantumphase", "eq:clearedphaseamplitude"],
+      "status": "inherited_analytic_claim_not_fully_reviewed",
+      "hypotheses": ["v=2*pi*b*w; five specified affine angle arguments; powers continued from positive real values."],
+      "coverage_gap": "The finite derivative check starts from the displayed phase/amplitude and fold trigonometric values. It is not verification of the phase constant G_star=0 or its Murakami--Yano branch identification."
+    },
+    {
+      "id": "s15.fold_algebra",
+      "labels": ["eq:regularAiryamplitude", "eq:regularAiryderivatives"],
+      "status": "finite_exact_algebra_checked",
+      "hypotheses": ["eta_E=acos(1/3), v_star=4*pi-5*eta_E; positive fold sines with the listed cotangents.", "Lambda'=-log(2*sin); derivatives of the five affine-angle terms of G."],
+      "computation": {"status": "exact_rational_quadratic_field_check", "code_paths": ["experiments/section15/check.py"], "evidence_paths": [], "description": "Checks G_v and G_eta through positive sine ratios, G_vv, G_vvv, G_v_eta, G_eta_eta, G_vvvv, G_vv_eta, A_star squared and (log A)_v. G_star itself is explicitly excluded."}
+    },
+    {
+      "id": "s15.contour",
+      "labels": ["eq:verticalphasegap", "eq:verticalphasepositivity", "eq:AiryGaussianbound"],
+      "status": "inherited_analytic_claim_not_fully_reviewed",
+      "hypotheses": ["Fold vertical contour and a positive real displacement c*h^(1/3); bounded transition parameter."],
+      "computation": {"status": "finite_rational_identity_only", "code_paths": ["experiments/section15/check.py"], "evidence_paths": [], "description": "Clears denominators to verify the exact polynomial numerator of Psi'(r)/sqrt(2). This does not by itself verify global tail decay, contour closing, or a uniform Gaussian majorant."}
+    },
+    {
+      "id": "s15.first_correction",
+      "labels": ["eq:Airyweightedexpansion", "eq:Airyscaledquantum", "eq:Airycorrectionpolynomial"],
+      "status": "finite_exact_algebra_checked",
+      "hypotheses": ["x=lambda*Y/3, t=lambda^2*zeta/(6*sqrt(2)); lambda=h^(1/3).", "The upward Airy contour sends Y^k to (-1)^k Ai^(k); Ai''=zeta*Ai."],
+      "computation": {"status": "exact_weighted_coefficients_and_cancellation", "code_paths": ["experiments/section15/check.py"], "evidence_paths": [], "description": "Derives the four correction polynomial coefficients from the fold derivatives, cancels zeta^2*Ai, obtains -3*sqrt(2)*Ai prime, and checks the oriented measure prefactor 3/4."},
+      "coverage_gap": "Termwise integration and its uniform error bound remain analytic proof obligations, not consequences of this finite check."
+    },
+    {
+      "id": "s15.airy_column",
+      "labels": ["sec:quantumAiry"],
+      "status": "numerical_approximation_column_checked",
+      "hypotheses": ["Exactly the six decimal-string b,zeta pairs transcribed from the supplied table."],
+      "computation": {"status": "mpmath_and_ode_series_comparison", "code_paths": ["experiments/section15/check.py"], "evidence_paths": ["experiments/section15/historical-table.json"], "description": "Checks the Airy approximation Q1 at 80 and 120 digits against a separately coded ODE series; compares only to the six-decimal approximation column. Historical Q values remain inputs."},
+      "source_evidence": [{"source": "DLMF", "url": "https://dlmf.nist.gov/9.2", "pin": "9.2.1, 9.2.3 and 9.2.4", "access": "Airy ODE and initial values inspected."}, {"source": "DLMF", "url": "https://dlmf.nist.gov/9.4", "pin": "9.4.1 and 9.4.2", "access": "Value/derivative power series inspected."}, {"source": "DLMF", "url": "https://dlmf.nist.gov/9.5", "pin": "9.5.4", "access": "Oriented complex Airy contour formula inspected; deformation to the chapter's vertical contour is a separate argument."}]
+    },
+    {
+      "id": "s15.reported_quantum_column",
+      "labels": ["sec:quantumAiry"],
+      "status": "historical_unreplayed_result",
+      "hypotheses": ["The supplied draft reports exact-integrand quadrature at six b,zeta pairs, and three scaled residuals."],
+      "computation": {"status": "not_reproduced", "code_paths": [], "evidence_paths": ["experiments/section15/historical-table.json"]},
+      "coverage_gap": "Original evaluator, raw values, precision, displacement, branch choices and tail/convergence records are unavailable. An Airy-only calculation cannot reproduce this column. Recover the original evidence or implement and review the exact double-sine integral with independent convergence studies."
+    }
+  ]
+}

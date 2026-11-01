@@ -1,0 +1,512 @@
+\section{A uniform quantum Airy transition for the regular family}
+\label{sec:quantumAiry}
+
+This section proves a statement for an explicitly specified
+meromorphic Barnes integral on the one-parameter regular slice.
+It does not assert a transition theorem for arbitrary six angle
+parameters, a three-manifold invariant, or an identification with
+the cone-metric measure. No novelty claim is made.
+
+\subsection{The exact normalization and the result}
+
+Take $b>0$, $Q=b+b^{-1}$, and
+\[
+ \alpha=\frac{\pi-\eta}{2\pi b},\quad
+ \eta_{\mathrm E}=\arccos(1/3),\quad
+ h=2\pi b^2,\quad \lambda=h^{1/3}.
+\]
+For $\eta$ close to $\eta_{\mathrm E}$ and sufficiently small $b$,
+choose an upward vertical contour $C$ satisfying
+$Q<\operatorname{Re}w<4\alpha$. This lies in the usual separating
+interval $3\alpha<\operatorname{Re}w<\min(4\alpha,2Q)$ and puts
+all three integrand arguments in their common fundamental strip.
+Define
+\begin{equation}
+ \mathcal R_b(\eta)=
+ \frac{S_b(3\alpha-Q)^2}{S_b(\alpha)^6}
+ \int_C I_b(w,\eta)\,\frac{\dd w}{i}.
+ \label{eq:realregularsymbol}
+\end{equation}
+This is the equal-label symmetric formula (2.27) of
+\cite{TeschnerVartanov}, with the measure convention specified as
+$\dd w/i$. If that formula's printed $\dd w$ is read literally,
+its value is $i\mathcal R_b$. Keeping this constant phase explicit
+avoids imposing an unstated Barnes-measure convention.
+
+The functional equation $S_b(x+b^{-1})=2\sin(\pi x/b)S_b(x)$
+gives the exact identity
+\begin{equation}
+ \frac{S_b(3\alpha-Q)^2}{S_b(\alpha)^6}
+ =
+ \frac{1}{4\sin^2((3\eta-\pi)/(2b^2))}
+ \frac{S_b(3\alpha-b)^2}{S_b(\alpha)^6}.
+ \label{eq:externalpoleclearing}
+\end{equation}
+Accordingly define
+\begin{equation}
+ \widehat{\mathcal R}_b(\eta)
+ =
+ 4\sin^2\!\left(\frac{3\eta-\pi}{2b^2}\right)\mathcal R_b(\eta)
+ =
+ \frac{S_b(3\alpha-b)^2}{S_b(\alpha)^6}
+ \int_C I_b(w,\eta)\,\frac{\dd w}{i}.
+ \label{eq:clearedregularsymbol}
+\end{equation}
+The right-hand side defines the continuation across the apparent
+singularities in the product on the left.
+
+\begin{proposition}[Uniform regular-family transition]
+\label{prop:regularquantumAiry}
+For every fixed $Z>0$, put
+\[
+ \eta=\eta_{\mathrm E}
+       -\frac{h^{2/3}}{6\sqrt2}\,\zeta,
+       \qquad |\zeta|\le Z.
+\]
+As $b\downarrow0$, the integral \eqref{eq:clearedregularsymbol}
+satisfies, uniformly for these real $\zeta$,
+\begin{equation}
+ \boxed{\quad
+ \widehat{\mathcal R}_b(\eta)=
+ \frac34\,\frac{h^{1/3}}{b}
+ \left\{
+ \operatorname{Ai}(\zeta)
+ -3\sqrt2\,h^{1/3}\operatorname{Ai}'(\zeta)
+ +O_Z(h^{2/3})
+ \right\}.
+ \quad}
+ \label{eq:quantumAirytheorem}
+\end{equation}
+The error inside braces is additive. The physical compact
+hyperbolic side has $\zeta\ge0$; negative $\zeta$ describes the
+analytic continuation across the Euclidean transition.
+\end{proposition}
+
+In particular the leading prefactor is
+$\frac34(2\pi)^{1/3}b^{-1/3}$. The correction can equivalently
+be written by replacing the Airy argument with
+$\zeta-3\sqrt2\,h^{1/3}$, at an error $O_Z(h^{2/3})$.
+The proof below controls the exact quantum integrand, the whole
+contour, its orientation, and the first correction.
+
+\subsection{A uniform double-sine estimate from its real integral}
+
+Let $\Lambda$ be the analytic primitive on
+$0<\operatorname{Re}z<\pi$ specified by
+\[
+ \Lambda'(z)=-\log(2\sin z),\qquad \Lambda(\pi/2)=0,
+\]
+with the logarithm real on $(0,\pi)$. On that real interval it is
+the usual Lobachevsky function.
+
+\begin{lemma}[Strip estimate]
+\label{lem:stripdoubleSine}
+For $z$ in a compact subset of $0<\operatorname{Re}z<1$ and
+real $\kappa$ in a bounded set,
+\begin{equation}
+ S_b(z/b+\kappa b)
+ =
+ \exp\!\left(-\frac{\Lambda(\pi z)}{\pi b^2}\right)
+ (2\sin\pi z)^{\kappa-1/2}
+ \bigl(1+O(b^2)\bigr).
+ \label{eq:uniformstripSb}
+\end{equation}
+The logarithmic error and its derivatives are uniform on
+smaller compact subsets. For
+$\varepsilon\le\operatorname{Re}z\le1-\varepsilon$,
+the real part of the logarithmic error is $O_\varepsilon(b^2)$
+uniformly for all $\operatorname{Im}z$.
+\end{lemma}
+
+\begin{proof}
+Subtract the two double-Gamma integrals defining
+$\log S_b(x)=\log\Gamma_b(x)-\log\Gamma_b(Q-x)$; see
+\cite[Appendix~A]{TeschnerVartanov}. At the centered argument,
+the substitution of the integration variable by $2bs$ gives
+\begin{equation}
+ \log S_b(z/b+b/2)
+ =-\frac{\Lambda(\pi z)}{\pi b^2}+D_b(z),
+ \label{eq:stripSbexactremainder}
+\end{equation}
+where
+\begin{equation}
+ D_b(z)=\frac12\int_0^\infty
+ \frac{\sinh((1-2z)s)}{s\sinh s}
+ \left(\operatorname{csch}(b^2s)-\frac1{b^2s}\right)\dd s.
+ \label{eq:Sbremainderintegral}
+\end{equation}
+The leading primitive is fixed by its derivative
+$\log(2\sin\pi z)$ and its value zero at $z=1/2$.
+For $u>0$,
+$|\operatorname{csch}u-u^{-1}|\le C u$.
+Near $s=0$ the numerator $\sinh((1-2z)s)$ is $O(s)$,
+and at infinity the strip condition supplies exponential decay.
+This proves $D_b=O(b^2)$ on compact subsets. Holomorphy and
+Cauchy's estimate give the derivative statement.
+
+For the global real-part bound use
+\[
+ \operatorname{Re}\sinh((1-2z)s)
+ =\sinh((1-2\operatorname{Re}z)s)
+       \cos(2\operatorname{Im}z\,s).
+ \]
+The same integrable bound is then independent of
+$\operatorname{Im}z$. Finally replace $z$ in
+\eqref{eq:stripSbexactremainder} by
+$z+(\kappa-\frac12)b^2$ and Taylor expand the leading
+primitive. Its second and higher derivatives are bounded on
+closed substrips, including as $|\operatorname{Im}z|\to\infty$.
+This gives \eqref{eq:uniformstripSb} and the corresponding
+global modulus estimate.
+\end{proof}
+
+\subsection{The smooth quantum phase and amplitude}
+
+Use the corrected variable $v=2\pi bw$, and set
+\begin{equation}
+ \begin{aligned}
+ \theta_1&=\tfrac12(v-3\pi+3\eta),&
+ \theta_2&=\tfrac12(4\pi-4\eta-v),\\
+ \theta_3&=\tfrac12(4\pi-v),&
+ s&=\tfrac12(\pi-\eta).
+ \end{aligned}
+ \label{eq:regularstripangles}
+\end{equation}
+The three integrand arguments are
+$\theta_1/(\pi b)$, $\theta_2/(\pi b)$, and
+$\theta_3/(\pi b)+2b$.
+The cleared prefactor uses $3s/(\pi b)-b$ and $s/(\pi b)$.
+All five scaled arguments are in a closed substrip near the fold.
+Lemma~\ref{lem:stripdoubleSine} therefore gives
+\begin{equation}
+ \frac{S_b(3\alpha-b)^2}{S_b(\alpha)^6}I_b(w,\eta)
+ =
+ \mathcal A(v,\eta)\,e^{G(v,\eta)/h}
+ \bigl(1+O(h)\bigr)
+ \label{eq:fullsmoothquantumphase}
+\end{equation}
+on compact subsets, where
+\begin{align}
+ G(v,\eta)
+ &=-2\{4\Lambda(\theta_1)+3\Lambda(\theta_2)
+                              +\Lambda(\theta_3)\}
+        +12\Lambda(s)-4\Lambda(3s),\notag\\
+ \mathcal A(v,\eta)
+ &=(2\sin\theta_1)^{-2}(2\sin\theta_2)^{-3/2}
+   (2\sin\theta_3)^{3/2}
+   \left(\frac{\sin s}{\sin3s}\right)^3.
+ \label{eq:clearedphaseamplitude}
+\end{align}
+The powers are continued from their positive real values.
+For modulus estimates on the full vertical line, the same formula
+holds with a bounded multiplicative error, uniformly in its
+imaginary coordinate; this follows from the real-part estimate
+in the lemma.
+
+At $v_*=4\pi-5\eta_{\mathrm E}$ the exact values are
+\[
+ \begin{array}{c|ccc}
+ &\theta_1&\theta_2&\theta_3\\ \hline
+ \sin\theta_j&1/3&1/\sqrt3&1/(9\sqrt3)\\
+ \cot\theta_j&2\sqrt2&\sqrt2&-11\sqrt2
+ \end{array}
+ \qquad
+ \frac{\sin s}{\sin3s}=3.
+\]
+Consequently
+\begin{equation}
+ \mathcal A_*=\frac94,\qquad
+ (\log\mathcal A)_v\big|_*=7\sqrt2.
+ \label{eq:regularAiryamplitude}
+\end{equation}
+Differentiation of \eqref{eq:clearedphaseamplitude} gives
+\begin{equation}
+ \begin{gathered}
+ G_*=G_v|_*=G_{vv}|_*=G_\eta|_*=0,\\
+ G_{vvv}|_*=54,\qquad G_{v\eta}|_*=18\sqrt2,\qquad
+ G_{\eta\eta}|_*=36\sqrt2,\\
+ G_{vvvv}|_*=-648\sqrt2,\qquad G_{vv\eta}|_*=-18.
+ \end{gathered}
+ \label{eq:regularAiryderivatives}
+\end{equation}
+The value $G_*=0$ can be checked without a numerical evaluation
+of a Lobachevsky identity. For real $v,\eta$ near the fold,
+the identity
+$\operatorname{Im}\operatorname{Li}_2(e^{i\vartheta})
+=2\Lambda(\vartheta/2)$, together with periodicity and
+oddness, identifies the entire term
+$-2\{4\Lambda(\theta_1)+3\Lambda(\theta_2)+\Lambda(\theta_3)\}$ with
+$\operatorname{Im}U(e^{iv},\eta)$. The four trivalent terms
+in the doubled Murakami--Yano correction have imaginary part
+\[
+ -6\operatorname{Im}\operatorname{Li}_2(-e^{i\eta})
+ -2\operatorname{Im}\operatorname{Li}_2(-e^{-3i\eta})
+ =12\Lambda(s)-4\Lambda(3s).
+\]
+The remaining logarithm products are real. Thus $G$ at the
+two classical saddles is $\pm2W$ by
+\cite[Theorem~2]{MurakamiYano}; at their Euclidean collision
+$W\to0$. This fixes the constant in
+\eqref{eq:regularAiryderivatives}.
+
+\subsection{The full contour and its tail estimate}
+
+The poles of the first double-sine factor are at
+$w=3\alpha-mb-n/b$; the other two factors have their poles
+at $w=4\alpha+mb+n/b$ and $w=2Q+mb+n/b$.
+Thus the separating interval remains nonempty for
+$0<\alpha<2Q/3$. Decreasing the equal real labels from
+$\alpha=Q/2$ to the compact values preserves this interval.
+Along this path $\alpha>Q/4$, so one may choose
+$\max(3\alpha,Q)<\operatorname{Re}w<4\alpha\le2Q$ and keep
+all three arguments in the common strip throughout.
+The integral has no pinch on this path. The singularities
+in the external trivalent factor have already been removed
+by \eqref{eq:externalpoleclearing}.
+
+On the vertical line $v=v_*+iy$ at $\eta=\eta_{\mathrm E}$,
+put $r=\tanh(y/2)$. For $y>0$, direct differentiation gives
+\begin{equation}
+ -\frac{\dd}{\dd y}\operatorname{Re}G(v_*+iy,\eta_{\mathrm E})
+ =\Psi(r),
+ \label{eq:verticalphasegap}
+\end{equation}
+where
+\[
+ \Psi(r)=4\arctan(2\sqrt2r)
+          +3\arctan(\sqrt2r)-\arctan(11\sqrt2r).
+\]
+Here $\Psi(0)=0$ and
+\begin{equation}
+ \Psi'(r)=
+ \frac{864\sqrt2\,r^2(3+11r^2)}
+ {(1+8r^2)(1+2r^2)(1+242r^2)}>0
+ \qquad(r>0).
+ \label{eq:verticalphasepositivity}
+\end{equation}
+It follows that the fold is the unique maximum of the real part
+of $G$ on this vertical line. In addition,
+\[
+ \operatorname{Re}G(v_*+iy,\eta_{\mathrm E})
+   =-27\sqrt2\,y^4+O(y^6),\qquad
+ \Psi(\tanh(y/2))\longrightarrow2\pi
+ \quad(y\to+\infty).
+\]
+Complex conjugation gives the corresponding estimates for
+negative $y$.
+
+These bounds persist in the form needed below under small
+changes of $\eta$ and of the real contour coordinate. On bounded
+annuli in $y$ this follows by continuity. For large $|y|$,
+the identity
+$4\theta_1+3\theta_2+\theta_3=2\pi$ on the real line
+shows directly that the limiting decay slope is $2\pi$,
+uniformly for nearby real parameters. The amplitude in
+\eqref{eq:clearedphaseamplitude} is $O(e^{-|y|})$ there.
+The global modulus bound from
+Lemma~\ref{lem:stripdoubleSine} transfers these estimates to
+the exact integrand, so all tails outside a fixed fold
+neighborhood are exponentially small in $h^{-1}$.
+
+\subsection{Airy localization and the first correction}
+
+\begin{proof}[Proof of Proposition~\ref{prop:regularquantumAiry}]
+Write $t=\eta_{\mathrm E}-\eta$ and $\lambda=h^{1/3}$.
+Choose a fixed $c>0$ and move the contour to
+\[
+ v=v_*+c\lambda+iy.
+\]
+For all sufficiently small $b$ this deformation stays within
+the common pole-free strip. The tail bounds just proved make
+the horizontal closing segments vanish, so no residues or
+undetermined cycle coefficients enter.
+
+At this displaced real point,
+$G_{vv}=54c\lambda+O_Z(\lambda^2)>0$ and
+$G_{vvvv}=-648\sqrt2+O_Z(\lambda)<0$.
+Taylor expansion in $iy$, with real derivatives at the real
+point, gives constants $c_1,c_2,\delta>0$ such that
+\begin{equation}
+ \begin{split}
+ &\operatorname{Re}\{G(v_*+c\lambda+iy,\eta)
+                     -G(v_*+c\lambda,\eta)\}\\
+ &\hspace{25mm}\le -c_1\lambda y^2-c_2y^4,
+       \qquad |y|\le\delta.
+ \end{split}
+ \label{eq:AiryGaussianbound}
+\end{equation}
+The constants can be taken uniform for $|\zeta|\le Z$.
+Outside this neighborhood use the previously established
+fixed tail gap and linear decay.
+
+Now set
+\[
+ x=v-v_*=\frac{\lambda}{3}Y,\qquad
+ t=\frac{\lambda^2}{6\sqrt2}\zeta.
+\]
+The rescaled contour is upward with $\operatorname{Re}Y=3c$.
+The derivative table gives, through weighted order four,
+\begin{align}
+ G(v_*+x,\eta_{\mathrm E}-t)
+ &=9x^3-18\sqrt2\,tx
+   +18\sqrt2\,t^2-27\sqrt2\,x^4+9tx^2
+   +\text{higher weighted terms},\notag\\
+ \frac{\mathcal A(v_*+x,\eta_{\mathrm E}-t)}{9/4}
+ &=1+7\sqrt2\,x+O(x^2+|t|).
+ \label{eq:Airyweightedexpansion}
+\end{align}
+The exact quantum error in
+\eqref{eq:fullsmoothquantumphase} is $O(h)=O(\lambda^3)$
+and hence does not affect the first correction.
+Consequently, the rescaled integrand is
+\begin{equation}
+ \frac94\,e^{Y^3/3-\zeta Y}
+ \left\{1+\lambda P(Y,\zeta)+O_Z(\lambda^2)\right\},
+ \label{eq:Airyscaledquantum}
+\end{equation}
+where the pointwise remainder is locally uniform and
+\begin{equation}
+ P(Y,\zeta)=
+ \frac{7\sqrt2}{3}Y-\frac{\sqrt2}{3}Y^4
+ +\frac{\zeta}{6\sqrt2}Y^2
+ +\frac{\sqrt2}{4}\zeta^2.
+ \label{eq:Airycorrectionpolynomial}
+\end{equation}
+
+For completeness, the integrated remainder is also
+$O_Z(\lambda^2)$. On
+$|Y|\le\lambda^{-1/12}$, analytic Taylor remainders in
+\eqref{eq:Airyweightedexpansion}, followed by exponentiation,
+are bounded by $\lambda^2$ times a fixed polynomial in
+$|Y|$, against a Gaussian on the vertical line.
+Equation~\eqref{eq:AiryGaussianbound} supplies a uniform
+Gaussian majorant for the exact integrand. The part with
+$\lambda^{-1/12}<|Y|$ inside the fixed fold neighborhood
+is smaller than every power of $\lambda$; the global contour
+tail is exponentially small in $h^{-1}$. This justifies
+integration of the expansion and its first correction.
+
+With the chosen orientation,
+\[
+ \frac1{2\pi i}\int_{\operatorname{Re}Y=3c}
+       e^{Y^3/3-\zeta Y}\,\dd Y=\operatorname{Ai}(\zeta);
+\]
+this is the vertical-contour form of the Airy representation
+in~\cite[Section~9.5]{DLMF}. Inserting $Y^k$ yields
+$(-1)^k\operatorname{Ai}^{(k)}(\zeta)$.
+Using
+\[
+ \operatorname{Ai}''(\zeta)=\zeta\operatorname{Ai}(\zeta),
+ \qquad
+ \operatorname{Ai}^{(4)}(\zeta)
+       =2\operatorname{Ai}'(\zeta)
+          +\zeta^2\operatorname{Ai}(\zeta)
+\]
+in \eqref{eq:Airycorrectionpolynomial}, all terms proportional
+to $\zeta^2\operatorname{Ai}$ cancel. The result is
+$-3\sqrt2\,\operatorname{Ai}'(\zeta)$.
+Finally,
+$\dd w/i=\lambda\,\dd Y/(6\pi i b)$.
+Multiplication by $9/4$ gives the coefficient
+$3\lambda/(4b)$ in \eqref{eq:quantumAirytheorem}.
+\end{proof}
+
+\subsection{Numerical evidence and reproducibility status}
+
+The supplied draft reports a calculation using the convergent
+real integral for $\log S_b$, combining all factors before
+exponentiating and integrating the exact cleared integrand on
+a displaced vertical contour. Its evaluator, raw output,
+arithmetic precision, contour displacement, and tail and
+convergence records were not included in the supplied material.
+The values below are retained from that draft and await
+independent reproduction of the exact integral. Write
+\[
+ Q_b(\zeta)=\frac{4b}{3h^{1/3}}\widehat{\mathcal R}_b(\eta),
+ \qquad
+ Q_b^{(1)}(\zeta)=\operatorname{Ai}(\zeta)
+       -3\sqrt2\,h^{1/3}\operatorname{Ai}'(\zeta).
+\]
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$b$&$\zeta$&Reported $Q_b$&Airy $Q_b^{(1)}$\\
+\midrule
+$0.0125$&$0$&$0.459087$&$0.464164$\\
+$0.00625$&$0$&$0.422572$&$0.423779$\\
+$0.003125$&$0$&$0.398047$&$0.398339$\\
+$0.0125$&$1$&$0.214333$&$0.202400$\\
+$0.00625$&$1$&$0.182316$&$0.177567$\\
+$0.003125$&$1$&$0.163805$&$0.161924$\\
+\bottomrule
+\end{tabular}
+\end{center}
+For the three $\zeta=1$ rows, the supplied draft reports
+differences divided by $h^{2/3}$ of approximately $1.208$,
+$1.211$, and $1.209$. These are retained diagnostics of that
+unreplayed calculation, not verified quadrature error bounds.
+The rounded entries do not recover the missing raw output or
+its error estimates. The analytic estimate in
+Proposition~\ref{prop:regularquantumAiry} is separate from this
+numerical evidence.
+
+The computational companion
+\path{experiments/section15/check.py} checks the displayed
+fold derivatives, the rational identity for $\Psi'$, and the
+first-correction cancellation in exact rational arithmetic
+with $\sqrt2$ adjoined. It also recomputes the Airy column at
+80 and 120 decimal digits and compares it with the power
+series obtained from the Airy differential equation and
+initial values~\cite[Sections~9.2 and~9.4]{DLMF}.
+These checks support the finite algebra and the approximation
+column. They do not evaluate the double-sine integral or
+establish its global contour and uniform remainder estimates.
+
+A reproduction of the reported $Q_b$ column must evaluate
+the exact integrand in~\eqref{eq:clearedregularsymbol}, record
+its branches and contour, and compare precision, truncation,
+and tail controls across settings. Substituting the Airy
+approximation for that integrand would not perform this check.
+
+\subsection{Interpretation and scope}
+
+The correction to the earlier pole argument is substantive.
+The exact quantum integrand is smooth at the correct fold;
+the remaining real-$b$ resonances are an explicit scalar
+factor outside the integral. For example, at $\eta=\eta_{\mathrm E}$
+the original normalization has poles along
+\[
+ b^2=\frac{3\eta_{\mathrm E}-\pi}{2\pi m},
+       \qquad m=1,2,\ldots.
+\]
+The numerator in \eqref{eq:clearedregularsymbol} is nonzero
+for sufficiently small $b$ in a bounded physical transition
+window, because $\operatorname{Ai}(\zeta)>0$ for
+$\zeta\ge0$. Thus the poles are not canceled by the integral.
+The cleared quantity has the uniform asymptotic in the
+proposition even through these resonances.
+
+In geometric terms,
+\[
+ \zeta=\frac{A}{2\sqrt3\,h^{2/3}}
+          +O\!\left(\frac{A^2}{h^{2/3}}\right),
+ \qquad A\asymp b^{4/3}.
+\]
+The decaying Airy branch selected by the contour agrees with
+the decaying volume exponential: its classical saddle
+exponent is $-2W/h=-W/(\pi b^2)$.
+The proposition is uniform for bounded $\zeta$; it does not,
+by itself, justify taking $\zeta\to\infty$ simultaneously
+with $b\to0$ or keeping a nonzero tetrahedral volume fixed.
+Those matching limits require additional estimates.
+
+This proves a quantum transition for one specified regular
+family, beyond the classical cubic calculation. Extension
+to arbitrary nondegenerate Euclidean tetrahedral shapes,
+comparison of normalizations used in a global state integral,
+and gluing into a topological invariant remain separate
+problems. In particular no new case of the colored-Jones
+volume conjecture, and no identification of the integrated
+quantum measure with the cone-metric measure, follows from
+this proposition alone.
+

@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "chapter_source": "book/chapters/30-sharp-diagnostics.tex",
+  "chapter_label": "sec:sharpdiagnostics",
+  "review_date": "2026-11-01",
+  "baseline_commit": "df952174e55f08a52596d912d9713a9d1e116313",
+  "review_scope": "Bounded revision of computational provenance, curve/event conventions, and a new length-64 replacement experiment. The complete Section 30 proof chain and the recent flatness preprint are not audited by this increment.",
+  "path_convention": "Local paths are relative to the research repository root; historical output remains distinct from replacement output.",
+  "status_definitions": {
+    "derivation_checked": "A local identity or finite-computation convention was checked by derivation; this does not classify all proofs in the chapter.",
+    "external_statement_checked": "The named local statement was checked against the cited primary source, without re-refereeing the full source.",
+    "exact_finite_check": "Exact rational or algebraic arithmetic verifies the named finite inputs or identities, not transcendental values.",
+    "numerical_check": "Recorded comparisons for a bounded run, with precision and tolerance; no interval certificate or asymptotic consequence.",
+    "conditional_bound": "An exact finite implication given an explicit error hypothesis that the computation does not certify.",
+    "reported_unreplayed": "Historical values are retained with their provenance; the purported original raw evidence is unavailable and the claim has not been replayed.",
+    "outside_increment_review": "Text is preserved; this computational revision does not establish its general proof or source status."
+  },
+  "claims": [
+    {
+      "id": "s30.mobius_and_strict_convexity",
+      "labels": ["eq:primitiveexactnormalizedmobius", "eq:primitiveDini", "prop:strictconvexlittleo"],
+      "status": "outside_increment_review",
+      "scope": "Signed primitive-vector counts, normalized shortest nonzero lattice vector, strict convexity hypotheses. The new unoriented torus counts do not verify the general discrepancy argument."
+    },
+    {
+      "id": "s30.polygon_comparison",
+      "labels": ["subsec:rationalpolygonbenchmark"],
+      "status": "outside_increment_review",
+      "scope": "External rational-polygon theorems and their lack of transfer to strictly convex norm balls remain distinct from this experiment."
+    },
+    {
+      "id": "s30.dyadic_inversion",
+      "labels": ["eq:dyadicerrorinverse"],
+      "status": "derivation_checked",
+      "hypotheses": ["N(L)/L^2 tends to a fixed c.", "The series is the limit of telescoping partial sums; absolute convergence needs the displayed growth conditions."],
+      "scope": "Finite iteration leaves the remainder 4^(-k)E(2^k L), which tends to zero. A bounded finite computation cannot infer an O(L) or o(L) remainder."
+    },
+    {
+      "id": "s30.block_events",
+      "labels": ["eq:dyadicblockmetrics"],
+      "status": "derivation_checked",
+      "hypotheses": ["N(L) counts lengths <=L, with multiplicities.", "A block [T,2T] requires the complete spectrum through 4T."],
+      "scope": "Full-length events jump by -4 and half-length events by +1. Aggregate simultaneous jumps; include interior and terminal left limits, exclude the external left limit at T. Integrate D^2/L^2 exactly as D^2(1/a-1/b) between events.",
+      "code_paths": ["experiments/section30/run.py", "experiments/section30/tests/test_diagnostic.py"]
+    },
+    {
+      "id": "s30.row_and_flatness_arguments",
+      "labels": ["prop:inverseflatrow", "eq:inverseflatwidth", "eq:inverseflatdiscrepancy", "eq:inverseflatmicroscopic", "fig:mono-flat-row", "eq:exponentialflatrow", "eq:primitiveintervalexact"],
+      "status": "outside_increment_review",
+      "scope": "The inverse-width proof, local profile models, exact primitive-row formula, and geometric hypotheses are preserved. The trace experiment does not identify a supporting rational normal at an irrational flat point."
+    },
+    {
+      "id": "s30.curve_markoff_identification",
+      "labels": ["subsec:torustraceexperiment"],
+      "status": "external_statement_checked",
+      "source": {"citation_key": "BowditchMarkoff", "locator": "Sections 1 and 2; Markoff map definition, simple-curve identification, and three-sector partition.", "url": "https://warwick.ac.uk/fac/sci/maths/people/staff/brian_bowditch/bhb-markoff.pdf", "accessed": "2026-11-01"},
+      "scope": "Primitive slopes modulo sign correspond to unoriented essential simple curves. The edge identity is tr(A)tr(B)=tr(AB)+tr(AB^-1). Distinct slopes are not deduplicated by trace."
+    },
+    {
+      "id": "s30.exact_roots",
+      "labels": ["eq:diagnostictracetriples"],
+      "status": "exact_finite_check",
+      "hypotheses": ["The two fixed triples (3,3,3) and (5/2,(10-sqrt(11))/2,4)."],
+      "scope": "Exact Q(sqrt(11)) arithmetic verifies x^2+y^2+z^2=xyz and the reduced-root inequalities. Exact traces do not imply exact lengths.",
+      "code_paths": ["experiments/section30/run.py", "experiments/section30/fixture.json"]
+    },
+    {
+      "id": "s30.slope_box_coverage",
+      "labels": ["subsec:torustraceexperiment"],
+      "status": "derivation_checked",
+      "hypotheses": ["These two reduced fixtures have minimum root trace at least 5/2.", "The positive outward subtraction ratio is at most one half."],
+      "scope": "v=log(trace/2) grows at least additively with the sector weight F. Since v>=F/5 and length>2v, length<=64 implies max(|p|,q)<160. This gives an analytic finite-box bound; membership decisions within the box use numerical transcendental comparisons.",
+      "derivation_path": "experiments/section30/README.md"
+    },
+    {
+      "id": "s30.bounded_replacement",
+      "labels": ["subsec:torustraceexperiment", "eq:dyadicblockmetrics"],
+      "status": "numerical_check",
+      "scope": "New length-64 experiment: 1104 modular and 1127 asymmetric curves; blocks T=4,8,16 only. Binary64 log traversal and independent primitive-slope box evaluation agree. Decimal lengths at 100/140 digits agree within the declared tolerance. M/Q event sweeps are compared against direct counts on every interval.",
+      "code_paths": ["experiments/section30/run.py", "experiments/section30/tests/test_diagnostic.py"],
+      "input_path": "experiments/section30/fixture.json",
+      "result_path": "artifacts/section30/result.json",
+      "coverage_gap": "No reproduction of length8192, no long twist-path campaign, no certified event locations or ordering, and no asymptotic conclusion. Log-vs-oracle metric discrepancies are retained as diagnostics."
+    },
+    {
+      "id": "s30.bounded_conditional_sensitivity",
+      "labels": ["subsec:torustraceexperiment"],
+      "status": "conditional_bound",
+      "hypotheses": ["The supplied finite curve list has fixed membership; to apply the bound to the complete spectrum, no omitted curve may enter a threshold up to 4T under perturbation.", "Every stored binary64 length differs from its true value by at most 1e-10."],
+      "scope": "Exact rational interval endpoints and lower/upper counting functions give bounds for M(T) without fixing the internal order of uncertain events. The length-error hypothesis is unproved; the resulting interval is not an unconditional geometry certificate.",
+      "derivation_path": "experiments/section30/README.md",
+      "code_paths": ["experiments/section30/run.py", "experiments/section30/tests/test_diagnostic.py"]
+    },
+    {
+      "id": "s30.historical_long_run",
+      "labels": ["subsec:torustraceexperiment"],
+      "status": "reported_unreplayed",
+      "scope": "Original counts 18191508 and 18486116 through 8192; four printed M/Q rows; reported 100-digit, long-path, cutoff-separation and sensitivity checks. Printed values are preserved, not reconstructed from rounded rows.",
+      "coverage_gap": "Original source, raw spectrum, full blocks, precision report and sensitivity archive were absent from the supplied materials. The chapter no longer advertises that archive as available."
+    },
+    {
+      "id": "s30.recent_flatness_preprint",
+      "labels": ["subsec:recentflatnessqualification"],
+      "status": "outside_increment_review",
+      "scope": "The existing pinned-version qualification remains; no full verification of Doan-Li-Nguyen or its claimed local audit is supplied by this diagnostic revision."
+    }
+  ]
+}
