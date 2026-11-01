@@ -1,0 +1,144 @@
+\section{Boundary lengths, cone angles, and continuation}
+\label{sec:cones}
+
+\subsection{Fixed signature and the polynomial chamber}
+
+Allow $a$ cone points with opening angles $\theta_1,\ldots,\theta_a$ and
+$b$ geodesic boundary components with lengths $L_1,\ldots,L_b$, including
+zero lengths for cusps. Thus $n=a+b$ and $d=3g-3+n$. The area is
+\begin{equation}
+ \operatorname{Area}(X)=2\pi(2g-2+n)-\sum_{i=1}^{a}\theta_i>0.
+ \label{eq:gb}
+\end{equation}
+There is no separate puncture parameter in the volume polynomial: a cusp
+is represented by $L=0$, or equivalently by cone opening zero.
+
+Use the logarithmic tautological class
+$\kappa_1=\pi_*(\psi_{n+1}^2)$ on $\MM_{g,n}$. The fixed-boundary WP class,
+continued to cone parameters, is
+\begin{equation}
+ \Omega_0=2\pi^2\kappa_1+\frac12\sum_{j=1}^{b}L_j^2\psi_j
+                          -\frac12\sum_{i=1}^{a}\theta_i^2\psi_i.
+ \label{eq:wpclass}
+\end{equation}
+The labels in the two sums are understood to be disjoint. In its geometric
+validity chamber,
+\begin{equation}
+ V_{g,n}(\lengths,i\angles)=\frac1{d!}
+                          \int_{\MM_{g,n}}\Omega_0^d.
+ \label{eq:intersectionvolume}
+\end{equation}
+The boundary formula follows from the symplectic-reduction/intersection
+description of WP volumes~\cite{MirzIntersection}; imaginary lengths
+$L=i\theta$ account for the minus sign~\cite{DoNorbury}.
+
+For mixed positive boundaries and cone points, a safe geometric regime is
+$0\le\theta_i<\pi$. For pure cone/cusp surfaces, the uncorrected formula
+holds in the larger chamber where every pair of openings sums to less than
+$2\pi$~\cite[Theorem 1.1 and Corollary 1.2]{AnagnostouNorbury}.
+In both statements the area condition~\eqref{eq:gb} and the prescribed
+labels remain part of the hypotheses. Polynomial evaluation outside these
+ranges is always algebraically defined, but requires a separate geometric
+justification. In particular, a single cone of arbitrary
+opening below $2\pi$, with only cusps as the other ends, does not create a
+cone-collision wall.
+
+For example, on $\MM_{0,4}$ one has
+$\int\kappa_1=\int\psi_i=1$, so
+\begin{equation}
+ V_{0,4}(\lengths,i\angles)
+ =2\pi^2+\frac12\sum L_j^2-\frac12\sum\theta_i^2
+ \label{eq:mixedv04}
+\end{equation}
+whenever this chamber formula applies. On $\MM_{1,1}$,
+$\int\kappa_1=\int\psi_1=1/24$, giving the torus normalization in
+\eqref{eq:basevolumes} and its one-cone continuation.
+
+\subsection{Pure cone/cusp volumes beyond the first chamber}
+
+For $0\le\theta_i<2\pi$, put
+\[
+ w_i=1-\frac{\theta_i}{2\pi},\qquad
+ \Phi_S=\sum_{i\in S}\theta_i-2\pi(|S|-1),\qquad u_+=\max(u,0).
+\]
+Assume $2g-2+\sum_iw_i>0$. A collision of the marked points in $S$ is
+allowed in the weighted compactification when $\sum_{i\in S}w_i\le1$.
+The class pulled back to ordinary Deligne--Mumford space is
+\begin{equation}
+ \boxed{
+ \Omega_{\angles}=2\pi^2\kappa_1-\frac12\sum_i\theta_i^2\psi_i
+      +\frac12\sum_S(\Phi_S)_+^2\,\delta_{0:S}.}
+ \label{eq:wallclass}
+\end{equation}
+The sum runs over stable rational-tail divisors, with $|S|\ge2$. The
+geometric volume is $\int\Omega_{\angles}^{d}/d!$. This is the
+wall-crossing class of Anagnostou--Mullane--Norbury
+\cite[Definitions 2.12--2.13 and Lemma 2.14]{AMN}, also expressed in the
+cone-volume formulation of Eberhardt--Turiaci~\cite{ET}.
+Here stability means that both components of the nodal curve are stable
+in ordinary DM space; in genus zero this requires also $|S^c|\ge2$.
+All classes in~\eqref{eq:wallclass}, including $\kappa_1$ and $\psi_i$,
+are on that ordinary compactification. They must not be replaced by
+weighted-space classes without applying the reduction pullback.
+
+For completeness, the coefficient follows immediately from the weighted
+formula: its normalized correction is
+$(1-\sum_{i\in S}w_i)^2\delta_{0:S}$, and multiplication by $2\pi^2$
+gives $(\Phi_S)^2/2$. If $r$ is the reduction to the relevant weighted
+compactification, then $r$ is proper and birational. Therefore
+$r_*[\MM_{g,n}]=[\MM_{g,\mathbf w}]$, and the projection formula justifies
+integrating the top power of the pulled-back class on ordinary DM space.
+On a wall $\Phi_S=0$ the added term vanishes. The formula therefore
+extends continuously from adjacent chambers, although its polynomial
+expression changes across the wall. In dimension greater than one the
+top power includes products and self-intersections of the boundary
+divisors; adding their coefficients as scalar volume corrections would
+not compute the volume.
+
+In genus zero $\delta_{0:S}=\delta_{0:S^c}$. There is no positive-term
+double counting in~\eqref{eq:wallclass}: stability gives $\sum_iw_i>2$,
+so both $S$ and its complement cannot have weight at most one.
+
+For four labeled cone/cusp points the formula becomes particularly simple:
+\begin{equation}
+ \boxed{
+ V_{0,4}(i\angles)=2\pi^2-\frac12\sum_{i=1}^4\theta_i^2
+ +\frac12\sum_{1\le i<j\le4}(\theta_i+\theta_j-2\pi)_+^2.}
+ \label{eq:conev04}
+\end{equation}
+For openings $(0,0,3\pi/2,3\pi/2)$, the area is positive but the uncorrected
+polynomial gives $-\pi^2/4$. The single active correction contributes
+$\pi^2/2$, giving the actual positive volume $\pi^2/4$. This example
+pinpoints the failure of unrestricted polynomial continuation.
+
+With a positive geodesic boundary and a cone opening greater than $\pi$,
+additional degenerations can occur when the cone approaches that boundary.
+Anagnostou--Norbury exhibit such a nonnodal degeneration
+when the positive boundary length is sufficiently large
+\cite[Lemma 2.10]{AnagnostouNorbury}. We consequently assert the full
+wall formula here for pure cones/cusps, and the preceding small-cone regime
+for arbitrary mixed positive boundaries. An unrestricted mixed-signature
+geometric theorem would require its own hypotheses and boundary analysis.
+
+\subsection{What continuation means for compact polyhedra}
+
+The boundary of a compact convex hyperbolic polyhedron has intrinsic cone
+opening $\theta_v$ equal to the sum of its face angles at $v$; its singular
+curvature is $2\pi-\theta_v$. Neither is an individual dihedral angle.
+Thus the substitution $L\mapsto i\theta$ concerns an intrinsic holonomy
+parameter. It is not a literal substitution of arbitrary hyperideal vertex
+coordinates by compact ones.
+
+At a local algebraic level the continuation is natural. For example,
+\begin{equation}
+ K_L(s)=\frac{\sinh(L/2-s)}{\sinh(L/2)}
+ \quad\longmapsto\quad
+ \frac{\sin(\theta/2-\alpha)}{\sin(\theta/2)}
+ \quad\text{under }(L,s)=(i\theta,i\alpha).
+ \label{eq:kernelcontinuation}
+\end{equation}
+Trace and Gram formulas have analogous analytic continuations. Recovering
+a real geometric volume also requires a real geometric domain, a valid
+coordinate chart, and the appropriate collision chamber. The polynomial
+example above shows why these cannot be inferred from the formal algebra.
+

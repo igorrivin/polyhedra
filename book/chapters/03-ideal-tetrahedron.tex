@@ -1,0 +1,140 @@
+\section{The ideal tetrahedron: an explicit volume integral}
+\label{sec:tetrahedron}
+
+\subsection{Lambda lengths and the ambient cross-ratio}
+
+Take the four labeled ideal vertices to be $0,1,\infty,z$, where
+$z=x+iy\in\CC\setminus\{0,1\}$. For $y\ne0$ their convex hull is a genuine
+ideal tetrahedron. The two half-planes describe its two orientation types.
+
+For a decorated ideal triangulation, set $\lambda_e=e^{\delta_e/2}$, where
+$\delta_e$ is the signed distance between the chosen horocycles along the
+edge. An overall fixed multiplier in the definition of $\lambda$ does not
+change its logarithmic differential. With cyclically ordered edge lengths
+$a,b,c$ on each oriented triangle, Penner's formula in convention
+\eqref{eq:fn} is
+\begin{equation}
+ \omega_{\WP}=-2\sum_{\triangle}
+ \bigl(\dd\log a\wedge\dd\log b+
+       \dd\log b\wedge\dd\log c+
+       \dd\log c\wedge\dd\log a\bigr).
+ \label{eq:penner}
+\end{equation}
+This is a form on decorated Teichm\"uller space that descends after forgetting
+the horocycles~\cite{Penner}; its magnitude agrees with the cuspidal limit
+of Mondello's arc-coordinate formula~\cite{MondelloBoundary}.
+
+The four decorations can be chosen so that
+\begin{equation}
+ \lambda_{0\infty}=\lambda_{1\infty}=\lambda_{z\infty}
+ =\lambda_{01}=1,
+ \qquad \lambda_{0z}=r=|z|,\quad\lambda_{1z}=s=|1-z|.
+ \label{eq:lambdagauge}
+\end{equation}
+For example, use equal Euclidean diameters for the three finite horospheres
+in the upper-half-space model and adjust their common scale together with
+the horosphere at infinity. The usual formula for the signed distance then
+gives~\eqref{eq:lambdagauge}.
+One may take diameter $1$ for each finite horosphere and height $1$ at
+infinity. The finite-edge formula is then
+$\lambda_{ij}=|z_i-z_j|$, and each edge to infinity has lambda length $1$.
+Overlapping horospheres cause no problem: the distances are signed, and
+smaller embedded decorations can first be chosen and then rescaled.
+
+Every face containing $\infty$ has at most one varying lambda length, so its
+contribution in~\eqref{eq:penner} vanishes in this section of the decoration
+bundle. The remaining face has lengths $1,r,s$. Consequently the positive
+WP measure is
+\begin{equation}
+ \boxed{
+ \dV=2\abs{\dd\log r\wedge\dd\log s}
+      =\frac{2|y|}{|z|^2|1-z|^2}\,\dd x\,\dd y.}
+ \label{eq:tetdensity}
+\end{equation}
+The Jacobian calculation is elementary:
+\[
+ \dd\log r=\frac{x\,\dd x+y\,\dd y}{r^2},\qquad
+ \dd\log s=\frac{(x-1)\,\dd x+y\,\dd y}{s^2}.
+\]
+Their wedge is $y\,\dd x\wedge\dd y/(r^2s^2)$.
+
+\subsection{Integration in angle coordinates}
+
+For $y>0$, let $A,B,C$ be the interior angles of the Euclidean triangle
+with vertices $0,1,z$. They satisfy
+\[
+ A>0,\quad B>0,\quad C>0,\quad A+B+C=\pi.
+\]
+They are also the three interior dihedral angles of the ideal tetrahedron,
+each repeated on the opposite edge. Direct differentiation gives
+\[
+ \abs{\dd A\wedge\dd B}
+   =\frac{y}{r^2s^2}\,\dd x\,\dd y,
+ \qquad\text{hence}\qquad
+ \dV=2\,\dd A\,\dd B.
+\]
+One orientation sheet therefore contributes
+\begin{equation}
+ \int_{\substack{A>0,\ B>0\\A+B<\pi}}2\,\dd A\,\dd B=\pi^2.
+ \label{eq:onecell}
+\end{equation}
+Including the other sheet gives the promised direct calculation:
+\begin{equation}
+ \boxed{V_{0,4}=2\pi^2.}
+ \label{eq:v04direct}
+\end{equation}
+The real configurations form the flat locus and contribute zero two-dimensional
+WP measure.
+
+There is also a useful check on~\eqref{eq:polyhedralpartition}. In a
+tetrahedral angle cell, the four perimeter equations force opposite exterior
+angles to be equal, with three values $a,b,c$ satisfying $a+b+c=2\pi$.
+To see the disintegration factor explicitly, order the edges as
+$(01,02,03,12,13,23)$, keep $a=\theta_{01}$ and $b=\theta_{02}$,
+and eliminate the last four variables. The corresponding perimeter minor is
+\[
+ \begin{pmatrix}
+ 1&0&0&0\\0&1&1&0\\0&1&0&1\\1&0&1&1
+ \end{pmatrix},\qquad \det=-2.
+\]
+It gives $(\theta_{03},\theta_{12},\theta_{13},\theta_{23})
+=(2\pi-a-b,2\pi-a-b,b,a)$ and the measure
+$\frac12|\dd a\,\dd b|$. Up to permuting the three angle names,
+$a=\pi-A$ and $b=\pi-B$, so this is
+$\frac12\dd A\,\dd B$. There are two oriented cells, each with trivial
+label-preserving automorphism group. The factor $2^{4-2}=4$ in
+\eqref{eq:polyhedralpartition} converts their total map volume $\pi^2/2$
+to $2\pi^2$.
+
+\subsection{What happens at the punctures of the parameter plane?}
+
+Finite volume requires integrability, not pointwise decay of a coordinate
+density. Near $z=0$, write $z=\rho e^{i\vartheta}$. Then
+\[
+ \frac{2|y|}{|z|^2|1-z|^2}
+ =\frac{2|\sin\vartheta|}{\rho}\,(1+O(\rho)),
+ \qquad \dd x\,\dd y=\rho\,\dd\rho\,\dd\vartheta.
+\]
+The singularity is integrable. The same is true at $1$. At infinity the
+density is $O(|z|^{-3})$, again integrable against Euclidean area. Thus the
+requested decay is best formulated as a condition on the measure, not on
+its density without its coordinate area element.
+
+\begin{remark}[The coordinate is not conformal]
+Formula~\eqref{eq:tetdensity} is the pullback to the ambient ideal-vertex
+coordinate. It is not a formula for WP measure in the intrinsic conformal
+cross-ratio. In particular, its vanishing on the real locus does not mean
+that the WP form degenerates at an ordinary interior point of moduli space.
+The polyhedral parametrization is not a smooth coordinate across that locus.
+The Delaunay literature also distinguishes the embedding coordinate from
+uniformization~\cite[Section 3.3.1]{CDE}.
+\end{remark}
+
+Nor do two ordinary closed angle triangles describe the full topology of
+the compactification without additional data. As $y\downarrow0$ with
+$0<x<1$, two of the triangle angles tend to zero and the third to $\pi$,
+independently of $x$. A whole family of flat quadrilaterals approaches one
+angle-simplex vertex. Retaining that modulus requires a refinement of the
+boundary, such as a real blow-up. This has no effect on the integral over
+the open cells.
+

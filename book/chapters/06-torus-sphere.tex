@@ -1,0 +1,81 @@
+\section{Equal parameters and the torus--sphere correspondence}
+\label{sec:torussphere}
+
+The familiar punctured correspondence extends geometrically to equal
+positive boundaries. Let $Q(c^4)$ be a four-holed sphere with all four
+boundary lengths $c$, and let $T(2c)$ be a one-holed torus with boundary
+length $2c$. The relevant construction is through a common orbifold:
+\begin{equation}
+ T(2c)\xrightarrow{\;2:1\;}
+ O(c;\pi,\pi,\pi)
+ \xleftarrow{\;4:1\;}Q(c,c,c,c).
+ \label{eq:commonorbifold}
+\end{equation}
+The middle surface is a sphere with one geodesic boundary and three
+angle-$\pi$ orbifold points. The torus quotient uses its elliptic
+involution; the sphere quotient uses its Klein-four symmetry. This works
+for every $c>0$ and limits to the cusped case~\cite[Section 3]{HuTan}.
+
+A matching simple curve on $T$ covers an arc between two orbifold points
+twice; its counterpart on $Q$ covers that arc four times. Thus
+\begin{equation}
+ \ell_Q=2\ell_T.
+ \label{eq:lengthtorussphere}
+\end{equation}
+The construction gives a correspondence of simple-curve classes, not only
+an agreement of dimension or of volume polynomials.
+
+WP forms scale by the degree of a local-isometric covering on a family of
+lifted metrics. This follows from naturality of the Goldman symplectic
+pairing: its surface integral is multiplied by the covering degree.
+On the common marked orbifold family,
+\[
+ \omega_T=2\omega_O,\qquad \omega_Q=4\omega_O,
+ \qquad\text{so}\qquad\omega_Q=2\omega_T.
+\]
+This comparison takes place before dividing by mapping classes. Branch
+points are cone points of the quotient, so the maps are local isometries
+in the orbifold sense; their orders $2$ and $4$ multiply the same integral
+pairing. The statement does not involve varying the boundary length $c$.
+Generically the equal-boundary sphere has its Klein-four isometry group.
+There are $4!/4=6$ inequivalent ways to label its boundaries. The torus has
+its generic elliptic involution, which acts ineffectively on Teichm\"uller
+space. The Klein-four transformations permute the four sphere boundaries
+freely and transitively, so none survives after all four labels are fixed.
+The generic degree from labeled spheres to the effective torus moduli
+space is therefore $6$, and the local area ratio is $2$. Consequently
+\begin{equation}
+ \boxed{
+ V_{0,4}(c,c,c,c)=12V_{1,1}^{\rm eff}(2c)
+                =24V_{1,1}^{\rm stack}(2c).}
+ \label{eq:voltorussphere}
+\end{equation}
+Indeed, $24((2c)^2+4\pi^2)/48=2\pi^2+2c^2$, as required by
+\eqref{eq:basevolumes}. Exceptional extra automorphisms are accounted for
+by orbifold integration. Forgetting the ineffective torus involution is
+the source of a common factor-of-two discrepancy.
+
+The cone analogue can be constructed directly. For $0<\phi<\pi$, the
+elliptic quotient of a torus with one cone opening $2\phi$ is a sphere
+with openings $(\phi,\pi,\pi,\pi)$. Its Klein-four cover branched over
+the three angle-$\pi$ points has four openings equal to $\phi$. Uniqueness
+of conical uniformization makes the conformal symmetries isometries.
+The same degree and labeling argument gives
+\begin{equation}
+ V_{0,4}(i\phi,i\phi,i\phi,i\phi)
+   =2\pi^2-2\phi^2=24V_{1,1}(2i\phi).
+ \label{eq:conetorus}
+\end{equation}
+The common quotient cone surface has area $\pi-\phi$, so $\phi<\pi$ is exactly the
+hyperbolic range. There are no collision corrections in this equal-cone
+sphere chamber.
+The torus has one cone opening $2\phi<2\pi$ and no other noncuspidal
+ends, so its polynomial evaluation is covered by the single-cone regime
+of Section~\ref{sec:cones}. Thus both sides of~\eqref{eq:conetorus} are
+geometric volumes in the stated interval. The endpoint $\phi=\pi$ has
+zero area and is a limit, not an additional hyperbolic moduli space.
+
+This correspondence does not assert a direct unbranched degree-two map
+from the four-holed sphere to the one-holed torus. The common orbifold and
+its two different covering degrees are the precise geometric statement.
+

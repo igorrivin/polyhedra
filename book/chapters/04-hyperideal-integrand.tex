@@ -1,0 +1,246 @@
+\section{Hyperideal polyhedra: an actual local integrand}
+\label{sec:hyperideal}
+
+\subsection{From vertices to orthogeodesic lengths}
+
+A strictly hyperideal vertex lies outside the closed ball in the projective
+model, while every edge meets the ball. Its polar plane cuts off the vertex.
+After all such truncations, the original faces form a bordered hyperbolic
+surface; the truncation polygons give its geodesic boundaries. Ideal vertices
+can be included by a limiting procedure and give cusps.
+
+For a hyperideal tetrahedron choose unit spacelike representatives
+$v_1,\ldots,v_4$ in Minkowski space of signature $(3,1)$. Choose their signs
+so that they represent the vertices in one projective affine chart and
+have negative pairwise inner products. Set
+\begin{equation}
+ q_{ij}=-\langle v_i,v_j\rangle=\cosh a_{ij}>1.
+ \label{eq:qvertices}
+\end{equation}
+Here $a_{ij}$ is the length of the original edge between the two polar
+truncation planes. It is an orthogeodesic of the intrinsic bordered surface.
+The six $a_{ij}$ specify the vertex configuration up to ambient isometry on
+the admissible tetrahedral domain.
+
+Let $b_i^{jk}$ be the side of the truncation triangle at vertex $i$ that lies
+in the original face $ijk$. The right-angled hexagon cosine rule gives
+\begin{equation}
+ \cosh b_i^{jk}=
+ \frac{\cosh a_{ij}\cosh a_{ik}+\cosh a_{jk}}
+      {\sinh a_{ij}\sinh a_{ik}},
+ \qquad
+ L_i=\sum_{\{j,k\}\subset\{1,2,3,4\}\setminus\{i\}}b_i^{jk}.
+ \label{eq:truncationlengths}
+\end{equation}
+The four $L_i$ are intrinsic boundary lengths. They are not the sums of the
+exterior dihedral angles around the hyperideal vertices.
+
+These formulas also describe the domain concretely. The Gram matrix
+\begin{equation}
+ G_{ii}=1,\qquad G_{ij}=-q_{ij}\quad(i\ne j)
+ \label{eq:gram}
+\end{equation}
+must have signature $(3,1)$. With all $q_{ij}>1$, the strict tetrahedral
+condition is $\det G<0$. Indeed, each $3\times3$ principal determinant is
+$1-q_{ij}^2-q_{ik}^2-q_{jk}^2-2q_{ij}q_{ik}q_{jk}<0$.
+The trace and a negative $2\times2$ principal determinant then show that
+this block has signature $(2,1)$. Interlacing and $\det G<0$ give
+signature $(3,1)$ for $G$.
+
+There is also a direct check of the geometric inequalities used below.
+At vertex $i$, put
+\[
+ u_j=\frac{v_j+q_{ij}v_i}{\sqrt{q_{ij}^2-1}}\quad(j\ne i).
+\]
+These are unit timelike vectors in $v_i^\perp$, with
+$-\langle u_j,u_k\rangle=\cosh b_i^{jk}>1$, so they lie in the same
+sheet of its hyperboloid. Their Gram determinant is
+$\det G/\prod_{j\ne i}(q_{ij}^2-1)<0$ by the Schur complement.
+Thus they are three noncollinear points in $\HH^2$: their pairwise
+distances $b_i^{jk}$ form a genuine triangle and satisfy strict triangle
+inequalities. Conversely a Gram realization with this signature lies in
+a common affine chart: a positive eigenvector for the largest eigenvalue
+of $I-G$ gives a timelike positive combination of the $v_i$ whose inner
+products with all four are negative. Every projective edge meets the ball
+because $\langle v_i+v_j,v_i+v_j\rangle=2-2q_{ij}<0$.
+
+It is possible to glue right-angled hexagons from a wider set of positive
+arc-length assignments and obtain a valid intrinsic bordered surface. Such
+arcs need not be the edges of its convex hyperideal realization. Thus the
+polyhedral domain must be imposed when the purpose is to integrate a
+canonical polyhedral cell.
+
+\subsection{The WP density on a fixed-boundary leaf}
+
+Mondello's Poisson formula for arc lengths has the boundary kernel
+\begin{equation}
+ K_L(s)=\frac{\sinh(L/2-s)}{\sinh(L/2)},\qquad 0<s<L.
+ \label{eq:boundarykernel}
+\end{equation}
+For two different arcs $e,f$, the bracket in convention~\eqref{eq:fn} is
+one half the sum of these kernels over their common boundary endpoints,
+with oriented boundary distances from the endpoint of $e$ to that of $f$.
+Changing the order changes the sign, since $K_L(L-s)=-K_L(s)$.
+The factor $1/2$ results from evaluating the ordered wedge sum in
+\cite[Theorem 4.1]{MondelloBoundary}.
+That theorem is stated for a compact surface with strictly positive
+geodesic boundaries and a maximal disjoint orthogeodesic arc system.
+Boundary lengths are Casimirs of the Poisson tensor; inversion is performed
+only after restricting to a fixed-boundary leaf. The matrix in all six
+tetrahedral arc lengths is therefore not the matrix to invert.
+
+Restrict now to the two-dimensional leaf where $L_1,\ldots,L_4$ are fixed.
+The arcs $a_{12},a_{13}$ share just the boundary at vertex $1$, and the
+relevant distance is $b=b_1^{23}$, up to orientation. Inverting the
+two-dimensional Poisson tensor gives
+\begin{equation}
+ \boxed{
+ \dV=
+ 2\frac{\sinh(L_1/2)}{\sinh(L_1/2-b_1^{23})}
+ \abs{\dd a_{12}\wedge\dd a_{13}}.}
+ \label{eq:hyperidealdensity}
+\end{equation}
+Since the three truncation sides form a genuine triangle,
+$b_1^{23}<L_1/2$. Thus the denominator is positive, the bracket is nonzero,
+and these two arc lengths are local coordinates on this leaf.
+
+Formula~\eqref{eq:hyperidealdensity} is an actual expression for the volume
+integrand in terms of the hyperideal geometry. Its remaining variables are
+functions on the fixed-$L$ leaf; they cannot be held independently fixed
+while $a_{12},a_{13}$ vary.
+
+For an expression directly in the vertex Gram entries, put
+\[
+ D=q_{12}^2+q_{13}^2+q_{23}^2+2q_{12}q_{13}q_{23}-1.
+\]
+Equation~\eqref{eq:truncationlengths} gives
+\[
+ \cosh b=\frac{q_{12}q_{13}+q_{23}}
+                   {\sqrt{q_{12}^2-1}\sqrt{q_{13}^2-1}},\qquad
+ \sinh b=\frac{\sqrt D}
+                   {\sqrt{q_{12}^2-1}\sqrt{q_{13}^2-1}}.
+\]
+Substituting in~\eqref{eq:hyperidealdensity} and using
+$\dd q_{ij}=\sinh a_{ij}\,\dd a_{ij}$ yields
+\begin{equation}
+ \boxed{
+ \dV=
+ \frac{2\abs{\dd q_{12}\wedge\dd q_{13}}}
+ {q_{12}q_{13}+q_{23}-\coth(L_1/2)\sqrt D}.}
+ \label{eq:gramdensity}
+\end{equation}
+The positivity follows from the same truncation-triangle inequality.
+For a concrete normalization check, take $q_{ij}=2$ for every edge.
+Then $G=3I-2\mathbf1\mathbf1^t$ has determinant $-135$,
+$a_{ij}=b_i^{jk}=a=\operatorname{arcosh}2$, and $L_i=3a$.
+The kernel is $K_{3a}(a)=1/5$, so the bracket is $1/10$ and
+\eqref{eq:hyperidealdensity} has coefficient $10$. In Gram coordinates
+$D=27$ and $\coth(3a/2)=3\sqrt3/5$, giving coefficient $10/3$ in
+\eqref{eq:gramdensity}, exactly as $\sinh^2a=3$ requires.
+This evaluates a local density at one admissible point; it does not solve
+the fixed-boundary equations throughout a cell.
+
+The cusp limit requires renormalization. As a positive boundary shrinks,
+the raw distances to its truncation plane diverge; subtract the endpoint
+terms corresponding to a chosen limiting horocycle before comparing with
+lambda lengths. If $s/L\to\rho$, the kernel itself has the regular limit
+$K_L(s)\to1-2\rho$. A fixed-perimeter horocycle gauge is different from
+the four-unit-lambda gauge in~\eqref{eq:lambdagauge}; changing that gauge
+changes coordinate Jacobians, while preserving the descended WP form.
+This is the cuspidal limiting procedure underlying
+\cite[Theorem 4.5]{MondelloBoundary}.
+
+\subsection{General cells and what remains to integrate}
+
+The same procedure applies to any arc system. On a fixed-boundary leaf,
+choose independent arc coordinates $x_1,\ldots,x_{2d}$ and form the
+antisymmetric matrix
+\[
+ B_{ef}=\{x_e,x_f\}_{\WP}.
+\]
+If it is nonsingular, then
+\begin{equation}
+ \boxed{
+ \dV=\frac{|\dd x_1\cdots\dd x_{2d}|}{|\Pf B|}
+       =\frac{|\dd x_1\cdots\dd x_{2d}|}{\sqrt{\det B}}.}
+ \label{eq:pfaffiandensity}
+\end{equation}
+This is simply the top exterior power of the inverse Poisson matrix. It
+turns a local arc-bracket formula into a local volume formula in every
+dimension.
+
+Bao--Bonahon's angle characterization assumes a planar $3$-connected dual
+graph, $0<\theta_e<\pi$, circuit sums at least $2\pi$ with equality
+only around ideal vertices, and sums greater than $\pi$ on embedded paths
+joining distinct vertices of one dual face without lying in its boundary
+\cite[Theorems 1--2]{BaoBonahon}. The path condition must not be dropped
+when passing from ideal to hyperideal cells.
+For a complete genus-zero hyperbolic metric with finitely many cusps and
+infinite-area ends, the global realization theorem gives a unique
+finite-vertex convex generalized hyperbolic polyhedron, up to congruence.
+This is the case without finite cone singularities of the precise
+restatement in~\cite[Theorem 1.1]{FillastreMetrics}; Section 1.3 there
+attributes its proof to Schlenker~\cite{Schlenker}. For a bordered surface,
+one attaches funnels and then truncates along the polar planes.
+Rivin's intrinsic theorem supplies
+ideal existence and generalized uniqueness~\cite[Theorems 1.1--1.3]{RivinIntrinsic}.
+The local Gram and Poisson calculations above are independent of invoking
+this global existence theorem.
+
+For fixed $L_i$, however, the angle cell is cut out further by the nonlinear
+equations~\eqref{eq:truncationlengths}. The local density is therefore more
+complicated than in the ideal case. The known total
+\[
+ V_{0,4}(L_1,L_2,L_3,L_4)=2\pi^2+\tfrac12\sum_iL_i^2
+\]
+provides a stringent target for a direct evaluation of these cell integrals.
+No such full hyperideal evaluation is carried out in this monograph.
+
+Budd's metric-map polynomials obey, for $g=0,1$,
+\begin{equation}
+ V_{g,n}^{(2\pi)}(\alpha_1,\ldots,\alpha_n)
+ =2^{2-2g-n}V_{g,n}\bigl(\sqrt{\alpha_1^2-4\pi^2},\ldots,
+                         \sqrt{\alpha_n^2-4\pi^2}\bigr).
+ \label{eq:buddidentity}
+\end{equation}
+This does not extend to $g\ge2$. Nor does the displayed substitution describe
+the actual relation between hyperideal angle perimeters and truncation
+boundary lengths~\cite[Corollary 2 and Section 1.3]{Budd}. It is useful
+evidence of a connection, with a separate geometric question behind it.
+
+\subsection{A further tree-coordinate result}
+
+There is now an additional concrete integration route for genus zero with
+a distinguished cusp. Budd--Meeusen--Zonneveld construct a spine bijection
+from a full-measure subset to explicitly decorated tree polytopes
+\cite[Theorem 1]{BMZ}. Writing $m$ for the total number of ends, their
+statement has the form
+\begin{equation}
+ \M_{0,m}^{\circ}(0,\lengths)\ \longleftrightarrow\
+ \bigsqcup_{\mathfrak t}\mathcal A_{\mathfrak t}(\lengths),
+ \qquad
+ \dV=2^{m-3}\,\dd^{\,2m-6}u_{\mathfrak t}.
+ \label{eq:treevolume}
+\end{equation}
+Thus its volume is a finite sum of ordinary polytope volumes, with this
+specified constant density. Their construction uses spine and tree
+coordinates rather than the Bao--Bonahon hyperideal angle cells. It
+requires an origin cusp.
+In~\eqref{eq:treevolume}, $u_{\mathfrak t}$ means the independent coordinates
+used in~\cite[equation (5)]{BMZ}: two angles at each trivalent inner
+vertex and all but the last entry in each of the two boundary simplices
+of size $L_i/2$. It is not Euclidean hypersurface measure on the redundant
+coordinate space. With $m=n+1$ in that paper, its factor $2^{n-2}$ is
+precisely $2^{m-3}$ here.
+
+Zonneveld's sequel removes that restriction using decompositions into
+half-tight cylinders~\cite[Theorem 3]{Zonneveld}. For positive boundary
+lengths, with a selected pair satisfying $L_1<L_2$, it gives a full-measure
+bijection to tree and double-tree cells and identifies their WP measures.
+The latter cells include a gluing length and a twist parameter. The resulting
+finite integrations compute the general genus-zero volume polynomials;
+equal-length volume values follow by continuity. These are further direct
+combinatorial integrations, but they do not identify the spine cells with
+the hyperideal dihedral-angle cells. The direct evaluation in those
+polyhedral coordinates remains a distinct calculation proposed here.
+

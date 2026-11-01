@@ -1,0 +1,385 @@
+\section{From ideal polyhedra to the Euclidean limit of WP geometry}
+\label{sec:flatlimit}
+
+\subsection{A prescribed intrinsic interpolation}
+
+For the weights in~\eqref{eq:flatweights}, define
+\begin{equation}
+ \theta_i(t)=2\pi t(1-\mu_i),\qquad
+ a_i(t)=1-t(1-\mu_i),\qquad 0\le t<1.
+ \label{eq:anglepath}
+\end{equation}
+Hold the marked conformal sphere $X\in\M_{0,n}$ fixed, and let $g_t(X)$
+be its curvature-$-1$ cone metric with these openings. Its area is
+\begin{equation}
+ A_t=2\pi\left(\sum_i a_i(t)-2\right)
+    =2\pi(n-2)(1-t).
+ \label{eq:areapath}
+\end{equation}
+At $t=0$ the metric is the complete cusped metric, realized by an ideal
+polyhedron, including doubled ideal polygons. For $0<t<1$ it is a positive-deficit hyperbolic cone metric,
+realized by a compact convex hyperbolic polyhedron, with flattened
+realizations included when necessary. The realization results are
+reviewed in~\cite{Fillastre}; the ideal and generalized settings are
+treated in~\cite{RivinIntrinsic,Schlenker}.
+
+Normalize to unit area:
+\begin{equation}
+ \widehat g_t=A_t^{-1}g_t,
+ \qquad \operatorname{Area}(\widehat g_t)=1,
+ \qquad K(\widehat g_t)=-A_t.
+ \label{eq:unitareanormalization}
+\end{equation}
+The unit-area uniformization and local deformation results of
+Mazzeo--Weiss give the flat limit
+\begin{equation}
+ \widehat g_t(X)\longrightarrow g_{\mathrm E,\mu}(X)
+ \quad (t\to1),
+ \label{eq:flatmetriclimit}
+\end{equation}
+with the Euclidean metric normalized to area one. Here their angle
+parameters are $\beta_i(t)=-a_i(t)\in(-1,0)$ near $t=1$, and
+$\chi(S^2)+\sum_i\beta_i(t)=-D(1-t)\le0$, where $D=n-2$.
+Thus their nonpositive-curvature existence and uniqueness theorem
+applies, including the flat endpoint. Their smooth local slices give
+convergence away from the cone points and uniform conic estimates
+after a local trivialization fixing the marks
+\cite[Theorem 1, Section 6.1, and Proposition 16]{MazzeoWeiss}.
+This is a deduction along the specified path; it is local over
+moduli where the marks remain separated.
+
+This constructs a family of complex fixed-angle leaves with two
+geometric endpoints: cusped hyperbolic surfaces/ideal polyhedra, and
+flat cone spheres/Euclidean shapes. It does not assign a single
+complex structure to all angle variables in the full real space of
+hyperbolic polyhedra. Nor is it generally radial scaling of a fixed
+Euclidean vertex configuration in the Klein ball. Such radial scaling
+makes all vertices ideal simultaneously only for a cospherical
+configuration. Every nondegenerate Euclidean tetrahedron is
+cospherical, but its radial path still need not preserve $X$ or
+the angle path~\eqref{eq:anglepath}.
+
+\subsection{The normalized local WP form}
+
+The scale of the WP form can be seen directly from the cotangent
+pairing. Write $w=x+iy$ and $g_t=\rho_t|\dd w|^2$. For
+$q=\varphi\,\dd w^2$ and $r=\psi\,\dd w^2$, the raw coefficient
+pairing is
+\[
+ Q_t(q,r)=\int_X\frac{\varphi\overline\psi}{\rho_t}\,\dd x\,\dd y.
+\]
+Since $\rho_t=A_t\widehat\rho_t$, the rescaled cometric $A_tQ_t$
+has a finite flat limit. A quadratic differential has at most a
+simple pole at a marked point, while
+$\widehat\rho_t\to\rho_{\mathrm E}$ with
+$\rho_{\mathrm E}=c_i(w)|w|^{-2\mu_i}$ for a smooth positive local
+factor $c_i$. The limiting integrand is
+$O(|w|^{2\mu_i-2})\,\dd x\,\dd y$, which is integrable because
+$\mu_i>0$. On a compact subset of a coordinate chart in moduli, the
+conic estimates bound the nearby integrands by
+$C|w|^{2m-2}\,\dd x\,\dd y$ for some $m>0$. Dominated convergence
+therefore gives locally uniform convergence of the pairing matrices.
+Their flat limit is positive definite, so matrix inversion gives a
+tangent metric and a K\"ahler form of order $A_t$. No assertion here
+allows the marked points to collide or a weight to tend to zero.
+
+To determine the constant, use the raw tangent coefficients
+$G_{j\bar k}(g)=\int_X\nu_j\overline{\nu_k}\,\dd A_g$, where
+$\nu_j$ is the harmonic Beltrami representative of a complex coordinate
+vector $\partial/\partial z_j$. Our FN normalization is
+$\omega_{\WP}=i\sum G_{j\bar k}\,\dd z_j\wedge\dd\bar z_k$,
+as fixed in Section~\ref{sec:conventions}; equivalently, on real
+tangent vectors it is $-2\operatorname{Im}G$
+\cite[Section 6.1, equation (38)]{KawazumiWP}.
+Wang's period-variation calculation, translated to the positive area
+pairing~\eqref{eq:DMarea}, gives
+\[
+ -\frac{\partial^2\log\mathcal A}{\partial z_j\partial\bar z_k}
+  =\frac{G_{j\bar k}(g_{\mathrm E})}
+         {\operatorname{Area}(g_{\mathrm E})}.
+\]
+Indeed, the component of the variation of $[\eta]$ orthogonal to
+$[\eta]$ is represented by $\nu_j\mathbin{\lrcorner}\eta$; its
+negative Hermitian norm divided by $H(\eta,\eta)$ is the displayed
+area average. This is the normalization-independent content of
+\cite[Theorem 1.2.1 and Section 4.4]{WangFlatWP}. Inserting
+\eqref{eq:CHpotential} now gives
+\begin{equation}
+ \boxed{\quad A_t^{-1}\omega_{\WP,t}
+       \longrightarrow\frac12\omega_{\mathrm{CH},\mu}.\quad}
+ \label{eq:localWPCHlimit}
+\end{equation}
+The convergence is of form coefficients locally uniformly on the
+open moduli space. The factor is also checked independently by the
+class calculation below. This conclusion combines the two cited
+inputs with the specified FN convention; neither source states this
+hyperbolic-to-flat limit verbatim. Local convergence on a noncompact
+moduli space alone does not justify convergence of total volumes.
+
+\subsection{The class calculation and an exact final-chamber polynomial}
+
+Put $d=n-3$, $D=n-2$, and $\mu_I=\sum_{i\in I}\mu_i$. Let
+$\delta_I=\delta_{I^c}$ denote the divisor of the stable bipartition
+$I\mid I^c$. Define the real divisor class
+\begin{equation}
+ B_\mu=\frac12\left(
+   -\sum_i\mu_i\psi_i+
+   \sum_{\{I,I^c\}}\min(\mu_I,\mu_{I^c})\delta_I\right),
+ \label{eq:CHclassB}
+\end{equation}
+where the second sum counts each unordered stable bipartition once.
+Use the real compactification class on the ordinary
+Deligne--Mumford compactification, defined at balanced weights by
+continuity. Its normalization and volume formula are
+\begin{equation}
+ [\omega_{\mathrm{CH},\mu}]=4\pi B_\mu,\qquad
+ V_{\mathrm{CH}}(\mu)=\frac{(4\pi)^d}{d!}
+                     \int_{\MM_{0,n}}B_\mu^d.
+ \label{eq:CHintersection}
+\end{equation}
+Away from balanced weights, Koziarz--Nguyen's normalized form
+$\Omega_\mu$ represents $B_\mu$ as a closed current. Their
+Section 7.3 gives the divisor class, and Section 7.4 converts it
+to curvature $-1$ by
+$\omega_{\mathrm{CH},\mu}=4\pi\Omega_\mu$
+\cite[Theorem 1.1 and Sections 7.3--7.4]{KoziarzNguyen}.
+Their direct metric/current analysis excludes subsets $\mu_I=1$;
+at these balanced weights the displayed divisor class and volume
+formula are understood by continuity, as explained in their
+Remark 1.3. The volume on the left is the finite volume of the
+open labeled moduli space, with no permutation quotient.
+
+Let $\varepsilon=1-t$, $r_i=1-\mu_i$, and
+$r_I=\sum_{i\in I}r_i=|I|-\mu_I$. Then
+$a_i=\mu_i+\varepsilon r_i$ and $A=2\pi D\varepsilon$. Write
+$\mathcal L_\mu$ for the stable subsets with $\mu_I<1$, each light
+side counted once. For sufficiently small positive $\varepsilon$,
+these are precisely the light subsets in the adjacent hyperbolic
+chamber. Subsets with $\mu_I=1$ are \emph{not} light along this path.
+Define
+\begin{equation}
+ \boxed{\quad
+ \Xi_\mu=\frac{1}{2D^2}\left(
+ -\sum_i(1-\mu_i)^2\psi_i+
+ \sum_{I\in\mathcal L_\mu}(|I|-\mu_I)^2\delta_I\right).
+ \quad}
+ \label{eq:Xiclass}
+\end{equation}
+
+\begin{proposition}[A deduction from the two compactification formulas]
+In the final chamber of the path~\eqref{eq:anglepath},
+\begin{align}
+ [\omega_{\WP}(A)]
+   &=\frac A2[\omega_{\mathrm{CH},\mu}]+A^2\Xi_\mu,
+       \label{eq:exactWPclassflat}\\
+ V_{\WP}(A)
+   &=\frac{A^d}{d!}\int_{\MM_{0,n}}
+       \left(\frac12[\omega_{\mathrm{CH},\mu}]+A\Xi_\mu\right)^d.
+       \label{eq:exactWPvolumeflat}
+\end{align}
+In particular,
+\begin{equation}
+ \boxed{\quad
+ V_{\WP}(A)=2^{-d}A^d V_{\mathrm{CH}}(\mu)+O(A^{d+1}).
+ \quad}
+ \label{eq:WPCHvolumeasymptotic}
+\end{equation}
+The volume in~\eqref{eq:exactWPvolumeflat} is exactly a polynomial in
+$A$ with possible degrees $d,d+1,\ldots,2d$ within that chamber.
+\end{proposition}
+
+\begin{proof}
+In terms of deficit weights, the pulled-back WP class
+\eqref{eq:wallclass}, divided by $2\pi^2$, is
+\[
+ \beta(a)=\kappa_1-\sum_i(1-a_i)^2\psi_i+
+           \sum_{a_I<1}(1-a_I)^2\delta_I.
+\]
+Here all collision sums run over stable subsets, so
+$2\le |I|\le n-2$; since $\sum a_i>2$, both sides of a
+bipartition cannot be light. We verify the two needed endpoint
+identities on the ordinary universal curve
+$\pi:\mathcal C\to\MM_{0,n}$. Write $\Gamma_i$ for its sections,
+$K=K_{\mathcal C/\MM_{0,n}}+\sum_i\Gamma_i$, and $F_I$ for
+the vertical component over $\delta_I$ carrying the marks in $I$.
+For the fixed final-chamber list $\mathcal L_\mu$, set
+\[
+ \Lambda(a)=K-\sum_i(1-a_i)\Gamma_i
+                  -\sum_{I\in\mathcal L_\mu}(1-a_I)F_I.
+\]
+The universal-curve intersections used in
+\cite[Section 8.4]{KoziarzNguyen} are
+\[
+ \begin{gathered}
+ \pi_*K^2=\kappa_1,\qquad K\Gamma_i=0,\qquad
+ \pi_*(\Gamma_i^2)=-\psi_i,\qquad \Gamma_i\Gamma_j=0\ (i\ne j),\\
+ \pi_*(KF_I)=(|I|-1)\delta_I,\qquad
+ \pi_*(F_IF_J)=-\mathbf1_{I=J}\delta_I,\qquad
+ \pi_*(\Gamma_iF_I)=\mathbf1_{i\in I}\delta_I.
+ \end{gathered}
+\]
+Consequently $\pi_*\Lambda(a)^2=\beta(a)$. For example, with
+$c=1-a_I$, the coefficient of $\delta_I$ in this square is
+$-2c(|I|-1)+2c\sum_{i\in I}(1-a_i)-c^2=c^2$; this checks
+the sign of the vertical correction.
+
+For rational flat weights away from balanced subsets, the corrected
+divisor $\Lambda(\mu)$ is fiberwise trivial and is the pullback of
+Koziarz--Nguyen's extended period-line class $B_\mu$
+\cite[Sections 8.1 and 8.4]{KoziarzNguyen}. All coefficients extend
+continuously to real weights and to balanced subsets, whose vertical
+coefficient $1-\mu_I$ vanishes. Hence
+$\Lambda(\mu)=\pi^*B_\mu$ as real divisor classes throughout
+\eqref{eq:flatweights}. Along our fixed chamber,
+\[
+ \Lambda(\mu+\varepsilon r)=\pi^*B_\mu+\varepsilon R,
+ \qquad R=\sum_i r_i\Gamma_i+\sum_{I\in\mathcal L_\mu}r_IF_I,
+ \qquad \pi_*R=\sum_i r_i=D.
+\]
+The projection formula now gives
+$\pi_*\Lambda(\mu)^2=0$ and first-order term
+$2\varepsilon D B_\mu$. Equivalently,
+\begin{align*}
+ \beta(\mu)&=0,\\
+ \sum_i r_i^2\psi_i-
+   \sum_{I\in\mathcal L_\mu}(1-\mu_I)r_I\delta_I&=D B_\mu.
+\end{align*}
+These are general class identities obtained by pushforward; finite
+intersection checks are supplementary.
+
+Expanding the quadratic expression for $\beta$ now gives
+\[
+ \beta(\mu+\varepsilon r)=2\varepsilon D B_\mu+
+ \varepsilon^2\left(-\sum_i r_i^2\psi_i+
+                \sum_{I\in\mathcal L_\mu}r_I^2\delta_I\right).
+\]
+Multiplication by $2\pi^2$, followed by
+$A=2\pi D\varepsilon$ and~\eqref{eq:CHintersection}, proves
+\eqref{eq:exactWPclassflat}. The WP intersection-volume theorem
+\cite{AMN} proves~\eqref{eq:exactWPvolumeflat}; its leading term is
+\eqref{eq:WPCHvolumeasymptotic}.
+\end{proof}
+
+Within the original parameter interval $0<\varepsilon\le1$, the
+open final chamber is
+\begin{equation}
+ 0<\varepsilon<\varepsilon_*,\qquad
+ \varepsilon_*=
+ \begin{cases}
+ \displaystyle\min_{I\in\mathcal L_\mu}
+                \frac{1-\mu_I}{|I|-\mu_I},&\mathcal L_\mu\ne\varnothing,\\
+ 1,&\mathcal L_\mu=\varnothing.
+ \end{cases}
+ \label{eq:finalchamberwidth}
+\end{equation}
+When the light-subset set is empty, the same polynomial also holds
+at the cusped endpoint $\varepsilon=1$. At a collision wall the
+vanishing correction makes the adjacent volume polynomials agree,
+but the strict inequality specifies which chamber supplies the
+coefficients. Along the full
+path, a stable subset crosses its wall at
+$t_I=(|I|-1)/(|I|-\mu_I)$ when $\mu_I<1$. Thus the ideal-to-flat
+volume is piecewise polynomial, even though the final expansion is
+an exact polynomial.
+
+\subsection{Examples and nonuniformity at balanced weights}
+
+With four equal weights $\mu_i=1/2$, all openings are $\pi t$, and
+there are no active collision corrections for $t<1$. Thus
+\begin{equation}
+ V_{\WP}(t)=2\pi^2(1-t^2),\qquad A=4\pi(1-t),\qquad
+ V_{\WP}(A)=\pi A-\frac{A^2}{8}.
+ \label{eq:equalflatvolume}
+\end{equation}
+Here $\int B_\mu=1/2$, $V_{\mathrm{CH}}=2\pi$, and
+$\int\Xi_\mu=-1/8$, checking all constants directly.
+
+For $\mu=(3/10,2/5,3/5,7/10)$, the light pairs are $\{1,2\}$
+and $\{1,3\}$, while $\{1,4\}\mid\{2,3\}$ is balanced.
+One obtains $\int B_\mu=3/10$ and $\int\Xi_\mu=9/40$.
+The two positive wall parameters are $\varepsilon=3/13$ and $1/11$,
+so the final-chamber volume is
+\[
+ V_{\WP}(A)=\frac35\pi A+\frac9{40}A^2,
+ \quad 0<A<\frac{4\pi}{11},\qquad
+ V_{\mathrm{CH}}=\frac65\pi.
+\]
+At the flat endpoint the uncorrected cone polynomial would equal
+$-\pi^2/5$; the two light-pair corrections, $9\pi^2/50$ and
+$\pi^2/50$, cancel it. The wall corrections are indispensable to
+the existence of the flat limit.
+
+There is also a two-dimensional exact check. For five equal weights
+$\mu_i=2/5$, put $T=\sum_{i<j}\delta_{\{i,j\}}$. On
+$\MM_{0,5}$ the boundary and cotangent relations give
+$\sum_i\psi_i=\tfrac32T$. Each of the ten boundary curves has
+self-intersection $-1$; distinct curves meet once precisely when
+their index pairs are disjoint. There are fifteen such unordered
+intersections, so $\int T^2=-10+2\cdot15=20$.
+Thus $B_\mu=T/10$, $\Xi_\mu=T/20$, and
+\[
+ V_{\mathrm{CH}}=\frac85\pi^2,\qquad
+ V_{\WP}(A)=\frac25\pi^2A^2+\frac15\pi A^3+\frac1{40}A^4,
+ \qquad 0<A<\pi.
+\]
+Here $\varepsilon<1/6$ is the exact final-chamber condition.
+The boundary intersections are described in
+\cite[Example 2.2 and Section 5]{Kojima}; the divisor identities are
+also available from~\cite[Section 7.3 and Appendix A]{KoziarzNguyen}.
+
+The leading class $B_\mu$ and volume $V_{\mathrm{CH}}(\mu)$ vary
+continuously with the weights. The higher coefficients of the
+\emph{final-chamber} expansion need not. For example, let
+\[
+ \mu(\delta)=\left(\tfrac12-\delta,\tfrac12-\delta,
+                    \tfrac12+\delta,\tfrac12+\delta\right),
+ \qquad 0<\delta<\tfrac12.
+\]
+The only light pair is $\{1,2\}$, and
+\[
+ \int\Xi_{\mu(\delta)}=\frac\delta2\longrightarrow0,
+ \qquad
+ \int\Xi_{(1/2)^4}=-\frac18.
+\]
+There is no contradiction: the final chamber has
+$\varepsilon<2\delta/(1+2\delta)$ and collapses as $\delta\to0$.
+The full piecewise WP volume remains continuous. The small-$A$
+expansion must therefore be taken at fixed weights; uniformity
+across balanced collision walls requires a separate analysis.
+
+\subsection{Why the complex hyperbolic volumes look different}
+
+Thurston proves finite volume and connects particular examples to
+counting triangulations~\cite{ThurstonShapes}. A general explicit
+volume formula is obtained by McMullen's stratified Gauss--Bonnet
+calculation~\cite[Theorem 8.1]{McMullenGB}. In the present labeled,
+curvature-$-1$ convention it is
+\begin{equation}
+ V_{\mathrm{CH}}(\mu)=\frac{(-4\pi)^d}{(d+1)!}
+ \sum_{\substack{\mathcal P\text{ a partition of }\{1,\ldots,n\}\\
+                  |\mathcal P|\ge3}}
+ (-1)^{|\mathcal P|+1}(|\mathcal P|-3)!
+ \prod_{B\in\mathcal P}(1-\mu_B)_+^{|B|-1}.
+ \label{eq:McMullenpartitionvolume}
+\end{equation}
+Here $(x)_+=\max(x,0)$. Each set partition is counted once, with
+no division by permutations of equal weights; singleton factors are
+$1$. Only blocks of weight less than one contribute. For the five
+equal weights above, the contributions with respectively five, four,
+and three blocks are $2$, $-2$, and $3/5$, giving
+$V_{\mathrm{CH}}=8\pi^2/5$ independently of the intersection
+calculation. This finite example checks the constant and the labeled
+partition convention; the general formula is McMullen's theorem.
+
+The blocks encode collisions. Their solid-angle factors weight
+Euler characteristics of the corresponding strata. Balanced subsets
+give cusps; the formula includes them by the finite-volume extension
+in the proof of that theorem. Koziarz--Nguyen's
+intersection formula~\eqref{eq:CHintersection} computes the same
+quantity by a different route. Equation~\eqref{eq:WPCHvolumeasymptotic}
+recovers it from the normalized small-area limit
+$V_{\mathrm{CH}}(\mu)=2^d\lim_{A\downarrow0}A^{-d}V_{\WP}(A)$. Thus the
+Gauss--Bonnet, period, and intersection calculations refer to the
+same limiting geometry, with their normalization made explicit.
+
+

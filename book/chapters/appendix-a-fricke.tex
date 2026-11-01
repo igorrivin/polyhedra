@@ -1,0 +1,55 @@
+\section{A trace-coordinate check of the WP factor}
+\label{app:fricke}
+
+A separate two-dimensional calculation is useful for checking the factor
+$2$ in the local densities. Let $A,B,C,D\in\mathrm{SL}_2(\RR)$ satisfy
+$ABCD=I$, and set
+\[
+ a=\tr A,\ b=\tr B,\ c=\tr C,\ d=\tr D,
+ \qquad x=\tr(AB),\ y=\tr(AC),\ z=\tr(BC).
+\]
+With the four peripheral traces fixed, the character surface satisfies
+the Fricke relation
+\begin{align}
+ \Phi(x,y,z)={}&x^2+y^2+z^2+xyz-(ab+cd)x-(ac+bd)y\notag\\
+ &-(ad+bc)z+a^2+b^2+c^2+d^2+abcd-4=0.
+ \label{eq:fricke}
+\end{align}
+This is the standard four-holed-sphere trace surface; see~\cite{Goldman}.
+
+On a chart where $x=2\cosh(\ell/2)>2$, put $s=\sinh(\ell/2)$ and
+$X=AB$. Twisting across the $AB$ cuff fixes $A,B$ and conjugates $C,D$ by
+\[
+ \exp\left(\frac{\tau}{2}H_X\right),
+ \qquad H_X=\frac{X-(x/2)I}{s}.
+\]
+The eigenvalues of $H_X$ are $1,-1$, so this is a displacement of length
+$\tau$ along the cuff axis. Differentiating $y=\tr(AC)$ gives
+\[
+ \frac{\partial y}{\partial\tau}
+ =\frac1{2s}\tr\bigl(A[X,C]\bigr)
+ =-\frac{\Phi_z}{2s}.
+\]
+For the last equality, Cayley--Hamilton gives
+$\tr(A^2BC)=ad-z$, while the two-matrix trace identity gives
+$\tr(ACAB)=xy-bc+z$. Their difference is
+$ad+bc-xy-2z=-\Phi_z$.
+
+Since $\dd x=s\,\dd\ell$ and $\omega_{\WP}=\dd\ell\wedge\dd\tau$,
+\begin{equation}
+ \boxed{\dV=\frac{2|\dd x\wedge\dd y|}{|\Phi_z|}.}
+ \label{eq:frickedensity}
+\end{equation}
+Equivalently, on this twist chart,
+$\dd x\wedge\dd y=-\Phi_z\,\dd\ell\wedge\dd\tau/2$.
+Reversing the chosen twist direction reverses the signed form but leaves
+the displayed positive density unchanged. The hyperbolic application
+requires the smooth geometric component of the relative character
+surface and $\Phi_z\ne0$ for $(x,y)$ to be coordinates. If $\Phi_z=0$
+but $\nabla\Phi\ne0$, another pair can be chosen; if all three partial
+derivatives vanish, the character surface is singular and this inversion
+argument does not supply a chart. In particular, arbitrary real solutions
+of $\Phi=0$ are not automatically holonomies of four-holed spheres.
+The formula is local on the marked character surface and does not
+describe a global mapping-class fundamental domain.
+

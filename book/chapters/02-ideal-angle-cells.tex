@@ -1,0 +1,112 @@
+\section{Ideal polyhedra, angle cells, and a partition function}
+\label{sec:idealcells}
+
+\subsection{The geometric parametrization}
+
+In the polyhedral cell discussion take $n\ge4$; the three-ended sphere is
+the zero-dimensional pants base case.
+
+Rivin's intrinsic realization theorem identifies a complete finite-area
+hyperbolic metric on an $n$-punctured sphere with the boundary metric of a
+convex ideal polyhedron, uniquely up to ambient isometry. Flat doubles of
+ideal polygons occur as limiting configurations~\cite{RivinIntrinsic}.
+For oriented moduli one retains the orientation of the boundary and uses
+orientation-preserving equivalences.
+
+Fix a combinatorial polyhedron and write $\theta_e$ for its exterior dihedral
+angles. In the dual graph, the ideal conditions are
+\begin{align}
+ &0<\theta_e<\pi,\label{eq:rivinangles1}\\
+ &\sum_{e\in\partial f}\theta_e=2\pi
+       &&\text{for every dual face }f,\label{eq:rivinangles2}\\
+ &\sum_{e\in C}\theta_e>2\pi
+       &&\text{for every simple dual circuit not bounding a face.}
+       \label{eq:rivinangles3}
+\end{align}
+Here the dual graph is the planar, $3$-connected graph of a convex
+polyhedron, with its oriented embedding fixed. With these hypotheses, these
+are Rivin's characterization~\cite{RivinAngles}. Thus the admissible angle
+assignments form an open convex polytope in an affine subspace. Generic
+polyhedra have triangular faces; their dual maps are trivalent and have
+$3n-6$ edges. The $n$ perimeter conditions are independent: their matrix
+is the unsigned vertex--edge incidence matrix of the primal triangulation.
+A row relation assigns numbers $c_v$ with $c_v+c_w=0$ across every edge;
+a triangular face forces its three numbers to vanish, and connectedness
+forces all of them to vanish. The dimension is therefore $2n-6$.
+
+An edge of the dual graph has metric length $\theta_e$. The resulting metric
+map has face perimeters $2\pi$ and no short nonfacial circuit. This is the
+genus-zero instance of a $2\pi$-irreducible metric map. It gives the precise
+combinatorial object behind the proposed sum over polyhedral types.
+
+\subsection{A normalized cell integral}
+
+For a dual ribbon graph $G$ with labeled faces, define its constrained
+Lebesgue measure by disintegrating $\prod_e\dd\theta_e$ with respect to the
+face-perimeter map. Symbolically, at perimeters $\boldsymbol\alpha$,
+\begin{equation}
+ \dd\nu_G(\boldsymbol\alpha)=
+ \left(\prod_{e\in E(G)}\dd\theta_e\right)
+ \left(\prod_{i=1}^{n}
+ \delta\left(\sum_{e\in\partial f_i}\theta_e-\alpha_i\right)\right).
+ \label{eq:deltameasure}
+\end{equation}
+An edge is counted with its boundary multiplicity. This notation specifies
+a disintegrated measure, rather than Euclidean hypersurface measure with an
+unstated coarea factor.
+Concretely, let $P$ be the perimeter matrix and split the edge coordinates
+as $(u,v)$ so that the square $n\times n$ block $P_v$ is invertible.
+On the fiber $P_u u+P_vv=\boldsymbol\alpha$, the measure is
+\[
+ \dd\nu_G=\frac{|\dd u_1\cdots\dd u_{2n-6}|}{|\det P_v|},
+ \qquad v=P_v^{-1}(\boldsymbol\alpha-P_u u).
+\]
+Thus deleting $n$ dependent edge variables without this determinant would
+change the normalization.
+
+The ideal cell description is known to give a volume calculation, beyond
+the possibility suggested by the realization theorem. Charbonnier--David--Eynard
+compare the angle measure with the WP form through lambda lengths
+\cite[Section 3.2]{CDE}. In Budd's normalization of metric-map volume,
+\begin{equation}
+ \boxed{
+ V_{0,n}(0,\ldots,0)=
+ 2^{n-2}\sum_{[G]}\frac{1}{|\Aut(G)|}
+ \int_{\mathcal P_G}\dd\nu_G(2\pi,\ldots,2\pi).}
+ \label{eq:polyhedralpartition}
+\end{equation}
+Here $\mathcal P_G$ imposes positivity and irreducibility, $G$ ranges over
+oriented trivalent maps with labeled faces, and automorphisms preserve this
+data. Nontrivalent strata have zero volume. Budd gives this interpretation
+and the normalization explicitly~\cite[Section 1.3]{Budd}.
+Equivalently, his rooted-map measure gives each root weight
+$1/(2|E(G)|)$; summing the $2|E(G)|/|\Aut(G)|$ rooted versions gives
+the displayed unrooted weight. Reversing the cyclic orders is not an
+allowed equivalence of oriented maps.
+
+Thus there is a genuine partition function over polyhedral combinatorial
+types. Formula~\eqref{eq:polyhedralpartition} is a finite cellwise integral
+at fixed $n$; it is not a sum over geodesics. The factors in it encode three
+choices that should never be suppressed: labels, orientation, and the
+normalization of the constrained measure. Section~\ref{sec:tetrahedron}
+checks them directly for $n=4$.
+
+\subsection{The string-theoretic connection}
+
+Saadi--Zwiebach's closed-string construction uses equal-perimeter polyhedral
+diagrams and quadratic differentials~\cite{SaadiZwiebach}. Zwiebach's
+minimal-area formulation imposes a lower bound $2\pi$ on nontrivial closed
+curves and uses uniqueness to control the covering of moduli space
+\cite{Zwiebach}. These give a concrete historical counterpart to the
+suggestion that such cells should be used for integration.
+
+Several identifications nevertheless require care. A metric ribbon graph
+can be thickened into a flat surface using a Jenkins--Strebel differential.
+A hyperbolic polyhedron has an intrinsic hyperbolic boundary metric and also
+extrinsic dual data. These constructions may share the same combinatorial
+and length description without giving the same metric or the same conformal
+coordinate on moduli. Likewise, a string amplitude includes its specified
+integrand; a decomposition used for string integration does not automatically
+select the WP measure. Equation~\eqref{eq:polyhedralpartition} uses an
+explicit measure comparison, not just the common vocabulary of polyhedra.
+

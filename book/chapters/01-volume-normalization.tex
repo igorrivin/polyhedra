@@ -1,0 +1,80 @@
+\section{The volume problem and its normalization}
+\label{sec:conventions}
+
+Let $\M_{g,n}(L_1,\ldots,L_n)$ denote the moduli space of oriented hyperbolic
+surfaces of genus $g$ with $n$ labeled, unparametrized geodesic boundary
+components of prescribed lengths. A zero length denotes a cusp. Throughout,
+the curvature is $-1$, the parameters are fixed before taking a volume, and
+$2g-2+n>0$. Put
+\[
+ d=3g-3+n,\qquad
+ V_{g,n}(\lengths)=\int_{\M_{g,n}(\lengths)}
+                  \frac{\omega_{\WP}^{d}}{d!}.
+\]
+We use the Fenchel--Nielsen convention
+\begin{equation}
+ \omega_{\WP}=\sum_{j=1}^{d}\dd\ell_j\wedge\dd\tau_j,
+ \qquad \text{one full Dehn twist: }\tau_j\longmapsto\tau_j+\ell_j.
+ \label{eq:fn}
+\end{equation}
+This fixes the scale of the form independently of the convention for
+orbifold integration. For comparison with complex coordinates $t_j$, let
+$\mu_j$ be the harmonic Beltrami representative of $\partial/\partial t_j$
+and let $H_{j\bar k}=\int_X\mu_j\overline{\mu_k}\,\dd A$ use the curvature
+$-1$ area element. Our positive complex convention is
+\[
+ \omega_{\WP}=i\sum_{j,k}H_{j\bar k}\,\dd t_j\wedge\dd\bar t_k.
+\]
+The factor is $i$, rather than $i/2$ with the same raw coefficients.
+For closed surfaces the conversion is explicit in
+\cite[Section 6.1, equation (38)]{KawazumiWP}; that paper writes
+$\dd\tau\wedge\dd\ell$, so its twist direction is opposite to ours.
+The conical extension used in Section~\ref{sec:flatlimit} retains this
+scale; its geometric hypotheses are stated there.
+
+Volumes are orbifold, or stack, volumes: generic ineffective stabilizers are
+included. In particular,
+\begin{equation}
+ V_{0,3}=1,\qquad
+ V_{0,4}(\lengths)=2\pi^2+\frac12\sum_{i=1}^4L_i^2,
+ \qquad
+ V_{1,1}(L)=\frac{L^2+4\pi^2}{48}.
+ \label{eq:basevolumes}
+\end{equation}
+The effective torus volume is twice the last expression. This convention
+matters both in unfolding and in the torus--sphere correspondence; see
+Do--Norbury~\cite{DoNorbury} and Section~\ref{sec:torussphere}.
+More generally, a generic ineffective stabilizer of order $h$ divides the
+effective volume by $h$ without rescaling the local two-form. Rescaling
+$\omega_{\WP}$ by a constant $c$ instead multiplies a $2d$-dimensional
+volume by $c^d$. These are separate normalization operations.
+
+The original geometric proposal has three separate ingredients:
+\begin{enumerate}
+ \item realize an intrinsic surface by a canonical convex polyhedron;
+ \item describe the allowed polyhedra by cells, ideally linear polytopes;
+ \item identify the pullback of $\omega_{\WP}^{d}/d!$ on each cell.
+\end{enumerate}
+The realization and the cell decomposition identify the integration domain.
+They do not, by themselves, identify its measure. In the ideal genus-zero
+case the measure comparison is particularly favorable; in the hyperideal
+case a useful local density is still available, but it is generally no longer
+constant in the natural angle variables.
+
+There are also two different cross-ratios in the four-point problem. Four
+ideal vertices on $\partial\HH^3$ have an \emph{ambient} cross-ratio. The
+intrinsic metric on the polyhedral boundary has a conformal uniformization,
+and its four punctures have a \emph{conformal} cross-ratio. The realization
+theorem relates the two parameter spaces, but these two numerical coordinates
+are not generally equal. Keeping them distinct is essential to the first
+explicit integral below.
+
+The computational companion in
+\texttt{experiments/normalizations/README.md} records exact finite checks
+of the determinants, factors, and low-dimensional intersection formulas
+used in Sections~\ref{sec:conventions}--\ref{sec:flatlimit} and
+Appendix~\ref{app:fricke}; its machine-readable output is
+\path{artifacts/normalizations/result.json}. These fixtures check
+algebraic consequences and conventions. They do not prove the cited
+realization, measure-comparison, or convergence theorems.
+
