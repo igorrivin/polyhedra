@@ -1,0 +1,13 @@
+[
+  {
+    "attempt": 1,
+    "scope": "Parent archive checker, not product or packaging failure",
+    "assertion": "Rejected every xattr PAX header",
+    "observed_keys": [
+      "LIBARCHIVE.xattr.com.apple.provenance",
+      "SCHILY.xattr.com.apple.provenance",
+      "mtime"
+    ],
+    "correction": "The official helper emits the two platform provenance PAX headers even with COPYFILE_DISABLE=1. The corrected checker permits only the exact observed header keys, records their value hashes, and still rejects metadata payload files, symlinks, traversal, secret paths, unknown headers and any payload hash mismatch. The archive was not changed."
+  }
+]

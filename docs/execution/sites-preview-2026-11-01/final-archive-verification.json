@@ -1,0 +1,847 @@
+{
+  "status": "offline_archive_verified_not_published",
+  "verified_at_utc": "2026-11-01T04:18:32.754397+00:00",
+  "archive_path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/sites-preview-2026-11-01/offline-sites-preview.tar.gz",
+  "archive_sha256": "9425c791ecb0f7d88f91aae8b19dfb7d30c6526446b103cf6415e79734007cd1",
+  "archive_bytes": 2778427,
+  "extracted_directory": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-sites-archive-verified-8tyjluz6",
+  "research_source_commit": "e79d4cee5b9fd7f999054617406ecebb1b9677cd",
+  "site_source_commit": null,
+  "project_id": "appgprj_6ae6b5b94abc8191aa00dfe244adcf37",
+  "hosting": {
+    "project_id": "appgprj_6ae6b5b94abc8191aa00dfe244adcf37",
+    "static": {
+      "directory": "dist"
+    }
+  },
+  "member_count": 71,
+  "file_count": 50,
+  "payload_files_identical_to_clean_export": 49,
+  "sidecar_files_symlinks_traversal_duplicates_and_extra_payloads_absent": true,
+  "pax_scope": "Official macOS archive format retains only mtime and the two com.apple.provenance PAX representations. These headers are recorded, not claimed absent. No sidecar payload files exist.",
+  "format_metadata": [
+    {
+      "path": "dist",
+      "pax_value_sha256": {
+        "mtime": "b638f8c329ae78146286985f3b2372fc113677b1650fe0022338a8c4f2ea5b10",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9",
+      "pax_value_sha256": {
+        "mtime": "416d55a549f61c57fcd188d557b8bf9d4a594f80b72ff7564479671ddddf3610",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/preview-manifest.json",
+      "pax_value_sha256": {
+        "mtime": "5cce3b93253b1699bb69bc3ebe13ae47ccdc60fb5fe5a894a98d00f05707b8a4",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/index.html",
+      "pax_value_sha256": {
+        "mtime": "b3c3116d116fa0a35541b648a702b1b9bbe1f0d82ca226c91ae20d3698554344",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/search-index.json",
+      "pax_value_sha256": {
+        "mtime": "2c673acec0739f3f7df100e4040b40f108f0b997426c8699a4b165c570287bb5",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/.openai",
+      "pax_value_sha256": {
+        "mtime": "e28ae670eaf2066225a142dfb6251e3c53e6eaa1139e8ac50379db77c3afe5d3",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/assets",
+      "pax_value_sha256": {
+        "mtime": "22a4932dc0c08bbe84bad054f69b42d472130c65df18b2d6260b83a773257386",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/assets/preview.css",
+      "pax_value_sha256": {
+        "mtime": "67f23fecd2d711302e68eb3a34e14c8938c03e1c35b36e3ecabf79ca8f688309",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/assets/search.js",
+      "pax_value_sha256": {
+        "mtime": "f2d66109ef54b9d3a81040dd30ec2269819524407e44e45181928d1510080417",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/.openai/hosting.json",
+      "pax_value_sha256": {
+        "mtime": "8f8b2db2812b315189f08bca16e261226a91ce1f6a55ba3872ea560955d5521e",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/index.html",
+      "pax_value_sha256": {
+        "mtime": "0d7506ba6a46e554cfd33ac2749070165652ab23b4a27e6221ce849e0dd795bc",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/barrier.html",
+      "pax_value_sha256": {
+        "mtime": "4c20ecb94393216d7ee09e97b7961c241c7ae59380293c8e3e3ef90810ce230b",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/chapter.html",
+      "pax_value_sha256": {
+        "mtime": "b0dba8c473bef4664ea92dceda0dd46b72755876dee9b050872ddb59d4bbabdd",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/assets",
+      "pax_value_sha256": {
+        "mtime": "e7b2ee202669519077e620c3a8e9467be4eff5965e55522880b0fccfd7d471e4",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads",
+      "pax_value_sha256": {
+        "mtime": "e6c63c3f9e47241a7cb0a8c75ad2644daa9a7f2dbf8e972fc60fb887fe6fbfc7",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/fixture.json",
+      "pax_value_sha256": {
+        "mtime": "84ba876452eac24798c6ca40c7f4affa17fc5548d45e64609926fa8e0296e8b7",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/barrier_run.py",
+      "pax_value_sha256": {
+        "mtime": "a764235836f8fc898f4fb542a95e5ea94d5cc58391ff6a70f37a9853173f0201",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/section9-reproduction.zip",
+      "pax_value_sha256": {
+        "mtime": "7f72c24975181649be0e1d13a3bf2f51a2ef49dd9f6d9e49abdc3c926e8fd666",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/companion-reconciliation.md",
+      "pax_value_sha256": {
+        "mtime": "40cc07d7e915bfcb8bf601b098eed6246fb74801a6d8537ef4be3ebcc6bde778",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/run.py",
+      "pax_value_sha256": {
+        "mtime": "9256080f28f57f6863aa6f7a1a20dc1b769b7128e03e987ee244289de796d1b3",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/polyhedral_volumes_and_geodesic_identities.pdf",
+      "pax_value_sha256": {
+        "mtime": "ba1be77afe34920ae4a318ddf26bfd2b6cb9fc3082b40c8b21d2889943f12ef4",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/angle_barrier.py",
+      "pax_value_sha256": {
+        "mtime": "6a173faefdec4af57219c64717e276d373bd244ed48d6463aa56dc59479d67ff",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/result.json",
+      "pax_value_sha256": {
+        "mtime": "5e992899e46a182544da456fb81c2f2357dd8d79ea61a7e685a2bf79cf5373ed",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/monograph-source.zip",
+      "pax_value_sha256": {
+        "mtime": "98acbb9ed96def4d0ab1efcddb0decf48af92faebdf3c0f8614a00f72dca8533",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/polyhedral_volumes_and_geodesic_identities.tex",
+      "pax_value_sha256": {
+        "mtime": "c21ce24ef8e653350684e41aeab736a13b5285b9461fa933d3e93367863d56ff",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection",
+      "pax_value_sha256": {
+        "mtime": "faddcd6387ac8c34c59573ae130af8655ddfcb301e146c069b8ef535ad8ef4ee",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/section9.pdf",
+      "pax_value_sha256": {
+        "mtime": "c91ff42e166db2eede79a64d433fa93c7105ed473191dbfa334a778c6b50c1b2",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/barrier-result.json",
+      "pax_value_sha256": {
+        "mtime": "03df1834396f52c2f59951324e8f20c444bf6635cc0584d6cde1a7c6bcd43b96",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/reproduction-guide.md",
+      "pax_value_sha256": {
+        "mtime": "769da1b580e82cd30d3a6ec68294b565885ef195cb50293e107ce5f663525ce5",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/chapter-build.json",
+      "pax_value_sha256": {
+        "mtime": "bc66b99ebfa5aaf16d5eed277499ff78970a5b8d4afd359541767e5f7b22baf5",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/section9-claims.json",
+      "pax_value_sha256": {
+        "mtime": "7cdcfcd1f8bd92084db9d658df6024761b483beed61846533335c3354b6068db",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/variational.py",
+      "pax_value_sha256": {
+        "mtime": "002976c3c49910f69f1047487bae13a42b0380b497a5f55bf14148dd29fd25f8",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/barrier-fixtures.json",
+      "pax_value_sha256": {
+        "mtime": "4bbfb473667fe42fbeaa10b6daf591948fedbae861807852288decf8d97aef6a",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/barrier-reproduction.zip",
+      "pax_value_sha256": {
+        "mtime": "fc49df011949c02baecee0427132ee22639e5eda5729d0d490704b26f5465498",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/experiments",
+      "pax_value_sha256": {
+        "mtime": "7be7f451e96e6d86d5b0eeca49ca13baaf0390d34cfe181aacfdff143dcaf745",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs",
+      "pax_value_sha256": {
+        "mtime": "b170b2d3d538474be60009983a298ed41503f44d327739ce74b2019273b0d3c2",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/packages",
+      "pax_value_sha256": {
+        "mtime": "5ba282a32d5d2f1ce3768c25bca4fa0c9074a29814f625f3805818a79b20e3aa",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/book",
+      "pax_value_sha256": {
+        "mtime": "44d6fab618c120ee00e7ea7958fff75f987b0f7f5d4ac30ed4fade14a42d2556",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/book/chapters",
+      "pax_value_sha256": {
+        "mtime": "ebfc1bf17904734faf596ab5f66790a384445b22c84ac3cd2dd35881a9e9446a",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/book/chapters/09-volume-hessians.tex",
+      "pax_value_sha256": {
+        "mtime": "80f6fce18eb5369b808454aaa117f9dda7aa6dde9022cc7fcc3ff560c40769cd",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/packages/volume-toolkit",
+      "pax_value_sha256": {
+        "mtime": "34e8a2fbb4a8ed990f908703233d9f8e45495eb6571f5e3abeae5ca127fc17b6",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/packages/volume-toolkit/tests",
+      "pax_value_sha256": {
+        "mtime": "7d8075acb811e27a5ffe1551f2d554ac548008c24d5ed7b56d5603c18b7bf2f9",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/packages/volume-toolkit/ideal_poly_volume_toolkit",
+      "pax_value_sha256": {
+        "mtime": "60f720f5e5c9f85366567c266d30d96b4ed2a2ef042137357f7138652ca45960",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py",
+      "pax_value_sha256": {
+        "mtime": "2af79a72a89fb4772f73aa97df98e6c7b4790f22eee985e396c77b8cdeb4e16c",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+      "pax_value_sha256": {
+        "mtime": "444c9ed51b200681e2150967fe94b7f3de273d4e00fb7794f078c98ff536f04b",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/packages/volume-toolkit/tests/test_angle_barrier.py",
+      "pax_value_sha256": {
+        "mtime": "59a7b7d33a81b4ef6587eff983e14343a6e131b745746225add455edcf6f518f",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/packages/volume-toolkit/tests/test_variational.py",
+      "pax_value_sha256": {
+        "mtime": "8105c7642f2d5171ac2d2942723f3ee0d778c67a18b296c40ec34963559f346a",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution",
+      "pax_value_sha256": {
+        "mtime": "b25dc98e25317f8b4a77e1d3d3ceaac27a7f4447222304612129e3ea59048597",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/section9-barrier-2026-10-31",
+      "pax_value_sha256": {
+        "mtime": "1162f24930719cac926a13cf0eff65a519472aad363ee013f823e6735e625faa",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/numerical-correctness-2026-10-31",
+      "pax_value_sha256": {
+        "mtime": "9b91639943ca94795183f4255888aff0166bb512c247c85bf3a9f759cb735c24",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/section9-chapter-2026-10-31",
+      "pax_value_sha256": {
+        "mtime": "d37a81d60488a6ff94c2af37592e47029bab1af3597f2dcab56cdbef36712e25",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/2026-10-31",
+      "pax_value_sha256": {
+        "mtime": "69e75f9f2a58115547abcf1fdb381e235174aefa2f1dbc8eeb6b6cf8b30b13e4",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/2026-10-31/section9-rereview.md",
+      "pax_value_sha256": {
+        "mtime": "07bf150aff3782e8b88e2988ad676e6fc91f55aa1aad63a48695e07876adfc7f",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/2026-10-31/section9-review.md",
+      "pax_value_sha256": {
+        "mtime": "91c8a2f81214a87d385fd94f6be0c5cdf9c8b840de869148a4e96dda559a276b",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/section9-chapter-2026-10-31/math-audit-checks.json",
+      "pax_value_sha256": {
+        "mtime": "b4854da30da107860f8d1fe87ba9b2d53b3a3cb07f72db6b864c8c87c8505863",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/section9-chapter-2026-10-31/companion_reference_probes.json",
+      "pax_value_sha256": {
+        "mtime": "5f91b342d2f0deacb23c6627e89b6f72d6d181833551dde5044b659093c788a4",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/section9-chapter-2026-10-31/proof-review.md",
+      "pax_value_sha256": {
+        "mtime": "1396c052a58103d706467f110d2d7b392ec03579f23d119aac3d7813efc77278",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/section9-chapter-2026-10-31/math-audit-checks.py",
+      "pax_value_sha256": {
+        "mtime": "7796e80970577a92a6406d95dc908cff3c83a7521913e67ffe292a5b3005c1d0",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/section9-chapter-2026-10-31/math-audit.md",
+      "pax_value_sha256": {
+        "mtime": "5557244c8cf9ce497bbbd409a2998a2f7e9b155e6511c5dda5531a6472751148",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/section9-chapter-2026-10-31/companion-audit.md",
+      "pax_value_sha256": {
+        "mtime": "30fb9a3708b5b469e8b3e9fa332b67bee1db0c908ed1239957be34ab27e255da",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/numerical-correctness-2026-10-31/closeout.md",
+      "pax_value_sha256": {
+        "mtime": "43274e7db3ac76ad83ff63367cc7e7cab43a63c4590a95a7d2b975f6fa9ca785",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/section9-barrier-2026-10-31/barrier-review.md",
+      "pax_value_sha256": {
+        "mtime": "f6dae589ecfc80eaf899b75000a55352818f0f8cd1aac090dbfd366ba8ac70ec",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/section9-barrier-2026-10-31/barrier-publication-review.md",
+      "pax_value_sha256": {
+        "mtime": "e0629a98957a346f8f444a3b907658f4d903a11ce4ae63a8ae96c3a6538ecdcf",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/experiments/section9",
+      "pax_value_sha256": {
+        "mtime": "5130d26e11e056804157212d483c219faa8a39d5c543ff920dcaccf59d7ba9ef",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/experiments/section9/fixture.json",
+      "pax_value_sha256": {
+        "mtime": "dd8759b95ce93e509b839815a30c6bf74157b9ae02be09194c6b18266463e7c0",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/experiments/section9/barrier_run.py",
+      "pax_value_sha256": {
+        "mtime": "dcfa778148b1a4c67b5e57a551b1887d6ea978001354cd2bdd07e8d6315a84d9",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/experiments/section9/run.py",
+      "pax_value_sha256": {
+        "mtime": "a2ee7d131c1b002c885c68036b63c0ed7e891e6edb22c2f78a1e78da50823d22",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/downloads/inspection/experiments/section9/barrier-fixtures.json",
+      "pax_value_sha256": {
+        "mtime": "8b592accbfac72188c244102794e7bb7625aa0220ccb59079669ff303ba0bc57",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/assets/section9-figure-2.png",
+      "pax_value_sha256": {
+        "mtime": "c6d0c6eaf09311d1413ada4df321a50283ed267bd66a6ff82cc85f9adec392eb",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/assets/section9-figure-1.png",
+      "pax_value_sha256": {
+        "mtime": "a67e31585d15d9f6f24928eacc07746be5564058907f3f3ee88e28e3debd667f",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    },
+    {
+      "path": "dist/section9/assets/section9.css",
+      "pax_value_sha256": {
+        "mtime": "6419cbf25f4e5d705740a97885542e561c2b6767c711c856c4d4ad100af0d53c",
+        "LIBARCHIVE.xattr.com.apple.provenance": "42105563d568cf217d232ce127e21d87af7224d3bb700f2863e1441cd96731ad",
+        "SCHILY.xattr.com.apple.provenance": "58287f1997ad9027bb4d77f4a92bdef58ab8e6ba939e5f8e709fec0dc0b1527d"
+      }
+    }
+  ],
+  "normalization": "Official helper adds the minimal static hosting manifest under dist/.openai; all 49 preview files are unchanged.",
+  "files": [
+    {
+      "path": "dist/preview-manifest.json",
+      "sha256": "457f11d89ca415095ab80906abd501e014afc187744f6b70a3effcb42585f1dd",
+      "bytes": 15259
+    },
+    {
+      "path": "dist/index.html",
+      "sha256": "14851a07c3269172854da24ef585cdce3b4bc94967cd6af396a6927f51ed9951",
+      "bytes": 113189
+    },
+    {
+      "path": "dist/search-index.json",
+      "sha256": "5e319c0cb4e7475e9e535389651caab2bba3822e9a54dfbbee60a9d8ce96345b",
+      "bytes": 105302
+    },
+    {
+      "path": "dist/assets/preview.css",
+      "sha256": "e0ad7df605f6c74342e865b205f1b01cb5fc31a993be55e496d45ee6066c1c0b",
+      "bytes": 8457
+    },
+    {
+      "path": "dist/assets/search.js",
+      "sha256": "7310cac3305f8daf354516eeb56d04c40f7d73a0b8d8a355fd380548ffd6e181",
+      "bytes": 3818
+    },
+    {
+      "path": "dist/.openai/hosting.json",
+      "sha256": "b940980116c4347a84ded60c36b40d9ea209e4d3f9de6bcb6443c18eea909d4f",
+      "bytes": 106
+    },
+    {
+      "path": "dist/section9/index.html",
+      "sha256": "88e9fd834d34c48f1c5ed67f49c4ec0a3551419037df63260ba28533105f291f",
+      "bytes": 26892
+    },
+    {
+      "path": "dist/section9/barrier.html",
+      "sha256": "05509d1a2b968bbb619d1cd9707ac62d58dc62802ece0c64d30bc2e4f3b6f685",
+      "bytes": 938828
+    },
+    {
+      "path": "dist/section9/chapter.html",
+      "sha256": "2194f2113701953aefcba88e43b0980f5dfe724887a53d752bfa4f12542be23e",
+      "bytes": 164496
+    },
+    {
+      "path": "dist/section9/downloads/fixture.json",
+      "sha256": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1",
+      "bytes": 1092
+    },
+    {
+      "path": "dist/section9/downloads/barrier_run.py",
+      "sha256": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60",
+      "bytes": 34430
+    },
+    {
+      "path": "dist/section9/downloads/section9-reproduction.zip",
+      "sha256": "0f2f6f343c9900762a6d8171065ab05141f79cacf37eae528c347c16b7a36fa9",
+      "bytes": 29437
+    },
+    {
+      "path": "dist/section9/downloads/companion-reconciliation.md",
+      "sha256": "f6c4ad1da9c4b0033c78f2ec8b90e914c30269dc8ee118c0f9d36b87bcbd6a9f",
+      "bytes": 11395
+    },
+    {
+      "path": "dist/section9/downloads/run.py",
+      "sha256": "91525e17669887d7863834a3322207088c7ff4dbf4b4f8348a67b529a6142a19",
+      "bytes": 24179
+    },
+    {
+      "path": "dist/section9/downloads/polyhedral_volumes_and_geodesic_identities.pdf",
+      "sha256": "40dd069bd2653f9a78666a31f53910d74b7f8de2a4a75d5a5dd62466032a6cd5",
+      "bytes": 1399634
+    },
+    {
+      "path": "dist/section9/downloads/angle_barrier.py",
+      "sha256": "d782aff2a23c9073c6f7cf02666cc0ec3f4446f28185c7474116fcf42edbbd07",
+      "bytes": 21900
+    },
+    {
+      "path": "dist/section9/downloads/result.json",
+      "sha256": "e6aa3b68d0e7f7bbcb326f0d2b1e76245aa1ee6e728dcb7173f5bc9541782f85",
+      "bytes": 11811
+    },
+    {
+      "path": "dist/section9/downloads/monograph-source.zip",
+      "sha256": "ac294eb06ba3e9bf400aeda84347922721f265220658af58eb332d52ba94b324",
+      "bytes": 217413
+    },
+    {
+      "path": "dist/section9/downloads/polyhedral_volumes_and_geodesic_identities.tex",
+      "sha256": "3b3b93d26764392353030a30ef4569360d051e0d78d6e5eb7fd6bef1f96de546",
+      "bytes": 546656
+    },
+    {
+      "path": "dist/section9/downloads/section9.pdf",
+      "sha256": "9db08eec8405c637c8ac79ad0afcaaa4b4bf810435463dbb3361fee7616975f0",
+      "bytes": 358526
+    },
+    {
+      "path": "dist/section9/downloads/barrier-result.json",
+      "sha256": "b7d680717a5de790a146c584f66e955fb515449cc583adfa9e3c4543d692f798",
+      "bytes": 1355033
+    },
+    {
+      "path": "dist/section9/downloads/reproduction-guide.md",
+      "sha256": "a69e69a7135107b04481f26a84e62336086d7002bad5c75f7c29f3d79664fd36",
+      "bytes": 9990
+    },
+    {
+      "path": "dist/section9/downloads/chapter-build.json",
+      "sha256": "222bf4ff16d3273d2acf3e36b1d4e0a26aa98fa52cbbd98bb77fb943fb55c899",
+      "bytes": 22925
+    },
+    {
+      "path": "dist/section9/downloads/section9-claims.json",
+      "sha256": "255ed6ebb0c3eb1c7714d238f2829f6115487817408545e40461ef87b47b5c73",
+      "bytes": 37274
+    },
+    {
+      "path": "dist/section9/downloads/variational.py",
+      "sha256": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+      "bytes": 10242
+    },
+    {
+      "path": "dist/section9/downloads/barrier-fixtures.json",
+      "sha256": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+      "bytes": 1936
+    },
+    {
+      "path": "dist/section9/downloads/barrier-reproduction.zip",
+      "sha256": "3927145433f4039b03f3649f6cf3c2e2db3f1b01456b0cd5ff530e383dc9955d",
+      "bytes": 35115
+    },
+    {
+      "path": "dist/section9/downloads/inspection/book/chapters/09-volume-hessians.tex",
+      "sha256": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00",
+      "bytes": 34587
+    },
+    {
+      "path": "dist/section9/downloads/inspection/packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py",
+      "sha256": "d782aff2a23c9073c6f7cf02666cc0ec3f4446f28185c7474116fcf42edbbd07",
+      "bytes": 21900
+    },
+    {
+      "path": "dist/section9/downloads/inspection/packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+      "sha256": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+      "bytes": 10242
+    },
+    {
+      "path": "dist/section9/downloads/inspection/packages/volume-toolkit/tests/test_angle_barrier.py",
+      "sha256": "31d9bd367799b9d6016dddefc255c27635e78046f33fd7c9bfa424f86b0d7a45",
+      "bytes": 11795
+    },
+    {
+      "path": "dist/section9/downloads/inspection/packages/volume-toolkit/tests/test_variational.py",
+      "sha256": "fffdb72c8907749a03e031c572d3bb928976ee6844ff0ca7b79d17b913b8a7fa",
+      "bytes": 10800
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/2026-10-31/section9-rereview.md",
+      "sha256": "b70f2732abb557b6c57b7498d33cfa56c9e917291793f5de5ac6be05378bba06",
+      "bytes": 6904
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/2026-10-31/section9-review.md",
+      "sha256": "1e25af61ed2c6856272e8f2ce930424ffd17da89d975fe77d33a08edd78871aa",
+      "bytes": 8033
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/section9-chapter-2026-10-31/math-audit-checks.json",
+      "sha256": "166eca3c97dfa34d22aa51c11021d3a0f5f7b4bd29e183004abc2d47127b1ce5",
+      "bytes": 2417
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/section9-chapter-2026-10-31/companion_reference_probes.json",
+      "sha256": "a7cd2000192a53f247bdd227178198cd79ada1157fbf9f3fe36cc55be6825e62",
+      "bytes": 3552
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/section9-chapter-2026-10-31/proof-review.md",
+      "sha256": "043780260852e24fcda41d3f7e36ee9385d393eb8a62456782c2636f6ff00aef",
+      "bytes": 24227
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/section9-chapter-2026-10-31/math-audit-checks.py",
+      "sha256": "8b8ed3970a0c15179cc5879616ab371d4763fe956cb27ae10956ad51026bc6bd",
+      "bytes": 6233
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/section9-chapter-2026-10-31/math-audit.md",
+      "sha256": "b35ce184791dfe5fa7ac78364929601039052e6bb5a79e2a50a9da9655c81df3",
+      "bytes": 25371
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/section9-chapter-2026-10-31/companion-audit.md",
+      "sha256": "b6565bf58cd96b2210fd086c44b3cf0a2d90cac727ca7d1a344907d009204b77",
+      "bytes": 27110
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/numerical-correctness-2026-10-31/closeout.md",
+      "sha256": "5fd344ccb3aa05303021486008c33dd0bfd01f8ed96a773a432d900351840a0c",
+      "bytes": 5340
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/section9-barrier-2026-10-31/barrier-review.md",
+      "sha256": "97f76974beb3d0eacab67fbbd01b5afc4c1580ed3e9786b04d1d017067d0cc1f",
+      "bytes": 13467
+    },
+    {
+      "path": "dist/section9/downloads/inspection/docs/execution/section9-barrier-2026-10-31/barrier-publication-review.md",
+      "sha256": "7162f2b137e17ac3364bb7a8c5b3bc6109794e1d88befb02a39555e72464683b",
+      "bytes": 9385
+    },
+    {
+      "path": "dist/section9/downloads/inspection/experiments/section9/fixture.json",
+      "sha256": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1",
+      "bytes": 1092
+    },
+    {
+      "path": "dist/section9/downloads/inspection/experiments/section9/barrier_run.py",
+      "sha256": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60",
+      "bytes": 34430
+    },
+    {
+      "path": "dist/section9/downloads/inspection/experiments/section9/run.py",
+      "sha256": "91525e17669887d7863834a3322207088c7ff4dbf4b4f8348a67b529a6142a19",
+      "bytes": 24179
+    },
+    {
+      "path": "dist/section9/downloads/inspection/experiments/section9/barrier-fixtures.json",
+      "sha256": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+      "bytes": 1936
+    },
+    {
+      "path": "dist/section9/assets/section9-figure-2.png",
+      "sha256": "cd534d247190d9b257611f6e775a5d6d89d2cdfcaa06f8275baede2fe718197d",
+      "bytes": 15077
+    },
+    {
+      "path": "dist/section9/assets/section9-figure-1.png",
+      "sha256": "ff955ac87063f13e1d698a1085ac18f30f6b643f818db8a57eb8ac6b0528336f",
+      "bytes": 19425
+    },
+    {
+      "path": "dist/section9/assets/section9.css",
+      "sha256": "aae27cd011f0d53aeb109ccaafbbe26e5a4c26eb2d9cb28c3aea78ec951f8b01",
+      "bytes": 2430
+    }
+  ],
+  "publication": "No pushed Sites source commit, saved version or deployment exists for this candidate.",
+  "browser_verification": "Not performed; archive extraction/hash verification is not browser QA."
+}
