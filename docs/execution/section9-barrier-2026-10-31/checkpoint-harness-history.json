@@ -1,0 +1,17 @@
+[
+  {
+    "scope": "Checkpoint helper preparation, not product or numerical execution",
+    "attempt": "Preparing final-generation-checks.py by copying/adapting the strict checker",
+    "outcome": "The completed checker was written successfully. A redundant trailing inspection line then referenced json before importing it and raised NameError. No repository files or generated outputs were changed by the failing line.",
+    "error": "NameError: name json is not defined",
+    "correction": "No generated-checker change was needed; independently compiled the fully written script before execution."
+  },
+  {
+    "scope": "Checkpoint artifact-staging helper, not product or numerical computation",
+    "attempt": "final-copy-and-stage-attempt-1.py",
+    "outcome": "Verified output copy and staging succeeded; the final assertion unnecessarily required a Pandoc line42 whitespace diagnostic. The actual staged diff check returned 0 with no diagnostics because the line was unchanged. No commit occurred.",
+    "correction": "Accept an empty successful check, or only the one named generated diagnostic when actually present. Reverify all staged payload hashes before committing.",
+    "initial_script_sha256": "389b9800a5bf820ee7a2c8f890edc2435c3f2df6b23e4d54ec55d5c679602f18",
+    "preserved_log": "final-copy-and-stage-attempt-1.log"
+  }
+]

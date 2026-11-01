@@ -1,0 +1,47 @@
+{
+  "scope": "Final clean-source export after both render-only backlinks; actual detached numerical replay recorded separately",
+  "preview_root": "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-20261031-y2dhw_su",
+  "source_commit": "c1f100b957166b93eca0d214586322d5af71b9cf",
+  "all_checks_passed": true,
+  "chapter_inputs_match_live_source": true,
+  "chapter_output_hashes_match": true,
+  "both_explicit_reports_match_exports": true,
+  "barrier_build_input_hash_scope": "inputs at chapter-build time, before any optional render-only backlink refresh",
+  "barrier_assets_changed_by_backlink_refresh": [
+    "barrier.html"
+  ],
+  "zip_checks": {
+    "section9-reproduction.zip": {
+      "payload_count": 9,
+      "all_payload_hashes_match": true
+    },
+    "barrier-reproduction.zip": {
+      "payload_count": 10,
+      "all_payload_hashes_match": true
+    },
+    "monograph-source.zip": {
+      "payload_count": 7,
+      "all_payload_hashes_match": true
+    }
+  },
+  "report_sha256": {
+    "result.json": "e6aa3b68d0e7f7bbcb326f0d2b1e76245aa1ee6e728dcb7173f5bc9541782f85",
+    "barrier-result.json": "b7d680717a5de790a146c584f66e955fb515449cc583adfa9e3c4543d692f798"
+  },
+  "rendered_page_sha256": {
+    "page-001.png": "5600fe0895c8541681a774acb3c860c6c8430f16c7cfb6443fe8b602cb0d15ed",
+    "page-002.png": "dfb40a1469bda851a08fa9e3f184bad814a413e790c33aee5df514b2e11d5b81",
+    "page-003.png": "871731176bdd74f542745b6b32a907cdcdc700ac89c2c1261be8e624d322e638",
+    "page-004.png": "735cfd2353489fa0b222a1e343c39841849e5c702c2892152a83eee84ac4a06c",
+    "page-005.png": "ea3cc9c399a3e632ed3b9589c6629017a22c5ae945152d864544ca448aefd202",
+    "page-006.png": "01cc798042b62386634989e7244f21da2c8370754bfc0fb97faf8da26eaa091f",
+    "page-007.png": "be9f9c4c73ed2bb56cfb8d6d777499034b4f3fb619e0c9aa0471040f398bd9fb",
+    "page-008.png": "51fb192dc7f0438b947590f09b440346ffa15fe6e73a0ef72d276ea894bc6ec6",
+    "page-009.png": "66b234de85fd8354bc4917355d59b7fc1541e7efec3c03f5b38fc3d0e68c09f3",
+    "page-010.png": "1b8661cf4a52e16e989de98fa83c51824928bade4af2472cc66580235771d57e"
+  },
+  "all_pages_identical_to_independently_inspected_strict_preview": true,
+  "final_pdf_sha256": "9db08eec8405c637c8ac79ad0afcaaa4b4bf810435463dbb3361fee7616975f0",
+  "repository_dirty_at_start": false,
+  "pending_evidence": []
+}

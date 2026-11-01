@@ -485,8 +485,9 @@ coefficient precision and transcendental evaluations need their own
 controls. This is not a bit-complexity or floating-point stability
 bound. Finding a feasible point, centering it, and certifying the final
 geometric error are separate costs. The companion's selected-input
-timings do not bound these additional tasks, and the current maintained
-example does not implement this barrier method.
+timings do not bound these additional tasks. The dense implementation
+described below follows the specified schedule, with numerical diagnostics;
+it does not implement a nearly-linear solver or certify floating-point error.
 
 \subsection{Flips connect the local matrix to mapping-class geometry}
 \label{subsec:ipolyFlips}
@@ -631,7 +632,7 @@ would connect variational existence to numerical certification and
 complexity. These questions describe how the computational strand can
 extend the monograph's variational and semiclassical program.
 
-\subsection{A reproducible computational example}
+\subsection{Reproducible computational examples}
 \label{subsec:ipolyComputation}
 
 The \href{../experiments/section9/README.md}{Section 9 reproduction guide}
@@ -666,10 +667,32 @@ and \href{../site/section9/downloads/section9-reproduction.zip}{complete
 reproduction archive} provide the input, runnable code and environment
 requirements. The grid has zero-weight square diagonals and is therefore
 non-strict Delaunay. Off-origin angles belong to the abstract domain;
-their geometric closure is not asserted. The example implements neither
-the barrier schedule nor a nearly-linear solver, a peripheral-holonomy
-solver, or a global realization certificate. The
-\href{claims/section9.json}{claim ledger} records these precise gaps,
-the mathematical review evidence, and the distinction between proved
-identities, external theorem inputs, finite computations and open questions.
+their geometric closure is not asserted.
+
+The separate \href{../site/section9/barrier.html}{barrier examples} exercise
+the \href{../packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py}
+{dense affine-angle solver}. It accepts a supplied positive angle vector
+and independent tangent columns, performs separately budgeted initial
+centering, and then follows the short-step parameter schedule above.
+Every accepted point records its parameter, Newton decrement, angle margins,
+linear-solve residual and numerical conditioning. Rejected domains, failed
+steps and exhausted budgets remain unsuccessful outcomes; angles are not
+clipped into the domain. The reported finite-gap estimate is evaluated in
+binary64 arithmetic and is not an interval certificate.
+
+The \href{../experiments/section9/barrier_run.py}{barrier experiment driver}
+compares the computed endpoints with independent multiprecision volume
+references and checks the recorded path and stopping conditions. The fixed
+cases are the full single-triangle angle simplex with its maximum at the
+regular ideal tetrahedron, an asymmetric rectangular disk, and a two-triangle
+affine slice with one flat triangle at its closed maximum. Its
+\href{../artifacts/section9/barrier-result.json}{result record} separates
+initial-centering work from path steps, and its
+\href{../site/section9/downloads/barrier-reproduction.zip}{reproduction archive}
+contains the actual code, inputs and environment requirements. These finite
+examples do not establish a scaling law. A nearly-linear solver, a certified
+relative energy-error bound, a peripheral-holonomy solver and a global
+realization certificate remain outside this implementation. The
+\href{claims/section9.json}{claim ledger} distinguishes this numerical
+coverage from the general proofs, external theorem inputs and open questions.
 

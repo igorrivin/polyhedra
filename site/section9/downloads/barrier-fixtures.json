@@ -1,0 +1,39 @@
+{
+  "id": "section9-barrier-fixtures-v1",
+  "description": "Three small affine angle domains for the reviewed dense log-sine barrier method.",
+  "precision": {"solver": "binary64", "reference_decimal_digits": 80, "reference_comparison_tolerance": "1e-11"},
+  "solver_options": {"epsilon": 0.0001, "t0": 1.0, "max_centering_steps": 100, "max_path_steps": 5000},
+  "cases": [
+    {
+      "id": "regular-triangle",
+      "title": "A triangle approaching the regular ideal tetrahedron",
+      "kind": "full_triangle",
+      "base_pi_fractions": ["1/6", "1/3", "1/2"],
+      "incidence": [[1, 0], [0, 1], [-1, -1]],
+      "initial_parameters": [-0.2, 0.1],
+      "reference": "On the exact triangle angle simplex, strict concavity and symmetry give the unique maximum at three angles pi/3."
+    },
+    {
+      "id": "asymmetric-disk",
+      "title": "An asymmetric geometric disk with a moving central path",
+      "kind": "geometric_disk",
+      "points": [["0", "0"], ["4", "0"], ["4", "3"], ["0", "3"], ["1", "0.5"]],
+      "triangles": [[4, 0, 1], [4, 1, 2], [4, 2, 3], [4, 3, 0]],
+      "interior_vertices": [4],
+      "incidence": [[0], [-1], [1], [0], [-1], [1], [0], [-1], [1], [0], [-1], [1]],
+      "initial_parameters": [-0.1],
+      "reference": "The exact geometric angles close at u=0. The positive disk Hessian gives their unique maximum. F'(0)=-28/15, so the barrier center is different."
+    },
+    {
+      "id": "boundary-maximum",
+      "title": "A closed maximum with one flat triangle",
+      "kind": "boundary_slice",
+      "s0": "0.05",
+      "width": "0.1",
+      "second_angle": "1",
+      "incidence": [[-2], [1], [1], [-1], [1], [0]],
+      "initial_parameters": [0.0],
+      "reference": "For 0<s<0.1, angles are (pi-2s,s,s) and (0.1-s,1+s,pi-1.1), with u=s-0.05. Strict concavity and V'(0+)=2 log 2+log(sin(0.1)/sin(1))<0 give the unique closed maximum at s=0. No geometric realization is asserted."
+    }
+  ]
+}

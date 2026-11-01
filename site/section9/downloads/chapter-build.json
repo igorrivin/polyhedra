@@ -1,39 +1,46 @@
 {
   "schema_version": 1,
   "operation": "build_complete_section9_excerpt",
-  "generated_at_utc": "2026-11-01T00:51:38.207060+00:00",
-  "source_commit": "1bafb83d2ec152f1f8eac75b2be0e3c4b796198e",
+  "generated_at_utc": "2026-11-01T03:10:30.717019+00:00",
+  "source_commit": "c1f100b957166b93eca0d214586322d5af71b9cf",
   "repository_dirty_at_start": false,
   "git_status_porcelain_at_start": [],
   "inputs": {
     "book/main.tex": "be3c45c0c4e3105d5e5275b2bbfefed5b8a79e088a456b83a8ea81dcce89a99d",
     "book/polyhedral_volumes_and_geodesic_identities.tex": "3b3b93d26764392353030a30ef4569360d051e0d78d6e5eb7fd6bef1f96de546",
-    "book/chapters/09-volume-hessians.tex": "abe89dd665b10fe808a0c4273f5f8ecdbe9fc9a5c0cd7b92bc3618a1759c2a5e",
-    "book/claims/section9.json": "f801da33c5224e04595211c23e7f54b1edc2087bff5ebd6d0bf739ade7f33ab8",
-    "site/build_section9.py": "b02995dab6d0c1b7b9c5f700a12be0878481a8d372057339daeea40b41afff94",
+    "book/chapters/09-volume-hessians.tex": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00",
+    "book/claims/section9.json": "255ed6ebb0c3eb1c7714d238f2829f6115487817408545e40461ef87b47b5c73",
+    "site/build_section9.py": "b01681557e5acde91dac749065b9ef787edd03cb3a5b4fa21f77aff9e0cc63a5",
     "site/section9.css": "aae27cd011f0d53aeb109ccaafbbe26e5a4c26eb2d9cb28c3aea78ec951f8b01",
+    "experiments/section9/barrier_run.py": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60",
+    "experiments/section9/barrier-page.html": "e4de74a735bf9d7bbdabae7f59fa368cef972297639a4cb2719d97d92ce3fb90",
+    "experiments/section9/barrier-fixtures.json": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py": "d782aff2a23c9073c6f7cf02666cc0ec3f4446f28185c7474116fcf42edbbd07",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73",
     "experiments/section9/run.py": "91525e17669887d7863834a3322207088c7ff4dbf4b4f8348a67b529a6142a19",
     "experiments/section9/fixture.json": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1",
-    "experiments/section9/README.md": "e961e12152e3cd024f31a15c39338989c98a7a9539938ffa4b0ee565c932cb5b",
-    "book/companion-reconciliation.md": "e5d67047f552430aba9cfd59a2f99dbd69c8664b77c0384be2df35bd520d51a1",
-    "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+    "experiments/section9/README.md": "a69e69a7135107b04481f26a84e62336086d7002bad5c75f7c29f3d79664fd36",
+    "book/companion-reconciliation.md": "f6c4ad1da9c4b0033c78f2ec8b90e914c30269dc8ee118c0f9d36b87bcbd6a9f",
     "docs/execution/2026-10-31/section9-rereview.md": "b70f2732abb557b6c57b7498d33cfa56c9e917291793f5de5ac6be05378bba06",
     "docs/execution/2026-10-31/section9-review.md": "1e25af61ed2c6856272e8f2ce930424ffd17da89d975fe77d33a08edd78871aa",
     "docs/execution/numerical-correctness-2026-10-31/closeout.md": "5fd344ccb3aa05303021486008c33dd0bfd01f8ed96a773a432d900351840a0c",
+    "docs/execution/section9-barrier-2026-10-31/barrier-publication-review.md": "7162f2b137e17ac3364bb7a8c5b3bc6109794e1d88befb02a39555e72464683b",
+    "docs/execution/section9-barrier-2026-10-31/barrier-review.md": "97f76974beb3d0eacab67fbbd01b5afc4c1580ed3e9786b04d1d017067d0cc1f",
     "docs/execution/section9-chapter-2026-10-31/companion-audit.md": "b6565bf58cd96b2210fd086c44b3cf0a2d90cac727ca7d1a344907d009204b77",
     "docs/execution/section9-chapter-2026-10-31/companion_reference_probes.json": "a7cd2000192a53f247bdd227178198cd79ada1157fbf9f3fe36cc55be6825e62",
-    "docs/execution/section9-chapter-2026-10-31/companion_reference_probes.py": "c789a44a650ab8778fc9eb4e71ec254ed44103621d035fa4557cb6eaa6c0b82e",
     "docs/execution/section9-chapter-2026-10-31/math-audit-checks.json": "166eca3c97dfa34d22aa51c11021d3a0f5f7b4bd29e183004abc2d47127b1ce5",
     "docs/execution/section9-chapter-2026-10-31/math-audit-checks.py": "8b8ed3970a0c15179cc5879616ab371d4763fe956cb27ae10956ad51026bc6bd",
     "docs/execution/section9-chapter-2026-10-31/math-audit.md": "b35ce184791dfe5fa7ac78364929601039052e6bb5a79e2a50a9da9655c81df3",
     "docs/execution/section9-chapter-2026-10-31/proof-review.md": "043780260852e24fcda41d3f7e36ee9385d393eb8a62456782c2636f6ff00aef",
+    "packages/volume-toolkit/tests/test_angle_barrier.py": "31d9bd367799b9d6016dddefc255c27635e78046f33fd7c9bfa424f86b0d7a45",
     "packages/volume-toolkit/tests/test_variational.py": "fffdb72c8907749a03e031c572d3bb928976ee6844ff0ca7b79d17b913b8a7fa"
   },
   "computation_result": {
-    "actual_path": "/private/tmp/polyhedra-section9-final-20261031/result.json",
-    "sha256": "66fdc288483c07a30930714c97eb59c70c0be92566eaba9437fc7f4d10707a61",
+    "actual_path": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-20261031-y2dhw_su/result.json",
+    "sha256": "e6aa3b68d0e7f7bbcb326f0d2b1e76245aa1ee6e728dcb7173f5bc9541782f85",
     "provenance": {
-      "source_commit": "1bafb83d2ec152f1f8eac75b2be0e3c4b796198e",
+      "source_commit": "c1f100b957166b93eca0d214586322d5af71b9cf",
       "execution_context": "git-checkout",
       "repository_dirty_at_start": false,
       "git_status_porcelain_at_start": [],
@@ -93,7 +100,7 @@
           "location_kind": "project-relative",
           "required": false,
           "available": true,
-          "sha256": "abe89dd665b10fe808a0c4273f5f8ecdbe9fc9a5c0cd7b92bc3618a1759c2a5e"
+          "sha256": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00"
         },
         {
           "role": "book.reference_pdf",
@@ -111,7 +118,7 @@
         "experiment.fixture": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1",
         "experiment.template": "fd3e70a21ef81478124742e43fdcffa55a20a4645528f486f788e6a9eec6982f",
         "book.tex": "3b3b93d26764392353030a30ef4569360d051e0d78d6e5eb7fd6bef1f96de546",
-        "book.chapter": "abe89dd665b10fe808a0c4273f5f8ecdbe9fc9a5c0cd7b92bc3618a1759c2a5e",
+        "book.chapter": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00",
         "book.reference_pdf": "40dd069bd2653f9a78666a31f53910d74b7f8de2a4a75d5a5dd62466032a6cd5"
       },
       "bundle_origin": null,
@@ -121,7 +128,100 @@
       "numpy": "2.5.4",
       "scipy": "1.18.1",
       "mpmath": "1.3.0",
-      "generated_at_utc": "2026-11-01T00:51:15.491545+00:00"
+      "generated_at_utc": "2026-11-01T03:10:06.634684+00:00"
+    }
+  },
+  "barrier_computation_result": {
+    "actual_path": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-20261031-y2dhw_su/barrier-result.json",
+    "sha256": "b7d680717a5de790a146c584f66e955fb515449cc583adfa9e3c4543d692f798",
+    "provenance": {
+      "source_commit": "c1f100b957166b93eca0d214586322d5af71b9cf",
+      "execution_context": "git-checkout",
+      "repository_dirty_at_start": false,
+      "git_status_porcelain_at_start": [],
+      "input_sha256": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+      "source_files": [
+        {
+          "role": "experiment.driver",
+          "path": "experiments/section9/barrier_run.py",
+          "location_kind": "project-relative",
+          "required": true,
+          "available": true,
+          "sha256": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60"
+        },
+        {
+          "role": "experiment.fixture",
+          "path": "experiments/section9/barrier-fixtures.json",
+          "location_kind": "project-relative",
+          "required": true,
+          "available": true,
+          "sha256": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a"
+        },
+        {
+          "role": "experiment.template",
+          "path": "experiments/section9/barrier-page.html",
+          "location_kind": "project-relative",
+          "required": true,
+          "available": true,
+          "sha256": "e4de74a735bf9d7bbdabae7f59fa368cef972297639a4cb2719d97d92ce3fb90"
+        },
+        {
+          "role": "toolkit.angle_barrier",
+          "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py",
+          "location_kind": "project-relative",
+          "required": true,
+          "available": true,
+          "sha256": "d782aff2a23c9073c6f7cf02666cc0ec3f4446f28185c7474116fcf42edbbd07"
+        },
+        {
+          "role": "toolkit.variational",
+          "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+          "location_kind": "project-relative",
+          "required": true,
+          "available": true,
+          "sha256": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b"
+        },
+        {
+          "role": "toolkit.geometry",
+          "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py",
+          "location_kind": "project-relative",
+          "required": true,
+          "available": true,
+          "sha256": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+        },
+        {
+          "role": "book.chapter",
+          "path": "book/chapters/09-volume-hessians.tex",
+          "location_kind": "project-relative",
+          "required": false,
+          "available": true,
+          "sha256": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00"
+        }
+      ],
+      "source_sha256": {
+        "experiment.driver": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60",
+        "experiment.fixture": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+        "experiment.template": "e4de74a735bf9d7bbdabae7f59fa368cef972297639a4cb2719d97d92ce3fb90",
+        "toolkit.angle_barrier": "d782aff2a23c9073c6f7cf02666cc0ec3f4446f28185c7474116fcf42edbbd07",
+        "toolkit.variational": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+        "toolkit.geometry": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73",
+        "book.chapter": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00"
+      },
+      "bundle_origin": null,
+      "bundle_payload_hashes_match": null,
+      "bundle_payload_mismatches": [],
+      "python": "3.12.11",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "mpmath": "1.3.0",
+      "generated_at_utc": "2026-11-01T03:10:12.669494+00:00"
+    },
+    "asset_hash_scope": "inputs at chapter-build time, before any optional render-only backlink refresh",
+    "asset_sha256": {
+      "barrier.html": "a437a4db0a58113a8360dc126b484d1f14bc14604f1580100ad0c49a826d4f08",
+      "downloads/barrier-result.json": "b7d680717a5de790a146c584f66e955fb515449cc583adfa9e3c4543d692f798",
+      "downloads/barrier-fixtures.json": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+      "downloads/barrier-reproduction.zip": "3927145433f4039b03f3649f6cf3c2e2db3f1b01456b0cd5ff530e383dc9955d"
     }
   },
   "tools": {
@@ -291,7 +391,7 @@
     "subsec:ipolyComputation": {
       "number": "9.6",
       "page": "34",
-      "title": "A reproducible computational example",
+      "title": "Reproducible computational examples",
       "anchor": "subsection.9.6"
     }
   },
@@ -459,7 +559,7 @@
       "ref-BrockMappingTori",
       "claim-ledger"
     ],
-    "local_links_checked": 192,
+    "local_links_checked": 219,
     "browser_review": "not performed; static checks are not browser verification",
     "pdf_pages": 10,
     "pdf_pages_rendered": 10,
@@ -468,13 +568,13 @@
     "full_monograph_overfull_hbox_count": 0,
     "chapter_overfull_hbox_count": 0
   },
-  "work_directory": "/private/tmp/polyhedra-section9-final-20261031/chapter-build",
-  "rendered_pages": "/private/tmp/polyhedra-section9-final-20261031/chapter-build/rendered-pages",
+  "work_directory": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-20261031-y2dhw_su/chapter-build",
+  "rendered_pages": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-20261031-y2dhw_su/chapter-build/rendered-pages",
   "output_sha256": {
-    "chapter.html": "b43ed517a4542442236edb16110a78730d53301df33104898dfd03b4e9df308a",
-    "downloads/section9.pdf": "a5b684f086fad6d0249da7cfc2a1fcf98b5eb193927614dc98baa1ab2cfc6e61",
-    "downloads/monograph-source.zip": "5a1d5a306a0504ebf5a0e8b46ba0ea6c9d2a664ba5fedc702ae748cd114b993b",
-    "downloads/section9-claims.json": "f801da33c5224e04595211c23e7f54b1edc2087bff5ebd6d0bf739ade7f33ab8",
+    "chapter.html": "d8e79d7ee395923059a262c897b413dfe8cb85c4777496595c55dfafa11585a4",
+    "downloads/section9.pdf": "9db08eec8405c637c8ac79ad0afcaaa4b4bf810435463dbb3361fee7616975f0",
+    "downloads/monograph-source.zip": "ac294eb06ba3e9bf400aeda84347922721f265220658af58eb332d52ba94b324",
+    "downloads/section9-claims.json": "255ed6ebb0c3eb1c7714d238f2829f6115487817408545e40461ef87b47b5c73",
     "assets/section9-figure-1.png": "ff955ac87063f13e1d698a1085ac18f30f6b643f818db8a57eb8ac6b0528336f",
     "assets/section9-figure-2.png": "cd534d247190d9b257611f6e775a5d6d89d2cdfcaa06f8275baede2fe718197d",
     "assets/section9.css": "aae27cd011f0d53aeb109ccaafbbe26e5a4c26eb2d9cb28c3aea78ec951f8b01"

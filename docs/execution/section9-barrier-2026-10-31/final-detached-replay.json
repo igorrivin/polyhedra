@@ -1,0 +1,425 @@
+{
+  "status": "both_fresh_detached_replays_passed",
+  "finished_at_utc": "2026-11-01T03:11:49.510658+00:00",
+  "source_commit": "c1f100b957166b93eca0d214586322d5af71b9cf",
+  "repository_clean_throughout": true,
+  "records": {
+    "grid": {
+      "archive": "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-20261031-y2dhw_su/site/section9/downloads/section9-reproduction.zip",
+      "archive_sha256": "0f2f6f343c9900762a6d8171065ab05141f79cacf37eae528c347c16b7a36fa9",
+      "command": [
+        "/tmp/polyhedra-numerical-core-20261031/bin/python",
+        "-c",
+        "import hashlib,json,runpy,sys\nfrom pathlib import Path\ndriver,output,site,imports=sys.argv[1:]\nnamespace=runpy.run_path(driver,run_name=\"detached_checkpoint\")\nsys.argv=[driver,\"--output\",output,\"--site-dir\",site]\ncode=namespace[\"main\"]()\nrows={name:{\"path\":str(Path(module.__file__).resolve()),\"sha256\":hashlib.sha256(Path(module.__file__).read_bytes()).hexdigest()} for name,module in sys.modules.items() if (name==\"ideal_poly_volume_toolkit\" or name.startswith(\"ideal_poly_volume_toolkit.\")) and getattr(module,\"__file__\",None)}\nPath(imports).write_text(json.dumps(rows,indent=2)+\"\\n\")\nraise SystemExit(code)\n",
+        "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/grid/section9-reproduction/experiments/section9/run.py",
+        "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/grid/replayed.json",
+        "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/grid/site",
+        "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/grid/imports.json"
+      ],
+      "working_directory": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/grid/unrelated-working-directory",
+      "returncode": 0,
+      "log_sha256": "d5281a3a26a7705cf9d070626dd7e7b1399515aad6ad0938776503bcc950b0ed",
+      "bundle_root": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/grid/section9-reproduction",
+      "payload_count": 9,
+      "actual_imports": {
+        "ideal_poly_volume_toolkit": {
+          "path": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/grid/section9-reproduction/packages/volume-toolkit/ideal_poly_volume_toolkit/__init__.py",
+          "sha256": "db17e85a24bad45f3a71aa2ed70e39a776f986c25b98ebcd085eab7da5c28ad4"
+        },
+        "ideal_poly_volume_toolkit.variational": {
+          "path": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/grid/section9-reproduction/packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+          "sha256": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b"
+        },
+        "ideal_poly_volume_toolkit.geometry": {
+          "path": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/grid/section9-reproduction/packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py",
+          "sha256": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+        }
+      },
+      "all_result_fields_except_provenance_identical": true,
+      "all_checks_passed": true,
+      "result_path": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/grid/replayed.json",
+      "result_sha256": "c48e37fbd3147a888d379d609b90a993d86aebf59b18aa847c28c1e64847143f",
+      "detached_provenance": {
+        "source_commit": null,
+        "execution_context": "detached-bundle",
+        "repository_dirty_at_start": null,
+        "git_status_porcelain_at_start": [],
+        "input_sha256": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1",
+        "source_files": [
+          {
+            "role": "experiment.driver",
+            "path": "experiments/section9/run.py",
+            "location_kind": "project-relative",
+            "required": true,
+            "available": true,
+            "sha256": "91525e17669887d7863834a3322207088c7ff4dbf4b4f8348a67b529a6142a19"
+          },
+          {
+            "role": "toolkit.variational",
+            "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+            "location_kind": "project-relative",
+            "required": true,
+            "available": true,
+            "sha256": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b"
+          },
+          {
+            "role": "toolkit.geometry",
+            "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py",
+            "location_kind": "project-relative",
+            "required": true,
+            "available": true,
+            "sha256": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+          },
+          {
+            "role": "experiment.fixture",
+            "path": "experiments/section9/fixture.json",
+            "location_kind": "project-relative",
+            "required": true,
+            "available": true,
+            "sha256": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1"
+          },
+          {
+            "role": "experiment.template",
+            "path": "experiments/section9/page.html",
+            "location_kind": "project-relative",
+            "required": true,
+            "available": true,
+            "sha256": "fd3e70a21ef81478124742e43fdcffa55a20a4645528f486f788e6a9eec6982f"
+          },
+          {
+            "role": "book.tex",
+            "path": "book/polyhedral_volumes_and_geodesic_identities.tex",
+            "location_kind": "project-relative",
+            "required": false,
+            "available": false,
+            "reason": "optional monograph asset not included in this execution context"
+          },
+          {
+            "role": "book.chapter",
+            "path": "book/chapters/09-volume-hessians.tex",
+            "location_kind": "project-relative",
+            "required": false,
+            "available": false,
+            "reason": "optional monograph asset not included in this execution context"
+          },
+          {
+            "role": "book.reference_pdf",
+            "path": "book/reference/polyhedral_volumes_and_geodesic_identities.pdf",
+            "location_kind": "project-relative",
+            "required": false,
+            "available": false,
+            "reason": "optional monograph asset not included in this execution context"
+          }
+        ],
+        "source_sha256": {
+          "experiment.driver": "91525e17669887d7863834a3322207088c7ff4dbf4b4f8348a67b529a6142a19",
+          "toolkit.variational": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+          "toolkit.geometry": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73",
+          "experiment.fixture": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1",
+          "experiment.template": "fd3e70a21ef81478124742e43fdcffa55a20a4645528f486f788e6a9eec6982f"
+        },
+        "bundle_origin": {
+          "source_commit": "c1f100b957166b93eca0d214586322d5af71b9cf",
+          "execution_context": "git-checkout",
+          "repository_dirty_at_start": false,
+          "git_status_porcelain_at_start": [],
+          "input_sha256": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1",
+          "source_files": [
+            {
+              "role": "experiment.driver",
+              "path": "experiments/section9/run.py",
+              "location_kind": "project-relative",
+              "required": true,
+              "available": true,
+              "sha256": "91525e17669887d7863834a3322207088c7ff4dbf4b4f8348a67b529a6142a19"
+            },
+            {
+              "role": "toolkit.variational",
+              "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+              "location_kind": "project-relative",
+              "required": true,
+              "available": true,
+              "sha256": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b"
+            },
+            {
+              "role": "toolkit.geometry",
+              "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py",
+              "location_kind": "project-relative",
+              "required": true,
+              "available": true,
+              "sha256": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+            },
+            {
+              "role": "experiment.fixture",
+              "path": "experiments/section9/fixture.json",
+              "location_kind": "project-relative",
+              "required": true,
+              "available": true,
+              "sha256": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1"
+            },
+            {
+              "role": "experiment.template",
+              "path": "experiments/section9/page.html",
+              "location_kind": "project-relative",
+              "required": true,
+              "available": true,
+              "sha256": "fd3e70a21ef81478124742e43fdcffa55a20a4645528f486f788e6a9eec6982f"
+            },
+            {
+              "role": "book.tex",
+              "path": "book/polyhedral_volumes_and_geodesic_identities.tex",
+              "location_kind": "project-relative",
+              "required": false,
+              "available": true,
+              "sha256": "3b3b93d26764392353030a30ef4569360d051e0d78d6e5eb7fd6bef1f96de546"
+            },
+            {
+              "role": "book.chapter",
+              "path": "book/chapters/09-volume-hessians.tex",
+              "location_kind": "project-relative",
+              "required": false,
+              "available": true,
+              "sha256": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00"
+            },
+            {
+              "role": "book.reference_pdf",
+              "path": "book/reference/polyhedral_volumes_and_geodesic_identities.pdf",
+              "location_kind": "project-relative",
+              "required": false,
+              "available": true,
+              "sha256": "40dd069bd2653f9a78666a31f53910d74b7f8de2a4a75d5a5dd62466032a6cd5"
+            }
+          ],
+          "source_sha256": {
+            "experiment.driver": "91525e17669887d7863834a3322207088c7ff4dbf4b4f8348a67b529a6142a19",
+            "toolkit.variational": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+            "toolkit.geometry": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73",
+            "experiment.fixture": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1",
+            "experiment.template": "fd3e70a21ef81478124742e43fdcffa55a20a4645528f486f788e6a9eec6982f",
+            "book.tex": "3b3b93d26764392353030a30ef4569360d051e0d78d6e5eb7fd6bef1f96de546",
+            "book.chapter": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00",
+            "book.reference_pdf": "40dd069bd2653f9a78666a31f53910d74b7f8de2a4a75d5a5dd62466032a6cd5"
+          },
+          "bundle_origin": null,
+          "bundle_payload_hashes_match": null,
+          "bundle_payload_mismatches": [],
+          "python": "3.12.11",
+          "numpy": "2.5.4",
+          "scipy": "1.18.1",
+          "mpmath": "1.3.0",
+          "generated_at_utc": "2026-11-01T03:10:06.634684+00:00"
+        },
+        "bundle_payload_hashes_match": true,
+        "bundle_payload_mismatches": [],
+        "python": "3.12.11",
+        "numpy": "2.5.4",
+        "scipy": "1.18.1",
+        "mpmath": "1.3.0",
+        "generated_at_utc": "2026-11-01T03:11:41.588068+00:00"
+      }
+    },
+    "barrier": {
+      "archive": "/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-20261031-y2dhw_su/site/section9/downloads/barrier-reproduction.zip",
+      "archive_sha256": "3927145433f4039b03f3649f6cf3c2e2db3f1b01456b0cd5ff530e383dc9955d",
+      "command": [
+        "/tmp/polyhedra-numerical-core-20261031/bin/python",
+        "-c",
+        "import hashlib,json,runpy,sys\nfrom pathlib import Path\ndriver,output,site,imports=sys.argv[1:]\nnamespace=runpy.run_path(driver,run_name=\"detached_checkpoint\")\nsys.argv=[driver,\"--output\",output,\"--site-dir\",site]\ncode=namespace[\"main\"]()\nrows={name:{\"path\":str(Path(module.__file__).resolve()),\"sha256\":hashlib.sha256(Path(module.__file__).read_bytes()).hexdigest()} for name,module in sys.modules.items() if (name==\"ideal_poly_volume_toolkit\" or name.startswith(\"ideal_poly_volume_toolkit.\")) and getattr(module,\"__file__\",None)}\nPath(imports).write_text(json.dumps(rows,indent=2)+\"\\n\")\nraise SystemExit(code)\n",
+        "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/barrier/barrier-reproduction/experiments/section9/barrier_run.py",
+        "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/barrier/replayed.json",
+        "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/barrier/site",
+        "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/barrier/imports.json"
+      ],
+      "working_directory": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/barrier/unrelated-working-directory",
+      "returncode": 0,
+      "log_sha256": "32f9281e4890d708cfd0e39716451a0e9b89e3a1020db020b3d466aad02e80d1",
+      "bundle_root": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/barrier/barrier-reproduction",
+      "payload_count": 10,
+      "actual_imports": {
+        "ideal_poly_volume_toolkit": {
+          "path": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/barrier/barrier-reproduction/packages/volume-toolkit/ideal_poly_volume_toolkit/__init__.py",
+          "sha256": "e5a100bd13fe3ca712c41ed50eb01faeb270c745275ebd08438ffabea336030b"
+        },
+        "ideal_poly_volume_toolkit.variational": {
+          "path": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/barrier/barrier-reproduction/packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+          "sha256": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b"
+        },
+        "ideal_poly_volume_toolkit.angle_barrier": {
+          "path": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/barrier/barrier-reproduction/packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py",
+          "sha256": "d782aff2a23c9073c6f7cf02666cc0ec3f4446f28185c7474116fcf42edbbd07"
+        },
+        "ideal_poly_volume_toolkit.geometry": {
+          "path": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/barrier/barrier-reproduction/packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py",
+          "sha256": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+        }
+      },
+      "all_result_fields_except_provenance_identical": true,
+      "all_checks_passed": true,
+      "result_path": "/private/var/folders/07/k5d5zt815j92q33gdb61j1280000gn/T/polyhedra-barrier-final-replays-4476fmfn/barrier/replayed.json",
+      "result_sha256": "2feb63cb8272b23a4fd8ff75fba91b5f91a6b119bac359ba320cfda9c5a1bce4",
+      "detached_provenance": {
+        "source_commit": null,
+        "execution_context": "detached-bundle",
+        "repository_dirty_at_start": null,
+        "git_status_porcelain_at_start": [],
+        "input_sha256": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+        "source_files": [
+          {
+            "role": "experiment.driver",
+            "path": "experiments/section9/barrier_run.py",
+            "location_kind": "project-relative",
+            "required": true,
+            "available": true,
+            "sha256": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60"
+          },
+          {
+            "role": "experiment.fixture",
+            "path": "experiments/section9/barrier-fixtures.json",
+            "location_kind": "project-relative",
+            "required": true,
+            "available": true,
+            "sha256": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a"
+          },
+          {
+            "role": "experiment.template",
+            "path": "experiments/section9/barrier-page.html",
+            "location_kind": "project-relative",
+            "required": true,
+            "available": true,
+            "sha256": "e4de74a735bf9d7bbdabae7f59fa368cef972297639a4cb2719d97d92ce3fb90"
+          },
+          {
+            "role": "toolkit.angle_barrier",
+            "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py",
+            "location_kind": "project-relative",
+            "required": true,
+            "available": true,
+            "sha256": "d782aff2a23c9073c6f7cf02666cc0ec3f4446f28185c7474116fcf42edbbd07"
+          },
+          {
+            "role": "toolkit.variational",
+            "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+            "location_kind": "project-relative",
+            "required": true,
+            "available": true,
+            "sha256": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b"
+          },
+          {
+            "role": "toolkit.geometry",
+            "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py",
+            "location_kind": "project-relative",
+            "required": true,
+            "available": true,
+            "sha256": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+          },
+          {
+            "role": "book.chapter",
+            "path": "book/chapters/09-volume-hessians.tex",
+            "location_kind": "project-relative",
+            "required": false,
+            "available": false,
+            "reason": "optional chapter source absent in this execution context"
+          }
+        ],
+        "source_sha256": {
+          "experiment.driver": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60",
+          "experiment.fixture": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+          "experiment.template": "e4de74a735bf9d7bbdabae7f59fa368cef972297639a4cb2719d97d92ce3fb90",
+          "toolkit.angle_barrier": "d782aff2a23c9073c6f7cf02666cc0ec3f4446f28185c7474116fcf42edbbd07",
+          "toolkit.variational": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+          "toolkit.geometry": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+        },
+        "bundle_origin": {
+          "source_commit": "c1f100b957166b93eca0d214586322d5af71b9cf",
+          "execution_context": "git-checkout",
+          "repository_dirty_at_start": false,
+          "git_status_porcelain_at_start": [],
+          "input_sha256": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+          "source_files": [
+            {
+              "role": "experiment.driver",
+              "path": "experiments/section9/barrier_run.py",
+              "location_kind": "project-relative",
+              "required": true,
+              "available": true,
+              "sha256": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60"
+            },
+            {
+              "role": "experiment.fixture",
+              "path": "experiments/section9/barrier-fixtures.json",
+              "location_kind": "project-relative",
+              "required": true,
+              "available": true,
+              "sha256": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a"
+            },
+            {
+              "role": "experiment.template",
+              "path": "experiments/section9/barrier-page.html",
+              "location_kind": "project-relative",
+              "required": true,
+              "available": true,
+              "sha256": "e4de74a735bf9d7bbdabae7f59fa368cef972297639a4cb2719d97d92ce3fb90"
+            },
+            {
+              "role": "toolkit.angle_barrier",
+              "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py",
+              "location_kind": "project-relative",
+              "required": true,
+              "available": true,
+              "sha256": "d782aff2a23c9073c6f7cf02666cc0ec3f4446f28185c7474116fcf42edbbd07"
+            },
+            {
+              "role": "toolkit.variational",
+              "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+              "location_kind": "project-relative",
+              "required": true,
+              "available": true,
+              "sha256": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b"
+            },
+            {
+              "role": "toolkit.geometry",
+              "path": "packages/volume-toolkit/ideal_poly_volume_toolkit/geometry.py",
+              "location_kind": "project-relative",
+              "required": true,
+              "available": true,
+              "sha256": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73"
+            },
+            {
+              "role": "book.chapter",
+              "path": "book/chapters/09-volume-hessians.tex",
+              "location_kind": "project-relative",
+              "required": false,
+              "available": true,
+              "sha256": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00"
+            }
+          ],
+          "source_sha256": {
+            "experiment.driver": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60",
+            "experiment.fixture": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+            "experiment.template": "e4de74a735bf9d7bbdabae7f59fa368cef972297639a4cb2719d97d92ce3fb90",
+            "toolkit.angle_barrier": "d782aff2a23c9073c6f7cf02666cc0ec3f4446f28185c7474116fcf42edbbd07",
+            "toolkit.variational": "f964764a992089b3725205d0730d27e1254f2b3b9ea17e73eaccae9465e9a07b",
+            "toolkit.geometry": "eb01142ad2cc8a9d3018737be59f90c19b6035b2e5d416c75865bf3fad8baf73",
+            "book.chapter": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00"
+          },
+          "bundle_origin": null,
+          "bundle_payload_hashes_match": null,
+          "bundle_payload_mismatches": [],
+          "python": "3.12.11",
+          "numpy": "2.5.4",
+          "scipy": "1.18.1",
+          "mpmath": "1.3.0",
+          "generated_at_utc": "2026-11-01T03:10:12.669494+00:00"
+        },
+        "bundle_payload_hashes_match": true,
+        "bundle_payload_mismatches": [],
+        "python": "3.12.11",
+        "numpy": "2.5.4",
+        "scipy": "1.18.1",
+        "mpmath": "1.3.0",
+        "generated_at_utc": "2026-11-01T03:11:47.419775+00:00"
+      }
+    }
+  },
+  "scope": "Fresh numerical execution with existing minimal dependencies; no dependency installation, network resolution or browser use."
+}

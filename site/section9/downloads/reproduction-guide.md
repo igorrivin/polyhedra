@@ -89,3 +89,77 @@ Ownership:
 
 Canonical monograph labels: `eq:ipolyAngleCoordinates`, `eq:ipolyHessian`,
 `eq:ipolyDtN`, `eq:ipolySchur`, `eq:ipolyForestDeterminant`.
+
+## Log-sine barrier examples
+
+`barrier_run.py` adds three fixed examples for the chapter's finite-iterate
+barrier argument. The maintained solver and its input/failure contract are in
+[`angle-barrier.md`](../../packages/volume-toolkit/docs/angle-barrier.md).
+This is a dense binary64 implementation with an explicitly supplied affine
+angle domain and strictly feasible start. It does not implement a nearly-linear
+method or certify the floating-point gap estimate.
+
+From the consolidated checkout, use an installed toolkit or an explicit source
+path:
+
+```sh
+PYTHONPATH=packages/volume-toolkit python experiments/section9/barrier_run.py \
+  --output /tmp/section9-preview/barrier-result.json \
+  --site-dir /tmp/section9-preview/site/section9
+```
+
+Defaults are `artifacts/section9/barrier-result.json` and
+`site/section9/barrier.html`; all download names are separate from the original
+grid example. The output includes complete centering/path traces, accepted
+parameters, positivity and constraint diagnostics, linear-solve checks, final
+decrement, schedule, work counts, and independent reference comparisons. The
+initial damped centering work is separate from the subsequent short path steps.
+Centering stops at decrement at most 1/4; its accepted point need not be the
+exact minimizer of the initial barrier objective.
+
+The fixtures are deliberately small mathematical examples:
+
+| Fixture | Independent reference |
+| --- | --- |
+| `regular-triangle` | The full two-dimensional triangle tangent space has its exact-space maximum at three angles π/3, with volume 1.014941606409653625… |
+| `asymmetric-disk` | Four triangles join the rectangle corners (0,0), (4,0), (4,3), (0,3) to (1,0.5). The grounded leading–trailing coordinate preserves interior-edge opposite sums and has its geometric volume maximum at u=0, of volume 3.006286641747050653… Its pure barrier center is u≈0.03634147; the exact Φ₁ center is u≈0.02844640. |
+| `boundary-maximum` | The affine slice consists of (π−2s,s,s) and (0.1−s,1+s,π−1.1), 0<s<0.1. Strict concavity and V′(0+)=2 log 2+log(sin(0.1)/sin(1))≈−0.74535421 give the unique closed maximum at s=0, of volume 0.316035844601294286… No geometric realization is asserted. |
+
+The oracle uses 80-digit mpmath Clausen/log-sine formulas and bracketed scalar
+stationarity calculations; it does not call the production Hessian. It records
+the exact mathematical decimal/geometric references separately from the
+Clausen model obtained by lifting the actual binary64 base angles and incidence
+coefficients. It also compares the endpoint with a separate high-precision
+Bloch–Wigner evaluation. The boundary example needs this distinction: tiny
+rounded triangle-sum defects alter the limiting derivative and move the lifted
+stationary point just inside the boundary. These are multiprecision comparisons,
+not interval bounds. Endpoint volume comparisons and observed-gap tests use the
+explicit 1e-11 allowance in the fixture; decrement checks have their own recorded
+tolerances. Full traces and sampled high-precision reference gaps are retained.
+
+`--fixture` only accepts an unchanged copy of `barrier-fixtures.json`; it is not
+a general mathematical experiment or renderer. The code, template and fixture
+are source-hashed, together with the actual imported `angle_barrier.py`,
+`variational.py` and `geometry.py`. The chapter source is optional for detached
+execution and hashed when available. `--render-result` validates all these
+roles before packaging and preserves the original computation environment and
+timestamp. It does not recompute the results. Supply `--chapter-page` only after
+the chapter builder has produced the actual `chapter.html` in the same site
+directory; detached standalone pages omit that link.
+
+The `downloads/barrier-reproduction.zip` archive contains the runner, fixture,
+template, three unchanged maintained numerical modules, a labeled minimal
+package initializer, MIT license, captured requirements, and `barrier-bundle.json`
+with a complete payload manifest and origin provenance. Extract it outside the
+checkout, install its captured requirements in an isolated environment, then
+run `python experiments/section9/barrier_run.py`; an absolute script path from
+another working directory also works. This only needs NumPy, SciPy and mpmath.
+The generated report records the current execution separately from the archive
+origin and refuses altered payloads. Individual Python downloads are inspection
+copies; the complete archive is the runnable reproduction.
+
+`tests/test_barrier_examples.py` checks independent reference values, nontrivial
+centering and disk motion, preservation of opposite sums, boundary rounding,
+source identity, download completeness, captured versions, and payload tamper
+rejection. The toolkit tests own the reusable solver's correctness. These fixed
+fixtures do not establish scaling performance or prove all chapter claims.

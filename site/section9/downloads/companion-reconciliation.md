@@ -122,7 +122,15 @@ scale after centering; success probabilities, coefficient precision,
 transcendental evaluation and final geometric error need separate controls.
 Neither this result nor a fast linear solve proves an unrestricted plain-
 Newton iteration bound, a bit-complexity bound, or a geometrization algorithm.
-The maintained Section 9 example does not implement this barrier schedule.
+The original maintained Section 9 grid example did not implement this barrier
+schedule. In the subsequent 31 October 2026 computational increment, the
+[dense barrier example](../experiments/section9/barrier_run.py) implements it
+on supplied positive affine angle slices, with separately budgeted initial
+centering. Its binary64 gap values are numerical estimates; nearly-linear
+solves, certified rounding and full geometric reconstruction remain separate
+work. The [barrier checkpoint](../docs/execution/section9-barrier-2026-10-31/README.md)
+records review of this computational addendum, separately from the frozen
+mathematical review above.
 
 For the free-angle program, adding barriers for affine inequality slacks
 requires a strictly feasible relative domain. Identically tight constraints
