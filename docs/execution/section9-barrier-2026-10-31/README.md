@@ -72,12 +72,14 @@ Its source checkout is explicitly dirty; this is an approved precommit preview.
 The [strict evidence copy manifest](strict-preview-evidence-copy-manifest.json)
 keeps the later approval separate from the frozen primary review inputs.
 
-Final clean-source generation follows the source commit. Existing canonical
-generated artifacts are not replaced by this preliminary checkpoint. No
-public Site or book edition is published.
-
-Final generation must follow the source commit, with fresh grid and barrier
-reports and a strict chapter build without `--allow-pending-evidence`.
-Render-only backlink updates preserve each report's computation provenance.
-The final artifact manifest must hash the output tree after those updates;
-the chapter build's barrier asset hashes identify its build-time inputs.
+The [final closeout](closeout.md) records clean-source generation from
+`c1f100b957166b93eca0d214586322d5af71b9cf` and canonical artifacts in
+`4823348bbd1593d8cade4d0a038531f80a97a676`. Fresh grid and barrier runs, the strict chapter build,
+both render-only backlinks, both detached numerical replays, all final output
+hashes and the ten-page comparison passed. The
+[artifact manifest](final-artifact-manifest.json) covers 46 canonical files after
+backlinks. The final PDF hash is
+`9db08eec8405c637c8ac79ad0afcaaa4b4bf810435463dbb3361fee7616975f0`.
+No public Site or book edition is published. The postcommit receipt is retained
+outside the repository as explained in the closeout; package-environment,
+browser and numerical-certification limits remain explicit above.

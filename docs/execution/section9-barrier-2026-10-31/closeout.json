@@ -1,0 +1,48 @@
+{
+  "status": "clean_source_generation_and_canonical_artifacts_committed",
+  "source_commit": "c1f100b957166b93eca0d214586322d5af71b9cf",
+  "artifact_commit": "4823348bbd1593d8cade4d0a038531f80a97a676",
+  "documentation_commit": "The commit containing this closeout; exact final SHA is recorded by the external postcommit receipt.",
+  "canonical_artifact_count": 46,
+  "artifact_manifest": "final-artifact-manifest.json",
+  "final_pdf_sha256": "9db08eec8405c637c8ac79ad0afcaaa4b4bf810435463dbb3361fee7616975f0",
+  "clean_source_reports_and_build": true,
+  "pending_evidence": [],
+  "fresh_detached_grid_and_barrier_replays": "All report fields except provenance match the final source executions exactly.",
+  "all_ten_rendered_pages_match_independently_inspected_layout": true,
+  "source_approval": "barrier-review.md and barrier-publication-review.md; separate strict-preview approval retained.",
+  "validation": {
+    "final_focused_tests_passed": 43,
+    "barrier_cases_in_focused_suite": 32,
+    "existing_variational_cases": 11,
+    "independent_core_probe_groups": 5,
+    "experiment_publisher_tests_passed": 27,
+    "experiment_publisher_subtests_passed": 29,
+    "experiment_publisher_test_timing": "Before the narrow core-only fixed-domain reporting correction; subsequent corrected-core source/detached examples agree exactly.",
+    "recorded_example_checks_passed": 54,
+    "full_suite": {
+      "passed": 423,
+      "skipped": 18,
+      "failed": 4,
+      "collection_errors": 9,
+      "source_module_sha256": "ea73137fbbfa2fc9b96a4925001dc317b83e5c1eb96fd6ddf0cdc6c29c3add9a",
+      "scope": "Before the one-line fixed-domain reporting fix. Failure/error/skip identities and messages equal preceding baseline. No final-source full-suite pass is claimed."
+    },
+    "optional_dependencies_unavailable": [
+      "gymnasium",
+      "hypothesis",
+      "pynauty"
+    ],
+    "preliminary_wheel_validation": "Offline sdist/wheel and new-target installed-wheel probe passed exact final module bytes using existing dependencies; not a clean-source release-wheel or dependency-resolution result."
+  },
+  "parent_verification": "Parent independently verified final44site files, both reports, all10page bytes, all953original tracked files, original heads/ancestry, original ZIP and supplied reference PDF. Final HEAD/fsck follows this documentation commit.",
+  "publication": "No remote, push, public Site or external publication. Browser layout/interaction remains unverified.",
+  "scope_limits": [
+    "Dense numerical implementation only; no nearly-linear backend or scaling claim.",
+    "Gap estimates are not interval certificates or geometric realization certificates.",
+    "Section9 computational addendum does not constitute a complete monograph proof audit."
+  ],
+  "final_receipt_location": "../execution/section9-barrier-2026-10-31/final-postcommit-verification.json relative to the consolidated repository root; kept outside Git to avoid recursive receipt commits.",
+  "git_integrity_gate": "Record ordinary git fsck --full, preserving informational dangling objects; require git fsck --full --no-dangling exit zero and empty stdout/stderr. Normal reflog reachability is retained; no archive refs or genuine-object deletion.",
+  "metadata_cleanup": "Retain and accumulate all verified AppleDouble cleanup batches, including the initial197 removals."
+}
