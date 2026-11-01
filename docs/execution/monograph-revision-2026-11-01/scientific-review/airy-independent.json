@@ -1,0 +1,102 @@
+{
+  "source_sha256": {
+    "book/chapters/15-quantum-airy.tex": "e042499f66436b1aafc1219efbef3c9db945f6a99bc60738ac913ebfa78a0d9e",
+    "book/claims/section15.json": "1e60b5dc77094bccbcb54fbc3130ad877b70e83613fe015cd88cd62220b856bc",
+    "experiments/section15/README.md": "a87e6f645844f64863d152cf5ec3ab2f6bd3a12737af4299c10baf63036771ac",
+    "experiments/section15/check.py": "56175063c8debbd150f1a3dc617d04367696dce7b713379aa8723ab3289d7ad0",
+    "experiments/section15/historical-table.json": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011"
+  },
+  "preservation": {
+    "analytic_proof_bytes_unchanged": true,
+    "interpretation_bytes_unchanged": true,
+    "all_original_rows_unchanged": true,
+    "labels": 21
+  },
+  "probes": [
+    {
+      "name": "G_v",
+      "method": "direct trigonometric expressions and numerical differentiation at 100 digits",
+      "residual": "2.8574684782056874555e-101",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "G_eta",
+      "method": "direct trigonometric expressions and numerical differentiation at 100 digits",
+      "residual": "2.2859747825645499644e-100",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "G_vv",
+      "method": "direct trigonometric expressions and numerical differentiation at 100 digits",
+      "residual": "1.4230104601282367646e-99",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "G_vvv",
+      "method": "direct trigonometric expressions and numerical differentiation at 100 digits",
+      "residual": "2.2859747825645499644e-98",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "G_vvvv",
+      "method": "direct trigonometric expressions and numerical differentiation at 100 digits",
+      "residual": "5.4131882851128543158e-97",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "G_v_eta",
+      "method": "direct trigonometric expressions and numerical differentiation at 100 digits",
+      "residual": "2.2859747825645499644e-100",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "G_vv_eta",
+      "method": "direct trigonometric expressions and numerical differentiation at 100 digits",
+      "residual": "6.8579243476936498933e-100",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "G_eta_eta",
+      "method": "direct trigonometric expressions and numerical differentiation at 100 digits",
+      "residual": "1.8287798260516399715e-99",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "A",
+      "method": "direct trigonometric expressions and numerical differentiation at 100 digits",
+      "residual": "4.0004558694879624378e-100",
+      "tolerance": "1e-85"
+    },
+    {
+      "name": "log_A_v",
+      "method": "direct trigonometric expressions and numerical differentiation at 100 digits",
+      "residual": "2.1716760434363224662e-99",
+      "tolerance": "1e-85"
+    }
+  ],
+  "displaced_cubic_contour_probes": [
+    {
+      "zeta": 0,
+      "Ai_residual": "0.0",
+      "first_correction_residual": "0.0",
+      "truncation": 16,
+      "tolerance": "1e-80",
+      "exact_quantum_integral": false
+    },
+    {
+      "zeta": 1,
+      "Ai_residual": "0.0",
+      "first_correction_residual": "0.0",
+      "truncation": 16,
+      "tolerance": "1e-80",
+      "exact_quantum_integral": false
+    }
+  ],
+  "exact_field_cases": 49,
+  "evidence_boundary": "Finite identities, numerical cubic-contour probes and six approximation rows only; not the exact double-sine integral or the uniform theorem.",
+  "primary_sources": [
+    "https://dlmf.nist.gov/9.2",
+    "https://dlmf.nist.gov/9.4",
+    "https://dlmf.nist.gov/9.5"
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "generated_at_utc": "2026-11-01T04:36:31.039360+00:00",
+  "baseline_commit": "df952174e55f08a52596d912d9713a9d1e116313",
+  "owned_active_files": [
+    "INTEGRATION_PLAN.md",
+    "book/polyhedral_volumes_and_geodesic_identities.tex"
+  ],
+  "extracted_files_released_to_section_authors": [
+    "book/chapters/15-quantum-airy.tex",
+    "book/chapters/30-sharp-diagnostics.tex"
+  ],
+  "active_sha256": {
+    "INTEGRATION_PLAN.md": "3949dc672a4db18ab275137ea35ef7bbbb7707b5495b2a1165a202b624445c26",
+    "book/polyhedral_volumes_and_geodesic_identities.tex": "bec25e96072e617a40de9ed00a81427afcb08568679e0b73585a9b6de82609d7"
+  },
+  "checks": [
+    {
+      "name": "verify-extraction",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/monograph-revision-2026-11-01/structure/verify_extraction.py"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stdout": "verify-extraction.stdout",
+      "stderr": "verify-extraction.stderr"
+    },
+    {
+      "name": "whitespace",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stdout": "whitespace.stdout",
+      "stderr": "whitespace.stderr"
+    }
+  ],
+  "evidence": {
+    "09-volume-hessians.tex": {
+      "bytes": 34587,
+      "sha256": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00"
+    },
+    "15-quantum-airy.tex": {
+      "bytes": 16995,
+      "sha256": "de643617d88a45bdad1601960a1caa2b2ddecb1ae299e8ea297f021fe27dbc3e"
+    },
+    "30-sharp-diagnostics.tex": {
+      "bytes": 24235,
+      "sha256": "23d27570121d5e0fd21e7aba6f16e805f00d776e4ab4bbe22878eba912ab6d93"
+    },
+    "baseline-main.tex": {
+      "bytes": 546656,
+      "sha256": "3b3b93d26764392353030a30ef4569360d051e0d78d6e5eb7fd6bef1f96de546"
+    },
+    "baseline-tracked-inventory.json": {
+      "bytes": 368738,
+      "sha256": "ad62a05785834e4c4c259bf0a711da4c2a94fa680316d2012c86be466eb550d2"
+    },
+    "extract_chapters.py": {
+      "bytes": 4967,
+      "sha256": "aa1088893b80e7b43d89e357d2aec6c5385776d2ec820a95926513040444bbe9"
+    },
+    "extracted-main.tex": {
+      "bytes": 505505,
+      "sha256": "bec25e96072e617a40de9ed00a81427afcb08568679e0b73585a9b6de82609d7"
+    },
+    "extraction.json": {
+      "bytes": 3149,
+      "sha256": "642a0bc5faef2b6e91a59f3aae4e5f1a4cac7d14f8f2530b316c80b30b98a52d"
+    },
+    "final-plan.md": {
+      "bytes": 41960,
+      "sha256": "3949dc672a4db18ab275137ea35ef7bbbb7707b5495b2a1165a202b624445c26"
+    },
+    "verify-extraction.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "verify-extraction.stdout": {
+      "bytes": 541,
+      "sha256": "012d5b110bdf09360db4db756500fd9b097dbd68c65c911736c310e52b8c405a"
+    },
+    "verify_extraction.py": {
+      "bytes": 2365,
+      "sha256": "1afcce61f9c4a8b00ced7beb605b36a741aeb19edb74a3b94fa098740e4d71ca"
+    },
+    "whitespace.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "whitespace.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "boundaries": [
+    "No commit or push.",
+    "No mathematical edits in structural extraction.",
+    "No new build, numerical replay or browser checks.",
+    "Original repositories, supplied archive/PDF, package code and frozen scientific/site artifacts not modified.",
+    "Next publication action deferred until revision and local release checks complete."
+  ]
+}

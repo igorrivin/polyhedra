@@ -1,0 +1,22 @@
+{
+  "verdict": "approved_bounded_revisions",
+  "source_sha256": {
+    "book/chapters/15-quantum-airy.tex": "e042499f66436b1aafc1219efbef3c9db945f6a99bc60738ac913ebfa78a0d9e",
+    "book/claims/section15.json": "1e60b5dc77094bccbcb54fbc3130ad877b70e83613fe015cd88cd62220b856bc",
+    "experiments/section15/README.md": "a87e6f645844f64863d152cf5ec3ab2f6bd3a12737af4299c10baf63036771ac",
+    "experiments/section15/check.py": "56175063c8debbd150f1a3dc617d04367696dce7b713379aa8723ab3289d7ad0",
+    "experiments/section15/historical-table.json": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011",
+    "book/chapters/30-sharp-diagnostics.tex": "ec9973858c9dc2dca31537230158e39a323287408782afb5dc9b599735ad996f",
+    "book/claims/section30.json": "dcdda088cf20e7b9c87126f46a9dcb733c52e2365186489461128fbe528dee47",
+    "experiments/section30/run.py": "3dc50d531d2b7a3eac8cb608772e14cd2649c724b65e8d117b04ca8735e8e34d",
+    "experiments/section30/fixture.json": "ef8869c5e4729605d630a81f5bd9f8dc9f34363facd84aeead4d15de238dd196",
+    "experiments/section30/README.md": "43f5c6dff6040f1946a961668bad19b80cf54248115bb910d55ea656dfef6724",
+    "experiments/section30/tests/test_diagnostic.py": "decb663edd303c9e4687df0a8b8feb652eb099b01ba0288ad83921ce4f5883c4"
+  },
+  "reviews": {
+    "airy-review-manifest.json": "a6cdc416da0cc5a89982ed3df4ee704117abe26639dbecf1c20141f766ae9572",
+    "torus-review-manifest.json": "690f5e419fe04b02a6eca7d35d1c4aa0f7a969e5b1f52e1f86539c8a8f72ee6e"
+  },
+  "unresolved_findings": [],
+  "scope": "Scientific calculations/code/provenance correction only; integration/build and final clean-source artifact generation remain separate."
+}

@@ -1,0 +1,44 @@
+{
+  "generated_at_utc": "2026-11-01T04:58:44.228264+00:00",
+  "mode": "candidate",
+  "all_checks_passed": true,
+  "baseline": "df952174e55f08a52596d912d9713a9d1e116313",
+  "source_commit": "cf34fcbcd0ee867a2dee974d9c952238bc5c6ce6",
+  "head": "cf34fcbcd0ee867a2dee974d9c952238bc5c6ce6",
+  "approved_source_files": 16,
+  "artifact_sha256": {
+    "artifacts/section15/checks.json": "1b275fb776a7a203cfada670bf37d4a5c428a463e24edafb38ed0e8c258f8404",
+    "artifacts/section30/result.json": "762b07184f76893c810f3e9832fd44dc7e4b292c1a64aae61aa26832e02884a1",
+    "artifacts/monograph-revision-2026-11-01/monograph-working-draft.pdf": "44e428ddbc625231f483748a9bfce914b4d4fc987a0c34b6201003e6dc87cacd"
+  },
+  "scientific_values_equal_reviewed_replays": true,
+  "both_results_record_clean_source": true,
+  "pdf_matches_reviewed_precommit_bytes_and_committed_inputs": true,
+  "pdf_rebuilt_after_commit": false,
+  "evidence_copies_verified": 94,
+  "protected_baseline_files": 1053,
+  "original_tracked_files_verified": 953,
+  "original_repository_heads": {
+    "ideal_poly_volume_toolkit": "cc6b689652ce735f2098bb0a3235089210d764df",
+    "ipoly": "30ef40e23005509bd94d26f27dc48ea778832a50"
+  },
+  "original_archive_sha256": "8f28b07686ea579a7dfb7b88ccef5c12bdd50b6e328737d5a8a79f6e06ba92dc",
+  "reference_pdf_sha256": "40dd069bd2653f9a78666a31f53910d74b7f8de2a4a75d5a5dd62466032a6cd5",
+  "shared_document_links_resolved": 109,
+  "ledger_local_paths_resolved": [
+    "artifacts/section30/result.json",
+    "book/chapters/15-quantum-airy.tex",
+    "book/chapters/30-sharp-diagnostics.tex",
+    "experiments/section15/check.py",
+    "experiments/section15/historical-table.json",
+    "experiments/section30/README.md",
+    "experiments/section30/fixture.json",
+    "experiments/section30/run.py",
+    "experiments/section30/tests/test_diagnostic.py"
+  ],
+  "worktree_and_index_clean": false,
+  "git_metadata_cleanup_history": [],
+  "git_fsck": [],
+  "no_remote_operations": true,
+  "scope": "Verification of recorded artifacts and source identities; no new replay, PDF build, browser check or publication."
+}

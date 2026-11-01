@@ -1,0 +1,41 @@
+[
+  {
+    "name": "airy-independent",
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/monograph-revision-2026-11-01/scientific-review/check_airy_independent.py"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "elapsed_seconds": 2.5739901065826416,
+    "stdout": "airy-independent.stdout",
+    "stderr": "airy-independent.stderr"
+  },
+  {
+    "name": "airy-replay",
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "experiments/section15/check.py",
+      "--output",
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/monograph-revision-2026-11-01/scientific-review/airy-replay.json"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "elapsed_seconds": 0.21537995338439941,
+    "stdout": "airy-replay.stdout",
+    "stderr": "airy-replay.stderr"
+  },
+  {
+    "name": "airy-ruff",
+    "argv": [
+      "/opt/anaconda3/bin/ruff",
+      "check",
+      "experiments/section15/check.py"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "elapsed_seconds": 0.05507183074951172,
+    "stdout": "airy-ruff.stdout",
+    "stderr": "airy-ruff.stderr"
+  }
+]

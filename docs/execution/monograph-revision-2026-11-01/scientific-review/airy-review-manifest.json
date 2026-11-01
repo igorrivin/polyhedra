@@ -1,0 +1,32 @@
+{
+  "verdict": "approved_bounded_revision",
+  "source_sha256": {
+    "book/chapters/15-quantum-airy.tex": "e042499f66436b1aafc1219efbef3c9db945f6a99bc60738ac913ebfa78a0d9e",
+    "book/claims/section15.json": "1e60b5dc77094bccbcb54fbc3130ad877b70e83613fe015cd88cd62220b856bc",
+    "experiments/section15/README.md": "a87e6f645844f64863d152cf5ec3ab2f6bd3a12737af4299c10baf63036771ac",
+    "experiments/section15/check.py": "56175063c8debbd150f1a3dc617d04367696dce7b713379aa8723ab3289d7ad0",
+    "experiments/section15/historical-table.json": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011"
+  },
+  "author_manifest_sha256": "d3f8b34658061d075ae27106538f21e544f0d78fa4654e29cf2a0087dcbb240e",
+  "independent_replay_scientific_values_match_author": true,
+  "unresolved_findings": [],
+  "evidence_sha256": {
+    "airy-review.md": "c670d3e83c6c029142195000c2dbd0d7010473d639d5092d57b6e7aa9aa6bd62",
+    "airy-commands.json": "76c31ef5e168e6ca888f9b5c1368c373552795c2fb519e771db66c331e78ab49",
+    "airy-independent.json": "7cb54c412b96679d081c87d437feb8dfa6244373de64d5c0999d7532ff823760",
+    "airy-replay.json": "d9b78ea2a558a34e929fbf5a39eab5dfe4494746915fd725492028c76141be0b",
+    "check_airy_independent.py": "6b80304dec2e2c756e4b7e2e6ba3d265118e12c161f713a466447924063dc2de",
+    "airy-independent.stdout": "8a9e270ce80ebcd10edc975190eb120ca69e455693863b9625ff9cbb4fbb37ca",
+    "airy-independent.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "airy-replay.stdout": "57a98a7bf7716207ca6001430514075194f6ae67cba8d824ddd2150a4541fb64",
+    "airy-replay.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "airy-ruff.stdout": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "airy-ruff.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "boundaries": [
+    "No full analytic proof audit",
+    "No exact quantum integral replay",
+    "No interval certificate",
+    "No canonical source changes by reviewer"
+  ]
+}

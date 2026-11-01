@@ -1,0 +1,50 @@
+{
+  "source_sha256": {
+    "book/chapters/30-sharp-diagnostics.tex": "ec9973858c9dc2dca31537230158e39a323287408782afb5dc9b599735ad996f",
+    "book/claims/section30.json": "dcdda088cf20e7b9c87126f46a9dcb733c52e2365186489461128fbe528dee47",
+    "experiments/section30/README.md": "43f5c6dff6040f1946a961668bad19b80cf54248115bb910d55ea656dfef6724",
+    "experiments/section30/run.py": "3dc50d531d2b7a3eac8cb608772e14cd2649c724b65e8d117b04ca8735e8e34d",
+    "experiments/section30/fixture.json": "ef8869c5e4729605d630a81f5bd9f8dc9f34363facd84aeead4d15de238dd196",
+    "experiments/section30/tests/test_diagnostic.py": "decb663edd303c9e4687df0a8b8feb652eb099b01ba0288ad83921ce4f5883c4"
+  },
+  "matrix_word_checks": [
+    {
+      "surface": "modular",
+      "primitive_words": 408,
+      "maximum_relative_trace_residual": "3.326531125006367749929729e-110",
+      "tolerance": "1e-90",
+      "length6_count": 12,
+      "matrix_box_coordinate_bound": 18,
+      "source_of_words": "direct floor crossing sequence, not Farey recursion"
+    },
+    {
+      "surface": "asymmetric",
+      "primitive_words": 408,
+      "maximum_relative_trace_residual": "5.371634392285526300572541e-104",
+      "tolerance": "1e-90",
+      "length6_count": 10,
+      "matrix_box_coordinate_bound": 18,
+      "source_of_words": "direct floor crossing sequence, not Farey recursion"
+    }
+  ],
+  "exact_event_cases": {
+    "cases": 1485,
+    "max_M_error": 0,
+    "max_Q_squared_error": 5.684341886080802e-14,
+    "includes": "multiplicities, simultaneous opposite jumps, all endpoint placements, empty lists"
+  },
+  "conditional_interval_cases": 4437,
+  "preservation": {
+    "labels": 22,
+    "all_proofs_and_propositions_unchanged": true,
+    "historical_table_rows_preserved": true,
+    "all_source_hashes_unchanged_during_probe": true
+  },
+  "boundaries": [
+    "No length8192 replay",
+    "Numerical matrix traces, not exact matrix certificates",
+    "Conditional M bounds for fixed curve membership and assumed radius",
+    "No complete Section30 proof audit or event-location certificate"
+  ],
+  "primary_source": "https://warwick.ac.uk/fac/sci/maths/people/staff/brian_bowditch/bhb-markoff.pdf"
+}

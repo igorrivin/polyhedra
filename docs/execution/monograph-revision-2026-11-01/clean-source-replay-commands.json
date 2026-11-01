@@ -1,0 +1,50 @@
+[
+  {
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/section15/check.py",
+      "--output",
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/monograph-revision-2026-11-01/clean-source-airy.json"
+    ],
+    "cwd": "/private/tmp",
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "returncode": 0,
+    "elapsed_seconds": 0.24018845800310373,
+    "before": {
+      "commit": "cf34fcbcd0ee867a2dee974d9c952238bc5c6ce6",
+      "dirty": false
+    },
+    "after": {
+      "commit": "cf34fcbcd0ee867a2dee974d9c952238bc5c6ce6",
+      "dirty": false
+    },
+    "stdout": "clean-source-airy.stdout",
+    "stderr": "clean-source-airy.stderr"
+  },
+  {
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/section30/run.py",
+      "--output",
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/monograph-revision-2026-11-01/clean-source-torus.json"
+    ],
+    "cwd": "/private/tmp",
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "returncode": 0,
+    "elapsed_seconds": 5.1480545829981565,
+    "before": {
+      "commit": "cf34fcbcd0ee867a2dee974d9c952238bc5c6ce6",
+      "dirty": false
+    },
+    "after": {
+      "commit": "cf34fcbcd0ee867a2dee974d9c952238bc5c6ce6",
+      "dirty": false
+    },
+    "stdout": "clean-source-torus.stdout",
+    "stderr": "clean-source-torus.stderr"
+  }
+]

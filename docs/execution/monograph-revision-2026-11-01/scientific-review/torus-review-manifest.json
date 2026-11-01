@@ -1,0 +1,37 @@
+{
+  "verdict": "approved_bounded_revision",
+  "source_sha256": {
+    "book/chapters/30-sharp-diagnostics.tex": "ec9973858c9dc2dca31537230158e39a323287408782afb5dc9b599735ad996f",
+    "book/claims/section30.json": "dcdda088cf20e7b9c87126f46a9dcb733c52e2365186489461128fbe528dee47",
+    "experiments/section30/run.py": "3dc50d531d2b7a3eac8cb608772e14cd2649c724b65e8d117b04ca8735e8e34d",
+    "experiments/section30/fixture.json": "ef8869c5e4729605d630a81f5bd9f8dc9f34363facd84aeead4d15de238dd196",
+    "experiments/section30/README.md": "43f5c6dff6040f1946a961668bad19b80cf54248115bb910d55ea656dfef6724",
+    "experiments/section30/tests/test_diagnostic.py": "decb663edd303c9e4687df0a8b8feb652eb099b01ba0288ad83921ce4f5883c4"
+  },
+  "author_manifest_sha256": "4ad60563d55f4b80207bd7c34e9adba3455cd0c2c40e8b33399259daf5f37771",
+  "independent_replay_scientific_values_match_author": true,
+  "chapter_rows_match_replay": true,
+  "unresolved_findings": [],
+  "resolved_scope_clarification": "Conditional sensitivity assumes fixed curve membership, including no entering omitted curve for whole-spectrum applications.",
+  "evidence_sha256": {
+    "torus-review.md": "fae8e5815230ed281f541f26c6527553a24be094f8be1c13cf007cf8968b132a",
+    "torus-commands.json": "d017e58ee9741a7b6f95d6c3bcc2bc39fc406e1ce2e07b06081c9c7bc87a88f3",
+    "torus-independent.json": "cb5e4a5a61b42940b3a61852a99ab36d78466632da0853250a541e28ed338b1e",
+    "torus-replay.json": "68a5f71827f0f4eec2ac6d6ffac2424f41eebb845243b69120378f1a3b1e4525",
+    "check_torus_independent.py": "b404c8a2932f917901923e954575819eef5ebef5b134cbf795b387f46067769e",
+    "torus-independent.stdout": "5dc947efe484b4bf964234aa94bc46f05898679c7b9e2c01c3d27406a249e07a",
+    "torus-independent.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "torus-replay.stdout": "bd887b09fc9490fcd932431eee6704294468b7dea278c93ccd90d52b32dd9bb0",
+    "torus-replay.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "torus-tests.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "torus-tests.stderr": "250ddd822374eb6a035a89d464d53db78cfdc778ae015accb377a6e47a9e65a0",
+    "torus-ruff.stdout": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "torus-ruff.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "boundaries": [
+    "No full Section30 proof audit",
+    "No historical length8192 replay",
+    "No interval certificate of transcendental lengths or event ordering",
+    "No canonical source changes by reviewer"
+  ]
+}

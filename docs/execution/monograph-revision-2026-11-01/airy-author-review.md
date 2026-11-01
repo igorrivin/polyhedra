@@ -1,0 +1,24 @@
+# Section 15 author revision and finite checks
+
+Baseline: `df952174e55f08a52596d912d9713a9d1e116313`. The structural author extracted this section without changing its bytes. The frozen extraction is `structure/15-quantum-airy.tex`. This report covers the five source files pinned in `airy-author-manifest.json`; it is author evidence awaiting independent review.
+
+The substantive correction is evidentiary. The draft presented six printed quantum-integral values as an available independent quadrature check. The supplied code and raw-output record are absent. The revised numerical subsection now attributes that calculation to the supplied draft, labels its values retained and unreplayed, and specifies what a real reproduction needs. All six rows and the three reported scaled diagnostics are preserved. The new calculation explicitly does not use the Airy model as a substitute for the exact quantum integrand.
+
+The mathematical proposition, its preceding definitions and its analytic proof remain byte-for-byte unchanged. The interpretation subsection also remains unchanged. All 21 Section 15 labels are preserved in order. The nine-entry claim ledger identifies analytic statements as inherited and not fully reviewed in this pass; finite checks are assigned their narrower status. This is not a completed mathematical review of Section 15.
+
+The new `experiments/section15/check.py` performs 31 exact checks. Starting from `cos(eta_E)=1/3` and positive sine, it derives the five fold cotangents and needed squared sines in rational pairs `a+b*sqrt(2)`. Differentiation of the five affine-angle terms reproduces the listed nonconstant fold derivatives. It also checks the positive amplitude, clears denominators in `Psi'`, derives the weighted correction polynomial and obtains cancellation of `zeta^2*Ai`, coefficient `-3*sqrt(2)` on `Ai'`, and prefactor `3/4`. No coefficient discrepancy was found. The phase constant `G_star=0`, the double-sine representation, global tail estimates and uniform analytic theorem are explicitly outside the executable check.
+
+At 80 and 120 decimal digits, all six Airy approximation values agree with their printed six-decimal entries and with a separately implemented ODE series using 160 and 240 terms. The largest comparison residual was about `5.272e-82` across the two runs; the largest precision difference was about `3.295e-81`. The series uses the same mpmath gamma and elementary functions for its initial values, so this is an independent formula in one library, not an independent numerical backend or interval proof. The scaled differences from the retained rounded `Q_b` values are arithmetic diagnostics only; conditional half-widths do not reconstruct the unknown quadrature error.
+
+Executed successfully with Python 3.12.11 and mpmath 1.3.0:
+
+```sh
+env PYTHONDONTWRITEBYTECODE=1 /tmp/polyhedra-baseline-20261031/bin/python experiments/section15/check.py --output ../execution/monograph-revision-2026-11-01/airy-author-result.json
+/opt/anaconda3/bin/ruff check experiments/section15/check.py
+```
+
+An absolute-path invocation from `/private/tmp` also passed; its report is `airy-other-cwd-result.json`. Additional checks recorded in the author manifest confirm that scoped precision is restored, a changed historical-table input is rejected by the source-table consistency check, inexact inputs are rejected by the exact-field coercion, and the bounded ODE oracle rejects an undeclared argument. JSON, Python syntax, ledger labels and trailing whitespace were checked. These source files were not committed, and the result truthfully records its dirty working-tree source state. No old scientific result, historical source, Site or publication artifact was regenerated or changed by this author.
+
+Source inspection used [Teschner--Vartanov v3, equation 2.27 and Appendix A](https://arxiv.org/html/1202.4698v3), [DLMF 9.2.1 and 9.2.3--4](https://dlmf.nist.gov/9.2), [DLMF 9.4.1--2](https://dlmf.nist.gov/9.4), and [DLMF 9.5.4](https://dlmf.nist.gov/9.5), accessed 1 November 2026. This established the cited equal-label integral/printed measure and the Airy ODE, initial values, power series and oriented contour formula. It does not assert a complete audit of the cited papers. Context7 `/mpmath/mpmath` supplied local precision-context documentation; its Airy-specific query returned no matching documentation, so the installed 1.3.0 `airyai` docstring supplied the derivative signature. No API was invented and no unpublished manuscript was uploaded.
+
+The next computational step is a separately reviewed evaluator of `log S_b` and the exact cleared integral, with explicit branches, contour, precision, truncation, tail and convergence records. Original or replacement integral results must have their own source and run identities. The current companion intentionally stops before that step.

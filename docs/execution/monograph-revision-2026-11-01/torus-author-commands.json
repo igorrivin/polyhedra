@@ -1,0 +1,40 @@
+[
+  {
+    "name": "torus-unit-tests",
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "experiments/section30/tests",
+      "-v"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "exit_code": 0,
+    "elapsed_seconds": 0.10166491591371596
+  },
+  {
+    "name": "torus-ruff",
+    "argv": [
+      "/opt/anaconda3/bin/ruff",
+      "check",
+      "experiments/section30"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "exit_code": 0,
+    "elapsed_seconds": 0.07116049993783236
+  },
+  {
+    "name": "torus-final-replay",
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/section30/run.py",
+      "--output",
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/monograph-revision-2026-11-01/torus-author-result.json"
+    ],
+    "cwd": "/private/tmp",
+    "exit_code": 0,
+    "elapsed_seconds": 5.2086063750321046
+  }
+]

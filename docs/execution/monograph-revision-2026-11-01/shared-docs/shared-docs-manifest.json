@@ -1,0 +1,67 @@
+{
+  "generated_at_utc": "2026-11-01T04:47:07.257181+00:00",
+  "baseline_commit": "df952174e55f08a52596d912d9713a9d1e116313",
+  "source_sha256": {
+    "README.md": "af9f5ead03fba92ca9f9459b62b0e5f6c8fd253fa058c8bcd95d395fa7e575e7",
+    "book/README.md": "b3b363089ebdeba7d3a03d990fe2b764a2d4b008cf4f1a32d48a04d2df8ee463",
+    "book/computational-status.md": "7eb08582f41402dc83dcb8f65be5504f87fb449f0082a0bbaf8edeee29550e6a",
+    "INTEGRATION_PLAN.md": "b0d7992206e59f72f71ad972ac7234f079947bb3a4629edae03749a2fb9c9074"
+  },
+  "input_evidence_sha256": {
+    "airy-author-review.md": "b79acdf56a38dab9075d79afff9b10907a5c9553b1641627e2b2374627acb4c5",
+    "airy-author-manifest.json": "d3f8b34658061d075ae27106538f21e544f0d78fa4654e29cf2a0087dcbb240e",
+    "torus-author-report.md": "b5aa95901c5e2c76077dfd68a6bf30ff6c6082b6d41a00d0baf0d2990ce26013",
+    "torus-author-manifest.json": "4ad60563d55f4b80207bd7c34e9adba3455cd0c2c40e8b33399259daf5f37771"
+  },
+  "integration_report_sha256": "31436278c057f6c34d433f881029b61ae53273dd5719cb51c22ce0d448ded0ed",
+  "verification": {
+    "section9_ledger_block_unchanged": true,
+    "authored_whitespace_clean": true,
+    "git_diff_check": {
+      "argv": [
+        "git",
+        "diff",
+        "--check",
+        "--",
+        "README.md",
+        "book/README.md",
+        "book/computational-status.md",
+        "INTEGRATION_PLAN.md"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stdout": "whitespace.stdout",
+      "stderr": "whitespace.stderr"
+    },
+    "local_link_occurrences": 109,
+    "existing_link_occurrences": 103,
+    "pending_link_occurrences": [
+      {
+        "source": "README.md",
+        "target": "docs/execution/monograph-revision-2026-11-01/README.md"
+      },
+      {
+        "source": "book/README.md",
+        "target": "docs/execution/monograph-revision-2026-11-01/README.md"
+      },
+      {
+        "source": "book/computational-status.md",
+        "target": "docs/execution/monograph-revision-2026-11-01/README.md"
+      },
+      {
+        "source": "book/computational-status.md",
+        "target": "artifacts/section15/checks.json"
+      },
+      {
+        "source": "book/computational-status.md",
+        "target": "artifacts/section30/result.json"
+      },
+      {
+        "source": "INTEGRATION_PLAN.md",
+        "target": "docs/execution/monograph-revision-2026-11-01/README.md"
+      }
+    ],
+    "pending_targets_are_expected_final_generation_outputs": true
+  },
+  "scope": "Documentation integration and finite link checks only; scientific approval, clean result generation and checkpoint creation are separate gates."
+}

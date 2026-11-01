@@ -1,0 +1,31 @@
+# Independent Section 30 scientific and code review
+
+The six frozen source files identified in `torus-review-manifest.json` are approved for this bounded computational revision. No unresolved scientific or code-quality finding remains within its declared scope. The complete chapter proof chain and the historical length-8192 campaign are outside this approval.
+
+I read the new driver, all tests, exact fixture, reproduction guide, claim ledger and changed chapter passages. The 22 original labels retain their order; every original proposition/proof block and every historical numerical table row remains unchanged. The new text corrects the absent-archive claim, attributes the long-run numbers and precision/sensitivity assertions to the supplied draft, and separates the new length-64 experiment and table. It does not turn retained historical values into newly reproduced output.
+
+## Enumeration and arithmetic
+
+The root slopes `(1,0),(0,1),(1,1)` and the three open signed sectors cover the unoriented primitive slopes once. The endpoints form unimodular bases. Euclidean subtraction gives a unique positive-coefficient mediant tree in each open sector, while canonical sign normalization identifies only simultaneous negatives. Equal traces therefore retain separate curves. The root reduced inequalities imply the opposite/product ratio is at most one half on each initial outward edge. If `c>=max(a,b)>2`, the next two traces `ac-b` and `bc-a` strictly exceed `c`; the ratio bound persists. This justifies the finite pruning used here.
+
+The separate primitive-box evaluator uses Euclidean modular-inverse parents and the difference slope, with no length-based tree pruning. The stated box coverage derivation is valid: `v=log(trace/2)` is at least additive at a mediant, every root has `v>1/5`, and the sector coefficient sum is `|p|+q`, `p`, or `q` in the three respective sectors. Hence `length>2F/5` and `length<=64` forces `max(|p|,q)<160`. The square with boundary160 safely contains every such slope. This proves the reduction to a finite box, not the exactness of the subsequent transcendental cutoff comparisons.
+
+The rational quadratic-field operations, exact root residual/inequality tests and rationalized Decimal conversion are consistent. The rationalization uses the exact algebraic norm and avoids cancellation between opposite-signed coefficients. The binary64 recursion uses a stable subtraction and nonoverflowing length formula. The two Decimal precisions, slope sets, tolerances and diagnostic-only metric differences retain distinct output fields.
+
+A fresh run reproduces **1104 modular and 1127 asymmetric curves** through 64, all recorded traces/lengths, six block statistics and exact conditional bound endpoints. Scientific result values agree with the author's final run after excluding only run timing and provenance. All 16 focused tests and Ruff pass.
+
+For a third independent construction, `check_torus_independent.py` builds explicit determinant-one matrices `A,B` with traces `x,y,z=tr(AB)`. Primitive words are generated directly by floor crossing sequences of rational straight lines in the square torus, rather than either Farey implementation. Across 816 words at 110 decimal digits the largest relative trace discrepancy is below `5.4e-104` (acceptance `1e-90`). The independently generated complete length-6 slope sets agree: 12 modular and 10 asymmetric curves. These are numerical matrix comparisons, not exact matrix certificates.
+
+The local curve/region correspondence and concatenation/edge identities were checked against [Bowditch, Sections 1–2](https://warwick.ac.uk/fac/sci/maths/people/staff/brian_bowditch/bhb-markoff.pdf), including the rational-lamination description and simple words arising from Euclidean torus geodesics. The finite-box inequality above is a direct derivation for these fixtures. This does not audit Bowditch's broader theorems or any recent flatness preprint.
+
+## Events and sensitivity
+
+For a complete finite spectrum, `N(L)=#{ell<=L}` gives a jump `+1` at each half length and `-4` at each full length. Between events, `D=N(2L)-4N(L)` is constant and its squared normalized integral is exactly `D^2(1/a-1/b)`. The implementation aggregates coincident events before considering the new value, includes interior and terminal left limits, and excludes the left limit outside the block at its start. This distinction matters for opposite simultaneous jumps.
+
+Independent exact rational recomputation passed 1485 event cases, including empty spectra, multiplicities, coincident jumps and endpoint placements. Maximum `M` discrepancy was zero in these dyadic-rational cases; maximum squared `Q` discrepancy was `5.69e-14`, below the declared `1e-12` comparison tolerance.
+
+For the conditional bound, interval endpoint counts give `N_lower<=N_true<=N_upper`, hence `D_lower=N_lower(2L)-4N_upper(L)` and `D_upper=N_upper(2L)-4N_lower(L)` bound the true difference. The distance of this interval from zero and its largest absolute endpoint bound `|D|`. Between all endpoint and half-endpoint events these integers are constant, so the supremum of either divided by `L` occurs at an endpoint or one-sided limit. Exact Fractions preserve these finite implications. The independent checker verified 4437 perturbed rational spectra against the returned exact bound endpoints.
+
+The parent requested an important scope clarification before this review: an error assumption on stored lengths alone does not prevent an omitted curve from entering a threshold. The final code, returned bound fields, README, chapter and ledger now explicitly assume fixed curve membership and, for a whole-spectrum application, no omitted curve entering a block threshold. The radius `1e-10` and that membership assumption are not certified. I verified the final wording and result fields; this clarification is resolved.
+
+Commands, output and exit codes are preserved in `torus-commands.json` and its logs. The replay and independent observations are `torus-replay.json` and `torus-independent.json`. No author source was edited by this reviewer. Final clean-source generation, full-book rendering and publication remain separate gates managed by the root/integration reviewer.

@@ -1,0 +1,44 @@
+{
+  "generated_at_utc": "2026-11-01T04:55:43.796301+00:00",
+  "source_commit": "cf34fcbcd0ee867a2dee974d9c952238bc5c6ce6",
+  "comparisons": {
+    "airy": {
+      "fresh_sha256": "1b275fb776a7a203cfada670bf37d4a5c428a463e24edafb38ed0e8c258f8404",
+      "reviewed_replay_sha256": "d9b78ea2a558a34e929fbf5a39eab5dfe4494746915fd725492028c76141be0b",
+      "all_scientific_fields_equal": true,
+      "excluded_json_paths": [
+        "/provenance",
+        "/runtime_seconds"
+      ],
+      "source_commit": "cf34fcbcd0ee867a2dee974d9c952238bc5c6ce6",
+      "dirty_at_start": false,
+      "source_hashes_match_commit": true
+    },
+    "torus": {
+      "fresh_sha256": "762b07184f76893c810f3e9832fd44dc7e4b292c1a64aae61aa26832e02884a1",
+      "reviewed_replay_sha256": "68a5f71827f0f4eec2ac6d6ffac2424f41eebb845243b69120378f1a3b1e4525",
+      "all_scientific_fields_equal": true,
+      "excluded_json_paths": [
+        "/provenance",
+        "/elapsed_seconds",
+        "/surfaces/*/elapsed_seconds"
+      ],
+      "source_commit": "cf34fcbcd0ee867a2dee974d9c952238bc5c6ce6",
+      "dirty_at_start": false,
+      "source_hashes_match_commit": true
+    }
+  },
+  "pdf": {
+    "sha256": "44e428ddbc625231f483748a9bfce914b4d4fc987a0c34b6201003e6dc87cacd",
+    "precommit_build": true,
+    "all_five_tex_input_hashes_match_source_commit": true,
+    "rebuilt_or_rerendered_after_commit": false,
+    "input_sha256": {
+      "book/main.tex": "be3c45c0c4e3105d5e5275b2bbfefed5b8a79e088a456b83a8ea81dcce89a99d",
+      "book/polyhedral_volumes_and_geodesic_identities.tex": "bec25e96072e617a40de9ed00a81427afcb08568679e0b73585a9b6de82609d7",
+      "book/chapters/09-volume-hessians.tex": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00",
+      "book/chapters/15-quantum-airy.tex": "e042499f66436b1aafc1219efbef3c9db945f6a99bc60738ac913ebfa78a0d9e",
+      "book/chapters/30-sharp-diagnostics.tex": "ec9973858c9dc2dca31537230158e39a323287408782afb5dc9b599735ad996f"
+    }
+  }
+}

@@ -1,0 +1,311 @@
+{
+  "role": "author_checks_not_independent_review",
+  "generated_at_utc": "2026-11-01T04:45:30.988512+00:00",
+  "baseline_commit": "df952174e55f08a52596d912d9713a9d1e116313",
+  "source_sha256": {
+    "book/chapters/30-sharp-diagnostics.tex": "ec9973858c9dc2dca31537230158e39a323287408782afb5dc9b599735ad996f",
+    "book/claims/section30.json": "dcdda088cf20e7b9c87126f46a9dcb733c52e2365186489461128fbe528dee47",
+    "experiments/section30/run.py": "3dc50d531d2b7a3eac8cb608772e14cd2649c724b65e8d117b04ca8735e8e34d",
+    "experiments/section30/fixture.json": "ef8869c5e4729605d630a81f5bd9f8dc9f34363facd84aeead4d15de238dd196",
+    "experiments/section30/README.md": "43f5c6dff6040f1946a961668bad19b80cf54248115bb910d55ea656dfef6724",
+    "experiments/section30/tests/test_diagnostic.py": "decb663edd303c9e4687df0a8b8feb652eb099b01ba0288ad83921ce4f5883c4"
+  },
+  "sources_unchanged_during_checks": true,
+  "baseline_labels_preserved_in_order": true,
+  "chapter_label_count": 22,
+  "historical_table_bytes_preserved": true,
+  "ledger_labels_resolve": true,
+  "source_whitespace_check_passed": true,
+  "all_recorded_commands_passed": true,
+  "result_sha256": "20b12b30d6f25565f34e5fcd7bf188d4ac541f2a492382835f133c72f858e613",
+  "result_source_sha256_matches": true,
+  "summary": [
+    {
+      "id": "modular",
+      "curve_count": 1104,
+      "exact_root_markoff_residual": {
+        "rational": "0",
+        "sqrt11": "0"
+      },
+      "all_slope_sets_equal": true,
+      "maximum_decimal_length_precision_difference": "1.0438344659352546176430293306366508157954E-98",
+      "maximum_log_vs_decimal_length_difference": "7.9681087067571212075145336677752860657986190314207358914805963171817394630481077616718249092005879964643661079616296205018480E-14",
+      "maximum_log_vs_exact_trace_metric_difference": {
+        "M": 2.6645352591003757e-15,
+        "Q": 3.1086244689504383e-15
+      },
+      "log_work": {
+        "visited_outward_nodes": 2205,
+        "pruned_nodes": 1104,
+        "maximum_subtraction_ratio": 0.3333333333333333
+      },
+      "reference_box": {
+        "box_coordinate_bound": 160,
+        "primitive_slopes_tested": 31224,
+        "minimum_cutoff_trace_margin": "538160162162.30483902197735222761023094962916152676518895488301910985835067045184842351152118111841"
+      },
+      "higher_precision_box": {
+        "box_coordinate_bound": 160,
+        "primitive_slopes_tested": 31224,
+        "minimum_cutoff_trace_margin": "538160162162.304839021977352227610230949629161526765188954883019109858350670451848423511521181118409351699582936083773214487586305638555636"
+      },
+      "blocks": [
+        {
+          "T": 4,
+          "M": 3.3289245661363354,
+          "Q": 1.453766205916999,
+          "event_positions_in_block": 11,
+          "direct_count_oracle": {
+            "T": 4,
+            "M": 3.3289245661363354,
+            "Q": 1.453766205916999
+          },
+          "direct_count_absolute_residual": {
+            "M": 0.0,
+            "Q": 0.0
+          },
+          "log_trace_metrics": {
+            "T": 4,
+            "M": 3.3289245661363345,
+            "Q": 1.4537662059169987,
+            "event_positions_in_block": 11
+          },
+          "conditional_M_bounds": {
+            "length_error_radius_assumed": "1/10000000000",
+            "scope": "supplied_finite_curve_list_with_fixed_membership",
+            "omitted_curves_cannot_enter_thresholds_assumed": true,
+            "lower_exact_rational": "197912092999680000000000/59452261254764267487151",
+            "upper_exact_rational": "197912092999680000000000/59452261252565244231599",
+            "lower_approx": 3.32892456607477,
+            "upper_approx": 3.3289245661979003,
+            "width_approx": 1.231304307447332e-10,
+            "error_assumption_certified": false
+          },
+          "log_vs_exact_trace_absolute_residual": {
+            "M": 8.881784197001252e-16,
+            "Q": 2.220446049250313e-16
+          }
+        },
+        {
+          "T": 8,
+          "M": 3.243329720900599,
+          "Q": 1.247621174550169,
+          "event_positions_in_block": 44,
+          "direct_count_oracle": {
+            "T": 8,
+            "M": 3.243329720900599,
+            "Q": 1.247621174550169
+          },
+          "direct_count_absolute_residual": {
+            "M": 0.0,
+            "Q": 0.0
+          },
+          "log_trace_metrics": {
+            "T": 8,
+            "M": 3.2433297209005976,
+            "Q": 1.247621174550166,
+            "event_positions_in_block": 44
+          },
+          "conditional_M_bounds": {
+            "length_error_radius_assumed": "1/10000000000",
+            "scope": "supplied_finite_curve_list_with_fixed_membership",
+            "omitted_curves_cannot_enter_thresholds_assumed": true,
+            "lower_exact_rational": "1288490188800000000000/397273881995613326671",
+            "upper_exact_rational": "1288490188800000000000/397273881987023392079",
+            "lower_approx": 3.243329720865535,
+            "upper_approx": 3.243329720935663,
+            "width_approx": 7.012791785651438e-11,
+            "error_assumption_certified": false
+          },
+          "log_vs_exact_trace_absolute_residual": {
+            "M": 1.3322676295501878e-15,
+            "Q": 3.1086244689504383e-15
+          }
+        },
+        {
+          "T": 16,
+          "M": 2.023757929070933,
+          "Q": 0.852130725303514,
+          "event_positions_in_block": 172,
+          "direct_count_oracle": {
+            "T": 16,
+            "M": 2.023757929070933,
+            "Q": 0.852130725303514
+          },
+          "direct_count_absolute_residual": {
+            "M": 0.0,
+            "Q": 0.0
+          },
+          "log_trace_metrics": {
+            "T": 16,
+            "M": 2.02375792907093,
+            "Q": 0.8521307253035145,
+            "event_positions_in_block": 172
+          },
+          "conditional_M_bounds": {
+            "length_error_radius_assumed": "1/10000000000",
+            "scope": "supplied_finite_curve_list_with_fixed_membership",
+            "omitted_curves_cannot_enter_thresholds_assumed": true,
+            "lower_exact_rational": "20615843020800000000000/10186911549396174009809",
+            "upper_exact_rational": "6871947673600000000000/3395637183120604757147",
+            "lower_approx": 2.0237579290675196,
+            "upper_approx": 2.0237579290743457,
+            "width_approx": 6.8259935924624505e-12,
+            "error_assumption_certified": false
+          },
+          "log_vs_exact_trace_absolute_residual": {
+            "M": 2.6645352591003757e-15,
+            "Q": 5.551115123125783e-16
+          }
+        }
+      ],
+      "elapsed_seconds": 1.6414711250690743
+    },
+    {
+      "id": "asymmetric",
+      "curve_count": 1127,
+      "exact_root_markoff_residual": {
+        "rational": "0",
+        "sqrt11": "0"
+      },
+      "all_slope_sets_equal": true,
+      "maximum_decimal_length_precision_difference": "1.0864417565878130706293025351073506972342E-98",
+      "maximum_log_vs_decimal_length_difference": "1.02811163725040505817341145161742427120888969644377060236881416944740316707470972475630481619841475321074358424405677795813188E-13",
+      "maximum_log_vs_exact_trace_metric_difference": {
+        "M": 2.220446049250313e-16,
+        "Q": 4.440892098500626e-16
+      },
+      "log_work": {
+        "visited_outward_nodes": 2251,
+        "pruned_nodes": 1127,
+        "maximum_subtraction_ratio": 0.4787999924622166
+      },
+      "reference_box": {
+        "box_coordinate_bound": 160,
+        "primitive_slopes_tested": 31224,
+        "minimum_cutoff_trace_margin": "3304413835.74108903838903535471505404615607906245150353439880827397098262456972876328435709395342"
+      },
+      "higher_precision_box": {
+        "box_coordinate_bound": 160,
+        "primitive_slopes_tested": 31224,
+        "minimum_cutoff_trace_margin": "3304413835.741089038389035354715054046156079062451503534398808273970982624569728763284357093953412675577447086044476966780991295656635199"
+      },
+      "blocks": [
+        {
+          "T": 4,
+          "M": 1.4982753776186395,
+          "Q": 0.7562774068737071,
+          "event_positions_in_block": 63,
+          "direct_count_oracle": {
+            "T": 4,
+            "M": 1.4982753776186395,
+            "Q": 0.7562774068737071
+          },
+          "direct_count_absolute_residual": {
+            "M": 0.0,
+            "Q": 0.0
+          },
+          "log_trace_metrics": {
+            "T": 4,
+            "M": 1.4982753776186395,
+            "Q": 0.756277406873707,
+            "event_positions_in_block": 63
+          },
+          "conditional_M_bounds": {
+            "length_error_radius_assumed": "1/10000000000",
+            "scope": "supplied_finite_curve_list_with_fixed_membership",
+            "omitted_curves_cannot_enter_thresholds_assumed": true,
+            "lower_exact_rational": "87960930222080000000000/58708119707294775299651",
+            "upper_exact_rational": "87960930222080000000000/58708119705095752044099",
+            "lower_approx": 1.498275377590579,
+            "upper_approx": 1.4982753776467,
+            "width_approx": 5.612072767945692e-11,
+            "error_assumption_certified": false
+          },
+          "log_vs_exact_trace_absolute_residual": {
+            "M": 0.0,
+            "Q": 1.1102230246251565e-16
+          }
+        },
+        {
+          "T": 8,
+          "M": 1.2352118221628978,
+          "Q": 0.4950773431436322,
+          "event_positions_in_block": 267,
+          "direct_count_oracle": {
+            "T": 8,
+            "M": 1.2352118221628978,
+            "Q": 0.4950773431436322
+          },
+          "direct_count_absolute_residual": {
+            "M": 0.0,
+            "Q": 0.0
+          },
+          "log_trace_metrics": {
+            "T": 8,
+            "M": 1.2352118221628978,
+            "Q": 0.4950773431436318,
+            "event_positions_in_block": 267
+          },
+          "conditional_M_bounds": {
+            "length_error_radius_assumed": "1/10000000000",
+            "scope": "supplied_finite_curve_list_with_fixed_membership",
+            "omitted_curves_cannot_enter_thresholds_assumed": true,
+            "lower_exact_rational": "3435973836800000000000/2781687946303764035243",
+            "upper_exact_rational": "3435973836800000000000/2781687946235044558507",
+            "lower_approx": 1.2352118221476405,
+            "upper_approx": 1.2352118221781554,
+            "width_approx": 3.0514964912219726e-11,
+            "error_assumption_certified": false
+          },
+          "log_vs_exact_trace_absolute_residual": {
+            "M": 0.0,
+            "Q": 4.440892098500626e-16
+          }
+        },
+        {
+          "T": 16,
+          "M": 1.2245791300292446,
+          "Q": 0.39420888024376705,
+          "event_positions_in_block": 1059,
+          "direct_count_oracle": {
+            "T": 16,
+            "M": 1.2245791300292446,
+            "Q": 0.39420888024376705
+          },
+          "direct_count_absolute_residual": {
+            "M": 0.0,
+            "Q": 0.0
+          },
+          "log_trace_metrics": {
+            "T": 16,
+            "M": 1.2245791300292448,
+            "Q": 0.3942088802437672,
+            "event_positions_in_block": 1059
+          },
+          "conditional_M_bounds": {
+            "length_error_radius_assumed": "1/10000000000",
+            "scope": "supplied_finite_curve_list_with_fixed_membership",
+            "omitted_curves_cannot_enter_thresholds_assumed": true,
+            "lower_exact_rational": "30236569763840000000000/24691397250324050281597",
+            "upper_exact_rational": "30236569763840000000000/24691397250049172374653",
+            "lower_approx": 1.2245791300224282,
+            "upper_approx": 1.224579130036061,
+            "width_approx": 1.3632673142756193e-11,
+            "error_assumption_certified": false
+          },
+          "log_vs_exact_trace_absolute_residual": {
+            "M": 2.220446049250313e-16,
+            "Q": 1.6653345369377348e-16
+          }
+        }
+      ],
+      "elapsed_seconds": 3.347436666022986
+    }
+  ],
+  "limits": [
+    "Author checks are not independent review.",
+    "No full length8192 replay, theorem audit, interval length proof, source commit or publication.",
+    "Fixed-list sensitivity assumes its error radius and no entering omitted curves."
+  ]
+}

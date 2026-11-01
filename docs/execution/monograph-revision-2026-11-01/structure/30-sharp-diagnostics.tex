@@ -1,0 +1,587 @@
+\section{Diagnosing the sharp remainder without fitting its main term}
+\label{sec:sharpdiagnostics}
+
+The alternatives for the sharp primitive remainder are not exhausted by
+$L$ and $L\log L$. Strict convexity already gives the qualitative
+improvement $o(L\log L)$, proved below, but supplies no effective
+intermediate rate. A normalized M\"obius formula identifies a sufficient
+criterion for $O(L)$. An exact dyadic inversion removes the leading area
+constant from the numerical test, and an inverse-flatness formula measures
+the contribution of a particular supporting row. Finally we implement the
+dyadic diagnostic using hyperbolic trace recursion on two tori.
+The proofs and the exploratory numerical observations are stated separately.
+
+\subsection{The normalized all-point discrepancy and the logarithmic loss}
+\label{subsec:mobiusmodulus}
+
+Rescale the norm so that its shortest nonzero integer vector has length one.
+Write $a=\operatorname{Area}(B)$,
+\[
+ A_0(u)=\#(uB\cap(\mathbb Z^2\setminus\{0\})),\qquad
+ D_B(u)=A_0(u)-a u^2,
+\]
+and let $P_B(L)$ count primitive vectors. For $M=\lfloor L\rfloor$,
+M\"obius inversion gives the exact identity
+\begin{equation}
+ \frac{P_B(L)-aL^2/\zeta(2)}{L}
+ =\sum_{d\le M}\frac{\mu(d)}d\,
+       \frac{D_B(L/d)}{L/d}
+   -aL\sum_{d>M}\frac{\mu(d)}{d^2}.
+ \label{eq:primitiveexactnormalizedmobius}
+\end{equation}
+The final term is bounded uniformly for $L\ge2$. Thus the linear
+remainder problem is precisely a boundedness problem for the displayed
+M\"obius-weighted harmonic sum. The prime number theorem alone does not
+bound it: the geometric weight $D_B(L/d)/(L/d)$ varies with both $L$ and $d$.
+
+For a convenient sufficient condition, put
+\[
+ \omega_B(u)=\sup_{v\ge u}\frac{|D_B(v)|}{v},\qquad u\ge1.
+\]
+The elementary boundary estimate makes $\omega_B$ bounded, and it is
+nonincreasing. Absolute values in~\eqref{eq:primitiveexactnormalizedmobius}
+give
+\begin{equation}
+ |P_B(L)-aL^2/\zeta(2)|
+ \le C_B L\left(1+\int_1^L\omega_B(u)\,\frac{du}{u}\right).
+ \label{eq:primitiveDini}
+\end{equation}
+Indeed, for $d\le M$,
+\[
+ \int_{L/(d+1)}^{L/d}\omega_B(u)\frac{du}{u}
+ \ge\omega_B(L/d)\log(1+1/d)
+ \ge\frac{\omega_B(L/d)}{2d},
+\]
+with the harmless interval below $1$ treated separately.
+Consequently the Dini condition
+\[
+ \int_1^\infty\omega_B(u)\,\frac{du}{u}<\infty
+\]
+implies an $O_B(L)$ primitive remainder without any M\"obius cancellation.
+With the prime number theorem, this improves to $o_B(L)$; see
+\eqref{eq:primitiveDiniPNT} below.
+In particular any all-point power saving $D_B(u)=O_B(u^{1-\eta})$,
+$\eta>0$, suffices. Infinite graph-flatness does not logically exclude
+this route: for example a bound $u\exp(-\sqrt{\log u})$ has no fixed
+power saving but has an integrable normalized modulus.
+
+\begin{proposition}[A qualitative strict-convexity improvement]
+\label{prop:strictconvexlittleo}
+For every fixed strictly convex compact body $B\subset\mathbb R^2$
+containing the origin in its interior,
+\[
+ D_B(L)=o_B(L),\qquad
+ P_B(L)-\frac{a}{\zeta(2)}L^2=o_B(L\log L).
+\]
+These statements supply no quantitative rate of little-oh convergence.
+\end{proposition}
+
+\begin{proof}
+Fix a unit vector $\nu$ and let $w_\nu(s)$ be the length of the
+chord $B\cap\{x:x\cdot\nu=s\}$. Its support is an interval
+$[a_\nu,b_\nu]$. Convexity makes $w_\nu$ concave, and strict
+convexity makes both extreme supporting chords singletons, so
+$w_\nu(a_\nu)=w_\nu(b_\nu)=0$. A finite continuous concave
+function on a compact interval is absolutely continuous: its
+monotone one-sided derivative is integrable, and the fundamental
+theorem on interior subintervals extends to the endpoints.
+The zero extension therefore belongs to $W^{1,1}(\mathbb R)$.
+Moreover
+\[
+ \|w_\nu'\|_1=2\max_s w_\nu(s)\le2\operatorname{diam}(B).
+\]
+Fubini and integration by parts give
+\[
+ \widehat{\mathbf1_B}(r\nu)=\widehat w_\nu(r),\qquad
+ r\widehat{\mathbf1_B}(r\nu)
+   =\frac1{2\pi i}\widehat{w_\nu'}(r)\longrightarrow0
+\]
+by the Riemann--Lebesgue lemma. The same formula gives the uniform
+bound $|\widehat{\mathbf1_B}(\xi)|\le C_B/|\xi|$.
+
+Fix a nonnegative smooth function $\rho_\epsilon$ of integral one,
+supported in the Euclidean disk of radius $\epsilon$. Choose $r_0>0$
+with $r_0\mathbb D\subset B$, and put $\delta=\epsilon/r_0$.
+Convexity gives the pointwise sandwich
+\[
+ \mathbf1_{(L-\delta)B}*\rho_\epsilon
+ \le\mathbf1_{LB}
+ \le\mathbf1_{(L+\delta)B}*\rho_\epsilon.
+\]
+For this fixed $\epsilon$, Poisson summation shows that either
+smoothed lattice count equals its area plus $o_{B,\epsilon}(L)$: after division
+by $L$, each nonzero-frequency term tends to zero, and the summable
+majorant is a constant times
+$|m|^{-1}|\widehat\rho_\epsilon(m)|$.
+The two areas differ from $aL^2$ by $O_B(\epsilon L)+O_B(\epsilon^2)$.
+Thus
+\[
+ \limsup_{L\to\infty}|D_B(L)|/L\le C_B\epsilon.
+\]
+Letting $\epsilon\downarrow0$ proves the first claim. It implies
+$\omega_B(u)\to0$, and logarithmic Ces\`aro averaging in
+\eqref{eq:primitiveDini} proves the second.
+\end{proof}
+
+The qualitative improvement excludes a fixed positive multiple of
+$L\log L$ along a subsequence, but still allows $L\log\log L$,
+$L(\log L)^{0.9}$, and many other intermediate scales. Quantitative
+control of $\omega_B$, or signed cancellation between its M\"obius
+blocks, is needed to reach $O_B(L)$.
+
+\subsection{A rational-polygon comparison}
+\label{subsec:rationalpolygonbenchmark}
+
+The intermediate scales cannot be dismissed merely because the
+$O(L\log L)$ proof takes absolute values. For a rational polygon
+$\mathcal A$ that is star-shaped about the origin, B\'ar\'any,
+Martin, Naslund, and Robins prove
+\[
+ E_{\mathcal A}(L)
+ =\Omega_\pm\bigl(L\sqrt{\log\log L}\bigr),
+\]
+while their upper bound for every rational polygon is
+\[
+ E_{\mathcal A}(L)
+ =O_{\mathcal A}\bigl(L(\log L)^{2/3}
+                         (\log\log L)^{4/3}\bigr).
+\]
+These are Theorems~1.4 and~1.2, respectively, in
+\emph{Primitive points in rational polygons}~\cite{BaranyPrimitivePolygons}.
+The polygons have genuine straight sides. These results do not
+transfer to a strictly convex McShane--Rivin norm ball; they show
+why an unspecified arithmetic cancellation is not a proof of a
+linear error. Even the elementary square illustrates the relevant
+arithmetic: at integer $N\ge1$,
+\[
+ \#([-N,N]^2\cap\mathbb Z^2_{\rm prim})
+ =8\sum_{n=1}^N\varphi(n).
+\]
+There is also a numerical warning. Freezing a rational polygonal
+approximation to a strictly convex ball can introduce the polygon's own
+totient fluctuations. A fixed area error $\delta a$ contributes
+$\delta a L^2$; resolving a linear remainder requires area accuracy
+$o(L^{-1})$, together with control of points near the two boundaries.
+The trace enumeration below avoids replacing the norm ball by a polygon.
+
+\subsection{An exact test independent of the leading coefficient}
+\label{subsec:dyadicdiagnostic}
+
+Suppose $N(L)/L^2\to c$, put $E(L)=N(L)-cL^2$, and define
+\[
+ \Delta_2N(L)=N(2L)-4N(L)=E(2L)-4E(L).
+\]
+Iterating the latter equality and using $E(L)=o(L^2)$ gives
+\begin{equation}
+ E(L)=-\sum_{j=0}^\infty4^{-j-1}\Delta_2N(2^jL).
+ \label{eq:dyadicerrorinverse}
+\end{equation}
+The series is understood as the limit of its telescoping partial
+sums; it is absolutely convergent under any of the bounds below.
+Consequently
+\[
+ E(L)=O(L)\quad\Longleftrightarrow\quad
+ \Delta_2N(L)=O(L),
+\]
+and likewise
+\[
+ E(L)=O(L\log L)\quad\Longleftrightarrow\quad
+ \Delta_2N(L)=O(L\log L).
+\]
+For example, if $|\Delta_2N(u)|\le Cu$ for every $u\ge L$, then
+\[
+ |E(L)|\le\frac{CL}{4}\sum_{j\ge0}2^{-j}=\frac{CL}{2}.
+\]
+These are asymptotic equivalences, not finite-computation certificates.
+They eliminate contamination by an inaccurately estimated value of $c$.
+
+If an estimated coefficient $\widetilde c=c+\delta c$ is subtracted
+instead, then
+\[
+ \frac{N(L)-\widetilde cL^2}{L}
+ =\frac{E(L)}L-\delta cL.
+\]
+Thus a small coefficient error creates a growing normalized drift. The
+dyadic statistic removes this source of error exactly. It does not
+remove the possibility of rare large excursions beyond the computed range.
+For measurements over a block define
+\begin{align}
+ M(T)&=\sup_{T\le L\le2T}\frac{|\Delta_2N(L)|}{L},\notag\\
+ Q(T)&=\left(\frac1T\int_T^{2T}
+                    \left|\frac{\Delta_2N(L)}L\right|^2\dd L\right)^{1/2}.
+ \label{eq:dyadicblockmetrics}
+\end{align}
+The first detects the largest computed excursions, while the second
+measures their contribution over the whole block. Between events at
+$L=\ell_\gamma$ and $L=\ell_\gamma/2$, $\Delta_2N(L)$ is constant.
+Hence its normalized absolute value decreases between events, and
+the block maximum is determined by event updates and the block endpoints.
+Its squared integral over such an interval $[a,b]$ is exactly
+$D^2(1/a-1/b)$. A coarse integer mesh can miss narrow excursions.
+
+
+\subsection{A quantitative row-crossing formula}
+\label{subsec:inverseflatness}
+
+The exponent-one obstruction does not specify the slowly varying factor
+in the discrepancy. The local graph itself gives a more precise statement.
+Let $B\subset\RR^2$ be strictly convex, compact, and contain the origin in
+its interior. After an integral unimodular change of coordinates, suppose
+its unique top point is $p=(\alpha,h)$, with $h>0$ and
+$\alpha/h\notin\mathbb Q$. Write the upper boundary near $p$ as
+\[
+ y=h-f(x-\alpha),\qquad f(0)=0.
+\]
+For sufficiently small $u\geq0$, define the one-sided inverse widths
+\[
+\begin{gathered}
+ \rho_+(u)=\sup\{s\geq0:f(s)\leq u\},\qquad
+ \rho_-(u)=\sup\{s\geq0:f(-s)\leq u\},\\
+ W(u)=\rho_+(u)+\rho_-(u),
+\end{gathered}
+\]
+where the suprema are restricted to the local graph interval. Strict
+convexity implies $W(u)\to0$ as $u\downarrow0$. The functions
+$\rho_\pm$, and hence $W$, are concave on a sufficiently small interval:
+they are inverses of increasing convex functions vanishing at zero.
+No symmetry between the two sides of the graph is assumed.
+
+Let
+\[
+ P_B(L)=\#(LB\cap\ZZ^2_{\rm prim}),\qquad
+ c_B=\frac{\operatorname{Area}(B)}{\zeta(2)},\qquad
+ E_B(L)=P_B(L)-c_BL^2.
+\]
+
+\begin{proposition}[Inverse flatness controls a primitive-row burst]
+\label{prop:inverseflatrow}
+Let $n$ tend to infinity through primes, put $L=n/h$, and let
+$\delta=\delta(L)>0$ satisfy $\delta=o(L)$. Set $T=L+\delta$.
+For all sufficiently large $n$, the intersection of $TB$ with the row
+$y=n$ is the interval with endpoints
+\[
+ a_T=T\alpha-T\rho_-\!\left(\frac{h\delta}{T}\right),\qquad
+ b_T=T\alpha+T\rho_+\!\left(\frac{h\delta}{T}\right).
+\]
+Its width is
+\begin{equation}
+ w_n(\delta)=T W\!\left(\frac{h\delta}{T}\right).
+ \label{eq:inverseflatwidth}
+\end{equation}
+The number of primitive lattice points on this row is $w_n(\delta)+O(1)$,
+with an absolute rounding constant, and
+\begin{equation}
+ \max\{|E_B(L)|,|E_B(L+\delta)|\}
+ \geq\frac12\left[
+ w_n(\delta)-c_B(2L\delta+\delta^2)-2\right].
+ \label{eq:inverseflatdiscrepancy}
+\end{equation}
+In particular, with $\delta=L^{-1}$,
+\begin{equation}
+ \max\{|E_B(L)|,|E_B(L+L^{-1})|\}
+ \geq\frac L2W(h/L^2)-O_B(1).
+ \label{eq:inverseflatmicroscopic}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+At scale $L=n/h$, the row touches $LB$ only at $(L\alpha,n)$.
+The first coordinate is irrational, so there is no lattice point there.
+At scale $T$, the normalized row has height $n/T$ and thus depth
+\[
+ h-\frac nT=\frac{h\delta}{T}
+\]
+below the supporting line. Inverting the two sides of the graph gives
+the displayed endpoints. Since $\delta/T\to0$ and $W(u)\to0$,
+\[
+ \frac{w_n(\delta)}n=\frac{T}{hL}
+ W\!\left(\frac{h\delta}{T}\right)\longrightarrow0.
+\]
+Eventually $w_n(\delta)<n$. The number of integers in a closed interval
+of width $w$ differs from $w$ by at most one. Such an interval contains
+at most one multiple of the prime $n$. Every other integer $k$ gives a
+primitive pair $(k,n)$. Therefore the row contains at least $w-2$ and
+at most $w+1$ primitive lattice points.
+
+Since $LB\subset TB$, all these points are new, while points elsewhere
+cannot disappear. Thus
+\[
+ E_B(T)-E_B(L)
+ \geq w_n(\delta)-2-c_B(T^2-L^2),
+\]
+which implies~\eqref{eq:inverseflatdiscrepancy}.
+
+For $\delta=L^{-1}$, set $u_0=h/L^2$. Concavity and $W(0)=0$ give
+\[
+ W\!\left(\frac h{L^2+1}\right)
+ \geq\frac{L^2}{L^2+1}W(u_0).
+\]
+Multiplying by $T=(L^2+1)/L$ yields
+$w_n(L^{-1})\geq LW(h/L^2)$. The change in the quadratic main term
+is $c_B(2+L^{-2})$, proving~\eqref{eq:inverseflatmicroscopic}.
+\end{proof}
+
+The theorem remains useful without a model formula for $f$. It measures
+the width of the graph at depth $L^{-2}$ and converts that width into a
+lower bound for the discrepancy. Infinite flatness implies, for every
+$N$, a lower bound $W(u)\gg_N u^{1/N}$ and recovers
+Proposition~\ref{prop:normballflatrow}. A specified modulus yields a
+specified slowly varying factor.
+
+
+% BEGIN INLINE FIGURE: 07_flat_row.tex
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\small,>=Latex,line cap=round]
+  \begin{scope}[shift={(-3.7,.3)}]
+    \node[font=\bfseries\small] at (0,2.25) {Local inverse width};
+    \draw[mpgray!60,dashed] (-2.05,1.5)--(2.05,1.5);
+    \draw[mpblue,line width=1.1pt,domain=-1.85:1.85,samples=100]
+      plot (\x,{1.5-.18*\x*\x*\x*\x});
+    \draw[mpteal,line width=.8pt] (-2.05,.8)--(2.05,.8);
+    \fill[mpblue] (0,1.5) circle (2pt) node[above=3pt] {$p=(\alpha,h)$};
+    \fill[mpteal] (-1.404,.8) circle (1.8pt);
+    \fill[mpteal] (1.404,.8) circle (1.8pt);
+    \draw[mpgray!55,dashed] (-1.404,.8)--(-1.404,.35) (1.404,.8)--(1.404,.35);
+    \draw[<->,mpteal] (-1.404,.35)--node[below=2pt] {$W(u)$}(1.404,.35);
+    \draw[<->,mpgray] (1.95,.8)--node[right] {$u$}(1.95,1.5);
+    \node[left=2pt,text=mpteal] at (-2.05,.8) {$h-u$};
+    \node[text=mpblue,align=center,font=\scriptsize] at (0,-.65)
+      {$y=h-f(x-\alpha)$\\profile shown schematically};
+  \end{scope}
+  \begin{scope}[shift={(3.2,1.15)}]
+    \node[font=\bfseries\small] at (0,1.4) {A prime lattice row};
+    \fill[mpteal!9] (-1.65,-.13) rectangle (1.85,.13);
+    \draw[->,mpgray] (-2.65,0)--(2.65,0) node[right] {$y=n$};
+    \foreach \x in {-2.5,-2,-1.5,-1,-.5,.5,1,1.5,2,2.5}
+      \fill[mpgray!60] (\x,0) circle (1.8pt);
+    \foreach \x in {-1.5,-1,-.5,.5,1,1.5}
+      \fill[mpteal] (\x,0) circle (2.3pt);
+    \filldraw[fill=white,draw=mpred,line width=1pt] (0,0) circle (2.8pt);
+    \draw[mpgray] (-1.65,-.2)--(-1.65,.2) (1.85,-.2)--(1.85,.2);
+    \node[above=4pt] at (-1.65,0) {$a_T$};\node[above=4pt] at (1.85,0) {$b_T$};
+    \draw[<->,mpteal] (-1.65,-.43)--node[below=2pt] {$w_n(\delta)$}(1.85,-.43);
+    \node[align=center,text=mpred,font=\scriptsize] at (0,-1.25)
+      {At most one excluded point\\when $w_n(\delta)<n$: $k\equiv0\pmod n$};
+    \node[font=\scriptsize,text=mpgray] at (0,.8) {Teal points are primitive; $n$ is prime};
+  \end{scope}
+  \node[align=center] at (0,-1.75)
+    {$L=n/h,\qquad T=L+\delta,\qquad
+      u=\displaystyle\frac{h\delta}{T},\qquad
+      w_n(\delta)=T\,W(u)$.};
+\end{tikzpicture}
+\caption[A flat supporting cap and a primitive-row burst]{How a supporting cap becomes a primitive-row contribution.
+At the contact scale $L=n/h$, the hypothesis $\alpha/h\notin\mathbb Q$
+leaves the row empty. Increasing the scale to $T=L+\delta$ cuts an interval
+of width $TW(h\delta/T)$ from that row. When $n$ is prime and the width
+is smaller than $n$, all but at most one of its integer points are
+primitive. The local profile and row spacing are schematic; the
+displayed width relation is exact.}
+\label{fig:mono-flat-row}
+\end{figure}
+% END INLINE FIGURE
+
+\subsection{Model flatness profiles and what they do not determine}
+\label{subsec:flatnessmodels}
+
+For illustration, suppose the two-sided local graph satisfies
+\[
+ f(s)\leq C\exp\!\left(-\frac a{|s|^\beta}\right),
+ \qquad a,\beta>0,
+\]
+for sufficiently small nonzero $s$. Then
+\[
+ W(u)\geq
+ 2\left(\frac a{\log(C/u)}\right)^{1/\beta},
+\]
+and~\eqref{eq:inverseflatmicroscopic} gives, along arbitrarily large
+prime-row contact scales,
+\begin{equation}
+ \max\{|E_B(L)|,|E_B(L+L^{-1})|\}
+ \gg_{B,a,\beta}\frac L{(\log L)^{1/\beta}}.
+ \label{eq:exponentialflatrow}
+\end{equation}
+If the graph has matching upper and lower estimates of this form, the
+row width itself has this order. This does not prove that the full
+discrepancy has exactly this order; other rows and other supporting
+directions can contribute.
+
+Other infinitely flat local profiles give different slowly varying
+factors. For example, the symmetric model
+$f(s)=\exp[-\exp(|s|^{-\beta})]$ gives a row width of order
+$L/(\log\log L)^{1/\beta}$. The model
+\[
+ f(s)=\exp[-(\log(1/|s|))^\gamma],\qquad\gamma>1,
+\]
+gives a width of order
+\[
+ L\exp[-(2\log L)^{1/\gamma}].
+\]
+These are convex for sufficiently small $|s|$ and illustrate local
+possibilities. They are not asserted here to be the precise profiles
+of a hyperbolic torus norm ball.
+
+For a strictly convex body, $W(u)\to0$. Consequently the single-row
+argument with a microscopic scale increment yields a quantity $o(L)$,
+although it can exceed every fixed power $L^{1-\varepsilon}$.
+It neither proves a literal $\Omega(L)$ lower bound nor distinguishes
+an $O(L)$ global remainder from an $O(L\log L)$ remainder. Its role is
+to quantify one geometric obstruction, rather than to identify the
+entire sharp remainder.
+
+\subsection{An exact row diagnostic and its precision requirements}
+\label{subsec:rowdiagnostic}
+
+For an arbitrary positive integer $n$ and a row interval $[a,b]$, the
+primitive count is exactly
+\begin{equation}
+ \#\{k\in\ZZ\cap[a,b]:\gcd(k,n)=1\}
+ =\sum_{d\mid n}\mu(d)
+ \left(\left\lfloor\frac bd\right\rfloor
+       -\left\lceil\frac ad\right\rceil+1\right).
+ \label{eq:primitiveintervalexact}
+\end{equation}
+In particular, it equals
+\[
+ (b-a)\frac{\varphi(n)}n+O(2^{\omega(n)}).
+\]
+The formula includes endpoints exactly. For prime $n$ and $b-a<n$,
+the simpler absolute-error comparison with $b-a$ used above applies.
+
+One can therefore record the local statistic
+\[
+ J_n=P_{B,n}(n/h+h/n),\qquad
+ P_{B,n}(T)=\#\{k\in\ZZ:\gcd(k,n)=1,\ (k,n)\in TB\},
+\]
+at prime $n$. Since $L=n/h$ and $h/n=L^{-1}$, the proposition gives
+\[
+ J_n=(L+L^{-1})W\!\left(\frac h{L^2+1}\right)+O(1).
+\]
+This statistic needs no estimate of $\operatorname{Area}(B)$; it tests
+the local flatness mechanism directly. It does require a verified
+lattice-rational supporting normal at an irrational radial point.
+Finding such a direction is a separate geometric step and is not
+automatic for an arbitrary fixed surface.
+
+The height $h$ must also be known accurately. An error $\Delta h$ moves
+the contact scale $n/h$ by approximately $-L\Delta h/h$. Resolving
+the window of width $L^{-1}$ thus requires $|\Delta h|\ll hL^{-2}$.
+Using a larger window relaxes this requirement but changes the depth
+sampled by~\eqref{eq:inverseflatwidth} and increases the background
+main-term increment. The local statistic is consequently complementary
+to a global main-term-free discrepancy diagnostic; it does not replace
+one.
+
+
+
+\subsection{A trace-based numerical experiment}
+\label{subsec:torustraceexperiment}
+
+The count here is $N_X(L)$ for unoriented essential simple closed
+geodesics on a once-punctured torus. A positive trace triple satisfies
+\[
+ x^2+y^2+z^2=xyz,\qquad x,y,z>2,
+\]
+and a Farey edge replaces $z$ by $xy-z$. The identification of Farey
+regions with simple curves and this edge relation are described in
+\cite[Sections~1--2]{BowditchMarkoff}. For the experiment take the reduced
+triples
+\begin{equation}
+ (x,y,z)=(3,3,3),\qquad
+ (x,y,z)=\left(\frac52,\frac{10-\sqrt{11}}2,4\right).
+ \label{eq:diagnostictracetriples}
+\end{equation}
+The first is the modular torus; the second is an asymmetric example.
+Both satisfy $2<x\le y\le z\le xy/2$.
+
+The three root curves and the three outward binary sectors enumerate
+every unoriented primitive slope once. After introducing an outward
+trace $c\ge\max(a,b)>2$, the two new traces are $ac-b$ and $bc-a$,
+both strictly larger than $c$. Therefore pruning a sector when its new
+curve exceeds the cutoff does not omit shorter descendants. Equal traces
+are retained with their curve multiplicities; they are not deduplicated.
+The hyperbolic length associated with trace $x$ is $2\arcosh(x/2)$.
+
+To avoid overflow the computation uses logarithmic traces. If
+$u_a=\log a$, $u_b=\log b$, and $u_c=\log c$, then
+\[
+ \log(ab-c)=u_a+u_b+
+        \log\bigl(1-\exp(u_c-u_a-u_b)\bigr).
+\]
+On the chosen outward edges the subtracted ratio is at most $1/2$,
+so this computation avoids catastrophic cancellation. The algorithm
+uses extended-precision arithmetic for the recursion and stores the
+resulting lengths in double precision for sorting. This is floating-point
+enumeration, not an interval certificate of every event location.
+
+We enumerated through hyperbolic length $8192$, obtaining
+$18\,191\,508$ curves for the modular torus and $18\,486\,116$ for
+the asymmetric torus. This permits evaluating the dyadic block statistics
+through $T=2048$, because the largest count used in a block is $N_X(4T)$.
+Selected output is as follows; all entries are rounded.
+
+\begin{center}
+\begin{tabular}{r r r r r}
+\toprule
+&\multicolumn{2}{c}{Modular torus}&\multicolumn{2}{c}{Asymmetric torus}\\
+$T$&$M(T)$&$Q(T)$&$M(T)$&$Q(T)$\\
+\midrule
+32 & 2.1686 & 0.6015 & 0.8134 & 0.2734 \\
+128 & 1.1130 & 0.3501 & 0.5285 & 0.1494 \\
+512 & 0.7415 & 0.1697 & 0.3756 & 0.0950 \\
+2048 & 0.4342 & 0.0950 & 0.2492 & 0.0612 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The reported maxima use all computed length events, including the
+half-length events, rather than an integer mesh. As precision checks,
+an independent direct-trace computation at $100$ decimal digits reproduces
+all lengths through $64$ within $3.6\times10^{-15}$, and thirty
+selected long recursion paths reaching lengths near $8192$ agree within
+$7.5\times10^{-13}$. The latter include long repeated-twist paths.
+Every dyadic cutoff used for the integer counts is separated from the
+computed spectrum by at least $8.3\times10^{-5}$.
+
+A separate sensitivity calculation treats nearby events as having an
+unknown internal order and allows errors up to $10^{-6}$ in each event
+position. Over all blocks the resulting lower and upper bounds for
+$M(T)$ differ by less than $7.1\times10^{-7}$. This is a conditional
+sensitivity check, not a proof that every computed length has that error
+bound. The source, full block table, precision report, and sensitivity
+tables accompany this monograph as a reproducible diagnostic archive.
+
+The displayed finite-range normalized excursions decrease overall;
+they do not establish an asymptotic linear or sublinear bound. The modular
+torus was already singled out as a candidate for exceptional behavior in
+\cite[Conjecture~4.3]{McShaneRivinTori}. Neither example is asserted to
+have a verified lattice-rational supporting normal at an infinitely flat
+irrational point. Sparse resonances can occur beyond the tested range.
+The numerical conclusion is only that this main-term-free diagnostic can
+be computed and is stable under the stated precision checks.
+
+\subsection{A recent qualification of irrational flatness}
+\label{subsec:recentflatnessqualification}
+
+Doan--Li--Nguyen's recent preprint~\cite{DoanLiNguyenStableNorm},
+version~3 dated 9 October 2026, gives a Diophantine refinement of the
+irrational flatness statement. Its Theorem~4.7 states that infinite
+graph-flatness holds precisely when the exponential rational-approximation
+exponent vanishes; superexponentially approximable irrational directions
+can have graph-flatness order only one. In slope coordinates the relevant
+quantity is $\limsup_j(\log q_{j+1})/q_j$, where $q_j$ are continued-fraction
+denominators. The local convexity mechanism is that a nearby rational
+corner can remain visible at a much smaller spatial scale than its
+exponentially small angle.
+
+We have checked the local Fricke and convexity mechanism relevant to
+this distinction, but have not audited the entire preprint. None of its
+global counting assertions is used in the proofs above. In particular,
+Propositions~\ref{prop:normballflatrow} and~\ref{prop:inverseflatrow}
+retain their explicit flat-point hypotheses, and
+Proposition~\ref{prop:strictconvexlittleo} uses only strict convexity.
+The preprint also continues to list the McShane--Rivin $O_X(L\log L)$
+bound as the cumulative counting benchmark; its multiplicity estimate
+concerns exact length levels, a different question.
+
+

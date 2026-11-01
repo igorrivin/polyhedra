@@ -1,0 +1,37 @@
+{
+  "generated_at_utc": "2026-11-01T04:38:50.764428+00:00",
+  "baseline_commit": "df952174e55f08a52596d912d9713a9d1e116313",
+  "exact_reconstruction": true,
+  "original_main_sha256": "3b3b93d26764392353030a30ef4569360d051e0d78d6e5eb7fd6bef1f96de546",
+  "fully_expanded_sha256": "27834a6bedc577a295eb48b29a09d35e4fea3ed6610291abe77258f8a79e775c",
+  "original_labels": 607,
+  "current_labels": 607,
+  "inventory_verified_against_git_blobs_and_lfs_pointers": 1056,
+  "lfs_pointer_count": 412,
+  "currently_changed_inventory_paths": [
+    "book/polyhedral_volumes_and_geodesic_identities.tex"
+  ],
+  "current_source_graph_sha256": {
+    "book/main.tex": "be3c45c0c4e3105d5e5275b2bbfefed5b8a79e088a456b83a8ea81dcce89a99d",
+    "book/polyhedral_volumes_and_geodesic_identities.tex": "bec25e96072e617a40de9ed00a81427afcb08568679e0b73585a9b6de82609d7",
+    "book/chapters/09-volume-hessians.tex": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00",
+    "book/chapters/15-quantum-airy.tex": "de643617d88a45bdad1601960a1caa2b2ddecb1ae299e8ea297f021fe27dbc3e",
+    "book/chapters/30-sharp-diagnostics.tex": "23d27570121d5e0fd21e7aba6f16e805f00d776e4ab4bbe22878eba912ab6d93"
+  },
+  "plan_sha256": "3949dc672a4db18ab275137ea35ef7bbbb7707b5495b2a1165a202b624445c26",
+  "final_phases": [
+    [
+      "6",
+      "Generate and verify the local edition"
+    ],
+    [
+      "7",
+      "Verify the complete local release"
+    ],
+    [
+      "8",
+      "Upload and publish the verified edition"
+    ]
+  ],
+  "scope": "Source reconstruction, preservation inventory, include-graph and release ordering only; no mathematical replay or PDF verification."
+}

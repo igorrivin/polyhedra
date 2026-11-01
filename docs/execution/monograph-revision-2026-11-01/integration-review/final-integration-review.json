@@ -1,0 +1,112 @@
+{
+  "generated_at_utc": "2026-11-01T04:51:12.682768+00:00",
+  "baseline_commit": "df952174e55f08a52596d912d9713a9d1e116313",
+  "verdict": "approved for the bounded local source increment; clean result generation and final checkpoint remain separate",
+  "source_sha256": {
+    "INTEGRATION_PLAN.md": "b0d7992206e59f72f71ad972ac7234f079947bb3a4629edae03749a2fb9c9074",
+    "README.md": "af9f5ead03fba92ca9f9459b62b0e5f6c8fd253fa058c8bcd95d395fa7e575e7",
+    "book/README.md": "b3b363089ebdeba7d3a03d990fe2b764a2d4b008cf4f1a32d48a04d2df8ee463",
+    "book/chapters/15-quantum-airy.tex": "e042499f66436b1aafc1219efbef3c9db945f6a99bc60738ac913ebfa78a0d9e",
+    "book/chapters/30-sharp-diagnostics.tex": "ec9973858c9dc2dca31537230158e39a323287408782afb5dc9b599735ad996f",
+    "book/claims/section15.json": "1e60b5dc77094bccbcb54fbc3130ad877b70e83613fe015cd88cd62220b856bc",
+    "book/claims/section30.json": "dcdda088cf20e7b9c87126f46a9dcb733c52e2365186489461128fbe528dee47",
+    "book/computational-status.md": "7eb08582f41402dc83dcb8f65be5504f87fb449f0082a0bbaf8edeee29550e6a",
+    "book/polyhedral_volumes_and_geodesic_identities.tex": "bec25e96072e617a40de9ed00a81427afcb08568679e0b73585a9b6de82609d7",
+    "experiments/section15/README.md": "a87e6f645844f64863d152cf5ec3ab2f6bd3a12737af4299c10baf63036771ac",
+    "experiments/section15/check.py": "56175063c8debbd150f1a3dc617d04367696dce7b713379aa8723ab3289d7ad0",
+    "experiments/section15/historical-table.json": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011",
+    "experiments/section30/README.md": "43f5c6dff6040f1946a961668bad19b80cf54248115bb910d55ea656dfef6724",
+    "experiments/section30/fixture.json": "ef8869c5e4729605d630a81f5bd9f8dc9f34363facd84aeead4d15de238dd196",
+    "experiments/section30/run.py": "3dc50d531d2b7a3eac8cb608772e14cd2649c724b65e8d117b04ca8735e8e34d",
+    "experiments/section30/tests/test_diagnostic.py": "decb663edd303c9e4687df0a8b8feb652eb099b01ba0288ad83921ce4f5883c4"
+  },
+  "shared_docs_manifest_sha256": "609ea746cb657b65ccefc5442a60724035a458e7be7624dc309fec36e301e87f",
+  "protected_baseline_files_unchanged": 1053,
+  "intentional_changed_inventory_paths": [
+    "book/README.md",
+    "book/computational-status.md",
+    "book/polyhedral_volumes_and_geodesic_identities.tex"
+  ],
+  "original_tracked_files_unchanged": 953,
+  "original_heads": {
+    "ideal_poly_volume_toolkit": "cc6b689652ce735f2098bb0a3235089210d764df",
+    "ipoly": "30ef40e23005509bd94d26f27dc48ea778832a50"
+  },
+  "original_archive_sha256": "8f28b07686ea579a7dfb7b88ccef5c12bdd50b6e328737d5a8a79f6e06ba92dc",
+  "all_607_labels_preserved_in_order": true,
+  "historical_table_rows_preserved": {
+    "15-quantum-airy.tex": 6,
+    "30-sharp-diagnostics.tex": 4
+  },
+  "shared_doc_local_link_occurrences": 109,
+  "existing_link_occurrences": 103,
+  "pending_targets_for_final_generation": [
+    {
+      "source": "README.md",
+      "target": "docs/execution/monograph-revision-2026-11-01/README.md"
+    },
+    {
+      "source": "book/README.md",
+      "target": "docs/execution/monograph-revision-2026-11-01/README.md"
+    },
+    {
+      "source": "book/computational-status.md",
+      "target": "docs/execution/monograph-revision-2026-11-01/README.md"
+    },
+    {
+      "source": "book/computational-status.md",
+      "target": "artifacts/section15/checks.json"
+    },
+    {
+      "source": "book/computational-status.md",
+      "target": "artifacts/section30/result.json"
+    },
+    {
+      "source": "INTEGRATION_PLAN.md",
+      "target": "docs/execution/monograph-revision-2026-11-01/README.md"
+    }
+  ],
+  "authored_whitespace_issues": [],
+  "pdf_sha256": "44e428ddbc625231f483748a9bfce914b4d4fc987a0c34b6201003e6dc87cacd",
+  "pdf_pages": 179,
+  "visual_review": {
+    "pages_actually_viewed": [
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166
+    ],
+    "unresolved_findings": [],
+    "observations": [
+      "Tables and equations legible and contained within margins.",
+      "Historical and replacement results visibly distinguished.",
+      "Computational paths wrap without clipping.",
+      "Chapter transitions, figure and page numbering inspected.",
+      "No overlap, broken symbols or overfull boxes observed in the inspected pages."
+    ]
+  },
+  "anti_pattern_findings": [],
+  "boundaries": [
+    "This is a precommit PDF built from recorded frozen source hashes.",
+    "The other 159 PDF pages were not visually reviewed in this pass.",
+    "Full-book mathematical review, exact quantum-integral reproduction and length-8192 replay remain incomplete.",
+    "No site/scientific artifact regeneration, browser test, upload, deployment or publication was performed.",
+    "The three pending local targets must exist and be verified after clean result generation and checkpoint assembly."
+  ]
+}

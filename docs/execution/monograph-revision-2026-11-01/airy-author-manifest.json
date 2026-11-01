@@ -1,0 +1,47 @@
+{
+  "source_sha256": {
+    "book/chapters/15-quantum-airy.tex": "e042499f66436b1aafc1219efbef3c9db945f6a99bc60738ac913ebfa78a0d9e",
+    "book/claims/section15.json": "1e60b5dc77094bccbcb54fbc3130ad877b70e83613fe015cd88cd62220b856bc",
+    "experiments/section15/README.md": "a87e6f645844f64863d152cf5ec3ab2f6bd3a12737af4299c10baf63036771ac",
+    "experiments/section15/check.py": "56175063c8debbd150f1a3dc617d04367696dce7b713379aa8723ab3289d7ad0",
+    "experiments/section15/historical-table.json": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011"
+  },
+  "baseline_chapter_sha256": "de643617d88a45bdad1601960a1caa2b2ddecb1ae299e8ea297f021fe27dbc3e",
+  "chapter_labels_preserved_in_order": [
+    "sec:quantumAiry",
+    "eq:realregularsymbol",
+    "eq:externalpoleclearing",
+    "eq:clearedregularsymbol",
+    "prop:regularquantumAiry",
+    "eq:quantumAirytheorem",
+    "lem:stripdoubleSine",
+    "eq:uniformstripSb",
+    "eq:stripSbexactremainder",
+    "eq:Sbremainderintegral",
+    "eq:regularstripangles",
+    "eq:fullsmoothquantumphase",
+    "eq:clearedphaseamplitude",
+    "eq:regularAiryamplitude",
+    "eq:regularAiryderivatives",
+    "eq:verticalphasegap",
+    "eq:verticalphasepositivity",
+    "eq:AiryGaussianbound",
+    "eq:Airyweightedexpansion",
+    "eq:Airyscaledquantum",
+    "eq:Airycorrectionpolynomial"
+  ],
+  "analytic_proposition_and_proof_bytes_unchanged": true,
+  "interpretation_bytes_unchanged": true,
+  "trailing_whitespace": {
+    "book/chapters/15-quantum-airy.tex": [],
+    "book/claims/section15.json": [],
+    "experiments/section15/README.md": [],
+    "experiments/section15/check.py": [],
+    "experiments/section15/historical-table.json": []
+  },
+  "mpmath_precision_restored": true,
+  "historical_table_mutation_detected": true,
+  "lossy_exact_inputs_rejected": true,
+  "oracle_scope_checked": true,
+  "claims_count": 9
+}

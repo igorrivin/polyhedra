@@ -1,0 +1,360 @@
+[
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "--show-toplevel"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated\n"
+  },
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "df952174e55f08a52596d912d9713a9d1e116313\n"
+  },
+  {
+    "argv": [
+      "git",
+      "remote"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--cached",
+      "--name-only"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "INTEGRATION_PLAN.md\nREADME.md\nbook/README.md\nbook/chapters/15-quantum-airy.tex\nbook/chapters/30-sharp-diagnostics.tex\nbook/claims/section15.json\nbook/claims/section30.json\nbook/computational-status.md\nbook/polyhedral_volumes_and_geodesic_identities.tex\nexperiments/section15/README.md\nexperiments/section15/check.py\nexperiments/section15/historical-table.json\nexperiments/section30/README.md\nexperiments/section30/fixture.json\nexperiments/section30/run.py\nexperiments/section30/tests/test_diagnostic.py\n"
+  },
+  {
+    "argv": [
+      "git",
+      "status",
+      "--porcelain=v1",
+      "-z",
+      "--untracked-files=all"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "M  INTEGRATION_PLAN.md\u0000M  README.md\u0000M  book/README.md\u0000A  book/chapters/15-quantum-airy.tex\u0000A  book/chapters/30-sharp-diagnostics.tex\u0000A  book/claims/section15.json\u0000A  book/claims/section30.json\u0000M  book/computational-status.md\u0000M  book/polyhedral_volumes_and_geodesic_identities.tex\u0000A  experiments/section15/README.md\u0000A  experiments/section15/check.py\u0000A  experiments/section15/historical-table.json\u0000A  experiments/section30/README.md\u0000A  experiments/section30/fixture.json\u0000A  experiments/section30/run.py\u0000A  experiments/section30/tests/test_diagnostic.py\u0000"
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "argv": [
+      "git",
+      "add",
+      "--",
+      "INTEGRATION_PLAN.md",
+      "README.md",
+      "book/README.md",
+      "book/chapters/15-quantum-airy.tex",
+      "book/chapters/30-sharp-diagnostics.tex",
+      "book/claims/section15.json",
+      "book/claims/section30.json",
+      "book/computational-status.md",
+      "book/polyhedral_volumes_and_geodesic_identities.tex",
+      "experiments/section15/README.md",
+      "experiments/section15/check.py",
+      "experiments/section15/historical-table.json",
+      "experiments/section30/README.md",
+      "experiments/section30/fixture.json",
+      "experiments/section30/run.py",
+      "experiments/section30/tests/test_diagnostic.py"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--cached",
+      "--name-only",
+      "-z"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "INTEGRATION_PLAN.md\u0000README.md\u0000book/README.md\u0000book/chapters/15-quantum-airy.tex\u0000book/chapters/30-sharp-diagnostics.tex\u0000book/claims/section15.json\u0000book/claims/section30.json\u0000book/computational-status.md\u0000book/polyhedral_volumes_and_geodesic_identities.tex\u0000experiments/section15/README.md\u0000experiments/section15/check.py\u0000experiments/section15/historical-table.json\u0000experiments/section30/README.md\u0000experiments/section30/fixture.json\u0000experiments/section30/run.py\u0000experiments/section30/tests/test_diagnostic.py\u0000"
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      ":INTEGRATION_PLAN.md"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout_sha256": "b0d7992206e59f72f71ad972ac7234f079947bb3a4629edae03749a2fb9c9074",
+    "stdout_bytes": 42688
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      ":README.md"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout_sha256": "af9f5ead03fba92ca9f9459b62b0e5f6c8fd253fa058c8bcd95d395fa7e575e7",
+    "stdout_bytes": 5835
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      ":book/README.md"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout_sha256": "b3b363089ebdeba7d3a03d990fe2b764a2d4b008cf4f1a32d48a04d2df8ee463",
+    "stdout_bytes": 3971
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      ":book/chapters/15-quantum-airy.tex"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout_sha256": "e042499f66436b1aafc1219efbef3c9db945f6a99bc60738ac913ebfa78a0d9e",
+    "stdout_bytes": 18274
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      ":book/chapters/30-sharp-diagnostics.tex"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout_sha256": "ec9973858c9dc2dca31537230158e39a323287408782afb5dc9b599735ad996f",
+    "stdout_bytes": 29049
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      ":book/claims/section15.json"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout_sha256": "1e60b5dc77094bccbcb54fbc3130ad877b70e83613fe015cd88cd62220b856bc",
+    "stdout_bytes": 8141
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      ":book/claims/section30.json"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout_sha256": "dcdda088cf20e7b9c87126f46a9dcb733c52e2365186489461128fbe528dee47",
+    "stdout_bytes": 8392
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      ":book/computational-status.md"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout_sha256": "7eb08582f41402dc83dcb8f65be5504f87fb449f0082a0bbaf8edeee29550e6a",
+    "stdout_bytes": 17086
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      ":book/polyhedral_volumes_and_geodesic_identities.tex"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout_sha256": "bec25e96072e617a40de9ed00a81427afcb08568679e0b73585a9b6de82609d7",
+    "stdout_bytes": 505505
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      ":experiments/section15/README.md"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout_sha256": "a87e6f645844f64863d152cf5ec3ab2f6bd3a12737af4299c10baf63036771ac",
+    "stdout_bytes": 2960
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      ":experiments/section15/check.py"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout_sha256": "56175063c8debbd150f1a3dc617d04367696dce7b713379aa8723ab3289d7ad0",
+    "stdout_bytes": 14560
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      ":experiments/section15/historical-table.json"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout_sha256": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011",
+    "stdout_bytes": 1155
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      ":experiments/section30/README.md"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout_sha256": "43f5c6dff6040f1946a961668bad19b80cf54248115bb910d55ea656dfef6724",
+    "stdout_bytes": 7678
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      ":experiments/section30/fixture.json"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout_sha256": "ef8869c5e4729605d630a81f5bd9f8dc9f34363facd84aeead4d15de238dd196",
+    "stdout_bytes": 757
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      ":experiments/section30/run.py"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout_sha256": "3dc50d531d2b7a3eac8cb608772e14cd2649c724b65e8d117b04ca8735e8e34d",
+    "stdout_bytes": 19364
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      ":experiments/section30/tests/test_diagnostic.py"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout_sha256": "decb663edd303c9e4687df0a8b8feb652eb099b01ba0288ad83921ce4f5883c4",
+    "stdout_bytes": 6352
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 2,
+    "stderr": "",
+    "stdout": "book/chapters/15-quantum-airy.tex:512: new blank line at EOF.\nbook/chapters/30-sharp-diagnostics.tex:672: new blank line at EOF.\n"
+  },
+  {
+    "argv": [
+      "git",
+      "commit",
+      "-m",
+      "Revise Airy and torus evidence with independently checked companions"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "[main cf34fcb] Revise Airy and torus evidence with independently checked companions\n 16 files changed, 2530 insertions(+), 1103 deletions(-)\n create mode 100644 book/chapters/15-quantum-airy.tex\n create mode 100644 book/chapters/30-sharp-diagnostics.tex\n create mode 100644 book/claims/section15.json\n create mode 100644 book/claims/section30.json\n create mode 100644 experiments/section15/README.md\n create mode 100644 experiments/section15/check.py\n create mode 100644 experiments/section15/historical-table.json\n create mode 100644 experiments/section30/README.md\n create mode 100644 experiments/section30/fixture.json\n create mode 100644 experiments/section30/run.py\n create mode 100644 experiments/section30/tests/test_diagnostic.py\n"
+  },
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "cf34fcbcd0ee867a2dee974d9c952238bc5c6ce6\n"
+  },
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD^"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "df952174e55f08a52596d912d9713a9d1e116313\n"
+  },
+  {
+    "argv": [
+      "git",
+      "status",
+      "--porcelain=v1",
+      "--untracked-files=all"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  }
+]
