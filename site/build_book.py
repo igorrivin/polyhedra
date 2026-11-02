@@ -25,6 +25,14 @@ ROOT = Path(__file__).resolve().parents[1]
 OWNER = "polyhedra-complete-local-working-edition-v1"
 THEOREMS = {"theorem", "proposition", "lemma", "corollary", "definition", "remark", "question"}
 MATH_NS = "http://www.w3.org/1998/Math/MathML"
+LICENSE_FILES = (
+    "LICENSES/README.md", "LICENSES/CC-BY-4.0.txt", "LICENSES/MONOGRAPH-NOTICE.md",
+    "LICENSES/new-companions-MIT.txt", "LICENSES/new-companion-files.txt", "LICENSES/volume-toolkit-MIT.txt",
+    "packages/volume-toolkit/LICENSE",
+)
+RIGHTS = ("Monograph text, original figures and TeX source: CC BY 4.0. "
+          "New maintained computational companion files listed in LICENSES/new-companion-files.txt: MIT. "
+          "Third-party rights and inherited notices are retained; see LICENSES/README.md.")
 
 
 def sibling(name):
@@ -619,14 +627,24 @@ def page_shell(title, content, *, current="", previous=None, following=None, hea
             f'<nav aria-label="Edition navigation">{links}</nav></header><div class="reading-layout">{contents}<main id="main">{content}{chapter_nav}</main></div>'
             '<footer><p>This local edition distinguishes proved results, conditional statements, finite checks and open questions. '
             'The computational records retain their original provenance; this edition performs no new scientific replay.</p>'
+            '<p>Monograph text, original figures and TeX source: <a rel="license" href="downloads/inspection/LICENSES/CC-BY-4.0.txt">CC BY 4.0</a>. '
+            'New maintained computational companion files: <a href="downloads/inspection/LICENSES/new-companions-MIT.txt">MIT</a>. '
+            'Third-party rights and inherited notices are retained. '
+            '<a href="downloads/inspection/LICENSES/MONOGRAPH-NOTICE.md">Monograph credit and notice</a> · '
+            '<a href="downloads/inspection/LICENSES/README.md">Licensing scope</a>.</p>'
             '<p><a href="downloads/edition-manifest.json">Edition manifest</a> · <a href="downloads/monograph-source.zip">Complete TeX source</a> · '
-            '<a href="downloads/inspection/LICENSES/README.md">Rights and licensing status</a></p></footer></body></html>\n')
+            '<a href="downloads/inspection/LICENSES/new-companion-files.txt">MIT-covered companion files</a></p></footer></body></html>\n')
 
 
-def source_archive(path, sources):
-    entries = dict(sources)
+def source_archive(path, sources, payload):
+    missing = set(LICENSE_FILES) - set(payload)
+    if missing:
+        raise BuildError(f"source archive is missing required license files: {sorted(missing)}")
+    licenses = {name: payload[name] for name in LICENSE_FILES}
+    entries = {**sources, **licenses}
     entries["source-manifest.json"] = (json.dumps({"operation": OWNER, "source_sha256": {k: digest(v) for k, v in sources.items()},
-        "scope": "Exact active TeX graph for this local working edition. No publication license is assigned."}, indent=2) + "\n").encode()
+        "license_sha256": {k: digest(v) for k, v in licenses.items()}, "rights": RIGHTS,
+        "scope": "Exact active TeX graph with the licensing scope map, notices, covered companion-file list and full license terms."}, indent=2) + "\n").encode()
     with zipfile.ZipFile(path, "x", compression=zipfile.ZIP_DEFLATED) as archive:
         for name, data in sorted(entries.items()):
             info = zipfile.ZipInfo(name, (1980, 1, 1, 0, 0, 0))
@@ -656,8 +674,11 @@ def computation_page(selection, payload):
     body += ('<p>These downloads are unchanged recorded results and explicitly selected inspection files. '
              'No campaign is rerun by the web build. The result files retain their original source commits, dirty-state records, '
              'inputs, precision and residuals; current source downloads are identified separately by the edition manifest.</p>'
-             '<p>The local selection excludes private holdouts and unclassified research outputs. No publication license is assigned '
-             'to the manuscript or companion scripts. See the <a href="downloads/inspection/LICENSES/README.md">licensing scope</a>.</p>'
+             '<p>The local selection excludes private holdouts and unclassified research outputs. '
+             'New maintained computational companion files on the <a href="downloads/inspection/LICENSES/new-companion-files.txt">covered-file list</a> '
+             'use the <a href="downloads/inspection/LICENSES/new-companions-MIT.txt">MIT license</a>. '
+             'Selected toolkit files retain their <a href="downloads/inspection/packages/volume-toolkit/LICENSE">existing MIT notice</a>. '
+             'See the <a href="downloads/inspection/LICENSES/README.md">licensing scope</a> for the monograph and preserved historical or third-party material.</p>'
              '<p><a href="historical-section9/index.html">Frozen Section 9 worked example</a> · '
              '<a href="historical-section9/barrier.html">Frozen barrier examples</a> · '
              '<a href="downloads/inspection/book/computational-status.md">Complete computational status ledger</a></p>')
@@ -837,7 +858,7 @@ def build(root, output, work, *, require_clean=False):
     if digest(pdf_data) != receipt["pdf_sha256"]:
         raise BuildError("PDF changed after compilation")
     (output / "downloads/monograph.pdf").write_bytes(pdf_data)
-    source_archive(output / "downloads/monograph-source.zip", sources)
+    source_archive(output / "downloads/monograph-source.zip", sources, payload)
     for name in ("edition.css", "search.js"):
         (output / "assets" / name).write_bytes(inputs["site/book/" + name])
     link_map = {"../" + name: "downloads/inspection/" + name for name in payload}
@@ -880,7 +901,7 @@ def build(root, output, work, *, require_clean=False):
         "compilation": receipt, "canonical_metadata": metadata, "tool_versions": versions, "verification": checks,
         "label_pages": label_pages, "label_numbers": {key: row["number"] for key, row in labels.items()},
         "bibliography_numbers": citations, "scientific_replay": "not performed; all reports copied unchanged",
-        "rights": "Local working edition. Manuscript and new companion publication rights remain unresolved.",
+        "rights": RIGHTS, "license_sha256": {name: digest(payload[name]) for name in LICENSE_FILES},
         "publication": "not performed; no Site registration, source synchronization, upload or deployment",
         "output_sha256": {name: digest(path.read_bytes()) for name, path in preview.ordinary_files(output).items()
                           if name != "downloads/edition-manifest.json"}}

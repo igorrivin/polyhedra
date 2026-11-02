@@ -8,6 +8,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 import xml.etree.ElementTree as ET
+import zipfile
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -22,6 +23,38 @@ def converter(number="28", labels=None, routes=None):
 
 
 class CompleteBookTests(unittest.TestCase):
+    def test_source_bundle_and_selected_code_carry_exact_scoped_license_files(self):
+        _, payload = book.curated_inputs(ROOT)
+        expected = {"LICENSES/README.md", "LICENSES/CC-BY-4.0.txt", "LICENSES/MONOGRAPH-NOTICE.md",
+                    "LICENSES/new-companions-MIT.txt", "LICENSES/new-companion-files.txt", "LICENSES/volume-toolkit-MIT.txt",
+                    "packages/volume-toolkit/LICENSE"}
+        self.assertEqual(set(book.LICENSE_FILES), expected)
+        for name in expected:
+            self.assertEqual(payload[name], (ROOT / name).read_bytes())
+        covered = set(payload["LICENSES/new-companion-files.txt"].decode().splitlines())
+        for name in payload:
+            if name.startswith("experiments/") and name.endswith(".py"):
+                self.assertIn(name, covered)
+        self.assertNotIn("experiments/section15/historical-table.json", covered)
+        sources = book.chapter.source_graph(ROOT)
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "monograph-source.zip"
+            book.source_archive(path, sources, payload)
+            with zipfile.ZipFile(path) as archive:
+                self.assertEqual(set(archive.namelist()), set(sources) | expected | {"source-manifest.json"})
+                for name, data in {**sources, **{name: payload[name] for name in expected}}.items():
+                    self.assertEqual(archive.read(name), data)
+                manifest = json.loads(archive.read("source-manifest.json"))
+                self.assertEqual(manifest["source_sha256"], {name: book.digest(data) for name, data in sources.items()})
+                self.assertEqual(manifest["license_sha256"], {name: book.digest(payload[name]) for name in expected})
+                self.assertIn("CC BY 4.0", manifest["rights"])
+                self.assertIn("LICENSES/new-companion-files.txt", manifest["rights"])
+                self.assertNotIn("artifacts/", "\n".join(archive.namelist()))
+            missing_terms = dict(payload)
+            del missing_terms["LICENSES/CC-BY-4.0.txt"]
+            with self.assertRaisesRegex(book.BuildError, "missing required license"):
+                book.source_archive(Path(tmp) / "incomplete.zip", sources, missing_terms)
+
     def test_source_routes_include_every_chapter_label_and_bibliography_entry(self):
         sources = book.chapter.source_graph(ROOT)
         _, pages, parts, routes, bib = book.source_pages(sources)

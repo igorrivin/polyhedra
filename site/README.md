@@ -233,11 +233,11 @@ work must be outside the research checkout, in two separate directories:
 
 ```sh
 /tmp/polyhedra-baseline-20261031/bin/python site/build_book.py \
-  --output-dir ../execution/editorial-local-release-2026-11-02/edition-dist \
-  --work-dir ../execution/editorial-local-release-2026-11-02/edition-build \
+  --output-dir ../execution/editorial-local-release-2026-11-02/licensed-edition-dist \
+  --work-dir ../execution/editorial-local-release-2026-11-02/licensed-edition-build \
   --require-clean
 /opt/homebrew/bin/node site/tests/test_book_search.cjs \
-  ../execution/editorial-local-release-2026-11-02/edition-dist/search-index.json
+  ../execution/editorial-local-release-2026-11-02/licensed-edition-dist/search-index.json
 ```
 
 Omit `--require-clean` only for an explicitly identified author preview. A final
@@ -259,15 +259,25 @@ modified exports are refused. The build is staged and replaces a prior export
 only after all static checks pass.
 
 The complete PDF and exact 36-file active TeX source graph are downloadable.
+The source ZIP also carries the exact `LICENSES/README.md` scope map,
+`MONOGRAPH-NOTICE.md`, full `CC-BY-4.0.txt`, `new-companions-MIT.txt` and retained
+`volume-toolkit-MIT.txt` terms, and the `new-companion-files.txt` covered-file list.
+The exact `packages/volume-toolkit/LICENSE` notice keeps the scope map's package
+notice link complete inside the source ZIP.
+Its source manifest hashes the TeX and licensing inputs separately. The same
+seven licensing files are distributed in the inspection tree, preserving the
+original notice for the selected toolkit source files.
 `book/downloads.json` is an explicit inspection allowlist for existing
 classified reports, their guides, selected source files and claim ledgers.
 Selected source files are for inspection, not newly advertised standalone
 reproduction packages. The computation index keeps finite scope, original
 source identities and known limits visible; it never replays a campaign or
 claims a missing historical evaluator was recovered. Private holdouts and
-unclassified research outputs are excluded. Manuscript and companion rights
-remain governed by `LICENSES/README.md`; local preparation assigns no new
-publication license.
+unclassified research outputs are excluded. The monograph text, original
+figures and TeX source use CC BY 4.0. New maintained computational companion
+files explicitly listed in `LICENSES/new-companion-files.txt` use MIT. The
+scope map preserves third-party rights and inherited licenses; these grants
+do not assign one license to historical archives or recorded result evidence.
 
 The 44 original Section 9 site assets are copied byte-for-byte under
 `historical-section9/`. Their older PDF, source archive and numerical records

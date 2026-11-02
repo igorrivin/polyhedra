@@ -1,8 +1,14 @@
 {
   "schema_version": 1,
-  "selection_policy": "Explicit local inspection allowlist. No private holdouts, unclassified research outputs or blanket repository export. These local files have no newly assigned redistribution license.",
+  "selection_policy": "Explicit local inspection allowlist. No private holdouts, unclassified research outputs or blanket repository export. Monograph text, original figures and TeX source are CC BY 4.0; listed new maintained computational companion files are MIT. LICENSES/README.md defines the scope and preserves third-party and inherited terms.",
   "inspection_files": [
     "LICENSES/README.md",
+    "LICENSES/CC-BY-4.0.txt",
+    "LICENSES/MONOGRAPH-NOTICE.md",
+    "LICENSES/new-companions-MIT.txt",
+    "LICENSES/new-companion-files.txt",
+    "LICENSES/volume-toolkit-MIT.txt",
+    "packages/volume-toolkit/LICENSE",
     "book/computational-status.md",
     "book/numerical-errata.md",
     "book/companion-reconciliation.md",
