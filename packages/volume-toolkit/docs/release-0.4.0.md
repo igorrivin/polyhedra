@@ -265,7 +265,7 @@ statistics, and wall-time reporting.
 - [ ] `git diff --check` passes.
 - [ ] Package-module import smoke and `python3 -m compileall -q
       ideal_poly_volume_toolkit` pass.
-- [ ] A seeded tetrahedron CLI run produces schema version 1, positive volume,
+- [ ] A seeded tetrahedron CLI run produces schema version 2, positive volume,
       four boundary vertices, Euler characteristic two, and JSON that round
       trips through the standard library.
 - [ ] `create_gui()` and the root HF app construct without a Gradio API warning.

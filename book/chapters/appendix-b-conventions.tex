@@ -6,6 +6,7 @@ Their geometric and analytic hypotheses remain those of the referenced
 statements; a convention does not assert an existence or convergence theorem.
 
 \begingroup\small
+\setlength{\LTpost}{4pt}
 \begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}
  >{\raggedright\arraybackslash}p{0.64\textwidth}@{}}
 \toprule
@@ -50,14 +51,13 @@ Cusp-normal rays & The almost-everywhere intersection/gap discussion is for comp
 Cuff phase matching & Use one common cuff coordinate after reversing one induced orientation: $(s,p)\mapsto(s+\tau,p)$, with $p$ the signed tangential unit velocity; \eqref{eq:endpointmatch}, \eqref{eq:momentummatch}.\\
 Peripheral logarithms & PSL$_2(\CC)$ multiplier logs $u,v$; eigenvalues $m=e^{u/2}$, $l=e^{v/2}$ with fixed lift signs; smooth filling $pu+qv=2\pi i$; \eqref{eq:dehnholonomy}, \eqref{eq:dehncone}.\\
 Peripheral polarization & $\Omega=\frac12\dd v\wedge\dd u$, $P=v/2$, $[\widehat P,\widehat u]=\hbar$; $\widehat l$ shifts $u$ by $\hbar$; \eqref{eq:introNZpolarization}, \eqref{eq:introcommutator}.\\
-Real filling source & Adding $jLx$ fixes the conjugate source $j=\ell_{\rm core}/2$; the cone angle is $Lx$; \eqref{eq:realdehnlegendre}, \eqref{eq:dehnsourcecore}.\\
+Real filling source & Adding $jLx$ fixes the source conjugate to angular holonomy $\theta=Lx$; on a geometric cone branch, $j=\ell_{\rm core}/2$ and $\theta$ is the cone angle; \eqref{eq:realdehnlegendre}, \eqref{eq:dehnsourcecore}.\\
 Holomorphic filling action & $F^{\prime}=v$ and $\Delta V=\frac12\Im\mathcal S^*$, with $\mathcal S$ as in~\eqref{eq:dehnsurgeryaction}; \eqref{eq:dehnexactcriticalvolume}.\\
-Norm-ball gauge and counts & $A_B$ counts all nonzero signed lattice points, $P_B$ the primitive ones, boundary included. The shortest gauge value is one; $\lambda_\gamma=\ell_\gamma/s_X$ for systole $s_X$; Sections~\ref{subsec:mobiusmodulus}, \ref{sec:arithmeticgeometry}.\\
-Flow and area scales & $g_t=\operatorname{diag}(e^t,e^{-t})$; for $h=\dim_{\CC}\mathcal Q$, area cutoff $L$ has exponent $h$ and period scale $\sqrt L$ has exponent $2h$; \eqref{eq:pairgeometryflow}, Section~\ref{subsec:pairquotient}.\\
+Norm-ball gauge and counts & $A_B$ counts all nonzero signed lattice points, $P_B$ the primitive ones, boundary included. The shortest gauge value is one; $\lambda_\gamma=\ell_\gamma/s_X$ for systole $s_X$; Sections~\ref{subsec:mobiusmodulus}, \ref{sec:arithmeticgeometry}. The earlier $A_X$ in Section~\ref{subsec:normballbarrier} includes the origin and uses hyperbolic length units.\\
+Flow and area scales & Teichm\"uller time uses $g_t=\operatorname{diag}(e^t,e^{-t})$; for $h=\dim_{\CC}\mathcal Q$, area cutoff $L$ has exponent $h$ and period scale $\sqrt L$ has exponent $2h$; \eqref{eq:pairgeometryflow}, Section~\ref{subsec:pairquotient}. The unit-speed geodesic flow in Section~\ref{subsec:countmixselberg} uses $\operatorname{diag}(e^{t/2},e^{-t/2})$.\\
 Weighted correlations & $C_{F,G}(t)=\int F(G\circ g_t)\,\dd\mu$ is bilinear; use $\overline F$ for the Hermitian version. The full-rate converse assumes the count for $(h+V)G$; Theorem~\ref{thm:twopointfullrate}.\\
 \bottomrule
 \end{longtable}
-\endgroup
 
 \noindent\textbf{Source conventions.}
 The local form scale is fixed by~\eqref{eq:fn} and the raw Beltrami
@@ -72,8 +72,8 @@ are therefore not imported unchanged into~\eqref{eq:penner}.
 The metric-map formula~\eqref{eq:polyhedralpartition} uses Budd's
 disintegrated measure and label-and-orientation-preserving
 automorphism weights~\cite[Section~1.1 and Corollary~2]{Budd}.
-The claim ledger \path{claims/section32-appendixb.json} records the
-source-statement audits inherited from the earlier reviewed chapters,
-the current convention dependencies, and the finite computational
-support. It does not claim a fresh complete proof review of those
-external sources.
+The ledger \path{book/claims/section32-appendixb.json} records inherited
+source-statement audits, current convention dependencies, and finite
+computational support. It does not claim a new complete review of the
+external proofs.
+\par\endgroup

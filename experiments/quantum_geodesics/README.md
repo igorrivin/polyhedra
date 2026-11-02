@@ -10,7 +10,9 @@ Run in the existing supported Python environment (Python 3.12, mpmath 1.3, SymPy
 /opt/anaconda3/bin/ruff check experiments/quantum_geodesics
 ```
 
-Output must be a new file in an existing directory outside the companion source. Initial author results belong under the outer `../execution/final-chapters-review-2026-11-01/computation/`. The prospective reviewed result is `artifacts/quantum_geodesics/result.json`. No result is computed or written on import; the driver works from another working directory. Explicit exceptions remain active under `python -O`. Serialization happens before exclusive file creation, so failed identities or nonfinite data cannot produce a successful result.
+Output must be a new file in an existing directory outside the companion source. Initial author results remain preserved under the outer `../execution/final-chapters-review-2026-11-01/computation/`. The [reviewed clean-source result](../../artifacts/quantum_geodesics/result.json) is recorded in the [completed checkpoint](../../docs/execution/final-chapters-review-2026-11-01/README.md), which identifies its source commit and separate author, review and final-generation evidence. No result is computed or written on import; the driver works from another working directory. Explicit exceptions remain active under `python -O`. Serialization happens before exclusive file creation, so failed identities or nonfinite data cannot produce a successful result.
+
+This post-run README correction leaves the result's recorded README hash and the historical acceptance records unchanged. Code, fixtures and mathematical modules are unchanged; this prose-only edit is not a new scientific replay.
 
 The fixture parser rejects duplicate keys, NaN/infinity tokens and JSON floating numbers; exact noninteger inputs must be strings. Result status is stage-neutral: author, reviewer and final replay receipts assign the evidence stage separately.
 

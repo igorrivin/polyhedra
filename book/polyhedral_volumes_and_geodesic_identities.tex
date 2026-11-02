@@ -11,7 +11,7 @@
 \usepackage{xcolor}
 \definecolor{linkblue}{RGB}{28,65,105}
 \usepackage[colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue,
- pdfauthor={},pdftitle={Polyhedra, Moduli, and Quantum Geometry}]{hyperref}
+ pdfauthor={Igor Rivin},pdftitle={Polyhedra, Moduli, and Quantum Geometry}]{hyperref}
 % Merge this preamble into the main document before inlining the figures.
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,calc,angles,quotes,positioning}
@@ -83,7 +83,8 @@
 
 \title{\textbf{Polyhedra, Moduli,\\and Quantum Geometry}\\[8pt]
 \large Variational principles, spectral methods, and computation}
-\author{}
+\author{Igor Rivin\\[3pt]
+\normalsize Department of Mathematics, Temple University}
 \date{30 October 2026}
 
 \begin{document}
@@ -104,11 +105,12 @@ The comparisons yield several explicit results. In a prescribed final
 cone-angle chamber, the leading small-area coefficient of an exact
 Weil--Petersson volume polynomial is $2^{-d}$ times the
 Thurston--Deligne--Mostow volume, where $d=n-3$. At the flat
-weights, the same complex hyperbolic form is the logarithmic curvature
-of a continued unit-volume Liouville correlation; its four-point fusion
-and Hermitian area pairing are calculated explicitly. A normalized
-quantum tetrahedral integral has a uniform Airy transition on the regular
-one-parameter family, including the first correction.
+weights and for $0<b<1$, the same complex hyperbolic form is the logarithmic
+curvature of a continued unit-volume Liouville correlation; its finite
+four-point fusion and Hermitian area pairing are calculated explicitly.
+A pole-cleared quantum tetrahedral integral has a uniform Airy transition
+on the regular one-parameter family for bounded real transition
+parameters, including the first correction.
 
 The computational strand connects the Casson--Rivin program to finite
 elements and resistor networks. For the planar prescribed-angle
@@ -116,10 +118,12 @@ realization problem, the negative volume Hessian is twice the cotangent
 stiffness matrix. Its Schur complement describes boundary response, and
 its Gaussian determinant has a rooted-forest expansion. A compatible
 barrier supplies a path-following iteration bound with Laplacian linear
-subproblems. On a geometric Dehn-filling branch, a holomorphic Legendre
-critical value recovers the filling volume to all orders; the inverse
-volume Hessian determines peripheral response, and the Gaussian surgery
-factor agrees with the peripheral torsion factor.
+subproblems. On a local geometric Dehn-filling branch, a holomorphic
+Legendre critical value recovers the volume germ to all orders. At a
+nondegenerate positive angle maximum, the inverse volume Hessian determines
+peripheral response. The normalized Gaussian Jacobian has the
+inverse-square-root dependence prescribed by peripheral torsion surgery;
+boundary torsion and solid-torus factors enter separately.
 
 On surfaces, character-twisted trace data organize multicurves by length.
 A length-valued Euler product has isolated unit leading atoms, while a
@@ -253,13 +257,15 @@ moduli-volume theory. The chamber, labels, and orbifold conventions are
 part of the formulas.
 
 \item \textbf{Quantum periods and a uniform degeneration.}
-The finite-$b$ identity~\eqref{eq:exactLiouvillecurvature} identifies the
-Thurston--Deligne--Mostow form with the logarithmic curvature of a
-continued unit-volume Liouville correlation. The four-point residue
-calculation determines its fusion matrix and Hermitian area pairing.
+For $0<b<1$, the exact identity~\eqref{eq:exactLiouvillecurvature}
+identifies the Thurston--Deligne--Mostow form with the logarithmic
+curvature of the continued unit-volume Liouville correlation at the
+fixed flat weights. The finite four-point period calculation determines
+its fusion matrix and Hermitian area pairing.
 Proposition~\ref{prop:regularquantumAiry} gives a separate uniform
 Airy theorem, with its first correction, for the specified pole-cleared
-tetrahedral integral on the regular one-parameter family.
+tetrahedral integral on the regular one-parameter family and bounded
+real transition parameters.
 
 \item \textbf{Volume optimization, finite elements, and complexity.}
 Proposition~\ref{prop:ipolyHessian} identifies the negative volume
@@ -277,9 +283,13 @@ Proposition~\ref{prop:dehncriticalvalue} identifies the local filling
 volume with a holomorphic Legendre critical value as an equality of
 analytic germs. Thus every classical long-slope coefficient is fixed,
 including the Neumann--Zagier expansion. The inverse volume Hessian
-recovers the marked cusp quadratic form, and the Gaussian factor
-matches the peripheral factor in torsion surgery. The transfer to a
-full quantum invariant is conditional on the representation, cycle,
+recovers the marked cusp quadratic form at a nondegenerate positive
+geometric angle maximum. The normalized Gaussian Jacobian agrees with the
+change of the inverse square root of peripheral torsion; the full
+smooth-filling amplitude also uses boundary torsion and solid-torus
+factors under the regularity
+hypotheses of~\eqref{eq:dehntorsionsurgery}. The transfer to a full
+quantum invariant is conditional on the representation, cycle,
 noncancellation, and competing-sector estimates stated in
 Proposition~\ref{prop:dehnquantumconditional}.
 
@@ -298,7 +308,8 @@ Theorem~\ref{thm:twopointfullrate} is a converse from a specified weighted
 two-endpoint count to mixing, with control of derivative endpoint
 weights. Theorem~\ref{thm:markedtorusmixing} gives an explicit global
 correlation bound for the marked-torus model of the nonsquare genus-two
-$(2,2)$ stratum. The strict-convexity, inverse-flatness, and arithmetic
+$(2,2)$ stratum, with probability measure and the stated rotation norm.
+The strict-convexity, inverse-flatness, and arithmetic
 transfer results then identify the separate geometric and M\"obius
 inputs needed for sharp primitive counting. The proposed $O_X(L)$
 remainder is a question to be decided, not a conclusion of these results.
@@ -361,6 +372,19 @@ For computation, Section~\ref{sec:ipolybridge} leads to the inverse-Hessian
 response in Section~\ref{sec:dehnresponse} and the counting diagnostics in
 Section~\ref{sec:sharpdiagnostics}. These routes share definitions and
 normalizations rather than requiring every calculation to be read in order.
+The trace and coefficient constructions in
+Sections~\ref{sec:coefficientdistributions}--\ref{sec:globalfilters}
+use closed surfaces of genus at least two; the later sharp-counting
+diagnostics return to the once-punctured torus.
+
+\paragraph{Conventions and computational evidence.}
+Appendix~\ref{app:conventions} collects the measure, angle, trace,
+curve-counting and time conventions, with references to their defining
+statements. The repository guide \path{book/computational-status.md}
+maps the chapter formulas to maintained computational recipes, recorded
+results and their limits. Paths printed in the computational notes are
+relative to the repository root. Each result retains its own source,
+precision and review record; revising the prose does not rerun that computation.
 
 \paragraph{Provenance and mathematical status.}
 This research monograph grew from a mathematical discussion and includes
@@ -372,6 +396,9 @@ identified where they occur. A theorem proved for a normalized local
 integral, a specified stratum, or a conditional weighted count retains
 that scope when it is used elsewhere in the monograph.
 
+\paragraph{Acknowledgment.}
+The author acknowledges substantial help from Codex in preparing and
+revising this monograph and its computational companions.
 
 
 \monographpart{Polyhedra and moduli measures}{Polyhedral realization supplies coordinates; the measure comparison turns them into volume formulas. Fixed-deficit Euclidean shapes then reveal a period geometry at the flat limit.}

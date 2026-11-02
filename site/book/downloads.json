@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "selection_policy": "Explicit local inspection allowlist. No private holdouts, unclassified research outputs or blanket repository export. These local files have no newly assigned redistribution license.",
+  "inspection_files": [
+    "LICENSES/README.md",
+    "book/computational-status.md",
+    "book/numerical-errata.md",
+    "book/companion-reconciliation.md",
+    "book/claims/section9.json",
+    "experiments/section9/README.md",
+    "experiments/section9/run.py",
+    "experiments/section9/barrier_run.py",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/variational.py",
+    "packages/volume-toolkit/ideal_poly_volume_toolkit/angle_barrier.py"
+  ],
+  "groups": [
+    {
+      "id": "normalizations", "title": "Sections 1–8 and Appendix A: exact finite normalizations",
+      "scope": "Rational fixtures for perimeter and Gram determinants, stack factors, cone walls, intersections, Pfaffians and SL₂ trace identities.",
+      "limit": "Finite identities for the named fixtures. No general moduli integral, divisor theorem or geometric realization is computed.",
+      "files": ["artifacts/normalizations/result.json", "experiments/normalizations/README.md", "experiments/normalizations/run.py", "experiments/normalizations/fixture.json", "book/claims/sections1-6.json", "book/claims/sections7-8.json"]
+    },
+    {
+      "id": "section9", "title": "Section 9: volume Hessians and barrier examples",
+      "scope": "The unchanged grid and dense barrier results belong to the frozen Section 9 checkpoint. Its complete reproduction archives remain available from the historical companion pages above.",
+      "limit": "Small supplied fixtures, numerical comparisons and finite exact identities. No nearly-linear solver, global embedding or interval optimality certificate is supplied.",
+      "files": ["artifacts/section9/result.json", "artifacts/section9/barrier-result.json", "experiments/section9/README.md", "book/claims/section9.json"]
+    },
+    {
+      "id": "quantum-surgery", "title": "Sections 12–14 and 16: periods and surgery",
+      "scope": "Finite period, fusion and local peripheral/surgery calculations with their original recorded coordinates, precision and source identities.",
+      "limit": "Local formulas and fixed examples. No full quantum gluing, geometric Dehn-filling solver or branch-independent Gaussian phase is certified.",
+      "files": ["artifacts/quantum_surgery/result.json", "experiments/quantum_surgery/README.md", "experiments/quantum_surgery/run.py", "experiments/quantum_surgery/fixture.json", "book/claims/sections12-14.json", "book/claims/section16.json"]
+    },
+    {
+      "id": "airy", "title": "Section 15: regular-family Airy evidence",
+      "scope": "The exact-integrand companion supplies new numerical quadrature with precision, contour and cutoff comparisons. The earlier finite algebra and historical input values remain separately downloadable.",
+      "limit": "The original Airy evaluator and its raw error record remain unrecovered. The later calculation is independent evidence, not a replay of that missing evaluator; neither supplies a total interval certificate.",
+      "files": ["artifacts/section15_quantum/result.json", "experiments/section15_quantum/README.md", "experiments/section15_quantum/check.py", "experiments/section15_quantum/evaluate.py", "artifacts/section15/checks.json", "experiments/section15/README.md", "experiments/section15/historical-table.json", "book/claims/section15.json"]
+    },
+    {
+      "id": "quantum-geodesics", "title": "Quantum and geodesic finite checks",
+      "scope": "Four finite quantum groups and ten finite geodesic groups support Sections 10–11, 17–22, 32 and Appendix B. The recorded report preserves exact and numerical evidence separately.",
+      "limit": "No general Jones or root-of-unity 6j evaluator, global moduli/GMC solver, numerical asymptotic theorem, arbitrary realization or geometric completeness result is claimed.",
+      "files": ["artifacts/quantum_geodesics/result.json", "experiments/quantum_geodesics/README.md", "experiments/quantum_geodesics/run.py", "experiments/quantum_geodesics/fixture.json", "book/claims/sections10-11.json", "book/claims/sections17-22.json", "book/claims/section32-appendixb.json"]
+    },
+    {
+      "id": "counting-mixing", "title": "Sections 23–31: finite counting and mixing formulas",
+      "scope": "Exact and numerical finite checks accompany the coefficient, dynamics and arithmetic formulas; the result retains its clean-source checkpoint provenance.",
+      "limit": "Finite checks do not prove the stated global counting or mixing implications and do not supply their independent analytic hypotheses.",
+      "files": ["artifacts/counting_mixing/result.json", "experiments/counting_mixing/README.md", "experiments/counting_mixing/run.py", "experiments/counting_mixing/fixture.json", "book/claims/sections23-25.json", "book/claims/sections26-29.json", "book/claims/section31.json"]
+    },
+    {
+      "id": "torus", "title": "Section 30: torus diagnostics and preserved predecessor",
+      "scope": "The maintained full diagnostic through length 8192 is supplied alongside the frozen length-64 predecessor. Each result keeps its own inputs, precision and source record.",
+      "limit": "The original historical high-length precision archive remains unrecovered. These replacement diagnostics do not certify a global sharp asymptotic or recover the original campaign.",
+      "files": ["artifacts/torus_campaign/result.json", "experiments/torus_campaign/README.md", "experiments/torus_campaign/run.py", "artifacts/section30/result.json", "experiments/section30/README.md", "book/claims/section30.json"]
+    }
+  ]
+}

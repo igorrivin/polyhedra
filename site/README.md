@@ -1,4 +1,10 @@
-# Section 9 publishing build
+# Local publishing builds
+
+The complete local working edition is built by `build_book.py`; its workflow is
+described at the end of this document. The earlier Section 9 files and preview
+remain frozen checkpoints with their own source, numerical and review records.
+
+## Section 9 publishing build
 
 `build_section9.py` owns the complete chapter conversion. Canonical mathematical
 text remains in `book/chapters/09-volume-hessians.tex`; the full monograph includes
@@ -192,3 +198,89 @@ ownership, source mismatch rejection, safe embedded JSON and local targets;
 `tests/test_preview_search.cjs` checks search behavior and actual edition queries.
 No browser/server is started by these checks. The scope remains a Section 9
 working edition, while the complete LaTeX download is explicitly the broader draft.
+
+## Complete local working edition
+
+`build_book.py` converts the active canonical TeX graph into separate reading
+pages: an introduction, 32 numbered chapters, Appendices A/B, and the complete
+bibliography. A contents page preserves the authored part summaries and adds
+browser-local passage search. Previous/next links, page contents, and a complete
+label-to-page map connect the edition. The HTML uses native MathML and local
+assets; no CDN, network API, framework installation or numerical backend is
+required. The visible byline, affiliation and HTML metadata come from the
+canonical TeX author declaration. The canonical introduction, including its
+acknowledgment, is retained as body content.
+
+The converter reuses the source graph, compiled-label reader and integrity
+helpers from `build_section9.py`, and the safe inventory and search primitives
+from `build_preview.py`. It does not modify their behavior or regenerate the
+frozen Section 9 files. Its full-book extensions explicitly handle shared
+theorem/remark/question numbering, multi-label alignment rows, appendices,
+paragraph headings, all eight tables and all nine TikZ figures. Alignment row
+numbers come from the compiled auxiliary labels and are attached to the
+corresponding MathML rows. Unknown raw TeX and every Pandoc warning/fallback
+remain fatal. A presentation-only `\hspace` normalization fixes the known
+Section 15 MathML limitation without changing canonical source.
+Every active source input and body region must be routed or explicitly rejected.
+Unexpected inter-chapter prose, nested inputs, wrapper content and unexplained
+bibliography content fail the build instead of disappearing. Numbered ordinary
+equations require canonical labels; unsupported unlabeled numbering is rejected.
+
+Use the existing supported Python 3.12 environment and installed Pandoc, TeX
+Live/latexmk and Ghostscript. The builder creates a fresh full-book PDF and
+renders each unchanged TikZ drawing into a local PNG. All source and generated
+work must be outside the research checkout, in two separate directories:
+
+```sh
+/tmp/polyhedra-baseline-20261031/bin/python site/build_book.py \
+  --output-dir ../execution/editorial-local-release-2026-11-02/edition-dist \
+  --work-dir ../execution/editorial-local-release-2026-11-02/edition-build \
+  --require-clean
+/opt/homebrew/bin/node site/tests/test_book_search.cjs \
+  ../execution/editorial-local-release-2026-11-02/edition-dist/search-index.json
+```
+
+Omit `--require-clean` only for an explicitly identified author preview. A final
+generation follows independent source review and uses the resulting clean
+checkout. Source bytes are frozen before conversion and rechecked at the end.
+PDF visual inspection and browser rendering, navigation, keyboard use and
+search checks are separate verification steps; a successful static build does
+not claim those checks. The builder starts no server and makes no browser,
+Site-registration, credential, source-synchronization, upload or deployment
+calls. Existing Site identity and audience remain untouched.
+
+Every invocation uses a new empty scratch directory and freshly compiles the
+frozen source. There is no supplied-PDF, auxiliary-file or compilation-receipt
+reuse option. The compilation receipt records this invocation's actual outputs;
+it is evidence output rather than a trusted input shortcut. Output and scratch
+paths are normalized before containment and overlap checks, with symlink aliases
+rejected. Existing output must match its ownership manifest; foreign files and
+modified exports are refused. The build is staged and replaces a prior export
+only after all static checks pass.
+
+The complete PDF and exact 36-file active TeX source graph are downloadable.
+`book/downloads.json` is an explicit inspection allowlist for existing
+classified reports, their guides, selected source files and claim ledgers.
+Selected source files are for inspection, not newly advertised standalone
+reproduction packages. The computation index keeps finite scope, original
+source identities and known limits visible; it never replays a campaign or
+claims a missing historical evaluator was recovered. Private holdouts and
+unclassified research outputs are excluded. Manuscript and companion rights
+remain governed by `LICENSES/README.md`; local preparation assigns no new
+publication license.
+
+The 44 original Section 9 site assets are copied byte-for-byte under
+`historical-section9/`. Their older PDF, source archive and numerical records
+remain explicitly historical. The complete edition's manifest separately
+records current source and tool identities, every selected input and output
+hash, historical input hashes, PDF/auxiliary/figure provenance, label and
+bibliography maps, and static verification counts. No old result's timestamp,
+source record, dirty-state field, numerical value or precision record is
+rewritten.
+
+Focused regressions and the existing site suite:
+
+```sh
+/tmp/polyhedra-baseline-20261031/bin/python -m unittest discover -s site/tests -v
+/opt/homebrew/bin/node site/tests/test_book_search.cjs
+```
