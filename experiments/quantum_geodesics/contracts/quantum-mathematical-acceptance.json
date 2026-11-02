@@ -1,0 +1,52 @@
+{
+  "status": "independent_exact_byte_acceptance",
+  "recorded_at_utc": "2026-11-02T02:56:05.900375+00:00",
+  "reviewer": "quantum_background_reviewer",
+  "accepted_canonical_sha256": {
+    "book/chapters/10-quantum-introduction.tex": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+    "book/chapters/11-quantum-degeneration.tex": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9",
+    "book/claims/sections10-11.json": "34dbb6255dc468cb796bb3a129eeaf37ac0c5f4dc358abfd73030e64331b3539"
+  },
+  "accepted_author_freeze_sha256": "f043f6943bd124638802bfdb5d5e7505269143f54046eea93d298345191c0620",
+  "accepted_author_handoff_sha256": "ad5dc2fad66afe7567efe722e8599680037fce663177c5eabd1157f3b3665ad3",
+  "initial_ledger_sha256": "ea22e86c4399d4d3fcf83c938144373c89367cb7f9ce1a074b866499000ce1cb",
+  "initial_freeze_preserved": true,
+  "repair_delta": "Exactly two inserted dependency-hash lines; no other ledger-byte changes.",
+  "mathematical_claims_and_chapter_bytes_unchanged": true,
+  "all_live_dependency_sha256": {
+    "book/chapters/08-wp-flat-limit.tex": "1a175315aa975708a5c93151b9ae107b7dd36f79720dae7c7264adda062a6283",
+    "book/chapters/12-quantum-boundary-measure.tex": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+    "book/chapters/13-four-point-fusion.tex": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+    "book/chapters/14-normalized-quantum-comparison.tex": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+    "book/chapters/15-quantum-airy.tex": "efee2c699923ab31e4d7d48eeac57c60bf2ea088ea4ff17e617b9ed97202d6dd",
+    "book/chapters/16-dehn-filling-response.tex": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+    "book/claims/sections12-14.json": "fecb43e3327f9f659afbd841f8b9ee10a2c75fa0b3a7694655beabc7675d53c7",
+    "book/claims/section15.json": "2a53176d95601bd09448326a34b203f1e05bd46dc6eee182226af36b24a2fb96",
+    "book/claims/section16.json": "dc24ca2ca1514446b5bd862f7632942a36f5e5d2bf07065a40b959bed3ce6531",
+    "book/chapters/03-ideal-tetrahedron.tex": "81c51ade3378fbfd4baff1cebeb2dcdd8b0fd43a032ac45fb3b30c4908060797",
+    "book/claims/sections7-8.json": "7438f1b5c8fde23fa81b0b1c3250d2965debf79678026d649bd7ff7cd368439d"
+  },
+  "claim_count": 61,
+  "preserved_label_count": 48,
+  "source_review_counts": {
+    "full_text_selected_statements": 20,
+    "unavailable_in_this_review": 1,
+    "metadata_only": 1,
+    "metadata_and_abstract_only": 1
+  },
+  "findings": [
+    {
+      "id": "QR01",
+      "status": "resolved_by_independently_verified_metadata_repair"
+    }
+  ],
+  "required_open_findings": [],
+  "independent_probes_reused_without_rerun": {
+    "reason": "Only dependency metadata changed; mathematical statements and both source hashes are identical.",
+    "script_sha256": "a8a4f324f58bf5e54b8ac39165f13ee820f46a6b6700f30b408c1b74e45b2e05",
+    "result_sha256": "257304aaedf3781ee51e36186f6061a241efa3ec8235200c4cc3f126d1b293a0"
+  },
+  "companion_status": "Mathematical specification accepted; maintained implementation and execution not yet reviewed.",
+  "source_review_limit": "Selected external statements inspected; no full external proof or external PDF byte hash claimed; one source unavailable and two checked only at metadata/abstract level.",
+  "scope": "Source/claim-ledger approval only; no canonical edit by reviewer, commit, build, installation, upload or global computational certification."
+}

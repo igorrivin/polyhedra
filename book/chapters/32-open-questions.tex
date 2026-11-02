@@ -1,0 +1,270 @@
+\section{Questions suggested by the calculations}
+\label{sec:questions}
+
+The ideal volume proposal already has an established measure-theoretic
+realization in~\eqref{eq:polyhedralpartition}, and the tree methods described
+in Section~\ref{sec:hyperideal} also compute bordered genus-zero volumes.
+The following fifteen questions start from the results and explicit
+hypotheses of the preceding chapters. They isolate further research,
+not claims that no related results exist. The local formulas, external
+theorem inputs, conditional estimates, and finite computations supporting
+each starting point have different roles. Resolving these questions is
+not a prerequisite for publishing those results with their stated limits.
+
+\begin{question}[Direct hyperideal integration]
+For four labeled geodesic boundaries of fixed positive lengths, can the
+domains and local density~\eqref{eq:hyperidealdensity} be integrated
+directly, with all cell and symmetry factors, to recover the already
+known volume $2\pi^2+\frac12\sum_iL_i^2$ in~\eqref{eq:basevolumes}?
+Which change of variables makes the polynomiality visible in these
+hyperideal coordinates? The positive-boundary extension described in
+Section~\ref{sec:hyperideal} uses a selected pair $L_1<L_2$ to give a
+full-measure decomposition into tree and double-tree cells
+\cite[Theorem~3]{Zonneveld}. Equal-length volume values follow by
+continuity. These spine/tree cells are not identified with the
+hyperideal angle cells.
+\end{question}
+
+\begin{question}[A usable measure on general polyhedral cells]
+The inverse-Poisson formula~\eqref{eq:pfaffiandensity} is already a local
+density on a symplectic leaf. Can it be expressed in independent
+dihedral-angle variables in a way that makes higher-dimensional cell
+integrals useful? A calculation must specify the coordinate Jacobian,
+the fixed hyperideal boundary lengths or compact cone openings, and the
+geometric chamber and quotient. In the ideal case the disintegrated
+measure~\eqref{eq:deltameasure} supplies a simple model; a determinant
+in redundant angle coordinates does not by itself supply the replacement.
+\end{question}
+
+\begin{question}[Gluing and topology]
+Can a polyhedral description be combined with Fenchel--Nielsen gluing to
+give a practical calculation for arbitrary $(g,n)$? A proposed formula
+must specify both the cutting multiplicity and the full mapping-class
+quotient, including stabilizer weights. The twist periods in~\eqref{eq:fn}
+remove the Dehn-twist ambiguity along a chosen cut; they do not make
+all pants-length coordinates a fundamental domain for moduli space.
+\end{question}
+
+\begin{question}[Curvature corrections in period coordinates]
+Can the correction class $\Xi_\mu$ in~\eqref{eq:Xiclass} be represented
+by an explicit first curvature correction to the WP form in
+the actual finite-area conformal coordinates? Equation~\eqref{eq:Frickefirstcorrection}
+answers the local four-point calculation in a blown-up character chart,
+whose conversion to conformal coordinates is still required.
+How does the local density behave
+in a joint limit toward a balanced collision wall, where the
+final-chamber expansion is not uniform in the weights?
+\end{question}
+
+\begin{question}[Beyond the regular quantum degeneration]
+Can Proposition~\ref{prop:regularquantumAiry}, for the pole-cleared
+equal-label family and bounded real transition parameter, be extended
+uniformly over compact sets of nondegenerate Euclidean tetrahedral
+shapes, with a geometric description of the required scalar normalization?
+Can a geometric state
+integral in that regime produce the Thurston--Deligne--Mostow measure
+on the boundary-shape space? The model~\eqref{eq:modelpartition}
+specifies a classical comparison, not an identification with an
+existing quantum invariant. The exact Liouville
+identity~\eqref{eq:exactLiouvillecurvature} and the torsion
+limit~\eqref{eq:torsionDMlimit} identify two precise boundary
+constructions; the auxiliary-tetrahedron obstruction and the
+different regimes in~\eqref{eq:areaLiouvillecharge} explain
+what remains to connect them to that joint asymptotic.
+The finite one-screening fusion calculation in
+Section~\ref{sec:screenedfusion} computes the finite period and
+residue-sector comparison, with a logarithmic limit at balanced
+weights. Its direct infinite-spectral derivation uses the
+continuation and tail-control input~\eqref{eq:screeningtailinput};
+Section~\ref{sec:normalizedsixj} fixes the quantum-group
+normalization, proves the rank-two obstruction, and computes
+the classical rank-three fold in the regular compact model.
+Section~\ref{sec:quantumAiry} proves the regular-family formula with
+its first correction using the exact integration-coordinate dictionary,
+pole clearing, contour and tail estimates. Its finite exact-integrand
+evaluations test that normalization on specified inputs. They give no
+uniform theorem for arbitrary shapes, unbounded transition parameter,
+or global gluing. The fixed-shape root-of-unity theorems in
+Section~\ref{sec:quantumdegeneration} have their own admissible label
+sequences; the refined Chen--Murakami prefactor has stricter sequence
+hypotheses than the leading volume limit. Neither supplies this joint
+degeneration or identifies its measure.
+\end{question}
+
+\begin{question}[Uniform quantum Dehn filling]
+For a knot complement admitting the positive geometric optimization
+of Section~\ref{sec:dehnresponse}, can an exact quantum surgery
+representation be controlled uniformly in a complex neighborhood
+of complete peripheral holonomy, with a nonzero geometric contribution
+and bounds on all competing terms? Proposition~\ref{prop:dehncriticalvalue}
+already fixes every classical long-slope coefficient, and
+\eqref{eq:dehngaussiantorsion} specifies the torsion check. The further
+issue is the analytic input of
+Proposition~\ref{prop:dehnquantumconditional}, especially in a joint
+limit where the slope varies with the quantum level.
+\end{question}
+
+
+\begin{question}[Certified realization and quantitative angle bounds]
+For the planar problem of Section~\ref{sec:ipolybridge}, can the
+finite-centering certificate and short-step iteration estimate
+\eqref{eq:ipolyStepBound} be combined with positive-feasibility search,
+controlled inexact solves, and geometric error certification into a
+complete complexity theorem with explicit input and precision dependence?
+The existing iteration estimate starts from a specified centered
+feasible point; the dense finite examples do not bound the cost of
+finding that point or certify their floating-point errors.
+For a three-manifold angle
+polytope whose maximum is interior, which additional geometric hypotheses
+bound its smallest angle in terms of the combinatorial input and a
+quantitative feasible margin? The planar Laplacian sign structure does
+not extend automatically to the full three-dimensional Hessian.
+\end{question}
+
+\begin{question}[A continuum comparison of second variations]
+Can a family of refined polyhedral functionals, with specified geometric
+convergence and normalization, have a second-variation limit related to
+a WP potential? The exact cotangent identity, Schur complement, and
+Gaussian determinant in Section~\ref{sec:ipolybridge} provide discrete
+objects for such a comparison, with the stated boundary grounding or
+quotient by constants. Control of their refinement limits and an
+explicit identification of the target metric are still required;
+finite determinant identities supply neither.
+\end{question}
+
+\begin{question}[Continuation of a coefficient Laplace transform]
+For a fixed nonempty multicurve on the closed surface of
+Section~\ref{sec:coefficientdistributions}, does $D_C(s)$ admit a
+meromorphic continuation beyond the proved half-plane $\Re s>1$?
+The kernel in~\eqref{eq:coeffLaplacedefinition} is $e^{-sL}$.
+A proof must control coefficient extraction in a suitable topology
+on the continued character-valued expression: extraction is not
+bounded for the uniform norm on unitary characters. Pointwise
+continuation of twisted Selberg functions does not justify that step.
+\end{question}
+
+\begin{question}[Control of the globally filtered remainder]
+Proposition~\ref{prop:globalonecrossing} gives a bounded global
+cancellation of every one-crossing primitive and all its iterates.
+Can the signed residual $\mathcal R_X$ in~\eqref{eq:globalresidual}
+be estimated with constants controlled by the geometry of $X$?
+The exact obstruction~\eqref{eq:globalobstruction} rules out a
+perfect selector in the specified class of fixed linear functionals.
+Length-dependent cancellation or the nonlinear diagonal extraction
+in~\eqref{eq:globaldiagonal} retains information that such a selector
+discards. The latter is an exact length-valued construction, whose
+quantitative stability under approximation remains an additional task.
+\end{question}
+
+\begin{question}[Effective selection of connected supports]
+Can the signed coefficient relations produce the smoothed estimate
+\eqref{eq:countsmoothhypothesis} with specified $\eta,m$ and geometric
+constants? The elementary lattice remainder, the stable finite support
+projection~\eqref{eq:countsupportfourier}, and the constructive isolation
+estimate are available. The global one-crossing filter and the
+length-valued Euler product now provide concrete aggregate objects.
+An estimate for the higher-intersection residual or for the nonlinear
+first-atom extraction, uniform over the growing family of supports and
+strong enough to yield a counting saving, remains to be proved.
+Fixed-coefficient isolation does not supply this aggregate estimate.
+\end{question}
+
+\begin{question}[From weighted curve counts to mixing]
+Can the filling-pair coefficient construction of
+Section~\ref{sec:pairconverse} produce a norm-controlled estimate
+for the weighted orbit kernel~\eqref{eq:twopointkernel} without
+assuming mixing? Proposition~\ref{prop:twopointunfolding} gives the
+exact unfolding with the reciprocal polar Jacobian. Under the assumed
+estimate for terminal tests $H_G=(h+V)G$, with $F\in L^2(\mu)$,
+$G\in\operatorname{Dom}(V)$ and $0<\delta\le h$,
+Theorem~\ref{thm:twopointfullrate} preserves
+the counting exponent $\delta$. A bound for one endpoint test alone
+has the weaker de-averaging conclusion of
+Theorem~\ref{thm:twopointconverse}. The norm-controlled two-endpoint
+estimate, its Jacobian weights, and the noncompact tail remain to be
+established by this coefficient route for the principal-stratum kernel;
+a scalar area or length count is insufficient.
+Section~\ref{sec:genus2markedtorus}
+settles the separate affine return estimate on the nonsquare $(2,2)$
+stratum, and Section~\ref{sec:coefficientobservables} gives selected
+primitive-arc coefficient observables with uniform geometric norms.
+Can their class be enlarged to control the full two-endpoint kernel,
+with quantitative stability of the nonlinear coefficient extraction
+and passage from auxiliary hyperbolic lengths to area on the
+simultaneous mapping-class quotient? Can the calculation be extended
+beyond the marked-torus locus with its distinct invariant measure?
+\end{question}
+
+\begin{question}[The sharp norm-ball remainder]
+Can the qualitative $o_X(L\log L)$ remainder of
+Proposition~\ref{prop:strictconvexlittleo} be made effective through a
+decay modulus satisfying~\eqref{eq:primitiveDini}, or through cancellation
+in~\eqref{eq:primitiveexactnormalizedmobius}? The inverse-flatness
+formula~\eqref{eq:inverseflatmicroscopic} quantifies a local lower
+obstruction, while~\eqref{eq:dyadicerrorinverse} gives a test independent
+of the leading coefficient. Determining whether the primitive remainder
+is $O_X(L)$, or has an unbounded slowly varying factor, remains open here.
+Section~\ref{sec:arithmeticgeometry} makes the two inputs explicit:
+$\Delta_B(u)=O(u/\log u)$ together with any fixed Mertens power
+saving gives $O_X(L)$, whereas an integrable geometric modulus and
+the prime number theorem already give $o_X(L)$.
+The all-point target is itself conditional on compatibility with the
+local geometry: under the supporting-row hypotheses of
+Proposition~\ref{prop:inverseflatrow}, it requires
+$W(h/L^2)=O(1/\log L)$ at the contact scales $L=n/h$.
+The double-exponential model in Section~\ref{subsec:flatnessmodels}
+violates that necessary condition. No such supporting configuration
+or compatible modulus is established for the two computed tori.
+The maintained length-$8192$ campaign evaluates the finite diagnostic
+\eqref{eq:allPointLogDiagnostic} in hyperbolic length units; the
+unit-shortest-vector gauge requires rescaling by the systole.
+It reproduces the displayed counts and block values, but the original
+precision and sensitivity archive remains unrecovered. Its new
+sampled precision checks and conditional sensitivity envelopes must
+retain their own provenance. Neither a finite range nor an assumed
+arithmetic saving determines the missing geometric modulus.
+\end{question}
+
+\begin{question}[Beyond closure operations]
+Which positive constant series have a geometric partition or a useful
+functional equation behind them? The figure-eight kernel
+\eqref{eq:universalkernel} and the twist kernel~\eqref{eq:Kkernel} provide
+two concrete models. Their different index sets suggest separating
+global curve identities from identities for a distinguished twist orbit.
+\end{question}
+
+\begin{question}[A boundary phase-space formulation]
+Can the endpoint-and-direction matching relations in
+Section~\ref{sec:matching} be organized into an integration scheme for
+general filling curves? Orthogeodesic lengths give the canonical local
+geometry, while the endpoint phase variables retain the missing gluing
+information. A useful result would specify the invariant measure,
+matching multiplicities and convergence of both the itinerary sum and
+the phase-variable integrals. A cusp version must also retain the
+truncation convention of Section~\ref{sec:cusps}; its
+almost-everywhere cusp-normal-ray discussion assumes no geodesic
+boundary. Surfaces with geodesic boundary require the additional
+exiting-ray contributions.
+\end{question}
+
+These questions concern concrete integrals or pointwise identities. The
+distinctions established above---fixed parameters, geometric chambers,
+correct curve types, and specified measures---are part of their statements,
+rather than technicalities to be added after a formal calculation.
+
+\paragraph{Computational support.}
+The maintained normalization, Hessian/barrier, quantum/surgery,
+regular-family exact-integrand, counting/mixing, and finite
+quantum/geodesic companions test specified identities or parameter sets.
+The last companion is described in
+\path{experiments/quantum_geodesics/README.md}, with result path
+\path{artifacts/quantum_geodesics/result.json}. Its local trace, twist,
+cusp and quantum formulas retain the finite scope of the named groups.
+The torus campaign adds
+finite length and event data. These computations are mapped to the
+questions in \path{claims/section32-appendixb.json}, with their result
+paths and limits. They do not implement direct general-cell integration,
+global quantum gluing, a stable infinite coefficient extractor, or an
+independent proof of a mixing or lattice-remainder rate. Such extensions
+require their stated analytic or geometric inputs before a numerical
+experiment could test a well-defined instance.

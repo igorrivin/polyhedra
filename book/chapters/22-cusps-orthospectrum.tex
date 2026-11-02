@@ -1,0 +1,205 @@
+\section{Cusps, McShane gaps, and the orthospectrum}
+\label{sec:cusps}
+
+\subsection{Which geodesics enter a cusp?}
+
+Throughout, the surface is oriented, hyperbolic of curvature $-1$, and
+has no cone points. The statements that simple closed geodesics avoid a sufficiently deep cusp
+and that simple cusp-ended geodesics enter the cusp are compatible. The
+first concerns a returning excursion; the second concerns an actual end.
+
+Here is an elementary version of the distinction. Normalize a cusp
+stabilizer in the upper half-plane to $z\mapsto z+1$. A geodesic with two
+finite ideal endpoints $u<v$ is a semicircle of radius $(v-u)/2$. If
+$v-u>1$, its endpoints interlace those of its translate:
+\[
+ u<u+1<v<v+1.
+\]
+The two geodesics intersect, so the projected geodesic is not simple.
+Therefore a simple geodesic with two finite endpoints cannot reach height
+greater than $1/2$. A geodesic reaching farther into this lifted cusp
+while remaining simple must have $\infty$ as an endpoint, and is vertical.
+It is perpendicular to every horocycle based at that endpoint.
+
+Choose $Y>1/2$ large enough that the horocycle $H=\{y=Y\}/\langle z\mapsto
+z+1\rangle$ bounds an embedded sufficiently deep cusp. Simple closed
+geodesics never cross $H$. Complete simple geodesics with a cusp end do
+cross it, normally, and continue indefinitely toward that end.
+
+\subsection{The family used in the gap argument}
+
+For this gap discussion assume that the surface is complete, has finite
+area and at least one cusp, and has no geodesic boundary. A surface with
+geodesic boundary has additional families of cusp-issued rays that exit
+through it, and needs the corresponding boundary gap terms.
+
+At a point $x\in H$, take the normal geodesic directed away from the
+cusp. A lift is
+\begin{equation}
+ \widetilde\gamma_x(t)=x+iYe^{-t}.
+ \label{eq:cuspray}
+\end{equation}
+Its backward end tends to the cusp. Its forward continuation enters the
+rest of the surface. The relevant question is whether that whole
+continuation remains simple; the short portion inside the cusp is
+automatically simple.
+
+McShane's gap argument partitions the horocycle using the behavior of
+these cusp-issued geodesics. Almost every direction eventually develops
+the relevant intersection pattern. The exceptional simple directions
+have measure zero and include cusp-to-cusp arcs and rays spiraling toward
+closed geodesics or minimal laminations
+\cite{McShane}\cite[Theorem 3, p.~4, and the paragraph after
+Corollary 5, p.~5]{McShanePants}.
+In some conventions a gap contains an isolated simple cusp-to-cusp
+direction; its interior is therefore not literally made entirely of
+nonsimple directions. The measure statement is unaffected.
+
+For a cusp pants contribution whose two other cuffs are interior, with
+lengths $a,b$ (allowing their identification on the torus), the combined
+normalized gap is
+\begin{equation}
+ \frac{2}{1+e^{(a+b)/2}}.
+ \label{eq:cuspgap}
+\end{equation}
+For example, this is the limit as $L\downarrow0$ of the geodesic-boundary
+combined gap divided by $L$:
+\[
+ \frac{2}{L}\log
+ \frac{e^{L/2}+e^{(a+b)/2}}{e^{-L/2}+e^{(a+b)/2}}
+ \longrightarrow \frac{2}{1+e^{(a+b)/2}}.
+\]
+The boundary gap is Mirzakhani's $\mathcal D$ contribution
+\cite[Lemma 3.1, equation (3.1), and Theorem 4.2]{MirzVolumes}. This calculation fixes the
+normalization; the null-set and pants-indexing arguments are separate
+external inputs.
+On the punctured torus the two cuffs are copies of one simple curve
+$\alpha$, so $a=b=\ell_\alpha$. The gap contributions sum to one,
+which is precisely~\eqref{eq:mcshane}. The simple closed curve occurring
+in the formula labels the pants and their gap. It is not the geodesic
+crossing the deep horocycle.
+
+\subsection{An exact truncated cusp-arc formula}
+
+Fix a sufficiently small embedded cusp horocycle of length $H>0$; here $H$ now
+denotes its length rather than the horocycle as a set. In pants with other
+cuffs $a,b$, let $\eta$ be the simple cusp-to-cusp geodesic arc separating
+those cuffs. Truncate its two ends at the horocycle and let $d_\eta$ be
+the resulting length. With the convention $\lambda_\eta=e^{d_\eta/2}$,
+\begin{equation}
+ \boxed{e^{d_\eta/2}=\frac{t_a+t_b}{H},
+        \qquad t_a=2\cosh(a/2),\quad t_b=2\cosh(b/2).}
+ \label{eq:cusplambda}
+\end{equation}
+The other cuffs may be geodesic or cuspidal, so $a,b\geq0$.
+The formula also holds for signed truncated lengths of decorations before
+the horocycle has been made small enough; this does not assert that an
+arbitrarily large decorated horocycle is embedded.
+
+\begin{proof}
+Normalize the cusp parabolic and horocycle to
+\[
+ P=\begin{pmatrix}1&q\\0&1\end{pmatrix},\quad q>0,\qquad y=Y,
+ \qquad H=q/Y.
+\]
+Choose cuff holonomy lifts $A,B$ with $AB=P$, $\tr A=t_a$ and
+$\tr B=-t_b$, and write $c_A$ for the lower-left entry of $A$. Then
+\[
+ \tr(A^{-1}P)=t_a-qc_A=-t_b,
+ \qquad qc_A=t_a+t_b.
+\]
+The image under $A$ of the horizontal horocycle has Euclidean diameter
+$1/(c_A^2Y)$ and is based at $A(\infty)$. The vertical ideal geodesic
+from $\infty$ to this point represents the separating return arc.
+The upper intersection with that image horocycle is at height
+$1/(c_A^2Y)$, so its signed truncated distance is
+$\log(c_A^2Y^2)$ and satisfies
+$e^{d_\eta/2}=|c_A|Y$. Substituting $H=q/Y$ proves the formula.
+\end{proof}
+
+On the once-punctured torus, essential unoriented simple cusp-to-cusp arc
+classes correspond to essential unoriented simple closed-curve classes:
+each is the unique such class disjoint from the other
+\cite[Proposition 14.1(i),(iv)]{Springborn}. Cutting along the
+closed curve gives $(a,a,0)$ pants, hence
+\begin{equation}
+ e^{d_\alpha/2}=\frac{2t_\alpha}{H}
+              =\frac{4\cosh(\ell_\alpha/2)}{H}.
+ \label{eq:toruscusplambda}
+\end{equation}
+As a check, each decorated ideal triangle contributes horocyclic corner
+lengths $u/(vw)$, $v/(uw)$ and $w/(uv)$ in the convention
+$\lambda=e^{d/2}$~\cite[Section 11, equation (30)]{Springborn}.
+The two triangles of a torus therefore give
+$H=2(u^2+v^2+w^2)/(uvw)$, as in that paper's Section 12.
+By~\eqref{eq:toruscusplambda}, the positive trace of the curve disjoint
+from edge $u$ is $Hu/2$. Thus the trace conversion is derived here from
+the cusp-parabolic calculation, with no additional factor of $\sqrt2$
+in the lambda convention.
+
+Substitute $t_\alpha=(H/2)e^{d_\alpha/2}$ into
+$\sum_\alpha h(t_\alpha)=1$. This gives a literal orthospectral form of
+McShane's identity:
+\begin{equation}
+ \boxed{
+ \sum_{\eta\text{ simple, unoriented cusp-to-cusp}}
+ \left(1-\sqrt{1-\frac{16e^{-d_\eta}}{H^2}}\right)=1.}
+ \label{eq:cusporthoidentity}
+\end{equation}
+All square roots use the nonnegative real branch. Indeed,
+$16e^{-d_\eta}/H^2=4/t_\alpha^2<1$, so the summands are real and
+positive, even when a chosen signed truncated length is negative.
+The index set retains the topological arc labels. Scaling the horocycle
+length by $k$ changes each truncated length to $d_\eta-2\log k$;
+therefore $e^{-d_\eta}/H^2$ and every summand are decoration-independent.
+
+\subsection{The precise relation to Basmajian's identity}
+
+For a compact hyperbolic surface with nonempty geodesic boundary,
+Basmajian's boundary-length identity is, with oriented orthogeodesics,
+\begin{equation}
+ \ell(\partial X)=
+ \sum_{\eta\text{ oriented}}2\log\coth\left(\frac{\ell_\eta}{2}\right).
+ \label{eq:basmajian}
+\end{equation}
+The oriented convention and this normalization are also explicit in
+\cite[Section 4.2, p.~26]{Parlier}.
+If each unoriented orthogeodesic is counted only once, the coefficient is
+$4$ instead of $2$. This spectrum includes nonsimple arcs. The gap comes
+from the shadow on a boundary lift of another boundary lift, and
+hyperbolic trigonometry expresses its length in terms of their common
+perpendicular. To see the coefficient directly, take one boundary lift
+to be $x=0$ and the other the semicircle with center $\coth d$ and
+radius $\operatorname{csch}d$, where $d=\ell_\eta>0$. Its ideal endpoints
+are $\tanh(d/2)$ and $\coth(d/2)$. Their perpendicular projections to
+$x=0$ have these heights, and the shadow length is
+$\log(\coth(d/2)/\tanh(d/2))=2\log\coth(d/2)$.
+The opposite orientation records the shadow at the other end. For a
+large $d$, the equivalent expression
+$2\log(1+2e^{-d}/(1-e^{-d}))$ retains the positive gap without subtracting
+nearby numbers.
+
+Equation~\eqref{eq:cusporthoidentity} uses the \emph{simple, truncated
+cuspidal orthospectrum}. Generic normal rays in the McShane gaps are not
+the canonical returning orthogeodesics, and adding all nonsimple cusp arcs
+would change the identity. Thus the orthospectrum interpretation is exact
+after the index set, truncation, and weights have been specified.
+
+Parlier's coherent-marking framework gives a systematic bridge between
+these boundary and cusp identities~\cite{Parlier}. The common mechanism
+is a measure decomposition of boundary initial data, with orthogeodesic
+geometry computing gaps. What differs is the chosen stopping or marking
+rule and the resulting index set. This is the useful sense in which the
+pants, McShane, and Basmajian pictures fit together. A finite selection
+of cusp arcs or orthogeodesics is not a verified approximation to these
+whole-surface identities unless its omitted classes are also controlled.
+
+\paragraph{Computational support.}
+Groups G9--G10 of \path{experiments/quantum_geodesics/README.md}
+check exact parabolic/decoration and ideal-triangle identities,
+alongside finite local shadow and orientation-factor comparisons.
+Signed truncation and stable small positive shadow formulas are
+retained. These are not a discrete-holonomy certificate, a complete
+orthospectrum enumeration or a numerical proof of its global identity.
+The result path is \path{artifacts/quantum_geodesics/result.json},
+with claim pointers in \path{book/claims/sections17-22.json}.
