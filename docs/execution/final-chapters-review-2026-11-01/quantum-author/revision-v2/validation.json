@@ -1,0 +1,93 @@
+{
+  "finding": "QR01",
+  "author_repair_status": "completed_pending_independent_exact_byte_acceptance",
+  "before_ledger_sha256": "ea22e86c4399d4d3fcf83c938144373c89367cb7f9ce1a074b866499000ce1cb",
+  "after_ledger_sha256": "34dbb6255dc468cb796bb3a129eeaf37ac0c5f4dc358abfd73030e64331b3539",
+  "added_dependency_pins": {
+    "book/chapters/03-ideal-tetrahedron.tex": "81c51ade3378fbfd4baff1cebeb2dcdd8b0fd43a032ac45fb3b30c4908060797",
+    "book/claims/sections7-8.json": "7438f1b5c8fde23fa81b0b1c3250d2965debf79678026d649bd7ff7cd368439d"
+  },
+  "all_dependency_pins_validated": {
+    "book/chapters/03-ideal-tetrahedron.tex": "81c51ade3378fbfd4baff1cebeb2dcdd8b0fd43a032ac45fb3b30c4908060797",
+    "book/chapters/08-wp-flat-limit.tex": "1a175315aa975708a5c93151b9ae107b7dd36f79720dae7c7264adda062a6283",
+    "book/chapters/12-quantum-boundary-measure.tex": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+    "book/chapters/13-four-point-fusion.tex": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+    "book/chapters/14-normalized-quantum-comparison.tex": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+    "book/chapters/15-quantum-airy.tex": "efee2c699923ab31e4d7d48eeac57c60bf2ea088ea4ff17e617b9ed97202d6dd",
+    "book/chapters/16-dehn-filling-response.tex": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+    "book/claims/sections7-8.json": "7438f1b5c8fde23fa81b0b1c3250d2965debf79678026d649bd7ff7cd368439d",
+    "book/claims/sections12-14.json": "fecb43e3327f9f659afbd841f8b9ee10a2c75fa0b3a7694655beabc7675d53c7",
+    "book/claims/section15.json": "2a53176d95601bd09448326a34b203f1e05bd46dc6eee182226af36b24a2fb96",
+    "book/claims/section16.json": "dc24ca2ca1514446b5bd862f7632942a36f5e5d2bf07065a40b959bed3ce6531"
+  },
+  "dependency_count": 11,
+  "chapter_sha256_unchanged": {
+    "book/chapters/10-quantum-introduction.tex": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+    "book/chapters/11-quantum-degeneration.tex": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9"
+  },
+  "two_line_insertion_only": true,
+  "mathematical_claims_unchanged": true,
+  "independent_review_status_unchanged": {
+    "status": "pending_separate_hash_bound_review"
+  },
+  "initial_author_evidence_preserved": true,
+  "initial_evidence_file_count": 25,
+  "ledger_single_final_newline": true,
+  "whitespace_checks": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "--",
+        "book/chapters/10-quantum-introduction.tex",
+        "book/chapters/11-quantum-degeneration.tex",
+        "book/claims/sections10-11.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "book/chapters/10-quantum-introduction.tex"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "book/chapters/11-quantum-degeneration.tex"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "book/claims/sections10-11.json"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "whitespace_note": "No-index exit 1 denotes differences against /dev/null; no whitespace diagnostics occurred.",
+  "scope": "Metadata repair only. No chapter edits, self-assigned independent approval, commit, build, companion implementation or upload."
+}

@@ -1,0 +1,99 @@
+{
+  "commands": [
+    {
+      "mode": "normal",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_checkpoint.GateTests.test_reference_identity_default_and_explicit_shapes_preserve_approval",
+        "test_checkpoint.GateTests.test_reference_identity_rejects_missing_extra_keys_bad_types_and_undeclared_shapes",
+        "test_checkpoint.GateTests.test_reference_identity_rejects_unsafe_noncanonical_and_mismatched_paths",
+        "test_checkpoint.GateTests.test_path_record_real_shaped_synthetic_replay_and_comparison_admission",
+        "test_checkpoint.GateTests.test_path_record_altered_path_rejected_before_launch_and_comparison_with_receipts",
+        "test_checkpoint.GateTests.test_synthetic_actual_command_success",
+        "test_checkpoint.GateTests.test_unused_approval_drift_fails",
+        "test_checkpoint.GateTests.test_comparison_detects_input_drift_after_comparing",
+        "test_checkpoint.GateTests.test_CR02_unconnected_36_files_without_entry_rejected_before_launch"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/subject-v3",
+      "observed_exitcode": 0,
+      "tests": 9,
+      "stdout": {
+        "path": "normal.stdout.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "normal.stderr.txt",
+        "sha256": "2f808c9a65c721c68e7e399860be6353ee6f13080dc336c8899f4373ed600be0",
+        "bytes": 1554
+      }
+    },
+    {
+      "mode": "optimized",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "-v",
+        "test_checkpoint.GateTests.test_reference_identity_default_and_explicit_shapes_preserve_approval",
+        "test_checkpoint.GateTests.test_reference_identity_rejects_missing_extra_keys_bad_types_and_undeclared_shapes",
+        "test_checkpoint.GateTests.test_reference_identity_rejects_unsafe_noncanonical_and_mismatched_paths",
+        "test_checkpoint.GateTests.test_path_record_real_shaped_synthetic_replay_and_comparison_admission",
+        "test_checkpoint.GateTests.test_path_record_altered_path_rejected_before_launch_and_comparison_with_receipts",
+        "test_checkpoint.GateTests.test_synthetic_actual_command_success",
+        "test_checkpoint.GateTests.test_unused_approval_drift_fails",
+        "test_checkpoint.GateTests.test_comparison_detects_input_drift_after_comparing",
+        "test_checkpoint.GateTests.test_CR02_unconnected_36_files_without_entry_rejected_before_launch"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/subject-v3",
+      "observed_exitcode": 0,
+      "tests": 9,
+      "stdout": {
+        "path": "optimized.stdout.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "optimized.stderr.txt",
+        "sha256": "68fa7b8e2f706029bb5bb3c789da02bafffa4b5779c51475d237f007d2468cd5",
+        "bytes": 1554
+      }
+    },
+    {
+      "mode": "ruff",
+      "argv": [
+        "/opt/anaconda3/bin/ruff",
+        "check",
+        "--no-cache",
+        "checkpoint_lib.py",
+        "run_clean_replay.py",
+        "compare_replays.py",
+        "verify_checkpoint.py",
+        "test_checkpoint.py"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/subject-v3",
+      "observed_exitcode": 0,
+      "stdout": {
+        "path": "ruff.stdout.txt",
+        "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+        "bytes": 19
+      },
+      "stderr": {
+        "path": "ruff.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    }
+  ],
+  "independent_probes_per_mode": 57,
+  "unexpected_outcomes": [],
+  "independent_probe_script_ruff": "Passed in observed tool output",
+  "unchanged_v2_review_reuse": "31 library functions, all50prior test bodies, three entry-point files, and checkpoint contract retained exactly. Nine selected tests cover allfiveadded tests plus default approval, drift, comparison failure and graph rejection.",
+  "scope": "Synthetic preparation verification and actual frozen approval/report reads only; no science replay or evolving live source audit."
+}

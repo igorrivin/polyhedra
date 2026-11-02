@@ -1,0 +1,52 @@
+{
+  "optimization": 0,
+  "all_rejections_passed": true,
+  "canonical_or_author_evidence_writes": false,
+  "cases": [
+    {
+      "case": "modified frozen source",
+      "result": "rejected as required",
+      "error": "Git baseline/frozen recursive bytes differ"
+    },
+    {
+      "case": "modified live source",
+      "result": "rejected as required",
+      "error": "Git baseline/live recursive bytes differ"
+    },
+    {
+      "case": "modified unrelated tracked file",
+      "result": "rejected as required",
+      "error": "out-of-scope tracked changes: ['.github/workflows/ci.yml', 'book/polyhedral_volumes_and_geodesic_identities.tex']"
+    },
+    {
+      "case": "modified inventory receipt",
+      "result": "rejected as required",
+      "error": "evidence digest mismatch: baseline-tracked-inventory.json"
+    },
+    {
+      "case": "unsafe include ../escape.tex",
+      "result": "rejected as required",
+      "error": "unsafe include: ../escape.tex"
+    },
+    {
+      "case": "unsafe include /tmp/escape.tex",
+      "result": "rejected as required",
+      "error": "unsafe include: /tmp/escape.tex"
+    },
+    {
+      "case": "unsafe include chapters/$dynamic.tex",
+      "result": "rejected as required",
+      "error": "unsafe include: chapters/$dynamic.tex"
+    },
+    {
+      "case": "include cycle",
+      "result": "rejected as required",
+      "error": "cycle: book/main.tex"
+    },
+    {
+      "case": "inline include",
+      "result": "rejected as required",
+      "error": "unsupported include line: book/main.tex:1"
+    }
+  ]
+}

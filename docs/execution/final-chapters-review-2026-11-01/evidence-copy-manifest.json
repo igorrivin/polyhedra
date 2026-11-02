@@ -1,0 +1,3163 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "151673b1817e66aae493eb7da1be5ddf49adfe0f",
+  "source_commit": "8f722ae462307146818932cde4811e4bb4e8423e",
+  "recorded_at_utc": "2026-11-02T05:08:44.580746+00:00",
+  "files": [
+    {
+      "path": "artifacts/final-chapters-review-2026-11-01/monograph-working-draft.pdf",
+      "outer_source": "integration-review/pdf-build/main.pdf",
+      "sha256": "5bb873e52a4fe668d74f6137150d5e1180f75d6ed1c93bff21724e5b8bcf4c83",
+      "bytes": 1522690,
+      "purpose": "Exact independently reviewed precommit PDF, all 36 committed inputs matched"
+    },
+    {
+      "path": "artifacts/quantum_geodesics/result.json",
+      "outer_source": "clean-source/result.json",
+      "sha256": "a8b5aea0d3bce364f069506d5b96a09ce03a49c0219fbe8bf070e61f1ead35ae",
+      "bytes": 4690689,
+      "purpose": "Actual single clean-source result"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/README.md",
+      "outer_source": "candidate-curation/README.md",
+      "sha256": "a1e403467eb6be19bceab74aae4fe768879bbdfdadd04e6ffd7b527d7e74a8f5",
+      "bytes": 2522,
+      "purpose": "Final reader documentation for completed source/replay/PDF stages"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/artifact-whitespace-exceptions.json",
+      "outer_source": "candidate-curation/artifact-whitespace-exceptions.json",
+      "sha256": "423226b2b95c51fccaeccb1530a3a3d7a2ab200b32d49b9095869f542d43b4ae",
+      "bytes": 77432,
+      "purpose": "Exact current copied verbatim artifact whitespace diagnostics; candidate approval required"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-contract.json",
+      "outer_source": "candidate-curation/checkpoint-contract.json",
+      "sha256": "941025ed54c8f1dd5c9688120661af218b26b36f70228e49cdb06366c8116705",
+      "bytes": 7168,
+      "purpose": "Actual bound candidate checkpoint contract"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-contract.unready.json",
+      "outer_source": "checkpoint-work/revision-v3/checkpoint-contract.unready.json",
+      "sha256": "532405b78e4ed2ea64d7b2044f412a184c67f3d16428763e083a6a4f6ecb4748",
+      "bytes": 4510,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/actual-bindings-v1/check_actual_bindings.py",
+      "outer_source": "checkpoint-review/actual-bindings-v1/check_actual_bindings.py",
+      "sha256": "4386b46e7e6be64fd168ac419395b06b2667953c1cba6d1f1aa17941824daea4",
+      "bytes": 12601,
+      "purpose": "Independent checkpoint actual-binding/preparation acceptance and evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/actual-bindings-v1/final-acceptance.json",
+      "outer_source": "checkpoint-review/actual-bindings-v1/final-acceptance.json",
+      "sha256": "da211daea1c701244295f6581abcb282b225531bb03b4590b15f6e8429a03070",
+      "bytes": 6559,
+      "purpose": "Independent checkpoint actual-binding/preparation acceptance and evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/actual-bindings-v1/independent-checks.json",
+      "outer_source": "checkpoint-review/actual-bindings-v1/independent-checks.json",
+      "sha256": "a26d84f1ea40376d896b735b43690773385955b62e5e991300f23b279b302062",
+      "bytes": 331115,
+      "purpose": "Independent checkpoint actual-binding/preparation acceptance and evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/actual-bindings-v1/pdf-binding-inputs.json",
+      "outer_source": "checkpoint-review/actual-bindings-v1/pdf-binding-inputs.json",
+      "sha256": "40168447fc61a6732097b227383b27a32a6d895a7f6f8389b9ea1a53ed76c7d6",
+      "bytes": 474,
+      "purpose": "Independent checkpoint actual-binding/preparation acceptance and evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/actual-bindings-v1/review-manifest.json",
+      "outer_source": "checkpoint-review/actual-bindings-v1/review-manifest.json",
+      "sha256": "0d8556d0b75edfcd9d4a543eeef46eb2b76aa89aef29f94d5bd794150ca5cfb4",
+      "bytes": 993,
+      "purpose": "Independent checkpoint actual-binding/preparation acceptance and evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/actual-bindings-v1/review.md",
+      "outer_source": "checkpoint-review/actual-bindings-v1/review.md",
+      "sha256": "b86e9dfe0c584871514655c8a718e87f7bad7792e288c3716232523494dc3006",
+      "bytes": 3693,
+      "purpose": "Independent checkpoint actual-binding/preparation acceptance and evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/actual-bindings-v1/subject-freeze.json",
+      "outer_source": "checkpoint-review/actual-bindings-v1/subject-freeze.json",
+      "sha256": "6ea7e63b635d78b0f9f713c6f492427511c231ddec40e39616949c0bc6a1f193",
+      "bytes": 68745,
+      "purpose": "Independent checkpoint actual-binding/preparation acceptance and evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/anti-pattern-review.json",
+      "outer_source": "checkpoint-review/anti-pattern-review.json",
+      "sha256": "2cd2c591b6017020b14bc9d97b15477d59e493bf11f5cf07c0e9a8ecd4630b35",
+      "bytes": 1660,
+      "purpose": "Checkpoint-tool CR01/CR02 independent failure evidence and synthetic probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/command-receipts.json",
+      "outer_source": "checkpoint-review/command-receipts.json",
+      "sha256": "177d70ba8ccebfac0b5fd4cf20676ab270abecb17f64ac0a7dca66f4e81763f6",
+      "bytes": 2852,
+      "purpose": "Checkpoint-tool CR01/CR02 independent failure evidence and synthetic probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/independent-probes-normal.json",
+      "outer_source": "checkpoint-review/independent-probes-normal.json",
+      "sha256": "7c654d24d8400542c33fb0a02250287ce482212c6a7d55add94150f8682be1d8",
+      "bytes": 5216,
+      "purpose": "Checkpoint-tool CR01/CR02 independent failure evidence and synthetic probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/independent-probes-optimized.json",
+      "outer_source": "checkpoint-review/independent-probes-optimized.json",
+      "sha256": "7c654d24d8400542c33fb0a02250287ce482212c6a7d55add94150f8682be1d8",
+      "bytes": 5216,
+      "purpose": "Checkpoint-tool CR01/CR02 independent failure evidence and synthetic probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/independent_probes.py",
+      "outer_source": "checkpoint-review/independent_probes.py",
+      "sha256": "2564ab420e0f3fb50675d3257ad9f9b376a5b46e97cbd7112c4a09ffab78cd3e",
+      "bytes": 6463,
+      "purpose": "Checkpoint-tool CR01/CR02 independent failure evidence and synthetic probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/initial-freeze-check.json",
+      "outer_source": "checkpoint-review/initial-freeze-check.json",
+      "sha256": "1938641ac8ee9561044f50e33edc0d531f3190e6ea555f7e910c4ed07a7c87f4",
+      "bytes": 2420,
+      "purpose": "Checkpoint-tool CR01/CR02 independent failure evidence and synthetic probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/initial-review-manifest.json",
+      "outer_source": "checkpoint-review/initial-review-manifest.json",
+      "sha256": "d3c2ff7a53f9495588432c0f29d8194521b072058f0cb5c9c807d9581e3d2d59",
+      "bytes": 5036,
+      "purpose": "Checkpoint-tool CR01/CR02 independent failure evidence and synthetic probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/normal.stderr.txt",
+      "outer_source": "checkpoint-review/normal.stderr.txt",
+      "sha256": "0bd22326dd755261fef28fd767630744afa3395e476fd6bcab7b9976f6685dc2",
+      "bytes": 3991,
+      "purpose": "Checkpoint-tool CR01/CR02 independent failure evidence and synthetic probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/normal.stdout.txt",
+      "outer_source": "checkpoint-review/normal.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Checkpoint-tool CR01/CR02 independent failure evidence and synthetic probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/optimized.stderr.txt",
+      "outer_source": "checkpoint-review/optimized.stderr.txt",
+      "sha256": "dd529df549951373f306b5fbeb79d607beca1b7323bb36824617d947c592d267",
+      "bytes": 3991,
+      "purpose": "Checkpoint-tool CR01/CR02 independent failure evidence and synthetic probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/optimized.stdout.txt",
+      "outer_source": "checkpoint-review/optimized.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Checkpoint-tool CR01/CR02 independent failure evidence and synthetic probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/preparation-bindings-v1/check_bindings.py",
+      "outer_source": "checkpoint-review/preparation-bindings-v1/check_bindings.py",
+      "sha256": "1639c05e03dba1765115b5d127a8d4a65b2a45da01d8e332259b12fad68757e7",
+      "bytes": 12961,
+      "purpose": "Independent checkpoint actual-binding/preparation acceptance and evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/preparation-bindings-v1/final-acceptance.json",
+      "outer_source": "checkpoint-review/preparation-bindings-v1/final-acceptance.json",
+      "sha256": "c4e30315d13a5d3450f0b147368dac725e37c61cd5f08dcdf7f78382adebf8bb",
+      "bytes": 6244,
+      "purpose": "Independent checkpoint actual-binding/preparation acceptance and evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/preparation-bindings-v1/git-after.json",
+      "outer_source": "checkpoint-review/preparation-bindings-v1/git-after.json",
+      "sha256": "13a2d4a0a5f9c2f6c2ddcab705e4fbca83ff36861bee6b801954303a8a2859c2",
+      "bytes": 1211,
+      "purpose": "Independent checkpoint actual-binding/preparation acceptance and evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/preparation-bindings-v1/git-before.json",
+      "outer_source": "checkpoint-review/preparation-bindings-v1/git-before.json",
+      "sha256": "af725a8b749bbb78a36ad6a3372f6ea35caaf2d64418aaf79bd9ef02373c21d7",
+      "bytes": 3231,
+      "purpose": "Independent checkpoint actual-binding/preparation acceptance and evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/preparation-bindings-v1/independent-checks.json",
+      "outer_source": "checkpoint-review/preparation-bindings-v1/independent-checks.json",
+      "sha256": "556457c8cbe182c7467a13a8c445a088857b2cfaf6ff50ca89bc2600379498bc",
+      "bytes": 80658,
+      "purpose": "Independent checkpoint actual-binding/preparation acceptance and evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/preparation-bindings-v1/review-manifest.json",
+      "outer_source": "checkpoint-review/preparation-bindings-v1/review-manifest.json",
+      "sha256": "a98cc53b520032534a519a19c6038ea20eaf688c0a2d9eed768613f3cbbb7fa1",
+      "bytes": 1099,
+      "purpose": "Independent checkpoint actual-binding/preparation acceptance and evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/preparation-bindings-v1/review.md",
+      "outer_source": "checkpoint-review/preparation-bindings-v1/review.md",
+      "sha256": "d2fa252f6785822587007477c3f5a37c125871cc1c8568a502b81c61c3db7f56",
+      "bytes": 4663,
+      "purpose": "Independent checkpoint actual-binding/preparation acceptance and evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/preparation-bindings-v1/subject-freeze.json",
+      "outer_source": "checkpoint-review/preparation-bindings-v1/subject-freeze.json",
+      "sha256": "c7fd0793c997b0d864b55cc68e165bf70a5be5b8f7626d6b9f1e9c39103a7f50",
+      "bytes": 95512,
+      "purpose": "Independent checkpoint actual-binding/preparation acceptance and evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/review-findings.json",
+      "outer_source": "checkpoint-review/review-findings.json",
+      "sha256": "da524cfe21013a9f02fce20af353f486424543dda4e9d8a68c4a9e0b7d19fc63",
+      "bytes": 4124,
+      "purpose": "Checkpoint-tool CR01/CR02 independent failure evidence and synthetic probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/review-report.md",
+      "outer_source": "checkpoint-review/review-report.md",
+      "sha256": "4179cfd739fb9186167dd32bb8f34d032f20565a1fa3c2234175dde3dcc83352",
+      "bytes": 2504,
+      "purpose": "Checkpoint-tool CR01/CR02 independent failure evidence and synthetic probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/command-receipts.json",
+      "outer_source": "checkpoint-review/revision-v2/command-receipts.json",
+      "sha256": "f8d5564bf7c3a141607e5259e6259cd121da87fa99b2a85d814fdc89a7a96d91",
+      "bytes": 2590,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/delta-audit.json",
+      "outer_source": "checkpoint-review/revision-v2/delta-audit.json",
+      "sha256": "6ada08f8b0891ee19bf958b384c7119fc4068fcd41bd4736b33a8926a9e4ccea",
+      "bytes": 4545,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/final-acceptance.json",
+      "outer_source": "checkpoint-review/revision-v2/final-acceptance.json",
+      "sha256": "314f8adc2b4b0371c77609a181ad6c2c3aa424c7a83cd58d57da11084b7d734d",
+      "bytes": 4159,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-probes-normal.json",
+      "outer_source": "checkpoint-review/revision-v2/independent-probes-normal.json",
+      "sha256": "fd998643c17d90af8a02cefa40686cb28d3a022a12cff1746b2840a008f0e36e",
+      "bytes": 7817,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-probes-optimized.json",
+      "outer_source": "checkpoint-review/revision-v2/independent-probes-optimized.json",
+      "sha256": "26ff4c3a876bc5d58e91176bf6febe9443ea55ae78dac0f31b57e7f20d0406cf",
+      "bytes": 7817,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch",
+      "outer_source": "checkpoint-review/revision-v2/independent-revision.patch",
+      "sha256": "5197cc34cfe44f97c21c39d10e9d49509ee6b5c14b7a3281f4acb7996a75a9c0",
+      "bytes": 42271,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent_recheck.py",
+      "outer_source": "checkpoint-review/revision-v2/independent_recheck.py",
+      "sha256": "95c28c743e58db2285c631e7171b37e47edfc58ec223db1378e8b856557c7edf",
+      "bytes": 11382,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/initial-freeze-check.json",
+      "outer_source": "checkpoint-review/revision-v2/initial-freeze-check.json",
+      "sha256": "8f3122be8b55f9fa91e062109783707c419b96202770c1e4775126630d4f9f85",
+      "bytes": 6965,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/normal.stderr.txt",
+      "outer_source": "checkpoint-review/revision-v2/normal.stderr.txt",
+      "sha256": "4c6bb1d7e104580e8677fdf78146e04c654f7a702901bcd80360f9ce4e0ef519",
+      "bytes": 7295,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/normal.stdout.txt",
+      "outer_source": "checkpoint-review/revision-v2/normal.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/optimized.stderr.txt",
+      "outer_source": "checkpoint-review/revision-v2/optimized.stderr.txt",
+      "sha256": "a99d449a5740e4919ff8fed97803bf57286a86a25affed6f095ac8f157fbbd73",
+      "bytes": 7295,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/optimized.stdout.txt",
+      "outer_source": "checkpoint-review/revision-v2/optimized.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/review-manifest.json",
+      "outer_source": "checkpoint-review/revision-v2/review-manifest.json",
+      "sha256": "710c2ac206c0956e7e6895e3ff487b7a806c02f6726210647e6e93f3ee3ba3bd",
+      "bytes": 7388,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/review-report.md",
+      "outer_source": "checkpoint-review/revision-v2/review-report.md",
+      "sha256": "6078c5c798e27140e5d3e7ba88cce232b52cc42fd40f9e7fae048970dabee1e8",
+      "bytes": 2544,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/ruff.stderr.txt",
+      "outer_source": "checkpoint-review/revision-v2/ruff.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/ruff.stdout.txt",
+      "outer_source": "checkpoint-review/revision-v2/ruff.stdout.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/schema-observation.json",
+      "outer_source": "checkpoint-review/revision-v2/schema-observation.json",
+      "sha256": "0d0549eb39dc548b375d03fa05c92173f893e0d6aaf1a5ee907e7233954b3067",
+      "bytes": 1371,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/unconnected-graph-command-receipt-normal.json",
+      "outer_source": "checkpoint-review/revision-v2/unconnected-graph-command-receipt-normal.json",
+      "sha256": "44824a0341a401a61bbb09fe55708f198b71a532d0fa6ed2c893ac38a88de16e",
+      "bytes": 1195,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/unconnected-graph-command-receipt-optimized.json",
+      "outer_source": "checkpoint-review/revision-v2/unconnected-graph-command-receipt-optimized.json",
+      "sha256": "4f5beb96153647e4ee9b4b1b4662fc92f673135969629b0b9b31bafbc5a0d75c",
+      "bytes": 1195,
+      "purpose": "Independent v2 checkpoint-tool preparation acceptance and resolution checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/command-receipts.json",
+      "outer_source": "checkpoint-review/revision-v3/command-receipts.json",
+      "sha256": "bec7f34edcd09464c85aca2c990ea3f379919e9fdaf2934b1263ac6a352671cf",
+      "bytes": 4588,
+      "purpose": "Independent targeted exact-byte v3 adapter acceptance; historical v2 review reused narrowly"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/final-acceptance.json",
+      "outer_source": "checkpoint-review/revision-v3/final-acceptance.json",
+      "sha256": "2c342b199506e589dbed3048e610c51846b739ecc3b9905540aff9624d8cac64",
+      "bytes": 3939,
+      "purpose": "Independent targeted exact-byte v3 adapter acceptance; historical v2 review reused narrowly"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/independent-delta-audit.json",
+      "outer_source": "checkpoint-review/revision-v3/independent-delta-audit.json",
+      "sha256": "44f06bea9099e8befc8e74bebb3bf3164922d04162a3bdf7fc34ce7983d06df1",
+      "bytes": 823,
+      "purpose": "Independent targeted exact-byte v3 adapter acceptance; historical v2 review reused narrowly"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/independent-probes-normal.json",
+      "outer_source": "checkpoint-review/revision-v3/independent-probes-normal.json",
+      "sha256": "7e3ee61491997cbd5b01bd9f042ea528c5a65714569cdf5748300e3bbcddb981",
+      "bytes": 15152,
+      "purpose": "Independent targeted exact-byte v3 adapter acceptance; historical v2 review reused narrowly"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/independent-probes-optimized.json",
+      "outer_source": "checkpoint-review/revision-v3/independent-probes-optimized.json",
+      "sha256": "7837690aa3b19dd9c0bee3a18ec3eb301b3b23c3267ea7ffdda77eec4fa4e367",
+      "bytes": 15152,
+      "purpose": "Independent targeted exact-byte v3 adapter acceptance; historical v2 review reused narrowly"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/independent_adapter_probes.py",
+      "outer_source": "checkpoint-review/revision-v3/independent_adapter_probes.py",
+      "sha256": "2fa07864f36e4bcf82e451185c04d32a865720cf2d0133e9512a8b708e99ff45",
+      "bytes": 7616,
+      "purpose": "Independent targeted exact-byte v3 adapter acceptance; historical v2 review reused narrowly"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/initial-freeze-check.json",
+      "outer_source": "checkpoint-review/revision-v3/initial-freeze-check.json",
+      "sha256": "3d683c92fb8c1ded7c550deb5c212c7ab37b5b8665fe568e422bd71c6e7623df",
+      "bytes": 8654,
+      "purpose": "Independent targeted exact-byte v3 adapter acceptance; historical v2 review reused narrowly"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/normal.stderr.txt",
+      "outer_source": "checkpoint-review/revision-v3/normal.stderr.txt",
+      "sha256": "2f808c9a65c721c68e7e399860be6353ee6f13080dc336c8899f4373ed600be0",
+      "bytes": 1554,
+      "purpose": "Independent targeted exact-byte v3 adapter acceptance; historical v2 review reused narrowly"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/normal.stdout.txt",
+      "outer_source": "checkpoint-review/revision-v3/normal.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Independent targeted exact-byte v3 adapter acceptance; historical v2 review reused narrowly"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/optimized.stderr.txt",
+      "outer_source": "checkpoint-review/revision-v3/optimized.stderr.txt",
+      "sha256": "68fa7b8e2f706029bb5bb3c789da02bafffa4b5779c51475d237f007d2468cd5",
+      "bytes": 1554,
+      "purpose": "Independent targeted exact-byte v3 adapter acceptance; historical v2 review reused narrowly"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/optimized.stdout.txt",
+      "outer_source": "checkpoint-review/revision-v3/optimized.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Independent targeted exact-byte v3 adapter acceptance; historical v2 review reused narrowly"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/preservation-check.json",
+      "outer_source": "checkpoint-review/revision-v3/preservation-check.json",
+      "sha256": "35d13f9b4d8c13b9755a056d4bb9679d8252a44ff4aa8621b496727840f6f38a",
+      "bytes": 217,
+      "purpose": "Independent targeted exact-byte v3 adapter acceptance; historical v2 review reused narrowly"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/review-manifest.json",
+      "outer_source": "checkpoint-review/revision-v3/review-manifest.json",
+      "sha256": "def7a729635bbe6f2516d3b5303cabd185f10e4e1d1fde4ce19cd4a9821da06f",
+      "bytes": 5866,
+      "purpose": "Independent targeted exact-byte v3 adapter acceptance; historical v2 review reused narrowly"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/review-report.md",
+      "outer_source": "checkpoint-review/revision-v3/review-report.md",
+      "sha256": "f39e75b402af7eae615eeb94b24ded7008dc8514026f358c906db5969f9b3076",
+      "bytes": 2157,
+      "purpose": "Independent targeted exact-byte v3 adapter acceptance; historical v2 review reused narrowly"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/ruff.stderr.txt",
+      "outer_source": "checkpoint-review/revision-v3/ruff.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Independent targeted exact-byte v3 adapter acceptance; historical v2 review reused narrowly"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/ruff.stdout.txt",
+      "outer_source": "checkpoint-review/revision-v3/ruff.stdout.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19,
+      "purpose": "Independent targeted exact-byte v3 adapter acceptance; historical v2 review reused narrowly"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/ruff.stderr.txt",
+      "outer_source": "checkpoint-review/ruff.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Checkpoint-tool CR01/CR02 independent failure evidence and synthetic probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/ruff.stdout.txt",
+      "outer_source": "checkpoint-review/ruff.stdout.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19,
+      "purpose": "Checkpoint-tool CR01/CR02 independent failure evidence and synthetic probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/HANDOFF.md",
+      "outer_source": "checkpoint-review/subject-v1/HANDOFF.md",
+      "sha256": "ed592c5d0f4d356ce7291b3b74d0773f10ecd93ab4ce44090e8ac26b129b46ca",
+      "bytes": 8399,
+      "purpose": "Initial rejected tool snapshot for reproducing independent failure probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/checkpoint-contract.unready.json",
+      "outer_source": "checkpoint-review/subject-v1/checkpoint-contract.unready.json",
+      "sha256": "8f3b50b192aea950caae934e335927e6c940e889091a2ded5b17c032c1153fdb",
+      "bytes": 4377,
+      "purpose": "Initial rejected tool snapshot for reproducing independent failure probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/checkpoint_lib.py",
+      "outer_source": "checkpoint-review/subject-v1/checkpoint_lib.py",
+      "sha256": "2e227c30dcb0585b307fc5d45c55538409e3ef3569ba2eb89908a3a86e55eeb9",
+      "bytes": 21853,
+      "purpose": "Initial rejected tool snapshot for reproducing independent failure probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/compare_replays.py",
+      "outer_source": "checkpoint-review/subject-v1/compare_replays.py",
+      "sha256": "f4f80cec1f4a76d1e5e290094edfb3152bd9ad4601a56c1e27253750c52d0e8a",
+      "bytes": 2128,
+      "purpose": "Initial rejected tool snapshot for reproducing independent failure probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/freeze-manifest.json",
+      "outer_source": "checkpoint-review/subject-v1/freeze-manifest.json",
+      "sha256": "fc438829b4a38da85bda247b38115ee012cce4344027adeb8efa840560d5a790",
+      "bytes": 3957,
+      "purpose": "Initial rejected tool snapshot for reproducing independent failure probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/replay-spec.unready.json",
+      "outer_source": "checkpoint-review/subject-v1/replay-spec.unready.json",
+      "sha256": "ac74e8b1ce094761eb27a9d06b3f725764a556a333f77f19ad2274986b63911e",
+      "bytes": 1948,
+      "purpose": "Initial rejected tool snapshot for reproducing independent failure probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/run_clean_replay.py",
+      "outer_source": "checkpoint-review/subject-v1/run_clean_replay.py",
+      "sha256": "26ea5840dd35fbded2ec7023ca86ca37e3ff05eb6e311bbf9eea2749603cdc60",
+      "bytes": 4312,
+      "purpose": "Initial rejected tool snapshot for reproducing independent failure probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/test_checkpoint.py",
+      "outer_source": "checkpoint-review/subject-v1/test_checkpoint.py",
+      "sha256": "c1fd2a738660066eb64283d4bd68f42ab3b66807c5ecf1a487857ea0c93147d2",
+      "bytes": 28061,
+      "purpose": "Initial rejected tool snapshot for reproducing independent failure probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/verify_checkpoint.py",
+      "outer_source": "checkpoint-review/subject-v1/verify_checkpoint.py",
+      "sha256": "3d99648a42ac015f6c8a013ef1d34af9db214a4e04b886c4b63bb727945025dc",
+      "bytes": 19612,
+      "purpose": "Initial rejected tool snapshot for reproducing independent failure probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/unconnected-graph-command-receipt-normal.json",
+      "outer_source": "checkpoint-review/unconnected-graph-command-receipt-normal.json",
+      "sha256": "318a92f3793b8c524611924b6dbf522a22ae984fa9d89b7ad57a852976a142c1",
+      "bytes": 10119,
+      "purpose": "Checkpoint-tool CR01/CR02 independent failure evidence and synthetic probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/unconnected-graph-command-receipt-optimized.json",
+      "outer_source": "checkpoint-review/unconnected-graph-command-receipt-optimized.json",
+      "sha256": "1bbdc7477397e0715cc075fd8a50bc3e1bb60ee7f5a08fa59e5b37ee9154d872",
+      "bytes": 10119,
+      "purpose": "Checkpoint-tool CR01/CR02 independent failure evidence and synthetic probes"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/HANDOFF.md",
+      "outer_source": "checkpoint-work/revision-v2/HANDOFF.md",
+      "sha256": "89b6ecdb58699822d54b9902150386279d8093d881a0c06ff4191556cc372592",
+      "bytes": 11818,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/checkpoint-contract.unready.json",
+      "outer_source": "checkpoint-work/revision-v2/checkpoint-contract.unready.json",
+      "sha256": "532405b78e4ed2ea64d7b2044f412a184c67f3d16428763e083a6a4f6ecb4748",
+      "bytes": 4510,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/checkpoint_lib.py",
+      "outer_source": "checkpoint-work/revision-v2/checkpoint_lib.py",
+      "sha256": "9b41c492510a00d9d3b22c5ecb04fcb1de86f8903a906ea4eb4c59ebb6c69c21",
+      "bytes": 26905,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/compare_replays.py",
+      "outer_source": "checkpoint-work/revision-v2/compare_replays.py",
+      "sha256": "f4f80cec1f4a76d1e5e290094edfb3152bd9ad4601a56c1e27253750c52d0e8a",
+      "bytes": 2128,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/freeze-manifest.json",
+      "outer_source": "checkpoint-work/revision-v2/freeze-manifest.json",
+      "sha256": "2f24bfc89793154d7ee7e41f252450a908a03fbc0b8dffb876c145a78656bdab",
+      "bytes": 5976,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/initial-evidence-preservation.json",
+      "outer_source": "checkpoint-work/revision-v2/initial-evidence-preservation.json",
+      "sha256": "8785aea16453f66f716a9abf8f6c6ce369a559daac1b79989acf4fe4a32c7030",
+      "bytes": 961,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/provisional-schema-observation.json",
+      "outer_source": "checkpoint-work/revision-v2/provisional-schema-observation.json",
+      "sha256": "144b19778cd68e93ce0762a2fedf3ee9141882242a0e20bf0bb3996b1c7eeb7f",
+      "bytes": 987,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/replay-spec.unready.json",
+      "outer_source": "checkpoint-work/revision-v2/replay-spec.unready.json",
+      "sha256": "479d960ad417b18efdbfff4d8fc03aab368035a8bc5928eda0ff9a5fd75d524a",
+      "bytes": 2271,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/revision-delta.json",
+      "outer_source": "checkpoint-work/revision-v2/revision-delta.json",
+      "sha256": "2f23b8c2b287a1498e3baee6d21fd6605d7c4a5378a95582ed9f43fe138c209a",
+      "bytes": 2858,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/revision.patch",
+      "outer_source": "checkpoint-work/revision-v2/revision.patch",
+      "sha256": "17b575ca1524ea6000d845a52fbff1a4ef622c027821f1f052b083d1f5cd8a5e",
+      "bytes": 42175,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/run_clean_replay.py",
+      "outer_source": "checkpoint-work/revision-v2/run_clean_replay.py",
+      "sha256": "26ea5840dd35fbded2ec7023ca86ca37e3ff05eb6e311bbf9eea2749603cdc60",
+      "bytes": 4312,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/test_checkpoint.py",
+      "outer_source": "checkpoint-work/revision-v2/test_checkpoint.py",
+      "sha256": "3e6c8003afd7f1861e6784fa95517c2e2aa2ae737f9ef93e411c621b27936293",
+      "bytes": 38935,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/verification-v2-final/commands.json",
+      "outer_source": "checkpoint-work/revision-v2/verification-v2-final/commands.json",
+      "sha256": "159b182b0e1e80ad168a858312c67af970e76dda74dbf76f9ab32a21a239ffe0",
+      "bytes": 2569,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/verification-v2-final/normal.stderr.txt",
+      "outer_source": "checkpoint-work/revision-v2/verification-v2-final/normal.stderr.txt",
+      "sha256": "c804e8a250c50e77f6884ada174a32973ca3569e3dcc07914183c46138b17fec",
+      "bytes": 7295,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/verification-v2-final/normal.stdout.txt",
+      "outer_source": "checkpoint-work/revision-v2/verification-v2-final/normal.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/verification-v2-final/optimized.stderr.txt",
+      "outer_source": "checkpoint-work/revision-v2/verification-v2-final/optimized.stderr.txt",
+      "sha256": "742fa696ac6f4795140ed942e8d875b9d7d3c6ef7aa64b17860cc19b729d9b4b",
+      "bytes": 7295,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/verification-v2-final/optimized.stdout.txt",
+      "outer_source": "checkpoint-work/revision-v2/verification-v2-final/optimized.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/verification-v2-final/pre-test-source-freeze.json",
+      "outer_source": "checkpoint-work/revision-v2/verification-v2-final/pre-test-source-freeze.json",
+      "sha256": "7f04fa80566243875dfa29c1b104a0e830a5b86949444b1a85f11a5e797145eb",
+      "bytes": 1207,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/verification-v2-final/ruff.stderr.txt",
+      "outer_source": "checkpoint-work/revision-v2/verification-v2-final/ruff.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/verification-v2-final/ruff.stdout.txt",
+      "outer_source": "checkpoint-work/revision-v2/verification-v2-final/ruff.stdout.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/verify_checkpoint.py",
+      "outer_source": "checkpoint-work/revision-v2/verify_checkpoint.py",
+      "sha256": "720f239af2e6b22c7f9b9143ede5d69a7f9e300bb4ea8985c6a2e49efe7ad94f",
+      "bytes": 18992,
+      "purpose": "Exact independently accepted v2 checkpoint tools and final verification evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/ADAPTER.md",
+      "outer_source": "checkpoint-work/revision-v3/ADAPTER.md",
+      "sha256": "f30f3cdc53f84a85cd068192bf936d4ec652ded17956e53481b9b831a5c3d9e5",
+      "bytes": 2390,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/HANDOFF.md",
+      "outer_source": "checkpoint-work/revision-v3/HANDOFF.md",
+      "sha256": "8c2a8c2aa9b555bb467127ac853f0a9cfa904a0033981b8b6b8a8db855050c61",
+      "bytes": 13253,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/freeze-manifest.json",
+      "outer_source": "checkpoint-work/revision-v3/freeze-manifest.json",
+      "sha256": "f83ba8eedb8ffc30db8bbbef95cd7c33a24881f411fdddcb58ca5073b54afe71",
+      "bytes": 4110,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/real-schema-observation.json",
+      "outer_source": "checkpoint-work/revision-v3/real-schema-observation.json",
+      "sha256": "13d60a56918b0d8daf308b7c7c1ed55d9e0fb64044cc058b1e843c1c0f2e34c8",
+      "bytes": 873,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/revision-delta.json",
+      "outer_source": "checkpoint-work/revision-v3/revision-delta.json",
+      "sha256": "f8367e74dd6f2f9166708b7ea6991ceb718633e8bed61c38d510f1b1af2bba89",
+      "bytes": 2813,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/revision.patch",
+      "outer_source": "checkpoint-work/revision-v3/revision.patch",
+      "sha256": "56700edecac3e100391f63fed02fc03a09baa8289f6375f2cdf929cfa3c58fed",
+      "bytes": 11301,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/normal.command.json",
+      "outer_source": "checkpoint-work/revision-v3/verification-v3/normal.command.json",
+      "sha256": "6f47b41dc2a3439b4ac8926534f8cc5faed3ed552a4318e8c025aa30ef74bb17",
+      "bytes": 769,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/normal.stderr.txt",
+      "outer_source": "checkpoint-work/revision-v3/verification-v3/normal.stderr.txt",
+      "sha256": "0f3cffb7745327a92fc3eeb733646b062fcf13569f01823ff4fd3a0a1a750ab1",
+      "bytes": 8228,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/normal.stdout.txt",
+      "outer_source": "checkpoint-work/revision-v3/verification-v3/normal.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/optimized.command.json",
+      "outer_source": "checkpoint-work/revision-v3/verification-v3/optimized.command.json",
+      "sha256": "a50923495df385fe668db70606dfae1fc403105038e28b124726c196bb5c7c4d",
+      "bytes": 782,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/optimized.stderr.txt",
+      "outer_source": "checkpoint-work/revision-v3/verification-v3/optimized.stderr.txt",
+      "sha256": "fe8d02f4a4fe7b4dca0a716f901c8c7df1f1ce0ec1285780614bc1b9ffb04c0c",
+      "bytes": 8228,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/optimized.stdout.txt",
+      "outer_source": "checkpoint-work/revision-v3/verification-v3/optimized.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/pre-test-source-freeze.json",
+      "outer_source": "checkpoint-work/revision-v3/verification-v3/pre-test-source-freeze.json",
+      "sha256": "a5547bafec12f756f94a99b4480e5370324aa816922326869817984c2f6c3dce",
+      "bytes": 1192,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/ruff.command.json",
+      "outer_source": "checkpoint-work/revision-v3/verification-v3/ruff.command.json",
+      "sha256": "ae9795ab5e6a9974e7632d51c970e8e4abf19e87ffdb8945b1c29a65e6c44b0d",
+      "bytes": 712,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/ruff.stderr.txt",
+      "outer_source": "checkpoint-work/revision-v3/verification-v3/ruff.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/ruff.stdout.txt",
+      "outer_source": "checkpoint-work/revision-v3/verification-v3/ruff.stdout.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/checkpoint_lib.py",
+      "outer_source": "checkpoint-work/revision-v3/checkpoint_lib.py",
+      "sha256": "2c024b0689474109afb93c0c76c2b88ef115f70fba04b5b1085cc1854fc8b9ea",
+      "bytes": 28242,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/clean-source/binding-freeze.json",
+      "outer_source": "clean-source/binding-freeze.json",
+      "sha256": "b2e5310f136f546d35c020910a54d675d4916920da75d449708c7964f643c9fd",
+      "bytes": 1646,
+      "purpose": "Actual approved clean-source bindings, one execution and strict comparison"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/clean-source/binding-preflight.json",
+      "outer_source": "clean-source/binding-preflight.json",
+      "sha256": "0404a72e59725bfa56b6e1fe4ddfe3cf29a2b92f924c9d5831ad11fbc8eef8fb",
+      "bytes": 22707,
+      "purpose": "Actual approved clean-source bindings, one execution and strict comparison"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/clean-source/replay-spec.json",
+      "outer_source": "clean-source/replay-spec.json",
+      "sha256": "7fbcdc3ca5c2443fff1b89096c6a5b94c3ddd233794fb1949d5737eb99f2266e",
+      "bytes": 38837,
+      "purpose": "Actual approved clean-source bindings, one execution and strict comparison"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/clean-source/run-command.json",
+      "outer_source": "clean-source/run-command.json",
+      "sha256": "7e3f2bee77621bb26439511daacf5b325fe4a9c65ca91afac39ca08b1c73a8f2",
+      "bytes": 21385,
+      "purpose": "Actual approved clean-source bindings, one execution and strict comparison"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/clean-source/scientific-comparison.json",
+      "outer_source": "clean-source/scientific-comparison.json",
+      "sha256": "2d55295cbb1d18f38bffa615d9981c7cb9f5a8f08c05dd298d3905adbc9d469b",
+      "bytes": 25361,
+      "purpose": "Actual approved clean-source bindings, one execution and strict comparison"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/closeout.md",
+      "outer_source": "candidate-curation/closeout.md",
+      "sha256": "c68de618d1eb4d7c048ae8ac19b6e4c447a731e432f63a7024965071c5d99068",
+      "bytes": 3801,
+      "purpose": "Final reader documentation for completed source/replay/PDF stages"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/compare_replays.py",
+      "outer_source": "checkpoint-work/revision-v3/compare_replays.py",
+      "sha256": "f4f80cec1f4a76d1e5e290094edfb3152bd9ad4601a56c1e27253750c52d0e8a",
+      "bytes": 2128,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/audit_frozen_result_v1.py",
+      "outer_source": "computation-review/audit_frozen_result_v1.py",
+      "sha256": "7659c8459f43de914f3878147758c8c0ca972d18e4f8f66587df48286181908e",
+      "bytes": 8131,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/command-receipts.json",
+      "outer_source": "computation-review/command-receipts.json",
+      "sha256": "30f875df0252046824b32727614adafadaf531e550f03d9cd49029d9b3edae59",
+      "bytes": 3224,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/independent-oracles-v1.json",
+      "outer_source": "computation-review/independent-oracles-v1.json",
+      "sha256": "40968ce6b0ecfaad83eb7d3203d4703e7c9f9a25d0bfd72cf6df92224f449a67",
+      "bytes": 632335,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/independent-oracles-v1.log.txt",
+      "outer_source": "computation-review/independent-oracles-v1.log",
+      "sha256": "4530e0c688b4794e0fb494d1621846a78d2aa1c2f432bf58e02acbc7407d369f",
+      "bytes": 250,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/independent-replay.stderr.txt",
+      "outer_source": "computation-review/independent-replay.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/independent-replay.stdout.txt",
+      "outer_source": "computation-review/independent-replay.stdout.txt",
+      "sha256": "b2bbc14b22076bbd3525a8396eea830e8b8942b20dff10c1bcf2426ff83e6803",
+      "bytes": 480,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/independent_oracles.py",
+      "outer_source": "computation-review/independent_oracles.py",
+      "sha256": "b74db119da8348f6d8e063c44e9dc354f56437e621f911b76f5c5e5b1bb3ee50",
+      "bytes": 20928,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/initial-subject-freeze.json",
+      "outer_source": "computation-review/initial-subject-freeze.json",
+      "sha256": "c56d2e297fe2f0b725f03ced97a31ea277ea573e9117f6c2487696a7f06173ad",
+      "bytes": 7305,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/negative-controls-normal-v1.json",
+      "outer_source": "computation-review/negative-controls-normal-v1.json",
+      "sha256": "61ed42043281957299b25eec615a7c787306db6b2d6e988d8fdb4ec3faa6daca",
+      "bytes": 11569,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/negative-controls-optimized-v1.json",
+      "outer_source": "computation-review/negative-controls-optimized-v1.json",
+      "sha256": "a12a013cb3910ca150abdd058a28584312f6deb5acf4cafda302fec5819b57ee",
+      "bytes": 11568,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/negative_controls_v1.py",
+      "outer_source": "computation-review/negative_controls_v1.py",
+      "sha256": "9e955d32dc9d9cdef2e2fdf916c6793d38fc716e10f66a81a1751dbf818e7627",
+      "bytes": 7043,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/provenance-controls-normal-v1.json",
+      "outer_source": "computation-review/provenance-controls-normal-v1.json",
+      "sha256": "097fc495baad1aa41a5b13502fd37c995669c2b6b59fc58dea3ca38c7d310a4f",
+      "bytes": 1913,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/provenance-controls-optimized-v1.json",
+      "outer_source": "computation-review/provenance-controls-optimized-v1.json",
+      "sha256": "00d29b5d2968f6fd6f13aa6bfdbc92f1e0fc5e24beb9435cf44e8f67f0a9dc7b",
+      "bytes": 1912,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/provenance_controls_v1.py",
+      "outer_source": "computation-review/provenance_controls_v1.py",
+      "sha256": "0bbba5586dc9f0dbdb8e0c3f5866c3beebe1acbd503ecde4b26fd4eae60576d1",
+      "bytes": 2198,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/required-fixture-profile-v1.json",
+      "outer_source": "computation-review/required-fixture-profile-v1.json",
+      "sha256": "ba9976302cd36fdad5856edfa4ec3d14ec633c32fdf40717160a793c6043f172",
+      "bytes": 14102,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/result-audit-v1.json",
+      "outer_source": "computation-review/result-audit-v1.json",
+      "sha256": "629bde81b0a9726e314c10af6cfcb2b331f6e280fd52f64b005b69b516fcba7f",
+      "bytes": 20590,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/review-v1-evidence-manifest.json",
+      "outer_source": "computation-review/review-v1-evidence-manifest.json",
+      "sha256": "8530f6e0385a19a5164c4ad846cf51c76ae99848da694444952a583c1919a891",
+      "bytes": 9133,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/review-v1.json",
+      "outer_source": "computation-review/review-v1.json",
+      "sha256": "4d592262de6037b2300fef2795e0778d4cc4d48ea1bb9db8dfb53bfc61bbc765",
+      "bytes": 17347,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/review-v1.md",
+      "outer_source": "computation-review/review-v1.md",
+      "sha256": "12e8adc131f9ec1d67d550f94df1d21b20205a1c156da466c0fe0b364798f32b",
+      "bytes": 11492,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/command-receipts.json",
+      "outer_source": "computation-review/revision-v2/command-receipts.json",
+      "sha256": "79f0c495309e1d046b72267189dd8047beb35a6e97e513d24ce63806c97b5c31",
+      "bytes": 3233,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/final-acceptance.json",
+      "outer_source": "computation-review/revision-v2/final-acceptance.json",
+      "sha256": "70070fe32c42961d68b035ccb7fae5b012c50ac5814ca42bd05689bfc64b6592",
+      "bytes": 25941,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/final-acceptance.md",
+      "outer_source": "computation-review/revision-v2/final-acceptance.md",
+      "sha256": "a183cc7c6d853edfb9e9c1eb24899830c9f59d0d2071a6ce87a44b8f02ba1cc2",
+      "bytes": 5669,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/final-evidence-manifest.json",
+      "outer_source": "computation-review/revision-v2/final-evidence-manifest.json",
+      "sha256": "d2f0317fb70286f2bd2b98855deb17a11ccf12e853c84ca40788e158f3073a19",
+      "bytes": 8112,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/final-recheck-audit.json",
+      "outer_source": "computation-review/revision-v2/final-recheck-audit.json",
+      "sha256": "89da0a91c034400bfc289fadb3c88037a0f47b6fb18b8d7a42d812fe11a20ec5",
+      "bytes": 2513,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/final_recheck_audit.py",
+      "outer_source": "computation-review/revision-v2/final_recheck_audit.py",
+      "sha256": "931f55e6fe9485480d75b43a3cf3e82feb66ebc5c1417362f8b48eb23271874c",
+      "bytes": 5848,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/freeze_and_compare.py",
+      "outer_source": "computation-review/revision-v2/freeze_and_compare.py",
+      "sha256": "e167f62c4db27b90ba8eeab1f5f491d6f0ad10e7369b11f20e7a0b5fd287851a",
+      "bytes": 7803,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/independent-replay.stderr.txt",
+      "outer_source": "computation-review/revision-v2/independent-replay.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/independent-replay.stdout.txt",
+      "outer_source": "computation-review/revision-v2/independent-replay.stdout.txt",
+      "sha256": "3393b81102ea18b99a2480bf8bf5cf051dd933805882d983fe2709cf68f0d154",
+      "bytes": 491,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/initial-freeze-and-comparison.json",
+      "outer_source": "computation-review/revision-v2/initial-freeze-and-comparison.json",
+      "sha256": "dd1e219094f889e3ad76a074c8a6e07b2b07e3c560f49e11386c3eeafd95325f",
+      "bytes": 15029,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/ruff.stderr.txt",
+      "outer_source": "computation-review/revision-v2/ruff.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/ruff.stdout.txt",
+      "outer_source": "computation-review/revision-v2/ruff.stdout.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/run_review_commands.py",
+      "outer_source": "computation-review/revision-v2/run_review_commands.py",
+      "sha256": "283695c943abc97e8f526869acdf6754b702eed3e2ff85ae545c2865fe418ceb",
+      "bytes": 2015,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/targeted-controls-normal.json",
+      "outer_source": "computation-review/revision-v2/targeted-controls-normal.json",
+      "sha256": "bbcebd32b35c2e7e2be5df0c4202633c31f51a6e03f974d45063087ddbaa72df",
+      "bytes": 93620,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/targeted-controls-optimized.json",
+      "outer_source": "computation-review/revision-v2/targeted-controls-optimized.json",
+      "sha256": "6cd8aacf2f1acfeefc8a4a43d6cdc27f1a9a6fad512bdfdd93bfc46f32a2e0a0",
+      "bytes": 93619,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/targeted_controls.py",
+      "outer_source": "computation-review/revision-v2/targeted_controls.py",
+      "sha256": "04c0e6b39d8d4d6d5a23c72aae475e0b84a411e49d67a5cf2ea32a530e075f26",
+      "bytes": 9591,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/tests-normal.stderr.txt",
+      "outer_source": "computation-review/revision-v2/tests-normal.stderr.txt",
+      "sha256": "b74dcf44c222a50e69037c9d0d65e7c7efc1baeebeec50edf942823e3f2109c6",
+      "bytes": 7630,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/tests-normal.stdout.txt",
+      "outer_source": "computation-review/revision-v2/tests-normal.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/tests-optimized.stderr.txt",
+      "outer_source": "computation-review/revision-v2/tests-optimized.stderr.txt",
+      "sha256": "cb471cf05c0b9319872b106e0f57816407c62540b8b5447c28f4abef7568d899",
+      "bytes": 7630,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/tests-optimized.stdout.txt",
+      "outer_source": "computation-review/revision-v2/tests-optimized.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Final independent computation acceptance, fresh reviewer replay receipts and targeted guard checks; duplicate result omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/ruff.stderr.txt",
+      "outer_source": "computation-review/ruff.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/ruff.stdout.txt",
+      "outer_source": "computation-review/ruff.stdout.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/run_review_commands.py",
+      "outer_source": "computation-review/run_review_commands.py",
+      "sha256": "18ccf52033a5834d81bfc8928615de9edf06ec34c4a51f5bb2839cc803895549",
+      "bytes": 2059,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/static-policy-audit-v1.json",
+      "outer_source": "computation-review/static-policy-audit-v1.json",
+      "sha256": "f4d1d51264ff6f10d1fcafdc3f788d2f399eb6d18df72c0f7b80736abdaee36e",
+      "bytes": 1257,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/subject-v1/author-result-70-110.json",
+      "outer_source": "computation-review/subject-v1/author-result-70-110.json",
+      "sha256": "618d7125e80813db18b96c55513bd6a0432a1cf7fad63595c6c58d89112b67a4",
+      "bytes": 4694249,
+      "purpose": "Single retained v1 report required by independent oracle script relative input path"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/tests-normal.stderr.txt",
+      "outer_source": "computation-review/tests-normal.stderr.txt",
+      "sha256": "814e84ec730c61c508260118ace75496601e442e1ed58d6a39d8929957abba1a",
+      "bytes": 4712,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/tests-normal.stdout.txt",
+      "outer_source": "computation-review/tests-normal.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/tests-optimized.stderr.txt",
+      "outer_source": "computation-review/tests-optimized.stderr.txt",
+      "sha256": "19f9ad3005e2a07e5ce100e74fe97e9a3c7ed4720ffe62969dcbcbf7567b8297",
+      "bytes": 4712,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation-review/tests-optimized.stdout.txt",
+      "outer_source": "computation-review/tests-optimized.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Independent initial science/oracles and required driver-validation failures; full duplicate replay omitted"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/after/experiments/quantum_geodesics/README.md.txt",
+      "outer_source": "computation/full-v2/after/experiments/quantum_geodesics/README.md",
+      "sha256": "22921e4545c1b4bb0fa0ac4c1e031b77140f2e3f3a51cda93ef4f67c05493b6a",
+      "bytes": 8627,
+      "purpose": "After driver-validation repair snapshot; bytes must match accepted runtime"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/after/experiments/quantum_geodesics/run.py",
+      "outer_source": "computation/full-v2/after/experiments/quantum_geodesics/run.py",
+      "sha256": "618f17d3aec05e2a6de637c851e6ccfabfde50088662f5198f165eebd8a5254a",
+      "bytes": 15695,
+      "purpose": "After driver-validation repair snapshot; bytes must match accepted runtime"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/after/experiments/quantum_geodesics/tests/test_validation.py",
+      "outer_source": "computation/full-v2/after/experiments/quantum_geodesics/tests/test_validation.py",
+      "sha256": "9ad40c44d0607cf919335c9b0ec7dd4e0985a1dc3b2a2f3513f2cc8c35e2b8b8",
+      "bytes": 8936,
+      "purpose": "After driver-validation repair snapshot; bytes must match accepted runtime"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/author-result-70-110.json",
+      "outer_source": "computation/full-v2/author-result-70-110.json",
+      "sha256": "5f73fce03e43103dc457570bcd90f4722599b5ac0d67a9b9b88d9e00679f0429",
+      "bytes": 4694781,
+      "purpose": "Accepted full-v2 author report, exact runtime freeze, driver repair and executed checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/author-run.log.txt",
+      "outer_source": "computation/full-v2/author-run.log",
+      "sha256": "d5d66b01ce530e6dce96f94ec60612e1c3d8e10a662780d873481feacc12c08e",
+      "bytes": 476,
+      "purpose": "Accepted full-v2 author report, exact runtime freeze, driver repair and executed checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/before/experiments/quantum_geodesics/README.md.txt",
+      "outer_source": "computation/full-v2/before/experiments/quantum_geodesics/README.md",
+      "sha256": "879a91c4c4269fcfb69b3cf67fa9ddda8e9123c76dad75cbb09d3d03a47f2a94",
+      "bytes": 8057,
+      "purpose": "Before driver-validation repair snapshot"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/before/experiments/quantum_geodesics/run.py",
+      "outer_source": "computation/full-v2/before/experiments/quantum_geodesics/run.py",
+      "sha256": "bc0deb4e8c010075211c3e5f04c5672bce39c1b20d802a0587f90f0d94a4bb04",
+      "bytes": 15927,
+      "purpose": "Before driver-validation repair snapshot"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/before/experiments/quantum_geodesics/tests/test_validation.py",
+      "outer_source": "computation/full-v2/before/experiments/quantum_geodesics/tests/test_validation.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Before driver-validation repair snapshot"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/command-receipts.json",
+      "outer_source": "computation/full-v2/command-receipts.json",
+      "sha256": "03243440ff747415e3cb138ef2c5de28d4b3b33de808774b0b91954e1d097388",
+      "bytes": 2327,
+      "purpose": "Accepted full-v2 author report, exact runtime freeze, driver repair and executed checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/compare_author_results.py",
+      "outer_source": "computation/full-v2/compare_author_results.py",
+      "sha256": "7af778cf8494fa86e3cb317a7d731ded3127060ae7cb3400a619eb4928eb25b2",
+      "bytes": 10336,
+      "purpose": "Accepted full-v2 author report, exact runtime freeze, driver repair and executed checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/driver-validation-repair.patch",
+      "outer_source": "computation/full-v2/driver-validation-repair.patch",
+      "sha256": "e785f6fc99d98604eaaac5867a05d457070ff27a8b716ed6aee2b2d4fbac1ca5",
+      "bytes": 20514,
+      "purpose": "Accepted full-v2 author report, exact runtime freeze, driver repair and executed checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/evidence-manifest.json",
+      "outer_source": "computation/full-v2/evidence-manifest.json",
+      "sha256": "31cc1d5cc10342f2ef7d2ed7997332f8ed7bb3129f8b7aa41167a2dfd6e3f045",
+      "bytes": 3128,
+      "purpose": "Accepted full-v2 author report, exact runtime freeze, driver repair and executed checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/ruff.log.txt",
+      "outer_source": "computation/full-v2/ruff.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19,
+      "purpose": "Accepted full-v2 author report, exact runtime freeze, driver repair and executed checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/runtime-file-map.json",
+      "outer_source": "computation/full-v2/runtime-file-map.json",
+      "sha256": "b2644b091e996d77d21cbdf69b419dcf5388763f246858b5ec9dbe076ce246c0",
+      "bytes": 3203,
+      "purpose": "Accepted full-v2 author report, exact runtime freeze, driver repair and executed checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/scientific-comparison.json",
+      "outer_source": "computation/full-v2/scientific-comparison.json",
+      "sha256": "b21ec307b97b11b73e83a2d28f37d6c870cf00a286492a1f9cf044b2df7ce617",
+      "bytes": 15384,
+      "purpose": "Accepted full-v2 author report, exact runtime freeze, driver repair and executed checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/source-freeze.json",
+      "outer_source": "computation/full-v2/source-freeze.json",
+      "sha256": "2c89451d7d9f69d18cdd514b8244615498e2d8c5ba6c0963ba63f279c70ed037",
+      "bytes": 25040,
+      "purpose": "Accepted full-v2 author report, exact runtime freeze, driver repair and executed checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/tests-optimized.log.txt",
+      "outer_source": "computation/full-v2/tests-optimized.log",
+      "sha256": "614045b2e86ac137976b479107337f38da7d9b7181fb8f604616f549b9f18dc3",
+      "bytes": 7630,
+      "purpose": "Accepted full-v2 author report, exact runtime freeze, driver repair and executed checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/tests.log.txt",
+      "outer_source": "computation/full-v2/tests.log",
+      "sha256": "bddc2ef9fc26178517d91f26e4b628aa007ed682a9840568542bfd3775e9ffc6",
+      "bytes": 7630,
+      "purpose": "Accepted full-v2 author report, exact runtime freeze, driver repair and executed checks"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-author/author-audit.md",
+      "outer_source": "conventions-author/author-audit.md",
+      "sha256": "96ae7b6df2b326a78176037ed8f8449cfed5b8598545438f3e8b1693373ba55e",
+      "bytes": 11433,
+      "purpose": "Conventions/question audit and original-to-reviewed source delta"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-author/convention-row-inventory.json",
+      "outer_source": "conventions-author/convention-row-inventory.json",
+      "sha256": "6b625f5056a7b4b63ee20766e4d1d742b09b8ad2240655a53ae7c7e6a56bf512",
+      "bytes": 16894,
+      "purpose": "Conventions/question audit and original-to-reviewed source delta"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-author/freeze-manifest.json",
+      "outer_source": "conventions-author/freeze-manifest.json",
+      "sha256": "fc80ec12ae3c1f13d7c7090fc60f05e2db1fe3eccfe3cf3cb9e72d7fef7d65dc",
+      "bytes": 7373,
+      "purpose": "Conventions/question audit and original-to-reviewed source delta"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-author/reviewed-dependency-binding.json",
+      "outer_source": "conventions-author/reviewed-dependency-binding.json",
+      "sha256": "36a3e733dbea673c78ad56dfd3a82a2c4464c4b3550d6d25a10e57d790a15f44",
+      "bytes": 12389,
+      "purpose": "Conventions/question audit and original-to-reviewed source delta"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/dependency-comparison.json",
+      "outer_source": "conventions-author/revision-v2/dependency-comparison.json",
+      "sha256": "9f603592eabd3e2abed664c004383af586e470ceebb9cc05e6310826457bd3cc",
+      "bytes": 9329,
+      "purpose": "Historical dependency reconciliation before final CV01 source repair"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/freeze-manifest.json",
+      "outer_source": "conventions-author/revision-v2/freeze-manifest.json",
+      "sha256": "ad43dfcb8eb18fa04a3f60ec88186066f873e132c0e9884459f1e91f18a84025",
+      "bytes": 8619,
+      "purpose": "Historical dependency reconciliation before final CV01 source repair"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/ledger-only.patch",
+      "outer_source": "conventions-author/revision-v2/ledger-only.patch",
+      "sha256": "a646162a9746c9cc823e527e425c550daa43fc86aa6829f8c80c70adfcce685a",
+      "bytes": 24018,
+      "purpose": "Historical dependency reconciliation before final CV01 source repair"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/metadata-delta.json",
+      "outer_source": "conventions-author/revision-v2/metadata-delta.json",
+      "sha256": "2e453c3c123e9797d73644b06f69fe593247dfc8c4613d223e870bab9ea2bbd5",
+      "bytes": 10049,
+      "purpose": "Historical dependency reconciliation before final CV01 source repair"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/reconciliation-report.md",
+      "outer_source": "conventions-author/revision-v2/reconciliation-report.md",
+      "sha256": "d4afda7c64b88a6d71f073ea49dd30ea84994fa697a6ab2f8579319f528d8583",
+      "bytes": 4848,
+      "purpose": "Historical dependency reconciliation before final CV01 source repair"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/revision-validation.json",
+      "outer_source": "conventions-author/revision-v2/revision-validation.json",
+      "sha256": "4b703a7a1f192707e25d4f53aa25bf4852f8b74395f9b957cd0f854b97c79256",
+      "bytes": 2588,
+      "purpose": "Historical dependency reconciliation before final CV01 source repair"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v3/author-static-checks.json",
+      "outer_source": "conventions-author/revision-v3/author-static-checks.json",
+      "sha256": "0f08415f2a6a6745f045e393cb57258b5c6cf93c27b2c3538e0ac453bffbfbf7",
+      "bytes": 5382,
+      "purpose": "Exact CV01 locator/scope repair and final author verification"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v3/check_author.py",
+      "outer_source": "conventions-author/revision-v3/check_author.py",
+      "sha256": "7833967a054da68933f60bd349c8d2d1792a680dd265d3afc2bc244ff9fb1cfa",
+      "bytes": 7125,
+      "purpose": "Exact CV01 locator/scope repair and final author verification"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v3/delta.json",
+      "outer_source": "conventions-author/revision-v3/delta.json",
+      "sha256": "11124469e1cff62f3c27229e19ceb4fe23d65287bb8fa9097834968d7279f9e8",
+      "bytes": 1728,
+      "purpose": "Exact CV01 locator/scope repair and final author verification"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v3/freeze-manifest.json",
+      "outer_source": "conventions-author/revision-v3/freeze-manifest.json",
+      "sha256": "839ad986f3162e849c362c3c43c666913fd601fbfea55d9264c41a3b5d1affe4",
+      "bytes": 5238,
+      "purpose": "Exact CV01 locator/scope repair and final author verification"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v3/minimaldiff.patch",
+      "outer_source": "conventions-author/revision-v3/minimaldiff.patch",
+      "sha256": "90810cf92eff4390803e6ab2528e7e129b0dc5877b4d46098896c808340bcb9e",
+      "bytes": 3024,
+      "purpose": "Exact CV01 locator/scope repair and final author verification"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v3/validation.json",
+      "outer_source": "conventions-author/revision-v3/validation.json",
+      "sha256": "9d2697a79839a78da4f0107947108b928916f26b5fd27d5ed312d297a5164abc",
+      "bytes": 2801,
+      "purpose": "Exact CV01 locator/scope repair and final author verification"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch",
+      "outer_source": "conventions-author/source-changes.patch",
+      "sha256": "3af6f6a98d90688bfad50000d985b5cff276bac5691516e02713c37e5802e1d3",
+      "bytes": 27862,
+      "purpose": "Conventions/question audit and original-to-reviewed source delta"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-review/claim-coverage.json",
+      "outer_source": "conventions-review/claim-coverage.json",
+      "sha256": "8b3b21db83dcd197c9bfe5742876a8c05e62cbc0d7d4f53cbe95e675c35805ae",
+      "bytes": 40917,
+      "purpose": "Independent conventions audit and required initial finding"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-review/independent-static-verification.json",
+      "outer_source": "conventions-review/independent-static-verification.json",
+      "sha256": "c636fd2adce5b66ac8837314fed88b49c28236a6a6530fb5c206226a534c1750",
+      "bytes": 73867,
+      "purpose": "Independent conventions audit and required initial finding"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-review/review-findings.json",
+      "outer_source": "conventions-review/review-findings.json",
+      "sha256": "6aa306f13387499c8a1ad981dc156144f4c31af189c717baa11c7e569e092ee9",
+      "bytes": 3412,
+      "purpose": "Independent conventions audit and required initial finding"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-review/review-manifest.json",
+      "outer_source": "conventions-review/review-manifest.json",
+      "sha256": "0fbbfc5c63d3e9b59cc3f8a506d202a057ae0dcb907eff5a411316537c63c3c1",
+      "bytes": 784,
+      "purpose": "Independent conventions audit and required initial finding"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-review/review-report.md",
+      "outer_source": "conventions-review/review-report.md",
+      "sha256": "3dd5cbf50e474743e1635745da9590bf0ab3b94589aeb90d72ef7cc66763de96",
+      "bytes": 5866,
+      "purpose": "Independent conventions audit and required initial finding"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/acceptance.md",
+      "outer_source": "conventions-review/revision-v3/acceptance.md",
+      "sha256": "eec6414464c7661de632e6aee3104f7244de03e67358eda4584232da6591c218",
+      "bytes": 2635,
+      "purpose": "Independent exact CV01 repair acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/after/book/chapters/32-open-questions.tex",
+      "outer_source": "conventions-review/revision-v3/after/book/chapters/32-open-questions.tex",
+      "sha256": "50fc264bbfc55fc19cb79dc09aa7a828b2cba479f6b3afb1c62459e0d31c9b5d",
+      "bytes": 15020,
+      "purpose": "Exact accepted conventions source and ledger snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/after/book/chapters/appendix-b-conventions.tex",
+      "outer_source": "conventions-review/revision-v3/after/book/chapters/appendix-b-conventions.tex",
+      "sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363,
+      "purpose": "Exact accepted conventions source and ledger snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/after/book/claims/section32-appendixb.json",
+      "outer_source": "conventions-review/revision-v3/after/book/claims/section32-appendixb.json",
+      "sha256": "488298ff34c229222010d03452f18e4f3855b9c7026589c74a28fbece04f3a9e",
+      "bytes": 125093,
+      "purpose": "Exact accepted conventions source and ledger snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/before/book/chapters/32-open-questions.tex",
+      "outer_source": "conventions-review/revision-v3/before/book/chapters/32-open-questions.tex",
+      "sha256": "c831bf85ab0c6cb7f5ed46509212ce5dc1549c05c5723be3c035c928a409fc21",
+      "bytes": 14848,
+      "purpose": "Before snapshot for the two changed CV01 repair paths"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/before/book/claims/section32-appendixb.json",
+      "outer_source": "conventions-review/revision-v3/before/book/claims/section32-appendixb.json",
+      "sha256": "0bf0a62df0e81ae502d0408935cb1fee80b0db9a85be8e0d58c73367773dfd5a",
+      "bytes": 123917,
+      "purpose": "Before snapshot for the two changed CV01 repair paths"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/final-acceptance.json",
+      "outer_source": "conventions-review/revision-v3/final-acceptance.json",
+      "sha256": "2a4030977ea4a64d584e98cce5171765d9e51d0abbf003b0622054d9723fd1b4",
+      "bytes": 3109,
+      "purpose": "Independent exact CV01 repair acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/recheck_cv01.py",
+      "outer_source": "conventions-review/revision-v3/recheck_cv01.py",
+      "sha256": "a81303307f143fe3b9d92bbc02521fdf2375264d5becf8d3d15b3a4ff94fcf37",
+      "bytes": 7937,
+      "purpose": "Independent exact CV01 repair acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/validation.json",
+      "outer_source": "conventions-review/revision-v3/validation.json",
+      "sha256": "60d7421ebd72c6a2a6b861891788a2df8782cd803fa98d48765f96490bbb4ec1",
+      "bytes": 2303,
+      "purpose": "Independent exact CV01 repair acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/conventions-review/verify_scope.py",
+      "outer_source": "conventions-review/verify_scope.py",
+      "sha256": "eb641650dcf7962727b197cc41273c1e29a31cf36abb02a80115932cc1dcf82c",
+      "bytes": 14960,
+      "purpose": "Independent conventions audit and required initial finding"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/evidence-retention.md",
+      "outer_source": "candidate-curation/evidence-retention.md",
+      "sha256": "c873e220b1db713f5d52bd10808ffb585e60da67c6d381cc9aae320cb27d59a0",
+      "bytes": 4060,
+      "purpose": "Final reader documentation for completed source/replay/PDF stages"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-author/author-freeze-manifest.json",
+      "outer_source": "geodesic-author/author-freeze-manifest.json",
+      "sha256": "38994ff43e952ff42ccafb4d56c44e51c385a0092d156e3d35cdbcf1041d7eec",
+      "bytes": 3887,
+      "purpose": "Geodesic mathematical audit, source references and accepted finite target contract"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-author/author-report.md",
+      "outer_source": "geodesic-author/author-report.md",
+      "sha256": "67d8b3020d54b5444007c49fa92d45b011507043995f39ae11ddf552753d4433",
+      "bytes": 6895,
+      "purpose": "Geodesic mathematical audit, source references and accepted finite target contract"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-author/author-scratch-result.json",
+      "outer_source": "geodesic-author/author-scratch-result.json",
+      "sha256": "a4f1dbaffb2bfb2d0cdb4844d59ba7aceaa44bb97b7a78868cac7e02a0f1747d",
+      "bytes": 12655,
+      "purpose": "Exact target referenced by committed mathematical claim ledgers"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-author/author-validation.json",
+      "outer_source": "geodesic-author/author-validation.json",
+      "sha256": "7cb26b04669341be6b61dadbbf1cf5f320322d0b74023920853314b9950a0a44",
+      "bytes": 3861,
+      "purpose": "Geodesic mathematical audit, source references and accepted finite target contract"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-author/author_scratch.py",
+      "outer_source": "geodesic-author/author_scratch.py",
+      "sha256": "a3c230f27e88c2915131727f12c35065a3bc5f6c3754d4a8cb71c50ad8e49c1e",
+      "bytes": 15083,
+      "purpose": "Exact target referenced by committed mathematical claim ledgers"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-author/companion-contract.md",
+      "outer_source": "geodesic-author/companion-contract.md",
+      "sha256": "2a62a149e7f5f88027329c24ba3a4720407debfed2fb78945350f23b6fce85a6",
+      "bytes": 14837,
+      "purpose": "Geodesic mathematical audit, source references and accepted finite target contract"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-author/initial-findings.md",
+      "outer_source": "geodesic-author/initial-findings.md",
+      "sha256": "63fb8e1a46ee5484c7f14e6868897ac60355ad83f00ec80eb193f0c0a899def4",
+      "bytes": 3366,
+      "purpose": "Geodesic mathematical audit, source references and accepted finite target contract"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-author/revision-v2/author-freeze-manifest-v2.json",
+      "outer_source": "geodesic-author/revision-v2/author-freeze-manifest-v2.json",
+      "sha256": "cf8a8f172a81a4cfb4090b44b65fc067cf70768b30ecfc80a858317649a44fb3",
+      "bytes": 5184,
+      "purpose": "R1/R2 source-locator repairs and author validation"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-author/revision-v2/minimal.diff",
+      "outer_source": "geodesic-author/revision-v2/minimal.diff",
+      "sha256": "e26a32f99f35d75f745a99e75255f8f4f20948ef0d96533955c8caa786243dff",
+      "bytes": 7306,
+      "purpose": "R1/R2 source-locator repairs and author validation"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-author/revision-v2/source-pin-repairs.md",
+      "outer_source": "geodesic-author/revision-v2/source-pin-repairs.md",
+      "sha256": "3874c1195d954636ea882dc8dc79f04ed490c17519b1c7f3ea6bdefde1e0103d",
+      "bytes": 2132,
+      "purpose": "R1/R2 source-locator repairs and author validation"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-author/revision-v2/validate.py",
+      "outer_source": "geodesic-author/revision-v2/validate.py",
+      "sha256": "d4df2d1ccbd65574c6788615d041a556a5860c8ad27731ca6eb643fed3d68980",
+      "bytes": 8369,
+      "purpose": "R1/R2 source-locator repairs and author validation"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-author/revision-v2/validation.json",
+      "outer_source": "geodesic-author/revision-v2/validation.json",
+      "sha256": "f6bc77dbb9fffa6bf19c7bb90e0d50970c84ce1245471f3ea3fe51617f6a31a9",
+      "bytes": 3981,
+      "purpose": "R1/R2 source-locator repairs and author validation"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-author/source-audit.md",
+      "outer_source": "geodesic-author/source-audit.md",
+      "sha256": "01c7824f045c97a9825a2b3ccd16dfaee5ec6454743d24f5127af9e7127724b5",
+      "bytes": 10224,
+      "purpose": "Geodesic mathematical audit, source references and accepted finite target contract"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/companion-contract-review.json",
+      "outer_source": "geodesic-review/companion-contract-review.json",
+      "sha256": "be7debaf190ecd960d0caeca6b82e884407b6da04e72234e16a60762980bc82b",
+      "bytes": 4294,
+      "purpose": "Independent geodesic contract, mathematical review and initial failure evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/companion-contract-review.md",
+      "outer_source": "geodesic-review/companion-contract-review.md",
+      "sha256": "c55d6e01d8913adad17940eb550e5dfd8371d8f48de081971414425f500aebee",
+      "bytes": 3013,
+      "purpose": "Independent geodesic contract, mathematical review and initial failure evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/frozen-initial/book/chapters/19-pants-twists.tex",
+      "outer_source": "geodesic-review/frozen-initial/book/chapters/19-pants-twists.tex",
+      "sha256": "9dc4438ad32d76c7508cd6f90e34dc615697bf60cc546b5187e130468213be9d",
+      "bytes": 9551,
+      "purpose": "Before snapshot for the three changed geodesic repair paths"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/frozen-initial/book/chapters/22-cusps-orthospectrum.tex",
+      "outer_source": "geodesic-review/frozen-initial/book/chapters/22-cusps-orthospectrum.tex",
+      "sha256": "67cd497d3599bbb6716335a90d6f2f5c71bd191efa96211dd47442c64f3b39e2",
+      "bytes": 9218,
+      "purpose": "Before snapshot for the three changed geodesic repair paths"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/frozen-initial/book/claims/sections17-22.json",
+      "outer_source": "geodesic-review/frozen-initial/book/claims/sections17-22.json",
+      "sha256": "aca716a9b08128e7c6feefb79693ff9313139dbc52c0b33ce7e395d6fce80d54",
+      "bytes": 112294,
+      "purpose": "Before snapshot for the three changed geodesic repair paths"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/independent-probe-results.json",
+      "outer_source": "geodesic-review/independent-probe-results.json",
+      "sha256": "63b98f71810f31f5a94d43687f30c8c4ad45ac164c121c60b20089881e17f4b8",
+      "bytes": 26792,
+      "purpose": "Independent geodesic contract, mathematical review and initial failure evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch",
+      "outer_source": "geodesic-review/independent-source-diff.patch",
+      "sha256": "4150d9ca84fd56e57b855a68d1ca03e1d27ba1515b20eb0f1ac1146b58b6d25f",
+      "bytes": 42100,
+      "purpose": "Independent geodesic contract, mathematical review and initial failure evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/independent-structure-check.json",
+      "outer_source": "geodesic-review/independent-structure-check.json",
+      "sha256": "b0b5126d01d6a1417d28441e3a5015893cb6ffd19726e88908ee5779b5f687d0",
+      "bytes": 5784,
+      "purpose": "Independent geodesic contract, mathematical review and initial failure evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/independent_probes.py",
+      "outer_source": "geodesic-review/independent_probes.py",
+      "sha256": "eda1567d85e7b667069b22b46d96cf5e5a7605fc031348f14261e74f52773ae7",
+      "bytes": 9078,
+      "purpose": "Independent geodesic contract, mathematical review and initial failure evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/initial-claim-review.json",
+      "outer_source": "geodesic-review/initial-claim-review.json",
+      "sha256": "fce9c416fa1caf4a81fc43bdaf43c807492ca98a42e55a2ae152e18b64eb1599",
+      "bytes": 43780,
+      "purpose": "Independent geodesic contract, mathematical review and initial failure evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/initial-findings.json",
+      "outer_source": "geodesic-review/initial-findings.json",
+      "sha256": "7b31165b3feacb37b424a4ecfd7d47e91f85beffcae9184a89697f3fc3f5a5e5",
+      "bytes": 2298,
+      "purpose": "Independent geodesic contract, mathematical review and initial failure evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/initial-label-review.json",
+      "outer_source": "geodesic-review/initial-label-review.json",
+      "sha256": "0a06be3f4284d4656d1b0565fbf2bcf7adbd0c9eb3d00de0600f3834bbdb6239",
+      "bytes": 18396,
+      "purpose": "Independent geodesic contract, mathematical review and initial failure evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/initial-review-manifest.json",
+      "outer_source": "geodesic-review/initial-review-manifest.json",
+      "sha256": "7386b5e022db352f9d5ce9506eeb907f46458baf6a2cac6029260fc6e90763f4",
+      "bytes": 3213,
+      "purpose": "Independent geodesic contract, mathematical review and initial failure evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/initial-review-report.md",
+      "outer_source": "geodesic-review/initial-review-report.md",
+      "sha256": "48f48cbd2677be3bbccae6b9f458121cd6dcc4c801445096eb05b48e49e5a3f7",
+      "bytes": 7214,
+      "purpose": "Independent geodesic contract, mathematical review and initial failure evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/final-acceptance.json",
+      "outer_source": "geodesic-review/revision-v2/final-acceptance.json",
+      "sha256": "b734eb97f35f360022cb874b4561d9d3151f876d26db7eb6459e9f676576c0ef",
+      "bytes": 2867,
+      "purpose": "Independent final geodesic repair acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/final-acceptance.md",
+      "outer_source": "geodesic-review/revision-v2/final-acceptance.md",
+      "sha256": "3a4c3e622ae153d6ba75c15c242d2b7cc0b655ddd7156994645e64e226fb7cfe",
+      "bytes": 3083,
+      "purpose": "Independent final geodesic repair acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/final-claim-coverage.json",
+      "outer_source": "geodesic-review/revision-v2/final-claim-coverage.json",
+      "sha256": "ccd749a1fe76144fe1de488f2437d074e2e2d1e91cfa4e4861fe92c35ee43825",
+      "bytes": 49698,
+      "purpose": "Independent final geodesic repair acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/final-label-coverage.json",
+      "outer_source": "geodesic-review/revision-v2/final-label-coverage.json",
+      "sha256": "af7f9f368a0fde6d5b0c27c2345acf605004dcb9547c241d812217941b390773",
+      "bytes": 18487,
+      "purpose": "Independent final geodesic repair acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/frozen-final/book/chapters/17-unfolding-constant-series.tex",
+      "outer_source": "geodesic-review/revision-v2/frozen-final/book/chapters/17-unfolding-constant-series.tex",
+      "sha256": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+      "bytes": 7804,
+      "purpose": "Exact accepted geodesic source and ledger snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/frozen-final/book/chapters/18-figure-eight-curves.tex",
+      "outer_source": "geodesic-review/revision-v2/frozen-final/book/chapters/18-figure-eight-curves.tex",
+      "sha256": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+      "bytes": 10705,
+      "purpose": "Exact accepted geodesic source and ledger snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/frozen-final/book/chapters/19-pants-twists.tex",
+      "outer_source": "geodesic-review/revision-v2/frozen-final/book/chapters/19-pants-twists.tex",
+      "sha256": "f1fd410500ec3c414b4266d706dddd220b0902a546090807e2288384101c2c35",
+      "bytes": 9708,
+      "purpose": "Exact accepted geodesic source and ledger snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/frozen-final/book/chapters/20-torus-twist-series.tex",
+      "outer_source": "geodesic-review/revision-v2/frozen-final/book/chapters/20-torus-twist-series.tex",
+      "sha256": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+      "bytes": 6616,
+      "purpose": "Exact accepted geodesic source and ledger snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/frozen-final/book/chapters/21-cuff-matching.tex",
+      "outer_source": "geodesic-review/revision-v2/frozen-final/book/chapters/21-cuff-matching.tex",
+      "sha256": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+      "bytes": 2960,
+      "purpose": "Exact accepted geodesic source and ledger snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/frozen-final/book/chapters/22-cusps-orthospectrum.tex",
+      "outer_source": "geodesic-review/revision-v2/frozen-final/book/chapters/22-cusps-orthospectrum.tex",
+      "sha256": "b8b3f0568c4667b7ed6116935291c5c71dc3be74ded57c916ac638f6ecd80f66",
+      "bytes": 9220,
+      "purpose": "Exact accepted geodesic source and ledger snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/frozen-final/book/claims/sections17-22.json",
+      "outer_source": "geodesic-review/revision-v2/frozen-final/book/claims/sections17-22.json",
+      "sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137",
+      "bytes": 113087,
+      "purpose": "Exact accepted geodesic source and ledger snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/independent-verification.json",
+      "outer_source": "geodesic-review/revision-v2/independent-verification.json",
+      "sha256": "d2193d40ccda62603f2b97122fe5382e82139cf67bcc1bdc30e3b9007795c479",
+      "bytes": 5828,
+      "purpose": "Independent final geodesic repair acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/verify_final_revision.py",
+      "outer_source": "geodesic-review/revision-v2/verify_final_revision.py",
+      "sha256": "fac2232133a24ead126a03d1ede1223ce99b401f61f6ecb567514b8a01bd7e1a",
+      "bytes": 7860,
+      "purpose": "Independent final geodesic repair acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/source-statement-review.json",
+      "outer_source": "geodesic-review/source-statement-review.json",
+      "sha256": "2f813af1e87b3419b1a25ad5176566711d0f73d5391b62ff3ca1c4687edbe515",
+      "bytes": 7239,
+      "purpose": "Independent geodesic contract, mathematical review and initial failure evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/P01-layout-delta.json",
+      "outer_source": "integration-author/revision-v2/P01-layout-delta.json",
+      "sha256": "bd292c0bc92a9a2fcdb7ae3ce5db95ec60a80609eedf50b6a7bb7b978b634b40",
+      "bytes": 927,
+      "purpose": "Frozen integration author source/layout/ledger changes and validation"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/INTEGRATION_PLAN.md.txt",
+      "outer_source": "integration-author/revision-v2/after/INTEGRATION_PLAN.md",
+      "sha256": "6883c25399ceb1cee5359c7256088d94612bcba37e039a4a2319f27c680480bd",
+      "bytes": 49025,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/README.md.txt",
+      "outer_source": "integration-author/revision-v2/after/README.md",
+      "sha256": "b38752855a2ff46c369b60d096135589fb4ae6421cf129f39f5792ed7a2adce5",
+      "bytes": 9576,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/book/README.md.txt",
+      "outer_source": "integration-author/revision-v2/after/book/README.md",
+      "sha256": "7f85f1340682a5c628bc407b41507585236312330c640289a217f647381c5204",
+      "bytes": 10147,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/book/chapters/10-quantum-introduction.tex",
+      "outer_source": "integration-author/revision-v2/after/book/chapters/10-quantum-introduction.tex",
+      "sha256": "609f375ff0c1ab926c7073e716642b6abbceefde487fe470b771394771abc66f",
+      "bytes": 44238,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/book/chapters/11-quantum-degeneration.tex",
+      "outer_source": "integration-author/revision-v2/after/book/chapters/11-quantum-degeneration.tex",
+      "sha256": "f7ab9345686dc71b44cb8486224c6b5875979e6a9820e45b4ea92fe70ba1a4c8",
+      "bytes": 14034,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/book/chapters/17-unfolding-constant-series.tex",
+      "outer_source": "integration-author/revision-v2/after/book/chapters/17-unfolding-constant-series.tex",
+      "sha256": "7b3e784b9b6f7ace3f402afca0a402e5cc354fd118d751b07b6a8bad707a4e88",
+      "bytes": 8329,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/book/chapters/18-figure-eight-curves.tex",
+      "outer_source": "integration-author/revision-v2/after/book/chapters/18-figure-eight-curves.tex",
+      "sha256": "db8fd09066b6b80bb1e231587ad0f740d6d37aad91cd20ae29e4bde95fc08cbc",
+      "bytes": 11343,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/book/chapters/19-pants-twists.tex",
+      "outer_source": "integration-author/revision-v2/after/book/chapters/19-pants-twists.tex",
+      "sha256": "07292527452fe2e728eba6cc917f548ebd7f9551ac2849d7e5a1b1b7158080dd",
+      "bytes": 10283,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/book/chapters/20-torus-twist-series.tex",
+      "outer_source": "integration-author/revision-v2/after/book/chapters/20-torus-twist-series.tex",
+      "sha256": "841fe98f4e7140ef6b6db82214f9e7d78d9c311888a2d2851e02e61eda6ab4e9",
+      "bytes": 7181,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/book/chapters/21-cuff-matching.tex",
+      "outer_source": "integration-author/revision-v2/after/book/chapters/21-cuff-matching.tex",
+      "sha256": "2988997ebd215ad77c6153309712ed557c139b2af8c13c4ca86fb2a865e84f90",
+      "bytes": 3393,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/book/chapters/22-cusps-orthospectrum.tex",
+      "outer_source": "integration-author/revision-v2/after/book/chapters/22-cusps-orthospectrum.tex",
+      "sha256": "bb3a234029d2b95b6c40eee4cbeee0199d4740a84326cd0595163dcbc6730557",
+      "bytes": 9783,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/book/chapters/32-open-questions.tex",
+      "outer_source": "integration-author/revision-v2/after/book/chapters/32-open-questions.tex",
+      "sha256": "cc5df6f2a283bb6eb3b96f1bd01229a212880aa47056aefc3cae7652c831c7ca",
+      "bytes": 15281,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/book/chapters/appendix-b-conventions.tex",
+      "outer_source": "integration-author/revision-v2/after/book/chapters/appendix-b-conventions.tex",
+      "sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/book/claims/section32-appendixb.json",
+      "outer_source": "integration-author/revision-v2/after/book/claims/section32-appendixb.json",
+      "sha256": "b8e2ae0cbab07d993b45c381caca1b308b30acad45685da447af5e8e4276de55",
+      "bytes": 150374,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/book/claims/sections10-11.json",
+      "outer_source": "integration-author/revision-v2/after/book/claims/sections10-11.json",
+      "sha256": "5d191ed33fdd5b1ce1a592e91ccc053674a9ea9c0f52a1c9bca33c473cff857c",
+      "bytes": 96300,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/book/claims/sections17-22.json",
+      "outer_source": "integration-author/revision-v2/after/book/claims/sections17-22.json",
+      "sha256": "40dc199e544b1eddf678b1a10210fdd46b4bee6cfb5bfdc168534e9c6076037b",
+      "bytes": 149832,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/book/computational-status.md.txt",
+      "outer_source": "integration-author/revision-v2/after/book/computational-status.md",
+      "sha256": "de27d20352ccb2b37043708a3f3e49ca0742dd7955d108e7ee88255bac0eafe4",
+      "bytes": 36186,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/book/polyhedral_volumes_and_geodesic_identities.tex",
+      "outer_source": "integration-author/revision-v2/after/book/polyhedral_volumes_and_geodesic_identities.tex",
+      "sha256": "858de9e69e082371593cec09d55fff6da5c276971c99cd32053d5db7c2822280",
+      "bytes": 56007,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/after/docs/INTEGRATION_STATUS.md.txt",
+      "outer_source": "integration-author/revision-v2/after/docs/INTEGRATION_STATUS.md",
+      "sha256": "7b7e71768702faeac19bac4ac4abb8b0558163f34ab57297756d6fc76b769ba3",
+      "bytes": 7479,
+      "purpose": "Exact after integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/author-freeze.json",
+      "outer_source": "integration-author/revision-v2/author-freeze.json",
+      "sha256": "174bc16423e1917a7d6ed634e90ac8a47dd5a86cedb551efb67bf86218d03d16",
+      "bytes": 18216,
+      "purpose": "Frozen integration author source/layout/ledger changes and validation"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/author-validation.json",
+      "outer_source": "integration-author/revision-v2/author-validation.json",
+      "sha256": "97c3625f79be55c09e10ab49b2948534d90df7cd190d6d85450f75ca002cb3a9",
+      "bytes": 17143,
+      "purpose": "Frozen integration author source/layout/ledger changes and validation"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/INTEGRATION_PLAN.md.txt",
+      "outer_source": "integration-author/revision-v2/before/INTEGRATION_PLAN.md",
+      "sha256": "9a568e4e37af32e1d23f42eac38c84b25e6b0e1da89bef7c819457da2336fead",
+      "bytes": 47691,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/README.md.txt",
+      "outer_source": "integration-author/revision-v2/before/README.md",
+      "sha256": "2e9610b545ab83d0340c19173128cc99a2599fb72837a04ece9d93cb008680fa",
+      "bytes": 9530,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/book/README.md.txt",
+      "outer_source": "integration-author/revision-v2/before/book/README.md",
+      "sha256": "d0f611c2631f82100cec3f941294374af275798708f3073adc5b3642902a840d",
+      "bytes": 9028,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/book/chapters/10-quantum-introduction.tex",
+      "outer_source": "integration-author/revision-v2/before/book/chapters/10-quantum-introduction.tex",
+      "sha256": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+      "bytes": 43507,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/book/chapters/11-quantum-degeneration.tex",
+      "outer_source": "integration-author/revision-v2/before/book/chapters/11-quantum-degeneration.tex",
+      "sha256": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9",
+      "bytes": 13435,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/book/chapters/17-unfolding-constant-series.tex",
+      "outer_source": "integration-author/revision-v2/before/book/chapters/17-unfolding-constant-series.tex",
+      "sha256": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+      "bytes": 7804,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/book/chapters/18-figure-eight-curves.tex",
+      "outer_source": "integration-author/revision-v2/before/book/chapters/18-figure-eight-curves.tex",
+      "sha256": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+      "bytes": 10705,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/book/chapters/19-pants-twists.tex",
+      "outer_source": "integration-author/revision-v2/before/book/chapters/19-pants-twists.tex",
+      "sha256": "f1fd410500ec3c414b4266d706dddd220b0902a546090807e2288384101c2c35",
+      "bytes": 9708,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/book/chapters/20-torus-twist-series.tex",
+      "outer_source": "integration-author/revision-v2/before/book/chapters/20-torus-twist-series.tex",
+      "sha256": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+      "bytes": 6616,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/book/chapters/21-cuff-matching.tex",
+      "outer_source": "integration-author/revision-v2/before/book/chapters/21-cuff-matching.tex",
+      "sha256": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+      "bytes": 2960,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/book/chapters/22-cusps-orthospectrum.tex",
+      "outer_source": "integration-author/revision-v2/before/book/chapters/22-cusps-orthospectrum.tex",
+      "sha256": "b8b3f0568c4667b7ed6116935291c5c71dc3be74ded57c916ac638f6ecd80f66",
+      "bytes": 9220,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/book/chapters/32-open-questions.tex",
+      "outer_source": "integration-author/revision-v2/before/book/chapters/32-open-questions.tex",
+      "sha256": "50fc264bbfc55fc19cb79dc09aa7a828b2cba479f6b3afb1c62459e0d31c9b5d",
+      "bytes": 15020,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/book/chapters/appendix-b-conventions.tex",
+      "outer_source": "integration-author/revision-v2/before/book/chapters/appendix-b-conventions.tex",
+      "sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/book/claims/section32-appendixb.json",
+      "outer_source": "integration-author/revision-v2/before/book/claims/section32-appendixb.json",
+      "sha256": "488298ff34c229222010d03452f18e4f3855b9c7026589c74a28fbece04f3a9e",
+      "bytes": 125093,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/book/claims/sections10-11.json",
+      "outer_source": "integration-author/revision-v2/before/book/claims/sections10-11.json",
+      "sha256": "34dbb6255dc468cb796bb3a129eeaf37ac0c5f4dc358abfd73030e64331b3539",
+      "bytes": 59530,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/book/claims/sections17-22.json",
+      "outer_source": "integration-author/revision-v2/before/book/claims/sections17-22.json",
+      "sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137",
+      "bytes": 113087,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/book/computational-status.md.txt",
+      "outer_source": "integration-author/revision-v2/before/book/computational-status.md",
+      "sha256": "d763007813449b0c677615cb0b3d9f9d7bc77ee62bba4622217c06d4890a9838",
+      "bytes": 30061,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/book/polyhedral_volumes_and_geodesic_identities.tex",
+      "outer_source": "integration-author/revision-v2/before/book/polyhedral_volumes_and_geodesic_identities.tex",
+      "sha256": "23b7f8d84f0236ce7939efb5f0858fd60ba58f8fc74207636779f3227b3d30dd",
+      "bytes": 56003,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/before/docs/INTEGRATION_STATUS.md.txt",
+      "outer_source": "integration-author/revision-v2/before/docs/INTEGRATION_STATUS.md",
+      "sha256": "e479af58af6af49dbc1106db779262fd7b03b12bc2a016491e5d2243924d8b76",
+      "bytes": 6177,
+      "purpose": "Exact before integration source snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/integration.patch",
+      "outer_source": "integration-author/revision-v2/integration.patch",
+      "sha256": "b49632c15578e3bb977b146df63e7c3b9971a272b2cf9b3e2237d1770beeb386",
+      "bytes": 308852,
+      "purpose": "Frozen integration author source/layout/ledger changes and validation"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/ledger-json-deltas.json",
+      "outer_source": "integration-author/revision-v2/ledger-json-deltas.json",
+      "sha256": "cc5c960acb5ce5717660f277f6fe9eee1dbcdada9e0eb410311b43d56b0322e8",
+      "bytes": 205833,
+      "purpose": "Frozen integration author source/layout/ledger changes and validation"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/local-reference-check.json",
+      "outer_source": "integration-author/revision-v2/local-reference-check.json",
+      "sha256": "de0e6a37591bec745ee46bae93e2531d61d6a22db9c2c4bc1853886746b5ab42",
+      "bytes": 45826,
+      "purpose": "Frozen integration author source/layout/ledger changes and validation"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/pending-artifact-links.json",
+      "outer_source": "integration-author/revision-v2/pending-artifact-links.json",
+      "sha256": "bab363eaa1e1f94950519baaa8cdebadf6e45a5c08c4983db44a07f6efe9a73f",
+      "bytes": 4215,
+      "purpose": "Frozen integration author source/layout/ledger changes and validation"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/preintegration-acceptance-pins.json",
+      "outer_source": "integration-author/revision-v2/preintegration-acceptance-pins.json",
+      "sha256": "a09d62f8fc1887ed17760c07c7518d5f952810c4dc777063539f31557150a1c5",
+      "bytes": 987,
+      "purpose": "Frozen integration author source/layout/ledger changes and validation"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/runtime-immutability.json",
+      "outer_source": "integration-author/revision-v2/runtime-immutability.json",
+      "sha256": "59d19298e99f67ee522611db2c6061cd31fe12e719436b394193bc4a3ac40a04",
+      "bytes": 3191,
+      "purpose": "Frozen integration author source/layout/ledger changes and validation"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/source-inventory.json",
+      "outer_source": "integration-author/revision-v2/source-inventory.json",
+      "sha256": "1660a37b0d1f4989d80bce01c24ef0c0632ec3e1feac72b16adb4df0a4753139",
+      "bytes": 8924,
+      "purpose": "Frozen integration author source/layout/ledger changes and validation"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/source-order.json",
+      "outer_source": "integration-author/revision-v2/source-order.json",
+      "sha256": "00c22c3f5fd3738ad9b9441ca4ac3f4ae1b6a0e56129895b57c976c68787d15c",
+      "bytes": 21395,
+      "purpose": "Frozen integration author source/layout/ledger changes and validation"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-author/revision-v2/verify_links_and_deltas.py",
+      "outer_source": "integration-author/revision-v2/verify_links_and_deltas.py",
+      "sha256": "986e23dd3f520a16ff4d02daaa0d554ee743c0597d441d68bdbbf1e04303dc41",
+      "bytes": 9519,
+      "purpose": "Frozen integration author source/layout/ledger changes and validation"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/audit-attempt-2.stderr.txt",
+      "outer_source": "integration-review/audit-attempt-2.stderr.txt",
+      "sha256": "60b5c01432d6453c2106f1e4b92750d02480a8adf1db519770e6f60790123e4a",
+      "bytes": 571,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/audit-attempt-2.stdout.txt",
+      "outer_source": "integration-review/audit-attempt-2.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/audit-attempt-3.stderr.txt",
+      "outer_source": "integration-review/audit-attempt-3.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/audit-attempt-3.stdout.txt",
+      "outer_source": "integration-review/audit-attempt-3.stdout.txt",
+      "sha256": "fb40163ec31b1338ff706e144d53d7550ed98db8c7184730c0135fbdfa214ed9",
+      "bytes": 225,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/audit_source.py",
+      "outer_source": "integration-review/audit_source.py",
+      "sha256": "6a4c08f9a9e3415303ccef6b309bd156c990aeeb4a145c4720ab035837ba3c39",
+      "bytes": 25944,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/build-command.json",
+      "outer_source": "integration-review/build-command.json",
+      "sha256": "c42c41b1ea929ecf50ff8b3a5fc9c6bdcc074003d75c365bf7da0bdce0eff87d",
+      "bytes": 641,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/build-command.stderr.txt",
+      "outer_source": "integration-review/build-command.stderr.txt",
+      "sha256": "7a416c1263270ca140b5e436507d96f9bd8a15eebdefdbd37def30237302f699",
+      "bytes": 194,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/build-command.stdout.txt",
+      "outer_source": "integration-review/build-command.stdout.txt",
+      "sha256": "6fc3cae93476f21084b263656a3af465a89ece17d86b9bb1bc751295f5eb3e2f",
+      "bytes": 129003,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/build_and_test.py",
+      "outer_source": "integration-review/build_and_test.py",
+      "sha256": "7a53a0bfdc55603f808d70d29ea3072faf0f28d029facc7200f3f9a534c9d76a",
+      "bytes": 5060,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/final-acceptance.json",
+      "outer_source": "integration-review/final-acceptance.json",
+      "sha256": "84b9eb77d45339fad20af6df2439f710a9fc2a47af35c823f4b3f8e3029cd708",
+      "bytes": 18644,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/finalize_review.py",
+      "outer_source": "integration-review/finalize_review.py",
+      "sha256": "67b1dc1a518cd70db5df736522affdd79339098b839d7d76e73fa8c2c892a40c",
+      "bytes": 17438,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/historical-warning-render.json",
+      "outer_source": "integration-review/historical-warning-render.json",
+      "sha256": "3a5cf7d63930249a166aee8776361c6045bf06da6a63a494cd8a8d26f17d8b90",
+      "bytes": 1572,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/independent-ledger-deltas.json",
+      "outer_source": "integration-review/independent-ledger-deltas.json",
+      "sha256": "2a839efbfc488af6cbe8d2f0b50e1cc440323cb95527a7d87866d35d97fdc9e0",
+      "bytes": 204603,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/inspect_pdf.py",
+      "outer_source": "integration-review/inspect_pdf.py",
+      "sha256": "58eb0ce8a1400526d3c769742e2cff6c5e7733c3609989a79bb55697c59743ee",
+      "bytes": 7150,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/local-link-and-dependency-receipt.json",
+      "outer_source": "integration-review/local-link-and-dependency-receipt.json",
+      "sha256": "c4a993e56b399c96c74a160db4d7f017f6699084f06b9943e7b31e496b589799",
+      "bytes": 173589,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/marker-reuse.json",
+      "outer_source": "integration-review/marker-reuse.json",
+      "sha256": "73b7839cc8e810ae75d037e340de7052561e4eb010dbf46f1e23db0e671ab278",
+      "bytes": 238,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/pdf-build-receipt.json",
+      "outer_source": "integration-review/pdf-build-receipt.json",
+      "sha256": "a15ccdf4a4b47f09f4e6173bcf13ff42776442c60ffcb3da0991b2363b4b6704",
+      "bytes": 10522,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.aux.txt",
+      "outer_source": "integration-review/pdf-build/main.aux",
+      "sha256": "1b5cb49042c83c68fb41010c4929ac2cc95a2fa3e4f85dbd37638d247278f490",
+      "bytes": 114072,
+      "purpose": "Verbatim actual final PDF build evidence with visible renamed extension"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.fls.txt",
+      "outer_source": "integration-review/pdf-build/main.fls",
+      "sha256": "21323c3adb32b71dd5b0b4bab0b03812c7210783f858e4d37a9085091247c7d2",
+      "bytes": 41260,
+      "purpose": "Verbatim actual final PDF build evidence with visible renamed extension"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.log.txt",
+      "outer_source": "integration-review/pdf-build/main.log",
+      "sha256": "a64a857a64f0534aad0b6a03884d26bbafc38dccbf1144f13b96b6579e1cf7f9",
+      "bytes": 47191,
+      "purpose": "Verbatim actual final PDF build evidence with visible renamed extension"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/pdf-inspection.stderr.txt",
+      "outer_source": "integration-review/pdf-inspection.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/pdf-inspection.stdout.txt",
+      "outer_source": "integration-review/pdf-inspection.stdout.txt",
+      "sha256": "01a45f06ebb7b5a1985e959d048639b5e0f56046fd3c68af91a46b89283ad912",
+      "bytes": 2100,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/preservation-receipt.json",
+      "outer_source": "integration-review/preservation-receipt.json",
+      "sha256": "7f8029bf864341dd79c2748680ec432e03dc322a2a304e86b623b368ed2271a5",
+      "bytes": 184387,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/render-manifest.json",
+      "outer_source": "integration-review/render-manifest.json",
+      "sha256": "b3cd2138e454cb6700adc70aff4015568484f11d6c035807c250c2892e649621",
+      "bytes": 83830,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/rendered/page-102.png",
+      "outer_source": "integration-review/rendered/page-102.png",
+      "sha256": "4931a22a0ec30e0c356a6fead10ada0d07d74b68e932e684963b7c6ac8e879f3",
+      "bytes": 56748,
+      "purpose": "Selected actually inspected critical final page image"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/rendered/page-103.png",
+      "outer_source": "integration-review/rendered/page-103.png",
+      "sha256": "20603bde7b9b2513bdd02146ff0964fad2d2c3c30715241de86ca812adc5d71e",
+      "bytes": 59045,
+      "purpose": "Selected actually inspected critical final page image"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/rendered/page-107.png",
+      "outer_source": "integration-review/rendered/page-107.png",
+      "sha256": "5ecec8a47aaf17e44350d16605ef41d8858488c2154d9e845c79d499f74d2313",
+      "bytes": 55197,
+      "purpose": "Selected actually inspected critical final page image"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/rendered/page-186.png",
+      "outer_source": "integration-review/rendered/page-186.png",
+      "sha256": "ec5326e6a99c867fee45c04d177c665e26d018530a574c68b7e00eb0d1a84e9a",
+      "bytes": 66256,
+      "purpose": "Selected actually inspected critical final page image"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/rendered/page-191.png",
+      "outer_source": "integration-review/rendered/page-191.png",
+      "sha256": "85035ffdbe0b99ff516e7e0bd32b722b5ada3be36c109149bca1378bd22631d2",
+      "bytes": 57416,
+      "purpose": "Selected actually inspected critical final page image"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/rendered/page-192.png",
+      "outer_source": "integration-review/rendered/page-192.png",
+      "sha256": "dafe14a8d716ac1fe90c86e1a2830b1547338c72d69a4b476e6a3aff015a2178",
+      "bytes": 63028,
+      "purpose": "Selected actually inspected critical final page image"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/rendered/page-195.png",
+      "outer_source": "integration-review/rendered/page-195.png",
+      "sha256": "256b945e36f803d96384d488e772dc428d1d86d3769495ff9f2b1bf86fb5e9f0",
+      "bytes": 80699,
+      "purpose": "Selected actually inspected critical final page image"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/review-report.md",
+      "outer_source": "integration-review/review-report.md",
+      "sha256": "418c64b2e422f300f97e222892c2a810ba0413d30b6320f9a08013fae974afc5",
+      "bytes": 3284,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/site-tests.json",
+      "outer_source": "integration-review/site-tests.json",
+      "sha256": "3eb99004a2a65bb43457ac5155850eaebe493a8fb55e5c3ea910a8205e2f22ce",
+      "bytes": 540,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/site-tests.stderr.txt",
+      "outer_source": "integration-review/site-tests.stderr.txt",
+      "sha256": "994c33a9c93d49de20a76d2cc6dfaacefcfce94ebd0e85796b4c5b66d442b382",
+      "bytes": 3752,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/site-tests.stdout.txt",
+      "outer_source": "integration-review/site-tests.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/source-delta-and-clarity-review.json",
+      "outer_source": "integration-review/source-delta-and-clarity-review.json",
+      "sha256": "8d8652cd45f024bfbeaa2e2b55d06996c8cb2c054333719882a324ac0e084ba6",
+      "bytes": 6039,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/source-verification.json",
+      "outer_source": "integration-review/source-verification.json",
+      "sha256": "6d5654bad4dd192846ace0efd20fde6236045d426d604579c632a1a57dcee949",
+      "bytes": 75282,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/test-review.json",
+      "outer_source": "integration-review/test-review.json",
+      "sha256": "860a944f9d05acb95190e62006bf55283b232f57fffe9c21f3e849c5ee7b4641",
+      "bytes": 647,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/tex-input-freeze.json",
+      "outer_source": "integration-review/tex-input-freeze.json",
+      "sha256": "f9d51b08ba5da5b4d68eb48508be4ce58a49e22a15a55a4b9cf4a44fa6c79e3d",
+      "bytes": 11268,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/visual-review.json",
+      "outer_source": "integration-review/visual-review.json",
+      "sha256": "f83ab82a95be4124cbcf16719aea88dc352c74935294e8988f401e38aa7bc15e",
+      "bytes": 11483,
+      "purpose": "Exact final independent integration/source/PDF review evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/pdf-preflight/build-command.json",
+      "outer_source": "pdf-preflight/build-command.json",
+      "sha256": "d48a062676bed49e3f51a480e895481d8286184036e6057aeab4296ed6522605",
+      "bytes": 535,
+      "purpose": "Preliminary PDF operation marker and P01 failure evidence only; preliminary PDF is not final artifact"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/pdf-preflight/evidence-manifest.json",
+      "outer_source": "pdf-preflight/evidence-manifest.json",
+      "sha256": "6051555f62f6e4db00df095f96e6221fe79829034d90f74d13fa213bcfb22ba0",
+      "bytes": 11766,
+      "purpose": "Preliminary PDF operation marker and P01 failure evidence only; preliminary PDF is not final artifact"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/pdf-preflight/final-source-check.json",
+      "outer_source": "pdf-preflight/final-source-check.json",
+      "sha256": "963d04216b2e7f794fc74c2c3dc7572a1ec7e398b108eddd17b998b58a879c37",
+      "bytes": 6466,
+      "purpose": "Preliminary PDF operation marker and P01 failure evidence only; preliminary PDF is not final artifact"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/pdf-preflight/marker-receipt.json",
+      "outer_source": "pdf-preflight/marker-receipt.json",
+      "sha256": "b5a3f29c344415d5295bae209d35afc64546bab9a2c17dfe2ccc37cba0315b1b",
+      "bytes": 704,
+      "purpose": "Preliminary PDF operation marker and P01 failure evidence only; preliminary PDF is not final artifact"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/pdf-preflight/marker.stderr.txt",
+      "outer_source": "pdf-preflight/marker.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Preliminary PDF operation marker and P01 failure evidence only; preliminary PDF is not final artifact"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/pdf-preflight/marker.stdout.txt",
+      "outer_source": "pdf-preflight/marker.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Preliminary PDF operation marker and P01 failure evidence only; preliminary PDF is not final artifact"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/pdf-preflight/pdf-build-receipt.json",
+      "outer_source": "pdf-preflight/pdf-build-receipt.json",
+      "sha256": "6fef500f35e14af0fbfee9c7927a00b688f53d631086965732b315c514beb772",
+      "bytes": 3401,
+      "purpose": "Preliminary PDF operation marker and P01 failure evidence only; preliminary PDF is not final artifact"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/pdf-preflight/pdf-build/main.fls.txt",
+      "outer_source": "pdf-preflight/pdf-build/main.fls",
+      "sha256": "a51c50e798b4886ac3d98a1428d5d4bb94179b8e18ce01e27dfe76c998fdbd59",
+      "bytes": 41135,
+      "purpose": "Preliminary PDF operation marker and P01 failure evidence only; preliminary PDF is not final artifact"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/pdf-preflight/pdf-build/main.log.txt",
+      "outer_source": "pdf-preflight/pdf-build/main.log",
+      "sha256": "dfe528b708d871d6f47a1edb2fb99c64ec4686e787fa64ed4653fe40a021b5cd",
+      "bytes": 47456,
+      "purpose": "Preliminary PDF operation marker and P01 failure evidence only; preliminary PDF is not final artifact"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/pdf-preflight/render-manifest.json",
+      "outer_source": "pdf-preflight/render-manifest.json",
+      "sha256": "39f80d1567af7b27fe02779f8276cd3f1694e06e6e9a5e4ab1df2b5911b3aca3",
+      "bytes": 16984,
+      "purpose": "Preliminary PDF operation marker and P01 failure evidence only; preliminary PDF is not final artifact"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/pdf-preflight/rendered/page-100.png",
+      "outer_source": "pdf-preflight/rendered/page-100.png",
+      "sha256": "242f4407c1a0e9cd7dab1d1b137011f4a5e8109ac60f4670e74b887bfbd48454",
+      "bytes": 59808,
+      "purpose": "Preliminary PDF operation marker and P01 failure evidence only; preliminary PDF is not final artifact"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/pdf-preflight/tex-input-freeze.json",
+      "outer_source": "pdf-preflight/tex-input-freeze.json",
+      "sha256": "406b12315a5701699ccfdaa9e54530b3904f77a51e8163f6b79e5f4083886ed3",
+      "bytes": 32775,
+      "purpose": "Preliminary PDF operation marker and P01 failure evidence only; preliminary PDF is not final artifact"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/pdf-preflight/visual-review.json",
+      "outer_source": "pdf-preflight/visual-review.json",
+      "sha256": "12d61dd750c040de75346b9a90055def15c9d676d9f5b3fc896ae3f3a86ba66d",
+      "bytes": 10826,
+      "purpose": "Preliminary PDF operation marker and P01 failure evidence only; preliminary PDF is not final artifact"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-author/computational-targets.md",
+      "outer_source": "quantum-author/computational-targets.md",
+      "sha256": "1d1fae5b1539b8ee52d27a761ee1d2aaf2a8b050d213c023df506af498fe96b1",
+      "bytes": 8691,
+      "purpose": "Quantum bounded audit, source pins, mathematical deltas and computational contract"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-author/defects-and-repairs.md",
+      "outer_source": "quantum-author/defects-and-repairs.md",
+      "sha256": "9bea67f32751dad0c257d838b66b1fe3343fbd6f26a0da289ad3c53fbe1fabbc",
+      "bytes": 5375,
+      "purpose": "Quantum bounded audit, source pins, mathematical deltas and computational contract"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-author/final-static-checks.json",
+      "outer_source": "quantum-author/final-static-checks.json",
+      "sha256": "4b7410a994f232594016256605b7c9be5d267b2904b74da88619e4f4a12e5d21",
+      "bytes": 1037,
+      "purpose": "Quantum bounded audit, source pins, mathematical deltas and computational contract"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-author/freeze-manifest.json",
+      "outer_source": "quantum-author/freeze-manifest.json",
+      "sha256": "107eda60080662c39b747bfa98fbbca765c2e3fa18b6d161960057128dfe1456",
+      "bytes": 1556,
+      "purpose": "Quantum bounded audit, source pins, mathematical deltas and computational contract"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-author/primary-source-pins.json",
+      "outer_source": "quantum-author/primary-source-pins.json",
+      "sha256": "0719a287e44e83e6fc6c7474ccd69b897e406e10aa252bbac7c61397aad2a51a",
+      "bytes": 17096,
+      "purpose": "Quantum bounded audit, source pins, mathematical deltas and computational contract"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-author/revision-v2/freeze-manifest.json",
+      "outer_source": "quantum-author/revision-v2/freeze-manifest.json",
+      "sha256": "f043f6943bd124638802bfdb5d5e7505269143f54046eea93d298345191c0620",
+      "bytes": 3133,
+      "purpose": "QR01 exact before/after dependency-pin repair"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-author/revision-v2/ledger-before.json",
+      "outer_source": "quantum-author/revision-v2/ledger-before.json",
+      "sha256": "ea22e86c4399d4d3fcf83c938144373c89367cb7f9ce1a074b866499000ce1cb",
+      "bytes": 59312,
+      "purpose": "QR01 exact before/after dependency-pin repair"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-author/revision-v2/ledger.patch",
+      "outer_source": "quantum-author/revision-v2/ledger.patch",
+      "sha256": "1d7b1aab3dbe8bbe3e3ff5d5a31dab36eb39f4c267fcbd13bd7167f9e3f49580",
+      "bytes": 1488,
+      "purpose": "QR01 exact before/after dependency-pin repair"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-author/revision-v2/validation.json",
+      "outer_source": "quantum-author/revision-v2/validation.json",
+      "sha256": "75762c8ee3f7992237391103d0ddb77a73007ad5c55a61fa95d87e4d1ecb82b0",
+      "bytes": 3730,
+      "purpose": "QR01 exact before/after dependency-pin repair"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-author/section10-revision.diff",
+      "outer_source": "quantum-author/section10-revision.diff",
+      "sha256": "274fac6387dbb947948b490c6df143e1a45a7e8bc6611ecf85530ebbc0010703",
+      "bytes": 9182,
+      "purpose": "Quantum bounded audit, source pins, mathematical deltas and computational contract"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-author/section11-revision.diff",
+      "outer_source": "quantum-author/section11-revision.diff",
+      "sha256": "021ea3889d9af124b7037a06fa45f09bacdf80459b894180f3019405fe303037",
+      "bytes": 11544,
+      "purpose": "Quantum bounded audit, source pins, mathematical deltas and computational contract"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-review/claim-coverage.json",
+      "outer_source": "quantum-review/claim-coverage.json",
+      "sha256": "2d7746386eb9e803cad645b80d1d5cbb476325eed36fed69e8c6d9e0e1c72211",
+      "bytes": 35744,
+      "purpose": "Independent quantum findings, resolution, source/claim checks and acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-review/final-acceptance.json",
+      "outer_source": "quantum-review/final-acceptance.json",
+      "sha256": "c631f5ed63513246adf7bbec958c3298ab577861ee02f1d359ff6ca25b7c4dd9",
+      "bytes": 3479,
+      "purpose": "Independent quantum findings, resolution, source/claim checks and acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-review/final-author-freeze/book/chapters/10-quantum-introduction.tex",
+      "outer_source": "quantum-review/final-author-freeze/book/chapters/10-quantum-introduction.tex",
+      "sha256": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+      "bytes": 43507,
+      "purpose": "Exact accepted quantum source and ledger snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-review/final-author-freeze/book/chapters/11-quantum-degeneration.tex",
+      "outer_source": "quantum-review/final-author-freeze/book/chapters/11-quantum-degeneration.tex",
+      "sha256": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9",
+      "bytes": 13435,
+      "purpose": "Exact accepted quantum source and ledger snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-review/final-author-freeze/book/claims/sections10-11.json",
+      "outer_source": "quantum-review/final-author-freeze/book/claims/sections10-11.json",
+      "sha256": "34dbb6255dc468cb796bb3a129eeaf37ac0c5f4dc358abfd73030e64331b3539",
+      "bytes": 59530,
+      "purpose": "Exact accepted quantum source and ledger snapshots"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-review/final-author-freeze/freeze-manifest.json",
+      "outer_source": "quantum-review/final-author-freeze/freeze-manifest.json",
+      "sha256": "f043f6943bd124638802bfdb5d5e7505269143f54046eea93d298345191c0620",
+      "bytes": 3133,
+      "purpose": "Pinned author source freeze copied by independent reviewer"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-review/independent-probe-results.json",
+      "outer_source": "quantum-review/independent-probe-results.json",
+      "sha256": "257304aaedf3781ee51e36186f6061a241efa3ec8235200c4cc3f126d1b293a0",
+      "bytes": 12263,
+      "purpose": "Independent quantum findings, resolution, source/claim checks and acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-review/independent-source-review.json",
+      "outer_source": "quantum-review/independent-source-review.json",
+      "sha256": "950555b745b06d22840bfdcd7b5e95699cbadc489693593f87149c07dacee4db",
+      "bytes": 11006,
+      "purpose": "Independent quantum findings, resolution, source/claim checks and acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-review/independent-structure-check.json",
+      "outer_source": "quantum-review/independent-structure-check.json",
+      "sha256": "7eceb8f44037890a601301e43c468672a5bc098bf9f44a2fa022986adc9953cd",
+      "bytes": 5713,
+      "purpose": "Independent quantum findings, resolution, source/claim checks and acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-review/independent_probes.py",
+      "outer_source": "quantum-review/independent_probes.py",
+      "sha256": "a8a4f324f58bf5e54b8ac39165f13ee820f46a6b6700f30b408c1b74e45b2e05",
+      "bytes": 9212,
+      "purpose": "Independent quantum findings, resolution, source/claim checks and acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-review/initial-findings.json",
+      "outer_source": "quantum-review/initial-findings.json",
+      "sha256": "78b33bbe7219c9b154aaa0798f862da95db82e703a7cdc480fc28f3f0c8fe96a",
+      "bytes": 1346,
+      "purpose": "Independent quantum findings, resolution, source/claim checks and acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-review/initial-identity-check.json",
+      "outer_source": "quantum-review/initial-identity-check.json",
+      "sha256": "05ad25eff8391eede8448657d164c8eeac5e1be621b8bc91c594423050d90e64",
+      "bytes": 6510,
+      "purpose": "Independent quantum findings, resolution, source/claim checks and acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-review/label-coverage.json",
+      "outer_source": "quantum-review/label-coverage.json",
+      "sha256": "62de93b367ef772099e83a95ca7232033cf6895a85c6366dede3e86c42d09ca9",
+      "bytes": 9044,
+      "purpose": "Independent quantum findings, resolution, source/claim checks and acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-review/review-evidence-manifest.json",
+      "outer_source": "quantum-review/review-evidence-manifest.json",
+      "sha256": "4baa28c995e4dad3e02911d45a0179cded9845a919c9f0e25bea57a2802f07a4",
+      "bytes": 5797,
+      "purpose": "Independent quantum findings, resolution, source/claim checks and acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-review/review-report.md",
+      "outer_source": "quantum-review/review-report.md",
+      "sha256": "6d27086af53a1c4a1ec903221fec1b387b170c8acb45b5fce746c204771dc5ea",
+      "bytes": 13797,
+      "purpose": "Independent quantum findings, resolution, source/claim checks and acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/quantum-review/verify_final_metadata.py",
+      "outer_source": "quantum-review/verify_final_metadata.py",
+      "sha256": "e1faa66bd0f0ea0c5516b33ffba9a05a7ba72a2101d9fcc2ced8b21402eab965",
+      "bytes": 5855,
+      "purpose": "Independent quantum findings, resolution, source/claim checks and acceptance"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/replay-spec.unready.json",
+      "outer_source": "checkpoint-work/revision-v3/replay-spec.unready.json",
+      "sha256": "8122b3a77b5e434c62a27ee84310a5139f000eaa3e4cf6eeade6e0b529596d0d",
+      "bytes": 2318,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/reproduction.md",
+      "outer_source": "candidate-curation/reproduction.md",
+      "sha256": "f7ded02db817a570bf30fc3ba064d0bf60edeb85e2275ae532b7f18d327a3822",
+      "bytes": 4340,
+      "purpose": "Final reader documentation for completed source/replay/PDF stages"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/run_clean_replay.py",
+      "outer_source": "checkpoint-work/revision-v3/run_clean_replay.py",
+      "sha256": "26ea5840dd35fbded2ec7023ca86ca37e3ff05eb6e311bbf9eea2749603cdc60",
+      "bytes": 4312,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/source-checkpoint/attempt-1/001.stdout.bin",
+      "outer_source": "source-checkpoint/attempt-1/001.stdout.bin",
+      "sha256": "857381152f578e52cce72ceeb77e81293e67713c52de2e675d48fa88dcd04f61",
+      "bytes": 51,
+      "purpose": "Nonempty source checkpoint mutation/status/index/integrity output"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/source-checkpoint/attempt-1/003.stdout.bin",
+      "outer_source": "source-checkpoint/attempt-1/003.stdout.bin",
+      "sha256": "2ed27c1421e6928dbe13dbfdb5c59e1045b30341fe7ebe05700006bc5ac572c0",
+      "bytes": 6,
+      "purpose": "Nonempty source checkpoint mutation/status/index/integrity output"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/source-checkpoint/attempt-1/004.stdout.bin",
+      "outer_source": "source-checkpoint/attempt-1/004.stdout.bin",
+      "sha256": "0fb8bf7206896b4d2c8225e974ac74b0afdc083f0c0d9f2577fc3d8c3b8e3b86",
+      "bytes": 41,
+      "purpose": "Nonempty source checkpoint mutation/status/index/integrity output"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/source-checkpoint/attempt-1/006.stdout.bin",
+      "outer_source": "source-checkpoint/attempt-1/006.stdout.bin",
+      "sha256": "7f80bfeb805b436aab3c0f399a65153eca12654685b157658175353effe2e6ea",
+      "bytes": 1854,
+      "purpose": "Nonempty source checkpoint mutation/status/index/integrity output"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/source-checkpoint/attempt-1/042.stdout.bin",
+      "outer_source": "source-checkpoint/attempt-1/042.stdout.bin",
+      "sha256": "8ded19ac100bc100140fc07dddf550db34dad9bf9d97bdc1ddc1251183dcdc94",
+      "bytes": 110,
+      "purpose": "Nonempty source checkpoint mutation/status/index/integrity output"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/source-checkpoint/attempt-1/044.stdout.bin",
+      "outer_source": "source-checkpoint/attempt-1/044.stdout.bin",
+      "sha256": "e94868300d7b3c841b2bfa3c6cc8bfd4f34930f63ffbc8b63c5c10535fd3e3a7",
+      "bytes": 1814,
+      "purpose": "Nonempty source checkpoint mutation/status/index/integrity output"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/source-checkpoint/attempt-1/047.stdout.bin",
+      "outer_source": "source-checkpoint/attempt-1/047.stdout.bin",
+      "sha256": "0e7b3a8fddfd3e939b827de4492376e939305cf1170d47c72ca3f4c2934ca142",
+      "bytes": 284599,
+      "purpose": "Nonempty source checkpoint mutation/status/index/integrity output"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/source-checkpoint/attempt-1/088.stdout.bin",
+      "outer_source": "source-checkpoint/attempt-1/088.stdout.bin",
+      "sha256": "c503eabd07a21e46717dbd35f6a0164854b16c7bf6c265b161ad8cc89b9fe38c",
+      "bytes": 1854,
+      "purpose": "Nonempty source checkpoint mutation/status/index/integrity output"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/source-checkpoint/attempt-1/089.stdout.bin",
+      "outer_source": "source-checkpoint/attempt-1/089.stdout.bin",
+      "sha256": "69a629057353ae156f5a4c513c000f33cf19b946dca874ad1db6b4a581146333",
+      "bytes": 2404,
+      "purpose": "Nonempty source checkpoint mutation/status/index/integrity output"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/source-checkpoint/attempt-1/090.stdout.bin",
+      "outer_source": "source-checkpoint/attempt-1/090.stdout.bin",
+      "sha256": "997b2ba428efad7948eebf6fa28c38fccad7b217e14645d70a1255f177bf2d2d",
+      "bytes": 41,
+      "purpose": "Nonempty source checkpoint mutation/status/index/integrity output"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/source-checkpoint/attempt-1/091.stdout.bin",
+      "outer_source": "source-checkpoint/attempt-1/091.stdout.bin",
+      "sha256": "e2aa95e52121fee1f0c8a282c6a99bd208ae0541b5f85f2402d4352c5decbc81",
+      "bytes": 82,
+      "purpose": "Nonempty source checkpoint mutation/status/index/integrity output"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/source-checkpoint/attempt-1/094.stdout.bin",
+      "outer_source": "source-checkpoint/attempt-1/094.stdout.bin",
+      "sha256": "8ded19ac100bc100140fc07dddf550db34dad9bf9d97bdc1ddc1251183dcdc94",
+      "bytes": 110,
+      "purpose": "Nonempty source checkpoint mutation/status/index/integrity output"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/source-checkpoint/attempt-1/approved-source-paths.nul",
+      "outer_source": "source-checkpoint/attempt-1/approved-source-paths.nul",
+      "sha256": "ea76841b8f4125425442b1d39c66cbf090682c30ddd4990212f0cc54b288fb2d",
+      "bytes": 1734,
+      "purpose": "Exact literal staged source allowlist"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/source-checkpoint/attempt-1/commands.jsonl",
+      "outer_source": "source-checkpoint/attempt-1/commands.jsonl",
+      "sha256": "de51592565017d3c333e14d0c71ea053fd09ce56040e25fa148e8f6c0932ec17",
+      "bytes": 62476,
+      "purpose": "Complete actual source checkpoint command ledger"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/source-checkpoint/checkpoint.py",
+      "outer_source": "source-checkpoint/checkpoint.py",
+      "sha256": "6e1249a88d8f28e071be59bae9b5f4b78f50f9da440a5cc7df0aaea1ff690ed9",
+      "bytes": 12807,
+      "purpose": "Historical executed source-checkpoint command implementation; never rerun against artifact tree"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/source-checkpoint/source-checkpoint.json",
+      "outer_source": "source-checkpoint/source-checkpoint.json",
+      "sha256": "56df9d0d5bfc155c8f0bcc077bbb4320290896d87d602b7cf823e18f42b88bd0",
+      "bytes": 50680,
+      "purpose": "Actual source-only commit and preservation receipt"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure-review/author-verifier-normal.json",
+      "outer_source": "structure-review/author-verifier-normal.json",
+      "sha256": "6932d8b849d6c0258b65f6243b5d7fa495d80c385b6df7d95215eb963afebee3",
+      "bytes": 1738,
+      "purpose": "Independent structural acceptance, retained full normal inventory and optimized/rejection evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure-review/author-verifier-optimized.json",
+      "outer_source": "structure-review/author-verifier-optimized.json",
+      "sha256": "6932d8b849d6c0258b65f6243b5d7fa495d80c385b6df7d95215eb963afebee3",
+      "bytes": 1738,
+      "purpose": "Independent structural acceptance, retained full normal inventory and optimized/rejection evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure-review/check_rejections.py",
+      "outer_source": "structure-review/check_rejections.py",
+      "sha256": "e8a850f2ff7a4a0b77d52c536cee3740c9802c30cdbdf72323babd4c14be1624",
+      "bytes": 2849,
+      "purpose": "Independent structural acceptance, retained full normal inventory and optimized/rejection evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure-review/independent-normal.json",
+      "outer_source": "structure-review/independent-normal.json",
+      "sha256": "15732708766b9a0ded90dc255c29f15a20209f7f3281534f210312f3b371d6a4",
+      "bytes": 1166086,
+      "purpose": "Independent structural acceptance, retained full normal inventory and optimized/rejection evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure-review/rejections-normal.json",
+      "outer_source": "structure-review/rejections-normal.json",
+      "sha256": "a5ebb5cd2cb117aeb614ed6830f06764392d76b9fce4b207bd482991b46ea55a",
+      "bytes": 1553,
+      "purpose": "Independent structural acceptance, retained full normal inventory and optimized/rejection evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure-review/rejections-optimized.json",
+      "outer_source": "structure-review/rejections-optimized.json",
+      "sha256": "979699f00b525d1f5b6699b5c899197b93f55c6e2c2e097d3a36900a5f399c3a",
+      "bytes": 1553,
+      "purpose": "Independent structural acceptance, retained full normal inventory and optimized/rejection evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure-review/review-manifest.json",
+      "outer_source": "structure-review/review-manifest.json",
+      "sha256": "50a17cfb46c8b867c5dd3c45129a6157f6bfaab248f889cd63dab177fe43e8fd",
+      "bytes": 2224,
+      "purpose": "Independent structural acceptance, retained full normal inventory and optimized/rejection evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure-review/review-report.txt",
+      "outer_source": "structure-review/review-report.txt",
+      "sha256": "4da79a7875caf5112b3456c4d6921ced8fa6f962e6a0e2374b9b7592536c4990",
+      "bytes": 5405,
+      "purpose": "Independent structural acceptance, retained full normal inventory and optimized/rejection evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure-review/review_structure.py",
+      "outer_source": "structure-review/review_structure.py",
+      "sha256": "da583addbc0a3e46939282028a16011d7c1b129bc59ba871b0b920cb4c405736",
+      "bytes": 16693,
+      "purpose": "Independent structural acceptance, retained full normal inventory and optimized/rejection evidence"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/baseline-tracked-inventory.json",
+      "outer_source": "structure/baseline-tracked-inventory.json",
+      "sha256": "7215c3af89f2f4fe50634bad4f572cbffbdd27c9cebfd0530e8d97c3c68e6ac8",
+      "bytes": 1135435,
+      "purpose": "Exact baseline preservation and structural extraction reconstruction"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/extract_chapters.py",
+      "outer_source": "structure/extract_chapters.py",
+      "sha256": "11a19df0322450dbd082cbf477f9072867367b34e9360dc4b12be600a1e1334b",
+      "bytes": 21393,
+      "purpose": "Exact baseline preservation and structural extraction reconstruction"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/10-quantum-introduction.tex",
+      "outer_source": "structure/extracted-source-graph/book/chapters/10-quantum-introduction.tex",
+      "sha256": "59adda3457313e6fb60f04bc0865062e7002487c38fb0d8d8b6a277a036cbec3",
+      "bytes": 41239,
+      "purpose": "Exact eleven-path extracted stage; remaining active files recover from baseline Git"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/11-quantum-degeneration.tex",
+      "outer_source": "structure/extracted-source-graph/book/chapters/11-quantum-degeneration.tex",
+      "sha256": "3b64addaa9f38fbd29edc59f9ee9a6467d0fe1ad753e52d6f5bcd398e9962b75",
+      "bytes": 9611,
+      "purpose": "Exact eleven-path extracted stage; remaining active files recover from baseline Git"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/17-unfolding-constant-series.tex",
+      "outer_source": "structure/extracted-source-graph/book/chapters/17-unfolding-constant-series.tex",
+      "sha256": "d1d34b1fd4fc8fad18c5991de6e2709e24e6c8a6663914e301ebbe6fbe938a01",
+      "bytes": 5668,
+      "purpose": "Exact eleven-path extracted stage; remaining active files recover from baseline Git"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/18-figure-eight-curves.tex",
+      "outer_source": "structure/extracted-source-graph/book/chapters/18-figure-eight-curves.tex",
+      "sha256": "cf47156a2ceb7cbf0c79b0d1800282b93d8ce4c3fda94c9a9dc854b013959324",
+      "bytes": 7704,
+      "purpose": "Exact eleven-path extracted stage; remaining active files recover from baseline Git"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/19-pants-twists.tex",
+      "outer_source": "structure/extracted-source-graph/book/chapters/19-pants-twists.tex",
+      "sha256": "6d1bd1ac3b906d69fdf1ca1d53d2c00b109b60284bcc024304a609fd953a0bb6",
+      "bytes": 6200,
+      "purpose": "Exact eleven-path extracted stage; remaining active files recover from baseline Git"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/20-torus-twist-series.tex",
+      "outer_source": "structure/extracted-source-graph/book/chapters/20-torus-twist-series.tex",
+      "sha256": "c87cad8b8759fdf1ebdba29f5c810dc209e2ada8025f4441fd8f25c772cf4982",
+      "bytes": 3579,
+      "purpose": "Exact eleven-path extracted stage; remaining active files recover from baseline Git"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/21-cuff-matching.tex",
+      "outer_source": "structure/extracted-source-graph/book/chapters/21-cuff-matching.tex",
+      "sha256": "8e2bd981f2f3d6b3d5a280bc3df4ec2594bf0cbd32d28cc0bbc260b4453f8f16",
+      "bytes": 1988,
+      "purpose": "Exact eleven-path extracted stage; remaining active files recover from baseline Git"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/22-cusps-orthospectrum.tex",
+      "outer_source": "structure/extracted-source-graph/book/chapters/22-cusps-orthospectrum.tex",
+      "sha256": "5e1af1883adbe90d6a5fbc9de2904f6ae0d0ae2af38b81bfc43e5892844416f5",
+      "bytes": 6714,
+      "purpose": "Exact eleven-path extracted stage; remaining active files recover from baseline Git"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/32-open-questions.tex",
+      "outer_source": "structure/extracted-source-graph/book/chapters/32-open-questions.tex",
+      "sha256": "e1a7069f19a75fc09f49c1af0b919f4987517d30953e686d9179e0665ca2b7b7",
+      "bytes": 10374,
+      "purpose": "Exact eleven-path extracted stage; remaining active files recover from baseline Git"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/appendix-b-conventions.tex",
+      "outer_source": "structure/extracted-source-graph/book/chapters/appendix-b-conventions.tex",
+      "sha256": "c0b3b5d73785daadb4654bf34a05129b5d1149811b965fe1e7fc69b5f398f155",
+      "bytes": 3582,
+      "purpose": "Exact eleven-path extracted stage; remaining active files recover from baseline Git"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/polyhedral_volumes_and_geodesic_identities.tex",
+      "outer_source": "structure/extracted-source-graph/book/polyhedral_volumes_and_geodesic_identities.tex",
+      "sha256": "23b7f8d84f0236ce7939efb5f0858fd60ba58f8fc74207636779f3227b3d30dd",
+      "bytes": 56003,
+      "purpose": "Exact eleven-path extracted stage; remaining active files recover from baseline Git"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/extraction-map.json",
+      "outer_source": "structure/extraction-map.json",
+      "sha256": "c209b243a41966249ad0f45fba69cae05c43468c34cf64d35885f56e068c8901",
+      "bytes": 9084,
+      "purpose": "Exact baseline preservation and structural extraction reconstruction"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/extraction-result.json",
+      "outer_source": "structure/extraction-result.json",
+      "sha256": "7d6574a44961d298a80dfc9332ed1640a46a39162ae858842464875a8bb4531a",
+      "bytes": 1143,
+      "purpose": "Exact baseline preservation and structural extraction reconstruction"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/freeze-record.json",
+      "outer_source": "structure/freeze-record.json",
+      "sha256": "e1ec8a59cb9c2dd7cfa77e8fb912a42e64d5b5a64fc9c40dd358802a46aaf984",
+      "bytes": 783,
+      "purpose": "Exact baseline preservation and structural extraction reconstruction"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/independent-verification.json",
+      "outer_source": "structure/independent-verification.json",
+      "sha256": "6932d8b849d6c0258b65f6243b5d7fa495d80c385b6df7d95215eb963afebee3",
+      "bytes": 1738,
+      "purpose": "Exact baseline preservation and structural extraction reconstruction"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/source-only.diff",
+      "outer_source": "structure/source-only.diff",
+      "sha256": "3f1f909929614395a9d767f1d1133457685214d015b6d1518f69992ff648083c",
+      "bytes": 201831,
+      "purpose": "Exact baseline preservation and structural extraction reconstruction"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/source-order.json",
+      "outer_source": "structure/source-order.json",
+      "sha256": "f0a1fb72eb45bd98123d7c4416a20f83535ed39c6ef1f34bcf67286293ccd49a",
+      "bytes": 46098,
+      "purpose": "Exact baseline preservation and structural extraction reconstruction"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/structure-manifest.json",
+      "outer_source": "structure/structure-manifest.json",
+      "sha256": "36192abd41a5a214cb1565fe7a0daf7f7e35c07ed5e9a39ff3b92adc3e794f75",
+      "bytes": 84445,
+      "purpose": "Exact baseline preservation and structural extraction reconstruction"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/structure-report.txt",
+      "outer_source": "structure/structure-report.txt",
+      "sha256": "5eac0e95412cc28e009cf4da6f65cd9690e0926abcbac14f5262dc3d63886002",
+      "bytes": 5225,
+      "purpose": "Exact baseline preservation and structural extraction reconstruction"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/structure/verify_extraction.py",
+      "outer_source": "structure/verify_extraction.py",
+      "sha256": "0ca177dfebb57fa3f4e6743c53ea8686c27452c7d3e79d6ccff0cf418f64e1c7",
+      "bytes": 11599,
+      "purpose": "Exact baseline preservation and structural extraction reconstruction"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/test_checkpoint.py",
+      "outer_source": "checkpoint-work/revision-v3/test_checkpoint.py",
+      "sha256": "135c0fce185bb011cba4e922c942426c15892130b4a26f25a49ff412953f3de2",
+      "bytes": 44930,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/verify_checkpoint.py",
+      "outer_source": "checkpoint-work/revision-v3/verify_checkpoint.py",
+      "sha256": "720f239af2e6b22c7f9b9143ede5d69a7f9e300bb4ea8985c6a2e49efe7ad94f",
+      "bytes": 18992,
+      "purpose": "Independently accepted v3 actual-approval shape adapter and frozen verification; final source/PDF/replay bindings remain pending"
+    }
+  ],
+  "omissions": [
+    "All originals remain in OUTER. Candidate-review and postcommit approvals/receipts are excluded to avoid cycles.",
+    "Partial four-group reports, duplicate independent reviewer replay results, temporary Git repositories, caches and duplicate source trees omitted.",
+    "One v1 author report retained only as the independent oracle input; accepted v2 reference and actual final clean-source result are distinct retained stages.",
+    "Redundant structural expanded manuscript bodies and 25 unchanged source copies reconstruct from baseline Git and extraction records; duplicate optimized full inventory omitted with its identity retained.",
+    "Preliminary PDF omitted. Final PDF retained once. Other final page images/contact sheets stay OUTER with hashes/review coverage retained; seven critical final page images retained.",
+    "Empty source command streams and redundant per-path Git blob dumps stay OUTER; complete command ledger identities and exact committed blob sources retained.",
+    "Raw ignored log/recorder/aux extensions renamed with unchanged bytes; no Gitignore weakening.",
+    "Verbatim whitespace is enumerated by exact copied path/hash/diagnostic in artifact-whitespace-exceptions.json; no broad or authored-source exception.",
+    "Frozen before/after Markdown source snapshots use .md.txt targets so original link syntax stays literal; original filenames and exact byte identities remain in this mapping."
+  ],
+  "self_and_candidate_manifest_excluded": true
+}

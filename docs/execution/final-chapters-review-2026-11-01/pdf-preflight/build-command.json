@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/Library/TeX/texbin/latexmk",
+    "-norc",
+    "-pdf",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-file-line-error",
+    "-no-shell-escape",
+    "-outdir=../../pdf-build",
+    "main.tex"
+  ],
+  "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/pdf-preflight/frozen-source/book",
+  "returncode": 0,
+  "elapsed_seconds": 11.940568874939345,
+  "scope": "Actual preliminary precommit build from the frozen math-only source. Not final integrated PDF approval."
+}

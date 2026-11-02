@@ -1,0 +1,2764 @@
+{
+  "schema_version": "1.1",
+  "chapter_sources": [
+    "book/chapters/32-open-questions.tex",
+    "book/chapters/appendix-b-conventions.tex"
+  ],
+  "chapter_labels": [
+    "sec:questions",
+    "app:conventions"
+  ],
+  "review_date": "2026-11-01",
+  "baseline_commit": "151673b1817e66aae493eb7da1be5ddf49adfe0f",
+  "review_scope": "Author consistency audit of all fifteen questions, every convention row and the source-convention paragraph, against exact previously reviewed chapters/ledgers and separately identified current author revisions. No open problem is promoted to a theorem or made a publication requirement.",
+  "path_convention": "Canonical paths are relative to the research repository. ../execution paths identify the outer task evidence; final curation and stable checkpoint linking belong to integration.",
+  "status_definitions": {
+    "open_target": "An explicit research extension; the established inputs are separately identified. Not a publication gate.",
+    "convention_pointer_checked": "The formula, sign, scale, domain or indexing convention agrees with the pinned dependency statement; inherits its mathematical status.",
+    "source_statement_inherited": "The named earlier statement/convention audit is reused, with its source locators and limits; no fresh full-proof audit claimed.",
+    "local_derivation_inherited": "The local normalization calculation is reused from its exact reviewed chapter and ledger.",
+    "evidence_scope_checked": "The described finite support agrees with the named records; no fresh numerical execution.",
+    "author_scope_declaration": "An explicit scope or publication-boundary statement, not a mathematical theorem."
+  },
+  "chapter_source_sha256": {
+    "book/chapters/32-open-questions.tex": "c831bf85ab0c6cb7f5ed46509212ce5dc1549c05c5723be3c035c928a409fc21",
+    "book/chapters/appendix-b-conventions.tex": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74"
+  },
+  "structural_baseline": {
+    "review_manifest": {
+      "path": "../execution/final-chapters-review-2026-11-01/structure-review/review-manifest.json",
+      "sha256": "50a17cfb46c8b867c5dd3c45129a6157f6bfaab248f889cd63dab177fe43e8fd"
+    },
+    "expected_original_labels": [
+      "sec:questions",
+      "app:conventions"
+    ],
+    "new_labels": [],
+    "question_count": 15,
+    "original_convention_rows": 28,
+    "current_convention_rows": 43
+  },
+  "prior_review_bindings": [
+    {
+      "id": "normalization",
+      "review_manifest": {
+        "path": "docs/execution/normalization-review-2026-11-01/integration-review/review-manifest.json",
+        "sha256": "a4a5d6e440d25188408c0ec2d70e8ce1e2c24ba69015c228936d2f408dcc9026",
+        "bytes": 12163
+      },
+      "approval_field": "approved_source_sha256",
+      "matched_files": [
+        {
+          "path": "book/chapters/01-volume-normalization.tex",
+          "sha256": "b35a17e1dce5aa276d915e67eff0d15926da7c4180a32f9ffa9706476c2fe095",
+          "bytes": 3889
+        },
+        {
+          "path": "book/chapters/02-ideal-angle-cells.tex",
+          "sha256": "968ea966c452494a299be719165b5ac25c5ebd70e31e8bfd974705b763f9644d",
+          "bytes": 5697
+        },
+        {
+          "path": "book/chapters/03-ideal-tetrahedron.tex",
+          "sha256": "81c51ade3378fbfd4baff1cebeb2dcdd8b0fd43a032ac45fb3b30c4908060797",
+          "bytes": 5926
+        },
+        {
+          "path": "book/chapters/04-hyperideal-integrand.tex",
+          "sha256": "94da7f5288e0b6c606ff7d1a80516bc421e1de1a801e83873a0c9a25af7946b5",
+          "bytes": 11640
+        },
+        {
+          "path": "book/chapters/05-boundary-cone-continuation.tex",
+          "sha256": "feee80182603e334d8cda389435a43a8b9d37192b581befd1e761c03b93e51d5",
+          "bytes": 6788
+        },
+        {
+          "path": "book/chapters/06-torus-sphere.tex",
+          "sha256": "4a60370b881044ff89f45bbe51a171f04fb315b3be9317468a6cf212e8fd2947",
+          "bytes": 3959
+        },
+        {
+          "path": "book/chapters/07-euclidean-periods.tex",
+          "sha256": "3665a4e2ff074950a5e74ef9fba511af4dc5820e3589d823d9d96f7fac2de8d9",
+          "bytes": 11798
+        },
+        {
+          "path": "book/chapters/08-wp-flat-limit.tex",
+          "sha256": "1a175315aa975708a5c93151b9ae107b7dd36f79720dae7c7264adda062a6283",
+          "bytes": 16284
+        },
+        {
+          "path": "book/chapters/appendix-a-fricke.tex",
+          "sha256": "61bde2f802c7c5cb931d6bc5c4528e82459392e803b2a7aaf1a7d5afc4fb7e5f",
+          "bytes": 2191
+        },
+        {
+          "path": "book/claims/sections1-6.json",
+          "sha256": "46d3939d0cacda4f5780f18ed6b9e2ba21758d2fc3d0deecac99130ab14b6af2",
+          "bytes": 29510
+        },
+        {
+          "path": "book/claims/sections7-8.json",
+          "sha256": "7438f1b5c8fde23fa81b0b1c3250d2965debf79678026d649bd7ff7cd368439d",
+          "bytes": 19707
+        }
+      ],
+      "scope": "Reuse the named checkpoint and its independent mathematical/source-statement reviews within their stated scope. This is a current byte-identity and dependency-statement check, not fresh external-proof refereeing or numerical replay."
+    },
+    {
+      "id": "section9",
+      "review_manifest": {
+        "path": "docs/execution/section9-barrier-2026-10-31/publication-review-manifest.json",
+        "sha256": "00559d8ae7edbc8eda88412e28208614f0dbec42b95cc4b0a119c3de9bac3b0e",
+        "bytes": 4749
+      },
+      "approval_field": "source_sha256",
+      "matched_files": [
+        {
+          "path": "book/chapters/09-volume-hessians.tex",
+          "sha256": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00",
+          "bytes": 34587
+        },
+        {
+          "path": "book/claims/section9.json",
+          "sha256": "255ed6ebb0c3eb1c7714d238f2829f6115487817408545e40461ef87b47b5c73",
+          "bytes": 37274
+        }
+      ],
+      "scope": "Reuse the named checkpoint and its independent mathematical/source-statement reviews within their stated scope. This is a current byte-identity and dependency-statement check, not fresh external-proof refereeing or numerical replay."
+    },
+    {
+      "id": "quantum_surgery",
+      "review_manifest": {
+        "path": "docs/execution/quantum-surgery-review-2026-11-01/integration-review/approved-source-manifest.json",
+        "sha256": "7ef377bd9f6f219cedb0a54db88eadce5e0dffc7807f5f08201d423c73ca2638",
+        "bytes": 7612
+      },
+      "approval_field": "files",
+      "matched_files": [
+        {
+          "path": "book/chapters/12-quantum-boundary-measure.tex",
+          "sha256": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+          "bytes": 18683
+        },
+        {
+          "path": "book/chapters/13-four-point-fusion.tex",
+          "sha256": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+          "bytes": 24410
+        },
+        {
+          "path": "book/chapters/14-normalized-quantum-comparison.tex",
+          "sha256": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+          "bytes": 21763
+        },
+        {
+          "path": "book/chapters/16-dehn-filling-response.tex",
+          "sha256": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+          "bytes": 42117
+        },
+        {
+          "path": "book/claims/section16.json",
+          "sha256": "dc24ca2ca1514446b5bd862f7632942a36f5e5d2bf07065a40b959bed3ce6531",
+          "bytes": 29199
+        },
+        {
+          "path": "book/claims/sections12-14.json",
+          "sha256": "fecb43e3327f9f659afbd841f8b9ee10a2c75fa0b3a7694655beabc7675d53c7",
+          "bytes": 30454
+        }
+      ],
+      "scope": "Reuse the named checkpoint and its independent mathematical/source-statement reviews within their stated scope. This is a current byte-identity and dependency-statement check, not fresh external-proof refereeing or numerical replay."
+    },
+    {
+      "id": "regular_airy",
+      "review_manifest": {
+        "path": "docs/execution/section15-analytic-review-2026-11-01/integration-review/approved-source-manifest.json",
+        "sha256": "4fcaa7f3893762884bfe78350db4eb690a5850eb74733a03feb37ce4c7b23041",
+        "bytes": 7902
+      },
+      "approval_field": "approved_source_sha256",
+      "matched_files": [
+        {
+          "path": "book/chapters/15-quantum-airy.tex",
+          "sha256": "efee2c699923ab31e4d7d48eeac57c60bf2ea088ea4ff17e617b9ed97202d6dd",
+          "bytes": 24972
+        },
+        {
+          "path": "book/claims/section15.json",
+          "sha256": "2a53176d95601bd09448326a34b203f1e05bd46dc6eee182226af36b24a2fb96",
+          "bytes": 25504
+        }
+      ],
+      "scope": "Reuse the named checkpoint and its independent mathematical/source-statement reviews within their stated scope. This is a current byte-identity and dependency-statement check, not fresh external-proof refereeing or numerical replay."
+    },
+    {
+      "id": "counting_mixing",
+      "review_manifest": {
+        "path": "docs/execution/counting-mixing-review-2026-11-01/integration-review/revision-v2/approved-source-manifest.json",
+        "sha256": "0fe9b4a314efdd5d1d8c33f448b49d36d998200bcad2d09a0dd12ede5cbf7a2d",
+        "bytes": 12125
+      },
+      "approval_field": "approved_sources",
+      "matched_files": [
+        {
+          "path": "book/chapters/23-trace-coefficients.tex",
+          "sha256": "5520b28607f96a3e65ea32e7c4dab267f6556dbbe8975d29b4186b9b27e429c9",
+          "bytes": 35208
+        },
+        {
+          "path": "book/chapters/24-quantitative-counting.tex",
+          "sha256": "4099f91c4abddf5f2a13831e48d7d52ac4d90af137068b969ca612fc6b273c58",
+          "bytes": 27440
+        },
+        {
+          "path": "book/chapters/25-global-coefficient-filters.tex",
+          "sha256": "c876c43ce0d738ea4fa4780713753c3c9c48efdcf788cc9e305ac5011af732e2",
+          "bytes": 14508
+        },
+        {
+          "path": "book/chapters/26-counting-to-mixing.tex",
+          "sha256": "64562ebf631c59b84b9c991a632926107b3e24cb5b08b29c21e263bd50a9e901",
+          "bytes": 17201
+        },
+        {
+          "path": "book/chapters/27-weighted-mixing-converse.tex",
+          "sha256": "79fb4660fe87a5723eea0d410e55e954913b0386057a31542473d6486492dcc1",
+          "bytes": 35331
+        },
+        {
+          "path": "book/chapters/28-genus-two-model.tex",
+          "sha256": "18c05143e86fb9630868bb2824ddf44643c1ee1c84a40dc77a8c9d5354663fb4",
+          "bytes": 34521
+        },
+        {
+          "path": "book/chapters/29-controlled-observables.tex",
+          "sha256": "8c26fb3e18186d95ead2ae71eebd601966855d1bf0f9f7ed662f9996ab3b49f1",
+          "bytes": 32478
+        },
+        {
+          "path": "book/chapters/30-sharp-diagnostics.tex",
+          "sha256": "23d92f42eeacbe7e6c967e9b35e48228e96458356a5d659333713bf79200bd33",
+          "bytes": 32832
+        },
+        {
+          "path": "book/chapters/31-arithmetic-remainder.tex",
+          "sha256": "7b065510eee82c535484ddcab44da4722c7b738b64d0d0e2aaec598407d2ba69",
+          "bytes": 18304
+        },
+        {
+          "path": "book/claims/section30.json",
+          "sha256": "5b19adfa2a45ab5fc22d760564f5576c5134f02d1827f8c94e3fa2e4c2bb852a",
+          "bytes": 30573
+        },
+        {
+          "path": "book/claims/section31.json",
+          "sha256": "6cd4a0d185cda2e8dc2852ce6ddf81d0f0fc75a4a19d3866c1f84e3ad835f6b9",
+          "bytes": 26963
+        },
+        {
+          "path": "book/claims/sections23-25.json",
+          "sha256": "61af82e0e0cf8b7e658803255f5bcd38849cde0f27539ef901b7f027816667db",
+          "bytes": 95857
+        },
+        {
+          "path": "book/claims/sections26-29.json",
+          "sha256": "d139ca58e77c234e7c9e5d1bce69caf85b0038c1d4ef586a0b9ea0972371629c",
+          "bytes": 93703
+        }
+      ],
+      "scope": "Reuse the named checkpoint and its independent mathematical/source-statement reviews within their stated scope. This is a current byte-identity and dependency-statement check, not fresh external-proof refereeing or numerical replay."
+    }
+  ],
+  "inherited_source_statement_evidence": [
+    {
+      "path": "docs/execution/normalization-review-2026-11-01/math-review-a/review.md",
+      "sha256": "ad9b41090ba735c8f08c3be15459c74d2d676b1dcd4f21aa9a6346c87b31d45b",
+      "bytes": 7810
+    },
+    {
+      "path": "docs/execution/normalization-review-2026-11-01/math-review-a/source-pins.json",
+      "sha256": "9d6b091ce546b2f23ea464f146b8573ddd735050618163041838d5f9543de2ec",
+      "bytes": 3469
+    },
+    {
+      "path": "docs/execution/normalization-review-2026-11-01/math-review-b/review.md",
+      "sha256": "cb6020bc0fe4197c64fd1cb37b66e5dfe62a973545bf01481d17104451c06b12",
+      "bytes": 4616
+    },
+    {
+      "path": "docs/execution/normalization-review-2026-11-01/math-review-b/final-approval.json",
+      "sha256": "aa92618dcd6946b9aa549b1a48d4ddb575c603a942a06b339bc8539838784aac",
+      "bytes": 1362
+    },
+    {
+      "path": "docs/execution/section9-barrier-2026-10-31/barrier-publication-review.md",
+      "sha256": "7162f2b137e17ac3364bb7a8c5b3bc6109794e1d88befb02a39555e72464683b",
+      "bytes": 9385
+    },
+    {
+      "path": "docs/execution/section15-analytic-review-2026-11-01/math-review/analytic-review.md",
+      "sha256": "9e68bb8bddf936f6ec2e2a8179266eaf4e587aca67e2980af7efcfcca55e1457",
+      "bytes": 12646
+    },
+    {
+      "path": "docs/execution/counting-mixing-review-2026-11-01/dynamics-review/targeted-acceptance-v2.md",
+      "sha256": "b4d9cf8c470229641099aaa0a294e3b5e7032ae3ed9b1084fe38c736bd6fe85e",
+      "bytes": 2431
+    }
+  ],
+  "current_author_dependencies": [
+    {
+      "track": "quantum-author",
+      "status": "independently_accepted_source_snapshot",
+      "files": [
+        {
+          "path": "book/chapters/10-quantum-introduction.tex",
+          "sha256": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+          "bytes": 43507
+        },
+        {
+          "path": "book/chapters/11-quantum-degeneration.tex",
+          "sha256": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9",
+          "bytes": 13435
+        },
+        {
+          "path": "book/claims/sections10-11.json",
+          "sha256": "34dbb6255dc468cb796bb3a129eeaf37ac0c5f4dc358abfd73030e64331b3539",
+          "bytes": 59530
+        }
+      ],
+      "freeze_manifest": {
+        "path": "../execution/final-chapters-review-2026-11-01/quantum-author/revision-v2/freeze-manifest.json",
+        "sha256": "f043f6943bd124638802bfdb5d5e7505269143f54046eea93d298345191c0620",
+        "bytes": 3133
+      },
+      "independent_review_record": {
+        "path": "../execution/final-chapters-review-2026-11-01/quantum-review/final-acceptance.json",
+        "sha256": "c631f5ed63513246adf7bbec958c3298ab577861ee02f1d359ff6ca25b7c4dd9",
+        "bytes": 3479
+      },
+      "independent_review_scope": "Selected external statements inspected; no full external proof or external PDF byte hash claimed; one source unavailable and two checked only at metadata/abstract level.",
+      "remaining": "No required source findings in the pinned acceptance. Maintained companion implementation and execution are still pending; later source changes require reconciliation."
+    },
+    {
+      "track": "geodesic-author",
+      "status": "author_frozen_pending_independent_review",
+      "files": [
+        {
+          "path": "book/chapters/17-unfolding-constant-series.tex",
+          "sha256": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+          "bytes": 7804
+        },
+        {
+          "path": "book/chapters/18-figure-eight-curves.tex",
+          "sha256": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+          "bytes": 10705
+        },
+        {
+          "path": "book/chapters/19-pants-twists.tex",
+          "sha256": "9dc4438ad32d76c7508cd6f90e34dc615697bf60cc546b5187e130468213be9d",
+          "bytes": 9551
+        },
+        {
+          "path": "book/chapters/20-torus-twist-series.tex",
+          "sha256": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+          "bytes": 6616
+        },
+        {
+          "path": "book/chapters/21-cuff-matching.tex",
+          "sha256": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+          "bytes": 2960
+        },
+        {
+          "path": "book/chapters/22-cusps-orthospectrum.tex",
+          "sha256": "67cd497d3599bbb6716335a90d6f2f5c71bd191efa96211dd47442c64f3b39e2",
+          "bytes": 9218
+        },
+        {
+          "path": "book/claims/sections17-22.json",
+          "sha256": "aca716a9b08128e7c6feefb79693ff9313139dbc52c0b33ce7e395d6fce80d54",
+          "bytes": 112294
+        }
+      ],
+      "freeze_manifest": {
+        "path": "../execution/final-chapters-review-2026-11-01/geodesic-author/author-freeze-manifest.json",
+        "sha256": "38994ff43e952ff42ccafb4d56c44e51c385a0092d156e3d35cdbcf1041d7eec",
+        "bytes": 3887
+      },
+      "independent_review_status": "pending",
+      "remaining": "The final six chapters and 59-claim author ledger are bound here; independent mathematical review is in progress and is not asserted as approved."
+    }
+  ],
+  "external_source_policy": "Prior ledgers retain exact source versions/locators and distinguish statement checks from proofs. This pass inherits those exact reviewed scopes. Sections 10-11 have the pinned independent exact-byte acceptance after QR01, with selected-statement and source-access limits. Sections 17-22 have a final author source/claim freeze, but independent mathematical review remains pending. No fresh complete literature or external-proof review is claimed.",
+  "computational_boundary": "Finite exact algebra, floating comparison, conditional analytic bounds, historical unrecovered claims, and planned contracts retain separate status. No numerical campaign, code implementation, PDF build or remote action was performed in this author pass.",
+  "computational_support_map": [
+    {
+      "id": "normalizations",
+      "status": "recorded_finite_result_not_replayed_in_this_pass",
+      "driver": "experiments/normalizations/run.py",
+      "readme": "experiments/normalizations/README.md",
+      "result": {
+        "path": "artifacts/normalizations/result.json",
+        "sha256": "9aceff49e5a8a66399004eec292183087ab640e6441bf580d7007b5dd7949490",
+        "bytes": 22364
+      },
+      "result_fields": [
+        "tetrahedron_base_and_cone",
+        "gram_pfaffian",
+        "intersection_relations",
+        "flat_fixtures",
+        "f_curve_probes",
+        "sl2_fixtures"
+      ],
+      "scope": "Exact finite convention, determinant, low-dimensional class and trace checks.",
+      "limits": "No direct general hyperideal integration, global quotient proof, conformal-coordinate conversion or analytic boundary-uniformity theorem.",
+      "review_boundary": "The artifact retains its original run status; independent implementation/replay approval, where present, is in its separate checkpoint. This audit reads and hashes the record; it runs no numerical replay."
+    },
+    {
+      "id": "section9",
+      "status": "recorded_finite_result_not_replayed_in_this_pass",
+      "driver": "experiments/section9/run.py",
+      "readme": "experiments/section9/README.md",
+      "result": {
+        "path": "artifacts/section9/result.json",
+        "sha256": "e6aa3b68d0e7f7bbcb326f0d2b1e76245aa1ee6e728dcb7173f5bc9541782f85",
+        "bytes": 11811
+      },
+      "result_fields": [
+        "exact_fixture",
+        "numerical"
+      ],
+      "scope": "Finite cotangent/Hessian, boundary response, Schur and forest checks, plus numerical volume/derivative comparisons.",
+      "limits": "Grounded fixture only; no continuum metric limit, arbitrary geometric realization or interval proof.",
+      "review_boundary": "The artifact retains its original run status; independent implementation/replay approval, where present, is in its separate checkpoint. This audit reads and hashes the record; it runs no numerical replay."
+    },
+    {
+      "id": "section9_barrier",
+      "status": "recorded_finite_result_not_replayed_in_this_pass",
+      "driver": "experiments/section9/barrier_run.py",
+      "readme": "experiments/section9/README.md",
+      "result": {
+        "path": "artifacts/section9/barrier-result.json",
+        "sha256": "b7d680717a5de790a146c584f66e955fb515449cc583adfa9e3c4543d692f798",
+        "bytes": 1355033
+      },
+      "result_fields": [
+        "cases",
+        "exercises_initial_centering"
+      ],
+      "scope": "Dense finite barrier examples with initial-centering and path work separated.",
+      "limits": "No nearly-linear implementation, bit-complexity theorem, rigorous floating-point energy/gap bound or geometric realization certificate.",
+      "review_boundary": "The artifact retains its original run status; independent implementation/replay approval, where present, is in its separate checkpoint. This audit reads and hashes the record; it runs no numerical replay."
+    },
+    {
+      "id": "quantum_surgery",
+      "status": "recorded_finite_result_not_replayed_in_this_pass",
+      "driver": "experiments/quantum_surgery/run.py",
+      "readme": "experiments/quantum_surgery/README.md",
+      "result": {
+        "path": "artifacts/quantum_surgery/result.json",
+        "sha256": "accdcaae347f363f20761cc2ffc7a2a252c2199787a277e519cef9978c5578cf",
+        "bytes": 120085
+      },
+      "result_fields": [
+        "exact.section12",
+        "exact.regular_section14",
+        "exact.formal_section16",
+        "exact.figure_eight_tensors",
+        "exact.peripheral_Hessians",
+        "nonresonant_periods",
+        "balanced_periods",
+        "screened_Gram"
+      ],
+      "scope": "Finite periods/fusion, Gram and fold algebra, Fricke correction, formal filling series and fixed Hessian tensors.",
+      "limits": "No infinite spectral-tail majorant, general six-label quantum asymptotic, actual filled-manifold optimization, global surgery contribution or uniform varying-slope theorem.",
+      "review_boundary": "The artifact retains its original run status; independent implementation/replay approval, where present, is in its separate checkpoint. This audit reads and hashes the record; it runs no numerical replay."
+    },
+    {
+      "id": "regular_airy",
+      "status": "recorded_finite_result_not_replayed_in_this_pass",
+      "driver": "experiments/section15_quantum/check.py",
+      "readme": "experiments/section15_quantum/README.md",
+      "result": {
+        "path": "artifacts/section15_quantum/result.json",
+        "sha256": "b8d600a6ca3797f45e616bc324d0d1620066e9c203c085229d4c544f6e245009",
+        "bytes": 130686
+      },
+      "result_fields": [
+        "rows",
+        "comparisons",
+        "independent_double_sine_checks"
+      ],
+      "scope": "Seven exact-integrand parameter pairs under three numerical settings; distinct from the earlier approximation-column check.",
+      "limits": "Quadrature/roundoff are uncertified; analytic theorem is only the pole-cleared regular family at bounded real transition parameter. Original historical evaluator/provenance remains unrecovered.",
+      "review_boundary": "The artifact retains its original run status; independent implementation/replay approval, where present, is in its separate checkpoint. This audit reads and hashes the record; it runs no numerical replay."
+    },
+    {
+      "id": "counting_mixing",
+      "status": "recorded_finite_result_not_replayed_in_this_pass",
+      "driver": "experiments/counting_mixing/run.py",
+      "readme": "experiments/counting_mixing/README.md",
+      "result": {
+        "path": "artifacts/counting_mixing/result.json",
+        "sha256": "04e9807ae5d3af8a8f2a2926a44ebc25f79a9e8151424ae39429655396b7567b",
+        "bytes": 438646
+      },
+      "result_fields": [
+        "exact.trace_coefficients",
+        "exact.global_filter",
+        "exact.finite_support",
+        "exact.finite_Euler_convolution",
+        "exact.scalar_trace_mixing",
+        "exact.terminal_exponential_algebra",
+        "exact.Bruhat_residues",
+        "exact.Mobius_lattice",
+        "exact.dyadic_events",
+        "exact.row_and_balance",
+        "numerical"
+      ],
+      "scope": "Exact finite algebra and selected precision comparisons of terminal, affine and Fourier formulas.",
+      "limits": "No infinite coefficient extraction, stable nonlinear aggregate estimator, new mixing theorem or all-scale discrepancy bound. Conditional analytic tails are distinct from numerical quadrature.",
+      "review_boundary": "The artifact retains its original run status; independent implementation/replay approval, where present, is in its separate checkpoint. This audit reads and hashes the record; it runs no numerical replay."
+    },
+    {
+      "id": "torus_campaign",
+      "status": "recorded_finite_result_not_replayed_in_this_pass",
+      "driver": "experiments/torus_campaign/run.py",
+      "readme": "experiments/torus_campaign/README.md",
+      "result": {
+        "path": "artifacts/torus_campaign/result.json",
+        "sha256": "51414cf7c3e72c2020e3267f3abbb6cf6e2c9c0f78b9b6ee3921ceced70bcece",
+        "bytes": 434757
+      },
+      "result_fields": [
+        "surfaces",
+        "all_point_convention",
+        "sensitivity_hypotheses",
+        "recovered_historical_provenance"
+      ],
+      "scope": "New full length-8192 torus campaign with both printed counts, all twenty M/Q block rows, finite signed all-point diagnostics and selected precision comparisons.",
+      "limits": "Hyperbolic-length units; unit-shortest gauge requires systole scaling. Exact arithmetic on stored binary64 lengths does not certify true membership/completeness. Sensitivity is conditional, original historical precision/sensitivity archive unrecovered. No asymptotic modulus is proved.",
+      "review_boundary": "The artifact retains its original run status; independent implementation/replay approval, where present, is in its separate checkpoint. This audit reads and hashes the record; it runs no numerical replay."
+    },
+    {
+      "id": "planned_quantum_background",
+      "status": "planned_contract_only",
+      "planned_code": "experiments/quantum_geodesics/",
+      "planned_result": "artifacts/quantum_geodesics/result.json",
+      "planned_checkpoint": "docs/execution/final-chapters-review-2026-11-01/",
+      "contract": {
+        "path": "../execution/final-chapters-review-2026-11-01/quantum-author/computational-targets.md",
+        "sha256": "1d1fae5b1539b8ee52d27a761ee1d2aaf2a8b050d213c023df506af498fe96b1",
+        "bytes": 8691
+      },
+      "groups": [
+        {
+          "contract_group": "Q1",
+          "scope": "Positive figure-eight finite sum and branch/product checks",
+          "labels": [
+            "eq:introfigureproduct",
+            "eq:introfigurevolume"
+          ]
+        },
+        {
+          "contract_group": "Q2",
+          "scope": "Exact Klein moments and first dihedral-curvature sum",
+          "labels": [
+            "eq:Kleinvolumeexpansion",
+            "eq:firstcurvaturevolume"
+          ]
+        },
+        {
+          "contract_group": "Q3",
+          "scope": "Peripheral shifts, symplectic/filling normalization",
+          "labels": [
+            "eq:introcommutator",
+            "eq:introfillingkernel",
+            "eq:introRTgrowth"
+          ]
+        },
+        {
+          "contract_group": "Q4",
+          "scope": "Finite charge and curvature-factor specialization",
+          "labels": [
+            "eq:introfirstmoment",
+            "eq:introcurvaturemeasure"
+          ]
+        }
+      ],
+      "limits": "No implementation, execution, numerical result or independent code/result review is asserted here. Exact inputs, branches, expected formulas, precision and finite tails are specified in the separate author contract. No new convention-specific solver or research computation is required.",
+      "contract_review_status": "Mathematical specification accepted in the quantum source review; maintained implementation and execution not yet reviewed."
+    },
+    {
+      "id": "planned_geodesic",
+      "status": "planned_contract_only",
+      "planned_code": "experiments/quantum_geodesics/",
+      "planned_result": "artifacts/quantum_geodesics/result.json",
+      "planned_checkpoint": "docs/execution/final-chapters-review-2026-11-01/",
+      "contract": {
+        "path": "../execution/final-chapters-review-2026-11-01/geodesic-author/companion-contract.md",
+        "sha256": "2a62a149e7f5f88027329c24ba3a4720407debfed2fb78945350f23b6fce85a6",
+        "bytes": 14837
+      },
+      "groups": [
+        {
+          "contract_group": "G1",
+          "scope": "Torus unfolding normalization and finite Fermi integral",
+          "labels": [
+            "eq:torusunfold",
+            "eq:mcshane"
+          ]
+        },
+        {
+          "contract_group": "G2",
+          "scope": "Pants signed traces and torus H/N multiplicities",
+          "labels": [
+            "eq:figuretrace",
+            "eq:twofigures",
+            "eq:htrace"
+          ]
+        },
+        {
+          "contract_group": "G3",
+          "scope": "Universal kernel finite telescoping and analytic remainder",
+          "labels": [
+            "eq:universalkernel",
+            "eq:figurefiniteidentity",
+            "eq:figurekerneltail"
+          ]
+        },
+        {
+          "contract_group": "G4",
+          "scope": "Local distance, gradients and Hessian",
+          "labels": [
+            "eq:localdistance",
+            "eq:localdistancehessian"
+          ]
+        },
+        {
+          "contract_group": "G5",
+          "scope": "Ordinary seams and independent torus holonomy matrices",
+          "labels": [
+            "eq:seam",
+            "eq:torustwist",
+            "eq:torustwistderivatives"
+          ]
+        },
+        {
+          "contract_group": "G6",
+          "scope": "Coarea and finite twist integrals with analytic tails",
+          "labels": [
+            "eq:toruscoarea",
+            "eq:betaintegral",
+            "eq:torusintegraltail"
+          ]
+        },
+        {
+          "contract_group": "G7",
+          "scope": "Twist-orbit partition and finite exact partial sums",
+          "labels": [
+            "eq:Hkernel",
+            "eq:Hpartialsumtail",
+            "eq:Kkernel"
+          ]
+        },
+        {
+          "contract_group": "G8",
+          "scope": "Position matching versus tangential-direction matching",
+          "labels": [
+            "eq:endpointmatch",
+            "eq:momentummatch"
+          ]
+        },
+        {
+          "contract_group": "G9",
+          "scope": "Signed cusp truncation, decoration and ideal-triangle algebra",
+          "labels": [
+            "eq:cusplambda",
+            "eq:toruscusplambda",
+            "eq:cusporthoidentity"
+          ]
+        },
+        {
+          "contract_group": "G10",
+          "scope": "Basmajian oriented/unoriented endpoint-shadow factor",
+          "labels": [
+            "eq:basmajian"
+          ]
+        }
+      ],
+      "limits": "No implementation, execution, numerical result or independent code/result review is asserted here. Exact inputs, branches, expected formulas, precision and finite tails are specified in the separate author contract. No new convention-specific solver or research computation is required.",
+      "contract_review_status": "Final author contract bound; independent mathematical review and maintained implementation/execution pending.",
+      "final_contract_notes": "Includes H=20,t=3 signed cusp truncation, stable tiny-positive tails, and guard precision at a=1e-12. These remain specified future checks, not executed evidence."
+    }
+  ],
+  "original_row_coverage": [
+    {
+      "original_quantity": "Surface/ambient hyperbolic curvature",
+      "current_claim": "appB.curvature"
+    },
+    {
+      "original_quantity": "Complex hyperbolic curvature",
+      "current_claim": "appB.ch_curvature"
+    },
+    {
+      "original_quantity": "Flat weights",
+      "current_claim": "appB.flat_weights"
+    },
+    {
+      "original_quantity": "Three volume scales",
+      "current_claim": "appB.volume_scales"
+    },
+    {
+      "original_quantity": "Flat WP limit",
+      "current_claim": "appB.wp_limit"
+    },
+    {
+      "original_quantity": "WP form",
+      "current_claim": "appB.wp_form"
+    },
+    {
+      "original_quantity": "Boundary components",
+      "current_claim": "appB.boundaries"
+    },
+    {
+      "original_quantity": "Volumes",
+      "current_claim": "appB.stack_volumes"
+    },
+    {
+      "original_quantity": "Punctured-torus volume",
+      "current_claim": "appB.torus_volume"
+    },
+    {
+      "original_quantity": "Four-punctured-sphere volume",
+      "current_claim": "appB.sphere_volume"
+    },
+    {
+      "original_quantity": "Cone parameter",
+      "current_claim": "appB.cone_parameter"
+    },
+    {
+      "original_quantity": "Ideal tetrahedral $z$",
+      "current_claim": "appB.ambient_crossratio"
+    },
+    {
+      "original_quantity": "Exterior angle $\\theta_e$",
+      "current_claim": "appB.angles"
+    },
+    {
+      "original_quantity": "Lambda length",
+      "current_claim": "appB.lambda_length"
+    },
+    {
+      "original_quantity": "Closed-curve sums",
+      "current_claim": "appB.closed_curves"
+    },
+    {
+      "original_quantity": "Coefficient basis",
+      "current_claim": "appB.coefficient_basis"
+    },
+    {
+      "original_quantity": "Twisted Selberg sum",
+      "current_claim": "appB.selberg"
+    },
+    {
+      "original_quantity": "Coefficient heat transform",
+      "current_claim": "appB.heat"
+    },
+    {
+      "original_quantity": "Coefficient Laplace parameter",
+      "current_claim": "appB.laplace"
+    },
+    {
+      "original_quantity": "Total multicurve count",
+      "current_claim": "appB.total_laminations"
+    },
+    {
+      "original_quantity": "Primitive lamination",
+      "current_claim": "appB.primitive_lamination"
+    },
+    {
+      "original_quantity": "Support variable $z$",
+      "current_claim": "appB.support_variable"
+    },
+    {
+      "original_quantity": "One-crossing curves",
+      "current_claim": "appB.one_crossing"
+    },
+    {
+      "original_quantity": "Basmajian sum",
+      "current_claim": "appB.basmajian"
+    },
+    {
+      "original_quantity": "Cusp orthospectrum",
+      "current_claim": "appB.cusp"
+    },
+    {
+      "original_quantity": "Peripheral logarithms",
+      "current_claim": "appB.peripheral"
+    },
+    {
+      "original_quantity": "Real filling source",
+      "current_claim": "appB.real_source"
+    },
+    {
+      "original_quantity": "Holomorphic filling action",
+      "current_claim": "appB.holomorphic_action"
+    }
+  ],
+  "claims": [
+    {
+      "id": "s32.q01",
+      "labels": [
+        "sec:questions"
+      ],
+      "question_number": 1,
+      "title": "Direct hyperideal integration",
+      "status": "open_target",
+      "established_inputs": "The fixed-boundary local density and the four-boundary WP volume are known; the tree coordinates give a separate volume construction.",
+      "remaining_target": "Direct integration over the full hyperideal cell quotient with all Jacobians and automorphism factors.",
+      "hypotheses": "The fixed parameters, geometric domain, quotient, and analytic assumptions written in this question and its referenced statements are retained.",
+      "dependency_labels": [
+        "eq:hyperidealdensity",
+        "eq:basevolumes",
+        "eq:treevolume"
+      ],
+      "dependency_sources": [
+        "book/chapters/04-hyperideal-integrand.tex",
+        "book/chapters/01-volume-normalization.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections1-6.json#s4.local_density",
+        "book/claims/sections1-6.json#s1.base_volumes",
+        "book/claims/sections1-6.json#s4.tree_density"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections1-6.json#s4.local_density": "derived_in_chapter_author_verified",
+        "book/claims/sections1-6.json#s1.base_volumes": "external_statement_checked",
+        "book/claims/sections1-6.json#s4.tree_density": "external_statement_checked"
+      },
+      "computational_support": [
+        "normalizations"
+      ],
+      "publication_gate": false
+    },
+    {
+      "id": "s32.q02",
+      "labels": [
+        "sec:questions"
+      ],
+      "question_number": 2,
+      "title": "A usable measure on general polyhedral cells",
+      "status": "open_target",
+      "established_inputs": "The Pfaffian expression is already the local volume density on an invertible fixed-parameter symplectic leaf.",
+      "remaining_target": "Independent angle coordinates, their Jacobian, chambers and a practical global cell integral.",
+      "hypotheses": "The fixed parameters, geometric domain, quotient, and analytic assumptions written in this question and its referenced statements are retained.",
+      "dependency_labels": [
+        "eq:pfaffiandensity",
+        "eq:deltameasure"
+      ],
+      "dependency_sources": [
+        "book/chapters/04-hyperideal-integrand.tex",
+        "book/chapters/02-ideal-angle-cells.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections1-6.json#s4.pfaffian",
+        "book/claims/sections1-6.json#s2.disintegration"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections1-6.json#s4.pfaffian": "derived_in_chapter_author_verified",
+        "book/claims/sections1-6.json#s2.disintegration": "derived_in_chapter_author_verified"
+      },
+      "computational_support": [
+        "normalizations"
+      ],
+      "publication_gate": false
+    },
+    {
+      "id": "s32.q03",
+      "labels": [
+        "sec:questions"
+      ],
+      "question_number": 3,
+      "title": "Gluing and topology",
+      "status": "open_target",
+      "established_inputs": "FN twists have length period and orbifold weights are specified; choosing a cut leaves further mapping-class identifications.",
+      "remaining_target": "A practical polyhedral gluing calculation with cutting multiplicity and the full quotient.",
+      "hypotheses": "The fixed parameters, geometric domain, quotient, and analytic assumptions written in this question and its referenced statements are retained.",
+      "dependency_labels": [
+        "eq:fn"
+      ],
+      "dependency_sources": [
+        "book/chapters/01-volume-normalization.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections1-6.json#s1.fn_and_hermitian_scale"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections1-6.json#s1.fn_and_hermitian_scale": "explicit_convention"
+      },
+      "computational_support": [
+        "normalizations"
+      ],
+      "publication_gate": false
+    },
+    {
+      "id": "s32.q04",
+      "labels": [
+        "sec:questions"
+      ],
+      "question_number": 4,
+      "title": "Curvature corrections in period coordinates",
+      "status": "open_target",
+      "established_inputs": "The final-chamber class coefficient Xi_mu and local four-point blown-up-character correction are explicit.",
+      "remaining_target": "Convert the correction to actual finite-area conformal coordinates and obtain joint balanced-wall control.",
+      "hypotheses": "The fixed parameters, geometric domain, quotient, and analytic assumptions written in this question and its referenced statements are retained.",
+      "dependency_labels": [
+        "eq:Xiclass",
+        "eq:Frickefirstcorrection"
+      ],
+      "dependency_sources": [
+        "book/chapters/08-wp-flat-limit.tex",
+        "book/chapters/12-quantum-boundary-measure.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections7-8.json#s8.final_chamber_polynomial",
+        "book/claims/sections7-8.json#s8.balanced_nonuniformity",
+        "book/claims/sections12-14.json#s12.fricke_blowup"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections7-8.json#s8.final_chamber_polynomial": "derived_in_chapter",
+        "book/claims/sections7-8.json#s8.balanced_nonuniformity": "derived_in_chapter",
+        "book/claims/sections12-14.json#s12.fricke_blowup": "derived_in_chapter"
+      },
+      "computational_support": [
+        "normalizations",
+        "quantum_surgery"
+      ],
+      "publication_gate": false
+    },
+    {
+      "id": "s32.q05",
+      "labels": [
+        "sec:questions"
+      ],
+      "question_number": 5,
+      "title": "Beyond the regular quantum degeneration",
+      "status": "open_target",
+      "established_inputs": "The equal-label pole-cleared Airy formula is proved uniformly for bounded real transition parameter. Finite periods, classical rank-two obstruction, rank-three regular fold, fixed-shape external theorems and exact-integrand samples have separate statuses.",
+      "remaining_target": "General nondegenerate shape dependence, geometric scalar normalization, global gluing and identification of a boundary measure; the infinite-spectral route still needs its tail input.",
+      "hypotheses": "The fixed parameters, geometric domain, quotient, and analytic assumptions written in this question and its referenced statements are retained.",
+      "dependency_labels": [
+        "prop:regularquantumAiry",
+        "eq:modelpartition",
+        "eq:exactLiouvillecurvature",
+        "eq:torsionDMlimit",
+        "eq:areaLiouvillecharge",
+        "sec:screenedfusion",
+        "eq:screeningtailinput",
+        "sec:normalizedsixj",
+        "sec:quantumAiry",
+        "sec:quantumdegeneration"
+      ],
+      "dependency_sources": [
+        "book/chapters/15-quantum-airy.tex",
+        "book/chapters/11-quantum-degeneration.tex",
+        "book/chapters/12-quantum-boundary-measure.tex",
+        "book/chapters/13-four-point-fusion.tex",
+        "book/chapters/14-normalized-quantum-comparison.tex"
+      ],
+      "dependencies": [
+        "book/claims/section15.json#s15.uniform_transition",
+        "book/claims/sections10-11.json#s11.compact_model",
+        "book/claims/sections12-14.json#s12.curvature",
+        "book/claims/sections12-14.json#s12.torsion_flat_limit",
+        "book/claims/sections12-14.json#s12.quantum_dictionary",
+        "book/claims/sections12-14.json#s13.spectral_continuation",
+        "book/claims/section15.json#s15.airy_column",
+        "book/claims/section15.json#s15.reported_quantum_column",
+        "book/claims/section15.json#s15.quantum_numerics",
+        "book/claims/sections10-11.json#s11.volume_dictionary",
+        "book/claims/sections12-14.json#s14.compact_regular_geometry",
+        "book/claims/sections12-14.json#s14.classical_fold",
+        "book/claims/sections12-14.json#s14.screened_gram",
+        "book/claims/sections10-11.json#s11.cm_leading",
+        "book/claims/sections10-11.json#s11.cm_refined"
+      ],
+      "inherited_statuses": {
+        "book/claims/section15.json#s15.uniform_transition": "analytic_derivation_in_chapter",
+        "book/claims/sections10-11.json#s11.compact_model": "conditional_analytic_statement",
+        "book/claims/sections12-14.json#s12.curvature": "derived_from_external_statements",
+        "book/claims/sections12-14.json#s12.torsion_flat_limit": "derived_from_external_statements",
+        "book/claims/sections12-14.json#s12.quantum_dictionary": "derived_in_chapter",
+        "book/claims/sections12-14.json#s13.spectral_continuation": "explicit_unproved_analytic_input",
+        "book/claims/section15.json#s15.airy_column": "numerical_approximation_column_checked",
+        "book/claims/section15.json#s15.reported_quantum_column": "historical_unreplayed_result",
+        "book/claims/section15.json#s15.quantum_numerics": "numerical_exact_integrand_checked",
+        "book/claims/sections10-11.json#s11.volume_dictionary": "external_conjecture",
+        "book/claims/sections12-14.json#s14.compact_regular_geometry": "derived_in_chapter",
+        "book/claims/sections12-14.json#s14.classical_fold": "derived_in_chapter",
+        "book/claims/sections12-14.json#s14.screened_gram": "derived_in_chapter",
+        "book/claims/sections10-11.json#s11.cm_leading": "external_statement_checked",
+        "book/claims/sections10-11.json#s11.cm_refined": "external_statement_checked"
+      },
+      "computational_support": [
+        "quantum_surgery",
+        "regular_airy",
+        "planned_quantum_background"
+      ],
+      "publication_gate": false,
+      "dependency_review_states": {
+        "sections10-11": "independent_exact_byte_acceptance_in_quantum_review_final_acceptance"
+      }
+    },
+    {
+      "id": "s32.q06",
+      "labels": [
+        "sec:questions"
+      ],
+      "question_number": 6,
+      "title": "Uniform quantum Dehn filling",
+      "status": "open_target",
+      "established_inputs": "The classical peripheral germ, critical value, formal long-slope coefficients and conditional torsion matching are specified.",
+      "remaining_target": "An exact quantum surgery representation controlled in a complex holonomy neighborhood, with a nonzero geometric contribution, competing-term bounds and a varying-slope joint limit.",
+      "hypotheses": "The fixed parameters, geometric domain, quotient, and analytic assumptions written in this question and its referenced statements are retained.",
+      "dependency_labels": [
+        "sec:dehnresponse",
+        "prop:dehncriticalvalue",
+        "eq:dehngaussiantorsion",
+        "prop:dehnquantumconditional"
+      ],
+      "dependency_sources": [
+        "book/chapters/16-dehn-filling-response.tex"
+      ],
+      "dependencies": [
+        "book/claims/section16.json#s16.figure_eight_quantum_theorem",
+        "book/claims/section16.json#s16.critical_value",
+        "book/claims/section16.json#s16.torsion_surgery",
+        "book/claims/section16.json#s16.quantum_transfer",
+        "book/claims/section16.json#s16.filling_series"
+      ],
+      "inherited_statuses": {
+        "book/claims/section16.json#s16.figure_eight_quantum_theorem": "external_theorem_statement_checked",
+        "book/claims/section16.json#s16.critical_value": "derived_in_chapter",
+        "book/claims/section16.json#s16.torsion_surgery": "external_theorem_statement_checked",
+        "book/claims/section16.json#s16.quantum_transfer": "conditional_quantum_consequence",
+        "book/claims/section16.json#s16.filling_series": "derived_in_chapter"
+      },
+      "computational_support": [
+        "quantum_surgery",
+        "planned_quantum_background"
+      ],
+      "publication_gate": false
+    },
+    {
+      "id": "s32.q07",
+      "labels": [
+        "sec:questions"
+      ],
+      "question_number": 7,
+      "title": "Certified realization and quantitative angle bounds",
+      "status": "open_target",
+      "established_inputs": "The finite-centering certificate and specified short-step schedule give an iteration bound from a centered feasible point; inexact solves have a stated error model.",
+      "remaining_target": "Positive-feasibility and centering costs, bit/precision complexity and geometric error certification; additional 3D hypotheses for an angle lower bound.",
+      "hypotheses": "The fixed parameters, geometric domain, quotient, and analytic assumptions written in this question and its referenced statements are retained.",
+      "dependency_labels": [
+        "sec:ipolybridge",
+        "eq:ipolyStepBound"
+      ],
+      "dependency_sources": [
+        "book/chapters/09-volume-hessians.tex"
+      ],
+      "dependencies": [
+        "book/claims/section9.json#s9.finite_centering",
+        "book/claims/section9.json#s9.short_step_iterations",
+        "book/claims/section9.json#s9.inexact_arithmetic_work",
+        "book/claims/section9.json#s9.quantitative_angle_bound"
+      ],
+      "inherited_statuses": {
+        "book/claims/section9.json#s9.finite_centering": "proved_in_chapter",
+        "book/claims/section9.json#s9.short_step_iterations": "conditional_algorithmic_consequence",
+        "book/claims/section9.json#s9.inexact_arithmetic_work": "conditional_algorithmic_consequence",
+        "book/claims/section9.json#s9.quantitative_angle_bound": "open"
+      },
+      "computational_support": [
+        "section9",
+        "section9_barrier"
+      ],
+      "publication_gate": false
+    },
+    {
+      "id": "s32.q08",
+      "labels": [
+        "sec:questions"
+      ],
+      "question_number": 8,
+      "title": "A continuum comparison of second variations",
+      "status": "open_target",
+      "established_inputs": "The grounded Hessian, Schur complement, boundary response and Gaussian determinant are finite exact objects.",
+      "remaining_target": "A specified refining family, convergence/normalization of its second variations and an identification with a WP metric or potential.",
+      "hypotheses": "The fixed parameters, geometric domain, quotient, and analytic assumptions written in this question and its referenced statements are retained.",
+      "dependency_labels": [
+        "sec:ipolybridge"
+      ],
+      "dependency_sources": [
+        "book/chapters/09-volume-hessians.tex"
+      ],
+      "dependencies": [
+        "book/claims/section9.json#s9.wp_continuum_limit"
+      ],
+      "inherited_statuses": {
+        "book/claims/section9.json#s9.wp_continuum_limit": "open"
+      },
+      "computational_support": [
+        "section9"
+      ],
+      "publication_gate": false
+    },
+    {
+      "id": "s32.q09",
+      "labels": [
+        "sec:questions"
+      ],
+      "question_number": 9,
+      "title": "Continuation of a coefficient Laplace transform",
+      "status": "open_target",
+      "established_inputs": "For a fixed nonempty coefficient the Laplace transform is holomorphic on Re(s)>1; finite-cutoff extraction is justified there.",
+      "remaining_target": "Continuation in a topology controlling coefficient extraction; pointwise twisted continuation and uniform-character norms are insufficient.",
+      "hypotheses": "The fixed parameters, geometric domain, quotient, and analytic assumptions written in this question and its referenced statements are retained.",
+      "dependency_labels": [
+        "sec:coefficientdistributions",
+        "eq:coeffLaplacedefinition"
+      ],
+      "dependency_sources": [
+        "book/chapters/23-trace-coefficients.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections23-25.json#23.11",
+        "book/claims/sections23-25.json#23.24"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections23-25.json#23.11": "derived_analytic",
+        "book/claims/sections23-25.json#23.24": "derived_analytic"
+      },
+      "computational_support": [
+        "counting_mixing"
+      ],
+      "publication_gate": false
+    },
+    {
+      "id": "s32.q10",
+      "labels": [
+        "sec:questions"
+      ],
+      "question_number": 10,
+      "title": "Control of the globally filtered remainder",
+      "status": "open_target",
+      "established_inputs": "The bounded global functional cancels one-crossing primitive families and their iterates; its fixed-linear-selector obstruction and the nonlinear unit diagonal are exact.",
+      "remaining_target": "Geometric constants for the higher-intersection signed residual, or quantitative stability of length-dependent/nonlinear extraction.",
+      "hypotheses": "The fixed parameters, geometric domain, quotient, and analytic assumptions written in this question and its referenced statements are retained.",
+      "dependency_labels": [
+        "prop:globalonecrossing",
+        "eq:globalresidual",
+        "eq:globalobstruction",
+        "eq:globaldiagonal"
+      ],
+      "dependency_sources": [
+        "book/chapters/25-global-coefficient-filters.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections23-25.json#25.03",
+        "book/claims/sections23-25.json#25.04",
+        "book/claims/sections23-25.json#25.05",
+        "book/claims/sections23-25.json#25.07"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections23-25.json#25.03": "derived_from_external_statements",
+        "book/claims/sections23-25.json#25.04": "derived_analytic",
+        "book/claims/sections23-25.json#25.05": "derived_exact_algebra",
+        "book/claims/sections23-25.json#25.07": "derived_geometric"
+      },
+      "computational_support": [
+        "counting_mixing"
+      ],
+      "publication_gate": false
+    },
+    {
+      "id": "s32.q11",
+      "labels": [
+        "sec:questions"
+      ],
+      "question_number": 11,
+      "title": "Effective selection of connected supports",
+      "status": "open_target",
+      "established_inputs": "The lattice remainder, finite support projection and constructive fixed-coefficient isolation are available.",
+      "remaining_target": "Uniform aggregate control over growing supports strong enough to imply the stated smoothed saving; neither first-atom existence nor finite Fourier projection proves it.",
+      "hypotheses": "The fixed parameters, geometric domain, quotient, and analytic assumptions written in this question and its referenced statements are retained.",
+      "dependency_labels": [
+        "eq:countsmoothhypothesis",
+        "eq:countsupportfourier"
+      ],
+      "dependency_sources": [
+        "book/chapters/24-quantitative-counting.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections23-25.json#24.17",
+        "book/claims/sections23-25.json#24.13",
+        "book/claims/sections23-25.json#24.10"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections23-25.json#24.17": "conditional_analytic_statement",
+        "book/claims/sections23-25.json#24.13": "derived_exact_algebra",
+        "book/claims/sections23-25.json#24.10": "derived_analytic"
+      },
+      "computational_support": [
+        "counting_mixing"
+      ],
+      "publication_gate": false
+    },
+    {
+      "id": "s32.q12",
+      "labels": [
+        "sec:questions"
+      ],
+      "question_number": 12,
+      "title": "From weighted curve counts to mixing",
+      "status": "open_target",
+      "established_inputs": "The reciprocal-Jacobian two-endpoint kernel unfolds exactly. Full rate delta is a conditional consequence of the derivative terminal-test estimate; one-test de-averaging loses rate. The nonsquare (2,2) model and selected observables have separate local results.",
+      "remaining_target": "An independent norm-controlled estimate covering both endpoints and (h+V)G, noncompact tails, stable nonlinear extraction, and area/mapping-class passage beyond the special locus.",
+      "hypotheses": "The fixed parameters, geometric domain, quotient, and analytic assumptions written in this question and its referenced statements are retained.",
+      "dependency_labels": [
+        "sec:pairconverse",
+        "eq:twopointkernel",
+        "prop:twopointunfolding",
+        "thm:twopointfullrate",
+        "thm:twopointconverse",
+        "sec:genus2markedtorus",
+        "sec:coefficientobservables"
+      ],
+      "dependency_sources": [
+        "book/chapters/27-weighted-mixing-converse.tex",
+        "book/chapters/28-genus-two-model.tex",
+        "book/chapters/29-controlled-observables.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections26-29.json#s27.tensor_first_corner",
+        "book/claims/sections26-29.json#s27.polar_kernel",
+        "book/claims/sections26-29.json#s27.unfolding",
+        "book/claims/sections26-29.json#s27.full_rate",
+        "book/claims/sections26-29.json#s27.deaveraging",
+        "book/claims/sections26-29.json#s28.hyperelliptic_polyhedron",
+        "book/claims/sections26-29.json#s29.normball_upper",
+        "book/claims/sections26-29.json#s26.scope"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections26-29.json#s27.tensor_first_corner": "derived_in_chapter",
+        "book/claims/sections26-29.json#s27.polar_kernel": "exact_definition_external_input",
+        "book/claims/sections26-29.json#s27.unfolding": "exact_identity_and_bound",
+        "book/claims/sections26-29.json#s27.full_rate": "conditional_implication",
+        "book/claims/sections26-29.json#s27.deaveraging": "conditional_implication",
+        "book/claims/sections26-29.json#s28.hyperelliptic_polyhedron": "derived_in_chapter_external_inputs",
+        "book/claims/sections26-29.json#s29.normball_upper": "derived_in_chapter_external_inputs",
+        "book/claims/sections26-29.json#s26.scope": "open_comparison"
+      },
+      "computational_support": [
+        "counting_mixing"
+      ],
+      "publication_gate": false
+    },
+    {
+      "id": "s32.q13",
+      "labels": [
+        "sec:questions"
+      ],
+      "question_number": 13,
+      "title": "The sharp norm-ball remainder",
+      "status": "open_target",
+      "established_inputs": "Strict convexity gives qualitative o(L log L). A fixed Mertens power saving plus a geometric O(L/log L) estimate gives a conditional O(L) primitive remainder; Dini geometry plus PNT gives o(L). The maintained full torus campaign is finite evidence.",
+      "remaining_target": "Establish a compatible geometric modulus for a specified ball; test the necessary W(h/L^2)=O(1/log L) contact-row condition before adopting the candidate target. Recover the original precision/sensitivity archive separately if available.",
+      "hypotheses": "The fixed parameters, geometric domain, quotient, and analytic assumptions written in this question and its referenced statements are retained.",
+      "dependency_labels": [
+        "prop:strictconvexlittleo",
+        "eq:primitiveDini",
+        "eq:primitiveexactnormalizedmobius",
+        "eq:inverseflatmicroscopic",
+        "eq:dyadicerrorinverse",
+        "sec:arithmeticgeometry",
+        "prop:inverseflatrow",
+        "subsec:flatnessmodels",
+        "eq:allPointLogDiagnostic"
+      ],
+      "dependency_sources": [
+        "book/chapters/30-sharp-diagnostics.tex",
+        "book/chapters/31-arithmetic-remainder.tex"
+      ],
+      "dependencies": [
+        "book/claims/section30.json#s30.chord_sobolev",
+        "book/claims/section30.json#s30.fourier_decay",
+        "book/claims/section30.json#s30.poisson_little_o",
+        "book/claims/section30.json#s30.strict_convex_primitive",
+        "book/claims/section30.json#s30.dini_comparison",
+        "book/claims/section30.json#s30.dini_linear",
+        "book/claims/section30.json#s30.normalized_mobius",
+        "book/claims/section30.json#s30.microscopic_row",
+        "book/claims/section30.json#s30.dyadic_inversion",
+        "book/claims/section31.json#s31.conventions",
+        "book/claims/section30.json#s30.prime_row_count",
+        "book/claims/section30.json#s30.infinite_flatness_scope",
+        "book/claims/section30.json#s30.flatness_models",
+        "book/claims/section31.json#s31.all_point_dyadic",
+        "book/claims/section31.json#s31.all_point_from_primitive_lengths",
+        "book/claims/section31.json#s31.all_point_width_compatibility",
+        "book/claims/section31.json#s31.geometric_target",
+        "book/claims/section30.json#s30.historical_long_run"
+      ],
+      "inherited_statuses": {
+        "book/claims/section30.json#s30.chord_sobolev": "derivation_checked",
+        "book/claims/section30.json#s30.fourier_decay": "derivation_checked",
+        "book/claims/section30.json#s30.poisson_little_o": "derivation_checked",
+        "book/claims/section30.json#s30.strict_convex_primitive": "derivation_checked",
+        "book/claims/section30.json#s30.dini_comparison": "derivation_checked",
+        "book/claims/section30.json#s30.dini_linear": "conditional_bound",
+        "book/claims/section30.json#s30.normalized_mobius": "derivation_checked",
+        "book/claims/section30.json#s30.microscopic_row": "derivation_checked",
+        "book/claims/section30.json#s30.dyadic_inversion": "derivation_checked",
+        "book/claims/section31.json#s31.conventions": "derivation_checked",
+        "book/claims/section30.json#s30.prime_row_count": "derivation_checked",
+        "book/claims/section30.json#s30.infinite_flatness_scope": "conditional_bound",
+        "book/claims/section30.json#s30.flatness_models": "derivation_checked",
+        "book/claims/section31.json#s31.all_point_dyadic": "derivation_checked",
+        "book/claims/section31.json#s31.all_point_from_primitive_lengths": "derivation_checked",
+        "book/claims/section31.json#s31.all_point_width_compatibility": "conditional_bound",
+        "book/claims/section31.json#s31.geometric_target": "open_target",
+        "book/claims/section30.json#s30.historical_long_run": "reported_unreplayed"
+      },
+      "computational_support": [
+        "counting_mixing",
+        "torus_campaign"
+      ],
+      "publication_gate": false
+    },
+    {
+      "id": "s32.q14",
+      "labels": [
+        "sec:questions"
+      ],
+      "question_number": 14,
+      "title": "Beyond closure operations",
+      "status": "open_target",
+      "established_inputs": "Global one-crossing and distinguished twist-orbit kernels have different index sets and analytic identities.",
+      "remaining_target": "A geometric partition or useful functional equation for further positive constant series; closure operations alone are not a new partition.",
+      "hypotheses": "The fixed parameters, geometric domain, quotient, and analytic assumptions written in this question and its referenced statements are retained.",
+      "dependency_labels": [
+        "eq:universalkernel",
+        "eq:Kkernel"
+      ],
+      "dependency_sources": [
+        "book/chapters/18-figure-eight-curves.tex",
+        "book/chapters/20-torus-twist-series.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections17-22.json#18.08",
+        "book/claims/sections17-22.json#20.09"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections17-22.json#18.08": "derived_analytic",
+        "book/claims/sections17-22.json#20.09": "derived_analytic"
+      },
+      "computational_support": [
+        "planned_geodesic"
+      ],
+      "publication_gate": false,
+      "dependency_review_states": {
+        "sections17-22": "final_author_freeze_bound_independent_review_pending"
+      }
+    },
+    {
+      "id": "s32.q15",
+      "labels": [
+        "sec:questions"
+      ],
+      "question_number": 15,
+      "title": "A boundary phase-space formulation",
+      "status": "open_target",
+      "established_inputs": "Endpoint position congruences and tangential-momentum matching give local transverse gluing data. Cusp gap statements have a no-geodesic-boundary scope.",
+      "remaining_target": "An invariant phase measure, multiplicity convention and convergent itinerary/phase integration for general filling curves; boundary cusp versions need exiting-ray contributions.",
+      "hypotheses": "The fixed parameters, geometric domain, quotient, and analytic assumptions written in this question and its referenced statements are retained.",
+      "dependency_labels": [
+        "sec:matching",
+        "sec:cusps"
+      ],
+      "dependency_sources": [
+        "book/chapters/21-cuff-matching.tex",
+        "book/chapters/22-cusps-orthospectrum.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections17-22.json#21.01",
+        "book/claims/sections17-22.json#21.02",
+        "book/claims/sections17-22.json#21.03",
+        "book/claims/sections17-22.json#22.03",
+        "book/claims/sections17-22.json#22.12"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections17-22.json#21.01": "derived_exact_algebra",
+        "book/claims/sections17-22.json#21.02": "derived_geometric",
+        "book/claims/sections17-22.json#21.03": "derived_geometric",
+        "book/claims/sections17-22.json#22.03": "external_statement",
+        "book/claims/sections17-22.json#22.12": "scope_boundary"
+      },
+      "computational_support": [
+        "planned_geodesic"
+      ],
+      "publication_gate": false,
+      "dependency_review_states": {
+        "sections17-22": "final_author_freeze_bound_independent_review_pending"
+      }
+    },
+    {
+      "id": "appB.curvature",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 1,
+      "quantity": "Surface/ambient hyperbolic curvature",
+      "status": "convention_pointer_checked",
+      "statement": "$-1$; the area-one rescaling $\\widehat g=A^{-1}g$ has curvature $-A$; \\eqref{eq:unitareanormalization}.",
+      "audit_note": "Fixed positive-area geometric family; rescaling the metric changes curvature.",
+      "dependency_labels": [
+        "eq:unitareanormalization"
+      ],
+      "dependency_sources": [
+        "book/chapters/08-wp-flat-limit.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections7-8.json#s8.cone_metric_limit"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections7-8.json#s8.cone_metric_limit": "derived_from_external_theorems"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.ch_curvature",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 2,
+      "quantity": "Complex hyperbolic curvature",
+      "status": "convention_pointer_checked",
+      "statement": "Holomorphic sectional curvature $-1$, with $\\omega_{\\mathrm{CH}}=-2i\\partial\\bar\\partial\\log\\mathcal A$; \\eqref{eq:CHpotential}.",
+      "audit_note": "The period-area potential fixes the local form scale.",
+      "dependency_labels": [
+        "eq:CHpotential"
+      ],
+      "dependency_sources": [
+        "book/chapters/07-euclidean-periods.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections7-8.json#s7.period_geometry",
+        "book/claims/sections7-8.json#s8.local_wp_ch_factor"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections7-8.json#s7.period_geometry": "external_theorem_statement_checked",
+        "book/claims/sections7-8.json#s8.local_wp_ch_factor": "derived_from_external_theorems"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.flat_weights",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 3,
+      "quantity": "Flat weights",
+      "status": "convention_pointer_checked",
+      "statement": "Deficit $2\\pi\\mu_i$, opening $2\\pi(1-\\mu_i)$, $0<\\mu_i<1$, $\\sum_i\\mu_i=2$; \\eqref{eq:flatweights}.",
+      "audit_note": "Weights and noncolliding marked points are fixed in a local limit; lattice monodromy requires additional hypotheses.",
+      "dependency_labels": [
+        "eq:flatweights"
+      ],
+      "dependency_sources": [
+        "book/chapters/07-euclidean-periods.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections7-8.json#s7.flat_leaf"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections7-8.json#s7.flat_leaf": "derived_in_chapter"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.volume_scales",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 4,
+      "quantity": "Three volume scales",
+      "status": "convention_pointer_checked",
+      "statement": "$A$ is boundary area, $W$ is enclosed three-volume, and $V_{\\WP}$ is moduli volume; Section~\\ref{sec:quantumdegeneration}.",
+      "audit_note": "The same letter may have a separate explicitly declared local meaning; no area/volume/moduli-measure identification.",
+      "dependency_labels": [
+        "sec:quantumdegeneration"
+      ],
+      "dependency_sources": [
+        "book/chapters/11-quantum-degeneration.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections10-11.json#s11.volume_dictionary"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections10-11.json#s11.volume_dictionary": "external_conjecture"
+      },
+      "independent_review_boundary": "Sections 10-11 source and ledger hashes have independent exact-byte acceptance after QR01. The accepted scope is selected external statements and local claims, not complete external-proof or companion execution review.",
+      "dependency_review_states": {
+        "sections10-11": "independent_exact_byte_acceptance_in_quantum_review_final_acceptance"
+      }
+    },
+    {
+      "id": "appB.wp_limit",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 5,
+      "quantity": "Flat WP limit",
+      "status": "convention_pointer_checked",
+      "statement": "$A^{-1}\\omega_{\\WP}\\to\\omega_{\\mathrm{CH}}/2$, locally on open moduli at fixed weights; \\eqref{eq:localWPCHlimit}.",
+      "audit_note": "The reviewed result is locally uniform away from collisions, not uniform as weights approach a wall.",
+      "dependency_labels": [
+        "eq:localWPCHlimit"
+      ],
+      "dependency_sources": [
+        "book/chapters/08-wp-flat-limit.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections7-8.json#s8.local_wp_ch_factor"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections7-8.json#s8.local_wp_ch_factor": "derived_from_external_theorems"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.wp_form",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 6,
+      "quantity": "WP form",
+      "status": "convention_pointer_checked",
+      "statement": "$\\sum_j\\dd\\ell_j\\wedge\\dd\\tau_j$, with full twist period $\\ell_j$; \\eqref{eq:fn}. For the raw Beltrami pairing $H$, the complex form is $i\\sum_{j,k}H_{j\\bar k}\\dd t_j\\wedge\\dd\\bar t_k$; Section~\\ref{sec:conventions}.",
+      "audit_note": "Opposite twist direction changes the signed wedge convention; ineffective stabilizers do not rescale the local form.",
+      "dependency_labels": [
+        "eq:fn",
+        "sec:conventions"
+      ],
+      "dependency_sources": [
+        "book/chapters/01-volume-normalization.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections1-6.json#s1.fn_and_hermitian_scale"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections1-6.json#s1.fn_and_hermitian_scale": "explicit_convention"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.boundaries",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 7,
+      "quantity": "Boundary components",
+      "status": "convention_pointer_checked",
+      "statement": "Labeled, unparametrized, with lengths fixed before integration; a zero length denotes a cusp; Section~\\ref{sec:conventions}.",
+      "audit_note": "No quotient by all label permutations is implicit.",
+      "dependency_labels": [
+        "sec:conventions"
+      ],
+      "dependency_sources": [
+        "book/chapters/01-volume-normalization.tex"
+      ],
+      "dependencies": [],
+      "inherited_statuses": {},
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.stack_volumes",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 8,
+      "quantity": "Volumes",
+      "status": "convention_pointer_checked",
+      "statement": "Orbifold/stack volumes include ineffective stabilizers; $V=\\int\\omega_{\\WP}^{d}/d!$; Section~\\ref{sec:conventions}.",
+      "audit_note": "Generic ineffective stabilizer order divides the effective volume independently of a symplectic scale change.",
+      "dependency_labels": [
+        "sec:conventions"
+      ],
+      "dependency_sources": [
+        "book/chapters/01-volume-normalization.tex"
+      ],
+      "dependencies": [],
+      "inherited_statuses": {},
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.torus_volume",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 9,
+      "quantity": "Punctured-torus volume",
+      "status": "convention_pointer_checked",
+      "statement": "$V_{1,1}(0)=\\pi^2/12$; effective volume $\\pi^2/6$; \\eqref{eq:basevolumes}.",
+      "audit_note": "One factor two comes from the ineffective involution.",
+      "dependency_labels": [
+        "eq:basevolumes"
+      ],
+      "dependency_sources": [
+        "book/chapters/01-volume-normalization.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections1-6.json#s1.base_volumes"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections1-6.json#s1.base_volumes": "external_statement_checked"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.sphere_volume",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 10,
+      "quantity": "Four-punctured-sphere volume",
+      "status": "convention_pointer_checked",
+      "statement": "$V_{0,4}(0)=2\\pi^2$; the direct integral includes both labeled orientation sheets; \\eqref{eq:v04direct}.",
+      "audit_note": "A one-sheet tetrahedron integral is half this total.",
+      "dependency_labels": [
+        "eq:v04direct"
+      ],
+      "dependency_sources": [
+        "book/chapters/03-ideal-tetrahedron.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections1-6.json#s3.angle_integral"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections1-6.json#s3.angle_integral": "derived_in_chapter_author_verified"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.cone_parameter",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 11,
+      "quantity": "Cone parameter",
+      "status": "convention_pointer_checked",
+      "statement": "Opening $\\theta$, formal length $L=i\\theta$, deficit $2\\pi-\\theta$. Geometric volumes require positive area and the specified chamber corrections; \\eqref{eq:gb}, \\eqref{eq:conev04}.",
+      "audit_note": "Unrestricted polynomial substitution is not the large-cone volume theorem.",
+      "dependency_labels": [
+        "eq:gb",
+        "eq:conev04"
+      ],
+      "dependency_sources": [
+        "book/chapters/05-boundary-cone-continuation.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections1-6.json#s5.area",
+        "book/claims/sections1-6.json#s5.four_cone_volume"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections1-6.json#s5.area": "derived_in_chapter_author_verified",
+        "book/claims/sections1-6.json#s5.four_cone_volume": "derived_in_chapter_author_verified"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.ambient_crossratio",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 12,
+      "quantity": "Ideal tetrahedral $z$",
+      "status": "convention_pointer_checked",
+      "statement": "Cross-ratio of ambient ideal vertices; it need not equal the intrinsic conformal cross-ratio; Section~\\ref{sec:tetrahedron}.",
+      "audit_note": "The lambda-gauge computation uses the ambient coordinate.",
+      "dependency_labels": [
+        "sec:tetrahedron"
+      ],
+      "dependency_sources": [
+        "book/chapters/03-ideal-tetrahedron.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections1-6.json#s3.integrability_and_flat_locus"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections1-6.json#s3.integrability_and_flat_locus": "derived_in_chapter_author_verified"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.angles",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 13,
+      "quantity": "Exterior and interior angles",
+      "status": "convention_pointer_checked",
+      "statement": "Exterior $\\theta_e$ is a dual metric edge length, with sum $2\\pi$ around an ideal vertex; \\eqref{eq:rivinangles2}. Schl\\\"afli uses interior $\\alpha_e$: $\\dd W=-\\frac12\\sum_e\\ell_e\\dd\\alpha_e$; \\eqref{eq:Schlafli}.",
+      "audit_note": "Exterior angles are pi minus interior angles; the variation sign changes accordingly.",
+      "dependency_labels": [
+        "eq:rivinangles2",
+        "eq:Schlafli"
+      ],
+      "dependency_sources": [
+        "book/chapters/02-ideal-angle-cells.tex",
+        "book/chapters/11-quantum-degeneration.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections1-6.json#s2.angle_domain",
+        "book/claims/sections10-11.json#s11.schlafli"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections1-6.json#s2.angle_domain": "external_statement_checked",
+        "book/claims/sections10-11.json#s11.schlafli": "external_statement_checked"
+      },
+      "independent_review_boundary": "Sections 10-11 source and ledger hashes have independent exact-byte acceptance after QR01. The accepted scope is selected external statements and local claims, not complete external-proof or companion execution review.",
+      "dependency_review_states": {
+        "sections10-11": "independent_exact_byte_acceptance_in_quantum_review_final_acceptance"
+      }
+    },
+    {
+      "id": "appB.lambda_length",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 14,
+      "quantity": "Lambda length",
+      "status": "convention_pointer_checked",
+      "statement": "$e^{\\delta/2}$ for signed decorated distance $\\delta$, with no additional $\\sqrt2$; \\eqref{eq:lambdagauge}, \\eqref{eq:cusplambda}.",
+      "audit_note": "Horocycle normalization is fixed before comparing numerical lambda lengths.",
+      "dependency_labels": [
+        "eq:lambdagauge",
+        "eq:cusplambda"
+      ],
+      "dependency_sources": [
+        "book/chapters/03-ideal-tetrahedron.tex",
+        "book/chapters/22-cusps-orthospectrum.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections1-6.json#s3.lambda_pullback",
+        "book/claims/sections17-22.json#22.05"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections1-6.json#s3.lambda_pullback": "derived_in_chapter_author_verified",
+        "book/claims/sections17-22.json#22.05": "derived_geometric"
+      },
+      "independent_review_boundary": "Final Sections 17-22 author sources and ledger are bound; independent mathematical review is pending. No geodesic independent approval is inferred.",
+      "dependency_review_states": {
+        "sections17-22": "final_author_freeze_bound_independent_review_pending"
+      }
+    },
+    {
+      "id": "appB.planar_gauge",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 15,
+      "quantity": "Planar Hessian and gauge",
+      "status": "convention_pointer_checked",
+      "statement": "Leading--trailing coordinates have $u|_B=0$ and $-D_u^2\\mathcal V=2L_{II}$; \\eqref{eq:ipolyAngleCoordinates}, \\eqref{eq:ipolyHessian}. The boundary response is grounded or taken modulo constants; \\eqref{eq:ipolyDtN}.",
+      "audit_note": "The coordinates are not logarithmic conformal scale factors. A determinant or inverse must specify the nondegenerate space.",
+      "dependency_labels": [
+        "eq:ipolyAngleCoordinates",
+        "eq:ipolyHessian",
+        "eq:ipolyDtN"
+      ],
+      "dependency_sources": [
+        "book/chapters/09-volume-hessians.tex"
+      ],
+      "dependencies": [
+        "book/claims/section9.json#s9.coordinates",
+        "book/claims/section9.json#s9.gradient_hessian",
+        "book/claims/section9.json#s9.fixture_numerical",
+        "book/claims/section9.json#s9.dtn"
+      ],
+      "inherited_statuses": {
+        "book/claims/section9.json#s9.coordinates": "proved_in_chapter",
+        "book/claims/section9.json#s9.gradient_hessian": "proved_in_chapter",
+        "book/claims/section9.json#s9.fixture_numerical": "numerical_check",
+        "book/claims/section9.json#s9.dtn": "proved_in_chapter"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.quantum_integer",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 16,
+      "quantity": "Compact quantum integers",
+      "status": "convention_pointer_checked",
+      "statement": "$[n]_{q_{\\rm alg}}=(q_{\\rm alg}^n-q_{\\rm alg}^{-n})/(q_{\\rm alg}-q_{\\rm alg}^{-1})$; the compact root is $e^{\\pi i/r}$; \\eqref{eq:introqinteger}.",
+      "audit_note": "Admissible spins, triangle inequalities, integral spin sums and the root truncation are part of the finite theory.",
+      "dependency_labels": [
+        "eq:introqinteger"
+      ],
+      "dependency_sources": [
+        "book/chapters/10-quantum-introduction.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections10-11.json#s10.quantum_integer"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections10-11.json#s10.quantum_integer": "external_statement_checked"
+      },
+      "independent_review_boundary": "Sections 10-11 source and ledger hashes have independent exact-byte acceptance after QR01. The accepted scope is selected external statements and local claims, not complete external-proof or companion execution review.",
+      "dependency_review_states": {
+        "sections10-11": "independent_exact_byte_acceptance_in_quantum_review_final_acceptance"
+      }
+    },
+    {
+      "id": "appB.jones",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 17,
+      "quantity": "Colored Jones and volume roots",
+      "status": "convention_pointer_checked",
+      "statement": "Reduced $J_N(\\text{unknot};q_J)=1$; form the polynomial before $q_J=e^{2\\pi i/N}$. Chen--Yang RT/TV use their separate odd-$r$ root convention; \\eqref{eq:introknotvolume}, \\eqref{eq:introclosedvolume}.",
+      "audit_note": "The top color at the Jones specialization is not a retained simple label of the corresponding compact fusion theory.",
+      "dependency_labels": [
+        "eq:introknotvolume",
+        "eq:introclosedvolume"
+      ],
+      "dependency_sources": [
+        "book/chapters/10-quantum-introduction.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections10-11.json#s10.knot_volume",
+        "book/claims/sections10-11.json#s10.closed_growth"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections10-11.json#s10.knot_volume": "external_conjecture",
+        "book/claims/sections10-11.json#s10.closed_growth": "external_statement_checked"
+      },
+      "independent_review_boundary": "Sections 10-11 source and ledger hashes have independent exact-byte acceptance after QR01. The accepted scope is selected external statements and local claims, not complete external-proof or companion execution review.",
+      "dependency_review_states": {
+        "sections10-11": "independent_exact_byte_acceptance_in_quantum_review_final_acceptance"
+      }
+    },
+    {
+      "id": "appB.cm_labels",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 18,
+      "quantity": "Chen--Murakami $6j$",
+      "status": "convention_pointer_checked",
+      "statement": "$\\xi_r=e^{2\\pi i/r}$, $r$ odd, source $q=\\xi_r^2$ and $q_{\\rm alg}=\\xi_r$. The refined prefactor in~\\eqref{eq:quantum6jstructure} requires the exact label sequence stated there, beyond the leading-limit hypotheses.",
+      "audit_note": "Fixed hyperbolic shape with an ideal/ultraideal vertex; the refined rational-angle odd-numerator/denominator sequence is not generic rounding or a shrinking compact family.",
+      "dependency_labels": [
+        "eq:quantum6jstructure"
+      ],
+      "dependency_sources": [
+        "book/chapters/11-quantum-degeneration.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections10-11.json#s11.cm_refined",
+        "book/claims/sections10-11.json#s11.cm_leading"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections10-11.json#s11.cm_refined": "external_statement_checked",
+        "book/claims/sections10-11.json#s11.cm_leading": "external_statement_checked"
+      },
+      "independent_review_boundary": "Sections 10-11 source and ledger hashes have independent exact-byte acceptance after QR01. The accepted scope is selected external statements and local claims, not complete external-proof or companion execution review.",
+      "dependency_review_states": {
+        "sections10-11": "independent_exact_byte_acceptance_in_quantum_review_final_acceptance"
+      }
+    },
+    {
+      "id": "appB.continuous_scale",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 19,
+      "quantity": "Continuous semiclassical scale",
+      "status": "convention_pointer_checked",
+      "statement": "$h=2\\pi b^2$, volume-action $\\hbar_{\\rm vol}=\\pi b^2=h/2$; \\eqref{eq:TVvolumehbar}. These differ from $\\hbar_r=4\\pi i/r$ in~\\eqref{eq:introRTgrowth}.",
+      "audit_note": "The symbol h in the Airy calculation differs from the entropy/dimension symbol in the mixing chapters.",
+      "dependency_labels": [
+        "eq:TVvolumehbar",
+        "eq:introRTgrowth"
+      ],
+      "dependency_sources": [
+        "book/chapters/14-normalized-quantum-comparison.tex",
+        "book/chapters/10-quantum-introduction.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections12-14.json#s14.volume_exponent",
+        "book/claims/sections10-11.json#s10.rt_exponent"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections12-14.json#s14.volume_exponent": "derived_from_external_statements",
+        "book/claims/sections10-11.json#s10.rt_exponent": "derived_in_chapter"
+      },
+      "independent_review_boundary": "Sections 10-11 source and ledger hashes have independent exact-byte acceptance after QR01. The accepted scope is selected external statements and local claims, not complete external-proof or companion execution review.",
+      "dependency_review_states": {
+        "sections10-11": "independent_exact_byte_acceptance_in_quantum_review_final_acceptance"
+      }
+    },
+    {
+      "id": "appB.barnes",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 20,
+      "quantity": "Regular Barnes normalization",
+      "status": "convention_pointer_checked",
+      "statement": "Upward contour with measure $\\dd w/i$; the Airy expansion is for the pole-cleared $\\widehat{\\mathcal R}_b$ and bounded real $\\zeta$; \\eqref{eq:realregularsymbol}, \\eqref{eq:clearedregularsymbol}, \\eqref{eq:quantumAirytheorem}.",
+      "audit_note": "The displayed error is additive; arbitrary six-label families and unbounded transition parameters are excluded.",
+      "dependency_labels": [
+        "eq:realregularsymbol",
+        "eq:clearedregularsymbol",
+        "eq:quantumAirytheorem"
+      ],
+      "dependency_sources": [
+        "book/chapters/15-quantum-airy.tex"
+      ],
+      "dependencies": [
+        "book/claims/section15.json#s15.normalization",
+        "book/claims/section15.json#s15.resonance_noncancellation",
+        "book/claims/section15.json#s15.quantum_numerics",
+        "book/claims/section15.json#s15.uniform_transition",
+        "book/claims/section15.json#s15.orientation"
+      ],
+      "inherited_statuses": {
+        "book/claims/section15.json#s15.normalization": "derived_from_external_statements",
+        "book/claims/section15.json#s15.resonance_noncancellation": "analytic_derivation_in_chapter",
+        "book/claims/section15.json#s15.quantum_numerics": "numerical_exact_integrand_checked",
+        "book/claims/section15.json#s15.uniform_transition": "analytic_derivation_in_chapter",
+        "book/claims/section15.json#s15.orientation": "derived_from_external_statements"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.liouville",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 21,
+      "quantity": "Liouville charges and marks",
+      "status": "convention_pointer_checked",
+      "statement": "Physics $\\alpha_i=\\mu_i/(2b)$, probabilistic $\\beta_i=2\\alpha_i$, $Q=b+b^{-1}$; marks $0,1,z,\\infty$ carry labels $1,2,3,4$; \\eqref{eq:introLiouvilleparameters}, \\eqref{eq:screeningparameters}.",
+      "audit_note": "The one-screening first moment and finite period fusion are distinct from infinite spectral continuation with a tail majorant.",
+      "dependency_labels": [
+        "eq:introLiouvilleparameters",
+        "eq:screeningparameters"
+      ],
+      "dependency_sources": [
+        "book/chapters/10-quantum-introduction.tex",
+        "book/chapters/13-four-point-fusion.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections10-11.json#s10.virasoro",
+        "book/claims/sections12-14.json#s13.parameters"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections10-11.json#s10.virasoro": "external_statement_checked",
+        "book/claims/sections12-14.json#s13.parameters": "derived_in_chapter"
+      },
+      "independent_review_boundary": "Sections 10-11 source and ledger hashes have independent exact-byte acceptance after QR01. The accepted scope is selected external statements and local claims, not complete external-proof or companion execution review.",
+      "dependency_review_states": {
+        "sections10-11": "independent_exact_byte_acceptance_in_quantum_review_final_acceptance"
+      }
+    },
+    {
+      "id": "appB.torsion",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 22,
+      "quantity": "Relative torsion normalization",
+      "status": "convention_pointer_checked",
+      "statement": "The $B=-\\tr$ peripheral factor in~\\eqref{eq:torsionGoldman} is specific to that bilinear form; torsion, Goldman form and peripheral factors must be rescaled together.",
+      "audit_note": "The fixed-trace density is obtained by disintegration, not by pulling an unrestricted top form directly to the leaf.",
+      "dependency_labels": [
+        "eq:torsionGoldman"
+      ],
+      "dependency_sources": [
+        "book/chapters/12-quantum-boundary-measure.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections12-14.json#s12.relative_torsion"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections12-14.json#s12.relative_torsion": "external_statement_and_derived_normalization"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.closed_curves",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 23,
+      "quantity": "Closed-curve sums",
+      "status": "convention_pointer_checked",
+      "statement": "Unoriented free-homotopy classes unless stated otherwise; primitivity and iteration are specified separately; Sections~\\ref{sec:figures}, \\ref{sec:coefficientdistributions}.",
+      "audit_note": "Equal lengths do not merge distinct topological classes.",
+      "dependency_labels": [
+        "sec:figures",
+        "sec:coefficientdistributions"
+      ],
+      "dependency_sources": [
+        "book/chapters/18-figure-eight-curves.tex",
+        "book/chapters/23-trace-coefficients.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections17-22.json#18.05",
+        "book/claims/sections17-22.json#18.12"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections17-22.json#18.05": "derived_geometric",
+        "book/claims/sections17-22.json#18.12": "scope_boundary"
+      },
+      "independent_review_boundary": "Final Sections 17-22 author sources and ledger are bound; independent mathematical review is pending. No geodesic independent approval is inferred.",
+      "dependency_review_states": {
+        "sections17-22": "final_author_freeze_bound_independent_review_pending"
+      }
+    },
+    {
+      "id": "appB.positive_trace",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 24,
+      "quantity": "Positive geometric trace",
+      "status": "convention_pointer_checked",
+      "statement": "$t_\\gamma=2\\cosh(\\ell_\\gamma/2)=|\\tr\\widetilde\\rho(\\gamma)|$ for a hyperbolic element; compatible lift signs are retained in trace identities; \\eqref{eq:figuretrace}.",
+      "audit_note": "Positive geometric traces must not be substituted for globally signed character traces inside a skein identity.",
+      "dependency_labels": [
+        "eq:figuretrace"
+      ],
+      "dependency_sources": [
+        "book/chapters/18-figure-eight-curves.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections17-22.json#18.01"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections17-22.json#18.01": "derived_geometric"
+      },
+      "independent_review_boundary": "Final Sections 17-22 author sources and ledger are bound; independent mathematical review is pending. No geodesic independent approval is inferred.",
+      "dependency_review_states": {
+        "sections17-22": "final_author_freeze_bound_independent_review_pending"
+      }
+    },
+    {
+      "id": "appB.coefficient_basis",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 25,
+      "quantity": "Coefficient basis",
+      "status": "convention_pointer_checked",
+      "statement": "$T_C=\\prod_{\\alpha\\subset C}\\tr\\rho(\\alpha)$, $T_\\varnothing=1$, with unnegated traces and parallel multiplicities; \\eqref{eq:coeffbasis}.",
+      "audit_note": "These functions are not pointwise positive on SU(2). The Kauffman minus-trace convention differs by a component sign.",
+      "dependency_labels": [
+        "eq:coeffbasis"
+      ],
+      "dependency_sources": [
+        "book/chapters/23-trace-coefficients.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections23-25.json#23.03"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections23-25.json#23.03": "external_statement_and_derived_normalization"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.selberg",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 26,
+      "quantity": "Twisted Selberg sum",
+      "status": "convention_pointer_checked",
+      "statement": "Closed genus-$g\\ge2$ surface; unoriented primitive $\\delta$ and iterate $k$ have weight $\\ell_\\delta/\\sinh(k\\ell_\\delta/2)$; \\eqref{eq:coefftwistedSelberg}.",
+      "audit_note": "Cusps/boundary require additional trace terms; orienting primitive classes changes the paired factor.",
+      "dependency_labels": [
+        "eq:coefftwistedSelberg"
+      ],
+      "dependency_sources": [
+        "book/chapters/23-trace-coefficients.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections23-25.json#23.04"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections23-25.json#23.04": "external_statement_and_derived_normalization"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.heat",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 27,
+      "quantity": "Coefficient heat transform",
+      "status": "convention_pointer_checked",
+      "statement": "$H_C(t)=e^{-t/4}(4\\pi t)^{-1/2}\\int e^{-L^2/(4t)}\\,\\dd\\sigma_C(L)$; \\eqref{eq:coeffheatdefinition}.",
+      "audit_note": "The signed coefficient measure and the spectral 1/4 shift use the closed curvature-minus-one convention.",
+      "dependency_labels": [
+        "eq:coeffheatdefinition"
+      ],
+      "dependency_sources": [
+        "book/chapters/23-trace-coefficients.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections23-25.json#23.11"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections23-25.json#23.11": "derived_analytic"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.laplace",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 28,
+      "quantity": "Coefficient Laplace parameter",
+      "status": "convention_pointer_checked",
+      "statement": "Kernel $e^{-sL}$; product parameter $v=s+1/2$; \\eqref{eq:coeffLaplacedefinition}, \\eqref{eq:coeffproductderivative}.",
+      "audit_note": "The proved half-plane for nonempty coefficient transforms is Re(s)>1; formal coefficient extraction after continuation requires separate control.",
+      "dependency_labels": [
+        "eq:coeffLaplacedefinition",
+        "eq:coeffproductderivative"
+      ],
+      "dependency_sources": [
+        "book/chapters/23-trace-coefficients.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections23-25.json#23.11",
+        "book/claims/sections23-25.json#23.20"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections23-25.json#23.11": "derived_analytic",
+        "book/claims/sections23-25.json#23.20": "derived_analytic"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.total_laminations",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 29,
+      "quantity": "Total multicurve count",
+      "status": "convention_pointer_checked",
+      "statement": "All nonzero integral laminations, including disconnected and parallel supports; \\eqref{eq:countall}.",
+      "audit_note": "This is not a count of connected simple curves alone.",
+      "dependency_labels": [
+        "eq:countall"
+      ],
+      "dependency_sources": [
+        "book/chapters/24-quantitative-counting.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections23-25.json#24.03"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections23-25.json#24.03": "derived_from_external_statements"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.primitive_lamination",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 30,
+      "quantity": "Primitive lamination",
+      "status": "convention_pointer_checked",
+      "statement": "Gcd of distinct-support weights is one; connectedness is an additional condition; \\eqref{eq:countprimitive}.",
+      "audit_note": "Primitive weighted laminations and primitive closed geodesics have different definitions.",
+      "dependency_labels": [
+        "eq:countprimitive"
+      ],
+      "dependency_sources": [
+        "book/chapters/24-quantitative-counting.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections23-25.json#24.04"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections23-25.json#24.04": "derived_analytic"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.support_variable",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 31,
+      "quantity": "Support variable $z$",
+      "status": "convention_pointer_checked",
+      "statement": "Exponent counts distinct geodesic supports, not parallel copies; \\eqref{eq:countsupportpartition}.",
+      "audit_note": "A finite Fourier projection does not supply a uniform global coefficient extraction estimate.",
+      "dependency_labels": [
+        "eq:countsupportpartition"
+      ],
+      "dependency_sources": [
+        "book/chapters/24-quantitative-counting.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections23-25.json#24.11"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections23-25.json#24.11": "derived_analytic"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.one_crossing",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 32,
+      "quantity": "One-crossing torus curves",
+      "status": "convention_pointer_checked",
+      "statement": "Primitive curves with one transverse double point; each simple class gives two N-type and one H-type labels, including equal-length multiplicity; \\eqref{eq:allfigureidentity}.",
+      "audit_note": "Hyperelliptic and non-hyperelliptic types are both retained.",
+      "dependency_labels": [
+        "eq:allfigureidentity"
+      ],
+      "dependency_sources": [
+        "book/chapters/18-figure-eight-curves.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections17-22.json#18.09",
+        "book/claims/sections17-22.json#18.05"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections17-22.json#18.09": "derived_from_external_statements",
+        "book/claims/sections17-22.json#18.05": "derived_geometric"
+      },
+      "independent_review_boundary": "Final Sections 17-22 author sources and ledger are bound; independent mathematical review is pending. No geodesic independent approval is inferred.",
+      "dependency_review_states": {
+        "sections17-22": "final_author_freeze_bound_independent_review_pending"
+      }
+    },
+    {
+      "id": "appB.basmajian",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 33,
+      "quantity": "Basmajian sum",
+      "status": "convention_pointer_checked",
+      "statement": "Coefficient $2$ for oriented orthogeodesics, $4$ for unoriented arcs counted once; \\eqref{eq:basmajian}.",
+      "audit_note": "Orientation counts the two endpoint shadows; this is a geodesic-boundary identity.",
+      "dependency_labels": [
+        "eq:basmajian"
+      ],
+      "dependency_sources": [
+        "book/chapters/22-cusps-orthospectrum.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections17-22.json#22.10"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections17-22.json#22.10": "external_statement_and_derived_normalization"
+      },
+      "independent_review_boundary": "Final Sections 17-22 author sources and ledger are bound; independent mathematical review is pending. No geodesic independent approval is inferred.",
+      "dependency_review_states": {
+        "sections17-22": "final_author_freeze_bound_independent_review_pending"
+      }
+    },
+    {
+      "id": "appB.cusp",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 34,
+      "quantity": "Cusp orthospectrum",
+      "status": "convention_pointer_checked",
+      "statement": "Simple cusp-to-cusp arcs, signed truncation $d$ at horocycle length $H$: $H\\mapsto kH$ gives $d\\mapsto d-2\\log k$; $e^{-d}/H^2$ is invariant; \\eqref{eq:toruscusplambda}.",
+      "audit_note": "Signed decorations may overlap; this does not assert that arbitrarily large horocycles are embedded.",
+      "dependency_labels": [
+        "eq:toruscusplambda"
+      ],
+      "dependency_sources": [
+        "book/chapters/22-cusps-orthospectrum.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections17-22.json#22.06",
+        "book/claims/sections17-22.json#22.09"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections17-22.json#22.06": "external_statement_and_derived_normalization",
+        "book/claims/sections17-22.json#22.09": "derived_exact_algebra"
+      },
+      "independent_review_boundary": "Final Sections 17-22 author sources and ledger are bound; independent mathematical review is pending. No geodesic independent approval is inferred.",
+      "dependency_review_states": {
+        "sections17-22": "final_author_freeze_bound_independent_review_pending"
+      }
+    },
+    {
+      "id": "appB.cusp_rays",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 35,
+      "quantity": "Cusp-normal rays",
+      "status": "convention_pointer_checked",
+      "statement": "The almost-everywhere intersection/gap discussion is for complete finite-area surfaces without geodesic boundary; Section~\\ref{sec:cusps}.",
+      "audit_note": "Boundary cases need the additional rays exiting through geodesic boundary and their gaps.",
+      "dependency_labels": [
+        "sec:cusps"
+      ],
+      "dependency_sources": [
+        "book/chapters/22-cusps-orthospectrum.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections17-22.json#22.03"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections17-22.json#22.03": "external_statement"
+      },
+      "independent_review_boundary": "Final Sections 17-22 author sources and ledger are bound; independent mathematical review is pending. No geodesic independent approval is inferred.",
+      "dependency_review_states": {
+        "sections17-22": "final_author_freeze_bound_independent_review_pending"
+      }
+    },
+    {
+      "id": "appB.phase",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 36,
+      "quantity": "Cuff phase matching",
+      "status": "convention_pointer_checked",
+      "statement": "Use one common cuff coordinate after reversing one induced orientation: $(s,p)\\mapsto(s+\\tau,p)$, with $p$ the signed tangential unit velocity; \\eqref{eq:endpointmatch}, \\eqref{eq:momentummatch}.",
+      "audit_note": "Matching endpoint positions alone does not match directions or close a geodesic.",
+      "dependency_labels": [
+        "eq:endpointmatch",
+        "eq:momentummatch"
+      ],
+      "dependency_sources": [
+        "book/chapters/21-cuff-matching.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections17-22.json#21.01",
+        "book/claims/sections17-22.json#21.02",
+        "book/claims/sections17-22.json#21.03"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections17-22.json#21.01": "derived_exact_algebra",
+        "book/claims/sections17-22.json#21.02": "derived_geometric",
+        "book/claims/sections17-22.json#21.03": "derived_geometric"
+      },
+      "independent_review_boundary": "Final Sections 17-22 author sources and ledger are bound; independent mathematical review is pending. No geodesic independent approval is inferred.",
+      "dependency_review_states": {
+        "sections17-22": "final_author_freeze_bound_independent_review_pending"
+      }
+    },
+    {
+      "id": "appB.peripheral",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 37,
+      "quantity": "Peripheral logarithms",
+      "status": "convention_pointer_checked",
+      "statement": "PSL$_2(\\CC)$ multiplier logs $u,v$; eigenvalues $m=e^{u/2}$, $l=e^{v/2}$ with fixed lift signs; smooth filling $pu+qv=2\\pi i$; \\eqref{eq:dehnholonomy}, \\eqref{eq:dehncone}.",
+      "audit_note": "Changing to eigenvalue logarithms would halve the smooth-filling right side.",
+      "dependency_labels": [
+        "eq:dehnholonomy",
+        "eq:dehncone"
+      ],
+      "dependency_sources": [
+        "book/chapters/16-dehn-filling-response.tex"
+      ],
+      "dependencies": [
+        "book/claims/section16.json#s16.peripheral_germ",
+        "book/claims/section16.json#s16.uniform_long_slope"
+      ],
+      "inherited_statuses": {
+        "book/claims/section16.json#s16.peripheral_germ": "external_theorem_statement_checked",
+        "book/claims/section16.json#s16.uniform_long_slope": "derived_in_chapter"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.polarization",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 38,
+      "quantity": "Peripheral polarization",
+      "status": "convention_pointer_checked",
+      "statement": "$\\Omega=\\frac12\\dd v\\wedge\\dd u$, $P=v/2$, $[\\widehat P,\\widehat u]=\\hbar$; $\\widehat l$ shifts $u$ by $\\hbar$; \\eqref{eq:introNZpolarization}, \\eqref{eq:introcommutator}.",
+      "audit_note": "The half-log coordinate gives l m = exp(hbar/2) m l; no q-independent identification of all quantum parameters is imposed.",
+      "dependency_labels": [
+        "eq:introNZpolarization",
+        "eq:introcommutator"
+      ],
+      "dependency_sources": [
+        "book/chapters/10-quantum-introduction.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections10-11.json#s10.nz_polarization",
+        "book/claims/sections10-11.json#s10.weyl_operators"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections10-11.json#s10.nz_polarization": "derived_from_reviewed_dependencies",
+        "book/claims/sections10-11.json#s10.weyl_operators": "derived_in_chapter"
+      },
+      "independent_review_boundary": "Sections 10-11 source and ledger hashes have independent exact-byte acceptance after QR01. The accepted scope is selected external statements and local claims, not complete external-proof or companion execution review.",
+      "dependency_review_states": {
+        "sections10-11": "independent_exact_byte_acceptance_in_quantum_review_final_acceptance"
+      }
+    },
+    {
+      "id": "appB.real_source",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 39,
+      "quantity": "Real filling source",
+      "status": "convention_pointer_checked",
+      "statement": "Adding $jLx$ fixes the conjugate source $j=\\ell_{\\rm core}/2$; the cone angle is $Lx$; \\eqref{eq:realdehnlegendre}, \\eqref{eq:dehnsourcecore}.",
+      "audit_note": "Fixing the source and fixing the cone angle are Legendre-dual operations.",
+      "dependency_labels": [
+        "eq:realdehnlegendre",
+        "eq:dehnsourcecore"
+      ],
+      "dependency_sources": [
+        "book/chapters/16-dehn-filling-response.tex"
+      ],
+      "dependencies": [
+        "book/claims/section16.json#s16.real_legendre"
+      ],
+      "inherited_statuses": {
+        "book/claims/section16.json#s16.real_legendre": "derived_in_chapter"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.holomorphic_action",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 40,
+      "quantity": "Holomorphic filling action",
+      "status": "convention_pointer_checked",
+      "statement": "$F^{\\prime}=v$ and $\\Delta V=\\frac12\\Im\\mathcal S^*$, with $\\mathcal S$ as in~\\eqref{eq:dehnsurgeryaction}; \\eqref{eq:dehnexactcriticalvolume}.",
+      "audit_note": "This holomorphic classical normalization does not supply the conditional quantum surgery input.",
+      "dependency_labels": [
+        "eq:dehnsurgeryaction",
+        "eq:dehnexactcriticalvolume"
+      ],
+      "dependency_sources": [
+        "book/chapters/16-dehn-filling-response.tex"
+      ],
+      "dependencies": [
+        "book/claims/section16.json#s16.potential",
+        "book/claims/section16.json#s16.critical_value"
+      ],
+      "inherited_statuses": {
+        "book/claims/section16.json#s16.potential": "derived_in_chapter",
+        "book/claims/section16.json#s16.critical_value": "derived_in_chapter"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.gauge_counts",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 41,
+      "quantity": "Norm-ball gauge and counts",
+      "status": "convention_pointer_checked",
+      "statement": "$A_B$ counts all nonzero signed lattice points, $P_B$ the primitive ones, boundary included. The shortest gauge value is one; $\\lambda_\\gamma=\\ell_\\gamma/s_X$ for systole $s_X$; Sections~\\ref{subsec:mobiusmodulus}, \\ref{sec:arithmeticgeometry}.",
+      "audit_note": "An unoriented torus simple-curve count is half the signed primitive count for the symmetric ball; campaign hyperbolic cutoffs must be rescaled.",
+      "dependency_labels": [
+        "subsec:mobiusmodulus",
+        "sec:arithmeticgeometry"
+      ],
+      "dependency_sources": [
+        "book/chapters/30-sharp-diagnostics.tex",
+        "book/chapters/31-arithmetic-remainder.tex"
+      ],
+      "dependencies": [
+        "book/claims/section30.json#s30.normalization",
+        "book/claims/section31.json#s31.conventions"
+      ],
+      "inherited_statuses": {
+        "book/claims/section30.json#s30.normalization": "derivation_checked",
+        "book/claims/section31.json#s31.conventions": "derivation_checked"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.flow_scale",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 42,
+      "quantity": "Flow and area scales",
+      "status": "convention_pointer_checked",
+      "statement": "$g_t=\\operatorname{diag}(e^t,e^{-t})$; for $h=\\dim_{\\CC}\\mathcal Q$, area cutoff $L$ has exponent $h$ and period scale $\\sqrt L$ has exponent $2h$; \\eqref{eq:pairgeometryflow}, Section~\\ref{subsec:pairquotient}.",
+      "audit_note": "The principal-stratum weighted kernel and the nonsquare (2,2) marked-torus model have distinct invariant measures.",
+      "dependency_labels": [
+        "eq:pairgeometryflow",
+        "subsec:pairquotient"
+      ],
+      "dependency_sources": [
+        "book/chapters/27-weighted-mixing-converse.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections26-29.json#s27.pair_realization",
+        "book/claims/sections26-29.json#s27.quotient_scales"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections26-29.json#s27.pair_realization": "external_theorem_statement_checked",
+        "book/claims/sections26-29.json#s27.quotient_scales": "derived_in_chapter"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "appB.correlation",
+      "labels": [
+        "app:conventions"
+      ],
+      "row_number": 43,
+      "quantity": "Weighted correlations",
+      "status": "convention_pointer_checked",
+      "statement": "$C_{F,G}(t)=\\int F(G\\circ g_t)\\,\\dd\\mu$ is bilinear; use $\\overline F$ for the Hermitian version. The full-rate converse assumes the count for $(h+V)G$; Theorem~\\ref{thm:twopointfullrate}.",
+      "audit_note": "The reciprocal Jacobian and both endpoints in the weighted kernel cannot be replaced by one scalar count.",
+      "dependency_labels": [
+        "thm:twopointfullrate"
+      ],
+      "dependency_sources": [
+        "book/chapters/27-weighted-mixing-converse.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections26-29.json#s27.full_rate"
+      ],
+      "inherited_statuses": {
+        "book/claims/sections26-29.json#s27.full_rate": "conditional_implication"
+      },
+      "independent_review_boundary": "Consistency with the exact earlier reviewed sources was checked; their mathematical/source-statement reviews are inherited, not repeated in full."
+    },
+    {
+      "id": "s32.scope",
+      "labels": [
+        "sec:questions"
+      ],
+      "status": "author_scope_declaration",
+      "statement": "The fifteen items are research questions with explicit established inputs; none is a condition for publishing the preceding results in their stated scope.",
+      "dependency_labels": [
+        "eq:polyhedralpartition",
+        "eq:treevolume"
+      ],
+      "dependency_sources": [
+        "book/chapters/02-ideal-angle-cells.tex",
+        "book/chapters/04-hyperideal-integrand.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections1-6.json#s2.partition",
+        "book/claims/sections1-6.json#s4.tree_density"
+      ],
+      "source_keys": []
+    },
+    {
+      "id": "s32.computational_map",
+      "labels": [
+        "sec:questions"
+      ],
+      "status": "evidence_scope_checked",
+      "statement": "The cited maintained companions supply finite algebra, finite numerical comparisons and event data; none is a general integration, gluing, coefficient-extraction or mixing solver.",
+      "dependency_labels": [
+        "sec:ipolybridge",
+        "sec:quantumAiry",
+        "sec:arithmeticgeometry"
+      ],
+      "dependency_sources": [
+        "book/chapters/09-volume-hessians.tex",
+        "book/chapters/15-quantum-airy.tex",
+        "book/chapters/31-arithmetic-remainder.tex"
+      ],
+      "dependencies": [
+        "book/claims/section15.json#s15.airy_column",
+        "book/claims/section15.json#s15.reported_quantum_column",
+        "book/claims/section15.json#s15.quantum_numerics",
+        "book/claims/section31.json#s31.conventions"
+      ],
+      "source_keys": []
+    },
+    {
+      "id": "appB.source_scale",
+      "labels": [
+        "app:conventions"
+      ],
+      "status": "source_statement_inherited",
+      "statement": "FN and the raw Beltrami pairing fix the local form scale; stabilizer weights are a separate volume convention.",
+      "dependency_labels": [
+        "eq:fn",
+        "sec:conventions"
+      ],
+      "dependency_sources": [
+        "book/chapters/01-volume-normalization.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections1-6.json#s1.fn_and_hermitian_scale"
+      ],
+      "source_keys": []
+    },
+    {
+      "id": "appB.source_penner",
+      "labels": [
+        "app:conventions"
+      ],
+      "status": "source_statement_inherited",
+      "statement": "Penner normalization is reconciled through Mondello ordered-endpoint/reduced-length conventions.",
+      "dependency_labels": [
+        "eq:penner"
+      ],
+      "dependency_sources": [
+        "book/chapters/03-ideal-tetrahedron.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections1-6.json#s3.lambda_pullback"
+      ],
+      "source_keys": [
+        "MondelloBoundary",
+        "Penner"
+      ]
+    },
+    {
+      "id": "appB.source_calibration",
+      "labels": [
+        "app:conventions"
+      ],
+      "status": "local_derivation_inherited",
+      "statement": "The direct two-sheet tetrahedral integral and the local Fricke trace density check the chosen scale.",
+      "dependency_labels": [
+        "eq:v04direct",
+        "eq:frickedensity"
+      ],
+      "dependency_sources": [
+        "book/chapters/03-ideal-tetrahedron.tex",
+        "book/chapters/appendix-a-fricke.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections1-6.json#s3.angle_integral",
+        "book/claims/sections1-6.json#appA.wp_factor"
+      ],
+      "source_keys": []
+    },
+    {
+      "id": "appB.source_cde",
+      "labels": [
+        "app:conventions"
+      ],
+      "status": "source_statement_inherited",
+      "statement": "CDE Sections 3.2.3-3.2.4 use their own Delaunay-form scale; their constants are not imported without FN/Mondello conversion.",
+      "dependency_labels": [
+        "eq:penner"
+      ],
+      "dependency_sources": [
+        "book/chapters/03-ideal-tetrahedron.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections1-6.json#s3.lambda_pullback"
+      ],
+      "source_keys": [
+        "CDE"
+      ]
+    },
+    {
+      "id": "appB.source_budd",
+      "labels": [
+        "app:conventions"
+      ],
+      "status": "source_statement_inherited",
+      "statement": "Budd Section 1.1 and Corollary 2 fix the disintegrated metric-map measure and orientation/label-preserving automorphism factors.",
+      "dependency_labels": [
+        "eq:polyhedralpartition"
+      ],
+      "dependency_sources": [
+        "book/chapters/02-ideal-angle-cells.tex"
+      ],
+      "dependencies": [
+        "book/claims/sections1-6.json#s2.partition"
+      ],
+      "source_keys": [
+        "Budd"
+      ]
+    },
+    {
+      "id": "appB.source_audit_scope",
+      "labels": [
+        "app:conventions"
+      ],
+      "status": "author_scope_declaration",
+      "statement": "The ledger records inherited source-statement audits and finite support, not a new complete review of external proofs.",
+      "dependency_labels": [
+        "app:conventions"
+      ],
+      "dependency_sources": [
+        "book/chapters/appendix-b-conventions.tex"
+      ],
+      "dependencies": [],
+      "source_keys": []
+    }
+  ],
+  "author_review": {
+    "status": "complete_for_independent_review",
+    "question_count": 15,
+    "convention_row_count": 43,
+    "narrative_claim_count": 8,
+    "no_new_numerical_fixture_required": true,
+    "targeted_dependency_reconciliation": "revision-v2: no chapter prose changes; exact accepted quantum and final-author geodesic snapshots bound, new geodesic claim links added, planned contract pins refreshed."
+  },
+  "independent_review": {
+    "status": "pending",
+    "author_is_independent_reviewer": false,
+    "record_directory": "docs/execution/final-chapters-review-2026-11-01/"
+  },
+  "pending_dependencies": [
+    "Independent conventions review of this exact revised Section 32/Appendix B/ledger freeze.",
+    "Independent mathematical review of the final Sections 17-22 author freeze; reconcile any resulting source or ledger deltas before integration.",
+    "Implement and independently review the separately specified four quantum and ten geodesic finite groups before replacing planned-only support status with results.",
+    "Curate evidence links and shared computational status; later build and visual review own table layout and rendered reference checks.",
+    "Original historical torus precision/sensitivity archive and original Airy evaluator provenance remain unrecovered; this does not block publication of correctly scoped replacement evidence."
+  ],
+  "dependency_reconciliation": {
+    "revision": "v2",
+    "initial_freeze_manifest_sha256": "fc80ec12ae3c1f13d7c7090fc60f05e2db1fe3eccfe3cf3cb9e72d7fef7d65dc",
+    "initial_ledger_sha256": "c93990683fea3caf3b34bb911e275551d6e3a641e63e9e8b2589424a8fa23e11",
+    "record_directory": "../execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/",
+    "chapter_prose_changed": false,
+    "semantic_mismatch_found": false,
+    "geodesic_change_from_previous_observation": "Each final chapter equals the previously observed bytes after deleting exactly one EOF blank line; conventions agree with Appendix B.",
+    "quantum_change_from_previous_observation": "Chapter bytes unchanged; QR01 adds only two dependency hashes to the quantum ledger and is independently accepted.",
+    "geodesic_independent_approval_claimed": false,
+    "companion_implementation_or_execution_claimed": false
+  }
+}

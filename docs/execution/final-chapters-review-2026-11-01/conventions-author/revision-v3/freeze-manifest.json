@@ -1,0 +1,169 @@
+{
+  "status": "author_CV01_repair_ready_for_targeted_independent_recheck",
+  "baseline_commit": "151673b1817e66aae493eb7da1be5ddf49adfe0f",
+  "previous_author_freeze_sha256": "ad43dfcb8eb18fa04a3f60ec88186066f873e132c0e9884459f1e91f18a84025",
+  "finding": "CV01",
+  "required_review": {
+    "findings": {
+      "path": "conventions-review/review-findings.json",
+      "sha256": "6aa306f13387499c8a1ad981dc156144f4c31af189c717baa11c7e569e092ee9",
+      "bytes": 3412
+    },
+    "report": {
+      "path": "conventions-review/review-report.md",
+      "sha256": "3dd5cbf50e474743e1635745da9590bf0ab3b94589aeb90d72ef7cc66763de96",
+      "bytes": 5866
+    }
+  },
+  "canonical_files": [
+    {
+      "path": "book/chapters/32-open-questions.tex",
+      "sha256": "50fc264bbfc55fc19cb79dc09aa7a828b2cba479f6b3afb1c62459e0d31c9b5d",
+      "bytes": 15020
+    },
+    {
+      "path": "book/chapters/appendix-b-conventions.tex",
+      "sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363
+    },
+    {
+      "path": "book/claims/section32-appendixb.json",
+      "sha256": "488298ff34c229222010d03452f18e4f3855b9c7026589c74a28fbece04f3a9e",
+      "bytes": 125093
+    }
+  ],
+  "change_scope": "Only Q1 positive-boundary comparison, matching s32.q01 source/hypothesis/dependency-use fields, and Section 32 source hash. Appendix B and all other claims/statuses unchanged.",
+  "changed_json_paths": [
+    {
+      "path": "/chapter_source_sha256/book/chapters/32-open-questions.tex",
+      "change": "updated"
+    },
+    {
+      "path": "/claims/0/dependency_labels/2",
+      "change": "updated"
+    },
+    {
+      "path": "/claims/0/dependency_usage",
+      "change": "added"
+    },
+    {
+      "path": "/claims/0/established_inputs",
+      "change": "updated"
+    },
+    {
+      "path": "/claims/0/hypotheses",
+      "change": "updated"
+    },
+    {
+      "path": "/claims/0/source_keys",
+      "change": "added"
+    },
+    {
+      "path": "/claims/0/source_statement_locator",
+      "change": "added"
+    }
+  ],
+  "preservation_and_static_counts": {
+    "claims": 66,
+    "question_titles_and_order_preserved": 15,
+    "convention_rows": 43,
+    "original_rows_covered": 28,
+    "source_graph_entry": "book/main.tex",
+    "source_graph_files": 36,
+    "original_labels_preserved_in_order": 607,
+    "declared_geodesic_labels": [
+      "eq:figurekerneltail",
+      "eq:figurefiniteidentity",
+      "eq:localdistancehessian",
+      "eq:torustwistderivatives",
+      "eq:torusintegraltail",
+      "eq:Hpartialsumtail"
+    ],
+    "unique_labels": 613,
+    "bibliography_keys": 129,
+    "new_labels_by_this_author": []
+  },
+  "prior_evidence_preserved": true,
+  "planned_companion_groups": 14,
+  "geodesic_independent_status": "unchanged_pending_in_this_frozen_handoff",
+  "evidence": [
+    {
+      "path": "after/book/chapters/32-open-questions.tex",
+      "sha256": "50fc264bbfc55fc19cb79dc09aa7a828b2cba479f6b3afb1c62459e0d31c9b5d",
+      "bytes": 15020
+    },
+    {
+      "path": "after/book/chapters/appendix-b-conventions.tex",
+      "sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363
+    },
+    {
+      "path": "after/book/claims/section32-appendixb.json",
+      "sha256": "488298ff34c229222010d03452f18e4f3855b9c7026589c74a28fbece04f3a9e",
+      "bytes": 125093
+    },
+    {
+      "path": "author-static-checks.json",
+      "sha256": "0f08415f2a6a6745f045e393cb57258b5c6cf93c27b2c3538e0ac453bffbfbf7",
+      "bytes": 5382
+    },
+    {
+      "path": "before/book/chapters/32-open-questions.tex",
+      "sha256": "c831bf85ab0c6cb7f5ed46509212ce5dc1549c05c5723be3c035c928a409fc21",
+      "bytes": 14848
+    },
+    {
+      "path": "before/book/chapters/appendix-b-conventions.tex",
+      "sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363
+    },
+    {
+      "path": "before/book/claims/section32-appendixb.json",
+      "sha256": "0bf0a62df0e81ae502d0408935cb1fee80b0db9a85be8e0d58c73367773dfd5a",
+      "bytes": 123917
+    },
+    {
+      "path": "check_author.py",
+      "sha256": "7833967a054da68933f60bd349c8d2d1792a680dd265d3afc2bc244ff9fb1cfa",
+      "bytes": 7125
+    },
+    {
+      "path": "delta.json",
+      "sha256": "11124469e1cff62f3c27229e19ceb4fe23d65287bb8fa9097834968d7279f9e8",
+      "bytes": 1728
+    },
+    {
+      "path": "handoff.md",
+      "sha256": "c12e7e42d7ff79d6de7d48b2f8cae974d752ecf1bcd185d79efd0ee635db04a3",
+      "bytes": 2528
+    },
+    {
+      "path": "minimaldiff.patch",
+      "sha256": "90810cf92eff4390803e6ab2528e7e129b0dc5877b4d46098896c808340bcb9e",
+      "bytes": 3024
+    },
+    {
+      "path": "preserved-evidence-before.json",
+      "sha256": "0d0353cc9ab1f00adc78863d4630355240ad0906124e1e891bee4169a1449356",
+      "bytes": 6355
+    },
+    {
+      "path": "repair_cv01.py",
+      "sha256": "ebb037398f33a87efc6cbbf6250ed61b15a571e82dd48e92d3745e84aa4123ff",
+      "bytes": 6367
+    },
+    {
+      "path": "validation.json",
+      "sha256": "9d2697a79839a78da4f0107947108b928916f26b5fd27d5ed312d297a5164abc",
+      "bytes": 2801
+    }
+  ],
+  "not_performed": [
+    "build/PDF marker",
+    "numerical run",
+    "installation",
+    "stage",
+    "commit",
+    "upload"
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "status": "passed",
+  "scope": "Static source, reference, evidence-path and exact hash checks only; no build, numerical replay or independent mathematical approval.",
+  "source_graph_entry": "book/main.tex",
+  "current_source_graph_files": 36,
+  "source_graph_paths": [
+    "book/main.tex",
+    "book/polyhedral_volumes_and_geodesic_identities.tex",
+    "book/chapters/01-volume-normalization.tex",
+    "book/chapters/02-ideal-angle-cells.tex",
+    "book/chapters/03-ideal-tetrahedron.tex",
+    "book/chapters/04-hyperideal-integrand.tex",
+    "book/chapters/05-boundary-cone-continuation.tex",
+    "book/chapters/06-torus-sphere.tex",
+    "book/chapters/07-euclidean-periods.tex",
+    "book/chapters/08-wp-flat-limit.tex",
+    "book/chapters/09-volume-hessians.tex",
+    "book/chapters/10-quantum-introduction.tex",
+    "book/chapters/11-quantum-degeneration.tex",
+    "book/chapters/12-quantum-boundary-measure.tex",
+    "book/chapters/13-four-point-fusion.tex",
+    "book/chapters/14-normalized-quantum-comparison.tex",
+    "book/chapters/15-quantum-airy.tex",
+    "book/chapters/16-dehn-filling-response.tex",
+    "book/chapters/17-unfolding-constant-series.tex",
+    "book/chapters/18-figure-eight-curves.tex",
+    "book/chapters/19-pants-twists.tex",
+    "book/chapters/20-torus-twist-series.tex",
+    "book/chapters/21-cuff-matching.tex",
+    "book/chapters/22-cusps-orthospectrum.tex",
+    "book/chapters/23-trace-coefficients.tex",
+    "book/chapters/24-quantitative-counting.tex",
+    "book/chapters/25-global-coefficient-filters.tex",
+    "book/chapters/26-counting-to-mixing.tex",
+    "book/chapters/27-weighted-mixing-converse.tex",
+    "book/chapters/28-genus-two-model.tex",
+    "book/chapters/29-controlled-observables.tex",
+    "book/chapters/30-sharp-diagnostics.tex",
+    "book/chapters/31-arithmetic-remainder.tex",
+    "book/chapters/32-open-questions.tex",
+    "book/chapters/appendix-a-fricke.tex",
+    "book/chapters/appendix-b-conventions.tex"
+  ],
+  "current_unique_labels": 613,
+  "baseline_labels_preserved_in_order": 607,
+  "concurrent_geodesic_additions": [
+    "eq:figurekerneltail",
+    "eq:figurefiniteidentity",
+    "eq:localdistancehessian",
+    "eq:torustwistderivatives",
+    "eq:torusintegraltail",
+    "eq:Hpartialsumtail"
+  ],
+  "concurrent_additions_status": "Root explicitly accepted separate declaration; independent geodesic review pending.",
+  "current_bibliography_keys": 129,
+  "own_original_labels_preserved": 2,
+  "new_labels": [],
+  "question_titles_and_order_preserved": 15,
+  "original_rows_covered": 28,
+  "current_rows_audited": 43,
+  "claims": 66,
+  "owned_file_checks": [
+    {
+      "path": "book/chapters/32-open-questions.tex",
+      "sha256": "50fc264bbfc55fc19cb79dc09aa7a828b2cba479f6b3afb1c62459e0d31c9b5d",
+      "bytes": 15020,
+      "trailing_whitespace_lines": [],
+      "exactly_one_final_newline": true,
+      "preserved_labels": [
+        "sec:questions"
+      ],
+      "references_resolve": 55,
+      "citations_resolve": [
+        "Zonneveld"
+      ],
+      "balanced_braces_and_environments": true
+    },
+    {
+      "path": "book/chapters/appendix-b-conventions.tex",
+      "sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363,
+      "trailing_whitespace_lines": [],
+      "exactly_one_final_newline": true,
+      "preserved_labels": [
+        "app:conventions"
+      ],
+      "references_resolve": 70,
+      "citations_resolve": [
+        "CDE",
+        "Budd"
+      ],
+      "balanced_braces_and_environments": true
+    },
+    {
+      "path": "book/claims/section32-appendixb.json",
+      "sha256": "488298ff34c229222010d03452f18e4f3855b9c7026589c74a28fbece04f3a9e",
+      "bytes": 125093,
+      "trailing_whitespace_lines": [],
+      "exactly_one_final_newline": true
+    }
+  ],
+  "actual_untracked_whitespace_checked": true,
+  "git_diff_check": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "owned_git_status": "?? book/chapters/32-open-questions.tex\n?? book/chapters/appendix-b-conventions.tex\n?? book/claims/section32-appendixb.json\n",
+  "recorded_result_hashes_checked": [
+    {
+      "path": "artifacts/normalizations/result.json",
+      "sha256": "9aceff49e5a8a66399004eec292183087ab640e6441bf580d7007b5dd7949490",
+      "bytes": 22364
+    },
+    {
+      "path": "artifacts/section9/result.json",
+      "sha256": "e6aa3b68d0e7f7bbcb326f0d2b1e76245aa1ee6e728dcb7173f5bc9541782f85",
+      "bytes": 11811
+    },
+    {
+      "path": "artifacts/section9/barrier-result.json",
+      "sha256": "b7d680717a5de790a146c584f66e955fb515449cc583adfa9e3c4543d692f798",
+      "bytes": 1355033
+    },
+    {
+      "path": "artifacts/quantum_surgery/result.json",
+      "sha256": "accdcaae347f363f20761cc2ffc7a2a252c2199787a277e519cef9978c5578cf",
+      "bytes": 120085
+    },
+    {
+      "path": "artifacts/section15_quantum/result.json",
+      "sha256": "b8d600a6ca3797f45e616bc324d0d1620066e9c203c085229d4c544f6e245009",
+      "bytes": 130686
+    },
+    {
+      "path": "artifacts/counting_mixing/result.json",
+      "sha256": "04e9807ae5d3af8a8f2a2926a44ebc25f79a9e8151424ae39429655396b7567b",
+      "bytes": 438646
+    },
+    {
+      "path": "artifacts/torus_campaign/result.json",
+      "sha256": "51414cf7c3e72c2020e3267f3abbb6cf6e2c9c0f78b9b6ee3921ceced70bcece",
+      "bytes": 434757
+    }
+  ],
+  "current_author_dependency_drift": []
+}

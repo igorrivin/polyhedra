@@ -1,0 +1,93 @@
+APPROVED: pure structural extraction at the exact frozen identities below.
+No blocking correctness, scope, or code-quality finding for this pinned graph.
+
+Pinned Git baseline: 151673b1817e66aae493eb7da1be5ddf49adfe0f
+Author structure-manifest.json SHA-256:
+36192abd41a5a214cb1565fe7a0daf7f7e35c07ed5e9a39ff3b92adc3e794f75
+Expanded book/main.tex: 633,773 bytes; SHA-256:
+cd9c97a260ddc34cc8f420e4e030a6ad44c8b5af82c7f491db91c9e5b850faea
+Expanded manuscript: 633,705 bytes; SHA-256:
+a1c5332c24fa1f7dcbd27e575d0dfb13fa31e229be03fc4b03d384acf5f94376
+Extracted main source: 56,003 bytes; SHA-256:
+23b7f8d84f0236ce7939efb5f0858fd60ba58f8fc74207636779f3227b3d30dd
+
+Independent preservation evidence
+
+review_structure.py imports no author implementation or evidence module. It
+reads every baseline blob directly from pinned Git objects, checks live bytes
+or materialized LFS size/SHA-256 identities, lexes the literal input directives,
+recursively substitutes them, and independently locates each new chapter's
+unique byte span in the original main source. Replacing the ten new input lines
+with those chapters reconstructs the entire original main byte for byte.
+
+The exact write set is the existing main manuscript plus chapters 10, 11,
+17-22, 32, and Appendix B. All other 2,272 tracked paths match pinned Git;
+all 412 LFS materializations match their pinned Git pointer identities. Graph
+membership changes from 26 to 36 files and edges from 25 to 35. All 607 unique
+labels, 129 unique bibliography keys, 32 numbered sections, appendices A/B,
+seven parts, preamble, introduction, page boundaries, and bibliography remain
+unchanged in order and expanded bytes. No definitions or mathematical edits
+were introduced. All source paths and tracked materialized paths have no
+symlink components or physical path escapes.
+
+HEAD remains pinned. The Git index matches the pinned tree including modes;
+no changes are staged. Its SHA-256 is:
+18012bd87304c04659eb42c95ed90515be30ffcd8db83f80b0541052226a07e3
+The checkout is on exFAT with core.filemode=false. Its uniform physical 0700
+file modes are recorded but are not evidence of executable-bit changes; Git
+index modes are the relevant unchanged modes. No mode repair was attempted.
+
+Script quality and acceptance gates
+
+Both author scripts were read in full. Extraction uses an explicit pinned
+baseline and fixed chapter names, checks unique nonoverlapping ranges, computes
+exact expansion equivalence before canonical writes, and enforces the precise
+post-write set. The existing graph loader rejects paths outside book/. The
+verifier rebuilds its baseline graph from Git and rejects unsupported input
+syntax. This review accepts those parsers for the actual literal input graph;
+it does not claim that either is a general TeX parser.
+
+Acceptance uses explicit exceptions. AST inspection found zero assert nodes
+in each author script. No cleanup, hidden source normalization, shell command
+interpolation, package installation, build, network operation, staging, or
+commit is in the reviewed extraction operation. The one-shot extraction script
+was not rerun because it writes canonical sources.
+
+Reviewer independent verification passed both normally and with Python -O.
+The two complete reports differ only in the recorded optimization flag. The
+author's read-only verifier also passed in both modes, with identical output
+SHA-256 6932d8b849d6c0258b65f6243b5d7fa495d80c385b6df7d95215eb963afebee3.
+Nine in-memory negative controls passed in EACH mode: changed frozen source,
+changed live source, unrelated tracked-file change, changed inventory receipt,
+parent traversal, absolute input path, dynamic input name, include cycle, and
+inline unsupported include. No negative control changed any disk source.
+
+Reviewed author script hashes:
+extract_chapters.py:
+11a19df0322450dbd082cbf477f9072867367b34e9360dc4b12be600a1e1334b
+verify_extraction.py:
+0ca177dfebb57fa3f4e6743c53ea8686c27452c7d3e79d6ccff0cf418f64e1c7
+
+Whitespace qualification, deliberately preserved
+
+Tracked git diff --check passes. Real new-file checks using git diff
+--no-index --check /dev/null report one "new blank line at EOF" warning in
+each of the ten extracted chapters. Each warning is a byte-identical original
+section separator, now at a file boundary. Chapters 10 and 11 end in three
+newline bytes; the other eight end in two. There are no trailing spaces/tabs.
+All ten warning lines and independent original byte offsets are recorded in
+independent-normal.json. These are harmless inherited bytes, not extraction
+defects; this structural review leaves all frozen and live source bytes intact.
+
+Evidence is entirely in this OUTER structure-review directory. It includes
+the reviewer scripts, full normal/optimized Git inventories and graph hashes,
+author verifier outputs, negative-control results, and a final review manifest.
+The author evidence directory was hashed before and after the independent
+review and remains byte-identical.
+
+This approval covers source preservation and the frozen extraction only.
+It authorizes the parent to proceed to the already planned mathematical phase.
+It is not a mathematical proof audit, scientific replay, PDF/build check,
+installation, staged commit, publication, or upload claim. Mathematical edits
+after this approval will intentionally cease to satisfy the live-preservation
+checks; the frozen extraction remains the structural evidence boundary.

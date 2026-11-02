@@ -1,0 +1,924 @@
+{
+  "claim_count": 59,
+  "coverage": [
+    {
+      "id": "17.01",
+      "title": "Orbit unfolding with decoration and orbifold measure",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:unfold"
+      ],
+      "review_note": "Coset unfolding is valid for nonnegative functions by Tonelli and for signed functions under the displayed absolute-integrability hypothesis; retaining ineffective isotropy on both quotients is essential.",
+      "source_keys": [],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "17.02",
+      "title": "Simple-cut evaluation and symmetry factors",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "Primary Theorem 7.1 and Lemma 7.3 support the simple-cut mechanism, including symmetry and one-handle factors. No unsupported universal factor is asserted after changing orbifold conventions.",
+      "source_keys": [
+        "MirzVolumes"
+      ],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "17.03",
+      "title": "Average does not establish pointwise constancy",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:recoverconstant"
+      ],
+      "review_note": "The argument correctly makes constancy a premise of recovering C; the first moment alone is only the mean.",
+      "source_keys": [],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "17.04",
+      "title": "Punctured-torus stack factor",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:torusunfold"
+      ],
+      "review_note": "The effective simple-curve stabilizer has one twist period a; the central ineffective involution gives one factor 1/2. This is consistent with the stated Section 6 stack convention.",
+      "source_keys": [],
+      "companion_groups": [
+        "G1"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "17.05",
+      "title": "Fermi integral and finite analytic errors",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "The geometric expansion is absolutely summable after integration, giving eta(2); exponential domination and alternating-series monotonicity prove the two independent finite tails.",
+      "source_keys": [],
+      "companion_groups": [
+        "G1"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "17.06",
+      "title": "McShane external identity",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:mcshane"
+      ],
+      "review_note": "Hu-Tan's primary equation (3) independently restates the same punctured-torus theorem with curve multiplicity. Its external status is preserved; normalization probes do not prove it.",
+      "source_keys": [
+        "McShane"
+      ],
+      "companion_groups": [
+        "G1"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "17.07",
+      "title": "Valid closure operations on constant series",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "The specified local uniform absolute control of the series and first derivatives suffices for differentiation; Fubini/Tonelli conditions cover the stated sums, integrals and products.",
+      "source_keys": [],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "17.08",
+      "title": "Metric derivative and spanning-direction criterion",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:derivativeidentity"
+      ],
+      "review_note": "The metric derivative includes the length differential. Vanishing on spanning tangent directions implies constancy on connected components; explicit metric dependence is correctly excluded.",
+      "source_keys": [],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "17.09",
+      "title": "Variance criterion",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:variance"
+      ],
+      "review_note": "A nonnegative squared deviation has zero integral only if it vanishes almost everywhere; continuity and full support give everywhere. Complex values correctly require the squared modulus.",
+      "source_keys": [],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "17.10",
+      "title": "Cusped Hu-Tan dilogarithm identity",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:dilogtorus"
+      ],
+      "review_note": "The primary Theorem 2 gives the exact three-term Rogers kernel and pi-squared/2 on the complete cusped torus; the positive-boundary formula is correctly kept separate.",
+      "source_keys": [
+        "HuTan"
+      ],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "17.11",
+      "title": "Closed-surface Luo-Tan identity and tangent volume",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:luotan"
+      ],
+      "review_note": "The primary Luo-Tan statement has closed oriented genus at least two and properly embedded geometric subsurfaces; area times angular fiber measure gives the displayed tangent volume.",
+      "source_keys": [
+        "LuoTan"
+      ],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "18.01",
+      "title": "One-crossing pants and positive trace relation",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:figuretrace"
+      ],
+      "review_note": "The one-crossing ribbon neighborhood is pants; compression would force a forbidden monogon/bigon or an iterate. Compatible pants lifts and SL(2) trace polarization produce the plus sign.",
+      "source_keys": [
+        "RivinFigures"
+      ],
+      "companion_groups": [
+        "G2"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "18.02",
+      "title": "Two-figure inverse map",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:twofigures"
+      ],
+      "review_note": "The two cusp-lobe traces form a determinant-three linear map, whose inverse is exactly displayed; paired reindexing is not presented as a single-length kernel.",
+      "source_keys": [],
+      "companion_groups": [
+        "G2"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "18.03",
+      "title": "Local double cover and non-disjoint simple lifts",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:doublepants"
+      ],
+      "review_note": "The parity character gives the four boundary lifts and Euler characteristic -2. Each lifted graph cycle is simple, but the two cycles meet over both original-crossing lifts.",
+      "source_keys": [],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "18.04",
+      "title": "Ambient cover obstruction and fourfold substitute",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "The mod-two homology obstruction is correct. Rivin Theorem 4.2 independently supplies the fourfold simple-lift statement; no projected whole identity or ambient character extension is inferred.",
+      "source_keys": [
+        "RivinFigures"
+      ],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "18.05",
+      "title": "Punctured-torus three-figure classification and multiplicity",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "The complement of the incompressible pants has four boundary components and Euler characteristic zero, hence two annuli. The unique disjoint class and three cuff-pair choices give complete blocks. Cyclic words distinguish the two N labels and show the H word is not a power.",
+      "source_keys": [
+        "LeiZhang"
+      ],
+      "companion_groups": [
+        "G2"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "18.06",
+      "title": "McShane trace kernel",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:htrace"
+      ],
+      "review_note": "Rationalization and sqrt(1-sech-squared)=tanh on positive lengths give both h formulas. The sum follows only through the explicitly recorded McShane dependency.",
+      "source_keys": [],
+      "companion_groups": [
+        "G3"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "18.07",
+      "title": "Separate torus figure-family identities",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:nidentity",
+        "eq:hidentity"
+      ],
+      "review_note": "Two N labels contribute twice h(t), one H label contributes h(t); both constants and square-root domains follow exactly from the three traces.",
+      "source_keys": [],
+      "companion_groups": [
+        "G2",
+        "G3"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "18.08",
+      "title": "Positive universal figure kernel",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:universalkernel",
+        "eq:fbound"
+      ],
+      "review_note": "beta(x)>x for x>6, and h decreases. Alternating first-two-term bounds prove positivity; later terms are O(x^-4), giving the coefficient 9 of x^-2.",
+      "source_keys": [],
+      "companion_groups": [
+        "G3"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "18.09",
+      "title": "All-figure single-length identity",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:allfigureidentity",
+        "eq:kernelrelation"
+      ],
+      "review_note": "Index shift gives the exact functional relation; positivity allows regrouping complete three-curve blocks. This proves the surface sum conditional on McShane without any finite enumeration claim.",
+      "source_keys": [],
+      "companion_groups": [
+        "G3"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "18.10",
+      "title": "Figure kernel alternating remainder",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:figurekerneltail"
+      ],
+      "review_note": "The next alternating term gives the signed remainder and stated positive bound; this is a kernel-iteration tail, not a surface-index tail.",
+      "source_keys": [],
+      "companion_groups": [
+        "G3"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "18.11",
+      "title": "Exact finite kernel residual and its conditioning",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:figurefiniteidentity"
+      ],
+      "review_note": "Independent formal-symbol coefficient cancellation confirms the finite residual. Large-N cancellation is properly separated from the nonzero exact endpoint term and analytic bound.",
+      "source_keys": [],
+      "companion_groups": [
+        "G3"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "18.12",
+      "title": "Cusp-only scope and cone realizability",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "The cone restriction is explicit and justified as an unperformed extension; the historical correction is only abstract-level evidence, not an audited full proof.",
+      "source_keys": [
+        "LeiZhang"
+      ],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "19.01",
+      "title": "Cut-curve itinerary data",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "Cutting a simple multicurve preserves disjoint essential arcs; immersed curves need relative arc classes, cyclic joining and winding in addition to intersection counts.",
+      "source_keys": [
+        "MirzSimple"
+      ],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "19.02",
+      "title": "Exact local seam-to-endpoint distance",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:localdistance"
+      ],
+      "review_note": "The Lorentz product of the two stated unit hyperboloid points gives the distance and orientation sign. Distinct ultraparallel lifts with d>0 avoid the degenerate case.",
+      "source_keys": [],
+      "companion_groups": [
+        "G4"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "19.03",
+      "title": "Ordinary pants seam length",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:seam"
+      ],
+      "review_note": "The right-angled-hexagon formula and opposed-direction translation trace agree. Returning and winding arcs correctly require their own pair of lifts.",
+      "source_keys": [],
+      "companion_groups": [
+        "G5"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "19.04",
+      "title": "Geodesic length as endpoint minimum",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "Fixed reduced itinerary and winding give a closed affine endpoint constraint space. Every competitor represents the same class, and the geodesic realizes its minimum. Independent coercivity reasoning is recorded in the report.",
+      "source_keys": [],
+      "companion_groups": [
+        "G4",
+        "G8"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "19.05",
+      "title": "Positive local endpoint Hessian",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:localdistancehessian"
+      ],
+      "review_note": "Independent exact rational substitutions verify both diagonal numerators, the mixed numerator and determinant. Positive diagonal and determinant establish a positive-definite Hessian generally.",
+      "source_keys": [],
+      "companion_groups": [
+        "G4"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "19.06",
+      "title": "Holonomy twist word and trace length",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:traceword"
+      ],
+      "review_note": "Fixed pants matrices and diagonal twist factors give a finite Laurent trace word. Absolute trace recovers hyperbolic length; arbitrary coefficients are not asserted positive.",
+      "source_keys": [],
+      "companion_groups": [
+        "G5"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "19.07",
+      "title": "Cosine derivative for immersed curves with passage multiplicity",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:cosine"
+      ],
+      "review_note": "Endpoint first variation cancels the moving internal endpoints at stationarity and leaves one signed tangential projection per passage. Iterates and disjoint cuff powers are treated correctly; external scan access remains limited.",
+      "source_keys": [
+        "WolpertTwist"
+      ],
+      "companion_groups": [
+        "G5",
+        "G8"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "19.08",
+      "title": "Strict convexity in a genuine intersecting twist",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "Affine interpolation of distinct minimizing full endpoint vectors proves strict convexity because an intersected cuff gluing constraint changes with coefficient plus or minus one. A supplementary Schur-complement argument confirms positive second variation; disjoint curves stay constant.",
+      "source_keys": [
+        "Kerckhoff"
+      ],
+      "companion_groups": [
+        "G4",
+        "G5"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "19.09",
+      "title": "Distinguishing the two Mirzakhani length uses",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "R1 closed. The revised prose and ledger distinguish Theorem 3.4/(3.6) coordinates/definition from Proposition 3.5/(3.7), p.107, length comparison and now state the L-bounded hypothesis explicitly. All other mathematical review notes remain applicable.",
+      "source_keys": [
+        "MirzSimple",
+        "MirzGeneral"
+      ],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "19.10",
+      "title": "Twist-lattice unfolding and stabilizers",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:twistunfold"
+      ],
+      "review_note": "Half-open lattice boxes partition real twist space. The extended nonnegative equality is sound; stabilizer multiplicities must be removed geometrically before claiming one term per curve.",
+      "source_keys": [],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "19.11",
+      "title": "Mellin substitution and full-moduli scope",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:mellin"
+      ],
+      "review_note": "The logarithmic substitution has Jacobian factor 2 per twist. The text correctly limits the box to a twist-subgroup quotient and states convergence as a hypothesis.",
+      "source_keys": [],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "20.01",
+      "title": "Exact once-holed-torus twist length",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:Atwist",
+        "eq:torustwist"
+      ],
+      "review_note": "ALPS Proposition 3.1 independently has two essential simple once-crossing curves, geodesic boundary or cusp, and the stated formula. Half-angle conversion gives the chapter's A and cusp specialization.",
+      "source_keys": [
+        "ALPS"
+      ],
+      "companion_groups": [
+        "G5"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "20.02",
+      "title": "Independent torus boundary-commutator matrix check",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "Independent matrix multiplication verifies determinant one, trace 2Acosh(u/2), and the negative boundary commutator trace; it does not assert global discreteness from these identities.",
+      "source_keys": [],
+      "companion_groups": [
+        "G5"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "20.03",
+      "title": "Exact torus twist derivatives",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:torustwistderivatives"
+      ],
+      "review_note": "Direct differentiation yields both derivatives; Q minus the squared first-derivative numerator equals A-squared minus one, proving the strict bound and second-derivative positivity.",
+      "source_keys": [],
+      "companion_groups": [
+        "G5"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "20.04",
+      "title": "Torus coarea density and removal of its endpoint singularity",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:toruscoarea"
+      ],
+      "review_note": "The two monotone twist branches give factor two. The y substitution gives 4 dy/sqrt(A-squared+y-squared), with the integrable endpoint singularity removed.",
+      "source_keys": [],
+      "companion_groups": [
+        "G6"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "20.05",
+      "title": "Sech-square and beta twist integrals",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:sechintegral",
+        "eq:betaintegral"
+      ],
+      "review_note": "Substitution tanh(u/2) produces 2 A^-s B(1/2,s/2), hence the gamma quotient and the s=2 value. Finite independent coarea probes agree.",
+      "source_keys": [],
+      "companion_groups": [
+        "G6"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "20.06",
+      "title": "Exact twist sublevel measure",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:sublevel"
+      ],
+      "review_note": "Solving the even monotone inequality gives two endpoints of magnitude 2 acosh(cosh(R/2)/A), hence total measure four times acosh and zero below the minimum.",
+      "source_keys": [],
+      "companion_groups": [
+        "G6"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "20.07",
+      "title": "Finite twist-integral analytic tails",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:torusintegraltail"
+      ],
+      "review_note": "The two exponential half-tails give exactly the factor 2^(s+2)/s. The s=2 tail integrates exactly, and neither is mislabeled as numerical error control.",
+      "source_keys": [],
+      "companion_groups": [
+        "G6"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "20.08",
+      "title": "Positive H-kernel and exact finite lattice telescoping",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:Hkernel",
+        "eq:Hidentity",
+        "eq:Hpartialsumtail"
+      ],
+      "review_note": "The tanh differences telescope at L_N=(N+1/2)a. The two positive logistic terms give the exact omitted mass and exponential upper bound; tiny terms remain positive in stable evaluation.",
+      "source_keys": [],
+      "companion_groups": [
+        "G7"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "20.09",
+      "title": "K-kernel constant twist orbit with multiplicity",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:Kkernel",
+        "eq:Kidentity"
+      ],
+      "review_note": "The cosh double-angle identity eliminates twist from H. Homology/twist coordinates distinguish all unoriented once-crossing orbit classes; equal lengths retain labels.",
+      "source_keys": [],
+      "companion_groups": [
+        "G7"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "20.10",
+      "title": "Probability-window source of constant twist kernels",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "The translated windows partition the line up to null endpoints. Evenness makes the mass a length function; only nonnegativity, not strict positivity, is claimed generally.",
+      "source_keys": [],
+      "companion_groups": [
+        "G7"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "21.01",
+      "title": "Cuff position congruences and winding",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:endpointmatch"
+      ],
+      "review_note": "One circle congruence fixes the rotation; the rest enforce matching cyclic spacings. Integer winding remains separate from modulo-a position matching.",
+      "source_keys": [],
+      "companion_groups": [
+        "G8"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "21.02",
+      "title": "Momentum matching imposes the tangent",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:momentummatch"
+      ],
+      "review_note": "Terminal and initial endpoint variations have opposite signs. Equal tangential components and transverse opposite-side crossing fix the full unit tangent, including its normal sign.",
+      "source_keys": [],
+      "companion_groups": [
+        "G8"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "21.03",
+      "title": "Boundary phase generating function and periodic gluing",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "The differential of arc length has the stated generating-function signs; the twist is translation in the common position coordinate. A smooth periodic nonperipheral chain is the geodesic representative.",
+      "source_keys": [],
+      "companion_groups": [
+        "G8"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "22.01",
+      "title": "Simple returning excursions avoid a deep cusp",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "A semicircle with endpoint span greater than one crosses its unit translate; this forbids deep simple returning excursions. Actual cusp ends are vertical and normal to horocycles.",
+      "source_keys": [],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "22.02",
+      "title": "Cusp-issued normal rays",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:cuspray"
+      ],
+      "review_note": "Vertical hyperbolic arclength is minus logarithmic height. The parametrized ray has backward cusp end and forward travel away from the cusp; no global simplicity is inferred locally.",
+      "source_keys": [],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "22.03",
+      "title": "McShane exceptional directions and boundary restriction",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "R2 closed. The revised prose/source record/claim pin Theorem 3 to printed p.4 and the measure-zero paragraph after Corollary 5 to printed p.5. The no-geodesic-boundary scope and mathematical statements are unchanged.",
+      "source_keys": [
+        "McShane",
+        "McShanePants"
+      ],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "22.04",
+      "title": "Normalized cusp-pants gap",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:cuspgap"
+      ],
+      "review_note": "Primary Lemma 3.1 gives the combined D gap. Differentiation at L=0 gives the stated normalized limit; the partition and null-set inputs remain external.",
+      "source_keys": [
+        "MirzVolumes"
+      ],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "22.05",
+      "title": "Cusp-parabolic truncated arc formula",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:cusplambda"
+      ],
+      "review_note": "The parabolic factorization gives q*c_A=t_a+t_b. The image horocycle diameter and logarithmic height difference prove the signed truncation formula; arbitrary large decorations are not asserted embedded.",
+      "source_keys": [],
+      "companion_groups": [
+        "G9"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "22.06",
+      "title": "Torus cusp arc and closed curve correspondence",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:toruscusplambda"
+      ],
+      "review_note": "Springborn Proposition 14.1(i),(iv) independently gives the simple arc/curve bijection. Substituting equal pants cuffs produces lambda=2t/H with no square-root-of-two factor.",
+      "source_keys": [
+        "Springborn"
+      ],
+      "companion_groups": [
+        "G9"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "22.07",
+      "title": "Decorated triangle corner and trace normalization",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "The source corner lengths sum over two triangles to H. The trace conversion follows from the local cusp proof, and independent rational Markov/flip checks validate the algebra only.",
+      "source_keys": [
+        "Springborn"
+      ],
+      "companion_groups": [
+        "G9"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "22.08",
+      "title": "Simple truncated cusp orthospectrum identity",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:cusporthoidentity"
+      ],
+      "review_note": "The bijection and trace substitution turn McShane into the displayed simple truncated orthospectrum. The square-root domain and convergence are inherited explicitly, even for signed negative lengths.",
+      "source_keys": [],
+      "companion_groups": [
+        "G9"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "22.09",
+      "title": "Decoration invariance",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "Scaling H by k moves each cutoff by log(k), changing the signed two-end length by minus 2log(k); the normalized exponential weight is invariant.",
+      "source_keys": [],
+      "companion_groups": [
+        "G9"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "22.10",
+      "title": "Basmajian oriented coefficient",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [
+        "eq:basmajian"
+      ],
+      "review_note": "Parlier defines oriented orthogeodesics and specializes to the coefficient-two Basmajian sum. Pairing two orientations produces coefficient four for an unoriented arc.",
+      "source_keys": [
+        "Parlier"
+      ],
+      "companion_groups": [
+        "G10"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "22.11",
+      "title": "Direct shadow length and stable positive evaluation",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "The circle endpoints and perpendicular projection give one logarithmic shadow. Independent log1p formulas agree after scaling by 4exp(-d) through d=1000, retaining positivity.",
+      "source_keys": [],
+      "companion_groups": [
+        "G10"
+      ],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    {
+      "id": "22.12",
+      "title": "Relation between cusp and boundary gap constructions",
+      "mathematical_decision": "accepted_with_recorded_external_dependencies",
+      "source_pin_decision": "accepted_at_recorded_access_scope",
+      "labels": [],
+      "review_note": "The distinct cusp-simple and boundary-full index sets, stopping rules and weights are preserved; the text correctly declines to identify finite subsets with controlled global approximations.",
+      "source_keys": [
+        "Parlier"
+      ],
+      "companion_groups": [],
+      "review_scope": "Formula/hypotheses/proof/dependencies/status/computation boundary checked against the frozen source; finite probes do not prove global external inputs.",
+      "final_ledger_sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    }
+  ],
+  "source_set_sha256": "b35883296116e459a702e0bc28b4f429875e2cec2cffb22910f02e5d0e8e87f9"
+}

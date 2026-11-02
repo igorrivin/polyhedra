@@ -1,0 +1,641 @@
+{
+  "scope": "Frozen current accepted finite scientific profile, including all required and declared extra probes; provenance pins remain separate from live source observations.",
+  "hash_algorithm": "SHA256 of UTF-8 json.dumps(profile,sort_keys=True,separators=(comma,colon)), no terminal newline",
+  "scientific_profile_sha256": "6ae75ae311c390acbb70234f4ea486940bcb46d47b6d9162105eba9f4d691735",
+  "scientific_profile": {
+    "precisions": [
+      70,
+      110
+    ],
+    "guard_digits": 20,
+    "quantum": {
+      "figure_eight_N": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        60,
+        120
+      ],
+      "klein": {
+        "radii": [
+          "1/20",
+          "1/10",
+          "1/5"
+        ],
+        "truncation_orders": [
+          0,
+          2,
+          4
+        ],
+        "polyhedra": [
+          {
+            "id": "standard_simplex",
+            "kind": "standard_simplex",
+            "radius_squared_bound": "1",
+            "expected_initial_moments": [
+              "1/6",
+              "1/20",
+              "2/105"
+            ]
+          },
+          {
+            "id": "centered_cube",
+            "kind": "box",
+            "bounds": [
+              [
+                "-1",
+                "1"
+              ],
+              [
+                "-1",
+                "1"
+              ],
+              [
+                "-1",
+                "1"
+              ]
+            ],
+            "radius_squared_bound": "3",
+            "expected_initial_moments": [
+              "8",
+              "8",
+              "152/15"
+            ]
+          },
+          {
+            "id": "translated_box",
+            "kind": "box",
+            "bounds": [
+              [
+                "1/2",
+                "3/2"
+              ],
+              [
+                "-1",
+                "1"
+              ],
+              [
+                "-1/3",
+                "2/3"
+              ]
+            ],
+            "radius_squared_bound": "133/36",
+            "expected_initial_moments": [
+              "2",
+              "55/18",
+              "17993/3240"
+            ]
+          }
+        ]
+      },
+      "peripheral": {
+        "slopes": [
+          [
+            1,
+            1,
+            0,
+            1
+          ],
+          [
+            5,
+            2,
+            2,
+            1
+          ],
+          [
+            -3,
+            2,
+            -2,
+            1
+          ],
+          [
+            5,
+            -2,
+            -2,
+            1
+          ]
+        ],
+        "formal_v_coefficients": [
+          "2/3",
+          "-1/5",
+          "2/7"
+        ],
+        "shift_points": [
+          {
+            "u": "1/3",
+            "hbar": [
+              "1/7",
+              "0"
+            ]
+          },
+          {
+            "u": "-2/5",
+            "hbar": [
+              "-2/5",
+              "0"
+            ]
+          },
+          {
+            "u": "3/4",
+            "hbar": [
+              "0",
+              "2/3"
+            ]
+          }
+        ]
+      },
+      "charges": {
+        "weights": [
+          {
+            "id": "four_balanced",
+            "mu": [
+              "1/2",
+              "1/2",
+              "1/2",
+              "1/2"
+            ]
+          },
+          {
+            "id": "four_varied",
+            "mu": [
+              "1/5",
+              "2/5",
+              "3/5",
+              "4/5"
+            ]
+          },
+          {
+            "id": "five_balanced",
+            "mu": [
+              "2/5",
+              "2/5",
+              "2/5",
+              "2/5",
+              "2/5"
+            ]
+          }
+        ],
+        "b_squared": [
+          "1/4",
+          "2/5",
+          "9/10"
+        ]
+      }
+    },
+    "geodesic": {
+      "guard_digits": {
+        "default": 20,
+        "kernel": 100,
+        "holonomy": 80
+      },
+      "unfolding": {
+        "cutoffs": [
+          12,
+          30,
+          60
+        ],
+        "alternating_depths": [
+          31,
+          32,
+          127,
+          128
+        ]
+      },
+      "traces": {
+        "shear_seeds": [
+          [
+            "1",
+            "2",
+            1
+          ],
+          [
+            "-1",
+            "3",
+            1
+          ],
+          [
+            "2/3",
+            "-1/2",
+            1
+          ],
+          [
+            "1/3",
+            "4",
+            -1
+          ],
+          [
+            "-2",
+            "-3",
+            -1
+          ],
+          [
+            "3/5",
+            "2/7",
+            -1
+          ]
+        ],
+        "simple_traces": [
+          "3",
+          "4",
+          "5",
+          "10"
+        ]
+      },
+      "kernel": {
+        "inputs": [
+          "6.00000000000000000001",
+          "6.01",
+          "7",
+          "9",
+          "11",
+          "30",
+          "1000"
+        ],
+        "depths": [
+          4,
+          12,
+          40,
+          180
+        ],
+        "simple_traces": [
+          "3",
+          "4",
+          "5",
+          "10"
+        ]
+      },
+      "distance": {
+        "distances": [
+          ".03",
+          ".5",
+          "2",
+          "7"
+        ],
+        "endpoints": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "1",
+            "-2"
+          ],
+          [
+            "-3",
+            "2"
+          ],
+          [
+            ".1",
+            ".2"
+          ],
+          [
+            "4",
+            "4"
+          ]
+        ]
+      },
+      "holonomy": {
+        "seams": [
+          [
+            ".2",
+            ".7",
+            "0"
+          ],
+          [
+            "1",
+            "1",
+            "0"
+          ],
+          [
+            "1",
+            "2",
+            "3"
+          ],
+          [
+            "8",
+            ".5",
+            "4"
+          ]
+        ],
+        "cuffs": [
+          ".2",
+          "1",
+          "3"
+        ],
+        "boundaries": [
+          "0",
+          ".7",
+          "4"
+        ],
+        "twists": [
+          "-4",
+          "-.5",
+          "0",
+          ".5",
+          "4"
+        ],
+        "small_cuff": "1e-12",
+        "small_boundaries": [
+          "0",
+          ".7"
+        ],
+        "small_twists": [
+          "0",
+          ".5"
+        ],
+        "large_cuff_minima": [
+          "1000"
+        ]
+      },
+      "integrals": {
+        "pairs": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "3",
+            "4"
+          ]
+        ],
+        "powers": [
+          ".5",
+          "1",
+          "2",
+          "3",
+          "6"
+        ],
+        "cutoffs": [
+          12,
+          30,
+          60
+        ],
+        "sublevel_offsets": [
+          ".1",
+          "2",
+          "6"
+        ]
+      },
+      "partition": {
+        "cuffs": [
+          ".1",
+          ".7",
+          "2",
+          "7"
+        ],
+        "boundaries": [
+          "0",
+          "1",
+          "3"
+        ],
+        "twist_ratios": [
+          "-.5",
+          "-.2",
+          "0",
+          ".37",
+          ".5"
+        ],
+        "depths": [
+          0,
+          1,
+          4,
+          12,
+          50
+        ],
+        "large_twists": [
+          "100",
+          "1000"
+        ],
+        "large_partition": {
+          "a": "7",
+          "tau": "261.59",
+          "N": 150
+        },
+        "uniform_windows": [
+          {
+            "a": "1/2",
+            "tau": "0"
+          },
+          {
+            "a": "2",
+            "tau": "1"
+          },
+          {
+            "a": "3/5",
+            "tau": "3/10"
+          }
+        ]
+      },
+      "matching": {
+        "endpoint_lists": [
+          {
+            "id": "consistent",
+            "circumference": "3",
+            "left": [
+              "0",
+              "1/2",
+              "7/4"
+            ],
+            "right": [
+              "2/3",
+              "7/6",
+              "29/12"
+            ],
+            "left_windings": [
+              0,
+              1,
+              -1
+            ],
+            "right_windings": [
+              1,
+              -1,
+              2
+            ],
+            "expected_match": true
+          },
+          {
+            "id": "inconsistent_spacing",
+            "circumference": "3",
+            "left": [
+              "0",
+              "1/2",
+              "7/4"
+            ],
+            "right": [
+              "2/3",
+              "5/4",
+              "29/12"
+            ],
+            "left_windings": [
+              0,
+              1,
+              -1
+            ],
+            "right_windings": [
+              1,
+              -1,
+              2
+            ],
+            "expected_match": false
+          }
+        ],
+        "stationarity": [
+          {
+            "id": "orthogonal",
+            "d": ".5",
+            "e": "2",
+            "u": "0",
+            "v": "0",
+            "tau": "0",
+            "x": "0",
+            "stationary": true
+          },
+          {
+            "id": "shifted_incoming",
+            "d": ".5",
+            "e": "2",
+            "u": "1",
+            "v": "0",
+            "tau": "0",
+            "x": "0",
+            "stationary": false
+          }
+        ]
+      },
+      "cusp": {
+        "parabolic_q": [
+          "1",
+          "2",
+          "3"
+        ],
+        "pants_traces": [
+          "2",
+          "3",
+          "5"
+        ],
+        "simple_traces": [
+          "3",
+          "4",
+          "5",
+          "10"
+        ],
+        "horocycles": [
+          ".1",
+          "1",
+          "6",
+          "20"
+        ],
+        "decoration_rescalings": [
+          "2/3",
+          "5"
+        ],
+        "triangle_lambdas": [
+          [
+            "1",
+            "1",
+            "1"
+          ],
+          [
+            "1",
+            "2",
+            "3"
+          ],
+          [
+            "2",
+            "3",
+            "5"
+          ]
+        ]
+      },
+      "shadow": {
+        "distances": [
+          ".1",
+          ".7",
+          "2",
+          "8",
+          "100",
+          "1000"
+        ]
+      }
+    }
+  },
+  "provenance_profile_sha256": "fe470dc45b830a1458fb1bb4a7a5cdc5eb7e499ebe95cd522f4564b3b7b334f2",
+  "provenance_profile": {
+    "formula_contracts": {
+      "quantum": {
+        "path": "contracts/quantum-targets.md",
+        "sha256": "1d1fae5b1539b8ee52d27a761ee1d2aaf2a8b050d213c023df506af498fe96b1",
+        "accepted_source_freeze_sha256": "f043f6943bd124638802bfdb5d5e7505269143f54046eea93d298345191c0620",
+        "review_acceptance_sha256": "c631f5ed63513246adf7bbec958c3298ab577861ee02f1d359ff6ca25b7c4dd9",
+        "review_evidence_manifest_sha256": "4baa28c995e4dad3e02911d45a0179cded9845a919c9f0e25bea57a2802f07a4",
+        "status": "mathematical contract accepted; current implementation and execution require separate review"
+      },
+      "geodesic": {
+        "path": "contracts/geodesic-targets.md",
+        "sha256": "2a62a149e7f5f88027329c24ba3a4720407debfed2fb78945350f23b6fce85a6",
+        "review_acceptance_sha256": "be7debaf190ecd960d0caeca6b82e884407b6da04e72234e16a60762980bc82b",
+        "independent_probe_result_sha256": "63b98f71810f31f5a94d43687f30c8c4ad45ac164c121c60b20089881e17f4b8",
+        "status": "finite mathematical contract and final source/claim ledger accepted; implementation and execution reviews remain separate",
+        "final_source_review_sha256": "b734eb97f35f360022cb874b4561d9d3151f876d26db7eb6459e9f676576c0ef",
+        "accepted_source_set_sha256": "b35883296116e459a702e0bc28b4f429875e2cec2cffb22910f02e5d0e8e87f9"
+      }
+    },
+    "accepted_manuscript_sha256": {
+      "book/chapters/10-quantum-introduction.tex": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+      "book/chapters/11-quantum-degeneration.tex": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9",
+      "book/claims/sections10-11.json": "34dbb6255dc468cb796bb3a129eeaf37ac0c5f4dc358abfd73030e64331b3539",
+      "book/chapters/08-wp-flat-limit.tex": "1a175315aa975708a5c93151b9ae107b7dd36f79720dae7c7264adda062a6283",
+      "book/chapters/12-quantum-boundary-measure.tex": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+      "book/chapters/13-four-point-fusion.tex": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+      "book/chapters/16-dehn-filling-response.tex": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+      "book/chapters/17-unfolding-constant-series.tex": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+      "book/chapters/18-figure-eight-curves.tex": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+      "book/chapters/19-pants-twists.tex": "f1fd410500ec3c414b4266d706dddd220b0902a546090807e2288384101c2c35",
+      "book/chapters/20-torus-twist-series.tex": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+      "book/chapters/21-cuff-matching.tex": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+      "book/chapters/22-cusps-orthospectrum.tex": "b8b3f0568c4667b7ed6116935291c5c71dc3be74ded57c916ac638f6ecd80f66",
+      "book/claims/sections17-22.json": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+    },
+    "guarded_dependency_sha256": {
+      "experiments/quantum_surgery/__init__.py": "1925c77c6e7cfff79798b2eab36ecb21b06bac8825c399743937da5da05f1d37",
+      "experiments/quantum_surgery/algebra.py": "c03d19471ba817dd8b9af234dd54418c3d411cb0d222803dfe2a93333c8d0ed4",
+      "experiments/quantum_surgery/exact.py": "1c9b6ce9fbf39dc4033e62451f83039616b1a1fa79fddcc7bd990aa5d9ec4f97"
+    }
+  }
+}

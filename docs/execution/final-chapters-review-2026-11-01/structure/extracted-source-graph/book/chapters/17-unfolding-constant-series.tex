@@ -1,0 +1,133 @@
+\section{Unfolding and the problem of finding constant series}
+\label{sec:unfolding}
+
+\subsection{What a volume computation determines}
+
+Let $\Gamma$ be the mapping class group and let $\gamma$ be a fixed curve
+or multicurve class. For an appropriate nonnegative or absolutely integrable
+function, the basic unfolding identity is
+\begin{equation}
+ \int_{\Gamma\backslash\T}
+ \sum_{\delta\in\Gamma\gamma}F(\ell_\delta(X))\,\dV(X)
+ =\int_{\Stab(\gamma)\backslash\T}
+             F(\ell_\gamma(X))\,\dV(X).
+ \label{eq:unfold}
+\end{equation}
+Multiplicity conventions belong in the stabilizer. This identity is just
+integration over coset translates of a fundamental domain; it does not
+require the curves in the orbit to be simple.
+
+Simplicity becomes important when evaluating the right side. If $\gamma$
+is a disjoint simple multicurve, cut along it and use Fenchel--Nielsen
+coordinates. Each twist period integrates to $\ell_j$, so the resulting
+integral has factors $\prod_j\ell_j\,\dd\ell_j$ times WP volumes of the
+components, with the relevant symmetry factors. This is the geometric
+integration mechanism in Mirzakhani's volume recursion
+\cite[Theorem 8.1]{MirzVolumes}.
+
+Suppose a series $S(X)$ is independently known to be constant, say $C$.
+Then
+\begin{equation}
+ C=\frac{1}{V_{g,n}}
+       \int_{\M_{g,n}}S(X)\,\dV(X),
+ \label{eq:recoverconstant}
+\end{equation}
+and unfolding can calculate its value. If constancy has not been proved,
+the same quotient computes only its average. This is the precise logical
+distinction behind the proposal to recover an identity from a volume.
+
+On the punctured torus, for an unoriented essential simple curve orbit,
+the stack-normalized formula is
+\begin{equation}
+ \int_{\M_{1,1}}\sum_{\alpha\text{ simple}}f(\ell_\alpha)\,\dV
+       =\frac12\int_0^\infty x f(x)\,\dd x.
+ \label{eq:torusunfold}
+\end{equation}
+For $f(x)=(1+e^x)^{-1}$, expand in $e^{-x}$ to obtain
+\[
+ \int_0^\infty\frac{x\,\dd x}{1+e^x}
+   =\sum_{m\ge1}\frac{(-1)^{m-1}}{m^2}=\frac{\pi^2}{12}.
+\]
+The integral of the series is $\pi^2/24$; division by
+$V_{1,1}=\pi^2/12$ gives $C=1/2$. Its pointwise constancy is McShane's
+theorem~\cite{McShane}:
+\begin{equation}
+ \sum_{\alpha\text{ simple, unoriented}}
+                 \frac{1}{1+e^{\ell_\alpha(X)}}=\frac12.
+ \label{eq:mcshane}
+\end{equation}
+The tetrahedral volume calculation and the covering argument provide an
+independent route to the volume used in this normalization check.
+
+\subsection{Operations that preserve constancy}
+
+There is indeed a large closure of any known collection of identities.
+Finite linear combinations preserve constancy. So do absolutely convergent
+parameter integrals and locally uniformly convergent differentiations of
+identities on an identified parameter family. Products of identities give
+constant double series when Tonelli's theorem or absolute convergence
+applies. These are useful mechanisms for constructing new kernels.
+
+Their geometric interpretation needs to be retained. A product usually
+indexes pairs of curves that may intersect; it is not automatically a
+disjoint-multicurve sum. A parameter derivative also differentiates lengths
+if the metric varies with that parameter. In particular, differentiating
+a constant series with respect to the metric gives the one-form identity
+\begin{equation}
+ \sum_\gamma F'(\ell_\gamma)\,\dd\ell_\gamma=0,
+ \label{eq:derivativeidentity}
+\end{equation}
+assuming sufficient local uniform control. It does not generally give
+another scalar identity by differentiating only the displayed weight.
+
+Two possible tests for a proposed constant series follow. One can try to
+show that~\eqref{eq:derivativeidentity} vanishes on a spanning set of tangent
+directions. Alternatively, if $S\in L^2$ and its mean is $\overline S$, then
+\begin{equation}
+ \int_{\M}(S-\overline S)^2\,\dV=0
+ \label{eq:variance}
+\end{equation}
+proves constancy almost everywhere, and everywhere if $S$ is continuous.
+The second-moment calculation involves pairs of curves, including their
+intersection patterns. It can be substantially harder than the first
+unfolding integral.
+
+Thus a useful search for further identities should ask for more than
+formal closure: a natural index set, a manageable positive weight, a
+geometric partition or telescoping mechanism, and a convergence proof.
+The constructions in Sections~\ref{sec:figures} and~\ref{sec:exacttwist}
+illustrate these requirements.
+
+\subsection{Other established constant series}
+
+There are also constant series with substantially different kernels.
+For example, write
+\[
+ \mathcal L(x)=\operatorname{Li}_2(x)+\tfrac12\log x\log(1-x)
+\]
+for the Rogers dilogarithm on $(0,1)$, extended continuously to its
+endpoints, and define
+\begin{align*}
+ D(r)={}&\mathcal L\bigl(\sech^2(r/2)\bigr)\\
+ &+2\mathcal L\left(\frac{1+e^{-r}}2\right)
+  -2\mathcal L\left(\frac{1-e^{-r}}2\right).
+\end{align*}
+Hu--Tan's punctured-torus identity is
+\begin{equation}
+ \sum_{\alpha\text{ simple, unoriented}}D(\ell_\alpha)=\frac{\pi^2}{2}.
+ \label{eq:dilogtorus}
+\end{equation}
+The same paper treats a positive torus boundary~\cite[Theorems 1--2]{HuTan}.
+
+For a closed surface of genus $g\ge2$, Luo--Tan give explicit dilogarithmic
+weights $f(P),g(T)$ on embedded geometric pairs of pants and one-holed tori
+such that
+\begin{equation}
+ \sum_P f(P)+\sum_T g(T)=8\pi^2(g-1)=\operatorname{Vol}(T^1X).
+ \label{eq:luotan}
+\end{equation}
+Their construction partitions unit tangent directions~\cite{LuoTan}.
+It illustrates another source of constant series: the invariant measure
+being partitioned need not live only on a horocycle or a geodesic boundary.
+The precise, longer subsurface weights are given in that reference.
+

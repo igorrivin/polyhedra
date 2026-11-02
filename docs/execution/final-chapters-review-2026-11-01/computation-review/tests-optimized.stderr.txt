@@ -1,0 +1,37 @@
+test_cusp_matrix_sign_and_markov_flip (test_geodesic.ExactGeodesicTests.test_cusp_matrix_sign_and_markov_flip) ... ok
+test_formal_kernel_and_partition_telescope_without_numerical_tail (test_geodesic.ExactGeodesicTests.test_formal_kernel_and_partition_telescope_without_numerical_tail) ... ok
+test_hessian_identities_reduce_hyperbolic_relations (test_geodesic.ExactGeodesicTests.test_hessian_identities_reduce_hyperbolic_relations) ... ok
+test_signed_trace_identity_retains_equal_length_labels (test_geodesic.ExactGeodesicTests.test_signed_trace_identity_retains_equal_length_labels) ... ok
+test_windings_and_cyclic_spacing_are_retained (test_geodesic.ExactGeodesicTests.test_windings_and_cyclic_spacing_are_retained) ... ok
+test_geodesic_imports_preserve_global_precision_and_have_no_output (test_geodesic.FullDriverPolicyTests.test_geodesic_imports_preserve_global_precision_and_have_no_output) ... ok
+test_partial_geodesic_coverage_and_changed_git_observation_rejected (test_geodesic.FullDriverPolicyTests.test_partial_geodesic_coverage_and_changed_git_observation_rejected) ... ok
+test_kernel_and_real_branch_domains_reject_nonfinite_and_boundary (test_geodesic.KernelConditioningTests.test_kernel_and_real_branch_domains_reject_nonfinite_and_boundary) ... ok
+test_kernel_near_six_and_unresolved_tail_are_distinguished (test_geodesic.KernelConditioningTests.test_kernel_near_six_and_unresolved_tail_are_distinguished) ... ok
+test_shadow_circle_and_orientation_factors (test_geodesic.KernelConditioningTests.test_shadow_circle_and_orientation_factors) ... ok
+test_stable_h_retains_large_trace_signal (test_geodesic.KernelConditioningTests.test_stable_h_retains_large_trace_signal) ... ok
+test_twist_and_shadow_tiny_tails_never_use_zero_reference (test_geodesic.KernelConditioningTests.test_twist_and_shadow_tiny_tails_never_use_zero_reference) ... ok
+test_distance_derivatives_and_orientation (test_geodesic.LocalGeometryTests.test_distance_derivatives_and_orientation) ... ok
+test_finite_coarea_s2_tail_and_sublevel_endpoints (test_geodesic.LocalGeometryTests.test_finite_coarea_s2_tail_and_sublevel_endpoints) ... ok
+test_geometry_and_integral_invalid_domains (test_geodesic.LocalGeometryTests.test_geometry_and_integral_invalid_domains) ... ok
+test_position_match_does_not_force_stationarity_and_cusp_length_can_be_negative (test_geodesic.LocalGeometryTests.test_position_match_does_not_force_stationarity_and_cusp_length_can_be_negative) ... ok
+test_small_cuff_matrix_reference_and_large_cuff_minimum (test_geodesic.LocalGeometryTests.test_small_cuff_matrix_reference_and_large_cuff_minimum) ... ok
+test_duplicate_keys_and_nonfinite_json_tokens_are_rejected (test_quantum.DriverTests.test_duplicate_keys_and_nonfinite_json_tokens_are_rejected) ... ok
+test_import_safe_and_failure_checks_survive_optimization (test_quantum.DriverTests.test_import_safe_and_failure_checks_survive_optimization) ... ok
+test_partial_fixture_and_failed_run_cannot_write_success (test_quantum.DriverTests.test_partial_fixture_and_failed_run_cannot_write_success) ... usage: python -m unittest [-h] --output OUTPUT
+python -m unittest: error: refusing to overwrite existing evidence
+ok
+test_cross_precision_cannot_accept_lost_positive_signal (test_quantum.NumericalPolicyTests.test_cross_precision_cannot_accept_lost_positive_signal) ... ok
+test_guards_and_precision_are_local (test_quantum.NumericalPolicyTests.test_guards_and_precision_are_local) ... ok
+test_tiny_positive_signal_rejects_zero_partial_negative_and_nonfinite (test_quantum.NumericalPolicyTests.test_tiny_positive_signal_rejects_zero_partial_negative_and_nonfinite) ... ok
+test_charge_boundaries_and_curvature_factor (test_quantum.QuantumIdentityTests.test_charge_boundaries_and_curvature_factor) ... ok
+test_full_log_weyl_factor_is_rejected (test_quantum.QuantumIdentityTests.test_full_log_weyl_factor_is_rejected) ... ok
+test_half_log_formal_stationarity_and_dependency_guards (test_quantum.QuantumIdentityTests.test_half_log_formal_stationarity_and_dependency_guards) ... ok
+test_klein_boundary_and_degenerate_geometry_rejected (test_quantum.QuantumIdentityTests.test_klein_boundary_and_degenerate_geometry_rejected) ... ok
+test_simplex_moments_and_duffy_jacobian (test_quantum.QuantumIdentityTests.test_simplex_moments_and_duffy_jacobian) ... ok
+test_small_habiro_values_and_six_divides_maximum_tie (test_quantum.QuantumIdentityTests.test_small_habiro_values_and_six_divides_maximum_tie) ... ok
+test_translation_retained_and_curvature_independent_of_origin (test_quantum.QuantumIdentityTests.test_translation_retained_and_curvature_independent_of_origin) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 1.737s
+
+OK

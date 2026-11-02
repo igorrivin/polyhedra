@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "status": "passed_targeted_independent_recheck",
+  "source_set_sha256": "e5bd0a08c64db41e9d6ef5d06d8ef0be8a93bd58a7f4f79e75d7b792098087ed",
+  "author_result": {
+    "sha256": "5f73fce03e43103dc457570bcd90f4722599b5ac0d67a9b9b88d9e00679f0429",
+    "bytes": 4694781
+  },
+  "independent_replay_result": {
+    "sha256": "d6e36f454d9a2de072e330154da166929aae0abb3299e21afb3e884cfa803581",
+    "bytes": 4694780
+  },
+  "replay_difference_paths": [
+    "/generated_at_utc",
+    "/runtime/elapsed_seconds"
+  ],
+  "scientific_strings_exactly_equal": true,
+  "full_source_before_after_current_equal": true,
+  "all_v1_evidence_preserved": true,
+  "source_freeze_and_profile_links_match": true,
+  "targeted_rejections_per_mode": 253,
+  "targeted_categories": {
+    "original_finding": 13,
+    "every_scientific_array": 188,
+    "every_source_or_dependency_pin": 19,
+    "every_contract_field": 13,
+    "schema_and_settings": 8,
+    "six_local_provenance_bindings": 12
+  },
+  "positive_and_observation_controls": {
+    "unchanged_profile_accepted": true,
+    "dictionary_order_irrelevant": true,
+    "original_corruptions_rejected": 13,
+    "targeted_rejections": 253,
+    "later_live_manuscript_changes_observed": true,
+    "live_changed_paths": [
+      "book/chapters/17-unfolding-constant-series.tex",
+      "book/claims/sections10-11.json"
+    ],
+    "unchanged_observation_of_later_edit_passes": true,
+    "midrun_source_change_rejected": true,
+    "canonical_source_untouched": true
+  },
+  "normal_and_optimized_probe_records_equal": true,
+  "test_counts": {
+    "normal": 50,
+    "optimized": 50
+  },
+  "ruff": "passed",
+  "production_assert_count": 0,
+  "derived_counts": {
+    "exact": 1342,
+    "numerical_formula_comparisons": 4266,
+    "cross_precision_observations": 509
+  },
+  "oracle_reuse": {
+    "reuse": true,
+    "freshly_rerun": false,
+    "script": {
+      "sha256": "b74db119da8348f6d8e063c44e9dc354f56437e621f911b76f5c5e5b1bb3ee50",
+      "bytes": 20928
+    },
+    "result": {
+      "sha256": "40968ce6b0ecfaad83eb7d3203d4703e7c9f9a25d0bfd72cf6df92224f449a67",
+      "bytes": 632335
+    },
+    "exact_count": 400,
+    "numerical_count": 1322,
+    "reason": "All mathematical modules, fixture, old guarded dependencies and every scientific result string are byte-identical to v1."
+  },
+  "closed_findings": [
+    "CR01",
+    "CR02"
+  ],
+  "open_required_findings": [],
+  "source_stage": "dirty author and independent reviewer replay; clean-source checkpoint remains separate"
+}

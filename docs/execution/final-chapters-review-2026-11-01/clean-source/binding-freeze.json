@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-02T04:53:07.404505+00:00",
+  "status": "final_actual_bindings_frozen_pending_independent_acceptance",
+  "ready_spec": true,
+  "numerical_launch_authorized": false,
+  "source_commit": "8f722ae462307146818932cde4811e4bb4e8423e",
+  "files": {
+    "replay-spec.json": {
+      "sha256": "7fbcdc3ca5c2443fff1b89096c6a5b94c3ddd233794fb1949d5737eb99f2266e",
+      "bytes": 38837
+    },
+    "binding-preflight.json": {
+      "sha256": "0404a72e59725bfa56b6e1fe4ddfe3cf29a2b92f924c9d5831ad11fbc8eef8fb",
+      "bytes": 22707
+    }
+  },
+  "external_inputs": {
+    "source-checkpoint/source-checkpoint.json": {
+      "sha256": "56df9d0d5bfc155c8f0bcc077bbb4320290896d87d602b7cf823e18f42b88bd0",
+      "bytes": 50680
+    },
+    "source-checkpoint/checkpoint.py": {
+      "sha256": "6e1249a88d8f28e071be59bae9b5f4b78f50f9da440a5cc7df0aaea1ff690ed9",
+      "bytes": 12807
+    },
+    "integration-review/final-acceptance.json": {
+      "sha256": "84b9eb77d45339fad20af6df2439f710a9fc2a47af35c823f4b3f8e3029cd708",
+      "bytes": 18644
+    },
+    "computation-review/revision-v2/final-acceptance.json": {
+      "sha256": "70070fe32c42961d68b035ccb7fae5b012c50ac5814ca42bd05689bfc64b6592",
+      "bytes": 25941
+    },
+    "checkpoint-review/revision-v3/final-acceptance.json": {
+      "sha256": "2c342b199506e589dbed3048e610c51846b739ecc3b9905540aff9624d8cac64",
+      "bytes": 3939
+    },
+    "checkpoint-review/preparation-bindings-v1/final-acceptance.json": {
+      "sha256": "c4e30315d13a5d3450f0b147368dac725e37c61cd5f08dcdf7f78382adebf8bb",
+      "bytes": 6244
+    }
+  },
+  "self_hash_excluded": true
+}

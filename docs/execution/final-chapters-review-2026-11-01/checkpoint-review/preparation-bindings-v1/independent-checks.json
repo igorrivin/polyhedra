@@ -1,0 +1,661 @@
+{
+  "scope": "Actual-evidence preparation bindings and unexecuted source-only plan; not final execution approval",
+  "passed": true,
+  "helper_tests_repeated": false,
+  "numerical_replay_performed": false,
+  "canonical_or_git_mutation": false,
+  "observations": {
+    "actual_approval_bindings": {
+      "completed_roles": [
+        "structure",
+        "quantum",
+        "geodesic",
+        "conventions",
+        "computation"
+      ],
+      "author_result": {
+        "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/computation/full-v2/author-result-70-110.json",
+        "sha256": "5f73fce03e43103dc457570bcd90f4722599b5ac0d67a9b9b88d9e00679f0429",
+        "bytes": 4694781
+      },
+      "runtime_files": 24,
+      "manuscript_observations": 14,
+      "tex_observations": 46,
+      "groups": [
+        "Q1_figure_eight",
+        "Q2_klein_geometry",
+        "Q3_peripheral_filling",
+        "Q4_charge_curvature",
+        "G1_torus_unfolding",
+        "G2_pants_traces",
+        "G3_figure_eight_kernel",
+        "G4_local_distance",
+        "G5_seams_torus_holonomy",
+        "G6_twist_coarea",
+        "G7_twist_partition",
+        "G8_endpoint_matching",
+        "G9_cusp_decoration",
+        "G10_boundary_shadows"
+      ],
+      "counts": {
+        "exact": 1342,
+        "numerical_formula_comparisons": 4266,
+        "cross_precision_observations": 509
+      },
+      "complete_author_source_before_after_equal": true
+    },
+    "source_plan": {
+      "paths": [
+        "INTEGRATION_PLAN.md",
+        "README.md",
+        "book/README.md",
+        "book/chapters/10-quantum-introduction.tex",
+        "book/chapters/11-quantum-degeneration.tex",
+        "book/chapters/17-unfolding-constant-series.tex",
+        "book/chapters/18-figure-eight-curves.tex",
+        "book/chapters/19-pants-twists.tex",
+        "book/chapters/20-torus-twist-series.tex",
+        "book/chapters/21-cuff-matching.tex",
+        "book/chapters/22-cusps-orthospectrum.tex",
+        "book/chapters/32-open-questions.tex",
+        "book/chapters/appendix-b-conventions.tex",
+        "book/claims/section32-appendixb.json",
+        "book/claims/sections10-11.json",
+        "book/claims/sections17-22.json",
+        "book/computational-status.md",
+        "book/polyhedral_volumes_and_geodesic_identities.tex",
+        "docs/INTEGRATION_STATUS.md",
+        "experiments/quantum_geodesics/README.md",
+        "experiments/quantum_geodesics/__init__.py",
+        "experiments/quantum_geodesics/common.py",
+        "experiments/quantum_geodesics/contracts/geodesic-contract-acceptance.json",
+        "experiments/quantum_geodesics/contracts/geodesic-source-acceptance.json",
+        "experiments/quantum_geodesics/contracts/geodesic-targets.md",
+        "experiments/quantum_geodesics/contracts/quantum-mathematical-acceptance.json",
+        "experiments/quantum_geodesics/contracts/quantum-source-freeze.json",
+        "experiments/quantum_geodesics/contracts/quantum-targets.md",
+        "experiments/quantum_geodesics/figure_eight.py",
+        "experiments/quantum_geodesics/fixture.json",
+        "experiments/quantum_geodesics/geodesic_exact.py",
+        "experiments/quantum_geodesics/geometry.py",
+        "experiments/quantum_geodesics/kernels.py",
+        "experiments/quantum_geodesics/klein.py",
+        "experiments/quantum_geodesics/normalization.py",
+        "experiments/quantum_geodesics/run.py",
+        "experiments/quantum_geodesics/tests/test_geodesic.py",
+        "experiments/quantum_geodesics/tests/test_quantum.py",
+        "experiments/quantum_geodesics/tests/test_validation.py",
+        "experiments/quantum_geodesics/twist_integrals.py"
+      ],
+      "modified": 6,
+      "new": 34,
+      "unchanged_runtime_dependencies_not_staged": [
+        "experiments/quantum_surgery/__init__.py",
+        "experiments/quantum_surgery/algebra.py",
+        "experiments/quantum_surgery/exact.py"
+      ],
+      "inactive_tex_fixed": [
+        "book/figures/01_connections.tex",
+        "book/figures/02_polyhedral_regimes.tex",
+        "book/figures/03_cotangent_hessian.tex",
+        "book/figures/04_dehn_filling.tex",
+        "book/figures/05_reconnection_atoms.tex",
+        "book/figures/06_double_covers.tex",
+        "book/figures/07_flat_row.tex",
+        "book/figures/08_flip.tex",
+        "book/figures/09_airy.tex",
+        "book/figures/preamble.tex"
+      ],
+      "inventory_matches_live_at_review": true,
+      "initial_index_empty": true,
+      "final_source_approval_and_commit_not_inferred": true
+    },
+    "curation": {
+      "files": 317,
+      "bytes": 16017571,
+      "renames": [
+        {
+          "source": "computation-review/independent-oracles-v1.log",
+          "target": "docs/execution/final-chapters-review-2026-11-01/computation-review/independent-oracles-v1.log.txt"
+        },
+        {
+          "source": "computation/full-v2/author-run.log",
+          "target": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/author-run.log.txt"
+        },
+        {
+          "source": "computation/full-v2/ruff.log",
+          "target": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/ruff.log.txt"
+        },
+        {
+          "source": "computation/full-v2/tests-optimized.log",
+          "target": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/tests-optimized.log.txt"
+        },
+        {
+          "source": "computation/full-v2/tests.log",
+          "target": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/tests.log.txt"
+        },
+        {
+          "source": "pdf-preflight/pdf-build/main.fls",
+          "target": "docs/execution/final-chapters-review-2026-11-01/pdf-preflight/pdf-build/main.fls.txt"
+        },
+        {
+          "source": "pdf-preflight/pdf-build/main.log",
+          "target": "docs/execution/final-chapters-review-2026-11-01/pdf-preflight/pdf-build/main.log.txt"
+        }
+      ],
+      "local_markdown_links": [
+        {
+          "from": "docs/execution/final-chapters-review-2026-11-01/README.md",
+          "link": "structure-review/review-manifest.json",
+          "target": "docs/execution/final-chapters-review-2026-11-01/structure-review/review-manifest.json"
+        },
+        {
+          "from": "docs/execution/final-chapters-review-2026-11-01/README.md",
+          "link": "quantum-review/final-acceptance.json",
+          "target": "docs/execution/final-chapters-review-2026-11-01/quantum-review/final-acceptance.json"
+        },
+        {
+          "from": "docs/execution/final-chapters-review-2026-11-01/README.md",
+          "link": "geodesic-review/revision-v2/final-acceptance.json",
+          "target": "docs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/final-acceptance.json"
+        },
+        {
+          "from": "docs/execution/final-chapters-review-2026-11-01/README.md",
+          "link": "conventions-review/revision-v3/final-acceptance.json",
+          "target": "docs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/final-acceptance.json"
+        },
+        {
+          "from": "docs/execution/final-chapters-review-2026-11-01/README.md",
+          "link": "computation-review/revision-v2/final-acceptance.json",
+          "target": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/final-acceptance.json"
+        },
+        {
+          "from": "docs/execution/final-chapters-review-2026-11-01/README.md",
+          "link": "computation/full-v2/author-result-70-110.json",
+          "target": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/author-result-70-110.json"
+        },
+        {
+          "from": "docs/execution/final-chapters-review-2026-11-01/README.md",
+          "link": "pdf-preflight/visual-review.json",
+          "target": "docs/execution/final-chapters-review-2026-11-01/pdf-preflight/visual-review.json"
+        },
+        {
+          "from": "docs/execution/final-chapters-review-2026-11-01/README.md",
+          "link": "checkpoint-review/revision-v3/final-acceptance.json",
+          "target": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/final-acceptance.json"
+        },
+        {
+          "from": "docs/execution/final-chapters-review-2026-11-01/README.md",
+          "link": "checkpoint-review/revision-v2/final-acceptance.json",
+          "target": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/final-acceptance.json"
+        },
+        {
+          "from": "docs/execution/final-chapters-review-2026-11-01/README.md",
+          "link": "closeout.md",
+          "target": "docs/execution/final-chapters-review-2026-11-01/closeout.md"
+        },
+        {
+          "from": "docs/execution/final-chapters-review-2026-11-01/README.md",
+          "link": "reproduction.md",
+          "target": "docs/execution/final-chapters-review-2026-11-01/reproduction.md"
+        },
+        {
+          "from": "docs/execution/final-chapters-review-2026-11-01/reproduction.md",
+          "link": "computation/full-v2/author-result-70-110.json",
+          "target": "docs/execution/final-chapters-review-2026-11-01/computation/full-v2/author-result-70-110.json"
+        },
+        {
+          "from": "docs/execution/final-chapters-review-2026-11-01/reproduction.md",
+          "link": "computation-review/revision-v2/final-acceptance.json",
+          "target": "docs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/final-acceptance.json"
+        },
+        {
+          "from": "docs/execution/final-chapters-review-2026-11-01/reproduction.md",
+          "link": "checkpoint-review/revision-v3/final-acceptance.json",
+          "target": "docs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/final-acceptance.json"
+        },
+        {
+          "from": "docs/execution/final-chapters-review-2026-11-01/reproduction.md",
+          "link": "computation-review/independent_oracles.py",
+          "target": "docs/execution/final-chapters-review-2026-11-01/computation-review/independent_oracles.py"
+        }
+      ],
+      "verbatim_whitespace_files": 22,
+      "whitespace_exception_authorized": false,
+      "authored_drafts_default_whitespace_pass": true,
+      "candidate_copy_not_performed": true
+    },
+    "all_384_frozen_inputs_unchanged": true
+  },
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "check-ignore",
+        "--no-index",
+        "--stdin"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": "docs/execution/final-chapters-review-2026-11-01/README.md\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-contract.unready.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/anti-pattern-review.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/command-receipts.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/independent-probes-normal.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/independent-probes-optimized.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/independent_probes.py\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/initial-freeze-check.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/initial-review-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/normal.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/normal.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/optimized.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/optimized.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/review-findings.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/review-report.md\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/command-receipts.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/delta-audit.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/final-acceptance.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-probes-normal.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-probes-optimized.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent_recheck.py\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/initial-freeze-check.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/normal.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/normal.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/optimized.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/optimized.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/review-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/review-report.md\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/ruff.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/ruff.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/schema-observation.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/unconnected-graph-command-receipt-normal.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/unconnected-graph-command-receipt-optimized.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/command-receipts.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/final-acceptance.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/independent-delta-audit.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/independent-probes-normal.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/independent-probes-optimized.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/independent_adapter_probes.py\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/initial-freeze-check.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/normal.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/normal.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/optimized.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/optimized.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/preservation-check.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/review-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/review-report.md\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/ruff.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/ruff.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/ruff.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/ruff.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/HANDOFF.md\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/checkpoint-contract.unready.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/checkpoint_lib.py\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/compare_replays.py\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/freeze-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/replay-spec.unready.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/run_clean_replay.py\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/test_checkpoint.py\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/verify_checkpoint.py\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/unconnected-graph-command-receipt-normal.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-review/unconnected-graph-command-receipt-optimized.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/HANDOFF.md\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/checkpoint-contract.unready.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/checkpoint_lib.py\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/compare_replays.py\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/freeze-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/initial-evidence-preservation.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/provisional-schema-observation.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/replay-spec.unready.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/revision-delta.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/revision.patch\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/run_clean_replay.py\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/test_checkpoint.py\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/verification-v2-final/commands.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/verification-v2-final/normal.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/verification-v2-final/normal.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/verification-v2-final/optimized.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/verification-v2-final/optimized.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/verification-v2-final/pre-test-source-freeze.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/verification-v2-final/ruff.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/verification-v2-final/ruff.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v2/verify_checkpoint.py\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/ADAPTER.md\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/HANDOFF.md\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/freeze-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/real-schema-observation.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/revision-delta.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/revision.patch\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/normal.command.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/normal.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/normal.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/optimized.command.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/optimized.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/optimized.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/pre-test-source-freeze.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/ruff.command.json\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/ruff.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint-tools/revision-v3/verification-v3/ruff.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/checkpoint_lib.py\ndocs/execution/final-chapters-review-2026-11-01/closeout.md\ndocs/execution/final-chapters-review-2026-11-01/compare_replays.py\ndocs/execution/final-chapters-review-2026-11-01/computation-review/audit_frozen_result_v1.py\ndocs/execution/final-chapters-review-2026-11-01/computation-review/command-receipts.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/independent-oracles-v1.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/independent-oracles-v1.log.txt\ndocs/execution/final-chapters-review-2026-11-01/computation-review/independent-replay.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/computation-review/independent-replay.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/computation-review/independent_oracles.py\ndocs/execution/final-chapters-review-2026-11-01/computation-review/initial-subject-freeze.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/negative-controls-normal-v1.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/negative-controls-optimized-v1.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/negative_controls_v1.py\ndocs/execution/final-chapters-review-2026-11-01/computation-review/provenance-controls-normal-v1.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/provenance-controls-optimized-v1.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/provenance_controls_v1.py\ndocs/execution/final-chapters-review-2026-11-01/computation-review/required-fixture-profile-v1.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/result-audit-v1.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/review-v1-evidence-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/review-v1.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/review-v1.md\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/command-receipts.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/final-acceptance.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/final-acceptance.md\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/final-evidence-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/final-recheck-audit.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/final_recheck_audit.py\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/freeze_and_compare.py\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/independent-replay.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/independent-replay.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/initial-freeze-and-comparison.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/ruff.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/ruff.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/run_review_commands.py\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/targeted-controls-normal.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/targeted-controls-optimized.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/targeted_controls.py\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/tests-normal.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/tests-normal.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/tests-optimized.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/tests-optimized.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/computation-review/ruff.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/computation-review/ruff.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/computation-review/run_review_commands.py\ndocs/execution/final-chapters-review-2026-11-01/computation-review/static-policy-audit-v1.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/subject-v1/author-result-70-110.json\ndocs/execution/final-chapters-review-2026-11-01/computation-review/tests-normal.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/computation-review/tests-normal.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/computation-review/tests-optimized.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/computation-review/tests-optimized.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/computation/full-v2/after/experiments/quantum_geodesics/README.md\ndocs/execution/final-chapters-review-2026-11-01/computation/full-v2/after/experiments/quantum_geodesics/run.py\ndocs/execution/final-chapters-review-2026-11-01/computation/full-v2/after/experiments/quantum_geodesics/tests/test_validation.py\ndocs/execution/final-chapters-review-2026-11-01/computation/full-v2/author-result-70-110.json\ndocs/execution/final-chapters-review-2026-11-01/computation/full-v2/author-run.log.txt\ndocs/execution/final-chapters-review-2026-11-01/computation/full-v2/before/experiments/quantum_geodesics/README.md\ndocs/execution/final-chapters-review-2026-11-01/computation/full-v2/before/experiments/quantum_geodesics/run.py\ndocs/execution/final-chapters-review-2026-11-01/computation/full-v2/before/experiments/quantum_geodesics/tests/test_validation.py\ndocs/execution/final-chapters-review-2026-11-01/computation/full-v2/command-receipts.json\ndocs/execution/final-chapters-review-2026-11-01/computation/full-v2/compare_author_results.py\ndocs/execution/final-chapters-review-2026-11-01/computation/full-v2/driver-validation-repair.patch\ndocs/execution/final-chapters-review-2026-11-01/computation/full-v2/evidence-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/computation/full-v2/ruff.log.txt\ndocs/execution/final-chapters-review-2026-11-01/computation/full-v2/runtime-file-map.json\ndocs/execution/final-chapters-review-2026-11-01/computation/full-v2/scientific-comparison.json\ndocs/execution/final-chapters-review-2026-11-01/computation/full-v2/source-freeze.json\ndocs/execution/final-chapters-review-2026-11-01/computation/full-v2/tests-optimized.log.txt\ndocs/execution/final-chapters-review-2026-11-01/computation/full-v2/tests.log.txt\ndocs/execution/final-chapters-review-2026-11-01/conventions-author/author-audit.md\ndocs/execution/final-chapters-review-2026-11-01/conventions-author/convention-row-inventory.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-author/freeze-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-author/reviewed-dependency-binding.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/dependency-comparison.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/freeze-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/ledger-only.patch\ndocs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/metadata-delta.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/reconciliation-report.md\ndocs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/revision-validation.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v3/author-static-checks.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v3/check_author.py\ndocs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v3/delta.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v3/freeze-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v3/minimaldiff.patch\ndocs/execution/final-chapters-review-2026-11-01/conventions-author/revision-v3/validation.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch\ndocs/execution/final-chapters-review-2026-11-01/conventions-review/claim-coverage.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-review/independent-static-verification.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-review/review-findings.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-review/review-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-review/review-report.md\ndocs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/acceptance.md\ndocs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/after/book/chapters/32-open-questions.tex\ndocs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/after/book/chapters/appendix-b-conventions.tex\ndocs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/after/book/claims/section32-appendixb.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/before/book/chapters/32-open-questions.tex\ndocs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/before/book/claims/section32-appendixb.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/final-acceptance.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/recheck_cv01.py\ndocs/execution/final-chapters-review-2026-11-01/conventions-review/revision-v3/validation.json\ndocs/execution/final-chapters-review-2026-11-01/conventions-review/verify_scope.py\ndocs/execution/final-chapters-review-2026-11-01/evidence-retention.md\ndocs/execution/final-chapters-review-2026-11-01/geodesic-author/author-freeze-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/geodesic-author/author-report.md\ndocs/execution/final-chapters-review-2026-11-01/geodesic-author/author-validation.json\ndocs/execution/final-chapters-review-2026-11-01/geodesic-author/companion-contract.md\ndocs/execution/final-chapters-review-2026-11-01/geodesic-author/initial-findings.md\ndocs/execution/final-chapters-review-2026-11-01/geodesic-author/revision-v2/author-freeze-manifest-v2.json\ndocs/execution/final-chapters-review-2026-11-01/geodesic-author/revision-v2/minimal.diff\ndocs/execution/final-chapters-review-2026-11-01/geodesic-author/revision-v2/source-pin-repairs.md\ndocs/execution/final-chapters-review-2026-11-01/geodesic-author/revision-v2/validate.py\ndocs/execution/final-chapters-review-2026-11-01/geodesic-author/revision-v2/validation.json\ndocs/execution/final-chapters-review-2026-11-01/geodesic-author/source-audit.md\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/companion-contract-review.json\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/companion-contract-review.md\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/frozen-initial/book/chapters/19-pants-twists.tex\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/frozen-initial/book/chapters/22-cusps-orthospectrum.tex\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/frozen-initial/book/claims/sections17-22.json\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/independent-probe-results.json\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/independent-structure-check.json\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/independent_probes.py\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/initial-claim-review.json\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/initial-findings.json\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/initial-label-review.json\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/initial-review-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/initial-review-report.md\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/final-acceptance.json\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/final-acceptance.md\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/final-claim-coverage.json\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/final-label-coverage.json\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/frozen-final/book/chapters/17-unfolding-constant-series.tex\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/frozen-final/book/chapters/18-figure-eight-curves.tex\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/frozen-final/book/chapters/19-pants-twists.tex\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/frozen-final/book/chapters/20-torus-twist-series.tex\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/frozen-final/book/chapters/21-cuff-matching.tex\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/frozen-final/book/chapters/22-cusps-orthospectrum.tex\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/frozen-final/book/claims/sections17-22.json\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/independent-verification.json\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/revision-v2/verify_final_revision.py\ndocs/execution/final-chapters-review-2026-11-01/geodesic-review/source-statement-review.json\ndocs/execution/final-chapters-review-2026-11-01/pdf-preflight/build-command.json\ndocs/execution/final-chapters-review-2026-11-01/pdf-preflight/evidence-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/pdf-preflight/final-source-check.json\ndocs/execution/final-chapters-review-2026-11-01/pdf-preflight/marker-receipt.json\ndocs/execution/final-chapters-review-2026-11-01/pdf-preflight/marker.stderr.txt\ndocs/execution/final-chapters-review-2026-11-01/pdf-preflight/marker.stdout.txt\ndocs/execution/final-chapters-review-2026-11-01/pdf-preflight/pdf-build-receipt.json\ndocs/execution/final-chapters-review-2026-11-01/pdf-preflight/pdf-build/main.fls.txt\ndocs/execution/final-chapters-review-2026-11-01/pdf-preflight/pdf-build/main.log.txt\ndocs/execution/final-chapters-review-2026-11-01/pdf-preflight/render-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/pdf-preflight/rendered/page-100.png\ndocs/execution/final-chapters-review-2026-11-01/pdf-preflight/tex-input-freeze.json\ndocs/execution/final-chapters-review-2026-11-01/pdf-preflight/visual-review.json\ndocs/execution/final-chapters-review-2026-11-01/quantum-author/computational-targets.md\ndocs/execution/final-chapters-review-2026-11-01/quantum-author/defects-and-repairs.md\ndocs/execution/final-chapters-review-2026-11-01/quantum-author/final-static-checks.json\ndocs/execution/final-chapters-review-2026-11-01/quantum-author/freeze-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/quantum-author/primary-source-pins.json\ndocs/execution/final-chapters-review-2026-11-01/quantum-author/revision-v2/freeze-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/quantum-author/revision-v2/ledger-before.json\ndocs/execution/final-chapters-review-2026-11-01/quantum-author/revision-v2/ledger.patch\ndocs/execution/final-chapters-review-2026-11-01/quantum-author/revision-v2/validation.json\ndocs/execution/final-chapters-review-2026-11-01/quantum-author/section10-revision.diff\ndocs/execution/final-chapters-review-2026-11-01/quantum-author/section11-revision.diff\ndocs/execution/final-chapters-review-2026-11-01/quantum-review/claim-coverage.json\ndocs/execution/final-chapters-review-2026-11-01/quantum-review/final-acceptance.json\ndocs/execution/final-chapters-review-2026-11-01/quantum-review/final-author-freeze/book/chapters/10-quantum-introduction.tex\ndocs/execution/final-chapters-review-2026-11-01/quantum-review/final-author-freeze/book/chapters/11-quantum-degeneration.tex\ndocs/execution/final-chapters-review-2026-11-01/quantum-review/final-author-freeze/book/claims/sections10-11.json\ndocs/execution/final-chapters-review-2026-11-01/quantum-review/final-author-freeze/freeze-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/quantum-review/independent-probe-results.json\ndocs/execution/final-chapters-review-2026-11-01/quantum-review/independent-source-review.json\ndocs/execution/final-chapters-review-2026-11-01/quantum-review/independent-structure-check.json\ndocs/execution/final-chapters-review-2026-11-01/quantum-review/independent_probes.py\ndocs/execution/final-chapters-review-2026-11-01/quantum-review/initial-findings.json\ndocs/execution/final-chapters-review-2026-11-01/quantum-review/initial-identity-check.json\ndocs/execution/final-chapters-review-2026-11-01/quantum-review/label-coverage.json\ndocs/execution/final-chapters-review-2026-11-01/quantum-review/review-evidence-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/quantum-review/review-report.md\ndocs/execution/final-chapters-review-2026-11-01/quantum-review/verify_final_metadata.py\ndocs/execution/final-chapters-review-2026-11-01/replay-spec.unready.json\ndocs/execution/final-chapters-review-2026-11-01/reproduction.md\ndocs/execution/final-chapters-review-2026-11-01/run_clean_replay.py\ndocs/execution/final-chapters-review-2026-11-01/structure-review/author-verifier-normal.json\ndocs/execution/final-chapters-review-2026-11-01/structure-review/author-verifier-optimized.json\ndocs/execution/final-chapters-review-2026-11-01/structure-review/check_rejections.py\ndocs/execution/final-chapters-review-2026-11-01/structure-review/independent-normal.json\ndocs/execution/final-chapters-review-2026-11-01/structure-review/rejections-normal.json\ndocs/execution/final-chapters-review-2026-11-01/structure-review/rejections-optimized.json\ndocs/execution/final-chapters-review-2026-11-01/structure-review/review-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/structure-review/review-report.txt\ndocs/execution/final-chapters-review-2026-11-01/structure-review/review_structure.py\ndocs/execution/final-chapters-review-2026-11-01/structure/baseline-tracked-inventory.json\ndocs/execution/final-chapters-review-2026-11-01/structure/extract_chapters.py\ndocs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/10-quantum-introduction.tex\ndocs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/11-quantum-degeneration.tex\ndocs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/17-unfolding-constant-series.tex\ndocs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/18-figure-eight-curves.tex\ndocs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/19-pants-twists.tex\ndocs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/20-torus-twist-series.tex\ndocs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/21-cuff-matching.tex\ndocs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/22-cusps-orthospectrum.tex\ndocs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/32-open-questions.tex\ndocs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/appendix-b-conventions.tex\ndocs/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/polyhedral_volumes_and_geodesic_identities.tex\ndocs/execution/final-chapters-review-2026-11-01/structure/extraction-map.json\ndocs/execution/final-chapters-review-2026-11-01/structure/extraction-result.json\ndocs/execution/final-chapters-review-2026-11-01/structure/freeze-record.json\ndocs/execution/final-chapters-review-2026-11-01/structure/independent-verification.json\ndocs/execution/final-chapters-review-2026-11-01/structure/source-only.diff\ndocs/execution/final-chapters-review-2026-11-01/structure/source-order.json\ndocs/execution/final-chapters-review-2026-11-01/structure/structure-manifest.json\ndocs/execution/final-chapters-review-2026-11-01/structure/structure-report.txt\ndocs/execution/final-chapters-review-2026-11-01/structure/verify_extraction.py\ndocs/execution/final-chapters-review-2026-11-01/test_checkpoint.py\ndocs/execution/final-chapters-review-2026-11-01/verify_checkpoint.py\n",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:28: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:29: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:115: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:116: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:165: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:166: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:182: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:208: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:209: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:216: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:373: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:396: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:415: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:496: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:548: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:552: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:554: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:563: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:565: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:568: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:573: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:575: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:582: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:584: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:586: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:588: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/independent-revision.patch:591: trailing whitespace.\n+ \n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:28: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:29: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:115: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:116: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:165: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:166: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:182: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:208: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:209: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:216: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:373: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:396: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:415: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:496: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:548: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:552: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:554: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:563: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:565: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:568: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:573: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:575: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:582: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:584: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:586: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:588: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2/revision.patch:591: trailing whitespace.\n+ \n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v3/revision.patch"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v3/revision.patch:26: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v3/revision.patch:27: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v3/revision.patch:134: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v3/revision.patch:161: trailing whitespace.\n+ \n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/computation/full-v2/driver-validation-repair.patch"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/computation/full-v2/driver-validation-repair.patch:19: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/computation/full-v2/driver-validation-repair.patch:20: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/computation/full-v2/driver-validation-repair.patch:24: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/computation/full-v2/driver-validation-repair.patch:25: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/computation/full-v2/driver-validation-repair.patch:110: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/computation/full-v2/driver-validation-repair.patch:111: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/computation/full-v2/driver-validation-repair.patch:161: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/computation/full-v2/driver-validation-repair.patch:166: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/computation/full-v2/driver-validation-repair.patch:170: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/computation/full-v2/driver-validation-repair.patch:172: trailing whitespace.\n+ \n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:15: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:30: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:45: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:56: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:60: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:92: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:95: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:96: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:119: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:132: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:147: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:162: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:174: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:207: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:231: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:247: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:252: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:269: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch:357: trailing whitespace.\n+ \n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-author/revision-v2/minimal.diff"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-author/revision-v2/minimal.diff:5: trailing whitespace.\n+ \n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:4: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:6: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:32: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:45: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:74: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:76: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:93: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:104: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:137: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:162: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:169: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:171: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:203: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:208: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:224: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:244: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:253: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:258: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:291: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:293: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:305: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:307: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:309: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:346: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:386: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:388: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:433: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:445: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:462: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:473: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:475: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:518: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:532: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:554: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:556: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:574: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:596: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:622: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:638: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:678: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:680: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:686: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:690: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:696: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:703: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:736: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:738: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:754: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:773: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:798: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-review/independent-source-diff.patch:832: trailing whitespace.\n+ \n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/pdf-preflight/pdf-build/main.log"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/pdf-preflight/pdf-build/main.log:881: trailing whitespace.\n+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/pdf-preflight/pdf-build/main.log:891: trailing whitespace.\n+* modes: \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/pdf-preflight/pdf-build/main.log:966: trailing whitespace.\n+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/pdf-preflight/pdf-build/main.log:972: trailing whitespace.\n+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/pdf-preflight/pdf-build/main.log:1175: trailing whitespace.\n+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/pdf-preflight/pdf-build/main.log:1528: trailing whitespace.\n+ ) ) \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/pdf-preflight/pdf-build/main.log:1572: new blank line at EOF.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/quantum-author/section10-revision.diff"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/quantum-author/section10-revision.diff:29: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/quantum-author/section10-revision.diff:83: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/quantum-author/section10-revision.diff:98: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/quantum-author/section10-revision.diff:99: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/quantum-author/section10-revision.diff:142: trailing whitespace.\n+ \n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/quantum-author/section11-revision.diff"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/quantum-author/section11-revision.diff:6: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/quantum-author/section11-revision.diff:117: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/quantum-author/section11-revision.diff:137: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/quantum-author/section11-revision.diff:186: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/quantum-author/section11-revision.diff:204: trailing whitespace.\n+ \n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure-review/independent-normal.json"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure-review/independent-normal.json:25626: new blank line at EOF.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/10-quantum-introduction.tex"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/10-quantum-introduction.tex:895: new blank line at EOF.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/11-quantum-degeneration.tex"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/11-quantum-degeneration.tex:215: new blank line at EOF.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/17-unfolding-constant-series.tex"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/17-unfolding-constant-series.tex:133: new blank line at EOF.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/18-figure-eight-curves.tex"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/18-figure-eight-curves.tex:191: new blank line at EOF.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/19-pants-twists.tex"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/19-pants-twists.tex:141: new blank line at EOF.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/20-torus-twist-series.tex"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/20-torus-twist-series.tex:99: new blank line at EOF.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/21-cuff-matching.tex"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/21-cuff-matching.tex:46: new blank line at EOF.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/22-cusps-orthospectrum.tex"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/22-cusps-orthospectrum.tex:151: new blank line at EOF.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/32-open-questions.tex"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/32-open-questions.tex:194: new blank line at EOF.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/appendix-b-conventions.tex"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extracted-source-graph/book/chapters/appendix-b-conventions.tex:52: new blank line at EOF.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/source-only.diff"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 3,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/source-only.diff:8: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/source-only.diff:1129: trailing whitespace.\n+ \n/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/source-only.diff:1903: trailing whitespace.\n+ \n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-curation-preparation/README.md"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-curation-preparation/closeout.md"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-curation-preparation/retention-policy.md"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/dev/null",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-curation-preparation/reproduction.md"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "stdin": null,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

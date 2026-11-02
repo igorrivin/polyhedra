@@ -1,0 +1,141 @@
+\section{Cutting into pants and varying twists}
+\label{sec:twists}
+
+\subsection{What data a cut curve retains}
+
+Fix a pants decomposition with cuff lengths $a_1,\ldots,a_N$, where
+$N=3g-3+n$. Cutting a simple multicurve gives disjoint essential arcs in
+each pair of pants. Cutting a general immersed curve, even a filling one,
+need not give disjoint arcs: self-intersections may remain inside a pair
+of pants. Nor are the actual segments generally orthogonal to the cuffs.
+
+Boundary intersection counts alone lose the relative homotopy classes of
+the arcs, their cyclic joining pattern, and winding information. For simple
+multicurves this information is organized by Dehn--Thurston coordinates.
+For a general immersed curve one must retain a fuller itinerary. Once this
+topological data is fixed, varying the metric twist is a well-defined and
+tractable problem.
+
+There are two complementary exact descriptions. One uses arc lengths as
+generating functions in endpoint positions. The other uses products of
+holonomy matrices. Both keep the information that intersection counts alone
+discard.
+
+\subsection{An exact local distance function}
+
+Take two ultraparallel geodesic lifts of cuffs in $\HH^2$, at common
+perpendicular distance $d$. Let $u,v$ be signed distances on the two lines
+from the perpendicular feet, with compatible orientations. Then
+\begin{equation}
+ \boxed{
+ D_d(u,v)=\arcosh\bigl(\cosh d\cosh u\cosh v-\sinh u\sinh v\bigr).}
+ \label{eq:localdistance}
+\end{equation}
+For example, in the hyperboloid model use
+\[
+ p(u)=(\cosh u,\sinh u,0),\qquad
+ q(v)=(\cosh d\cosh v,\sinh v,\sinh d\cosh v).
+\]
+Then $\cosh D=-\langle p,q\rangle$. Reversing one endpoint coordinate
+changes the sign of the mixed term.
+
+For the ordinary seam between cuffs $a,b$ of pants with third cuff $c$,
+\begin{equation}
+ \cosh d=\frac{\cosh(c/2)+\cosh(a/2)\cosh(b/2)}
+                    {\sinh(a/2)\sinh(b/2)}.
+ \label{eq:seam}
+\end{equation}
+For a returning or winding arc, choose the boundary lifts appropriate to
+its relative homotopy class and use their common perpendicular instead.
+There is no single seam length that describes all relative arc classes.
+
+Given a fixed itinerary, cuff gluing imposes affine relations on the
+endpoint variables involving the twists $\tau_i$ and integer winding
+data. The length of its closed geodesic representative is obtained by
+minimizing the sum of the corresponding functions~\eqref{eq:localdistance}
+over the crossing positions. The first-variation equations impose smooth
+tangent matching at every crossing. This provides an exact formulation
+even when the resulting minimization is not elementary to evaluate.
+
+\subsection{Holonomy and first variation}
+
+In a basis adapted to a cuff axis, a twist displacement is represented by
+\[
+ T_i(\tau_i)=\diag(e^{\tau_i/2},e^{-\tau_i/2}).
+\]
+For a fixed curve word $\gamma$, insert these matrices into the fixed pants
+holonomies. The resulting product $W_\gamma$ satisfies
+\begin{equation}
+ 2\cosh(\ell_\gamma/2)
+  =\abs{\tr W_\gamma(\mathbf a,T_1(\tau_1),\ldots,T_N(\tau_N))}.
+ \label{eq:traceword}
+\end{equation}
+With the cuff lengths fixed, its trace is a finite Laurent polynomial in
+$e^{\tau_i/2}$. Its coefficients need not all be positive in an arbitrary
+choice of lifts and coordinates.
+
+The twist derivative has the cosine formula
+\begin{equation}
+ \frac{\partial\ell_\gamma}{\partial\tau_i}
+   =\sum_{p\in\gamma\cap\alpha_i}\cos\vartheta_p,
+ \qquad
+ \abs{\frac{\partial\ell_\gamma}{\partial\tau_i}}
+      \le i(\gamma,\alpha_i).
+ \label{eq:cosine}
+\end{equation}
+Angles and twist orientation are chosen consistently. Length is strictly
+convex along an individual nontrivial twist when the curve crosses the
+twisting cuff; the argument also applies to nonsimple geodesics
+\cite{Kerckhoff}. We do not need a stronger claim about arbitrary lines
+with several twist parameters varying in different signs.
+
+These ideas overlap with several parts of Mirzakhani's work, but serve
+different roles there. Dehn--Thurston estimates compare combinatorial and
+geometric length for simple curves~\cite[Section 3]{MirzSimple}. The work
+on general curve orbits studies asymptotically piecewise-linear length,
+including filling curves and length sublevel volumes
+\cite[Sections 4 and 8]{MirzGeneral}. In the basic volume recursion, the
+cutting curves are simple and the kernel depends on their lengths, so the
+twist integral itself is just the period $a_i$.
+
+\subsection{Unfolding a twist lattice}
+
+Let $D_i$ be the Dehn twist about the $i$th cuff. With a consistent sign
+convention,
+\[
+ \ell_{D_1^{k_1}\cdots D_N^{k_N}\gamma}(\mathbf a,\boldsymbol\tau)
+ =\ell_\gamma(\mathbf a,\boldsymbol\tau+\mathbf k\mathbf a).
+\]
+For a nonnegative function $F$, Tonelli's theorem gives
+\begin{equation}
+ \boxed{
+ \int_{\prod_i[0,a_i)}\sum_{\mathbf k\in\ZZ^N}
+ F\bigl(\ell_{D_1^{k_1}\cdots D_N^{k_N}\gamma}
+                  (\mathbf a,\boldsymbol\tau)\bigr)\,\dd\boldsymbol\tau
+ =\int_{\RR^N}F\bigl(\ell_\gamma(\mathbf a,\mathbf u)\bigr)\,\dd\mathbf u.}
+ \label{eq:twistunfold}
+\end{equation}
+For signed functions, impose absolute integrability. If the curve has a
+nontrivial stabilizer in this twist lattice, remove the redundant directions
+or account for their multiplicity; in particular, twisting about a disjoint
+cuff should not produce infinitely many copies of the same term.
+
+A fixed curve's length is not periodic in a twist coordinate. The sum over
+its twist orbit is periodic, which is exactly what makes this unfolding
+work. The accompanying WP measure is $\prod_i\dd a_i\,\dd\tau_i$.
+However, the positive cuff orthant times one twist box is the quotient by
+this particular twist subgroup, not a fundamental domain for the full
+mapping class group. A further full-moduli integration needs the appropriate
+orbit unfolding.
+
+For example, with weight $(2\cosh(\ell_\gamma/2))^{-s}$ and
+$x_i=e^{u_i/2}$, the right side becomes the Mellin-type integral
+\begin{equation}
+ 2^N\int_{(0,\infty)^N}
+ \abs{\tr W_\gamma(\mathbf a,\mathbf x)}^{-s}
+             \prod_i\frac{\dd x_i}{x_i},
+ \label{eq:mellin}
+\end{equation}
+whenever it converges. This is an explicit analytic object attached to the
+curve itinerary and the fixed pants lengths.
+

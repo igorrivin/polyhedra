@@ -1,0 +1,83 @@
+Final chapters structural extraction: complete and frozen for root review
+
+Baseline: 151673b1817e66aae493eb7da1be5ddf49adfe0f
+Baseline was clean, with 2,273 tracked paths. Materialized bytes were compared
+with every pinned Git blob, or with its LFS size and SHA-256 identity.
+Materialized LFS paths checked: 412
+
+Canonical writes: main manuscript and exactly ten new chapter files.
+The other 2,272 baseline tracked paths, including all existing chapters and
+prior artifacts, remain byte-identical. No other canonical documentation,
+ledger, code, generated artifact, original repository, ZIP or reference PDF
+was written. The Git HEAD and index remain unchanged; nothing was staged.
+
+The main manuscript retains all seven part headings, the appendix marker,
+its boundary clearpage commands, and its bibliography without byte changes.
+The introduction and all preamble text also remain unchanged.
+
+Source graph: 26 files and 25 include edges before; 36 files and 35 after.
+All 32 numbered sections and appendices A/B retain their order.
+All 607 unique labels and all 129 unique bibliography keys retain their order.
+Expanded book/main.tex: 633773 bytes
+Expanded entry SHA-256 before and after: cd9c97a260ddc34cc8f420e4e030a6ad44c8b5af82c7f491db91c9e5b850faea
+Expanded manuscript SHA-256 before and after: a1c5332c24fa1f7dcbd27e575d0dfb13fa31e229be03fc4b03d384acf5f94376
+
+Independent verification rebuilt the baseline source graph directly from
+pinned Git objects and recursively expanded complete lines. It did not
+import the extractor or use its extraction map to expand the manuscript.
+The Git expansion equals both the frozen extracted graph and live graph.
+The independent verifier passed with Python -O; neither script uses asserts.
+git diff --check passed. These are source-preservation checks only.
+
+Extraction map (baseline main line ranges are inclusive):
+10: book/chapters/10-quantum-introduction.tex
+  lines 394-1289; bytes [19664, 60903); 41239 bytes; 38 labels
+  SHA-256 59adda3457313e6fb60f04bc0865062e7002487c38fb0d8d8b6a277a036cbec3
+11: book/chapters/11-quantum-degeneration.tex
+  lines 1290-1505; bytes [60903, 70514); 9611 bytes; 10 labels
+  SHA-256 3b64addaa9f38fbd29edc59f9ee9a6467d0fe1ad753e52d6f5bcd398e9962b75
+17: book/chapters/17-unfolding-constant-series.tex
+  lines 1513-1645; bytes [70945, 76613); 5668 bytes; 9 labels
+  SHA-256 d1d34b1fd4fc8fad18c5991de6e2709e24e6c8a6663914e301ebbe6fbe938a01
+18: book/chapters/18-figure-eight-curves.tex
+  lines 1646-1836; bytes [76613, 84317); 7704 bytes; 11 labels
+  SHA-256 cf47156a2ceb7cbf0c79b0d1800282b93d8ce4c3fda94c9a9dc854b013959324
+19: book/chapters/19-pants-twists.tex
+  lines 1837-1977; bytes [84317, 90517); 6200 bytes; 7 labels
+  SHA-256 6d1bd1ac3b906d69fdf1ca1d53d2c00b109b60284bcc024304a609fd953a0bb6
+20: book/chapters/20-torus-twist-series.tex
+  lines 1978-2076; bytes [90517, 94096); 3579 bytes; 11 labels
+  SHA-256 c87cad8b8759fdf1ebdba29f5c810dc209e2ada8025f4441fd8f25c772cf4982
+21: book/chapters/21-cuff-matching.tex
+  lines 2077-2122; bytes [94096, 96084); 1988 bytes; 3 labels
+  SHA-256 8e2bd981f2f3d6b3d5a280bc3df4ec2594bf0cbd32d28cc0bbc260b4453f8f16
+22: book/chapters/22-cusps-orthospectrum.tex
+  lines 2123-2273; bytes [96084, 102798); 6714 bytes; 7 labels
+  SHA-256 5e1af1883adbe90d6a5fbc9de2904f6ae0d0ae2af38b81bfc43e5892844416f5
+32: book/chapters/32-open-questions.tex
+  lines 2290-2483; bytes [103904, 114278); 10374 bytes; 1 labels
+  SHA-256 e1a7069f19a75fc09f49c1af0b919f4987517d30953e686d9179e0665ca2b7b7
+B: book/chapters/appendix-b-conventions.tex
+  lines 2487-2538; bytes [114338, 117920); 3582 bytes; 1 labels
+  SHA-256 c0b3b5d73785daadb4654bf34a05129b5d1149811b965fe1e7fc69b5f398f155
+
+Evidence files:
+structure-manifest.json: hashes, graph manifests and edges, source orders, scope gates.
+baseline-tracked-inventory.json: full 2,273-path Git/materialized identities.
+baseline-source-graph/: full original 26-file graph from the clean baseline.
+extracted-source-graph/: full frozen 36-file graph after extraction.
+expanded-entry-before.tex and expanded-entry-after.tex: identical recursive sources.
+extraction-map.json: exact source offsets, line ranges, hashes and label membership.
+source-order.json: all labels, sections, bibliography keys and part headings in order.
+chosen-files.txt: exact eleven-path canonical write set.
+source-only.diff: tracked-main diff plus all ten new files, with no staging.
+extraction-result.json and independent-verification.json: successful gate outputs.
+
+Extraction command: /tmp/polyhedra-baseline-20261031/bin/python /Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/extract_chapters.py
+Independent verification command: /tmp/polyhedra-baseline-20261031/bin/python -O /Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/structure/verify_extraction.py
+
+No build, PDF marker, mathematical revision, numerical replay, install,
+stage, commit, remote access, upload, or publication was performed.
+Frozen extraction evidence remains the structural baseline for later authors.
+The live-preservation verifier is intentionally strict: it will reject live
+mathematical edits after authors start; frozen evidence remains inspectable.

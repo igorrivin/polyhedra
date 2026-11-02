@@ -1,0 +1,318 @@
+{
+  "status": "authored_integration_frozen_for_independent_review",
+  "baseline_commit": "151673b1817e66aae493eb7da1be5ddf49adfe0f",
+  "owned_changed_count": 18,
+  "complete_source_path_count": 40,
+  "source_sha256": {
+    "INTEGRATION_PLAN.md": "6883c25399ceb1cee5359c7256088d94612bcba37e039a4a2319f27c680480bd",
+    "README.md": "b38752855a2ff46c369b60d096135589fb4ae6421cf129f39f5792ed7a2adce5",
+    "book/README.md": "7f85f1340682a5c628bc407b41507585236312330c640289a217f647381c5204",
+    "book/chapters/10-quantum-introduction.tex": "609f375ff0c1ab926c7073e716642b6abbceefde487fe470b771394771abc66f",
+    "book/chapters/11-quantum-degeneration.tex": "f7ab9345686dc71b44cb8486224c6b5875979e6a9820e45b4ea92fe70ba1a4c8",
+    "book/chapters/17-unfolding-constant-series.tex": "7b3e784b9b6f7ace3f402afca0a402e5cc354fd118d751b07b6a8bad707a4e88",
+    "book/chapters/18-figure-eight-curves.tex": "db8fd09066b6b80bb1e231587ad0f740d6d37aad91cd20ae29e4bde95fc08cbc",
+    "book/chapters/19-pants-twists.tex": "07292527452fe2e728eba6cc917f548ebd7f9551ac2849d7e5a1b1b7158080dd",
+    "book/chapters/20-torus-twist-series.tex": "841fe98f4e7140ef6b6db82214f9e7d78d9c311888a2d2851e02e61eda6ab4e9",
+    "book/chapters/21-cuff-matching.tex": "2988997ebd215ad77c6153309712ed557c139b2af8c13c4ca86fb2a865e84f90",
+    "book/chapters/22-cusps-orthospectrum.tex": "bb3a234029d2b95b6c40eee4cbeee0199d4740a84326cd0595163dcbc6730557",
+    "book/chapters/32-open-questions.tex": "cc5df6f2a283bb6eb3b96f1bd01229a212880aa47056aefc3cae7652c831c7ca",
+    "book/chapters/appendix-b-conventions.tex": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+    "book/claims/section32-appendixb.json": "b8e2ae0cbab07d993b45c381caca1b308b30acad45685da447af5e8e4276de55",
+    "book/claims/sections10-11.json": "5d191ed33fdd5b1ce1a592e91ccc053674a9ea9c0f52a1c9bca33c473cff857c",
+    "book/claims/sections17-22.json": "40dc199e544b1eddf678b1a10210fdd46b4bee6cfb5bfdc168534e9c6076037b",
+    "book/computational-status.md": "de27d20352ccb2b37043708a3f3e49ca0742dd7955d108e7ee88255bac0eafe4",
+    "book/polyhedral_volumes_and_geodesic_identities.tex": "858de9e69e082371593cec09d55fff6da5c276971c99cd32053d5db7c2822280",
+    "docs/INTEGRATION_STATUS.md": "7b7e71768702faeac19bac4ac4abb8b0558163f34ab57297756d6fc76b769ba3",
+    "experiments/quantum_geodesics/README.md": "22921e4545c1b4bb0fa0ac4c1e031b77140f2e3f3a51cda93ef4f67c05493b6a",
+    "experiments/quantum_geodesics/__init__.py": "0c8007dbe9a1134b40566beed05c4469fb671771a78f072090c4f2b0504404a2",
+    "experiments/quantum_geodesics/common.py": "279d158fb17d557dfe4c17bcb01bcb932f6e5343594c1d664ffd0519775bb2cc",
+    "experiments/quantum_geodesics/contracts/geodesic-contract-acceptance.json": "be7debaf190ecd960d0caeca6b82e884407b6da04e72234e16a60762980bc82b",
+    "experiments/quantum_geodesics/contracts/geodesic-source-acceptance.json": "b734eb97f35f360022cb874b4561d9d3151f876d26db7eb6459e9f676576c0ef",
+    "experiments/quantum_geodesics/contracts/geodesic-targets.md": "2a62a149e7f5f88027329c24ba3a4720407debfed2fb78945350f23b6fce85a6",
+    "experiments/quantum_geodesics/contracts/quantum-mathematical-acceptance.json": "c631f5ed63513246adf7bbec958c3298ab577861ee02f1d359ff6ca25b7c4dd9",
+    "experiments/quantum_geodesics/contracts/quantum-source-freeze.json": "f043f6943bd124638802bfdb5d5e7505269143f54046eea93d298345191c0620",
+    "experiments/quantum_geodesics/contracts/quantum-targets.md": "1d1fae5b1539b8ee52d27a761ee1d2aaf2a8b050d213c023df506af498fe96b1",
+    "experiments/quantum_geodesics/figure_eight.py": "7fc20f4328316e31565341537bffae462a6083423ef30d6ce4fb02ceb6bc68e8",
+    "experiments/quantum_geodesics/fixture.json": "3c0f2ba7ffe7715d38e602697a0c7012b1963f653b483f5c7033858670530a1b",
+    "experiments/quantum_geodesics/geodesic_exact.py": "6e72ad9335987f7c355d1a4a744905008faf2088e6ba4b4efa4b676243c30ea7",
+    "experiments/quantum_geodesics/geometry.py": "18a92ccbbae9ebe84b841fe97fd0df91a66fac00f81d411dfd2ff636975878b0",
+    "experiments/quantum_geodesics/kernels.py": "4c4431bb43267144dac233948846897e1032a7ee938908e6b1701421799ded97",
+    "experiments/quantum_geodesics/klein.py": "f5ab68c308580b1c954d16104118b9cf807455bf7b6e51125e872ac0c505a4dd",
+    "experiments/quantum_geodesics/normalization.py": "50436249a581492e3cc263e389929bad9d22925e0c523922a0f4b06dd6686687",
+    "experiments/quantum_geodesics/run.py": "618f17d3aec05e2a6de637c851e6ccfabfde50088662f5198f165eebd8a5254a",
+    "experiments/quantum_geodesics/tests/test_geodesic.py": "61652d138e4be89ef15fd748fda0eea941807e97fcad770f4f0ee73709337c71",
+    "experiments/quantum_geodesics/tests/test_quantum.py": "a5d3a2a8242a579b3af345dcce40a55c4314c10becfa82f7215e5dda6335fcc0",
+    "experiments/quantum_geodesics/tests/test_validation.py": "9ad40c44d0607cf919335c9b0ec7dd4e0985a1dc3b2a2f3513f2cc8c35e2b8b8",
+    "experiments/quantum_geodesics/twist_integrals.py": "11e99ee89d12f8dd11697ed663b40da2eee15eb0150c77320fb0e7173b4b54ea"
+  },
+  "tex_input_sha256": {
+    "book/main.tex": "be3c45c0c4e3105d5e5275b2bbfefed5b8a79e088a456b83a8ea81dcce89a99d",
+    "book/polyhedral_volumes_and_geodesic_identities.tex": "858de9e69e082371593cec09d55fff6da5c276971c99cd32053d5db7c2822280",
+    "book/chapters/01-volume-normalization.tex": "b35a17e1dce5aa276d915e67eff0d15926da7c4180a32f9ffa9706476c2fe095",
+    "book/chapters/02-ideal-angle-cells.tex": "968ea966c452494a299be719165b5ac25c5ebd70e31e8bfd974705b763f9644d",
+    "book/chapters/03-ideal-tetrahedron.tex": "81c51ade3378fbfd4baff1cebeb2dcdd8b0fd43a032ac45fb3b30c4908060797",
+    "book/chapters/04-hyperideal-integrand.tex": "94da7f5288e0b6c606ff7d1a80516bc421e1de1a801e83873a0c9a25af7946b5",
+    "book/chapters/05-boundary-cone-continuation.tex": "feee80182603e334d8cda389435a43a8b9d37192b581befd1e761c03b93e51d5",
+    "book/chapters/06-torus-sphere.tex": "4a60370b881044ff89f45bbe51a171f04fb315b3be9317468a6cf212e8fd2947",
+    "book/chapters/07-euclidean-periods.tex": "3665a4e2ff074950a5e74ef9fba511af4dc5820e3589d823d9d96f7fac2de8d9",
+    "book/chapters/08-wp-flat-limit.tex": "1a175315aa975708a5c93151b9ae107b7dd36f79720dae7c7264adda062a6283",
+    "book/chapters/09-volume-hessians.tex": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00",
+    "book/chapters/10-quantum-introduction.tex": "609f375ff0c1ab926c7073e716642b6abbceefde487fe470b771394771abc66f",
+    "book/chapters/11-quantum-degeneration.tex": "f7ab9345686dc71b44cb8486224c6b5875979e6a9820e45b4ea92fe70ba1a4c8",
+    "book/chapters/12-quantum-boundary-measure.tex": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+    "book/chapters/13-four-point-fusion.tex": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+    "book/chapters/14-normalized-quantum-comparison.tex": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+    "book/chapters/15-quantum-airy.tex": "efee2c699923ab31e4d7d48eeac57c60bf2ea088ea4ff17e617b9ed97202d6dd",
+    "book/chapters/16-dehn-filling-response.tex": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+    "book/chapters/17-unfolding-constant-series.tex": "7b3e784b9b6f7ace3f402afca0a402e5cc354fd118d751b07b6a8bad707a4e88",
+    "book/chapters/18-figure-eight-curves.tex": "db8fd09066b6b80bb1e231587ad0f740d6d37aad91cd20ae29e4bde95fc08cbc",
+    "book/chapters/19-pants-twists.tex": "07292527452fe2e728eba6cc917f548ebd7f9551ac2849d7e5a1b1b7158080dd",
+    "book/chapters/20-torus-twist-series.tex": "841fe98f4e7140ef6b6db82214f9e7d78d9c311888a2d2851e02e61eda6ab4e9",
+    "book/chapters/21-cuff-matching.tex": "2988997ebd215ad77c6153309712ed557c139b2af8c13c4ca86fb2a865e84f90",
+    "book/chapters/22-cusps-orthospectrum.tex": "bb3a234029d2b95b6c40eee4cbeee0199d4740a84326cd0595163dcbc6730557",
+    "book/chapters/23-trace-coefficients.tex": "5520b28607f96a3e65ea32e7c4dab267f6556dbbe8975d29b4186b9b27e429c9",
+    "book/chapters/24-quantitative-counting.tex": "4099f91c4abddf5f2a13831e48d7d52ac4d90af137068b969ca612fc6b273c58",
+    "book/chapters/25-global-coefficient-filters.tex": "c876c43ce0d738ea4fa4780713753c3c9c48efdcf788cc9e305ac5011af732e2",
+    "book/chapters/26-counting-to-mixing.tex": "64562ebf631c59b84b9c991a632926107b3e24cb5b08b29c21e263bd50a9e901",
+    "book/chapters/27-weighted-mixing-converse.tex": "79fb4660fe87a5723eea0d410e55e954913b0386057a31542473d6486492dcc1",
+    "book/chapters/28-genus-two-model.tex": "18c05143e86fb9630868bb2824ddf44643c1ee1c84a40dc77a8c9d5354663fb4",
+    "book/chapters/29-controlled-observables.tex": "8c26fb3e18186d95ead2ae71eebd601966855d1bf0f9f7ed662f9996ab3b49f1",
+    "book/chapters/30-sharp-diagnostics.tex": "23d92f42eeacbe7e6c967e9b35e48228e96458356a5d659333713bf79200bd33",
+    "book/chapters/31-arithmetic-remainder.tex": "7b065510eee82c535484ddcab44da4722c7b738b64d0d0e2aaec598407d2ba69",
+    "book/chapters/32-open-questions.tex": "cc5df6f2a283bb6eb3b96f1bd01229a212880aa47056aefc3cae7652c831c7ca",
+    "book/chapters/appendix-a-fricke.tex": "61bde2f802c7c5cb931d6bc5c4528e82459392e803b2a7aaf1a7d5afc4fb7e5f",
+    "book/chapters/appendix-b-conventions.tex": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74"
+  },
+  "accepted_input_evidence": {
+    "quantum-review/final-acceptance.json": {
+      "sha256": "c631f5ed63513246adf7bbec958c3298ab577861ee02f1d359ff6ca25b7c4dd9",
+      "bytes": 3479
+    },
+    "geodesic-review/revision-v2/final-acceptance.json": {
+      "sha256": "b734eb97f35f360022cb874b4561d9d3151f876d26db7eb6459e9f676576c0ef",
+      "bytes": 2867
+    },
+    "conventions-review/revision-v3/final-acceptance.json": {
+      "sha256": "2a4030977ea4a64d584e98cce5171765d9e51d0abbf003b0622054d9723fd1b4",
+      "bytes": 3109
+    },
+    "computation-review/revision-v2/final-acceptance.json": {
+      "sha256": "70070fe32c42961d68b035ccb7fae5b012c50ac5814ca42bd05689bfc64b6592",
+      "bytes": 25941
+    },
+    "computation/full-v2/author-result-70-110.json": {
+      "sha256": "5f73fce03e43103dc457570bcd90f4722599b5ac0d67a9b9b88d9e00679f0429",
+      "bytes": 4694781
+    }
+  },
+  "evidence": {
+    "P01-layout-delta.json": {
+      "sha256": "bd292c0bc92a9a2fcdb7ae3ce5db95ec60a80609eedf50b6a7bb7b978b634b40",
+      "bytes": 927
+    },
+    "after/INTEGRATION_PLAN.md": {
+      "sha256": "6883c25399ceb1cee5359c7256088d94612bcba37e039a4a2319f27c680480bd",
+      "bytes": 49025
+    },
+    "after/README.md": {
+      "sha256": "b38752855a2ff46c369b60d096135589fb4ae6421cf129f39f5792ed7a2adce5",
+      "bytes": 9576
+    },
+    "after/book/README.md": {
+      "sha256": "7f85f1340682a5c628bc407b41507585236312330c640289a217f647381c5204",
+      "bytes": 10147
+    },
+    "after/book/chapters/10-quantum-introduction.tex": {
+      "sha256": "609f375ff0c1ab926c7073e716642b6abbceefde487fe470b771394771abc66f",
+      "bytes": 44238
+    },
+    "after/book/chapters/11-quantum-degeneration.tex": {
+      "sha256": "f7ab9345686dc71b44cb8486224c6b5875979e6a9820e45b4ea92fe70ba1a4c8",
+      "bytes": 14034
+    },
+    "after/book/chapters/17-unfolding-constant-series.tex": {
+      "sha256": "7b3e784b9b6f7ace3f402afca0a402e5cc354fd118d751b07b6a8bad707a4e88",
+      "bytes": 8329
+    },
+    "after/book/chapters/18-figure-eight-curves.tex": {
+      "sha256": "db8fd09066b6b80bb1e231587ad0f740d6d37aad91cd20ae29e4bde95fc08cbc",
+      "bytes": 11343
+    },
+    "after/book/chapters/19-pants-twists.tex": {
+      "sha256": "07292527452fe2e728eba6cc917f548ebd7f9551ac2849d7e5a1b1b7158080dd",
+      "bytes": 10283
+    },
+    "after/book/chapters/20-torus-twist-series.tex": {
+      "sha256": "841fe98f4e7140ef6b6db82214f9e7d78d9c311888a2d2851e02e61eda6ab4e9",
+      "bytes": 7181
+    },
+    "after/book/chapters/21-cuff-matching.tex": {
+      "sha256": "2988997ebd215ad77c6153309712ed557c139b2af8c13c4ca86fb2a865e84f90",
+      "bytes": 3393
+    },
+    "after/book/chapters/22-cusps-orthospectrum.tex": {
+      "sha256": "bb3a234029d2b95b6c40eee4cbeee0199d4740a84326cd0595163dcbc6730557",
+      "bytes": 9783
+    },
+    "after/book/chapters/32-open-questions.tex": {
+      "sha256": "cc5df6f2a283bb6eb3b96f1bd01229a212880aa47056aefc3cae7652c831c7ca",
+      "bytes": 15281
+    },
+    "after/book/chapters/appendix-b-conventions.tex": {
+      "sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363
+    },
+    "after/book/claims/section32-appendixb.json": {
+      "sha256": "b8e2ae0cbab07d993b45c381caca1b308b30acad45685da447af5e8e4276de55",
+      "bytes": 150374
+    },
+    "after/book/claims/sections10-11.json": {
+      "sha256": "5d191ed33fdd5b1ce1a592e91ccc053674a9ea9c0f52a1c9bca33c473cff857c",
+      "bytes": 96300
+    },
+    "after/book/claims/sections17-22.json": {
+      "sha256": "40dc199e544b1eddf678b1a10210fdd46b4bee6cfb5bfdc168534e9c6076037b",
+      "bytes": 149832
+    },
+    "after/book/computational-status.md": {
+      "sha256": "de27d20352ccb2b37043708a3f3e49ca0742dd7955d108e7ee88255bac0eafe4",
+      "bytes": 36186
+    },
+    "after/book/polyhedral_volumes_and_geodesic_identities.tex": {
+      "sha256": "858de9e69e082371593cec09d55fff6da5c276971c99cd32053d5db7c2822280",
+      "bytes": 56007
+    },
+    "after/docs/INTEGRATION_STATUS.md": {
+      "sha256": "7b7e71768702faeac19bac4ac4abb8b0558163f34ab57297756d6fc76b769ba3",
+      "bytes": 7479
+    },
+    "author-validation.json": {
+      "sha256": "97c3625f79be55c09e10ab49b2948534d90df7cd190d6d85450f75ca002cb3a9",
+      "bytes": 17143
+    },
+    "before/INTEGRATION_PLAN.md": {
+      "sha256": "9a568e4e37af32e1d23f42eac38c84b25e6b0e1da89bef7c819457da2336fead",
+      "bytes": 47691
+    },
+    "before/README.md": {
+      "sha256": "2e9610b545ab83d0340c19173128cc99a2599fb72837a04ece9d93cb008680fa",
+      "bytes": 9530
+    },
+    "before/book/README.md": {
+      "sha256": "d0f611c2631f82100cec3f941294374af275798708f3073adc5b3642902a840d",
+      "bytes": 9028
+    },
+    "before/book/chapters/10-quantum-introduction.tex": {
+      "sha256": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+      "bytes": 43507
+    },
+    "before/book/chapters/11-quantum-degeneration.tex": {
+      "sha256": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9",
+      "bytes": 13435
+    },
+    "before/book/chapters/17-unfolding-constant-series.tex": {
+      "sha256": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+      "bytes": 7804
+    },
+    "before/book/chapters/18-figure-eight-curves.tex": {
+      "sha256": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+      "bytes": 10705
+    },
+    "before/book/chapters/19-pants-twists.tex": {
+      "sha256": "f1fd410500ec3c414b4266d706dddd220b0902a546090807e2288384101c2c35",
+      "bytes": 9708
+    },
+    "before/book/chapters/20-torus-twist-series.tex": {
+      "sha256": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+      "bytes": 6616
+    },
+    "before/book/chapters/21-cuff-matching.tex": {
+      "sha256": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+      "bytes": 2960
+    },
+    "before/book/chapters/22-cusps-orthospectrum.tex": {
+      "sha256": "b8b3f0568c4667b7ed6116935291c5c71dc3be74ded57c916ac638f6ecd80f66",
+      "bytes": 9220
+    },
+    "before/book/chapters/32-open-questions.tex": {
+      "sha256": "50fc264bbfc55fc19cb79dc09aa7a828b2cba479f6b3afb1c62459e0d31c9b5d",
+      "bytes": 15020
+    },
+    "before/book/chapters/appendix-b-conventions.tex": {
+      "sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363
+    },
+    "before/book/claims/section32-appendixb.json": {
+      "sha256": "488298ff34c229222010d03452f18e4f3855b9c7026589c74a28fbece04f3a9e",
+      "bytes": 125093
+    },
+    "before/book/claims/sections10-11.json": {
+      "sha256": "34dbb6255dc468cb796bb3a129eeaf37ac0c5f4dc358abfd73030e64331b3539",
+      "bytes": 59530
+    },
+    "before/book/claims/sections17-22.json": {
+      "sha256": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137",
+      "bytes": 113087
+    },
+    "before/book/computational-status.md": {
+      "sha256": "d763007813449b0c677615cb0b3d9f9d7bc77ee62bba4622217c06d4890a9838",
+      "bytes": 30061
+    },
+    "before/book/polyhedral_volumes_and_geodesic_identities.tex": {
+      "sha256": "23b7f8d84f0236ce7939efb5f0858fd60ba58f8fc74207636779f3227b3d30dd",
+      "bytes": 56003
+    },
+    "before/docs/INTEGRATION_STATUS.md": {
+      "sha256": "e479af58af6af49dbc1106db779262fd7b03b12bc2a016491e5d2243924d8b76",
+      "bytes": 6177
+    },
+    "handoff.md": {
+      "sha256": "07c58e6090eb6cded2285f0941fcfa35f4288c9590f986ce6724d85b9846ea05",
+      "bytes": 5350
+    },
+    "integrate.py": {
+      "sha256": "269a859f0bf270bcbc7730fe13a98890a93c524eed8ae60c0dd3cc185233c0bb",
+      "bytes": 32158
+    },
+    "integration.patch": {
+      "sha256": "b49632c15578e3bb977b146df63e7c3b9971a272b2cf9b3e2237d1770beeb386",
+      "bytes": 308852
+    },
+    "ledger-json-deltas.json": {
+      "sha256": "cc5c960acb5ce5717660f277f6fe9eee1dbcdada9e0eb410311b43d56b0322e8",
+      "bytes": 205833
+    },
+    "local-reference-check.json": {
+      "sha256": "de0e6a37591bec745ee46bae93e2531d61d6a22db9c2c4bc1853886746b5ab42",
+      "bytes": 45826
+    },
+    "pending-artifact-links.json": {
+      "sha256": "bab363eaa1e1f94950519baaa8cdebadf6e45a5c08c4983db44a07f6efe9a73f",
+      "bytes": 4215
+    },
+    "preintegration-acceptance-pins.json": {
+      "sha256": "a09d62f8fc1887ed17760c07c7518d5f952810c4dc777063539f31557150a1c5",
+      "bytes": 987
+    },
+    "runtime-immutability.json": {
+      "sha256": "59d19298e99f67ee522611db2c6061cd31fe12e719436b394193bc4a3ac40a04",
+      "bytes": 3191
+    },
+    "source-inventory.json": {
+      "sha256": "1660a37b0d1f4989d80bce01c24ef0c0632ec3e1feac72b16adb4df0a4753139",
+      "bytes": 8924
+    },
+    "source-order.json": {
+      "sha256": "00c22c3f5fd3738ad9b9441ca4ac3f4ae1b6a0e56129895b57c976c68787d15c",
+      "bytes": 21395
+    },
+    "verify_links_and_deltas.py": {
+      "sha256": "986e23dd3f520a16ff4d02daaa0d554ee743c0597d441d68bdbbf1e04303dc41",
+      "bytes": 9519
+    }
+  },
+  "self_hash_excluded": true,
+  "scientific_runtime_changed": false,
+  "independent_integration_approval_claimed": false,
+  "PDF_build_or_clean_replay_or_commit_or_upload_claimed": false
+}

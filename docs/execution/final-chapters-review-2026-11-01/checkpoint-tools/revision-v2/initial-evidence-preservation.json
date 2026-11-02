@@ -1,0 +1,25 @@
+{
+  "recorded_at_utc": "2026-11-02T03:54:24.624326+00:00",
+  "passed": true,
+  "initial_evidence": [
+    {
+      "directory": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work",
+      "manifest": "freeze-manifest.json",
+      "identity": {
+        "sha256": "fc438829b4a38da85bda247b38115ee012cce4344027adeb8efa840560d5a790",
+        "bytes": 3957
+      },
+      "verified_payload_files": 15
+    },
+    {
+      "directory": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review",
+      "manifest": "initial-review-manifest.json",
+      "identity": {
+        "sha256": "d3c2ff7a53f9495588432c0f29d8194521b072058f0cb5c9c807d9581e3d2d59",
+        "bytes": 5036
+      },
+      "verified_payload_files": 32
+    }
+  ],
+  "scope": "Read-only hash/size verification of initial author and independent-review evidence; no claim that the pending repaired tools are approved."
+}

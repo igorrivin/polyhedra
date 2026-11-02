@@ -1,0 +1,43 @@
+--- before/book/chapters/32-open-questions.tex
++++ after/book/chapters/32-open-questions.tex
+@@ -20,3 +20,6 @@
+-hyperideal coordinates? The tree decomposition~\eqref{eq:treevolume}
+-provides a separate volume calculation; it does not identify its
+-coordinates with the hyperideal angle cells.
++hyperideal coordinates? The positive-boundary extension described in
++Section~\ref{sec:hyperideal} uses a selected pair $L_1<L_2$ to give a
++full-measure decomposition into tree and double-tree cells
++\cite[Theorem~3]{Zonneveld}. Equal-length volume values follow by
++continuity. These spine/tree cells are not identified with the
++hyperideal angle cells.
+--- before/book/claims/section32-appendixb.json
++++ after/book/claims/section32-appendixb.json
+@@ -24 +24 @@
+-    "book/chapters/32-open-questions.tex": "c831bf85ab0c6cb7f5ed46509212ce5dc1549c05c5723be3c035c928a409fc21",
++    "book/chapters/32-open-questions.tex": "50fc264bbfc55fc19cb79dc09aa7a828b2cba479f6b3afb1c62459e0d31c9b5d",
+@@ -819 +819 @@
+-      "established_inputs": "The fixed-boundary local density and the four-boundary WP volume are known; the tree coordinates give a separate volume construction.",
++      "established_inputs": "The fixed-boundary local density and the four-boundary WP volume are known. The positive-boundary Zonneveld spine/tree extension in Section 4 gives a separate full-measure cell calculation for a selected unequal pair; equal-length volume values follow by continuity.",
+@@ -821 +821 @@
+-      "hypotheses": "The fixed parameters, geometric domain, quotient, and analytic assumptions written in this question and its referenced statements are retained.",
++      "hypotheses": "Four labeled strictly positive geodesic boundary lengths are fixed. The positive-boundary spine/tree comparison selects a pair L1<L2 on the stated full-measure subset. Equal-length volume values use continuity; no cell bijection at equality or identification with hyperideal angle cells is asserted.",
+@@ -825 +825 @@
+-        "eq:treevolume"
++        "sec:hyperideal"
+@@ -844 +844,15 @@
+-      "publication_gate": false
++      "publication_gate": false,
++      "source_keys": [
++        "Zonneveld"
++      ],
++      "source_statement_locator": {
++        "chapter": "book/chapters/04-hyperideal-integrand.tex",
++        "chapter_label": "sec:hyperideal",
++        "paragraph": "Zonneveld positive-boundary sequel, after the origin-cusp BMZ formula eq:treevolume",
++        "primary_statement": "Zonneveld, Theorem 3",
++        "inherited_source_record": "book/claims/sections1-6.json#/sources/Zonneveld",
++        "scope": "Selected pair L1<L2 and full-measure tree/double-tree WP decomposition; equal-length volume values by continuity."
++      },
++      "dependency_usage": {
++        "book/claims/sections1-6.json#s4.tree_density": "Use the Zonneveld Theorem 3 positive-boundary sequel explicitly named in this bundled claim's evidence and review_limit. Its BMZ origin-cusp hypotheses and eq:treevolume are not the all-positive comparison."
++      }

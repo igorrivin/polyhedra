@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "required_finding": "CV01",
+  "source_change_confined_to_Q1": true,
+  "ledger_change_confined_to_s32_q01_and_source_hash": true,
+  "appendix_b_byte_identical": true,
+  "other_65_claims_byte_equivalent_as_JSON": true,
+  "companion_and_review_statuses_unchanged": true,
+  "prior_author_and_independent_review_evidence_preserved": 32,
+  "claims": 66,
+  "question_titles_and_order_preserved": 15,
+  "convention_rows": 43,
+  "original_rows_covered": 28,
+  "source_graph_entry": "book/main.tex",
+  "source_graph_files": 36,
+  "original_labels_preserved_in_order": 607,
+  "declared_geodesic_labels": [
+    "eq:figurekerneltail",
+    "eq:figurefiniteidentity",
+    "eq:localdistancehessian",
+    "eq:torustwistderivatives",
+    "eq:torusintegraltail",
+    "eq:Hpartialsumtail"
+  ],
+  "unique_labels": 613,
+  "bibliography_keys": 129,
+  "new_labels_by_this_author": [],
+  "new_evidence_whitespace": [
+    {
+      "path": "after/book/chapters/32-open-questions.tex",
+      "trailing_whitespace_lines": [],
+      "single_final_newline": true
+    },
+    {
+      "path": "after/book/chapters/appendix-b-conventions.tex",
+      "trailing_whitespace_lines": [],
+      "single_final_newline": true
+    },
+    {
+      "path": "after/book/claims/section32-appendixb.json",
+      "trailing_whitespace_lines": [],
+      "single_final_newline": true
+    },
+    {
+      "path": "author-static-checks.json",
+      "trailing_whitespace_lines": [],
+      "single_final_newline": true
+    },
+    {
+      "path": "before/book/chapters/32-open-questions.tex",
+      "trailing_whitespace_lines": [],
+      "single_final_newline": true
+    },
+    {
+      "path": "before/book/chapters/appendix-b-conventions.tex",
+      "trailing_whitespace_lines": [],
+      "single_final_newline": true
+    },
+    {
+      "path": "before/book/claims/section32-appendixb.json",
+      "trailing_whitespace_lines": [],
+      "single_final_newline": true
+    },
+    {
+      "path": "check_author.py",
+      "trailing_whitespace_lines": [],
+      "single_final_newline": true
+    },
+    {
+      "path": "delta.json",
+      "trailing_whitespace_lines": [],
+      "single_final_newline": true
+    },
+    {
+      "path": "handoff.md",
+      "trailing_whitespace_lines": [],
+      "single_final_newline": true
+    },
+    {
+      "path": "minimaldiff.patch",
+      "trailing_whitespace_lines": [],
+      "single_final_newline": true
+    },
+    {
+      "path": "preserved-evidence-before.json",
+      "trailing_whitespace_lines": [],
+      "single_final_newline": true
+    },
+    {
+      "path": "repair_cv01.py",
+      "trailing_whitespace_lines": [],
+      "single_final_newline": true
+    }
+  ],
+  "current_dependency_drift": [],
+  "scope": "Static/source-scope repair verification only; independent CV01 acceptance pending."
+}

@@ -1,0 +1,2118 @@
+{
+  "scope": "Independent identity, dependency and structural checks only; no numerical replay, proof certification, build, commit or upload.",
+  "status": "PASS",
+  "issues": [],
+  "requested_subject_hashes": {
+    "book/chapters/32-open-questions.tex": "c831bf85ab0c6cb7f5ed46509212ce5dc1549c05c5723be3c035c928a409fc21",
+    "book/chapters/appendix-b-conventions.tex": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+    "book/claims/section32-appendixb.json": "0bf0a62df0e81ae502d0408935cb1fee80b0db9a85be8e0d58c73367773dfd5a"
+  },
+  "author_freeze_sha256": "ad43dfcb8eb18fa04a3f60ec88186066f873e132c0e9884459f1e91f18a84025",
+  "pins_checked": 98,
+  "pin_results": [
+    {
+      "where": "review_subject",
+      "path": "consolidated/book/chapters/32-open-questions.tex",
+      "sha256": "c831bf85ab0c6cb7f5ed46509212ce5dc1549c05c5723be3c035c928a409fc21",
+      "bytes": 14848,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "review_subject",
+      "path": "consolidated/book/chapters/appendix-b-conventions.tex",
+      "sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "review_subject",
+      "path": "consolidated/book/claims/section32-appendixb.json",
+      "sha256": "0bf0a62df0e81ae502d0408935cb1fee80b0db9a85be8e0d58c73367773dfd5a",
+      "bytes": 123917,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "initial/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/author-audit.md",
+      "sha256": "96ae7b6df2b326a78176037ed8f8449cfed5b8598545438f3e8b1693373ba55e",
+      "bytes": 11433,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "initial/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/author-static-checks.json",
+      "sha256": "8ebc091eb77d76c79d9d78364ee8e4dbde03ca73eda6ed964dcc437e4881ece0",
+      "bytes": 5355,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "initial/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/reviewed-dependency-binding.json",
+      "sha256": "36a3e733dbea673c78ad56dfd3a82a2c4464c4b3550d6d25a10e57d790a15f44",
+      "bytes": 12389,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "initial/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/convention-row-inventory.json",
+      "sha256": "6b625f5056a7b4b63ee20766e4d1d742b09b8ad2240655a53ae7c7e6a56bf512",
+      "bytes": 16894,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "initial/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/source-changes.patch",
+      "sha256": "3af6f6a98d90688bfad50000d985b5cff276bac5691516e02713c37e5802e1d3",
+      "bytes": 27862,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "initial/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/write_conventions.py",
+      "sha256": "3863cf5330675b6a37fa1793115ee1ef6984783fad903db73a99c41461cf4d6b",
+      "bytes": 15343,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "initial/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/make_ledger.py",
+      "sha256": "ce80cb2382137ced6783b26d104df356973b12259355cc1618e150493235f9b7",
+      "bytes": 29102,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "initial/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/check_author.py",
+      "sha256": "9e00429df9577af18b47ce71a58e153ec99921a58b3df0130afa7c2e58282a44",
+      "bytes": 7106,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "revision-v2/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/after/book/chapters/32-open-questions.tex",
+      "sha256": "c831bf85ab0c6cb7f5ed46509212ce5dc1549c05c5723be3c035c928a409fc21",
+      "bytes": 14848,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "revision-v2/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/after/book/chapters/appendix-b-conventions.tex",
+      "sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "revision-v2/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/after/book/claims/section32-appendixb.json",
+      "sha256": "0bf0a62df0e81ae502d0408935cb1fee80b0db9a85be8e0d58c73367773dfd5a",
+      "bytes": 123917,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "revision-v2/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/author-static-checks.json",
+      "sha256": "dddd37bb0034078ccb86868c6bec5d81ceae492c775b6646944213cf20101089",
+      "bytes": 5355,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "revision-v2/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/before/book/chapters/32-open-questions.tex",
+      "sha256": "c831bf85ab0c6cb7f5ed46509212ce5dc1549c05c5723be3c035c928a409fc21",
+      "bytes": 14848,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "revision-v2/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/before/book/chapters/appendix-b-conventions.tex",
+      "sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "revision-v2/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/before/book/claims/section32-appendixb.json",
+      "sha256": "c93990683fea3caf3b34bb911e275551d6e3a641e63e9e8b2589424a8fa23e11",
+      "bytes": 114217,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "revision-v2/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/check_author.py",
+      "sha256": "22ea4910fa14878a6457afff8d91b9d62b4a037f497913cbbbc9ae4131576210",
+      "bytes": 7125,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "revision-v2/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/dependency-comparison.json",
+      "sha256": "9f603592eabd3e2abed664c004383af586e470ceebb9cc05e6310826457bd3cc",
+      "bytes": 9329,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "revision-v2/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/ledger-only.patch",
+      "sha256": "a646162a9746c9cc823e527e425c550daa43fc86aa6829f8c80c70adfcce685a",
+      "bytes": 24018,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "revision-v2/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/metadata-delta.json",
+      "sha256": "2e453c3c123e9797d73644b06f69fe593247dfc8c4613d223e870bab9ea2bbd5",
+      "bytes": 10049,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "revision-v2/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/reconcile.py",
+      "sha256": "3d5faa11c4f8c08b3cdd7fb569f96af1b37a11667fd8eee3dcd9007070757105",
+      "bytes": 13144,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "revision-v2/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/reconciliation-report.md",
+      "sha256": "d4afda7c64b88a6d71f073ea49dd30ea84994fa697a6ab2f8579319f528d8583",
+      "bytes": 4848,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "revision-v2/evidence",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/revision-validation.json",
+      "sha256": "4b703a7a1f192707e25d4f53aa25bf4852f8b74395f9b957cd0f854b97c79256",
+      "bytes": 2588,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "original_source",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/before/book/chapters/32-open-questions.tex",
+      "sha256": "e1a7069f19a75fc09f49c1af0b919f4987517d30953e686d9179e0665ca2b7b7",
+      "bytes": 10374,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "original_source",
+      "path": "execution/final-chapters-review-2026-11-01/conventions-author/before/book/chapters/appendix-b-conventions.tex",
+      "sha256": "c0b3b5d73785daadb4654bf34a05129b5d1149811b965fe1e7fc69b5f398f155",
+      "bytes": 3582,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/structural_baseline/review_manifest",
+      "path": "consolidated/../execution/final-chapters-review-2026-11-01/structure-review/review-manifest.json",
+      "sha256": "50a17cfb46c8b867c5dd3c45129a6157f6bfaab248f889cd63dab177fe43e8fd",
+      "bytes": 2224,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/0/review_manifest",
+      "path": "consolidated/docs/execution/normalization-review-2026-11-01/integration-review/review-manifest.json",
+      "sha256": "a4a5d6e440d25188408c0ec2d70e8ce1e2c24ba69015c228936d2f408dcc9026",
+      "bytes": 12163,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/0/matched_files/0",
+      "path": "consolidated/book/chapters/01-volume-normalization.tex",
+      "sha256": "b35a17e1dce5aa276d915e67eff0d15926da7c4180a32f9ffa9706476c2fe095",
+      "bytes": 3889,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/0/matched_files/1",
+      "path": "consolidated/book/chapters/02-ideal-angle-cells.tex",
+      "sha256": "968ea966c452494a299be719165b5ac25c5ebd70e31e8bfd974705b763f9644d",
+      "bytes": 5697,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/0/matched_files/2",
+      "path": "consolidated/book/chapters/03-ideal-tetrahedron.tex",
+      "sha256": "81c51ade3378fbfd4baff1cebeb2dcdd8b0fd43a032ac45fb3b30c4908060797",
+      "bytes": 5926,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/0/matched_files/3",
+      "path": "consolidated/book/chapters/04-hyperideal-integrand.tex",
+      "sha256": "94da7f5288e0b6c606ff7d1a80516bc421e1de1a801e83873a0c9a25af7946b5",
+      "bytes": 11640,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/0/matched_files/4",
+      "path": "consolidated/book/chapters/05-boundary-cone-continuation.tex",
+      "sha256": "feee80182603e334d8cda389435a43a8b9d37192b581befd1e761c03b93e51d5",
+      "bytes": 6788,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/0/matched_files/5",
+      "path": "consolidated/book/chapters/06-torus-sphere.tex",
+      "sha256": "4a60370b881044ff89f45bbe51a171f04fb315b3be9317468a6cf212e8fd2947",
+      "bytes": 3959,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/0/matched_files/6",
+      "path": "consolidated/book/chapters/07-euclidean-periods.tex",
+      "sha256": "3665a4e2ff074950a5e74ef9fba511af4dc5820e3589d823d9d96f7fac2de8d9",
+      "bytes": 11798,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/0/matched_files/7",
+      "path": "consolidated/book/chapters/08-wp-flat-limit.tex",
+      "sha256": "1a175315aa975708a5c93151b9ae107b7dd36f79720dae7c7264adda062a6283",
+      "bytes": 16284,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/0/matched_files/8",
+      "path": "consolidated/book/chapters/appendix-a-fricke.tex",
+      "sha256": "61bde2f802c7c5cb931d6bc5c4528e82459392e803b2a7aaf1a7d5afc4fb7e5f",
+      "bytes": 2191,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/0/matched_files/9",
+      "path": "consolidated/book/claims/sections1-6.json",
+      "sha256": "46d3939d0cacda4f5780f18ed6b9e2ba21758d2fc3d0deecac99130ab14b6af2",
+      "bytes": 29510,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/0/matched_files/10",
+      "path": "consolidated/book/claims/sections7-8.json",
+      "sha256": "7438f1b5c8fde23fa81b0b1c3250d2965debf79678026d649bd7ff7cd368439d",
+      "bytes": 19707,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/1/review_manifest",
+      "path": "consolidated/docs/execution/section9-barrier-2026-10-31/publication-review-manifest.json",
+      "sha256": "00559d8ae7edbc8eda88412e28208614f0dbec42b95cc4b0a119c3de9bac3b0e",
+      "bytes": 4749,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/1/matched_files/0",
+      "path": "consolidated/book/chapters/09-volume-hessians.tex",
+      "sha256": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00",
+      "bytes": 34587,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/1/matched_files/1",
+      "path": "consolidated/book/claims/section9.json",
+      "sha256": "255ed6ebb0c3eb1c7714d238f2829f6115487817408545e40461ef87b47b5c73",
+      "bytes": 37274,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/2/review_manifest",
+      "path": "consolidated/docs/execution/quantum-surgery-review-2026-11-01/integration-review/approved-source-manifest.json",
+      "sha256": "7ef377bd9f6f219cedb0a54db88eadce5e0dffc7807f5f08201d423c73ca2638",
+      "bytes": 7612,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/2/matched_files/0",
+      "path": "consolidated/book/chapters/12-quantum-boundary-measure.tex",
+      "sha256": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+      "bytes": 18683,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/2/matched_files/1",
+      "path": "consolidated/book/chapters/13-four-point-fusion.tex",
+      "sha256": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+      "bytes": 24410,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/2/matched_files/2",
+      "path": "consolidated/book/chapters/14-normalized-quantum-comparison.tex",
+      "sha256": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+      "bytes": 21763,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/2/matched_files/3",
+      "path": "consolidated/book/chapters/16-dehn-filling-response.tex",
+      "sha256": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+      "bytes": 42117,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/2/matched_files/4",
+      "path": "consolidated/book/claims/section16.json",
+      "sha256": "dc24ca2ca1514446b5bd862f7632942a36f5e5d2bf07065a40b959bed3ce6531",
+      "bytes": 29199,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/2/matched_files/5",
+      "path": "consolidated/book/claims/sections12-14.json",
+      "sha256": "fecb43e3327f9f659afbd841f8b9ee10a2c75fa0b3a7694655beabc7675d53c7",
+      "bytes": 30454,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/3/review_manifest",
+      "path": "consolidated/docs/execution/section15-analytic-review-2026-11-01/integration-review/approved-source-manifest.json",
+      "sha256": "4fcaa7f3893762884bfe78350db4eb690a5850eb74733a03feb37ce4c7b23041",
+      "bytes": 7902,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/3/matched_files/0",
+      "path": "consolidated/book/chapters/15-quantum-airy.tex",
+      "sha256": "efee2c699923ab31e4d7d48eeac57c60bf2ea088ea4ff17e617b9ed97202d6dd",
+      "bytes": 24972,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/3/matched_files/1",
+      "path": "consolidated/book/claims/section15.json",
+      "sha256": "2a53176d95601bd09448326a34b203f1e05bd46dc6eee182226af36b24a2fb96",
+      "bytes": 25504,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/4/review_manifest",
+      "path": "consolidated/docs/execution/counting-mixing-review-2026-11-01/integration-review/revision-v2/approved-source-manifest.json",
+      "sha256": "0fe9b4a314efdd5d1d8c33f448b49d36d998200bcad2d09a0dd12ede5cbf7a2d",
+      "bytes": 12125,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/4/matched_files/0",
+      "path": "consolidated/book/chapters/23-trace-coefficients.tex",
+      "sha256": "5520b28607f96a3e65ea32e7c4dab267f6556dbbe8975d29b4186b9b27e429c9",
+      "bytes": 35208,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/4/matched_files/1",
+      "path": "consolidated/book/chapters/24-quantitative-counting.tex",
+      "sha256": "4099f91c4abddf5f2a13831e48d7d52ac4d90af137068b969ca612fc6b273c58",
+      "bytes": 27440,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/4/matched_files/2",
+      "path": "consolidated/book/chapters/25-global-coefficient-filters.tex",
+      "sha256": "c876c43ce0d738ea4fa4780713753c3c9c48efdcf788cc9e305ac5011af732e2",
+      "bytes": 14508,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/4/matched_files/3",
+      "path": "consolidated/book/chapters/26-counting-to-mixing.tex",
+      "sha256": "64562ebf631c59b84b9c991a632926107b3e24cb5b08b29c21e263bd50a9e901",
+      "bytes": 17201,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/4/matched_files/4",
+      "path": "consolidated/book/chapters/27-weighted-mixing-converse.tex",
+      "sha256": "79fb4660fe87a5723eea0d410e55e954913b0386057a31542473d6486492dcc1",
+      "bytes": 35331,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/4/matched_files/5",
+      "path": "consolidated/book/chapters/28-genus-two-model.tex",
+      "sha256": "18c05143e86fb9630868bb2824ddf44643c1ee1c84a40dc77a8c9d5354663fb4",
+      "bytes": 34521,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/4/matched_files/6",
+      "path": "consolidated/book/chapters/29-controlled-observables.tex",
+      "sha256": "8c26fb3e18186d95ead2ae71eebd601966855d1bf0f9f7ed662f9996ab3b49f1",
+      "bytes": 32478,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/4/matched_files/7",
+      "path": "consolidated/book/chapters/30-sharp-diagnostics.tex",
+      "sha256": "23d92f42eeacbe7e6c967e9b35e48228e96458356a5d659333713bf79200bd33",
+      "bytes": 32832,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/4/matched_files/8",
+      "path": "consolidated/book/chapters/31-arithmetic-remainder.tex",
+      "sha256": "7b065510eee82c535484ddcab44da4722c7b738b64d0d0e2aaec598407d2ba69",
+      "bytes": 18304,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/4/matched_files/9",
+      "path": "consolidated/book/claims/section30.json",
+      "sha256": "5b19adfa2a45ab5fc22d760564f5576c5134f02d1827f8c94e3fa2e4c2bb852a",
+      "bytes": 30573,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/4/matched_files/10",
+      "path": "consolidated/book/claims/section31.json",
+      "sha256": "6cd4a0d185cda2e8dc2852ce6ddf81d0f0fc75a4a19d3866c1f84e3ad835f6b9",
+      "bytes": 26963,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/4/matched_files/11",
+      "path": "consolidated/book/claims/sections23-25.json",
+      "sha256": "61af82e0e0cf8b7e658803255f5bcd38849cde0f27539ef901b7f027816667db",
+      "bytes": 95857,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/prior_review_bindings/4/matched_files/12",
+      "path": "consolidated/book/claims/sections26-29.json",
+      "sha256": "d139ca58e77c234e7c9e5d1bce69caf85b0038c1d4ef586a0b9ea0972371629c",
+      "bytes": 93703,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/inherited_source_statement_evidence/0",
+      "path": "consolidated/docs/execution/normalization-review-2026-11-01/math-review-a/review.md",
+      "sha256": "ad9b41090ba735c8f08c3be15459c74d2d676b1dcd4f21aa9a6346c87b31d45b",
+      "bytes": 7810,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/inherited_source_statement_evidence/1",
+      "path": "consolidated/docs/execution/normalization-review-2026-11-01/math-review-a/source-pins.json",
+      "sha256": "9d6b091ce546b2f23ea464f146b8573ddd735050618163041838d5f9543de2ec",
+      "bytes": 3469,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/inherited_source_statement_evidence/2",
+      "path": "consolidated/docs/execution/normalization-review-2026-11-01/math-review-b/review.md",
+      "sha256": "cb6020bc0fe4197c64fd1cb37b66e5dfe62a973545bf01481d17104451c06b12",
+      "bytes": 4616,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/inherited_source_statement_evidence/3",
+      "path": "consolidated/docs/execution/normalization-review-2026-11-01/math-review-b/final-approval.json",
+      "sha256": "aa92618dcd6946b9aa549b1a48d4ddb575c603a942a06b339bc8539838784aac",
+      "bytes": 1362,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/inherited_source_statement_evidence/4",
+      "path": "consolidated/docs/execution/section9-barrier-2026-10-31/barrier-publication-review.md",
+      "sha256": "7162f2b137e17ac3364bb7a8c5b3bc6109794e1d88befb02a39555e72464683b",
+      "bytes": 9385,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/inherited_source_statement_evidence/5",
+      "path": "consolidated/docs/execution/section15-analytic-review-2026-11-01/math-review/analytic-review.md",
+      "sha256": "9e68bb8bddf936f6ec2e2a8179266eaf4e587aca67e2980af7efcfcca55e1457",
+      "bytes": 12646,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/inherited_source_statement_evidence/6",
+      "path": "consolidated/docs/execution/counting-mixing-review-2026-11-01/dynamics-review/targeted-acceptance-v2.md",
+      "sha256": "b4d9cf8c470229641099aaa0a294e3b5e7032ae3ed9b1084fe38c736bd6fe85e",
+      "bytes": 2431,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/current_author_dependencies/0/files/0",
+      "path": "consolidated/book/chapters/10-quantum-introduction.tex",
+      "sha256": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+      "bytes": 43507,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/current_author_dependencies/0/files/1",
+      "path": "consolidated/book/chapters/11-quantum-degeneration.tex",
+      "sha256": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9",
+      "bytes": 13435,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/current_author_dependencies/0/files/2",
+      "path": "consolidated/book/claims/sections10-11.json",
+      "sha256": "34dbb6255dc468cb796bb3a129eeaf37ac0c5f4dc358abfd73030e64331b3539",
+      "bytes": 59530,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/current_author_dependencies/0/freeze_manifest",
+      "path": "consolidated/../execution/final-chapters-review-2026-11-01/quantum-author/revision-v2/freeze-manifest.json",
+      "sha256": "f043f6943bd124638802bfdb5d5e7505269143f54046eea93d298345191c0620",
+      "bytes": 3133,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/current_author_dependencies/0/independent_review_record",
+      "path": "consolidated/../execution/final-chapters-review-2026-11-01/quantum-review/final-acceptance.json",
+      "sha256": "c631f5ed63513246adf7bbec958c3298ab577861ee02f1d359ff6ca25b7c4dd9",
+      "bytes": 3479,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/current_author_dependencies/1/files/0",
+      "path": "consolidated/book/chapters/17-unfolding-constant-series.tex",
+      "sha256": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+      "bytes": 7804,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/current_author_dependencies/1/files/1",
+      "path": "consolidated/book/chapters/18-figure-eight-curves.tex",
+      "sha256": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+      "bytes": 10705,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/current_author_dependencies/1/files/2",
+      "path": "consolidated/book/chapters/19-pants-twists.tex",
+      "sha256": "9dc4438ad32d76c7508cd6f90e34dc615697bf60cc546b5187e130468213be9d",
+      "bytes": 9551,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/current_author_dependencies/1/files/3",
+      "path": "consolidated/book/chapters/20-torus-twist-series.tex",
+      "sha256": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+      "bytes": 6616,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/current_author_dependencies/1/files/4",
+      "path": "consolidated/book/chapters/21-cuff-matching.tex",
+      "sha256": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+      "bytes": 2960,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/current_author_dependencies/1/files/5",
+      "path": "consolidated/book/chapters/22-cusps-orthospectrum.tex",
+      "sha256": "67cd497d3599bbb6716335a90d6f2f5c71bd191efa96211dd47442c64f3b39e2",
+      "bytes": 9218,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/current_author_dependencies/1/files/6",
+      "path": "consolidated/book/claims/sections17-22.json",
+      "sha256": "aca716a9b08128e7c6feefb79693ff9313139dbc52c0b33ce7e395d6fce80d54",
+      "bytes": 112294,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/current_author_dependencies/1/freeze_manifest",
+      "path": "consolidated/../execution/final-chapters-review-2026-11-01/geodesic-author/author-freeze-manifest.json",
+      "sha256": "38994ff43e952ff42ccafb4d56c44e51c385a0092d156e3d35cdbcf1041d7eec",
+      "bytes": 3887,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/computational_support_map/0/result",
+      "path": "consolidated/artifacts/normalizations/result.json",
+      "sha256": "9aceff49e5a8a66399004eec292183087ab640e6441bf580d7007b5dd7949490",
+      "bytes": 22364,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/computational_support_map/1/result",
+      "path": "consolidated/artifacts/section9/result.json",
+      "sha256": "e6aa3b68d0e7f7bbcb326f0d2b1e76245aa1ee6e728dcb7173f5bc9541782f85",
+      "bytes": 11811,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/computational_support_map/2/result",
+      "path": "consolidated/artifacts/section9/barrier-result.json",
+      "sha256": "b7d680717a5de790a146c584f66e955fb515449cc583adfa9e3c4543d692f798",
+      "bytes": 1355033,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/computational_support_map/3/result",
+      "path": "consolidated/artifacts/quantum_surgery/result.json",
+      "sha256": "accdcaae347f363f20761cc2ffc7a2a252c2199787a277e519cef9978c5578cf",
+      "bytes": 120085,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/computational_support_map/4/result",
+      "path": "consolidated/artifacts/section15_quantum/result.json",
+      "sha256": "b8d600a6ca3797f45e616bc324d0d1620066e9c203c085229d4c544f6e245009",
+      "bytes": 130686,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/computational_support_map/5/result",
+      "path": "consolidated/artifacts/counting_mixing/result.json",
+      "sha256": "04e9807ae5d3af8a8f2a2926a44ebc25f79a9e8151424ae39429655396b7567b",
+      "bytes": 438646,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/computational_support_map/6/result",
+      "path": "consolidated/artifacts/torus_campaign/result.json",
+      "sha256": "51414cf7c3e72c2020e3267f3abbb6cf6e2c9c0f78b9b6ee3921ceced70bcece",
+      "bytes": 434757,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/computational_support_map/7/contract",
+      "path": "consolidated/../execution/final-chapters-review-2026-11-01/quantum-author/computational-targets.md",
+      "sha256": "1d1fae5b1539b8ee52d27a761ee1d2aaf2a8b050d213c023df506af498fe96b1",
+      "bytes": 8691,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "ledger/computational_support_map/8/contract",
+      "path": "consolidated/../execution/final-chapters-review-2026-11-01/geodesic-author/companion-contract.md",
+      "sha256": "2a62a149e7f5f88027329c24ba3a4720407debfed2fb78945350f23b6fce85a6",
+      "bytes": 14837,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "chapter_source_sha256",
+      "path": "consolidated/book/chapters/32-open-questions.tex",
+      "sha256": "c831bf85ab0c6cb7f5ed46509212ce5dc1549c05c5723be3c035c928a409fc21",
+      "bytes": 14848,
+      "hash_match": true,
+      "size_match": true
+    },
+    {
+      "where": "chapter_source_sha256",
+      "path": "consolidated/book/chapters/appendix-b-conventions.tex",
+      "sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363,
+      "hash_match": true,
+      "size_match": true
+    }
+  ],
+  "prior_approval_counts": {
+    "normalization": 11,
+    "section9": 2,
+    "quantum_surgery": 6,
+    "regular_airy": 2,
+    "counting_mixing": 13
+  },
+  "prior_approved_files": 34,
+  "claim_count": 66,
+  "dependency_pointer_occurrences": 155,
+  "unique_dependency_pointers": 127,
+  "dependency_results": [
+    {
+      "claim": "s32.q01",
+      "dependency": "book/claims/sections1-6.json#s4.local_density",
+      "status": "derived_in_chapter_author_verified",
+      "inherited_status": "derived_in_chapter_author_verified"
+    },
+    {
+      "claim": "s32.q01",
+      "dependency": "book/claims/sections1-6.json#s1.base_volumes",
+      "status": "external_statement_checked",
+      "inherited_status": "external_statement_checked"
+    },
+    {
+      "claim": "s32.q01",
+      "dependency": "book/claims/sections1-6.json#s4.tree_density",
+      "status": "external_statement_checked",
+      "inherited_status": "external_statement_checked"
+    },
+    {
+      "claim": "s32.q02",
+      "dependency": "book/claims/sections1-6.json#s4.pfaffian",
+      "status": "derived_in_chapter_author_verified",
+      "inherited_status": "derived_in_chapter_author_verified"
+    },
+    {
+      "claim": "s32.q02",
+      "dependency": "book/claims/sections1-6.json#s2.disintegration",
+      "status": "derived_in_chapter_author_verified",
+      "inherited_status": "derived_in_chapter_author_verified"
+    },
+    {
+      "claim": "s32.q03",
+      "dependency": "book/claims/sections1-6.json#s1.fn_and_hermitian_scale",
+      "status": "explicit_convention",
+      "inherited_status": "explicit_convention"
+    },
+    {
+      "claim": "s32.q04",
+      "dependency": "book/claims/sections7-8.json#s8.final_chamber_polynomial",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "s32.q04",
+      "dependency": "book/claims/sections7-8.json#s8.balanced_nonuniformity",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "s32.q04",
+      "dependency": "book/claims/sections12-14.json#s12.fricke_blowup",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "s32.q05",
+      "dependency": "book/claims/section15.json#s15.uniform_transition",
+      "status": "analytic_derivation_in_chapter",
+      "inherited_status": "analytic_derivation_in_chapter"
+    },
+    {
+      "claim": "s32.q05",
+      "dependency": "book/claims/sections10-11.json#s11.compact_model",
+      "status": "conditional_analytic_statement",
+      "inherited_status": "conditional_analytic_statement"
+    },
+    {
+      "claim": "s32.q05",
+      "dependency": "book/claims/sections12-14.json#s12.curvature",
+      "status": "derived_from_external_statements",
+      "inherited_status": "derived_from_external_statements"
+    },
+    {
+      "claim": "s32.q05",
+      "dependency": "book/claims/sections12-14.json#s12.torsion_flat_limit",
+      "status": "derived_from_external_statements",
+      "inherited_status": "derived_from_external_statements"
+    },
+    {
+      "claim": "s32.q05",
+      "dependency": "book/claims/sections12-14.json#s12.quantum_dictionary",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "s32.q05",
+      "dependency": "book/claims/sections12-14.json#s13.spectral_continuation",
+      "status": "explicit_unproved_analytic_input",
+      "inherited_status": "explicit_unproved_analytic_input"
+    },
+    {
+      "claim": "s32.q05",
+      "dependency": "book/claims/section15.json#s15.airy_column",
+      "status": "numerical_approximation_column_checked",
+      "inherited_status": "numerical_approximation_column_checked"
+    },
+    {
+      "claim": "s32.q05",
+      "dependency": "book/claims/section15.json#s15.reported_quantum_column",
+      "status": "historical_unreplayed_result",
+      "inherited_status": "historical_unreplayed_result"
+    },
+    {
+      "claim": "s32.q05",
+      "dependency": "book/claims/section15.json#s15.quantum_numerics",
+      "status": "numerical_exact_integrand_checked",
+      "inherited_status": "numerical_exact_integrand_checked"
+    },
+    {
+      "claim": "s32.q05",
+      "dependency": "book/claims/sections10-11.json#s11.volume_dictionary",
+      "status": "external_conjecture",
+      "inherited_status": "external_conjecture"
+    },
+    {
+      "claim": "s32.q05",
+      "dependency": "book/claims/sections12-14.json#s14.compact_regular_geometry",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "s32.q05",
+      "dependency": "book/claims/sections12-14.json#s14.classical_fold",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "s32.q05",
+      "dependency": "book/claims/sections12-14.json#s14.screened_gram",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "s32.q05",
+      "dependency": "book/claims/sections10-11.json#s11.cm_leading",
+      "status": "external_statement_checked",
+      "inherited_status": "external_statement_checked"
+    },
+    {
+      "claim": "s32.q05",
+      "dependency": "book/claims/sections10-11.json#s11.cm_refined",
+      "status": "external_statement_checked",
+      "inherited_status": "external_statement_checked"
+    },
+    {
+      "claim": "s32.q06",
+      "dependency": "book/claims/section16.json#s16.figure_eight_quantum_theorem",
+      "status": "external_theorem_statement_checked",
+      "inherited_status": "external_theorem_statement_checked"
+    },
+    {
+      "claim": "s32.q06",
+      "dependency": "book/claims/section16.json#s16.critical_value",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "s32.q06",
+      "dependency": "book/claims/section16.json#s16.torsion_surgery",
+      "status": "external_theorem_statement_checked",
+      "inherited_status": "external_theorem_statement_checked"
+    },
+    {
+      "claim": "s32.q06",
+      "dependency": "book/claims/section16.json#s16.quantum_transfer",
+      "status": "conditional_quantum_consequence",
+      "inherited_status": "conditional_quantum_consequence"
+    },
+    {
+      "claim": "s32.q06",
+      "dependency": "book/claims/section16.json#s16.filling_series",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "s32.q07",
+      "dependency": "book/claims/section9.json#s9.finite_centering",
+      "status": "proved_in_chapter",
+      "inherited_status": "proved_in_chapter"
+    },
+    {
+      "claim": "s32.q07",
+      "dependency": "book/claims/section9.json#s9.short_step_iterations",
+      "status": "conditional_algorithmic_consequence",
+      "inherited_status": "conditional_algorithmic_consequence"
+    },
+    {
+      "claim": "s32.q07",
+      "dependency": "book/claims/section9.json#s9.inexact_arithmetic_work",
+      "status": "conditional_algorithmic_consequence",
+      "inherited_status": "conditional_algorithmic_consequence"
+    },
+    {
+      "claim": "s32.q07",
+      "dependency": "book/claims/section9.json#s9.quantitative_angle_bound",
+      "status": "open",
+      "inherited_status": "open"
+    },
+    {
+      "claim": "s32.q08",
+      "dependency": "book/claims/section9.json#s9.wp_continuum_limit",
+      "status": "open",
+      "inherited_status": "open"
+    },
+    {
+      "claim": "s32.q09",
+      "dependency": "book/claims/sections23-25.json#23.11",
+      "status": "derived_analytic",
+      "inherited_status": "derived_analytic"
+    },
+    {
+      "claim": "s32.q09",
+      "dependency": "book/claims/sections23-25.json#23.24",
+      "status": "derived_analytic",
+      "inherited_status": "derived_analytic"
+    },
+    {
+      "claim": "s32.q10",
+      "dependency": "book/claims/sections23-25.json#25.03",
+      "status": "derived_from_external_statements",
+      "inherited_status": "derived_from_external_statements"
+    },
+    {
+      "claim": "s32.q10",
+      "dependency": "book/claims/sections23-25.json#25.04",
+      "status": "derived_analytic",
+      "inherited_status": "derived_analytic"
+    },
+    {
+      "claim": "s32.q10",
+      "dependency": "book/claims/sections23-25.json#25.05",
+      "status": "derived_exact_algebra",
+      "inherited_status": "derived_exact_algebra"
+    },
+    {
+      "claim": "s32.q10",
+      "dependency": "book/claims/sections23-25.json#25.07",
+      "status": "derived_geometric",
+      "inherited_status": "derived_geometric"
+    },
+    {
+      "claim": "s32.q11",
+      "dependency": "book/claims/sections23-25.json#24.17",
+      "status": "conditional_analytic_statement",
+      "inherited_status": "conditional_analytic_statement"
+    },
+    {
+      "claim": "s32.q11",
+      "dependency": "book/claims/sections23-25.json#24.13",
+      "status": "derived_exact_algebra",
+      "inherited_status": "derived_exact_algebra"
+    },
+    {
+      "claim": "s32.q11",
+      "dependency": "book/claims/sections23-25.json#24.10",
+      "status": "derived_analytic",
+      "inherited_status": "derived_analytic"
+    },
+    {
+      "claim": "s32.q12",
+      "dependency": "book/claims/sections26-29.json#s27.tensor_first_corner",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "s32.q12",
+      "dependency": "book/claims/sections26-29.json#s27.polar_kernel",
+      "status": "exact_definition_external_input",
+      "inherited_status": "exact_definition_external_input"
+    },
+    {
+      "claim": "s32.q12",
+      "dependency": "book/claims/sections26-29.json#s27.unfolding",
+      "status": "exact_identity_and_bound",
+      "inherited_status": "exact_identity_and_bound"
+    },
+    {
+      "claim": "s32.q12",
+      "dependency": "book/claims/sections26-29.json#s27.full_rate",
+      "status": "conditional_implication",
+      "inherited_status": "conditional_implication"
+    },
+    {
+      "claim": "s32.q12",
+      "dependency": "book/claims/sections26-29.json#s27.deaveraging",
+      "status": "conditional_implication",
+      "inherited_status": "conditional_implication"
+    },
+    {
+      "claim": "s32.q12",
+      "dependency": "book/claims/sections26-29.json#s28.hyperelliptic_polyhedron",
+      "status": "derived_in_chapter_external_inputs",
+      "inherited_status": "derived_in_chapter_external_inputs"
+    },
+    {
+      "claim": "s32.q12",
+      "dependency": "book/claims/sections26-29.json#s29.normball_upper",
+      "status": "derived_in_chapter_external_inputs",
+      "inherited_status": "derived_in_chapter_external_inputs"
+    },
+    {
+      "claim": "s32.q12",
+      "dependency": "book/claims/sections26-29.json#s26.scope",
+      "status": "open_comparison",
+      "inherited_status": "open_comparison"
+    },
+    {
+      "claim": "s32.q13",
+      "dependency": "book/claims/section30.json#s30.chord_sobolev",
+      "status": "derivation_checked",
+      "inherited_status": "derivation_checked"
+    },
+    {
+      "claim": "s32.q13",
+      "dependency": "book/claims/section30.json#s30.fourier_decay",
+      "status": "derivation_checked",
+      "inherited_status": "derivation_checked"
+    },
+    {
+      "claim": "s32.q13",
+      "dependency": "book/claims/section30.json#s30.poisson_little_o",
+      "status": "derivation_checked",
+      "inherited_status": "derivation_checked"
+    },
+    {
+      "claim": "s32.q13",
+      "dependency": "book/claims/section30.json#s30.strict_convex_primitive",
+      "status": "derivation_checked",
+      "inherited_status": "derivation_checked"
+    },
+    {
+      "claim": "s32.q13",
+      "dependency": "book/claims/section30.json#s30.dini_comparison",
+      "status": "derivation_checked",
+      "inherited_status": "derivation_checked"
+    },
+    {
+      "claim": "s32.q13",
+      "dependency": "book/claims/section30.json#s30.dini_linear",
+      "status": "conditional_bound",
+      "inherited_status": "conditional_bound"
+    },
+    {
+      "claim": "s32.q13",
+      "dependency": "book/claims/section30.json#s30.normalized_mobius",
+      "status": "derivation_checked",
+      "inherited_status": "derivation_checked"
+    },
+    {
+      "claim": "s32.q13",
+      "dependency": "book/claims/section30.json#s30.microscopic_row",
+      "status": "derivation_checked",
+      "inherited_status": "derivation_checked"
+    },
+    {
+      "claim": "s32.q13",
+      "dependency": "book/claims/section30.json#s30.dyadic_inversion",
+      "status": "derivation_checked",
+      "inherited_status": "derivation_checked"
+    },
+    {
+      "claim": "s32.q13",
+      "dependency": "book/claims/section31.json#s31.conventions",
+      "status": "derivation_checked",
+      "inherited_status": "derivation_checked"
+    },
+    {
+      "claim": "s32.q13",
+      "dependency": "book/claims/section30.json#s30.prime_row_count",
+      "status": "derivation_checked",
+      "inherited_status": "derivation_checked"
+    },
+    {
+      "claim": "s32.q13",
+      "dependency": "book/claims/section30.json#s30.infinite_flatness_scope",
+      "status": "conditional_bound",
+      "inherited_status": "conditional_bound"
+    },
+    {
+      "claim": "s32.q13",
+      "dependency": "book/claims/section30.json#s30.flatness_models",
+      "status": "derivation_checked",
+      "inherited_status": "derivation_checked"
+    },
+    {
+      "claim": "s32.q13",
+      "dependency": "book/claims/section31.json#s31.all_point_dyadic",
+      "status": "derivation_checked",
+      "inherited_status": "derivation_checked"
+    },
+    {
+      "claim": "s32.q13",
+      "dependency": "book/claims/section31.json#s31.all_point_from_primitive_lengths",
+      "status": "derivation_checked",
+      "inherited_status": "derivation_checked"
+    },
+    {
+      "claim": "s32.q13",
+      "dependency": "book/claims/section31.json#s31.all_point_width_compatibility",
+      "status": "conditional_bound",
+      "inherited_status": "conditional_bound"
+    },
+    {
+      "claim": "s32.q13",
+      "dependency": "book/claims/section31.json#s31.geometric_target",
+      "status": "open_target",
+      "inherited_status": "open_target"
+    },
+    {
+      "claim": "s32.q13",
+      "dependency": "book/claims/section30.json#s30.historical_long_run",
+      "status": "reported_unreplayed",
+      "inherited_status": "reported_unreplayed"
+    },
+    {
+      "claim": "s32.q14",
+      "dependency": "book/claims/sections17-22.json#18.08",
+      "status": "derived_analytic",
+      "inherited_status": "derived_analytic"
+    },
+    {
+      "claim": "s32.q14",
+      "dependency": "book/claims/sections17-22.json#20.09",
+      "status": "derived_analytic",
+      "inherited_status": "derived_analytic"
+    },
+    {
+      "claim": "s32.q15",
+      "dependency": "book/claims/sections17-22.json#21.01",
+      "status": "derived_exact_algebra",
+      "inherited_status": "derived_exact_algebra"
+    },
+    {
+      "claim": "s32.q15",
+      "dependency": "book/claims/sections17-22.json#21.02",
+      "status": "derived_geometric",
+      "inherited_status": "derived_geometric"
+    },
+    {
+      "claim": "s32.q15",
+      "dependency": "book/claims/sections17-22.json#21.03",
+      "status": "derived_geometric",
+      "inherited_status": "derived_geometric"
+    },
+    {
+      "claim": "s32.q15",
+      "dependency": "book/claims/sections17-22.json#22.03",
+      "status": "external_statement",
+      "inherited_status": "external_statement"
+    },
+    {
+      "claim": "s32.q15",
+      "dependency": "book/claims/sections17-22.json#22.12",
+      "status": "scope_boundary",
+      "inherited_status": "scope_boundary"
+    },
+    {
+      "claim": "appB.curvature",
+      "dependency": "book/claims/sections7-8.json#s8.cone_metric_limit",
+      "status": "derived_from_external_theorems",
+      "inherited_status": "derived_from_external_theorems"
+    },
+    {
+      "claim": "appB.ch_curvature",
+      "dependency": "book/claims/sections7-8.json#s7.period_geometry",
+      "status": "external_theorem_statement_checked",
+      "inherited_status": "external_theorem_statement_checked"
+    },
+    {
+      "claim": "appB.ch_curvature",
+      "dependency": "book/claims/sections7-8.json#s8.local_wp_ch_factor",
+      "status": "derived_from_external_theorems",
+      "inherited_status": "derived_from_external_theorems"
+    },
+    {
+      "claim": "appB.flat_weights",
+      "dependency": "book/claims/sections7-8.json#s7.flat_leaf",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "appB.volume_scales",
+      "dependency": "book/claims/sections10-11.json#s11.volume_dictionary",
+      "status": "external_conjecture",
+      "inherited_status": "external_conjecture"
+    },
+    {
+      "claim": "appB.wp_limit",
+      "dependency": "book/claims/sections7-8.json#s8.local_wp_ch_factor",
+      "status": "derived_from_external_theorems",
+      "inherited_status": "derived_from_external_theorems"
+    },
+    {
+      "claim": "appB.wp_form",
+      "dependency": "book/claims/sections1-6.json#s1.fn_and_hermitian_scale",
+      "status": "explicit_convention",
+      "inherited_status": "explicit_convention"
+    },
+    {
+      "claim": "appB.torus_volume",
+      "dependency": "book/claims/sections1-6.json#s1.base_volumes",
+      "status": "external_statement_checked",
+      "inherited_status": "external_statement_checked"
+    },
+    {
+      "claim": "appB.sphere_volume",
+      "dependency": "book/claims/sections1-6.json#s3.angle_integral",
+      "status": "derived_in_chapter_author_verified",
+      "inherited_status": "derived_in_chapter_author_verified"
+    },
+    {
+      "claim": "appB.cone_parameter",
+      "dependency": "book/claims/sections1-6.json#s5.area",
+      "status": "derived_in_chapter_author_verified",
+      "inherited_status": "derived_in_chapter_author_verified"
+    },
+    {
+      "claim": "appB.cone_parameter",
+      "dependency": "book/claims/sections1-6.json#s5.four_cone_volume",
+      "status": "derived_in_chapter_author_verified",
+      "inherited_status": "derived_in_chapter_author_verified"
+    },
+    {
+      "claim": "appB.ambient_crossratio",
+      "dependency": "book/claims/sections1-6.json#s3.integrability_and_flat_locus",
+      "status": "derived_in_chapter_author_verified",
+      "inherited_status": "derived_in_chapter_author_verified"
+    },
+    {
+      "claim": "appB.angles",
+      "dependency": "book/claims/sections1-6.json#s2.angle_domain",
+      "status": "external_statement_checked",
+      "inherited_status": "external_statement_checked"
+    },
+    {
+      "claim": "appB.angles",
+      "dependency": "book/claims/sections10-11.json#s11.schlafli",
+      "status": "external_statement_checked",
+      "inherited_status": "external_statement_checked"
+    },
+    {
+      "claim": "appB.lambda_length",
+      "dependency": "book/claims/sections1-6.json#s3.lambda_pullback",
+      "status": "derived_in_chapter_author_verified",
+      "inherited_status": "derived_in_chapter_author_verified"
+    },
+    {
+      "claim": "appB.lambda_length",
+      "dependency": "book/claims/sections17-22.json#22.05",
+      "status": "derived_geometric",
+      "inherited_status": "derived_geometric"
+    },
+    {
+      "claim": "appB.planar_gauge",
+      "dependency": "book/claims/section9.json#s9.coordinates",
+      "status": "proved_in_chapter",
+      "inherited_status": "proved_in_chapter"
+    },
+    {
+      "claim": "appB.planar_gauge",
+      "dependency": "book/claims/section9.json#s9.gradient_hessian",
+      "status": "proved_in_chapter",
+      "inherited_status": "proved_in_chapter"
+    },
+    {
+      "claim": "appB.planar_gauge",
+      "dependency": "book/claims/section9.json#s9.fixture_numerical",
+      "status": "numerical_check",
+      "inherited_status": "numerical_check"
+    },
+    {
+      "claim": "appB.planar_gauge",
+      "dependency": "book/claims/section9.json#s9.dtn",
+      "status": "proved_in_chapter",
+      "inherited_status": "proved_in_chapter"
+    },
+    {
+      "claim": "appB.quantum_integer",
+      "dependency": "book/claims/sections10-11.json#s10.quantum_integer",
+      "status": "external_statement_checked",
+      "inherited_status": "external_statement_checked"
+    },
+    {
+      "claim": "appB.jones",
+      "dependency": "book/claims/sections10-11.json#s10.knot_volume",
+      "status": "external_conjecture",
+      "inherited_status": "external_conjecture"
+    },
+    {
+      "claim": "appB.jones",
+      "dependency": "book/claims/sections10-11.json#s10.closed_growth",
+      "status": "external_statement_checked",
+      "inherited_status": "external_statement_checked"
+    },
+    {
+      "claim": "appB.cm_labels",
+      "dependency": "book/claims/sections10-11.json#s11.cm_refined",
+      "status": "external_statement_checked",
+      "inherited_status": "external_statement_checked"
+    },
+    {
+      "claim": "appB.cm_labels",
+      "dependency": "book/claims/sections10-11.json#s11.cm_leading",
+      "status": "external_statement_checked",
+      "inherited_status": "external_statement_checked"
+    },
+    {
+      "claim": "appB.continuous_scale",
+      "dependency": "book/claims/sections12-14.json#s14.volume_exponent",
+      "status": "derived_from_external_statements",
+      "inherited_status": "derived_from_external_statements"
+    },
+    {
+      "claim": "appB.continuous_scale",
+      "dependency": "book/claims/sections10-11.json#s10.rt_exponent",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "appB.barnes",
+      "dependency": "book/claims/section15.json#s15.normalization",
+      "status": "derived_from_external_statements",
+      "inherited_status": "derived_from_external_statements"
+    },
+    {
+      "claim": "appB.barnes",
+      "dependency": "book/claims/section15.json#s15.resonance_noncancellation",
+      "status": "analytic_derivation_in_chapter",
+      "inherited_status": "analytic_derivation_in_chapter"
+    },
+    {
+      "claim": "appB.barnes",
+      "dependency": "book/claims/section15.json#s15.quantum_numerics",
+      "status": "numerical_exact_integrand_checked",
+      "inherited_status": "numerical_exact_integrand_checked"
+    },
+    {
+      "claim": "appB.barnes",
+      "dependency": "book/claims/section15.json#s15.uniform_transition",
+      "status": "analytic_derivation_in_chapter",
+      "inherited_status": "analytic_derivation_in_chapter"
+    },
+    {
+      "claim": "appB.barnes",
+      "dependency": "book/claims/section15.json#s15.orientation",
+      "status": "derived_from_external_statements",
+      "inherited_status": "derived_from_external_statements"
+    },
+    {
+      "claim": "appB.liouville",
+      "dependency": "book/claims/sections10-11.json#s10.virasoro",
+      "status": "external_statement_checked",
+      "inherited_status": "external_statement_checked"
+    },
+    {
+      "claim": "appB.liouville",
+      "dependency": "book/claims/sections12-14.json#s13.parameters",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "appB.torsion",
+      "dependency": "book/claims/sections12-14.json#s12.relative_torsion",
+      "status": "external_statement_and_derived_normalization",
+      "inherited_status": "external_statement_and_derived_normalization"
+    },
+    {
+      "claim": "appB.closed_curves",
+      "dependency": "book/claims/sections17-22.json#18.05",
+      "status": "derived_geometric",
+      "inherited_status": "derived_geometric"
+    },
+    {
+      "claim": "appB.closed_curves",
+      "dependency": "book/claims/sections17-22.json#18.12",
+      "status": "scope_boundary",
+      "inherited_status": "scope_boundary"
+    },
+    {
+      "claim": "appB.positive_trace",
+      "dependency": "book/claims/sections17-22.json#18.01",
+      "status": "derived_geometric",
+      "inherited_status": "derived_geometric"
+    },
+    {
+      "claim": "appB.coefficient_basis",
+      "dependency": "book/claims/sections23-25.json#23.03",
+      "status": "external_statement_and_derived_normalization",
+      "inherited_status": "external_statement_and_derived_normalization"
+    },
+    {
+      "claim": "appB.selberg",
+      "dependency": "book/claims/sections23-25.json#23.04",
+      "status": "external_statement_and_derived_normalization",
+      "inherited_status": "external_statement_and_derived_normalization"
+    },
+    {
+      "claim": "appB.heat",
+      "dependency": "book/claims/sections23-25.json#23.11",
+      "status": "derived_analytic",
+      "inherited_status": "derived_analytic"
+    },
+    {
+      "claim": "appB.laplace",
+      "dependency": "book/claims/sections23-25.json#23.11",
+      "status": "derived_analytic",
+      "inherited_status": "derived_analytic"
+    },
+    {
+      "claim": "appB.laplace",
+      "dependency": "book/claims/sections23-25.json#23.20",
+      "status": "derived_analytic",
+      "inherited_status": "derived_analytic"
+    },
+    {
+      "claim": "appB.total_laminations",
+      "dependency": "book/claims/sections23-25.json#24.03",
+      "status": "derived_from_external_statements",
+      "inherited_status": "derived_from_external_statements"
+    },
+    {
+      "claim": "appB.primitive_lamination",
+      "dependency": "book/claims/sections23-25.json#24.04",
+      "status": "derived_analytic",
+      "inherited_status": "derived_analytic"
+    },
+    {
+      "claim": "appB.support_variable",
+      "dependency": "book/claims/sections23-25.json#24.11",
+      "status": "derived_analytic",
+      "inherited_status": "derived_analytic"
+    },
+    {
+      "claim": "appB.one_crossing",
+      "dependency": "book/claims/sections17-22.json#18.09",
+      "status": "derived_from_external_statements",
+      "inherited_status": "derived_from_external_statements"
+    },
+    {
+      "claim": "appB.one_crossing",
+      "dependency": "book/claims/sections17-22.json#18.05",
+      "status": "derived_geometric",
+      "inherited_status": "derived_geometric"
+    },
+    {
+      "claim": "appB.basmajian",
+      "dependency": "book/claims/sections17-22.json#22.10",
+      "status": "external_statement_and_derived_normalization",
+      "inherited_status": "external_statement_and_derived_normalization"
+    },
+    {
+      "claim": "appB.cusp",
+      "dependency": "book/claims/sections17-22.json#22.06",
+      "status": "external_statement_and_derived_normalization",
+      "inherited_status": "external_statement_and_derived_normalization"
+    },
+    {
+      "claim": "appB.cusp",
+      "dependency": "book/claims/sections17-22.json#22.09",
+      "status": "derived_exact_algebra",
+      "inherited_status": "derived_exact_algebra"
+    },
+    {
+      "claim": "appB.cusp_rays",
+      "dependency": "book/claims/sections17-22.json#22.03",
+      "status": "external_statement",
+      "inherited_status": "external_statement"
+    },
+    {
+      "claim": "appB.phase",
+      "dependency": "book/claims/sections17-22.json#21.01",
+      "status": "derived_exact_algebra",
+      "inherited_status": "derived_exact_algebra"
+    },
+    {
+      "claim": "appB.phase",
+      "dependency": "book/claims/sections17-22.json#21.02",
+      "status": "derived_geometric",
+      "inherited_status": "derived_geometric"
+    },
+    {
+      "claim": "appB.phase",
+      "dependency": "book/claims/sections17-22.json#21.03",
+      "status": "derived_geometric",
+      "inherited_status": "derived_geometric"
+    },
+    {
+      "claim": "appB.peripheral",
+      "dependency": "book/claims/section16.json#s16.peripheral_germ",
+      "status": "external_theorem_statement_checked",
+      "inherited_status": "external_theorem_statement_checked"
+    },
+    {
+      "claim": "appB.peripheral",
+      "dependency": "book/claims/section16.json#s16.uniform_long_slope",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "appB.polarization",
+      "dependency": "book/claims/sections10-11.json#s10.nz_polarization",
+      "status": "derived_from_reviewed_dependencies",
+      "inherited_status": "derived_from_reviewed_dependencies"
+    },
+    {
+      "claim": "appB.polarization",
+      "dependency": "book/claims/sections10-11.json#s10.weyl_operators",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "appB.real_source",
+      "dependency": "book/claims/section16.json#s16.real_legendre",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "appB.holomorphic_action",
+      "dependency": "book/claims/section16.json#s16.potential",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "appB.holomorphic_action",
+      "dependency": "book/claims/section16.json#s16.critical_value",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "appB.gauge_counts",
+      "dependency": "book/claims/section30.json#s30.normalization",
+      "status": "derivation_checked",
+      "inherited_status": "derivation_checked"
+    },
+    {
+      "claim": "appB.gauge_counts",
+      "dependency": "book/claims/section31.json#s31.conventions",
+      "status": "derivation_checked",
+      "inherited_status": "derivation_checked"
+    },
+    {
+      "claim": "appB.flow_scale",
+      "dependency": "book/claims/sections26-29.json#s27.pair_realization",
+      "status": "external_theorem_statement_checked",
+      "inherited_status": "external_theorem_statement_checked"
+    },
+    {
+      "claim": "appB.flow_scale",
+      "dependency": "book/claims/sections26-29.json#s27.quotient_scales",
+      "status": "derived_in_chapter",
+      "inherited_status": "derived_in_chapter"
+    },
+    {
+      "claim": "appB.correlation",
+      "dependency": "book/claims/sections26-29.json#s27.full_rate",
+      "status": "conditional_implication",
+      "inherited_status": "conditional_implication"
+    },
+    {
+      "claim": "s32.scope",
+      "dependency": "book/claims/sections1-6.json#s2.partition",
+      "status": "external_statement_checked",
+      "inherited_status": null
+    },
+    {
+      "claim": "s32.scope",
+      "dependency": "book/claims/sections1-6.json#s4.tree_density",
+      "status": "external_statement_checked",
+      "inherited_status": null
+    },
+    {
+      "claim": "s32.computational_map",
+      "dependency": "book/claims/section15.json#s15.airy_column",
+      "status": "numerical_approximation_column_checked",
+      "inherited_status": null
+    },
+    {
+      "claim": "s32.computational_map",
+      "dependency": "book/claims/section15.json#s15.reported_quantum_column",
+      "status": "historical_unreplayed_result",
+      "inherited_status": null
+    },
+    {
+      "claim": "s32.computational_map",
+      "dependency": "book/claims/section15.json#s15.quantum_numerics",
+      "status": "numerical_exact_integrand_checked",
+      "inherited_status": null
+    },
+    {
+      "claim": "s32.computational_map",
+      "dependency": "book/claims/section31.json#s31.conventions",
+      "status": "derivation_checked",
+      "inherited_status": null
+    },
+    {
+      "claim": "appB.source_scale",
+      "dependency": "book/claims/sections1-6.json#s1.fn_and_hermitian_scale",
+      "status": "explicit_convention",
+      "inherited_status": null
+    },
+    {
+      "claim": "appB.source_penner",
+      "dependency": "book/claims/sections1-6.json#s3.lambda_pullback",
+      "status": "derived_in_chapter_author_verified",
+      "inherited_status": null
+    },
+    {
+      "claim": "appB.source_calibration",
+      "dependency": "book/claims/sections1-6.json#s3.angle_integral",
+      "status": "derived_in_chapter_author_verified",
+      "inherited_status": null
+    },
+    {
+      "claim": "appB.source_calibration",
+      "dependency": "book/claims/sections1-6.json#appA.wp_factor",
+      "status": "derived_in_chapter_author_verified",
+      "inherited_status": null
+    },
+    {
+      "claim": "appB.source_cde",
+      "dependency": "book/claims/sections1-6.json#s3.lambda_pullback",
+      "status": "derived_in_chapter_author_verified",
+      "inherited_status": null
+    },
+    {
+      "claim": "appB.source_budd",
+      "dependency": "book/claims/sections1-6.json#s2.partition",
+      "status": "external_statement_checked",
+      "inherited_status": null
+    }
+  ],
+  "result_field_checks": [
+    {
+      "support": "normalizations",
+      "field": "tetrahedron_base_and_cone",
+      "present": true
+    },
+    {
+      "support": "normalizations",
+      "field": "gram_pfaffian",
+      "present": true
+    },
+    {
+      "support": "normalizations",
+      "field": "intersection_relations",
+      "present": true
+    },
+    {
+      "support": "normalizations",
+      "field": "flat_fixtures",
+      "present": true
+    },
+    {
+      "support": "normalizations",
+      "field": "f_curve_probes",
+      "present": true
+    },
+    {
+      "support": "normalizations",
+      "field": "sl2_fixtures",
+      "present": true
+    },
+    {
+      "support": "section9",
+      "field": "exact_fixture",
+      "present": true
+    },
+    {
+      "support": "section9",
+      "field": "numerical",
+      "present": true
+    },
+    {
+      "support": "section9_barrier",
+      "field": "cases",
+      "present": true
+    },
+    {
+      "support": "section9_barrier",
+      "field": "exercises_initial_centering",
+      "present": true
+    },
+    {
+      "support": "quantum_surgery",
+      "field": "exact.section12",
+      "present": true
+    },
+    {
+      "support": "quantum_surgery",
+      "field": "exact.regular_section14",
+      "present": true
+    },
+    {
+      "support": "quantum_surgery",
+      "field": "exact.formal_section16",
+      "present": true
+    },
+    {
+      "support": "quantum_surgery",
+      "field": "exact.figure_eight_tensors",
+      "present": true
+    },
+    {
+      "support": "quantum_surgery",
+      "field": "exact.peripheral_Hessians",
+      "present": true
+    },
+    {
+      "support": "quantum_surgery",
+      "field": "nonresonant_periods",
+      "present": true
+    },
+    {
+      "support": "quantum_surgery",
+      "field": "balanced_periods",
+      "present": true
+    },
+    {
+      "support": "quantum_surgery",
+      "field": "screened_Gram",
+      "present": true
+    },
+    {
+      "support": "regular_airy",
+      "field": "rows",
+      "present": true
+    },
+    {
+      "support": "regular_airy",
+      "field": "comparisons",
+      "present": true
+    },
+    {
+      "support": "regular_airy",
+      "field": "independent_double_sine_checks",
+      "present": true
+    },
+    {
+      "support": "counting_mixing",
+      "field": "exact.trace_coefficients",
+      "present": true
+    },
+    {
+      "support": "counting_mixing",
+      "field": "exact.global_filter",
+      "present": true
+    },
+    {
+      "support": "counting_mixing",
+      "field": "exact.finite_support",
+      "present": true
+    },
+    {
+      "support": "counting_mixing",
+      "field": "exact.finite_Euler_convolution",
+      "present": true
+    },
+    {
+      "support": "counting_mixing",
+      "field": "exact.scalar_trace_mixing",
+      "present": true
+    },
+    {
+      "support": "counting_mixing",
+      "field": "exact.terminal_exponential_algebra",
+      "present": true
+    },
+    {
+      "support": "counting_mixing",
+      "field": "exact.Bruhat_residues",
+      "present": true
+    },
+    {
+      "support": "counting_mixing",
+      "field": "exact.Mobius_lattice",
+      "present": true
+    },
+    {
+      "support": "counting_mixing",
+      "field": "exact.dyadic_events",
+      "present": true
+    },
+    {
+      "support": "counting_mixing",
+      "field": "exact.row_and_balance",
+      "present": true
+    },
+    {
+      "support": "counting_mixing",
+      "field": "numerical",
+      "present": true
+    },
+    {
+      "support": "torus_campaign",
+      "field": "surfaces",
+      "present": true
+    },
+    {
+      "support": "torus_campaign",
+      "field": "all_point_convention",
+      "present": true
+    },
+    {
+      "support": "torus_campaign",
+      "field": "sensitivity_hypotheses",
+      "present": true
+    },
+    {
+      "support": "torus_campaign",
+      "field": "recovered_historical_provenance",
+      "present": true
+    }
+  ],
+  "graph": [
+    "book/main.tex",
+    "book/polyhedral_volumes_and_geodesic_identities.tex",
+    "book/chapters/01-volume-normalization.tex",
+    "book/chapters/02-ideal-angle-cells.tex",
+    "book/chapters/03-ideal-tetrahedron.tex",
+    "book/chapters/04-hyperideal-integrand.tex",
+    "book/chapters/05-boundary-cone-continuation.tex",
+    "book/chapters/06-torus-sphere.tex",
+    "book/chapters/07-euclidean-periods.tex",
+    "book/chapters/08-wp-flat-limit.tex",
+    "book/chapters/09-volume-hessians.tex",
+    "book/chapters/10-quantum-introduction.tex",
+    "book/chapters/11-quantum-degeneration.tex",
+    "book/chapters/12-quantum-boundary-measure.tex",
+    "book/chapters/13-four-point-fusion.tex",
+    "book/chapters/14-normalized-quantum-comparison.tex",
+    "book/chapters/15-quantum-airy.tex",
+    "book/chapters/16-dehn-filling-response.tex",
+    "book/chapters/17-unfolding-constant-series.tex",
+    "book/chapters/18-figure-eight-curves.tex",
+    "book/chapters/19-pants-twists.tex",
+    "book/chapters/20-torus-twist-series.tex",
+    "book/chapters/21-cuff-matching.tex",
+    "book/chapters/22-cusps-orthospectrum.tex",
+    "book/chapters/23-trace-coefficients.tex",
+    "book/chapters/24-quantitative-counting.tex",
+    "book/chapters/25-global-coefficient-filters.tex",
+    "book/chapters/26-counting-to-mixing.tex",
+    "book/chapters/27-weighted-mixing-converse.tex",
+    "book/chapters/28-genus-two-model.tex",
+    "book/chapters/29-controlled-observables.tex",
+    "book/chapters/30-sharp-diagnostics.tex",
+    "book/chapters/31-arithmetic-remainder.tex",
+    "book/chapters/32-open-questions.tex",
+    "book/chapters/appendix-a-fricke.tex",
+    "book/chapters/appendix-b-conventions.tex"
+  ],
+  "graph_file_count": 36,
+  "baseline_graph_file_count": 26,
+  "baseline_labels": 607,
+  "current_labels": 613,
+  "added_labels": [
+    "eq:figurekerneltail",
+    "eq:figurefiniteidentity",
+    "eq:localdistancehessian",
+    "eq:torustwistderivatives",
+    "eq:torusintegraltail",
+    "eq:Hpartialsumtail"
+  ],
+  "bibliography_keys": 129,
+  "questions": [
+    "Direct hyperideal integration",
+    "A usable measure on general polyhedral cells",
+    "Gluing and topology",
+    "Curvature corrections in period coordinates",
+    "Beyond the regular quantum degeneration",
+    "Uniform quantum Dehn filling",
+    "Certified realization and quantitative angle bounds",
+    "A continuum comparison of second variations",
+    "Continuation of a coefficient Laplace transform",
+    "Control of the globally filtered remainder",
+    "Effective selection of connected supports",
+    "From weighted curve counts to mixing",
+    "The sharp norm-ball remainder",
+    "Beyond closure operations",
+    "A boundary phase-space formulation"
+  ],
+  "convention_rows": 43,
+  "original_rows": 28,
+  "narrative_claims": 8,
+  "original_coverage": [
+    {
+      "original_quantity": "Surface/ambient hyperbolic curvature",
+      "current_claim": "appB.curvature"
+    },
+    {
+      "original_quantity": "Complex hyperbolic curvature",
+      "current_claim": "appB.ch_curvature"
+    },
+    {
+      "original_quantity": "Flat weights",
+      "current_claim": "appB.flat_weights"
+    },
+    {
+      "original_quantity": "Three volume scales",
+      "current_claim": "appB.volume_scales"
+    },
+    {
+      "original_quantity": "Flat WP limit",
+      "current_claim": "appB.wp_limit"
+    },
+    {
+      "original_quantity": "WP form",
+      "current_claim": "appB.wp_form"
+    },
+    {
+      "original_quantity": "Boundary components",
+      "current_claim": "appB.boundaries"
+    },
+    {
+      "original_quantity": "Volumes",
+      "current_claim": "appB.stack_volumes"
+    },
+    {
+      "original_quantity": "Punctured-torus volume",
+      "current_claim": "appB.torus_volume"
+    },
+    {
+      "original_quantity": "Four-punctured-sphere volume",
+      "current_claim": "appB.sphere_volume"
+    },
+    {
+      "original_quantity": "Cone parameter",
+      "current_claim": "appB.cone_parameter"
+    },
+    {
+      "original_quantity": "Ideal tetrahedral $z$",
+      "current_claim": "appB.ambient_crossratio"
+    },
+    {
+      "original_quantity": "Exterior angle $\\theta_e$",
+      "current_claim": "appB.angles"
+    },
+    {
+      "original_quantity": "Lambda length",
+      "current_claim": "appB.lambda_length"
+    },
+    {
+      "original_quantity": "Closed-curve sums",
+      "current_claim": "appB.closed_curves"
+    },
+    {
+      "original_quantity": "Coefficient basis",
+      "current_claim": "appB.coefficient_basis"
+    },
+    {
+      "original_quantity": "Twisted Selberg sum",
+      "current_claim": "appB.selberg"
+    },
+    {
+      "original_quantity": "Coefficient heat transform",
+      "current_claim": "appB.heat"
+    },
+    {
+      "original_quantity": "Coefficient Laplace parameter",
+      "current_claim": "appB.laplace"
+    },
+    {
+      "original_quantity": "Total multicurve count",
+      "current_claim": "appB.total_laminations"
+    },
+    {
+      "original_quantity": "Primitive lamination",
+      "current_claim": "appB.primitive_lamination"
+    },
+    {
+      "original_quantity": "Support variable $z$",
+      "current_claim": "appB.support_variable"
+    },
+    {
+      "original_quantity": "One-crossing curves",
+      "current_claim": "appB.one_crossing"
+    },
+    {
+      "original_quantity": "Basmajian sum",
+      "current_claim": "appB.basmajian"
+    },
+    {
+      "original_quantity": "Cusp orthospectrum",
+      "current_claim": "appB.cusp"
+    },
+    {
+      "original_quantity": "Peripheral logarithms",
+      "current_claim": "appB.peripheral"
+    },
+    {
+      "original_quantity": "Real filling source",
+      "current_claim": "appB.real_source"
+    },
+    {
+      "original_quantity": "Holomorphic filling action",
+      "current_claim": "appB.holomorphic_action"
+    }
+  ],
+  "metadata_delta_top_level": [
+    "author_review",
+    "claims",
+    "computational_support_map",
+    "current_author_dependencies",
+    "dependency_reconciliation",
+    "external_source_policy",
+    "pending_dependencies"
+  ],
+  "metadata_delta_paths": 97
+}

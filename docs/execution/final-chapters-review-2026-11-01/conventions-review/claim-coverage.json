@@ -1,0 +1,1179 @@
+{
+  "subject_ledger_sha256": "0bf0a62df0e81ae502d0408935cb1fee80b0db9a85be8e0d58c73367773dfd5a",
+  "coverage_count": 66,
+  "claims": [
+    {
+      "claim": "s32.q01",
+      "type": "question",
+      "disposition": "required_scope_locator_repair_CV01",
+      "review_note": "CV01: the origin-cusp displayed formula is not the all-positive comparison; point to the positive-boundary Zonneveld extension, retaining its unequal-pair and equal-length-continuity scope.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:hyperidealdensity",
+          "path": "book/chapters/04-hyperideal-integrand.tex",
+          "line": 101
+        },
+        {
+          "label": "eq:basevolumes",
+          "path": "book/chapters/01-volume-normalization.tex",
+          "line": 42
+        },
+        {
+          "label": "eq:treevolume",
+          "path": "book/chapters/04-hyperideal-integrand.tex",
+          "line": 223
+        }
+      ]
+    },
+    {
+      "claim": "s32.q02",
+      "type": "question",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The inverse-Poisson density is local on an invertible fixed-parameter leaf; independent angles, Jacobian, chamber and quotient remain required.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:pfaffiandensity",
+          "path": "book/chapters/04-hyperideal-integrand.tex",
+          "line": 166
+        },
+        {
+          "label": "eq:deltameasure",
+          "path": "book/chapters/02-ideal-angle-cells.tex",
+          "line": 52
+        }
+      ]
+    },
+    {
+      "claim": "s32.q03",
+      "type": "question",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "A Dehn-twist period does not produce the full mapping-class fundamental domain or remove stabilizer/cutting multiplicities.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:fn",
+          "path": "book/chapters/01-volume-normalization.tex",
+          "line": 18
+        }
+      ]
+    },
+    {
+      "claim": "s32.q04",
+      "type": "question",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The class coefficient and blown-up-character correction do not identify finite-area conformal coordinates or give joint balanced-wall uniformity.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:Xiclass",
+          "path": "book/chapters/08-wp-flat-limit.tex",
+          "line": 166
+        },
+        {
+          "label": "eq:Frickefirstcorrection",
+          "path": "book/chapters/12-quantum-boundary-measure.tex",
+          "line": 343
+        }
+      ]
+    },
+    {
+      "claim": "s32.q05",
+      "type": "question",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Pole-cleared regular Airy, finite periods, conditional spectral tails, rank-two obstruction and fixed-shape leading/refined sequences retain distinct scopes.",
+      "inspected_dependency_locations": [
+        {
+          "label": "prop:regularquantumAiry",
+          "path": "book/chapters/15-quantum-airy.tex",
+          "line": 67
+        },
+        {
+          "label": "eq:modelpartition",
+          "path": "book/chapters/11-quantum-degeneration.tex",
+          "line": 265
+        },
+        {
+          "label": "eq:exactLiouvillecurvature",
+          "path": "book/chapters/12-quantum-boundary-measure.tex",
+          "line": 80
+        },
+        {
+          "label": "eq:torsionDMlimit",
+          "path": "book/chapters/12-quantum-boundary-measure.tex",
+          "line": 277
+        },
+        {
+          "label": "eq:areaLiouvillecharge",
+          "path": "book/chapters/12-quantum-boundary-measure.tex",
+          "line": 452
+        },
+        {
+          "label": "sec:screenedfusion",
+          "path": "book/chapters/13-four-point-fusion.tex",
+          "line": 2
+        },
+        {
+          "label": "eq:screeningtailinput",
+          "path": "book/chapters/13-four-point-fusion.tex",
+          "line": 79
+        },
+        {
+          "label": "sec:normalizedsixj",
+          "path": "book/chapters/14-normalized-quantum-comparison.tex",
+          "line": 2
+        },
+        {
+          "label": "sec:quantumAiry",
+          "path": "book/chapters/15-quantum-airy.tex",
+          "line": 2
+        },
+        {
+          "label": "sec:quantumdegeneration",
+          "path": "book/chapters/11-quantum-degeneration.tex",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "claim": "s32.q06",
+      "type": "question",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Formal local critical-value coefficients are established; exact surgery, nonzero net sector, competing contributions and varying-slope uniformity remain requested analytic inputs. Referenced torsion retains its smooth-filling and endpoint limits.",
+      "inspected_dependency_locations": [
+        {
+          "label": "sec:dehnresponse",
+          "path": "book/chapters/16-dehn-filling-response.tex",
+          "line": 2
+        },
+        {
+          "label": "prop:dehncriticalvalue",
+          "path": "book/chapters/16-dehn-filling-response.tex",
+          "line": 205
+        },
+        {
+          "label": "eq:dehngaussiantorsion",
+          "path": "book/chapters/16-dehn-filling-response.tex",
+          "line": 535
+        },
+        {
+          "label": "prop:dehnquantumconditional",
+          "path": "book/chapters/16-dehn-filling-response.tex",
+          "line": 446
+        }
+      ]
+    },
+    {
+      "claim": "s32.q07",
+      "type": "question",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Iteration begins centered and feasible. Feasibility/centering cost, arithmetic precision, geometric certification and extra 3D angle hypotheses remain separate.",
+      "inspected_dependency_locations": [
+        {
+          "label": "sec:ipolybridge",
+          "path": "book/chapters/09-volume-hessians.tex",
+          "line": 2
+        },
+        {
+          "label": "eq:ipolyStepBound",
+          "path": "book/chapters/09-volume-hessians.tex",
+          "line": 444
+        }
+      ]
+    },
+    {
+      "claim": "s32.q08",
+      "type": "question",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Grounded finite Hessian, Schur and determinant identities do not imply a continuum limit or WP identification.",
+      "inspected_dependency_locations": [
+        {
+          "label": "sec:ipolybridge",
+          "path": "book/chapters/09-volume-hessians.tex",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "claim": "s32.q09",
+      "type": "question",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The fixed nonempty coefficient on the closed surface has kernel exp(-sL) and proved domain Re(s)>1. Continued coefficient extraction requires additional topology.",
+      "inspected_dependency_locations": [
+        {
+          "label": "sec:coefficientdistributions",
+          "path": "book/chapters/23-trace-coefficients.tex",
+          "line": 2
+        },
+        {
+          "label": "eq:coeffLaplacedefinition",
+          "path": "book/chapters/23-trace-coefficients.tex",
+          "line": 441
+        }
+      ]
+    },
+    {
+      "claim": "s32.q10",
+      "type": "question",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "One-crossing cancellation and the fixed-linear obstruction are established; the signed residual and nonlinear extraction stability remain quantitative research targets.",
+      "inspected_dependency_locations": [
+        {
+          "label": "prop:globalonecrossing",
+          "path": "book/chapters/25-global-coefficient-filters.tex",
+          "line": 75
+        },
+        {
+          "label": "eq:globalresidual",
+          "path": "book/chapters/25-global-coefficient-filters.tex",
+          "line": 144
+        },
+        {
+          "label": "eq:globalobstruction",
+          "path": "book/chapters/25-global-coefficient-filters.tex",
+          "line": 164
+        },
+        {
+          "label": "eq:globaldiagonal",
+          "path": "book/chapters/25-global-coefficient-filters.tex",
+          "line": 237
+        }
+      ]
+    },
+    {
+      "claim": "s32.q11",
+      "type": "question",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Stable finite Fourier projection and fixed-coefficient isolation do not give a uniform aggregate estimate over growing supports.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:countsmoothhypothesis",
+          "path": "book/chapters/24-quantitative-counting.tex",
+          "line": 605
+        },
+        {
+          "label": "eq:countsupportfourier",
+          "path": "book/chapters/24-quantitative-counting.tex",
+          "line": 513
+        }
+      ]
+    },
+    {
+      "claim": "s32.q12",
+      "type": "question",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Full rate requires both endpoints, reciprocal Jacobian, H_G=(h+V)G, F in L2, G in Dom(V) and 0<delta<=h. One-test de-averaging and the special-stratum measure remain separate.",
+      "inspected_dependency_locations": [
+        {
+          "label": "sec:pairconverse",
+          "path": "book/chapters/27-weighted-mixing-converse.tex",
+          "line": 2
+        },
+        {
+          "label": "eq:twopointkernel",
+          "path": "book/chapters/27-weighted-mixing-converse.tex",
+          "line": 331
+        },
+        {
+          "label": "prop:twopointunfolding",
+          "path": "book/chapters/27-weighted-mixing-converse.tex",
+          "line": 342
+        },
+        {
+          "label": "thm:twopointfullrate",
+          "path": "book/chapters/27-weighted-mixing-converse.tex",
+          "line": 518
+        },
+        {
+          "label": "thm:twopointconverse",
+          "path": "book/chapters/27-weighted-mixing-converse.tex",
+          "line": 398
+        },
+        {
+          "label": "sec:genus2markedtorus",
+          "path": "book/chapters/28-genus-two-model.tex",
+          "line": 2
+        },
+        {
+          "label": "sec:coefficientobservables",
+          "path": "book/chapters/29-controlled-observables.tex",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "claim": "s32.q13",
+      "type": "question",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Arithmetic and geometric inputs remain separate. The contact-row width condition, hyperbolic-versus-unit-systole gauge, finite replacement evidence and unrecovered historical archive are explicit.",
+      "inspected_dependency_locations": [
+        {
+          "label": "prop:strictconvexlittleo",
+          "path": "book/chapters/30-sharp-diagnostics.tex",
+          "line": 77
+        },
+        {
+          "label": "eq:primitiveDini",
+          "path": "book/chapters/30-sharp-diagnostics.tex",
+          "line": 55
+        },
+        {
+          "label": "eq:primitiveexactnormalizedmobius",
+          "path": "book/chapters/30-sharp-diagnostics.tex",
+          "line": 35
+        },
+        {
+          "label": "eq:inverseflatmicroscopic",
+          "path": "book/chapters/30-sharp-diagnostics.tex",
+          "line": 299
+        },
+        {
+          "label": "eq:dyadicerrorinverse",
+          "path": "book/chapters/30-sharp-diagnostics.tex",
+          "line": 188
+        },
+        {
+          "label": "sec:arithmeticgeometry",
+          "path": "book/chapters/31-arithmetic-remainder.tex",
+          "line": 2
+        },
+        {
+          "label": "prop:inverseflatrow",
+          "path": "book/chapters/30-sharp-diagnostics.tex",
+          "line": 273
+        },
+        {
+          "label": "subsec:flatnessmodels",
+          "path": "book/chapters/30-sharp-diagnostics.tex",
+          "line": 401
+        },
+        {
+          "label": "eq:allPointLogDiagnostic",
+          "path": "book/chapters/31-arithmetic-remainder.tex",
+          "line": 378
+        }
+      ]
+    },
+    {
+      "claim": "s32.q14",
+      "type": "question",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The complete cusped-torus figure-eight sum and one distinguished simple-curve twist orbit have different index sets and parameters.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:universalkernel",
+          "path": "book/chapters/18-figure-eight-curves.tex",
+          "line": 171
+        },
+        {
+          "label": "eq:Kkernel",
+          "path": "book/chapters/20-torus-twist-series.tex",
+          "line": 129
+        }
+      ]
+    },
+    {
+      "claim": "s32.q15",
+      "type": "question",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Position and tangential-velocity matching are separate; phase measure/multiplicity/convergence remain open. Cusp gaps exclude geodesic boundary and boundary extensions need exiting rays.",
+      "inspected_dependency_locations": [
+        {
+          "label": "sec:matching",
+          "path": "book/chapters/21-cuff-matching.tex",
+          "line": 2
+        },
+        {
+          "label": "sec:cusps",
+          "path": "book/chapters/22-cusps-orthospectrum.tex",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "claim": "appB.curvature",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Metric scaling by A^(-1) changes curvature -1 to -A on the positive-area family.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:unitareanormalization",
+          "path": "book/chapters/08-wp-flat-limit.tex",
+          "line": 31
+        }
+      ]
+    },
+    {
+      "claim": "appB.ch_curvature",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The -2i partial-barpartial log area potential has holomorphic sectional curvature -1, independently of constant scale of the area pairing.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:CHpotential",
+          "path": "book/chapters/07-euclidean-periods.tex",
+          "line": 152
+        }
+      ]
+    },
+    {
+      "claim": "appB.flat_weights",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Deficit and opening sum to 2pi; weights in (0,1) sum to 2. No lattice claim follows for general weights.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:flatweights",
+          "path": "book/chapters/07-euclidean-periods.tex",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "claim": "appB.volume_scales",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Boundary area, enclosed volume and moduli volume have different meanings and dimensions.",
+      "inspected_dependency_locations": [
+        {
+          "label": "sec:quantumdegeneration",
+          "path": "book/chapters/11-quantum-degeneration.tex",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "claim": "appB.wp_limit",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The factor 1/2 belongs to the locally uniform fixed-weight open-moduli limit, without collision or total-volume uniformity.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:localWPCHlimit",
+          "path": "book/chapters/08-wp-flat-limit.tex",
+          "line": 110
+        }
+      ]
+    },
+    {
+      "claim": "appB.wp_form",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "FN wedge direction and period ell agree; raw complex pairing uses iH. Stabilizers do not rescale the local form.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:fn",
+          "path": "book/chapters/01-volume-normalization.tex",
+          "line": 18
+        },
+        {
+          "label": "sec:conventions",
+          "path": "book/chapters/01-volume-normalization.tex",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "claim": "appB.boundaries",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Labels, fixed lengths and unparametrized boundaries are retained; zero is a cusp and label permutations are not silently quotiented.",
+      "inspected_dependency_locations": [
+        {
+          "label": "sec:conventions",
+          "path": "book/chapters/01-volume-normalization.tex",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "claim": "appB.stack_volumes",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The power/d! volume and ineffective stabilizer weights agree with Section 1 and remain distinct from form rescaling.",
+      "inspected_dependency_locations": [
+        {
+          "label": "sec:conventions",
+          "path": "book/chapters/01-volume-normalization.tex",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "claim": "appB.torus_volume",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The stack value pi^2/12 is half the effective torus value, accounting for the ineffective involution.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:basevolumes",
+          "path": "book/chapters/01-volume-normalization.tex",
+          "line": 42
+        }
+      ]
+    },
+    {
+      "claim": "appB.sphere_volume",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Both labeled orientation sheets contribute; one sheet alone gives half the stated 2pi^2.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:v04direct",
+          "path": "book/chapters/03-ideal-tetrahedron.tex",
+          "line": 84
+        }
+      ]
+    },
+    {
+      "claim": "appB.cone_parameter",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Imaginary length uses opening theta, with deficit 2pi-theta; positive area and chamber corrections remain necessary.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:gb",
+          "path": "book/chapters/05-boundary-cone-continuation.tex",
+          "line": 11
+        },
+        {
+          "label": "eq:conev04",
+          "path": "book/chapters/05-boundary-cone-continuation.tex",
+          "line": 107
+        }
+      ]
+    },
+    {
+      "claim": "appB.ambient_crossratio",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The ideal-vertex coordinate is ambient and need not be the intrinsic conformal cross-ratio.",
+      "inspected_dependency_locations": [
+        {
+          "label": "sec:tetrahedron",
+          "path": "book/chapters/03-ideal-tetrahedron.tex",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "claim": "appB.angles",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Exterior angles have the ideal 2pi vertex sum; the negative half Schlaefli coefficient is for interior angles.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:rivinangles2",
+          "path": "book/chapters/02-ideal-angle-cells.tex",
+          "line": 21
+        },
+        {
+          "label": "eq:Schlafli",
+          "path": "book/chapters/11-quantum-degeneration.tex",
+          "line": 105
+        }
+      ]
+    },
+    {
+      "claim": "appB.lambda_length",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Signed lambda=exp(delta/2) without sqrt(2) agrees with both the tetrahedral and cusp-parabolic calculations.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:lambdagauge",
+          "path": "book/chapters/03-ideal-tetrahedron.tex",
+          "line": 32
+        },
+        {
+          "label": "eq:cusplambda",
+          "path": "book/chapters/22-cusps-orthospectrum.tex",
+          "line": 92
+        }
+      ]
+    },
+    {
+      "claim": "appB.planar_gauge",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Leading-trailing coordinates are grounded and -D^2V=2L_II; boundary constants must be removed before inversion/determinants.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:ipolyAngleCoordinates",
+          "path": "book/chapters/09-volume-hessians.tex",
+          "line": 78
+        },
+        {
+          "label": "eq:ipolyHessian",
+          "path": "book/chapters/09-volume-hessians.tex",
+          "line": 121
+        },
+        {
+          "label": "eq:ipolyDtN",
+          "path": "book/chapters/09-volume-hessians.tex",
+          "line": 245
+        }
+      ]
+    },
+    {
+      "claim": "appB.quantum_integer",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The q_alg integer and compact root exp(pi i/r) agree with the accepted quantum chapter, with fusion admissibility retained there.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:introqinteger",
+          "path": "book/chapters/10-quantum-introduction.tex",
+          "line": 54
+        }
+      ]
+    },
+    {
+      "claim": "appB.jones",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Reduced Jones normalization and polynomial-before-specialization remain distinct from the separate odd-level Chen-Yang conventions.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:introknotvolume",
+          "path": "book/chapters/10-quantum-introduction.tex",
+          "line": 131
+        },
+        {
+          "label": "eq:introclosedvolume",
+          "path": "book/chapters/10-quantum-introduction.tex",
+          "line": 144
+        }
+      ]
+    },
+    {
+      "claim": "appB.cm_labels",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Source q=xi_r^2, q_alg=xi_r; the refined equivalent requires the exact odd rational-angle sequence beyond leading convergence.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:quantum6jstructure",
+          "path": "book/chapters/11-quantum-degeneration.tex",
+          "line": 205
+        }
+      ]
+    },
+    {
+      "claim": "appB.continuous_scale",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "h=2pi b^2 and hbar_vol=h/2 follow from doubled action; the RT scale 4pi i/r remains a different convention.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:TVvolumehbar",
+          "path": "book/chapters/14-normalized-quantum-comparison.tex",
+          "line": 531
+        },
+        {
+          "label": "eq:introRTgrowth",
+          "path": "book/chapters/10-quantum-introduction.tex",
+          "line": 635
+        }
+      ]
+    },
+    {
+      "claim": "appB.barnes",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The upward dw/i contour and pole-cleared symbol agree; the Airy error is additive for bounded real transition parameter.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:realregularsymbol",
+          "path": "book/chapters/15-quantum-airy.tex",
+          "line": 33
+        },
+        {
+          "label": "eq:clearedregularsymbol",
+          "path": "book/chapters/15-quantum-airy.tex",
+          "line": 61
+        },
+        {
+          "label": "eq:quantumAirytheorem",
+          "path": "book/chapters/15-quantum-airy.tex",
+          "line": 86
+        }
+      ]
+    },
+    {
+      "claim": "appB.liouville",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Physics alpha=mu/(2b), probabilistic beta=2alpha and Q agree. Marks 0,1,z,infinity carry labels 1,2,3,4.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:introLiouvilleparameters",
+          "path": "book/chapters/10-quantum-introduction.tex",
+          "line": 679
+        },
+        {
+          "label": "eq:screeningparameters",
+          "path": "book/chapters/13-four-point-fusion.tex",
+          "line": 21
+        }
+      ]
+    },
+    {
+      "claim": "appB.torsion",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "B=-tr fixes the peripheral factor; Goldman, peripheral and total torsion forms must be rescaled together.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:torsionGoldman",
+          "path": "book/chapters/12-quantum-boundary-measure.tex",
+          "line": 230
+        }
+      ]
+    },
+    {
+      "claim": "appB.closed_curves",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Unoriented topological labels persist at equal lengths; primitivity and iteration/multiplicity are specified separately.",
+      "inspected_dependency_locations": [
+        {
+          "label": "sec:figures",
+          "path": "book/chapters/18-figure-eight-curves.tex",
+          "line": 2
+        },
+        {
+          "label": "sec:coefficientdistributions",
+          "path": "book/chapters/23-trace-coefficients.tex",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "claim": "appB.positive_trace",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The pants plus sign uses compatible local lifts; positive geometric absolute traces cannot replace globally signed character traces.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:figuretrace",
+          "path": "book/chapters/18-figure-eight-curves.tex",
+          "line": 27
+        }
+      ]
+    },
+    {
+      "claim": "appB.coefficient_basis",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The unnegated basis retains parallel multiplicity and empty unit; unnegated is not pointwise positive on SU(2).",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:coeffbasis",
+          "path": "book/chapters/23-trace-coefficients.tex",
+          "line": 71
+        }
+      ]
+    },
+    {
+      "claim": "appB.selberg",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Grouping inverse oriented primitives changes denominator 2sinh to sinh; closed genus-at-least-two scope is explicit.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:coefftwistedSelberg",
+          "path": "book/chapters/23-trace-coefficients.tex",
+          "line": 112
+        }
+      ]
+    },
+    {
+      "claim": "appB.heat",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The Gaussian normalization and exp(-t/4) curvature spectral shift match the coefficient transform.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:coeffheatdefinition",
+          "path": "book/chapters/23-trace-coefficients.tex",
+          "line": 439
+        }
+      ]
+    },
+    {
+      "claim": "appB.laplace",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The exp(-sL) transform corresponds to v=s+1/2; coefficient extraction is justified first at finite length cutoffs.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:coeffLaplacedefinition",
+          "path": "book/chapters/23-trace-coefficients.tex",
+          "line": 441
+        },
+        {
+          "label": "eq:coeffproductderivative",
+          "path": "book/chapters/23-trace-coefficients.tex",
+          "line": 784
+        }
+      ]
+    },
+    {
+      "claim": "appB.total_laminations",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The count includes all nonzero integral laminations, disconnected supports and parallel copies.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:countall",
+          "path": "book/chapters/24-quantitative-counting.tex",
+          "line": 67
+        }
+      ]
+    },
+    {
+      "claim": "appB.primitive_lamination",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Gcd-one support weights do not imply connected support, unlike a count of connected simple curves.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:countprimitive",
+          "path": "book/chapters/24-quantitative-counting.tex",
+          "line": 182
+        }
+      ]
+    },
+    {
+      "claim": "appB.support_variable",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The exponent counts distinct supports, not parallel copies in a trace monomial.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:countsupportpartition",
+          "path": "book/chapters/24-quantitative-counting.tex",
+          "line": 473
+        }
+      ]
+    },
+    {
+      "claim": "appB.one_crossing",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Each simple torus class gives two N labels of trace 3t and one H label of trace t^2+2, preserving equal-length multiplicity.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:allfigureidentity",
+          "path": "book/chapters/18-figure-eight-curves.tex",
+          "line": 181
+        }
+      ]
+    },
+    {
+      "claim": "appB.basmajian",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "One oriented endpoint shadow has weight 2log coth(d/2); combining reverse orientations yields coefficient 4 for the full boundary orthospectrum.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:basmajian",
+          "path": "book/chapters/22-cusps-orthospectrum.tex",
+          "line": 163
+        }
+      ]
+    },
+    {
+      "claim": "appB.cusp",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Rescaling H by k changes d by -2log k and leaves exp(-d)/H^2 invariant; arbitrary decorations need not be embedded horocycles.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:toruscusplambda",
+          "path": "book/chapters/22-cusps-orthospectrum.tex",
+          "line": 128
+        }
+      ]
+    },
+    {
+      "claim": "appB.cusp_rays",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The gap discussion assumes complete finite area without geodesic boundary; exiting-ray terms are additional in boundary cases.",
+      "inspected_dependency_locations": [
+        {
+          "label": "sec:cusps",
+          "path": "book/chapters/22-cusps-orthospectrum.tex",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "claim": "appB.phase",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "One induced orientation is reversed to obtain the common cuff coordinate; twists preserve signed tangential velocity as well as shifting position.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:endpointmatch",
+          "path": "book/chapters/21-cuff-matching.tex",
+          "line": 16
+        },
+        {
+          "label": "eq:momentummatch",
+          "path": "book/chapters/21-cuff-matching.tex",
+          "line": 31
+        }
+      ]
+    },
+    {
+      "claim": "appB.peripheral",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Multiplier logs are twice eigenvalue logs; fixed lift signs are compatible with pu+qv=2pi i.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:dehnholonomy",
+          "path": "book/chapters/16-dehn-filling-response.tex",
+          "line": 27
+        },
+        {
+          "label": "eq:dehncone",
+          "path": "book/chapters/16-dehn-filling-response.tex",
+          "line": 43
+        }
+      ]
+    },
+    {
+      "claim": "appB.polarization",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "P=v/2 and P_hat=hbar partial_u give the commutator and l-shift; the induced relation is lm=exp(hbar/2)ml.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:introNZpolarization",
+          "path": "book/chapters/10-quantum-introduction.tex",
+          "line": 536
+        },
+        {
+          "label": "eq:introcommutator",
+          "path": "book/chapters/10-quantum-introduction.tex",
+          "line": 573
+        }
+      ]
+    },
+    {
+      "claim": "appB.real_source",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The envelope derivative and cone Schlaefli formula give j=ell_core/2; source and angle are Legendre-dual quantities.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:realdehnlegendre",
+          "path": "book/chapters/16-dehn-filling-response.tex",
+          "line": 125
+        },
+        {
+          "label": "eq:dehnsourcecore",
+          "path": "book/chapters/16-dehn-filling-response.tex",
+          "line": 137
+        }
+      ]
+    },
+    {
+      "claim": "appB.holomorphic_action",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "F'=v and the specified surgery action give half the imaginary critical value; local chart and geometric-completion hypotheses remain referenced.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:dehnsurgeryaction",
+          "path": "book/chapters/16-dehn-filling-response.tex",
+          "line": 196
+        },
+        {
+          "label": "eq:dehnexactcriticalvolume",
+          "path": "book/chapters/16-dehn-filling-response.tex",
+          "line": 211
+        }
+      ]
+    },
+    {
+      "claim": "appB.gauge_counts",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Counts include nonzero signed lattice vectors and boundary membership; gauge length is ell/systole and unoriented primitive count is half the signed count.",
+      "inspected_dependency_locations": [
+        {
+          "label": "subsec:mobiusmodulus",
+          "path": "book/chapters/30-sharp-diagnostics.tex",
+          "line": 18
+        },
+        {
+          "label": "sec:arithmeticgeometry",
+          "path": "book/chapters/31-arithmetic-remainder.tex",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "claim": "appB.flow_scale",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The flow is diag(exp(t),exp(-t)); quadratic area scaling gives exponents h for area cutoff and 2h for period scale.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:pairgeometryflow",
+          "path": "book/chapters/27-weighted-mixing-converse.tex",
+          "line": 92
+        },
+        {
+          "label": "subsec:pairquotient",
+          "path": "book/chapters/27-weighted-mixing-converse.tex",
+          "line": 125
+        }
+      ]
+    },
+    {
+      "claim": "appB.correlation",
+      "type": "convention_row",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Correlation is bilinear; the Hermitian version conjugates F. Preserving delta requires the derivative terminal-test count.",
+      "inspected_dependency_locations": [
+        {
+          "label": "thm:twopointfullrate",
+          "path": "book/chapters/27-weighted-mixing-converse.tex",
+          "line": 518
+        }
+      ]
+    },
+    {
+      "claim": "s32.scope",
+      "type": "narrative_or_source",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Questions are explicit research extensions with established inputs; no literature-completeness claim or publication prerequisite is asserted.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:polyhedralpartition",
+          "path": "book/chapters/02-ideal-angle-cells.tex",
+          "line": 76
+        },
+        {
+          "label": "eq:treevolume",
+          "path": "book/chapters/04-hyperideal-integrand.tex",
+          "line": 223
+        }
+      ]
+    },
+    {
+      "claim": "s32.computational_map",
+      "type": "narrative_or_source",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Seven hashed records provide finite formulas/event data, preserving historical statuses and missing provenance without claiming replay or general solvers.",
+      "inspected_dependency_locations": [
+        {
+          "label": "sec:ipolybridge",
+          "path": "book/chapters/09-volume-hessians.tex",
+          "line": 2
+        },
+        {
+          "label": "sec:quantumAiry",
+          "path": "book/chapters/15-quantum-airy.tex",
+          "line": 2
+        },
+        {
+          "label": "sec:arithmeticgeometry",
+          "path": "book/chapters/31-arithmetic-remainder.tex",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "claim": "appB.source_scale",
+      "type": "narrative_or_source",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "FN/raw-Beltrami form normalization and ineffective stabilizer division are independent operations in the exact earlier review.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:fn",
+          "path": "book/chapters/01-volume-normalization.tex",
+          "line": 18
+        },
+        {
+          "label": "sec:conventions",
+          "path": "book/chapters/01-volume-normalization.tex",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "claim": "appB.source_penner",
+      "type": "narrative_or_source",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The inherited Mondello ordered-endpoint/reduced-length conversion supports the lambda form; no full Penner proof audit is claimed.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:penner",
+          "path": "book/chapters/03-ideal-tetrahedron.tex",
+          "line": 21
+        }
+      ]
+    },
+    {
+      "claim": "appB.source_calibration",
+      "type": "narrative_or_source",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The two-sheet tetrahedral integral and local Fricke density independently calibrate the chosen scale within their domains.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:v04direct",
+          "path": "book/chapters/03-ideal-tetrahedron.tex",
+          "line": 84
+        },
+        {
+          "label": "eq:frickedensity",
+          "path": "book/chapters/appendix-a-fricke.tex",
+          "line": 41
+        }
+      ]
+    },
+    {
+      "claim": "appB.source_cde",
+      "type": "narrative_or_source",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "The approved ledger pins CDE v3 Sections 3.2.3-3.2.4, equations 3.31-3.36; constants are not imported unchanged.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:penner",
+          "path": "book/chapters/03-ideal-tetrahedron.tex",
+          "line": 21
+        }
+      ]
+    },
+    {
+      "claim": "appB.source_budd",
+      "type": "narrative_or_source",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Budd Section 1.1 disintegration/root weights, Corollary 2 and Section 1.3 interpretation retain orientation- and label-preserving automorphisms.",
+      "inspected_dependency_locations": [
+        {
+          "label": "eq:polyhedralpartition",
+          "path": "book/chapters/02-ideal-angle-cells.tex",
+          "line": 76
+        }
+      ]
+    },
+    {
+      "claim": "appB.source_audit_scope",
+      "type": "narrative_or_source",
+      "disposition": "consistent_with_declared_scope",
+      "review_note": "Inherited source statements and local derivations are separated; the appendix does not assert a fresh complete external-proof audit.",
+      "inspected_dependency_locations": [
+        {
+          "label": "app:conventions",
+          "path": "book/chapters/appendix-b-conventions.tex",
+          "line": 2
+        }
+      ]
+    }
+  ]
+}

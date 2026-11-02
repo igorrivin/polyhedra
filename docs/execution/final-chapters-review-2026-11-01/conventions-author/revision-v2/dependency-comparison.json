@@ -1,0 +1,214 @@
+{
+  "status": "matched_final_snapshots_no_semantic_prose_change",
+  "quantum_author_freeze": {
+    "path": "../execution/final-chapters-review-2026-11-01/quantum-author/revision-v2/freeze-manifest.json",
+    "sha256": "f043f6943bd124638802bfdb5d5e7505269143f54046eea93d298345191c0620",
+    "bytes": 3133
+  },
+  "quantum_independent_acceptance": {
+    "path": "../execution/final-chapters-review-2026-11-01/quantum-review/final-acceptance.json",
+    "sha256": "c631f5ed63513246adf7bbec958c3298ab577861ee02f1d359ff6ca25b7c4dd9",
+    "bytes": 3479
+  },
+  "geodesic_author_freeze": {
+    "path": "../execution/final-chapters-review-2026-11-01/geodesic-author/author-freeze-manifest.json",
+    "sha256": "38994ff43e952ff42ccafb4d56c44e51c385a0092d156e3d35cdbcf1041d7eec",
+    "bytes": 3887
+  },
+  "previous_observation_comparisons": [
+    {
+      "path": "book/chapters/10-quantum-introduction.tex",
+      "previous_observation_sha256": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+      "current_sha256": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+      "disposition": "byte_identical"
+    },
+    {
+      "path": "book/chapters/11-quantum-degeneration.tex",
+      "previous_observation_sha256": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9",
+      "current_sha256": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9",
+      "disposition": "byte_identical"
+    },
+    {
+      "path": "book/claims/sections10-11.json",
+      "previous_observation_sha256": "ea22e86c4399d4d3fcf83c938144373c89367cb7f9ce1a074b866499000ce1cb",
+      "current_sha256": "34dbb6255dc468cb796bb3a129eeaf37ac0c5f4dc358abfd73030e64331b3539",
+      "disposition": "QR01_two_dependency_hash_entries_added_independently_accepted"
+    },
+    {
+      "path": "book/chapters/17-unfolding-constant-series.tex",
+      "previous_observation_sha256": "d2bd6ee8af07ca7c27ae78ed2cab58777aba5d99204251d3b1b458964205b889",
+      "current_sha256": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+      "disposition": "only_one_inherited_EOF_blank_line_removed"
+    },
+    {
+      "path": "book/chapters/18-figure-eight-curves.tex",
+      "previous_observation_sha256": "efd74e44095a57780ed3a06afc1f00e9dffd850e6cc3d536025224527d58b8b2",
+      "current_sha256": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+      "disposition": "only_one_inherited_EOF_blank_line_removed"
+    },
+    {
+      "path": "book/chapters/19-pants-twists.tex",
+      "previous_observation_sha256": "bc0b50a6c550a8665696d75a55d173914b542e886147b483ebf97b160cf425c9",
+      "current_sha256": "9dc4438ad32d76c7508cd6f90e34dc615697bf60cc546b5187e130468213be9d",
+      "disposition": "only_one_inherited_EOF_blank_line_removed"
+    },
+    {
+      "path": "book/chapters/20-torus-twist-series.tex",
+      "previous_observation_sha256": "7a0a2601279ecfe922d68aa32dfe55672817afc699e5feb4c4585f3ef8668f7b",
+      "current_sha256": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+      "disposition": "only_one_inherited_EOF_blank_line_removed"
+    },
+    {
+      "path": "book/chapters/21-cuff-matching.tex",
+      "previous_observation_sha256": "7250a26f641331b5cdd1e760f7540373662396349f10feb487e6a2d7495f35c2",
+      "current_sha256": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+      "disposition": "only_one_inherited_EOF_blank_line_removed"
+    },
+    {
+      "path": "book/chapters/22-cusps-orthospectrum.tex",
+      "previous_observation_sha256": "ff9bbd28455e2427ea3ae6ad8f2b2bd37873d088a5827a8418fdcbbdf6bdd6ed",
+      "current_sha256": "67cd497d3599bbb6716335a90d6f2f5c71bd191efa96211dd47442c64f3b39e2",
+      "disposition": "only_one_inherited_EOF_blank_line_removed"
+    }
+  ],
+  "new_geodesic_ledger": {
+    "path": "book/claims/sections17-22.json",
+    "sha256": "aca716a9b08128e7c6feefb79693ff9313139dbc52c0b33ce7e395d6fce80d54",
+    "bytes": 112294
+  },
+  "geodesic_conventions_inspected": {
+    "geometry": "Oriented finite-type hyperbolic curvature -1, no cone singularities. Each theorem adds its own compactness, cusp and boundary hypotheses.",
+    "curves": "Unoriented free-homotopy classes by default. Figure-eights are primitive one-transverse-double-point classes; the torus contributes two N labels and one H label per simple alpha. Equal lengths do not identify labels.",
+    "traces": "Positive geometric t=2cosh(ell/2), cusp t=2. Pants lifts trA=t_a, trB=t_b, trAB=-t_c; cusp parabolic factorization instead trA=t_a,trB=-t_b,AB=P. These are local compatible signs, not a universal positive SL(2) lift. Section 23 retains signed characters.",
+    "twists": "Signed hyperbolic displacement with Dehn-twist period a>0. Angles and endpoint tangential coordinates use the compatible signed convention. Fixed curve length is not periodic; its orbit sum is.",
+    "endpoint_phase": "Orient by travel, p in (-1,1); dL=-p_s ds+p_t dt. Common cuff coordinate after reversal of one induced boundary orientation; opposite-side crossing plus equal p matches the full unit tangent.",
+    "branches": "acosh nonnegative real branch on [1,infinity); all displayed square roots nonnegative; invalid domains are not clamped.",
+    "cusps": "lambda=exp(signed truncated distance/2), without sqrt(2). H denotes an embedded sufficiently small horocycle for literal truncation, or a positive decoration with signed length when larger. Gap partition assumes no geodesic boundary.",
+    "basmajian": "Oriented orthogeodesics contribute 2log(coth(d/2)); grouping reverse orientations gives 4 for one unoriented arc. The boundary spectrum includes nonsimple arcs.",
+    "WP": "Same orbifold measure on both unfolded quotients. Punctured-torus stack measure includes one ineffective factor 1/2, consistent with reviewed Section 6.",
+    "numerics": "Author finite checks use exact SymPy identities and mpmath at 70/110 digits. Floating residuals are not intervals. Analytic truncation bounds are separate from quadrature/roundoff; tiny positive signals use stable or scaled forms."
+  },
+  "added_dependency_pointers": [
+    {
+      "claim": "s32.q05",
+      "added": [
+        "book/claims/sections10-11.json#s11.cm_leading",
+        "book/claims/sections10-11.json#s11.cm_refined"
+      ]
+    },
+    {
+      "claim": "s32.q14",
+      "added": [
+        "book/claims/sections17-22.json#18.08",
+        "book/claims/sections17-22.json#20.09"
+      ]
+    },
+    {
+      "claim": "s32.q15",
+      "added": [
+        "book/claims/sections17-22.json#21.01",
+        "book/claims/sections17-22.json#21.02",
+        "book/claims/sections17-22.json#21.03",
+        "book/claims/sections17-22.json#22.03",
+        "book/claims/sections17-22.json#22.12"
+      ]
+    },
+    {
+      "claim": "appB.lambda_length",
+      "added": [
+        "book/claims/sections17-22.json#22.05"
+      ]
+    },
+    {
+      "claim": "appB.cm_labels",
+      "added": [
+        "book/claims/sections10-11.json#s11.cm_leading"
+      ]
+    },
+    {
+      "claim": "appB.closed_curves",
+      "added": [
+        "book/claims/sections17-22.json#18.05",
+        "book/claims/sections17-22.json#18.12"
+      ]
+    },
+    {
+      "claim": "appB.positive_trace",
+      "added": [
+        "book/claims/sections17-22.json#18.01"
+      ]
+    },
+    {
+      "claim": "appB.one_crossing",
+      "added": [
+        "book/claims/sections17-22.json#18.09",
+        "book/claims/sections17-22.json#18.05"
+      ]
+    },
+    {
+      "claim": "appB.basmajian",
+      "added": [
+        "book/claims/sections17-22.json#22.10"
+      ]
+    },
+    {
+      "claim": "appB.cusp",
+      "added": [
+        "book/claims/sections17-22.json#22.06",
+        "book/claims/sections17-22.json#22.09"
+      ]
+    },
+    {
+      "claim": "appB.cusp_rays",
+      "added": [
+        "book/claims/sections17-22.json#22.03"
+      ]
+    },
+    {
+      "claim": "appB.phase",
+      "added": [
+        "book/claims/sections17-22.json#21.01",
+        "book/claims/sections17-22.json#21.02",
+        "book/claims/sections17-22.json#21.03"
+      ]
+    }
+  ],
+  "initial_evidence_preserved": [
+    {
+      "path": "freeze-manifest.json",
+      "sha256": "fc80ec12ae3c1f13d7c7090fc60f05e2db1fe3eccfe3cf3cb9e72d7fef7d65dc"
+    },
+    {
+      "path": "author-audit.md",
+      "sha256": "96ae7b6df2b326a78176037ed8f8449cfed5b8598545438f3e8b1693373ba55e"
+    },
+    {
+      "path": "author-static-checks.json",
+      "sha256": "8ebc091eb77d76c79d9d78364ee8e4dbde03ca73eda6ed964dcc437e4881ece0"
+    },
+    {
+      "path": "reviewed-dependency-binding.json",
+      "sha256": "36a3e733dbea673c78ad56dfd3a82a2c4464c4b3550d6d25a10e57d790a15f44"
+    },
+    {
+      "path": "convention-row-inventory.json",
+      "sha256": "6b625f5056a7b4b63ee20766e4d1d742b09b8ad2240655a53ae7c7e6a56bf512"
+    },
+    {
+      "path": "source-changes.patch",
+      "sha256": "3af6f6a98d90688bfad50000d985b5cff276bac5691516e02713c37e5802e1d3"
+    },
+    {
+      "path": "write_conventions.py",
+      "sha256": "3863cf5330675b6a37fa1793115ee1ef6984783fad903db73a99c41461cf4d6b"
+    },
+    {
+      "path": "make_ledger.py",
+      "sha256": "ce80cb2382137ced6783b26d104df356973b12259355cc1618e150493235f9b7"
+    },
+    {
+      "path": "check_author.py",
+      "sha256": "9e00429df9577af18b47ce71a58e153ec99921a58b3df0130afa7c2e58282a44"
+    }
+  ]
+}

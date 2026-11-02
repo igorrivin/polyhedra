@@ -1,0 +1,155 @@
+{
+  "status": "R1_R2_author_static_validation_passed_targeted_review_pending",
+  "recorded_at_utc": "2026-11-02T03:36:54.690914+00:00",
+  "changed_canonical_paths": [
+    "book/chapters/19-pants-twists.tex",
+    "book/chapters/22-cusps-orthospectrum.tex",
+    "book/claims/sections17-22.json"
+  ],
+  "unchanged_other_owned_paths": [
+    "book/chapters/17-unfolding-constant-series.tex",
+    "book/chapters/18-figure-eight-curves.tex",
+    "book/chapters/20-torus-twist-series.tex",
+    "book/chapters/21-cuff-matching.tex"
+  ],
+  "whitelisted_ledger_delta_only": true,
+  "all_displayed_formulas_and_proof_environments_unchanged": true,
+  "all_owned_labels_and_headings_unchanged": true,
+  "claim_count": 59,
+  "owned_labels": 54,
+  "original_owned_labels": 48,
+  "existing_added_anchors": 6,
+  "global_graph_observation": {
+    "inputs_including_wrapper_and_main": 36,
+    "labels": 613,
+    "baseline_607_labels_preserved_in_order": true,
+    "additional_labels": [
+      "eq:figurekerneltail",
+      "eq:figurefiniteidentity",
+      "eq:localdistancehessian",
+      "eq:torustwistderivatives",
+      "eq:torusintegraltail",
+      "eq:Hpartialsumtail"
+    ],
+    "bibliography_keys": 129,
+    "bibliography_key_sequence_unchanged": true,
+    "scope": "Read-only observation, not approval of other authors or integration."
+  },
+  "all_owned_files_single_final_newline": true,
+  "all_initial_author_and_review_evidence_hashes_preserved": true,
+  "initial_review_manifest_sha256": "7386b5e022db352f9d5ce9506eeb907f46458baf6a2cac6029260fc6e90763f4",
+  "accepted_contract_sha256_unchanged": "2a62a149e7f5f88027329c24ba3a4720407debfed2fb78945350f23b6fce85a6",
+  "accepted_contract_review_record_sha256": "be7debaf190ecd960d0caeca6b82e884407b6da04e72234e16a60762980bc82b",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "book/chapters/17-unfolding-constant-series.tex"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "book/chapters/18-figure-eight-curves.tex"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "book/chapters/19-pants-twists.tex"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "book/chapters/20-torus-twist-series.tex"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "book/chapters/21-cuff-matching.tex"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "book/chapters/22-cusps-orthospectrum.tex"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "book/claims/sections17-22.json"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "no_index_exit_note": "Exit 1 with no diagnostic output is the expected new-file content-difference status; no whitespace errors.",
+  "scientific_rerun": "not performed or needed for this citation-only delta",
+  "not_performed": [
+    "PDF build or marker",
+    "stage or commit",
+    "installation",
+    "upload",
+    "unrelated canonical edits"
+  ]
+}

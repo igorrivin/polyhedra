@@ -1,0 +1,73 @@
+{
+  "decision": "targeted_revision_required",
+  "reviewer": "questions_conventions_reviewer",
+  "recorded_at_utc": "2026-11-02T03:12:58.767612+00:00",
+  "author_freeze_sha256": "ad43dfcb8eb18fa04a3f60ec88186066f873e132c0e9884459f1e91f18a84025",
+  "reviewed_subject_sha256": {
+    "book/chapters/32-open-questions.tex": "c831bf85ab0c6cb7f5ed46509212ce5dc1549c05c5723be3c035c928a409fc21",
+    "book/chapters/appendix-b-conventions.tex": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+    "book/claims/section32-appendixb.json": "0bf0a62df0e81ae502d0408935cb1fee80b0db9a85be8e0d58c73367773dfd5a"
+  },
+  "required_findings": [
+    {
+      "id": "CV01",
+      "severity": "minor_required_scope_and_locator_correction",
+      "claim": "s32.q01",
+      "path": "book/chapters/32-open-questions.tex",
+      "lines": [
+        20,
+        22
+      ],
+      "problem": "Q1 asks about four strictly positive geodesic boundary lengths, but the comparison points specifically to eq:treevolume, whose BMZ domain M_0,m(0,lengths) requires an origin cusp. It is not the cited all-positive comparison.",
+      "evidence": [
+        {
+          "path": "book/chapters/04-hyperideal-integrand.tex",
+          "lines": [
+            213,
+            234
+          ],
+          "scope": "BMZ construction requires an origin cusp."
+        },
+        {
+          "path": "book/chapters/04-hyperideal-integrand.tex",
+          "lines": [
+            236,
+            245
+          ],
+          "scope": "Zonneveld positive-boundary extension selects L1<L2; equal-length volume values use continuity."
+        }
+      ],
+      "required_repair": "Point Q1 to the positive-boundary extension in Section 4 with the unequal-selected-pair/equal-volume-by-continuity distinction. Retain the open hyperideal integration question and the separation of spine/tree cells from hyperideal angle cells. Reconcile s32.q01 wording/locator and source hashes without new labels.",
+      "recheck_scope": "Targeted paragraph and matching ledger/dependency/hash delta; preserve all other reviewed claims and original evidence."
+    }
+  ],
+  "other_required_findings": [],
+  "claim_coverage": {
+    "total": 66,
+    "questions": 15,
+    "convention_rows": 43,
+    "original_rows": 28,
+    "narrative_or_source": 8
+  },
+  "static_verification": {
+    "status": "PASS",
+    "pins": 98,
+    "prior_approved_files": 34,
+    "dependency_occurrences": 155,
+    "unique_dependency_pointers": 127,
+    "result_fields": 36,
+    "metadata_delta_paths": 97,
+    "graph_files": 36,
+    "baseline_ordered_labels": 607,
+    "total_unique_labels": 613,
+    "bibliography_keys": 129
+  },
+  "review_boundaries": [
+    "Quantum acceptance is inherited only from the exact final acceptance c631f5ed63513246adf7bbec958c3298ab577861ee02f1d359ff6ca25b7c4dd9.",
+    "Geodesic conventions are checked against author freeze 38994ff43e952ff42ccafb4d56c44e51c385a0092d156e3d35cdbcf1041d7eec; no independent geodesic approval is assigned here.",
+    "Seven result identity/content checks are not fresh numerical replay.",
+    "Four quantum and ten geodesic groups are planned-only in this frozen handoff; subsequent work is reconciled in integration.",
+    "Exact inherited source-statement scopes are reused; no complete new external-proof or PDF-byte audit.",
+    "No new numerical solver, build/PDF marker, rendering, install, stage, commit or upload."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "source_commit": "51e8273d56612a98182a13ae9bb4521b34e37271",
+  "spec_identity": {
+    "sha256": "7f0f5a3104c6eb744b4d2418dca75a4df6e594739d755eedade5cb9be9aa96f2",
+    "bytes": 22708
+  },
+  "frozen_input_identities": {},
+  "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/subject-v2/synthetic-gate-5xa9yzqe/repository",
+  "argv": null,
+  "command_executed": false,
+  "returncode": null,
+  "stdout": "",
+  "stderr": "",
+  "source_before": null,
+  "source_after": null,
+  "result": null,
+  "output_path": null,
+  "stage": "approval_guards",
+  "scope": "Actual finite command execution with clean source, input and result identity guards; not independent mathematical or implementation approval.",
+  "checks_passed": false,
+  "exit_status": 1,
+  "started_at_utc": "2026-11-02T04:05:59.819970+00:00",
+  "failure": "CheckpointError: git command failed: show 51e8273d56612a98182a13ae9bb4521b34e37271:book/main.tex\nfatal: path 'book/main.tex' does not exist in '51e8273d56612a98182a13ae9bb4521b34e37271'\n",
+  "failure_stage": "approval_guards",
+  "finished_at_utc": "2026-11-02T04:05:59.914712+00:00"
+}

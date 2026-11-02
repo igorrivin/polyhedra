@@ -1,0 +1,216 @@
+\section{Polyhedral degeneration and quantum volume asymptotics}
+\label{sec:quantumdegeneration}
+
+\subsection{Three different geometric quantities}
+
+The connection to the volume conjecture becomes precise only after
+separating three quantities:
+\[
+ A=\operatorname{Area}(\partial P),\qquad
+ W(P)=\operatorname{Vol}_{\HH^3}(P),\qquad
+ V_{\WP}=\int_{\M}\frac{\omega_{\WP}^d}{d!}.
+\]
+The first is a surface area, the second an enclosed three-dimensional
+volume, and the third a measure of a space of shapes. The ordinary
+knot volume conjecture concerns three-dimensional volume. For a
+hyperbolic knot, in the reduced colored-Jones normalization
+$J_N(\text{unknot};q)=1$, its familiar form is
+\begin{equation}
+ \lim_{N\to\infty}\frac{2\pi}{N}
+ \log\left|J_N(K;e^{2\pi i/N})\right|
+ =\operatorname{Vol}(S^3\setminus K).
+ \label{eq:volumeconjecture}
+\end{equation}
+This remains a conjecture in general; see the colored-Jones
+formulation in~\cite{MurakamiMurakami} and the tetrahedral
+results in~\cite{Costantino}.
+
+Suppose a shrinking family $P_A$, after lengths are multiplied by
+$A^{-1/2}$, converges to a \emph{nondegenerate} Euclidean polyhedron
+$P_{\mathrm E}$ of surface area one. Ordinary volume scaling gives
+\begin{equation}
+ W(P_A)=A^{3/2}W_{\mathrm E}(P_{\mathrm E})+o(A^{3/2}).
+ \label{eq:individualflatvolume}
+\end{equation}
+In contrast, the corresponding moduli volume satisfies
+\[
+ V_{\WP}(A)=2^{-d}A^d V_{\mathrm{CH}}(\mu)+O(A^{d+1}).
+\]
+The different powers reflect different dimensions. Flattened
+Euclidean limits and changes of polyhedral combinatorics require
+additional care; they are not covered by the nondegeneracy
+hypothesis in~\eqref{eq:individualflatvolume}.
+
+\subsection{An explicit small-polyhedron expansion}
+
+A controlled model gives more than the leading power. Let $Q$ be a
+bounded nondegenerate convex Euclidean polyhedron, and place $P_r=rQ$ in
+the curvature-$-1$ Klein ball. Its Euclidean planar faces are
+hyperbolic geodesic faces. The Klein volume density is
+\[
+ \dd\operatorname{Vol}_{\HH^3}=(1-|x|^2)^{-2}\,\dd^3x.
+\]
+Consequently, whenever $r\sup_Q|y|<1$,
+\begin{align}
+ W(rQ)
+ &=r^3\int_Q(1-r^2|y|^2)^{-2}\,\dd^3y\notag\\
+ &=\sum_{k=0}^{\infty}(k+1)r^{3+2k}
+                         \int_Q|y|^{2k}\,\dd^3y\notag\\
+ &=r^3 W_{\mathrm E}(Q)
+      +2r^5\int_Q|y|^2\,\dd^3y
+      +3r^7\int_Q|y|^4\,\dd^3y+\cdots.
+ \label{eq:Kleinvolumeexpansion}
+\end{align}
+This convergent expansion is elementary and exact for the specified
+homothetic Klein path. It is not generally the fixed-conformal
+angle path~\eqref{eq:anglepath}. Nor does it imply a Taylor expansion
+of this form at ideal, flattening, or otherwise uncontrolled
+degenerations. Unlike~\eqref{eq:exactWPvolumeflat}, it is an infinite
+series: the finite polynomial for the moduli volume comes from a
+quadratic cohomology class and a top intersection.
+
+\subsection{Schl\"afli, doubling, and degeneration/regeneration}
+
+For a compact hyperbolic polyhedron with interior dihedral angles
+$\alpha_e$ and edge lengths $\ell_e$, Schl\"afli's formula is
+\begin{equation}
+ \dd W=-\frac12\sum_e\ell_e\,\dd\alpha_e.
+ \label{eq:Schlafli}
+\end{equation}
+For the Klein family above, write
+\[
+ \ell_e(r)=rL_e+O(r^3),\qquad
+ \alpha_e(r)=\alpha_e^{\mathrm E}+r^2b_e+O(r^4).
+\]
+The leading term of~\eqref{eq:Kleinvolumeexpansion} and
+\eqref{eq:Schlafli} imply
+\begin{equation}
+ \boxed{\quad\sum_eL_e b_e=-3W_{\mathrm E}(Q).\quad}
+ \label{eq:firstcurvaturevolume}
+\end{equation}
+Indeed, $\dd W/\dd r=3r^2W_{\mathrm E}+O(r^4)$, while
+the right side of~\eqref{eq:Schlafli}, divided by $\dd r$, is
+$-r^2\sum_eL_e b_e+O(r^4)$. Thus the first curvature correction
+to the Euclidean dihedral angles already determines the Euclidean
+enclosed volume. The sign reverses if exterior dihedral angles are
+used. The same identity holds with
+$\ell_e=A^{1/2}L_e+O(A^{3/2})$ and
+$\alpha_e=\alpha_e^{\mathrm E}+A b_e+O(A^2)$ for a smooth
+unit-area Euclidean limiting family.
+
+Doubling a convex polyhedron across its faces produces a cone
+three-manifold with singular graph given by its edges. The cone
+angle along an edge is $2\alpha_e$, and its volume is $2W(P)$.
+A shrinking polyhedron therefore supplies a direct example of
+degeneration to a Euclidean cone three-manifold after rescaling.
+This is the geometric setting suggested by Hodgson's thesis,
+\emph{Degeneration and regeneration of geometric structures on
+3-manifolds}~\cite{HodgsonThesis}. Later precise regeneration results
+include Porti--Weiss~\cite{PortiWeiss}; their assumptions on cone
+angles and the limiting structure must be checked before using
+them for a particular doubled polyhedron. No unrestricted
+regeneration theorem is being asserted here. The edge cone angles
+$2\alpha_e$ are also distinct from the intrinsic vertex openings
+$\theta_i$ of the boundary surface.
+
+Rivin's \emph{Volumes of degenerating polyhedra---on a conjecture
+of J.~W. Milnor} is directly relevant~\cite{RivinDegeneration}.
+It studies continuous extension of volume toward degenerate angle
+data, the Euclidean vanishing boundary, and quantitative control
+through Schl\"afli's formula and polar geometry. Its estimates
+allow logarithmically growing volume derivatives at degenerations;
+continuity does not imply a smooth power series at every boundary
+point. The controlled small-polyhedron expansion above gives a
+particularly explicit local calculation on the Euclidean side of
+this broader degeneration picture.
+
+\subsection{The established tetrahedral quantum connection}
+
+Quantum $6j$-symbols provide a concrete bridge to three-dimensional
+geometry. Costantino obtains hyperbolic-volume exponential growth
+for appropriate root-of-unity label regimes associated to truncated
+tetrahedra~\cite{Costantino}. Chen--Murakami give, for a fixed
+hyperbolic tetrahedron with at least one ideal or ultraideal vertex
+and their prescribed admissible label sequences, an asymptotic of
+the form
+\begin{equation}
+ |\{6j\}_r|\sim C\,r^{-3/2}(-\det G)^{-1/4}
+                 \exp\left(\frac{r}{2\pi}W(T)\right),
+ \label{eq:quantum6jstructure}
+\end{equation}
+where $G$ is the dihedral-angle Gram matrix and the prefactor and
+labels depend on the stated conventions~\cite{ChenMurakami}.
+In that regime the exponential growth rate is the tetrahedron's
+hyperbolic volume. Different $6j$ normalizations and doubled
+tetrahedral blocks change factors; the formula is not meant to
+identify all such conventions.
+
+At the Euclidean end, Roberts proves the Ponzano--Regge asymptotic
+for classical $6j$-symbols: Euclidean tetrahedral edge lengths and
+dihedral angles enter an oscillatory Regge phase, and Euclidean
+volume enters its amplitude~\cite{Roberts}. This is an established
+appearance of Euclidean tetrahedral geometry in quantum
+asymptotics. It does not automatically identify the classical
+large-label limit with a chosen root-of-unity hyperbolic limit.
+
+In particular, the stated Chen--Murakami theorem does not cover
+an arbitrary family of compact tetrahedra shrinking to Euclidean
+ones. At a Euclidean tetrahedron the angle Gram determinant
+vanishes, so the displayed fixed-shape prefactor itself warns of
+nonuniformity. A continuous classical volume limit, even with
+good quantitative estimates, does not by itself control the
+quantum Hessian, the prefactor, or the error term in a joint limit.
+
+\subsection{A proposed joint scale and a model integral}
+
+Suppose a suitable quantum object, in a specified geometric branch
+and choice of variables, has an exponential contribution
+$\exp(W(P_A)/\hbar)$. Equation~\eqref{eq:individualflatvolume}
+then singles out the dimensionless ratio
+\begin{equation}
+ \lambda=\frac{A^{3/2}}{\hbar},\qquad
+ A\asymp\hbar^{2/3}.
+ \label{eq:jointscale}
+\end{equation}
+This is the regime in which geometric degeneration competes
+with the semiclassical limit. At this stage it is a scaling prediction;
+Section~\ref{sec:quantumAiry} proves a uniform Airy statement for an
+explicitly normalized regular $b$-$6j$ family. A different
+polarization may involve a Regge or Legendre-transformed action,
+so the quantum object and phase must be specified first.
+
+There is a useful classical model making the potential role of
+ the WP--Thurston limit explicit. Let $K\subset\M_{0,n}$ be a
+ fixed compact subset with controlled nondegenerate Euclidean
+ realizations, and define
+\begin{equation}
+ \mathcal Z_K(A,\hbar)=\int_K
+       \exp\left(\frac{W(P_A(X))}{\hbar}\right)
+       \frac{\omega_{\WP,A}^d}{d!}.
+ \label{eq:modelpartition}
+\end{equation}
+This is a constructed geometric integral, not an identification
+with a colored-Jones or other known quantum invariant. Under the
+corresponding uniform geometric convergence on $K$, take
+$A\to0$, $\hbar\to0$, and $A^{3/2}/\hbar\to\lambda_0\in(0,\infty)$.
+The local limits then give
+\begin{equation}
+ 2^d A^{-d}\mathcal Z_K(A,\hbar)\longrightarrow
+ \int_K e^{\lambda_0 W_{\mathrm E}(P_{\mathrm E}(X))}
+                 \frac{\omega_{\mathrm{CH},\mu}^d}{d!}.
+ \label{eq:modelpartitionlimit}
+\end{equation}
+Extending this formula to the full noncompact space requires
+ domination and control of collision and flattened strata.
+ Identifying its measure and phase with those of an actual quantum
+ state integral is a further mathematical problem.
+
+This separates the two potentially compatible roles: enclosed
+three-dimensional volume supplies an action, while the WP form
+supplies a measure on boundary shapes. Their Euclidean limits
+are respectively Euclidean polyhedral volume and the
+Thurston--Deligne--Mostow measure. Establishing that both occur
+together in a particular quantum construction would provide the
+substantive connection to the volume conjecture.
+
+

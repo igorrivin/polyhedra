@@ -1,0 +1,4572 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 27 Dec. 2024. Version 4.86a.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -file-line-error -no-shell-escape -recorder -output-directory="/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build"  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex)
+entering extended mode
+(./main.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(./polyhedral_volumes_and_geodesic_identities.tex
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size11.clo))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/lmodern.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/mathrsfs.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryangles.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryquotes.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/ltcaption.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-
+01/integration-review/pdf-build/main.aux)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+
+Package epstopdf Warning: Shell escape feature is not enabled.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd)
+[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
+ocal/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2
+025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist
+/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc
+/dvips/lm/lm-mathit.enc}]
+No file main.toc.
+
+[2]
+No file main.lof.
+
+[3]
+
+LaTeX Warning: Citation `IpolyStudy' on page 4 undefined on input line 177.
+
+
+LaTeX Warning: Reference `fig:mono-connections' on page 4 undefined on input li
+ne 181.
+
+
+[4]
+
+LaTeX Warning: Reference `eq:exactWPclassflat' on page 5 undefined on input lin
+e 247.
+
+
+LaTeX Warning: Reference `eq:WPCHvolumeasymptotic' on page 5 undefined on input
+ line 248.
+
+
+LaTeX Warning: Reference `eq:exactLiouvillecurvature' on page 5 undefined on in
+put line 256.
+
+
+LaTeX Warning: Reference `prop:regularquantumAiry' on page 5 undefined on input
+ line 260.
+
+
+LaTeX Warning: Reference `prop:ipolyHessian' on page 5 undefined on input line 
+265.
+
+
+LaTeX Warning: Reference `eq:ipolySchur' on page 5 undefined on input line 267.
+
+
+
+LaTeX Warning: Reference `eq:ipolyForestDeterminant' on page 5 undefined on inp
+ut line 268.
+
+
+LaTeX Warning: Reference `prop:ipolyCompatibility' on page 5 undefined on input
+ line 269.
+
+
+LaTeX Warning: Reference `prop:dehncriticalvalue' on page 5 undefined on input 
+line 276.
+
+
+LaTeX Warning: Reference `prop:dehnquantumconditional' on page 5 undefined on i
+nput line 284.
+
+
+LaTeX Warning: Reference `prop:globaldiagonal' on page 5 undefined on input lin
+e 287.
+
+
+LaTeX Warning: Reference `eq:globalobstruction' on page 5 undefined on input li
+ne 291.
+
+
+LaTeX Warning: Reference `thm:twopointfullrate' on page 5 undefined on input li
+ne 297.
+
+
+LaTeX Warning: Reference `thm:markedtorusmixing' on page 5 undefined on input l
+ine 299.
+
+
+[5]
+
+LaTeX Warning: Reference `sec:questions' on page 6 undefined on input line 325.
+
+
+
+LaTeX Warning: Reference `sec:quantumintro' on page 6 undefined on input line 3
+57.
+
+
+LaTeX Warning: Reference `sec:ipolybridge' on page 6 undefined on input line 36
+0.
+
+
+LaTeX Warning: Reference `sec:dehnresponse' on page 6 undefined on input line 3
+61.
+
+
+LaTeX Warning: Reference `sec:sharpdiagnostics' on page 6 undefined on input li
+ne 362.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd)
+
+LaTeX Warning: Reference `sec:ipolybridge' on page 6 undefined on input line 36
+9.
+
+
+[6]
+[7] (./chapters/01-volume-normalization.tex
+
+LaTeX Warning: Citation `KawazumiWP' on page 8 undefined on input line 30.
+
+
+LaTeX Warning: Reference `sec:flatlimit' on page 8 undefined on input line 32.
+
+
+LaTeX Warning: Citation `DoNorbury' on page 8 undefined on input line 46.
+
+
+LaTeX Warning: Reference `sec:torussphere' on page 8 undefined on input line 46
+.
+
+
+[8{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+
+LaTeX Warning: Reference `sec:conventions' on page 9 undefined on input line 75
+.
+
+
+LaTeX Warning: Reference `sec:flatlimit' on page 9 undefined on input line 75.
+
+
+LaTeX Warning: Reference `app:fricke' on page 9 undefined on input line 76.
+
+) (./chapters/02-ideal-angle-cells.tex
+
+LaTeX Warning: Citation `RivinIntrinsic' on page 9 undefined on input line 12.
+
+
+LaTeX Warning: Citation `RivinAngles' on page 9 undefined on input line 28.
+
+
+[9]
+
+LaTeX Warning: Citation `CDE' on page 10 undefined on input line 70.
+
+
+LaTeX Warning: Citation `Budd' on page 10 undefined on input line 81.
+
+
+LaTeX Warning: Reference `eq:polyhedralpartition' on page 10 undefined on input
+ line 88.
+
+
+LaTeX Warning: Reference `sec:tetrahedron' on page 10 undefined on input line 9
+1.
+
+
+LaTeX Warning: Citation `SaadiZwiebach' on page 10 undefined on input line 97.
+
+
+LaTeX Warning: Citation `Zwiebach' on page 10 undefined on input line 100.
+
+
+LaTeX Warning: Reference `eq:polyhedralpartition' on page 10 undefined on input
+ line 110.
+
+) (./chapters/03-ideal-tetrahedron.tex
+[10]
+
+LaTeX Warning: Reference `eq:fn' on page 11 undefined on input line 15.
+
+
+LaTeX Warning: Citation `Penner' on page 11 undefined on input line 24.
+
+
+LaTeX Warning: Citation `MondelloBoundary' on page 11 undefined on input line 2
+5.
+
+
+LaTeX Warning: Reference `eq:lambdagauge' on page 11 undefined on input line 37
+.
+
+
+LaTeX Warning: Reference `eq:penner' on page 11 undefined on input line 45.
+
+
+[11]
+
+LaTeX Warning: Reference `eq:polyhedralpartition' on page 12 undefined on input
+ line 89.
+
+
+LaTeX Warning: Reference `eq:polyhedralpartition' on page 12 undefined on input
+ line 106.
+
+
+LaTeX Warning: Reference `eq:tetdensity' on page 12 undefined on input line 124
+.
+
+
+LaTeX Warning: Citation `CDE' on page 12 undefined on input line 130.
+
+) (./chapters/04-hyperideal-integrand.tex
+[12]
+
+LaTeX Warning: Reference `eq:fn' on page 13 undefined on input line 80.
+
+
+LaTeX Warning: Citation `MondelloBoundary' on page 13 undefined on input line 8
+5.
+
+
+[13]
+
+LaTeX Warning: Reference `eq:hyperidealdensity' on page 14 undefined on input l
+ine 107.
+
+
+LaTeX Warning: Reference `eq:truncationlengths' on page 14 undefined on input l
+ine 116.
+
+
+LaTeX Warning: Reference `eq:hyperidealdensity' on page 14 undefined on input l
+ine 123.
+
+
+LaTeX Warning: Reference `eq:hyperidealdensity' on page 14 undefined on input l
+ine 137.
+
+
+LaTeX Warning: Reference `eq:gramdensity' on page 14 undefined on input line 13
+9.
+
+
+LaTeX Warning: Reference `eq:lambdagauge' on page 14 undefined on input line 14
+8.
+
+
+LaTeX Warning: Citation `MondelloBoundary' on page 14 undefined on input line 1
+51.
+
+
+[14]
+
+LaTeX Warning: Citation `BaoBonahon' on page 15 undefined on input line 176.
+
+
+LaTeX Warning: Citation `FillastreMetrics' on page 15 undefined on input line 1
+82.
+
+
+LaTeX Warning: Citation `Schlenker' on page 15 undefined on input line 183.
+
+
+LaTeX Warning: Citation `RivinIntrinsic' on page 15 undefined on input line 186
+.
+
+
+LaTeX Warning: Reference `eq:truncationlengths' on page 15 undefined on input l
+ine 191.
+
+
+LaTeX Warning: Citation `Budd' on page 15 undefined on input line 208.
+
+
+LaTeX Warning: Citation `BMZ' on page 15 undefined on input line 216.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-euf.cfg)
+
+LaTeX Warning: Reference `eq:treevolume' on page 15 undefined on input line 229
+.
+
+
+LaTeX Warning: Citation `BMZ' on page 15 undefined on input line 230.
+
+
+LaTeX Warning: Citation `Zonneveld' on page 15 undefined on input line 237.
+
+
+[15]) (./chapters/05-boundary-cone-continuation.tex
+
+LaTeX Warning: Citation `MirzIntersection' on page 16 undefined on input line 3
+2.
+
+
+LaTeX Warning: Citation `DoNorbury' on page 16 undefined on input line 33.
+
+
+LaTeX Warning: Citation `AnagnostouNorbury' on page 16 undefined on input line 
+38.
+
+
+LaTeX Warning: Reference `eq:gb' on page 16 undefined on input line 39.
+
+
+LaTeX Warning: Reference `eq:basevolumes' on page 16 undefined on input line 55
+.
+
+
+[16]
+
+LaTeX Warning: Citation `AMN' on page 17 undefined on input line 76.
+
+
+LaTeX Warning: Citation `ET' on page 17 undefined on input line 77.
+
+
+LaTeX Warning: Reference `eq:wallclass' on page 17 undefined on input line 80.
+
+
+LaTeX Warning: Reference `eq:wallclass' on page 17 undefined on input line 99.
+
+
+LaTeX Warning: Citation `AnagnostouNorbury' on page 17 undefined on input line 
+118.
+
+
+[17]) (./chapters/06-torus-sphere.tex
+
+LaTeX Warning: Citation `HuTan' on page 18 undefined on input line 17.
+
+
+LaTeX Warning: Reference `eq:basevolumes' on page 18 undefined on input line 54
+.
+
+
+LaTeX Warning: Reference `sec:cones' on page 18 undefined on input line 74.
+
+
+LaTeX Warning: Reference `eq:conetorus' on page 18 undefined on input line 74.
+
+
+[18]) (./chapters/07-euclidean-periods.tex
+
+LaTeX Warning: Citation `ThurstonShapes' on page 19 undefined on input line 28.
+
+
+
+LaTeX Warning: Citation `Fillastre' on page 19 undefined on input line 28.
+
+
+LaTeX Warning: Citation `DeligneMostow' on page 19 undefined on input line 115.
+
+
+
+[19]
+
+LaTeX Warning: Citation `Kojima' on page 20 undefined on input line 144.
+
+
+LaTeX Warning: Reference `eq:DMarea' on page 20 undefined on input line 146.
+
+
+[20]
+
+LaTeX Warning: Citation `MostowHalfIntegral' on page 21 undefined on input line
+ 207.
+
+
+LaTeX Warning: Citation `ThurstonShapes' on page 21 undefined on input line 210
+.
+
+
+LaTeX Warning: Reference `eq:flatweights' on page 21 undefined on input line 21
+4.
+
+
+LaTeX Warning: Citation `ThurstonShapes' on page 21 undefined on input line 216
+.
+
+
+[21]
+
+LaTeX Warning: Citation `Kojima' on page 22 undefined on input line 249.
+
+
+LaTeX Warning: Reference `sec:torussphere' on page 22 undefined on input line 2
+51.
+
+) (./chapters/08-wp-flat-limit.tex
+
+LaTeX Warning: Reference `eq:flatweights' on page 22 undefined on input line 6.
+
+
+
+LaTeX Warning: Citation `Fillastre' on page 22 undefined on input line 23.
+
+
+LaTeX Warning: Citation `RivinIntrinsic' on page 22 undefined on input line 24.
+
+
+
+LaTeX Warning: Citation `Schlenker' on page 22 undefined on input line 24.
+
+
+LaTeX Warning: Citation `MazzeoWeiss' on page 22 undefined on input line 47.
+
+
+LaTeX Warning: Reference `eq:anglepath' on page 22 undefined on input line 60.
+
+
+[22]
+
+LaTeX Warning: Reference `sec:conventions' on page 23 undefined on input line 9
+1.
+
+
+LaTeX Warning: Citation `KawazumiWP' on page 23 undefined on input line 93.
+
+
+LaTeX Warning: Reference `eq:DMarea' on page 23 undefined on input line 95.
+
+
+LaTeX Warning: Citation `WangFlatWP' on page 23 undefined on input line 105.
+
+
+LaTeX Warning: Reference `eq:CHpotential' on page 23 undefined on input line 10
+6.
+
+
+LaTeX Warning: Citation `KoziarzNguyen' on page 23 undefined on input line 145.
+
+
+
+[23]
+
+LaTeX Warning: Reference `eq:anglepath' on page 24 undefined on input line 170.
+
+
+
+LaTeX Warning: Reference `eq:exactWPvolumeflat' on page 24 undefined on input l
+ine 187.
+
+
+LaTeX Warning: Reference `eq:wallclass' on page 24 undefined on input line 193.
+
+
+
+LaTeX Warning: Citation `KoziarzNguyen' on page 24 undefined on input line 211.
+
+
+
+LaTeX Warning: Citation `KoziarzNguyen' on page 24 undefined on input line 229.
+
+
+
+LaTeX Warning: Reference `eq:flatweights' on page 24 undefined on input line 23
+3.
+
+
+[24]
+
+LaTeX Warning: Reference `eq:CHintersection' on page 25 undefined on input line
+ 257.
+
+
+LaTeX Warning: Reference `eq:exactWPclassflat' on page 25 undefined on input li
+ne 258.
+
+
+LaTeX Warning: Citation `AMN' on page 25 undefined on input line 259.
+
+
+LaTeX Warning: Reference `eq:exactWPvolumeflat' on page 25 undefined on input l
+ine 259.
+
+
+LaTeX Warning: Reference `eq:WPCHvolumeasymptotic' on page 25 undefined on inpu
+t line 260.
+
+
+[25]
+
+LaTeX Warning: Citation `Kojima' on page 26 undefined on input line 327.
+
+
+LaTeX Warning: Citation `KoziarzNguyen' on page 26 undefined on input line 328.
+
+
+
+LaTeX Warning: Citation `ThurstonShapes' on page 26 undefined on input line 353
+.
+
+
+LaTeX Warning: Citation `McMullenGB' on page 26 undefined on input line 355.
+
+
+LaTeX Warning: Reference `eq:CHintersection' on page 26 undefined on input line
+ 378.
+
+
+LaTeX Warning: Reference `eq:WPCHvolumeasymptotic' on page 26 undefined on inpu
+t line 379.
+
+)
+[26] (./chapters/09-volume-hessians.tex
+
+LaTeX Warning: Citation `IpolyStudy' on page 27 undefined on input line 10.
+
+
+LaTeX Warning: Citation `DuffinNetworks' on page 27 undefined on input line 37.
+
+
+
+[27]
+
+LaTeX Warning: Citation `RivinEuclidean' on page 28 undefined on input line 107
+.
+
+
+LaTeX Warning: Citation `FuterGueritaud' on page 28 undefined on input line 107
+.
+
+
+LaTeX Warning: Citation `RivinOptimization' on page 28 undefined on input line 
+110.
+
+
+LaTeX Warning: Reference `eq:ipolyAngleCoordinates' on page 28 undefined on inp
+ut line 117.
+
+
+LaTeX Warning: Reference `eq:ipolyFEM' on page 28 undefined on input line 142.
+
+
+Underfull \hbox (badness 1014) in paragraph at lines 131--143
+[]\T1/lmr/m/n/10.95 (+20) In a pos-i-tively ori-ented tri-an-gle $\OML/lmm/m/it
+/10.95 ijk$\T1/lmr/m/n/10.95 (+20) , dif-fer-en-ti-a-tion with re-spect to $\OM
+L/lmm/m/it/10.95 u[]$ \T1/lmr/m/n/10.95 (+20) gives
+
+[28]
+[29]
+
+LaTeX Warning: Reference `eq:cuspHessian' on page 30 undefined on input line 27
+8.
+
+
+LaTeX Warning: Reference `eq:cuspmatrixHessian' on page 30 undefined on input l
+ine 278.
+
+
+[30]
+[31]
+
+LaTeX Warning: Citation `BoydVandenberghe' on page 32 undefined on input line 4
+48.
+
+
+LaTeX Warning: Citation `BoydVandenbergheSlides' on page 32 undefined on input 
+line 449.
+
+
+LaTeX Warning: Citation `SpielmanTengSolvers' on page 32 undefined on input lin
+e 477.
+
+
+LaTeX Warning: Reference `eq:ipolyStepBound' on page 32 undefined on input line
+ 479.
+
+
+[32]
+
+LaTeX Warning: Citation `RippaEnergy' on page 33 undefined on input line 499.
+
+
+LaTeX Warning: Citation `DisarloParlier' on page 33 undefined on input line 559
+.
+
+
+LaTeX Warning: Citation `BrockWPVolumes' on page 33 undefined on input line 565
+.
+
+
+LaTeX Warning: Citation `BrockMappingTori' on page 33 undefined on input line 5
+68.
+
+
+[33]
+
+LaTeX Warning: Citation `FuterGueritaud' on page 34 undefined on input line 586
+.
+
+
+LaTeX Warning: Citation `FuterGueritaud' on page 34 undefined on input line 612
+.
+
+
+LaTeX Warning: Reference `eq:ipolyForestDeterminant' on page 34 undefined on in
+put line 649.
+
+
+[34])
+[35] (./chapters/10-quantum-introduction.tex
+
+LaTeX Warning: Citation `TaylorWoodward' on page 36 undefined on input line 62.
+
+
+
+[36]
+
+LaTeX Warning: Citation `ChenYang' on page 37 undefined on input line 79.
+
+
+LaTeX Warning: Citation `MurakamiIntro' on page 37 undefined on input line 120.
+
+
+
+LaTeX Warning: Citation `MurakamiMurakami' on page 37 undefined on input line 1
+26.
+
+
+LaTeX Warning: Reference `sec:dehnresponse' on page 37 undefined on input line 
+137.
+
+
+[37]
+
+LaTeX Warning: Citation `WongYangDehn' on page 38 undefined on input line 148.
+
+
+LaTeX Warning: Citation `TuraevVirelizier' on page 38 undefined on input line 1
+54.
+
+
+LaTeX Warning: Citation `ChenYang' on page 38 undefined on input line 161.
+
+
+LaTeX Warning: Citation `KashaevVolume' on page 38 undefined on input line 183.
+
+
+
+LaTeX Warning: Citation `MurakamiIntro' on page 38 undefined on input line 185.
+
+
+
+[38]
+
+LaTeX Warning: Citation `FaddeevKashaev' on page 39 undefined on input line 267
+.
+
+
+LaTeX Warning: Citation `DimofteGaroufalidis' on page 39 undefined on input lin
+e 284.
+
+
+LaTeX Warning: Reference `eq:introqpochhammer' on page 39 undefined on input li
+ne 306.
+
+
+[39]
+
+LaTeX Warning: Citation `WittenJones' on page 40 undefined on input line 376.
+
+
+LaTeX Warning: Citation `DimofteGaroufalidis' on page 40 undefined on input lin
+e 376.
+
+
+LaTeX Warning: Citation `DimofteGaroufalidis' on page 40 undefined on input lin
+e 379.
+
+
+[40]
+
+LaTeX Warning: Reference `sec:dehnresponse' on page 41 undefined on input line 
+386.
+
+
+LaTeX Warning: Citation `WittenContinuation' on page 41 undefined on input line
+ 399.
+
+
+LaTeX Warning: Reference `sec:quantumAiry' on page 41 undefined on input line 4
+20.
+
+
+LaTeX Warning: Reference `eq:TVvolumehbar' on page 41 undefined on input line 4
+27.
+
+
+LaTeX Warning: Citation `WittenJones' on page 41 undefined on input line 499.
+
+
+LaTeX Warning: Citation `GukovApoly' on page 41 undefined on input line 509.
+
+
+LaTeX Warning: Citation `WittenContinuation' on page 41 undefined on input line
+ 509.
+
+
+[41]
+
+LaTeX Warning: Reference `sec:dehnresponse' on page 42 undefined on input line 
+531.
+
+
+LaTeX Warning: Citation `DimofteQuantumRS' on page 42 undefined on input line 5
+49.
+
+
+[42]
+
+LaTeX Warning: Reference `sec:NZsymplectic' on page 43 undefined on input line 
+560.
+
+
+LaTeX Warning: Reference `eq:introWKBstate' on page 43 undefined on input line 
+597.
+
+
+LaTeX Warning: Citation `GukovApoly' on page 43 undefined on input line 605.
+
+
+LaTeX Warning: Citation `DimofteQuantumRS' on page 43 undefined on input line 6
+05.
+
+
+LaTeX Warning: Reference `eq:introclosedvolume' on page 43 undefined on input l
+ine 637.
+
+
+LaTeX Warning: Reference `sec:dehnresponse' on page 43 undefined on input line 
+643.
+
+
+[43]
+
+LaTeX Warning: Citation `KRV' on page 44 undefined on input line 663.
+
+
+LaTeX Warning: Citation `TeschnerRevisited' on page 44 undefined on input line 
+691.
+
+
+LaTeX Warning: Citation `KRV' on page 44 undefined on input line 721.
+
+
+LaTeX Warning: Citation `GKRVBootstrap' on page 44 undefined on input line 721.
+
+
+
+LaTeX Warning: Citation `GKRVBootstrap' on page 44 undefined on input line 721.
+
+
+
+[44]
+
+LaTeX Warning: Reference `eq:introrecoupling' on page 45 undefined on input lin
+e 737.
+
+
+LaTeX Warning: Citation `TeschnerVartanov' on page 45 undefined on input line 7
+42.
+
+
+LaTeX Warning: Reference `sec:introrecoupling' on page 45 undefined on input li
+ne 755.
+
+
+LaTeX Warning: Citation `TeschnerVartanov' on page 45 undefined on input line 7
+72.
+
+
+LaTeX Warning: Reference `lem:stripdoubleSine' on page 45 undefined on input li
+ne 783.
+
+
+LaTeX Warning: Reference `eq:LiouvilleGMC' on page 45 undefined on input line 8
+00.
+
+
+[45]
+
+LaTeX Warning: Reference `eq:introzeromode' on page 46 undefined on input line 
+818.
+
+
+LaTeX Warning: Reference `sec:quantummeasure' on page 46 undefined on input lin
+e 832.
+
+
+LaTeX Warning: Reference `sec:screenedfusion' on page 46 undefined on input lin
+e 862.
+
+
+LaTeX Warning: Reference `eq:introfusion' on page 46 undefined on input line 86
+3.
+
+
+LaTeX Warning: Reference `sec:screenedfusion' on page 46 undefined on input lin
+e 867.
+
+
+LaTeX Warning: Reference `sec:normalizedsixj' on page 46 undefined on input lin
+e 871.
+
+
+[46]
+
+LaTeX Warning: Reference `eq:introknotvolume' on page 47 undefined on input lin
+e 887.
+
+
+LaTeX Warning: Reference `eq:b6jparameterdictionary' on page 47 undefined on in
+put line 904.
+
+
+LaTeX Warning: Citation `Roberts' on page 47 undefined on input line 908.
+
+
+LaTeX Warning: Citation `TaylorWoodward' on page 47 undefined on input line 909
+.
+
+
+LaTeX Warning: Reference `sec:quantummeasure' on page 47 undefined on input lin
+e 916.
+
+
+LaTeX Warning: Reference `sec:screenedfusion' on page 47 undefined on input lin
+e 917.
+
+
+LaTeX Warning: Reference `sec:normalizedsixj' on page 47 undefined on input lin
+e 918.
+
+
+LaTeX Warning: Reference `sec:quantumdegeneration' on page 47 undefined on inpu
+t line 919.
+
+
+LaTeX Warning: Reference `sec:normalizedsixj' on page 47 undefined on input lin
+e 920.
+
+
+LaTeX Warning: Reference `sec:quantumAiry' on page 47 undefined on input line 9
+21.
+
+
+LaTeX Warning: Reference `sec:dehnresponse' on page 47 undefined on input line 
+922.
+
+
+LaTeX Warning: Reference `sec:NZsymplectic' on page 47 undefined on input line 
+924.
+
+) (./chapters/11-quantum-degeneration.tex
+[47]
+
+LaTeX Warning: Citation `MurakamiMurakami' on page 48 undefined on input line 2
+5.
+
+
+LaTeX Warning: Citation `Costantino' on page 48 undefined on input line 26.
+
+
+LaTeX Warning: Reference `eq:anglepath' on page 48 undefined on input line 41.
+
+
+LaTeX Warning: Reference `eq:WPCHvolumeasymptotic' on page 48 undefined on inpu
+t line 47.
+
+
+LaTeX Warning: Reference `sec:flatlimit' on page 48 undefined on input line 48.
+
+
+
+LaTeX Warning: Reference `eq:individualflatvolume' on page 48 undefined on inpu
+t line 52.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmss.fd)
+[48]
+
+LaTeX Warning: Reference `eq:anglepath' on page 49 undefined on input line 93.
+
+
+LaTeX Warning: Reference `eq:exactWPvolumeflat' on page 49 undefined on input l
+ine 95.
+
+
+LaTeX Warning: Reference `eq:Kleinvolumeexpansion' on page 49 undefined on inpu
+t line 130.
+
+
+LaTeX Warning: Reference `eq:Schlafli' on page 49 undefined on input line 130.
+
+
+LaTeX Warning: Reference `eq:Schlafli' on page 49 undefined on input line 136.
+
+
+LaTeX Warning: Citation `HodgsonThesis' on page 49 undefined on input line 157.
+
+
+
+LaTeX Warning: Citation `PortiWeiss' on page 49 undefined on input line 158.
+
+
+[49]
+
+LaTeX Warning: Citation `RivinDegeneration' on page 50 undefined on input line 
+168.
+
+
+LaTeX Warning: Citation `Costantino' on page 50 undefined on input line 184.
+
+
+LaTeX Warning: Citation `ChenMurakami' on page 50 undefined on input line 208.
+
+
+LaTeX Warning: Reference `eq:introqinteger' on page 50 undefined on input line 
+211.
+
+
+LaTeX Warning: Citation `Roberts' on page 50 undefined on input line 218.
+
+
+LaTeX Warning: Reference `eq:individualflatvolume' on page 50 undefined on inpu
+t line 235.
+
+
+[50]
+
+LaTeX Warning: Reference `sec:quantumAiry' on page 51 undefined on input line 2
+44.
+
+
+LaTeX Warning: Reference `eq:TVvolumehbar' on page 51 undefined on input line 2
+49.
+
+
+LaTeX Warning: Reference `eq:anglepath' on page 51 undefined on input line 256.
+
+
+
+LaTeX Warning: Reference `eq:localWPCHlimit' on page 51 undefined on input line
+ 270.
+
+) (./chapters/12-quantum-boundary-measure.tex
+
+LaTeX Warning: Reference `eq:modelpartition' on page 51 undefined on input line
+ 10.
+
+
+[51]
+
+LaTeX Warning: Reference `eq:flatweights' on page 52 undefined on input line 15
+.
+
+
+LaTeX Warning: Citation `KRV' on page 52 undefined on input line 29.
+
+
+LaTeX Warning: Reference `eq:flatweights' on page 52 undefined on input line 61
+.
+
+
+LaTeX Warning: Reference `eq:Liouvilleflatparameters' on page 52 undefined on i
+nput line 87.
+
+
+LaTeX Warning: Reference `eq:GMCfirstmoment' on page 52 undefined on input line
+ 89.
+
+
+LaTeX Warning: Reference `eq:DMarea' on page 52 undefined on input line 100.
+
+
+LaTeX Warning: Reference `eq:CHpotential' on page 52 undefined on input line 10
+3.
+
+
+[52]
+
+LaTeX Warning: Citation `KRV' on page 53 undefined on input line 122.
+
+
+LaTeX Warning: Citation `KRV' on page 53 undefined on input line 134.
+
+
+LaTeX Warning: Reference `eq:LiouvilleGMC' on page 53 undefined on input line 1
+37.
+
+
+LaTeX Warning: Reference `eq:exactLiouvillecurvature' on page 53 undefined on i
+nput line 151.
+
+
+LaTeX Warning: Citation `TeschnerRevisited' on page 53 undefined on input line 
+155.
+
+
+LaTeX Warning: Reference `eq:DMperiods' on page 53 undefined on input line 160.
+
+
+
+LaTeX Warning: Reference `sec:screenedfusion' on page 53 undefined on input lin
+e 161.
+
+
+LaTeX Warning: Reference `sec:normalizedsixj' on page 53 undefined on input lin
+e 167.
+
+
+LaTeX Warning: Reference `eq:exactLiouvilleDM' on page 53 undefined on input li
+ne 174.
+
+
+[53]
+
+LaTeX Warning: Reference `eq:ellipticDM' on page 54 undefined on input line 195
+.
+
+
+LaTeX Warning: Reference `eq:ellipticperiodratio' on page 54 undefined on input
+ line 215.
+
+
+LaTeX Warning: Reference `sec:thurstonDM' on page 54 undefined on input line 21
+7.
+
+
+LaTeX Warning: Citation `HeusenerPorti' on page 54 undefined on input line 235.
+
+
+
+LaTeX Warning: Citation `HeusenerPorti' on page 54 undefined on input line 238.
+
+
+
+LaTeX Warning: Citation `MondelloCones' on page 54 undefined on input line 262.
+
+
+
+LaTeX Warning: Reference `app:fricke' on page 54 undefined on input line 265.
+
+
+LaTeX Warning: Reference `eq:torsionGoldman' on page 54 undefined on input line
+ 268.
+
+
+LaTeX Warning: Reference `eq:localWPCHlimit' on page 54 undefined on input line
+ 269.
+
+
+[54]
+
+LaTeX Warning: Reference `app:fricke' on page 55 undefined on input line 294.
+
+
+LaTeX Warning: Reference `eq:frickedensity' on page 55 undefined on input line 
+325.
+
+
+LaTeX Warning: Reference `eq:exactWPvolumeflat' on page 55 undefined on input l
+ine 352.
+
+
+[55]
+
+LaTeX Warning: Citation `TeschnerVartanov' on page 56 undefined on input line 3
+82.
+
+
+LaTeX Warning: Reference `eq:kernelLiouvillemeasure' on page 56 undefined on in
+put line 386.
+
+
+LaTeX Warning: Reference `eq:torsionDMlimit' on page 56 undefined on input line
+ 387.
+
+
+LaTeX Warning: Citation `TeschnerVartanov' on page 56 undefined on input line 3
+96.
+
+
+[56]
+
+LaTeX Warning: Reference `eq:b6jparameterdictionary' on page 57 undefined on in
+put line 432.
+
+
+LaTeX Warning: Reference `eq:Liouvilleflatparameters' on page 57 undefined on i
+nput line 436.
+
+
+LaTeX Warning: Reference `sec:quantumdegeneration' on page 57 undefined on inpu
+t line 463.
+
+) (./chapters/13-four-point-fusion.tex
+
+LaTeX Warning: Reference `sec:quantummeasure' on page 57 undefined on input lin
+e 41.
+
+
+LaTeX Warning: Citation `GKRVBootstrap' on page 57 undefined on input line 44.
+
+
+LaTeX Warning: Citation `TeschnerRevisited' on page 57 undefined on input line 
+48.
+
+
+[57]
+
+LaTeX Warning: Reference `eq:screeningtailinput' on page 58 undefined on input 
+line 95.
+
+
+[58]
+
+LaTeX Warning: Citation `TeschnerRevisited' on page 59 undefined on input line 
+157.
+
+
+LaTeX Warning: Reference `eq:onescreeningresidue' on page 59 undefined on input
+ line 201.
+
+
+LaTeX Warning: Reference `eq:screeningareapairing' on page 59 undefined on inpu
+t line 203.
+
+
+LaTeX Warning: Reference `eq:screeningVirasoroblocks' on page 59 undefined on i
+nput line 204.
+
+
+LaTeX Warning: Reference `eq:threepointscreeningresidues' on page 59 undefined 
+on input line 208.
+
+
+[59]
+
+LaTeX Warning: Citation `TeschnerRevisited' on page 60 undefined on input line 
+261.
+
+
+LaTeX Warning: Citation `DLMF' on page 60 undefined on input line 309.
+
+
+[60]
+
+LaTeX Warning: Reference `eq:screeningfusionmatrix' on page 61 undefined on inp
+ut line 329.
+
+
+LaTeX Warning: Reference `eq:spectralonescreeningresidue' on page 61 undefined 
+on input line 356.
+
+
+LaTeX Warning: Reference `eq:complexbetaintegral' on page 61 undefined on input
+ line 374.
+
+
+LaTeX Warning: Reference `eq:screeningHermitiancoefficients' on page 61 undefin
+ed on input line 387.
+
+
+[61]
+
+LaTeX Warning: Reference `eq:screeningareapairing' on page 62 undefined on inpu
+t line 457.
+
+
+LaTeX Warning: Citation `Kojima' on page 62 undefined on input line 471.
+
+
+[62]
+
+LaTeX Warning: Reference `eq:ellipticperiodratio' on page 63 undefined on input
+ line 518.
+
+
+LaTeX Warning: Citation `DLMF' on page 63 undefined on input line 523.
+
+
+LaTeX Warning: Reference `eq:equalweightlogsolutions' on page 63 undefined on i
+nput line 534.
+
+
+LaTeX Warning: Reference `eq:equalweightlogfusion' on page 63 undefined on inpu
+t line 562.
+
+
+LaTeX Warning: Reference `eq:screeningareapairing' on page 63 undefined on inpu
+t line 574.
+
+
+LaTeX Warning: Reference `eq:equalweightareaexact' on page 63 undefined on inpu
+t line 575.
+
+
+[63]
+
+LaTeX Warning: Reference `eq:screeningtailinput' on page 64 undefined on input 
+line 625.
+
+
+LaTeX Warning: Reference `eq:screeningfusionmatrix' on page 64 undefined on inp
+ut line 630.
+
+
+LaTeX Warning: Reference `eq:equalweightlogfusion' on page 64 undefined on inpu
+t line 631.
+
+
+LaTeX Warning: Reference `sec:normalizedsixj' on page 64 undefined on input lin
+e 638.
+
+) (./chapters/14-normalized-quantum-comparison.tex
+
+LaTeX Warning: Reference `sec:screenedfusion' on page 64 undefined on input lin
+e 9.
+
+
+LaTeX Warning: Reference `sec:quantumAiry' on page 64 undefined on input line 2
+1.
+
+
+[64]
+
+LaTeX Warning: Citation `TeschnerVartanov' on page 65 undefined on input line 2
+7.
+
+
+LaTeX Warning: Reference `sec:screenedfusion' on page 65 undefined on input lin
+e 56.
+
+
+[65]
+
+LaTeX Warning: Reference `eq:screeningfusionmatrix' on page 66 undefined on inp
+ut line 121.
+
+
+LaTeX Warning: Reference `sec:screenedfusion' on page 66 undefined on input lin
+e 145.
+
+
+LaTeX Warning: Reference `eq:TVunitarykernel' on page 66 undefined on input lin
+e 172.
+
+
+[66]
+
+LaTeX Warning: Reference `eq:analytic6jscreening' on page 67 undefined on input
+ line 222.
+
+
+LaTeX Warning: Reference `eq:symmetric6jscreening' on page 67 undefined on inpu
+t line 223.
+
+
+LaTeX Warning: Reference `sec:screenedfusion' on page 67 undefined on input lin
+e 225.
+
+
+LaTeX Warning: Citation `TeschnerVartanov' on page 67 undefined on input line 2
+52.
+
+
+LaTeX Warning: Citation `MurakamiYano' on page 67 undefined on input line 258.
+
+
+LaTeX Warning: Reference `eq:TVreflectedlabels' on page 67 undefined on input l
+ine 265.
+
+
+[67]
+
+LaTeX Warning: Reference `eq:screenedzerocofactors' on page 68 undefined on inp
+ut line 320.
+
+
+LaTeX Warning: Citation `BellettiYang' on page 68 undefined on input line 346.
+
+
+LaTeX Warning: Citation `TeschnerVartanov' on page 68 undefined on input line 3
+61.
+
+
+LaTeX Warning: Reference `eq:screenedclassicalpotential' on page 68 undefined o
+n input line 376.
+
+
+[68]
+
+LaTeX Warning: Reference `eq:regulartetrahedrongeometry' on page 69 undefined o
+n input line 424.
+
+
+[69]
+
+LaTeX Warning: Citation `TeschnerVartanov' on page 70 undefined on input line 5
+02.
+
+
+LaTeX Warning: Citation `DLMF' on page 70 undefined on input line 517.
+
+
+LaTeX Warning: Reference `sec:quantumAiry' on page 70 undefined on input line 5
+17.
+
+
+LaTeX Warning: Citation `MurakamiYano' on page 70 undefined on input line 524.
+
+
+LaTeX Warning: Citation `TeschnerVartanov' on page 70 undefined on input line 5
+45.
+
+
+[70]
+
+LaTeX Warning: Reference `eq:regularsaddlequadratic' on page 71 undefined on in
+put line 574.
+
+
+LaTeX Warning: Reference `eq:screeningtailinput' on page 71 undefined on input 
+line 608.
+
+) (./chapters/15-quantum-airy.tex
+
+LaTeX Warning: Reference `eq:regularquantumintegrand' on page 71 undefined on i
+nput line 23.
+
+
+[71]
+
+LaTeX Warning: Citation `TeschnerVartanov' on page 72 undefined on input line 3
+6.
+
+
+LaTeX Warning: Reference `eq:clearedregularsymbol' on page 72 undefined on inpu
+t line 74.
+
+
+[72]
+
+LaTeX Warning: Citation `TeschnerVartanov' on page 73 undefined on input line 1
+41.
+
+
+LaTeX Warning: Reference `eq:stripSbexactremainder' on page 73 undefined on inp
+ut line 197.
+
+
+LaTeX Warning: Reference `eq:uniformstripSb' on page 73 undefined on input line
+ 201.
+
+
+[73]
+
+LaTeX Warning: Reference `lem:stripdoubleSine' on page 74 undefined on input li
+ne 226.
+
+
+LaTeX Warning: Reference `eq:clearedphaseamplitude' on page 74 undefined on inp
+ut line 269.
+
+
+LaTeX Warning: Citation `MurakamiYano' on page 74 undefined on input line 281.
+
+
+LaTeX Warning: Reference `eq:regularvolumebyarea' on page 74 undefined on input
+ line 306.
+
+
+[74]
+
+LaTeX Warning: Citation `TeschnerVartanov' on page 75 undefined on input line 3
+25.
+
+
+LaTeX Warning: Reference `eq:externalpoleclearing' on page 75 undefined on inpu
+t line 342.
+
+
+LaTeX Warning: Reference `eq:clearedphaseamplitude' on page 75 undefined on inp
+ut line 393.
+
+
+LaTeX Warning: Reference `lem:stripdoubleSine' on page 75 undefined on input li
+ne 395.
+
+
+LaTeX Warning: Reference `prop:regularquantumAiry' on page 75 undefined on inpu
+t line 409.
+
+
+[75]
+
+LaTeX Warning: Reference `eq:fullsmoothquantumphase' on page 76 undefined on in
+put line 461.
+
+
+LaTeX Warning: Reference `eq:Airyweightedexpansion' on page 76 undefined on inp
+ut line 481.
+
+
+LaTeX Warning: Reference `eq:AiryGaussianbound' on page 76 undefined on input l
+ine 489.
+
+
+LaTeX Warning: Citation `DLMF' on page 76 undefined on input line 502.
+
+
+[76]
+
+LaTeX Warning: Reference `eq:Airycorrectionpolynomial' on page 77 undefined on 
+input line 521.
+
+
+LaTeX Warning: Reference `eq:quantumAirytheorem' on page 77 undefined on input 
+line 527.
+
+
+LaTeX Warning: Reference `eq:clearedregularsymbol' on page 77 undefined on inpu
+t line 533.
+
+
+LaTeX Warning: Reference `eq:stripSbexactremainder' on page 77 undefined on inp
+ut line 542.
+
+
+[77]
+
+LaTeX Warning: Citation `DLMF' on page 78 undefined on input line 614.
+
+
+LaTeX Warning: Reference `prop:regularquantumAiry' on page 78 undefined on inpu
+t line 622.
+
+
+LaTeX Warning: Reference `eq:clearedregularsymbol' on page 78 undefined on inpu
+t line 636.
+
+) (./chapters/16-dehn-filling-response.tex
+[78]
+
+LaTeX Warning: Citation `NeumannZagier' on page 79 undefined on input line 37.
+
+
+LaTeX Warning: Citation `NeumannZagier' on page 79 undefined on input line 60.
+
+
+[79]
+
+LaTeX Warning: Citation `FuterGueritaud' on page 80 undefined on input line 98.
+
+
+
+LaTeX Warning: Reference `eq:dehncone' on page 80 undefined on input line 118.
+
+
+LaTeX Warning: Reference `eq:realdehnlegendre' on page 80 undefined on input li
+ne 142.
+
+
+[80]
+
+LaTeX Warning: Reference `eq:dehnenvelope' on page 81 undefined on input line 2
+33.
+
+
+LaTeX Warning: Reference `eq:dehnexactcriticalvolume' on page 81 undefined on i
+nput line 235.
+
+
+LaTeX Warning: Reference `eq:dehnenvelope' on page 81 undefined on input line 2
+37.
+
+
+[81]
+
+LaTeX Warning: Reference `eq:dehnexactcriticalvolume' on page 82 undefined on i
+nput line 249.
+
+
+LaTeX Warning: Reference `eq:dehncone' on page 82 undefined on input line 302.
+
+
+[82]
+
+LaTeX Warning: Citation `NeumannZagier' on page 83 undefined on input line 350.
+
+
+
+LaTeX Warning: Reference `eq:dehnconeloss' on page 83 undefined on input line 3
+83.
+
+
+[83]
+
+LaTeX Warning: Citation `ChenYang' on page 84 undefined on input line 407.
+
+
+LaTeX Warning: Reference `prop:dehncriticalvalue' on page 84 undefined on input
+ line 421.
+
+
+LaTeX Warning: Reference `eq:dehnconeloss' on page 84 undefined on input line 4
+35.
+
+
+LaTeX Warning: Citation `WongYangDehn' on page 84 undefined on input line 439.
+
+
+LaTeX Warning: Citation `GangRomoYamazaki' on page 84 undefined on input line 4
+41.
+
+
+LaTeX Warning: Reference `eq:dehnquantumexponent' on page 84 undefined on input
+ line 457.
+
+
+LaTeX Warning: Reference `sec:quantumAiry' on page 84 undefined on input line 4
+85.
+
+
+[84]
+
+LaTeX Warning: Citation `WongYangDehn' on page 85 undefined on input line 524.
+
+
+LaTeX Warning: Citation `PortiTorsionSurvey' on page 85 undefined on input line
+ 526.
+
+
+LaTeX Warning: Reference `prop:dehnquantumconditional' on page 85 undefined on 
+input line 546.
+
+
+LaTeX Warning: Citation `NeumannZagier' on page 85 undefined on input line 552.
+
+
+
+[85]
+
+LaTeX Warning: Citation `NeumannZagier' on page 86 undefined on input line 568.
+
+
+
+LaTeX Warning: Reference `eq:figureeightfillingloss' on page 86 undefined on in
+put line 632.
+
+
+LaTeX Warning: Citation `WongYangDehn' on page 86 undefined on input line 641.
+
+
+[86]
+
+LaTeX Warning: Citation `NeumannZagier' on page 87 undefined on input line 703.
+
+
+
+LaTeX Warning: Citation `MathewsPurcellSymplectic' on page 87 undefined on inpu
+t line 710.
+
+
+[87]
+
+LaTeX Warning: Citation `NeumannZagier' on page 88 undefined on input line 715.
+
+
+
+LaTeX Warning: Citation `DimofteVeen' on page 88 undefined on input line 726.
+
+
+LaTeX Warning: Citation `NeumannZagier' on page 88 undefined on input line 743.
+
+
+
+LaTeX Warning: Reference `eq:NZrealvolume' on page 88 undefined on input line 7
+63.
+
+
+LaTeX Warning: Citation `FuterGueritaud' on page 88 undefined on input line 766
+.
+
+
+[88]
+
+LaTeX Warning: Citation `WongYangDehn' on page 89 undefined on input line 805.
+
+
+LaTeX Warning: Reference `eq:dehnsmoothloss' on page 89 undefined on input line
+ 836.
+
+
+LaTeX Warning: Reference `eq:cuspmatrixHessian' on page 89 undefined on input l
+ine 876.
+
+
+[89]
+
+LaTeX Warning: Reference `eq:dehnenvelope' on page 90 undefined on input line 9
+31.
+
+
+[90]
+
+LaTeX Warning: Reference `eq:dehntorsionsurgery' on page 91 undefined on input 
+line 998.
+
+
+LaTeX Warning: Citation `GangRomoYamazaki' on page 91 undefined on input line 1
+001.
+
+
+LaTeX Warning: Reference `prop:dehnquantumconditional' on page 91 undefined on 
+input line 1007.
+
+)
+[91] (./chapters/17-unfolding-constant-series.tex
+
+LaTeX Warning: Citation `MirzVolumes' on page 92 undefined on input line 32.
+
+
+LaTeX Warning: Reference `sec:torussphere' on page 92 undefined on input line 5
+9.
+
+
+LaTeX Warning: Citation `McShane' on page 92 undefined on input line 72.
+
+
+[92]
+
+LaTeX Warning: Reference `eq:derivativeidentity' on page 93 undefined on input 
+line 108.
+
+
+LaTeX Warning: Reference `sec:figures' on page 93 undefined on input line 126.
+
+
+LaTeX Warning: Reference `sec:exacttwist' on page 93 undefined on input line 12
+6.
+
+
+[93]
+
+LaTeX Warning: Citation `HuTan' on page 94 undefined on input line 149.
+
+
+LaTeX Warning: Citation `LuoTan' on page 94 undefined on input line 162.
+
+) (./chapters/18-figure-eight-curves.tex
+
+LaTeX Warning: Citation `RivinFigures' on page 94 undefined on input line 29.
+
+
+LaTeX Warning: Reference `eq:figuretrace' on page 94 undefined on input line 34
+.
+
+
+LaTeX Warning: Reference `sec:coefficientdistributions' on page 94 undefined on
+ input line 35.
+
+
+[94]
+
+LaTeX Warning: Citation `RivinFigures' on page 95 undefined on input line 81.
+
+
+[95]
+
+LaTeX Warning: Citation `LeiZhang' on page 96 undefined on input line 141.
+
+
+[96]
+
+LaTeX Warning: Reference `eq:universalkernel' on page 97 undefined on input lin
+e 194.
+
+
+LaTeX Warning: Reference `eq:fbound' on page 97 undefined on input line 198.
+
+
+LaTeX Warning: Reference `eq:universalkernel' on page 97 undefined on input lin
+e 218.
+
+
+LaTeX Warning: Citation `LeiZhang' on page 97 undefined on input line 243.
+
+) (./chapters/19-pants-twists.tex
+[97]
+
+LaTeX Warning: Reference `eq:seam' on page 98 undefined on input line 58.
+
+
+LaTeX Warning: Reference `eq:figuretrace' on page 98 undefined on input line 59
+.
+
+
+LaTeX Warning: Reference `eq:localdistance' on page 98 undefined on input line 
+68.
+
+
+[98]
+
+LaTeX Warning: Citation `WolpertTwist' on page 99 undefined on input line 131.
+
+
+LaTeX Warning: Reference `eq:localdistancehessian' on page 99 undefined on inpu
+t line 145.
+
+
+LaTeX Warning: Citation `Kerckhoff' on page 99 undefined on input line 149.
+
+
+LaTeX Warning: Citation `MirzSimple' on page 99 undefined on input line 155.
+
+
+LaTeX Warning: Citation `MirzSimple' on page 99 undefined on input line 157.
+
+
+LaTeX Warning: Citation `MirzGeneral' on page 99 undefined on input line 160.
+
+
+[99]) (./chapters/20-torus-twist-series.tex
+[100]
+
+LaTeX Warning: Citation `ALPS' on page 101 undefined on input line 22.
+
+
+LaTeX Warning: Reference `eq:Atwist' on page 101 undefined on input line 38.
+
+
+LaTeX Warning: Reference `eq:torustwist' on page 101 undefined on input line 39
+.
+
+
+LaTeX Warning: Reference `eq:cosine' on page 101 undefined on input line 47.
+
+
+[101]
+
+LaTeX Warning: Reference `eq:torustwist' on page 102 undefined on input line 12
+3.
+
+
+LaTeX Warning: Reference `eq:Hkernel' on page 102 undefined on input line 124.
+
+
+LaTeX Warning: Reference `eq:Hpartialsumtail' on page 102 undefined on input li
+ne 144.
+
+
+LaTeX Warning: Reference `eq:torustwist' on page 102 undefined on input line 15
+9.
+
+
+LaTeX Warning: Reference `eq:Hkernel' on page 102 undefined on input line 160.
+
+) (./chapters/21-cuff-matching.tex
+[102]) (./chapters/22-cusps-orthospectrum.tex
+[103]
+
+LaTeX Warning: Citation `McShane' on page 104 undefined on input line 52.
+
+
+LaTeX Warning: Citation `McShanePants' on page 104 undefined on input line 53.
+
+
+LaTeX Warning: Citation `MirzVolumes' on page 104 undefined on input line 73.
+
+
+LaTeX Warning: Reference `eq:mcshane' on page 104 undefined on input line 78.
+
+
+[104]
+
+LaTeX Warning: Citation `Springborn' on page 105 undefined on input line 123.
+
+
+LaTeX Warning: Citation `Springborn' on page 105 undefined on input line 132.
+
+
+LaTeX Warning: Reference `eq:toruscusplambda' on page 105 undefined on input li
+ne 135.
+
+
+[105]
+
+LaTeX Warning: Citation `Parlier' on page 106 undefined on input line 166.
+
+
+LaTeX Warning: Reference `eq:cusporthoidentity' on page 106 undefined on input 
+line 182.
+
+
+LaTeX Warning: Citation `Parlier' on page 106 undefined on input line 189.
+
+)
+[106] (./chapters/23-trace-coefficients.tex
+
+LaTeX Warning: Citation `CdVPeriodic' on page 107 undefined on input line 23.
+
+
+LaTeX Warning: Citation `CharlesMarche' on page 107 undefined on input line 77.
+
+
+
+[107]
+
+LaTeX Warning: Citation `NaudTwisted' on page 108 undefined on input line 115.
+
+
+LaTeX Warning: Reference `eq:coefftwistedSelberg' on page 108 undefined on inpu
+t line 117.
+
+
+LaTeX Warning: Reference `eq:coeffuncrossing' on page 108 undefined on input li
+ne 163.
+
+
+[108]
+
+LaTeX Warning: Reference `lem:coefftriangularity' on page 109 undefined on inpu
+t line 210.
+
+
+[109]
+
+LaTeX Warning: Citation `DThurstonPositive' on page 110 undefined on input line
+ 320.
+
+
+LaTeX Warning: Citation `DThurstonPositive' on page 110 undefined on input line
+ 322.
+
+
+LaTeX Warning: Reference `eq:coeffbasis' on page 110 undefined on input line 33
+9.
+
+
+[110]
+
+LaTeX Warning: Reference `eq:coeffbraceletpositive' on page 111 undefined on in
+put line 390.
+
+
+LaTeX Warning: Citation `BasokChelkak' on page 111 undefined on input line 404.
+
+
+
+LaTeX Warning: Reference `eq:coeffmeasuregrowth' on page 111 undefined on input
+ line 443.
+
+
+[111]
+
+LaTeX Warning: Reference `eq:coeffbraceletpositive' on page 112 undefined on in
+put line 463.
+
+
+[112]
+
+LaTeX Warning: Reference `eq:coefffirstatom' on page 113 undefined on input lin
+e 540.
+
+
+[113]
+
+LaTeX Warning: Reference `eq:coeffoddpowers' on page 114 undefined on input lin
+e 628.
+
+
+LaTeX Warning: Reference `eq:figuretrace' on page 114 undefined on input line 6
+43.
+
+
+LaTeX Warning: Reference `eq:coeffChebyshev' on page 114 undefined on input lin
+e 660.
+
+
+LaTeX Warning: Reference `eq:coeffheatdefinition' on page 114 undefined on inpu
+t line 685.
+
+
+LaTeX Warning: Reference `eq:coeffLaplacedefinition' on page 114 undefined on i
+nput line 685.
+
+
+[114]
+
+LaTeX Warning: Reference `sec:figures' on page 115 undefined on input line 689.
+
+
+
+LaTeX Warning: Citation `WolpertTwist' on page 115 undefined on input line 733.
+
+
+
+LaTeX Warning: Reference `eq:coeffmetricvariation' on page 115 undefined on inp
+ut line 734.
+
+
+LaTeX Warning: Reference `eq:coeffmomentratio' on page 115 undefined on input l
+ine 737.
+
+
+LaTeX Warning: Reference `eq:coeffWolpert' on page 115 undefined on input line 
+737.
+
+
+LaTeX Warning: Reference `prop:coefffirstatom' on page 115 undefined on input l
+ine 748.
+
+
+LaTeX Warning: Reference `eq:coeffexponentialbound' on page 115 undefined on in
+put line 763.
+
+
+[115]
+
+LaTeX Warning: Reference `eq:coefftwistedSelberg' on page 116 undefined on inpu
+t line 820.
+
+
+LaTeX Warning: Reference `eq:coeffoddpowers' on page 116 undefined on input lin
+e 835.
+
+
+[116]
+
+LaTeX Warning: Citation `AougabLahnLovingMiller' on page 117 undefined on input
+ line 848.
+
+
+LaTeX Warning: Reference `eq:coeffmomentratio' on page 117 undefined on input l
+ine 849.
+
+
+LaTeX Warning: Citation `MirzSimple' on page 117 undefined on input line 858.
+
+
+LaTeX Warning: Reference `eq:coefflengthlimits' on page 117 undefined on input 
+line 867.
+
+
+LaTeX Warning: Reference `eq:coefffigurecancellation' on page 117 undefined on 
+input line 872.
+
+
+LaTeX Warning: Reference `sec:quantitativecounting' on page 117 undefined on in
+put line 876.
+
+
+[117]) (./chapters/24-quantitative-counting.tex
+
+LaTeX Warning: Citation `EMMEffective' on page 118 undefined on input line 32.
+
+
+LaTeX Warning: Reference `eq:countEMM' on page 118 undefined on input line 41.
+
+
+LaTeX Warning: Citation `MirzSimple' on page 118 undefined on input line 44.
+
+
+LaTeX Warning: Citation `RivinSimpleAsymptotics' on page 118 undefined on input
+ line 44.
+
+
+[118]
+
+LaTeX Warning: Reference `eq:countsandwich' on page 119 undefined on input line
+ 99.
+
+
+LaTeX Warning: Citation `EMMEffective' on page 119 undefined on input line 113.
+
+
+
+LaTeX Warning: Citation `EMMEffective' on page 119 undefined on input line 116.
+
+
+
+LaTeX Warning: Reference `eq:countsandwich' on page 119 undefined on input line
+ 124.
+
+
+LaTeX Warning: Citation `MirzSimple' on page 119 undefined on input line 144.
+
+
+LaTeX Warning: Reference `eq:countcellerror' on page 119 undefined on input lin
+e 145.
+
+
+LaTeX Warning: Citation `LuoStongLengths' on page 119 undefined on input line 1
+49.
+
+
+[119]
+
+LaTeX Warning: Reference `eq:countprimitive' on page 120 undefined on input lin
+e 185.
+
+
+LaTeX Warning: Citation `McShaneRivinTori' on page 120 undefined on input line 
+199.
+
+
+LaTeX Warning: Citation `RivinFigures' on page 120 undefined on input line 246.
+
+
+
+[120]
+
+LaTeX Warning: Reference `eq:countpantsgap' on page 121 undefined on input line
+ 251.
+
+
+LaTeX Warning: Reference `eq:coefffigurecancellation' on page 121 undefined on 
+input line 281.
+
+
+LaTeX Warning: Reference `eq:coeffbraceletpositive' on page 121 undefined on in
+put line 322.
+
+
+LaTeX Warning: Reference `eq:counttracegap' on page 121 undefined on input line
+ 339.
+
+
+[121]
+
+LaTeX Warning: Reference `lem:counttracegap' on page 122 undefined on input lin
+e 380.
+
+
+LaTeX Warning: Reference `eq:countuniformisolation' on page 122 undefined on in
+put line 436.
+
+
+[122]
+
+LaTeX Warning: Reference `eq:countcertifiedtime' on page 123 undefined on input
+ line 452.
+
+
+LaTeX Warning: Reference `prop:countnearcollision' on page 123 undefined on inp
+ut line 453.
+
+
+LaTeX Warning: Reference `eq:countall' on page 123 undefined on input line 475.
+
+
+
+[123]
+
+LaTeX Warning: Reference `eq:countsupportmobius' on page 124 undefined on input
+ line 533.
+
+
+LaTeX Warning: Reference `eq:countsupportfourier' on page 124 undefined on inpu
+t line 549.
+
+
+LaTeX Warning: Citation `AHTComponents' on page 124 undefined on input line 559
+.
+
+
+LaTeX Warning: Reference `eq:countsupportpartition' on page 124 undefined on in
+put line 571.
+
+
+LaTeX Warning: Reference `prop:countall' on page 124 undefined on input line 58
+2.
+
+
+[124]
+
+LaTeX Warning: Reference `eq:countshell' on page 125 undefined on input line 61
+7.
+
+
+LaTeX Warning: Reference `eq:countsmoothhypothesis' on page 125 undefined on in
+put line 619.
+
+
+LaTeX Warning: Reference `eq:countsmoothhypothesis' on page 125 undefined on in
+put line 630.
+
+
+LaTeX Warning: Reference `eq:countsupportpartition' on page 125 undefined on in
+put line 646.
+
+
+LaTeX Warning: Reference `eq:countsupportconditional' on page 125 undefined on 
+input line 649.
+
+
+LaTeX Warning: Reference `prop:countdesmooth' on page 125 undefined on input li
+ne 652.
+
+
+[125]) (./chapters/25-global-coefficient-filters.tex
+
+LaTeX Warning: Reference `subsec:countsupport' on page 126 undefined on input l
+ine 20.
+
+
+LaTeX Warning: Reference `sec:coefficientdistributions' on page 126 undefined o
+n input line 49.
+
+
+LaTeX Warning: Citation `RivinFigures' on page 126 undefined on input line 88.
+
+
+[126]
+
+LaTeX Warning: Reference `eq:coefffullheatexpansion' on page 127 undefined on i
+nput line 109.
+
+
+LaTeX Warning: Reference `eq:globalbounded' on page 127 undefined on input line
+ 110.
+
+
+LaTeX Warning: Reference `sec:coefficientdistributions' on page 127 undefined o
+n input line 128.
+
+
+[127]
+[128]
+
+LaTeX Warning: Reference `eq:globalEuler' on page 129 undefined on input line 2
+56.
+
+
+LaTeX Warning: Reference `eq:globalEulerbound' on page 129 undefined on input l
+ine 294.
+
+
+LaTeX Warning: Reference `eq:globalEulerinput' on page 129 undefined on input l
+ine 318.
+
+
+LaTeX Warning: Reference `eq:globalobstruction' on page 129 undefined on input 
+line 325.
+
+
+[129]
+
+LaTeX Warning: Reference `subsec:countsupport' on page 130 undefined on input l
+ine 332.
+
+
+LaTeX Warning: Reference `eq:globalresidual' on page 130 undefined on input lin
+e 342.
+
+
+[130]) (./chapters/26-counting-to-mixing.tex
+
+LaTeX Warning: Reference `sec:quantitativecounting' on page 131 undefined on in
+put line 9.
+
+
+LaTeX Warning: Citation `PollicottSharpZeta' on page 131 undefined on input lin
+e 20.
+
+
+[131]
+
+LaTeX Warning: Citation `BJPZeta' on page 132 undefined on input line 79.
+
+
+LaTeX Warning: Reference `eq:countmixselberggap' on page 132 undefined on input
+ line 80.
+
+
+LaTeX Warning: Citation `EdwardsOhMixing' on page 132 undefined on input line 8
+3.
+
+
+LaTeX Warning: Reference `eq:countmixselbergmixing' on page 132 undefined on in
+put line 86.
+
+
+LaTeX Warning: Reference `eq:countmixselbergcount' on page 132 undefined on inp
+ut line 92.
+
+
+LaTeX Warning: Citation `GNDiscrepancy' on page 132 undefined on input line 106
+.
+
+
+LaTeX Warning: Citation `SharpZeta' on page 132 undefined on input line 149.
+
+
+[132]
+[133]
+
+LaTeX Warning: Citation `DolgopyatMixing' on page 134 undefined on input line 2
+76.
+
+
+LaTeX Warning: Citation `BabillotMixing' on page 134 undefined on input line 28
+1.
+
+
+[134]
+
+LaTeX Warning: Reference `eq:countmixentry' on page 135 undefined on input line
+ 349.
+
+
+LaTeX Warning: Reference `eq:countmixentry' on page 135 undefined on input line
+ 358.
+
+
+[135]
+[136]) (./chapters/27-weighted-mixing-converse.tex
+
+LaTeX Warning: Reference `sec:globalfilters' on page 137 undefined on input lin
+e 21.
+
+
+LaTeX Warning: Reference `eq:globaldiagonal' on page 137 undefined on input lin
+e 46.
+
+
+LaTeX Warning: Citation `WentworthGardiner' on page 137 undefined on input line
+ 81.
+
+
+LaTeX Warning: Citation `AranaHerreraSquare2020' on page 137 undefined on input
+ line 82.
+
+
+[137]
+
+LaTeX Warning: Reference `eq:pairgeometryflow' on page 138 undefined on input l
+ine 121.
+
+
+LaTeX Warning: Citation `AranaHerreraSquare2020' on page 138 undefined on input
+ line 159.
+
+
+[138]
+
+LaTeX Warning: Citation `AranaHerreraSquareEffective' on page 139 undefined on 
+input line 193.
+
+
+LaTeX Warning: Citation `AranaHerreraSquareEffective' on page 139 undefined on 
+input line 196.
+
+
+LaTeX Warning: Citation `AranaHerreraSquareEffective' on page 139 undefined on 
+input line 203.
+
+
+LaTeX Warning: Reference `eq:pairgeometryflow' on page 139 undefined on input l
+ine 207.
+
+
+[139]
+
+LaTeX Warning: Citation `ABEMPolar' on page 140 undefined on input line 306.
+
+
+[140]
+
+LaTeX Warning: Reference `eq:twopointpolar' on page 141 undefined on input line
+ 362.
+
+
+LaTeX Warning: Reference `eq:twopointkernel' on page 141 undefined on input lin
+e 363.
+
+
+LaTeX Warning: Reference `eq:twopointexact' on page 141 undefined on input line
+ 368.
+
+
+[141]
+
+LaTeX Warning: Reference `eq:twopointkernel' on page 142 undefined on input lin
+e 418.
+
+
+LaTeX Warning: Reference `thm:twopointfullrate' on page 142 undefined on input 
+line 423.
+
+
+LaTeX Warning: Reference `eq:twopointcountassumption' on page 142 undefined on 
+input line 429.
+
+
+LaTeX Warning: Reference `eq:twopointderivative' on page 142 undefined on input
+ line 443.
+
+
+LaTeX Warning: Reference `eq:twopointmixrate' on page 142 undefined on input li
+ne 462.
+
+
+LaTeX Warning: Reference `eq:twopointcountassumption' on page 142 undefined on 
+input line 487.
+
+
+[142]
+
+LaTeX Warning: Reference `eq:twopointcountassumption' on page 143 undefined on 
+input line 505.
+
+
+LaTeX Warning: Reference `prop:twopointunfolding' on page 143 undefined on inpu
+t line 519.
+
+
+LaTeX Warning: Reference `eq:twopointderivativecount' on page 143 undefined on 
+input line 559.
+
+
+[143]
+
+LaTeX Warning: Reference `thm:twopointconverse' on page 144 undefined on input 
+line 593.
+
+
+LaTeX Warning: Reference `eq:twopointfullrate' on page 144 undefined on input l
+ine 615.
+
+
+LaTeX Warning: Citation `ABEMPolar' on page 144 undefined on input line 636.
+
+
+LaTeX Warning: Citation `ABEMPolar' on page 144 undefined on input line 644.
+
+
+LaTeX Warning: Reference `eq:twopointHM' on page 144 undefined on input line 65
+3.
+
+
+LaTeX Warning: Reference `eq:twopointHM' on page 144 undefined on input line 67
+0.
+
+
+[144]
+
+LaTeX Warning: Citation `ABEMPolar' on page 145 undefined on input line 674.
+
+
+LaTeX Warning: Citation `AranaHerreraLattice' on page 145 undefined on input li
+ne 682.
+
+
+LaTeX Warning: Reference `thm:twopointconverse' on page 145 undefined on input 
+line 690.
+
+
+[145]
+
+LaTeX Warning: Citation `HumphriesModular' on page 146 undefined on input line 
+760.
+
+
+LaTeX Warning: Reference `eq:pairkloostermansmooth' on page 146 undefined on in
+put line 792.
+
+
+[146]
+
+LaTeX Warning: Reference `eq:twopointcountassumption' on page 147 undefined on 
+input line 824.
+
+
+LaTeX Warning: Reference `eq:twopointkernel' on page 147 undefined on input lin
+e 832.
+
+
+LaTeX Warning: Reference `sec:genus2markedtorus' on page 147 undefined on input
+ line 837.
+
+
+LaTeX Warning: Reference `eq:twopointfullrate' on page 147 undefined on input l
+ine 843.
+
+
+LaTeX Warning: Reference `eq:twopointfullcusprate' on page 147 undefined on inp
+ut line 844.
+
+
+LaTeX Warning: Reference `eq:twopointmixrate' on page 147 undefined on input li
+ne 845.
+
+) (./chapters/28-genus-two-model.tex
+
+LaTeX Warning: Citation `BenirschkeServan' on page 147 undefined on input line 
+23.
+
+
+[147]
+
+LaTeX Warning: Citation `FillastreIzmestievCusps' on page 148 undefined on inpu
+t line 34.
+
+
+LaTeX Warning: Citation `LanneauComponents' on page 148 undefined on input line
+ 87.
+
+
+[148]
+
+LaTeX Warning: Reference `eq:genus2qformula' on page 149 undefined on input lin
+e 113.
+
+
+LaTeX Warning: Reference `eq:genus2order' on page 149 undefined on input line 1
+21.
+
+
+LaTeX Warning: Reference `eq:genus2cancel' on page 149 undefined on input line 
+185.
+
+
+[149]
+[150]
+[151]
+
+LaTeX Warning: Citation `LanneauComponents' on page 152 undefined on input line
+ 390.
+
+
+LaTeX Warning: Reference `eq:genus2equalareas' on page 152 undefined on input l
+ine 400.
+
+
+[152]
+
+LaTeX Warning: Citation `StrombergssonVishe' on page 153 undefined on input lin
+e 489.
+
+
+LaTeX Warning: Reference `eq:markedtorusinduction' on page 153 undefined on inp
+ut line 495.
+
+
+LaTeX Warning: Citation `BenoistKobayashi' on page 153 undefined on input line 
+496.
+
+
+LaTeX Warning: Citation `AthreyaLagaceMollerRaum' on page 153 undefined on inpu
+t line 508.
+
+
+LaTeX Warning: Citation `OtalRosas' on page 153 undefined on input line 515.
+
+
+LaTeX Warning: Citation `EdwardsOhMixing' on page 153 undefined on input line 5
+25.
+
+
+[153]
+
+LaTeX Warning: Citation `BenoistKobayashi' on page 154 undefined on input line 
+560.
+
+
+LaTeX Warning: Citation `CowlingHaagerupHowe' on page 154 undefined on input li
+ne 561.
+
+
+LaTeX Warning: Reference `eq:markedtorusfourier' on page 154 undefined on input
+ line 571.
+
+
+LaTeX Warning: Reference `eq:markedtorusXi' on page 154 undefined on input line
+ 604.
+
+
+LaTeX Warning: Reference `eq:markedtorusalltempered' on page 154 undefined on i
+nput line 605.
+
+
+LaTeX Warning: Reference `subsec:genus2homogeneous' on page 154 undefined on in
+put line 608.
+
+
+[154]
+
+LaTeX Warning: Reference `eq:markedtorusexactcount' on page 155 undefined on in
+put line 660.
+
+
+LaTeX Warning: Reference `eq:markedtorusexplicitmix' on page 155 undefined on i
+nput line 678.
+
+
+[155]
+
+LaTeX Warning: Reference `eq:markedtoruscountremainder' on page 156 undefined o
+n input line 739.
+
+
+LaTeX Warning: Citation `StrombergssonVishe' on page 156 undefined on input lin
+e 745.
+
+
+LaTeX Warning: Citation `AthreyaLagaceMollerRaum' on page 156 undefined on inpu
+t line 745.
+
+
+LaTeX Warning: Reference `eq:markedtorusderivativeweight' on page 156 undefined
+ on input line 748.
+
+
+LaTeX Warning: Reference `sec:pairconverse' on page 156 undefined on input line
+ 760.
+
+
+LaTeX Warning: Reference `sec:coefficientobservables' on page 156 undefined on 
+input line 761.
+
+) (./chapters/29-controlled-observables.tex
+[156]
+
+LaTeX Warning: Citation `McShaneRivinTori' on page 157 undefined on input line 
+36.
+
+
+[157]
+[158]
+
+LaTeX Warning: Reference `prop:normballflatrow' on page 159 undefined on input 
+line 171.
+
+
+LaTeX Warning: Reference `sec:genus2markedtorus' on page 159 undefined on input
+ line 204.
+
+
+LaTeX Warning: Reference `subsec:genus2homogeneous' on page 159 undefined on in
+put line 226.
+
+
+[159]
+
+LaTeX Warning: Reference `prop:coefffirstatom' on page 160 undefined on input l
+ine 275.
+
+
+LaTeX Warning: Reference `lem:primitivepolearcs' on page 160 undefined on input
+ line 304.
+
+
+[160]
+
+LaTeX Warning: Reference `eq:polearcobservable' on page 161 undefined on input 
+line 348.
+
+
+LaTeX Warning: Reference `thm:markedtorusmixing' on page 161 undefined on input
+ line 367.
+
+
+LaTeX Warning: Reference `eq:polearcobservable' on page 161 undefined on input 
+line 368.
+
+
+LaTeX Warning: Citation `ShigaHyperbolicQC' on page 161 undefined on input line
+ 410.
+
+
+[161]
+
+LaTeX Warning: Reference `eq:polearclengthderivatives' on page 162 undefined on
+ input line 418.
+
+
+[162]
+
+LaTeX Warning: Reference `eq:polearccoefficientweight' on page 163 undefined on
+ input line 484.
+
+
+LaTeX Warning: Reference `eq:polearcVnorms' on page 163 undefined on input line
+ 484.
+
+
+LaTeX Warning: Reference `subsec:countnearcollision' on page 163 undefined on i
+nput line 489.
+
+
+LaTeX Warning: Citation `AthreyaLagaceMollerRaum' on page 163 undefined on inpu
+t line 498.
+
+
+LaTeX Warning: Citation `AthreyaLagaceMollerRaum' on page 163 undefined on inpu
+t line 526.
+
+
+LaTeX Warning: Citation `AthreyaAffineLattices' on page 163 undefined on input 
+line 541.
+
+
+[163]
+
+LaTeX Warning: Reference `eq:affinesiegelexactcorr' on page 164 undefined on in
+put line 554.
+
+
+LaTeX Warning: Reference `eq:affineranktwonorm' on page 164 undefined on input 
+line 633.
+
+
+[164]
+
+LaTeX Warning: Reference `eq:affineranktwogaussiancorr' on page 165 undefined o
+n input line 708.
+
+
+[165])
+[166] (./chapters/30-sharp-diagnostics.tex
+
+LaTeX Warning: Reference `eq:primitiveexactnormalizedmobius' on page 167 undefi
+ned on input line 50.
+
+
+[167]
+
+LaTeX Warning: Reference `eq:primitiveDiniPNT' on page 168 undefined on input l
+ine 70.
+
+
+LaTeX Warning: Reference `eq:primitiveDini' on page 168 undefined on input line
+ 133.
+
+
+[168]
+
+LaTeX Warning: Citation `BaranyPrimitivePolygons' on page 169 undefined on inpu
+t line 161.
+
+
+[169]
+[170]
+
+LaTeX Warning: Reference `eq:inverseflatdiscrepancy' on page 171 undefined on i
+nput line 328.
+
+
+LaTeX Warning: Reference `eq:inverseflatmicroscopic' on page 171 undefined on i
+nput line 337.
+
+
+LaTeX Warning: Reference `prop:normballflatrow' on page 171 undefined on input 
+line 344.
+
+
+LaTeX Warning: Reference `eq:inverseflatmicroscopic' on page 171 undefined on i
+nput line 413.
+
+
+[171]
+[172]
+
+LaTeX Warning: Reference `eq:inverseflatwidth' on page 173 undefined on input l
+ine 491.
+
+
+LaTeX Warning: Reference `eq:primitiveintervalexact' on page 173 undefined on i
+nput line 495.
+
+
+LaTeX Warning: Citation `BowditchMarkoff' on page 173 undefined on input line 5
+16.
+
+
+[173]
+
+LaTeX Warning: Citation `McShaneRivinTori' on page 174 undefined on input line 
+604.
+
+
+[174]
+
+LaTeX Warning: Reference `sec:arithmeticgeometry' on page 175 undefined on inpu
+t line 646.
+
+
+[175]
+
+LaTeX Warning: Citation `DoanLiNguyenStableNorm' on page 176 undefined on input
+ line 714.
+
+
+LaTeX Warning: Reference `prop:normballflatrow' on page 176 undefined on input 
+line 730.
+
+
+LaTeX Warning: Reference `prop:inverseflatrow' on page 176 undefined on input l
+ine 730.
+
+
+LaTeX Warning: Reference `prop:strictconvexlittleo' on page 176 undefined on in
+put line 732.
+
+) (./chapters/31-arithmetic-remainder.tex
+
+LaTeX Warning: Reference `subsec:mobiusmodulus' on page 176 undefined on input 
+line 22.
+
+
+[176]
+[177]
+
+LaTeX Warning: Reference `eq:zeroFreeMertens' on page 178 undefined on input li
+ne 126.
+
+
+LaTeX Warning: Reference `eq:zeroFreeMertens' on page 178 undefined on input li
+ne 156.
+
+
+LaTeX Warning: Citation `OpenAIQuasiRHSeptember' on page 178 undefined on input
+ line 171.
+
+
+LaTeX Warning: Citation `OpenAIQuasiRHOctober' on page 178 undefined on input l
+ine 174.
+
+
+LaTeX Warning: Reference `prop:primitiveRHtransfer' on page 178 undefined on in
+put line 179.
+
+
+[178]
+
+LaTeX Warning: Reference `eq:primitiveRHpowerM' on page 179 undefined on input 
+line 197.
+
+
+LaTeX Warning: Citation `ZhaiPrimitive2003' on page 179 undefined on input line
+ 216.
+
+
+[179]
+
+LaTeX Warning: Citation `ZhaiPrimitive2003' on page 180 undefined on input line
+ 283.
+
+
+LaTeX Warning: Citation `BakerPrimitive2010' on page 180 undefined on input lin
+e 289.
+
+
+LaTeX Warning: Reference `subsec:rationalpolygonbenchmark' on page 180 undefine
+d on input line 298.
+
+
+[180]
+
+LaTeX Warning: Reference `prop:normballflatrow' on page 181 undefined on input 
+line 344.
+
+
+LaTeX Warning: Reference `subsec:flatnessmodels' on page 181 undefined on input
+ line 365.
+
+
+LaTeX Warning: Reference `subsec:dyadicdiagnostic' on page 181 undefined on inp
+ut line 369.
+
+
+LaTeX Warning: Reference `subsec:torustraceexperiment' on page 181 undefined on
+ input line 385.
+
+
+LaTeX Warning: Reference `eq:allPointLogDiagnostic' on page 181 undefined on in
+put line 394.
+
+
+[181])
+[182] (./chapters/32-open-questions.tex
+
+LaTeX Warning: Reference `eq:polyhedralpartition' on page 183 undefined on inpu
+t line 5.
+
+
+LaTeX Warning: Reference `sec:hyperideal' on page 183 undefined on input line 6
+.
+
+
+LaTeX Warning: Reference `eq:hyperidealdensity' on page 183 undefined on input 
+line 16.
+
+
+LaTeX Warning: Reference `eq:basevolumes' on page 183 undefined on input line 1
+8.
+
+
+LaTeX Warning: Reference `sec:hyperideal' on page 183 undefined on input line 2
+1.
+
+
+LaTeX Warning: Citation `Zonneveld' on page 183 undefined on input line 23.
+
+
+LaTeX Warning: Reference `eq:pfaffiandensity' on page 183 undefined on input li
+ne 29.
+
+
+LaTeX Warning: Reference `eq:deltameasure' on page 183 undefined on input line 
+35.
+
+
+LaTeX Warning: Reference `eq:fn' on page 183 undefined on input line 43.
+
+
+LaTeX Warning: Reference `eq:Xiclass' on page 183 undefined on input line 49.
+
+
+LaTeX Warning: Reference `eq:Frickefirstcorrection' on page 183 undefined on in
+put line 51.
+
+
+LaTeX Warning: Reference `prop:regularquantumAiry' on page 183 undefined on inp
+ut line 60.
+
+
+LaTeX Warning: Reference `eq:modelpartition' on page 183 undefined on input lin
+e 66.
+
+
+LaTeX Warning: Reference `eq:exactLiouvillecurvature' on page 183 undefined on 
+input line 69.
+
+
+LaTeX Warning: Reference `eq:torsionDMlimit' on page 183 undefined on input lin
+e 70.
+
+
+LaTeX Warning: Reference `eq:areaLiouvillecharge' on page 183 undefined on inpu
+t line 72.
+
+
+LaTeX Warning: Reference `sec:screenedfusion' on page 183 undefined on input li
+ne 75.
+
+
+LaTeX Warning: Reference `eq:screeningtailinput' on page 183 undefined on input
+ line 78.
+
+
+LaTeX Warning: Reference `sec:normalizedsixj' on page 183 undefined on input li
+ne 79.
+
+
+LaTeX Warning: Reference `sec:quantumAiry' on page 183 undefined on input line 
+82.
+
+
+LaTeX Warning: Reference `sec:quantumdegeneration' on page 183 undefined on inp
+ut line 88.
+
+
+[183]
+
+LaTeX Warning: Reference `sec:dehnresponse' on page 184 undefined on input line
+ 96.
+
+
+LaTeX Warning: Reference `prop:dehncriticalvalue' on page 184 undefined on inpu
+t line 99.
+
+
+LaTeX Warning: Reference `eq:dehngaussiantorsion' on page 184 undefined on inpu
+t line 101.
+
+
+LaTeX Warning: Reference `prop:dehnquantumconditional' on page 184 undefined on
+ input line 103.
+
+
+LaTeX Warning: Reference `sec:ipolybridge' on page 184 undefined on input line 
+109.
+
+
+LaTeX Warning: Reference `eq:ipolyStepBound' on page 184 undefined on input lin
+e 111.
+
+
+LaTeX Warning: Reference `sec:ipolybridge' on page 184 undefined on input line 
+128.
+
+
+LaTeX Warning: Reference `sec:coefficientdistributions' on page 184 undefined o
+n input line 137.
+
+
+LaTeX Warning: Reference `eq:coeffLaplacedefinition' on page 184 undefined on i
+nput line 139.
+
+
+LaTeX Warning: Reference `prop:globalonecrossing' on page 184 undefined on inpu
+t line 147.
+
+
+LaTeX Warning: Reference `eq:globalresidual' on page 184 undefined on input lin
+e 149.
+
+
+LaTeX Warning: Reference `eq:globalobstruction' on page 184 undefined on input 
+line 151.
+
+
+LaTeX Warning: Reference `eq:globaldiagonal' on page 184 undefined on input lin
+e 154.
+
+
+[184]
+
+LaTeX Warning: Reference `eq:countsmoothhypothesis' on page 185 undefined on in
+put line 161.
+
+
+LaTeX Warning: Reference `eq:countsupportfourier' on page 185 undefined on inpu
+t line 163.
+
+
+LaTeX Warning: Reference `sec:pairconverse' on page 185 undefined on input line
+ 174.
+
+
+LaTeX Warning: Reference `eq:twopointkernel' on page 185 undefined on input lin
+e 175.
+
+
+LaTeX Warning: Reference `prop:twopointunfolding' on page 185 undefined on inpu
+t line 176.
+
+
+LaTeX Warning: Reference `thm:twopointfullrate' on page 185 undefined on input 
+line 180.
+
+
+LaTeX Warning: Reference `thm:twopointconverse' on page 185 undefined on input 
+line 183.
+
+
+LaTeX Warning: Reference `sec:genus2markedtorus' on page 185 undefined on input
+ line 187.
+
+
+LaTeX Warning: Reference `sec:coefficientobservables' on page 185 undefined on 
+input line 189.
+
+
+LaTeX Warning: Reference `prop:strictconvexlittleo' on page 185 undefined on in
+put line 200.
+
+
+LaTeX Warning: Reference `eq:primitiveDini' on page 185 undefined on input line
+ 201.
+
+
+LaTeX Warning: Reference `eq:primitiveexactnormalizedmobius' on page 185 undefi
+ned on input line 202.
+
+
+LaTeX Warning: Reference `eq:inverseflatmicroscopic' on page 185 undefined on i
+nput line 203.
+
+
+LaTeX Warning: Reference `eq:dyadicerrorinverse' on page 185 undefined on input
+ line 204.
+
+
+LaTeX Warning: Reference `sec:arithmeticgeometry' on page 185 undefined on inpu
+t line 207.
+
+
+LaTeX Warning: Reference `prop:inverseflatrow' on page 185 undefined on input l
+ine 213.
+
+
+LaTeX Warning: Reference `subsec:flatnessmodels' on page 185 undefined on input
+ line 215.
+
+
+LaTeX Warning: Reference `eq:allPointLogDiagnostic' on page 185 undefined on in
+put line 219.
+
+
+LaTeX Warning: Reference `eq:universalkernel' on page 185 undefined on input li
+ne 231.
+
+
+LaTeX Warning: Reference `eq:Kkernel' on page 185 undefined on input line 231.
+
+
+LaTeX Warning: Reference `sec:matching' on page 185 undefined on input line 238
+.
+
+
+LaTeX Warning: Reference `sec:cusps' on page 185 undefined on input line 244.
+
+
+[185])
+Underfull \hbox (badness 3907) in paragraph at lines 256--426
+ []\T1/lmr/bx/n/10.95 (+20) Computational sup-port.[] \T1/lmr/m/n/10.95 (+20) T
+he main-tained nor-mal-iza-tion, Hes-sian/barrier, quan-
+(./chapters/appendix-a-fricke.tex
+
+LaTeX Warning: Citation `Goldman' on page 186 undefined on input line 18.
+
+
+[186])
+[187] (./chapters/appendix-b-conventions.tex
+
+LaTeX Warning: Reference `eq:unitareanormalization' on page 188 undefined on in
+put line 15.
+
+
+LaTeX Warning: Reference `eq:CHpotential' on page 188 undefined on input line 1
+6.
+
+
+LaTeX Warning: Reference `eq:flatweights' on page 188 undefined on input line 1
+7.
+
+
+LaTeX Warning: Reference `sec:quantumdegeneration' on page 188 undefined on inp
+ut line 18.
+
+
+LaTeX Warning: Reference `eq:localWPCHlimit' on page 188 undefined on input lin
+e 19.
+
+
+LaTeX Warning: Reference `eq:fn' on page 188 undefined on input line 20.
+
+
+LaTeX Warning: Reference `sec:conventions' on page 188 undefined on input line 
+20.
+
+
+LaTeX Warning: Reference `sec:conventions' on page 188 undefined on input line 
+21.
+
+
+LaTeX Warning: Reference `sec:conventions' on page 188 undefined on input line 
+22.
+
+
+LaTeX Warning: Reference `eq:basevolumes' on page 188 undefined on input line 2
+3.
+
+
+LaTeX Warning: Reference `eq:v04direct' on page 188 undefined on input line 24.
+
+
+
+LaTeX Warning: Reference `eq:gb' on page 188 undefined on input line 25.
+
+
+LaTeX Warning: Reference `eq:conev04' on page 188 undefined on input line 25.
+
+
+LaTeX Warning: Reference `sec:tetrahedron' on page 188 undefined on input line 
+26.
+
+
+LaTeX Warning: Reference `eq:rivinangles2' on page 188 undefined on input line 
+27.
+
+
+LaTeX Warning: Reference `eq:Schlafli' on page 188 undefined on input line 27.
+
+
+LaTeX Warning: Reference `eq:lambdagauge' on page 188 undefined on input line 2
+8.
+
+
+LaTeX Warning: Reference `eq:cusplambda' on page 188 undefined on input line 28
+.
+
+
+LaTeX Warning: Reference `eq:ipolyAngleCoordinates' on page 188 undefined on in
+put line 29.
+
+
+LaTeX Warning: Reference `eq:ipolyHessian' on page 188 undefined on input line 
+29.
+
+
+LaTeX Warning: Reference `eq:ipolyDtN' on page 188 undefined on input line 29.
+
+
+LaTeX Warning: Reference `eq:introqinteger' on page 188 undefined on input line
+ 30.
+
+
+LaTeX Warning: Reference `eq:introknotvolume' on page 188 undefined on input li
+ne 31.
+
+
+LaTeX Warning: Reference `eq:introclosedvolume' on page 188 undefined on input 
+line 31.
+
+
+LaTeX Warning: Reference `eq:quantum6jstructure' on page 188 undefined on input
+ line 32.
+
+
+LaTeX Warning: Reference `eq:TVvolumehbar' on page 188 undefined on input line 
+33.
+
+
+LaTeX Warning: Reference `eq:introRTgrowth' on page 188 undefined on input line
+ 33.
+
+
+LaTeX Warning: Reference `eq:realregularsymbol' on page 188 undefined on input 
+line 34.
+
+
+LaTeX Warning: Reference `eq:clearedregularsymbol' on page 188 undefined on inp
+ut line 34.
+
+
+LaTeX Warning: Reference `eq:quantumAirytheorem' on page 188 undefined on input
+ line 34.
+
+
+LaTeX Warning: Reference `eq:introLiouvilleparameters' on page 188 undefined on
+ input line 35.
+
+
+LaTeX Warning: Reference `eq:screeningparameters' on page 188 undefined on inpu
+t line 35.
+
+
+LaTeX Warning: Reference `eq:torsionGoldman' on page 188 undefined on input lin
+e 36.
+
+
+LaTeX Warning: Reference `sec:figures' on page 188 undefined on input line 37.
+
+
+LaTeX Warning: Reference `sec:coefficientdistributions' on page 188 undefined o
+n input line 37.
+
+
+LaTeX Warning: Reference `eq:figuretrace' on page 188 undefined on input line 3
+8.
+
+
+LaTeX Warning: Reference `eq:coeffbasis' on page 188 undefined on input line 39
+.
+
+
+LaTeX Warning: Reference `eq:coefftwistedSelberg' on page 188 undefined on inpu
+t line 40.
+
+
+LaTeX Warning: Reference `eq:coeffheatdefinition' on page 188 undefined on inpu
+t line 41.
+
+
+LaTeX Warning: Reference `eq:coeffLaplacedefinition' on page 188 undefined on i
+nput line 42.
+
+
+LaTeX Warning: Reference `eq:coeffproductderivative' on page 188 undefined on i
+nput line 42.
+
+
+LaTeX Warning: Reference `eq:countall' on page 188 undefined on input line 43.
+
+
+LaTeX Warning: Reference `eq:countprimitive' on page 188 undefined on input lin
+e 44.
+
+
+LaTeX Warning: Reference `eq:countsupportpartition' on page 188 undefined on in
+put line 45.
+
+
+LaTeX Warning: Reference `eq:allfigureidentity' on page 188 undefined on input 
+line 46.
+
+
+LaTeX Warning: Reference `eq:basmajian' on page 188 undefined on input line 47.
+
+
+
+LaTeX Warning: Reference `eq:toruscusplambda' on page 188 undefined on input li
+ne 48.
+
+
+LaTeX Warning: Reference `sec:cusps' on page 188 undefined on input line 49.
+
+
+LaTeX Warning: Reference `eq:endpointmatch' on page 188 undefined on input line
+ 50.
+
+
+LaTeX Warning: Reference `eq:momentummatch' on page 188 undefined on input line
+ 50.
+
+
+LaTeX Warning: Reference `eq:dehnholonomy' on page 188 undefined on input line 
+51.
+
+
+LaTeX Warning: Reference `eq:dehncone' on page 188 undefined on input line 51.
+
+
+LaTeX Warning: Reference `eq:introNZpolarization' on page 188 undefined on inpu
+t line 52.
+
+
+LaTeX Warning: Reference `eq:introcommutator' on page 188 undefined on input li
+ne 52.
+
+
+LaTeX Warning: Reference `eq:realdehnlegendre' on page 188 undefined on input l
+ine 53.
+
+
+LaTeX Warning: Reference `eq:dehnsourcecore' on page 188 undefined on input lin
+e 53.
+
+
+LaTeX Warning: Reference `eq:dehnsurgeryaction' on page 188 undefined on input 
+line 54.
+
+
+LaTeX Warning: Reference `eq:dehnexactcriticalvolume' on page 188 undefined on 
+input line 54.
+
+
+LaTeX Warning: Reference `subsec:mobiusmodulus' on page 188 undefined on input 
+line 55.
+
+
+LaTeX Warning: Reference `sec:arithmeticgeometry' on page 188 undefined on inpu
+t line 55.
+
+
+LaTeX Warning: Reference `eq:pairgeometryflow' on page 188 undefined on input l
+ine 56.
+
+
+LaTeX Warning: Reference `subsec:pairquotient' on page 188 undefined on input l
+ine 56.
+
+
+LaTeX Warning: Reference `thm:twopointfullrate' on page 188 undefined on input 
+line 57.
+
+[188]
+
+LaTeX Warning: Reference `eq:fn' on page 189 undefined on input line 63.
+
+
+LaTeX Warning: Reference `sec:conventions' on page 189 undefined on input line 
+64.
+
+
+LaTeX Warning: Reference `sec:tetrahedron' on page 189 undefined on input line 
+67.
+
+
+LaTeX Warning: Reference `eq:v04direct' on page 189 undefined on input line 68.
+
+
+
+LaTeX Warning: Reference `eq:frickedensity' on page 189 undefined on input line
+ 68.
+
+
+LaTeX Warning: Citation `CDE' on page 189 undefined on input line 70.
+
+
+LaTeX Warning: Reference `eq:penner' on page 189 undefined on input line 71.
+
+
+LaTeX Warning: Reference `eq:polyhedralpartition' on page 189 undefined on inpu
+t line 72.
+
+
+LaTeX Warning: Citation `Budd' on page 189 undefined on input line 74.
+
+)
+[189]
+[190]
+[191]
+[192]
+
+LaTeX Warning: Reference `sec:figures' on page 193 undefined on input line 875.
+
+
+
+[193]
+[194]
+[195]
+[196]
+(/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-
+01/integration-review/pdf-build/main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ ) )
+(see the transcript file for additional information)</usr/local/texlive/2025/te
+xmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2025/
+texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2025/texmf-dist
+/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/typ
+e1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/l
+m/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.p
+fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/lo
+cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive
+/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2025/texmf
+-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts
+/type1/public/lm/lmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pu
+blic/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr
+12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr
+/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texli
+ve/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2025/texm
+f-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts
+/type1/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pub
+lic/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss
+10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss8.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/te
+xlive/2025/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2025/
+texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/
+fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
+/public/lm/lmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/am
+sfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
+c/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p
+ublic/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type
+1/public/rsfs/rsfs10.pfb>
+Output written on /Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapter
+s-review-2026-11-01/integration-review/pdf-build/main.pdf (196 pages, 1445775 b
+ytes).
+Transcript written on /Volumes/Lexar/lambda/devel/polyhedra/execution/final-cha
+pters-review-2026-11-01/integration-review/pdf-build/main.log.
+Latexmk: Getting log file '/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.log'
+Latexmk: Examining '/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.fls'
+Latexmk: Examining '/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.log'
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: Log file says output to '/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.pdf'
+Latexmk: Log file says output to '/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.pdf'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  /Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.aux
+  /Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.lof
+  /Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.out
+  /Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.toc
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -file-line-error -no-shell-escape -recorder -output-directory="/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build"  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex)
+entering extended mode
+(./main.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(./polyhedral_volumes_and_geodesic_identities.tex
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size11.clo))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/lmodern.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/mathrsfs.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryangles.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryquotes.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/ltcaption.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-
+01/integration-review/pdf-build/main.aux)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+
+Package epstopdf Warning: Shell escape feature is not enabled.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-
+01/integration-review/pdf-build/main.out)
+(/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-
+01/integration-review/pdf-build/main.out)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd)
+[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
+ocal/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2
+025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist
+/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc
+/dvips/lm/lm-mathit.enc}]
+(/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-
+01/integration-review/pdf-build/main.toc
+[2]
+[3]
+[4]
+[5])
+[6]
+(/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-
+01/integration-review/pdf-build/main.lof)
+[7]
+[8]
+[9] (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd)
+[10] (./chapters/01-volume-normalization.tex
+[11{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}])
+(./chapters/02-ideal-angle-cells.tex
+[12]) (./chapters/03-ideal-tetrahedron.tex
+[13]
+[14]) (./chapters/04-hyperideal-integrand.tex
+[15]
+[16]
+[17] (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-euf.cfg)
+[18]) (./chapters/05-boundary-cone-continuation.tex
+[19]
+[20]) (./chapters/06-torus-sphere.tex
+[21]) (./chapters/07-euclidean-periods.tex
+[22]
+[23]
+[24]) (./chapters/08-wp-flat-limit.tex
+[25]
+[26]
+[27]
+[28])
+[29] (./chapters/09-volume-hessians.tex
+[30]
+Underfull \hbox (badness 1014) in paragraph at lines 131--143
+[]\T1/lmr/m/n/10.95 (+20) In a pos-i-tively ori-ented tri-an-gle $\OML/lmm/m/it
+/10.95 ijk$\T1/lmr/m/n/10.95 (+20) , dif-fer-en-ti-a-tion with re-spect to $\OM
+L/lmm/m/it/10.95 u[]$ \T1/lmr/m/n/10.95 (+20) gives
+
+[31]
+[32]
+[33]
+[34]
+[35]
+[36]
+[37])
+[38] (./chapters/10-quantum-introduction.tex
+[39]
+[40]
+[41]
+[42]
+[43]
+[44]
+[45]
+[46]
+[47]
+[48]
+[49]) (./chapters/11-quantum-degeneration.tex
+[50] (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmss.fd)
+[51]
+[52]
+[53]) (./chapters/12-quantum-boundary-measure.tex
+[54]
+[55]
+[56]
+[57]
+[58]
+[59]) (./chapters/13-four-point-fusion.tex
+[60]
+[61]
+[62]
+[63]
+[64]
+[65]
+[66]) (./chapters/14-normalized-quantum-comparison.tex
+[67]
+[68]
+[69]
+[70]
+[71]
+[72]
+[73]) (./chapters/15-quantum-airy.tex
+[74]
+[75]
+[76]
+[77]
+[78]
+[79]
+[80]) (./chapters/16-dehn-filling-response.tex
+[81]
+[82]
+[83]
+[84]
+[85]
+[86]
+[87]
+[88]
+[89]
+[90]
+[91]
+[92]
+[93])
+[94] (./chapters/17-unfolding-constant-series.tex
+[95]
+[96]) (./chapters/18-figure-eight-curves.tex
+[97]
+[98]
+[99]) (./chapters/19-pants-twists.tex
+[100]
+[101]
+[102]) (./chapters/20-torus-twist-series.tex
+[103]
+Underfull \hbox (badness 1178) in paragraph at lines 37--41
+\T1/lmr/m/n/10.95 (+20) Solving this bound-ary equa-tion re-cov-ers []. Dif-fer
+-en-ti-at-ing [], with $\OML/lmm/m/it/10.95 Q \OT1/lmr/m/n/10.95 (+20) =
+
+[104]) (./chapters/21-cuff-matching.tex
+[105]) (./chapters/22-cusps-orthospectrum.tex
+[106]
+[107]
+[108])
+[109] (./chapters/23-trace-coefficients.tex
+[110]
+[111]
+[112]
+[113]
+[114]
+[115]
+[116]
+[117]
+[118]
+[119]
+[120]) (./chapters/24-quantitative-counting.tex
+[121]
+[122]
+[123]
+[124]
+[125]
+[126]
+[127]
+[128]) (./chapters/25-global-coefficient-filters.tex
+[129]
+[130]
+[131]
+[132]
+[133]) (./chapters/26-counting-to-mixing.tex
+[134]
+[135]
+[136]
+[137]
+[138]
+[139]) (./chapters/27-weighted-mixing-converse.tex
+[140]
+[141]
+[142]
+[143]
+[144]
+[145]
+[146]
+[147]
+[148]
+[149]) (./chapters/28-genus-two-model.tex
+[150]
+[151]
+[152]
+[153]
+[154]
+[155]
+[156]
+[157]
+[158]) (./chapters/29-controlled-observables.tex
+[159]
+[160]
+[161]
+[162]
+[163]
+[164]
+[165]
+[166]
+[167]
+[168])
+[169] (./chapters/30-sharp-diagnostics.tex
+[170]
+[171]
+[172]
+[173]
+[174]
+[175]
+[176]
+[177]
+[178]) (./chapters/31-arithmetic-remainder.tex
+[179]
+[180]
+[181]
+[182]
+[183]
+[184])
+[185] (./chapters/32-open-questions.tex
+[186]
+[187]
+[188])
+Underfull \hbox (badness 3907) in paragraph at lines 256--426
+ []\T1/lmr/bx/n/10.95 (+20) Computational sup-port.[] \T1/lmr/m/n/10.95 (+20) T
+he main-tained nor-mal-iza-tion, Hes-sian/barrier, quan-
+(./chapters/appendix-a-fricke.tex
+[189])
+[190] (./chapters/appendix-b-conventions.tex [191])
+[192]
+[193]
+[194]
+[195]
+[196]
+[197]
+[198]
+[199]
+(/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-
+01/integration-review/pdf-build/main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) )
+(see the transcript file for additional information)</usr/local/texlive/2025/te
+xmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2025/
+texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2025/texmf-dist
+/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/typ
+e1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/l
+m/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.p
+fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/lo
+cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive
+/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2025/texmf
+-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts
+/type1/public/lm/lmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pu
+blic/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr
+12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr
+/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texli
+ve/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2025/texm
+f-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts
+/type1/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pub
+lic/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss
+10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss8.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/te
+xlive/2025/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2025/
+texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/
+fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
+/public/lm/lmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/am
+sfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
+c/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p
+ublic/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type
+1/public/rsfs/rsfs10.pfb>
+Output written on /Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapter
+s-review-2026-11-01/integration-review/pdf-build/main.pdf (199 pages, 1522702 b
+ytes).
+Transcript written on /Volumes/Lexar/lambda/devel/polyhedra/execution/final-cha
+pters-review-2026-11-01/integration-review/pdf-build/main.log.
+Latexmk: Getting log file '/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.log'
+Latexmk: Examining '/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.fls'
+Latexmk: Examining '/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.log'
+Latexmk: References changed.
+Latexmk: Log file says output to '/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.pdf'
+Latexmk: Log file says output to '/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.pdf'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  /Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.aux
+  /Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.lof
+  /Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.toc
+
+------------
+Run number 3 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -file-line-error -no-shell-escape -recorder -output-directory="/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build"  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex)
+entering extended mode
+(./main.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(./polyhedral_volumes_and_geodesic_identities.tex
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size11.clo))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/lmodern.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/mathrsfs.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryangles.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryquotes.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/ltcaption.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-
+01/integration-review/pdf-build/main.aux)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+
+Package epstopdf Warning: Shell escape feature is not enabled.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-
+01/integration-review/pdf-build/main.out)
+(/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-
+01/integration-review/pdf-build/main.out)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd)
+[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
+ocal/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2
+025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist
+/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc
+/dvips/lm/lm-mathit.enc}]
+(/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-
+01/integration-review/pdf-build/main.toc
+[2]
+[3]
+[4]
+[5])
+[6]
+(/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-
+01/integration-review/pdf-build/main.lof)
+[7]
+[8]
+[9] (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd)
+[10] (./chapters/01-volume-normalization.tex
+[11{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}])
+(./chapters/02-ideal-angle-cells.tex
+[12]) (./chapters/03-ideal-tetrahedron.tex
+[13]
+[14]) (./chapters/04-hyperideal-integrand.tex
+[15]
+[16]
+[17] (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-euf.cfg)
+[18]) (./chapters/05-boundary-cone-continuation.tex
+[19]
+[20]) (./chapters/06-torus-sphere.tex
+[21]) (./chapters/07-euclidean-periods.tex
+[22]
+[23]
+[24]) (./chapters/08-wp-flat-limit.tex
+[25]
+[26]
+[27]
+[28])
+[29] (./chapters/09-volume-hessians.tex
+[30]
+Underfull \hbox (badness 1014) in paragraph at lines 131--143
+[]\T1/lmr/m/n/10.95 (+20) In a pos-i-tively ori-ented tri-an-gle $\OML/lmm/m/it
+/10.95 ijk$\T1/lmr/m/n/10.95 (+20) , dif-fer-en-ti-a-tion with re-spect to $\OM
+L/lmm/m/it/10.95 u[]$ \T1/lmr/m/n/10.95 (+20) gives
+
+[31]
+[32]
+[33]
+[34]
+[35]
+[36]
+[37])
+[38] (./chapters/10-quantum-introduction.tex
+[39]
+[40]
+[41]
+[42]
+[43]
+[44]
+[45]
+[46]
+[47]
+[48]
+[49]) (./chapters/11-quantum-degeneration.tex
+[50] (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmss.fd)
+[51]
+[52]
+[53]) (./chapters/12-quantum-boundary-measure.tex
+[54]
+[55]
+[56]
+[57]
+[58]
+[59]) (./chapters/13-four-point-fusion.tex
+[60]
+[61]
+[62]
+[63]
+[64]
+[65]
+[66]) (./chapters/14-normalized-quantum-comparison.tex
+[67]
+[68]
+[69]
+[70]
+[71]
+[72]
+[73]) (./chapters/15-quantum-airy.tex
+[74]
+[75]
+[76]
+[77]
+[78]
+[79]
+[80]) (./chapters/16-dehn-filling-response.tex
+[81]
+[82]
+[83]
+[84]
+[85]
+[86]
+[87]
+[88]
+[89]
+[90]
+[91]
+[92]
+[93])
+[94] (./chapters/17-unfolding-constant-series.tex
+[95]
+[96]) (./chapters/18-figure-eight-curves.tex
+[97]
+[98]
+[99]) (./chapters/19-pants-twists.tex
+[100]
+[101]
+[102]) (./chapters/20-torus-twist-series.tex
+[103]
+Underfull \hbox (badness 1178) in paragraph at lines 37--41
+\T1/lmr/m/n/10.95 (+20) Solving this bound-ary equa-tion re-cov-ers []. Dif-fer
+-en-ti-at-ing [], with $\OML/lmm/m/it/10.95 Q \OT1/lmr/m/n/10.95 (+20) =
+
+[104]) (./chapters/21-cuff-matching.tex
+[105]) (./chapters/22-cusps-orthospectrum.tex
+[106]
+[107]
+[108])
+[109] (./chapters/23-trace-coefficients.tex
+[110]
+[111]
+[112]
+[113]
+[114]
+[115]
+[116]
+[117]
+[118]
+[119]
+[120]) (./chapters/24-quantitative-counting.tex
+[121]
+[122]
+[123]
+[124]
+[125]
+[126]
+[127]
+[128]) (./chapters/25-global-coefficient-filters.tex
+[129]
+[130]
+[131]
+[132]
+[133]) (./chapters/26-counting-to-mixing.tex
+[134]
+[135]
+[136]
+[137]
+[138]
+[139]) (./chapters/27-weighted-mixing-converse.tex
+[140]
+[141]
+[142]
+[143]
+[144]
+[145]
+[146]
+[147]
+[148]
+[149]) (./chapters/28-genus-two-model.tex
+[150]
+[151]
+[152]
+[153]
+[154]
+[155]
+[156]
+[157]
+[158]) (./chapters/29-controlled-observables.tex
+[159]
+[160]
+[161]
+[162]
+[163]
+[164]
+[165]
+[166]
+[167]
+[168])
+[169] (./chapters/30-sharp-diagnostics.tex
+[170]
+[171]
+[172]
+[173]
+[174]
+[175]
+[176]
+[177]
+[178]) (./chapters/31-arithmetic-remainder.tex
+[179]
+[180]
+[181]
+[182]
+[183]
+[184])
+[185] (./chapters/32-open-questions.tex
+[186]
+[187]
+[188])
+Underfull \hbox (badness 3907) in paragraph at lines 256--426
+ []\T1/lmr/bx/n/10.95 (+20) Computational sup-port.[] \T1/lmr/m/n/10.95 (+20) T
+he main-tained nor-mal-iza-tion, Hes-sian/barrier, quan-
+(./chapters/appendix-a-fricke.tex
+[189])
+[190] (./chapters/appendix-b-conventions.tex [191])
+[192]
+[193]
+[194]
+[195]
+[196]
+[197]
+[198]
+[199]
+(/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-
+01/integration-review/pdf-build/main.aux) ) )
+(see the transcript file for additional information)</usr/local/texlive/2025/te
+xmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2025/
+texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2025/texmf-dist
+/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/typ
+e1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/l
+m/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.p
+fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/lo
+cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive
+/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2025/texmf
+-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts
+/type1/public/lm/lmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pu
+blic/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr
+12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr
+/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texli
+ve/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2025/texm
+f-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts
+/type1/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pub
+lic/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss
+10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss8.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/te
+xlive/2025/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2025/
+texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/
+fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
+/public/lm/lmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/am
+sfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
+c/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p
+ublic/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type
+1/public/rsfs/rsfs10.pfb>
+Output written on /Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapter
+s-review-2026-11-01/integration-review/pdf-build/main.pdf (199 pages, 1522690 b
+ytes).
+Transcript written on /Volumes/Lexar/lambda/devel/polyhedra/execution/final-cha
+pters-review-2026-11-01/integration-review/pdf-build/main.log.
+Latexmk: Getting log file '/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.log'
+Latexmk: Examining '/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.fls'
+Latexmk: Examining '/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.log'
+Latexmk: Log file says output to '/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.pdf'
+Latexmk: Log file says output to '/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.pdf'
+Latexmk: All targets (/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.pdf) are up-to-date
+

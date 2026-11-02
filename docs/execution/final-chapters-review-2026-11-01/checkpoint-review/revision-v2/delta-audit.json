@@ -1,0 +1,131 @@
+{
+  "files": [
+    {
+      "path": "checkpoint_lib.py",
+      "before": {
+        "sha256": "2e227c30dcb0585b307fc5d45c55538409e3ef3569ba2eb89908a3a86e55eeb9",
+        "bytes": 21853
+      },
+      "after": {
+        "sha256": "9b41c492510a00d9d3b22c5ecb04fcb1de86f8903a906ea4eb4c59ebb6c69c21",
+        "bytes": 26905
+      },
+      "changed": true
+    },
+    {
+      "path": "run_clean_replay.py",
+      "before": {
+        "sha256": "26ea5840dd35fbded2ec7023ca86ca37e3ff05eb6e311bbf9eea2749603cdc60",
+        "bytes": 4312
+      },
+      "after": {
+        "sha256": "26ea5840dd35fbded2ec7023ca86ca37e3ff05eb6e311bbf9eea2749603cdc60",
+        "bytes": 4312
+      },
+      "changed": false
+    },
+    {
+      "path": "compare_replays.py",
+      "before": {
+        "sha256": "f4f80cec1f4a76d1e5e290094edfb3152bd9ad4601a56c1e27253750c52d0e8a",
+        "bytes": 2128
+      },
+      "after": {
+        "sha256": "f4f80cec1f4a76d1e5e290094edfb3152bd9ad4601a56c1e27253750c52d0e8a",
+        "bytes": 2128
+      },
+      "changed": false
+    },
+    {
+      "path": "verify_checkpoint.py",
+      "before": {
+        "sha256": "3d99648a42ac015f6c8a013ef1d34af9db214a4e04b886c4b63bb727945025dc",
+        "bytes": 19612
+      },
+      "after": {
+        "sha256": "720f239af2e6b22c7f9b9143ede5d69a7f9e300bb4ea8985c6a2e49efe7ad94f",
+        "bytes": 18992
+      },
+      "changed": true
+    },
+    {
+      "path": "test_checkpoint.py",
+      "before": {
+        "sha256": "c1fd2a738660066eb64283d4bd68f42ab3b66807c5ecf1a487857ea0c93147d2",
+        "bytes": 28061
+      },
+      "after": {
+        "sha256": "3e6c8003afd7f1861e6784fa95517c2e2aa2ae737f9ef93e411c621b27936293",
+        "bytes": 38935
+      },
+      "changed": true
+    },
+    {
+      "path": "replay-spec.unready.json",
+      "before": {
+        "sha256": "ac74e8b1ce094761eb27a9d06b3f725764a556a333f77f19ad2274986b63911e",
+        "bytes": 1948
+      },
+      "after": {
+        "sha256": "479d960ad417b18efdbfff4d8fc03aab368035a8bc5928eda0ff9a5fd75d524a",
+        "bytes": 2271
+      },
+      "changed": true
+    },
+    {
+      "path": "checkpoint-contract.unready.json",
+      "before": {
+        "sha256": "8f3b50b192aea950caae934e335927e6c940e889091a2ded5b17c032c1153fdb",
+        "bytes": 4377
+      },
+      "after": {
+        "sha256": "532405b78e4ed2ea64d7b2044f412a184c67f3d16428763e083a6a4f6ecb4748",
+        "bytes": 4510
+      },
+      "changed": true
+    },
+    {
+      "path": "HANDOFF.md",
+      "before": {
+        "sha256": "ed592c5d0f4d356ce7291b3b74d0773f10ecd93ab4ce44090e8ac26b129b46ca",
+        "bytes": 8399
+      },
+      "after": {
+        "sha256": "89b6ecdb58699822d54b9902150386279d8093d881a0c06ff4191556cc372592",
+        "bytes": 11818
+      },
+      "changed": true
+    }
+  ],
+  "old_test_count": 29,
+  "new_test_count": 50,
+  "all_initial_test_methods_retained": true,
+  "new_test_methods": [
+    "test_CR01_close_decimal_candidate_fails_with_serialized_receipt",
+    "test_CR01_close_decimal_reference_fails_with_serialized_receipt",
+    "test_CR01_exact_decimal_round_trip_policy_and_scalar_types",
+    "test_CR01_integer_boundary_candidate_fails_with_serialized_receipt",
+    "test_CR01_integer_boundary_reference_fails_with_serialized_receipt",
+    "test_CR01_lossless_decimal_and_timing_receipt_success_control",
+    "test_CR01_source_state_scalar_type_changes_fail_before_metadata_exclusions",
+    "test_CR01_underflow_candidate_fails_with_serialized_receipt",
+    "test_CR01_underflow_reference_fails_with_serialized_receipt",
+    "test_CR02_committed_absolute_input_rejected_before_launch",
+    "test_CR02_committed_cycle_rejected_before_launch",
+    "test_CR02_committed_outside_input_rejected_before_launch",
+    "test_CR02_committed_repeated_input_rejected_before_launch",
+    "test_CR02_disconnected_files_with_entry_rejected_before_launch",
+    "test_CR02_live_changed_graph_rejected_before_launch",
+    "test_CR02_live_missing_entry_rejected_before_launch",
+    "test_CR02_omitted_active_input_replaced_by_filler_rejected_before_launch",
+    "test_CR02_shared_graph_walker_ignores_commented_inputs",
+    "test_CR02_unconnected_36_files_without_entry_rejected_before_launch",
+    "test_CR02_unsupported_input_syntax_rejected_before_launch",
+    "test_full_schema_preserves_all_46_tex_rows_and_inactive_hashes"
+  ],
+  "unchanged_cli_sources": [
+    "run_clean_replay.py",
+    "compare_replays.py"
+  ],
+  "shared_graph_function": "verify_checkpoint.expand_tex is imported from checkpoint_lib.expand_tex; independently verified in code and test."
+}

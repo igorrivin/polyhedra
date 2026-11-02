@@ -1,0 +1,2327 @@
+{
+  "schema_version": "1.0",
+  "chapter_sources": [
+    "book/chapters/17-unfolding-constant-series.tex",
+    "book/chapters/18-figure-eight-curves.tex",
+    "book/chapters/19-pants-twists.tex",
+    "book/chapters/20-torus-twist-series.tex",
+    "book/chapters/21-cuff-matching.tex",
+    "book/chapters/22-cusps-orthospectrum.tex"
+  ],
+  "chapter_labels": [
+    "sec:unfolding",
+    "sec:figures",
+    "sec:twists",
+    "sec:exacttwist",
+    "sec:matching",
+    "sec:cusps"
+  ],
+  "review_date": "2026-11-01",
+  "baseline_commit": "151673b1817e66aae493eb7da1be5ddf49adfe0f",
+  "revision_review": "Author mathematical audit completed for independent review; maintained companion implementation, execution and integration are pending.",
+  "author_review": {
+    "status": "completed_for_independent_review",
+    "scope": "Every substantive formula, theorem, local proof, external dependency and stated boundary in Sections 17-22.",
+    "no_claim_of_full_external_proof_refereeing": true,
+    "evidence_directory": "execution/final-chapters-review-2026-11-01/geodesic-author/ (outer workspace)"
+  },
+  "independent_review": {
+    "status": "pending",
+    "author_is_independent_reviewer": false,
+    "scope": "Pending review of the frozen source, local proofs and source-statement conversions; no code or PDF approval implied."
+  },
+  "status_definitions": {
+    "derived_exact_algebra": "Finite algebraic identity derived generally in the chapter; exact finite fixtures are separate evidence.",
+    "derived_geometric": "Local geometric proof author-checked under explicit surface, lift, orientation and itinerary hypotheses.",
+    "derived_analytic": "Analytic implication derived with stated convergence, differentiability or tail hypotheses.",
+    "derived_from_external_statements": "Local deduction from stated external theorem inputs; full external proofs not re-refereed.",
+    "external_statement_and_derived_normalization": "Primary source statement plus an explicit locally checked convention conversion.",
+    "external_statement": "Externally proved input checked at the stated source location and access scope.",
+    "scope_boundary": "Limitation or unperformed extension, not a theorem resolving the omitted problem."
+  },
+  "conventions": {
+    "geometry": "Oriented finite-type hyperbolic curvature -1, no cone singularities. Each theorem adds its own compactness, cusp and boundary hypotheses.",
+    "curves": "Unoriented free-homotopy classes by default. Figure-eights are primitive one-transverse-double-point classes; the torus contributes two N labels and one H label per simple alpha. Equal lengths do not identify labels.",
+    "traces": "Positive geometric t=2cosh(ell/2), cusp t=2. Pants lifts trA=t_a, trB=t_b, trAB=-t_c; cusp parabolic factorization instead trA=t_a,trB=-t_b,AB=P. These are local compatible signs, not a universal positive SL(2) lift. Section 23 retains signed characters.",
+    "twists": "Signed hyperbolic displacement with Dehn-twist period a>0. Angles and endpoint tangential coordinates use the compatible signed convention. Fixed curve length is not periodic; its orbit sum is.",
+    "endpoint_phase": "Orient by travel, p in (-1,1); dL=-p_s ds+p_t dt. Common cuff coordinate after reversal of one induced boundary orientation; opposite-side crossing plus equal p matches the full unit tangent.",
+    "branches": "acosh nonnegative real branch on [1,infinity); all displayed square roots nonnegative; invalid domains are not clamped.",
+    "cusps": "lambda=exp(signed truncated distance/2), without sqrt(2). H denotes an embedded sufficiently small horocycle for literal truncation, or a positive decoration with signed length when larger. Gap partition assumes no geodesic boundary.",
+    "basmajian": "Oriented orthogeodesics contribute 2log(coth(d/2)); grouping reverse orientations gives 4 for one unoriented arc. The boundary spectrum includes nonsimple arcs.",
+    "WP": "Same orbifold measure on both unfolded quotients. Punctured-torus stack measure includes one ineffective factor 1/2, consistent with reviewed Section 6.",
+    "numerics": "Author finite checks use exact SymPy identities and mpmath at 70/110 digits. Floating residuals are not intervals. Analytic truncation bounds are separate from quadrature/roundoff; tiny positive signals use stable or scaled forms."
+  },
+  "computational_companion": {
+    "planned_code": "experiments/quantum_geodesics/",
+    "planned_result": "artifacts/quantum_geodesics/result.json",
+    "planned_checkpoint": "docs/execution/final-chapters-review-2026-11-01/",
+    "status_at_author_freeze": "implementation_and_execution_pending",
+    "fixture_specification": "execution/final-chapters-review-2026-11-01/geodesic-author/companion-contract.md (outer workspace)",
+    "author_scratch_script": "execution/final-chapters-review-2026-11-01/geodesic-author/author_scratch.py (outer workspace)",
+    "author_scratch_result": "execution/final-chapters-review-2026-11-01/geodesic-author/author-scratch-result.json (outer workspace)",
+    "author_scratch_status": "author_finite_checks_passed_not_independent_review",
+    "author_scratch_exact_count": 80,
+    "author_scratch_numerical_comparisons_by_precision": {
+      "70": 268,
+      "110": 268
+    },
+    "author_scratch_is_complete_contract_implementation": false,
+    "fixture_groups": {
+      "G1": "Torus unfolding normalization and Fermi integral tails",
+      "G2": "Pants traces, paired inverse and torus label multiplicities",
+      "G3": "Finite figure kernel coefficients, tails and conditioning",
+      "G4": "Lorentz distance, derivatives and positive Hessian",
+      "G5": "Seam matrices and torus twist holonomy",
+      "G6": "Coarea, beta integrals, sublevels and finite tails",
+      "G7": "H/K partitions, logistic tails and even density",
+      "G8": "Endpoint versus direction matching",
+      "G9": "Cusp parabolics, decoration and triangle checks",
+      "G10": "Basmajian shadow and orientation coefficient"
+    },
+    "exclusions": [
+      "No whole-surface geodesic-spectrum approximation or omitted-class tail claim.",
+      "No full external theorem proof audit, arbitrary multicurve minimizer, global cover constructor or discrete-holonomy certificate.",
+      "No interval enclosure, PDF build, publication, source commit or upload."
+    ]
+  },
+  "sources": [
+    {
+      "key": "MirzVolumes",
+      "url": "https://www.labri.fr/perso/vdelecro/toprint/mirzakhani1-pdf2up.pdf",
+      "version": "Inventiones Mathematicae 167 (2007), 179-222; DOI 10.1007/s00222-006-0013-2",
+      "pins": [
+        "Theorem 7.1, Lemma 7.3, equations (7.3)-(7.5), pp. 213-216",
+        "Lemma 3.1, equation (3.1), pp. 191-192; Theorem 4.2"
+      ],
+      "checked": "Simple-multicurve integration with symmetry and one-handle conventions; combined boundary gap D. The original integration citation to Theorem 8.1 was a mismatch.",
+      "verification": "Primary PDF-indexed text retrieved by targeted web search. Direct PDF opening timed out. Convention conversions and cusp limit are derived locally.",
+      "full_external_proof_audit": false
+    },
+    {
+      "key": "McShane",
+      "url": "https://arxiv.org/pdf/1402.1573v1",
+      "version": "Original identity restated in Hu-Tan arXiv:1402.1573v1 (7 February 2014)",
+      "pins": [
+        "p. 2, equation (3)"
+      ],
+      "checked": "Complete finite-area once-punctured torus; unoriented essential simple classes, with curve multiplicities; sum 1/(1+exp(length))=1/2.",
+      "verification": "Primary research-paper restatement inspected; original Inventiones proof not reread. The author gap draft is separately pinned under McShanePants.",
+      "full_external_proof_audit": false
+    },
+    {
+      "key": "HuTan",
+      "url": "https://arxiv.org/pdf/1402.1573v1",
+      "version": "arXiv:1402.1573v1, 7 February 2014",
+      "pins": [
+        "p. 2, Theorem 2, equation (2); positive-boundary comparison Theorem 1, equation (1)"
+      ],
+      "checked": "Displayed D kernel and constant pi^2/2 apply to the cusped torus. Positive geodesic boundary k>0 has a different k-dependent kernel.",
+      "verification": "Version-pinned primary PDF theorem statements read; complete dilogarithm proofs not re-refereed.",
+      "full_external_proof_audit": false
+    },
+    {
+      "key": "LuoTan",
+      "url": "https://arxiv.org/pdf/1102.2133v2",
+      "version": "arXiv:1102.2133v2, 28 April 2011",
+      "pins": [
+        "p. 2, Theorem 1.1; Section 1.2"
+      ],
+      "checked": "Closed oriented genus g>=2; properly embedded geometric pants and one-holed tori; decomposition of unit tangent bundle modulo null set; constant 8pi^2(g-1).",
+      "verification": "Primary theorem and decomposition statement read. Longer f(P),g(T) formulas and full proof not re-audited.",
+      "full_external_proof_audit": false
+    },
+    {
+      "key": "RivinFigures",
+      "url": "https://arxiv.org/pdf/0901.2543v4",
+      "version": "arXiv:0901.2543v4, header 2 July 2011",
+      "pins": [
+        "p. 5, Theorem 1.3, equation (1)",
+        "p. 15, Theorem 4.2"
+      ],
+      "checked": "Pants trace t_gamma=t_a*t_b+t_c; global simple lift in a fourfold cover for a one-double-point geodesic on an oriented hyperbolic surface.",
+      "verification": "Version-pinned theorem statements read. Internal printed date differs from arXiv header. This does not validate the old all-figure index set.",
+      "full_external_proof_audit": false
+    },
+    {
+      "key": "LeiZhang",
+      "url": "https://www.researchgate.net/publication/371244731_A_note_on_Rivin's_interpretation_of_McShane's_identity_as_identities_for_closed_geodesics_with_one_self-intersection",
+      "version": "Publisher-supplied first-page preview; DOI 10.1142/S0218216523500499",
+      "pins": [
+        "p. 2350049-1, abstract"
+      ],
+      "checked": "Earlier torus formula omits the hyperelliptic family; cone continuation also requires geodesic realizability.",
+      "verification": "Only the primary publisher preview/abstract was accessible. No full proof or numbered theorem is claimed checked. The classification and weights used here are derived locally.",
+      "full_external_proof_audit": false
+    },
+    {
+      "key": "WolpertTwist",
+      "url": "https://gdz.sub.uni-goettingen.de/download/pdf/PPN358147735_0056/LOG_0014.pdf",
+      "version": "Commentarii Mathematici Helvetici 56 (1981), 132-135",
+      "pins": [
+        "p. 132, first-page introduction and first-variation formula (1.1)"
+      ],
+      "checked": "Closed-geodesic first variation supplies the background; immersed cosine sum is derived from the cut-arc variation in the chapter.",
+      "verification": "Primary first-page indexed text available; retrieved scan text principally cover. No claim of having recovered the final-page formula in this increment. Existing Section 23 audit records additional p. 133 inspection.",
+      "full_external_proof_audit": false
+    },
+    {
+      "key": "Kerckhoff",
+      "url": "https://people.math.harvard.edu/~ctm/home/text/others/kerckhoff/nielsen/nielsen.pdf",
+      "version": "Annals of Mathematics 117 (1983), 235-265",
+      "pins": [
+        "Theorem 1; Section 3"
+      ],
+      "checked": "Simple-closed-curve earthquake convexity gives broader context. The chapter does not extend that source statement to nonsimple curves by citation.",
+      "verification": "Indexed primary theorem text checked. Scan text only exposed cover and screenshot access failed. Full external proof not read; local endpoint-Hessian proof supplies the nonsimple twist statement.",
+      "full_external_proof_audit": false
+    },
+    {
+      "key": "MirzSimple",
+      "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v168-n1-p03.pdf",
+      "version": "Annals of Mathematics 168 (2008), 97-125",
+      "pins": [
+        "pp. 106-108, Theorem 3.4, equations (3.5)-(3.6)"
+      ],
+      "checked": "Dehn-Thurston simple-multicurve data and length estimates include intersections and twists.",
+      "verification": "Primary journal PDF statements inspected. No nonsimple exact solver follows from this comparison.",
+      "full_external_proof_audit": false
+    },
+    {
+      "key": "MirzGeneral",
+      "url": "https://arxiv.org/pdf/1601.03342v1",
+      "version": "arXiv:1601.03342v1, 13 January 2016",
+      "pins": [
+        "p. 20, Theorem 4.1; Section 8"
+      ],
+      "checked": "General closed-curve length is asymptotically piecewise-linear of rational type in Fenchel-Nielsen coordinates; length-sublevel volumes are studied separately.",
+      "verification": "Primary statements and section scope inspected, not full counting proof.",
+      "full_external_proof_audit": false
+    },
+    {
+      "key": "ALPS",
+      "url": "https://arxiv.org/pdf/1105.0202v1",
+      "version": "arXiv:1105.0202v1, 1 May 2011",
+      "pins": [
+        "Proposition 3.1, pp. 5-6, and zero-twist description"
+      ],
+      "checked": "One-holed torus with positive geodesic boundary or cusp; two essential simple curves intersect once; cosh(length/2)=cosh(tau/2)*sqrt((cosh(a)+cosh(b/2))/2)/sinh(a/2).",
+      "verification": "Primary formula and twist-origin hypotheses read; the chapter also checks the boundary trace with independent matrices.",
+      "full_external_proof_audit": false
+    },
+    {
+      "key": "McShanePants",
+      "url": "https://macbuse.github.io/M2R_2019/shearsAgain.pdf",
+      "version": "Author-hosted draft, retrieved 2026-11-01; no immutable version identifier supplied",
+      "pins": [
+        "Theorem 3 and measure paragraph, pp. 3-4",
+        "Lemma 7, pp. 8-9; gap functions Sections 8-9"
+      ],
+      "checked": "Finite-area surface without geodesic boundary; exceptional simple cusp directions have zero measure; isolated cusp-to-cusp directions can lie in enlarged gaps; boundary requires additional rules.",
+      "verification": "Primary author draft statements read. Exact remote PDF byte identity is not claimed.",
+      "full_external_proof_audit": false
+    },
+    {
+      "key": "Springborn",
+      "url": "https://arxiv.org/pdf/1702.05061v2",
+      "version": "arXiv:1702.05061v2, 7 August 2019",
+      "pins": [
+        "Section 11, pp. 20-21, lambda definition and equation (30)",
+        "Section 12, p. 23",
+        "Section 14, p. 28, Proposition 14.1(i),(iv)"
+      ],
+      "checked": "Lambda=exp(signed distance/2), no sqrt(2); corner lengths u/(vw); torus horocycle H=2sum(u^2)/(uvw); simple cusp arc/closed curve correspondence.",
+      "verification": "Primary definitions and propositions read. Trace Hu/2 is locally derived from the cusp-parabolic computation, not falsely attributed wholesale to Section 12.",
+      "full_external_proof_audit": false
+    },
+    {
+      "key": "Parlier",
+      "url": "https://arxiv.org/pdf/2004.09078v3",
+      "version": "arXiv:2004.09078v3, 3 May 2020",
+      "pins": [
+        "p. 2 oriented orthogeodesic convention",
+        "p. 3 Theorem 1.1",
+        "Section 4.2, p. 26"
+      ],
+      "checked": "Empty coherent marking gives Basmajian with oriented orthogeodesics and coefficient 2log(coth(ell/2)); pairing reverse orientations gives coefficient 4.",
+      "verification": "Immutable version and primary specialization checked. Original Basmajian 1993 full proof not reread; local shadow factor derived independently.",
+      "full_external_proof_audit": false
+    }
+  ],
+  "claims": [
+    {
+      "id": "17.01",
+      "title": "Orbit unfolding with decoration and orbifold measure",
+      "labels": [
+        "eq:unfold"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "Oriented finite-type surface, fixed boundary lengths, mapping class group Gamma.",
+        "One orbit of a fixed nonperipheral curve or multicurve; stabilizer preserves its entire decoration.",
+        "F measurable nonnegative, or integral of sum over orbit of |F(length)| finite; use the same WP orbifold measure on both quotients."
+      ],
+      "exact_formulas": [
+        "integral_(Gamma\\T) sum_(delta in Gamma gamma) F(ell_delta) dV = integral_(Stab(gamma)\\T) F(ell_gamma) dV"
+      ],
+      "proof_summary": "Partition a stabilizer fundamental domain into Gamma coset translates. Tonelli permits infinite nonnegative values; absolute integrability permits signed rearrangement. Ineffective isotropy is retained on both sides.",
+      "dependencies": [],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "Simplicity is unnecessary for unfolding, but usually necessary for the pants-volume evaluation; no nonsimple stabilizer domain is computed."
+    },
+    {
+      "id": "17.02",
+      "title": "Simple-cut evaluation and symmetry factors",
+      "labels": [],
+      "status": "external_statement_and_derived_normalization",
+      "hypotheses": [
+        "Cutting multicurve simple, disjoint, with specified decoration.",
+        "Boundary and orbifold normalizations consistent with the source and each cut component."
+      ],
+      "exact_formulas": [
+        "Twist period ell_j yields product_j ell_j d ell_j times component WP volumes and the appropriate finite symmetry factors."
+      ],
+      "proof_summary": "Fenchel-Nielsen symplectic coordinates yield each twist period. Mirzakhani Theorem 7.1 gives the integration mechanism; source one-handle factors must not be added again to stack-normalized components.",
+      "dependencies": [
+        "17.01"
+      ],
+      "source_pins": [
+        {
+          "source_key": "MirzVolumes",
+          "pins": [
+            "Theorem 7.1, Lemma 7.3, equations (7.3)-(7.5), pp. 213-216",
+            "Lemma 3.1, equation (3.1), pp. 191-192; Theorem 4.2"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "No universal combinatorial factor is asserted for an unspecified decoration; source conventions must first be converted."
+    },
+    {
+      "id": "17.03",
+      "title": "Average does not establish pointwise constancy",
+      "labels": [
+        "eq:recoverconstant"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "0<V_(g,n)<infinity.",
+        "S integrable and independently known to equal a constant C."
+      ],
+      "exact_formulas": [
+        "C=(1/V) integral S dV"
+      ],
+      "proof_summary": "Integrating a constant gives CV. Without independent constancy the quotient is only the mean.",
+      "dependencies": [
+        "17.01"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "General proof is the chapter argument under these hypotheses; computational evidence is finite and not an interval certificate."
+    },
+    {
+      "id": "17.04",
+      "title": "Punctured-torus stack factor",
+      "labels": [
+        "eq:torusunfold"
+      ],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Complete finite-area once-punctured torus; unoriented essential simple orbit.",
+        "Stack WP convention V_(1,1)=pi^2/12 from reviewed Section 6.",
+        "Nonnegative f or absolutely integrable unfolding."
+      ],
+      "exact_formulas": [
+        "integral_M sum_alpha f(ell_alpha) dV = (1/2) integral_0^infinity x f(x) dx"
+      ],
+      "proof_summary": "The effective stabilizer quotient has x>0 and 0<=tau<x. Its ineffective central involution contributes one factor 1/2; there is no additional cuff-exchange quotient.",
+      "dependencies": [
+        "17.01"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G1"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "The orbifold factor is a geometric convention argument, not a numerical inference."
+    },
+    {
+      "id": "17.05",
+      "title": "Fermi integral and finite analytic errors",
+      "labels": [],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "R>=0; integer M>=1."
+      ],
+      "exact_formulas": [
+        "integral_0^infinity x/(1+exp(x)) dx = sum_(m>=1) (-1)^(m-1)/m^2 = pi^2/12",
+        "integral_R^infinity x/(1+exp(x)) dx <= (R+1)exp(-R)",
+        "Alternating M-term error <=1/(M+1)^2"
+      ],
+      "proof_summary": "Expand in exp(-x). The sum of integrals of absolute terms is zeta(2), so Fubini applies. Exponential domination and the alternating-series theorem give the two tails.",
+      "dependencies": [
+        "17.04"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G1"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "The analytic tails do not bound floating quadrature or rounding; numerical comparisons record those separately."
+    },
+    {
+      "id": "17.06",
+      "title": "McShane external identity",
+      "labels": [
+        "eq:mcshane"
+      ],
+      "status": "external_statement",
+      "hypotheses": [
+        "Complete finite-area once-punctured hyperbolic torus.",
+        "Each unoriented essential simple curve class once, retaining equal-length multiplicities."
+      ],
+      "exact_formulas": [
+        "sum_alpha 1/(1+exp(ell_alpha))=1/2"
+      ],
+      "proof_summary": "The pointwise identity is McShane theorem; unfolding and V_(1,1) only check its normalization.",
+      "dependencies": [
+        "17.04",
+        "17.05"
+      ],
+      "source_pins": [
+        {
+          "source_key": "McShane",
+          "pins": [
+            "p. 2, equation (3)"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G1"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "Original external proof not re-refereed; no finite simple-spectrum enumeration is claimed."
+    },
+    {
+      "id": "17.07",
+      "title": "Valid closure operations on constant series",
+      "labels": [],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "For parameter integrals impose joint Fubini integrability, or nonnegative Tonelli hypotheses.",
+        "For parameter differentiation one sufficient condition is local uniform absolute convergence of both original series and first derivatives.",
+        "For products use absolute convergence or Tonelli; keep pair-curve indexing."
+      ],
+      "exact_formulas": [
+        "Finite linear combinations, justified parameter integrals, derivatives and double-series products preserve constancy."
+      ],
+      "proof_summary": "Apply the respective interchange theorem; a product usually indexes intersecting pairs, not disjoint multicurves. Uniform convergence of the original series alone does not justify differentiated summation.",
+      "dependencies": [],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "General proof is the chapter argument under these hypotheses; computational evidence is finite and not an interval certificate."
+    },
+    {
+      "id": "17.08",
+      "title": "Metric derivative and spanning-direction criterion",
+      "labels": [
+        "eq:derivativeidentity"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "C^1 metric-dependent lengths; locally controlled differentiated series as in 17.07.",
+        "F has no extra explicit metric dependence.",
+        "For the converse, derivative vanishes on spanning tangent directions at every point of a connected component."
+      ],
+      "exact_formulas": [
+        "sum_gamma F prime(ell_gamma) d ell_gamma=0"
+      ],
+      "proof_summary": "The chain rule differentiates lengths as well as the scalar weight. A C^1 function with zero differential is constant on a connected component.",
+      "dependencies": [
+        "17.07"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "General proof is the chapter argument under these hypotheses; computational evidence is finite and not an interval certificate."
+    },
+    {
+      "id": "17.09",
+      "title": "Variance criterion",
+      "labels": [
+        "eq:variance"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "Real S in L^2 on finite positive-volume moduli space with full-support WP measure.",
+        "To upgrade almost-everywhere constancy to everywhere, S is continuous; complex S uses squared modulus."
+      ],
+      "exact_formulas": [
+        "integral (S-mean(S))^2 dV=0 implies S=mean(S) almost everywhere"
+      ],
+      "proof_summary": "A nonnegative integrand of integral zero vanishes almost everywhere. Continuity and full support exclude a nonzero value on an open set. The second moment includes intersecting pairs.",
+      "dependencies": [],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "General proof is the chapter argument under these hypotheses; computational evidence is finite and not an interval certificate."
+    },
+    {
+      "id": "17.10",
+      "title": "Cusped Hu-Tan dilogarithm identity",
+      "labels": [
+        "eq:dilogtorus"
+      ],
+      "status": "external_statement",
+      "hypotheses": [
+        "Complete finite-area once-punctured torus.",
+        "Rogers L(x)=Li_2(x)+(1/2)log(x)log(1-x) on (0,1), continuous at endpoints.",
+        "Unoriented essential simple spectrum with curve multiplicities."
+      ],
+      "exact_formulas": [
+        "D(r)=L(sech^2(r/2))+2L((1+exp(-r))/2)-2L((1-exp(-r))/2)",
+        "sum_alpha D(ell_alpha)=pi^2/2"
+      ],
+      "proof_summary": "Hu-Tan Theorem 2 equation (2) supplies this exact kernel; their positive-boundary Theorem 1 uses a different kernel.",
+      "dependencies": [],
+      "source_pins": [
+        {
+          "source_key": "HuTan",
+          "pins": [
+            "p. 2, Theorem 2, equation (2); positive-boundary comparison Theorem 1, equation (1)"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "No full external dilogarithm proof or numerical whole-spectrum sum is audited. The displayed kernel is not asserted for b>0."
+    },
+    {
+      "id": "17.11",
+      "title": "Closed-surface Luo-Tan identity and tangent volume",
+      "labels": [
+        "eq:luotan"
+      ],
+      "status": "external_statement_and_derived_normalization",
+      "hypotheses": [
+        "Closed oriented genus g>=2.",
+        "Properly embedded geometric pants and one-holed tori counted as subsurfaces once.",
+        "Angular measure 2pi on unit tangent circles."
+      ],
+      "exact_formulas": [
+        "sum_P f(P)+sum_T g(T)=8pi^2(g-1)=Vol(T^1X)"
+      ],
+      "proof_summary": "Use Luo-Tan Theorem 1.1 and their null-set decomposition. Gauss-Bonnet area 4pi(g-1) times angular fiber 2pi gives the normalization.",
+      "dependencies": [],
+      "source_pins": [
+        {
+          "source_key": "LuoTan",
+          "pins": [
+            "p. 2, Theorem 1.1; Section 1.2"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "Long subsurface weights remain in the cited source; their complete formulas and proofs are not re-audited here."
+    },
+    {
+      "id": "18.01",
+      "title": "One-crossing pants and positive trace relation",
+      "labels": [
+        "eq:figuretrace"
+      ],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Oriented finite-type hyperbolic surface of curvature -1, cusps or geodesic boundary, no cone singularities.",
+        "Primitive closed geodesic with exactly one transverse self-intersection.",
+        "Pants cuff lengths a,b,c>=0; equal ambient cuff images are identified after forming the polynomial."
+      ],
+      "exact_formulas": [
+        "t_l=2cosh(l/2); cusp t_0=2",
+        "tr A=t_a, tr B=t_b, tr(AB)=-t_c",
+        "t_gamma=tr(AB^-1)=t_a*t_b+t_c"
+      ],
+      "proof_summary": "The two lobes have adjacent half-edges, giving a pants neighborhood. A compressing disk would yield a monogon, bigon or iterate. The SL(2) trace identity with compatible pants signs gives the positive geometric relation.",
+      "dependencies": [],
+      "source_pins": [
+        {
+          "source_key": "RivinFigures",
+          "pins": [
+            "p. 5, Theorem 1.3, equation (1)",
+            "p. 15, Theorem 4.2"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G2"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "Positive geometric traces cannot replace signed SL(2) traces in arbitrary character identities; Section 23 uses the latter convention."
+    },
+    {
+      "id": "18.02",
+      "title": "Two-figure inverse map",
+      "labels": [
+        "eq:twofigures"
+      ],
+      "status": "derived_exact_algebra",
+      "hypotheses": [
+        "Pants with cuff lengths (a,b,0); paired cusp-lobe figures are distinguished by label."
+      ],
+      "exact_formulas": [
+        "u=2t_a+t_b; v=t_a+2t_b; t_a=(2u-v)/3; t_b=(2v-u)/3"
+      ],
+      "proof_summary": "Apply the pants trace relation twice and invert the determinant-three linear system. A pants weight becomes a paired-curve weight.",
+      "dependencies": [
+        "18.01"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G2"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "This reindexing alone does not produce a universal function of one figure length."
+    },
+    {
+      "id": "18.03",
+      "title": "Local double cover and non-disjoint simple lifts",
+      "labels": [
+        "eq:doublepants"
+      ],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Pants group free basis a,b; c=(ab)^-1; gamma=ab^-1.",
+        "Character chi(a)=chi(b)=1 in Z/2."
+      ],
+      "exact_formulas": [
+        "Upstairs cuffs have lengths (2a,2b,c,c).",
+        "Two degree-one simple lifts of gamma intersect each other twice."
+      ],
+      "proof_summary": "Boundary monodromy gives two degree-two cuffs and two degree-one cuffs. Euler characteristic gives a four-holed sphere. The lifted two-loop spine has two vertices; each lifted cycle is simple but both pass through both vertices.",
+      "dependencies": [
+        "18.01"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "A local cover need not extend to the ambient surface, and the two lifts are not a disjoint multicurve."
+    },
+    {
+      "id": "18.04",
+      "title": "Ambient cover obstruction and fourfold substitute",
+      "labels": [],
+      "status": "external_statement_and_derived_normalization",
+      "hypotheses": [
+        "Oriented hyperbolic surface and one-double-point geodesic.",
+        "For the local Z/2 character to extend, its restriction must agree with an ambient homology character."
+      ],
+      "exact_formulas": [
+        "A lobe zero in H_1(S;Z/2), such as a separating closed-surface lobe, cannot be assigned value one by an ambient character.",
+        "Rivin Theorem 4.2 supplies a simple lift in a fourfold cover."
+      ],
+      "proof_summary": "The character obstruction follows by factoring through mod-two homology; the global replacement is externally supplied. Projecting an entire upstairs identity adds curve types, degrees and multiplicities that require accounting.",
+      "dependencies": [
+        "18.03"
+      ],
+      "source_pins": [
+        {
+          "source_key": "RivinFigures",
+          "pins": [
+            "p. 5, Theorem 1.3, equation (1)",
+            "p. 15, Theorem 4.2"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "No global cover is constructed computationally and no projected identity is inferred solely from desingularization."
+    },
+    {
+      "id": "18.05",
+      "title": "Punctured-torus three-figure classification and multiplicity",
+      "labels": [],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Complete once-punctured torus; primitive unoriented one-crossing class.",
+        "t=2cosh(ell_alpha/2)>2 for its essential simple disjoint class."
+      ],
+      "exact_formulas": [
+        "Two N-type labels each have trace 3t; one H-type label has trace t^2+2.",
+        "For b=s a^-1 s^-1, N words are a^2 s a^-1 s^-1 and a s a^-2 s^-1; H word is a s a s^-1."
+      ],
+      "proof_summary": "After cusp truncation the complement of the incompressible pants neighborhood has chi=0, no disks and four boundary circles, hence consists of two annuli. This identifies its two essential cuffs and the unique disjoint simple alpha. The three choices of two pants cuffs give exactly three figures. N cyclic words are distinct even up to inversion and have primitive homology; H has homology 2[a] but is not a proper word power. Recovering alpha prevents duplication across blocks.",
+      "dependencies": [
+        "18.01"
+      ],
+      "source_pins": [
+        {
+          "source_key": "LeiZhang",
+          "pins": [
+            "p. 2350049-1, abstract"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G2"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "The Lei-Zhang abstract checks the historical omission only; the topological classification is the chapter proof, not a finite matrix inference."
+    },
+    {
+      "id": "18.06",
+      "title": "McShane trace kernel",
+      "labels": [
+        "eq:htrace"
+      ],
+      "status": "derived_exact_algebra",
+      "hypotheses": [
+        "t>2 and ell=2acosh(t/2)>0; nonnegative square root."
+      ],
+      "exact_formulas": [
+        "h(t)=1-sqrt(1-4/t^2)=2/(1+exp(ell))",
+        "h(t)=4/(t^2(1+sqrt(1-4/t^2)))",
+        "sum_alpha h(t_alpha)=1"
+      ],
+      "proof_summary": "Use sqrt(1-sech^2(ell/2))=tanh(ell/2), and rationalize the square-root difference for stable evaluation.",
+      "dependencies": [
+        "17.06"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G3"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "General proof is the chapter argument under these hypotheses; computational evidence is finite and not an interval certificate."
+    },
+    {
+      "id": "18.07",
+      "title": "Separate torus figure-family identities",
+      "labels": [
+        "eq:nidentity",
+        "eq:hidentity"
+      ],
+      "status": "derived_from_external_statements",
+      "hypotheses": [
+        "Complete finite-area once-punctured torus; classes and multiplicities of 18.05."
+      ],
+      "exact_formulas": [
+        "sum_(gamma in N)(1-sqrt(1-36/t_gamma^2))=2",
+        "sum_(gamma in H)(1-sqrt(1-4/(t_gamma-2)))=1"
+      ],
+      "proof_summary": "Each simple alpha contributes two copies of h(t) to N and one copy to H. McShane supplies sum h=1.",
+      "dependencies": [
+        "18.05",
+        "18.06"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G2",
+          "G3"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "Finite three-label fixtures do not enumerate the full geodesic sum."
+    },
+    {
+      "id": "18.08",
+      "title": "Positive universal figure kernel",
+      "labels": [
+        "eq:universalkernel",
+        "eq:fbound"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "x>6; beta(x)=x^2/9+2; beta iteration retains this domain."
+      ],
+      "exact_formulas": [
+        "F(x)=sum_(n>=0)(-1)^n 2^(-n-1) h(beta^n(x)/3)",
+        "(1/4)h(x/3)<=F(x)<=(1/2)h(x/3)",
+        "F(x)~9/x^2 as x->infinity"
+      ],
+      "proof_summary": "beta(x)-x=(x-3)(x-6)/9>0 and h is positive decreasing. Terms are absolutely dominated by 2^(-n-1); alternating first-two-term estimates give positivity. h(x/3)=18/x^2+O(x^-4); all later terms are bounded by a constant times h(beta(x)/3)=O(x^-4).",
+      "dependencies": [
+        "18.06"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G3"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "The asserted asymptotic is analytic; finite values of x^2F(x) would only illustrate it."
+    },
+    {
+      "id": "18.09",
+      "title": "All-figure single-length identity",
+      "labels": [
+        "eq:allfigureidentity",
+        "eq:kernelrelation"
+      ],
+      "status": "derived_from_external_statements",
+      "hypotheses": [
+        "Complete finite-area once-punctured torus.",
+        "Each primitive unoriented one-crossing class once, retaining the two equal-length N labels."
+      ],
+      "exact_formulas": [
+        "2F(3t)+F(t^2+2)=h(t)",
+        "sum_(i(gamma,gamma)=1, gamma primitive unoriented) F(2cosh(ell_gamma/2))=1"
+      ],
+      "proof_summary": "Shift the absolutely convergent F series. The exact three-curve block then equals h(t_alpha). Positivity justifies regrouping over all simple alpha; McShane proves convergence and the constant.",
+      "dependencies": [
+        "18.05",
+        "18.06",
+        "18.08"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G3"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "This is a local construction from the corrected classification, not a literature novelty claim or a numerical whole-surface verification."
+    },
+    {
+      "id": "18.10",
+      "title": "Figure kernel alternating remainder",
+      "labels": [
+        "eq:figurekerneltail"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "x>6; integer N>=1; F_N consists of the first N terms; x_N=beta^N(x)."
+      ],
+      "exact_formulas": [
+        "0<=(-1)^N(F-F_N)<=B_N=2^(-N-1)h(x_N/3)<=2^(-N-1)"
+      ],
+      "proof_summary": "The positive absolute summands decrease, so the next term bounds the alternating remainder and fixes its sign. Stable h retains positive tiny tails.",
+      "dependencies": [
+        "18.08"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G3"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "Kernel evaluation tail is not a tail for a truncated enumeration of all curve classes. Floating roundoff is separate."
+    },
+    {
+      "id": "18.11",
+      "title": "Exact finite kernel residual and its conditioning",
+      "labels": [
+        "eq:figurefiniteidentity"
+      ],
+      "status": "derived_exact_algebra",
+      "hypotheses": [
+        "x>6; integer N>=1; same F_N convention."
+      ],
+      "exact_formulas": [
+        "2F_N(x)+F_N(beta(x))-h(x/3)=(-1)^(N-1)2^-N h(x_N/3)"
+      ],
+      "proof_summary": "Cancel the finite coefficients of h(x_j/3) for j=1,...,N-1; the final endpoint term survives. This finite polynomial identity is independently symbolically checked.",
+      "dependencies": [
+        "18.10"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G3"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "For large N the nonzero right side lies below cancellation roundoff of the left side. Rounded zero is not relative verification; retain log(B_N), positivity and separate absolute numerical tolerance."
+    },
+    {
+      "id": "18.12",
+      "title": "Cusp-only scope and cone realizability",
+      "labels": [],
+      "status": "scope_boundary",
+      "hypotheses": [
+        "All-figure identities here restricted to the complete cusped torus."
+      ],
+      "exact_formulas": [
+        "Analytic continuation of weights alone does not ensure existence of all indexed cone geodesics."
+      ],
+      "proof_summary": "Lei-Zhang publisher abstract flags the cone realizability issue. No cone identity is asserted in this chapter.",
+      "dependencies": [],
+      "source_pins": [
+        {
+          "source_key": "LeiZhang",
+          "pins": [
+            "p. 2350049-1, abstract"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "Full correction-paper proof unavailable and no cone enumeration attempted."
+    },
+    {
+      "id": "19.01",
+      "title": "Cut-curve itinerary data",
+      "labels": [],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Oriented finite-type hyperbolic surface, no cone points; internal cuffs a_i>0 and fixed exterior boundary lengths including cusps.",
+        "Treat components parallel to cutting cuffs separately."
+      ],
+      "exact_formulas": [
+        "Simple multicurves cut into disjoint essential arcs; a general immersed curve need not do so."
+      ],
+      "proof_summary": "Boundary intersection counts omit relative arc classes, cyclic joining and integer winding. Simple classes use Dehn-Thurston data; general classes retain an itinerary.",
+      "dependencies": [],
+      "source_pins": [
+        {
+          "source_key": "MirzSimple",
+          "pins": [
+            "pp. 106-108, Theorem 3.4, equations (3.5)-(3.6)"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "No general itinerary reconstruction algorithm is asserted from counts alone."
+    },
+    {
+      "id": "19.02",
+      "title": "Exact local seam-to-endpoint distance",
+      "labels": [
+        "eq:localdistance"
+      ],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Two distinct ultraparallel positive-cuff lifts at distance d>0.",
+        "u,v measured from common-perpendicular feet with compatible orientations.",
+        "Lorentz form signature (-,+,+); nonnegative real acosh branch."
+      ],
+      "exact_formulas": [
+        "D_d(u,v)=acosh(cosh(d)cosh(u)cosh(v)-sinh(u)sinh(v))"
+      ],
+      "proof_summary": "The displayed hyperboloid representatives p(u),q(v) have norm -1 and their negative Lorentz product is cosh(D). Reversing one endpoint coordinate reverses the mixed sign.",
+      "dependencies": [],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G4"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "General proof is the chapter argument under these hypotheses; computational evidence is finite and not an interval certificate."
+    },
+    {
+      "id": "19.03",
+      "title": "Ordinary pants seam length",
+      "labels": [
+        "eq:seam"
+      ],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Pants cuffs a,b>0, c>=0; opposed boundary orientations with tr(XY)=-2cosh(c/2)."
+      ],
+      "exact_formulas": [
+        "cosh(d)=(cosh(c/2)+cosh(a/2)cosh(b/2))/(sinh(a/2)sinh(b/2))",
+        "tr(XY)=2cosh(a/2)cosh(b/2)-2cosh(d)sinh(a/2)sinh(b/2)"
+      ],
+      "proof_summary": "The right-angled hexagon gives the seam; an independent product of translations on ultraparallel axes yields the stated trace and solves for the same cosh(d). Other returning/winding classes choose their own boundary lifts.",
+      "dependencies": [
+        "18.01",
+        "19.02"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G5"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "A single ordinary seam value does not cover all relative homotopy classes."
+    },
+    {
+      "id": "19.04",
+      "title": "Geodesic length as endpoint minimum",
+      "labels": [],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Fixed nonperipheral closed free-homotopy class with reduced cuff itinerary; boundary lifts and integer winding fixed.",
+        "Each nontrivial segment joins distinct cuff lifts at positive distance.",
+        "Crossing positions satisfy affine gluing constraints involving the fixed-length twists."
+      ],
+      "exact_formulas": [
+        "ell_gamma(tau)=min_(affine endpoint constraints) sum_segments D_d(u,v)"
+      ],
+      "proof_summary": "Every competitor is a piecewise geodesic in the fixed class and is no shorter than its geodesic representative. Geodesics have no bigons with cuffs, so the geodesic realizes the reduced itinerary and attains the minimum. First variation at a minimum enforces tangent matching. A class entirely in one pants piece uses holonomy and has no endpoint variables.",
+      "dependencies": [
+        "19.01",
+        "19.02"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G4",
+          "G8"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "No maintained arbitrary-curve minimizer is implemented; the claim is the analytic variational characterization."
+    },
+    {
+      "id": "19.05",
+      "title": "Positive local endpoint Hessian",
+      "labels": [
+        "eq:localdistancehessian"
+      ],
+      "status": "derived_exact_algebra",
+      "hypotheses": [
+        "d>0; u,v real; z=cosh(D)>1; S=sqrt(z^2-1)>0."
+      ],
+      "exact_formulas": [
+        "H=(sinh(d)^2/S^3)*[[z*cosh(v)^2,-cosh(u)cosh(v)],[-cosh(u)cosh(v),z*cosh(u)^2]]",
+        "det(H)=sinh(d)^4*cosh(u)^2*cosh(v)^2/S^4>0"
+      ],
+      "proof_summary": "Differentiate acosh(z). The identities z_uu=z, z^2-z_u^2-1=sinh(d)^2cosh(v)^2 and z_uv(z^2-1)-z*z_u*z_v=-sinh(d)^2cosh(u)cosh(v) give the entries. Positive diagonal and determinant prove strict joint convexity. Orientation reversal is sign-matrix congruence.",
+      "dependencies": [
+        "19.02"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G4"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "General convexity follows from the exact displayed algebra, not positivity at finitely many sampled points."
+    },
+    {
+      "id": "19.06",
+      "title": "Holonomy twist word and trace length",
+      "labels": [
+        "eq:traceword"
+      ],
+      "status": "derived_exact_algebra",
+      "hypotheses": [
+        "Fixed pants lengths and a fixed nonperipheral curve word; compatible fixed holonomy lifts.",
+        "Twist displacement is signed hyperbolic length."
+      ],
+      "exact_formulas": [
+        "T_i(tau)=diag(exp(tau/2),exp(-tau/2))",
+        "2cosh(ell_gamma/2)=|tr W_gamma|"
+      ],
+      "proof_summary": "Insert each crossing twist matrix or inverse in the fixed pants word. Its trace is a finite Laurent polynomial in exp(tau_i/2). The absolute trace gives the hyperbolic translation length.",
+      "dependencies": [],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G5"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "Arbitrary coordinate/lift choices need not have positive Laurent coefficients; no full word-enumeration solver is promised."
+    },
+    {
+      "id": "19.07",
+      "title": "Cosine derivative for immersed curves with passage multiplicity",
+      "labels": [
+        "eq:cosine"
+      ],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Fixed nonperipheral closed curve, possibly immersed or iterated; cuff twist and angle orientations consistent.",
+        "Intersections counted by passages of the geodesic representative; cuff powers treated separately."
+      ],
+      "exact_formulas": [
+        "partial ell_gamma/partial tau_i=sum_(p in gamma intersect alpha_i)cos(theta_p)",
+        "|partial ell_gamma/partial tau_i|<=i(gamma,alpha_i)"
+      ],
+      "proof_summary": "Cut at cuff crossings. Internal endpoint terms cancel at the stationary geodesic; relative cuff displacement leaves each tangential cosine. Repeated passages contribute repeatedly. A cuff power has empty sum and constant length.",
+      "dependencies": [
+        "19.04"
+      ],
+      "source_pins": [
+        {
+          "source_key": "WolpertTwist",
+          "pins": [
+            "p. 132, first-page introduction and first-variation formula (1.1)"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G5",
+          "G8"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "The chapter supplies the immersed first-variation argument; the cited external final-page formula was not independently recovered here."
+    },
+    {
+      "id": "19.08",
+      "title": "Strict convexity in a genuine intersecting twist",
+      "labels": [],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "One internal cuff alpha_i; all pants lengths and other twists fixed.",
+        "Fixed reduced itinerary, fixed boundary lifts, positive segment distances, fixed integer winding.",
+        "i(gamma,alpha_i)>0; otherwise length is constant."
+      ],
+      "exact_formulas": [
+        "ell_gamma((1-t)tau_0+t tau_1)<(1-t)ell_gamma(tau_0)+t ell_gamma(tau_1) for 0<t<1 and tau_0!=tau_1"
+      ],
+      "proof_summary": "Take minimizing full endpoint vectors at the two twist values. Affine interpolation is admissible at the intermediate twist. At a crossing the gluing equation has coefficient +1 or -1 on tau_i, so the full endpoint vectors differ; no all-endpoint-fixed gauge absorbs the change. Strict joint convexity of the sum then gives a strict inequality for that competitor, hence for its minimum. A disjoint curve lies in the fixed cut geometry and stays constant.",
+      "dependencies": [
+        "19.04",
+        "19.05"
+      ],
+      "source_pins": [
+        {
+          "source_key": "Kerckhoff",
+          "pins": [
+            "Theorem 1; Section 3"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G4",
+          "G5"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "Kerckhoff simple-curve earthquake statement supplies context only; the nonsimple extension is the local proof above, not a source claim or numerical inference."
+    },
+    {
+      "id": "19.09",
+      "title": "Distinguishing the two Mirzakhani length uses",
+      "labels": [],
+      "status": "external_statement",
+      "hypotheses": [
+        "Simple multicurves for Dehn-Thurston comparisons; general closed curves for asymptotically piecewise-linear length."
+      ],
+      "exact_formulas": [
+        "Simple comparison: MirzSimple Theorem 3.4 and (3.6).",
+        "General APL length: MirzGeneral Theorem 4.1; sublevel volumes Section 8."
+      ],
+      "proof_summary": "The cited statements have different index sets and purposes; neither turns an arbitrary twist box into a full moduli fundamental domain.",
+      "dependencies": [],
+      "source_pins": [
+        {
+          "source_key": "MirzSimple",
+          "pins": [
+            "pp. 106-108, Theorem 3.4, equations (3.5)-(3.6)"
+          ]
+        },
+        {
+          "source_key": "MirzGeneral",
+          "pins": [
+            "p. 20, Theorem 4.1; Section 8"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "No full external counting proof or new exact integration formula is inferred."
+    },
+    {
+      "id": "19.10",
+      "title": "Twist-lattice unfolding and stabilizers",
+      "labels": [
+        "eq:twistunfold"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "a_i>0; chosen Dehn-twist sign gives ell_(D^k gamma)(a,tau)=ell_gamma(a,tau+k*a).",
+        "F nonnegative, or integrable in absolute value on R^N."
+      ],
+      "exact_formulas": [
+        "integral_(product[0,a_i)) sum_(k in Z^N) F(ell_gamma(a,tau+k*a)) d tau = integral_R^N F(ell_gamma(a,u)) du"
+      ],
+      "proof_summary": "The translated half-open boxes partition R^N. Tonelli yields a nonnegative extended equality. The written sum counts lattice elements. A curve-orbit interpretation must first quotient the stabilizer and choose the corresponding nonredundant lattice and fundamental domain.",
+      "dependencies": [],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "If a cuff is disjoint, infinite duplicate orbit terms may occur; one cannot divide an infinite multiplicity out of the displayed equality."
+    },
+    {
+      "id": "19.11",
+      "title": "Mellin substitution and full-moduli scope",
+      "labels": [
+        "eq:mellin"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "Weight (2cosh(ell_gamma/2))^-s; integral convergent.",
+        "Fixed positive cuff lengths; x_i=exp(u_i/2)>0."
+      ],
+      "exact_formulas": [
+        "integral_R^N |tr W(a,exp(u/2))|^-s du=2^N integral_(0,infinity)^N |tr W(a,x)|^-s product_i dx_i/x_i",
+        "WP measure product_i da_i d tau_i"
+      ],
+      "proof_summary": "Use du_i=2dx_i/x_i. A fixed curve length is not periodic but its lattice sum is. The cuff orthant and twist box quotient only this twist subgroup, so full-moduli integration needs further orbit unfolding.",
+      "dependencies": [
+        "19.06",
+        "19.10"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "No convergence range for a general word or full mapping-class fundamental domain is asserted."
+    },
+    {
+      "id": "20.01",
+      "title": "Exact once-holed-torus twist length",
+      "labels": [
+        "eq:Atwist",
+        "eq:torustwist"
+      ],
+      "status": "external_statement_and_derived_normalization",
+      "hypotheses": [
+        "Oriented one-holed torus, boundary b>0 or complete cusp b=0.",
+        "Essential simple alpha of length a>0 and essential simple beta with i(alpha,beta)=1.",
+        "Twist origin minimizes beta length; A positive."
+      ],
+      "exact_formulas": [
+        "A^2=(cosh(a)+cosh(b/2))/(cosh(a)-1)>1",
+        "cosh(ell_beta(tau)/2)=A*cosh(tau/2)",
+        "For b=0, A=coth(a/2); r0=2acosh(A)"
+      ],
+      "proof_summary": "Convert the ALPS Proposition 3.1 hexagon formula using 2sinh^2(a/2)=cosh(a)-1. The zero origin is the perpendicular crossing configuration.",
+      "dependencies": [],
+      "source_pins": [
+        {
+          "source_key": "ALPS",
+          "pins": [
+            "Proposition 3.1, pp. 5-6, and zero-twist description"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G5"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "The crossing curve must be simple; an arbitrary immersed word of intersection one is not included by this citation."
+    },
+    {
+      "id": "20.02",
+      "title": "Independent torus boundary-commutator matrix check",
+      "labels": [],
+      "status": "derived_exact_algebra",
+      "hypotheses": [
+        "a>0, b>=0, A as in 20.01, u real; k=sqrt(A^2-1)>0."
+      ],
+      "exact_formulas": [
+        "M=diag(exp(a/2),exp(-a/2)); B_u=diag(exp(u/2),exp(-u/2))*[[A,k],[k,A]]",
+        "det(B_u)=1; tr(B_u)=2Acosh(u/2)",
+        "tr([M,B_u])=2-4sinh^2(a/2)(A^2-1)=-2cosh(b/2)"
+      ],
+      "proof_summary": "Direct multiplication establishes determinant, trace and the signed commutator equation. Solving the latter recovers A^2.",
+      "dependencies": [
+        "20.01"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G5"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "Matrix identities check conventions, not by themselves the global discreteness/topological marking of a torus representation."
+    },
+    {
+      "id": "20.03",
+      "title": "Exact torus twist derivatives",
+      "labels": [
+        "eq:torustwistderivatives"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "A>1, u real; Q=A^2cosh^2(u/2)-1>0."
+      ],
+      "exact_formulas": [
+        "ell prime=A*sinh(u/2)/sqrt(Q)",
+        "ell double-prime=A*(A^2-1)*cosh(u/2)/(2Q^(3/2))>0",
+        "|ell prime|<1"
+      ],
+      "proof_summary": "Differentiate 2acosh(Acosh(u/2)) twice. Q minus the squared derivative numerator is A^2-1>0.",
+      "dependencies": [
+        "20.01"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G5"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "General proof is the chapter argument under these hypotheses; computational evidence is finite and not an interval certificate."
+    },
+    {
+      "id": "20.04",
+      "title": "Torus coarea density and removal of its endpoint singularity",
+      "labels": [
+        "eq:toruscoarea"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "A>1; r0=2acosh(A); f nonnegative measurable, or integrable in absolute value.",
+        "Nonnegative equality permits both sides infinite."
+      ],
+      "exact_formulas": [
+        "integral_R f(ell(u)) du=2 integral_r0^infinity f(r)*sinh(r/2)/sqrt(cosh^2(r/2)-A^2) dr",
+        "With y=sqrt(cosh^2(r/2)-A^2), the right side is 4 integral_0^infinity f(2acosh(sqrt(A^2+y^2)))/sqrt(A^2+y^2) dy"
+      ],
+      "proof_summary": "The length is monotone on each half-axis; differentiate cosh(r/2)=Acosh(u/2). The two halves contribute the factor two. The y substitution removes the integrable square-root endpoint singularity.",
+      "dependencies": [
+        "20.01"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G6"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "General proof is the chapter argument under these hypotheses; computational evidence is finite and not an interval certificate."
+    },
+    {
+      "id": "20.05",
+      "title": "Sech-square and beta twist integrals",
+      "labels": [
+        "eq:sechintegral",
+        "eq:betaintegral"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "A>1; s>0."
+      ],
+      "exact_formulas": [
+        "integral_R sech^2(ell(u)/2) du=4/A^2",
+        "integral_R cosh(ell(u)/2)^(-s) du=2sqrt(pi)Gamma(s/2)/(A^s Gamma((s+1)/2))"
+      ],
+      "proof_summary": "Factor A^-s and substitute t=tanh(u/2); the resulting beta integral is 2A^-s B(1/2,s/2). At s=2 it reduces to 4/A^2.",
+      "dependencies": [
+        "20.01"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G6"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "General proof is the chapter argument under these hypotheses; computational evidence is finite and not an interval certificate."
+    },
+    {
+      "id": "20.06",
+      "title": "Exact twist sublevel measure",
+      "labels": [
+        "eq:sublevel"
+      ],
+      "status": "derived_exact_algebra",
+      "hypotheses": [
+        "A>1; R real; r0=2acosh(A)."
+      ],
+      "exact_formulas": [
+        "measure{u:ell(u)<=R}=4acosh(cosh(R/2)/A) for R>=r0, and zero otherwise"
+      ],
+      "proof_summary": "Solve the even monotone length inequality on u>=0 and double the positive interval length.",
+      "dependencies": [
+        "20.01"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G6"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "General proof is the chapter argument under these hypotheses; computational evidence is finite and not an interval certificate."
+    },
+    {
+      "id": "20.07",
+      "title": "Finite twist-integral analytic tails",
+      "labels": [
+        "eq:torusintegraltail"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "A>1; s>0; U>=0."
+      ],
+      "exact_formulas": [
+        "integral_(|u|>U)cosh(ell(u)/2)^(-s) du <= 2^(s+2)/(s A^s) exp(-sU/2)",
+        "For s=2, exact tail=4A^-2(1-tanh(U/2))"
+      ],
+      "proof_summary": "Use cosh(u/2)>=exp(|u|/2)/2 and integrate the exponential on both half-lines; integrate sech-square exactly for the second formula.",
+      "dependencies": [
+        "20.05"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G6"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "These analytic tails do not enclose quadrature or roundoff. For very large U use 1-tanh(U/2)=2exp(-U)/(1+exp(-U)) to retain the positive tail."
+    },
+    {
+      "id": "20.08",
+      "title": "Positive H-kernel and exact finite lattice telescoping",
+      "labels": [
+        "eq:Hkernel",
+        "eq:Hidentity",
+        "eq:Hpartialsumtail"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "a>0, tau real, integer N>=0; L_N=(N+1/2)a.",
+        "Uniformity holds for fixed a and bounded tau; orbit may be relabeled to |tau|<=a/2."
+      ],
+      "exact_formulas": [
+        "H_a(u)=sinh(a/2)/(cosh(u)+cosh(a/2))=(1/2)(tanh((u+a/2)/2)-tanh((u-a/2)/2))",
+        "sum_(n in Z)H_a(tau+na)=1",
+        "P_N=(1/2)(tanh((tau+L_N)/2)-tanh((tau-L_N)/2))",
+        "1-P_N=1/(1+exp(L_N+tau))+1/(1+exp(L_N-tau))<=2cosh(tau)exp(-L_N)"
+      ],
+      "proof_summary": "The finite tanh differences telescope exactly. Positive logistic tails tend to zero, proving the bilateral identity and exponential convergence. Stable exp(-|u|) and logistic forms preserve tiny terms.",
+      "dependencies": [],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G7"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "No fixed-N uniformity as a->0. At large lengths direct tanh subtraction rounds to zero; relative checks use the positive stable gap, not cancellation."
+    },
+    {
+      "id": "20.09",
+      "title": "K-kernel constant twist orbit with multiplicity",
+      "labels": [
+        "eq:Kkernel",
+        "eq:Kidentity"
+      ],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "Torus and simple crossing curve as in 20.01; r>=r0.",
+        "Each unoriented class D_alpha^n beta retains its integer twist label."
+      ],
+      "exact_formulas": [
+        "K_(a,b)(r)=A^2sinh(a/2)/(cosh(r)+1+A^2(cosh(a/2)-1))",
+        "K_(a,b)(ell_beta(u))=H_a(u)",
+        "sum_(n in Z)K_(a,b)(ell_(D_alpha^n beta))=1"
+      ],
+      "proof_summary": "Use cosh(r)+1=A^2(cosh(u)+1). Distinct integral twist coordinates give distinct simple classes crossing alpha once; equal symmetric lengths do not merge labels. The H-series tail applies unchanged.",
+      "dependencies": [
+        "20.01",
+        "20.08"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G7"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "The kernel depends on the distinguished cuff a and boundary b and indexes one twist orbit, not all surface curves."
+    },
+    {
+      "id": "20.10",
+      "title": "Probability-window source of constant twist kernels",
+      "labels": [],
+      "status": "derived_analytic",
+      "hypotheses": [
+        "rho in L^1(R), even, nonnegative, integral one; a>0."
+      ],
+      "exact_formulas": [
+        "H_(a,rho)(u)=integral_(u-a/2)^(u+a/2) rho(v) dv",
+        "sum_(n in Z)H_(a,rho)(u+na)=1",
+        "rho(v)=(1/4)sech^2(v/2) gives H_a"
+      ],
+      "proof_summary": "The translated intervals partition R except shared endpoints of measure zero; Tonelli gives the total probability. Evenness makes the window mass depend on |u|, hence on r through the torus length formula.",
+      "dependencies": [
+        "20.01"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G7"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "Only nonnegativity is general; compact-support probability densities have zero terms, so strict positivity needs extra assumptions."
+    },
+    {
+      "id": "21.01",
+      "title": "Cuff position congruences and winding",
+      "labels": [
+        "eq:endpointmatch"
+      ],
+      "status": "derived_exact_algebra",
+      "hypotheses": [
+        "a>0; m>=1 distinct endpoints on each cuff side; compatible circle coordinates after reversing one induced boundary orientation.",
+        "A prescribed cyclic matching sigma; marked integer winding data retained separately."
+      ],
+      "exact_formulas": [
+        "y_(sigma(j))-x_j=tau mod a for all j"
+      ],
+      "proof_summary": "One endpoint determines tau modulo a; the remaining congruences are equivalent to matching cyclic spacings. This is necessary and sufficient for this prescribed position matching.",
+      "dependencies": [],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G8"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "Position congruences alone give no direction matching; modulo-a data alone do not fix a marked curve."
+    },
+    {
+      "id": "21.02",
+      "title": "Momentum matching imposes the tangent",
+      "labels": [
+        "eq:momentummatch"
+      ],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Transverse unit-speed chain, oriented by travel; common cuff coordinate; p in (-1,1).",
+        "Incoming and outgoing pieces lie on opposite sides of the cut."
+      ],
+      "exact_formulas": [
+        "partial S/partial x=p_in-p_out"
+      ],
+      "proof_summary": "Endpoint first variation uses plus terminal and minus initial tangential components. If these agree, transverse unit speeds and opposite-side crossing also match normal components of magnitude sqrt(1-p^2). Orthogonal arcs have p=0 and therefore match smoothly once positions match.",
+      "dependencies": [],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G8"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "Arbitrary closed geodesics are not orthogonal to an arbitrary pants decomposition; tangent cuff segments are excluded."
+    },
+    {
+      "id": "21.03",
+      "title": "Boundary phase generating function and periodic gluing",
+      "labels": [],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Transverse geodesic segment with endpoint coordinates s,t and signed tangential components p_s,p_t.",
+        "Nonperipheral periodic chain; opposite-side crossing and direction matching at every join."
+      ],
+      "exact_formulas": [
+        "dL=-p_s ds+p_t dt",
+        "Cuff twist maps (s,p) to (s+tau,p)"
+      ],
+      "proof_summary": "First variation gives the generating function. Position and tangent matches make the periodic chain smooth and locally geodesic, hence the closed geodesic in its class; cutting a transverse closed geodesic reverses the construction.",
+      "dependencies": [
+        "21.01",
+        "21.02"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G8"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "The p=0 orthospectrum alone does not encode arbitrary phase gluing; no general reconstruction algorithm is claimed."
+    },
+    {
+      "id": "22.01",
+      "title": "Simple returning excursions avoid a deep cusp",
+      "labels": [],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Oriented hyperbolic surface with no cone points; normalize a cusp stabilizer to z->z+1.",
+        "Choose an embedded cusp horocycle y=Y with Y>1/2."
+      ],
+      "exact_formulas": [
+        "A finite-endpoint semicircle (u,v) has height radius (v-u)/2.",
+        "If v-u>1, u<u+1<v<v+1 gives a crossing with its translate."
+      ],
+      "proof_summary": "A projected simple geodesic with two finite ideal endpoints therefore has height at most 1/2. Any simple geodesic entering deeper must have infinity as an endpoint, hence be vertical and normal to horocycles. Simple closed geodesics never cross the chosen deep horocycle.",
+      "dependencies": [],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "The height is tied to the chosen unit parabolic normalization and embedded horocycle; it is not a coordinate-free universal physical cutoff."
+    },
+    {
+      "id": "22.02",
+      "title": "Cusp-issued normal rays",
+      "labels": [
+        "eq:cuspray"
+      ],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Embedded horocycle y=Y for the normalized cusp; forward travel away from the cusp."
+      ],
+      "exact_formulas": [
+        "gamma_x(t)=x+iYexp(-t)"
+      ],
+      "proof_summary": "Vertical hyperbolic arclength is the logarithm of height. Backward time tends to the cusp; simplicity of the full forward continuation is distinct from simplicity inside the cusp.",
+      "dependencies": [
+        "22.01"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "General proof is the chapter argument under these hypotheses; computational evidence is finite and not an interval certificate."
+    },
+    {
+      "id": "22.03",
+      "title": "McShane exceptional directions and boundary restriction",
+      "labels": [],
+      "status": "external_statement",
+      "hypotheses": [
+        "Complete finite-area oriented surface with at least one cusp and no geodesic boundary.",
+        "Directions are normal rays from the chosen cusp horocycle."
+      ],
+      "exact_formulas": [
+        "The exceptional simple directions have horocycle measure zero.",
+        "An enlarged gap may contain an isolated simple cusp-to-cusp direction."
+      ],
+      "proof_summary": "Use McShane Theorem 3 and its measure discussion. Simple exceptions include cusp-to-cusp arcs and rays spiraling toward geodesics or minimal laminations. Geodesic-boundary surfaces have rays exiting through their boundary and need extra gap terms.",
+      "dependencies": [
+        "22.02"
+      ],
+      "source_pins": [
+        {
+          "source_key": "McShane",
+          "pins": [
+            "p. 2, equation (3)"
+          ]
+        },
+        {
+          "source_key": "McShanePants",
+          "pins": [
+            "Theorem 3 and measure paragraph, pp. 3-4",
+            "Lemma 7, pp. 8-9; gap functions Sections 8-9"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "The boundary counter-scope is retained; the statement is not extended to surfaces with geodesic boundary or interpreted as saying every point of an enlarged gap is nonsimple."
+    },
+    {
+      "id": "22.04",
+      "title": "Normalized cusp-pants gap",
+      "labels": [
+        "eq:cuspgap"
+      ],
+      "status": "derived_from_external_statements",
+      "hypotheses": [
+        "Cusp pants contribution has two other interior cuffs of lengths a,b, including the two copies of one torus curve.",
+        "Positive-boundary combined gap D(L,a,b) is normalized by its starting boundary length L."
+      ],
+      "exact_formulas": [
+        "D(L,a,b)=2log((exp(L/2)+exp((a+b)/2))/(exp(-L/2)+exp((a+b)/2)))",
+        "lim_(L->0+) D(L,a,b)/L=2/(1+exp((a+b)/2))"
+      ],
+      "proof_summary": "Differentiate the logarithms at L=0. Mirzakhani Lemma 3.1 supplies D, while the external partition supplies the index set and null-set statement. On the punctured torus a=b=ell_alpha and the gaps sum to one.",
+      "dependencies": [
+        "17.06",
+        "22.03"
+      ],
+      "source_pins": [
+        {
+          "source_key": "MirzVolumes",
+          "pins": [
+            "Theorem 7.1, Lemma 7.3, equations (7.3)-(7.5), pp. 213-216",
+            "Lemma 3.1, equation (3.1), pp. 191-192; Theorem 4.2"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "Computing the limit fixes normalization but does not prove the external partition. Other cusp/boundary types require their own gap accounting."
+    },
+    {
+      "id": "22.05",
+      "title": "Cusp-parabolic truncated arc formula",
+      "labels": [
+        "eq:cusplambda"
+      ],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Pants with a cusp and other cuffs a,b>=0; simple separating cusp-to-cusp arc.",
+        "H>0 is horocycle length. For a literal positive truncated arc choose a sufficiently small embedded horocycle; arbitrary decorations use signed distance.",
+        "P=[[1,q],[0,1]], q>0; AB=P; tr(A)=t_a, tr(B)=-t_b."
+      ],
+      "exact_formulas": [
+        "q*c_A=t_a+t_b; H=q/Y",
+        "d_eta=log(c_A^2 Y^2)",
+        "lambda_eta=exp(d_eta/2)=(t_a+t_b)/H"
+      ],
+      "proof_summary": "The trace of A^-1P is t_a-q*c_A. The image of y=Y under A is a tangent horocycle of diameter 1/(c_A^2Y); the vertical arc to A(infinity) has signed separation log(c_A^2Y^2). Substitute H=q/Y.",
+      "dependencies": [],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G9"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "An arbitrarily large decorated horocycle need not be embedded. The signed formula is meaningful without that geometric embedding claim."
+    },
+    {
+      "id": "22.06",
+      "title": "Torus cusp arc and closed curve correspondence",
+      "labels": [
+        "eq:toruscusplambda"
+      ],
+      "status": "external_statement_and_derived_normalization",
+      "hypotheses": [
+        "Complete once-punctured torus; essential unoriented simple cusp-to-cusp arcs and essential unoriented simple closed curves.",
+        "lambda=exp(d/2), no sqrt(2) factor."
+      ],
+      "exact_formulas": [
+        "exp(d_alpha/2)=2t_alpha/H=4cosh(ell_alpha/2)/H"
+      ],
+      "proof_summary": "Springborn Proposition 14.1(i),(iv) identifies the unique disjoint simple classes. Cutting along the closed curve gives (a,a,0) pants; substitute t_a=t_b=t_alpha in 22.05.",
+      "dependencies": [
+        "22.05"
+      ],
+      "source_pins": [
+        {
+          "source_key": "Springborn",
+          "pins": [
+            "Section 11, pp. 20-21, lambda definition and equation (30)",
+            "Section 12, p. 23",
+            "Section 14, p. 28, Proposition 14.1(i),(iv)"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G9"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "General proof is the chapter argument under these hypotheses; computational evidence is finite and not an interval certificate."
+    },
+    {
+      "id": "22.07",
+      "title": "Decorated triangle corner and trace normalization",
+      "labels": [],
+      "status": "external_statement_and_derived_normalization",
+      "hypotheses": [
+        "Positive lambda lengths u,v,w with convention exp(signed distance/2); torus formed from two ideal triangles."
+      ],
+      "exact_formulas": [
+        "Triangle corners: u/(vw),v/(uw),w/(uv)",
+        "H=2(u^2+v^2+w^2)/(uvw)",
+        "Trace of simple closed curve disjoint from edge u is Hu/2"
+      ],
+      "proof_summary": "Springborn equation (30) gives the corner lengths and Section 12 sums both triangles. The trace conversion is locally derived from 22.06. As companion checks, these traces satisfy x^2+y^2+z^2=xyz and H is invariant under u->(v^2+w^2)/u.",
+      "dependencies": [
+        "22.06"
+      ],
+      "source_pins": [
+        {
+          "source_key": "Springborn",
+          "pins": [
+            "Section 11, pp. 20-21, lambda definition and equation (30)",
+            "Section 12, p. 23",
+            "Section 14, p. 28, Proposition 14.1(i),(iv)"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G9"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "The Markov and flip fixtures check algebra and normalization, not a complete discrete representation. Trace Hu/2 is not attributed wholesale to source Section 12."
+    },
+    {
+      "id": "22.08",
+      "title": "Simple truncated cusp orthospectrum identity",
+      "labels": [
+        "eq:cusporthoidentity"
+      ],
+      "status": "derived_from_external_statements",
+      "hypotheses": [
+        "Complete finite-area once-punctured torus; simple unoriented cusp-to-cusp arc classes once.",
+        "H>0; signed truncated lengths allowed; nonnegative square-root branch."
+      ],
+      "exact_formulas": [
+        "sum_eta(1-sqrt(1-16exp(-d_eta)/H^2))=1",
+        "16exp(-d_eta)/H^2=4/t_alpha^2<1"
+      ],
+      "proof_summary": "Use the simple arc/curve bijection and substitute t_alpha=(H/2)exp(d_alpha/2) in sum h(t_alpha)=1. Positivity and convergence are inherited from McShane; square roots remain real even for negative signed lengths.",
+      "dependencies": [
+        "18.06",
+        "22.06"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G9"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "Adding nonsimple cusp arcs would change the index set and is not asserted; no finite spectral approximation is claimed."
+    },
+    {
+      "id": "22.09",
+      "title": "Decoration invariance",
+      "labels": [],
+      "status": "derived_exact_algebra",
+      "hypotheses": [
+        "Horocycle scaling H->kH with k>0; consistently signed cusp truncation."
+      ],
+      "exact_formulas": [
+        "d_eta->d_eta-2log(k)",
+        "exp(-d_eta)/H^2 is invariant"
+      ],
+      "proof_summary": "Each endpoint moves by log(k); substituting the two-end shift cancels the k^2 from H^2.",
+      "dependencies": [
+        "22.05",
+        "22.08"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G9"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "General proof is the chapter argument under these hypotheses; computational evidence is finite and not an interval certificate."
+    },
+    {
+      "id": "22.10",
+      "title": "Basmajian oriented coefficient",
+      "labels": [
+        "eq:basmajian"
+      ],
+      "status": "external_statement_and_derived_normalization",
+      "hypotheses": [
+        "Compact hyperbolic surface with nonempty geodesic boundary.",
+        "Full orthogeodesic spectrum, including nonsimple arcs, with oriented arcs counted by endpoint direction."
+      ],
+      "exact_formulas": [
+        "ell(boundary X)=sum_(eta oriented) 2log(coth(ell_eta/2))",
+        "One unoriented arc contributes 4log(coth(ell_eta/2))."
+      ],
+      "proof_summary": "Parlier Section 4.2 explicitly gives the oriented normalization; grouping reverse orientations doubles the coefficient. The boundary shadows give the geometric meaning.",
+      "dependencies": [],
+      "source_pins": [
+        {
+          "source_key": "Parlier",
+          "pins": [
+            "p. 2 oriented orthogeodesic convention",
+            "p. 3 Theorem 1.1",
+            "Section 4.2, p. 26"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G10"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "Original Basmajian full proof is not re-refereed and no finite full-orthospectrum approximation is attempted."
+    },
+    {
+      "id": "22.11",
+      "title": "Direct shadow length and stable positive evaluation",
+      "labels": [],
+      "status": "derived_geometric",
+      "hypotheses": [
+        "Orthogeodesic length d>0; boundary lift x=0 and disjoint semicircle center coth(d), radius csch(d)."
+      ],
+      "exact_formulas": [
+        "Ideal endpoints tanh(d/2),coth(d/2)",
+        "Shadow length log(coth(d/2)/tanh(d/2))=2log(coth(d/2))",
+        "Stable shadow=2log1p(2exp(-d)/(1-exp(-d)))"
+      ],
+      "proof_summary": "Perpendicular projections of the two ideal endpoints onto x=0 give those heights. Their hyperbolic separation is the logarithmic ratio. The reverse orientation records the other endpoint shadow; rationalizing coth yields the stable formula.",
+      "dependencies": [
+        "22.10"
+      ],
+      "source_pins": [],
+      "computational_coverage": {
+        "planned_fixture_groups": [
+          "G10"
+        ],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "Outer author-scratch-result.json contains representative finite algebra and floating checks; it is not the later companion or an independent review.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "For d=1000 direct coth rounds to one at the fixture precisions; a rounded zero is rejected and the tiny positive gap is compared relatively/scaled."
+    },
+    {
+      "id": "22.12",
+      "title": "Relation between cusp and boundary gap constructions",
+      "labels": [],
+      "status": "scope_boundary",
+      "hypotheses": [
+        "Simple truncated cusp spectrum for 22.08; full oriented boundary orthospectrum for 22.10."
+      ],
+      "exact_formulas": [
+        "Common mechanism: decomposition of initial boundary data with different stopping/marking rules."
+      ],
+      "proof_summary": "Parlier coherent markings provide a systematic bridge. Generic normal rays in McShane gaps are not the canonical returning orthogeodesics; index set, truncation and weights remain specified.",
+      "dependencies": [
+        "22.08",
+        "22.10"
+      ],
+      "source_pins": [
+        {
+          "source_key": "Parlier",
+          "pins": [
+            "p. 2 oriented orthogeodesic convention",
+            "p. 3 Theorem 1.1",
+            "Section 4.2, p. 26"
+          ]
+        }
+      ],
+      "computational_coverage": {
+        "planned_fixture_groups": [],
+        "maintained_companion_implementation": "pending",
+        "maintained_companion_execution": "pending",
+        "implemented_result_groups": [],
+        "evidence_record": null,
+        "author_scratch": "No direct finite scratch check asserted for this claim.",
+        "limit": "Finite fixtures do not prove topology, an external theorem, global enumeration, general convexity or an infinite surface identity."
+      },
+      "coverage_gaps": "No finite set of arcs certifies a whole-surface identity without complete omitted-class bounds. No general phase reconstruction or global enumeration is computed."
+    }
+  ],
+  "preservation": {
+    "baseline_labels": [
+      "sec:unfolding",
+      "eq:unfold",
+      "eq:recoverconstant",
+      "eq:torusunfold",
+      "eq:mcshane",
+      "eq:derivativeidentity",
+      "eq:variance",
+      "eq:dilogtorus",
+      "eq:luotan",
+      "sec:figures",
+      "eq:figuretrace",
+      "eq:twofigures",
+      "eq:doublepants",
+      "eq:htrace",
+      "eq:nidentity",
+      "eq:hidentity",
+      "eq:universalkernel",
+      "eq:allfigureidentity",
+      "eq:fbound",
+      "eq:kernelrelation",
+      "sec:twists",
+      "eq:localdistance",
+      "eq:seam",
+      "eq:traceword",
+      "eq:cosine",
+      "eq:twistunfold",
+      "eq:mellin",
+      "sec:exacttwist",
+      "eq:Atwist",
+      "eq:torustwist",
+      "eq:toruscoarea",
+      "eq:sechintegral",
+      "eq:sublevel",
+      "eq:betaintegral",
+      "eq:Hkernel",
+      "eq:Hidentity",
+      "eq:Kkernel",
+      "eq:Kidentity",
+      "sec:matching",
+      "eq:endpointmatch",
+      "eq:momentummatch",
+      "sec:cusps",
+      "eq:cuspray",
+      "eq:cuspgap",
+      "eq:cusplambda",
+      "eq:toruscusplambda",
+      "eq:cusporthoidentity",
+      "eq:basmajian"
+    ],
+    "baseline_label_count": 48,
+    "new_labels": [
+      "eq:figurekerneltail",
+      "eq:figurefiniteidentity",
+      "eq:localdistancehessian",
+      "eq:torustwistderivatives",
+      "eq:torusintegraltail",
+      "eq:Hpartialsumtail"
+    ],
+    "current_label_count": 54,
+    "baseline_label_order_preserved": true,
+    "headings_order_preserved": true,
+    "new_label_purpose": "Finite kernel tails/residual, local Hessian, torus derivatives/integral tail and exact twist partial-sum tail are substantive reusable formulas."
+  },
+  "chapter_source_snapshots": {
+    "book/chapters/17-unfolding-constant-series.tex": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+    "book/chapters/18-figure-eight-curves.tex": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+    "book/chapters/19-pants-twists.tex": "9dc4438ad32d76c7508cd6f90e34dc615697bf60cc546b5187e130468213be9d",
+    "book/chapters/20-torus-twist-series.tex": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+    "book/chapters/21-cuff-matching.tex": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+    "book/chapters/22-cusps-orthospectrum.tex": "67cd497d3599bbb6716335a90d6f2f5c71bd191efa96211dd47442c64f3b39e2"
+  },
+  "claim_count": 59,
+  "unresolved_limits": [
+    "Independent mathematical review pending.",
+    "Maintained companion code and executed result bindings pending.",
+    "Some primary sources were accessed through indexed statement text or publisher abstract only; exact access limits remain per source.",
+    "No full source/PDF/publishing integration approval in this author increment."
+  ]
+}

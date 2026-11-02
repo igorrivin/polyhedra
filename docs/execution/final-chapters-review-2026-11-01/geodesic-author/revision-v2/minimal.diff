@@ -1,0 +1,120 @@
+--- before/book/chapters/19-pants-twists.tex
++++ after/book/chapters/19-pants-twists.tex
+@@ -148,9 +148,11 @@
+ statement is needed for the local argument here.
+ 
+ These ideas overlap with several parts of Mirzakhani's work, but serve
+-different roles there. Dehn--Thurston estimates compare combinatorial and
+-geometric length for simple multicurves
+-\cite[Theorem 3.4 and equation (3.6)]{MirzSimple}. The work
++different roles there. Dehn--Thurston coordinates and the definition of
++combinatorial length for simple multicurves are given in
++\cite[Theorem 3.4 and equation (3.6)]{MirzSimple}. The comparison with
++geometric length for an $L$-bounded pants decomposition is
++\cite[Proposition 3.5 and equation (3.7), p.~107]{MirzSimple}. The work
+ on general curve orbits studies asymptotically piecewise-linear length,
+ including filling curves and length sublevel volumes
+ \cite[Theorem 4.1 and Section 8]{MirzGeneral}. In the basic volume recursion, the
+--- before/book/chapters/22-cusps-orthospectrum.tex
++++ after/book/chapters/22-cusps-orthospectrum.tex
+@@ -49,8 +49,8 @@
+ the relevant intersection pattern. The exceptional simple directions
+ have measure zero and include cusp-to-cusp arcs and rays spiraling toward
+ closed geodesics or minimal laminations
+-\cite{McShane}\cite[Theorem 3 and the following measure discussion,
+-pp.~3--4]{McShanePants}.
++\cite{McShane}\cite[Theorem 3, p.~4, and the paragraph after
++Corollary 5, p.~5]{McShanePants}.
+ In some conventions a gap contains an isolated simple cusp-to-cusp
+ direction; its interior is therefore not literally made entirely of
+ nonsimple directions. The measure statement is unaffected.
+--- before/book/claims/sections17-22.json
++++ after/book/claims/sections17-22.json
+@@ -180,9 +180,10 @@
+       "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v168-n1-p03.pdf",
+       "version": "Annals of Mathematics 168 (2008), 97-125",
+       "pins": [
+-        "pp. 106-108, Theorem 3.4, equations (3.5)-(3.6)"
+-      ],
+-      "checked": "Dehn-Thurston simple-multicurve data and length estimates include intersections and twists.",
++        "p. 107, Theorem 3.4, equations (3.5)-(3.6): Dehn-Thurston coordinates and combinatorial length",
++        "p. 107, Proposition 3.5, equation (3.7): geometric-length comparison for an L-bounded pants decomposition"
++      ],
++      "checked": "Theorem 3.4 and equations (3.5)-(3.6) give Dehn-Thurston coordinates and combinatorial length for simple multicurves. Proposition 3.5, equation (3.7), compares combinatorial and geometric length for an L-bounded pants decomposition.",
+       "verification": "Primary journal PDF statements inspected. No nonsimple exact solver follows from this comparison.",
+       "full_external_proof_audit": false
+     },
+@@ -213,7 +214,7 @@
+       "url": "https://macbuse.github.io/M2R_2019/shearsAgain.pdf",
+       "version": "Author-hosted draft, retrieved 2026-11-01; no immutable version identifier supplied",
+       "pins": [
+-        "Theorem 3 and measure paragraph, pp. 3-4",
++        "Theorem 3, p. 4; measure-zero paragraph after Corollary 5, p. 5",
+         "Lemma 7, pp. 8-9; gap functions Sections 8-9"
+       ],
+       "checked": "Finite-area surface without geodesic boundary; exceptional simple cusp directions have zero measure; isolated cusp-to-cusp directions can lie in enlarged gaps; boundary requires additional rules.",
+@@ -1034,7 +1035,7 @@
+         {
+           "source_key": "MirzSimple",
+           "pins": [
+-            "pp. 106-108, Theorem 3.4, equations (3.5)-(3.6)"
++            "p. 107, Theorem 3.4, equations (3.5)-(3.6): Dehn-Thurston coordinates and combinatorial length"
+           ]
+         }
+       ],
+@@ -1296,10 +1297,10 @@
+       "labels": [],
+       "status": "external_statement",
+       "hypotheses": [
+-        "Simple multicurves for Dehn-Thurston comparisons; general closed curves for asymptotically piecewise-linear length."
+-      ],
+-      "exact_formulas": [
+-        "Simple comparison: MirzSimple Theorem 3.4 and (3.6).",
++        "Simple multicurves for Dehn-Thurston coordinates and length comparison; the comparison assumes an L-bounded pants decomposition. General closed curves for asymptotically piecewise-linear length."
++      ],
++      "exact_formulas": [
++        "Simple coordinates and combinatorial length: MirzSimple Theorem 3.4 and (3.6); comparison for an L-bounded pants decomposition: Proposition 3.5 and (3.7), p. 107.",
+         "General APL length: MirzGeneral Theorem 4.1; sublevel volumes Section 8."
+       ],
+       "proof_summary": "The cited statements have different index sets and purposes; neither turns an arbitrary twist box into a full moduli fundamental domain.",
+@@ -1308,7 +1309,8 @@
+         {
+           "source_key": "MirzSimple",
+           "pins": [
+-            "pp. 106-108, Theorem 3.4, equations (3.5)-(3.6)"
++            "p. 107, Theorem 3.4, equations (3.5)-(3.6): Dehn-Thurston coordinates and combinatorial length",
++            "p. 107, Proposition 3.5, equation (3.7): geometric-length comparison for an L-bounded pants decomposition"
+           ]
+         },
+         {
+@@ -1886,7 +1888,7 @@
+         "The exceptional simple directions have horocycle measure zero.",
+         "An enlarged gap may contain an isolated simple cusp-to-cusp direction."
+       ],
+-      "proof_summary": "Use McShane Theorem 3 and its measure discussion. Simple exceptions include cusp-to-cusp arcs and rays spiraling toward geodesics or minimal laminations. Geodesic-boundary surfaces have rays exiting through their boundary and need extra gap terms.",
++      "proof_summary": "Use McShane Theorem 3 on p. 4 and the measure-zero paragraph after Corollary 5 on p. 5. Simple exceptions include cusp-to-cusp arcs and rays spiraling toward geodesics or minimal laminations. Geodesic-boundary surfaces have rays exiting through their boundary and need extra gap terms.",
+       "dependencies": [
+         "22.02"
+       ],
+@@ -1900,7 +1902,7 @@
+         {
+           "source_key": "McShanePants",
+           "pins": [
+-            "Theorem 3 and measure paragraph, pp. 3-4",
++            "Theorem 3, p. 4; measure-zero paragraph after Corollary 5, p. 5",
+             "Lemma 7, pp. 8-9; gap functions Sections 8-9"
+           ]
+         }
+@@ -2312,10 +2314,10 @@
+   "chapter_source_snapshots": {
+     "book/chapters/17-unfolding-constant-series.tex": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+     "book/chapters/18-figure-eight-curves.tex": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+-    "book/chapters/19-pants-twists.tex": "9dc4438ad32d76c7508cd6f90e34dc615697bf60cc546b5187e130468213be9d",
++    "book/chapters/19-pants-twists.tex": "f1fd410500ec3c414b4266d706dddd220b0902a546090807e2288384101c2c35",
+     "book/chapters/20-torus-twist-series.tex": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+     "book/chapters/21-cuff-matching.tex": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+-    "book/chapters/22-cusps-orthospectrum.tex": "67cd497d3599bbb6716335a90d6f2f5c71bd191efa96211dd47442c64f3b39e2"
++    "book/chapters/22-cusps-orthospectrum.tex": "b8b3f0568c4667b7ed6116935291c5c71dc3be74ded57c916ac638f6ecd80f66"
+   },
+   "claim_count": 59,
+   "unresolved_limits": [

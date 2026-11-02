@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "ready": false,
+  "unresolved": [
+    "Final fourteen-group code/fixture/report and independent computation approval",
+    "Final mathematical reviews and integrated source/PDF approvals",
+    "Actual source-only direct-child commit and empty Git state",
+    "Exact source/runtime/manuscript hash maps and actual approval-schema pointers",
+    "Final 46-file author/final TeX observation maps and exact active-source change paths; 36 remain active inputs"
+  ],
+  "root": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+  "outer": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01",
+  "python": "/tmp/polyhedra-baseline-20261031/bin/python",
+  "baseline_commit": "151673b1817e66aae493eb7da1be5ddf49adfe0f",
+  "source_commit": null,
+  "source_approval": {
+    "path": "integration-review/approved-source-manifest.json",
+    "identity": null,
+    "required_values": {
+      "/decision": "approve"
+    },
+    "source_sha256_pointer": "/approved_source_sha256",
+    "source_sha256_shape": "mapping"
+  },
+  "computation_approval": {
+    "path": "computation-review/approved-manifest.json",
+    "identity": null,
+    "required_values": {
+      "/decision": "approve"
+    },
+    "runtime_sha256_pointer": "/approved_runtime_sha256",
+    "runtime_sha256_shape": "mapping",
+    "reference_identity_pointer": "/approved_author_result_identity",
+    "reference_manuscript_sha256_pointer": "/approved_author_manuscript_sha256",
+    "expected_groups_pointer": "/approved_groups",
+    "reference_tex_observation_sha256_pointer": "/approved_author_tex_observation_sha256"
+  },
+  "approved_source_sha256": {},
+  "tex_input_sha256": {},
+  "runtime_sha256": {},
+  "reference_manuscript_sha256": {},
+  "manuscript_observation_sha256": {},
+  "allowed_manuscript_changes": [],
+  "replay_guard_sha256": {},
+  "reference": {
+    "path": null,
+    "identity": null
+  },
+  "output": "clean-source/result.json",
+  "expected_groups": null,
+  "expected_check_counts": null,
+  "preparation_note": "Unready template. Pin actual independent receipts and snapshots; never replace a missing approval with a success value.",
+  "reference_tex_observation_sha256": {},
+  "tex_observation_sha256": {},
+  "allowed_tex_observation_changes": []
+}

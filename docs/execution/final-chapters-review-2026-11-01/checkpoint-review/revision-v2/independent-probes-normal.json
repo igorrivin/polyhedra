@@ -1,0 +1,221 @@
+{
+  "scope": "Independent synthetic rejection probes, not a real replay or mathematical check.",
+  "subject_code_sha256": {
+    "checkpoint_lib.py": "9b41c492510a00d9d3b22c5ecb04fcb1de86f8903a906ea4eb4c59ebb6c69c21",
+    "run_clean_replay.py": "26ea5840dd35fbded2ec7023ca86ca37e3ff05eb6e311bbf9eea2749603cdc60",
+    "compare_replays.py": "f4f80cec1f4a76d1e5e290094edfb3152bd9ad4601a56c1e27253750c52d0e8a",
+    "verify_checkpoint.py": "720f239af2e6b22c7f9b9143ede5d69a7f9e300bb4ea8985c6a2e49efe7ad94f"
+  },
+  "probe_count": 25,
+  "unexpected_acceptance_ids": [],
+  "observations": [
+    {
+      "id": "json_underflow",
+      "input_a": "{\"signal\":1e-999}",
+      "input_b": "{\"signal\":0.0}",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "JSON fractional number cannot round-trip without loss: 1e-999"
+    },
+    {
+      "id": "json_near_one",
+      "input_a": "{\"signal\":1.0000000000000001}",
+      "input_b": "{\"signal\":1.0}",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "JSON fractional number cannot round-trip without loss: 1.0000000000000001"
+    },
+    {
+      "id": "json_binary64_integer_boundary",
+      "input_a": "{\"signal\":9007199254740993.0}",
+      "input_b": "{\"signal\":9007199254740992.0}",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "JSON fractional number cannot round-trip without loss: 9007199254740993.0"
+    },
+    {
+      "id": "json_boolean_integer",
+      "input_a": "{\"signal\":true}",
+      "input_b": "{\"signal\":1}",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "scientific JSON differs outside enumerated provenance/timing exclusions"
+    },
+    {
+      "id": "json_string_number",
+      "input_a": "{\"signal\":\"1\"}",
+      "input_b": "{\"signal\":1}",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "scientific JSON differs outside enumerated provenance/timing exclusions"
+    },
+    {
+      "id": "json_integer_float",
+      "input_a": "{\"signal\":1}",
+      "input_b": "{\"signal\":1.0}",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "scientific JSON differs outside enumerated provenance/timing exclusions"
+    },
+    {
+      "id": "json_large_integer_exact",
+      "input_a": "{\"signal\":9007199254740993}",
+      "input_b": "{\"signal\":9007199254740992}",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "scientific JSON differs outside enumerated provenance/timing exclusions"
+    },
+    {
+      "id": "report_raw_underflow",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "JSON fractional number cannot round-trip without loss: 1e-999"
+    },
+    {
+      "id": "report_raw_rounding",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "JSON fractional number cannot round-trip without loss: 1.0000000000000001"
+    },
+    {
+      "id": "report_string_tiny_positive",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "scientific JSON differs outside enumerated provenance/timing exclusions"
+    },
+    {
+      "id": "report_boolean_integer",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "scientific JSON differs outside enumerated provenance/timing exclusions"
+    },
+    {
+      "id": "report_string_number",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "scientific JSON differs outside enumerated provenance/timing exclusions"
+    },
+    {
+      "id": "forged_manuscript_match",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "invalid manuscript-match flag"
+    },
+    {
+      "id": "tex_rows_missing_row",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "unexpected broader TeX observation schema"
+    },
+    {
+      "id": "tex_rows_reordered_rows",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "46-file TeX observation path/order/hash snapshot differs"
+    },
+    {
+      "id": "tex_rows_extra_field",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "unexpected broader TeX observation schema"
+    },
+    {
+      "id": "tex_rows_inactive_hash",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "46-file TeX observation path/order/hash snapshot differs"
+    },
+    {
+      "id": "inactive_exception_with_claimed_approval",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "TeX observation exceptions need approved active source paths"
+    },
+    {
+      "id": "approved_active_tex_delta_exact_fields",
+      "expected_acceptance": true,
+      "accepted": true,
+      "result": {
+        "excluded_exact_JSON_pointers": [
+          "/generated_at_utc",
+          "/runtime/elapsed_seconds",
+          "/source_before/git_commit",
+          "/source_before/git_dirty",
+          "/source_before/git_status_porcelain",
+          "/source_before/live_manuscript_observation/0/current_sha256",
+          "/source_before/live_manuscript_observation/0/matches_accepted_snapshot",
+          "/source_before/live_tex_source_observations/10/sha256",
+          "/source_after/git_commit",
+          "/source_after/git_dirty",
+          "/source_after/git_status_porcelain",
+          "/source_after/live_manuscript_observation/0/current_sha256",
+          "/source_after/live_manuscript_observation/0/matches_accepted_snapshot",
+          "/source_after/live_tex_source_observations/10/sha256"
+        ],
+        "only_two_individual_tex_hash_exclusions": true
+      }
+    },
+    {
+      "id": "symlink_outer_escape",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "path escapes base: outside-link/result.json"
+    },
+    {
+      "id": "unconnected_36_files_without_entry_point",
+      "expected_acceptance": false,
+      "recorded_TeX_input_count": 36,
+      "book_main_exists": false,
+      "command_executed": false,
+      "receipt_checks_passed": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "git command failed: show 51e8273d56612a98182a13ae9bb4521b34e37271:book/main.tex\nfatal: path 'book/main.tex' does not exist in '51e8273d56612a98182a13ae9bb4521b34e37271'\n"
+    },
+    {
+      "id": "numeric_representable_subnormal",
+      "expected_acceptance": true,
+      "accepted": true,
+      "result": []
+    },
+    {
+      "id": "numeric_lossy_subnormal",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "JSON fractional number cannot round-trip without loss: 6e-324"
+    },
+    {
+      "id": "numeric_decimal_formatting_same_value",
+      "expected_acceptance": true,
+      "accepted": true,
+      "result": []
+    },
+    {
+      "id": "numeric_negative_underflow",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "JSON fractional number cannot round-trip without loss: -1e-999"
+    }
+  ]
+}

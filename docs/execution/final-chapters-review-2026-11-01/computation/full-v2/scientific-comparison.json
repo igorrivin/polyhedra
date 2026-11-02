@@ -1,0 +1,313 @@
+{
+  "status": "author CR01/CR02 repair comparison passed; targeted independent recheck still required",
+  "recorded_at_utc": "2026-11-02T04:15:26.369647+00:00",
+  "previous_result_sha256": "618d7125e80813db18b96c55513bd6a0432a1cf7fad63595c6c58d89112b67a4",
+  "current_result_sha256": "5f73fce03e43103dc457570bcd90f4722599b5ac0d67a9b9b88d9e00679f0429",
+  "source_freeze_sha256": "2c89451d7d9f69d18cdd514b8244615498e2d8c5ba6c0963ba63f279c70ed037",
+  "source_set_sha256": "e5bd0a08c64db41e9d6ef5d06d8ef0be8a93bd58a7f4f79e75d7b792098087ed",
+  "scientific_fixture_and_all_groups_exactly_equal": true,
+  "scientific_comparison_method": "Canonical JSON bytes and every nested string compared exactly; huge-exponent strings are never numerically parsed or rounded.",
+  "fixture_file_sha256_unchanged": "3c0f2ba7ffe7715d38e602697a0c7012b1963f653b483f5c7033858670530a1b",
+  "scientific_profile_sha256": "6ae75ae311c390acbb70234f4ea486940bcb46d47b6d9162105eba9f4d691735",
+  "provenance_profile_sha256": "fe470dc45b830a1458fb1bb4a7a5cdc5eb7e499ebe95cd522f4564b3b7b334f2",
+  "per_group": {
+    "Q1_figure_eight": {
+      "canonical_sha256": "ec0e9004dd9347260f83654ed5c72d182ceb79377ff54d4530a871f36fae9a6d",
+      "strings_compared_exactly": 5141
+    },
+    "Q2_klein_geometry": {
+      "canonical_sha256": "6d58f9096a791d4782ac3d82ae1ddd0ad1f1c39dca24a83cdab82ac8de99cf0e",
+      "strings_compared_exactly": 907
+    },
+    "Q3_peripheral_filling": {
+      "canonical_sha256": "268a9a39e0a501c95618a7eb12c01d0c396b373e50f68b867ca8deb0d2eca79e",
+      "strings_compared_exactly": 449
+    },
+    "Q4_charge_curvature": {
+      "canonical_sha256": "9909ec8bc15aba67b2bae492543b2f5cf2d1cbce92746d3fc1b13a71ba840818",
+      "strings_compared_exactly": 782
+    },
+    "G1_torus_unfolding": {
+      "canonical_sha256": "38109a86ff5adc0eb2d3c43ffde8fe53190ebf14d979e9c1332318ebe573febd",
+      "strings_compared_exactly": 372
+    },
+    "G2_pants_traces": {
+      "canonical_sha256": "ad4b675679d7935cbafd33c2bbed3f1fe660be9cd3e7b001823dca17842249da",
+      "strings_compared_exactly": 207
+    },
+    "G3_figure_eight_kernel": {
+      "canonical_sha256": "5e05cf5707524bd7cf4da2fc5324a6ad0ad06cb5718023950dfe763c39b90423",
+      "strings_compared_exactly": 4492
+    },
+    "G4_local_distance": {
+      "canonical_sha256": "d5ea74887d38c8cd4a0ab1c5ffe1c9a095dd5793132b3fd58e02786b92b93581",
+      "strings_compared_exactly": 2111
+    },
+    "G5_seams_torus_holonomy": {
+      "canonical_sha256": "c0db2006ea0476a9ddf20237c5e8d73995ba55d7c22d69a63005cb401e4e8992",
+      "strings_compared_exactly": 4102
+    },
+    "G6_twist_coarea": {
+      "canonical_sha256": "a4c654863902b872d9f0d1eb3dacaa67e7c9133a4533aaa6f28a3e988dcf0b86",
+      "strings_compared_exactly": 4072
+    },
+    "G7_twist_partition": {
+      "canonical_sha256": "53b134961542c1c62ca55629de0e4d26f19ca2a89cbb7b01b4c09776a14a4c7b",
+      "strings_compared_exactly": 10361
+    },
+    "G8_endpoint_matching": {
+      "canonical_sha256": "cd15601e077b437418a9d20251f5bbdf0cf42a827e513ea59f17d6044a022927",
+      "strings_compared_exactly": 138
+    },
+    "G9_cusp_decoration": {
+      "canonical_sha256": "aeb3b6f4f4fcb53806b4bd8e64db09ad8331a40514704fba9eb9eb4a3f2ccb7e",
+      "strings_compared_exactly": 5603
+    },
+    "G10_boundary_shadows": {
+      "canonical_sha256": "fdbfa786e8bb099ffda6ce147429325cf35c796db4d0866388b747e167a0f405",
+      "strings_compared_exactly": 363
+    }
+  },
+  "derived_check_counts": {
+    "exact": 1342,
+    "numerical_formula_comparisons": 4266,
+    "cross_precision_observations": 509
+  },
+  "all_other_result_fields_equal_after_enumerated_metadata_removal": true,
+  "enumerated_result_differences": [
+    {
+      "path": "/generated_at_utc",
+      "before": "2026-11-02T03:42:50.617304+00:00",
+      "after": "2026-11-02T04:13:03.195085+00:00"
+    },
+    {
+      "path": "/runtime/elapsed_seconds",
+      "before": 16.560322042088956,
+      "after": 16.101054291939363
+    },
+    {
+      "path": "/source_before/sources",
+      "before_entries": 20,
+      "after_entries": 21,
+      "detail": "exact per-file before/after identities are recorded in changed_runtime_files"
+    },
+    {
+      "path": "/source_before/source_set_sha256",
+      "before": "1a19c98c7822ac5b22f46db044a70a45880a11470db10d94a5d084564ba7614d",
+      "after": "e5bd0a08c64db41e9d6ef5d06d8ef0be8a93bd58a7f4f79e75d7b792098087ed"
+    },
+    {
+      "path": "/source_before/git_status_porcelain",
+      "before": [
+        " M book/polyhedral_volumes_and_geodesic_identities.tex",
+        "?? book/chapters/10-quantum-introduction.tex",
+        "?? book/chapters/11-quantum-degeneration.tex",
+        "?? book/chapters/17-unfolding-constant-series.tex",
+        "?? book/chapters/18-figure-eight-curves.tex",
+        "?? book/chapters/19-pants-twists.tex",
+        "?? book/chapters/20-torus-twist-series.tex",
+        "?? book/chapters/21-cuff-matching.tex",
+        "?? book/chapters/22-cusps-orthospectrum.tex",
+        "?? book/chapters/32-open-questions.tex",
+        "?? book/chapters/appendix-b-conventions.tex",
+        "?? book/claims/section32-appendixb.json",
+        "?? book/claims/sections10-11.json",
+        "?? book/claims/sections17-22.json",
+        "?? experiments/quantum_geodesics/README.md",
+        "?? experiments/quantum_geodesics/__init__.py",
+        "?? experiments/quantum_geodesics/common.py",
+        "?? experiments/quantum_geodesics/contracts/geodesic-contract-acceptance.json",
+        "?? experiments/quantum_geodesics/contracts/geodesic-source-acceptance.json",
+        "?? experiments/quantum_geodesics/contracts/geodesic-targets.md",
+        "?? experiments/quantum_geodesics/contracts/quantum-mathematical-acceptance.json",
+        "?? experiments/quantum_geodesics/contracts/quantum-source-freeze.json",
+        "?? experiments/quantum_geodesics/contracts/quantum-targets.md",
+        "?? experiments/quantum_geodesics/figure_eight.py",
+        "?? experiments/quantum_geodesics/fixture.json",
+        "?? experiments/quantum_geodesics/geodesic_exact.py",
+        "?? experiments/quantum_geodesics/geometry.py",
+        "?? experiments/quantum_geodesics/kernels.py",
+        "?? experiments/quantum_geodesics/klein.py",
+        "?? experiments/quantum_geodesics/normalization.py",
+        "?? experiments/quantum_geodesics/run.py",
+        "?? experiments/quantum_geodesics/tests/test_geodesic.py",
+        "?? experiments/quantum_geodesics/tests/test_quantum.py",
+        "?? experiments/quantum_geodesics/twist_integrals.py"
+      ],
+      "after": [
+        " M book/polyhedral_volumes_and_geodesic_identities.tex",
+        "?? book/chapters/10-quantum-introduction.tex",
+        "?? book/chapters/11-quantum-degeneration.tex",
+        "?? book/chapters/17-unfolding-constant-series.tex",
+        "?? book/chapters/18-figure-eight-curves.tex",
+        "?? book/chapters/19-pants-twists.tex",
+        "?? book/chapters/20-torus-twist-series.tex",
+        "?? book/chapters/21-cuff-matching.tex",
+        "?? book/chapters/22-cusps-orthospectrum.tex",
+        "?? book/chapters/32-open-questions.tex",
+        "?? book/chapters/appendix-b-conventions.tex",
+        "?? book/claims/section32-appendixb.json",
+        "?? book/claims/sections10-11.json",
+        "?? book/claims/sections17-22.json",
+        "?? experiments/quantum_geodesics/README.md",
+        "?? experiments/quantum_geodesics/__init__.py",
+        "?? experiments/quantum_geodesics/common.py",
+        "?? experiments/quantum_geodesics/contracts/geodesic-contract-acceptance.json",
+        "?? experiments/quantum_geodesics/contracts/geodesic-source-acceptance.json",
+        "?? experiments/quantum_geodesics/contracts/geodesic-targets.md",
+        "?? experiments/quantum_geodesics/contracts/quantum-mathematical-acceptance.json",
+        "?? experiments/quantum_geodesics/contracts/quantum-source-freeze.json",
+        "?? experiments/quantum_geodesics/contracts/quantum-targets.md",
+        "?? experiments/quantum_geodesics/figure_eight.py",
+        "?? experiments/quantum_geodesics/fixture.json",
+        "?? experiments/quantum_geodesics/geodesic_exact.py",
+        "?? experiments/quantum_geodesics/geometry.py",
+        "?? experiments/quantum_geodesics/kernels.py",
+        "?? experiments/quantum_geodesics/klein.py",
+        "?? experiments/quantum_geodesics/normalization.py",
+        "?? experiments/quantum_geodesics/run.py",
+        "?? experiments/quantum_geodesics/tests/test_geodesic.py",
+        "?? experiments/quantum_geodesics/tests/test_quantum.py",
+        "?? experiments/quantum_geodesics/tests/test_validation.py",
+        "?? experiments/quantum_geodesics/twist_integrals.py"
+      ]
+    },
+    {
+      "path": "/source_after/sources",
+      "before_entries": 20,
+      "after_entries": 21,
+      "detail": "exact per-file before/after identities are recorded in changed_runtime_files"
+    },
+    {
+      "path": "/source_after/source_set_sha256",
+      "before": "1a19c98c7822ac5b22f46db044a70a45880a11470db10d94a5d084564ba7614d",
+      "after": "e5bd0a08c64db41e9d6ef5d06d8ef0be8a93bd58a7f4f79e75d7b792098087ed"
+    },
+    {
+      "path": "/source_after/git_status_porcelain",
+      "before": [
+        " M book/polyhedral_volumes_and_geodesic_identities.tex",
+        "?? book/chapters/10-quantum-introduction.tex",
+        "?? book/chapters/11-quantum-degeneration.tex",
+        "?? book/chapters/17-unfolding-constant-series.tex",
+        "?? book/chapters/18-figure-eight-curves.tex",
+        "?? book/chapters/19-pants-twists.tex",
+        "?? book/chapters/20-torus-twist-series.tex",
+        "?? book/chapters/21-cuff-matching.tex",
+        "?? book/chapters/22-cusps-orthospectrum.tex",
+        "?? book/chapters/32-open-questions.tex",
+        "?? book/chapters/appendix-b-conventions.tex",
+        "?? book/claims/section32-appendixb.json",
+        "?? book/claims/sections10-11.json",
+        "?? book/claims/sections17-22.json",
+        "?? experiments/quantum_geodesics/README.md",
+        "?? experiments/quantum_geodesics/__init__.py",
+        "?? experiments/quantum_geodesics/common.py",
+        "?? experiments/quantum_geodesics/contracts/geodesic-contract-acceptance.json",
+        "?? experiments/quantum_geodesics/contracts/geodesic-source-acceptance.json",
+        "?? experiments/quantum_geodesics/contracts/geodesic-targets.md",
+        "?? experiments/quantum_geodesics/contracts/quantum-mathematical-acceptance.json",
+        "?? experiments/quantum_geodesics/contracts/quantum-source-freeze.json",
+        "?? experiments/quantum_geodesics/contracts/quantum-targets.md",
+        "?? experiments/quantum_geodesics/figure_eight.py",
+        "?? experiments/quantum_geodesics/fixture.json",
+        "?? experiments/quantum_geodesics/geodesic_exact.py",
+        "?? experiments/quantum_geodesics/geometry.py",
+        "?? experiments/quantum_geodesics/kernels.py",
+        "?? experiments/quantum_geodesics/klein.py",
+        "?? experiments/quantum_geodesics/normalization.py",
+        "?? experiments/quantum_geodesics/run.py",
+        "?? experiments/quantum_geodesics/tests/test_geodesic.py",
+        "?? experiments/quantum_geodesics/tests/test_quantum.py",
+        "?? experiments/quantum_geodesics/twist_integrals.py"
+      ],
+      "after": [
+        " M book/polyhedral_volumes_and_geodesic_identities.tex",
+        "?? book/chapters/10-quantum-introduction.tex",
+        "?? book/chapters/11-quantum-degeneration.tex",
+        "?? book/chapters/17-unfolding-constant-series.tex",
+        "?? book/chapters/18-figure-eight-curves.tex",
+        "?? book/chapters/19-pants-twists.tex",
+        "?? book/chapters/20-torus-twist-series.tex",
+        "?? book/chapters/21-cuff-matching.tex",
+        "?? book/chapters/22-cusps-orthospectrum.tex",
+        "?? book/chapters/32-open-questions.tex",
+        "?? book/chapters/appendix-b-conventions.tex",
+        "?? book/claims/section32-appendixb.json",
+        "?? book/claims/sections10-11.json",
+        "?? book/claims/sections17-22.json",
+        "?? experiments/quantum_geodesics/README.md",
+        "?? experiments/quantum_geodesics/__init__.py",
+        "?? experiments/quantum_geodesics/common.py",
+        "?? experiments/quantum_geodesics/contracts/geodesic-contract-acceptance.json",
+        "?? experiments/quantum_geodesics/contracts/geodesic-source-acceptance.json",
+        "?? experiments/quantum_geodesics/contracts/geodesic-targets.md",
+        "?? experiments/quantum_geodesics/contracts/quantum-mathematical-acceptance.json",
+        "?? experiments/quantum_geodesics/contracts/quantum-source-freeze.json",
+        "?? experiments/quantum_geodesics/contracts/quantum-targets.md",
+        "?? experiments/quantum_geodesics/figure_eight.py",
+        "?? experiments/quantum_geodesics/fixture.json",
+        "?? experiments/quantum_geodesics/geodesic_exact.py",
+        "?? experiments/quantum_geodesics/geometry.py",
+        "?? experiments/quantum_geodesics/kernels.py",
+        "?? experiments/quantum_geodesics/klein.py",
+        "?? experiments/quantum_geodesics/normalization.py",
+        "?? experiments/quantum_geodesics/run.py",
+        "?? experiments/quantum_geodesics/tests/test_geodesic.py",
+        "?? experiments/quantum_geodesics/tests/test_quantum.py",
+        "?? experiments/quantum_geodesics/tests/test_validation.py",
+        "?? experiments/quantum_geodesics/twist_integrals.py"
+      ]
+    }
+  ],
+  "changed_runtime_files": [
+    {
+      "path": "experiments/quantum_geodesics/README.md",
+      "before": {
+        "path": "experiments/quantum_geodesics/README.md",
+        "sha256": "879a91c4c4269fcfb69b3cf67fa9ddda8e9123c76dad75cbb09d3d03a47f2a94",
+        "bytes": 8057
+      },
+      "after": {
+        "path": "experiments/quantum_geodesics/README.md",
+        "sha256": "22921e4545c1b4bb0fa0ac4c1e031b77140f2e3f3a51cda93ef4f67c05493b6a",
+        "bytes": 8627
+      }
+    },
+    {
+      "path": "experiments/quantum_geodesics/run.py",
+      "before": {
+        "path": "experiments/quantum_geodesics/run.py",
+        "sha256": "bc0deb4e8c010075211c3e5f04c5672bce39c1b20d802a0587f90f0d94a4bb04",
+        "bytes": 15927
+      },
+      "after": {
+        "path": "experiments/quantum_geodesics/run.py",
+        "sha256": "618f17d3aec05e2a6de637c851e6ccfabfde50088662f5198f165eebd8a5254a",
+        "bytes": 15695
+      }
+    },
+    {
+      "path": "experiments/quantum_geodesics/tests/test_validation.py",
+      "before": null,
+      "after": {
+        "path": "experiments/quantum_geodesics/tests/test_validation.py",
+        "sha256": "9ad40c44d0607cf919335c9b0ec7dd4e0985a1dc3b2a2f3513f2cc8c35e2b8b8",
+        "bytes": 8936
+      }
+    }
+  ],
+  "runtime_file_count_before": 23,
+  "runtime_file_count_after": 24,
+  "all_mathematical_modules_and_local_provenance_copies_unchanged": true,
+  "all_guarded_existing_dependency_files_unchanged": true,
+  "full_source_before_after_freeze_equal": true,
+  "preserved_prior_author_and_reviewer_evidence_unchanged": true,
+  "reused_alternate_oracle_evidence": {
+    "status": "v1 independent evidence preserved and eligible for reuse by unchanged fixture/math hashes; not a fresh oracle run",
+    "script_sha256": "b74db119da8348f6d8e063c44e9dc354f56437e621f911b76f5c5e5b1bb3ee50",
+    "result_sha256": "40968ce6b0ecfaad83eb7d3203d4703e7c9f9a25d0bfd72cf6df92224f449a67",
+    "exact_checks": 400,
+    "numerical_checks": 1322
+  }
+}

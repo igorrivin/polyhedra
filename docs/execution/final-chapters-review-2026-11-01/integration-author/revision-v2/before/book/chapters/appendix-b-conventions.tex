@@ -1,0 +1,79 @@
+\section{Conventions at a glance}
+\label{app:conventions}
+
+These conventions locate the normalizations used in the chapter formulas.
+Their geometric and analytic hypotheses remain those of the referenced
+statements; a convention does not assert an existence or convergence theorem.
+
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}
+ >{\raggedright\arraybackslash}p{0.64\textwidth}@{}}
+\toprule
+Quantity & Convention in this monograph\\
+\midrule
+\endhead
+Surface/ambient hyperbolic curvature & $-1$; the area-one rescaling $\widehat g=A^{-1}g$ has curvature $-A$; \eqref{eq:unitareanormalization}.\\
+Complex hyperbolic curvature & Holomorphic sectional curvature $-1$, with $\omega_{\mathrm{CH}}=-2i\partial\bar\partial\log\mathcal A$; \eqref{eq:CHpotential}.\\
+Flat weights & Deficit $2\pi\mu_i$, opening $2\pi(1-\mu_i)$, $0<\mu_i<1$, $\sum_i\mu_i=2$; \eqref{eq:flatweights}.\\
+Three volume scales & $A$ is boundary area, $W$ is enclosed three-volume, and $V_{\WP}$ is moduli volume; Section~\ref{sec:quantumdegeneration}.\\
+Flat WP limit & $A^{-1}\omega_{\WP}\to\omega_{\mathrm{CH}}/2$, locally on open moduli at fixed weights; \eqref{eq:localWPCHlimit}.\\
+WP form & $\sum_j\dd\ell_j\wedge\dd\tau_j$, with full twist period $\ell_j$; \eqref{eq:fn}. For the raw Beltrami pairing $H$, the complex form is $i\sum_{j,k}H_{j\bar k}\dd t_j\wedge\dd\bar t_k$; Section~\ref{sec:conventions}.\\
+Boundary components & Labeled, unparametrized, with lengths fixed before integration; a zero length denotes a cusp; Section~\ref{sec:conventions}.\\
+Volumes & Orbifold/stack volumes include ineffective stabilizers; $V=\int\omega_{\WP}^{d}/d!$; Section~\ref{sec:conventions}.\\
+Punctured-torus volume & $V_{1,1}(0)=\pi^2/12$; effective volume $\pi^2/6$; \eqref{eq:basevolumes}.\\
+Four-punctured-sphere volume & $V_{0,4}(0)=2\pi^2$; the direct integral includes both labeled orientation sheets; \eqref{eq:v04direct}.\\
+Cone parameter & Opening $\theta$, formal length $L=i\theta$, deficit $2\pi-\theta$. Geometric volumes require positive area and the specified chamber corrections; \eqref{eq:gb}, \eqref{eq:conev04}.\\
+Ideal tetrahedral $z$ & Cross-ratio of ambient ideal vertices; it need not equal the intrinsic conformal cross-ratio; Section~\ref{sec:tetrahedron}.\\
+Exterior and interior angles & Exterior $\theta_e$ is a dual metric edge length, with sum $2\pi$ around an ideal vertex; \eqref{eq:rivinangles2}. Schl\"afli uses interior $\alpha_e$: $\dd W=-\frac12\sum_e\ell_e\dd\alpha_e$; \eqref{eq:Schlafli}.\\
+Lambda length & $e^{\delta/2}$ for signed decorated distance $\delta$, with no additional $\sqrt2$; \eqref{eq:lambdagauge}, \eqref{eq:cusplambda}.\\
+Planar Hessian and gauge & Leading--trailing coordinates have $u|_B=0$ and $-D_u^2\mathcal V=2L_{II}$; \eqref{eq:ipolyAngleCoordinates}, \eqref{eq:ipolyHessian}. The boundary response is grounded or taken modulo constants; \eqref{eq:ipolyDtN}.\\
+Compact quantum integers & $[n]_{q_{\rm alg}}=(q_{\rm alg}^n-q_{\rm alg}^{-n})/(q_{\rm alg}-q_{\rm alg}^{-1})$; the compact root is $e^{\pi i/r}$; \eqref{eq:introqinteger}.\\
+Colored Jones and volume roots & Reduced $J_N(\text{unknot};q_J)=1$; form the polynomial before $q_J=e^{2\pi i/N}$. Chen--Yang RT/TV use their separate odd-$r$ root convention; \eqref{eq:introknotvolume}, \eqref{eq:introclosedvolume}.\\
+Chen--Murakami $6j$ & $\xi_r=e^{2\pi i/r}$, $r$ odd, source $q=\xi_r^2$ and $q_{\rm alg}=\xi_r$. The refined prefactor in~\eqref{eq:quantum6jstructure} requires the exact label sequence stated there, beyond the leading-limit hypotheses.\\
+Continuous semiclassical scale & $h=2\pi b^2$, volume-action $\hbar_{\rm vol}=\pi b^2=h/2$; \eqref{eq:TVvolumehbar}. These differ from $\hbar_r=4\pi i/r$ in~\eqref{eq:introRTgrowth}.\\
+Regular Barnes normalization & Upward contour with measure $\dd w/i$; the Airy expansion is for the pole-cleared $\widehat{\mathcal R}_b$ and bounded real $\zeta$; \eqref{eq:realregularsymbol}, \eqref{eq:clearedregularsymbol}, \eqref{eq:quantumAirytheorem}.\\
+Liouville charges and marks & Physics $\alpha_i=\mu_i/(2b)$, probabilistic $\beta_i=2\alpha_i$, $Q=b+b^{-1}$; marks $0,1,z,\infty$ carry labels $1,2,3,4$; \eqref{eq:introLiouvilleparameters}, \eqref{eq:screeningparameters}.\\
+Relative torsion normalization & The $B=-\tr$ peripheral factor in~\eqref{eq:torsionGoldman} is specific to that bilinear form; torsion, Goldman form and peripheral factors must be rescaled together.\\
+Closed-curve sums & Unoriented free-homotopy classes unless stated otherwise; primitivity and iteration are specified separately; Sections~\ref{sec:figures}, \ref{sec:coefficientdistributions}.\\
+Positive geometric trace & $t_\gamma=2\cosh(\ell_\gamma/2)=|\tr\widetilde\rho(\gamma)|$ for a hyperbolic element; compatible lift signs are retained in trace identities; \eqref{eq:figuretrace}.\\
+Coefficient basis & $T_C=\prod_{\alpha\subset C}\tr\rho(\alpha)$, $T_\varnothing=1$, with unnegated traces and parallel multiplicities; \eqref{eq:coeffbasis}.\\
+Twisted Selberg sum & Closed genus-$g\ge2$ surface; unoriented primitive $\delta$ and iterate $k$ have weight $\ell_\delta/\sinh(k\ell_\delta/2)$; \eqref{eq:coefftwistedSelberg}.\\
+Coefficient heat transform & $H_C(t)=e^{-t/4}(4\pi t)^{-1/2}\int e^{-L^2/(4t)}\,\dd\sigma_C(L)$; \eqref{eq:coeffheatdefinition}.\\
+Coefficient Laplace parameter & Kernel $e^{-sL}$; product parameter $v=s+1/2$; \eqref{eq:coeffLaplacedefinition}, \eqref{eq:coeffproductderivative}.\\
+Total multicurve count & All nonzero integral laminations, including disconnected and parallel supports; \eqref{eq:countall}.\\
+Primitive lamination & Gcd of distinct-support weights is one; connectedness is an additional condition; \eqref{eq:countprimitive}.\\
+Support variable $z$ & Exponent counts distinct geodesic supports, not parallel copies; \eqref{eq:countsupportpartition}.\\
+One-crossing torus curves & Primitive curves with one transverse double point; each simple class gives two N-type and one H-type labels, including equal-length multiplicity; \eqref{eq:allfigureidentity}.\\
+Basmajian sum & Coefficient $2$ for oriented orthogeodesics, $4$ for unoriented arcs counted once; \eqref{eq:basmajian}.\\
+Cusp orthospectrum & Simple cusp-to-cusp arcs, signed truncation $d$ at horocycle length $H$: $H\mapsto kH$ gives $d\mapsto d-2\log k$; $e^{-d}/H^2$ is invariant; \eqref{eq:toruscusplambda}.\\
+Cusp-normal rays & The almost-everywhere intersection/gap discussion is for complete finite-area surfaces without geodesic boundary; Section~\ref{sec:cusps}.\\
+Cuff phase matching & Use one common cuff coordinate after reversing one induced orientation: $(s,p)\mapsto(s+\tau,p)$, with $p$ the signed tangential unit velocity; \eqref{eq:endpointmatch}, \eqref{eq:momentummatch}.\\
+Peripheral logarithms & PSL$_2(\CC)$ multiplier logs $u,v$; eigenvalues $m=e^{u/2}$, $l=e^{v/2}$ with fixed lift signs; smooth filling $pu+qv=2\pi i$; \eqref{eq:dehnholonomy}, \eqref{eq:dehncone}.\\
+Peripheral polarization & $\Omega=\frac12\dd v\wedge\dd u$, $P=v/2$, $[\widehat P,\widehat u]=\hbar$; $\widehat l$ shifts $u$ by $\hbar$; \eqref{eq:introNZpolarization}, \eqref{eq:introcommutator}.\\
+Real filling source & Adding $jLx$ fixes the conjugate source $j=\ell_{\rm core}/2$; the cone angle is $Lx$; \eqref{eq:realdehnlegendre}, \eqref{eq:dehnsourcecore}.\\
+Holomorphic filling action & $F^{\prime}=v$ and $\Delta V=\frac12\Im\mathcal S^*$, with $\mathcal S$ as in~\eqref{eq:dehnsurgeryaction}; \eqref{eq:dehnexactcriticalvolume}.\\
+Norm-ball gauge and counts & $A_B$ counts all nonzero signed lattice points, $P_B$ the primitive ones, boundary included. The shortest gauge value is one; $\lambda_\gamma=\ell_\gamma/s_X$ for systole $s_X$; Sections~\ref{subsec:mobiusmodulus}, \ref{sec:arithmeticgeometry}.\\
+Flow and area scales & $g_t=\operatorname{diag}(e^t,e^{-t})$; for $h=\dim_{\CC}\mathcal Q$, area cutoff $L$ has exponent $h$ and period scale $\sqrt L$ has exponent $2h$; \eqref{eq:pairgeometryflow}, Section~\ref{subsec:pairquotient}.\\
+Weighted correlations & $C_{F,G}(t)=\int F(G\circ g_t)\,\dd\mu$ is bilinear; use $\overline F$ for the Hermitian version. The full-rate converse assumes the count for $(h+V)G$; Theorem~\ref{thm:twopointfullrate}.\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+\noindent\textbf{Source conventions.}
+The local form scale is fixed by~\eqref{eq:fn} and the raw Beltrami
+pairing in Section~\ref{sec:conventions}. Ineffective stabilizer weights
+are a separate operation. Penner's logarithmic triangle form is used
+with the ordered-endpoint conversion from Mondello in
+Section~\ref{sec:tetrahedron}; the direct tetrahedral integral
+\eqref{eq:v04direct} and trace density~\eqref{eq:frickedensity} give
+independent normalization checks within the monograph.
+The Delaunay-form constants of~\cite[Sections~3.2.3--3.2.4]{CDE}
+are therefore not imported unchanged into~\eqref{eq:penner}.
+The metric-map formula~\eqref{eq:polyhedralpartition} uses Budd's
+disintegrated measure and label-and-orientation-preserving
+automorphism weights~\cite[Section~1.1 and Corollary~2]{Budd}.
+The claim ledger \path{claims/section32-appendixb.json} records the
+source-statement audits inherited from the earlier reviewed chapters,
+the current convention dependencies, and the finite computational
+support. It does not claim a fresh complete proof review of those
+external sources.

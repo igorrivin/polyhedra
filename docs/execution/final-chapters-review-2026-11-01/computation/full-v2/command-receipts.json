@@ -1,0 +1,77 @@
+{
+  "status": "author driver repair tests and fresh full run passed; no independent approval claimed",
+  "recorded_at_utc": "2026-11-02T04:15:26.378654+00:00",
+  "commands": [
+    {
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/quantum_geodesics/tests",
+        "-v"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "exit_code": 0,
+      "log": "tests.log"
+    },
+    {
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/quantum_geodesics/tests",
+        "-v"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "exit_code": 0,
+      "log": "tests-optimized.log"
+    },
+    {
+      "argv": [
+        "/opt/anaconda3/bin/ruff",
+        "check",
+        "experiments/quantum_geodesics"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "exit_code": 0,
+      "log": "ruff.log"
+    },
+    {
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "-O",
+        "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/quantum_geodesics/run.py",
+        "--output",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/computation/full-v2/author-result-70-110.json"
+      ],
+      "cwd": "/private/tmp",
+      "exit_code": 0,
+      "log": "author-run.log"
+    }
+  ],
+  "tests_from_logs": {
+    "tests.log": 50,
+    "tests-optimized.log": 50
+  },
+  "check_counts_from_records": {
+    "exact": 1342,
+    "numerical_formula_comparisons": 4266,
+    "cross_precision_observations": 509
+  },
+  "runtime": {
+    "python_version": "3.12.11",
+    "python_executable": "/tmp/polyhedra-baseline-20261031/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "mpmath_version": "1.3.0",
+    "sympy_version": "1.14.0",
+    "elapsed_seconds": 16.101054291939363
+  },
+  "source_set_sha256": "e5bd0a08c64db41e9d6ef5d06d8ef0be8a93bd58a7f4f79e75d7b792098087ed",
+  "result_sha256": "5f73fce03e43103dc457570bcd90f4722599b5ac0d67a9b9b88d9e00679f0429",
+  "comparison_sha256": "b21ec307b97b11b73e83a2d28f37d6c870cf00a286492a1f9cf044b2df7ce617"
+}

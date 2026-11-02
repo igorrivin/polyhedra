@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "optimized": true,
+  "records": [
+    {
+      "name": "wrong_quantum_acceptance_hash",
+      "path": [
+        "formula_contracts",
+        "quantum",
+        "review_acceptance_sha256"
+      ],
+      "replacement": "0000000000000000000000000000000000000000000000000000000000000000",
+      "rejected": false
+    },
+    {
+      "name": "wrong_quantum_source_freeze_hash",
+      "path": [
+        "formula_contracts",
+        "quantum",
+        "accepted_source_freeze_sha256"
+      ],
+      "replacement": "0000000000000000000000000000000000000000000000000000000000000000",
+      "rejected": false
+    },
+    {
+      "name": "wrong_geodesic_contract_acceptance_hash",
+      "path": [
+        "formula_contracts",
+        "geodesic",
+        "review_acceptance_sha256"
+      ],
+      "replacement": "0000000000000000000000000000000000000000000000000000000000000000",
+      "rejected": false
+    },
+    {
+      "name": "wrong_geodesic_source_acceptance_hash",
+      "path": [
+        "formula_contracts",
+        "geodesic",
+        "final_source_review_sha256"
+      ],
+      "replacement": "0000000000000000000000000000000000000000000000000000000000000000",
+      "rejected": false
+    },
+    {
+      "name": "wrong_geodesic_accepted_source_set_hash",
+      "path": [
+        "formula_contracts",
+        "geodesic",
+        "accepted_source_set_sha256"
+      ],
+      "replacement": "0000000000000000000000000000000000000000000000000000000000000000",
+      "rejected": false
+    },
+    {
+      "name": "wrong_accepted_manuscript_pin",
+      "path": [
+        "accepted_manuscript_sha256",
+        "book/chapters/10-quantum-introduction.tex"
+      ],
+      "replacement": "0000000000000000000000000000000000000000000000000000000000000000",
+      "rejected": false
+    }
+  ],
+  "scope": "Only in-memory fixture changes; valid original acceptance copies and canonical files untouched."
+}

@@ -1,0 +1,357 @@
+--- before/experiments/quantum_geodesics/run.py
++++ after/experiments/quantum_geodesics/run.py
+@@ -25,8 +25,17 @@
+     figure_eight, geodesic_exact, geometry, kernels, klein, normalization, twist_integrals,
+ )
+ from experiments.quantum_geodesics.common import (  # noqa: E402
+-    context, integer, json_exact, precision_comparison, require,
++    json_exact, precision_comparison, require,
+ )
++
++
++# Independently frozen required-fixture-profile-v1.json, reviewed as CR01/CR02.
++# SHA256 uses UTF-8 canonical JSON with sorted keys, separators (",", ":"), no newline.
++# These pins are not calculated from a fresh read of the mutable fixture.
++SCIENTIFIC_PROFILE_SHA256 = "6ae75ae311c390acbb70234f4ea486940bcb46d47b6d9162105eba9f4d691735"
++PROVENANCE_PROFILE_SHA256 = "fe470dc45b830a1458fb1bb4a7a5cdc5eb7e499ebe95cd522f4564b3b7b334f2"
++SCIENTIFIC_PROFILE_KEYS = ("precisions", "guard_digits", "quantum", "geodesic")
++PROVENANCE_PROFILE_KEYS = ("formula_contracts", "accepted_manuscript_sha256", "guarded_dependency_sha256")
+ 
+ 
+ def parse_fixture(text):
+@@ -49,83 +58,72 @@
+     return parse_fixture((HERE/"fixture.json").read_text())
+ 
+ 
++def profile_digest(profile):
++    try:
++        encoded = json.dumps(profile, sort_keys=True, separators=(",", ":"), allow_nan=False).encode()
++    except (TypeError, ValueError) as error:
++        raise ValueError("fixture profile must contain finite JSON data") from error
++    return sha256(encoded).hexdigest()
++
++
++def validate_local_provenance(fixture):
++    """Bind accepted declarations to local copies, never to mutable live sources."""
++    contracts = fixture["formula_contracts"]
++    bindings = (
++        ("quantum", "sha256", "quantum-targets.md"),
++        ("quantum", "review_acceptance_sha256", "quantum-mathematical-acceptance.json"),
++        ("quantum", "accepted_source_freeze_sha256", "quantum-source-freeze.json"),
++        ("geodesic", "sha256", "geodesic-targets.md"),
++        ("geodesic", "review_acceptance_sha256", "geodesic-contract-acceptance.json"),
++        ("geodesic", "final_source_review_sha256", "geodesic-source-acceptance.json"),
++    )
++    copies = {}
++    for group, field, filename in bindings:
++        data = (HERE/"contracts"/filename).read_bytes()
++        if sha256(data).hexdigest() != contracts[group][field]:
++            raise ValueError(f"accepted local provenance copy changed: {filename}")
++        if filename.endswith(".json"):
++            copies[filename] = json.loads(data)
++    quantum = copies["quantum-mathematical-acceptance.json"]
++    geodesic_contract = copies["geodesic-contract-acceptance.json"]
++    geodesic_source = copies["geodesic-source-acceptance.json"]
++    declared_source_set = contracts["geodesic"]["accepted_source_set_sha256"]
++    if (quantum["accepted_author_freeze_sha256"] != contracts["quantum"]["accepted_source_freeze_sha256"]
++            or geodesic_contract["contract_sha256"] != contracts["geodesic"]["sha256"]
++            or geodesic_contract["independent_finite_evidence"]["sha256"] != contracts["geodesic"]["independent_probe_result_sha256"]
++            or geodesic_source["companion_contract_acceptance_sha256"] != contracts["geodesic"]["review_acceptance_sha256"]
++            or geodesic_source["companion_contract_sha256"] != contracts["geodesic"]["sha256"]
++            or geodesic_source["canonical_source_set_sha256"] != declared_source_set
++            or profile_digest(geodesic_source["canonical_sources_sha256"]) != declared_source_set):
++        raise ValueError("accepted local contract/source provenance links disagree")
++    accepted = {**quantum["accepted_canonical_sha256"], **quantum["all_live_dependency_sha256"],
++                **geodesic_source["canonical_sources_sha256"]}
++    for path, pin in fixture["accepted_manuscript_sha256"].items():
++        if accepted.get(path) != pin:
++            raise ValueError(f"accepted manuscript pin disagrees with local provenance: {path}")
++
++
+ def validate_fixture(fixture):
+     keys = {"schema_version", "scope", "precisions", "guard_digits", "formula_contracts",
+             "accepted_manuscript_sha256", "guarded_dependency_sha256", "quantum", "geodesic"}
+     if (not isinstance(fixture, dict) or set(fixture) != keys
+             or type(fixture["schema_version"]) is not int or fixture["schema_version"] != 1):
+         raise ValueError("unexpected fixture keys or version")
+-    if fixture["precisions"] != [70, 110]:
+-        raise ValueError("accepted fixture requires the 70/110 decimal-digit pair")
+-    integer(fixture["guard_digits"], 0, 80)
+-    for digits in fixture["precisions"]:
+-        context(digits, fixture["guard_digits"])
+-    for contract in fixture["formula_contracts"].values():
+-        path = (HERE/contract["path"]).resolve()
+-        if not path.is_relative_to(HERE/"contracts"):
+-            raise ValueError("formula contracts must be local immutable provenance copies")
+-        require(sha256(path.read_bytes()).hexdigest() == contract["sha256"], "formula contract hash changed")
+-    quantum = fixture["quantum"]
+-    if set(quantum) != {"figure_eight_N", "klein", "peripheral", "charges"}:
+-        raise ValueError("all four quantum groups are required")
+-    if quantum["figure_eight_N"] != list(range(2, 41))+[60, 120]:
+-        raise ValueError("complete accepted finite figure-eight N list required")
+-    if (len(quantum["klein"]["polyhedra"]) != 3 or quantum["klein"]["truncation_orders"] != [0, 2, 4]
+-            or quantum["klein"]["radii"] != ["1/20", "1/10", "1/5"]):
+-        raise ValueError("complete accepted Klein fixture required")
+-    if not quantum["peripheral"]["slopes"] or not quantum["peripheral"]["shift_points"]:
+-        raise ValueError("nonempty peripheral fixtures required")
+-    if not quantum["charges"]["weights"] or not quantum["charges"]["b_squared"]:
+-        raise ValueError("nonempty charge fixtures required")
+-    validate_geodesic_fixture(fixture["geodesic"])
++    if not isinstance(fixture["scope"], str) or not fixture["scope"].strip():
++        raise ValueError("fixture scope must be a nonempty description")
++    scientific = {key: fixture[key] for key in SCIENTIFIC_PROFILE_KEYS}
++    if profile_digest(scientific) != SCIENTIFIC_PROFILE_SHA256:
++        raise ValueError("complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage")
++    provenance = {key: fixture[key] for key in PROVENANCE_PROFILE_KEYS}
++    if profile_digest(provenance) != PROVENANCE_PROFILE_SHA256:
++        raise ValueError("complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required")
++    validate_local_provenance(fixture)
+     return fixture
+ 
+ 
+-def validate_geodesic_fixture(data):
+-    expected = {"guard_digits", "unfolding", "traces", "kernel", "distance", "holonomy", "integrals",
+-                "partition", "matching", "cusp", "shadow"}
+-    if not isinstance(data, dict) or set(data) != expected:
+-        raise ValueError("all ten accepted geodesic fixture groups are required")
+-    if data["guard_digits"] != {"default": 20, "kernel": 100, "holonomy": 80}:
+-        raise ValueError("declared geodesic conditioning guards must be retained")
+-    required = [
+-        (data["unfolding"]["cutoffs"], [12, 30, 60]),
+-        (data["traces"]["simple_traces"], ["3", "4", "5", "10"]),
+-        (data["kernel"]["inputs"], ["6.00000000000000000001", "6.01", "7", "9", "11", "30", "1000"]),
+-        (data["kernel"]["depths"], [4, 12, 40, 180]),
+-        (data["kernel"]["simple_traces"], data["traces"]["simple_traces"]),
+-        (data["distance"]["distances"], [".03", ".5", "2", "7"]),
+-        (data["distance"]["endpoints"], [["0", "0"], ["1", "-2"], ["-3", "2"], [".1", ".2"], ["4", "4"]]),
+-        (data["holonomy"]["seams"], [[".2", ".7", "0"], ["1", "1", "0"], ["1", "2", "3"], ["8", ".5", "4"]]),
+-        (data["holonomy"]["cuffs"], [".2", "1", "3"]),
+-        (data["holonomy"]["boundaries"], ["0", ".7", "4"]),
+-        (data["holonomy"]["twists"], ["-4", "-.5", "0", ".5", "4"]),
+-        (data["holonomy"]["small_cuff"], "1e-12"),
+-        (data["holonomy"]["small_boundaries"], ["0", ".7"]),
+-        (data["holonomy"]["small_twists"], ["0", ".5"]),
+-        (data["integrals"]["powers"], [".5", "1", "2", "3", "6"]),
+-        (data["integrals"]["cutoffs"], [12, 30, 60]),
+-        (data["integrals"]["sublevel_offsets"], [".1", "2", "6"]),
+-        (data["partition"]["cuffs"], [".1", ".7", "2", "7"]),
+-        (data["partition"]["boundaries"], ["0", "1", "3"]),
+-        (data["partition"]["twist_ratios"], ["-.5", "-.2", "0", ".37", ".5"]),
+-        (data["partition"]["depths"], [0, 1, 4, 12, 50]),
+-        (data["partition"]["large_twists"], ["100", "1000"]),
+-        (data["cusp"]["parabolic_q"], ["1", "2", "3"]),
+-        (data["cusp"]["pants_traces"], ["2", "3", "5"]),
+-        (data["cusp"]["simple_traces"], ["3", "4", "5", "10"]),
+-        (data["cusp"]["horocycles"], [".1", "1", "6", "20"]),
+-        (data["cusp"]["triangle_lambdas"], [["1", "1", "1"], ["1", "2", "3"], ["2", "3", "5"]]),
+-        (data["shadow"]["distances"], [".1", ".7", "2", "8", "100", "1000"]),
+-    ]
+-    if any(actual != expected_value for actual, expected_value in required):
+-        raise ValueError("required geodesic conditioning/coverage fixtures were changed or truncated")
+-    for key in expected-{"guard_digits"}:
+-        if not data[key] or any(value == [] for value in data[key].values()):
+-            raise ValueError("nonempty geodesic fixture groups required")
+-
+-
+ def source_state(fixture):
++    validate_fixture(fixture)
++
+     def git(*args):
+         return subprocess.check_output(["git", "-C", str(ROOT), *args], text=True).rstrip("\n")
+ 
+--- before/experiments/quantum_geodesics/README.md
++++ after/experiments/quantum_geodesics/README.md
+@@ -13,6 +13,8 @@
+ Output must be a new file in an existing directory outside the companion source. Initial author results belong under the outer `../execution/final-chapters-review-2026-11-01/computation/`. The prospective reviewed result is `artifacts/quantum_geodesics/result.json`. No result is computed or written on import; the driver works from another working directory. Explicit exceptions remain active under `python -O`. Serialization happens before exclusive file creation, so failed identities or nonfinite data cannot produce a successful result.
+ 
+ The fixture parser rejects duplicate keys, NaN/infinity tokens and JSON floating numbers; exact noninteger inputs must be strings. Result status is stage-neutral: author, reviewer and final replay receipts assign the evidence stage separately.
++
++The full driver pins the complete independently reviewed scientific and provenance profiles, so missing, duplicated or substituted cases and altered declarations fail before computation. It binds all six existing local contract/review/source copies and the accepted source map to those preserved records. These accepted pins are distinct from live manuscript observations: later authorized prose integration may change a live hash without changing the accepted contract identity. Focused lower-level functions still accept the bounded subsets used by regression tests.
+ 
+ The stable groups are:
+ 
+--- before/experiments/quantum_geodesics/tests/test_validation.py
++++ after/experiments/quantum_geodesics/tests/test_validation.py
+@@ -0,0 +1,182 @@
++"""CR01/CR02: complete accepted coverage and locally bound provenance gates."""
++
++from copy import deepcopy
++from pathlib import Path
++import sys
++import tempfile
++import unittest
++from unittest.mock import patch
++
++
++HERE = Path(__file__).resolve().parents[1]
++ROOT = HERE.parents[1]
++if str(ROOT) not in sys.path:
++    sys.path.insert(0, str(ROOT))
++
++from experiments.quantum_geodesics import run  # noqa: E402
++
++
++class ProfileValidationTests(unittest.TestCase):
++    def reject_before_calculation(self, data):
++        """A bad profile cannot reach source collection, calculate, or result writing."""
++        with tempfile.TemporaryDirectory() as directory:
++            output = Path(directory)/"must-not-exist.json"
++            with patch.object(run, "load_fixture", return_value=data):
++                with patch.object(run, "source_state") as state:
++                    with patch.object(run, "calculate") as calculate:
++                        with self.assertRaises(ValueError):
++                            run.main(["--output", str(output)])
++                        state.assert_not_called()
++                        calculate.assert_not_called()
++            self.assertFalse(output.exists())
++
++    def altered(self, mutate):
++        data = run.load_fixture()
++        mutate(data)
++        self.reject_before_calculation(data)
++
++    def test_CR01_missing_negative_q_slope(self):
++        self.altered(lambda f: f["quantum"]["peripheral"]["slopes"].pop())
++
++    def test_CR01_three_duplicate_simplexes_replace_both_boxes(self):
++        self.altered(lambda f: f["quantum"]["klein"].update(
++            polyhedra=[deepcopy(f["quantum"]["klein"]["polyhedra"][0]) for _ in range(3)]))
++
++    def test_CR01_large_partition_replaced_by_N_zero(self):
++        self.altered(lambda f: f["geodesic"]["partition"].update(large_partition={"a": "7", "tau": "0", "N": 0}))
++
++    def test_CR01_missing_shifted_nonstationary_case(self):
++        self.altered(lambda f: f["geodesic"]["matching"]["stationarity"].pop())
++
++    def test_CR01_missing_inconsistent_endpoint_spacing(self):
++        self.altered(lambda f: f["geodesic"]["matching"]["endpoint_lists"].pop())
++
++    def test_CR02_missing_formula_contracts(self):
++        self.altered(lambda f: f.update(formula_contracts={}))
++
++    def test_CR02_missing_accepted_source_map(self):
++        self.altered(lambda f: f.update(accepted_manuscript_sha256={}))
++
++    def test_CR02_wrong_quantum_acceptance_hash(self):
++        self.altered(lambda f: f["formula_contracts"]["quantum"].update(review_acceptance_sha256="0"*64))
++
++    def test_CR02_wrong_quantum_source_freeze_hash(self):
++        self.altered(lambda f: f["formula_contracts"]["quantum"].update(accepted_source_freeze_sha256="0"*64))
++
++    def test_CR02_wrong_geodesic_contract_acceptance_hash(self):
++        self.altered(lambda f: f["formula_contracts"]["geodesic"].update(review_acceptance_sha256="0"*64))
++
++    def test_CR02_wrong_geodesic_source_acceptance_hash(self):
++        self.altered(lambda f: f["formula_contracts"]["geodesic"].update(final_source_review_sha256="0"*64))
++
++    def test_CR02_wrong_geodesic_accepted_source_set_hash(self):
++        self.altered(lambda f: f["formula_contracts"]["geodesic"].update(accepted_source_set_sha256="0"*64))
++
++    def test_CR02_wrong_accepted_manuscript_pin(self):
++        self.altered(lambda f: f["accepted_manuscript_sha256"].update({"book/chapters/10-quantum-introduction.tex": "0"*64}))
++
++    def test_unchanged_complete_profile_succeeds_independent_of_dict_order(self):
++        data = run.load_fixture()
++        self.assertIs(run.validate_fixture(data), data)
++        reordered = {key: data[key] for key in reversed(data)}
++        self.assertIs(run.validate_fixture(reordered), reordered)
++        self.assertEqual(len(data["accepted_manuscript_sha256"]), 14)
++        self.assertEqual(len(data["guarded_dependency_sha256"]), 3)
++
++    def test_omissions_and_duplicates_cover_other_scientific_grids(self):
++        paths = [
++            ("Q1", ("quantum", "figure_eight_N")),
++            ("Q3_shifts", ("quantum", "peripheral", "shift_points")),
++            ("Q4", ("quantum", "charges", "weights")),
++            ("G1", ("geodesic", "unfolding", "alternating_depths")),
++            ("G2", ("geodesic", "traces", "shear_seeds")),
++            ("G3", ("geodesic", "kernel", "inputs")),
++            ("G4", ("geodesic", "distance", "endpoints")),
++            ("G5", ("geodesic", "holonomy", "large_cuff_minima")),
++            ("G6", ("geodesic", "integrals", "pairs")),
++            ("G7_windows", ("geodesic", "partition", "uniform_windows")),
++            ("G9", ("geodesic", "cusp", "decoration_rescalings")),
++            ("G10", ("geodesic", "shadow", "distances")),
++        ]
++        for name, path in paths:
++            for operation in ("omit", "duplicate"):
++                with self.subTest(group=name, operation=operation):
++                    data = run.load_fixture()
++                    value = data
++                    for key in path:
++                        value = value[key]
++                    if operation == "omit":
++                        value.pop()
++                    else:
++                        value.append(deepcopy(value[0]))
++                    self.reject_before_calculation(data)
++
++    def test_substitutions_and_extra_profile_fields_rejected(self):
++        mutations = [
++            lambda f: f["geodesic"]["matching"]["endpoint_lists"][0]["left_windings"].__setitem__(0, 1),
++            lambda f: f["geodesic"]["guard_digits"].update(kernel=99),
++            lambda f: f["quantum"]["charges"].update(extra_unreviewed_weights=[]),
++            lambda f: f["quantum"].pop("charges"),
++            lambda f: f.update(precisions=[70.0, 110]),
++        ]
++        for index, mutate in enumerate(mutations):
++            with self.subTest(mutation=index):
++                self.altered(mutate)
++
++    def test_missing_extra_and_altered_provenance_fields_rejected(self):
++        mutations = [
++            lambda f: f["formula_contracts"].pop("geodesic"),
++            lambda f: f["formula_contracts"].update(unreviewed={}),
++            lambda f: f["formula_contracts"]["quantum"].update(review_evidence_manifest_sha256="0"*64),
++            lambda f: f["formula_contracts"]["geodesic"].update(independent_probe_result_sha256="0"*64),
++            lambda f: f["formula_contracts"]["quantum"].update(path="../outside.md"),
++            lambda f: f["accepted_manuscript_sha256"].pop("book/chapters/11-quantum-degeneration.tex"),
++            lambda f: f["accepted_manuscript_sha256"].update({"book/chapters/unreviewed.tex": "0"*64}),
++            lambda f: f["guarded_dependency_sha256"].pop("experiments/quantum_surgery/exact.py"),
++            lambda f: f["guarded_dependency_sha256"].update({"experiments/quantum_surgery/exact.py": "0"*64}),
++            lambda f: f["guarded_dependency_sha256"].update({"unreviewed.py": "0"*64}),
++        ]
++        for index, mutate in enumerate(mutations):
++            with self.subTest(mutation=index):
++                self.altered(mutate)
++
++    def test_all_six_local_provenance_files_are_bound_by_bytes(self):
++        filenames = ["quantum-targets.md", "quantum-mathematical-acceptance.json", "quantum-source-freeze.json",
++                     "geodesic-targets.md", "geodesic-contract-acceptance.json", "geodesic-source-acceptance.json"]
++        original = Path.read_bytes
++        for filename in filenames:
++            target = HERE/"contracts"/filename
++
++            def altered_bytes(path):
++                data = original(path)
++                return data+b"\n" if path == target else data
++
++            with self.subTest(filename=filename), patch.object(Path, "read_bytes", altered_bytes):
++                self.reject_before_calculation(run.load_fixture())
++
++    def test_source_observer_rejects_malformed_accepted_map(self):
++        data = run.load_fixture()
++        data["accepted_manuscript_sha256"] = {}
++        with self.assertRaises(ValueError):
++            run.source_state(data)
++
++    def test_later_live_manuscript_edits_remain_separate_observations(self):
++        data = run.load_fixture()
++        relative = "book/chapters/10-quantum-introduction.tex"
++        target = ROOT/relative
++        original = Path.read_bytes
++
++        def changed_live_source(path):
++            contents = original(path)
++            return contents+b"\n% later authorized computational prose pointer\n" if path == target else contents
++
++        with patch.object(Path, "read_bytes", changed_live_source):
++            state = run.source_state(data)
++        observation = next(row for row in state["live_manuscript_observation"] if row["path"] == relative)
++        self.assertEqual(observation["accepted_contract_source_sha256"], data["accepted_manuscript_sha256"][relative])
++        self.assertFalse(observation["matches_accepted_snapshot"])
++        self.assertNotEqual(observation["current_sha256"], observation["accepted_contract_source_sha256"])
++
++
++if __name__ == "__main__":
++    unittest.main()

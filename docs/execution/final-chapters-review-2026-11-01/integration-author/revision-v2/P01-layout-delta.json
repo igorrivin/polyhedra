@@ -1,0 +1,11 @@
+{
+  "finding": "P01",
+  "path": "book/chapters/19-pants-twists.tex",
+  "label": "eq:localdistancehessian",
+  "before": "\\begin{equation}\n \\nabla^2D_d=\\frac{\\sinh^2d}{S^3}\n \\begin{pmatrix}\n z\\cosh^2v&-\\cosh u\\cosh v\\\\\n -\\cosh u\\cosh v&z\\cosh^2u\n \\end{pmatrix},\\qquad\n \\det\\nabla^2D_d=\n \\frac{\\sinh^4d\\cosh^2u\\cosh^2v}{S^4}>0.\n \\label{eq:localdistancehessian}\n\\end{equation}",
+  "after": "\\begin{equation}\n \\begin{aligned}\n \\nabla^2D_d&=\\frac{\\sinh^2d}{S^3}\n \\begin{pmatrix}\n z\\cosh^2v&-\\cosh u\\cosh v\\\\\n -\\cosh u\\cosh v&z\\cosh^2u\n \\end{pmatrix},\\\\\n \\det\\nabla^2D_d&=\n \\frac{\\sinh^4d\\cosh^2u\\cosh^2v}{S^4}>0.\n \\end{aligned}\n \\label{eq:localdistancehessian}\n\\end{equation}",
+  "mathematical_tokens_equal_after_removing_layout_only_tokens": true,
+  "numbered_equation_count_before": 1,
+  "numbered_equation_count_after": 1,
+  "PDF_rebuild_not_performed": true
+}

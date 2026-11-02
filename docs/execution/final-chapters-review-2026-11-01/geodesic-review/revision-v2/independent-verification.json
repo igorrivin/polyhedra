@@ -1,0 +1,149 @@
+{
+  "status": "passed_independent_targeted_revision_verification",
+  "script_sha256": "fac2232133a24ead126a03d1ede1223ce99b401f61f6ecb567514b8a01bd7e1a",
+  "recorded_at_utc": "2026-11-02T03:39:20.941748+00:00",
+  "canonical_sources_sha256": {
+    "book/chapters/17-unfolding-constant-series.tex": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+    "book/chapters/18-figure-eight-curves.tex": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+    "book/chapters/19-pants-twists.tex": "f1fd410500ec3c414b4266d706dddd220b0902a546090807e2288384101c2c35",
+    "book/chapters/20-torus-twist-series.tex": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+    "book/chapters/21-cuff-matching.tex": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+    "book/chapters/22-cusps-orthospectrum.tex": "b8b3f0568c4667b7ed6116935291c5c71dc3be74ded57c916ac638f6ecd80f66",
+    "book/claims/sections17-22.json": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+  },
+  "canonical_source_set_sha256": "b35883296116e459a702e0bc28b4f429875e2cec2cffb22910f02e5d0e8e87f9",
+  "changed_paths": [
+    "book/chapters/19-pants-twists.tex",
+    "book/chapters/22-cusps-orthospectrum.tex",
+    "book/claims/sections17-22.json"
+  ],
+  "source_delta_exactly_two_reviewed_replacements": true,
+  "ledger_changed_leaves": [
+    {
+      "path": [
+        "sources",
+        8,
+        "pins"
+      ],
+      "before": [
+        "pp. 106-108, Theorem 3.4, equations (3.5)-(3.6)"
+      ],
+      "after": [
+        "p. 107, Theorem 3.4, equations (3.5)-(3.6): Dehn-Thurston coordinates and combinatorial length",
+        "p. 107, Proposition 3.5, equation (3.7): geometric-length comparison for an L-bounded pants decomposition"
+      ]
+    },
+    {
+      "path": [
+        "sources",
+        8,
+        "checked"
+      ],
+      "before": "Dehn-Thurston simple-multicurve data and length estimates include intersections and twists.",
+      "after": "Theorem 3.4 and equations (3.5)-(3.6) give Dehn-Thurston coordinates and combinatorial length for simple multicurves. Proposition 3.5, equation (3.7), compares combinatorial and geometric length for an L-bounded pants decomposition."
+    },
+    {
+      "path": [
+        "sources",
+        11,
+        "pins",
+        0
+      ],
+      "before": "Theorem 3 and measure paragraph, pp. 3-4",
+      "after": "Theorem 3, p. 4; measure-zero paragraph after Corollary 5, p. 5"
+    },
+    {
+      "path": [
+        "claims",
+        23,
+        "source_pins",
+        0,
+        "pins",
+        0
+      ],
+      "before": "pp. 106-108, Theorem 3.4, equations (3.5)-(3.6)",
+      "after": "p. 107, Theorem 3.4, equations (3.5)-(3.6): Dehn-Thurston coordinates and combinatorial length"
+    },
+    {
+      "path": [
+        "claims",
+        31,
+        "hypotheses",
+        0
+      ],
+      "before": "Simple multicurves for Dehn-Thurston comparisons; general closed curves for asymptotically piecewise-linear length.",
+      "after": "Simple multicurves for Dehn-Thurston coordinates and length comparison; the comparison assumes an L-bounded pants decomposition. General closed curves for asymptotically piecewise-linear length."
+    },
+    {
+      "path": [
+        "claims",
+        31,
+        "exact_formulas",
+        0
+      ],
+      "before": "Simple comparison: MirzSimple Theorem 3.4 and (3.6).",
+      "after": "Simple coordinates and combinatorial length: MirzSimple Theorem 3.4 and (3.6); comparison for an L-bounded pants decomposition: Proposition 3.5 and (3.7), p. 107."
+    },
+    {
+      "path": [
+        "claims",
+        31,
+        "source_pins",
+        0,
+        "pins"
+      ],
+      "before": [
+        "pp. 106-108, Theorem 3.4, equations (3.5)-(3.6)"
+      ],
+      "after": [
+        "p. 107, Theorem 3.4, equations (3.5)-(3.6): Dehn-Thurston coordinates and combinatorial length",
+        "p. 107, Proposition 3.5, equation (3.7): geometric-length comparison for an L-bounded pants decomposition"
+      ]
+    },
+    {
+      "path": [
+        "claims",
+        49,
+        "proof_summary"
+      ],
+      "before": "Use McShane Theorem 3 and its measure discussion. Simple exceptions include cusp-to-cusp arcs and rays spiraling toward geodesics or minimal laminations. Geodesic-boundary surfaces have rays exiting through their boundary and need extra gap terms.",
+      "after": "Use McShane Theorem 3 on p. 4 and the measure-zero paragraph after Corollary 5 on p. 5. Simple exceptions include cusp-to-cusp arcs and rays spiraling toward geodesics or minimal laminations. Geodesic-boundary surfaces have rays exiting through their boundary and need extra gap terms."
+    },
+    {
+      "path": [
+        "claims",
+        49,
+        "source_pins",
+        1,
+        "pins",
+        0
+      ],
+      "before": "Theorem 3 and measure paragraph, pp. 3-4",
+      "after": "Theorem 3, p. 4; measure-zero paragraph after Corollary 5, p. 5"
+    },
+    {
+      "path": [
+        "chapter_source_snapshots",
+        "book/chapters/19-pants-twists.tex"
+      ],
+      "before": "9dc4438ad32d76c7508cd6f90e34dc615697bf60cc546b5187e130468213be9d",
+      "after": "f1fd410500ec3c414b4266d706dddd220b0902a546090807e2288384101c2c35"
+    },
+    {
+      "path": [
+        "chapter_source_snapshots",
+        "book/chapters/22-cusps-orthospectrum.tex"
+      ],
+      "before": "67cd497d3599bbb6716335a90d6f2f5c71bd191efa96211dd47442c64f3b39e2",
+      "after": "b8b3f0568c4667b7ed6116935291c5c71dc3be74ded57c916ac638f6ecd80f66"
+    }
+  ],
+  "initial_author_and_review_evidence_unchanged": true,
+  "all_v2_snapshot_and_evidence_hashes_match": true,
+  "claims": 59,
+  "owned_labels": 54,
+  "contract_unchanged": true,
+  "contract_acceptance_unchanged": true,
+  "no_scientific_rerun": true,
+  "no_canonical_edits": true
+}

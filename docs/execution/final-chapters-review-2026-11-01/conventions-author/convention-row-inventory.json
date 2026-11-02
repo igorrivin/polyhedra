@@ -1,0 +1,303 @@
+[
+  {
+    "id": "appB.curvature",
+    "row_number": 1,
+    "quantity": "Surface/ambient hyperbolic curvature",
+    "text": "$-1$; the area-one rescaling $\\widehat g=A^{-1}g$ has curvature $-A$; \\eqref{eq:unitareanormalization}.",
+    "audit_note": "Fixed positive-area geometric family; rescaling the metric changes curvature."
+  },
+  {
+    "id": "appB.ch_curvature",
+    "row_number": 2,
+    "quantity": "Complex hyperbolic curvature",
+    "text": "Holomorphic sectional curvature $-1$, with $\\omega_{\\mathrm{CH}}=-2i\\partial\\bar\\partial\\log\\mathcal A$; \\eqref{eq:CHpotential}.",
+    "audit_note": "The period-area potential fixes the local form scale."
+  },
+  {
+    "id": "appB.flat_weights",
+    "row_number": 3,
+    "quantity": "Flat weights",
+    "text": "Deficit $2\\pi\\mu_i$, opening $2\\pi(1-\\mu_i)$, $0<\\mu_i<1$, $\\sum_i\\mu_i=2$; \\eqref{eq:flatweights}.",
+    "audit_note": "Weights and noncolliding marked points are fixed in a local limit; lattice monodromy requires additional hypotheses."
+  },
+  {
+    "id": "appB.volume_scales",
+    "row_number": 4,
+    "quantity": "Three volume scales",
+    "text": "$A$ is boundary area, $W$ is enclosed three-volume, and $V_{\\WP}$ is moduli volume; Section~\\ref{sec:quantumdegeneration}.",
+    "audit_note": "The same letter may have a separate explicitly declared local meaning; no area/volume/moduli-measure identification."
+  },
+  {
+    "id": "appB.wp_limit",
+    "row_number": 5,
+    "quantity": "Flat WP limit",
+    "text": "$A^{-1}\\omega_{\\WP}\\to\\omega_{\\mathrm{CH}}/2$, locally on open moduli at fixed weights; \\eqref{eq:localWPCHlimit}.",
+    "audit_note": "The reviewed result is locally uniform away from collisions, not uniform as weights approach a wall."
+  },
+  {
+    "id": "appB.wp_form",
+    "row_number": 6,
+    "quantity": "WP form",
+    "text": "$\\sum_j\\dd\\ell_j\\wedge\\dd\\tau_j$, with full twist period $\\ell_j$; \\eqref{eq:fn}. For the raw Beltrami pairing $H$, the complex form is $i\\sum_{j,k}H_{j\\bar k}\\dd t_j\\wedge\\dd\\bar t_k$; Section~\\ref{sec:conventions}.",
+    "audit_note": "Opposite twist direction changes the signed wedge convention; ineffective stabilizers do not rescale the local form."
+  },
+  {
+    "id": "appB.boundaries",
+    "row_number": 7,
+    "quantity": "Boundary components",
+    "text": "Labeled, unparametrized, with lengths fixed before integration; a zero length denotes a cusp; Section~\\ref{sec:conventions}.",
+    "audit_note": "No quotient by all label permutations is implicit."
+  },
+  {
+    "id": "appB.stack_volumes",
+    "row_number": 8,
+    "quantity": "Volumes",
+    "text": "Orbifold/stack volumes include ineffective stabilizers; $V=\\int\\omega_{\\WP}^{d}/d!$; Section~\\ref{sec:conventions}.",
+    "audit_note": "Generic ineffective stabilizer order divides the effective volume independently of a symplectic scale change."
+  },
+  {
+    "id": "appB.torus_volume",
+    "row_number": 9,
+    "quantity": "Punctured-torus volume",
+    "text": "$V_{1,1}(0)=\\pi^2/12$; effective volume $\\pi^2/6$; \\eqref{eq:basevolumes}.",
+    "audit_note": "One factor two comes from the ineffective involution."
+  },
+  {
+    "id": "appB.sphere_volume",
+    "row_number": 10,
+    "quantity": "Four-punctured-sphere volume",
+    "text": "$V_{0,4}(0)=2\\pi^2$; the direct integral includes both labeled orientation sheets; \\eqref{eq:v04direct}.",
+    "audit_note": "A one-sheet tetrahedron integral is half this total."
+  },
+  {
+    "id": "appB.cone_parameter",
+    "row_number": 11,
+    "quantity": "Cone parameter",
+    "text": "Opening $\\theta$, formal length $L=i\\theta$, deficit $2\\pi-\\theta$. Geometric volumes require positive area and the specified chamber corrections; \\eqref{eq:gb}, \\eqref{eq:conev04}.",
+    "audit_note": "Unrestricted polynomial substitution is not the large-cone volume theorem."
+  },
+  {
+    "id": "appB.ambient_crossratio",
+    "row_number": 12,
+    "quantity": "Ideal tetrahedral $z$",
+    "text": "Cross-ratio of ambient ideal vertices; it need not equal the intrinsic conformal cross-ratio; Section~\\ref{sec:tetrahedron}.",
+    "audit_note": "The lambda-gauge computation uses the ambient coordinate."
+  },
+  {
+    "id": "appB.angles",
+    "row_number": 13,
+    "quantity": "Exterior and interior angles",
+    "text": "Exterior $\\theta_e$ is a dual metric edge length, with sum $2\\pi$ around an ideal vertex; \\eqref{eq:rivinangles2}. Schl\\\"afli uses interior $\\alpha_e$: $\\dd W=-\\frac12\\sum_e\\ell_e\\dd\\alpha_e$; \\eqref{eq:Schlafli}.",
+    "audit_note": "Exterior angles are pi minus interior angles; the variation sign changes accordingly."
+  },
+  {
+    "id": "appB.lambda_length",
+    "row_number": 14,
+    "quantity": "Lambda length",
+    "text": "$e^{\\delta/2}$ for signed decorated distance $\\delta$, with no additional $\\sqrt2$; \\eqref{eq:lambdagauge}, \\eqref{eq:cusplambda}.",
+    "audit_note": "Horocycle normalization is fixed before comparing numerical lambda lengths."
+  },
+  {
+    "id": "appB.planar_gauge",
+    "row_number": 15,
+    "quantity": "Planar Hessian and gauge",
+    "text": "Leading--trailing coordinates have $u|_B=0$ and $-D_u^2\\mathcal V=2L_{II}$; \\eqref{eq:ipolyAngleCoordinates}, \\eqref{eq:ipolyHessian}. The boundary response is grounded or taken modulo constants; \\eqref{eq:ipolyDtN}.",
+    "audit_note": "The coordinates are not logarithmic conformal scale factors. A determinant or inverse must specify the nondegenerate space."
+  },
+  {
+    "id": "appB.quantum_integer",
+    "row_number": 16,
+    "quantity": "Compact quantum integers",
+    "text": "$[n]_{q_{\\rm alg}}=(q_{\\rm alg}^n-q_{\\rm alg}^{-n})/(q_{\\rm alg}-q_{\\rm alg}^{-1})$; the compact root is $e^{\\pi i/r}$; \\eqref{eq:introqinteger}.",
+    "audit_note": "Admissible spins, triangle inequalities, integral spin sums and the root truncation are part of the finite theory."
+  },
+  {
+    "id": "appB.jones",
+    "row_number": 17,
+    "quantity": "Colored Jones and volume roots",
+    "text": "Reduced $J_N(\\text{unknot};q_J)=1$; form the polynomial before $q_J=e^{2\\pi i/N}$. Chen--Yang RT/TV use their separate odd-$r$ root convention; \\eqref{eq:introknotvolume}, \\eqref{eq:introclosedvolume}.",
+    "audit_note": "The top color at the Jones specialization is not a retained simple label of the corresponding compact fusion theory."
+  },
+  {
+    "id": "appB.cm_labels",
+    "row_number": 18,
+    "quantity": "Chen--Murakami $6j$",
+    "text": "$\\xi_r=e^{2\\pi i/r}$, $r$ odd, source $q=\\xi_r^2$ and $q_{\\rm alg}=\\xi_r$. The refined prefactor in~\\eqref{eq:quantum6jstructure} requires the exact label sequence stated there, beyond the leading-limit hypotheses.",
+    "audit_note": "Fixed hyperbolic shape with an ideal/ultraideal vertex; the refined rational-angle odd-numerator/denominator sequence is not generic rounding or a shrinking compact family."
+  },
+  {
+    "id": "appB.continuous_scale",
+    "row_number": 19,
+    "quantity": "Continuous semiclassical scale",
+    "text": "$h=2\\pi b^2$, volume-action $\\hbar_{\\rm vol}=\\pi b^2=h/2$; \\eqref{eq:TVvolumehbar}. These differ from $\\hbar_r=4\\pi i/r$ in~\\eqref{eq:introRTgrowth}.",
+    "audit_note": "The symbol h in the Airy calculation differs from the entropy/dimension symbol in the mixing chapters."
+  },
+  {
+    "id": "appB.barnes",
+    "row_number": 20,
+    "quantity": "Regular Barnes normalization",
+    "text": "Upward contour with measure $\\dd w/i$; the Airy expansion is for the pole-cleared $\\widehat{\\mathcal R}_b$ and bounded real $\\zeta$; \\eqref{eq:realregularsymbol}, \\eqref{eq:clearedregularsymbol}, \\eqref{eq:quantumAirytheorem}.",
+    "audit_note": "The displayed error is additive; arbitrary six-label families and unbounded transition parameters are excluded."
+  },
+  {
+    "id": "appB.liouville",
+    "row_number": 21,
+    "quantity": "Liouville charges and marks",
+    "text": "Physics $\\alpha_i=\\mu_i/(2b)$, probabilistic $\\beta_i=2\\alpha_i$, $Q=b+b^{-1}$; marks $0,1,z,\\infty$ carry labels $1,2,3,4$; \\eqref{eq:introLiouvilleparameters}, \\eqref{eq:screeningparameters}.",
+    "audit_note": "The one-screening first moment and finite period fusion are distinct from infinite spectral continuation with a tail majorant."
+  },
+  {
+    "id": "appB.torsion",
+    "row_number": 22,
+    "quantity": "Relative torsion normalization",
+    "text": "The $B=-\\tr$ peripheral factor in~\\eqref{eq:torsionGoldman} is specific to that bilinear form; torsion, Goldman form and peripheral factors must be rescaled together.",
+    "audit_note": "The fixed-trace density is obtained by disintegration, not by pulling an unrestricted top form directly to the leaf."
+  },
+  {
+    "id": "appB.closed_curves",
+    "row_number": 23,
+    "quantity": "Closed-curve sums",
+    "text": "Unoriented free-homotopy classes unless stated otherwise; primitivity and iteration are specified separately; Sections~\\ref{sec:figures}, \\ref{sec:coefficientdistributions}.",
+    "audit_note": "Equal lengths do not merge distinct topological classes."
+  },
+  {
+    "id": "appB.positive_trace",
+    "row_number": 24,
+    "quantity": "Positive geometric trace",
+    "text": "$t_\\gamma=2\\cosh(\\ell_\\gamma/2)=|\\tr\\widetilde\\rho(\\gamma)|$ for a hyperbolic element; compatible lift signs are retained in trace identities; \\eqref{eq:figuretrace}.",
+    "audit_note": "Positive geometric traces must not be substituted for globally signed character traces inside a skein identity."
+  },
+  {
+    "id": "appB.coefficient_basis",
+    "row_number": 25,
+    "quantity": "Coefficient basis",
+    "text": "$T_C=\\prod_{\\alpha\\subset C}\\tr\\rho(\\alpha)$, $T_\\varnothing=1$, with unnegated traces and parallel multiplicities; \\eqref{eq:coeffbasis}.",
+    "audit_note": "These functions are not pointwise positive on SU(2). The Kauffman minus-trace convention differs by a component sign."
+  },
+  {
+    "id": "appB.selberg",
+    "row_number": 26,
+    "quantity": "Twisted Selberg sum",
+    "text": "Closed genus-$g\\ge2$ surface; unoriented primitive $\\delta$ and iterate $k$ have weight $\\ell_\\delta/\\sinh(k\\ell_\\delta/2)$; \\eqref{eq:coefftwistedSelberg}.",
+    "audit_note": "Cusps/boundary require additional trace terms; orienting primitive classes changes the paired factor."
+  },
+  {
+    "id": "appB.heat",
+    "row_number": 27,
+    "quantity": "Coefficient heat transform",
+    "text": "$H_C(t)=e^{-t/4}(4\\pi t)^{-1/2}\\int e^{-L^2/(4t)}\\,\\dd\\sigma_C(L)$; \\eqref{eq:coeffheatdefinition}.",
+    "audit_note": "The signed coefficient measure and the spectral 1/4 shift use the closed curvature-minus-one convention."
+  },
+  {
+    "id": "appB.laplace",
+    "row_number": 28,
+    "quantity": "Coefficient Laplace parameter",
+    "text": "Kernel $e^{-sL}$; product parameter $v=s+1/2$; \\eqref{eq:coeffLaplacedefinition}, \\eqref{eq:coeffproductderivative}.",
+    "audit_note": "The proved half-plane for nonempty coefficient transforms is Re(s)>1; formal coefficient extraction after continuation requires separate control."
+  },
+  {
+    "id": "appB.total_laminations",
+    "row_number": 29,
+    "quantity": "Total multicurve count",
+    "text": "All nonzero integral laminations, including disconnected and parallel supports; \\eqref{eq:countall}.",
+    "audit_note": "This is not a count of connected simple curves alone."
+  },
+  {
+    "id": "appB.primitive_lamination",
+    "row_number": 30,
+    "quantity": "Primitive lamination",
+    "text": "Gcd of distinct-support weights is one; connectedness is an additional condition; \\eqref{eq:countprimitive}.",
+    "audit_note": "Primitive weighted laminations and primitive closed geodesics have different definitions."
+  },
+  {
+    "id": "appB.support_variable",
+    "row_number": 31,
+    "quantity": "Support variable $z$",
+    "text": "Exponent counts distinct geodesic supports, not parallel copies; \\eqref{eq:countsupportpartition}.",
+    "audit_note": "A finite Fourier projection does not supply a uniform global coefficient extraction estimate."
+  },
+  {
+    "id": "appB.one_crossing",
+    "row_number": 32,
+    "quantity": "One-crossing torus curves",
+    "text": "Primitive curves with one transverse double point; each simple class gives two N-type and one H-type labels, including equal-length multiplicity; \\eqref{eq:allfigureidentity}.",
+    "audit_note": "Hyperelliptic and non-hyperelliptic types are both retained."
+  },
+  {
+    "id": "appB.basmajian",
+    "row_number": 33,
+    "quantity": "Basmajian sum",
+    "text": "Coefficient $2$ for oriented orthogeodesics, $4$ for unoriented arcs counted once; \\eqref{eq:basmajian}.",
+    "audit_note": "Orientation counts the two endpoint shadows; this is a geodesic-boundary identity."
+  },
+  {
+    "id": "appB.cusp",
+    "row_number": 34,
+    "quantity": "Cusp orthospectrum",
+    "text": "Simple cusp-to-cusp arcs, signed truncation $d$ at horocycle length $H$: $H\\mapsto kH$ gives $d\\mapsto d-2\\log k$; $e^{-d}/H^2$ is invariant; \\eqref{eq:toruscusplambda}.",
+    "audit_note": "Signed decorations may overlap; this does not assert that arbitrarily large horocycles are embedded."
+  },
+  {
+    "id": "appB.cusp_rays",
+    "row_number": 35,
+    "quantity": "Cusp-normal rays",
+    "text": "The almost-everywhere intersection/gap discussion is for complete finite-area surfaces without geodesic boundary; Section~\\ref{sec:cusps}.",
+    "audit_note": "Boundary cases need the additional rays exiting through geodesic boundary and their gaps."
+  },
+  {
+    "id": "appB.phase",
+    "row_number": 36,
+    "quantity": "Cuff phase matching",
+    "text": "Use one common cuff coordinate after reversing one induced orientation: $(s,p)\\mapsto(s+\\tau,p)$, with $p$ the signed tangential unit velocity; \\eqref{eq:endpointmatch}, \\eqref{eq:momentummatch}.",
+    "audit_note": "Matching endpoint positions alone does not match directions or close a geodesic."
+  },
+  {
+    "id": "appB.peripheral",
+    "row_number": 37,
+    "quantity": "Peripheral logarithms",
+    "text": "PSL$_2(\\CC)$ multiplier logs $u,v$; eigenvalues $m=e^{u/2}$, $l=e^{v/2}$ with fixed lift signs; smooth filling $pu+qv=2\\pi i$; \\eqref{eq:dehnholonomy}, \\eqref{eq:dehncone}.",
+    "audit_note": "Changing to eigenvalue logarithms would halve the smooth-filling right side."
+  },
+  {
+    "id": "appB.polarization",
+    "row_number": 38,
+    "quantity": "Peripheral polarization",
+    "text": "$\\Omega=\\frac12\\dd v\\wedge\\dd u$, $P=v/2$, $[\\widehat P,\\widehat u]=\\hbar$; $\\widehat l$ shifts $u$ by $\\hbar$; \\eqref{eq:introNZpolarization}, \\eqref{eq:introcommutator}.",
+    "audit_note": "The half-log coordinate gives l m = exp(hbar/2) m l; no q-independent identification of all quantum parameters is imposed."
+  },
+  {
+    "id": "appB.real_source",
+    "row_number": 39,
+    "quantity": "Real filling source",
+    "text": "Adding $jLx$ fixes the conjugate source $j=\\ell_{\\rm core}/2$; the cone angle is $Lx$; \\eqref{eq:realdehnlegendre}, \\eqref{eq:dehnsourcecore}.",
+    "audit_note": "Fixing the source and fixing the cone angle are Legendre-dual operations."
+  },
+  {
+    "id": "appB.holomorphic_action",
+    "row_number": 40,
+    "quantity": "Holomorphic filling action",
+    "text": "$F^{\\prime}=v$ and $\\Delta V=\\frac12\\Im\\mathcal S^*$, with $\\mathcal S$ as in~\\eqref{eq:dehnsurgeryaction}; \\eqref{eq:dehnexactcriticalvolume}.",
+    "audit_note": "This holomorphic classical normalization does not supply the conditional quantum surgery input."
+  },
+  {
+    "id": "appB.gauge_counts",
+    "row_number": 41,
+    "quantity": "Norm-ball gauge and counts",
+    "text": "$A_B$ counts all nonzero signed lattice points, $P_B$ the primitive ones, boundary included. The shortest gauge value is one; $\\lambda_\\gamma=\\ell_\\gamma/s_X$ for systole $s_X$; Sections~\\ref{subsec:mobiusmodulus}, \\ref{sec:arithmeticgeometry}.",
+    "audit_note": "An unoriented torus simple-curve count is half the signed primitive count for the symmetric ball; campaign hyperbolic cutoffs must be rescaled."
+  },
+  {
+    "id": "appB.flow_scale",
+    "row_number": 42,
+    "quantity": "Flow and area scales",
+    "text": "$g_t=\\operatorname{diag}(e^t,e^{-t})$; for $h=\\dim_{\\CC}\\mathcal Q$, area cutoff $L$ has exponent $h$ and period scale $\\sqrt L$ has exponent $2h$; \\eqref{eq:pairgeometryflow}, Section~\\ref{subsec:pairquotient}.",
+    "audit_note": "The principal-stratum weighted kernel and the nonsquare (2,2) marked-torus model have distinct invariant measures."
+  },
+  {
+    "id": "appB.correlation",
+    "row_number": 43,
+    "quantity": "Weighted correlations",
+    "text": "$C_{F,G}(t)=\\int F(G\\circ g_t)\\,\\dd\\mu$ is bilinear; use $\\overline F$ for the Hermitian version. The full-rate converse assumes the count for $(h+V)G$; Theorem~\\ref{thm:twopointfullrate}.",
+    "audit_note": "The reciprocal Jacobian and both endpoints in the weighted kernel cannot be replaced by one scalar count."
+  }
+]

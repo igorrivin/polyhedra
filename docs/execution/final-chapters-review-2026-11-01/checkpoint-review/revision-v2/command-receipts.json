@@ -1,0 +1,82 @@
+{
+  "commands": [
+    {
+      "label": "normal",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_checkpoint"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/subject-v2",
+      "observed_exitcode": 0,
+      "stdout": {
+        "path": "normal.stdout.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "normal.stderr.txt",
+        "sha256": "4c6bb1d7e104580e8677fdf78146e04c654f7a702901bcd80360f9ce4e0ef519",
+        "bytes": 7295
+      }
+    },
+    {
+      "label": "optimized",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "-v",
+        "test_checkpoint"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/subject-v2",
+      "observed_exitcode": 0,
+      "stdout": {
+        "path": "optimized.stdout.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "optimized.stderr.txt",
+        "sha256": "a99d449a5740e4919ff8fed97803bf57286a86a25affed6f095ac8f157fbbd73",
+        "bytes": 7295
+      }
+    },
+    {
+      "label": "ruff",
+      "argv": [
+        "/opt/anaconda3/bin/ruff",
+        "check",
+        "--no-cache",
+        "checkpoint_lib.py",
+        "run_clean_replay.py",
+        "compare_replays.py",
+        "verify_checkpoint.py",
+        "test_checkpoint.py"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v2/subject-v2",
+      "observed_exitcode": 0,
+      "stdout": {
+        "path": "ruff.stdout.txt",
+        "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+        "bytes": 19
+      },
+      "stderr": {
+        "path": "ruff.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    }
+  ],
+  "normal_tests": 50,
+  "optimized_tests": 50,
+  "independent_probes_per_mode": 25,
+  "independent_unexpected_outcomes": [],
+  "reviewer_script_ruff": "Passed in observed tool output.",
+  "scope": "Synthetic preparation tools only; no monograph calculation, PDF, actual source/artifact commit or final-candidate verification."
+}

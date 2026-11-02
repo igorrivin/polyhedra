@@ -1,0 +1,80 @@
+{
+  "recorded_at_utc": "2026-11-02T03:54:03.687045+00:00",
+  "status": "preliminary_build_complete_with_layout_finding",
+  "build_command_receipt": {
+    "path": "build-command.json",
+    "sha256": "d48a062676bed49e3f51a480e895481d8286184036e6057aeab4296ed6522605"
+  },
+  "marker_receipt": {
+    "path": "marker-receipt.json",
+    "sha256": "b5a3f29c344415d5295bae209d35afc64546bab9a2c17dfe2ccc37cba0315b1b",
+    "repeat_marker_for_later_rebuild": false
+  },
+  "pdf": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/pdf-preflight/pdf-build/main.pdf",
+    "sha256": "5c916d703087c8e9058a19b0f98d35c1c6256e2f31981a1fc55b9a948eddd719",
+    "bytes": 1517017,
+    "pages": 198
+  },
+  "tex_input_freeze_sha256": "406b12315a5701699ccfdaa9e54530b3904f77a51e8163f6b79e5f4083886ed3",
+  "recorder_active_custom_TeX_inputs": [
+    "book/chapters/01-volume-normalization.tex",
+    "book/chapters/02-ideal-angle-cells.tex",
+    "book/chapters/03-ideal-tetrahedron.tex",
+    "book/chapters/04-hyperideal-integrand.tex",
+    "book/chapters/05-boundary-cone-continuation.tex",
+    "book/chapters/06-torus-sphere.tex",
+    "book/chapters/07-euclidean-periods.tex",
+    "book/chapters/08-wp-flat-limit.tex",
+    "book/chapters/09-volume-hessians.tex",
+    "book/chapters/10-quantum-introduction.tex",
+    "book/chapters/11-quantum-degeneration.tex",
+    "book/chapters/12-quantum-boundary-measure.tex",
+    "book/chapters/13-four-point-fusion.tex",
+    "book/chapters/14-normalized-quantum-comparison.tex",
+    "book/chapters/15-quantum-airy.tex",
+    "book/chapters/16-dehn-filling-response.tex",
+    "book/chapters/17-unfolding-constant-series.tex",
+    "book/chapters/18-figure-eight-curves.tex",
+    "book/chapters/19-pants-twists.tex",
+    "book/chapters/20-torus-twist-series.tex",
+    "book/chapters/21-cuff-matching.tex",
+    "book/chapters/22-cusps-orthospectrum.tex",
+    "book/chapters/23-trace-coefficients.tex",
+    "book/chapters/24-quantitative-counting.tex",
+    "book/chapters/25-global-coefficient-filters.tex",
+    "book/chapters/26-counting-to-mixing.tex",
+    "book/chapters/27-weighted-mixing-converse.tex",
+    "book/chapters/28-genus-two-model.tex",
+    "book/chapters/29-controlled-observables.tex",
+    "book/chapters/30-sharp-diagnostics.tex",
+    "book/chapters/31-arithmetic-remainder.tex",
+    "book/chapters/32-open-questions.tex",
+    "book/chapters/appendix-a-fricke.tex",
+    "book/chapters/appendix-b-conventions.tex",
+    "book/main.tex",
+    "book/polyhedral_volumes_and_geodesic_identities.tex"
+  ],
+  "active_custom_input_count": 36,
+  "compiled_unique_labels": 613,
+  "compiled_unique_bibliography_keys": 129,
+  "overfull_count": 1,
+  "underfull_count": 3,
+  "undefined_references_or_citations": false,
+  "multiply_defined_labels": false,
+  "source_freeze_matches_live_and_snapshot_after_build": true,
+  "versions": {
+    "latexmk": [
+      "Latexmk, John Collins, 27 Dec. 2024. Version 4.86a"
+    ],
+    "pdflatex": [
+      "pdfTeX 3.141592653-2.6-1.40.27 (TeX Live 2025)",
+      "kpathsea version 6.4.1",
+      "Copyright 2025 Han The Thanh (pdfTeX) et al."
+    ],
+    "ghostscript": [
+      "10.04.0"
+    ]
+  },
+  "scope": "Preliminary precommit math-only layout. Computational support paragraphs and integrated ledgers are not yet applied. Not final PDF, full-page visual approval, numerical replay, or publication approval."
+}

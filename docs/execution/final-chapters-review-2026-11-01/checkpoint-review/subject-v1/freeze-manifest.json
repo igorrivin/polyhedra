@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-02T03:29:02.930267+00:00",
+  "status": "prepared_author_tools_pending_independent_review_and_final_evidence_binding",
+  "ready_for_real_replay": false,
+  "final_approvals_bound": false,
+  "real_numerical_replay_performed": false,
+  "canonical_source_or_artifacts_edited": false,
+  "PDF_built_or_rendered": false,
+  "stage_commit_or_remote_operation_performed": false,
+  "test_scope": "29 synthetic gate tests in normal and optimized modes, plus Ruff; no mathematical validation or real candidate audit.",
+  "normal_tests": 29,
+  "optimized_tests": 29,
+  "ruff_passed": true,
+  "templates_explicitly_unready": true,
+  "files": {
+    "checkpoint_lib.py": {
+      "sha256": "2e227c30dcb0585b307fc5d45c55538409e3ef3569ba2eb89908a3a86e55eeb9",
+      "bytes": 21853
+    },
+    "run_clean_replay.py": {
+      "sha256": "26ea5840dd35fbded2ec7023ca86ca37e3ff05eb6e311bbf9eea2749603cdc60",
+      "bytes": 4312
+    },
+    "compare_replays.py": {
+      "sha256": "f4f80cec1f4a76d1e5e290094edfb3152bd9ad4601a56c1e27253750c52d0e8a",
+      "bytes": 2128
+    },
+    "verify_checkpoint.py": {
+      "sha256": "3d99648a42ac015f6c8a013ef1d34af9db214a4e04b886c4b63bb727945025dc",
+      "bytes": 19612
+    },
+    "test_checkpoint.py": {
+      "sha256": "c1fd2a738660066eb64283d4bd68f42ab3b66807c5ecf1a487857ea0c93147d2",
+      "bytes": 28061
+    },
+    "replay-spec.unready.json": {
+      "sha256": "ac74e8b1ce094761eb27a9d06b3f725764a556a333f77f19ad2274986b63911e",
+      "bytes": 1948
+    },
+    "checkpoint-contract.unready.json": {
+      "sha256": "8f3b50b192aea950caae934e335927e6c940e889091a2ded5b17c032c1153fdb",
+      "bytes": 4377
+    },
+    "HANDOFF.md": {
+      "sha256": "ed592c5d0f4d356ce7291b3b74d0773f10ecd93ab4ce44090e8ac26b129b46ca",
+      "bytes": 8399
+    },
+    "verification-v1/commands.json": {
+      "sha256": "45c13ecab8beaced082cee11b43605df6ae4ada9cd1d3035070a0677d087282f",
+      "bytes": 2382
+    },
+    "verification-v1/normal.stderr.txt": {
+      "sha256": "e36546a6f03a52a393731b3b3f72fc3f175cd5c34e7708f2eeb57fac568737ec",
+      "bytes": 3991
+    },
+    "verification-v1/normal.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "verification-v1/optimized.stderr.txt": {
+      "sha256": "c7d60ae8d56992d310e767b498c69ced2065a75e5dae0d66acd07380c27a345d",
+      "bytes": 3991
+    },
+    "verification-v1/optimized.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "verification-v1/ruff.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "verification-v1/ruff.stdout.txt": {
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    }
+  },
+  "adapted_prior_pattern_sha256": {
+    "checkpoint_lib.py": "c29512500065509e68f2efb2bd47351e61ab3034721ecb9e213c4a96a219b466",
+    "run_clean_replay.py": "b990ede70c6ef9aaa2cf62666d73849a87b301fef95ee9cbf34d9eb8ef3adea3",
+    "compare_replays.py": "faea75531a95443e756a31ab36a84ecf524daa59311c77aaf9438ab5a17cf301",
+    "verify_checkpoint.py": "9824dc523fd3ca3a66d98f47d186e544b637b26f2f6fbe41d8256f8cd96a97ea",
+    "source_approval_adapter.py": "23f81e38c87d51fc0d255614929a553b3bedf5a7f87a1314a03db743c33e4736",
+    "candidate_receipt_adapter.py": "3c129c34d04a65b738eeadd518e33bfac1041ab801b0c152999dd1cea6fa7a8a"
+  },
+  "omissions": [
+    "Temporary synthetic repositories were removed by test cleanup.",
+    "Ruff cache and any filesystem sidecars are not checkpoint payload."
+  ],
+  "remaining": [
+    "Independent tool review",
+    "Actual final receipt-schema binding",
+    "Actual source checkpoint and clean replay",
+    "Actual PDF/build/visual evidence",
+    "Candidate curation and independent approval",
+    "Artifact commit and postcommit verification"
+  ]
+}

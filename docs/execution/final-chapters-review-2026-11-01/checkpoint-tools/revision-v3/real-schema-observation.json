@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "scope": "Read-only actual schema compatibility, not final checkpoint binding or replay.",
+  "approval": {
+    "path": "computation-review/revision-v2/final-acceptance.json",
+    "sha256": "70070fe32c42961d68b035ccb7fae5b012c50ac5814ca42bd05689bfc64b6592",
+    "bytes": 25941
+  },
+  "adapter_pin": {
+    "reference_identity_pointer": "/accepted_author_result",
+    "reference_identity_shape": "path-record"
+  },
+  "approved_reference": {
+    "path": "computation/full-v2/author-result-70-110.json",
+    "sha256": "5f73fce03e43103dc457570bcd90f4722599b5ac0d67a9b9b88d9e00679f0429",
+    "bytes": 4694781
+  },
+  "projected_identity_matches_actual_outer_reference": true,
+  "approval_unchanged_after_read": {
+    "sha256": "70070fe32c42961d68b035ccb7fae5b012c50ac5814ca42bd05689bfc64b6592",
+    "bytes": 25941
+  },
+  "ready_for_real_replay": false
+}

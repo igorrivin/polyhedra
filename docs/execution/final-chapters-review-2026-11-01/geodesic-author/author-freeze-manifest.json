@@ -1,0 +1,63 @@
+{
+  "status": "author_complete_ready_for_independent_mathematical_review",
+  "recorded_at_utc": "2026-11-02T02:55:02.536102+00:00",
+  "baseline_commit": "151673b1817e66aae493eb7da1be5ddf49adfe0f",
+  "structural_gate_manifest_sha256": "50a17cfb46c8b867c5dd3c45129a6157f6bfaab248f889cd63dab177fe43e8fd",
+  "canonical_root": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+  "outer_evidence_root": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-author",
+  "canonical_sources_sha256": {
+    "book/chapters/17-unfolding-constant-series.tex": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+    "book/chapters/18-figure-eight-curves.tex": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+    "book/chapters/19-pants-twists.tex": "9dc4438ad32d76c7508cd6f90e34dc615697bf60cc546b5187e130468213be9d",
+    "book/chapters/20-torus-twist-series.tex": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+    "book/chapters/21-cuff-matching.tex": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+    "book/chapters/22-cusps-orthospectrum.tex": "67cd497d3599bbb6716335a90d6f2f5c71bd191efa96211dd47442c64f3b39e2",
+    "book/claims/sections17-22.json": "aca716a9b08128e7c6feefb79693ff9313139dbc52c0b33ce7e395d6fce80d54"
+  },
+  "canonical_source_set_sha256": "86ac29026811b5c7f6207e4568d01a01496326f3c8c1b0d8fb2b8fcfb541d8c6",
+  "outer_evidence_sha256": {
+    "initial-findings.md": "63fb8e1a46ee5484c7f14e6868897ac60355ad83f00ec80eb193f0c0a899def4",
+    "source-audit.md": "01c7824f045c97a9825a2b3ccd16dfaee5ec6454743d24f5127af9e7127724b5",
+    "companion-contract.md": "2a62a149e7f5f88027329c24ba3a4720407debfed2fb78945350f23b6fce85a6",
+    "author_scratch.py": "a3c230f27e88c2915131727f12c35065a3bc5f6c3754d4a8cb71c50ad8e49c1e",
+    "author-scratch-result.json": "a4f1dbaffb2bfb2d0cdb4844d59ba7aceaa44bb97b7a78868cac7e02a0f1747d",
+    "build_author_ledger.py": "d52653d201ccb2bbe482d3c5a2679199fa6b46a79ed9c292ed0149f1737bf446",
+    "validate_author_freeze.py": "26105342bac1de75b40516c6d88478caf82c2d9e072d9954ff86989f7a34a59a",
+    "author-validation.json": "7cb26b04669341be6b61dadbbf1cf5f320322d0b74023920853314b9950a0a44",
+    "author-report.md": "67d8b3020d54b5444007c49fa92d45b011507043995f39ae11ddf552753d4433",
+    "baseline-main.tex": "087fd8690a43fc023b0feb370dc07a1421e06f770d98abaf4234bc88116d6a07",
+    "before/17-unfolding-constant-series.tex": "d1d34b1fd4fc8fad18c5991de6e2709e24e6c8a6663914e301ebbe6fbe938a01",
+    "before/18-figure-eight-curves.tex": "cf47156a2ceb7cbf0c79b0d1800282b93d8ce4c3fda94c9a9dc854b013959324",
+    "before/19-pants-twists.tex": "6d1bd1ac3b906d69fdf1ca1d53d2c00b109b60284bcc024304a609fd953a0bb6",
+    "before/20-torus-twist-series.tex": "c87cad8b8759fdf1ebdba29f5c810dc209e2ada8025f4441fd8f25c772cf4982",
+    "before/21-cuff-matching.tex": "8e2bd981f2f3d6b3d5a280bc3df4ec2594bf0cbd32d28cc0bbc260b4453f8f16",
+    "before/22-cusps-orthospectrum.tex": "5e1af1883adbe90d6a5fbc9de2904f6ae0d0ae2af38b81bfc43e5892844416f5"
+  },
+  "baseline_owned_labels": 48,
+  "current_owned_labels": 54,
+  "new_labels_in_order": [
+    "eq:figurekerneltail",
+    "eq:figurefiniteidentity",
+    "eq:localdistancehessian",
+    "eq:torustwistderivatives",
+    "eq:torusintegraltail",
+    "eq:Hpartialsumtail"
+  ],
+  "claim_count": 59,
+  "independent_mathematical_review": "pending",
+  "maintained_companion_implementation_and_execution": "pending",
+  "external_proof_limit": "Source statements and local derivations audited at the access scopes in source-audit.md; no complete external-proof refereeing claim.",
+  "unchanged_by_this_role": [
+    "main manuscript",
+    "bibliography",
+    "shared documents",
+    "previously reviewed chapters"
+  ],
+  "not_performed": [
+    "stage",
+    "commit",
+    "installation",
+    "PDF build or marker",
+    "upload"
+  ]
+}

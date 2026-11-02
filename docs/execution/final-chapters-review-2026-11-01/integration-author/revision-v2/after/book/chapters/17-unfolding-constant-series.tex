@@ -1,0 +1,177 @@
+\section{Unfolding and the problem of finding constant series}
+\label{sec:unfolding}
+
+\subsection{What a volume computation determines}
+
+Let $\Gamma$ be the mapping class group of an oriented finite-type surface
+with fixed boundary lengths, and let $\gamma$ be a fixed nonperipheral
+curve or multicurve class. Use the same WP orbifold measure on both
+quotients. For a measurable nonnegative function, or one for which
+$\int_{\Gamma\backslash\T}\sum_\delta|F(\ell_\delta)|\,\dV<\infty$,
+the basic unfolding identity is
+\begin{equation}
+ \int_{\Gamma\backslash\T}
+ \sum_{\delta\in\Gamma\gamma}F(\ell_\delta(X))\,\dV(X)
+ =\int_{\Stab(\gamma)\backslash\T}
+             F(\ell_\gamma(X))\,\dV(X).
+ \label{eq:unfold}
+\end{equation}
+The orbit contains each class once; $\Stab(\gamma)$ preserves the entire
+chosen decoration, including any orientation, ordering or component
+weights. Integration over coset translates of a fundamental domain proves
+the formula, with ineffective isotropy retained on both sides. For
+nonnegative functions either side may be infinite. Simplicity of the
+orbit curves is not required.
+
+Simplicity becomes important when evaluating the right side. If $\gamma$
+is a disjoint simple multicurve, cut along it and use Fenchel--Nielsen
+coordinates. Each twist period integrates to $\ell_j$, so the resulting
+integral has factors $\prod_j\ell_j\,\dd\ell_j$ times WP volumes of the
+components, with the relevant symmetry factors. This is the geometric
+integration mechanism underlying Mirzakhani's volume recursion
+\cite[Theorem 7.1 and Lemma 7.3]{MirzVolumes}. The symmetry and
+one-handle factors in that formula must be converted using the volume
+convention for each component; they are not extra factors to append to
+an already stack-normalized quotient.
+
+Suppose a series $S(X)$ is independently known to be constant, say $C$,
+and $0<V_{g,n}<\infty$ in the chosen normalization.
+Then
+\begin{equation}
+ C=\frac{1}{V_{g,n}}
+       \int_{\M_{g,n}}S(X)\,\dV(X),
+ \label{eq:recoverconstant}
+\end{equation}
+and unfolding can calculate its value. If constancy has not been proved,
+the same quotient computes only its average. This is the precise logical
+distinction behind the proposal to recover an identity from a volume.
+
+On the punctured torus, for an unoriented essential simple curve orbit,
+the stack-normalized formula is
+\begin{equation}
+ \int_{\M_{1,1}}\sum_{\alpha\text{ simple}}f(\ell_\alpha)\,\dV
+       =\frac12\int_0^\infty x f(x)\,\dd x.
+ \label{eq:torusunfold}
+\end{equation}
+Indeed, the effective stabilizer quotient has coordinates $x>0$ and
+$0\leq\tau<x$, while the ineffective torus involution contributes the
+single factor $1/2$. This is the stack convention of
+Section~\ref{sec:torussphere}; it is not a second quotient by cuff exchange.
+For $f(x)=(1+e^x)^{-1}$, expand in $e^{-x}$ to obtain
+\[
+ \int_0^\infty\frac{x\,\dd x}{1+e^x}
+   =\sum_{m\ge1}\frac{(-1)^{m-1}}{m^2}=\frac{\pi^2}{12}.
+\]
+Termwise integration is justified by
+$\sum_m\int_0^\infty xe^{-mx}\,\dd x=\sum_m m^{-2}<\infty$.
+For a finite numerical check, the integral beyond $R$ is at most
+$(R+1)e^{-R}$, and the alternating sum through $m=M$ has error at most
+$(M+1)^{-2}$.
+The integral of the series is $\pi^2/24$; division by
+$V_{1,1}=\pi^2/12$ gives $C=1/2$. Its pointwise constancy is McShane's
+theorem~\cite{McShane}:
+\begin{equation}
+ \sum_{\alpha\text{ simple, unoriented}}
+                 \frac{1}{1+e^{\ell_\alpha(X)}}=\frac12.
+ \label{eq:mcshane}
+\end{equation}
+The tetrahedral volume calculation and the covering argument provide an
+independent route to the volume used in this normalization check.
+
+\subsection{Operations that preserve constancy}
+
+Finite linear combinations of constant series preserve constancy.
+Parameter integrals do too when the constant is integrable and Fubini's
+theorem applies to the joint sum and integral, or when all terms are
+nonnegative and Tonelli's theorem applies. For differentiation on an
+identified parameter family, one sufficient hypothesis is local uniform
+absolute convergence of both the series and its first derivatives.
+Uniform convergence of the original series alone is insufficient.
+Products give constant double series when Tonelli's theorem or absolute
+convergence applies. These operations construct kernels together with
+their required convergence hypotheses.
+
+Their geometric interpretation needs to be retained. A product usually
+indexes pairs of curves that may intersect; it is not automatically a
+disjoint-multicurve sum. A parameter derivative also differentiates lengths
+if the metric varies with that parameter. In particular, differentiating
+a constant series with respect to the metric gives the one-form identity
+\begin{equation}
+ \sum_\gamma F'(\ell_\gamma)\,\dd\ell_\gamma=0,
+ \label{eq:derivativeidentity}
+\end{equation}
+under the stated local $C^1$ control, for a kernel with no additional
+explicit metric dependence. It does not generally give
+another scalar identity by differentiating only the displayed weight.
+
+Two possible tests for a proposed constant series follow. One can try to
+show that~\eqref{eq:derivativeidentity} vanishes on a spanning set of tangent
+directions at every point; a $C^1$ series is then constant on each
+connected component. Alternatively, for real-valued $S\in L^2$ on a
+finite positive-volume moduli space, let $\overline S$ be its mean. Then
+\begin{equation}
+ \int_{\M}(S-\overline S)^2\,\dV=0
+ \label{eq:variance}
+\end{equation}
+proves constancy almost everywhere, and everywhere if $S$ is continuous,
+since WP measure has full support. For a complex-valued series use
+$|S-\overline S|^2$ instead of the square.
+The second-moment calculation involves pairs of curves, including their
+intersection patterns. It can be substantially harder than the first
+unfolding integral.
+
+Thus a useful search for further identities should ask for more than
+formal closure: a natural index set, a manageable positive weight, a
+geometric partition or telescoping mechanism, and a convergence proof.
+The constructions in Sections~\ref{sec:figures} and~\ref{sec:exacttwist}
+illustrate these requirements.
+
+\subsection{Other established constant series}
+
+There are also constant series with substantially different kernels.
+For example, write
+\[
+ \mathcal L(x)=\operatorname{Li}_2(x)+\tfrac12\log x\log(1-x)
+\]
+for the Rogers dilogarithm on $(0,1)$, extended continuously to its
+endpoints, and define
+\begin{align*}
+ D(r)={}&\mathcal L\bigl(\sech^2(r/2)\bigr)\\
+ &+2\mathcal L\left(\frac{1+e^{-r}}2\right)
+  -2\mathcal L\left(\frac{1-e^{-r}}2\right).
+\end{align*}
+On a complete finite-area once-punctured torus, Hu--Tan's identity is
+\begin{equation}
+ \sum_{\alpha\text{ simple, unoriented}}D(\ell_\alpha)=\frac{\pi^2}{2}.
+ \label{eq:dilogtorus}
+\end{equation}
+Here the index set is the nonperipheral simple spectrum with its curve
+multiplicities~\cite[Theorem 2, equation (2)]{HuTan}. Their Theorem 1
+treats a positive geodesic boundary with a different, boundary-dependent
+kernel; the displayed $D$ is the cusped specialization.
+
+For a closed oriented surface of genus $g\ge2$, Luo--Tan give explicit
+dilogarithmic weights $f(P),g(T)$ on properly embedded geometric pairs of
+pants and one-holed tori, each subsurface counted once,
+such that
+\begin{equation}
+ \sum_P f(P)+\sum_T g(T)=8\pi^2(g-1)=\operatorname{Vol}(T^1X).
+ \label{eq:luotan}
+\end{equation}
+Their construction partitions unit tangent directions up to a null set
+\cite[Theorem 1.1 and Section 1.2]{LuoTan}. Angular measure $2\pi$ on
+each unit tangent circle, together with area $4\pi(g-1)$, explains the
+normalization on the right.
+It illustrates another source of constant series: the invariant measure
+being partitioned need not live only on a horocycle or a geodesic boundary.
+The precise, longer subsurface weights are given in that reference.
+
+\paragraph{Computational support.}
+Group G1 of \path{experiments/quantum_geodesics/README.md} checks
+the finite torus normalization and Fermi-integral formulas, with the
+specified finite cutoffs and analytic tail. Its numerical comparisons
+do not prove a quotient-volume identity or constancy of a general
+surface sum. The result path is
+\path{artifacts/quantum_geodesics/result.json};
+\path{book/claims/sections17-22.json} records the corresponding claims
+and the separate scope of the analytic and computational evidence.

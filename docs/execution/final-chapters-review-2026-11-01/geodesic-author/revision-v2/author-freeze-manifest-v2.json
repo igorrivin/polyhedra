@@ -1,0 +1,77 @@
+{
+  "status": "R1_R2_repaired_ready_for_targeted_independent_review",
+  "recorded_at_utc": "2026-11-02T03:37:36.826885+00:00",
+  "revision": "v2_citation_pin_repairs_only",
+  "baseline_commit": "151673b1817e66aae493eb7da1be5ddf49adfe0f",
+  "canonical_root": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+  "outer_evidence_root": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/geodesic-author/revision-v2",
+  "initial_author_manifest_sha256": "38994ff43e952ff42ccafb4d56c44e51c385a0092d156e3d35cdbcf1041d7eec",
+  "initial_source_set_sha256": "86ac29026811b5c7f6207e4568d01a01496326f3c8c1b0d8fb2b8fcfb541d8c6",
+  "initial_review_manifest_sha256": "7386b5e022db352f9d5ce9506eeb907f46458baf6a2cac6029260fc6e90763f4",
+  "required_repairs": [
+    "R1",
+    "R2"
+  ],
+  "changed_canonical_paths": [
+    "book/chapters/19-pants-twists.tex",
+    "book/chapters/22-cusps-orthospectrum.tex",
+    "book/claims/sections17-22.json"
+  ],
+  "canonical_sources_sha256": {
+    "book/chapters/17-unfolding-constant-series.tex": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+    "book/chapters/18-figure-eight-curves.tex": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+    "book/chapters/19-pants-twists.tex": "f1fd410500ec3c414b4266d706dddd220b0902a546090807e2288384101c2c35",
+    "book/chapters/20-torus-twist-series.tex": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+    "book/chapters/21-cuff-matching.tex": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+    "book/chapters/22-cusps-orthospectrum.tex": "b8b3f0568c4667b7ed6116935291c5c71dc3be74ded57c916ac638f6ecd80f66",
+    "book/claims/sections17-22.json": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+  },
+  "canonical_source_set_sha256": "b35883296116e459a702e0bc28b4f429875e2cec2cffb22910f02e5d0e8e87f9",
+  "set_hash_algorithm": "SHA256 of UTF-8 json.dumps(path_to_sha256, sort_keys=True, separators=(comma,colon)) with no terminal newline",
+  "revision_evidence_sha256": {
+    "after/book/chapters/17-unfolding-constant-series.tex": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+    "after/book/chapters/18-figure-eight-curves.tex": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+    "after/book/chapters/19-pants-twists.tex": "f1fd410500ec3c414b4266d706dddd220b0902a546090807e2288384101c2c35",
+    "after/book/chapters/20-torus-twist-series.tex": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+    "after/book/chapters/21-cuff-matching.tex": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+    "after/book/chapters/22-cusps-orthospectrum.tex": "b8b3f0568c4667b7ed6116935291c5c71dc3be74ded57c916ac638f6ecd80f66",
+    "after/book/claims/sections17-22.json": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137",
+    "before/book/chapters/17-unfolding-constant-series.tex": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+    "before/book/chapters/18-figure-eight-curves.tex": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+    "before/book/chapters/19-pants-twists.tex": "9dc4438ad32d76c7508cd6f90e34dc615697bf60cc546b5187e130468213be9d",
+    "before/book/chapters/20-torus-twist-series.tex": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+    "before/book/chapters/21-cuff-matching.tex": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+    "before/book/chapters/22-cusps-orthospectrum.tex": "67cd497d3599bbb6716335a90d6f2f5c71bd191efa96211dd47442c64f3b39e2",
+    "before/book/claims/sections17-22.json": "aca716a9b08128e7c6feefb79693ff9313139dbc52c0b33ce7e395d6fce80d54",
+    "handoff.md": "a7609e440e7a5ac910f1c7c434f25b5d96edb353b32ef9b0fdbf74b12918540f",
+    "minimal.diff": "e26a32f99f35d75f745a99e75255f8f4f20948ef0d96533955c8caa786243dff",
+    "source-pin-repairs.md": "3874c1195d954636ea882dc8dc79f04ed490c17519b1c7f3ea6bdefde1e0103d",
+    "validate.py": "d4df2d1ccbd65574c6788615d041a556a5860c8ad27731ca6eb643fed3d68980",
+    "validation.json": "f6bc77dbb9fffa6bf19c7bb90e0d50970c84ce1245471f3ea3fe51617f6a31a9"
+  },
+  "preservation": {
+    "claims": 59,
+    "owned_labels": 54,
+    "baseline_owned_labels": 48,
+    "existing_added_anchors": 6,
+    "global_inputs": 36,
+    "global_labels": 613,
+    "baseline_global_labels_ordered": 607,
+    "bibliography_keys": 129
+  },
+  "companion_contract_sha256_unchanged": "2a62a149e7f5f88027329c24ba3a4720407debfed2fb78945350f23b6fce85a6",
+  "companion_contract_review_record_sha256_unchanged": "be7debaf190ecd960d0caeca6b82e884407b6da04e72234e16a60762980bc82b",
+  "initial_author_and_review_evidence_preserved": true,
+  "formulas_and_local_proofs_unchanged": true,
+  "targeted_independent_source_acceptance": "pending",
+  "scientific_rerun": "not run; citation-only delta",
+  "maintained_companion_status": "Separate parallel implementation; no implementation/execution approval supplied by this author repair.",
+  "not_performed": [
+    "PDF build or marker",
+    "stage",
+    "commit",
+    "installation",
+    "upload",
+    "unrelated canonical edits"
+  ]
+}

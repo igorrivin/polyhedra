@@ -1,0 +1,221 @@
+{
+  "status": "author_revision_v2_ready_for_independent_conventions_review",
+  "revision_scope": "Dependency/review metadata only; no chapter prose change.",
+  "baseline_commit": "151673b1817e66aae493eb7da1be5ddf49adfe0f",
+  "initial_author_freeze_sha256": "fc80ec12ae3c1f13d7c7090fc60f05e2db1fe3eccfe3cf3cb9e72d7fef7d65dc",
+  "canonical_files": [
+    {
+      "path": "book/chapters/32-open-questions.tex",
+      "sha256": "c831bf85ab0c6cb7f5ed46509212ce5dc1549c05c5723be3c035c928a409fc21",
+      "bytes": 14848
+    },
+    {
+      "path": "book/chapters/appendix-b-conventions.tex",
+      "sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363
+    },
+    {
+      "path": "book/claims/section32-appendixb.json",
+      "sha256": "0bf0a62df0e81ae502d0408935cb1fee80b0db9a85be8e0d58c73367773dfd5a",
+      "bytes": 123917
+    }
+  ],
+  "chapter_bytes_unchanged_from_initial_freeze": true,
+  "claims": 66,
+  "questions": 15,
+  "convention_rows": 43,
+  "original_rows_covered": 28,
+  "source_graph_entry": "book/main.tex",
+  "source_graph_files": 36,
+  "original_labels_preserved_in_order": 607,
+  "new_labels_by_this_author": [],
+  "concurrent_geodesic_labels": [
+    "eq:figurekerneltail",
+    "eq:figurefiniteidentity",
+    "eq:localdistancehessian",
+    "eq:torustwistderivatives",
+    "eq:torusintegraltail",
+    "eq:Hpartialsumtail"
+  ],
+  "current_unique_labels": 613,
+  "bibliography_keys": 129,
+  "dependency_snapshots": [
+    {
+      "track": "quantum-author",
+      "status": "independently_accepted_source_snapshot",
+      "files": [
+        {
+          "path": "book/chapters/10-quantum-introduction.tex",
+          "sha256": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+          "bytes": 43507
+        },
+        {
+          "path": "book/chapters/11-quantum-degeneration.tex",
+          "sha256": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9",
+          "bytes": 13435
+        },
+        {
+          "path": "book/claims/sections10-11.json",
+          "sha256": "34dbb6255dc468cb796bb3a129eeaf37ac0c5f4dc358abfd73030e64331b3539",
+          "bytes": 59530
+        }
+      ],
+      "freeze_manifest": {
+        "path": "../execution/final-chapters-review-2026-11-01/quantum-author/revision-v2/freeze-manifest.json",
+        "sha256": "f043f6943bd124638802bfdb5d5e7505269143f54046eea93d298345191c0620",
+        "bytes": 3133
+      },
+      "independent_review_record": {
+        "path": "../execution/final-chapters-review-2026-11-01/quantum-review/final-acceptance.json",
+        "sha256": "c631f5ed63513246adf7bbec958c3298ab577861ee02f1d359ff6ca25b7c4dd9",
+        "bytes": 3479
+      },
+      "independent_review_scope": "Selected external statements inspected; no full external proof or external PDF byte hash claimed; one source unavailable and two checked only at metadata/abstract level.",
+      "remaining": "No required source findings in the pinned acceptance. Maintained companion implementation and execution are still pending; later source changes require reconciliation."
+    },
+    {
+      "track": "geodesic-author",
+      "status": "author_frozen_pending_independent_review",
+      "files": [
+        {
+          "path": "book/chapters/17-unfolding-constant-series.tex",
+          "sha256": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+          "bytes": 7804
+        },
+        {
+          "path": "book/chapters/18-figure-eight-curves.tex",
+          "sha256": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+          "bytes": 10705
+        },
+        {
+          "path": "book/chapters/19-pants-twists.tex",
+          "sha256": "9dc4438ad32d76c7508cd6f90e34dc615697bf60cc546b5187e130468213be9d",
+          "bytes": 9551
+        },
+        {
+          "path": "book/chapters/20-torus-twist-series.tex",
+          "sha256": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+          "bytes": 6616
+        },
+        {
+          "path": "book/chapters/21-cuff-matching.tex",
+          "sha256": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+          "bytes": 2960
+        },
+        {
+          "path": "book/chapters/22-cusps-orthospectrum.tex",
+          "sha256": "67cd497d3599bbb6716335a90d6f2f5c71bd191efa96211dd47442c64f3b39e2",
+          "bytes": 9218
+        },
+        {
+          "path": "book/claims/sections17-22.json",
+          "sha256": "aca716a9b08128e7c6feefb79693ff9313139dbc52c0b33ce7e395d6fce80d54",
+          "bytes": 112294
+        }
+      ],
+      "freeze_manifest": {
+        "path": "../execution/final-chapters-review-2026-11-01/geodesic-author/author-freeze-manifest.json",
+        "sha256": "38994ff43e952ff42ccafb4d56c44e51c385a0092d156e3d35cdbcf1041d7eec",
+        "bytes": 3887
+      },
+      "independent_review_status": "pending",
+      "remaining": "The final six chapters and 59-claim author ledger are bound here; independent mathematical review is in progress and is not asserted as approved."
+    }
+  ],
+  "planned_companion_groups": 14,
+  "geodesic_independent_approval_claimed": false,
+  "initial_evidence_preserved": true,
+  "validation": {
+    "path": "revision-validation.json",
+    "sha256": "4b703a7a1f192707e25d4f53aa25bf4852f8b74395f9b957cd0f854b97c79256",
+    "bytes": 2588
+  },
+  "evidence": [
+    {
+      "path": "after/book/chapters/32-open-questions.tex",
+      "sha256": "c831bf85ab0c6cb7f5ed46509212ce5dc1549c05c5723be3c035c928a409fc21",
+      "bytes": 14848
+    },
+    {
+      "path": "after/book/chapters/appendix-b-conventions.tex",
+      "sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363
+    },
+    {
+      "path": "after/book/claims/section32-appendixb.json",
+      "sha256": "0bf0a62df0e81ae502d0408935cb1fee80b0db9a85be8e0d58c73367773dfd5a",
+      "bytes": 123917
+    },
+    {
+      "path": "author-static-checks.json",
+      "sha256": "dddd37bb0034078ccb86868c6bec5d81ceae492c775b6646944213cf20101089",
+      "bytes": 5355
+    },
+    {
+      "path": "before/book/chapters/32-open-questions.tex",
+      "sha256": "c831bf85ab0c6cb7f5ed46509212ce5dc1549c05c5723be3c035c928a409fc21",
+      "bytes": 14848
+    },
+    {
+      "path": "before/book/chapters/appendix-b-conventions.tex",
+      "sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363
+    },
+    {
+      "path": "before/book/claims/section32-appendixb.json",
+      "sha256": "c93990683fea3caf3b34bb911e275551d6e3a641e63e9e8b2589424a8fa23e11",
+      "bytes": 114217
+    },
+    {
+      "path": "check_author.py",
+      "sha256": "22ea4910fa14878a6457afff8d91b9d62b4a037f497913cbbbc9ae4131576210",
+      "bytes": 7125
+    },
+    {
+      "path": "dependency-comparison.json",
+      "sha256": "9f603592eabd3e2abed664c004383af586e470ceebb9cc05e6310826457bd3cc",
+      "bytes": 9329
+    },
+    {
+      "path": "ledger-only.patch",
+      "sha256": "a646162a9746c9cc823e527e425c550daa43fc86aa6829f8c80c70adfcce685a",
+      "bytes": 24018
+    },
+    {
+      "path": "metadata-delta.json",
+      "sha256": "2e453c3c123e9797d73644b06f69fe593247dfc8c4613d223e870bab9ea2bbd5",
+      "bytes": 10049
+    },
+    {
+      "path": "reconcile.py",
+      "sha256": "3d5faa11c4f8c08b3cdd7fb569f96af1b37a11667fd8eee3dcd9007070757105",
+      "bytes": 13144
+    },
+    {
+      "path": "reconciliation-report.md",
+      "sha256": "d4afda7c64b88a6d71f073ea49dd30ea84994fa697a6ab2f8579319f528d8583",
+      "bytes": 4848
+    },
+    {
+      "path": "revision-validation.json",
+      "sha256": "4b703a7a1f192707e25d4f53aa25bf4852f8b74395f9b957cd0f854b97c79256",
+      "bytes": 2588
+    }
+  ],
+  "pending_dependencies": [
+    "Independent conventions review of this exact revised Section 32/Appendix B/ledger freeze.",
+    "Independent mathematical review of the final Sections 17-22 author freeze; reconcile any resulting source or ledger deltas before integration.",
+    "Implement and independently review the separately specified four quantum and ten geodesic finite groups before replacing planned-only support status with results.",
+    "Curate evidence links and shared computational status; later build and visual review own table layout and rendered reference checks.",
+    "Original historical torus precision/sensitivity archive and original Airy evaluator provenance remain unrecovered; this does not block publication of correctly scoped replacement evidence."
+  ],
+  "not_performed": [
+    "PDF build or marker",
+    "numerical replay",
+    "companion implementation",
+    "installation",
+    "stage",
+    "commit",
+    "upload"
+  ]
+}

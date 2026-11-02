@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "scope": "Final independent full-v2 implementation acceptance evidence, including unchanged frozen subject; manifest excludes itself.",
+  "files": {
+    "command-receipts.json": {
+      "sha256": "79f0c495309e1d046b72267189dd8047beb35a6e97e513d24ce63806c97b5c31",
+      "bytes": 3233
+    },
+    "final-acceptance.json": {
+      "sha256": "70070fe32c42961d68b035ccb7fae5b012c50ac5814ca42bd05689bfc64b6592",
+      "bytes": 25941
+    },
+    "final-acceptance.md": {
+      "sha256": "a183cc7c6d853edfb9e9c1eb24899830c9f59d0d2071a6ce87a44b8f02ba1cc2",
+      "bytes": 5669
+    },
+    "final-recheck-audit.json": {
+      "sha256": "89da0a91c034400bfc289fadb3c88037a0f47b6fb18b8d7a42d812fe11a20ec5",
+      "bytes": 2513
+    },
+    "final_recheck_audit.py": {
+      "sha256": "931f55e6fe9485480d75b43a3cf3e82feb66ebc5c1417362f8b48eb23271874c",
+      "bytes": 5848
+    },
+    "freeze_and_compare.py": {
+      "sha256": "e167f62c4db27b90ba8eeab1f5f491d6f0ad10e7369b11f20e7a0b5fd287851a",
+      "bytes": 7803
+    },
+    "independent-replay-result.json": {
+      "sha256": "d6e36f454d9a2de072e330154da166929aae0abb3299e21afb3e884cfa803581",
+      "bytes": 4694780
+    },
+    "independent-replay.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "independent-replay.stdout.txt": {
+      "sha256": "3393b81102ea18b99a2480bf8bf5cf051dd933805882d983fe2709cf68f0d154",
+      "bytes": 491
+    },
+    "initial-freeze-and-comparison.json": {
+      "sha256": "dd1e219094f889e3ad76a074c8a6e07b2b07e3c560f49e11386c3eeafd95325f",
+      "bytes": 15029
+    },
+    "ruff.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ruff.stdout.txt": {
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    "run_review_commands.py": {
+      "sha256": "283695c943abc97e8f526869acdf6754b702eed3e2ff85ae545c2865fe418ceb",
+      "bytes": 2015
+    },
+    "subject/author-result-70-110.json": {
+      "sha256": "5f73fce03e43103dc457570bcd90f4722599b5ac0d67a9b9b88d9e00679f0429",
+      "bytes": 4694781
+    },
+    "subject/command-receipts.json": {
+      "sha256": "03243440ff747415e3cb138ef2c5de28d4b3b33de808774b0b91954e1d097388",
+      "bytes": 2327
+    },
+    "subject/experiments/quantum_geodesics/README.md": {
+      "sha256": "22921e4545c1b4bb0fa0ac4c1e031b77140f2e3f3a51cda93ef4f67c05493b6a",
+      "bytes": 8627
+    },
+    "subject/experiments/quantum_geodesics/__init__.py": {
+      "sha256": "0c8007dbe9a1134b40566beed05c4469fb671771a78f072090c4f2b0504404a2",
+      "bytes": 80
+    },
+    "subject/experiments/quantum_geodesics/common.py": {
+      "sha256": "279d158fb17d557dfe4c17bcb01bcb932f6e5343594c1d664ffd0519775bb2cc",
+      "bytes": 8508
+    },
+    "subject/experiments/quantum_geodesics/contracts/geodesic-contract-acceptance.json": {
+      "sha256": "be7debaf190ecd960d0caeca6b82e884407b6da04e72234e16a60762980bc82b",
+      "bytes": 4294
+    },
+    "subject/experiments/quantum_geodesics/contracts/geodesic-source-acceptance.json": {
+      "sha256": "b734eb97f35f360022cb874b4561d9d3151f876d26db7eb6459e9f676576c0ef",
+      "bytes": 2867
+    },
+    "subject/experiments/quantum_geodesics/contracts/geodesic-targets.md": {
+      "sha256": "2a62a149e7f5f88027329c24ba3a4720407debfed2fb78945350f23b6fce85a6",
+      "bytes": 14837
+    },
+    "subject/experiments/quantum_geodesics/contracts/quantum-mathematical-acceptance.json": {
+      "sha256": "c631f5ed63513246adf7bbec958c3298ab577861ee02f1d359ff6ca25b7c4dd9",
+      "bytes": 3479
+    },
+    "subject/experiments/quantum_geodesics/contracts/quantum-source-freeze.json": {
+      "sha256": "f043f6943bd124638802bfdb5d5e7505269143f54046eea93d298345191c0620",
+      "bytes": 3133
+    },
+    "subject/experiments/quantum_geodesics/contracts/quantum-targets.md": {
+      "sha256": "1d1fae5b1539b8ee52d27a761ee1d2aaf2a8b050d213c023df506af498fe96b1",
+      "bytes": 8691
+    },
+    "subject/experiments/quantum_geodesics/figure_eight.py": {
+      "sha256": "7fc20f4328316e31565341537bffae462a6083423ef30d6ce4fb02ceb6bc68e8",
+      "bytes": 4170
+    },
+    "subject/experiments/quantum_geodesics/fixture.json": {
+      "sha256": "3c0f2ba7ffe7715d38e602697a0c7012b1963f653b483f5c7033858670530a1b",
+      "bytes": 12421
+    },
+    "subject/experiments/quantum_geodesics/geodesic_exact.py": {
+      "sha256": "6e72ad9335987f7c355d1a4a744905008faf2088e6ba4b4efa4b676243c30ea7",
+      "bytes": 10537
+    },
+    "subject/experiments/quantum_geodesics/geometry.py": {
+      "sha256": "18a92ccbbae9ebe84b841fe97fd0df91a66fac00f81d411dfd2ff636975878b0",
+      "bytes": 14225
+    },
+    "subject/experiments/quantum_geodesics/kernels.py": {
+      "sha256": "4c4431bb43267144dac233948846897e1032a7ee938908e6b1701421799ded97",
+      "bytes": 14697
+    },
+    "subject/experiments/quantum_geodesics/klein.py": {
+      "sha256": "f5ab68c308580b1c954d16104118b9cf807455bf7b6e51125e872ac0c505a4dd",
+      "bytes": 10762
+    },
+    "subject/experiments/quantum_geodesics/normalization.py": {
+      "sha256": "50436249a581492e3cc263e389929bad9d22925e0c523922a0f4b06dd6686687",
+      "bytes": 8859
+    },
+    "subject/experiments/quantum_geodesics/run.py": {
+      "sha256": "618f17d3aec05e2a6de637c851e6ccfabfde50088662f5198f165eebd8a5254a",
+      "bytes": 15695
+    },
+    "subject/experiments/quantum_geodesics/tests/test_geodesic.py": {
+      "sha256": "61652d138e4be89ef15fd748fda0eea941807e97fcad770f4f0ee73709337c71",
+      "bytes": 11615
+    },
+    "subject/experiments/quantum_geodesics/tests/test_quantum.py": {
+      "sha256": "a5d3a2a8242a579b3af345dcce40a55c4314c10becfa82f7215e5dda6335fcc0",
+      "bytes": 10326
+    },
+    "subject/experiments/quantum_geodesics/tests/test_validation.py": {
+      "sha256": "9ad40c44d0607cf919335c9b0ec7dd4e0985a1dc3b2a2f3513f2cc8c35e2b8b8",
+      "bytes": 8936
+    },
+    "subject/experiments/quantum_geodesics/twist_integrals.py": {
+      "sha256": "11e99ee89d12f8dd11697ed663b40da2eee15eb0150c77320fb0e7173b4b54ea",
+      "bytes": 6407
+    },
+    "subject/experiments/quantum_surgery/__init__.py": {
+      "sha256": "1925c77c6e7cfff79798b2eab36ecb21b06bac8825c399743937da5da05f1d37",
+      "bytes": 85
+    },
+    "subject/experiments/quantum_surgery/algebra.py": {
+      "sha256": "c03d19471ba817dd8b9af234dd54418c3d411cb0d222803dfe2a93333c8d0ed4",
+      "bytes": 16988
+    },
+    "subject/experiments/quantum_surgery/exact.py": {
+      "sha256": "1c9b6ce9fbf39dc4033e62451f83039616b1a1fa79fddcc7bd990aa5d9ec4f97",
+      "bytes": 8138
+    },
+    "subject/runtime-file-map.json": {
+      "sha256": "b2644b091e996d77d21cbdf69b419dcf5388763f246858b5ec9dbe076ce246c0",
+      "bytes": 3203
+    },
+    "subject/scientific-comparison.json": {
+      "sha256": "b21ec307b97b11b73e83a2d28f37d6c870cf00a286492a1f9cf044b2df7ce617",
+      "bytes": 15384
+    },
+    "subject/source-freeze.json": {
+      "sha256": "2c89451d7d9f69d18cdd514b8244615498e2d8c5ba6c0963ba63f279c70ed037",
+      "bytes": 25040
+    },
+    "targeted-controls-normal.json": {
+      "sha256": "bbcebd32b35c2e7e2be5df0c4202633c31f51a6e03f974d45063087ddbaa72df",
+      "bytes": 93620
+    },
+    "targeted-controls-optimized.json": {
+      "sha256": "6cd8aacf2f1acfeefc8a4a43d6cdc27f1a9a6fad512bdfdd93bfc46f32a2e0a0",
+      "bytes": 93619
+    },
+    "targeted_controls.py": {
+      "sha256": "04c0e6b39d8d4d6d5a23c72aae475e0b84a411e49d67a5cf2ea32a530e075f26",
+      "bytes": 9591
+    },
+    "tests-normal.stderr.txt": {
+      "sha256": "b74dcf44c222a50e69037c9d0d65e7c7efc1baeebeec50edf942823e3f2109c6",
+      "bytes": 7630
+    },
+    "tests-normal.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "tests-optimized.stderr.txt": {
+      "sha256": "cb471cf05c0b9319872b106e0f57816407c62540b8b5447c28f4abef7568d899",
+      "bytes": 7630
+    },
+    "tests-optimized.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  }
+}

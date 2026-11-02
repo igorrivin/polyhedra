@@ -1,0 +1,2281 @@
+{
+  "recorded_at_utc": "2026-11-02T04:43:07.618683+00:00",
+  "author_freeze_sha256": "174bc16423e1917a7d6ed634e90ac8a47dd5a86cedb551efb67bf86218d03d16",
+  "author_evidence_files_verified": 51,
+  "approved_source_sha256": {
+    "INTEGRATION_PLAN.md": "6883c25399ceb1cee5359c7256088d94612bcba37e039a4a2319f27c680480bd",
+    "README.md": "b38752855a2ff46c369b60d096135589fb4ae6421cf129f39f5792ed7a2adce5",
+    "book/README.md": "7f85f1340682a5c628bc407b41507585236312330c640289a217f647381c5204",
+    "book/chapters/10-quantum-introduction.tex": "609f375ff0c1ab926c7073e716642b6abbceefde487fe470b771394771abc66f",
+    "book/chapters/11-quantum-degeneration.tex": "f7ab9345686dc71b44cb8486224c6b5875979e6a9820e45b4ea92fe70ba1a4c8",
+    "book/chapters/17-unfolding-constant-series.tex": "7b3e784b9b6f7ace3f402afca0a402e5cc354fd118d751b07b6a8bad707a4e88",
+    "book/chapters/18-figure-eight-curves.tex": "db8fd09066b6b80bb1e231587ad0f740d6d37aad91cd20ae29e4bde95fc08cbc",
+    "book/chapters/19-pants-twists.tex": "07292527452fe2e728eba6cc917f548ebd7f9551ac2849d7e5a1b1b7158080dd",
+    "book/chapters/20-torus-twist-series.tex": "841fe98f4e7140ef6b6db82214f9e7d78d9c311888a2d2851e02e61eda6ab4e9",
+    "book/chapters/21-cuff-matching.tex": "2988997ebd215ad77c6153309712ed557c139b2af8c13c4ca86fb2a865e84f90",
+    "book/chapters/22-cusps-orthospectrum.tex": "bb3a234029d2b95b6c40eee4cbeee0199d4740a84326cd0595163dcbc6730557",
+    "book/chapters/32-open-questions.tex": "cc5df6f2a283bb6eb3b96f1bd01229a212880aa47056aefc3cae7652c831c7ca",
+    "book/chapters/appendix-b-conventions.tex": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+    "book/claims/section32-appendixb.json": "b8e2ae0cbab07d993b45c381caca1b308b30acad45685da447af5e8e4276de55",
+    "book/claims/sections10-11.json": "5d191ed33fdd5b1ce1a592e91ccc053674a9ea9c0f52a1c9bca33c473cff857c",
+    "book/claims/sections17-22.json": "40dc199e544b1eddf678b1a10210fdd46b4bee6cfb5bfdc168534e9c6076037b",
+    "book/computational-status.md": "de27d20352ccb2b37043708a3f3e49ca0742dd7955d108e7ee88255bac0eafe4",
+    "book/polyhedral_volumes_and_geodesic_identities.tex": "858de9e69e082371593cec09d55fff6da5c276971c99cd32053d5db7c2822280",
+    "docs/INTEGRATION_STATUS.md": "7b7e71768702faeac19bac4ac4abb8b0558163f34ab57297756d6fc76b769ba3",
+    "experiments/quantum_geodesics/README.md": "22921e4545c1b4bb0fa0ac4c1e031b77140f2e3f3a51cda93ef4f67c05493b6a",
+    "experiments/quantum_geodesics/__init__.py": "0c8007dbe9a1134b40566beed05c4469fb671771a78f072090c4f2b0504404a2",
+    "experiments/quantum_geodesics/common.py": "279d158fb17d557dfe4c17bcb01bcb932f6e5343594c1d664ffd0519775bb2cc",
+    "experiments/quantum_geodesics/contracts/geodesic-contract-acceptance.json": "be7debaf190ecd960d0caeca6b82e884407b6da04e72234e16a60762980bc82b",
+    "experiments/quantum_geodesics/contracts/geodesic-source-acceptance.json": "b734eb97f35f360022cb874b4561d9d3151f876d26db7eb6459e9f676576c0ef",
+    "experiments/quantum_geodesics/contracts/geodesic-targets.md": "2a62a149e7f5f88027329c24ba3a4720407debfed2fb78945350f23b6fce85a6",
+    "experiments/quantum_geodesics/contracts/quantum-mathematical-acceptance.json": "c631f5ed63513246adf7bbec958c3298ab577861ee02f1d359ff6ca25b7c4dd9",
+    "experiments/quantum_geodesics/contracts/quantum-source-freeze.json": "f043f6943bd124638802bfdb5d5e7505269143f54046eea93d298345191c0620",
+    "experiments/quantum_geodesics/contracts/quantum-targets.md": "1d1fae5b1539b8ee52d27a761ee1d2aaf2a8b050d213c023df506af498fe96b1",
+    "experiments/quantum_geodesics/figure_eight.py": "7fc20f4328316e31565341537bffae462a6083423ef30d6ce4fb02ceb6bc68e8",
+    "experiments/quantum_geodesics/fixture.json": "3c0f2ba7ffe7715d38e602697a0c7012b1963f653b483f5c7033858670530a1b",
+    "experiments/quantum_geodesics/geodesic_exact.py": "6e72ad9335987f7c355d1a4a744905008faf2088e6ba4b4efa4b676243c30ea7",
+    "experiments/quantum_geodesics/geometry.py": "18a92ccbbae9ebe84b841fe97fd0df91a66fac00f81d411dfd2ff636975878b0",
+    "experiments/quantum_geodesics/kernels.py": "4c4431bb43267144dac233948846897e1032a7ee938908e6b1701421799ded97",
+    "experiments/quantum_geodesics/klein.py": "f5ab68c308580b1c954d16104118b9cf807455bf7b6e51125e872ac0c505a4dd",
+    "experiments/quantum_geodesics/normalization.py": "50436249a581492e3cc263e389929bad9d22925e0c523922a0f4b06dd6686687",
+    "experiments/quantum_geodesics/run.py": "618f17d3aec05e2a6de637c851e6ccfabfde50088662f5198f165eebd8a5254a",
+    "experiments/quantum_geodesics/tests/test_geodesic.py": "61652d138e4be89ef15fd748fda0eea941807e97fcad770f4f0ee73709337c71",
+    "experiments/quantum_geodesics/tests/test_quantum.py": "a5d3a2a8242a579b3af345dcce40a55c4314c10becfa82f7215e5dda6335fcc0",
+    "experiments/quantum_geodesics/tests/test_validation.py": "9ad40c44d0607cf919335c9b0ec7dd4e0985a1dc3b2a2f3513f2cc8c35e2b8b8",
+    "experiments/quantum_geodesics/twist_integrals.py": "11e99ee89d12f8dd11697ed663b40da2eee15eb0150c77320fb0e7173b4b54ea"
+  },
+  "actual_modified_paths": [
+    "INTEGRATION_PLAN.md",
+    "README.md",
+    "book/README.md",
+    "book/computational-status.md",
+    "book/polyhedral_volumes_and_geodesic_identities.tex",
+    "docs/INTEGRATION_STATUS.md"
+  ],
+  "actual_untracked_paths": [
+    "book/chapters/10-quantum-introduction.tex",
+    "book/chapters/11-quantum-degeneration.tex",
+    "book/chapters/17-unfolding-constant-series.tex",
+    "book/chapters/18-figure-eight-curves.tex",
+    "book/chapters/19-pants-twists.tex",
+    "book/chapters/20-torus-twist-series.tex",
+    "book/chapters/21-cuff-matching.tex",
+    "book/chapters/22-cusps-orthospectrum.tex",
+    "book/chapters/32-open-questions.tex",
+    "book/chapters/appendix-b-conventions.tex",
+    "book/claims/section32-appendixb.json",
+    "book/claims/sections10-11.json",
+    "book/claims/sections17-22.json",
+    "experiments/quantum_geodesics/README.md",
+    "experiments/quantum_geodesics/__init__.py",
+    "experiments/quantum_geodesics/common.py",
+    "experiments/quantum_geodesics/contracts/geodesic-contract-acceptance.json",
+    "experiments/quantum_geodesics/contracts/geodesic-source-acceptance.json",
+    "experiments/quantum_geodesics/contracts/geodesic-targets.md",
+    "experiments/quantum_geodesics/contracts/quantum-mathematical-acceptance.json",
+    "experiments/quantum_geodesics/contracts/quantum-source-freeze.json",
+    "experiments/quantum_geodesics/contracts/quantum-targets.md",
+    "experiments/quantum_geodesics/figure_eight.py",
+    "experiments/quantum_geodesics/fixture.json",
+    "experiments/quantum_geodesics/geodesic_exact.py",
+    "experiments/quantum_geodesics/geometry.py",
+    "experiments/quantum_geodesics/kernels.py",
+    "experiments/quantum_geodesics/klein.py",
+    "experiments/quantum_geodesics/normalization.py",
+    "experiments/quantum_geodesics/run.py",
+    "experiments/quantum_geodesics/tests/test_geodesic.py",
+    "experiments/quantum_geodesics/tests/test_quantum.py",
+    "experiments/quantum_geodesics/tests/test_validation.py",
+    "experiments/quantum_geodesics/twist_integrals.py"
+  ],
+  "active_TeX_inputs": {
+    "book/main.tex": "be3c45c0c4e3105d5e5275b2bbfefed5b8a79e088a456b83a8ea81dcce89a99d",
+    "book/polyhedral_volumes_and_geodesic_identities.tex": "858de9e69e082371593cec09d55fff6da5c276971c99cd32053d5db7c2822280",
+    "book/chapters/01-volume-normalization.tex": "b35a17e1dce5aa276d915e67eff0d15926da7c4180a32f9ffa9706476c2fe095",
+    "book/chapters/02-ideal-angle-cells.tex": "968ea966c452494a299be719165b5ac25c5ebd70e31e8bfd974705b763f9644d",
+    "book/chapters/03-ideal-tetrahedron.tex": "81c51ade3378fbfd4baff1cebeb2dcdd8b0fd43a032ac45fb3b30c4908060797",
+    "book/chapters/04-hyperideal-integrand.tex": "94da7f5288e0b6c606ff7d1a80516bc421e1de1a801e83873a0c9a25af7946b5",
+    "book/chapters/05-boundary-cone-continuation.tex": "feee80182603e334d8cda389435a43a8b9d37192b581befd1e761c03b93e51d5",
+    "book/chapters/06-torus-sphere.tex": "4a60370b881044ff89f45bbe51a171f04fb315b3be9317468a6cf212e8fd2947",
+    "book/chapters/07-euclidean-periods.tex": "3665a4e2ff074950a5e74ef9fba511af4dc5820e3589d823d9d96f7fac2de8d9",
+    "book/chapters/08-wp-flat-limit.tex": "1a175315aa975708a5c93151b9ae107b7dd36f79720dae7c7264adda062a6283",
+    "book/chapters/09-volume-hessians.tex": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00",
+    "book/chapters/10-quantum-introduction.tex": "609f375ff0c1ab926c7073e716642b6abbceefde487fe470b771394771abc66f",
+    "book/chapters/11-quantum-degeneration.tex": "f7ab9345686dc71b44cb8486224c6b5875979e6a9820e45b4ea92fe70ba1a4c8",
+    "book/chapters/12-quantum-boundary-measure.tex": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+    "book/chapters/13-four-point-fusion.tex": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+    "book/chapters/14-normalized-quantum-comparison.tex": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+    "book/chapters/15-quantum-airy.tex": "efee2c699923ab31e4d7d48eeac57c60bf2ea088ea4ff17e617b9ed97202d6dd",
+    "book/chapters/16-dehn-filling-response.tex": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+    "book/chapters/17-unfolding-constant-series.tex": "7b3e784b9b6f7ace3f402afca0a402e5cc354fd118d751b07b6a8bad707a4e88",
+    "book/chapters/18-figure-eight-curves.tex": "db8fd09066b6b80bb1e231587ad0f740d6d37aad91cd20ae29e4bde95fc08cbc",
+    "book/chapters/19-pants-twists.tex": "07292527452fe2e728eba6cc917f548ebd7f9551ac2849d7e5a1b1b7158080dd",
+    "book/chapters/20-torus-twist-series.tex": "841fe98f4e7140ef6b6db82214f9e7d78d9c311888a2d2851e02e61eda6ab4e9",
+    "book/chapters/21-cuff-matching.tex": "2988997ebd215ad77c6153309712ed557c139b2af8c13c4ca86fb2a865e84f90",
+    "book/chapters/22-cusps-orthospectrum.tex": "bb3a234029d2b95b6c40eee4cbeee0199d4740a84326cd0595163dcbc6730557",
+    "book/chapters/23-trace-coefficients.tex": "5520b28607f96a3e65ea32e7c4dab267f6556dbbe8975d29b4186b9b27e429c9",
+    "book/chapters/24-quantitative-counting.tex": "4099f91c4abddf5f2a13831e48d7d52ac4d90af137068b969ca612fc6b273c58",
+    "book/chapters/25-global-coefficient-filters.tex": "c876c43ce0d738ea4fa4780713753c3c9c48efdcf788cc9e305ac5011af732e2",
+    "book/chapters/26-counting-to-mixing.tex": "64562ebf631c59b84b9c991a632926107b3e24cb5b08b29c21e263bd50a9e901",
+    "book/chapters/27-weighted-mixing-converse.tex": "79fb4660fe87a5723eea0d410e55e954913b0386057a31542473d6486492dcc1",
+    "book/chapters/28-genus-two-model.tex": "18c05143e86fb9630868bb2824ddf44643c1ee1c84a40dc77a8c9d5354663fb4",
+    "book/chapters/29-controlled-observables.tex": "8c26fb3e18186d95ead2ae71eebd601966855d1bf0f9f7ed662f9996ab3b49f1",
+    "book/chapters/30-sharp-diagnostics.tex": "23d92f42eeacbe7e6c967e9b35e48228e96458356a5d659333713bf79200bd33",
+    "book/chapters/31-arithmetic-remainder.tex": "7b065510eee82c535484ddcab44da4722c7b738b64d0d0e2aaec598407d2ba69",
+    "book/chapters/32-open-questions.tex": "cc5df6f2a283bb6eb3b96f1bd01229a212880aa47056aefc3cae7652c831c7ca",
+    "book/chapters/appendix-a-fricke.tex": "61bde2f802c7c5cb931d6bc5c4528e82459392e803b2a7aaf1a7d5afc4fb7e5f",
+    "book/chapters/appendix-b-conventions.tex": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74"
+  },
+  "ordered_labels": [
+    "sec:monographintro",
+    "fig:mono-connections",
+    "sec:conventions",
+    "eq:fn",
+    "eq:basevolumes",
+    "sec:idealcells",
+    "eq:rivinangles1",
+    "eq:rivinangles2",
+    "eq:rivinangles3",
+    "eq:deltameasure",
+    "eq:polyhedralpartition",
+    "sec:tetrahedron",
+    "eq:penner",
+    "eq:lambdagauge",
+    "eq:tetdensity",
+    "eq:onecell",
+    "eq:v04direct",
+    "sec:hyperideal",
+    "eq:qvertices",
+    "eq:truncationlengths",
+    "eq:gram",
+    "eq:boundarykernel",
+    "eq:hyperidealdensity",
+    "eq:gramdensity",
+    "eq:pfaffiandensity",
+    "eq:buddidentity",
+    "eq:treevolume",
+    "sec:cones",
+    "eq:gb",
+    "eq:wpclass",
+    "eq:intersectionvolume",
+    "eq:mixedv04",
+    "eq:wallclass",
+    "eq:conev04",
+    "eq:kernelcontinuation",
+    "sec:torussphere",
+    "eq:commonorbifold",
+    "eq:lengthtorussphere",
+    "eq:voltorussphere",
+    "eq:conetorus",
+    "sec:thurstonDM",
+    "eq:flatweights",
+    "eq:flatconemetric",
+    "fig:mono-polyhedral-regimes",
+    "eq:DMdifferential",
+    "eq:DMperiods",
+    "eq:DMarea",
+    "eq:CHpotential",
+    "eq:vanishingperiod",
+    "eq:INT",
+    "eq:ellipticDM",
+    "eq:ellipticperiodratio",
+    "sec:flatlimit",
+    "eq:anglepath",
+    "eq:areapath",
+    "eq:unitareanormalization",
+    "eq:flatmetriclimit",
+    "eq:localWPCHlimit",
+    "eq:CHclassB",
+    "eq:CHintersection",
+    "eq:Xiclass",
+    "eq:exactWPclassflat",
+    "eq:exactWPvolumeflat",
+    "eq:WPCHvolumeasymptotic",
+    "eq:finalchamberwidth",
+    "eq:equalflatvolume",
+    "eq:McMullenpartitionvolume",
+    "sec:ipolybridge",
+    "subsec:ipolyCoordinates",
+    "eq:ipolyFEM",
+    "eq:ipolyDelaunayweight",
+    "eq:ipolyAngleCoordinates",
+    "prop:ipolyHessian",
+    "eq:ipolyHessian",
+    "eq:ipolyWeightLower",
+    "eq:ipolyNewton",
+    "fig:mono-cotangent-hessian",
+    "subsec:ipolyResponse",
+    "eq:ipolyDtN",
+    "eq:ipolyBoundaryResponse",
+    "eq:ipolySchur",
+    "eq:ipolyGaussian",
+    "eq:ipolyForestDeterminant",
+    "subsec:ipolyBarrierComplexity",
+    "eq:ipolyBarrier",
+    "prop:ipolyCompatibility",
+    "eq:ipolyCompatibility",
+    "eq:ipolyStepBound",
+    "subsec:ipolyFlips",
+    "fig:mono-flip",
+    "subsec:ipolyThreeManifolds",
+    "eq:ipolyThreeDimensionalHessian",
+    "subsec:ipolyComputation",
+    "sec:quantumintro",
+    "sec:introrecoupling",
+    "eq:introrecoupling",
+    "eq:introqinteger",
+    "eq:introstatesum",
+    "sec:introinvariants",
+    "eq:introknotvolume",
+    "eq:introclosedvolume",
+    "sec:introfigureeight",
+    "eq:introfigureproduct",
+    "eq:introfigureintegral",
+    "eq:introfigurevolume",
+    "sec:introdilog",
+    "eq:introqpochhammer",
+    "eq:introBlochWigner",
+    "eq:introquantumshape",
+    "sec:introsemiclassical",
+    "eq:introsaddleintegral",
+    "eq:introgaussian",
+    "fig:mono-airy",
+    "sec:introCS",
+    "eq:introCSfunctional",
+    "eq:introNZpolarization",
+    "eq:introWKBstate",
+    "eq:introvolumeboundary",
+    "sec:introquantization",
+    "eq:introcommutator",
+    "eq:introfillingkernel",
+    "eq:introRTgrowth",
+    "sec:introLiouville",
+    "eq:introLiouvilleparameters",
+    "eq:introfusion",
+    "eq:introdoublesine",
+    "sec:introscreening",
+    "eq:introzeromode",
+    "eq:introfirstmoment",
+    "eq:introcurvaturemeasure",
+    "sec:introreadingguide",
+    "sec:quantumdegeneration",
+    "eq:volumeconjecture",
+    "eq:individualflatvolume",
+    "eq:Kleinvolumeexpansion",
+    "eq:Schlafli",
+    "eq:firstcurvaturevolume",
+    "eq:quantum6jstructure",
+    "eq:jointscale",
+    "eq:modelpartition",
+    "eq:modelpartitionlimit",
+    "sec:quantummeasure",
+    "eq:Liouvilleflatparameters",
+    "eq:LiouvilleGMC",
+    "eq:GMCfirstmoment",
+    "eq:unitvolumeLiouville",
+    "eq:exactLiouvilleDM",
+    "eq:exactLiouvillecurvature",
+    "eq:flatSeibergbounds",
+    "eq:onescreeningresidue",
+    "eq:screeningDMperiods",
+    "eq:fourpointLiouville",
+    "eq:fourpointareaintegral",
+    "eq:fourpointquantumDMdensity",
+    "eq:torsionGoldman",
+    "eq:torsionDMlimit",
+    "eq:equalFricke",
+    "eq:Frickeblowup",
+    "eq:Frickeexpanded",
+    "eq:Frickeperiodchart",
+    "eq:Frickefirstcorrection",
+    "eq:normalizedWKBkernel",
+    "eq:kernelLiouvillemeasure",
+    "eq:b6jparameterdictionary",
+    "eq:auxiliaryGramobstruction",
+    "eq:areaLiouvillecharge",
+    "sec:screenedfusion",
+    "eq:screeningparameters",
+    "eq:screeningtransverse",
+    "eq:screeningtailinput",
+    "eq:screeningpolefamilies",
+    "eq:twoscreeningchannels",
+    "eq:gammaratio",
+    "eq:threepointscreeningresidues",
+    "eq:screeningexponentdifferences",
+    "eq:screeningHermitiancoefficients",
+    "eq:spectralonescreeningresidue",
+    "eq:screeningsbasis",
+    "eq:screeningVirasoroblocks",
+    "eq:screeningEulerarcs",
+    "eq:screeningtbasis",
+    "eq:screeningfusionrelation",
+    "eq:screeningfusionmatrix",
+    "eq:fusiondeterminant",
+    "eq:screeningsinefusion",
+    "eq:screeningareapairing",
+    "eq:complexbetaintegral",
+    "eq:screeningarcarea",
+    "eq:fusionHermitianidentity",
+    "eq:HermitianWronskian",
+    "eq:screeningWronskian",
+    "eq:general4DMdensity",
+    "eq:general4DMvolume",
+    "eq:equalweightfg",
+    "eq:equalweightlogsolutions",
+    "eq:equalweightlogfusion",
+    "eq:equalweightareaexact",
+    "eq:equalweightHermitian",
+    "eq:equalweightmonodromy",
+    "eq:equalweightdensityexplicit",
+    "sec:normalizedsixj",
+    "eq:TVnormalization",
+    "eq:TVunitarykernel",
+    "eq:TVreflectedlabels",
+    "eq:TVscreeningN",
+    "eq:TVfiniteN",
+    "eq:analytic6jscreening",
+    "eq:analytic6jpairing",
+    "eq:regularizedTVvector",
+    "eq:symmetric6jscreening",
+    "eq:continuedPlancherel",
+    "eq:screenedPlancherel",
+    "eq:screenedangleGram",
+    "eq:screenedplanarGram",
+    "eq:screenedranktwo",
+    "eq:screenedzerocofactors",
+    "eq:screenedclassicalpotential",
+    "eq:actualtetrahedralcharges",
+    "eq:regulartetrahedrongeometry",
+    "eq:regularareadihedral",
+    "eq:regularvolumebyarea",
+    "eq:regularsaddlequadratic",
+    "eq:regularcubicfold",
+    "eq:regularAiryvariable",
+    "eq:TVvolumehbar",
+    "eq:regularquantumintegrand",
+    "eq:correctquantumcoordinate",
+    "eq:exactintegrandquotient",
+    "eq:correctfoldarguments",
+    "sec:quantumAiry",
+    "eq:realregularsymbol",
+    "eq:externalpoleclearing",
+    "eq:clearedregularsymbol",
+    "prop:regularquantumAiry",
+    "eq:quantumAirytheorem",
+    "lem:stripdoubleSine",
+    "eq:uniformstripSb",
+    "eq:stripSbexactremainder",
+    "eq:Sbremainderintegral",
+    "eq:regularstripangles",
+    "eq:fullsmoothquantumphase",
+    "eq:clearedphaseamplitude",
+    "eq:regularAiryamplitude",
+    "eq:regularAiryderivatives",
+    "eq:verticalphasegap",
+    "eq:verticalphasepositivity",
+    "eq:AiryGaussianbound",
+    "eq:Airyweightedexpansion",
+    "eq:Airyscaledquantum",
+    "eq:Airycorrectionpolynomial",
+    "sec:dehnresponse",
+    "eq:dehnholonomy",
+    "eq:dehncone",
+    "eq:dehnvolumedifferential",
+    "eq:realdehnlegendre",
+    "eq:dehnsourcecore",
+    "eq:dehnquadraticresponse",
+    "eq:cuspHessian",
+    "eq:cuspmatrixHessian",
+    "eq:dehnprimitive",
+    "eq:dehnsurgeryaction",
+    "prop:dehncriticalvalue",
+    "eq:dehnexactcriticalvolume",
+    "eq:dehnenvelope",
+    "eq:NZrealvolume",
+    "fig:mono-dehn-filling",
+    "eq:dehninversion",
+    "eq:dehncriticalseries",
+    "eq:dehnconeloss",
+    "eq:dehnsmoothloss",
+    "eq:dehnquartictensors",
+    "eq:dehnquarticdictionary",
+    "eq:closedquantumvolume",
+    "eq:dehnquantumphase",
+    "eq:dehnquantumexponent",
+    "eq:dehnquantumresponse",
+    "prop:dehnquantumconditional",
+    "eq:dehnjacobian",
+    "eq:dehntorsionsurgery",
+    "eq:dehngaussiantorsion",
+    "eq:figureeightNZcoefficients",
+    "eq:figureeightfillingloss",
+    "eq:figureeightdirectHessian",
+    "eq:figureeightdirectquartic",
+    "sec:NZsymplectic",
+    "eq:NZmatrixpairing",
+    "eq:NZboundarysymplectic",
+    "eq:NZreciprocity",
+    "eq:NZvolumeprimitive",
+    "eq:NZcanonicalfilling",
+    "eq:NZcanonicalkernel",
+    "eq:NZgeneratingidentity",
+    "eq:NZcanonicalaction",
+    "eq:NZinvariantpotential",
+    "eq:NZcoefficientcovariance",
+    "eq:NZvolumenewpolarization",
+    "eq:NZreducedHessian",
+    "eq:NZMongeAmpere",
+    "eq:NZnonlinearresponse",
+    "eq:NZexactcurvature",
+    "eq:NZcompatiblemetric",
+    "eq:NZmulticuspHessian",
+    "eq:NZhalfdensity",
+    "sec:unfolding",
+    "eq:unfold",
+    "eq:recoverconstant",
+    "eq:torusunfold",
+    "eq:mcshane",
+    "eq:derivativeidentity",
+    "eq:variance",
+    "eq:dilogtorus",
+    "eq:luotan",
+    "sec:figures",
+    "eq:figuretrace",
+    "eq:twofigures",
+    "eq:doublepants",
+    "eq:htrace",
+    "eq:nidentity",
+    "eq:hidentity",
+    "eq:universalkernel",
+    "eq:allfigureidentity",
+    "eq:fbound",
+    "eq:kernelrelation",
+    "eq:figurekerneltail",
+    "eq:figurefiniteidentity",
+    "sec:twists",
+    "eq:localdistance",
+    "eq:seam",
+    "eq:localdistancehessian",
+    "eq:traceword",
+    "eq:cosine",
+    "eq:twistunfold",
+    "eq:mellin",
+    "sec:exacttwist",
+    "eq:Atwist",
+    "eq:torustwist",
+    "eq:torustwistderivatives",
+    "eq:toruscoarea",
+    "eq:sechintegral",
+    "eq:sublevel",
+    "eq:betaintegral",
+    "eq:torusintegraltail",
+    "eq:Hkernel",
+    "eq:Hidentity",
+    "eq:Hpartialsumtail",
+    "eq:Kkernel",
+    "eq:Kidentity",
+    "sec:matching",
+    "eq:endpointmatch",
+    "eq:momentummatch",
+    "sec:cusps",
+    "eq:cuspray",
+    "eq:cuspgap",
+    "eq:cusplambda",
+    "eq:toruscusplambda",
+    "eq:cusporthoidentity",
+    "eq:basmajian",
+    "sec:coefficientdistributions",
+    "eq:coeffuncrossing",
+    "eq:coeffbasis",
+    "eq:coeffcurveexpansion",
+    "eq:coefftwistedSelberg",
+    "eq:coeffdistribution",
+    "lem:coefftriangularity",
+    "prop:coefffirstatom",
+    "eq:coefffirstatom",
+    "eq:coeffmomentratio",
+    "fig:mono-reconnection-atoms",
+    "eq:coeffbraceletpositive",
+    "prop:coeffgrowth",
+    "eq:coeffexponentialbound",
+    "eq:coeffMrbound",
+    "cor:coeffmeasuregrowth",
+    "eq:coeffmeasuregrowth",
+    "eq:coeffheatdefinition",
+    "eq:coeffLaplacedefinition",
+    "eq:coeffallchannelbound",
+    "eq:coefffullheatexpansion",
+    "prop:coeffheatfirst",
+    "eq:coeffheatfirst",
+    "eq:coeffLaplacefirst",
+    "eq:coefflengthlimits",
+    "eq:coeffChebyshev",
+    "eq:coeffsimplepowers",
+    "eq:coeffoddpowers",
+    "eq:coeffpowergenerating",
+    "eq:coeffpowerLaplace",
+    "eq:coeffpowerheat",
+    "eq:coefffigurepowers",
+    "eq:coefffigurecancellation",
+    "eq:coeffmetricvariation",
+    "eq:coeffWolpert",
+    "eq:coeffheatvariation",
+    "eq:coeffunorientedproduct",
+    "eq:coeffproductderivative",
+    "eq:coeffAdamsobstruction",
+    "sec:quantitativecounting",
+    "subsec:countknown",
+    "eq:countEMM",
+    "subsec:countlattice",
+    "prop:countall",
+    "eq:countall",
+    "eq:countsandwich",
+    "eq:countcellerror",
+    "subsec:countprimitive",
+    "eq:countprimitive",
+    "eq:counttorus",
+    "subsec:countnearcollision",
+    "prop:countnearcollision",
+    "eq:countpantsgap",
+    "eq:countnormalizedpants",
+    "eq:countnecessarytime",
+    "subsec:countuniformisolation",
+    "eq:counttracegapconstant",
+    "lem:counttracegap",
+    "eq:counttracegap",
+    "eq:countactiongap",
+    "eq:countuniformconstants",
+    "prop:countuniformisolation",
+    "eq:countuniformisolation",
+    "eq:countcertifiedtime",
+    "subsec:countsupport",
+    "eq:countsupportpartition",
+    "eq:countonesupport",
+    "eq:countsupportmobius",
+    "eq:countsupportfourier",
+    "eq:countsupportconditional",
+    "subsec:countdesmooth",
+    "eq:countshell",
+    "prop:countdesmooth",
+    "eq:countsmoothhypothesis",
+    "eq:countsharpconditional",
+    "sec:globalfilters",
+    "eq:globalmoments",
+    "eq:globalbounded",
+    "eq:globalweightseries",
+    "prop:globalonecrossing",
+    "eq:globalonecrossing",
+    "eq:globalfilteredheat",
+    "eq:globalresidual",
+    "eq:globalobstruction",
+    "eq:globalobstructionbound",
+    "eq:globalEuler",
+    "prop:globaldiagonal",
+    "eq:globaldiagonal",
+    "eq:globalEulerbound",
+    "eq:globalEulerhalfplane",
+    "eq:globalEulerinput",
+    "sec:countmixing",
+    "subsec:countmixselberg",
+    "prop:countmixselberg",
+    "eq:countmixselbergcount",
+    "eq:countmixselberggap",
+    "eq:countmixselbergmixing",
+    "eq:countmixselberglogderivative",
+    "eq:countmixGN",
+    "subsec:countmixfinite",
+    "prop:countmixfinite",
+    "eq:countmixtrace",
+    "eq:countmixgap",
+    "eq:countmixparry",
+    "eq:countmixmatrixconstant",
+    "subsec:countmixscalar",
+    "subsec:countmixlocalized",
+    "prop:countmixlocalized",
+    "eq:countmixentry",
+    "eq:countmixrate",
+    "subsec:countmixnoncompact",
+    "eq:countmixcusprate",
+    "sec:pairconverse",
+    "subsec:paircoefficients",
+    "prop:pairfirstcorner",
+    "subsec:pairgeometry",
+    "eq:pairgeometryflow",
+    "subsec:pairquotient",
+    "subsec:pairliterature",
+    "eq:pairquadrature",
+    "eq:pairpoissonzero",
+    "subsec:twopointkernel",
+    "eq:twopointpolar",
+    "eq:twopointkernel",
+    "prop:twopointunfolding",
+    "eq:twopointexact",
+    "subsec:twopointdeaverage",
+    "thm:twopointconverse",
+    "eq:twopointcountassumption",
+    "eq:twopointmixrate",
+    "eq:twopointderivative",
+    "eq:twopointpointwise",
+    "subsec:twopointderivativeweight",
+    "thm:twopointfullrate",
+    "eq:twopointderivativecount",
+    "eq:twopointfullrate",
+    "eq:twopointfundamental",
+    "eq:twopointfullidentity",
+    "eq:twopointfullnorm",
+    "eq:twopointfullcusprate",
+    "subsec:twopointjacobian",
+    "eq:twopointHM",
+    "eq:twopointinverseHM",
+    "eq:twopointcusprate",
+    "eq:pairbruhat",
+    "eq:pairkloosterman",
+    "eq:pairkloostermansmooth",
+    "sec:genus2markedtorus",
+    "subsec:genus2compact",
+    "subsec:genus2quadraticformula",
+    "eq:genus2curve",
+    "eq:genus2qformula",
+    "eq:genus2order",
+    "subsec:genus2twodouble",
+    "eq:genus2cancel",
+    "eq:genus2pillowmark",
+    "subsec:genus2ellipticcover",
+    "eq:genus2toruscover",
+    "eq:genus2torusadmissible",
+    "eq:genus2equalareas",
+    "fig:mono-double-covers",
+    "subsec:genus2homogeneous",
+    "eq:genus2Y2",
+    "eq:genus2homflow",
+    "subsec:genus2haarmeasure",
+    "subsec:markedtorusconverse",
+    "eq:markedtorusfourier",
+    "eq:markedtorusequivariance",
+    "eq:markedtorusinduction",
+    "eq:markedtorusalltempered",
+    "eq:markedtorusKnorm",
+    "eq:markedtorusXi",
+    "thm:markedtorusmixing",
+    "eq:markedtorusexplicitmix",
+    "eq:markedtorusweight",
+    "eq:markedtorusweightcoordinates",
+    "eq:markedtorusexactcount",
+    "eq:markedtoruscountremainder",
+    "eq:markedtorusderivativeweight",
+    "subsec:genus2torusscope",
+    "sec:coefficientobservables",
+    "subsec:normballbarrier",
+    "eq:normballall",
+    "eq:normballprimitive",
+    "prop:normballflatrow",
+    "eq:normballlowerpower",
+    "subsec:normballspectral",
+    "eq:normballfinitephase",
+    "subsec:primitivepolebridge",
+    "lem:primitivepolearcs",
+    "eq:polearcflatlength",
+    "eq:polearccoefficientweight",
+    "eq:polearcobservable",
+    "subsec:polearcnorms",
+    "lem:polearcprimitivebound",
+    "eq:polearcprimitivebound",
+    "eq:polearcuniformS1",
+    "eq:polearccorrelation",
+    "eq:polearcKfixedcorrelation",
+    "subsec:polearcterminal",
+    "eq:polearclengthderivatives",
+    "eq:polearcVnorms",
+    "eq:polearcterminalidentity",
+    "subsec:polearcscope",
+    "subsec:affinedisplacements",
+    "eq:affinesiegelisometry",
+    "eq:affinesiegelexactcorr",
+    "eq:affinegaussiancorr",
+    "subsec:affineranktwo",
+    "eq:affineranktwoobservable",
+    "eq:affineranktwonorm",
+    "eq:affineranktwoschwartz",
+    "eq:affineranktwoKnorm",
+    "subsec:affineranktwogaussian",
+    "eq:affineranktwogaussiancorr",
+    "subsec:affinesharprotation",
+    "sec:sharpdiagnostics",
+    "subsec:mobiusmodulus",
+    "eq:primitiveexactnormalizedmobius",
+    "eq:primitiveDini",
+    "prop:strictconvexlittleo",
+    "subsec:rationalpolygonbenchmark",
+    "subsec:dyadicdiagnostic",
+    "eq:dyadicerrorinverse",
+    "eq:dyadicblockmetrics",
+    "subsec:inverseflatness",
+    "prop:inverseflatrow",
+    "eq:inverseflatwidth",
+    "eq:inverseflatdiscrepancy",
+    "eq:inverseflatmicroscopic",
+    "fig:mono-flat-row",
+    "subsec:flatnessmodels",
+    "eq:exponentialflatrow",
+    "subsec:rowdiagnostic",
+    "eq:primitiveintervalexact",
+    "subsec:torustraceexperiment",
+    "eq:diagnostictracetriples",
+    "subsec:recentflatnessqualification",
+    "sec:arithmeticgeometry",
+    "subsec:primitiveRHtransfer",
+    "prop:primitiveRHtransfer",
+    "eq:primitiveRHmaster",
+    "eq:primitiveRHpowerM",
+    "eq:primitiveRHmodulus",
+    "eq:primitiveDiniPNT",
+    "subsec:quasiRHapplication",
+    "eq:zeroFreeMertens",
+    "eq:primitiveRHgeometry",
+    "eq:primitiveRHlogresult",
+    "eq:primitiveRHbalancedpower",
+    "eq:allPointLogDiagnostic",
+    "sec:questions",
+    "app:fricke",
+    "eq:fricke",
+    "eq:frickedensity",
+    "app:conventions"
+  ],
+  "added_labels": [
+    "eq:figurekerneltail",
+    "eq:figurefiniteidentity",
+    "eq:localdistancehessian",
+    "eq:torustwistderivatives",
+    "eq:torusintegraltail",
+    "eq:Hpartialsumtail"
+  ],
+  "bibliography_keys": [
+    "WentworthGardiner",
+    "AranaHerreraSquare2020",
+    "AranaHerreraSquareEffective",
+    "ABEMPolar",
+    "AranaHerreraLattice",
+    "HumphriesModular",
+    "PollicottSharpZeta",
+    "BJPZeta",
+    "EdwardsOhMixing",
+    "GNDiscrepancy",
+    "SharpZeta",
+    "BabillotMixing",
+    "DolgopyatMixing",
+    "EMMEffective",
+    "LuoStongLengths",
+    "McShaneRivinTori",
+    "RivinSimpleAsymptotics",
+    "AHTComponents",
+    "CdVPeriodic",
+    "CharlesMarche",
+    "NaudTwisted",
+    "DThurstonPositive",
+    "BasokChelkak",
+    "WolpertTwist",
+    "AougabLahnLovingMiller",
+    "TaylorWoodward",
+    "TuraevVirelizier",
+    "KashaevVolume",
+    "MurakamiIntro",
+    "FaddeevKashaev",
+    "DimofteGaroufalidis",
+    "WittenJones",
+    "WittenContinuation",
+    "GukovApoly",
+    "DimofteQuantumRS",
+    "NeumannZagier",
+    "FuterGueritaud",
+    "ChenYang",
+    "GangRomoYamazaki",
+    "WongYangDehn",
+    "DimofteVeen",
+    "MathewsPurcellSymplectic",
+    "ALPS",
+    "AMN",
+    "AnagnostouNorbury",
+    "BaoBonahon",
+    "BellettiYang",
+    "Budd",
+    "BMZ",
+    "CDE",
+    "ChenMurakami",
+    "Costantino",
+    "DeligneMostow",
+    "DLMF",
+    "DoNorbury",
+    "ET",
+    "Fillastre",
+    "FillastreMetrics",
+    "Goldman",
+    "GKRVBootstrap",
+    "HeusenerPorti",
+    "HodgsonThesis",
+    "HuTan",
+    "KawazumiWP",
+    "Kerckhoff",
+    "Kojima",
+    "KoziarzNguyen",
+    "KRV",
+    "LeiZhang",
+    "LuoTan",
+    "MazzeoWeiss",
+    "McMullenGB",
+    "McShane",
+    "McShanePants",
+    "MirzVolumes",
+    "MirzIntersection",
+    "MirzSimple",
+    "MirzGeneral",
+    "MondelloBoundary",
+    "MondelloCones",
+    "MostowHalfIntegral",
+    "MurakamiMurakami",
+    "MurakamiYano",
+    "Parlier",
+    "Penner",
+    "PortiWeiss",
+    "RivinIntrinsic",
+    "RivinAngles",
+    "RivinDegeneration",
+    "RivinFigures",
+    "Roberts",
+    "SaadiZwiebach",
+    "Schlenker",
+    "Springborn",
+    "TeschnerRevisited",
+    "TeschnerVartanov",
+    "ThurstonShapes",
+    "WangFlatWP",
+    "Zonneveld",
+    "Zwiebach",
+    "BenirschkeServan",
+    "FillastreIzmestievCusps",
+    "LanneauComponents",
+    "StrombergssonVishe",
+    "BenoistKobayashi",
+    "CowlingHaagerupHowe",
+    "OtalRosas",
+    "AthreyaLagaceMollerRaum",
+    "AthreyaAffineLattices",
+    "ShigaHyperbolicQC",
+    "BaranyPrimitivePolygons",
+    "BowditchMarkoff",
+    "DoanLiNguyenStableNorm",
+    "ZhaiPrimitive2003",
+    "BakerPrimitive2010",
+    "OpenAIQuasiRHSeptember",
+    "OpenAIQuasiRHOctober",
+    "IpolyStudy",
+    "DuffinNetworks",
+    "RivinEuclidean",
+    "RivinOptimization",
+    "BoydVandenberghe",
+    "BoydVandenbergheSlides",
+    "SpielmanTengSolvers",
+    "RippaEnergy",
+    "DisarloParlier",
+    "BrockWPVolumes",
+    "BrockMappingTori",
+    "PortiTorsionSurvey"
+  ],
+  "reference_occurrences": 521,
+  "citation_occurrences": 245,
+  "accepted_mathematical_bodies_recovered_exactly": [
+    "book/chapters/10-quantum-introduction.tex",
+    "book/chapters/11-quantum-degeneration.tex",
+    "book/chapters/17-unfolding-constant-series.tex",
+    "book/chapters/18-figure-eight-curves.tex",
+    "book/chapters/19-pants-twists.tex",
+    "book/chapters/20-torus-twist-series.tex",
+    "book/chapters/21-cuff-matching.tex",
+    "book/chapters/22-cusps-orthospectrum.tex"
+  ],
+  "P01_normalized_mathematical_tokens_identical": true,
+  "P01_numbered_equations_before_after": [
+    1,
+    1
+  ],
+  "all_186_mathematical_claims": [
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.recoupling",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.quantum_integer",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.state_sum",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.invariant_dictionary",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.jones_kashaev",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.knot_volume",
+      "mathematical_fields_preserved": true,
+      "status": "external_conjecture"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.closed_growth",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.center_relation",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.root_color_scope",
+      "mathematical_fields_preserved": true,
+      "status": "derived_in_chapter"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.figure_product",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.figure_maximum",
+      "mathematical_fields_preserved": true,
+      "status": "derived_in_chapter"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.figure_integral",
+      "mathematical_fields_preserved": true,
+      "status": "derived_in_chapter"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.figure_volume",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.qpochhammer",
+      "mathematical_fields_preserved": true,
+      "status": "derived_in_chapter"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.quantum_pentagon",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.bloch_wigner",
+      "mathematical_fields_preserved": true,
+      "status": "derived_from_reviewed_dependencies"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.quantum_shape",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.state_integral_gluing",
+      "mathematical_fields_preserved": true,
+      "status": "formal_framework"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.stationary_phase",
+      "mathematical_fields_preserved": true,
+      "status": "conditional_analytic_statement"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.loop_dictionary",
+      "mathematical_fields_preserved": true,
+      "status": "formal_framework"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.torsion_scope",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.thimbles",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.fold_scale",
+      "mathematical_fields_preserved": true,
+      "status": "derived_from_reviewed_dependencies"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.cs_functional",
+      "mathematical_fields_preserved": true,
+      "status": "derived_in_chapter"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.complex_cs",
+      "mathematical_fields_preserved": true,
+      "status": "formal_framework"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.boundary_pairing",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.nz_polarization",
+      "mathematical_fields_preserved": true,
+      "status": "derived_from_reviewed_dependencies"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.volume_boundary",
+      "mathematical_fields_preserved": true,
+      "status": "derived_from_reviewed_dependencies"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.weyl_operators",
+      "mathematical_fields_preserved": true,
+      "status": "derived_in_chapter"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.quantum_curve",
+      "mathematical_fields_preserved": true,
+      "status": "conditional_analytic_statement"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.filling_generator",
+      "mathematical_fields_preserved": true,
+      "status": "derived_in_chapter"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.rt_exponent",
+      "mathematical_fields_preserved": true,
+      "status": "derived_in_chapter"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.liouville_construction",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.virasoro",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.spectral_domain",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.fusion_kernel",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.double_sine",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.double_sine_limit",
+      "mathematical_fields_preserved": true,
+      "status": "formal_framework"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.zero_mode",
+      "mathematical_fields_preserved": true,
+      "status": "derived_in_chapter"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.screening_first_moment",
+      "mathematical_fields_preserved": true,
+      "status": "derived_from_reviewed_dependencies"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.curvature_measure",
+      "mathematical_fields_preserved": true,
+      "status": "derived_from_reviewed_dependencies"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.finite_screening",
+      "mathematical_fields_preserved": true,
+      "status": "derived_from_reviewed_dependencies"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s10.limit_dictionary",
+      "mathematical_fields_preserved": true,
+      "status": "derived_from_reviewed_dependencies"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s11.volume_dictionary",
+      "mathematical_fields_preserved": true,
+      "status": "external_conjecture"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s11.individual_volume",
+      "mathematical_fields_preserved": true,
+      "status": "derived_in_chapter"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s11.wp_scale",
+      "mathematical_fields_preserved": true,
+      "status": "derived_from_reviewed_dependencies"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s11.klein_series",
+      "mathematical_fields_preserved": true,
+      "status": "derived_in_chapter"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s11.klein_remainder",
+      "mathematical_fields_preserved": true,
+      "status": "derived_in_chapter"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s11.schlafli",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s11.face_coefficients",
+      "mathematical_fields_preserved": true,
+      "status": "derived_in_chapter"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s11.first_curvature",
+      "mathematical_fields_preserved": true,
+      "status": "derived_in_chapter"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s11.doubling",
+      "mathematical_fields_preserved": true,
+      "status": "derived_in_chapter"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s11.regeneration_scope",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s11.volume_regular_continuation",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s11.costantino",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s11.cm_leading",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s11.cm_refined",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s11.roberts",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_checked"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s11.gram_degeneracy",
+      "mathematical_fields_preserved": true,
+      "status": "derived_in_chapter"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s11.joint_scale",
+      "mathematical_fields_preserved": true,
+      "status": "formal_framework"
+    },
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "claim_id": "s11.compact_model",
+      "mathematical_fields_preserved": true,
+      "status": "conditional_analytic_statement"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "17.01",
+      "mathematical_fields_preserved": true,
+      "status": "derived_analytic"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "17.02",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_and_derived_normalization"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "17.03",
+      "mathematical_fields_preserved": true,
+      "status": "derived_analytic"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "17.04",
+      "mathematical_fields_preserved": true,
+      "status": "derived_geometric"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "17.05",
+      "mathematical_fields_preserved": true,
+      "status": "derived_analytic"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "17.06",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "17.07",
+      "mathematical_fields_preserved": true,
+      "status": "derived_analytic"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "17.08",
+      "mathematical_fields_preserved": true,
+      "status": "derived_analytic"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "17.09",
+      "mathematical_fields_preserved": true,
+      "status": "derived_analytic"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "17.10",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "17.11",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_and_derived_normalization"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "18.01",
+      "mathematical_fields_preserved": true,
+      "status": "derived_geometric"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "18.02",
+      "mathematical_fields_preserved": true,
+      "status": "derived_exact_algebra"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "18.03",
+      "mathematical_fields_preserved": true,
+      "status": "derived_geometric"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "18.04",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_and_derived_normalization"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "18.05",
+      "mathematical_fields_preserved": true,
+      "status": "derived_geometric"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "18.06",
+      "mathematical_fields_preserved": true,
+      "status": "derived_exact_algebra"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "18.07",
+      "mathematical_fields_preserved": true,
+      "status": "derived_from_external_statements"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "18.08",
+      "mathematical_fields_preserved": true,
+      "status": "derived_analytic"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "18.09",
+      "mathematical_fields_preserved": true,
+      "status": "derived_from_external_statements"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "18.10",
+      "mathematical_fields_preserved": true,
+      "status": "derived_analytic"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "18.11",
+      "mathematical_fields_preserved": true,
+      "status": "derived_exact_algebra"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "18.12",
+      "mathematical_fields_preserved": true,
+      "status": "scope_boundary"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "19.01",
+      "mathematical_fields_preserved": true,
+      "status": "derived_geometric"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "19.02",
+      "mathematical_fields_preserved": true,
+      "status": "derived_geometric"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "19.03",
+      "mathematical_fields_preserved": true,
+      "status": "derived_geometric"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "19.04",
+      "mathematical_fields_preserved": true,
+      "status": "derived_geometric"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "19.05",
+      "mathematical_fields_preserved": true,
+      "status": "derived_exact_algebra"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "19.06",
+      "mathematical_fields_preserved": true,
+      "status": "derived_exact_algebra"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "19.07",
+      "mathematical_fields_preserved": true,
+      "status": "derived_geometric"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "19.08",
+      "mathematical_fields_preserved": true,
+      "status": "derived_geometric"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "19.09",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "19.10",
+      "mathematical_fields_preserved": true,
+      "status": "derived_analytic"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "19.11",
+      "mathematical_fields_preserved": true,
+      "status": "derived_analytic"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "20.01",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_and_derived_normalization"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "20.02",
+      "mathematical_fields_preserved": true,
+      "status": "derived_exact_algebra"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "20.03",
+      "mathematical_fields_preserved": true,
+      "status": "derived_analytic"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "20.04",
+      "mathematical_fields_preserved": true,
+      "status": "derived_analytic"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "20.05",
+      "mathematical_fields_preserved": true,
+      "status": "derived_analytic"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "20.06",
+      "mathematical_fields_preserved": true,
+      "status": "derived_exact_algebra"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "20.07",
+      "mathematical_fields_preserved": true,
+      "status": "derived_analytic"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "20.08",
+      "mathematical_fields_preserved": true,
+      "status": "derived_analytic"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "20.09",
+      "mathematical_fields_preserved": true,
+      "status": "derived_analytic"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "20.10",
+      "mathematical_fields_preserved": true,
+      "status": "derived_analytic"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "21.01",
+      "mathematical_fields_preserved": true,
+      "status": "derived_exact_algebra"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "21.02",
+      "mathematical_fields_preserved": true,
+      "status": "derived_geometric"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "21.03",
+      "mathematical_fields_preserved": true,
+      "status": "derived_geometric"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "22.01",
+      "mathematical_fields_preserved": true,
+      "status": "derived_geometric"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "22.02",
+      "mathematical_fields_preserved": true,
+      "status": "derived_geometric"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "22.03",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "22.04",
+      "mathematical_fields_preserved": true,
+      "status": "derived_from_external_statements"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "22.05",
+      "mathematical_fields_preserved": true,
+      "status": "derived_geometric"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "22.06",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_and_derived_normalization"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "22.07",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_and_derived_normalization"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "22.08",
+      "mathematical_fields_preserved": true,
+      "status": "derived_from_external_statements"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "22.09",
+      "mathematical_fields_preserved": true,
+      "status": "derived_exact_algebra"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "22.10",
+      "mathematical_fields_preserved": true,
+      "status": "external_statement_and_derived_normalization"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "22.11",
+      "mathematical_fields_preserved": true,
+      "status": "derived_geometric"
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "claim_id": "22.12",
+      "mathematical_fields_preserved": true,
+      "status": "scope_boundary"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "s32.q01",
+      "mathematical_fields_preserved": true,
+      "status": "open_target"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "s32.q02",
+      "mathematical_fields_preserved": true,
+      "status": "open_target"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "s32.q03",
+      "mathematical_fields_preserved": true,
+      "status": "open_target"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "s32.q04",
+      "mathematical_fields_preserved": true,
+      "status": "open_target"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "s32.q05",
+      "mathematical_fields_preserved": true,
+      "status": "open_target"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "s32.q06",
+      "mathematical_fields_preserved": true,
+      "status": "open_target"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "s32.q07",
+      "mathematical_fields_preserved": true,
+      "status": "open_target"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "s32.q08",
+      "mathematical_fields_preserved": true,
+      "status": "open_target"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "s32.q09",
+      "mathematical_fields_preserved": true,
+      "status": "open_target"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "s32.q10",
+      "mathematical_fields_preserved": true,
+      "status": "open_target"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "s32.q11",
+      "mathematical_fields_preserved": true,
+      "status": "open_target"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "s32.q12",
+      "mathematical_fields_preserved": true,
+      "status": "open_target"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "s32.q13",
+      "mathematical_fields_preserved": true,
+      "status": "open_target"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "s32.q14",
+      "mathematical_fields_preserved": true,
+      "status": "open_target"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "s32.q15",
+      "mathematical_fields_preserved": true,
+      "status": "open_target"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.curvature",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.ch_curvature",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.flat_weights",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.volume_scales",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.wp_limit",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.wp_form",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.boundaries",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.stack_volumes",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.torus_volume",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.sphere_volume",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.cone_parameter",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.ambient_crossratio",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.angles",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.lambda_length",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.planar_gauge",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.quantum_integer",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.jones",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.cm_labels",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.continuous_scale",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.barnes",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.liouville",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.torsion",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.closed_curves",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.positive_trace",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.coefficient_basis",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.selberg",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.heat",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.laplace",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.total_laminations",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.primitive_lamination",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.support_variable",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.one_crossing",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.basmajian",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.cusp",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.cusp_rays",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.phase",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.peripheral",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.polarization",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.real_source",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.holomorphic_action",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.gauge_counts",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.flow_scale",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.correlation",
+      "mathematical_fields_preserved": true,
+      "status": "convention_pointer_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "s32.scope",
+      "mathematical_fields_preserved": true,
+      "status": "author_scope_declaration"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "s32.computational_map",
+      "mathematical_fields_preserved": true,
+      "status": "evidence_scope_checked"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.source_scale",
+      "mathematical_fields_preserved": true,
+      "status": "source_statement_inherited"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.source_penner",
+      "mathematical_fields_preserved": true,
+      "status": "source_statement_inherited"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.source_calibration",
+      "mathematical_fields_preserved": true,
+      "status": "local_derivation_inherited"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.source_cde",
+      "mathematical_fields_preserved": true,
+      "status": "source_statement_inherited"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.source_budd",
+      "mathematical_fields_preserved": true,
+      "status": "source_statement_inherited"
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "claim_id": "appB.source_audit_scope",
+      "mathematical_fields_preserved": true,
+      "status": "author_scope_declaration"
+    }
+  ],
+  "claim_counts": [
+    61,
+    59,
+    66
+  ],
+  "runtime_files_unchanged": {
+    "experiments/quantum_geodesics/README.md": "22921e4545c1b4bb0fa0ac4c1e031b77140f2e3f3a51cda93ef4f67c05493b6a",
+    "experiments/quantum_geodesics/__init__.py": "0c8007dbe9a1134b40566beed05c4469fb671771a78f072090c4f2b0504404a2",
+    "experiments/quantum_geodesics/common.py": "279d158fb17d557dfe4c17bcb01bcb932f6e5343594c1d664ffd0519775bb2cc",
+    "experiments/quantum_geodesics/contracts/geodesic-contract-acceptance.json": "be7debaf190ecd960d0caeca6b82e884407b6da04e72234e16a60762980bc82b",
+    "experiments/quantum_geodesics/contracts/geodesic-source-acceptance.json": "b734eb97f35f360022cb874b4561d9d3151f876d26db7eb6459e9f676576c0ef",
+    "experiments/quantum_geodesics/contracts/geodesic-targets.md": "2a62a149e7f5f88027329c24ba3a4720407debfed2fb78945350f23b6fce85a6",
+    "experiments/quantum_geodesics/contracts/quantum-mathematical-acceptance.json": "c631f5ed63513246adf7bbec958c3298ab577861ee02f1d359ff6ca25b7c4dd9",
+    "experiments/quantum_geodesics/contracts/quantum-source-freeze.json": "f043f6943bd124638802bfdb5d5e7505269143f54046eea93d298345191c0620",
+    "experiments/quantum_geodesics/contracts/quantum-targets.md": "1d1fae5b1539b8ee52d27a761ee1d2aaf2a8b050d213c023df506af498fe96b1",
+    "experiments/quantum_geodesics/figure_eight.py": "7fc20f4328316e31565341537bffae462a6083423ef30d6ce4fb02ceb6bc68e8",
+    "experiments/quantum_geodesics/fixture.json": "3c0f2ba7ffe7715d38e602697a0c7012b1963f653b483f5c7033858670530a1b",
+    "experiments/quantum_geodesics/geodesic_exact.py": "6e72ad9335987f7c355d1a4a744905008faf2088e6ba4b4efa4b676243c30ea7",
+    "experiments/quantum_geodesics/geometry.py": "18a92ccbbae9ebe84b841fe97fd0df91a66fac00f81d411dfd2ff636975878b0",
+    "experiments/quantum_geodesics/kernels.py": "4c4431bb43267144dac233948846897e1032a7ee938908e6b1701421799ded97",
+    "experiments/quantum_geodesics/klein.py": "f5ab68c308580b1c954d16104118b9cf807455bf7b6e51125e872ac0c505a4dd",
+    "experiments/quantum_geodesics/normalization.py": "50436249a581492e3cc263e389929bad9d22925e0c523922a0f4b06dd6686687",
+    "experiments/quantum_geodesics/run.py": "618f17d3aec05e2a6de637c851e6ccfabfde50088662f5198f165eebd8a5254a",
+    "experiments/quantum_geodesics/tests/test_geodesic.py": "61652d138e4be89ef15fd748fda0eea941807e97fcad770f4f0ee73709337c71",
+    "experiments/quantum_geodesics/tests/test_quantum.py": "a5d3a2a8242a579b3af345dcce40a55c4314c10becfa82f7215e5dda6335fcc0",
+    "experiments/quantum_geodesics/tests/test_validation.py": "9ad40c44d0607cf919335c9b0ec7dd4e0985a1dc3b2a2f3513f2cc8c35e2b8b8",
+    "experiments/quantum_geodesics/twist_integrals.py": "11e99ee89d12f8dd11697ed663b40da2eee15eb0150c77320fb0e7173b4b54ea",
+    "experiments/quantum_surgery/__init__.py": "1925c77c6e7cfff79798b2eab36ecb21b06bac8825c399743937da5da05f1d37",
+    "experiments/quantum_surgery/algebra.py": "c03d19471ba817dd8b9af234dd54418c3d411cb0d222803dfe2a93333c8d0ed4",
+    "experiments/quantum_surgery/exact.py": "1c9b6ce9fbf39dc4033e62451f83039616b1a1fa79fddcc7bd990aa5d9ec4f97"
+  },
+  "immutable_author_result": {
+    "path": "computation/full-v2/author-result-70-110.json",
+    "sha256": "5f73fce03e43103dc457570bcd90f4722599b5ac0d67a9b9b88d9e00679f0429",
+    "bytes": 4694781
+  },
+  "derived_group_counts": {
+    "exact": 1342,
+    "numerical_formula_comparisons": 4266,
+    "cross_precision_observations": 509
+  },
+  "group_names": [
+    "Q1_figure_eight",
+    "Q2_klein_geometry",
+    "Q3_peripheral_filling",
+    "Q4_charge_curvature",
+    "G1_torus_unfolding",
+    "G2_pants_traces",
+    "G3_figure_eight_kernel",
+    "G4_local_distance",
+    "G5_seams_torus_holonomy",
+    "G6_twist_coarea",
+    "G7_twist_partition",
+    "G8_endpoint_matching",
+    "G9_cusp_decoration",
+    "G10_boundary_shadows"
+  ],
+  "current_dependencies_bound_after_quantum_geodesic_hashes": true,
+  "historical_snapshots_and_older_result_records_preserved": true,
+  "whitespace_checks": [
+    {
+      "path": "INTEGRATION_PLAN.md",
+      "returncode": 0,
+      "diagnostics": []
+    },
+    {
+      "path": "README.md",
+      "returncode": 0,
+      "diagnostics": []
+    },
+    {
+      "path": "book/README.md",
+      "returncode": 0,
+      "diagnostics": []
+    },
+    {
+      "path": "book/chapters/10-quantum-introduction.tex",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "book/chapters/11-quantum-degeneration.tex",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "book/chapters/17-unfolding-constant-series.tex",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "book/chapters/18-figure-eight-curves.tex",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "book/chapters/19-pants-twists.tex",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "book/chapters/20-torus-twist-series.tex",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "book/chapters/21-cuff-matching.tex",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "book/chapters/22-cusps-orthospectrum.tex",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "book/chapters/32-open-questions.tex",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "book/chapters/appendix-b-conventions.tex",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "book/claims/section32-appendixb.json",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "book/claims/sections10-11.json",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "book/claims/sections17-22.json",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "book/computational-status.md",
+      "returncode": 0,
+      "diagnostics": []
+    },
+    {
+      "path": "book/polyhedral_volumes_and_geodesic_identities.tex",
+      "returncode": 0,
+      "diagnostics": []
+    },
+    {
+      "path": "docs/INTEGRATION_STATUS.md",
+      "returncode": 0,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/README.md",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/__init__.py",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/common.py",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/contracts/geodesic-contract-acceptance.json",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/contracts/geodesic-source-acceptance.json",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/contracts/geodesic-targets.md",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/contracts/quantum-mathematical-acceptance.json",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/contracts/quantum-source-freeze.json",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/contracts/quantum-targets.md",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/figure_eight.py",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/fixture.json",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/geodesic_exact.py",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/geometry.py",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/kernels.py",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/klein.py",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/normalization.py",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/run.py",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/tests/test_geodesic.py",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/tests/test_quantum.py",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/tests/test_validation.py",
+      "returncode": 1,
+      "diagnostics": []
+    },
+    {
+      "path": "experiments/quantum_geodesics/twist_integrals.py",
+      "returncode": 1,
+      "diagnostics": []
+    }
+  ],
+  "scientific_replay_performed": false,
+  "canonical_edits_performed": false
+}

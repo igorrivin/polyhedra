@@ -1,0 +1,582 @@
+{
+  "status": "author_finite_checks_passed_not_independent_review",
+  "scope": "Representative finite checks; does not implement the full maintained companion contract.",
+  "evidence_classes": {
+    "exact": "finite symbolic identities",
+    "numerical": "uncertified floating comparisons at stated precision",
+    "tails": "evaluations of analytically proved bounds, not interval enclosures"
+  },
+  "versions": {
+    "python": "3.12.11",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "script_sha256": "a3c230f27e88c2915131727f12c35065a3bc5f6c3754d4a8cb71c50ad8e49c1e",
+  "exact_count": 80,
+  "exact": [
+    {
+      "group": "G2",
+      "name": "trace_identity_1",
+      "residual": "0"
+    },
+    {
+      "group": "G2",
+      "name": "trace_identity_2",
+      "residual": "0"
+    },
+    {
+      "group": "G2",
+      "name": "trace_identity_3",
+      "residual": "0"
+    },
+    {
+      "group": "G2",
+      "name": "trace_identity_4",
+      "residual": "0"
+    },
+    {
+      "group": "G2",
+      "name": "trace_identity_5",
+      "residual": "0"
+    },
+    {
+      "group": "G2",
+      "name": "trace_identity_6",
+      "residual": "0"
+    },
+    {
+      "group": "G2",
+      "name": "paired_inverse_a",
+      "residual": "0"
+    },
+    {
+      "group": "G2",
+      "name": "paired_inverse_b",
+      "residual": "0"
+    },
+    {
+      "group": "G3",
+      "name": "finite_coefficients_N1",
+      "residual": "0"
+    },
+    {
+      "group": "G3",
+      "name": "finite_coefficients_N2",
+      "residual": "0"
+    },
+    {
+      "group": "G3",
+      "name": "finite_coefficients_N4",
+      "residual": "0"
+    },
+    {
+      "group": "G3",
+      "name": "finite_coefficients_N12",
+      "residual": "0"
+    },
+    {
+      "group": "G3",
+      "name": "finite_coefficients_N40",
+      "residual": "0"
+    },
+    {
+      "group": "G3",
+      "name": "finite_coefficients_N180",
+      "residual": "0"
+    },
+    {
+      "group": "G4",
+      "name": "z_uu",
+      "residual": "0"
+    },
+    {
+      "group": "G4",
+      "name": "diagonal_numerator",
+      "residual": "0"
+    },
+    {
+      "group": "G4",
+      "name": "mixed_numerator",
+      "residual": "0"
+    },
+    {
+      "group": "G4",
+      "name": "hessian_determinant_numerator",
+      "residual": "0"
+    },
+    {
+      "group": "G5",
+      "name": "torus_commutator",
+      "residual": "0"
+    },
+    {
+      "group": "G5",
+      "name": "torus_trace",
+      "residual": "0"
+    },
+    {
+      "group": "G7",
+      "name": "finite_tanh_coefficients_N0",
+      "residual": "0"
+    },
+    {
+      "group": "G7",
+      "name": "finite_tanh_coefficients_N1",
+      "residual": "0"
+    },
+    {
+      "group": "G7",
+      "name": "finite_tanh_coefficients_N4",
+      "residual": "0"
+    },
+    {
+      "group": "G7",
+      "name": "finite_tanh_coefficients_N12",
+      "residual": "0"
+    },
+    {
+      "group": "G7",
+      "name": "finite_tanh_coefficients_N50",
+      "residual": "0"
+    },
+    {
+      "group": "G7",
+      "name": "uniform_density_1/3_0",
+      "residual": "0"
+    },
+    {
+      "group": "G7",
+      "name": "uniform_density_1/3_1/6",
+      "residual": "0"
+    },
+    {
+      "group": "G7",
+      "name": "uniform_density_1/3_-1/6",
+      "residual": "0"
+    },
+    {
+      "group": "G7",
+      "name": "uniform_density_1/3_1/9",
+      "residual": "0"
+    },
+    {
+      "group": "G7",
+      "name": "uniform_density_2_0",
+      "residual": "0"
+    },
+    {
+      "group": "G7",
+      "name": "uniform_density_2_1",
+      "residual": "0"
+    },
+    {
+      "group": "G7",
+      "name": "uniform_density_2_-1",
+      "residual": "0"
+    },
+    {
+      "group": "G7",
+      "name": "uniform_density_2_2/3",
+      "residual": "0"
+    },
+    {
+      "group": "G7",
+      "name": "uniform_density_5/2_0",
+      "residual": "0"
+    },
+    {
+      "group": "G7",
+      "name": "uniform_density_5/2_5/4",
+      "residual": "0"
+    },
+    {
+      "group": "G7",
+      "name": "uniform_density_5/2_-5/4",
+      "residual": "0"
+    },
+    {
+      "group": "G7",
+      "name": "uniform_density_5/2_5/6",
+      "residual": "0"
+    },
+    {
+      "group": "G8",
+      "name": "matching_and_failed_spacing",
+      "residual": "exact predicates"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_det_1_2_2",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_traceB_1_2_2",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_qc_1_2_2",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_det_1_2_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_traceB_1_2_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_qc_1_2_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_det_1_3_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_traceB_1_3_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_qc_1_3_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_det_1_5_3",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_traceB_1_5_3",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_qc_1_5_3",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_det_2_2_2",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_traceB_2_2_2",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_qc_2_2_2",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_det_2_2_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_traceB_2_2_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_qc_2_2_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_det_2_3_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_traceB_2_3_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_qc_2_3_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_det_2_5_3",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_traceB_2_5_3",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_qc_2_5_3",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_det_3_2_2",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_traceB_3_2_2",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_qc_3_2_2",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_det_3_2_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_traceB_3_2_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_qc_3_2_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_det_3_3_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_traceB_3_3_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_qc_3_3_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_det_3_5_3",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_traceB_3_5_3",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "cusp_qc_3_5_3",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "markov_1_1_1",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "flip_H_1_1_1",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "markov_1_2_3",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "flip_H_1_2_3",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "markov_2_3_5",
+      "residual": "0"
+    },
+    {
+      "group": "G9",
+      "name": "flip_H_2_3_5",
+      "residual": "0"
+    }
+  ],
+  "numeric": [
+    {
+      "decimal_digits": 70,
+      "scaled_tolerance": "1.0e-55",
+      "groups": {
+        "G1": {
+          "comparisons": 4,
+          "max_scaled_residual": "0.0"
+        },
+        "G2": {
+          "comparisons": 0,
+          "max_scaled_residual": "0.0"
+        },
+        "G3": {
+          "comparisons": 31,
+          "max_scaled_residual": "4.52783953941e-72"
+        },
+        "G4": {
+          "comparisons": 100,
+          "max_scaled_residual": "5.87441901843e-68"
+        },
+        "G5": {
+          "comparisons": 49,
+          "max_scaled_residual": "5.36096201467e-69"
+        },
+        "G6": {
+          "comparisons": 8,
+          "max_scaled_residual": "1.30856170695e-71"
+        },
+        "G7": {
+          "comparisons": 36,
+          "max_scaled_residual": "1.81113581577e-71"
+        },
+        "G8": {
+          "comparisons": 2,
+          "max_scaled_residual": "2.82989971213e-72"
+        },
+        "G9": {
+          "comparisons": 32,
+          "max_scaled_residual": "2.66124632368e-70"
+        },
+        "G10": {
+          "comparisons": 6,
+          "max_scaled_residual": "1.81897192648e-69"
+        }
+      },
+      "conditioning_observations": [
+        {
+          "group": "G3",
+          "x": "6.00000000000000000001",
+          "N": 180,
+          "log_bound": "-73018.5551151004933",
+          "positive_bound_retained": true,
+          "cancellation_limited": true,
+          "finite_residual_verification": "exact coefficient identity plus floating absolute comparison"
+        },
+        {
+          "group": "G3",
+          "x": "1000",
+          "N": 180,
+          "log_bound": "-1.44377621765570944e+55",
+          "positive_bound_retained": true,
+          "cancellation_limited": true,
+          "finite_residual_verification": "exact coefficient identity plus floating absolute comparison"
+        },
+        {
+          "group": "G7",
+          "L": "1001",
+          "positive_tail": "3.99325057335412614e-435",
+          "rounded_subtractive_tail": "0",
+          "status": "subtractive route rejected"
+        },
+        {
+          "group": "G10",
+          "d": "1000",
+          "positive_shadow": "2.03038355901978271e-434",
+          "scaled_by_4_exp_minus_d": "1.0",
+          "subtractive_value": "0",
+          "status": "subtractive route rejected"
+        }
+      ]
+    },
+    {
+      "decimal_digits": 110,
+      "scaled_tolerance": "1.0e-95",
+      "groups": {
+        "G1": {
+          "comparisons": 4,
+          "max_scaled_residual": "0.0"
+        },
+        "G2": {
+          "comparisons": 0,
+          "max_scaled_residual": "0.0"
+        },
+        "G3": {
+          "comparisons": 31,
+          "max_scaled_residual": "5.57128992128e-112"
+        },
+        "G4": {
+          "comparisons": 100,
+          "max_scaled_residual": "3.49285768126e-108"
+        },
+        "G5": {
+          "comparisons": 49,
+          "max_scaled_residual": "2.262041165e-109"
+        },
+        "G6": {
+          "comparisons": 8,
+          "max_scaled_residual": "1.20170936891e-111"
+        },
+        "G7": {
+          "comparisons": 36,
+          "max_scaled_residual": "1.6632655625e-111"
+        },
+        "G8": {
+          "comparisons": 2,
+          "max_scaled_residual": "1.40338031836e-111"
+        },
+        "G9": {
+          "comparisons": 32,
+          "max_scaled_residual": "2.57259870035e-110"
+        },
+        "G10": {
+          "comparisons": 6,
+          "max_scaled_residual": "3.99641308164e-110"
+        }
+      },
+      "conditioning_observations": [
+        {
+          "group": "G3",
+          "x": "6.00000000000000000001",
+          "N": 180,
+          "log_bound": "-73018.5551151004933",
+          "positive_bound_retained": true,
+          "cancellation_limited": true,
+          "finite_residual_verification": "exact coefficient identity plus floating absolute comparison"
+        },
+        {
+          "group": "G3",
+          "x": "1000",
+          "N": 180,
+          "log_bound": "-1.44377621765570944e+55",
+          "positive_bound_retained": true,
+          "cancellation_limited": true,
+          "finite_residual_verification": "exact coefficient identity plus floating absolute comparison"
+        },
+        {
+          "group": "G7",
+          "L": "1001",
+          "positive_tail": "3.99325057335412614e-435",
+          "rounded_subtractive_tail": "0",
+          "status": "subtractive route rejected"
+        },
+        {
+          "group": "G10",
+          "d": "1000",
+          "positive_shadow": "2.03038355901978271e-434",
+          "scaled_by_4_exp_minus_d": "1.0",
+          "subtractive_value": "0",
+          "status": "subtractive route rejected"
+        }
+      ]
+    }
+  ]
+}

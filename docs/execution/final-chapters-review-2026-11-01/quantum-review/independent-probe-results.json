@@ -1,0 +1,538 @@
+{
+  "status": "independent_finite_review_probes",
+  "scope": "Exact algebra plus bounded numerical agreement, not interval certification, maintained companion execution, or a global asymptotic theorem.",
+  "python": "3.12.11",
+  "mpmath": "1.3.0",
+  "sympy": "1.14.0",
+  "precisions": [
+    70,
+    110
+  ],
+  "simplex_moments": [
+    {
+      "k": 0,
+      "moment": "1/6",
+      "duffy_exact": "1/6"
+    },
+    {
+      "k": 1,
+      "moment": "1/20",
+      "duffy_exact": "1/20"
+    },
+    {
+      "k": 2,
+      "moment": "2/105",
+      "duffy_exact": "2/105"
+    },
+    {
+      "k": 3,
+      "moment": "8/945",
+      "duffy_exact": "8/945"
+    },
+    {
+      "k": 4,
+      "moment": "7/1650",
+      "duffy_exact": "7/1650"
+    }
+  ],
+  "box_moments_and_curvature": [
+    {
+      "bounds": [
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ]
+      ],
+      "moments": [
+        "8",
+        "8",
+        "152/15",
+        "4664/315",
+        "12584/525"
+      ],
+      "face_b": [
+        "-1",
+        "-1",
+        "-1",
+        "-1",
+        "-1",
+        "-1",
+        "-1",
+        "-1",
+        "-1",
+        "-1",
+        "-1",
+        "-1"
+      ],
+      "sum_L_b": "-24",
+      "minus_3_volume": "-24"
+    },
+    {
+      "bounds": [
+        [
+          "1/3",
+          "7/3"
+        ],
+        [
+          "-2/5",
+          "3/5"
+        ],
+        [
+          "1/7",
+          "15/7"
+        ]
+      ],
+      "moments": [
+        "4",
+        "169516/11025",
+        "9273876364/121550625",
+        "587977700921356/1340095640625",
+        "41179642056198091324/14774554437890625"
+      ],
+      "face_b": [
+        "2/15",
+        "1/5",
+        "-14/15",
+        "-7/5",
+        "-1/21",
+        "5/7",
+        "1/3",
+        "-5",
+        "2/35",
+        "-6/7",
+        "3/35",
+        "-9/7"
+      ],
+      "sum_L_b": "-12",
+      "minus_3_volume": "-12"
+    }
+  ],
+  "simplex_dihedral_curvature": [
+    {
+      "L": "1",
+      "b": "0"
+    },
+    {
+      "L": "1",
+      "b": "0"
+    },
+    {
+      "L": "sqrt(2)",
+      "b": "-sqrt(2)/12"
+    },
+    {
+      "L": "1",
+      "b": "0"
+    },
+    {
+      "L": "sqrt(2)",
+      "b": "-sqrt(2)/12"
+    },
+    {
+      "L": "sqrt(2)",
+      "b": "-sqrt(2)/12"
+    }
+  ],
+  "exact_scalar_tail_orders": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "klein_metric_determinant": "(1-x^2-y^2-z^2)^(-4), checked by symbolic matrix determinant",
+  "filling_slopes_exact": [
+    [
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      5,
+      2,
+      2,
+      1
+    ],
+    [
+      -3,
+      2,
+      -2,
+      1
+    ],
+    [
+      5,
+      -2,
+      -2,
+      1
+    ]
+  ],
+  "weyl_derivation": "For arbitrary f, (lm f)(u)=exp((u+h)/2)f(u+h)=exp(h/2)(ml f)(u); [h*d/du,u]f=h*f.",
+  "charge_specialization_exact": [
+    {
+      "mu": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "b_squared": "1/16",
+      "strict_moment_margins": [
+        "15",
+        "8",
+        "8",
+        "8",
+        "8"
+      ]
+    },
+    {
+      "mu": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "b_squared": "1/3",
+      "strict_moment_margins": [
+        "2",
+        "3/2",
+        "3/2",
+        "3/2",
+        "3/2"
+      ]
+    },
+    {
+      "mu": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "b_squared": "4/5",
+      "strict_moment_margins": [
+        "1/4",
+        "5/8",
+        "5/8",
+        "5/8",
+        "5/8"
+      ]
+    },
+    {
+      "mu": [
+        "1/4",
+        "1/2",
+        "1/2",
+        "3/4"
+      ],
+      "b_squared": "1/16",
+      "strict_moment_margins": [
+        "15",
+        "12",
+        "8",
+        "8",
+        "4"
+      ]
+    },
+    {
+      "mu": [
+        "1/4",
+        "1/2",
+        "1/2",
+        "3/4"
+      ],
+      "b_squared": "1/3",
+      "strict_moment_margins": [
+        "2",
+        "9/4",
+        "3/2",
+        "3/2",
+        "3/4"
+      ]
+    },
+    {
+      "mu": [
+        "1/4",
+        "1/2",
+        "1/2",
+        "3/4"
+      ],
+      "b_squared": "4/5",
+      "strict_moment_margins": [
+        "1/4",
+        "15/16",
+        "5/8",
+        "5/8",
+        "5/16"
+      ]
+    },
+    {
+      "mu": [
+        "2/5",
+        "2/5",
+        "2/5",
+        "2/5",
+        "2/5"
+      ],
+      "b_squared": "1/16",
+      "strict_moment_margins": [
+        "15",
+        "48/5",
+        "48/5",
+        "48/5",
+        "48/5",
+        "48/5"
+      ]
+    },
+    {
+      "mu": [
+        "2/5",
+        "2/5",
+        "2/5",
+        "2/5",
+        "2/5"
+      ],
+      "b_squared": "1/3",
+      "strict_moment_margins": [
+        "2",
+        "9/5",
+        "9/5",
+        "9/5",
+        "9/5",
+        "9/5"
+      ]
+    },
+    {
+      "mu": [
+        "2/5",
+        "2/5",
+        "2/5",
+        "2/5",
+        "2/5"
+      ],
+      "b_squared": "4/5",
+      "strict_moment_margins": [
+        "1/4",
+        "3/4",
+        "3/4",
+        "3/4",
+        "3/4",
+        "3/4"
+      ]
+    }
+  ],
+  "numerical": [
+    {
+      "dps": 70,
+      "figures": [
+        {
+          "N": 2,
+          "relative_complex_vs_positive": "0.0",
+          "relative_imaginary": "0.0",
+          "relative_final_product": "0.0",
+          "log_maximum_error": "0.0",
+          "rate": "5.056198322111862681989358"
+        },
+        {
+          "N": 3,
+          "relative_complex_vs_positive": "1.11454511739406e-71",
+          "relative_imaginary": "0.0",
+          "relative_final_product": "1.81113581576534e-71",
+          "log_maximum_error": "0.0",
+          "rate": "5.372017372154016218736768"
+        },
+        {
+          "N": 6,
+          "relative_complex_vs_positive": "2.60477960020184e-71",
+          "relative_imaginary": "0.0",
+          "relative_final_product": "5.43340744729603e-71",
+          "log_maximum_error": "0.0",
+          "rate": "4.700489014595483158271126"
+        },
+        {
+          "N": 7,
+          "relative_complex_vs_positive": "3.06487138519921e-71",
+          "relative_imaginary": "0.0",
+          "relative_final_product": "2.71670372364801e-71",
+          "log_maximum_error": "0.0",
+          "rate": "4.505156970999659116499617"
+        },
+        {
+          "N": 12,
+          "relative_complex_vs_positive": "4.6054582586166e-71",
+          "relative_imaginary": "0.0",
+          "relative_final_product": "1.08668148945921e-70",
+          "log_maximum_error": "0.0",
+          "rate": "3.86650372284160982608438"
+        },
+        {
+          "N": 31,
+          "relative_complex_vs_positive": "1.01692449221446e-70",
+          "relative_imaginary": "0.0",
+          "relative_final_product": "6.52008893675523e-70",
+          "log_maximum_error": "0.0",
+          "rate": "3.022033476000559176079994"
+        },
+        {
+          "N": 40,
+          "relative_complex_vs_positive": "3.8053486219185e-70",
+          "relative_imaginary": "0.0",
+          "relative_final_product": "2.71670372364801e-70",
+          "log_maximum_error": "0.0",
+          "rate": "2.858168215633952232164984"
+        },
+        {
+          "N": 60,
+          "relative_complex_vs_positive": "3.99718718460371e-71",
+          "relative_imaginary": "0.0",
+          "relative_final_product": "1.53946544340054e-69",
+          "log_maximum_error": "0.0",
+          "rate": "2.645249712761989644411315"
+        },
+        {
+          "N": 120,
+          "relative_complex_vs_positive": "6.69173556662214e-70",
+          "relative_imaginary": "0.0",
+          "relative_final_product": "6.8823160999083e-70",
+          "log_maximum_error": "0.0",
+          "rate": "2.391755698571109550991374"
+        }
+      ],
+      "volume_integral": "2.0298832128193072500424051085490405718833786150605995840349782136",
+      "volume_dilog": "2.0298832128193072500424051085490405718833786150605995840349782136",
+      "volume_absolute_difference": "0.0",
+      "q_product_scalar_remainders": [
+        {
+          "t": "0.001",
+          "remainder_divided_by_t": "0.08333333194444447751322669"
+        },
+        {
+          "t": "0.125",
+          "remainder_divided_by_t": "0.08331164001472536979756045"
+        },
+        {
+          "t": "1.0",
+          "remainder_divided_by_t": "0.08197670686932642438500201"
+        },
+        {
+          "t": "100.0",
+          "remainder_divided_by_t": "0.0049"
+        }
+      ]
+    },
+    {
+      "dps": 110,
+      "figures": [
+        {
+          "N": 2,
+          "relative_complex_vs_positive": "0.0",
+          "relative_imaginary": "0.0",
+          "relative_final_product": "0.0",
+          "log_maximum_error": "0.0",
+          "rate": "5.056198322111862681989358"
+        },
+        {
+          "N": 3,
+          "relative_complex_vs_positive": "0.0",
+          "relative_imaginary": "0.0",
+          "relative_final_product": "1.66326556250318e-111",
+          "log_maximum_error": "0.0",
+          "rate": "5.372017372154016218736768"
+        },
+        {
+          "N": 6,
+          "relative_complex_vs_positive": "3.58816840450125e-111",
+          "relative_imaginary": "0.0",
+          "relative_final_product": "9.14796059376751e-111",
+          "log_maximum_error": "6.65306225001274e-111",
+          "rate": "4.700489014595483158271126"
+        },
+        {
+          "N": 7,
+          "relative_complex_vs_positive": "4.22195976480299e-111",
+          "relative_imaginary": "0.0",
+          "relative_final_product": "8.31632781251592e-112",
+          "log_maximum_error": "0.0",
+          "rate": "4.505156970999659116499617"
+        },
+        {
+          "N": 12,
+          "relative_complex_vs_positive": "1.05736136053743e-110",
+          "relative_imaginary": "0.0",
+          "relative_final_product": "4.98979668750955e-111",
+          "log_maximum_error": "6.65306225001274e-111",
+          "rate": "3.86650372284160982608438"
+        },
+        {
+          "N": 31,
+          "relative_complex_vs_positive": "5.83686033110803e-111",
+          "relative_imaginary": "0.0",
+          "relative_final_product": "5.15612324375987e-110",
+          "log_maximum_error": "0.0",
+          "rate": "3.022033476000559176079994"
+        },
+        {
+          "N": 40,
+          "relative_complex_vs_positive": "1.25807788349285e-110",
+          "relative_imaginary": "0.0",
+          "relative_final_product": "1.87117375781608e-109",
+          "log_maximum_error": "0.0",
+          "rate": "2.858168215633952232164984"
+        },
+        {
+          "N": 60,
+          "relative_complex_vs_positive": "5.62861624779484e-110",
+          "relative_imaginary": "0.0",
+          "relative_final_product": "2.91071473438057e-110",
+          "log_maximum_error": "0.0",
+          "rate": "2.645249712761989644411315"
+        },
+        {
+          "N": 120,
+          "relative_complex_vs_positive": "5.0766253315033e-110",
+          "relative_imaginary": "0.0",
+          "relative_final_product": "1.56346962875299e-109",
+          "log_maximum_error": "0.0",
+          "rate": "2.391755698571109550991374"
+        }
+      ],
+      "volume_integral": "2.02988321281930725004240510854904057188337861506059958403497821355319495251648804427294070845651338989172",
+      "volume_dilog": "2.02988321281930725004240510854904057188337861506059958403497821355319495251648804427294070845651338989172",
+      "volume_absolute_difference": "3.32653112500637e-111",
+      "q_product_scalar_remainders": [
+        {
+          "t": "0.001",
+          "remainder_divided_by_t": "0.08333333194444447751322669"
+        },
+        {
+          "t": "0.125",
+          "remainder_divided_by_t": "0.08331164001472536979756045"
+        },
+        {
+          "t": "1.0",
+          "remainder_divided_by_t": "0.08197670686932642438500201"
+        },
+        {
+          "t": "100.0",
+          "remainder_divided_by_t": "0.0049"
+        }
+      ]
+    }
+  ],
+  "review_input_sha256": {
+    "book/chapters/10-quantum-introduction.tex": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+    "book/chapters/11-quantum-degeneration.tex": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9"
+  },
+  "script_sha256": "a8a4f324f58bf5e54b8ac39165f13ee820f46a6b6700f30b408c1b74e45b2e05"
+}

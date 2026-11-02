@@ -1,0 +1,44 @@
+{
+  "decision": "approved_exact_final_mathematical_source_and_claim_ledger",
+  "recorded_at_utc": "2026-11-02T03:39:59.650501+00:00",
+  "author_revision_manifest_sha256": "cf8a8f172a81a4cfb4090b44b65fc067cf70768b30ecfc80a858317649a44fb3",
+  "initial_review_manifest_sha256": "7386b5e022db352f9d5ce9506eeb907f46458baf6a2cac6029260fc6e90763f4",
+  "canonical_sources_sha256": {
+    "book/chapters/17-unfolding-constant-series.tex": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+    "book/chapters/18-figure-eight-curves.tex": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+    "book/chapters/19-pants-twists.tex": "f1fd410500ec3c414b4266d706dddd220b0902a546090807e2288384101c2c35",
+    "book/chapters/20-torus-twist-series.tex": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+    "book/chapters/21-cuff-matching.tex": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+    "book/chapters/22-cusps-orthospectrum.tex": "b8b3f0568c4667b7ed6116935291c5c71dc3be74ded57c916ac638f6ecd80f66",
+    "book/claims/sections17-22.json": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+  },
+  "canonical_source_set_sha256": "b35883296116e459a702e0bc28b4f429875e2cec2cffb22910f02e5d0e8e87f9",
+  "set_hash_algorithm": "SHA256 of UTF-8 json.dumps(path_to_sha256, sort_keys=True, separators=(comma,colon)) with no terminal newline",
+  "closed_findings": {
+    "R1": "Exact comparison pin and L-bounded source hypothesis correct in prose/source/ledger",
+    "R2": "Theorem 3 p.4 and post-Corollary-5 measure paragraph p.5 correct in prose/source/ledger"
+  },
+  "open_required_findings": [],
+  "reviewed_claims": 59,
+  "reviewed_owned_labels": 54,
+  "preserved_baseline_owned_labels": 48,
+  "preserved_added_labels": 6,
+  "companion_contract_sha256": "2a62a149e7f5f88027329c24ba3a4720407debfed2fb78945350f23b6fce85a6",
+  "companion_contract_acceptance_sha256": "be7debaf190ecd960d0caeca6b82e884407b6da04e72234e16a60762980bc82b",
+  "all_initial_evidence_unchanged": true,
+  "scientific_rerun_performed": false,
+  "full_external_proof_audit": false,
+  "canonical_edits_by_reviewer": false,
+  "approval_excludes": [
+    "Maintained companion code and executed result artifacts",
+    "Other chapters and global integration",
+    "PDF/build/publication/upload"
+  ],
+  "evidence_sha256": {
+    "final-acceptance.md": "3a4c3e622ae153d6ba75c15c242d2b7cc0b655ddd7156994645e64e226fb7cfe",
+    "final-claim-coverage.json": "ccd749a1fe76144fe1de488f2437d074e2e2d1e91cfa4e4861fe92c35ee43825",
+    "final-label-coverage.json": "af7f9f368a0fde6d5b0c27c2345acf605004dcb9547c241d812217941b390773",
+    "independent-verification.json": "d2193d40ccda62603f2b97122fe5382e82139cf67bcc1bdc30e3b9007795c479",
+    "verify_final_revision.py": "fac2232133a24ead126a03d1ede1223ce99b401f61f6ecb567514b8a01bd7e1a"
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-02T04:06:44.028639+00:00",
+  "decision": "changes_required_driver_validation_only",
+  "implementation_approved": false,
+  "numerical_review_status": "passed_for_exact_frozen_author_result",
+  "findings": [
+    {
+      "id": "CR01",
+      "severity": "medium",
+      "status": "required_open",
+      "title": "Complete finite coverage is not enforced",
+      "file": "experiments/quantum_geodesics/run.py",
+      "lines": [
+        73,
+        79,
+        91,
+        125
+      ],
+      "reproductions": [
+        "Q3_missing_negative_q",
+        "Q2_three_duplicate_simplexes_replace_boxes",
+        "G7_required_large_L_replaced_by_N_zero",
+        "G8_missing_shifted_nonstationary_case",
+        "G8_missing_inconsistent_endpoint_spacing"
+      ],
+      "required_repair": "Pin or equivalently validate the entire accepted scientific profile; reject removed, duplicate, substituted and partial coverage. Preserve all current inputs and mathematical modules. Add normal/-O no-output regressions."
+    },
+    {
+      "id": "CR02",
+      "severity": "medium",
+      "status": "required_open",
+      "title": "Acceptance/source identity declarations fail open",
+      "file": "experiments/quantum_geodesics/run.py",
+      "lines": [
+        52,
+        67,
+        144,
+        149
+      ],
+      "reproductions": [
+        "provenance_empty_formula_contracts",
+        "provenance_empty_accepted_manuscript_map",
+        "wrong_quantum_acceptance_hash",
+        "wrong_quantum_source_freeze_hash",
+        "wrong_geodesic_contract_acceptance_hash",
+        "wrong_geodesic_source_acceptance_hash",
+        "wrong_geodesic_accepted_source_set_hash",
+        "wrong_accepted_manuscript_pin"
+      ],
+      "required_repair": "Require complete approved provenance profile; validate all six local contract/acceptance/source copies and accepted manuscript pins. Preserve the separate live source observations and guarded helper identities; no outer runtime dependencies."
+    }
+  ],
+  "required_open_findings": [
+    "CR01",
+    "CR02"
+  ],
+  "review_report": {
+    "sha256": "12e8adc131f9ec1d67d550f94df1d21b20205a1c156da466c0fe0b364798f32b",
+    "bytes": 11492
+  },
+  "initial_subject_freeze": {
+    "sha256": "c56d2e297fe2f0b725f03ced97a31ea277ea573e9117f6c2487696a7f06173ad",
+    "bytes": 7305
+  },
+  "author_source_freeze": {
+    "sha256": "caa5aedee70ad423ba1a921a99e5511db9c3e438a66cbdb82ab7975d78ae4a4a",
+    "bytes": 22416
+  },
+  "author_result": {
+    "sha256": "618d7125e80813db18b96c55513bd6a0432a1cf7fad63595c6c58d89112b67a4",
+    "bytes": 4694249
+  },
+  "source_set_sha256": "1a19c98c7822ac5b22f46db044a70a45880a11470db10d94a5d084564ba7614d",
+  "runtime_sha256": {
+    "experiments/quantum_geodesics/README.md": "879a91c4c4269fcfb69b3cf67fa9ddda8e9123c76dad75cbb09d3d03a47f2a94",
+    "experiments/quantum_geodesics/__init__.py": "0c8007dbe9a1134b40566beed05c4469fb671771a78f072090c4f2b0504404a2",
+    "experiments/quantum_geodesics/common.py": "279d158fb17d557dfe4c17bcb01bcb932f6e5343594c1d664ffd0519775bb2cc",
+    "experiments/quantum_geodesics/contracts/geodesic-contract-acceptance.json": "be7debaf190ecd960d0caeca6b82e884407b6da04e72234e16a60762980bc82b",
+    "experiments/quantum_geodesics/contracts/geodesic-source-acceptance.json": "b734eb97f35f360022cb874b4561d9d3151f876d26db7eb6459e9f676576c0ef",
+    "experiments/quantum_geodesics/contracts/geodesic-targets.md": "2a62a149e7f5f88027329c24ba3a4720407debfed2fb78945350f23b6fce85a6",
+    "experiments/quantum_geodesics/contracts/quantum-mathematical-acceptance.json": "c631f5ed63513246adf7bbec958c3298ab577861ee02f1d359ff6ca25b7c4dd9",
+    "experiments/quantum_geodesics/contracts/quantum-source-freeze.json": "f043f6943bd124638802bfdb5d5e7505269143f54046eea93d298345191c0620",
+    "experiments/quantum_geodesics/contracts/quantum-targets.md": "1d1fae5b1539b8ee52d27a761ee1d2aaf2a8b050d213c023df506af498fe96b1",
+    "experiments/quantum_geodesics/figure_eight.py": "7fc20f4328316e31565341537bffae462a6083423ef30d6ce4fb02ceb6bc68e8",
+    "experiments/quantum_geodesics/fixture.json": "3c0f2ba7ffe7715d38e602697a0c7012b1963f653b483f5c7033858670530a1b",
+    "experiments/quantum_geodesics/geodesic_exact.py": "6e72ad9335987f7c355d1a4a744905008faf2088e6ba4b4efa4b676243c30ea7",
+    "experiments/quantum_geodesics/geometry.py": "18a92ccbbae9ebe84b841fe97fd0df91a66fac00f81d411dfd2ff636975878b0",
+    "experiments/quantum_geodesics/kernels.py": "4c4431bb43267144dac233948846897e1032a7ee938908e6b1701421799ded97",
+    "experiments/quantum_geodesics/klein.py": "f5ab68c308580b1c954d16104118b9cf807455bf7b6e51125e872ac0c505a4dd",
+    "experiments/quantum_geodesics/normalization.py": "50436249a581492e3cc263e389929bad9d22925e0c523922a0f4b06dd6686687",
+    "experiments/quantum_geodesics/run.py": "bc0deb4e8c010075211c3e5f04c5672bce39c1b20d802a0587f90f0d94a4bb04",
+    "experiments/quantum_geodesics/tests/test_geodesic.py": "61652d138e4be89ef15fd748fda0eea941807e97fcad770f4f0ee73709337c71",
+    "experiments/quantum_geodesics/tests/test_quantum.py": "a5d3a2a8242a579b3af345dcce40a55c4314c10becfa82f7215e5dda6335fcc0",
+    "experiments/quantum_geodesics/twist_integrals.py": "11e99ee89d12f8dd11697ed663b40da2eee15eb0150c77320fb0e7173b4b54ea",
+    "experiments/quantum_surgery/__init__.py": "1925c77c6e7cfff79798b2eab36ecb21b06bac8825c399743937da5da05f1d37",
+    "experiments/quantum_surgery/algebra.py": "c03d19471ba817dd8b9af234dd54418c3d411cb0d222803dfe2a93333c8d0ed4",
+    "experiments/quantum_surgery/exact.py": "1c9b6ce9fbf39dc4033e62451f83039616b1a1fa79fddcc7bd990aa5d9ec4f97"
+  },
+  "group_names": [
+    "Q1_figure_eight",
+    "Q2_klein_geometry",
+    "Q3_peripheral_filling",
+    "Q4_charge_curvature",
+    "G1_torus_unfolding",
+    "G2_pants_traces",
+    "G3_figure_eight_kernel",
+    "G4_local_distance",
+    "G5_seams_torus_holonomy",
+    "G6_twist_coarea",
+    "G7_twist_partition",
+    "G8_endpoint_matching",
+    "G9_cusp_decoration",
+    "G10_boundary_shadows"
+  ],
+  "author_manuscript_sha256": {
+    "book/chapters/08-wp-flat-limit.tex": "1a175315aa975708a5c93151b9ae107b7dd36f79720dae7c7264adda062a6283",
+    "book/chapters/10-quantum-introduction.tex": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+    "book/chapters/11-quantum-degeneration.tex": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9",
+    "book/chapters/12-quantum-boundary-measure.tex": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+    "book/chapters/13-four-point-fusion.tex": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+    "book/chapters/16-dehn-filling-response.tex": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+    "book/chapters/17-unfolding-constant-series.tex": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+    "book/chapters/18-figure-eight-curves.tex": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+    "book/chapters/19-pants-twists.tex": "f1fd410500ec3c414b4266d706dddd220b0902a546090807e2288384101c2c35",
+    "book/chapters/20-torus-twist-series.tex": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+    "book/chapters/21-cuff-matching.tex": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+    "book/chapters/22-cusps-orthospectrum.tex": "b8b3f0568c4667b7ed6116935291c5c71dc3be74ded57c916ac638f6ecd80f66",
+    "book/claims/sections10-11.json": "34dbb6255dc468cb796bb3a129eeaf37ac0c5f4dc358abfd73030e64331b3539",
+    "book/claims/sections17-22.json": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137"
+  },
+  "author_tex_sha256": {
+    "book/chapters/01-volume-normalization.tex": "b35a17e1dce5aa276d915e67eff0d15926da7c4180a32f9ffa9706476c2fe095",
+    "book/chapters/02-ideal-angle-cells.tex": "968ea966c452494a299be719165b5ac25c5ebd70e31e8bfd974705b763f9644d",
+    "book/chapters/03-ideal-tetrahedron.tex": "81c51ade3378fbfd4baff1cebeb2dcdd8b0fd43a032ac45fb3b30c4908060797",
+    "book/chapters/04-hyperideal-integrand.tex": "94da7f5288e0b6c606ff7d1a80516bc421e1de1a801e83873a0c9a25af7946b5",
+    "book/chapters/05-boundary-cone-continuation.tex": "feee80182603e334d8cda389435a43a8b9d37192b581befd1e761c03b93e51d5",
+    "book/chapters/06-torus-sphere.tex": "4a60370b881044ff89f45bbe51a171f04fb315b3be9317468a6cf212e8fd2947",
+    "book/chapters/07-euclidean-periods.tex": "3665a4e2ff074950a5e74ef9fba511af4dc5820e3589d823d9d96f7fac2de8d9",
+    "book/chapters/08-wp-flat-limit.tex": "1a175315aa975708a5c93151b9ae107b7dd36f79720dae7c7264adda062a6283",
+    "book/chapters/09-volume-hessians.tex": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00",
+    "book/chapters/10-quantum-introduction.tex": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+    "book/chapters/11-quantum-degeneration.tex": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9",
+    "book/chapters/12-quantum-boundary-measure.tex": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+    "book/chapters/13-four-point-fusion.tex": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+    "book/chapters/14-normalized-quantum-comparison.tex": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+    "book/chapters/15-quantum-airy.tex": "efee2c699923ab31e4d7d48eeac57c60bf2ea088ea4ff17e617b9ed97202d6dd",
+    "book/chapters/16-dehn-filling-response.tex": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+    "book/chapters/17-unfolding-constant-series.tex": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+    "book/chapters/18-figure-eight-curves.tex": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+    "book/chapters/19-pants-twists.tex": "f1fd410500ec3c414b4266d706dddd220b0902a546090807e2288384101c2c35",
+    "book/chapters/20-torus-twist-series.tex": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+    "book/chapters/21-cuff-matching.tex": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+    "book/chapters/22-cusps-orthospectrum.tex": "b8b3f0568c4667b7ed6116935291c5c71dc3be74ded57c916ac638f6ecd80f66",
+    "book/chapters/23-trace-coefficients.tex": "5520b28607f96a3e65ea32e7c4dab267f6556dbbe8975d29b4186b9b27e429c9",
+    "book/chapters/24-quantitative-counting.tex": "4099f91c4abddf5f2a13831e48d7d52ac4d90af137068b969ca612fc6b273c58",
+    "book/chapters/25-global-coefficient-filters.tex": "c876c43ce0d738ea4fa4780713753c3c9c48efdcf788cc9e305ac5011af732e2",
+    "book/chapters/26-counting-to-mixing.tex": "64562ebf631c59b84b9c991a632926107b3e24cb5b08b29c21e263bd50a9e901",
+    "book/chapters/27-weighted-mixing-converse.tex": "79fb4660fe87a5723eea0d410e55e954913b0386057a31542473d6486492dcc1",
+    "book/chapters/28-genus-two-model.tex": "18c05143e86fb9630868bb2824ddf44643c1ee1c84a40dc77a8c9d5354663fb4",
+    "book/chapters/29-controlled-observables.tex": "8c26fb3e18186d95ead2ae71eebd601966855d1bf0f9f7ed662f9996ab3b49f1",
+    "book/chapters/30-sharp-diagnostics.tex": "23d92f42eeacbe7e6c967e9b35e48228e96458356a5d659333713bf79200bd33",
+    "book/chapters/31-arithmetic-remainder.tex": "7b065510eee82c535484ddcab44da4722c7b738b64d0d0e2aaec598407d2ba69",
+    "book/chapters/32-open-questions.tex": "50fc264bbfc55fc19cb79dc09aa7a828b2cba479f6b3afb1c62459e0d31c9b5d",
+    "book/chapters/appendix-a-fricke.tex": "61bde2f802c7c5cb931d6bc5c4528e82459392e803b2a7aaf1a7d5afc4fb7e5f",
+    "book/chapters/appendix-b-conventions.tex": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+    "book/figures/01_connections.tex": "f0182c8d9cfcffdf7d2b0a06c9bfebd0aaee36a3c3c4c53bd5671c44c193c60b",
+    "book/figures/02_polyhedral_regimes.tex": "fdd4352cd48c1c191d5101ebdef585f903c4ded91133fa44167269c266b2e82b",
+    "book/figures/03_cotangent_hessian.tex": "34a41c072e7528f044d248b5e0c90c171b40333ff8a378c932501da33c34925d",
+    "book/figures/04_dehn_filling.tex": "074de992cd9105388254e8d17658c6a768eefe4d116e6c1a13cb78739f7401ea",
+    "book/figures/05_reconnection_atoms.tex": "0ea1c520cd4c97c46055431faaeb2851168a07d1de71d33515cd81f75fe46662",
+    "book/figures/06_double_covers.tex": "bbf116c7af29562c12ff946ac99349e68d6f40b836ca01f18e1f61070b094251",
+    "book/figures/07_flat_row.tex": "b44cef936c6a4665bb502f24e89eb7c25cdaba98ef7f31e08b79a21880ca11ed",
+    "book/figures/08_flip.tex": "c87674bad04e98b2ce3023d8ea0a98838e09094b5892009d7fd0870c9a9bfb17",
+    "book/figures/09_airy.tex": "2486ffee18652d41e4bcf1379cf0960ea2f7c59fc26c506e117b0c4fc76e2444",
+    "book/figures/preamble.tex": "a7270ea8134e09d61d1808049390e5b5d9816eaa510333197e135707df615ef0",
+    "book/main.tex": "be3c45c0c4e3105d5e5275b2bbfefed5b8a79e088a456b83a8ea81dcce89a99d",
+    "book/polyhedral_volumes_and_geodesic_identities.tex": "23b7f8d84f0236ce7939efb5f0858fd60ba58f8fc74207636779f3227b3d30dd"
+  },
+  "observed_TeX_scope": "46 observed book TeX files: 36 active inputs and 10 preserved inactive figure/preamble fragments",
+  "frozen_fixture_complete": true,
+  "frozen_provenance_correct": true,
+  "independent_replay": {
+    "sha256": "537e0bcb2dcd55bb8fe3c35a10ac1478c52807bf85796f65f2b4afb77a0afa0a",
+    "bytes": 4694249
+  },
+  "replay_scientific_strings_equal": true,
+  "replay_only_changed_paths": [
+    "/generated_at_utc",
+    "/runtime/elapsed_seconds"
+  ],
+  "derived_counts": {
+    "exact": 1342,
+    "numerical_formula_comparisons": 4266,
+    "cross_precision_observations": 509
+  },
+  "independent_oracles": {
+    "result": {
+      "sha256": "40968ce6b0ecfaad83eb7d3203d4703e7c9f9a25d0bfd72cf6df92224f449a67",
+      "bytes": 632335
+    },
+    "script": {
+      "sha256": "b74db119da8348f6d8e063c44e9dc354f56437e621f911b76f5c5e5b1bb3ee50",
+      "bytes": 20928
+    },
+    "exact": 400,
+    "numerical": 1322,
+    "coverage": {
+      "Q1_figure_eight": "All41N values: exact cyclotomic quotient terminal product and polynomial evaluation, independently of sine/Habiro multiplication.",
+      "Q2_klein_geometry": "All15 radial moments by nested polynomial integration;24 Cartesian box edges; all27 exact scalar remainder evaluations.",
+      "Q3_peripheral_filling": "Four slopes: explicit Lagrange reversion and mixed kernel derivative; all12 operator modulus observations each precision.",
+      "Q4_charge_curvature": "All9 rational weight/b-squared specializations, positive charge squares and exact first-moment margins; no GMC construction.",
+      "G1_torus_unfolding": "All finite cutoffs independently evaluated by a dilogarithm primitive; exact rational alternating sums.",
+      "G2_pants_traces": "All6 signed matrix pairs by Fraction arithmetic and all4 three-label torus blocks.",
+      "G3_figure_eight_kernel": "All28input/depth cases each precision: independent logarithmic iterate recursion; positive tails compared relatively and absolute log errors separately checked at350reference digits.",
+      "G4_local_distance": "All20geometric points each precision using upper-half-plane asinh distance and its numerical derivatives, independently of Lorentz-acosh implementation.",
+      "G5_seams_torus_holonomy": "All49torus cases each precision: Fricke trace identity and log-eigenvalue derivatives at250digits; extraa1000minimum from direct coth at600digits, no large-cuff derivative claim.",
+      "G6_twist_coarea": "All30integrals each precision independently evaluated by incomplete beta; stable exact omitted-tail beta checked against analytic bound. No interval quadrature bound.",
+      "G7_twist_partition": "All28Hterms each precision from translated logistic-density quadrature with tiny amplitude factored out; all101positive lattice tails checked.",
+      "G8_endpoint_matching": "Both exact endpoint/winding configurations and both stationarity examples each precision using alternate half-plane distance.",
+      "G9_cusp_decoration": "All27cusp matrices from independent Fraction formulas;3triangle decorations; all16torus signed lengths/weights each precision via hyperbolic eigenvalue form.",
+      "G10_boundary_shadows": "All6shadows each precision from4q*integral_0^1(1-q^2x^2)^-1dx; tiny q is factored out, independent of log1p/coth evaluation."
+    },
+    "interval_certified": false
+  },
+  "focused_tests_normal": 30,
+  "focused_tests_optimized": 30,
+  "ruff": "passed",
+  "reviewer_controls_per_mode": 50,
+  "controls_requiring_rejection_but_accepted_per_mode": 13,
+  "source_unchanged_during_review": true,
+  "canonical_edits_by_reviewer": false,
+  "mathematical_modules_need_repair": false,
+  "repair_replay_requirements": [
+    "Preserve initial frozen subject and all v1 evidence.",
+    "Repair driver validation and focused regressions only; no numerical formula or fixture value change needed.",
+    "Run full companion freshly as author; compare all groups and numeric strings exactly with v1.",
+    "Run normal and -O tests plus Ruff.",
+    "Independent reviewer must verify exact source delta and close CR01/CR02.",
+    "If mathematical modules/fixture remain identical, explicitly reuse unchanged independent oracles; do not relabel reuse as fresh execution."
+  ],
+  "approval_excludes": [
+    "full implementation pending CR01/CR02",
+    "clean-source checkpoint replay",
+    "interval enclosure or achieved digits",
+    "global geometry/asymptotic theorem/completeness",
+    "installation/PDF/upload"
+  ]
+}

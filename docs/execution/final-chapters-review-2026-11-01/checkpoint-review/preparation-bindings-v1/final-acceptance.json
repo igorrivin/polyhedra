@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-02T04:51:25.467034+00:00",
+  "decision": "approve_resolved_actual_bindings_and_source_commit_plan_preparation_only",
+  "status": "independent_bounded_binding_plan_acceptance",
+  "required_open_findings": [],
+  "ready_for_numerical_launch": false,
+  "accepted_preparation_freeze": {
+    "path": "checkpoint-curation-preparation/freeze-manifest.json",
+    "sha256": "77bcefe06dff4a4c97a576dd727ee969472ab3676f70c953f571952943edd85f",
+    "bytes": 4402
+  },
+  "accepted_preparation_files": {
+    "HANDOFF.md": {
+      "sha256": "242a085f9c3d4292ccfe28a4f2bea155c55958687ad0bbe33e8e5059d17099f9",
+      "bytes": 5062
+    },
+    "README.md": {
+      "sha256": "6d43557051e1c81218dc0e6a848531311a9f66166dad250fbeba5d295e4f52a4",
+      "bytes": 2825
+    },
+    "binding-plan.unready.json": {
+      "sha256": "60e22e88c365b79575170d055e7579d930c9852f89d5c2f16d159a615cc4ff64",
+      "bytes": 23114
+    },
+    "closeout.md": {
+      "sha256": "bc9ae28ec37e75d641e7b460c779b53f3a95e2983efb5177cb5c9a114cf3231c",
+      "bytes": 3893
+    },
+    "curation-map.unready.json": {
+      "sha256": "452923d9869d174f9cdf97fb63e225024358b42766c510da74718f39ee10cf58",
+      "bytes": 161720
+    },
+    "final-ruff-command.json": {
+      "sha256": "86c709215b5b615423a0ea0cb473a1b3e339adbfe451939309043e631561c95e",
+      "bytes": 769
+    },
+    "final-ruff.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "final-ruff.stdout.txt": {
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    "initial-validation-rejected.json": {
+      "sha256": "00429bd19d2302f45517eeb3b750e7c4257f720dd48f15d1bd0e35bcff31b00e",
+      "bytes": 69943
+    },
+    "reproduction.md": {
+      "sha256": "73321a797fd18a768b5fc69ff28c00aaafc88179a4321cc6a0c26e1f93452573",
+      "bytes": 5651
+    },
+    "retention-policy.md": {
+      "sha256": "282c1ec018944e0049c33c1cad80fde88f4c437c0e0b868501e4692a78585ea0",
+      "bytes": 5764
+    },
+    "ruff.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ruff.stdout.txt": {
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    "source-checkpoint-plan.unready.json": {
+      "sha256": "40a0aa97300ea573bb7bde9dafd4f5b40316170d2becc3729cc60e813e1446fa",
+      "bytes": 13930
+    },
+    "source-checkpoint-receipt-schema.unready.json": {
+      "sha256": "49f6fb7d0d38ee462b67443468936a440c0367f85b1ea59aae5d92ab5379d31d",
+      "bytes": 2045
+    },
+    "source-commit-message.draft.txt": {
+      "sha256": "2e769d985ccb05d17483445951282381f3af18b08e82f429742362f42349b094",
+      "bytes": 294
+    },
+    "source-paths.provisional.nul": {
+      "sha256": "ea76841b8f4125425442b1d39c66cbf090682c30ddd4990212f0cc54b288fb2d",
+      "bytes": 1734
+    },
+    "source-plan-observation.json": {
+      "sha256": "b3b31404e07062021d3d6c0ff0c49cc3fc4cd6deddf8bf3407473284ef64e197",
+      "bytes": 825
+    },
+    "validate_preparation.py": {
+      "sha256": "734e7984bcc7d0d3856437feffb436e8df06c370994ded6942e16c372e920efa",
+      "bytes": 6834
+    },
+    "validation-300-file-intermediate.json": {
+      "sha256": "1ff06271df96295cc797cf78fe50793971c6bcb5432e95c1874aac1b96f480e4",
+      "bytes": 42353
+    },
+    "validation-301-file-intermediate.json": {
+      "sha256": "4aa0632f2ac9b4c08e816e6347b1bf757c9cd70c65366bd01c0124c2e44951d9",
+      "bytes": 42353
+    },
+    "validation-before-v3-acceptance.json": {
+      "sha256": "61fe2a674dd0c9af5c79ade79d8e145412ac393ab4c2a01633a4eea615027543",
+      "bytes": 42353
+    },
+    "validation-correction.json": {
+      "sha256": "a995f75321e5651b40372c384b2e31ac21f70664fda74f1c36deeae28922829d",
+      "bytes": 2010
+    },
+    "validation-script-initial.py.txt": {
+      "sha256": "2362cb6f099086cda1ca8870c5dcc7fb82359b892dcf42ff1703da2313927150",
+      "bytes": 6430
+    },
+    "validation.json": {
+      "sha256": "44284fd0cd3b821abbfe0ccdcf66a67648b72e4cbf86b2634f5464222c89612e",
+      "bytes": 42983
+    }
+  },
+  "independent_subject_freeze": {
+    "sha256": "c7fd0793c997b0d864b55cc68e165bf70a5be5b8f7626d6b9f1e9c39103a7f50",
+    "bytes": 95512
+  },
+  "independent_checks": {
+    "sha256": "556457c8cbe182c7467a13a8c445a088857b2cfaf6ff50ca89bc2600379498bc",
+    "bytes": 80658
+  },
+  "approved_author_result": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/computation/full-v2/author-result-70-110.json",
+    "sha256": "5f73fce03e43103dc457570bcd90f4722599b5ac0d67a9b9b88d9e00679f0429",
+    "bytes": 4694781
+  },
+  "resolved_counts": {
+    "runtime_files": 24,
+    "source_paths": 40,
+    "modified": 6,
+    "new": 34,
+    "author_manuscript_observations": 14,
+    "author_tex_observations": 46,
+    "active_tex_inputs": 36,
+    "inactive_tex_observations": 10,
+    "existing_curation_files": 317,
+    "existing_curation_bytes": 16017571,
+    "local_markdown_links": 15,
+    "verbatim_whitespace_observations": 22,
+    "authored_drafts_default_whitespace_pass": 4
+  },
+  "all_384_frozen_inputs_unchanged": true,
+  "accepted_helper_tests_repeated": false,
+  "canonical_or_git_mutation_by_reviewer": false,
+  "numerical_replay_performed": false,
+  "PDF_build_or_marker_performed": false,
+  "candidate_copy_performed": false,
+  "upload_performed": false,
+  "scope_excludes": [
+    "Actual final integration/PDF approval binding; parent-reported later approval is not inserted into this frozen preparation",
+    "Actual source commit, source receipt and final committed/live source/TeX/observation maps",
+    "Ready replay spec and exact final-stage metadata exceptions before numerical launch",
+    "Fresh clean-source run and strict comparison",
+    "Final candidate copy, bounded whitespace exceptions, manifest/link checks and independent candidate acceptance",
+    "Separate artifact commit, external postcommit evidence and upload"
+  ],
+  "later_delta_required_before_numerical_launch": true,
+  "review_report": {
+    "sha256": "d2fa252f6785822587007477c3f5a37c125871cc1c8568a502b81c61c3db7f56",
+    "bytes": 4663
+  }
+}

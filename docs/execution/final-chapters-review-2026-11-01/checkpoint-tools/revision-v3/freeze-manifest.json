@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-02T04:34:12.075841+00:00",
+  "status": "author_adapter_complete_pending_independent_targeted_recheck",
+  "previous_freeze": {
+    "sha256": "2f24bfc89793154d7ee7e41f252450a908a03fbc0b8dffb876c145a78656bdab",
+    "bytes": 5976
+  },
+  "previous_independent_acceptance": {
+    "sha256": "314f8adc2b4b0371c77609a181ad6c2c3aa424c7a83cd58d57da11084b7d734d",
+    "bytes": 4159
+  },
+  "ready_for_real_replay": false,
+  "final_approvals_bound": false,
+  "templates_explicitly_unready": true,
+  "normal_tests": 55,
+  "optimized_tests": 55,
+  "ruff_passed": true,
+  "pre_test_nine_file_freeze_unchanged": true,
+  "previous_v2_payloads_preserved": 28,
+  "scope": "Narrow real-schema adapter and synthetic gate verification; no canonical edits, science/PDF execution, staging/commit, evidence transfer or publication.",
+  "files": {
+    "ADAPTER.md": {
+      "sha256": "f30f3cdc53f84a85cd068192bf936d4ec652ded17956e53481b9b831a5c3d9e5",
+      "bytes": 2390
+    },
+    "HANDOFF.md": {
+      "sha256": "8c2a8c2aa9b555bb467127ac853f0a9cfa904a0033981b8b6b8a8db855050c61",
+      "bytes": 13253
+    },
+    "checkpoint-contract.unready.json": {
+      "sha256": "532405b78e4ed2ea64d7b2044f412a184c67f3d16428763e083a6a4f6ecb4748",
+      "bytes": 4510
+    },
+    "checkpoint_lib.py": {
+      "sha256": "2c024b0689474109afb93c0c76c2b88ef115f70fba04b5b1085cc1854fc8b9ea",
+      "bytes": 28242
+    },
+    "compare_replays.py": {
+      "sha256": "f4f80cec1f4a76d1e5e290094edfb3152bd9ad4601a56c1e27253750c52d0e8a",
+      "bytes": 2128
+    },
+    "real-schema-observation.json": {
+      "sha256": "13d60a56918b0d8daf308b7c7c1ed55d9e0fb64044cc058b1e843c1c0f2e34c8",
+      "bytes": 873
+    },
+    "replay-spec.unready.json": {
+      "sha256": "8122b3a77b5e434c62a27ee84310a5139f000eaa3e4cf6eeade6e0b529596d0d",
+      "bytes": 2318
+    },
+    "revision-delta.json": {
+      "sha256": "f8367e74dd6f2f9166708b7ea6991ceb718633e8bed61c38d510f1b1af2bba89",
+      "bytes": 2813
+    },
+    "revision.patch": {
+      "sha256": "56700edecac3e100391f63fed02fc03a09baa8289f6375f2cdf929cfa3c58fed",
+      "bytes": 11301
+    },
+    "run_clean_replay.py": {
+      "sha256": "26ea5840dd35fbded2ec7023ca86ca37e3ff05eb6e311bbf9eea2749603cdc60",
+      "bytes": 4312
+    },
+    "test_checkpoint.py": {
+      "sha256": "135c0fce185bb011cba4e922c942426c15892130b4a26f25a49ff412953f3de2",
+      "bytes": 44930
+    },
+    "verification-v3/normal.command.json": {
+      "sha256": "6f47b41dc2a3439b4ac8926534f8cc5faed3ed552a4318e8c025aa30ef74bb17",
+      "bytes": 769
+    },
+    "verification-v3/normal.stderr.txt": {
+      "sha256": "0f3cffb7745327a92fc3eeb733646b062fcf13569f01823ff4fd3a0a1a750ab1",
+      "bytes": 8228
+    },
+    "verification-v3/normal.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "verification-v3/optimized.command.json": {
+      "sha256": "a50923495df385fe668db70606dfae1fc403105038e28b124726c196bb5c7c4d",
+      "bytes": 782
+    },
+    "verification-v3/optimized.stderr.txt": {
+      "sha256": "fe8d02f4a4fe7b4dca0a716f901c8c7df1f1ce0ec1285780614bc1b9ffb04c0c",
+      "bytes": 8228
+    },
+    "verification-v3/optimized.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "verification-v3/pre-test-source-freeze.json": {
+      "sha256": "a5547bafec12f756f94a99b4480e5370324aa816922326869817984c2f6c3dce",
+      "bytes": 1192
+    },
+    "verification-v3/ruff.command.json": {
+      "sha256": "ae9795ab5e6a9974e7632d51c970e8e4abf19e87ffdb8945b1c29a65e6c44b0d",
+      "bytes": 712
+    },
+    "verification-v3/ruff.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "verification-v3/ruff.stdout.txt": {
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    "verify_checkpoint.py": {
+      "sha256": "720f239af2e6b22c7f9b9143ede5d69a7f9e300bb4ea8985c6a2e49efe7ad94f",
+      "bytes": 18992
+    }
+  }
+}

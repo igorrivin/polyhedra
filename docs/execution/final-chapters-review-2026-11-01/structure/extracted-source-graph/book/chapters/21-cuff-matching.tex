@@ -1,0 +1,46 @@
+\section{Matching across cuffs: positions and directions}
+\label{sec:matching}
+
+The pants viewpoint suggests that orthogeodesic pieces should glue when
+their boundary data match. There are two levels of matching.
+
+First consider a cuff of length $a$, with endpoint configurations
+$x_1,\ldots,x_m$ and $y_1,\ldots,y_m$ on the two sides. Choose compatible
+coordinates in $\RR/a\ZZ$, reversing one induced boundary orientation
+as needed. For a prescribed cyclic matching $\sigma$, a twist $\tau$
+must satisfy
+\begin{equation}
+ y_{\sigma(j)}-x_j\equiv\tau\pmod a
+       \qquad(1\le j\le m).
+ \label{eq:endpointmatch}
+\end{equation}
+One endpoint determines $\tau$ modulo $a$; the remaining $m-1$ equations
+require the cyclic spacings to agree. Integer winding data must also be
+retained if the curve is marked, rather than only considered modulo a
+twist.
+
+Second, a general geodesic segment has a tangential velocity component
+$p$ at an endpoint. If $S$ is the sum of segment lengths, the first
+variation at a glued endpoint has the form
+\begin{equation}
+ \frac{\partial S}{\partial x}=p_{\rm in}-p_{\rm out}.
+ \label{eq:momentummatch}
+\end{equation}
+Stationarity imposes tangent matching as well as position matching. For
+orthogonal segments the tangential components vanish, so smooth gluing
+is automatic once the endpoints match. A generic closed geodesic does
+not satisfy this orthogonality condition along an arbitrarily chosen
+pants decomposition.
+
+Equivalently, boundary data live in a phase space $(s,p)$: endpoint
+position and tangential component. The length of an arc is a generating
+function, with
+\[
+ \dd L=-p_s\,\dd s+p_t\,\dd t,
+ \qquad\text{and cuff gluing acts by }(s,p)\longmapsto(s+\tau,p).
+\]
+A closed geodesic is a periodic compatible chain of these relations.
+The orthospectrum records the special $p=0$ representatives. It is
+excellent input for gap identities and local geometry, but endpoint
+positions and directions are needed to reconstruct arbitrary glued curves.
+

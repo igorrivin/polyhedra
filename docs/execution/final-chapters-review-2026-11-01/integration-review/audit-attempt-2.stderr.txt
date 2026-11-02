@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/audit_source.py", line 365, in <module>
+    main()
+  File "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/audit_source.py", line 297, in main
+    require(bool(cov['implemented_result_groups']) or cov['status']=='no_direct_fixture_in_this_companion','Unmapped claim computational status')
+                                                      ~~~^^^^^^^^^^
+KeyError: 'status'

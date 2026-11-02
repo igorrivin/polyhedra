@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/Library/TeX/texbin/latexmk",
+    "-norc",
+    "-pdf",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-file-line-error",
+    "-no-shell-escape",
+    "-outdir=../../pdf-build",
+    "main.tex"
+  ],
+  "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/frozen-source/book",
+  "scope": "Actual precommit integrated build; no marker rerun",
+  "started_at_utc": "2026-11-02T04:38:57.025995+00:00",
+  "returncode": 0,
+  "elapsed_seconds": 11.813867875025608,
+  "finished_at_utc": "2026-11-02T04:39:08.839812+00:00",
+  "source_unchanged_before_after": true
+}

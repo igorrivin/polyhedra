@@ -1,0 +1,843 @@
+--- extracted-baseline/book/chapters/17-unfolding-constant-series.tex
++++ frozen-initial/book/chapters/17-unfolding-constant-series.tex
+@@ -3,9 +3,12 @@
+ 
+ \subsection{What a volume computation determines}
+ 
+-Let $\Gamma$ be the mapping class group and let $\gamma$ be a fixed curve
+-or multicurve class. For an appropriate nonnegative or absolutely integrable
+-function, the basic unfolding identity is
++Let $\Gamma$ be the mapping class group of an oriented finite-type surface
++with fixed boundary lengths, and let $\gamma$ be a fixed nonperipheral
++curve or multicurve class. Use the same WP orbifold measure on both
++quotients. For a measurable nonnegative function, or one for which
++$\int_{\Gamma\backslash\T}\sum_\delta|F(\ell_\delta)|\,\dV<\infty$,
++the basic unfolding identity is
+ \begin{equation}
+  \int_{\Gamma\backslash\T}
+  \sum_{\delta\in\Gamma\gamma}F(\ell_\delta(X))\,\dV(X)
+@@ -13,19 +16,26 @@
+              F(\ell_\gamma(X))\,\dV(X).
+  \label{eq:unfold}
+ \end{equation}
+-Multiplicity conventions belong in the stabilizer. This identity is just
+-integration over coset translates of a fundamental domain; it does not
+-require the curves in the orbit to be simple.
++The orbit contains each class once; $\Stab(\gamma)$ preserves the entire
++chosen decoration, including any orientation, ordering or component
++weights. Integration over coset translates of a fundamental domain proves
++the formula, with ineffective isotropy retained on both sides. For
++nonnegative functions either side may be infinite. Simplicity of the
++orbit curves is not required.
+ 
+ Simplicity becomes important when evaluating the right side. If $\gamma$
+ is a disjoint simple multicurve, cut along it and use Fenchel--Nielsen
+ coordinates. Each twist period integrates to $\ell_j$, so the resulting
+ integral has factors $\prod_j\ell_j\,\dd\ell_j$ times WP volumes of the
+ components, with the relevant symmetry factors. This is the geometric
+-integration mechanism in Mirzakhani's volume recursion
+-\cite[Theorem 8.1]{MirzVolumes}.
++integration mechanism underlying Mirzakhani's volume recursion
++\cite[Theorem 7.1 and Lemma 7.3]{MirzVolumes}. The symmetry and
++one-handle factors in that formula must be converted using the volume
++convention for each component; they are not extra factors to append to
++an already stack-normalized quotient.
+ 
+-Suppose a series $S(X)$ is independently known to be constant, say $C$.
++Suppose a series $S(X)$ is independently known to be constant, say $C$,
++and $0<V_{g,n}<\infty$ in the chosen normalization.
+ Then
+ \begin{equation}
+  C=\frac{1}{V_{g,n}}
+@@ -43,11 +53,20 @@
+        =\frac12\int_0^\infty x f(x)\,\dd x.
+  \label{eq:torusunfold}
+ \end{equation}
++Indeed, the effective stabilizer quotient has coordinates $x>0$ and
++$0\leq\tau<x$, while the ineffective torus involution contributes the
++single factor $1/2$. This is the stack convention of
++Section~\ref{sec:torussphere}; it is not a second quotient by cuff exchange.
+ For $f(x)=(1+e^x)^{-1}$, expand in $e^{-x}$ to obtain
+ \[
+  \int_0^\infty\frac{x\,\dd x}{1+e^x}
+    =\sum_{m\ge1}\frac{(-1)^{m-1}}{m^2}=\frac{\pi^2}{12}.
+ \]
++Termwise integration is justified by
++$\sum_m\int_0^\infty xe^{-mx}\,\dd x=\sum_m m^{-2}<\infty$.
++For a finite numerical check, the integral beyond $R$ is at most
++$(R+1)e^{-R}$, and the alternating sum through $m=M$ has error at most
++$(M+1)^{-2}$.
+ The integral of the series is $\pi^2/24$; division by
+ $V_{1,1}=\pi^2/12$ gives $C=1/2$. Its pointwise constancy is McShane's
+ theorem~\cite{McShane}:
+@@ -61,12 +80,16 @@
+ 
+ \subsection{Operations that preserve constancy}
+ 
+-There is indeed a large closure of any known collection of identities.
+-Finite linear combinations preserve constancy. So do absolutely convergent
+-parameter integrals and locally uniformly convergent differentiations of
+-identities on an identified parameter family. Products of identities give
+-constant double series when Tonelli's theorem or absolute convergence
+-applies. These are useful mechanisms for constructing new kernels.
++Finite linear combinations of constant series preserve constancy.
++Parameter integrals do too when the constant is integrable and Fubini's
++theorem applies to the joint sum and integral, or when all terms are
++nonnegative and Tonelli's theorem applies. For differentiation on an
++identified parameter family, one sufficient hypothesis is local uniform
++absolute convergence of both the series and its first derivatives.
++Uniform convergence of the original series alone is insufficient.
++Products give constant double series when Tonelli's theorem or absolute
++convergence applies. These operations construct kernels together with
++their required convergence hypotheses.
+ 
+ Their geometric interpretation needs to be retained. A product usually
+ indexes pairs of curves that may intersect; it is not automatically a
+@@ -77,17 +100,22 @@
+  \sum_\gamma F'(\ell_\gamma)\,\dd\ell_\gamma=0,
+  \label{eq:derivativeidentity}
+ \end{equation}
+-assuming sufficient local uniform control. It does not generally give
++under the stated local $C^1$ control, for a kernel with no additional
++explicit metric dependence. It does not generally give
+ another scalar identity by differentiating only the displayed weight.
+ 
+ Two possible tests for a proposed constant series follow. One can try to
+ show that~\eqref{eq:derivativeidentity} vanishes on a spanning set of tangent
+-directions. Alternatively, if $S\in L^2$ and its mean is $\overline S$, then
++directions at every point; a $C^1$ series is then constant on each
++connected component. Alternatively, for real-valued $S\in L^2$ on a
++finite positive-volume moduli space, let $\overline S$ be its mean. Then
+ \begin{equation}
+  \int_{\M}(S-\overline S)^2\,\dV=0
+  \label{eq:variance}
+ \end{equation}
+-proves constancy almost everywhere, and everywhere if $S$ is continuous.
++proves constancy almost everywhere, and everywhere if $S$ is continuous,
++since WP measure has full support. For a complex-valued series use
++$|S-\overline S|^2$ instead of the square.
+ The second-moment calculation involves pairs of curves, including their
+ intersection patterns. It can be substantially harder than the first
+ unfolding integral.
+@@ -112,22 +140,28 @@
+  &+2\mathcal L\left(\frac{1+e^{-r}}2\right)
+   -2\mathcal L\left(\frac{1-e^{-r}}2\right).
+ \end{align*}
+-Hu--Tan's punctured-torus identity is
++On a complete finite-area once-punctured torus, Hu--Tan's identity is
+ \begin{equation}
+  \sum_{\alpha\text{ simple, unoriented}}D(\ell_\alpha)=\frac{\pi^2}{2}.
+  \label{eq:dilogtorus}
+ \end{equation}
+-The same paper treats a positive torus boundary~\cite[Theorems 1--2]{HuTan}.
++Here the index set is the nonperipheral simple spectrum with its curve
++multiplicities~\cite[Theorem 2, equation (2)]{HuTan}. Their Theorem 1
++treats a positive geodesic boundary with a different, boundary-dependent
++kernel; the displayed $D$ is the cusped specialization.
+ 
+-For a closed surface of genus $g\ge2$, Luo--Tan give explicit dilogarithmic
+-weights $f(P),g(T)$ on embedded geometric pairs of pants and one-holed tori
++For a closed oriented surface of genus $g\ge2$, Luo--Tan give explicit
++dilogarithmic weights $f(P),g(T)$ on properly embedded geometric pairs of
++pants and one-holed tori, each subsurface counted once,
+ such that
+ \begin{equation}
+  \sum_P f(P)+\sum_T g(T)=8\pi^2(g-1)=\operatorname{Vol}(T^1X).
+  \label{eq:luotan}
+ \end{equation}
+-Their construction partitions unit tangent directions~\cite{LuoTan}.
++Their construction partitions unit tangent directions up to a null set
++\cite[Theorem 1.1 and Section 1.2]{LuoTan}. Angular measure $2\pi$ on
++each unit tangent circle, together with area $4\pi(g-1)$, explains the
++normalization on the right.
+ It illustrates another source of constant series: the invariant measure
+ being partitioned need not live only on a horocycle or a geodesic boundary.
+ The precise, longer subsurface weights are given in that reference.
+-
+--- extracted-baseline/book/chapters/18-figure-eight-curves.tex
++++ frozen-initial/book/chapters/18-figure-eight-curves.tex
+@@ -1,20 +1,26 @@
+ \section{Figure-eight curves and simple lifts}
+ \label{sec:figures}
+ 
+-In this section surfaces have cusps or geodesic boundary and no cone
+-singularities.
++In this section surfaces are oriented, of finite type, and have a
++hyperbolic metric of curvature $-1$, with cusps or geodesic boundary and
++no cone singularities. Curves are unoriented free-homotopy classes unless
++an orientation is explicitly chosen for a word calculation.
+ 
+ \subsection{The pants trace relation}
+ 
+ Let $\gamma$ be a closed geodesic with exactly one transverse self-intersection,
+-not a proper iterate. Its two-lobed neighborhood is a pair of pants. After
+-tightening the cuffs, allow coincident cuff images in the ambient surface;
+-this occurs on a one-holed torus. If the three cuff lengths are $a,b,c$,
++not a proper iterate. Its two-lobed regular neighborhood is a pair of
++pants: the two ends of each lobe are adjacent in the cyclic order at the
++crossing. Its cuffs are essential or peripheral; a compressing disk would
++give a geodesic monogon or bigon, or make the curve an iterate.
++After tightening the cuffs, allow coincident cuff images in the ambient
++surface; this occurs on a one-holed torus. If the three cuff lengths are $a,b,c$,
+ write
+ \[
+  t_a=2\cosh(a/2),\quad t_b=2\cosh(b/2),\quad t_c=2\cosh(c/2).
+ \]
+-A cusp has positive trace $2$. For the figure-eight that wraps the $a$
++A cusp has positive geometric trace $2$, regardless of the sign of a
++chosen $\mathrm{SL}_2$ lift. For the figure-eight that wraps the $a$
+ and $b$ cuffs, the trace identity is
+ \begin{equation}
+  \boxed{t_\gamma=t_at_b+t_c.}
+@@ -23,8 +29,11 @@
+ This is Rivin's pants relation~\cite[Theorem 1.3]{RivinFigures}. It also
+ follows directly from
+ $\tr(AB^{-1})=\tr A\,\tr B-\tr(AB)$ with the consistent signs of pants
+-holonomies; rewriting in positive traces produces the plus sign in
+-\eqref{eq:figuretrace}.
++holonomies: choose $\tr A=t_a$, $\tr B=t_b$, and $\tr(AB)=-t_c$.
++Rewriting in positive geometric traces produces the plus sign in
++\eqref{eq:figuretrace}. One cannot make this replacement in an arbitrary
++character identity; Section~\ref{sec:coefficientdistributions} retains
++signed traces and therefore has a different sign.
+ 
+ For pants with lengths $(a,b,0)$, the two figures that use the cusp as one
+ lobe have traces
+@@ -80,12 +89,25 @@
+ \subsection{The two types on a punctured torus}
+ 
+ On a once-punctured torus, a figure-eight has a unique essential simple
+-curve $\alpha$ disjoint from it. Its pants neighborhood has one peripheral
+-cuff and two parallel essential cuffs, which both tighten to $\alpha$.
++curve $\alpha$ disjoint from it. To see the topological restriction,
++truncate the cusp and consider the complement of its incompressible
++pants neighborhood in the resulting compact torus. That complement has
++Euler characteristic zero and no disk components, so it consists of two
++annuli. One joins a pants cuff to the cusp boundary; the other joins the
++remaining two cuffs, which are therefore parallel essential curves.
++Conversely, any essential simple
++curve disjoint from the figure can be pushed out of its regular
++neighborhood and is parallel to these cuffs. Thus its pants neighborhood
++has one peripheral cuff and two essential cuffs that tighten to $\alpha$.
+ Cutting along $\alpha$ gives pants of lengths $(a,a,0)$, where
+ $a=\ell_\alpha$ and $t=2\cosh(a/2)>2$.
+ 
+-There are exactly three unoriented figure-eight classes in these cut pants:
++There are exactly three unoriented figure-eight classes in these cut pants.
++Indeed, splitting at the unique crossing gives two simple based lobes;
++their two distinct peripheral classes determine a choice of two of the three
++pants cuffs. Traversing them with opposite boundary orientations is the
++one-crossing class; traversing their product with the other relative
++orientation is the third cuff. This gives the three choices below:
+ \begin{center}
+ \begin{tabular}{@{}p{0.42\textwidth}c c@{}}
+ \toprule
+@@ -108,10 +130,18 @@
+ $ab^{-1}=asa s^{-1}$. The last word is not a square. The common disjoint
+ class $\alpha$ is recoverable from the figure's pants neighborhood, so
+ grouping all figure-eights by $\alpha$ has no duplication.
++More explicitly, the first two words become $a^2sa^{-1}s^{-1}$ and
++$asa^{-2}s^{-1}$ in the free basis $a,s$. Their cyclic words are neither
++conjugate nor inverse-conjugate. Their homology classes are $[a]$ and
++$-[a]$; the third has class $2[a]$ and cyclic word $asa s^{-1}$, which
++is not a power of a shorter cyclic word. This also checks primitivity.
+ 
+ Lei--Zhang correct the index set in Rivin's earlier torus identity: its
+ stated formula accounts for $\mathcal N$, while $\mathcal H$ requires
+-separate treatment~\cite{LeiZhang}. The separation is important here
++separate treatment~\cite[p.~2350049-1, abstract]{LeiZhang}. The
++classification and weights used here have been derived above; this
++citation does not substitute for a check of the full correction paper.
++The separation is important here
+ because the next construction is intended to include \emph{both} families.
+ 
+ \subsection{A positive single-length kernel for all figure-eights}
+@@ -183,9 +213,31 @@
+ subsequent terms contribute $O(x^{-4})$, giving the stated asymptotic.
+ \end{proof}
+ 
++The same alternating-series argument supplies an explicit finite
++evaluation contract. For $N\geq1$ let $F_N$ be the sum of the first $N$
++terms in~\eqref{eq:universalkernel}, and put $x_N=\beta^{\circ N}(x)$.
++Then
++\begin{equation}
++ 0\leq(-1)^N\bigl(F(x)-F_N(x)\bigr)
++ \leq 2^{-N-1}h(x_N/3)\leq 2^{-N-1}.
++ \label{eq:figurekerneltail}
++\end{equation}
++Moreover the exact finite identity
++\begin{equation}
++ 2F_N(x)+F_N(\beta(x))-h(x/3)
++   =(-1)^{N-1}2^{-N}h(x_N/3)
++ \label{eq:figurefiniteidentity}
++\end{equation}
++provides a check independent of extrapolating a computed infinite sum.
++For large $t$, evaluate
++$h(t)=4/[t^2(1+\sqrt{1-4/t^2})]$ to avoid subtraction of nearby numbers.
++These bounds concern evaluation of the kernel. Approximating the sum over
++surface curves additionally requires a complete index enumeration and a
++bound for the omitted curve classes; no such numerical approximation is
++asserted here.
++
+ This is an elementary construction from the corrected classification,
+ not a claim of a new identity in the literature. It is restricted to the
+ cusped torus. Cone continuation requires checking existence of the indexed
+ geodesics as well as continuing the weight; the cone obstruction discussed
+ by Lei--Zhang is a reason to keep that distinction explicit~\cite{LeiZhang}.
+-
+--- extracted-baseline/book/chapters/19-pants-twists.tex
++++ frozen-initial/book/chapters/19-pants-twists.tex
+@@ -3,9 +3,12 @@
+ 
+ \subsection{What data a cut curve retains}
+ 
+-Fix a pants decomposition with cuff lengths $a_1,\ldots,a_N$, where
+-$N=3g-3+n$. Cutting a simple multicurve gives disjoint essential arcs in
+-each pair of pants. Cutting a general immersed curve, even a filling one,
++Fix an oriented hyperbolic surface of finite type, without cone points,
++and a pants decomposition with internal cuff lengths $a_1,\ldots,a_N>0$,
++where $N=3g-3+n$. Boundary lengths, including cusps, are fixed.
++Apart from components parallel to a cutting cuff, cutting a simple
++multicurve gives disjoint essential arcs in each pair of pants.
++Cutting a general immersed curve, even a filling one,
+ need not give disjoint arcs: self-intersections may remain inside a pair
+ of pants. Nor are the actual segments generally orthogonal to the cuffs.
+ 
+@@ -23,8 +26,9 @@
+ 
+ \subsection{An exact local distance function}
+ 
+-Take two ultraparallel geodesic lifts of cuffs in $\HH^2$, at common
+-perpendicular distance $d$. Let $u,v$ be signed distances on the two lines
++Take two distinct ultraparallel geodesic lifts of positive-length cuffs
++in $\HH^2$, at common perpendicular distance $d>0$.
++Let $u,v$ be signed distances on the two lines
+ from the perpendicular feet, with compatible orientations. Then
+ \begin{equation}
+  \boxed{
+@@ -36,26 +40,59 @@
+  p(u)=(\cosh u,\sinh u,0),\qquad
+  q(v)=(\cosh d\cosh v,\sinh v,\sinh d\cosh v).
+ \]
+-Then $\cosh D=-\langle p,q\rangle$. Reversing one endpoint coordinate
+-changes the sign of the mixed term.
+-
+-For the ordinary seam between cuffs $a,b$ of pants with third cuff $c$,
++Then $\cosh D=-\langle p,q\rangle$ for the Lorentz form of signature
++$(-,+,+)$, and $\arcosh$ is its nonnegative real branch.
++Reversing one endpoint coordinate changes the sign of the mixed term.
++
++For the ordinary seam between cuffs $a,b>0$ of pants with third cuff
++$c\geq0$, the right-angled-hexagon relation gives
+ \begin{equation}
+  \cosh d=\frac{\cosh(c/2)+\cosh(a/2)\cosh(b/2)}
+                     {\sinh(a/2)\sinh(b/2)}.
+  \label{eq:seam}
+ \end{equation}
++It can also be checked from pants holonomy: translations of lengths
++$a,b$ on axes at distance $d$, with the opposed boundary directions,
++have product trace
++$2\cosh(a/2)\cosh(b/2)-2\cosh d\sinh(a/2)\sinh(b/2)$.
++Equating this to $-2\cosh(c/2)$ gives~\eqref{eq:seam}, with the
++same lift signs as~\eqref{eq:figuretrace}.
+ For a returning or winding arc, choose the boundary lifts appropriate to
+ its relative homotopy class and use their common perpendicular instead.
+ There is no single seam length that describes all relative arc classes.
+ 
+-Given a fixed itinerary, cuff gluing imposes affine relations on the
+-endpoint variables involving the twists $\tau_i$ and integer winding
+-data. The length of its closed geodesic representative is obtained by
+-minimizing the sum of the corresponding functions~\eqref{eq:localdistance}
+-over the crossing positions. The first-variation equations impose smooth
+-tangent matching at every crossing. This provides an exact formulation
+-even when the resulting minimization is not elementary to evaluate.
++For the reduced itinerary of a fixed nonperipheral closed curve, fix the
++boundary lifts for each segment and retain its integer winding data.
++Cuff gluing then imposes affine relations on the real endpoint positions,
++involving the twists $\tau_i$. Minimize the sum of the corresponding
++functions~\eqref{eq:localdistance} over the crossing positions. Every
++competitor is a piecewise geodesic in the fixed free-homotopy class, so its
++length is at least the closed geodesic length. The geodesic representative
++realizes equality: geodesics have no bigons with the cutting cuffs and
++therefore realize the same reduced itinerary. At the minimum, first
++variation imposes smooth tangent matching at every crossing. A curve
++contained entirely in one pair of pants is handled directly by its
++holonomy; it has no endpoint variables.
++
++The endpoint Hessian will also control variation in a twist. Put
++$z=\cosh D_d(u,v)$ and $S=\sqrt{z^2-1}>0$. Direct differentiation gives
++\begin{equation}
++ \nabla^2D_d=\frac{\sinh^2d}{S^3}
++ \begin{pmatrix}
++ z\cosh^2v&-\cosh u\cosh v\\
++ -\cosh u\cosh v&z\cosh^2u
++ \end{pmatrix},\qquad
++ \det\nabla^2D_d=
++ \frac{\sinh^4d\cosh^2u\cosh^2v}{S^4}>0.
++ \label{eq:localdistancehessian}
++\end{equation}
++For example, $z_{uu}=z$ and
++$z^2-z_u^2-1=\sinh^2d\cosh^2v$, while
++$z_{uv}(z^2-1)-zz_uz_v=-\sinh^2d\cosh u\cosh v$.
++These identities give the displayed matrix. Its positive diagonal and
++determinant prove strict joint convexity in the two endpoint coordinates.
++Reversing an endpoint orientation conjugates the Hessian by a sign matrix
++and preserves positive definiteness.
+ 
+ \subsection{Holonomy and first variation}
+ 
+@@ -63,7 +100,8 @@
+ \[
+  T_i(\tau_i)=\diag(e^{\tau_i/2},e^{-\tau_i/2}).
+ \]
+-For a fixed curve word $\gamma$, insert these matrices into the fixed pants
++For a fixed nonperipheral curve word $\gamma$, insert these matrices and
++their inverses into the fixed pants
+ holonomies. The resulting product $W_\gamma$ satisfies
+ \begin{equation}
+  2\cosh(\ell_\gamma/2)
+@@ -83,18 +121,39 @@
+       \le i(\gamma,\alpha_i).
+  \label{eq:cosine}
+ \end{equation}
+-Angles and twist orientation are chosen consistently. Length is strictly
+-convex along an individual nontrivial twist when the curve crosses the
+-twisting cuff; the argument also applies to nonsimple geodesics
+-\cite{Kerckhoff}. We do not need a stronger claim about arbitrary lines
+-with several twist parameters varying in different signs.
++Angles and twist orientation are chosen consistently, and intersections
++are counted by passages, including repeated passages for an iterate.
++Cutting at each crossing proves the cosine formula: endpoint variations
++inside a segment cancel by stationarity, while the relative displacement
++across the cuff contributes the tangential projection
++$\cos\vartheta_p$~\cite{WolpertTwist}. The same argument applies to
++immersed geodesics. If $\gamma$ is a power of a cuff, the intersection
++sum is empty and the derivative is zero.
++
++Length is strictly convex in one twist $\tau_i$ whenever
++$i(\gamma,\alpha_i)>0$. Here is a proof that includes nonsimple curves.
++Hold all pants lengths and the other twists fixed, and use the fixed
++reduced itinerary above. The segment distances $d$ remain positive and
++fixed. For two twist values choose the minimizing endpoint configurations.
++Their affine interpolation is admissible for the interpolated twist.
++The two full endpoint vectors cannot coincide: at a crossing of
++$\alpha_i$, the gluing equation contains $\tau_i$ with coefficient
++$1$ or $-1$, with fixed winding data. Thus a change of this twist cannot
++be absorbed while leaving all segment endpoints fixed. Strict convexity
++of the sum in~\eqref{eq:localdistancehessian}, followed by minimization,
++gives the strict convexity inequality for the geodesic length. This also
++explains why the conclusion excludes a disjoint cuff, whose twist leaves
++the length constant. The simple-curve earthquake theorem provides a
++broader context~\cite[Theorem 1]{Kerckhoff}; no extension of that cited
++statement is needed for the local argument here.
+ 
+ These ideas overlap with several parts of Mirzakhani's work, but serve
+ different roles there. Dehn--Thurston estimates compare combinatorial and
+-geometric length for simple curves~\cite[Section 3]{MirzSimple}. The work
++geometric length for simple multicurves
++\cite[Theorem 3.4 and equation (3.6)]{MirzSimple}. The work
+ on general curve orbits studies asymptotically piecewise-linear length,
+ including filling curves and length sublevel volumes
+-\cite[Sections 4 and 8]{MirzGeneral}. In the basic volume recursion, the
++\cite[Theorem 4.1 and Section 8]{MirzGeneral}. In the basic volume recursion, the
+ cutting curves are simple and the kernel depends on their lengths, so the
+ twist integral itself is just the period $a_i$.
+ 
+@@ -115,10 +174,14 @@
+  =\int_{\RR^N}F\bigl(\ell_\gamma(\mathbf a,\mathbf u)\bigr)\,\dd\mathbf u.}
+  \label{eq:twistunfold}
+ \end{equation}
+-For signed functions, impose absolute integrability. If the curve has a
+-nontrivial stabilizer in this twist lattice, remove the redundant directions
+-or account for their multiplicity; in particular, twisting about a disjoint
+-cuff should not produce infinitely many copies of the same term.
++As written, the sum is over lattice elements, so the nonnegative equality
++is valid even if both sides are infinite. For signed functions, impose
++absolute integrability on $\RR^N$. To interpret the sum as one term per
++curve, first quotient any stabilizer and unfold the corresponding
++nonredundant twist directions; twisting about a disjoint cuff must not
++produce infinitely many copies of one curve. This quotient may change
++the lattice and its fundamental domain, so one cannot simply divide an
++infinite multiplicity out of the displayed formula.
+ 
+ A fixed curve's length is not periodic in a twist coordinate. The sum over
+ its twist orbit is periodic, which is exactly what makes this unfolding
+@@ -138,4 +201,3 @@
+ \end{equation}
+ whenever it converges. This is an explicit analytic object attached to the
+ curve itinerary and the fixed pants lengths.
+-
+--- extracted-baseline/book/chapters/20-torus-twist-series.tex
++++ frozen-initial/book/chapters/20-torus-twist-series.tex
+@@ -3,9 +3,11 @@
+ 
+ \subsection{The length function and its integral}
+ 
+-Let $X$ be a one-holed torus with boundary length $b\ge0$. Cut along a
+-simple curve $\alpha$ of length $a>0$, and choose a curve $\beta$ crossing
+-$\alpha$ once. Normalize the twist origin so that this crossing curve
++Let $X$ be an oriented one-holed hyperbolic torus with geodesic boundary
++length $b>0$, or a complete finite-area once-punctured torus when $b=0$.
++Cut along an essential simple curve $\alpha$ of length $a>0$, and choose
++an essential simple curve $\beta$ crossing $\alpha$ once.
++Normalize the twist origin so that this crossing curve
+ has minimum length at $\tau=0$. Set
+ \begin{equation}
+  A^2=\frac{\cosh a+\cosh(b/2)}{\cosh a-1}.
+@@ -17,8 +19,32 @@
+  \label{eq:torustwist}
+ \end{equation}
+ It follows from the right-angled-hexagon description of the cut pants;
+-see also~\cite[Proposition 3.1]{ALPS}. For $b=0$,
++see also~\cite[Proposition 3.1, pp.~5--6]{ALPS}. Take the positive square
++root $A>1$. For $b=0$,
+ $A=\coth(a/2)$. The minimum length is $r_0=2\arcosh A$.
++
++There is also a matrix check fixing the signed boundary convention.
++At zero twist the two axes meet perpendicularly. In an adapted basis put
++\[
++ M=\begin{pmatrix}e^{a/2}&0\\0&e^{-a/2}\end{pmatrix},\qquad
++ B_u=\begin{pmatrix}e^{u/2}&0\\0&e^{-u/2}\end{pmatrix}
++      \begin{pmatrix}A&\sqrt{A^2-1}\\\sqrt{A^2-1}&A\end{pmatrix}.
++\]
++Then $\det B_u=1$, $\tr B_u=2A\cosh(u/2)$, and direct multiplication gives
++\[
++ \tr[M,B_u]=2-4\sinh^2(a/2)(A^2-1)=-2\cosh(b/2),
++ \qquad [M,B_u]=MB_uM^{-1}B_u^{-1}.
++\]
++Solving this boundary equation recovers~\eqref{eq:Atwist}.
++Differentiating~\eqref{eq:torustwist}, with
++$Q=A^2\cosh^2(u/2)-1>0$, also gives
++\begin{equation}
++ \ell'_\beta(u)=\frac{A\sinh(u/2)}{\sqrt Q},\qquad
++ \ell''_\beta(u)=\frac{A(A^2-1)\cosh(u/2)}{2Q^{3/2}}>0.
++ \label{eq:torustwistderivatives}
++\end{equation}
++In particular $|\ell'_\beta|<1$, consistent with the single crossing
++in~\eqref{eq:cosine}.
+ 
+ For any nonnegative measurable function $f$, change variables separately
+ on the positive and negative twist axes to obtain
+@@ -30,7 +56,12 @@
+ \end{equation}
+ Indeed, differentiating $\cosh(r/2)=A\cosh(u/2)$ gives
+ $\dd u/\dd r=\sinh(r/2)/\sqrt{\cosh^2(r/2)-A^2}$ for $u>0$.
+-The two signs of $u$ explain the factor $2$.
++The two signs of $u$ explain the factor $2$. The nonnegative equality
++allows infinity on both sides; for signed $f$ require absolute
++integrability. The coarea density's endpoint singularity at $r_0$ is
++integrable. For
++example, $y=\sqrt{\cosh^2(r/2)-A^2}$ converts the right-hand side to
++$4\int_0^\infty f(2\arcosh\sqrt{A^2+y^2})\,\dd y/\sqrt{A^2+y^2}$.
+ 
+ Several useful checks are immediate:
+ \begin{align}
+@@ -44,8 +75,19 @@
+              {A^s\Gamma((s+1)/2)},\quad s>0.
+        \label{eq:betaintegral}
+ \end{align}
+-The sublevel measure is zero for $R<r_0$. These are exact twist integrals,
+-not asymptotic estimates.
++The sublevel measure is zero for $R<r_0$. In the last integral the change
++of variable $t=\tanh(u/2)$ gives
++$2A^{-s}B(1/2,s/2)$, which proves the displayed gamma quotient.
++These are exact twist integrals. For a finite interval $[-U,U]$, $U\geq0$,
++the omitted tail satisfies
++\begin{equation}
++ \int_{|u|>U}\cosh^{-s}(\ell_\beta(u)/2)\,\dd u
++ \leq\frac{2^{s+2}}{sA^s}e^{-sU/2},\qquad s>0,
++ \label{eq:torusintegraltail}
++\end{equation}
++because $\cosh(u/2)\geq e^{|u|/2}/2$.
++For $s=2$ the tail is exactly $4A^{-2}(1-\tanh(U/2))$.
++These analytic tails do not enclose numerical quadrature or roundoff error.
+ 
+ \subsection{A positive partition of unity}
+ 
+@@ -64,6 +106,19 @@
+ \end{equation}
+ All terms are positive and the convergence is exponential on compact
+ twist intervals.
++More precisely, for $N\geq0$ put $L_N=(N+1/2)a$ and
++$P_N(\tau)=\sum_{n=-N}^NH_a(\tau+na)$. Finite telescoping gives
++\begin{align}
++ P_N(\tau)&=\tfrac12\left[
++    \tanh\frac{\tau+L_N}{2}-\tanh\frac{\tau-L_N}{2}\right],\notag\\
++ 1-P_N(\tau)&=\frac1{1+e^{L_N+\tau}}+
++               \frac1{1+e^{L_N-\tau}}
++       \leq2\cosh\tau\,e^{-L_N}.
++ \label{eq:Hpartialsumtail}
++\end{align}
++This is an explicit tail estimate, uniform for bounded $\tau$ with $a$
++fixed. One may reduce $\tau$ modulo $a$ to $|\tau|\leq a/2$ by relabeling
++the orbit; no estimate uniform as $a\to0$ is asserted for fixed $N$.
+ 
+ Since~\eqref{eq:torustwist} implies
+ $\cosh r+1=A^2(\cosh u+1)$, eliminate $u$ from~\eqref{eq:Hkernel} and set
+@@ -73,7 +128,8 @@
+       {\cosh r+1+A^2(\cosh(a/2)-1)}.
+  \label{eq:Kkernel}
+ \end{equation}
+-For $r_n=\ell_{D_\alpha^n\beta}(X)$ we obtain the pointwise identity
++For $r\geq r_0$, this satisfies $K_{a,b}(r)=H_a(u)$ at the two twists
++with length $r$. For $r_n=\ell_{D_\alpha^n\beta}(X)$ we obtain the pointwise identity
+ \begin{equation}
+  \boxed{\sum_{n\in\ZZ}K_{a,b}(r_n)=1.}
+  \label{eq:Kidentity}
+@@ -82,18 +138,25 @@
+ its average. Its kernel depends on the distinguished cuff length $a$ and
+ the boundary length $b$, and its index set is one twist orbit. It is not
+ an unrestricted universal sum over every curve on the surface.
++The classes $D_\alpha^n\beta$ are all distinct as unoriented simple
++classes, since they cross $\alpha$ once and have distinct integral twist
++coordinates. Equal lengths, which occur at symmetric twist values, do
++not merge their labels. Equation~\eqref{eq:Hpartialsumtail} is also the
++tail estimate for this $K$-series.
+ 
+-There is a simple source of many such examples. If $\rho$ is an even
+-probability density on $\RR$, then
++There is a simple source of many such examples. If $\rho\in L^1(\RR)$
++is an even nonnegative probability density, then
+ \[
+  H_{a,\rho}(u)=\int_{u-a/2}^{u+a/2}\rho(v)\,\dd v
+  \quad\text{satisfies}\quad
+  \sum_{n\in\ZZ}H_{a,\rho}(u+na)=1.
+ \]
+-The translated intervals partition the line. Evenness makes
++The translated intervals partition the line except for shared endpoints
++of measure zero, so Tonelli proves the identity. These terms are
++nonnegative; strict positivity requires further assumptions on $\rho$.
++Evenness makes
+ $H_{a,\rho}$ a function of $|u|$, hence of the length $r$ through
+ \eqref{eq:torustwist}. The choice
+ $\rho(v)=\frac14\sech^2(v/2)$ gives~\eqref{eq:Hkernel}.
+ This realizes the proposed ``zoo'' of identities in a concrete way, with
+ the source of constancy and the parameter dependence both visible.
+-
+--- extracted-baseline/book/chapters/21-cuff-matching.tex
++++ frozen-initial/book/chapters/21-cuff-matching.tex
+@@ -4,8 +4,9 @@
+ The pants viewpoint suggests that orthogeodesic pieces should glue when
+ their boundary data match. There are two levels of matching.
+ 
+-First consider a cuff of length $a$, with endpoint configurations
+-$x_1,\ldots,x_m$ and $y_1,\ldots,y_m$ on the two sides. Choose compatible
++First consider a positive-length cuff $a>0$, with $m\geq1$ distinct
++endpoint positions $x_1,\ldots,x_m$ and $y_1,\ldots,y_m$ on the two sides.
++Choose compatible
+ coordinates in $\RR/a\ZZ$, reversing one induced boundary orientation
+ as needed. For a prescribed cyclic matching $\sigma$, a twist $\tau$
+ must satisfy
+@@ -17,16 +18,25 @@
+ One endpoint determines $\tau$ modulo $a$; the remaining $m-1$ equations
+ require the cyclic spacings to agree. Integer winding data must also be
+ retained if the curve is marked, rather than only considered modulo a
+-twist.
++twist. These congruences are necessary and sufficient for the prescribed
++position matching. They do not supply the direction data of the pieces.
+ 
+-Second, a general geodesic segment has a tangential velocity component
+-$p$ at an endpoint. If $S$ is the sum of segment lengths, the first
++Second, orient a chain by its direction of travel and measure all
++tangential components in the common cuff coordinate just chosen.
++A transverse unit-speed geodesic segment has a signed tangential velocity
++component $p\in(-1,1)$ at an endpoint. If $S$ is the sum of segment lengths, the first
+ variation at a glued endpoint has the form
+ \begin{equation}
+  \frac{\partial S}{\partial x}=p_{\rm in}-p_{\rm out}.
+  \label{eq:momentummatch}
+ \end{equation}
+-Stationarity imposes tangent matching as well as position matching. For
++Here $p_{\rm in}$ is the terminal tangential component of the incoming
++segment and $p_{\rm out}$ the initial component of the outgoing segment.
++The pieces must approach and leave on the opposite sides of the cut.
++Equality of their tangential components then also matches the normal
++components, whose magnitudes are $\sqrt{1-p^2}$ and whose signs are fixed
++by this crossing condition. Stationarity therefore imposes full tangent
++matching as well as position matching. For
+ orthogonal segments the tangential components vanish, so smooth gluing
+ is automatic once the endpoints match. A generic closed geodesic does
+ not satisfy this orthogonality condition along an arbitrarily chosen
+@@ -39,8 +49,11 @@
+  \dd L=-p_s\,\dd s+p_t\,\dd t,
+  \qquad\text{and cuff gluing acts by }(s,p)\longmapsto(s+\tau,p).
+ \]
+-A closed geodesic is a periodic compatible chain of these relations.
++A nonperipheral periodic chain with these position and direction matches
++is smooth and locally geodesic, hence is its closed geodesic
++representative. Conversely, cutting a transverse closed geodesic gives
++such a chain. Tangent segments lying on a cuff require separate treatment
++and are not included in the transverse phase space.
+ The orthospectrum records the special $p=0$ representatives. It is
+ excellent input for gap identities and local geometry, but endpoint
+ positions and directions are needed to reconstruct arbitrary glued curves.
+-
+--- extracted-baseline/book/chapters/22-cusps-orthospectrum.tex
++++ frozen-initial/book/chapters/22-cusps-orthospectrum.tex
+@@ -3,7 +3,8 @@
+ 
+ \subsection{Which geodesics enter a cusp?}
+ 
+-The statements that simple closed geodesics avoid a sufficiently deep cusp
++Throughout, the surface is oriented, hyperbolic of curvature $-1$, and
++has no cone points. The statements that simple closed geodesics avoid a sufficiently deep cusp
+ and that simple cusp-ended geodesics enter the cusp are compatible. The
+ first concerns a returning excursion; the second concerns an actual end.
+ 
+@@ -20,12 +21,17 @@
+ while remaining simple must have $\infty$ as an endpoint, and is vertical.
+ It is perpendicular to every horocycle based at that endpoint.
+ 
+-Choose $Y$ large enough that the horocycle $H=\{y=Y\}/\langle z\mapsto
++Choose $Y>1/2$ large enough that the horocycle $H=\{y=Y\}/\langle z\mapsto
+ z+1\rangle$ bounds an embedded sufficiently deep cusp. Simple closed
+ geodesics never cross $H$. Complete simple geodesics with a cusp end do
+ cross it, normally, and continue indefinitely toward that end.
+ 
+ \subsection{The family used in the gap argument}
++
++For this gap discussion assume that the surface is complete, has finite
++area and at least one cusp, and has no geodesic boundary. A surface with
++geodesic boundary has additional families of cusp-issued rays that exit
++through it, and needs the corresponding boundary gap terms.
+ 
+ At a point $x\in H$, take the normal geodesic directed away from the
+ cusp. A lift is
+@@ -42,7 +48,9 @@
+ these cusp-issued geodesics. Almost every direction eventually develops
+ the relevant intersection pattern. The exceptional simple directions
+ have measure zero and include cusp-to-cusp arcs and rays spiraling toward
+-closed geodesics or minimal laminations~\cite{McShane,McShanePants}.
++closed geodesics or minimal laminations
++\cite{McShane}\cite[Theorem 3 and the following measure discussion,
++pp.~3--4]{McShanePants}.
+ In some conventions a gap contains an isolated simple cusp-to-cusp
+ direction; its interior is therefore not literally made entirely of
+ nonsimple directions. The measure statement is unaffected.
+@@ -54,6 +62,17 @@
+  \frac{2}{1+e^{(a+b)/2}}.
+  \label{eq:cuspgap}
+ \end{equation}
++For example, this is the limit as $L\downarrow0$ of the geodesic-boundary
++combined gap divided by $L$:
++\[
++ \frac{2}{L}\log
++ \frac{e^{L/2}+e^{(a+b)/2}}{e^{-L/2}+e^{(a+b)/2}}
++ \longrightarrow \frac{2}{1+e^{(a+b)/2}}.
++\]
++The boundary gap is Mirzakhani's $\mathcal D$ contribution
++\cite[Lemma 3.1, equation (3.1), and Theorem 4.2]{MirzVolumes}. This calculation fixes the
++normalization; the null-set and pants-indexing arguments are separate
++external inputs.
+ On the punctured torus the two cuffs are copies of one simple curve
+ $\alpha$, so $a=b=\ell_\alpha$. The gap contributions sum to one,
+ which is precisely~\eqref{eq:mcshane}. The simple closed curve occurring
+@@ -62,7 +81,7 @@
+ 
+ \subsection{An exact truncated cusp-arc formula}
+ 
+-Fix a sufficiently small cusp horocycle of length $H>0$; here $H$ now
++Fix a sufficiently small embedded cusp horocycle of length $H>0$; here $H$ now
+ denotes its length rather than the horocycle as a set. In pants with other
+ cuffs $a,b$, let $\eta$ be the simple cusp-to-cusp geodesic arc separating
+ those cuffs. Truncate its two ends at the horocycle and let $d_\eta$ be
+@@ -72,13 +91,15 @@
+         \qquad t_a=2\cosh(a/2),\quad t_b=2\cosh(b/2).}
+  \label{eq:cusplambda}
+ \end{equation}
+-The formula also holds for signed truncated lengths before the horocycle
+-has been made small enough.
++The other cuffs may be geodesic or cuspidal, so $a,b\geq0$.
++The formula also holds for signed truncated lengths of decorations before
++the horocycle has been made small enough; this does not assert that an
++arbitrarily large decorated horocycle is embedded.
+ 
+ \begin{proof}
+ Normalize the cusp parabolic and horocycle to
+ \[
+- P=\begin{pmatrix}1&q\\0&1\end{pmatrix},\qquad y=Y,
++ P=\begin{pmatrix}1&q\\0&1\end{pmatrix},\quad q>0,\qquad y=Y,
+  \qquad H=q/Y.
+ \]
+ Choose cuff holonomy lifts $A,B$ with $AB=P$, $\tr A=t_a$ and
+@@ -90,23 +111,31 @@
+ The image under $A$ of the horizontal horocycle has Euclidean diameter
+ $1/(c_A^2Y)$ and is based at $A(\infty)$. The vertical ideal geodesic
+ from $\infty$ to this point represents the separating return arc.
+-Its signed truncated distance satisfies
++The upper intersection with that image horocycle is at height
++$1/(c_A^2Y)$, so its signed truncated distance is
++$\log(c_A^2Y^2)$ and satisfies
+ $e^{d_\eta/2}=|c_A|Y$. Substituting $H=q/Y$ proves the formula.
+ \end{proof}
+ 
+ On the once-punctured torus, essential unoriented simple cusp-to-cusp arc
+ classes correspond to essential unoriented simple closed-curve classes:
+-each is the unique such class disjoint from the other. Cutting along the
++each is the unique such class disjoint from the other
++\cite[Proposition 14.1(i),(iv)]{Springborn}. Cutting along the
+ closed curve gives $(a,a,0)$ pants, hence
+ \begin{equation}
+  e^{d_\alpha/2}=\frac{2t_\alpha}{H}
+               =\frac{4\cosh(\ell_\alpha/2)}{H}.
+  \label{eq:toruscusplambda}
+ \end{equation}
+-As a check, an ideal triangulation with lambda lengths $u,v,w$ has
+-horocycle length $H=2(u^2+v^2+w^2)/(uvw)$; its trace associated with the
+-curve disjoint from edge $u$ is $Hu/2$, in agreement with
+-\eqref{eq:toruscusplambda}; see~\cite[Section 12]{Springborn}.
++As a check, each decorated ideal triangle contributes horocyclic corner
++lengths $u/(vw)$, $v/(uw)$ and $w/(uv)$ in the convention
++$\lambda=e^{d/2}$~\cite[Section 11, equation (30)]{Springborn}.
++The two triangles of a torus therefore give
++$H=2(u^2+v^2+w^2)/(uvw)$, as in that paper's Section 12.
++By~\eqref{eq:toruscusplambda}, the positive trace of the curve disjoint
++from edge $u$ is $Hu/2$. Thus the trace conversion is derived here from
++the cusp-parabolic calculation, with no additional factor of $\sqrt2$
++in the lambda convention.
+ 
+ Substitute $t_\alpha=(H/2)e^{d_\alpha/2}$ into
+ $\sum_\alpha h(t_\alpha)=1$. This gives a literal orthospectral form of
+@@ -117,6 +146,9 @@
+  \left(1-\sqrt{1-\frac{16e^{-d_\eta}}{H^2}}\right)=1.}
+  \label{eq:cusporthoidentity}
+ \end{equation}
++All square roots use the nonnegative real branch. Indeed,
++$16e^{-d_\eta}/H^2=4/t_\alpha^2<1$, so the summands are real and
++positive, even when a chosen signed truncated length is negative.
+ The index set retains the topological arc labels. Scaling the horocycle
+ length by $k$ changes each truncated length to $d_\eta-2\log k$;
+ therefore $e^{-d_\eta}/H^2$ and every summand are decoration-independent.
+@@ -130,11 +162,22 @@
+  \sum_{\eta\text{ oriented}}2\log\coth\left(\frac{\ell_\eta}{2}\right).
+  \label{eq:basmajian}
+ \end{equation}
++The oriented convention and this normalization are also explicit in
++\cite[Section 4.2, p.~26]{Parlier}.
+ If each unoriented orthogeodesic is counted only once, the coefficient is
+ $4$ instead of $2$. This spectrum includes nonsimple arcs. The gap comes
+ from the shadow on a boundary lift of another boundary lift, and
+ hyperbolic trigonometry expresses its length in terms of their common
+-perpendicular.
++perpendicular. To see the coefficient directly, take one boundary lift
++to be $x=0$ and the other the semicircle with center $\coth d$ and
++radius $\operatorname{csch}d$, where $d=\ell_\eta>0$. Its ideal endpoints
++are $\tanh(d/2)$ and $\coth(d/2)$. Their perpendicular projections to
++$x=0$ have these heights, and the shadow length is
++$\log(\coth(d/2)/\tanh(d/2))=2\log\coth(d/2)$.
++The opposite orientation records the shadow at the other end. For a
++large $d$, the equivalent expression
++$2\log(1+2e^{-d}/(1-e^{-d}))$ retains the positive gap without subtracting
++nearby numbers.
+ 
+ Equation~\eqref{eq:cusporthoidentity} uses the \emph{simple, truncated
+ cuspidal orthospectrum}. Generic normal rays in the McShane gaps are not
+@@ -147,5 +190,6 @@
+ is a measure decomposition of boundary initial data, with orthogeodesic
+ geometry computing gaps. What differs is the chosen stopping or marking
+ rule and the resulting index set. This is the useful sense in which the
+-pants, McShane, and Basmajian pictures fit together.
+-
++pants, McShane, and Basmajian pictures fit together. A finite selection
++of cusp arcs or orthogeodesics is not a verified approximation to these
++whole-surface identities unless its omitted classes are also controlled.

@@ -1,0 +1,99 @@
+\section{An exact torus twist calculation and a constant orbit series}
+\label{sec:exacttwist}
+
+\subsection{The length function and its integral}
+
+Let $X$ be a one-holed torus with boundary length $b\ge0$. Cut along a
+simple curve $\alpha$ of length $a>0$, and choose a curve $\beta$ crossing
+$\alpha$ once. Normalize the twist origin so that this crossing curve
+has minimum length at $\tau=0$. Set
+\begin{equation}
+ A^2=\frac{\cosh a+\cosh(b/2)}{\cosh a-1}.
+ \label{eq:Atwist}
+\end{equation}
+The exact formula is
+\begin{equation}
+ \boxed{\cosh\bigl(\ell_\beta(\tau)/2\bigr)=A\cosh(\tau/2).}
+ \label{eq:torustwist}
+\end{equation}
+It follows from the right-angled-hexagon description of the cut pants;
+see also~\cite[Proposition 3.1]{ALPS}. For $b=0$,
+$A=\coth(a/2)$. The minimum length is $r_0=2\arcosh A$.
+
+For any nonnegative measurable function $f$, change variables separately
+on the positive and negative twist axes to obtain
+\begin{equation}
+ \int_{\RR}f\bigl(\ell_\beta(u)\bigr)\,\dd u
+ =2\int_{r_0}^\infty
+ f(r)\frac{\sinh(r/2)}{\sqrt{\cosh^2(r/2)-A^2}}\,\dd r.
+ \label{eq:toruscoarea}
+\end{equation}
+Indeed, differentiating $\cosh(r/2)=A\cosh(u/2)$ gives
+$\dd u/\dd r=\sinh(r/2)/\sqrt{\cosh^2(r/2)-A^2}$ for $u>0$.
+The two signs of $u$ explain the factor $2$.
+
+Several useful checks are immediate:
+\begin{align}
+ \int_{\RR}\sech^2\bigl(\ell_\beta(u)/2\bigr)\,\dd u
+     &=\frac4{A^2},\label{eq:sechintegral}\\
+ \operatorname{meas}\{u:\ell_\beta(u)\le R\}
+     &=4\arcosh\left(\frac{\cosh(R/2)}{A}\right),\quad R\ge r_0,
+       \label{eq:sublevel}\\
+ \int_{\RR}\cosh^{-s}\bigl(\ell_\beta(u)/2\bigr)\,\dd u
+     &=\frac{2\sqrt\pi\,\Gamma(s/2)}
+             {A^s\Gamma((s+1)/2)},\quad s>0.
+       \label{eq:betaintegral}
+\end{align}
+The sublevel measure is zero for $R<r_0$. These are exact twist integrals,
+not asymptotic estimates.
+
+\subsection{A positive partition of unity}
+
+Define
+\begin{equation}
+ H_a(u)=\frac{\sinh(a/2)}{\cosh u+\cosh(a/2)}
+ =\frac12\left[
+ \tanh\left(\frac{u+a/2}{2}\right)
+ -\tanh\left(\frac{u-a/2}{2}\right)\right].
+ \label{eq:Hkernel}
+\end{equation}
+The second expression telescopes under translation by $a$, so
+\begin{equation}
+ \sum_{n\in\ZZ}H_a(\tau+na)=1.
+ \label{eq:Hidentity}
+\end{equation}
+All terms are positive and the convergence is exponential on compact
+twist intervals.
+
+Since~\eqref{eq:torustwist} implies
+$\cosh r+1=A^2(\cosh u+1)$, eliminate $u$ from~\eqref{eq:Hkernel} and set
+\begin{equation}
+ K_{a,b}(r)=
+ \frac{A^2\sinh(a/2)}
+      {\cosh r+1+A^2(\cosh(a/2)-1)}.
+ \label{eq:Kkernel}
+\end{equation}
+For $r_n=\ell_{D_\alpha^n\beta}(X)$ we obtain the pointwise identity
+\begin{equation}
+ \boxed{\sum_{n\in\ZZ}K_{a,b}(r_n)=1.}
+ \label{eq:Kidentity}
+\end{equation}
+This is a constant series proved by telescoping, rather than inferred from
+its average. Its kernel depends on the distinguished cuff length $a$ and
+the boundary length $b$, and its index set is one twist orbit. It is not
+an unrestricted universal sum over every curve on the surface.
+
+There is a simple source of many such examples. If $\rho$ is an even
+probability density on $\RR$, then
+\[
+ H_{a,\rho}(u)=\int_{u-a/2}^{u+a/2}\rho(v)\,\dd v
+ \quad\text{satisfies}\quad
+ \sum_{n\in\ZZ}H_{a,\rho}(u+na)=1.
+\]
+The translated intervals partition the line. Evenness makes
+$H_{a,\rho}$ a function of $|u|$, hence of the length $r$ through
+\eqref{eq:torustwist}. The choice
+$\rho(v)=\frac14\sech^2(v/2)$ gives~\eqref{eq:Hkernel}.
+This realizes the proposed ``zoo'' of identities in a concrete way, with
+the source of constancy and the parameter dependence both visible.
+

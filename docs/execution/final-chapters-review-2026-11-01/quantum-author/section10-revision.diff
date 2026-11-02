@@ -1,0 +1,184 @@
+--- baseline-151673b/section10.tex
++++ book/chapters/10-quantum-introduction.tex
+@@ -192,7 +192,9 @@
+ and $5N/6$, and less than one afterward. The global maximum is
+ therefore attained at $m_N=\lfloor5N/6\rfloor$, allowing an adjacent
+ tie. To compare with the initial value $1$, use the elementary
+-identity $P_{N,N-1}=N^2$. Positivity now gives
++identity $P_{N,N-1}=N^2$: evaluating
++$(z^N-1)/(z-1)=\prod_{j=1}^{N-1}(z-e^{2\pi i j/N})$ at $z=1$
++and taking absolute squares proves it. Positivity now gives
+ \[
+  P_{N,m_N}\le J_N(4_1;e^{2\pi i/N})\le N P_{N,m_N}.
+ \]
+@@ -253,7 +255,12 @@
+        +\frac12\log(1-z)+O(\varepsilon),
+  \label{eq:introqpochhammer}
+ \end{align}
+-uniformly on compact subsets of $|z|<1$.
++uniformly on compact subsets of $|z|<1$, with the logarithm
++continued from $z=0$. Indeed,
++$(1-e^{-t})^{-1}-t^{-1}-\tfrac12=O(t)$ for all $t>0$;
++for $|z|\le\rho<1$ the remainder is bounded by a constant times
++$\varepsilon\sum_{m\ge1}\rho^m$. This justifies summing the
++expansion despite unbounded $m$.
+ The logarithm of this ``quantum dilogarithm'' has the ordinary
+ dilogarithm as its leading term. Faddeev--Kashaev's quantum
+ pentagon identity deforms the classical five-term dilogarithm
+@@ -275,7 +282,8 @@
+ 
+ Here is a particularly direct version in the convention of
+ Dimofte--Garoufalidis~\cite[Section 5.1]{DimofteGaroufalidis}.
+-Their tetrahedral quantum function obeys
++On a fixed logarithmic branch away from the limiting pole cuts,
++their tetrahedral quantum function obeys
+ \begin{equation}
+  \psi_\hbar(Z+\hbar)=(1-e^{-Z})\psi_\hbar(Z),\qquad
+  \log\psi_\hbar(Z)\sim\frac1\hbar\operatorname{Li}_2(e^{-Z})+O(1).
+@@ -312,11 +320,14 @@
+  \qquad a(x;\hbar)=a_0(x)+\hbar a_1(x)+\cdots.
+  \label{eq:introsaddleintegral}
+ \end{equation}
+-Suppose $x_*$ is a nondegenerate critical point with $a_0(x_*)\ne0$,
+-the parameter tends
+-to zero along a fixed ray, and $\Gamma$ contains the corresponding
+-steepest-descent cycle. Taylor expansion and Gaussian integration
+-give its local contribution
++Suppose $S$ is holomorphic near a nondegenerate critical point
++$x_*$, $a_0(x_*)\ne0$, and the amplitude has a classical-symbol
++expansion there, including the derivatives needed at each order.
++Let $\hbar$ tend to zero along a fixed ray, and localize to an
++oriented steepest-descent contour through $x_*$ on which the real
++part of $(S-S(x_*))/\hbar$ has a strict quadratic maximum.
++Taylor expansion, rescaling, and Gaussian integration give this
++localized contribution
+ \begin{equation}
+  I_{x_*}(\hbar)\sim
+  e^{S(x_*)/\hbar}(2\pi\hbar)^{m/2}
+@@ -324,7 +335,10 @@
+  (1+c_1\hbar+\cdots).
+  \label{eq:introgaussian}
+ \end{equation}
+-The contour fixes the phase and square-root branch. For a real
++The contour orientation, the ray of $\hbar$, and the continued
++square root fix the phase. Extending the formula from this local
++integral to the whole contour requires a bound on its complement.
++For a real
+ Laplace integral with a strict maximum this is the usual Gaussian
+ formula; for a complex phase it is applied along suitable real
+ $m$-dimensional contours in the complexified variables.
+@@ -358,9 +372,12 @@
+ specified cellular bases with bases adapted to the differentials,
+ using an alternating product of determinants. Nonzero cohomology
+ requires cohomology bases as well; for a cusped three-manifold,
+-peripheral curves enter this normalization. This explains the
+-appearance of adjoint torsion in semiclassical amplitudes
+-\cite{WittenJones,DimofteGaroufalidis}.
++peripheral curves enter this normalization. This explains why adjoint torsion is a candidate for a
++semiclassical amplitude~\cite{WittenJones,DimofteGaroufalidis}.
++In particular, the identification of the gluing-equation one-loop
++invariant with adjoint Reidemeister torsion is a conjecture in
++\cite[Conjecture~1.8]{DimofteGaroufalidis}; its formal Gaussian
++construction is not a general proof of that identification.
+ 
+ An individual Hessian determinant is not the torsion by definition:
+ measure factors, gauge directions, and basis conventions must be
+@@ -404,8 +421,12 @@
+ is $h=2\pi b^2$, so the geometric deformation has scale
+ $b^{4/3}$. When that deformation is proportional to boundary area
+ $A$, the same scale follows from $W\asymp A^{3/2}$ and $W/h=O(1)$.
+-The later theorem proves the necessary contour and error estimates
+-for its specified family; the scaling argument alone does not.
++The later theorem proves the contour and additive error estimates
++for its pole-cleared regular family and fixed bounded real
++transition parameter. Its volume-action parameter is
++$\hbar_{\mathrm{vol}}=h/2$ as in~\eqref{eq:TVvolumehbar}; this
++constant does not change the exponent $2/3$. The scaling argument
++alone does not prove a transition theorem.
+ 
+ 
+ % BEGIN INLINE FIGURE: 09_airy.tex
+@@ -614,8 +635,11 @@
+  \label{eq:introRTgrowth}
+ \end{equation}
+ This is the RT exponential in \eqref{eq:introclosedvolume}.
+-The Gaussian change of boundary coordinate gives
+-$(p+qv'(u))^{-1/2}$; the solid torus contributes further factors.
++After the Fourier-kernel square-root normalization, the Gaussian
++change of boundary coordinate has dependence
++$(p+qv'(u))^{-1/2}$, up to its phase; the solid torus contributes
++further factors. This requires $q\ne0$ in the displayed chart and
++$p+qv'(u)\ne0$ at the saddle.
+ The calculation in Section~\ref{sec:dehnresponse} makes each of
+ these statements precise and states the hypotheses needed to pass
+ from the geometric contribution to an exact invariant. Notice that
+@@ -678,8 +702,12 @@
+ \]
+ ``Chiral'' refers here to the holomorphic half. The full
+ correlation pairs holomorphic and antiholomorphic blocks and
+-integrates over the intermediate spectrum. For real external
+-charges in its initial convergence domain this has the form
++integrates over the intermediate spectrum. Label the insertions at $0,1,z,\infty$ by
++$\alpha_1,\alpha_2,\alpha_3,\alpha_4$, respectively.
++For real external charges in the initial domain
++$\alpha_i<Q/2$, $\alpha_1+\alpha_3>Q/2$, and
++$\alpha_2+\alpha_4>Q/2$, the proved four-point decomposition has
++the form
+ \[
+  C_b(z,\bar z)=\int_0^\infty
+     \rho(\alpha_1,\ldots,\alpha_4;P)\,
+@@ -690,8 +718,12 @@
+ DOZZ constants, named for Dorn--Otto and Zamolodchikov--Zamolodchikov.
+ The relevant three-point formula and four-point decomposition have
+ rigorous constructions and proofs in their stated domains
+-\cite{KRV,GKRVBootstrap}. Continuing the charges outside that domain
+-can require additional residues when poles cross the spectral contour.
++\cite{KRV,GKRVBootstrap}. Here the charges in~\cite[Theorem~1.1]{GKRVBootstrap} are twice
++our $\alpha_i$. Continuing outside that domain can require
++additional residues when poles cross the spectral contour.
++For complex charges the two chiral factors must be continued
++analytically in the charges; the real-domain absolute-square
++notation does not prescribe that continuation.
+ 
+ Changing the pants decomposition gives the \emph{fusion kernel}:
+ \begin{equation}
+@@ -788,7 +820,7 @@
+ continued unit-volume expression contains $Z^{-s}=Z$: its
+ \emph{first moment}. The normalized random measure has the prescribed
+ reference measure as its expectation. The reference factors cancel
+-at these weights, leaving
++at these weights, leaving, in a coordinate with all marks finite,
+ \begin{equation}
+  \mathbb E[Z]=\mathcal A_\mu(\boldsymbol p)
+    =\int_{\CC}\prod_i|w-p_i|^{-2\mu_i}\,\dd^2w.
+@@ -829,7 +861,12 @@
+ the finite hypergeometric fusion matrix calculated in
+ Section~\ref{sec:screenedfusion}. Generic Liouville fusion is still
+ the integral operator \eqref{eq:introfusion}; the $2\times2$ matrix
+-belongs to this specific residue sector. Its auxiliary tetrahedron
++is the exact change of basis for these finite periods. Identifying
++it with a residue of the continued infinite fusion operator also
++requires the spectral-continuation and tail input stated in
++Section~\ref{sec:screenedfusion}. The first-moment area identity
++does not require that additional spectral input. At balanced
++weights a logarithmic basis is needed. The auxiliary tetrahedron
+ also need not be the convex realization of the original cone
+ sphere. Section~\ref{sec:normalizedsixj} checks that geometric
+ comparison separately.
+@@ -880,8 +917,8 @@
+ and its normalization in Sections~\ref{sec:screenedfusion}
+ and~\ref{sec:normalizedsixj}. For the degeneration of an individual
+ tetrahedron, use Section~\ref{sec:quantumdegeneration}, the regular
+-family in Section~\ref{sec:normalizedsixj}, and the uniform Airy
+-theorem in Section~\ref{sec:quantumAiry}. For three-manifold volume
++family in Section~\ref{sec:normalizedsixj}, and the uniform theorem for the cleared regular-family integral
++at bounded real Airy parameter in Section~\ref{sec:quantumAiry}. For three-manifold volume
+ and surgery, Section~\ref{sec:dehnresponse} is largely independent
+ of the Liouville calculations; its symplectic explanation is in
+ Section~\ref{sec:NZsymplectic}.
+@@ -892,5 +929,3 @@
+ distinction permits the geometric calculations to be used fully
+ without silently assuming an integration cycle, a measure on
+ moduli, or a dominance theorem that has not been established.
+-
+-

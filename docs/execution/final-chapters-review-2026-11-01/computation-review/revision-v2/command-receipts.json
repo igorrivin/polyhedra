@@ -1,0 +1,103 @@
+{
+  "recorded_at_utc": "2026-11-02T04:18:23.830083+00:00",
+  "commands": [
+    {
+      "name": "tests-normal",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/quantum_geodesics/tests",
+        "-v"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "elapsed_seconds": 2.270455291029066,
+      "logs": {
+        "stdout": {
+          "path": "tests-normal.stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "path": "tests-normal.stderr.txt",
+          "sha256": "b74dcf44c222a50e69037c9d0d65e7c7efc1baeebeec50edf942823e3f2109c6"
+        }
+      }
+    },
+    {
+      "name": "tests-optimized",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/quantum_geodesics/tests",
+        "-v"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "elapsed_seconds": 2.356543167028576,
+      "logs": {
+        "stdout": {
+          "path": "tests-optimized.stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "path": "tests-optimized.stderr.txt",
+          "sha256": "cb471cf05c0b9319872b106e0f57816407c62540b8b5447c28f4abef7568d899"
+        }
+      }
+    },
+    {
+      "name": "ruff",
+      "argv": [
+        "/opt/anaconda3/bin/ruff",
+        "check",
+        "experiments/quantum_geodesics"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "elapsed_seconds": 0.05663845897652209,
+      "logs": {
+        "stdout": {
+          "path": "ruff.stdout.txt",
+          "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+        },
+        "stderr": {
+          "path": "ruff.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "name": "independent-replay",
+      "argv": [
+        "/tmp/polyhedra-baseline-20261031/bin/python",
+        "-B",
+        "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/quantum_geodesics/run.py",
+        "--output",
+        "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/independent-replay-result.json"
+      ],
+      "cwd": "/private/tmp",
+      "returncode": 0,
+      "elapsed_seconds": 16.421943290974014,
+      "logs": {
+        "stdout": {
+          "path": "independent-replay.stdout.txt",
+          "sha256": "3393b81102ea18b99a2480bf8bf5cf051dd933805882d983fe2709cf68f0d154"
+        },
+        "stderr": {
+          "path": "independent-replay.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    }
+  ],
+  "scope": "Actual independent reviewer replay and focused regressions; not clean-source replay or independent numerical-oracle approval."
+}

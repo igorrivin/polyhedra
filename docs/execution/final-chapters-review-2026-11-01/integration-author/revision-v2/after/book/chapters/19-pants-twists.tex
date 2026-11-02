@@ -1,0 +1,217 @@
+\section{Cutting into pants and varying twists}
+\label{sec:twists}
+
+\subsection{What data a cut curve retains}
+
+Fix an oriented hyperbolic surface of finite type, without cone points,
+and a pants decomposition with internal cuff lengths $a_1,\ldots,a_N>0$,
+where $N=3g-3+n$. Boundary lengths, including cusps, are fixed.
+Apart from components parallel to a cutting cuff, cutting a simple
+multicurve gives disjoint essential arcs in each pair of pants.
+Cutting a general immersed curve, even a filling one,
+need not give disjoint arcs: self-intersections may remain inside a pair
+of pants. Nor are the actual segments generally orthogonal to the cuffs.
+
+Boundary intersection counts alone lose the relative homotopy classes of
+the arcs, their cyclic joining pattern, and winding information. For simple
+multicurves this information is organized by Dehn--Thurston coordinates.
+For a general immersed curve one must retain a fuller itinerary. Once this
+topological data is fixed, varying the metric twist is a well-defined and
+tractable problem.
+
+There are two complementary exact descriptions. One uses arc lengths as
+generating functions in endpoint positions. The other uses products of
+holonomy matrices. Both keep the information that intersection counts alone
+discard.
+
+\subsection{An exact local distance function}
+
+Take two distinct ultraparallel geodesic lifts of positive-length cuffs
+in $\HH^2$, at common perpendicular distance $d>0$.
+Let $u,v$ be signed distances on the two lines
+from the perpendicular feet, with compatible orientations. Then
+\begin{equation}
+ \boxed{
+ D_d(u,v)=\arcosh\bigl(\cosh d\cosh u\cosh v-\sinh u\sinh v\bigr).}
+ \label{eq:localdistance}
+\end{equation}
+For example, in the hyperboloid model use
+\[
+ p(u)=(\cosh u,\sinh u,0),\qquad
+ q(v)=(\cosh d\cosh v,\sinh v,\sinh d\cosh v).
+\]
+Then $\cosh D=-\langle p,q\rangle$ for the Lorentz form of signature
+$(-,+,+)$, and $\arcosh$ is its nonnegative real branch.
+Reversing one endpoint coordinate changes the sign of the mixed term.
+
+For the ordinary seam between cuffs $a,b>0$ of pants with third cuff
+$c\geq0$, the right-angled-hexagon relation gives
+\begin{equation}
+ \cosh d=\frac{\cosh(c/2)+\cosh(a/2)\cosh(b/2)}
+                    {\sinh(a/2)\sinh(b/2)}.
+ \label{eq:seam}
+\end{equation}
+It can also be checked from pants holonomy: translations of lengths
+$a,b$ on axes at distance $d$, with the opposed boundary directions,
+have product trace
+$2\cosh(a/2)\cosh(b/2)-2\cosh d\sinh(a/2)\sinh(b/2)$.
+Equating this to $-2\cosh(c/2)$ gives~\eqref{eq:seam}, with the
+same lift signs as~\eqref{eq:figuretrace}.
+For a returning or winding arc, choose the boundary lifts appropriate to
+its relative homotopy class and use their common perpendicular instead.
+There is no single seam length that describes all relative arc classes.
+
+For the reduced itinerary of a fixed nonperipheral closed curve, fix the
+boundary lifts for each segment and retain its integer winding data.
+Cuff gluing then imposes affine relations on the real endpoint positions,
+involving the twists $\tau_i$. Minimize the sum of the corresponding
+functions~\eqref{eq:localdistance} over the crossing positions. Every
+competitor is a piecewise geodesic in the fixed free-homotopy class, so its
+length is at least the closed geodesic length. The geodesic representative
+realizes equality: geodesics have no bigons with the cutting cuffs and
+therefore realize the same reduced itinerary. At the minimum, first
+variation imposes smooth tangent matching at every crossing. A curve
+contained entirely in one pair of pants is handled directly by its
+holonomy; it has no endpoint variables.
+
+The endpoint Hessian will also control variation in a twist. Put
+$z=\cosh D_d(u,v)$ and $S=\sqrt{z^2-1}>0$. Direct differentiation gives
+\begin{equation}
+ \begin{aligned}
+ \nabla^2D_d&=\frac{\sinh^2d}{S^3}
+ \begin{pmatrix}
+ z\cosh^2v&-\cosh u\cosh v\\
+ -\cosh u\cosh v&z\cosh^2u
+ \end{pmatrix},\\
+ \det\nabla^2D_d&=
+ \frac{\sinh^4d\cosh^2u\cosh^2v}{S^4}>0.
+ \end{aligned}
+ \label{eq:localdistancehessian}
+\end{equation}
+For example, $z_{uu}=z$ and
+$z^2-z_u^2-1=\sinh^2d\cosh^2v$, while
+$z_{uv}(z^2-1)-zz_uz_v=-\sinh^2d\cosh u\cosh v$.
+These identities give the displayed matrix. Its positive diagonal and
+determinant prove strict joint convexity in the two endpoint coordinates.
+Reversing an endpoint orientation conjugates the Hessian by a sign matrix
+and preserves positive definiteness.
+
+\subsection{Holonomy and first variation}
+
+In a basis adapted to a cuff axis, a twist displacement is represented by
+\[
+ T_i(\tau_i)=\diag(e^{\tau_i/2},e^{-\tau_i/2}).
+\]
+For a fixed nonperipheral curve word $\gamma$, insert these matrices and
+their inverses into the fixed pants
+holonomies. The resulting product $W_\gamma$ satisfies
+\begin{equation}
+ 2\cosh(\ell_\gamma/2)
+  =\abs{\tr W_\gamma(\mathbf a,T_1(\tau_1),\ldots,T_N(\tau_N))}.
+ \label{eq:traceword}
+\end{equation}
+With the cuff lengths fixed, its trace is a finite Laurent polynomial in
+$e^{\tau_i/2}$. Its coefficients need not all be positive in an arbitrary
+choice of lifts and coordinates.
+
+The twist derivative has the cosine formula
+\begin{equation}
+ \frac{\partial\ell_\gamma}{\partial\tau_i}
+   =\sum_{p\in\gamma\cap\alpha_i}\cos\vartheta_p,
+ \qquad
+ \abs{\frac{\partial\ell_\gamma}{\partial\tau_i}}
+      \le i(\gamma,\alpha_i).
+ \label{eq:cosine}
+\end{equation}
+Angles and twist orientation are chosen consistently, and intersections
+are counted by passages, including repeated passages for an iterate.
+Cutting at each crossing proves the cosine formula: endpoint variations
+inside a segment cancel by stationarity, while the relative displacement
+across the cuff contributes the tangential projection
+$\cos\vartheta_p$~\cite{WolpertTwist}. The same argument applies to
+immersed geodesics. If $\gamma$ is a power of a cuff, the intersection
+sum is empty and the derivative is zero.
+
+Length is strictly convex in one twist $\tau_i$ whenever
+$i(\gamma,\alpha_i)>0$. Here is a proof that includes nonsimple curves.
+Hold all pants lengths and the other twists fixed, and use the fixed
+reduced itinerary above. The segment distances $d$ remain positive and
+fixed. For two twist values choose the minimizing endpoint configurations.
+Their affine interpolation is admissible for the interpolated twist.
+The two full endpoint vectors cannot coincide: at a crossing of
+$\alpha_i$, the gluing equation contains $\tau_i$ with coefficient
+$1$ or $-1$, with fixed winding data. Thus a change of this twist cannot
+be absorbed while leaving all segment endpoints fixed. Strict convexity
+of the sum in~\eqref{eq:localdistancehessian}, followed by minimization,
+gives the strict convexity inequality for the geodesic length. This also
+explains why the conclusion excludes a disjoint cuff, whose twist leaves
+the length constant. The simple-curve earthquake theorem provides a
+broader context~\cite[Theorem 1]{Kerckhoff}; no extension of that cited
+statement is needed for the local argument here.
+
+These ideas overlap with several parts of Mirzakhani's work, but serve
+different roles there. Dehn--Thurston coordinates and the definition of
+combinatorial length for simple multicurves are given in
+\cite[Theorem 3.4 and equation (3.6)]{MirzSimple}. The comparison with
+geometric length for an $L$-bounded pants decomposition is
+\cite[Proposition 3.5 and equation (3.7), p.~107]{MirzSimple}. The work
+on general curve orbits studies asymptotically piecewise-linear length,
+including filling curves and length sublevel volumes
+\cite[Theorem 4.1 and Section 8]{MirzGeneral}. In the basic volume recursion, the
+cutting curves are simple and the kernel depends on their lengths, so the
+twist integral itself is just the period $a_i$.
+
+\subsection{Unfolding a twist lattice}
+
+Let $D_i$ be the Dehn twist about the $i$th cuff. With a consistent sign
+convention,
+\[
+ \ell_{D_1^{k_1}\cdots D_N^{k_N}\gamma}(\mathbf a,\boldsymbol\tau)
+ =\ell_\gamma(\mathbf a,\boldsymbol\tau+\mathbf k\mathbf a).
+\]
+For a nonnegative function $F$, Tonelli's theorem gives
+\begin{equation}
+ \boxed{
+ \int_{\prod_i[0,a_i)}\sum_{\mathbf k\in\ZZ^N}
+ F\bigl(\ell_{D_1^{k_1}\cdots D_N^{k_N}\gamma}
+                  (\mathbf a,\boldsymbol\tau)\bigr)\,\dd\boldsymbol\tau
+ =\int_{\RR^N}F\bigl(\ell_\gamma(\mathbf a,\mathbf u)\bigr)\,\dd\mathbf u.}
+ \label{eq:twistunfold}
+\end{equation}
+As written, the sum is over lattice elements, so the nonnegative equality
+is valid even if both sides are infinite. For signed functions, impose
+absolute integrability on $\RR^N$. To interpret the sum as one term per
+curve, first quotient any stabilizer and unfold the corresponding
+nonredundant twist directions; twisting about a disjoint cuff must not
+produce infinitely many copies of one curve. This quotient may change
+the lattice and its fundamental domain, so one cannot simply divide an
+infinite multiplicity out of the displayed formula.
+
+A fixed curve's length is not periodic in a twist coordinate. The sum over
+its twist orbit is periodic, which is exactly what makes this unfolding
+work. The accompanying WP measure is $\prod_i\dd a_i\,\dd\tau_i$.
+However, the positive cuff orthant times one twist box is the quotient by
+this particular twist subgroup, not a fundamental domain for the full
+mapping class group. A further full-moduli integration needs the appropriate
+orbit unfolding.
+
+For example, with weight $(2\cosh(\ell_\gamma/2))^{-s}$ and
+$x_i=e^{u_i/2}$, the right side becomes the Mellin-type integral
+\begin{equation}
+ 2^N\int_{(0,\infty)^N}
+ \abs{\tr W_\gamma(\mathbf a,\mathbf x)}^{-s}
+             \prod_i\frac{\dd x_i}{x_i},
+ \label{eq:mellin}
+\end{equation}
+whenever it converges. This is an explicit analytic object attached to the
+curve itinerary and the fixed pants lengths.
+
+\paragraph{Computational support.}
+Groups G4--G5 and G8 of
+\path{experiments/quantum_geodesics/README.md} check the local Lorentz
+distance, endpoint derivatives and Hessian, seam matrices, and a fixed
+stationarity example. They test declared finite inputs, not a general
+multicurve minimization or global holonomy-construction algorithm.
+The strict-convexity statement rests on the fixed-itinerary argument
+above. The result path is \path{artifacts/quantum_geodesics/result.json},
+with the formula map in \path{book/claims/sections17-22.json}.

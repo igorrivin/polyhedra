@@ -1,0 +1,490 @@
+{
+  "scope": "Independent adapter probes and read-only accepted author-stage schema compatibility; no final binding, live manuscript approval or replay.",
+  "probe_count": 57,
+  "unexpected_outcomes": [],
+  "probes": [
+    {
+      "id": "explicit_path_relative",
+      "expected_acceptance": true,
+      "approval_unchanged": true,
+      "accepted": true,
+      "projected_identity": {
+        "sha256": "cb8daed7b30399a1c3c8b83b3b7bee4b774a30fc389afc1d375e4c23a3cc4ae8",
+        "bytes": 19
+      }
+    },
+    {
+      "id": "explicit_path_absolute_declaration",
+      "expected_acceptance": true,
+      "approval_unchanged": true,
+      "accepted": true,
+      "projected_identity": {
+        "sha256": "cb8daed7b30399a1c3c8b83b3b7bee4b774a30fc389afc1d375e4c23a3cc4ae8",
+        "bytes": 19
+      }
+    },
+    {
+      "id": "default_two_key_identity",
+      "expected_acceptance": true,
+      "approval_unchanged": true,
+      "accepted": true,
+      "projected_identity": {
+        "sha256": "cb8daed7b30399a1c3c8b83b3b7bee4b774a30fc389afc1d375e4c23a3cc4ae8",
+        "bytes": 19
+      }
+    },
+    {
+      "id": "explicit_two_key_identity",
+      "expected_acceptance": true,
+      "approval_unchanged": true,
+      "accepted": true,
+      "projected_identity": {
+        "sha256": "cb8daed7b30399a1c3c8b83b3b7bee4b774a30fc389afc1d375e4c23a3cc4ae8",
+        "bytes": 19
+      }
+    },
+    {
+      "id": "unrelated_approval_fields_preserved",
+      "expected_acceptance": true,
+      "approval_unchanged": true,
+      "accepted": true,
+      "projected_identity": {
+        "sha256": "cb8daed7b30399a1c3c8b83b3b7bee4b774a30fc389afc1d375e4c23a3cc4ae8",
+        "bytes": 19
+      }
+    },
+    {
+      "id": "missing_path",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "unexpected approved reference identity keys"
+    },
+    {
+      "id": "missing_sha256",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "unexpected approved reference identity keys"
+    },
+    {
+      "id": "missing_bytes",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "unexpected approved reference identity keys"
+    },
+    {
+      "id": "extra_extra",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "unexpected approved reference identity keys"
+    },
+    {
+      "id": "extra_size",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "unexpected approved reference identity keys"
+    },
+    {
+      "id": "extra_approved",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "unexpected approved reference identity keys"
+    },
+    {
+      "id": "bad_shape_0",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "unsupported approved reference identity shape"
+    },
+    {
+      "id": "bad_shape_1",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "unsupported approved reference identity shape"
+    },
+    {
+      "id": "bad_shape_2",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "unsupported approved reference identity shape"
+    },
+    {
+      "id": "bad_shape_3",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "unsupported approved reference identity shape"
+    },
+    {
+      "id": "bad_shape_4",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "unsupported approved reference identity shape"
+    },
+    {
+      "id": "bad_shape_5",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "unsupported approved reference identity shape"
+    },
+    {
+      "id": "bad_shape_6",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "unexpected approved reference identity keys"
+    },
+    {
+      "id": "path_record_not_inferred",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "unexpected approved reference identity keys"
+    },
+    {
+      "id": "bad_bytes_0",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "invalid approved reference identity types"
+    },
+    {
+      "id": "bad_bytes_1",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "invalid approved reference identity types"
+    },
+    {
+      "id": "bad_bytes_2",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "invalid approved reference identity types"
+    },
+    {
+      "id": "bad_bytes_3",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "invalid approved reference identity types"
+    },
+    {
+      "id": "bad_bytes_4",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "invalid approved reference identity types"
+    },
+    {
+      "id": "bad_bytes_5",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "invalid approved reference identity types"
+    },
+    {
+      "id": "bad_bytes_6",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "invalid approved reference identity types"
+    },
+    {
+      "id": "bad_digest_0",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "invalid approved reference identity types"
+    },
+    {
+      "id": "bad_digest_1",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "invalid approved reference identity types"
+    },
+    {
+      "id": "bad_digest_2",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "invalid approved reference identity types"
+    },
+    {
+      "id": "bad_digest_3",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "invalid approved reference identity types"
+    },
+    {
+      "id": "bad_digest_4",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "invalid approved reference identity types"
+    },
+    {
+      "id": "bad_digest_5",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "invalid approved reference identity types"
+    },
+    {
+      "id": "bad_digest_6",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "invalid approved reference identity types"
+    },
+    {
+      "id": "bad_digest_7",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "invalid approved reference identity types"
+    },
+    {
+      "id": "bad_approved_path_0",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "noncanonical approved reference path"
+    },
+    {
+      "id": "bad_approved_path_1",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "noncanonical approved reference path"
+    },
+    {
+      "id": "bad_approved_path_2",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "noncanonical approved reference path"
+    },
+    {
+      "id": "bad_approved_path_3",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "noncanonical approved reference path"
+    },
+    {
+      "id": "bad_approved_path_4",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "noncanonical approved reference path"
+    },
+    {
+      "id": "bad_approved_path_5",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "noncanonical approved reference path"
+    },
+    {
+      "id": "bad_approved_path_6",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "expected relative path without traversal: ."
+    },
+    {
+      "id": "bad_approved_path_7",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "noncanonical approved reference path"
+    },
+    {
+      "id": "bad_approved_path_8",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "noncanonical approved reference path"
+    },
+    {
+      "id": "bad_approved_path_9",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "expected relative path without traversal: ../reference.json"
+    },
+    {
+      "id": "bad_approved_path_10",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "expected relative path without traversal: sub/../reference.json"
+    },
+    {
+      "id": "bad_approved_path_11",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "AppleDouble sidecar path: ._reference.json"
+    },
+    {
+      "id": "bad_approved_path_12",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "expected relative path without traversal: /Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/adapter-review-opqv49_i/outer/reference.json"
+    },
+    {
+      "id": "bad_approved_path_13",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "approved reference path differs from declared outer reference"
+    },
+    {
+      "id": "bad_approved_path_14",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "approved reference path differs from declared outer reference"
+    },
+    {
+      "id": "bad_approved_path_15",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "path escapes base: escape/reference.json"
+    },
+    {
+      "id": "bad_declared_path_0",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "approved reference path differs from declared outer reference"
+    },
+    {
+      "id": "bad_declared_path_1",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "approved reference path differs from declared outer reference"
+    },
+    {
+      "id": "bad_declared_path_2",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "path escapes base: escape/reference.json"
+    },
+    {
+      "id": "bad_declared_path_3",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "expected relative path without traversal: ../reference.json"
+    },
+    {
+      "id": "bad_declared_path_4",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "path is outside execution evidence: /Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/revision-v3/adapter-review-opqv49_i/outside/reference.json"
+    },
+    {
+      "id": "matching_escape_paths_rejected",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "path escapes base: escape/reference.json"
+    },
+    {
+      "id": "missing_selected_pointer",
+      "expected_acceptance": false,
+      "approval_unchanged": true,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "missing JSON pointer: /result"
+    }
+  ],
+  "real_compatibility": {
+    "approval": {
+      "path": "computation-review/revision-v2/final-acceptance.json",
+      "sha256": "70070fe32c42961d68b035ccb7fae5b012c50ac5814ca42bd05689bfc64b6592",
+      "bytes": 25941
+    },
+    "reference": {
+      "path": "computation/full-v2/author-result-70-110.json",
+      "sha256": "5f73fce03e43103dc457570bcd90f4722599b5ac0d67a9b9b88d9e00679f0429",
+      "bytes": 4694781
+    },
+    "projected_identity_matches": true,
+    "author_stage_schema_passes": true,
+    "input_identities_unchanged": true,
+    "live_manuscript_read": false
+  },
+  "subject_lib_sha256": "2c024b0689474109afb93c0c76c2b88ef115f70fba04b5b1085cc1854fc8b9ea"
+}

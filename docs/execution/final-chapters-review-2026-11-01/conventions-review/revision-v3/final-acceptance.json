@@ -1,0 +1,67 @@
+{
+  "status": "independent_exact_byte_acceptance",
+  "reviewer": "questions_conventions_reviewer",
+  "recorded_at_utc": "2026-11-02T03:20:13.942520+00:00",
+  "accepted_author_freeze_sha256": "839ad986f3162e849c362c3c43c666913fd601fbfea55d9264c41a3b5d1affe4",
+  "accepted_canonical_sha256": {
+    "book/chapters/32-open-questions.tex": "50fc264bbfc55fc19cb79dc09aa7a828b2cba479f6b3afb1c62459e0d31c9b5d",
+    "book/chapters/appendix-b-conventions.tex": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+    "book/claims/section32-appendixb.json": "488298ff34c229222010d03452f18e4f3855b9c7026589c74a28fbece04f3a9e"
+  },
+  "finding_resolution": {
+    "CV01": "resolved_by_verified_positive_boundary_scope_and_locator_repair"
+  },
+  "required_open_findings": [],
+  "coverage": {
+    "claims": 66,
+    "questions": 15,
+    "convention_rows": 43,
+    "original_rows": 28,
+    "narrative_or_source_claims": 8,
+    "unchanged_claims_reused": 65
+  },
+  "verified_delta": "Exactly one requested source paragraph and seven declared JSON paths; Appendix B and all other claim/status metadata unchanged.",
+  "initial_review_manifest": {
+    "path": "../review-manifest.json",
+    "sha256": "0fbbfc5c63d3e9b59cc3f8a506d202a057ae0dcb907eff5a411316537c63c3c1"
+  },
+  "evidence": {
+    "recheck_cv01.py": {
+      "sha256": "a81303307f143fe3b9d92bbc02521fdf2375264d5becf8d3d15b3a4ff94fcf37",
+      "bytes": 7937
+    },
+    "validation.json": {
+      "sha256": "60d7421ebd72c6a2a6b861891788a2df8782cd803fa98d48765f96490bbb4ec1",
+      "bytes": 2303
+    },
+    "acceptance.md": {
+      "sha256": "eec6414464c7661de632e6aee3104f7244de03e67358eda4584232da6591c218",
+      "bytes": 2635
+    },
+    "before/book/chapters/32-open-questions.tex": {
+      "sha256": "c831bf85ab0c6cb7f5ed46509212ce5dc1549c05c5723be3c035c928a409fc21",
+      "bytes": 14848
+    },
+    "before/book/chapters/appendix-b-conventions.tex": {
+      "sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363
+    },
+    "before/book/claims/section32-appendixb.json": {
+      "sha256": "0bf0a62df0e81ae502d0408935cb1fee80b0db9a85be8e0d58c73367773dfd5a",
+      "bytes": 123917
+    },
+    "after/book/chapters/32-open-questions.tex": {
+      "sha256": "50fc264bbfc55fc19cb79dc09aa7a828b2cba479f6b3afb1c62459e0d31c9b5d",
+      "bytes": 15020
+    },
+    "after/book/chapters/appendix-b-conventions.tex": {
+      "sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363
+    },
+    "after/book/claims/section32-appendixb.json": {
+      "sha256": "488298ff34c229222010d03452f18e4f3855b9c7026589c74a28fbece04f3a9e",
+      "bytes": 125093
+    }
+  },
+  "scope": "Exact source/claim-ledger conventions approval. Earlier primary-source statement limits remain inherited; no new complete external-proof audit. The geodesic author snapshot remains pending in the frozen handoff. Four quantum and ten geodesic planned groups and subsequent implementation/results remain integration work. No numerical replay, canonical edit, build/PDF marker, install, stage, commit or upload."
+}

@@ -1,0 +1,302 @@
+{
+  "status": "all_exact_prior_dependency_hashes_match",
+  "bindings": [
+    {
+      "id": "normalization",
+      "review_manifest": {
+        "path": "docs/execution/normalization-review-2026-11-01/integration-review/review-manifest.json",
+        "sha256": "a4a5d6e440d25188408c0ec2d70e8ce1e2c24ba69015c228936d2f408dcc9026",
+        "bytes": 12163
+      },
+      "approval_field": "approved_source_sha256",
+      "matched_files": [
+        {
+          "path": "book/chapters/01-volume-normalization.tex",
+          "sha256": "b35a17e1dce5aa276d915e67eff0d15926da7c4180a32f9ffa9706476c2fe095",
+          "bytes": 3889
+        },
+        {
+          "path": "book/chapters/02-ideal-angle-cells.tex",
+          "sha256": "968ea966c452494a299be719165b5ac25c5ebd70e31e8bfd974705b763f9644d",
+          "bytes": 5697
+        },
+        {
+          "path": "book/chapters/03-ideal-tetrahedron.tex",
+          "sha256": "81c51ade3378fbfd4baff1cebeb2dcdd8b0fd43a032ac45fb3b30c4908060797",
+          "bytes": 5926
+        },
+        {
+          "path": "book/chapters/04-hyperideal-integrand.tex",
+          "sha256": "94da7f5288e0b6c606ff7d1a80516bc421e1de1a801e83873a0c9a25af7946b5",
+          "bytes": 11640
+        },
+        {
+          "path": "book/chapters/05-boundary-cone-continuation.tex",
+          "sha256": "feee80182603e334d8cda389435a43a8b9d37192b581befd1e761c03b93e51d5",
+          "bytes": 6788
+        },
+        {
+          "path": "book/chapters/06-torus-sphere.tex",
+          "sha256": "4a60370b881044ff89f45bbe51a171f04fb315b3be9317468a6cf212e8fd2947",
+          "bytes": 3959
+        },
+        {
+          "path": "book/chapters/07-euclidean-periods.tex",
+          "sha256": "3665a4e2ff074950a5e74ef9fba511af4dc5820e3589d823d9d96f7fac2de8d9",
+          "bytes": 11798
+        },
+        {
+          "path": "book/chapters/08-wp-flat-limit.tex",
+          "sha256": "1a175315aa975708a5c93151b9ae107b7dd36f79720dae7c7264adda062a6283",
+          "bytes": 16284
+        },
+        {
+          "path": "book/chapters/appendix-a-fricke.tex",
+          "sha256": "61bde2f802c7c5cb931d6bc5c4528e82459392e803b2a7aaf1a7d5afc4fb7e5f",
+          "bytes": 2191
+        },
+        {
+          "path": "book/claims/sections1-6.json",
+          "sha256": "46d3939d0cacda4f5780f18ed6b9e2ba21758d2fc3d0deecac99130ab14b6af2",
+          "bytes": 29510
+        },
+        {
+          "path": "book/claims/sections7-8.json",
+          "sha256": "7438f1b5c8fde23fa81b0b1c3250d2965debf79678026d649bd7ff7cd368439d",
+          "bytes": 19707
+        }
+      ],
+      "scope": "Reuse the named checkpoint and its independent mathematical/source-statement reviews within their stated scope. This is a current byte-identity and dependency-statement check, not fresh external-proof refereeing or numerical replay."
+    },
+    {
+      "id": "section9",
+      "review_manifest": {
+        "path": "docs/execution/section9-barrier-2026-10-31/publication-review-manifest.json",
+        "sha256": "00559d8ae7edbc8eda88412e28208614f0dbec42b95cc4b0a119c3de9bac3b0e",
+        "bytes": 4749
+      },
+      "approval_field": "source_sha256",
+      "matched_files": [
+        {
+          "path": "book/chapters/09-volume-hessians.tex",
+          "sha256": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00",
+          "bytes": 34587
+        },
+        {
+          "path": "book/claims/section9.json",
+          "sha256": "255ed6ebb0c3eb1c7714d238f2829f6115487817408545e40461ef87b47b5c73",
+          "bytes": 37274
+        }
+      ],
+      "scope": "Reuse the named checkpoint and its independent mathematical/source-statement reviews within their stated scope. This is a current byte-identity and dependency-statement check, not fresh external-proof refereeing or numerical replay."
+    },
+    {
+      "id": "quantum_surgery",
+      "review_manifest": {
+        "path": "docs/execution/quantum-surgery-review-2026-11-01/integration-review/approved-source-manifest.json",
+        "sha256": "7ef377bd9f6f219cedb0a54db88eadce5e0dffc7807f5f08201d423c73ca2638",
+        "bytes": 7612
+      },
+      "approval_field": "files",
+      "matched_files": [
+        {
+          "path": "book/chapters/12-quantum-boundary-measure.tex",
+          "sha256": "7dfd05ded3cb51c6697cae5787d2ba15b93f12f6d918c976dc3e25ec889144db",
+          "bytes": 18683
+        },
+        {
+          "path": "book/chapters/13-four-point-fusion.tex",
+          "sha256": "fae1a51e1cc6c142246048f4b4f20a045ae0d03c545536a9722a8e11f79e8782",
+          "bytes": 24410
+        },
+        {
+          "path": "book/chapters/14-normalized-quantum-comparison.tex",
+          "sha256": "3b1f0ca1378a57c7ab3370d3440e97752fe8c02bbcc2f6afddbf3a6e6fa960f5",
+          "bytes": 21763
+        },
+        {
+          "path": "book/chapters/16-dehn-filling-response.tex",
+          "sha256": "a649d1e72d03180d2fdd921a2bd01e056f587d74f0b570aa22a7cf446b1cfa0b",
+          "bytes": 42117
+        },
+        {
+          "path": "book/claims/section16.json",
+          "sha256": "dc24ca2ca1514446b5bd862f7632942a36f5e5d2bf07065a40b959bed3ce6531",
+          "bytes": 29199
+        },
+        {
+          "path": "book/claims/sections12-14.json",
+          "sha256": "fecb43e3327f9f659afbd841f8b9ee10a2c75fa0b3a7694655beabc7675d53c7",
+          "bytes": 30454
+        }
+      ],
+      "scope": "Reuse the named checkpoint and its independent mathematical/source-statement reviews within their stated scope. This is a current byte-identity and dependency-statement check, not fresh external-proof refereeing or numerical replay."
+    },
+    {
+      "id": "regular_airy",
+      "review_manifest": {
+        "path": "docs/execution/section15-analytic-review-2026-11-01/integration-review/approved-source-manifest.json",
+        "sha256": "4fcaa7f3893762884bfe78350db4eb690a5850eb74733a03feb37ce4c7b23041",
+        "bytes": 7902
+      },
+      "approval_field": "approved_source_sha256",
+      "matched_files": [
+        {
+          "path": "book/chapters/15-quantum-airy.tex",
+          "sha256": "efee2c699923ab31e4d7d48eeac57c60bf2ea088ea4ff17e617b9ed97202d6dd",
+          "bytes": 24972
+        },
+        {
+          "path": "book/claims/section15.json",
+          "sha256": "2a53176d95601bd09448326a34b203f1e05bd46dc6eee182226af36b24a2fb96",
+          "bytes": 25504
+        }
+      ],
+      "scope": "Reuse the named checkpoint and its independent mathematical/source-statement reviews within their stated scope. This is a current byte-identity and dependency-statement check, not fresh external-proof refereeing or numerical replay."
+    },
+    {
+      "id": "counting_mixing",
+      "review_manifest": {
+        "path": "docs/execution/counting-mixing-review-2026-11-01/integration-review/revision-v2/approved-source-manifest.json",
+        "sha256": "0fe9b4a314efdd5d1d8c33f448b49d36d998200bcad2d09a0dd12ede5cbf7a2d",
+        "bytes": 12125
+      },
+      "approval_field": "approved_sources",
+      "matched_files": [
+        {
+          "path": "book/chapters/23-trace-coefficients.tex",
+          "sha256": "5520b28607f96a3e65ea32e7c4dab267f6556dbbe8975d29b4186b9b27e429c9",
+          "bytes": 35208
+        },
+        {
+          "path": "book/chapters/24-quantitative-counting.tex",
+          "sha256": "4099f91c4abddf5f2a13831e48d7d52ac4d90af137068b969ca612fc6b273c58",
+          "bytes": 27440
+        },
+        {
+          "path": "book/chapters/25-global-coefficient-filters.tex",
+          "sha256": "c876c43ce0d738ea4fa4780713753c3c9c48efdcf788cc9e305ac5011af732e2",
+          "bytes": 14508
+        },
+        {
+          "path": "book/chapters/26-counting-to-mixing.tex",
+          "sha256": "64562ebf631c59b84b9c991a632926107b3e24cb5b08b29c21e263bd50a9e901",
+          "bytes": 17201
+        },
+        {
+          "path": "book/chapters/27-weighted-mixing-converse.tex",
+          "sha256": "79fb4660fe87a5723eea0d410e55e954913b0386057a31542473d6486492dcc1",
+          "bytes": 35331
+        },
+        {
+          "path": "book/chapters/28-genus-two-model.tex",
+          "sha256": "18c05143e86fb9630868bb2824ddf44643c1ee1c84a40dc77a8c9d5354663fb4",
+          "bytes": 34521
+        },
+        {
+          "path": "book/chapters/29-controlled-observables.tex",
+          "sha256": "8c26fb3e18186d95ead2ae71eebd601966855d1bf0f9f7ed662f9996ab3b49f1",
+          "bytes": 32478
+        },
+        {
+          "path": "book/chapters/30-sharp-diagnostics.tex",
+          "sha256": "23d92f42eeacbe7e6c967e9b35e48228e96458356a5d659333713bf79200bd33",
+          "bytes": 32832
+        },
+        {
+          "path": "book/chapters/31-arithmetic-remainder.tex",
+          "sha256": "7b065510eee82c535484ddcab44da4722c7b738b64d0d0e2aaec598407d2ba69",
+          "bytes": 18304
+        },
+        {
+          "path": "book/claims/section30.json",
+          "sha256": "5b19adfa2a45ab5fc22d760564f5576c5134f02d1827f8c94e3fa2e4c2bb852a",
+          "bytes": 30573
+        },
+        {
+          "path": "book/claims/section31.json",
+          "sha256": "6cd4a0d185cda2e8dc2852ce6ddf81d0f0fc75a4a19d3866c1f84e3ad835f6b9",
+          "bytes": 26963
+        },
+        {
+          "path": "book/claims/sections23-25.json",
+          "sha256": "61af82e0e0cf8b7e658803255f5bcd38849cde0f27539ef901b7f027816667db",
+          "bytes": 95857
+        },
+        {
+          "path": "book/claims/sections26-29.json",
+          "sha256": "d139ca58e77c234e7c9e5d1bce69caf85b0038c1d4ef586a0b9ea0972371629c",
+          "bytes": 93703
+        }
+      ],
+      "scope": "Reuse the named checkpoint and its independent mathematical/source-statement reviews within their stated scope. This is a current byte-identity and dependency-statement check, not fresh external-proof refereeing or numerical replay."
+    }
+  ],
+  "current_author_dependencies": [
+    {
+      "track": "quantum-author",
+      "status": "author_snapshot_pending_independent_review",
+      "files": [
+        {
+          "path": "book/chapters/10-quantum-introduction.tex",
+          "sha256": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+          "bytes": 43507
+        },
+        {
+          "path": "book/chapters/11-quantum-degeneration.tex",
+          "sha256": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9",
+          "bytes": 13435
+        },
+        {
+          "path": "book/claims/sections10-11.json",
+          "sha256": "ea22e86c4399d4d3fcf83c938144373c89367cb7f9ce1a074b866499000ce1cb",
+          "bytes": 59312
+        }
+      ],
+      "freeze_manifest": {
+        "path": "../execution/final-chapters-review-2026-11-01/quantum-author/freeze-manifest.json",
+        "sha256": "107eda60080662c39b747bfa98fbbca765c2e3fa18b6d161960057128dfe1456",
+        "bytes": 1556
+      },
+      "remaining": "Reconcile against any later author/independent-review changes before integration. An author freeze is not independent mathematical approval."
+    },
+    {
+      "track": "geodesic-author",
+      "status": "author_snapshot_pending_independent_review",
+      "files": [
+        {
+          "path": "book/chapters/17-unfolding-constant-series.tex",
+          "sha256": "d2bd6ee8af07ca7c27ae78ed2cab58777aba5d99204251d3b1b458964205b889",
+          "bytes": 7805
+        },
+        {
+          "path": "book/chapters/18-figure-eight-curves.tex",
+          "sha256": "efd74e44095a57780ed3a06afc1f00e9dffd850e6cc3d536025224527d58b8b2",
+          "bytes": 10706
+        },
+        {
+          "path": "book/chapters/19-pants-twists.tex",
+          "sha256": "bc0b50a6c550a8665696d75a55d173914b542e886147b483ebf97b160cf425c9",
+          "bytes": 9552
+        },
+        {
+          "path": "book/chapters/20-torus-twist-series.tex",
+          "sha256": "7a0a2601279ecfe922d68aa32dfe55672817afc699e5feb4c4585f3ef8668f7b",
+          "bytes": 6617
+        },
+        {
+          "path": "book/chapters/21-cuff-matching.tex",
+          "sha256": "7250a26f641331b5cdd1e760f7540373662396349f10feb487e6a2d7495f35c2",
+          "bytes": 2961
+        },
+        {
+          "path": "book/chapters/22-cusps-orthospectrum.tex",
+          "sha256": "ff9bbd28455e2427ea3ae6ad8f2b2bd37873d088a5827a8418fdcbbdf6bdd6ed",
+          "bytes": 9219
+        }
+      ],
+      "freeze_manifest": null,
+      "remaining": "Reconcile against any later author/independent-review changes before integration. An author freeze is not independent mathematical approval."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "findings": [
+    {
+      "id": "QR01",
+      "severity": "required_provenance_repair",
+      "status": "open_pending_author_exact_byte_repair",
+      "description": "Two direct local dependencies are omitted from reviewed_dependency_sha256. The source mathematics has passed, but exact dependency closure is incomplete.",
+      "affected_claims": [
+        "s10.bloch_wigner",
+        "s10.curvature_measure",
+        "s11.compact_model",
+        "s11.wp_scale"
+      ],
+      "requested_repair": "Add actual SHA256 values for the two listed dependencies and refresh the author freeze/handoff, preserving initial evidence.",
+      "dependencies": [
+        {
+          "path": "book/chapters/03-ideal-tetrahedron.tex",
+          "sha256_observed_by_reviewer": "81c51ade3378fbfd4baff1cebeb2dcdd8b0fd43a032ac45fb3b30c4908060797"
+        },
+        {
+          "path": "book/claims/sections7-8.json",
+          "sha256_observed_by_reviewer": "7438f1b5c8fde23fa81b0b1c3250d2965debf79678026d649bd7ff7cd368439d"
+        }
+      ],
+      "initial_ledger_sha256": "ea22e86c4399d4d3fcf83c938144373c89367cb7f9ce1a074b866499000ce1cb"
+    }
+  ],
+  "required_source_text_repairs": [],
+  "optional_bibliography_change": "The authors separate proposed-bibliography-patch.txt correctly pins ChenMurakami to1706.04887v3. Recommendation only; not applied."
+}

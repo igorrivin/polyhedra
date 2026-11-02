@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "source_commit": "838815a782dcd39e805432c83e74cb3ddfaaeea2",
+  "spec_identity": {
+    "sha256": "7c640064f15a38f1e3422f5dcfcba34fcbfa5f033278a6884fb4233391370fbf",
+    "bytes": 12834
+  },
+  "frozen_input_identities": {
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/synthetic-gate-dbvh8_es/outer/integration.json": {
+      "sha256": "2b98bdcb3f493f5c8ad3944cf93b0b0283e788a9a8189ef8b64a116c4052f2b2",
+      "bytes": 3499
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/synthetic-gate-dbvh8_es/outer/computation.json": {
+      "sha256": "852af8435fd989015ac2ae9ffca20e6e22d9040df8af054b7f976672822e6395",
+      "bytes": 801
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/synthetic-gate-dbvh8_es/outer/reference.json": {
+      "sha256": "45bf5ec507cfcf34d98abf57839385cdfc60a1c3d8791a3386b140ba38db8fa8",
+      "bytes": 4425
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/synthetic-gate-dbvh8_es/outer/spec.json": {
+      "sha256": "7c640064f15a38f1e3422f5dcfcba34fcbfa5f033278a6884fb4233391370fbf",
+      "bytes": 12834
+    }
+  },
+  "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/synthetic-gate-dbvh8_es/repository",
+  "argv": [
+    "/tmp/polyhedra-baseline-20261031/bin/python",
+    "-B",
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/synthetic-gate-dbvh8_es/repository/experiments/quantum_geodesics/run.py",
+    "--output",
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/synthetic-gate-dbvh8_es/outer/result.json"
+  ],
+  "command_executed": true,
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "source_before": {
+    "head": "838815a782dcd39e805432c83e74cb3ddfaaeea2",
+    "status_porcelain": "",
+    "sha256": {
+      "book/input0.tex": "2c9fa4943aa720c79eebee469368e3dcb74399d6ad168255f9a6362f4f3f4ae1",
+      "book/input1.tex": "3aeaa9dfaae28d6acd2a9dd7f8a8d37c8bad9b26f7b819500284403006374256",
+      "book/input2.tex": "ea207c525efeced43934a9ab8a9e187d83244344368346cc24df99bcc1a7b82b",
+      "book/input3.tex": "c4c0c1c763ebef748a4d4dbdd1e0de82b861f7e39865f5ea8239d4592db1d876",
+      "book/input4.tex": "2b24c66d9ba95009a24cc613a71cbf1741dec122facec622e23cfcf498c5d42d",
+      "book/input5.tex": "484a621cd7c79a623ec8c2dc2bc8bcd2ee4a8222a3bf62f20947409597c70378",
+      "book/input6.tex": "67b6a41f951e14d27e0cffd65c672614f9593f0e3caba51accea50f8350713dd",
+      "book/input7.tex": "fad1ffdf687129a27155998b03c4769e7c3aadda9a670622b5a76d7a367ea296",
+      "book/input8.tex": "f06ffa2a94b80da725211e93f06cdd5123d8ecdd54cf00d3335f842492d8978a",
+      "book/input9.tex": "160d40f69aecdfe1994a925d3cd99eac5acb092bf8cc9ae1c11a3e916adf6b2f",
+      "book/input10.tex": "c965ee8ec88dc93aeeadc233e2d8fc8b91ef3a16d449c0b0cbeed924582b29d1",
+      "book/input11.tex": "c39829e0bc604f93e7f958072d3d899bf046d9e51ff670112092f0ca46de77c4",
+      "book/input12.tex": "24307441cfb74323e92c6de496a9d97785eac13c9e1d19a4b28d4fbdfd736825",
+      "book/input13.tex": "52066a233fb1b96e3fb994233c7526babb9dfc4238d171c45a80955076e7571d",
+      "book/input14.tex": "e230057f6ec57b42e5cb79a27f0fe21350a13274a766ccfd944eb1847de6259f",
+      "book/input15.tex": "66cfc542f1c53a8b1c38ada5f47ee5acd35124d493fb68d12e35563fe007ff53",
+      "book/input16.tex": "4e33bf5594f60b4b8adcad29a37f3839d9514791601c885d072ee62367ee5f76",
+      "book/input17.tex": "cdda61fba665ca8c4332a07da40479ef28ae5bf85ec2e61b41dd93406d287fcb",
+      "book/input18.tex": "fe52ec8cca8ce080ae2093f754d959843c2af7706cd64f2f415a2a8a81d2b1a1",
+      "book/input19.tex": "6da9f4eb886d62e7add9b64ea3885f11c1b1cbda37493d26949b435b8793a85f",
+      "book/input20.tex": "63fe5cf088a0771e5501576123c648913c09891c6c0a1f58f616bce45f2def2d",
+      "book/input21.tex": "a3673b3916a07f628ca6f2691f77083c18b6a07b39f14822fe85f9348cdf0272",
+      "book/input22.tex": "ac1d94ef9b3906e3181d20b11e0672e2f2678ff74fcd54ee79bc617ebf0e60a4",
+      "book/input23.tex": "2c5d1425e9d0a125ab19d07909038bc5d375f22af5d35373527549429a94c5d8",
+      "book/input24.tex": "a7702a92ac3ce0331c785e89a1e1215357855f03cf8ada4324bf7ed2b039709d",
+      "book/input25.tex": "1244ab29bb4ec7ef70399de8734f62b02cde012008956649f6c0b775a8e196a3",
+      "book/input26.tex": "df8dbf6a543850519fca67457e516826903c8df585ce95a96e2743526629f881",
+      "book/input27.tex": "3a42270d4ee0f81bd122cf098035e4966aaa7c54c82e755b24f8152d08df56df",
+      "book/input28.tex": "f485d917561875b65dd20d19a50c82ba939f794b88b4b627ac883b47bc879fef",
+      "book/input29.tex": "0cbde52840ac0faeccef4fddd477353a738ee4015da6206af0881ea085fef232",
+      "book/input30.tex": "c36f18d1008247ef6bb7415411c466c3191217dc44a9807d1679664309024f7b",
+      "book/input31.tex": "f3fa6157ddcb14737f599bdd0e40439c0c3702197e762de3d46bdf27de4088dd",
+      "book/input32.tex": "a86043648ea0219d6295f0e23a2aa83d8d4c9147a9f13ea54885fd683104e245",
+      "book/input33.tex": "b64c66adc5b5c64e0ae0e326ac6cf1f403913afcbb111fd410b88db0c0cebf40",
+      "book/input34.tex": "16d192b51745dee27a70626bccf0d9b9bec213240acc5442e2fed762962e0058",
+      "book/input35.tex": "c8a246aa94871cf93d6e77907bb76a25397c98950b411d12bfb85aea44cc8270",
+      "experiments/quantum_geodesics/run.py": "c559ddf57819027fda69da528effe49616db1f8fc603c81e38311d4fe3276951",
+      "dependency.txt": "56d8d1b2e8da4078e6f64afb2a956287531b589a0d8887d4431de44db569f43f"
+    }
+  },
+  "source_after": {
+    "head": "838815a782dcd39e805432c83e74cb3ddfaaeea2",
+    "status_porcelain": "",
+    "sha256": {
+      "book/input0.tex": "2c9fa4943aa720c79eebee469368e3dcb74399d6ad168255f9a6362f4f3f4ae1",
+      "book/input1.tex": "3aeaa9dfaae28d6acd2a9dd7f8a8d37c8bad9b26f7b819500284403006374256",
+      "book/input2.tex": "ea207c525efeced43934a9ab8a9e187d83244344368346cc24df99bcc1a7b82b",
+      "book/input3.tex": "c4c0c1c763ebef748a4d4dbdd1e0de82b861f7e39865f5ea8239d4592db1d876",
+      "book/input4.tex": "2b24c66d9ba95009a24cc613a71cbf1741dec122facec622e23cfcf498c5d42d",
+      "book/input5.tex": "484a621cd7c79a623ec8c2dc2bc8bcd2ee4a8222a3bf62f20947409597c70378",
+      "book/input6.tex": "67b6a41f951e14d27e0cffd65c672614f9593f0e3caba51accea50f8350713dd",
+      "book/input7.tex": "fad1ffdf687129a27155998b03c4769e7c3aadda9a670622b5a76d7a367ea296",
+      "book/input8.tex": "f06ffa2a94b80da725211e93f06cdd5123d8ecdd54cf00d3335f842492d8978a",
+      "book/input9.tex": "160d40f69aecdfe1994a925d3cd99eac5acb092bf8cc9ae1c11a3e916adf6b2f",
+      "book/input10.tex": "c965ee8ec88dc93aeeadc233e2d8fc8b91ef3a16d449c0b0cbeed924582b29d1",
+      "book/input11.tex": "c39829e0bc604f93e7f958072d3d899bf046d9e51ff670112092f0ca46de77c4",
+      "book/input12.tex": "24307441cfb74323e92c6de496a9d97785eac13c9e1d19a4b28d4fbdfd736825",
+      "book/input13.tex": "52066a233fb1b96e3fb994233c7526babb9dfc4238d171c45a80955076e7571d",
+      "book/input14.tex": "e230057f6ec57b42e5cb79a27f0fe21350a13274a766ccfd944eb1847de6259f",
+      "book/input15.tex": "66cfc542f1c53a8b1c38ada5f47ee5acd35124d493fb68d12e35563fe007ff53",
+      "book/input16.tex": "4e33bf5594f60b4b8adcad29a37f3839d9514791601c885d072ee62367ee5f76",
+      "book/input17.tex": "cdda61fba665ca8c4332a07da40479ef28ae5bf85ec2e61b41dd93406d287fcb",
+      "book/input18.tex": "fe52ec8cca8ce080ae2093f754d959843c2af7706cd64f2f415a2a8a81d2b1a1",
+      "book/input19.tex": "6da9f4eb886d62e7add9b64ea3885f11c1b1cbda37493d26949b435b8793a85f",
+      "book/input20.tex": "63fe5cf088a0771e5501576123c648913c09891c6c0a1f58f616bce45f2def2d",
+      "book/input21.tex": "a3673b3916a07f628ca6f2691f77083c18b6a07b39f14822fe85f9348cdf0272",
+      "book/input22.tex": "ac1d94ef9b3906e3181d20b11e0672e2f2678ff74fcd54ee79bc617ebf0e60a4",
+      "book/input23.tex": "2c5d1425e9d0a125ab19d07909038bc5d375f22af5d35373527549429a94c5d8",
+      "book/input24.tex": "a7702a92ac3ce0331c785e89a1e1215357855f03cf8ada4324bf7ed2b039709d",
+      "book/input25.tex": "1244ab29bb4ec7ef70399de8734f62b02cde012008956649f6c0b775a8e196a3",
+      "book/input26.tex": "df8dbf6a543850519fca67457e516826903c8df585ce95a96e2743526629f881",
+      "book/input27.tex": "3a42270d4ee0f81bd122cf098035e4966aaa7c54c82e755b24f8152d08df56df",
+      "book/input28.tex": "f485d917561875b65dd20d19a50c82ba939f794b88b4b627ac883b47bc879fef",
+      "book/input29.tex": "0cbde52840ac0faeccef4fddd477353a738ee4015da6206af0881ea085fef232",
+      "book/input30.tex": "c36f18d1008247ef6bb7415411c466c3191217dc44a9807d1679664309024f7b",
+      "book/input31.tex": "f3fa6157ddcb14737f599bdd0e40439c0c3702197e762de3d46bdf27de4088dd",
+      "book/input32.tex": "a86043648ea0219d6295f0e23a2aa83d8d4c9147a9f13ea54885fd683104e245",
+      "book/input33.tex": "b64c66adc5b5c64e0ae0e326ac6cf1f403913afcbb111fd410b88db0c0cebf40",
+      "book/input34.tex": "16d192b51745dee27a70626bccf0d9b9bec213240acc5442e2fed762962e0058",
+      "book/input35.tex": "c8a246aa94871cf93d6e77907bb76a25397c98950b411d12bfb85aea44cc8270",
+      "experiments/quantum_geodesics/run.py": "c559ddf57819027fda69da528effe49616db1f8fc603c81e38311d4fe3276951",
+      "dependency.txt": "56d8d1b2e8da4078e6f64afb2a956287531b589a0d8887d4431de44db569f43f"
+    }
+  },
+  "result": {
+    "sha256": "13b90e38ed17db705f209767d93d4e8a9b4a0272d01bf561b9d390b6524a447f",
+    "bytes": 3168
+  },
+  "output_path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-review/subject-v1/synthetic-gate-dbvh8_es/outer/result.json",
+  "stage": "complete",
+  "scope": "Actual finite command execution with clean source, input and result identity guards; not independent mathematical or implementation approval.",
+  "checks_passed": true,
+  "exit_status": 0,
+  "started_at_utc": "2026-11-02T03:36:39.728217+00:00",
+  "elapsed_seconds": 0.024994459003210068,
+  "finished_at_utc": "2026-11-02T03:36:42.531739+00:00"
+}

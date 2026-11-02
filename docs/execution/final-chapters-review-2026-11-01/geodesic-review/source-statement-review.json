@@ -1,0 +1,132 @@
+{
+  "scope": "Critical statement and convention checks only; not full external-proof review",
+  "sources": [
+    {
+      "key": "MirzVolumes",
+      "status": "primary_indexed_statements_checked",
+      "reviewed_pin": "Theorem 7.1, Lemma 7.3, equations (7.3)-(7.5); Lemma 3.1, equation (3.1)",
+      "note": "Direct mirror fetch timed out; independent targeted primary-PDF indexing recovered the precise statements, symmetry/one-handle factors, and D gap.",
+      "url": "https://www.labri.fr/perso/vdelecro/toprint/mirzakhani1-pdf2up.pdf",
+      "full_external_proof_audit": false,
+      "remote_pdf_byte_identity_claimed": false
+    },
+    {
+      "key": "McShane",
+      "status": "primary_research_restatement_checked",
+      "reviewed_pin": "Hu-Tan p.2 equation (3)",
+      "note": "The same complete finite-area punctured-torus statement and simple spectrum multiplicity are explicit. Original Inventiones proof not reread.",
+      "url": "https://arxiv.org/pdf/1402.1573v1",
+      "full_external_proof_audit": false,
+      "remote_pdf_byte_identity_claimed": false
+    },
+    {
+      "key": "HuTan",
+      "status": "primary_pdf_statement_checked",
+      "reviewed_pin": "arXiv:1402.1573v1 p.2 Theorems 1-2, equations (1)-(2)",
+      "note": "Displayed cusped kernel and pi-squared/2 match. Positive boundary has a distinct formula.",
+      "url": "https://arxiv.org/pdf/1402.1573v1",
+      "full_external_proof_audit": false,
+      "remote_pdf_byte_identity_claimed": false
+    },
+    {
+      "key": "LuoTan",
+      "status": "primary_pdf_statement_checked",
+      "reviewed_pin": "arXiv:1102.2133v2 p.2 Theorem 1.1 and Section 1.2",
+      "note": "Closed oriented surface, proper geometric subsurface indexing and null-set decomposition match. Long weights/proofs not re-refereed.",
+      "url": "https://arxiv.org/pdf/1102.2133v2",
+      "full_external_proof_audit": false,
+      "remote_pdf_byte_identity_claimed": false
+    },
+    {
+      "key": "RivinFigures",
+      "status": "primary_pdf_statement_checked",
+      "reviewed_pin": "arXiv:0901.2543v4 p.5 Theorem 1.3; p.15 Theorem 4.2",
+      "note": "Pants trace and fourfold lift statements match. Old torus-family indexing is not taken from this uncorrected source.",
+      "url": "https://arxiv.org/pdf/0901.2543v4",
+      "full_external_proof_audit": false,
+      "remote_pdf_byte_identity_claimed": false
+    },
+    {
+      "key": "LeiZhang",
+      "status": "publisher_abstract_only_checked",
+      "reviewed_pin": "ResearchGate publisher-preview landing page abstract; DOI 10.1142/S0218216523500499",
+      "note": "The abstract confirms missing hyperelliptic family and cone-realizability restriction. Preview click failed; no full theorem/proof independently inspected.",
+      "url": "https://www.researchgate.net/publication/371244731_A_note_on_Rivin's_interpretation_of_McShane's_identity_as_identities_for_closed_geodesics_with_one_self-intersection",
+      "full_external_proof_audit": false,
+      "remote_pdf_byte_identity_claimed": false
+    },
+    {
+      "key": "WolpertTwist",
+      "status": "independent_full_statement_access_unavailable",
+      "reviewed_pin": "GDZ article metadata; author record pins p.132 formula (1.1)",
+      "note": "The retrieved scan text exposed only the cover; screenshot returned no inspectable image. This review independently checks the local first-variation derivation instead of asserting a recovered external formula.",
+      "url": "https://gdz.sub.uni-goettingen.de/download/pdf/PPN358147735_0056/LOG_0014.pdf",
+      "full_external_proof_audit": false,
+      "remote_pdf_byte_identity_claimed": false
+    },
+    {
+      "key": "Kerckhoff",
+      "status": "primary_pdf_statement_checked_with_additional_remark",
+      "reviewed_pin": "Theorem 1 p.253; explicit nonsimple-curve remark p.254",
+      "note": "An independent Pisa-hosted primary scan exposes the statement and nonsimple extension remark. This improves access beyond the author record without claiming full proof refereeing.",
+      "url": "https://people.math.harvard.edu/~ctm/home/text/others/kerckhoff/nielsen/nielsen.pdf",
+      "full_external_proof_audit": false,
+      "remote_pdf_byte_identity_claimed": false,
+      "independent_access_url": "https://poisson.phc.dm.unipi.it/~camponovo/Kerckhoff-NielsenRealizationProblem-1983.pdf"
+    },
+    {
+      "key": "MirzSimple",
+      "status": "primary_pdf_statement_checked_pin_repair_R1",
+      "reviewed_pin": "p.107 Theorem 3.4, equations (3.5)-(3.6); Proposition 3.5, equation (3.7)",
+      "note": "Coordinate data and two-sided length estimate have distinct pins. Add the latter to support the comparison sentence.",
+      "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v168-n1-p03.pdf",
+      "full_external_proof_audit": false,
+      "remote_pdf_byte_identity_claimed": false
+    },
+    {
+      "key": "MirzGeneral",
+      "status": "primary_pdf_statement_checked",
+      "reviewed_pin": "arXiv:1601.03342v1 p.20 Theorem 4.1; Section 8",
+      "note": "General closed-curve rational-type APL length and sublevel-volume scope match. No exact fundamental domain/integral inferred.",
+      "url": "https://arxiv.org/pdf/1601.03342v1",
+      "full_external_proof_audit": false,
+      "remote_pdf_byte_identity_claimed": false
+    },
+    {
+      "key": "ALPS",
+      "status": "primary_pdf_statement_checked",
+      "reviewed_pin": "arXiv:1105.0202v1 pp.5-6 Proposition 3.1 and surrounding setup",
+      "note": "Both curves are simple with intersection one; positive boundary and cusp are explicit. The formula and displacement twist convention match after half-angle conversion.",
+      "url": "https://arxiv.org/pdf/1105.0202v1",
+      "full_external_proof_audit": false,
+      "remote_pdf_byte_identity_claimed": false
+    },
+    {
+      "key": "McShanePants",
+      "status": "primary_pdf_statement_checked_pin_repair_R2",
+      "reviewed_pin": "Theorem 3 p.4; post-Corollary-5 measure paragraph p.5",
+      "note": "No-geodesic-boundary scope, isolated peripheral directions, enlarged gaps and zero measure match. Correct the page range.",
+      "url": "https://macbuse.github.io/M2R_2019/shearsAgain.pdf",
+      "full_external_proof_audit": false,
+      "remote_pdf_byte_identity_claimed": false
+    },
+    {
+      "key": "Springborn",
+      "status": "primary_pdf_statement_checked",
+      "reviewed_pin": "arXiv:1702.05061v2 Section 11 lambda convention and equation (30); Section 12 horocycle equation; Proposition 14.1(i),(iv)",
+      "note": "The signed lambda, corner and horocycle formulas and arc/curve bijection match. Trace Hu/2 remains a local deduction.",
+      "url": "https://arxiv.org/pdf/1702.05061v2",
+      "full_external_proof_audit": false,
+      "remote_pdf_byte_identity_claimed": false
+    },
+    {
+      "key": "Parlier",
+      "status": "primary_pdf_statement_checked",
+      "reviewed_pin": "arXiv:2004.09078v3 p.2 orientation definition; Section 4.2 p.26",
+      "note": "The oriented coefficient-two formula and coherent-marking relationship match; original Basmajian proof not reread.",
+      "url": "https://arxiv.org/pdf/2004.09078v3",
+      "full_external_proof_audit": false,
+      "remote_pdf_byte_identity_claimed": false
+    }
+  ]
+}

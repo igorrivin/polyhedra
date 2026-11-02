@@ -1,0 +1,546 @@
+{
+  "schema_version": 1,
+  "spec_identity": {
+    "sha256": "7fbcdc3ca5c2443fff1b89096c6a5b94c3ddd233794fb1949d5737eb99f2266e",
+    "bytes": 38837
+  },
+  "source_commit": "8f722ae462307146818932cde4811e4bb4e8423e",
+  "frozen_input_identities": {
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/final-acceptance.json": {
+      "sha256": "84b9eb77d45339fad20af6df2439f710a9fc2a47af35c823f4b3f8e3029cd708",
+      "bytes": 18644
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/computation-review/revision-v2/final-acceptance.json": {
+      "sha256": "70070fe32c42961d68b035ccb7fae5b012c50ac5814ca42bd05689bfc64b6592",
+      "bytes": 25941
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/computation/full-v2/author-result-70-110.json": {
+      "sha256": "5f73fce03e43103dc457570bcd90f4722599b5ac0d67a9b9b88d9e00679f0429",
+      "bytes": 4694781
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/clean-source/replay-spec.json": {
+      "sha256": "7fbcdc3ca5c2443fff1b89096c6a5b94c3ddd233794fb1949d5737eb99f2266e",
+      "bytes": 38837
+    },
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/clean-source/result.json": {
+      "sha256": "a8b5aea0d3bce364f069506d5b96a09ce03a49c0219fbe8bf070e61f1ead35ae",
+      "bytes": 4690689
+    }
+  },
+  "candidate": {
+    "sha256": "a8b5aea0d3bce364f069506d5b96a09ce03a49c0219fbe8bf070e61f1ead35ae",
+    "bytes": 4690689
+  },
+  "stage": "complete",
+  "scope": "Strict report equality apart from individually validated stage metadata; no numerical replay or error certificate.",
+  "checks_passed": true,
+  "exit_status": 0,
+  "started_at_utc": "2026-11-02T05:00:04.946331+00:00",
+  "identical_scientific_payload": true,
+  "check_counts": {
+    "exact": 1342,
+    "numerical_formula_comparisons": 4266,
+    "cross_precision_observations": 509
+  },
+  "groups": [
+    "G10_boundary_shadows",
+    "G1_torus_unfolding",
+    "G2_pants_traces",
+    "G3_figure_eight_kernel",
+    "G4_local_distance",
+    "G5_seams_torus_holonomy",
+    "G6_twist_coarea",
+    "G7_twist_partition",
+    "G8_endpoint_matching",
+    "G9_cusp_decoration",
+    "Q1_figure_eight",
+    "Q2_klein_geometry",
+    "Q3_peripheral_filling",
+    "Q4_charge_curvature"
+  ],
+  "excluded_exact_JSON_pointers": [
+    "/generated_at_utc",
+    "/runtime/elapsed_seconds",
+    "/source_before/git_commit",
+    "/source_before/git_dirty",
+    "/source_before/git_status_porcelain",
+    "/source_before/live_manuscript_observation/1/current_sha256",
+    "/source_before/live_manuscript_observation/1/matches_accepted_snapshot",
+    "/source_before/live_manuscript_observation/2/current_sha256",
+    "/source_before/live_manuscript_observation/2/matches_accepted_snapshot",
+    "/source_before/live_manuscript_observation/6/current_sha256",
+    "/source_before/live_manuscript_observation/6/matches_accepted_snapshot",
+    "/source_before/live_manuscript_observation/7/current_sha256",
+    "/source_before/live_manuscript_observation/7/matches_accepted_snapshot",
+    "/source_before/live_manuscript_observation/8/current_sha256",
+    "/source_before/live_manuscript_observation/8/matches_accepted_snapshot",
+    "/source_before/live_manuscript_observation/9/current_sha256",
+    "/source_before/live_manuscript_observation/9/matches_accepted_snapshot",
+    "/source_before/live_manuscript_observation/10/current_sha256",
+    "/source_before/live_manuscript_observation/10/matches_accepted_snapshot",
+    "/source_before/live_manuscript_observation/11/current_sha256",
+    "/source_before/live_manuscript_observation/11/matches_accepted_snapshot",
+    "/source_before/live_manuscript_observation/12/current_sha256",
+    "/source_before/live_manuscript_observation/12/matches_accepted_snapshot",
+    "/source_before/live_manuscript_observation/13/current_sha256",
+    "/source_before/live_manuscript_observation/13/matches_accepted_snapshot",
+    "/source_before/live_tex_source_observations/9/sha256",
+    "/source_before/live_tex_source_observations/10/sha256",
+    "/source_before/live_tex_source_observations/16/sha256",
+    "/source_before/live_tex_source_observations/17/sha256",
+    "/source_before/live_tex_source_observations/18/sha256",
+    "/source_before/live_tex_source_observations/19/sha256",
+    "/source_before/live_tex_source_observations/20/sha256",
+    "/source_before/live_tex_source_observations/21/sha256",
+    "/source_before/live_tex_source_observations/31/sha256",
+    "/source_before/live_tex_source_observations/45/sha256",
+    "/source_after/git_commit",
+    "/source_after/git_dirty",
+    "/source_after/git_status_porcelain",
+    "/source_after/live_manuscript_observation/1/current_sha256",
+    "/source_after/live_manuscript_observation/1/matches_accepted_snapshot",
+    "/source_after/live_manuscript_observation/2/current_sha256",
+    "/source_after/live_manuscript_observation/2/matches_accepted_snapshot",
+    "/source_after/live_manuscript_observation/6/current_sha256",
+    "/source_after/live_manuscript_observation/6/matches_accepted_snapshot",
+    "/source_after/live_manuscript_observation/7/current_sha256",
+    "/source_after/live_manuscript_observation/7/matches_accepted_snapshot",
+    "/source_after/live_manuscript_observation/8/current_sha256",
+    "/source_after/live_manuscript_observation/8/matches_accepted_snapshot",
+    "/source_after/live_manuscript_observation/9/current_sha256",
+    "/source_after/live_manuscript_observation/9/matches_accepted_snapshot",
+    "/source_after/live_manuscript_observation/10/current_sha256",
+    "/source_after/live_manuscript_observation/10/matches_accepted_snapshot",
+    "/source_after/live_manuscript_observation/11/current_sha256",
+    "/source_after/live_manuscript_observation/11/matches_accepted_snapshot",
+    "/source_after/live_manuscript_observation/12/current_sha256",
+    "/source_after/live_manuscript_observation/12/matches_accepted_snapshot",
+    "/source_after/live_manuscript_observation/13/current_sha256",
+    "/source_after/live_manuscript_observation/13/matches_accepted_snapshot",
+    "/source_after/live_tex_source_observations/9/sha256",
+    "/source_after/live_tex_source_observations/10/sha256",
+    "/source_after/live_tex_source_observations/16/sha256",
+    "/source_after/live_tex_source_observations/17/sha256",
+    "/source_after/live_tex_source_observations/18/sha256",
+    "/source_after/live_tex_source_observations/19/sha256",
+    "/source_after/live_tex_source_observations/20/sha256",
+    "/source_after/live_tex_source_observations/21/sha256",
+    "/source_after/live_tex_source_observations/31/sha256",
+    "/source_after/live_tex_source_observations/45/sha256"
+  ],
+  "excluded_values": [
+    {
+      "pointer": "/generated_at_utc",
+      "before": "2026-11-02T04:13:03.195085+00:00",
+      "after": "2026-11-02T04:58:35.079417+00:00"
+    },
+    {
+      "pointer": "/runtime/elapsed_seconds",
+      "before": 16.101054291939363,
+      "after": 15.976498332922347
+    },
+    {
+      "pointer": "/source_before/git_commit",
+      "before": "151673b1817e66aae493eb7da1be5ddf49adfe0f",
+      "after": "8f722ae462307146818932cde4811e4bb4e8423e"
+    },
+    {
+      "pointer": "/source_before/git_dirty",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_before/git_status_porcelain",
+      "before": [
+        " M book/polyhedral_volumes_and_geodesic_identities.tex",
+        "?? book/chapters/10-quantum-introduction.tex",
+        "?? book/chapters/11-quantum-degeneration.tex",
+        "?? book/chapters/17-unfolding-constant-series.tex",
+        "?? book/chapters/18-figure-eight-curves.tex",
+        "?? book/chapters/19-pants-twists.tex",
+        "?? book/chapters/20-torus-twist-series.tex",
+        "?? book/chapters/21-cuff-matching.tex",
+        "?? book/chapters/22-cusps-orthospectrum.tex",
+        "?? book/chapters/32-open-questions.tex",
+        "?? book/chapters/appendix-b-conventions.tex",
+        "?? book/claims/section32-appendixb.json",
+        "?? book/claims/sections10-11.json",
+        "?? book/claims/sections17-22.json",
+        "?? experiments/quantum_geodesics/README.md",
+        "?? experiments/quantum_geodesics/__init__.py",
+        "?? experiments/quantum_geodesics/common.py",
+        "?? experiments/quantum_geodesics/contracts/geodesic-contract-acceptance.json",
+        "?? experiments/quantum_geodesics/contracts/geodesic-source-acceptance.json",
+        "?? experiments/quantum_geodesics/contracts/geodesic-targets.md",
+        "?? experiments/quantum_geodesics/contracts/quantum-mathematical-acceptance.json",
+        "?? experiments/quantum_geodesics/contracts/quantum-source-freeze.json",
+        "?? experiments/quantum_geodesics/contracts/quantum-targets.md",
+        "?? experiments/quantum_geodesics/figure_eight.py",
+        "?? experiments/quantum_geodesics/fixture.json",
+        "?? experiments/quantum_geodesics/geodesic_exact.py",
+        "?? experiments/quantum_geodesics/geometry.py",
+        "?? experiments/quantum_geodesics/kernels.py",
+        "?? experiments/quantum_geodesics/klein.py",
+        "?? experiments/quantum_geodesics/normalization.py",
+        "?? experiments/quantum_geodesics/run.py",
+        "?? experiments/quantum_geodesics/tests/test_geodesic.py",
+        "?? experiments/quantum_geodesics/tests/test_quantum.py",
+        "?? experiments/quantum_geodesics/tests/test_validation.py",
+        "?? experiments/quantum_geodesics/twist_integrals.py"
+      ],
+      "after": []
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/1/current_sha256",
+      "before": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+      "after": "609f375ff0c1ab926c7073e716642b6abbceefde487fe470b771394771abc66f"
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/1/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/2/current_sha256",
+      "before": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9",
+      "after": "f7ab9345686dc71b44cb8486224c6b5875979e6a9820e45b4ea92fe70ba1a4c8"
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/2/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/6/current_sha256",
+      "before": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+      "after": "7b3e784b9b6f7ace3f402afca0a402e5cc354fd118d751b07b6a8bad707a4e88"
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/6/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/7/current_sha256",
+      "before": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+      "after": "db8fd09066b6b80bb1e231587ad0f740d6d37aad91cd20ae29e4bde95fc08cbc"
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/7/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/8/current_sha256",
+      "before": "f1fd410500ec3c414b4266d706dddd220b0902a546090807e2288384101c2c35",
+      "after": "07292527452fe2e728eba6cc917f548ebd7f9551ac2849d7e5a1b1b7158080dd"
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/8/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/9/current_sha256",
+      "before": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+      "after": "841fe98f4e7140ef6b6db82214f9e7d78d9c311888a2d2851e02e61eda6ab4e9"
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/9/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/10/current_sha256",
+      "before": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+      "after": "2988997ebd215ad77c6153309712ed557c139b2af8c13c4ca86fb2a865e84f90"
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/10/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/11/current_sha256",
+      "before": "b8b3f0568c4667b7ed6116935291c5c71dc3be74ded57c916ac638f6ecd80f66",
+      "after": "bb3a234029d2b95b6c40eee4cbeee0199d4740a84326cd0595163dcbc6730557"
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/11/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/12/current_sha256",
+      "before": "34dbb6255dc468cb796bb3a129eeaf37ac0c5f4dc358abfd73030e64331b3539",
+      "after": "5d191ed33fdd5b1ce1a592e91ccc053674a9ea9c0f52a1c9bca33c473cff857c"
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/12/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/13/current_sha256",
+      "before": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137",
+      "after": "40dc199e544b1eddf678b1a10210fdd46b4bee6cfb5bfdc168534e9c6076037b"
+    },
+    {
+      "pointer": "/source_before/live_manuscript_observation/13/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_before/live_tex_source_observations/9/sha256",
+      "before": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+      "after": "609f375ff0c1ab926c7073e716642b6abbceefde487fe470b771394771abc66f"
+    },
+    {
+      "pointer": "/source_before/live_tex_source_observations/10/sha256",
+      "before": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9",
+      "after": "f7ab9345686dc71b44cb8486224c6b5875979e6a9820e45b4ea92fe70ba1a4c8"
+    },
+    {
+      "pointer": "/source_before/live_tex_source_observations/16/sha256",
+      "before": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+      "after": "7b3e784b9b6f7ace3f402afca0a402e5cc354fd118d751b07b6a8bad707a4e88"
+    },
+    {
+      "pointer": "/source_before/live_tex_source_observations/17/sha256",
+      "before": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+      "after": "db8fd09066b6b80bb1e231587ad0f740d6d37aad91cd20ae29e4bde95fc08cbc"
+    },
+    {
+      "pointer": "/source_before/live_tex_source_observations/18/sha256",
+      "before": "f1fd410500ec3c414b4266d706dddd220b0902a546090807e2288384101c2c35",
+      "after": "07292527452fe2e728eba6cc917f548ebd7f9551ac2849d7e5a1b1b7158080dd"
+    },
+    {
+      "pointer": "/source_before/live_tex_source_observations/19/sha256",
+      "before": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+      "after": "841fe98f4e7140ef6b6db82214f9e7d78d9c311888a2d2851e02e61eda6ab4e9"
+    },
+    {
+      "pointer": "/source_before/live_tex_source_observations/20/sha256",
+      "before": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+      "after": "2988997ebd215ad77c6153309712ed557c139b2af8c13c4ca86fb2a865e84f90"
+    },
+    {
+      "pointer": "/source_before/live_tex_source_observations/21/sha256",
+      "before": "b8b3f0568c4667b7ed6116935291c5c71dc3be74ded57c916ac638f6ecd80f66",
+      "after": "bb3a234029d2b95b6c40eee4cbeee0199d4740a84326cd0595163dcbc6730557"
+    },
+    {
+      "pointer": "/source_before/live_tex_source_observations/31/sha256",
+      "before": "50fc264bbfc55fc19cb79dc09aa7a828b2cba479f6b3afb1c62459e0d31c9b5d",
+      "after": "cc5df6f2a283bb6eb3b96f1bd01229a212880aa47056aefc3cae7652c831c7ca"
+    },
+    {
+      "pointer": "/source_before/live_tex_source_observations/45/sha256",
+      "before": "23b7f8d84f0236ce7939efb5f0858fd60ba58f8fc74207636779f3227b3d30dd",
+      "after": "858de9e69e082371593cec09d55fff6da5c276971c99cd32053d5db7c2822280"
+    },
+    {
+      "pointer": "/source_after/git_commit",
+      "before": "151673b1817e66aae493eb7da1be5ddf49adfe0f",
+      "after": "8f722ae462307146818932cde4811e4bb4e8423e"
+    },
+    {
+      "pointer": "/source_after/git_dirty",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_after/git_status_porcelain",
+      "before": [
+        " M book/polyhedral_volumes_and_geodesic_identities.tex",
+        "?? book/chapters/10-quantum-introduction.tex",
+        "?? book/chapters/11-quantum-degeneration.tex",
+        "?? book/chapters/17-unfolding-constant-series.tex",
+        "?? book/chapters/18-figure-eight-curves.tex",
+        "?? book/chapters/19-pants-twists.tex",
+        "?? book/chapters/20-torus-twist-series.tex",
+        "?? book/chapters/21-cuff-matching.tex",
+        "?? book/chapters/22-cusps-orthospectrum.tex",
+        "?? book/chapters/32-open-questions.tex",
+        "?? book/chapters/appendix-b-conventions.tex",
+        "?? book/claims/section32-appendixb.json",
+        "?? book/claims/sections10-11.json",
+        "?? book/claims/sections17-22.json",
+        "?? experiments/quantum_geodesics/README.md",
+        "?? experiments/quantum_geodesics/__init__.py",
+        "?? experiments/quantum_geodesics/common.py",
+        "?? experiments/quantum_geodesics/contracts/geodesic-contract-acceptance.json",
+        "?? experiments/quantum_geodesics/contracts/geodesic-source-acceptance.json",
+        "?? experiments/quantum_geodesics/contracts/geodesic-targets.md",
+        "?? experiments/quantum_geodesics/contracts/quantum-mathematical-acceptance.json",
+        "?? experiments/quantum_geodesics/contracts/quantum-source-freeze.json",
+        "?? experiments/quantum_geodesics/contracts/quantum-targets.md",
+        "?? experiments/quantum_geodesics/figure_eight.py",
+        "?? experiments/quantum_geodesics/fixture.json",
+        "?? experiments/quantum_geodesics/geodesic_exact.py",
+        "?? experiments/quantum_geodesics/geometry.py",
+        "?? experiments/quantum_geodesics/kernels.py",
+        "?? experiments/quantum_geodesics/klein.py",
+        "?? experiments/quantum_geodesics/normalization.py",
+        "?? experiments/quantum_geodesics/run.py",
+        "?? experiments/quantum_geodesics/tests/test_geodesic.py",
+        "?? experiments/quantum_geodesics/tests/test_quantum.py",
+        "?? experiments/quantum_geodesics/tests/test_validation.py",
+        "?? experiments/quantum_geodesics/twist_integrals.py"
+      ],
+      "after": []
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/1/current_sha256",
+      "before": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+      "after": "609f375ff0c1ab926c7073e716642b6abbceefde487fe470b771394771abc66f"
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/1/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/2/current_sha256",
+      "before": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9",
+      "after": "f7ab9345686dc71b44cb8486224c6b5875979e6a9820e45b4ea92fe70ba1a4c8"
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/2/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/6/current_sha256",
+      "before": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+      "after": "7b3e784b9b6f7ace3f402afca0a402e5cc354fd118d751b07b6a8bad707a4e88"
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/6/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/7/current_sha256",
+      "before": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+      "after": "db8fd09066b6b80bb1e231587ad0f740d6d37aad91cd20ae29e4bde95fc08cbc"
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/7/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/8/current_sha256",
+      "before": "f1fd410500ec3c414b4266d706dddd220b0902a546090807e2288384101c2c35",
+      "after": "07292527452fe2e728eba6cc917f548ebd7f9551ac2849d7e5a1b1b7158080dd"
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/8/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/9/current_sha256",
+      "before": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+      "after": "841fe98f4e7140ef6b6db82214f9e7d78d9c311888a2d2851e02e61eda6ab4e9"
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/9/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/10/current_sha256",
+      "before": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+      "after": "2988997ebd215ad77c6153309712ed557c139b2af8c13c4ca86fb2a865e84f90"
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/10/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/11/current_sha256",
+      "before": "b8b3f0568c4667b7ed6116935291c5c71dc3be74ded57c916ac638f6ecd80f66",
+      "after": "bb3a234029d2b95b6c40eee4cbeee0199d4740a84326cd0595163dcbc6730557"
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/11/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/12/current_sha256",
+      "before": "34dbb6255dc468cb796bb3a129eeaf37ac0c5f4dc358abfd73030e64331b3539",
+      "after": "5d191ed33fdd5b1ce1a592e91ccc053674a9ea9c0f52a1c9bca33c473cff857c"
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/12/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/13/current_sha256",
+      "before": "41e9221cc71ba73808e003125158110e9ff86383466273b9410baa9f7bba5137",
+      "after": "40dc199e544b1eddf678b1a10210fdd46b4bee6cfb5bfdc168534e9c6076037b"
+    },
+    {
+      "pointer": "/source_after/live_manuscript_observation/13/matches_accepted_snapshot",
+      "before": true,
+      "after": false
+    },
+    {
+      "pointer": "/source_after/live_tex_source_observations/9/sha256",
+      "before": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+      "after": "609f375ff0c1ab926c7073e716642b6abbceefde487fe470b771394771abc66f"
+    },
+    {
+      "pointer": "/source_after/live_tex_source_observations/10/sha256",
+      "before": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9",
+      "after": "f7ab9345686dc71b44cb8486224c6b5875979e6a9820e45b4ea92fe70ba1a4c8"
+    },
+    {
+      "pointer": "/source_after/live_tex_source_observations/16/sha256",
+      "before": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+      "after": "7b3e784b9b6f7ace3f402afca0a402e5cc354fd118d751b07b6a8bad707a4e88"
+    },
+    {
+      "pointer": "/source_after/live_tex_source_observations/17/sha256",
+      "before": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+      "after": "db8fd09066b6b80bb1e231587ad0f740d6d37aad91cd20ae29e4bde95fc08cbc"
+    },
+    {
+      "pointer": "/source_after/live_tex_source_observations/18/sha256",
+      "before": "f1fd410500ec3c414b4266d706dddd220b0902a546090807e2288384101c2c35",
+      "after": "07292527452fe2e728eba6cc917f548ebd7f9551ac2849d7e5a1b1b7158080dd"
+    },
+    {
+      "pointer": "/source_after/live_tex_source_observations/19/sha256",
+      "before": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+      "after": "841fe98f4e7140ef6b6db82214f9e7d78d9c311888a2d2851e02e61eda6ab4e9"
+    },
+    {
+      "pointer": "/source_after/live_tex_source_observations/20/sha256",
+      "before": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+      "after": "2988997ebd215ad77c6153309712ed557c139b2af8c13c4ca86fb2a865e84f90"
+    },
+    {
+      "pointer": "/source_after/live_tex_source_observations/21/sha256",
+      "before": "b8b3f0568c4667b7ed6116935291c5c71dc3be74ded57c916ac638f6ecd80f66",
+      "after": "bb3a234029d2b95b6c40eee4cbeee0199d4740a84326cd0595163dcbc6730557"
+    },
+    {
+      "pointer": "/source_after/live_tex_source_observations/31/sha256",
+      "before": "50fc264bbfc55fc19cb79dc09aa7a828b2cba479f6b3afb1c62459e0d31c9b5d",
+      "after": "cc5df6f2a283bb6eb3b96f1bd01229a212880aa47056aefc3cae7652c831c7ca"
+    },
+    {
+      "pointer": "/source_after/live_tex_source_observations/45/sha256",
+      "before": "23b7f8d84f0236ce7939efb5f0858fd60ba58f8fc74207636779f3227b3d30dd",
+      "after": "858de9e69e082371593cec09d55fff6da5c276971c99cd32053d5db7c2822280"
+    }
+  ],
+  "finished_at_utc": "2026-11-02T05:00:07.264550+00:00"
+}

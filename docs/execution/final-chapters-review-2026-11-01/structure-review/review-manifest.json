@@ -1,0 +1,59 @@
+{
+  "decision": "APPROVED: exact frozen structural extraction",
+  "created_at_utc": "2026-11-02T02:29:33.388939+00:00",
+  "baseline_commit": "151673b1817e66aae493eb7da1be5ddf49adfe0f",
+  "author_manifest_sha256": "36192abd41a5a214cb1565fe7a0daf7f7e35c07ed5e9a39ff3b92adc3e794f75",
+  "expanded_entry_sha256": "cd9c97a260ddc34cc8f420e4e030a6ad44c8b5af82c7f491db91c9e5b850faea",
+  "expanded_entry_bytes": 633773,
+  "unchanged_tracked_paths": 2272,
+  "materialized_lfs_paths": 412,
+  "source_preservation_normal_and_optimized": true,
+  "author_verifier_normal_and_optimized": true,
+  "negative_controls_per_mode": 9,
+  "inherited_eof_warnings": 10,
+  "author_evidence_unchanged": true,
+  "head_and_index_unchanged": true,
+  "canonical_writes_by_reviewer": false,
+  "evidence": {
+    "author-verifier-normal.json": {
+      "bytes": 1738,
+      "sha256": "6932d8b849d6c0258b65f6243b5d7fa495d80c385b6df7d95215eb963afebee3"
+    },
+    "author-verifier-optimized.json": {
+      "bytes": 1738,
+      "sha256": "6932d8b849d6c0258b65f6243b5d7fa495d80c385b6df7d95215eb963afebee3"
+    },
+    "check_rejections.py": {
+      "bytes": 2849,
+      "sha256": "e8a850f2ff7a4a0b77d52c536cee3740c9802c30cdbdf72323babd4c14be1624"
+    },
+    "final-git-status.txt": {
+      "bytes": 484,
+      "sha256": "34631c65be37b8e85b10b96d2eb4e5b541ed2825bd1165c9af640e1bd1f092c8"
+    },
+    "independent-normal.json": {
+      "bytes": 1166086,
+      "sha256": "15732708766b9a0ded90dc255c29f15a20209f7f3281534f210312f3b371d6a4"
+    },
+    "independent-optimized.json": {
+      "bytes": 1166086,
+      "sha256": "d83a1c0b44b92312eb1c0b4a7ddbf62dfe02708de51bc1be5c320d0ffafdaf41"
+    },
+    "rejections-normal.json": {
+      "bytes": 1553,
+      "sha256": "a5ebb5cd2cb117aeb614ed6830f06764392d76b9fce4b207bd482991b46ea55a"
+    },
+    "rejections-optimized.json": {
+      "bytes": 1553,
+      "sha256": "979699f00b525d1f5b6699b5c899197b93f55c6e2c2e097d3a36900a5f399c3a"
+    },
+    "review-report.txt": {
+      "bytes": 5405,
+      "sha256": "4da79a7875caf5112b3456c4d6921ced8fa6f962e6a0e2374b9b7592536c4990"
+    },
+    "review_structure.py": {
+      "bytes": 16693,
+      "sha256": "da583addbc0a3e46939282028a16011d7c1b129bc59ba871b0b920cb4c405736"
+    }
+  }
+}

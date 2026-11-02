@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "issues": [],
+  "reviewed_author_freeze_sha256": "839ad986f3162e849c362c3c43c666913fd601fbfea55d9264c41a3b5d1affe4",
+  "accepted_subject_sha256": {
+    "book/chapters/32-open-questions.tex": "50fc264bbfc55fc19cb79dc09aa7a828b2cba479f6b3afb1c62459e0d31c9b5d",
+    "book/chapters/appendix-b-conventions.tex": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+    "book/claims/section32-appendixb.json": "488298ff34c229222010d03452f18e4f3855b9c7026589c74a28fbece04f3a9e"
+  },
+  "source_paragraph_delta_only": true,
+  "changed_json_paths": [
+    {
+      "path": "/chapter_source_sha256/book/chapters/32-open-questions.tex",
+      "change": "updated"
+    },
+    {
+      "path": "/claims/0/dependency_labels/2",
+      "change": "updated"
+    },
+    {
+      "path": "/claims/0/dependency_usage",
+      "change": "added"
+    },
+    {
+      "path": "/claims/0/established_inputs",
+      "change": "updated"
+    },
+    {
+      "path": "/claims/0/hypotheses",
+      "change": "updated"
+    },
+    {
+      "path": "/claims/0/source_keys",
+      "change": "added"
+    },
+    {
+      "path": "/claims/0/source_statement_locator",
+      "change": "added"
+    }
+  ],
+  "other_claims_unchanged": 65,
+  "prior_pin_occurrences_rechecked": 98,
+  "prior_evidence_inventory_preserved": 32,
+  "original_reviewer_manifest_preserved": true,
+  "source_record": {
+    "url": "https://arxiv.org/html/2512.10673v1",
+    "location": "Theorem 3",
+    "checked": "Selected pair L1<L2; full measure subset with unique shortest separating geodesic; tree/double-tree measure.",
+    "limit": "Equal-length values use continuity of volume; no claim that the same cell bijection is nonsingular at equal lengths."
+  },
+  "dependency_use": {
+    "book/claims/sections1-6.json#s4.tree_density": "Use the Zonneveld Theorem 3 positive-boundary sequel explicitly named in this bundled claim's evidence and review_limit. Its BMZ origin-cusp hypotheses and eq:treevolume are not the all-positive comparison."
+  },
+  "graph_files": 36,
+  "labels": 613,
+  "bibliography_keys": 129,
+  "inherited_initial_review": "../review-report.md and ../claim-coverage.json, exact identities in ../review-manifest.json",
+  "scope": "Targeted source/metadata review; no numerical execution or whole-external-proof audit."
+}

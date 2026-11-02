@@ -1,0 +1,41 @@
+{
+  "independent_verification_passed": true,
+  "baseline_rebuilt_from_git": "151673b1817e66aae493eb7da1be5ddf49adfe0f",
+  "expansion_algorithm": "independent recursive line walk; no extractor imports",
+  "python_optimization_does_not_remove_gates": true,
+  "expanded_entry_sha256": "cd9c97a260ddc34cc8f420e4e030a6ad44c8b5af82c7f491db91c9e5b850faea",
+  "expanded_entry_bytes": 633773,
+  "expanded_manuscript_sha256": "a1c5332c24fa1f7dcbd27e575d0dfb13fa31e229be03fc4b03d384acf5f94376",
+  "baseline_source_files": 26,
+  "extracted_source_files": 36,
+  "baseline_include_edges": 25,
+  "extracted_include_edges": 35,
+  "labels_preserved_in_order": 607,
+  "bibliography_keys_preserved_in_order": 129,
+  "numbered_sections_preserved_in_order": 32,
+  "appendices_preserved_in_order": [
+    "A",
+    "B"
+  ],
+  "part_headings_retained_in_main": 7,
+  "baseline_tracked_paths_checked": 2273,
+  "unchanged_baseline_tracked_paths": 2272,
+  "changed_baseline_tracked_paths": [
+    "book/polyhedral_volumes_and_geodesic_identities.tex"
+  ],
+  "new_chapter_paths": [
+    "book/chapters/10-quantum-introduction.tex",
+    "book/chapters/11-quantum-degeneration.tex",
+    "book/chapters/17-unfolding-constant-series.tex",
+    "book/chapters/18-figure-eight-curves.tex",
+    "book/chapters/19-pants-twists.tex",
+    "book/chapters/20-torus-twist-series.tex",
+    "book/chapters/21-cuff-matching.tex",
+    "book/chapters/22-cusps-orthospectrum.tex",
+    "book/chapters/32-open-questions.tex",
+    "book/chapters/appendix-b-conventions.tex"
+  ],
+  "live_graph_matches_frozen_extraction": true,
+  "head_and_index_unchanged": true,
+  "scope": "Source preservation only; no build, proof audit, numerical replay, PDF verification, commit, or publication claim."
+}

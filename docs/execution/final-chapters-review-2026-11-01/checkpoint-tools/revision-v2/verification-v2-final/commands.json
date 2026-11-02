@@ -1,0 +1,75 @@
+[
+  {
+    "name": "normal",
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "test_checkpoint"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2",
+    "started_at_utc": "2026-11-02T03:55:49.939889+00:00",
+    "elapsed_seconds": 105.49242879205849,
+    "returncode": 0,
+    "pre_test_source_freeze_unchanged": true,
+    "stdout": {
+      "path": "normal.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "normal.stderr.txt",
+      "sha256": "c804e8a250c50e77f6884ada174a32973ca3569e3dcc07914183c46138b17fec"
+    },
+    "scope": "Synthetic gate tests only; no monograph computation or publication."
+  },
+  {
+    "name": "optimized",
+    "argv": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "-B",
+      "-O",
+      "-m",
+      "unittest",
+      "-v",
+      "test_checkpoint"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2",
+    "started_at_utc": "2026-11-02T03:57:35.431980+00:00",
+    "elapsed_seconds": 103.6948934160173,
+    "returncode": 0,
+    "pre_test_source_freeze_unchanged": true,
+    "stdout": {
+      "path": "optimized.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "optimized.stderr.txt",
+      "sha256": "742fa696ac6f4795140ed942e8d875b9d7d3c6ef7aa64b17860cc19b729d9b4b"
+    },
+    "scope": "Synthetic gate tests only; no monograph computation or publication."
+  },
+  {
+    "name": "ruff",
+    "argv": [
+      "/opt/anaconda3/bin/ruff",
+      "check",
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v2",
+    "started_at_utc": "2026-11-02T03:59:19.126330+00:00",
+    "elapsed_seconds": 0.07511820795480162,
+    "returncode": 0,
+    "pre_test_source_freeze_unchanged": true,
+    "stdout": {
+      "path": "ruff.stdout.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "stderr": {
+      "path": "ruff.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "scope": "Synthetic gate tests only; no monograph computation or publication."
+  }
+]

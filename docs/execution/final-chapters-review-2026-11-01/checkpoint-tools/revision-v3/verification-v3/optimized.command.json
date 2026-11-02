@@ -1,0 +1,26 @@
+{
+  "name": "optimized",
+  "argv": [
+    "/tmp/polyhedra-baseline-20261031/bin/python",
+    "-B",
+    "-O",
+    "-m",
+    "unittest",
+    "-v",
+    "test_checkpoint"
+  ],
+  "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/checkpoint-work/revision-v3",
+  "started_at_utc": "2026-11-02T04:31:12.049063+00:00",
+  "elapsed_seconds": 130.77139316604007,
+  "returncode": 0,
+  "pre_test_source_freeze_unchanged": true,
+  "stdout": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "stderr": {
+    "sha256": "fe8d02f4a4fe7b4dca0a716f901c8c7df1f1ce0ec1285780614bc1b9ffb04c0c",
+    "bytes": 8228
+  },
+  "scope": "Synthetic gate fixtures only; no monograph computation or final review binding."
+}

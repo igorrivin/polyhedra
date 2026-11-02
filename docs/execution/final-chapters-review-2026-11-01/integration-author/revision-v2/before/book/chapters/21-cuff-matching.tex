@@ -1,0 +1,59 @@
+\section{Matching across cuffs: positions and directions}
+\label{sec:matching}
+
+The pants viewpoint suggests that orthogeodesic pieces should glue when
+their boundary data match. There are two levels of matching.
+
+First consider a positive-length cuff $a>0$, with $m\geq1$ distinct
+endpoint positions $x_1,\ldots,x_m$ and $y_1,\ldots,y_m$ on the two sides.
+Choose compatible
+coordinates in $\RR/a\ZZ$, reversing one induced boundary orientation
+as needed. For a prescribed cyclic matching $\sigma$, a twist $\tau$
+must satisfy
+\begin{equation}
+ y_{\sigma(j)}-x_j\equiv\tau\pmod a
+       \qquad(1\le j\le m).
+ \label{eq:endpointmatch}
+\end{equation}
+One endpoint determines $\tau$ modulo $a$; the remaining $m-1$ equations
+require the cyclic spacings to agree. Integer winding data must also be
+retained if the curve is marked, rather than only considered modulo a
+twist. These congruences are necessary and sufficient for the prescribed
+position matching. They do not supply the direction data of the pieces.
+
+Second, orient a chain by its direction of travel and measure all
+tangential components in the common cuff coordinate just chosen.
+A transverse unit-speed geodesic segment has a signed tangential velocity
+component $p\in(-1,1)$ at an endpoint. If $S$ is the sum of segment lengths, the first
+variation at a glued endpoint has the form
+\begin{equation}
+ \frac{\partial S}{\partial x}=p_{\rm in}-p_{\rm out}.
+ \label{eq:momentummatch}
+\end{equation}
+Here $p_{\rm in}$ is the terminal tangential component of the incoming
+segment and $p_{\rm out}$ the initial component of the outgoing segment.
+The pieces must approach and leave on the opposite sides of the cut.
+Equality of their tangential components then also matches the normal
+components, whose magnitudes are $\sqrt{1-p^2}$ and whose signs are fixed
+by this crossing condition. Stationarity therefore imposes full tangent
+matching as well as position matching. For
+orthogonal segments the tangential components vanish, so smooth gluing
+is automatic once the endpoints match. A generic closed geodesic does
+not satisfy this orthogonality condition along an arbitrarily chosen
+pants decomposition.
+
+Equivalently, boundary data live in a phase space $(s,p)$: endpoint
+position and tangential component. The length of an arc is a generating
+function, with
+\[
+ \dd L=-p_s\,\dd s+p_t\,\dd t,
+ \qquad\text{and cuff gluing acts by }(s,p)\longmapsto(s+\tau,p).
+\]
+A nonperipheral periodic chain with these position and direction matches
+is smooth and locally geodesic, hence is its closed geodesic
+representative. Conversely, cutting a transverse closed geodesic gives
+such a chain. Tangent segments lying on a cuff require separate treatment
+and are not included in the transverse phase space.
+The orthospectrum records the special $p=0$ representatives. It is
+excellent input for gap identities and local geometry, but endpoint
+positions and directions are needed to reconstruct arbitrary glued curves.

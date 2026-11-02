@@ -1,0 +1,101 @@
+{
+  "scope": "Exact initial-preparation to revision-v2 deltas. Initial files remain unchanged.",
+  "files": [
+    {
+      "path": "checkpoint_lib.py",
+      "changed": true,
+      "before": {
+        "sha256": "2e227c30dcb0585b307fc5d45c55538409e3ef3569ba2eb89908a3a86e55eeb9",
+        "bytes": 21853
+      },
+      "after": {
+        "sha256": "9b41c492510a00d9d3b22c5ecb04fcb1de86f8903a906ea4eb4c59ebb6c69c21",
+        "bytes": 26905
+      }
+    },
+    {
+      "path": "run_clean_replay.py",
+      "changed": false,
+      "before": {
+        "sha256": "26ea5840dd35fbded2ec7023ca86ca37e3ff05eb6e311bbf9eea2749603cdc60",
+        "bytes": 4312
+      },
+      "after": {
+        "sha256": "26ea5840dd35fbded2ec7023ca86ca37e3ff05eb6e311bbf9eea2749603cdc60",
+        "bytes": 4312
+      }
+    },
+    {
+      "path": "compare_replays.py",
+      "changed": false,
+      "before": {
+        "sha256": "f4f80cec1f4a76d1e5e290094edfb3152bd9ad4601a56c1e27253750c52d0e8a",
+        "bytes": 2128
+      },
+      "after": {
+        "sha256": "f4f80cec1f4a76d1e5e290094edfb3152bd9ad4601a56c1e27253750c52d0e8a",
+        "bytes": 2128
+      }
+    },
+    {
+      "path": "verify_checkpoint.py",
+      "changed": true,
+      "before": {
+        "sha256": "3d99648a42ac015f6c8a013ef1d34af9db214a4e04b886c4b63bb727945025dc",
+        "bytes": 19612
+      },
+      "after": {
+        "sha256": "720f239af2e6b22c7f9b9143ede5d69a7f9e300bb4ea8985c6a2e49efe7ad94f",
+        "bytes": 18992
+      }
+    },
+    {
+      "path": "test_checkpoint.py",
+      "changed": true,
+      "before": {
+        "sha256": "c1fd2a738660066eb64283d4bd68f42ab3b66807c5ecf1a487857ea0c93147d2",
+        "bytes": 28061
+      },
+      "after": {
+        "sha256": "3e6c8003afd7f1861e6784fa95517c2e2aa2ae737f9ef93e411c621b27936293",
+        "bytes": 38935
+      }
+    },
+    {
+      "path": "replay-spec.unready.json",
+      "changed": true,
+      "before": {
+        "sha256": "ac74e8b1ce094761eb27a9d06b3f725764a556a333f77f19ad2274986b63911e",
+        "bytes": 1948
+      },
+      "after": {
+        "sha256": "479d960ad417b18efdbfff4d8fc03aab368035a8bc5928eda0ff9a5fd75d524a",
+        "bytes": 2271
+      }
+    },
+    {
+      "path": "checkpoint-contract.unready.json",
+      "changed": true,
+      "before": {
+        "sha256": "8f3b50b192aea950caae934e335927e6c940e889091a2ded5b17c032c1153fdb",
+        "bytes": 4377
+      },
+      "after": {
+        "sha256": "532405b78e4ed2ea64d7b2044f412a184c67f3d16428763e083a6a4f6ecb4748",
+        "bytes": 4510
+      }
+    },
+    {
+      "path": "HANDOFF.md",
+      "changed": true,
+      "before": {
+        "sha256": "ed592c5d0f4d356ce7291b3b74d0773f10ecd93ab4ce44090e8ac26b129b46ca",
+        "bytes": 8399
+      },
+      "after": {
+        "sha256": "89b6ecdb58699822d54b9902150386279d8093d881a0c06ff4191556cc372592",
+        "bytes": 11818
+      }
+    }
+  ]
+}

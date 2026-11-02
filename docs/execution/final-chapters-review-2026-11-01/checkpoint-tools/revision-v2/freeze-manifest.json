@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-02T04:00:41.769599+00:00",
+  "status": "author_repairs_complete_pending_independent_targeted_recheck",
+  "initial_author_freeze_sha256": "fc438829b4a38da85bda247b38115ee012cce4344027adeb8efa840560d5a790",
+  "initial_review_manifest_sha256": "d3c2ff7a53f9495588432c0f29d8194521b072058f0cb5c9c807d9581e3d2d59",
+  "initial_author_payloads_preserved": 15,
+  "initial_review_payloads_preserved": 32,
+  "findings": {
+    "CR01": "Lossy JSON decimal tokens are rejected before comparison; exact scalar type distinctions and ordinary receipt serialization retained.",
+    "CR02": "A shared walker binds both committed and live recursive book/main.tex graphs to all36declared inputs before launch."
+  },
+  "additional_requested_schema_adaptation": "46TeX observation rows guarded separately; only exact approved active-source hash changes may differ; ten inactive observations fixed.",
+  "final_focused_tests": {
+    "normal": 50,
+    "optimized": 50,
+    "ruff_passed": true,
+    "pre_test_eight_file_freeze_unchanged": true
+  },
+  "intermediate_verification": "The successful earlier49-test normal/optimized/Ruff stage is preserved separately, before the final source-state scalar-type regression.",
+  "ready_for_real_replay": false,
+  "final_approvals_bound": false,
+  "templates_explicitly_unready": true,
+  "canonical_edits": false,
+  "real_numerical_replay": false,
+  "PDF_build_or_render": false,
+  "real_git_stage_or_commit": false,
+  "remote_operations": false,
+  "scope": "Author preparation repair and synthetic gate verification only. Independent recheck, real final schema binding, source/replay/PDF/candidate/artifact lifecycle remain pending.",
+  "files": {
+    "HANDOFF.md": {
+      "sha256": "89b6ecdb58699822d54b9902150386279d8093d881a0c06ff4191556cc372592",
+      "bytes": 11818
+    },
+    "checkpoint-contract.unready.json": {
+      "sha256": "532405b78e4ed2ea64d7b2044f412a184c67f3d16428763e083a6a4f6ecb4748",
+      "bytes": 4510
+    },
+    "checkpoint_lib.py": {
+      "sha256": "9b41c492510a00d9d3b22c5ecb04fcb1de86f8903a906ea4eb4c59ebb6c69c21",
+      "bytes": 26905
+    },
+    "compare_replays.py": {
+      "sha256": "f4f80cec1f4a76d1e5e290094edfb3152bd9ad4601a56c1e27253750c52d0e8a",
+      "bytes": 2128
+    },
+    "initial-evidence-preservation.json": {
+      "sha256": "8785aea16453f66f716a9abf8f6c6ce369a559daac1b79989acf4fe4a32c7030",
+      "bytes": 961
+    },
+    "provisional-schema-observation.json": {
+      "sha256": "144b19778cd68e93ce0762a2fedf3ee9141882242a0e20bf0bb3996b1c7eeb7f",
+      "bytes": 987
+    },
+    "replay-spec.unready.json": {
+      "sha256": "479d960ad417b18efdbfff4d8fc03aab368035a8bc5928eda0ff9a5fd75d524a",
+      "bytes": 2271
+    },
+    "revision-delta.json": {
+      "sha256": "2f23b8c2b287a1498e3baee6d21fd6605d7c4a5378a95582ed9f43fe138c209a",
+      "bytes": 2858
+    },
+    "revision.patch": {
+      "sha256": "17b575ca1524ea6000d845a52fbff1a4ef622c027821f1f052b083d1f5cd8a5e",
+      "bytes": 42175
+    },
+    "run_clean_replay.py": {
+      "sha256": "26ea5840dd35fbded2ec7023ca86ca37e3ff05eb6e311bbf9eea2749603cdc60",
+      "bytes": 4312
+    },
+    "test_checkpoint.py": {
+      "sha256": "3e6c8003afd7f1861e6784fa95517c2e2aa2ae737f9ef93e411c621b27936293",
+      "bytes": 38935
+    },
+    "verification-v2/commands.json": {
+      "sha256": "331f2e1291c2f9e160eefac5ed9193e4ce93db95224e23c3db120cbc0185700e",
+      "bytes": 2430
+    },
+    "verification-v2/normal.stderr.txt": {
+      "sha256": "44a8c12ce5257e28a2059faf07c63feaf11d9f928cdf13e9e4d461d8efb64cf9",
+      "bytes": 7109
+    },
+    "verification-v2/normal.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "verification-v2/optimized.stderr.txt": {
+      "sha256": "c5cd8a95f37e357f0ed9fd8de8813769507fd0626ba64a43261f3b69d51cfb28",
+      "bytes": 7109
+    },
+    "verification-v2/optimized.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "verification-v2/ruff.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "verification-v2/ruff.stdout.txt": {
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    "verification-v2/tested-source-identities.json": {
+      "sha256": "4d1bf0124eed149b7dd4c13dc6f83fc440ebe76f00b60e94d65c90fa5996558d",
+      "bytes": 959
+    },
+    "verification-v2-final/commands.json": {
+      "sha256": "159b182b0e1e80ad168a858312c67af970e76dda74dbf76f9ab32a21a239ffe0",
+      "bytes": 2569
+    },
+    "verification-v2-final/normal.stderr.txt": {
+      "sha256": "c804e8a250c50e77f6884ada174a32973ca3569e3dcc07914183c46138b17fec",
+      "bytes": 7295
+    },
+    "verification-v2-final/normal.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "verification-v2-final/optimized.stderr.txt": {
+      "sha256": "742fa696ac6f4795140ed942e8d875b9d7d3c6ef7aa64b17860cc19b729d9b4b",
+      "bytes": 7295
+    },
+    "verification-v2-final/optimized.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "verification-v2-final/pre-test-source-freeze.json": {
+      "sha256": "7f04fa80566243875dfa29c1b104a0e830a5b86949444b1a85f11a5e797145eb",
+      "bytes": 1207
+    },
+    "verification-v2-final/ruff.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "verification-v2-final/ruff.stdout.txt": {
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    "verify_checkpoint.py": {
+      "sha256": "720f239af2e6b22c7f9b9143ede5d69a7f9e300bb4ea8985c6a2e49efe7ad94f",
+      "bytes": 18992
+    }
+  },
+  "self_hash_excluded": true
+}

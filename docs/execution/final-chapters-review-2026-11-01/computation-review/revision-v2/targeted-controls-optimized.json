@@ -1,0 +1,2301 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "optimized": true,
+  "source_set_sha256": "e5bd0a08c64db41e9d6ef5d06d8ef0be8a93bd58a7f4f79e75d7b792098087ed",
+  "script_sha256": "04c0e6b39d8d4d6d5a23c72aae475e0b84a411e49d67a5cf2ea32a530e075f26",
+  "records": [
+    {
+      "name": "Q3_missing_negative_q",
+      "category": "original_finding",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "Q2_three_duplicate_simplexes_replace_boxes",
+      "category": "original_finding",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "G7_required_large_L_replaced_by_N_zero",
+      "category": "original_finding",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "G8_missing_shifted_nonstationary_case",
+      "category": "original_finding",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "G8_missing_inconsistent_endpoint_spacing",
+      "category": "original_finding",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "provenance_empty_formula_contracts",
+      "category": "original_finding",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "provenance_empty_accepted_manuscript_map",
+      "category": "original_finding",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "wrong_quantum_acceptance_hash",
+      "category": "original_finding",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "wrong_quantum_source_freeze_hash",
+      "category": "original_finding",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "wrong_geodesic_contract_acceptance_hash",
+      "category": "original_finding",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "wrong_geodesic_source_acceptance_hash",
+      "category": "original_finding",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "wrong_geodesic_accepted_source_set_hash",
+      "category": "original_finding",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "wrong_accepted_manuscript_pin",
+      "category": "original_finding",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "precisions:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "precisions:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/figure_eight_N:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/figure_eight_N:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/radii:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/radii:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/truncation_orders:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/truncation_orders:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/0/expected_initial_moments:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/0/expected_initial_moments:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/1/bounds:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/1/bounds:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/1/bounds/0:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/1/bounds/0:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/1/bounds/1:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/1/bounds/1:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/1/bounds/2:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/1/bounds/2:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/1/expected_initial_moments:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/1/expected_initial_moments:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/2/bounds:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/2/bounds:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/2/bounds/0:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/2/bounds/0:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/2/bounds/1:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/2/bounds/1:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/2/bounds/2:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/2/bounds/2:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/2/expected_initial_moments:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/klein/polyhedra/2/expected_initial_moments:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/slopes:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/slopes:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/slopes/0:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/slopes/0:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/slopes/1:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/slopes/1:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/slopes/2:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/slopes/2:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/slopes/3:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/slopes/3:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/formal_v_coefficients:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/formal_v_coefficients:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/shift_points:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/shift_points:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/shift_points/0/hbar:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/shift_points/0/hbar:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/shift_points/1/hbar:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/shift_points/1/hbar:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/shift_points/2/hbar:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/peripheral/shift_points/2/hbar:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/charges/weights:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/charges/weights:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/charges/weights/0/mu:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/charges/weights/0/mu:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/charges/weights/1/mu:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/charges/weights/1/mu:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/charges/weights/2/mu:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/charges/weights/2/mu:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/charges/b_squared:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "quantum/charges/b_squared:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/unfolding/cutoffs:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/unfolding/cutoffs:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/unfolding/alternating_depths:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/unfolding/alternating_depths:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/traces/shear_seeds:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/traces/shear_seeds:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/traces/shear_seeds/0:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/traces/shear_seeds/0:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/traces/shear_seeds/1:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/traces/shear_seeds/1:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/traces/shear_seeds/2:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/traces/shear_seeds/2:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/traces/shear_seeds/3:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/traces/shear_seeds/3:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/traces/shear_seeds/4:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/traces/shear_seeds/4:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/traces/shear_seeds/5:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/traces/shear_seeds/5:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/traces/simple_traces:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/traces/simple_traces:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/kernel/inputs:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/kernel/inputs:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/kernel/depths:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/kernel/depths:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/kernel/simple_traces:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/kernel/simple_traces:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/distance/distances:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/distance/distances:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/distance/endpoints:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/distance/endpoints:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/distance/endpoints/0:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/distance/endpoints/0:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/distance/endpoints/1:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/distance/endpoints/1:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/distance/endpoints/2:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/distance/endpoints/2:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/distance/endpoints/3:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/distance/endpoints/3:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/distance/endpoints/4:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/distance/endpoints/4:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/seams:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/seams:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/seams/0:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/seams/0:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/seams/1:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/seams/1:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/seams/2:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/seams/2:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/seams/3:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/seams/3:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/cuffs:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/cuffs:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/boundaries:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/boundaries:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/twists:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/twists:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/small_boundaries:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/small_boundaries:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/small_twists:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/small_twists:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/large_cuff_minima:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/holonomy/large_cuff_minima:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/integrals/pairs:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/integrals/pairs:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/integrals/pairs/0:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/integrals/pairs/0:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/integrals/pairs/1:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/integrals/pairs/1:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/integrals/powers:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/integrals/powers:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/integrals/cutoffs:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/integrals/cutoffs:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/integrals/sublevel_offsets:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/integrals/sublevel_offsets:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/partition/cuffs:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/partition/cuffs:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/partition/boundaries:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/partition/boundaries:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/partition/twist_ratios:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/partition/twist_ratios:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/partition/depths:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/partition/depths:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/partition/large_twists:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/partition/large_twists:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/partition/uniform_windows:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/partition/uniform_windows:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/endpoint_lists:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/endpoint_lists:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/endpoint_lists/0/left:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/endpoint_lists/0/left:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/endpoint_lists/0/right:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/endpoint_lists/0/right:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/endpoint_lists/0/left_windings:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/endpoint_lists/0/left_windings:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/endpoint_lists/0/right_windings:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/endpoint_lists/0/right_windings:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/endpoint_lists/1/left:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/endpoint_lists/1/left:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/endpoint_lists/1/right:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/endpoint_lists/1/right:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/endpoint_lists/1/left_windings:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/endpoint_lists/1/left_windings:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/endpoint_lists/1/right_windings:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/endpoint_lists/1/right_windings:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/stationarity:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/matching/stationarity:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/cusp/parabolic_q:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/cusp/parabolic_q:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/cusp/pants_traces:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/cusp/pants_traces:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/cusp/simple_traces:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/cusp/simple_traces:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/cusp/horocycles:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/cusp/horocycles:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/cusp/decoration_rescalings:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/cusp/decoration_rescalings:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/cusp/triangle_lambdas:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/cusp/triangle_lambdas:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/cusp/triangle_lambdas/0:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/cusp/triangle_lambdas/0:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/cusp/triangle_lambdas/1:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/cusp/triangle_lambdas/1:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/cusp/triangle_lambdas/2:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/cusp/triangle_lambdas/2:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/shadow/distances:remove_last",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "geodesic/shadow/distances:duplicate_first",
+      "category": "every_scientific_array",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "accepted_manuscript_sha256:remove:book/chapters/10-quantum-introduction.tex",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "accepted_manuscript_sha256:remove:book/chapters/11-quantum-degeneration.tex",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "accepted_manuscript_sha256:remove:book/claims/sections10-11.json",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "accepted_manuscript_sha256:remove:book/chapters/08-wp-flat-limit.tex",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "accepted_manuscript_sha256:remove:book/chapters/12-quantum-boundary-measure.tex",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "accepted_manuscript_sha256:remove:book/chapters/13-four-point-fusion.tex",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "accepted_manuscript_sha256:remove:book/chapters/16-dehn-filling-response.tex",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "accepted_manuscript_sha256:remove:book/chapters/17-unfolding-constant-series.tex",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "accepted_manuscript_sha256:remove:book/chapters/18-figure-eight-curves.tex",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "accepted_manuscript_sha256:remove:book/chapters/19-pants-twists.tex",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "accepted_manuscript_sha256:remove:book/chapters/20-torus-twist-series.tex",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "accepted_manuscript_sha256:remove:book/chapters/21-cuff-matching.tex",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "accepted_manuscript_sha256:remove:book/chapters/22-cusps-orthospectrum.tex",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "accepted_manuscript_sha256:remove:book/claims/sections17-22.json",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "accepted_manuscript_sha256:extra",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "guarded_dependency_sha256:remove:experiments/quantum_surgery/__init__.py",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "guarded_dependency_sha256:remove:experiments/quantum_surgery/algebra.py",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "guarded_dependency_sha256:remove:experiments/quantum_surgery/exact.py",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "guarded_dependency_sha256:extra",
+      "category": "every_source_or_dependency_pin",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "contract:quantum:remove:path",
+      "category": "every_contract_field",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "contract:quantum:remove:sha256",
+      "category": "every_contract_field",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "contract:quantum:remove:accepted_source_freeze_sha256",
+      "category": "every_contract_field",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "contract:quantum:remove:review_acceptance_sha256",
+      "category": "every_contract_field",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "contract:quantum:remove:review_evidence_manifest_sha256",
+      "category": "every_contract_field",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "contract:quantum:remove:status",
+      "category": "every_contract_field",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "contract:geodesic:remove:path",
+      "category": "every_contract_field",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "contract:geodesic:remove:sha256",
+      "category": "every_contract_field",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "contract:geodesic:remove:review_acceptance_sha256",
+      "category": "every_contract_field",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "contract:geodesic:remove:independent_probe_result_sha256",
+      "category": "every_contract_field",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "contract:geodesic:remove:status",
+      "category": "every_contract_field",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "contract:geodesic:remove:final_source_review_sha256",
+      "category": "every_contract_field",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "contract:geodesic:remove:accepted_source_set_sha256",
+      "category": "every_contract_field",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "schema_or_setting:('schema_version',):True",
+      "category": "schema_and_settings",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "unexpected fixture keys or version",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "schema_or_setting:('schema_version',):2",
+      "category": "schema_and_settings",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "unexpected fixture keys or version",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "schema_or_setting:('scope',):''",
+      "category": "schema_and_settings",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "fixture scope must be a nonempty description",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "schema_or_setting:('scope',):[]",
+      "category": "schema_and_settings",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "fixture scope must be a nonempty description",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "schema_or_setting:('guard_digits',):19",
+      "category": "schema_and_settings",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "schema_or_setting:('precisions',):[70.0, 110]",
+      "category": "schema_and_settings",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "schema_or_setting:('formula_contracts',):[]",
+      "category": "schema_and_settings",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted provenance profile changed: contracts, 14 source pins and 3 dependency guards required",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "schema_or_setting:('geodesic', 'guard_digits', 'kernel'):99",
+      "category": "schema_and_settings",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted scientific profile changed: missing, duplicate, substituted or partial coverage",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "local_copy:quantum-targets.md:changed",
+      "category": "six_local_provenance_bindings",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "accepted local provenance copy changed: quantum-targets.md",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "local_copy:quantum-targets.md:missing",
+      "category": "six_local_provenance_bindings",
+      "rejected": true,
+      "exception": "FileNotFoundError",
+      "message": "reviewer injected missing local provenance /Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/quantum_geodesics/contracts/quantum-targets.md",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "local_copy:quantum-mathematical-acceptance.json:changed",
+      "category": "six_local_provenance_bindings",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "accepted local provenance copy changed: quantum-mathematical-acceptance.json",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "local_copy:quantum-mathematical-acceptance.json:missing",
+      "category": "six_local_provenance_bindings",
+      "rejected": true,
+      "exception": "FileNotFoundError",
+      "message": "reviewer injected missing local provenance /Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/quantum_geodesics/contracts/quantum-mathematical-acceptance.json",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "local_copy:quantum-source-freeze.json:changed",
+      "category": "six_local_provenance_bindings",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "accepted local provenance copy changed: quantum-source-freeze.json",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "local_copy:quantum-source-freeze.json:missing",
+      "category": "six_local_provenance_bindings",
+      "rejected": true,
+      "exception": "FileNotFoundError",
+      "message": "reviewer injected missing local provenance /Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/quantum_geodesics/contracts/quantum-source-freeze.json",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "local_copy:geodesic-targets.md:changed",
+      "category": "six_local_provenance_bindings",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "accepted local provenance copy changed: geodesic-targets.md",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "local_copy:geodesic-targets.md:missing",
+      "category": "six_local_provenance_bindings",
+      "rejected": true,
+      "exception": "FileNotFoundError",
+      "message": "reviewer injected missing local provenance /Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/quantum_geodesics/contracts/geodesic-targets.md",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "local_copy:geodesic-contract-acceptance.json:changed",
+      "category": "six_local_provenance_bindings",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "accepted local provenance copy changed: geodesic-contract-acceptance.json",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "local_copy:geodesic-contract-acceptance.json:missing",
+      "category": "six_local_provenance_bindings",
+      "rejected": true,
+      "exception": "FileNotFoundError",
+      "message": "reviewer injected missing local provenance /Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/quantum_geodesics/contracts/geodesic-contract-acceptance.json",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "local_copy:geodesic-source-acceptance.json:changed",
+      "category": "six_local_provenance_bindings",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "accepted local provenance copy changed: geodesic-source-acceptance.json",
+      "before_source_and_calculation": true,
+      "no_output": true
+    },
+    {
+      "name": "local_copy:geodesic-source-acceptance.json:missing",
+      "category": "six_local_provenance_bindings",
+      "rejected": true,
+      "exception": "FileNotFoundError",
+      "message": "reviewer injected missing local provenance /Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/quantum_geodesics/contracts/geodesic-source-acceptance.json",
+      "before_source_and_calculation": true,
+      "no_output": true
+    }
+  ],
+  "positive_and_observation_controls": {
+    "unchanged_profile_accepted": true,
+    "dictionary_order_irrelevant": true,
+    "original_corruptions_rejected": 13,
+    "targeted_rejections": 253,
+    "later_live_manuscript_changes_observed": true,
+    "live_changed_paths": [
+      "book/chapters/17-unfolding-constant-series.tex",
+      "book/claims/sections10-11.json"
+    ],
+    "unchanged_observation_of_later_edit_passes": true,
+    "midrun_source_change_rejected": true,
+    "canonical_source_untouched": true
+  },
+  "scope": "Independent driver gate probes only; mutations and changed/missing-file tests are in-memory mocks. No source edits or fresh alternate numerical oracle claim."
+}

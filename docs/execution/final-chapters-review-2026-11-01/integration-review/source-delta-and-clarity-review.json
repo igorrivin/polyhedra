@@ -1,0 +1,132 @@
+{
+  "decision": "approved_bounded_source_metadata_and_clarity_delta",
+  "owned_changed_files": [
+    "INTEGRATION_PLAN.md",
+    "README.md",
+    "book/README.md",
+    "book/chapters/10-quantum-introduction.tex",
+    "book/chapters/11-quantum-degeneration.tex",
+    "book/chapters/17-unfolding-constant-series.tex",
+    "book/chapters/18-figure-eight-curves.tex",
+    "book/chapters/19-pants-twists.tex",
+    "book/chapters/20-torus-twist-series.tex",
+    "book/chapters/21-cuff-matching.tex",
+    "book/chapters/22-cusps-orthospectrum.tex",
+    "book/chapters/32-open-questions.tex",
+    "book/claims/section32-appendixb.json",
+    "book/claims/sections10-11.json",
+    "book/claims/sections17-22.json",
+    "book/computational-status.md",
+    "book/polyhedral_volumes_and_geodesic_identities.tex",
+    "docs/INTEGRATION_STATUS.md"
+  ],
+  "unchanged_owned_snapshot": [
+    "book/chapters/appendix-b-conventions.tex"
+  ],
+  "ledger_metadata_delta_audit": [
+    {
+      "ledger": "book/claims/sections10-11.json",
+      "changed_top_level_fields": [
+        "chapter_source_sha256",
+        "claims",
+        "computational_companion",
+        "independent_review",
+        "integration"
+      ],
+      "independent_delta_count": 91
+    },
+    {
+      "ledger": "book/claims/sections17-22.json",
+      "changed_top_level_fields": [
+        "author_review",
+        "chapter_source_snapshots",
+        "claims",
+        "computational_companion",
+        "independent_review",
+        "integration",
+        "revision_review",
+        "unresolved_limits"
+      ],
+      "independent_delta_count": 306
+    },
+    {
+      "ledger": "book/claims/section32-appendixb.json",
+      "changed_top_level_fields": [
+        "chapter_source_sha256",
+        "claims",
+        "computational_boundary",
+        "computational_support_map",
+        "current_author_dependencies",
+        "dependency_reconciliation",
+        "external_source_policy",
+        "historical_author_dependencies",
+        "historical_author_dependency_reconciliation",
+        "independent_review",
+        "path_convention",
+        "pending_dependencies",
+        "structural_baseline"
+      ],
+      "independent_delta_count": 263
+    }
+  ],
+  "mathematical_claim_fields_statuses_and_hypotheses_preserved": 186,
+  "source_mathematics": "Eight quantum/geodesic chapter bodies recovered byte-for-byte after removing appended support paragraphs and reversing P01. Section32 changes confined to its support paragraph. AppendixB accepted bytes unchanged.",
+  "citation_repairs": "Mirzakhani Theorem3.4/(3.6) versus Proposition3.5/(3.7) p107 with L-bounded pants; McShane Theorem3 p4 and measure-zero paragraph after Corollary5 p5; Section32 positive-boundary Zonneveld extension and continuity retained.",
+  "current_dependency_order": "Current quantum and geodesic source/ledger hashes finish before conventions dependency hashes; historical mathematical snapshots and historical author observations remain distinct.",
+  "no_circular_source_or_final_result_identity": "Source holds old baseline identity and fixed reviewed dirty author-result identity only; future final source commit/result/PDF identities belong to later receipts.",
+  "evidence_scope": "Finite exact algebra, floating comparisons, cross-precision observations, analytic truncation and uncertified numerical error remain separate. No general proof promotion, achieved-digit certificate, total interval error, or fresh full external-proof audit.",
+  "precision_and_counts": {
+    "derived_counts": {
+      "exact": 1342,
+      "numerical_formula_comparisons": 4266,
+      "cross_precision_observations": 509
+    },
+    "requested": [
+      70,
+      110
+    ],
+    "ordinary_actual": [
+      90,
+      130
+    ],
+    "G3_actual": [
+      170,
+      210
+    ],
+    "G5_actual": [
+      150,
+      190
+    ],
+    "acceptance_scales": [
+      "1e-55",
+      "1e-95"
+    ],
+    "achieved_digit_certification": false
+  },
+  "prior_oracles": "400 exact and 1322 numerical independent oracle checks explicitly reused by unchanged mathematical and fixture identity, not rerun here.",
+  "status_and_clarity": "Five shared documents accurately identify all 32 sections and both appendices as bounded chapter passes while retaining later cross-chapter editorial, full local web/browser/release, metadata/credits/licensing, and final upload gates. Optional-dependency full-suite limitations and unrecovered originals remain explicit.",
+  "inactive_observed_TeX_fragments": {
+    "book/figures/01_connections.tex": "f0182c8d9cfcffdf7d2b0a06c9bfebd0aaee36a3c3c4c53bd5671c44c193c60b",
+    "book/figures/02_polyhedral_regimes.tex": "fdd4352cd48c1c191d5101ebdef585f903c4ded91133fa44167269c266b2e82b",
+    "book/figures/03_cotangent_hessian.tex": "34a41c072e7528f044d248b5e0c90c171b40333ff8a378c932501da33c34925d",
+    "book/figures/04_dehn_filling.tex": "074de992cd9105388254e8d17658c6a768eefe4d116e6c1a13cb78739f7401ea",
+    "book/figures/05_reconnection_atoms.tex": "0ea1c520cd4c97c46055431faaeb2851168a07d1de71d33515cd81f75fe46662",
+    "book/figures/06_double_covers.tex": "bbf116c7af29562c12ff946ac99349e68d6f40b836ca01f18e1f61070b094251",
+    "book/figures/07_flat_row.tex": "b44cef936c6a4665bb502f24e89eb7c25cdaba98ef7f31e08b79a21880ca11ed",
+    "book/figures/08_flip.tex": "c87674bad04e98b2ce3023d8ea0a98838e09094b5892009d7fd0870c9a9bfb17",
+    "book/figures/09_airy.tex": "2486ffee18652d41e4bcf1379cf0960ea2f7c59fc26c506e117b0c4fc76e2444",
+    "book/figures/preamble.tex": "a7270ea8134e09d61d1808049390e5b5d9816eaa510333197e135707df615ef0"
+  },
+  "companion_observed_TeX_files": 46,
+  "active_TeX_inputs": 36,
+  "physical_AppleDouble_sidecars": "Ignored ._ files are filesystem metadata, not active TeX inputs or proposed Git source paths; left untouched.",
+  "anti_pattern_scan": {
+    "patterns": [
+      "\\b(?:TODO|FIXME|TBD)\\b",
+      "<<<<<<<|>>>>>>>|=======",
+      "(?i)(?:postcommit|post.commit|source_commit|final_result_sha256|final_pdf_sha256)"
+    ],
+    "hits": []
+  },
+  "required_open_findings": []
+}

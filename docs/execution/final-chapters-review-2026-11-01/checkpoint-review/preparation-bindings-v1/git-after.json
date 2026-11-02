@@ -1,0 +1,54 @@
+{
+  "scope": "Concurrent source-commit author may change Git state; reviewer made no mutation.",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stdout": "8f722ae462307146818932cde4811e4bb4e8423e\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--name-status",
+        "--no-renames",
+        "-z"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all",
+        "-z"
+      ],
+      "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

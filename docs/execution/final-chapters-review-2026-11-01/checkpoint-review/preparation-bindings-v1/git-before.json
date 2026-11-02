@@ -1,0 +1,61 @@
+[
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "--show-toplevel"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stdout": "151673b1817e66aae493eb7da1be5ddf49adfe0f\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--cached",
+      "--name-status",
+      "--no-renames",
+      "-z"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "status",
+      "--porcelain=v1",
+      "--untracked-files=all",
+      "-z"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stdout": " M INTEGRATION_PLAN.md\u0000 M README.md\u0000 M book/README.md\u0000 M book/computational-status.md\u0000 M book/polyhedral_volumes_and_geodesic_identities.tex\u0000 M docs/INTEGRATION_STATUS.md\u0000?? book/chapters/10-quantum-introduction.tex\u0000?? book/chapters/11-quantum-degeneration.tex\u0000?? book/chapters/17-unfolding-constant-series.tex\u0000?? book/chapters/18-figure-eight-curves.tex\u0000?? book/chapters/19-pants-twists.tex\u0000?? book/chapters/20-torus-twist-series.tex\u0000?? book/chapters/21-cuff-matching.tex\u0000?? book/chapters/22-cusps-orthospectrum.tex\u0000?? book/chapters/32-open-questions.tex\u0000?? book/chapters/appendix-b-conventions.tex\u0000?? book/claims/section32-appendixb.json\u0000?? book/claims/sections10-11.json\u0000?? book/claims/sections17-22.json\u0000?? experiments/quantum_geodesics/README.md\u0000?? experiments/quantum_geodesics/__init__.py\u0000?? experiments/quantum_geodesics/common.py\u0000?? experiments/quantum_geodesics/contracts/geodesic-contract-acceptance.json\u0000?? experiments/quantum_geodesics/contracts/geodesic-source-acceptance.json\u0000?? experiments/quantum_geodesics/contracts/geodesic-targets.md\u0000?? experiments/quantum_geodesics/contracts/quantum-mathematical-acceptance.json\u0000?? experiments/quantum_geodesics/contracts/quantum-source-freeze.json\u0000?? experiments/quantum_geodesics/contracts/quantum-targets.md\u0000?? experiments/quantum_geodesics/figure_eight.py\u0000?? experiments/quantum_geodesics/fixture.json\u0000?? experiments/quantum_geodesics/geodesic_exact.py\u0000?? experiments/quantum_geodesics/geometry.py\u0000?? experiments/quantum_geodesics/kernels.py\u0000?? experiments/quantum_geodesics/klein.py\u0000?? experiments/quantum_geodesics/normalization.py\u0000?? experiments/quantum_geodesics/run.py\u0000?? experiments/quantum_geodesics/tests/test_geodesic.py\u0000?? experiments/quantum_geodesics/tests/test_quantum.py\u0000?? experiments/quantum_geodesics/tests/test_validation.py\u0000?? experiments/quantum_geodesics/twist_integrals.py\u0000",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "remote"
+    ],
+    "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

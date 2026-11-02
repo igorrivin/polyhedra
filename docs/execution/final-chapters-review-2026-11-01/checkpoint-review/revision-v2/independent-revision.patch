@@ -1,0 +1,592 @@
+--- initial/checkpoint_lib.py
++++ revision-v2/checkpoint_lib.py
+@@ -9,6 +9,7 @@
+ import copy
+ from contextlib import contextmanager
+ from datetime import datetime, timezone
++from decimal import Decimal, InvalidOperation
+ from hashlib import sha256
+ import json
+ import math
+@@ -49,6 +50,14 @@
+     def finite_float(value):
+         parsed = float(value)
+         require(math.isfinite(parsed), "nonfinite JSON number: " + value)
++        # Keep only the subset whose exact decimal value survives JSON's
++        # ordinary float serialization. This is rejection of lossy tokens,
++        # not arbitrary-precision numeric parsing or a binary64 error bound.
++        try:
++            lossless = Decimal(value) == Decimal(str(parsed))
++        except InvalidOperation as exc:
++            raise CheckpointError("unsupported JSON decimal token: " + value) from exc
++        require(lossless, "JSON fractional number cannot round-trip without loss: " + value)
+         return parsed
+     return json.loads(data, object_pairs_hook=object_pairs,
+                       parse_constant=bad_constant, parse_float=finite_float)
+@@ -179,6 +188,57 @@
+     return result
+ 
+ 
++def expand_tex(getter, name="book/main.tex", seen=None):
++    """Expand this book's literal braced input syntax; reject unsupported inputs.
++
++    Raw file bytes determine hashes. Comments are removed only for traversal
++    and label inspection. This is not a general TeX interpreter.
++    """
++    require(isinstance(name, str) and name.startswith("book/") and name.endswith(".tex")
++            and str(Path(name)) == name, "noncanonical TeX input path: " + str(name))
++    relative_path(Path("/"), name)
++    seen = set() if seen is None else seen
++    require(name not in seen, "repeated or cyclic TeX input: " + name)
++    seen.add(name)
++    try:
++        raw_data = getter(name)
++    except (OSError, KeyError) as exc:
++        raise CheckpointError("missing TeX input: " + name) from exc
++    graph = {name: sha256(raw_data).hexdigest()}
++    active_lines = []
++    for line in raw_data.splitlines(keepends=True):
++        for index, character in enumerate(line):
++            if character == ord("%"):
++                back = index - 1
++                while back >= 0 and line[back] == ord("\\"):
++                    back -= 1
++                if (index - back - 1) % 2 == 0:
++                    line = line[:index] + (b"\n" if line.endswith(b"\n") else b"")
++                    break
++        active_lines.append(line)
++    data = b"".join(active_lines)
++    pattern = rb"\\input\s*\{([A-Za-z0-9_./-]+)\}"
++    require(not re.search(rb"\\(?:input|include|includeonly)\b", re.sub(pattern, b"", data)),
++            "unsupported TeX input syntax in " + name)
++    def replace(match):
++        raw = match[1]
++        require(not raw.startswith(b"/"), "absolute TeX input path")
++        child = "book/" + raw.decode() + ("" if raw.endswith(b".tex") else ".tex")
++        expanded, nested = expand_tex(getter, child, seen)
++        graph.update(nested)
++        return expanded
++    return re.sub(pattern, replace, data), graph
++
++
++def verify_tex_graphs(root, source, declared):
++    """Bind the actual committed and live recursive graph before a replay."""
++    _, committed = expand_tex(lambda p: commit_blob(root, source, p))
++    _, current = expand_tex(lambda p: relative_path(root, p).read_bytes())
++    require(committed == current == declared and len(declared) == 36,
++            "declared 36-file TeX map differs from committed/current active graph")
++    return current
++
++
+ def get_pointer(value, pointer):
+     require(pointer.startswith("/"), "JSON pointer must start with slash")
+     current = value
+@@ -280,11 +340,13 @@
+             "canonical and outer evidence directories must be disjoint")
+     require(Path(spec["python"]).is_absolute(), "explicit Python executable required")
+     for key in ("approved_source_sha256", "tex_input_sha256", "runtime_sha256",
+-                "reference_manuscript_sha256", "manuscript_observation_sha256", "replay_guard_sha256"):
++                "reference_manuscript_sha256", "manuscript_observation_sha256",
++                "reference_tex_observation_sha256", "tex_observation_sha256", "replay_guard_sha256"):
+         hash_map(spec[key], key)
+     require(len(spec["tex_input_sha256"]) == 36, "all 36 TeX inputs required")
+     require(spec["replay_guard_sha256"] == merge_hashes(spec["approved_source_sha256"],
+-            spec["tex_input_sha256"], spec["runtime_sha256"], spec["manuscript_observation_sha256"]),
++            spec["tex_input_sha256"], spec["runtime_sha256"], spec["manuscript_observation_sha256"],
++            spec["tex_observation_sha256"]),
+             "replay guard omits a reviewed, runtime or manuscript input")
+     groups = spec["expected_groups"]
+     require(isinstance(groups, list) and len(groups) == len(set(groups)) == 14,
+@@ -302,6 +364,16 @@
+     changed = {p for p, h in spec["reference_manuscript_sha256"].items()
+                if h != spec["manuscript_observation_sha256"][p]}
+     require(changed == set(changes), "metadata exceptions must equal actual stage-specific manuscript changes")
++    old_tex, new_tex = spec["reference_tex_observation_sha256"], spec["tex_observation_sha256"]
++    require(len(old_tex) == len(new_tex) == 46 and set(old_tex) == set(new_tex)
++            and set(spec["tex_input_sha256"]) <= set(new_tex), "46 fixed TeX observations, including 36 active inputs, required")
++    changes = spec["allowed_tex_observation_changes"]
++    require(isinstance(changes, list) and len(changes) == len(set(changes))
++            and set(changes) <= set(spec["approved_source_sha256"]) & set(spec["tex_input_sha256"]),
++            "TeX observation exceptions need approved active source paths")
++    require({p for p in old_tex if old_tex[p] != new_tex[p]} == set(changes),
++            "TeX observation exceptions must equal actual stage-specific changes")
++    merge_hashes(spec["reference_manuscript_sha256"], old_tex)
+     return root, outer
+ 
+ 
+@@ -326,6 +398,8 @@
+             == spec["runtime_sha256"], "computation approval runtime map differs")
+     require(mapped_hashes(code_record, pin["reference_manuscript_sha256_pointer"])
+             == spec["reference_manuscript_sha256"], "author-stage manuscript freeze differs")
++    require(mapped_hashes(code_record, pin["reference_tex_observation_sha256_pointer"])
++            == spec["reference_tex_observation_sha256"], "author-stage 46-file TeX observation freeze differs")
+     require(get_pointer(code_record, pin["expected_groups_pointer"]) == spec["expected_groups"],
+             "exact group names differ from independent computation approval")
+     reference_path = outer_path(outer, spec["reference"]["path"])
+@@ -334,6 +408,7 @@
+             == get_pointer(code_record, pin["reference_identity_pointer"]), "approved author result identity differs")
+     frozen[str(reference_path)] = reference_identity
+     validate_report(reference, spec, clean=False)
++    verify_tex_graphs(root, source, spec["tex_input_sha256"])
+     for name, expected in spec["replay_guard_sha256"].items():
+         require(identity(relative_path(root, name))["sha256"] == sha256(commit_blob(root, source, name)).hexdigest()
+                 == expected, "working/committed/approved input differs: " + name)
+@@ -363,7 +438,8 @@
+ def validate_report(report, spec, clean):
+     require(type(report["schema_version"]) is int and report["schema_version"] == 1
+             and report["checks_passed"] is True, "finite report did not pass")
+-    require(report["source_before"] == report["source_after"], "report source metadata changed during run")
++    require(encode(report["source_before"]) == encode(report["source_after"]),
++            "report source metadata changed during run")
+     require(set(report["groups"]) == set(spec["expected_groups"]), "finite group coverage differs")
+     require(report["check_counts"] == spec["expected_check_counts"], "reviewed finite check counts differ")
+     require(report["fixture"]["precisions"] == [70, 110], "70/110 requested precision pair required")
+@@ -371,7 +447,7 @@
+     finite_nonnegative(report["runtime"]["elapsed_seconds"], "elapsed_seconds")
+     state = report["source_before"]
+     required = {"git_commit", "git_dirty", "git_status_porcelain", "sources", "guarded_dependencies",
+-                "source_set_sha256", "live_manuscript_observation", "scope"}
++                "source_set_sha256", "live_manuscript_observation", "live_tex_source_observations", "scope"}
+     require(set(state) == required, "unexpected finite source-state schema")
+     sources, dependencies = source_rows(state["sources"]), source_rows(state["guarded_dependencies"])
+     require(not sources.keys() & dependencies.keys(), "runtime and guarded dependency paths overlap")
+@@ -396,6 +472,14 @@
+                 "accepted mathematical source pin differs")
+         require(type(row["matches_accepted_snapshot"]) is bool and row["matches_accepted_snapshot"]
+                 == (row["current_sha256"] == row["accepted_contract_source_sha256"]), "invalid manuscript-match flag")
++    observations = state["live_tex_source_observations"]
++    expected = spec["tex_observation_sha256"] if clean else spec["reference_tex_observation_sha256"]
++    require(isinstance(observations, list) and len(observations) == 46
++            and all(isinstance(row, dict) and set(row) == {"path", "sha256"} for row in observations),
++            "unexpected broader TeX observation schema")
++    require([row["path"] for row in observations] == sorted(expected)
++            and {row["path"]: row["sha256"] for row in observations} == expected,
++            "46-file TeX observation path/order/hash snapshot differs")
+ 
+ 
+ def finite_comparison(reference, candidate, spec):
+@@ -411,6 +495,9 @@
+             if row["path"] in spec["allowed_manuscript_changes"]:
+                 allowed += [f"/{name}/live_manuscript_observation/{index}/{key}"
+                             for key in ("current_sha256", "matches_accepted_snapshot")]
++        for index, row in enumerate(reference[name]["live_tex_source_observations"]):
++            if row["path"] in spec["allowed_tex_observation_changes"]:
++                allowed.append(f"/{name}/live_tex_source_observations/{index}/sha256")
+     # Only actually differing, individually checked metadata fields are masked.
+     pointers = [p for p in allowed if encode(get_pointer(reference, p)) != encode(get_pointer(candidate, p))]
+     exclusions = strict_equal(reference, candidate, pointers)
+--- initial/verify_checkpoint.py
++++ revision-v2/verify_checkpoint.py
+@@ -14,7 +14,7 @@
+ import subprocess
+ 
+ from checkpoint_lib import (
+-    BASELINE, ENV, NEW_LABELS, PDF, REL, RESULT, approved_spec, commit_blob, finite_comparison,
++    BASELINE, ENV, NEW_LABELS, PDF, REL, RESULT, approved_spec, commit_blob, expand_tex, finite_comparison,
+     get_pointer, git, identity, json_snapshot, load_pin, mapped_hashes, outer_path, receipt_record,
+     recheck, relative_path, repository, require,
+ )
+@@ -144,21 +144,6 @@
+         require(identity(relative_path(root, row["path"])) == identity(outer_path(outer, row["outer_source"]))
+                 == expected, "curated bytes differ from outer evidence")
+     return head, paths
+-
+-
+-def expand_tex(getter, name="book/main.tex", seen=None):
+-    seen = set() if seen is None else seen
+-    require(name not in seen, "repeated or cyclic TeX input: " + name)
+-    seen.add(name)
+-    data = getter(name)
+-    graph = {name: sha256(data).hexdigest()}
+-    active = re.sub(rb"(?<!\\)%[^\n]*", b"", data)
+-    for raw in re.findall(rb"\\input\{([^{}\n]+)\}", active):
+-        child = "book/" + raw.decode() + ("" if raw.endswith(b".tex") else ".tex")
+-        expanded, nested = expand_tex(getter, child, seen)
+-        data = data.replace(b"\\input{" + raw + b"}", expanded)
+-        graph.update(nested)
+-    return data, graph
+ 
+ 
+ def manuscript(root, source, spec, config):
+--- initial/test_checkpoint.py
++++ revision-v2/test_checkpoint.py
+@@ -64,10 +64,17 @@
+     def tearDown(self):
+         self.temp.cleanup()
+ 
+-    def fixture(self):
++    def fixture(self, graph_mode="connected"):
+         synthetic_git(self.root, "init", "-q")
+         (self.root / "README.md").write_text("Synthetic gate fixture only.\n")
+         (self.root / "dependency.txt").write_text("Synthetic frozen dependency.\n")
++        inactive_tex = {}
++        for index in range(10):
++            name = f"book/figures/inactive{index}.tex"
++            path = self.root / name
++            path.parent.mkdir(parents=True, exist_ok=True)
++            path.write_text(f"Synthetic preserved inactive figure fragment {index}.\n")
++            inactive_tex[name] = lib.digest(path)
+         synthetic_git(self.root, "add", ".")
+         synthetic_git(self.root, "commit", "-qm", "synthetic baseline")
+         baseline = synthetic_git(self.root, "rev-parse", "HEAD")
+@@ -75,16 +82,29 @@
+         path.parent.mkdir(parents=True)
+         path.write_text(DRIVER)
+         tex = {}
+-        for index in range(36):
++        if graph_mode != "no_entry_point":
++            main = self.root / "book/main.tex"
++            content = {"absolute": "\\input{/tmp/outside}", "outside": "\\input{../outside}",
++                       "repeated": "\\input{input0.tex}\\input{input0.tex}",
++                       "unsupported": "\\input input0.tex"}.get(graph_mode, "\\input{input0.tex}")
++            main.write_text(content + "\n")
++            tex["book/main.tex"] = lib.digest(main)
++        for index in range(36 if graph_mode == "no_entry_point" else 35):
+             name = f"book/input{index}.tex"
+             path = self.root / name
+             path.parent.mkdir(exist_ok=True)
+-            path.write_text(f"Synthetic TeX input {index}.\n")
++            suffix = ""
++            if graph_mode != "no_entry_point" and index < 34 and not (graph_mode == "disconnected" and index == 0):
++                suffix = f"\\input{{input{index + 1}.tex}}\n"
++            if graph_mode == "cycle" and index == 34:
++                suffix = "\\input{main.tex}\n"
++            path.write_text(f"Synthetic TeX input {index}.\n" + suffix)
+             tex[name] = lib.digest(path)
+         runtime = {lib.DRIVER: lib.digest(self.root / lib.DRIVER),
+                    "dependency.txt": lib.digest(self.root / "dependency.txt")}
+         approved = {**tex, lib.DRIVER: runtime[lib.DRIVER]}
+-        guards = {**approved, **runtime}
++        observed_tex = {**inactive_tex, **tex}
++        guards = {**approved, **runtime, **observed_tex}
+         synthetic_git(self.root, "add", ".")
+         synthetic_git(self.root, "commit", "-qm", "synthetic source")
+         source = synthetic_git(self.root, "rev-parse", "HEAD")
+@@ -100,6 +120,7 @@
+                  "live_manuscript_observation": [{"path": p, "accepted_contract_source_sha256": h,
+                                                    "current_sha256": h, "matches_accepted_snapshot": True}
+                                                   for p, h in observations.items()],
++                 "live_tex_source_observations": [{"path": p, "sha256": h} for p, h in sorted(observed_tex.items())],
+                  "scope": "Synthetic source metadata; no science or manuscript review."}
+         reference = {"schema_version": 1, "generated_at_utc": "2026-11-01T00:00:00+00:00", "checks_passed": True,
+                      "status": "synthetic passing-gate fixture only", "source_before": state, "source_after": copy.deepcopy(state),
+@@ -117,7 +138,7 @@
+         integration = {"decision": "synthetic_approve", "hashes": approved, "unused_note": "original"}
+         computation = {"decision": "synthetic_approve", "hashes": runtime,
+                        "reference_identity": lib.identity(self.outer / "reference.json"),
+-                       "manuscript": observations, "groups": groups}
++                       "manuscript": observations, "observed_tex": observed_tex, "groups": groups}
+         dump(self.outer / "integration.json", integration)
+         dump(self.outer / "computation.json", computation)
+         def pin(name):
+@@ -128,9 +149,12 @@
+                 "source_approval": {**pin("integration.json"), "source_sha256_pointer": "/hashes"},
+                 "computation_approval": {**pin("computation.json"), "runtime_sha256_pointer": "/hashes",
+                                          "reference_identity_pointer": "/reference_identity",
+-                                         "reference_manuscript_sha256_pointer": "/manuscript", "expected_groups_pointer": "/groups"},
++                                         "reference_manuscript_sha256_pointer": "/manuscript", "expected_groups_pointer": "/groups",
++                                         "reference_tex_observation_sha256_pointer": "/observed_tex"},
+                 "approved_source_sha256": approved, "tex_input_sha256": tex, "runtime_sha256": runtime,
+                 "reference_manuscript_sha256": observations, "manuscript_observation_sha256": observations,
++                "reference_tex_observation_sha256": observed_tex, "tex_observation_sha256": observed_tex,
++                "allowed_tex_observation_changes": [],
+                 "allowed_manuscript_changes": [], "replay_guard_sha256": guards,
+                 "expected_groups": groups, "expected_check_counts": counts,
+                 "reference": {"path": "reference.json", "identity": lib.identity(self.outer / "reference.json")},
+@@ -142,6 +166,79 @@
+         for payload in ('{"a":1,"a":2}', '{"a":NaN}', '{"a":Infinity}', '{"a":1e999}', '{"a":'):
+             with self.subTest(payload=payload), self.assertRaises((lib.CheckpointError, ValueError)):
+                 lib.parse_json(payload)
++
++    def test_CR01_exact_decimal_round_trip_policy_and_scalar_types(self):
++        for token in ("1e-999", "1.0000000000000001", "9007199254740993.0"):
++            with self.subTest(token=token), self.assertRaisesRegex(lib.CheckpointError, "round-trip without loss"):
++                lib.parse_json(token)
++        for token in ("0.1", "1e-200", "1.25", "9007199254740992.0", "0.0"):
++            with self.subTest(token=token):
++                parsed = lib.parse_json(token)
++                self.assertIs(type(parsed), float)
++                self.assertEqual(lib.encode(lib.parse_json(lib.encode(parsed))), lib.encode(parsed))
++        for left, right in (("true", "1"), ('"1.0"', "1.0"), ("1", "1.0"),
++                            ("9007199254740993", "9007199254740992"), ('"1e-999"', '"0.0"')):
++            with self.subTest(left=left, right=right):
++                self.assertNotEqual(lib.encode(lib.parse_json(left)), lib.encode(lib.parse_json(right)))
++
++    def raw_comparison_case(self, left, right, success=False):
++        """Exercise strict parsing through full CLI comparison and its receipt."""
++        baseline, spec, reference, candidate = self.fixture()
++        if success:
++            reference["runtime"]["elapsed_seconds"] = 1e-200
++            candidate["runtime"]["elapsed_seconds"] = 0.25
++        for name, value, token in (("reference.json", reference, left), ("result.json", candidate, right)):
++            value["unknown_scientific_number"] = "RAW_NUMBER_PLACEHOLDER"
++            raw = json.dumps(value).replace('"RAW_NUMBER_PLACEHOLDER"', token)
++            (self.outer / name).write_text(raw + "\n")
++        # These are synthetic approved identities; no real review is fabricated.
++        spec["reference"]["identity"] = lib.identity(self.outer / "reference.json")
++        code = json.loads((self.outer / "computation.json").read_text())
++        code["reference_identity"] = spec["reference"]["identity"]
++        dump(self.outer / "computation.json", code)
++        spec["computation_approval"]["identity"] = lib.identity(self.outer / "computation.json")
++        dump(self.outer / "spec.json", spec)
++        receipt = self.outer / "raw-comparison.json"
++        argv = [compare.__file__, "--spec", str(self.outer / "spec.json"), "--receipt", str(receipt)]
++        with patch.object(lib, "BASELINE", baseline), patch.object(sys, "argv", argv), contextlib.redirect_stdout(io.StringIO()):
++            if success:
++                compare.main()
++            else:
++                with self.assertRaisesRegex(lib.CheckpointError, "round-trip without loss"):
++                    compare.main()
++        # Receipt remains ordinary strict JSON, including tiny valid timings.
++        row = lib.parse_json(receipt.read_bytes())
++        self.assertEqual(row["checks_passed"], success)
++        self.assertEqual(row["exit_status"], 0 if success else 1)
++        self.assertEqual(lib.encode(lib.parse_json(lib.encode(row))), lib.encode(row))
++        if success:
++            excluded = {r["pointer"]: r for r in row["excluded_values"]}
++            self.assertEqual(excluded["/runtime/elapsed_seconds"]["before"], 1e-200)
++            self.assertEqual(excluded["/runtime/elapsed_seconds"]["after"], 0.25)
++        else:
++            self.assertIn("round-trip without loss", row["failure"])
++            self.assertTrue(row["failure_stage"])
++
++    def test_CR01_underflow_reference_fails_with_serialized_receipt(self):
++        self.raw_comparison_case("1e-999", "0.0")
++
++    def test_CR01_underflow_candidate_fails_with_serialized_receipt(self):
++        self.raw_comparison_case("0.0", "1e-999")
++
++    def test_CR01_close_decimal_reference_fails_with_serialized_receipt(self):
++        self.raw_comparison_case("1.0000000000000001", "1.0")
++
++    def test_CR01_close_decimal_candidate_fails_with_serialized_receipt(self):
++        self.raw_comparison_case("1.0", "1.0000000000000001")
++
++    def test_CR01_integer_boundary_reference_fails_with_serialized_receipt(self):
++        self.raw_comparison_case("9007199254740993.0", "9007199254740992.0")
++
++    def test_CR01_integer_boundary_candidate_fails_with_serialized_receipt(self):
++        self.raw_comparison_case("9007199254740992.0", "9007199254740993.0")
++
++    def test_CR01_lossless_decimal_and_timing_receipt_success_control(self):
++        self.raw_comparison_case("0.1", "0.10", success=True)
+ 
+     def test_exact_pointer_exclusions_reject_duplicates_overlap_and_missing(self):
+         for pointers in (["/a", "/a"], ["/a", "/a/b"], ["/missing"]):
+@@ -220,6 +317,8 @@
+         name, old = "book/input0.tex", "a" * 64
+         spec["reference_manuscript_sha256"] = {name: old}
+         spec["allowed_manuscript_changes"] = [name]
++        spec["reference_tex_observation_sha256"] = {**spec["reference_tex_observation_sha256"], name: old}
++        spec["allowed_tex_observation_changes"] = [name]
+         for report in (reference, candidate):
+             report["fixture"]["accepted_manuscript_sha256"] = {name: old}
+             for phase in ("source_before", "source_after"):
+@@ -227,10 +326,12 @@
+                 row["accepted_contract_source_sha256"] = old
+                 row["current_sha256"] = old if report is reference else spec["manuscript_observation_sha256"][name]
+                 row["matches_accepted_snapshot"] = report is reference
++                if report is reference:
++                    next(r for r in report[phase]["live_tex_source_observations"] if r["path"] == name)["sha256"] = old
+         with patch.object(lib, "BASELINE", baseline):
+             lib.ready_spec(spec)
+             result = lib.finite_comparison(reference, candidate, spec)
+-        self.assertEqual(len(result["excluded_exact_JSON_pointers"]), 12)
++        self.assertEqual(len(result["excluded_exact_JSON_pointers"]), 14)
+ 
+     def test_unapproved_or_wrong_snapshot_manuscript_change_rejected(self):
+         baseline, spec, reference, candidate = self.fixture()
+@@ -258,6 +359,18 @@
+         reference["source_after"]["git_status_porcelain"].append(" M changed-during-author-run")
+         with patch.object(lib, "BASELINE", baseline), self.assertRaisesRegex(lib.CheckpointError, "metadata changed"):
+             lib.finite_comparison(reference, candidate, spec)
++
++    def test_CR01_source_state_scalar_type_changes_fail_before_metadata_exclusions(self):
++        baseline, spec, reference, candidate = self.fixture()
++        changes = [lambda r: r["source_after"].update({"git_dirty": 0}),
++                   lambda r: r["source_after"]["sources"][0].update(
++                       {"bytes": float(r["source_after"]["sources"][0]["bytes"])})]
++        for change in changes:
++            data = copy.deepcopy(candidate)
++            change(data)
++            with self.subTest(change=change), patch.object(lib, "BASELINE", baseline), \
++                    self.assertRaisesRegex(lib.CheckpointError, "source metadata changed"):
++                lib.finite_comparison(reference, data, spec)
+ 
+     def replay_case(self, mode, fail):
+         baseline, spec, _, _ = self.fixture()
+@@ -353,6 +466,80 @@
+         for graph in graphs:
+             with self.subTest(graph=graph), self.assertRaises(lib.CheckpointError):
+                 verify.expand_tex(graph.__getitem__)
++
++    def graph_rejection_case(self, mode):
++        baseline, spec, _, _ = self.fixture(graph_mode=mode)
++        if mode == "omitted_active_with_filler":
++            declared = dict(spec["tex_input_sha256"])
++            del declared["book/input34.tex"]
++            declared["book/figures/inactive0.tex"] = spec["tex_observation_sha256"]["book/figures/inactive0.tex"]
++            spec["tex_input_sha256"] = declared
++            dump(self.outer / "spec.json", spec)
++        if mode == "live_missing_entry":
++            (self.root / "book/main.tex").unlink()
++        if mode == "live_changed_graph":
++            (self.root / "book/main.tex").write_text("\\input{input1.tex}\n")
++        receipt = self.outer / "graph-rejection.json"
++        argv = [replay.__file__, "--spec", str(self.outer / "spec.json"), "--receipt", str(receipt)]
++        with patch.object(lib, "BASELINE", baseline), patch.object(sys, "argv", argv), self.assertRaises(lib.CheckpointError):
++            replay.main()
++        row = lib.parse_json(receipt.read_bytes())
++        self.assertFalse(row["command_executed"])
++        self.assertFalse(row["checks_passed"])
++        self.assertEqual(row["failure_stage"], "approval_guards")
++        self.assertIsNone(row["argv"])
++        self.assertFalse((self.outer / "result.json").exists())
++        return row
++
++    def test_CR02_unconnected_36_files_without_entry_rejected_before_launch(self):
++        self.graph_rejection_case("no_entry_point")
++
++    def test_CR02_disconnected_files_with_entry_rejected_before_launch(self):
++        self.graph_rejection_case("disconnected")
++
++    def test_CR02_omitted_active_input_replaced_by_filler_rejected_before_launch(self):
++        self.graph_rejection_case("omitted_active_with_filler")
++
++    def test_CR02_committed_cycle_rejected_before_launch(self):
++        self.graph_rejection_case("cycle")
++
++    def test_CR02_committed_repeated_input_rejected_before_launch(self):
++        self.graph_rejection_case("repeated")
++
++    def test_CR02_committed_outside_input_rejected_before_launch(self):
++        self.graph_rejection_case("outside")
++
++    def test_CR02_committed_absolute_input_rejected_before_launch(self):
++        self.graph_rejection_case("absolute")
++
++    def test_CR02_unsupported_input_syntax_rejected_before_launch(self):
++        self.graph_rejection_case("unsupported")
++
++    def test_CR02_live_missing_entry_rejected_before_launch(self):
++        self.graph_rejection_case("live_missing_entry")
++
++    def test_CR02_live_changed_graph_rejected_before_launch(self):
++        self.graph_rejection_case("live_changed_graph")
++
++    def test_CR02_shared_graph_walker_ignores_commented_inputs(self):
++        self.assertIs(verify.expand_tex, lib.expand_tex)
++        files = {"book/main.tex": b"% \\input{absent}\n\\input{child}\n",
++                 "book/child.tex": b"text\\%still text % \\input{also-absent}\n"}
++        expanded, graph = lib.expand_tex(files.__getitem__)
++        self.assertEqual(set(graph), set(files))
++        self.assertIn(b"text\\%still text", expanded)
++        self.assertNotIn(b"absent", expanded)
++
++    def test_full_schema_preserves_all_46_tex_rows_and_inactive_hashes(self):
++        baseline, spec, reference, candidate = self.fixture()
++        for phase in ("source_before", "source_after"):
++            row = next(r for r in candidate[phase]["live_tex_source_observations"] if "inactive0" in r["path"])
++            row["sha256"] = "a" * 64
++        with patch.object(lib, "BASELINE", baseline), self.assertRaisesRegex(lib.CheckpointError, "observation path/order/hash"):
++            lib.finite_comparison(reference, candidate, spec)
++        spec["allowed_tex_observation_changes"] = ["book/figures/inactive0.tex"]
++        with patch.object(lib, "BASELINE", baseline), self.assertRaisesRegex(lib.CheckpointError, "approved active source"):
++            lib.ready_spec(spec)
+ 
+     def test_candidate_manifest_cannot_hash_itself(self):
+         manifest = {"baseline_commit": lib.BASELINE, "source_commit": "s", "files": {verify.MANIFEST: {}}}
+--- initial/replay-spec.unready.json
++++ revision-v2/replay-spec.unready.json
+@@ -5,7 +5,8 @@
+     "Final fourteen-group code/fixture/report and independent computation approval",
+     "Final mathematical reviews and integrated source/PDF approvals",
+     "Actual source-only direct-child commit and empty Git state",
+-    "Exact source/runtime/manuscript hash maps and actual approval-schema pointers"
++    "Exact source/runtime/manuscript hash maps and actual approval-schema pointers",
++    "Final 46-file author/final TeX observation maps and exact active-source change paths; 36 remain active inputs"
+   ],
+   "root": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+   "outer": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01",
+@@ -31,7 +32,8 @@
+     "runtime_sha256_shape": "mapping",
+     "reference_identity_pointer": "/approved_author_result_identity",
+     "reference_manuscript_sha256_pointer": "/approved_author_manuscript_sha256",
+-    "expected_groups_pointer": "/approved_groups"
++    "expected_groups_pointer": "/approved_groups",
++    "reference_tex_observation_sha256_pointer": "/approved_author_tex_observation_sha256"
+   },
+   "approved_source_sha256": {},
+   "tex_input_sha256": {},
+@@ -47,5 +49,8 @@
+   "output": "clean-source/result.json",
+   "expected_groups": null,
+   "expected_check_counts": null,
+-  "preparation_note": "Unready template. Pin actual independent receipts and snapshots; never replace a missing approval with a success value."
++  "preparation_note": "Unready template. Pin actual independent receipts and snapshots; never replace a missing approval with a success value.",
++  "reference_tex_observation_sha256": {},
++  "tex_observation_sha256": {},
++  "allowed_tex_observation_changes": []
+ }
+--- initial/checkpoint-contract.unready.json
++++ revision-v2/checkpoint-contract.unready.json
+@@ -6,7 +6,8 @@
+     "Final mathematical reviews and integrated source/PDF approvals",
+     "Actual source-only direct-child commit and empty Git state",
+     "Exact source/runtime/manuscript hash maps and actual approval-schema pointers",
+-    "Actual clean-source result, comparison and curated candidate identities"
++    "Actual clean-source result, comparison and curated candidate identities",
++    "Bind shared 36-active-input graph verification and broader 46-file TeX observation maps through the real replay specification"
+   ],
+   "baseline_commit": "151673b1817e66aae493eb7da1be5ddf49adfe0f",
+   "source_commit": null,
+--- initial/HANDOFF.md
++++ revision-v2/HANDOFF.md
+@@ -1,12 +1,14 @@
+-# Prepared final-chapter checkpoint tools
++# Prepared final-chapter checkpoint tools, revision v2
+ 
+ This directory is **preparatory author work**, awaiting independent review. Both JSON templates have `ready: false` and explicit unresolved dependencies. They cannot authorize a clean-source replay or claim a completed checkpoint. No canonical source, artifact, index, commit, remote, or actual PDF was changed by this preparation. No monograph computation was run.
++
++Revision v2 repairs independent findings **CR01** and **CR02**. The initial preparation and independent review remain unchanged in their original directories. `revision.patch` records the exact file deltas; the revision freeze binds those originals and the new evidence. This is an author repair, pending targeted independent recheck.
+ 
+ The implementation adapts the frozen-input and failure-receipt patterns from `consolidated/docs/execution/counting-mixing-review-2026-11-01/`. Torus execution, native binaries, raw streams, historical whitespace exceptions, and fixed earlier receipt identities are omitted. The new tools support only the finite `quantum_geodesics` companion.
+ 
+ | Tool | Purpose and boundary |
+ | --- | --- |
+-| `checkpoint_lib.py` | Strict JSON, safe paths, exclusive receipts, approval and input snapshots, exact source maps, and individually checked report metadata. |
++| `checkpoint_lib.py` | Strict JSON with rejection of lossy decimal tokens, safe paths, exclusive receipts, the shared active TeX graph walker, approval/input snapshots, and individually checked report metadata. |
+ | `run_clean_replay.py` | Execute the approved companion once into a new outer file. Require the final source commit, empty Git status, and unchanged reviewed/runtime/manuscript inputs before and after. |
+ | `compare_replays.py` | Compare the accepted author report with the new clean-source report. This performs no numerical computation. |
+ | `verify_checkpoint.py` | Read-only candidate or artifact-commit verification: ancestry, source/approval/run identities, original preservation, exact PDF copy, manuscript labels, and candidate/copy inventories. |
+@@ -18,13 +20,19 @@
+ 
+ After final independent computation and integration approval, copy `replay-spec.unready.json` to a new real specification and fill its fields from the retained receipts. The proposed paths and JSON pointers are interfaces to be reconciled with the actual original records; do not rewrite those records to fit a template. Preserve the unready templates and this initial preparation.
+ 
+-The integration approval must bind the exact final source hash map. The computation approval must bind the exact runtime hash map, accepted author-result identity, author-stage manuscript observation hashes, and **all fourteen exact group names**. Mapping, path-record-list, and path-record-mapping hash representations are supported where declared. The four-group quantum author result is deliberately insufficient.
++The integration approval must bind the exact final source hash map. The computation approval must bind the exact runtime hash map, accepted author-result identity, author-stage manuscript observation hashes, broader 46-file TeX observation hashes, and **all fourteen exact group names**. Mapping, path-record-list, and path-record-mapping hash representations are supported where declared. The four-group quantum author result is deliberately insufficient.
+ 
+-Bind the source commit only after it actually exists as the baseline's direct child. Fill the 36 active TeX hashes, complete runtime map, observed manuscript hashes, and their conflict-free union. The accepted author report must record the same complete source state before and after its run; its actual precommit dirty state is retained. The clean replay must record the source commit with empty status in both observations. If an actual final report or review uses a different schema, make a small reviewed adaptation rather than weakening these predicates.
++Bind the source commit only after it actually exists as the baseline's direct child. Fill the 36 active TeX hashes, complete runtime map, observed manuscript hashes, all 46 broader TeX observation hashes, and their conflict-free union. The accepted author report must record the same complete source state before and after its run; its actual precommit dirty state is retained. Keep that final author-run window free of concurrent canonical changes. The clean replay must record the source commit with empty status in both observations. If an actual final report or review uses a different schema, make a small reviewed adaptation rather than weakening these predicates.
++
++Before launch, one shared graph walker recursively expands `book/main.tex` from both the source commit and current files and requires both exact path/hash maps to equal the declared 36-entry map. Counting files is insufficient. Missing entry points, omitted active inputs, unrelated filler paths, repeated/cyclic inputs, absolute/traversing paths, and unsupported input syntax fail before the command. The walker supports this book's literal braced `\input{...}` syntax, ignores TeX comments, and rejects unsupported input/include forms; it is not a general TeX interpreter. The later manuscript verifier imports this same function.
+ 
+ `allowed_manuscript_changes` is exactly the set whose observed hashes differ between the approved author snapshot and the final integration snapshot. Each must be an independently approved source path. The accepted mathematical source pins remain fixed in the fixture and both report observations. No runtime file, dependency, fixture, precision, software version, formula, group, count, or unknown scientific field is discarded during comparison.
+ 
+-The comparison can exclude only **actually differing** UTC generation time, elapsed time, Git commit/dirty/status fields, and the current-hash/match fields for those enumerated manuscript observations. Each excluded value is retained in the receipt and checked against its stage. Missing locations, duplicate exclusions, overlapping exclusions, stale inputs, unknown scientific changes, and altered runtime identities fail.
++The full companion also records `live_tex_source_observations`: 46 sorted path/hash rows. These comprise the 36 active inputs and ten preserved inactive figure fragments/preamble files; the active graph still has 36 inputs. `reference_tex_observation_sha256` and `tex_observation_sha256` bind the two stages. `allowed_tex_observation_changes` must equal the actually changed paths and contain only independently approved active source paths. All ten inactive hashes remain fixed. Every observed file is guarded against current and committed bytes, and the only additional comparison exceptions are the individual changed `/live_tex_source_observations/i/sha256` fields. No whole array is excluded.
++
++The comparison can exclude only **actually differing** UTC generation time, elapsed time, Git commit/dirty/status fields, the current-hash/match fields for enumerated manuscript observations, and the individual broader-TeX hash fields just described. Each excluded value is retained in the receipt and checked against its stage. Missing locations, duplicate exclusions, overlapping exclusions, stale inputs, unknown scientific changes, and altered runtime identities fail.
++
++CR01 is addressed with a narrow decimal round-trip policy. A JSON fractional/exponent token is accepted only if it is finite and `Decimal(original_token) == Decimal(str(parsed_float))`. Arbitrary decimal tokens outside this lossless serialization subset are **rejected**; this is not arbitrary-precision numeric parsing or a claim that binary64 represents every accepted decimal exactly. Ordinary Python-generated timing values survive unchanged. Tokens such as `1e-999`, `1.0000000000000001`, and `9007199254740993.0` fail explicitly instead of collapsing to another number. Integer/float, boolean/integer, string/number, large integer, and tiny-positive-string distinctions remain intact. Success and failure receipts remain ordinary strict JSON, including valid tiny timing values.
+ 
+ Set `ready: true` and `unresolved: []` only once all real bindings are complete and independently reviewed. Reserve new receipt paths. Typical commands from this directory are:
+ 
+@@ -49,6 +57,6 @@
+ 
+ ## Verification of this preparation
+ 
+-`verification-v1/` retains the actual normal/optimized unit-test and Ruff commands, outputs, and exit statuses. The fixtures test scientific-field retention, exact group binding, stage-specific manuscript changes, strict JSON, protected outputs, dirty source, command failures, input drift, and consistent replacement of candidate payloads/control manifests. Temporary Git repositories, approval records, report values, and non-PDF byte fixtures are explicitly synthetic. The candidate tests mock the original-source, mathematical/PDF, and Git-integrity audits; passing them is not an audit of the real final candidate.
++`verification-v2-final/` retains the final normal/optimized unit-test and Ruff commands, outputs, and exit statuses. The earlier successful 49-test repair stage remains in `verification-v2/`; the final stage adds a scalar-type regression for source-state metadata. The new regressions exercise all three lossy-number pairs through the full comparison CLI and failure-receipt serialization in both directions, ordinary decimal/timing success, the shared connected-input positive fixture, rejected prelaunch graph defects, and immutable inactive TeX observations. Source-state equality uses the same type-preserving canonical encoding, so bool/int or int/float changes cannot hide inside metadata exclusions. The retained fixtures test scientific-field retention, exact group binding, stage-specific manuscript changes, strict JSON, protected outputs, dirty source, command failures, input drift, and consistent replacement of candidate payloads/control manifests. Temporary Git repositories, approval records, report values, and non-PDF byte fixtures are explicitly synthetic. The candidate tests mock the original-source, mathematical/PDF, and Git-integrity audits; passing them is not an audit of the real final candidate. The initial 29-test preparation evidence remains in the parent directory's `verification-v1/`.
+ 
+ The next gate is independent review of these prepared tools and their tests. Final schema binding, final numerical replay, curation, source/artifact commits, and postcommit verification remain unresolved.

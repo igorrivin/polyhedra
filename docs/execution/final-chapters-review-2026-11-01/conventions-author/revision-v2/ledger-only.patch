@@ -1,0 +1,363 @@
+--- before/book/claims/section32-appendixb.json
++++ after/book/claims/section32-appendixb.json
+@@ -313 +313 @@
+-      "status": "author_snapshot_pending_independent_review",
++      "status": "independently_accepted_source_snapshot",
+@@ -327,2 +327,2 @@
+-          "sha256": "ea22e86c4399d4d3fcf83c938144373c89367cb7f9ce1a074b866499000ce1cb",
+-          "bytes": 59312
++          "sha256": "34dbb6255dc468cb796bb3a129eeaf37ac0c5f4dc358abfd73030e64331b3539",
++          "bytes": 59530
+@@ -332,5 +332,11 @@
+-        "path": "../execution/final-chapters-review-2026-11-01/quantum-author/freeze-manifest.json",
+-        "sha256": "107eda60080662c39b747bfa98fbbca765c2e3fa18b6d161960057128dfe1456",
+-        "bytes": 1556
+-      },
+-      "remaining": "Reconcile against any later author/independent-review changes before integration. An author freeze is not independent mathematical approval."
++        "path": "../execution/final-chapters-review-2026-11-01/quantum-author/revision-v2/freeze-manifest.json",
++        "sha256": "f043f6943bd124638802bfdb5d5e7505269143f54046eea93d298345191c0620",
++        "bytes": 3133
++      },
++      "independent_review_record": {
++        "path": "../execution/final-chapters-review-2026-11-01/quantum-review/final-acceptance.json",
++        "sha256": "c631f5ed63513246adf7bbec958c3298ab577861ee02f1d359ff6ca25b7c4dd9",
++        "bytes": 3479
++      },
++      "independent_review_scope": "Selected external statements inspected; no full external proof or external PDF byte hash claimed; one source unavailable and two checked only at metadata/abstract level.",
++      "remaining": "No required source findings in the pinned acceptance. Maintained companion implementation and execution are still pending; later source changes require reconciliation."
+@@ -340 +346 @@
+-      "status": "author_snapshot_pending_independent_review",
++      "status": "author_frozen_pending_independent_review",
+@@ -344,2 +350,2 @@
+-          "sha256": "d2bd6ee8af07ca7c27ae78ed2cab58777aba5d99204251d3b1b458964205b889",
+-          "bytes": 7805
++          "sha256": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
++          "bytes": 7804
+@@ -349,2 +355,2 @@
+-          "sha256": "efd74e44095a57780ed3a06afc1f00e9dffd850e6cc3d536025224527d58b8b2",
+-          "bytes": 10706
++          "sha256": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
++          "bytes": 10705
+@@ -354,2 +360,2 @@
+-          "sha256": "bc0b50a6c550a8665696d75a55d173914b542e886147b483ebf97b160cf425c9",
+-          "bytes": 9552
++          "sha256": "9dc4438ad32d76c7508cd6f90e34dc615697bf60cc546b5187e130468213be9d",
++          "bytes": 9551
+@@ -359,2 +365,2 @@
+-          "sha256": "7a0a2601279ecfe922d68aa32dfe55672817afc699e5feb4c4585f3ef8668f7b",
+-          "bytes": 6617
++          "sha256": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
++          "bytes": 6616
+@@ -364,2 +370,2 @@
+-          "sha256": "7250a26f641331b5cdd1e760f7540373662396349f10feb487e6a2d7495f35c2",
+-          "bytes": 2961
++          "sha256": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
++          "bytes": 2960
+@@ -369,2 +375,7 @@
+-          "sha256": "ff9bbd28455e2427ea3ae6ad8f2b2bd37873d088a5827a8418fdcbbdf6bdd6ed",
+-          "bytes": 9219
++          "sha256": "67cd497d3599bbb6716335a90d6f2f5c71bd191efa96211dd47442c64f3b39e2",
++          "bytes": 9218
++        },
++        {
++          "path": "book/claims/sections17-22.json",
++          "sha256": "aca716a9b08128e7c6feefb79693ff9313139dbc52c0b33ce7e395d6fce80d54",
++          "bytes": 112294
+@@ -373,2 +384,7 @@
+-      "freeze_manifest": null,
+-      "remaining": "Reconcile against any later author/independent-review changes before integration. An author freeze is not independent mathematical approval."
++      "freeze_manifest": {
++        "path": "../execution/final-chapters-review-2026-11-01/geodesic-author/author-freeze-manifest.json",
++        "sha256": "38994ff43e952ff42ccafb4d56c44e51c385a0092d156e3d35cdbcf1041d7eec",
++        "bytes": 3887
++      },
++      "independent_review_status": "pending",
++      "remaining": "The final six chapters and 59-claim author ledger are bound here; independent mathematical review is in progress and is not asserted as approved."
+@@ -377 +393 @@
+-  "external_source_policy": "The prior ledgers carry exact source versions/locators and distinguish theorem-statement checks from proofs. This pass checks the statements used here against those exact reviewed chapters and ledgers. Sections 10-11 and 17-22 have separate current author primary-source audits and still require independent review. No claim of a fresh complete literature/proof review is made.",
++  "external_source_policy": "Prior ledgers retain exact source versions/locators and distinguish statement checks from proofs. This pass inherits those exact reviewed scopes. Sections 10-11 have the pinned independent exact-byte acceptance after QR01, with selected-statement and source-access limits. Sections 17-22 have a final author source/claim freeze, but independent mathematical review remains pending. No fresh complete literature or external-proof review is claimed.",
+@@ -574 +590,2 @@
+-      "limits": "No implementation, execution, numerical result or independent code/result review is asserted here. Exact inputs, branches, expected formulas, precision and finite tails are specified in the separate author contract. No new convention-specific solver or research computation is required."
++      "limits": "No implementation, execution, numerical result or independent code/result review is asserted here. Exact inputs, branches, expected formulas, precision and finite tails are specified in the separate author contract. No new convention-specific solver or research computation is required.",
++      "contract_review_status": "Mathematical specification accepted in the quantum source review; maintained implementation and execution not yet reviewed."
+@@ -584,2 +601,2 @@
+-        "sha256": "31c332032d7927962fc3ac305667810971066076a51b7d75a752eb9733641b85",
+-        "bytes": 14145
++        "sha256": "2a62a149e7f5f88027329c24ba3a4720407debfed2fb78945350f23b6fce85a6",
++        "bytes": 14837
+@@ -674 +691,3 @@
+-      "limits": "No implementation, execution, numerical result or independent code/result review is asserted here. Exact inputs, branches, expected formulas, precision and finite tails are specified in the separate author contract. No new convention-specific solver or research computation is required."
++      "limits": "No implementation, execution, numerical result or independent code/result review is asserted here. Exact inputs, branches, expected formulas, precision and finite tails are specified in the separate author contract. No new convention-specific solver or research computation is required.",
++      "contract_review_status": "Final author contract bound; independent mathematical review and maintained implementation/execution pending.",
++      "final_contract_notes": "Includes H=20,t=3 signed cusp truncation, stable tiny-positive tails, and guard precision at a=1e-12. These remain specified future checks, not executed evidence."
+@@ -965 +984,3 @@
+-        "book/claims/sections12-14.json#s14.screened_gram"
++        "book/claims/sections12-14.json#s14.screened_gram",
++        "book/claims/sections10-11.json#s11.cm_leading",
++        "book/claims/sections10-11.json#s11.cm_refined"
+@@ -980 +1001,3 @@
+-        "book/claims/sections12-14.json#s14.screened_gram": "derived_in_chapter"
++        "book/claims/sections12-14.json#s14.screened_gram": "derived_in_chapter",
++        "book/claims/sections10-11.json#s11.cm_leading": "external_statement_checked",
++        "book/claims/sections10-11.json#s11.cm_refined": "external_statement_checked"
+@@ -987 +1010,4 @@
+-      "publication_gate": false
++      "publication_gate": false,
++      "dependency_review_states": {
++        "sections10-11": "independent_exact_byte_acceptance_in_quantum_review_final_acceptance"
++      }
+@@ -1335,2 +1361,8 @@
+-      "dependencies": [],
+-      "inherited_statuses": {},
++      "dependencies": [
++        "book/claims/sections17-22.json#18.08",
++        "book/claims/sections17-22.json#20.09"
++      ],
++      "inherited_statuses": {
++        "book/claims/sections17-22.json#18.08": "derived_analytic",
++        "book/claims/sections17-22.json#20.09": "derived_analytic"
++      },
+@@ -1340 +1372,4 @@
+-      "publication_gate": false
++      "publication_gate": false,
++      "dependency_review_states": {
++        "sections17-22": "final_author_freeze_bound_independent_review_pending"
++      }
+@@ -1361,2 +1396,14 @@
+-      "dependencies": [],
+-      "inherited_statuses": {},
++      "dependencies": [
++        "book/claims/sections17-22.json#21.01",
++        "book/claims/sections17-22.json#21.02",
++        "book/claims/sections17-22.json#21.03",
++        "book/claims/sections17-22.json#22.03",
++        "book/claims/sections17-22.json#22.12"
++      ],
++      "inherited_statuses": {
++        "book/claims/sections17-22.json#21.01": "derived_exact_algebra",
++        "book/claims/sections17-22.json#21.02": "derived_geometric",
++        "book/claims/sections17-22.json#21.03": "derived_geometric",
++        "book/claims/sections17-22.json#22.03": "external_statement",
++        "book/claims/sections17-22.json#22.12": "scope_boundary"
++      },
+@@ -1366 +1413,4 @@
+-      "publication_gate": false
++      "publication_gate": false,
++      "dependency_review_states": {
++        "sections17-22": "final_author_freeze_bound_independent_review_pending"
++      }
+@@ -1464 +1514,4 @@
+-      "independent_review_boundary": "Current Sections 10-11 and 17-22 are author revisions awaiting independent review."
++      "independent_review_boundary": "Sections 10-11 source and ledger hashes have independent exact-byte acceptance after QR01. The accepted scope is selected external statements and local claims, not complete external-proof or companion execution review.",
++      "dependency_review_states": {
++        "sections10-11": "independent_exact_byte_acceptance_in_quantum_review_final_acceptance"
++      }
+@@ -1680 +1733,4 @@
+-      "independent_review_boundary": "Current Sections 10-11 and 17-22 are author revisions awaiting independent review."
++      "independent_review_boundary": "Sections 10-11 source and ledger hashes have independent exact-byte acceptance after QR01. The accepted scope is selected external statements and local claims, not complete external-proof or companion execution review.",
++      "dependency_review_states": {
++        "sections10-11": "independent_exact_byte_acceptance_in_quantum_review_final_acceptance"
++      }
+@@ -1701,6 +1757,11 @@
+-        "book/claims/sections1-6.json#s3.lambda_pullback"
+-      ],
+-      "inherited_statuses": {
+-        "book/claims/sections1-6.json#s3.lambda_pullback": "derived_in_chapter_author_verified"
+-      },
+-      "independent_review_boundary": "Current Sections 10-11 and 17-22 are author revisions awaiting independent review."
++        "book/claims/sections1-6.json#s3.lambda_pullback",
++        "book/claims/sections17-22.json#22.05"
++      ],
++      "inherited_statuses": {
++        "book/claims/sections1-6.json#s3.lambda_pullback": "derived_in_chapter_author_verified",
++        "book/claims/sections17-22.json#22.05": "derived_geometric"
++      },
++      "independent_review_boundary": "Final Sections 17-22 author sources and ledger are bound; independent mathematical review is pending. No geodesic independent approval is inferred.",
++      "dependency_review_states": {
++        "sections17-22": "final_author_freeze_bound_independent_review_pending"
++      }
+@@ -1762 +1823,4 @@
+-      "independent_review_boundary": "Current Sections 10-11 and 17-22 are author revisions awaiting independent review."
++      "independent_review_boundary": "Sections 10-11 source and ledger hashes have independent exact-byte acceptance after QR01. The accepted scope is selected external statements and local claims, not complete external-proof or companion execution review.",
++      "dependency_review_states": {
++        "sections10-11": "independent_exact_byte_acceptance_in_quantum_review_final_acceptance"
++      }
+@@ -1789 +1853,4 @@
+-      "independent_review_boundary": "Current Sections 10-11 and 17-22 are author revisions awaiting independent review."
++      "independent_review_boundary": "Sections 10-11 source and ledger hashes have independent exact-byte acceptance after QR01. The accepted scope is selected external statements and local claims, not complete external-proof or companion execution review.",
++      "dependency_review_states": {
++        "sections10-11": "independent_exact_byte_acceptance_in_quantum_review_final_acceptance"
++      }
+@@ -1808,6 +1875,11 @@
+-        "book/claims/sections10-11.json#s11.cm_refined"
+-      ],
+-      "inherited_statuses": {
+-        "book/claims/sections10-11.json#s11.cm_refined": "external_statement_checked"
+-      },
+-      "independent_review_boundary": "Current Sections 10-11 and 17-22 are author revisions awaiting independent review."
++        "book/claims/sections10-11.json#s11.cm_refined",
++        "book/claims/sections10-11.json#s11.cm_leading"
++      ],
++      "inherited_statuses": {
++        "book/claims/sections10-11.json#s11.cm_refined": "external_statement_checked",
++        "book/claims/sections10-11.json#s11.cm_leading": "external_statement_checked"
++      },
++      "independent_review_boundary": "Sections 10-11 source and ledger hashes have independent exact-byte acceptance after QR01. The accepted scope is selected external statements and local claims, not complete external-proof or companion execution review.",
++      "dependency_review_states": {
++        "sections10-11": "independent_exact_byte_acceptance_in_quantum_review_final_acceptance"
++      }
+@@ -1841 +1913,4 @@
+-      "independent_review_boundary": "Current Sections 10-11 and 17-22 are author revisions awaiting independent review."
++      "independent_review_boundary": "Sections 10-11 source and ledger hashes have independent exact-byte acceptance after QR01. The accepted scope is selected external statements and local claims, not complete external-proof or companion execution review.",
++      "dependency_review_states": {
++        "sections10-11": "independent_exact_byte_acceptance_in_quantum_review_final_acceptance"
++      }
+@@ -1903 +1978,4 @@
+-      "independent_review_boundary": "Current Sections 10-11 and 17-22 are author revisions awaiting independent review."
++      "independent_review_boundary": "Sections 10-11 source and ledger hashes have independent exact-byte acceptance after QR01. The accepted scope is selected external statements and local claims, not complete external-proof or companion execution review.",
++      "dependency_review_states": {
++        "sections10-11": "independent_exact_byte_acceptance_in_quantum_review_final_acceptance"
++      }
+@@ -1947,3 +2025,12 @@
+-      "dependencies": [],
+-      "inherited_statuses": {},
+-      "independent_review_boundary": "Current Sections 10-11 and 17-22 are author revisions awaiting independent review."
++      "dependencies": [
++        "book/claims/sections17-22.json#18.05",
++        "book/claims/sections17-22.json#18.12"
++      ],
++      "inherited_statuses": {
++        "book/claims/sections17-22.json#18.05": "derived_geometric",
++        "book/claims/sections17-22.json#18.12": "scope_boundary"
++      },
++      "independent_review_boundary": "Final Sections 17-22 author sources and ledger are bound; independent mathematical review is pending. No geodesic independent approval is inferred.",
++      "dependency_review_states": {
++        "sections17-22": "final_author_freeze_bound_independent_review_pending"
++      }
+@@ -1967,3 +2054,10 @@
+-      "dependencies": [],
+-      "inherited_statuses": {},
+-      "independent_review_boundary": "Current Sections 10-11 and 17-22 are author revisions awaiting independent review."
++      "dependencies": [
++        "book/claims/sections17-22.json#18.01"
++      ],
++      "inherited_statuses": {
++        "book/claims/sections17-22.json#18.01": "derived_geometric"
++      },
++      "independent_review_boundary": "Final Sections 17-22 author sources and ledger are bound; independent mathematical review is pending. No geodesic independent approval is inferred.",
++      "dependency_review_states": {
++        "sections17-22": "final_author_freeze_bound_independent_review_pending"
++      }
+@@ -2158,3 +2252,12 @@
+-      "dependencies": [],
+-      "inherited_statuses": {},
+-      "independent_review_boundary": "Current Sections 10-11 and 17-22 are author revisions awaiting independent review."
++      "dependencies": [
++        "book/claims/sections17-22.json#18.09",
++        "book/claims/sections17-22.json#18.05"
++      ],
++      "inherited_statuses": {
++        "book/claims/sections17-22.json#18.09": "derived_from_external_statements",
++        "book/claims/sections17-22.json#18.05": "derived_geometric"
++      },
++      "independent_review_boundary": "Final Sections 17-22 author sources and ledger are bound; independent mathematical review is pending. No geodesic independent approval is inferred.",
++      "dependency_review_states": {
++        "sections17-22": "final_author_freeze_bound_independent_review_pending"
++      }
+@@ -2178,3 +2281,10 @@
+-      "dependencies": [],
+-      "inherited_statuses": {},
+-      "independent_review_boundary": "Current Sections 10-11 and 17-22 are author revisions awaiting independent review."
++      "dependencies": [
++        "book/claims/sections17-22.json#22.10"
++      ],
++      "inherited_statuses": {
++        "book/claims/sections17-22.json#22.10": "external_statement_and_derived_normalization"
++      },
++      "independent_review_boundary": "Final Sections 17-22 author sources and ledger are bound; independent mathematical review is pending. No geodesic independent approval is inferred.",
++      "dependency_review_states": {
++        "sections17-22": "final_author_freeze_bound_independent_review_pending"
++      }
+@@ -2198,3 +2308,12 @@
+-      "dependencies": [],
+-      "inherited_statuses": {},
+-      "independent_review_boundary": "Current Sections 10-11 and 17-22 are author revisions awaiting independent review."
++      "dependencies": [
++        "book/claims/sections17-22.json#22.06",
++        "book/claims/sections17-22.json#22.09"
++      ],
++      "inherited_statuses": {
++        "book/claims/sections17-22.json#22.06": "external_statement_and_derived_normalization",
++        "book/claims/sections17-22.json#22.09": "derived_exact_algebra"
++      },
++      "independent_review_boundary": "Final Sections 17-22 author sources and ledger are bound; independent mathematical review is pending. No geodesic independent approval is inferred.",
++      "dependency_review_states": {
++        "sections17-22": "final_author_freeze_bound_independent_review_pending"
++      }
+@@ -2218,3 +2337,10 @@
+-      "dependencies": [],
+-      "inherited_statuses": {},
+-      "independent_review_boundary": "Current Sections 10-11 and 17-22 are author revisions awaiting independent review."
++      "dependencies": [
++        "book/claims/sections17-22.json#22.03"
++      ],
++      "inherited_statuses": {
++        "book/claims/sections17-22.json#22.03": "external_statement"
++      },
++      "independent_review_boundary": "Final Sections 17-22 author sources and ledger are bound; independent mathematical review is pending. No geodesic independent approval is inferred.",
++      "dependency_review_states": {
++        "sections17-22": "final_author_freeze_bound_independent_review_pending"
++      }
+@@ -2239,3 +2365,14 @@
+-      "dependencies": [],
+-      "inherited_statuses": {},
+-      "independent_review_boundary": "Current Sections 10-11 and 17-22 are author revisions awaiting independent review."
++      "dependencies": [
++        "book/claims/sections17-22.json#21.01",
++        "book/claims/sections17-22.json#21.02",
++        "book/claims/sections17-22.json#21.03"
++      ],
++      "inherited_statuses": {
++        "book/claims/sections17-22.json#21.01": "derived_exact_algebra",
++        "book/claims/sections17-22.json#21.02": "derived_geometric",
++        "book/claims/sections17-22.json#21.03": "derived_geometric"
++      },
++      "independent_review_boundary": "Final Sections 17-22 author sources and ledger are bound; independent mathematical review is pending. No geodesic independent approval is inferred.",
++      "dependency_review_states": {
++        "sections17-22": "final_author_freeze_bound_independent_review_pending"
++      }
+@@ -2295 +2432,4 @@
+-      "independent_review_boundary": "Current Sections 10-11 and 17-22 are author revisions awaiting independent review."
++      "independent_review_boundary": "Sections 10-11 source and ledger hashes have independent exact-byte acceptance after QR01. The accepted scope is selected external statements and local claims, not complete external-proof or companion execution review.",
++      "dependency_review_states": {
++        "sections10-11": "independent_exact_byte_acceptance_in_quantum_review_final_acceptance"
++      }
+@@ -2597 +2737,2 @@
+-    "no_new_numerical_fixture_required": true
++    "no_new_numerical_fixture_required": true,
++    "targeted_dependency_reconciliation": "revision-v2: no chapter prose changes; exact accepted quantum and final-author geodesic snapshots bound, new geodesic claim links added, planned contract pins refreshed."
+@@ -2605,6 +2746,18 @@
+-    "Independent review of this exact Section 32/Appendix B/ledger source freeze.",
+-    "Independent mathematical review of Sections 10-11 and 17-22; reconcile any changed conventions and refresh the recorded author dependency hashes after approved deltas.",
+-    "Implement and independently review the separately specified four quantum and ten geodesic finite groups before replacing planned-only support status with result links.",
+-    "Integrate/curate evidence links and shared computational status; later build and visual review own table layout and rendered reference checks.",
+-    "Original historical torus precision/sensitivity archive and original Airy evaluator provenance remain unrecovered, without blocking publication of the correctly scoped replacement evidence."
+-  ]
++    "Independent conventions review of this exact revised Section 32/Appendix B/ledger freeze.",
++    "Independent mathematical review of the final Sections 17-22 author freeze; reconcile any resulting source or ledger deltas before integration.",
++    "Implement and independently review the separately specified four quantum and ten geodesic finite groups before replacing planned-only support status with results.",
++    "Curate evidence links and shared computational status; later build and visual review own table layout and rendered reference checks.",
++    "Original historical torus precision/sensitivity archive and original Airy evaluator provenance remain unrecovered; this does not block publication of correctly scoped replacement evidence."
++  ],
++  "dependency_reconciliation": {
++    "revision": "v2",
++    "initial_freeze_manifest_sha256": "fc80ec12ae3c1f13d7c7090fc60f05e2db1fe3eccfe3cf3cb9e72d7fef7d65dc",
++    "initial_ledger_sha256": "c93990683fea3caf3b34bb911e275551d6e3a641e63e9e8b2589424a8fa23e11",
++    "record_directory": "../execution/final-chapters-review-2026-11-01/conventions-author/revision-v2/",
++    "chapter_prose_changed": false,
++    "semantic_mismatch_found": false,
++    "geodesic_change_from_previous_observation": "Each final chapter equals the previously observed bytes after deleting exactly one EOF blank line; conventions agree with Appendix B.",
++    "quantum_change_from_previous_observation": "Chapter bytes unchanged; QR01 adds only two dependency hashes to the quantum ledger and is independently accepted.",
++    "geodesic_independent_approval_claimed": false,
++    "companion_implementation_or_execution_claimed": false
++  }

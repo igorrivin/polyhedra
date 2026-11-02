@@ -1,0 +1,49 @@
+# Polyhedra
+
+Research software and a computational companion to *Polyhedra, Moduli, and Quantum Geometry*.
+
+This repository integrates the volume toolkit, the historical `ipoly` study, and the supplied monograph while preserving the original Git histories and source provenance. The integration is in progress; numerical examples and mathematical claims retain the evidence limits recorded in the audit and plan.
+
+## Contents
+
+- [Volume toolkit](packages/volume-toolkit/README.md): existing Python package and API, tests, examples, and historical results.
+- [Monograph source](book/README.md): canonical LaTeX with normalization and hypothesis reviews of Sections 1–8 and Appendix A, a separately reviewed Section 9, the finite-period and local-surgery revision of Sections 12–14 and 16, a reviewed regular-family quantum Airy theorem in Section 15, and the locally reviewed counting, mixing and arithmetic arguments of Sections 23–31 with finite companions. Each increment retains its own review status and evidence limits.
+- [Historical ipoly study](research/ipoly/README.md): original manuscript and verification scripts, retained unchanged.
+- [Complete Section 9 chapter](site/section9/chapter.html): reviewed text with proofs and computational coverage; [chapter PDF](site/section9/downloads/section9.pdf) and [monograph LaTeX source snapshot](site/section9/downloads/monograph-source.zip). The [generation checkpoint](docs/execution/section9-barrier-2026-10-31/README.md) records artifact provenance; these frozen downloads do not include the later Sections 15/30 or normalization revisions.
+- [Section 9 companion](site/section9/index.html): the first worked text, computation and result example; [runnable reproduction archive](site/section9/downloads/section9-reproduction.zip) and [instructions](experiments/section9/README.md).
+- [Section 9 chapter checkpoint](docs/execution/section9-chapter-2026-10-31/README.md): mathematical corrections, independent proof review, publishing-build evidence and remaining validation; [claim ledger](book/claims/section9.json), [historical companion reconciliation](book/companion-reconciliation.md) and [chapter build guide](site/README.md).
+- [Section 9 dense barrier checkpoint](docs/execution/section9-barrier-2026-10-31/README.md): executable centering and short-step schedule, independent numerical references, and the separate computational-addendum and export review. Floating-point gap estimates are not formal certificates.
+- [Sites reading preview](docs/execution/sites-preview-2026-11-01/README.md): frozen Section 9 presentation checkpoint with reviewed navigation, passage search and an inspected offline candidate. Its source upload failed; further upload is deferred until manuscript revision and local release verification are complete.
+- [Counting, mixing and arithmetic checkpoint](docs/execution/counting-mixing-review-2026-11-01/README.md): nine modular chapters, 168 independently reviewed claims, an [exact finite and 60/90-digit formula companion](experiments/counting_mixing/README.md), and a [new full torus campaign](experiments/torus_campaign/README.md). The new campaign reproduces both length-8192 counts and the four printed M/Q rows, and records all twenty block rows, signed all-point diagnostics, selected precision checks and conditional sensitivity. Finite agreement does not prove general mixing, asymptotic bounds or every-node accuracy; the original torus precision archive remains unrecovered.
+- [Section 15 checkpoint](docs/execution/section15-analytic-review-2026-11-01/README.md): the regular-family quantum Airy proof, including normalization, global contour/tail bounds and the uniform first correction, has an independent analytic review. The [new exact-integrand companion](experiments/section15_quantum/README.md) evaluates seven parameter pairs under three precision/contour settings and has a separate direct Barnes-integral reference. It corrects the first printed quantum value from `0.459087` to `0.459086`; original historical inputs remain preserved. These numerical comparisons are not total interval quadrature certificates.
+- [Prior quantum and surgery increment](docs/execution/quantum-surgery-review-2026-11-01/README.md): Sections 12–14 and 16, with two claim ledgers and a [bounded computational companion](experiments/quantum_surgery/README.md). Its initial author run passes 192 exact finite identities, period and Euler-arc comparisons at 60/90 digits, and 15 focused tests. Independent review, final artifact generation and integrated PDF verification have separate records; finite computations do not establish spectral tails or global quantum-invariant asymptotics.
+- [Prior normalization review](docs/execution/normalization-review-2026-11-01/README.md): Sections 1–8 and Appendix A, with 41 recorded claims and an [exact finite companion](experiments/normalizations/README.md). Independent computational review passed; the checkpoint records mathematical review and integrated PDF verification separately. This is a bounded increment, not a full-book proof review.
+- [Prior Airy and torus checkpoint](docs/execution/monograph-revision-2026-11-01/README.md): corrected evidence descriptions, finite Airy checks and a bounded replacement torus computation, with inherited theorem claims and unreplayed original results kept distinct. Its artifacts remain frozen.
+- [Computational status](book/computational-status.md): checked examples, reported results awaiting evidence, and the next mathematical review tasks.
+- [Numerical errata](book/numerical-errata.md): corrected software contracts, changed bounded examples, and the limits of those corrections.
+- [Numerical-correctness checkpoint](docs/execution/numerical-correctness-2026-10-31/README.md): precision, angle-solver and optimizer-result evidence, review stages and remaining checks.
+- [First integration checkpoint](docs/execution/2026-10-31/README.md): preserved baseline, initial independent reviews and recovery inventory.
+- [Integration plan](INTEGRATION_PLAN.md): correction priorities, computational coverage and publication phases.
+- [Provenance](provenance/README.md): source identities, restoration checks and path mapping.
+- [Audit](audit/2026-10-31/): the evidence used to plan this integration.
+
+The new result paths are `artifacts/counting_mixing/result.json` and `artifacts/torus_campaign/result.json`; the [counting/mixing checkpoint](docs/execution/counting-mixing-review-2026-11-01/README.md) records independent reviews, final generation, source identities and the integrated PDF separately. The Section 15 exact-integrand result remains `artifacts/section15_quantum/result.json`; the [Section 15 checkpoint](docs/execution/section15-analytic-review-2026-11-01/README.md) records source identities, numerical review, final generation and integrated PDF verification separately. The earlier quantum/surgery and normalization results and PDFs, Site downloads, and Section 15/30 outputs retain their own source identities. The remaining chapter reviews are Sections 10–11, 17–22, 32 and Appendix B, followed by cross-chapter and local-release checks. Section 15's theorem is for its specified regular family and bounded real transition parameter; no arbitrary-shape, fixed-volume or global-invariant result is claimed. The whole book is not yet publication-ready. Upload and deployment remain the final publication step.
+
+## Development
+
+Use Python 3.10 through 3.14, matching the toolkit's declared support. The system `python3` is currently 3.15 and is unsuitable. With an installed supported interpreter (3.12 shown), from the repository root:
+
+```sh
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -e 'packages/volume-toolkit[dev]'
+cd packages/volume-toolkit
+../../.venv/bin/python -m pytest -q
+```
+
+The commands above describe the installation procedure. [Baseline environment validation](docs/execution/2026-10-31/baseline.md) used an isolated copy of existing dependencies after PyPI DNS resolution failed; complete optional-dependency validation remains outstanding. The minimal numerical installation is `pip install -e packages/volume-toolkit`. See the package README for optional dependencies. The installed `ideal-poly-optimize` command retains its name.
+
+For numerical work, choose an explicit [volume precision mode](packages/volume-toolkit/docs/numerical-precision.md). Legacy `fast` defaults remain finite Fourier approximations; `exact` and `eval_only` are compatibility names for numerical mpmath evaluation. Current optimizer output uses [schema v2](packages/volume-toolkit/docs/optimizer-result-contract.md), separating freshly checked candidates from the solver's convergence flag. The [Rivin angle contract](packages/volume-toolkit/docs/rivin-numerics.md) records feasibility and KKT residuals for the finite angle program. None of these numerical statuses supplies an interval proof or a general embedding certificate.
+
+The original HF deployment and maintenance workflows remain as historical files inside the imported package. GitHub does not run workflows in that nested directory. Root workflows are deliberately configured for checks only; this repository does not currently publish a package, update HF, or deploy a Site automatically.
+
+The text and the `ipoly` companion do not yet specify a distribution license. Preserve their attribution and resolve publication licensing before a public release. The toolkit retains its existing MIT license; see [licensing scope](LICENSES/README.md).

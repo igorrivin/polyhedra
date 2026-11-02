@@ -1,0 +1,45 @@
+{
+  "decision": "minor_source_pin_repairs_required_before_final_source_approval",
+  "recorded_at_utc": "2026-11-02T03:32:41.449113+00:00",
+  "author_manifest_sha256": "38994ff43e952ff42ccafb4d56c44e51c385a0092d156e3d35cdbcf1041d7eec",
+  "actual_reviewed_sources_sha256": {
+    "book/chapters/17-unfolding-constant-series.tex": "24ba935c494861b11683b7df82176b158a4a7e0127f38a71a2ffbf8007148308",
+    "book/chapters/18-figure-eight-curves.tex": "2bf920f1aecc30a2d04fecf52bf66612f752394e29abbf51fe5a3955588a496f",
+    "book/chapters/19-pants-twists.tex": "9dc4438ad32d76c7508cd6f90e34dc615697bf60cc546b5187e130468213be9d",
+    "book/chapters/20-torus-twist-series.tex": "f647a31d55c1751554437a297165df39b5509c898b746a682552a4917f942f02",
+    "book/chapters/21-cuff-matching.tex": "0ee050f66e732d37f6ac4dc0f611e192e2d386f268657b755ca4c3fde8d5cd90",
+    "book/chapters/22-cusps-orthospectrum.tex": "67cd497d3599bbb6716335a90d6f2f5c71bd191efa96211dd47442c64f3b39e2",
+    "book/claims/sections17-22.json": "aca716a9b08128e7c6feefb79693ff9313139dbc52c0b33ce7e395d6fce80d54"
+  },
+  "canonical_source_set_sha256": "86ac29026811b5c7f6207e4568d01a01496326f3c8c1b0d8fb2b8fcfb541d8c6",
+  "set_hash_algorithm": "SHA256 of UTF-8 json.dumps(path_to_sha256, sort_keys=True, separators=(comma,colon)) with no terminal newline",
+  "claim_coverage": 59,
+  "owned_label_coverage": 54,
+  "preserved_baseline_owned_labels": 48,
+  "explicit_new_labels": 6,
+  "mathematical_blockers": [],
+  "required_source_pin_repairs": [
+    "R1",
+    "R2"
+  ],
+  "companion_contract_decision": "accepted_finite_mathematical_contract_only",
+  "companion_contract_sha256": "2a62a149e7f5f88027329c24ba3a4720407debfed2fb78945350f23b6fce85a6",
+  "full_external_proof_audit": false,
+  "canonical_edits_by_reviewer": false,
+  "initial_evidence_sha256": {
+    "companion-contract-review.json": "be7debaf190ecd960d0caeca6b82e884407b6da04e72234e16a60762980bc82b",
+    "companion-contract-review.md": "c55d6e01d8913adad17940eb550e5dfd8371d8f48de081971414425f500aebee",
+    "independent-probe-results.json": "63b98f71810f31f5a94d43687f30c8c4ad45ac164c121c60b20089881e17f4b8",
+    "independent-source-diff.patch": "4150d9ca84fd56e57b855a68d1ca03e1d27ba1515b20eb0f1ac1146b58b6d25f",
+    "independent-structure-check.json": "b0b5126d01d6a1417d28441e3a5015893cb6ffd19726e88908ee5779b5f687d0",
+    "independent_probes.py": "eda1567d85e7b667069b22b46d96cf5e5a7605fc031348f14261e74f52773ae7",
+    "initial-claim-review.json": "fce9c416fa1caf4a81fc43bdaf43c807492ca98a42e55a2ae152e18b64eb1599",
+    "initial-findings.json": "7b31165b3feacb37b424a4ecfd7d47e91f85beffcae9184a89697f3fc3f5a5e5",
+    "initial-label-review.json": "0a06be3f4284d4656d1b0565fbf2bcf7adbd0c9eb3d00de0600f3834bbdb6239",
+    "initial-review-report.md": "48f48cbd2677be3bbccae6b9f458121cd6dcc4c801445096eb05b48e49e5a3f7",
+    "partial-status.json": "5b7ff357a8186e2c7413bc3a6e695a899d2c3f314a5d18cea957bde9f6a092bf",
+    "source-statement-review.json": "2f813af1e87b3419b1a25ad5176566711d0f73d5391b62ff3ca1c4687edbe515",
+    "write_initial_review.py": "977ddd462f92dcf3bd74fadebeb65ebc6957c51d25e38efa68ff405135c19809"
+  },
+  "final_acceptance": "pending targeted repaired-source hash-bound review"
+}

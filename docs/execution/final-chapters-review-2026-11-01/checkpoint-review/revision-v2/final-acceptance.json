@@ -1,0 +1,88 @@
+{
+  "decision": "approve_preparation_only",
+  "status": "independent_targeted_preparation_acceptance",
+  "recorded_at_utc": "2026-11-02T04:08:45.468441+00:00",
+  "reviewer": "final_checkpoint_reviewer",
+  "accepted_author_freeze_sha256": "2f24bfc89793154d7ee7e41f252450a908a03fbc0b8dffb876c145a78656bdab",
+  "initial_findings_manifest_sha256": "d3c2ff7a53f9495588432c0f29d8194521b072058f0cb5c9c807d9581e3d2d59",
+  "accepted_preparation_files": {
+    "checkpoint_lib.py": {
+      "sha256": "9b41c492510a00d9d3b22c5ecb04fcb1de86f8903a906ea4eb4c59ebb6c69c21",
+      "bytes": 26905
+    },
+    "run_clean_replay.py": {
+      "sha256": "26ea5840dd35fbded2ec7023ca86ca37e3ff05eb6e311bbf9eea2749603cdc60",
+      "bytes": 4312
+    },
+    "compare_replays.py": {
+      "sha256": "f4f80cec1f4a76d1e5e290094edfb3152bd9ad4601a56c1e27253750c52d0e8a",
+      "bytes": 2128
+    },
+    "verify_checkpoint.py": {
+      "sha256": "720f239af2e6b22c7f9b9143ede5d69a7f9e300bb4ea8985c6a2e49efe7ad94f",
+      "bytes": 18992
+    },
+    "test_checkpoint.py": {
+      "sha256": "3e6c8003afd7f1861e6784fa95517c2e2aa2ae737f9ef93e411c621b27936293",
+      "bytes": 38935
+    },
+    "replay-spec.unready.json": {
+      "sha256": "479d960ad417b18efdbfff4d8fc03aab368035a8bc5928eda0ff9a5fd75d524a",
+      "bytes": 2271
+    },
+    "checkpoint-contract.unready.json": {
+      "sha256": "532405b78e4ed2ea64d7b2044f412a184c67f3d16428763e083a6a4f6ecb4748",
+      "bytes": 4510
+    },
+    "HANDOFF.md": {
+      "sha256": "89b6ecdb58699822d54b9902150386279d8093d881a0c06ff4191556cc372592",
+      "bytes": 11818
+    }
+  },
+  "accepted_tool_sha256": {
+    "checkpoint_lib.py": "9b41c492510a00d9d3b22c5ecb04fcb1de86f8903a906ea4eb4c59ebb6c69c21",
+    "run_clean_replay.py": "26ea5840dd35fbded2ec7023ca86ca37e3ff05eb6e311bbf9eea2749603cdc60",
+    "compare_replays.py": "f4f80cec1f4a76d1e5e290094edfb3152bd9ad4601a56c1e27253750c52d0e8a",
+    "verify_checkpoint.py": "720f239af2e6b22c7f9b9143ede5d69a7f9e300bb4ea8985c6a2e49efe7ad94f"
+  },
+  "findings": [
+    {
+      "id": "CR01",
+      "status": "resolved",
+      "scope": "Lossy JSON fractional/exponent tokens fail explicitly; admitted decimal tokens round-trip through ordinary float serialization without changing their decimal value. This is a rejection subset, not arbitrary-precision numeric parsing or exact binary64 arithmetic."
+    },
+    {
+      "id": "CR02",
+      "status": "resolved",
+      "scope": "Shared graph traversal binds committed and current book/main.tex input closures to the complete 36-path/hash map before the command; invalid graphs reject without launch."
+    }
+  ],
+  "required_open_findings": [],
+  "schema_delta": {
+    "accepted_preparation_support": "46 sorted TeX observation rows; exact stage maps pinned to computation approval; conflict-free union guarded; inactive ten cannot be observation exceptions; only individual sha256 locations for approved active changes can differ.",
+    "positive_delta_probe": "Exactly two added per-stage TeX sha256 exclusions for one changed active path, with no whole-array exclusion.",
+    "observed_full_v1_report_sha256": "618d7125e80813db18b96c55513bd6a0432a1cf7fad63595c6c58d89112b67a4",
+    "observed_full_v1_scientific_or_code_approval": false
+  },
+  "verification": {
+    "unit_tests_normal": 50,
+    "unit_tests_optimized": 50,
+    "ruff_passed": true,
+    "independent_probes_normal": 25,
+    "independent_probes_optimized": 25,
+    "unexpected_probe_outcomes": [],
+    "initial_author_and_review_payloads_preserved": 47,
+    "repaired_payloads_unchanged_after_tests": 28
+  },
+  "templates_unready": true,
+  "actual_final_approvals_bound": false,
+  "real_replay_authorized": false,
+  "remaining": [
+    "Actual complete companion code/report approval",
+    "Actual integration source and PDF approval",
+    "Actual final schema/identity binding and exact exceptions",
+    "Source commit and fresh clean-source replay",
+    "Candidate curation/independent approval and artifact lifecycle verification"
+  ],
+  "scope": "Exact preparation-code approval only. No approval of final scientific claims, current real source, provisional full-v1 computations, PDF or publication."
+}

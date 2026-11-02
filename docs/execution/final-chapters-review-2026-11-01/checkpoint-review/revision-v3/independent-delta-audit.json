@@ -1,0 +1,19 @@
+{
+  "library_added_functions": [
+    "approved_reference_identity"
+  ],
+  "library_changed_functions": [
+    "approved_spec"
+  ],
+  "unchanged_library_function_count": 31,
+  "non_function_library_ast_unchanged": true,
+  "all50prior_test_bodies_unchanged": true,
+  "new_tests": [
+    "test_path_record_altered_path_rejected_before_launch_and_comparison_with_receipts",
+    "test_path_record_real_shaped_synthetic_replay_and_comparison_admission",
+    "test_reference_identity_default_and_explicit_shapes_preserve_approval",
+    "test_reference_identity_rejects_missing_extra_keys_bad_types_and_undeclared_shapes",
+    "test_reference_identity_rejects_unsafe_noncanonical_and_mismatched_paths"
+  ],
+  "scope": "Exact AST/delta audit; prior numeric, graph, report and failure-receipt review reused only for unchanged code."
+}

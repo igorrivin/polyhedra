@@ -1,0 +1,57 @@
+{
+  "finding": "CV01",
+  "scope": "Q1 positive-boundary locator/hypotheses/dependency usage and its chapter-source hash only",
+  "changed_json_paths": [
+    {
+      "path": "/chapter_source_sha256/book/chapters/32-open-questions.tex",
+      "change": "updated"
+    },
+    {
+      "path": "/claims/0/dependency_labels/2",
+      "change": "updated"
+    },
+    {
+      "path": "/claims/0/dependency_usage",
+      "change": "added"
+    },
+    {
+      "path": "/claims/0/established_inputs",
+      "change": "updated"
+    },
+    {
+      "path": "/claims/0/hypotheses",
+      "change": "updated"
+    },
+    {
+      "path": "/claims/0/source_keys",
+      "change": "added"
+    },
+    {
+      "path": "/claims/0/source_statement_locator",
+      "change": "added"
+    }
+  ],
+  "appendix_b_unchanged": true,
+  "other_65_claims_unchanged": true,
+  "all_companion_and_review_statuses_unchanged": true,
+  "canonical_files": [
+    {
+      "path": "book/chapters/32-open-questions.tex",
+      "before_sha256": "c831bf85ab0c6cb7f5ed46509212ce5dc1549c05c5723be3c035c928a409fc21",
+      "after_sha256": "50fc264bbfc55fc19cb79dc09aa7a828b2cba479f6b3afb1c62459e0d31c9b5d",
+      "bytes": 15020
+    },
+    {
+      "path": "book/chapters/appendix-b-conventions.tex",
+      "before_sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "after_sha256": "b57a96b3f141e0d372b26dbb710d1ec0fa8e8a4a8ac8f0dd04b4ce0432f99a74",
+      "bytes": 9363
+    },
+    {
+      "path": "book/claims/section32-appendixb.json",
+      "before_sha256": "0bf0a62df0e81ae502d0408935cb1fee80b0db9a85be8e0d58c73367773dfd5a",
+      "after_sha256": "488298ff34c229222010d03452f18e4f3855b9c7026589c74a28fbece04f3a9e",
+      "bytes": 125093
+    }
+  ]
+}

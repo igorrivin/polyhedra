@@ -1,0 +1,161 @@
+{
+  "scope": "Independent synthetic rejection probes, not a real replay or mathematical check.",
+  "subject_code_sha256": {
+    "checkpoint_lib.py": "2e227c30dcb0585b307fc5d45c55538409e3ef3569ba2eb89908a3a86e55eeb9",
+    "run_clean_replay.py": "26ea5840dd35fbded2ec7023ca86ca37e3ff05eb6e311bbf9eea2749603cdc60",
+    "compare_replays.py": "f4f80cec1f4a76d1e5e290094edfb3152bd9ad4601a56c1e27253750c52d0e8a",
+    "verify_checkpoint.py": "3d99648a42ac015f6c8a013ef1d34af9db214a4e04b886c4b63bb727945025dc"
+  },
+  "probe_count": 15,
+  "unexpected_acceptance_ids": [
+    "json_underflow",
+    "json_near_one",
+    "json_binary64_integer_boundary",
+    "report_raw_underflow",
+    "report_raw_rounding",
+    "unconnected_36_files_without_entry_point"
+  ],
+  "observations": [
+    {
+      "id": "json_underflow",
+      "input_a": "{\"signal\":1e-999}",
+      "input_b": "{\"signal\":0.0}",
+      "expected_acceptance": false,
+      "accepted": true,
+      "result": []
+    },
+    {
+      "id": "json_near_one",
+      "input_a": "{\"signal\":1.0000000000000001}",
+      "input_b": "{\"signal\":1.0}",
+      "expected_acceptance": false,
+      "accepted": true,
+      "result": []
+    },
+    {
+      "id": "json_binary64_integer_boundary",
+      "input_a": "{\"signal\":9007199254740993.0}",
+      "input_b": "{\"signal\":9007199254740992.0}",
+      "expected_acceptance": false,
+      "accepted": true,
+      "result": []
+    },
+    {
+      "id": "json_boolean_integer",
+      "input_a": "{\"signal\":true}",
+      "input_b": "{\"signal\":1}",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "scientific JSON differs outside enumerated provenance/timing exclusions"
+    },
+    {
+      "id": "json_string_number",
+      "input_a": "{\"signal\":\"1\"}",
+      "input_b": "{\"signal\":1}",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "scientific JSON differs outside enumerated provenance/timing exclusions"
+    },
+    {
+      "id": "json_integer_float",
+      "input_a": "{\"signal\":1}",
+      "input_b": "{\"signal\":1.0}",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "scientific JSON differs outside enumerated provenance/timing exclusions"
+    },
+    {
+      "id": "json_large_integer_exact",
+      "input_a": "{\"signal\":9007199254740993}",
+      "input_b": "{\"signal\":9007199254740992}",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "scientific JSON differs outside enumerated provenance/timing exclusions"
+    },
+    {
+      "id": "report_raw_underflow",
+      "expected_acceptance": false,
+      "accepted": true,
+      "result": {
+        "identical_scientific_payload": true,
+        "excluded_exact_JSON_pointers": [
+          "/generated_at_utc",
+          "/runtime/elapsed_seconds",
+          "/source_before/git_commit",
+          "/source_before/git_dirty",
+          "/source_before/git_status_porcelain",
+          "/source_after/git_commit",
+          "/source_after/git_dirty",
+          "/source_after/git_status_porcelain"
+        ]
+      }
+    },
+    {
+      "id": "report_raw_rounding",
+      "expected_acceptance": false,
+      "accepted": true,
+      "result": {
+        "identical_scientific_payload": true,
+        "excluded_exact_JSON_pointers": [
+          "/generated_at_utc",
+          "/runtime/elapsed_seconds",
+          "/source_before/git_commit",
+          "/source_before/git_dirty",
+          "/source_before/git_status_porcelain",
+          "/source_after/git_commit",
+          "/source_after/git_dirty",
+          "/source_after/git_status_porcelain"
+        ]
+      }
+    },
+    {
+      "id": "report_string_tiny_positive",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "scientific JSON differs outside enumerated provenance/timing exclusions"
+    },
+    {
+      "id": "report_boolean_integer",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "scientific JSON differs outside enumerated provenance/timing exclusions"
+    },
+    {
+      "id": "report_string_number",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "scientific JSON differs outside enumerated provenance/timing exclusions"
+    },
+    {
+      "id": "forged_manuscript_match",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "invalid manuscript-match flag"
+    },
+    {
+      "id": "symlink_outer_escape",
+      "expected_acceptance": false,
+      "accepted": false,
+      "exception": "CheckpointError",
+      "reason": "path escapes base: outside-link/result.json"
+    },
+    {
+      "id": "unconnected_36_files_without_entry_point",
+      "expected_acceptance": false,
+      "recorded_TeX_input_count": 36,
+      "book_main_exists": false,
+      "command_executed": true,
+      "receipt_checks_passed": true,
+      "accepted": true,
+      "result": null
+    }
+  ]
+}

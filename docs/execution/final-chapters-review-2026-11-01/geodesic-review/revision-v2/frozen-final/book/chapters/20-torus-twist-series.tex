@@ -1,0 +1,162 @@
+\section{An exact torus twist calculation and a constant orbit series}
+\label{sec:exacttwist}
+
+\subsection{The length function and its integral}
+
+Let $X$ be an oriented one-holed hyperbolic torus with geodesic boundary
+length $b>0$, or a complete finite-area once-punctured torus when $b=0$.
+Cut along an essential simple curve $\alpha$ of length $a>0$, and choose
+an essential simple curve $\beta$ crossing $\alpha$ once.
+Normalize the twist origin so that this crossing curve
+has minimum length at $\tau=0$. Set
+\begin{equation}
+ A^2=\frac{\cosh a+\cosh(b/2)}{\cosh a-1}.
+ \label{eq:Atwist}
+\end{equation}
+The exact formula is
+\begin{equation}
+ \boxed{\cosh\bigl(\ell_\beta(\tau)/2\bigr)=A\cosh(\tau/2).}
+ \label{eq:torustwist}
+\end{equation}
+It follows from the right-angled-hexagon description of the cut pants;
+see also~\cite[Proposition 3.1, pp.~5--6]{ALPS}. Take the positive square
+root $A>1$. For $b=0$,
+$A=\coth(a/2)$. The minimum length is $r_0=2\arcosh A$.
+
+There is also a matrix check fixing the signed boundary convention.
+At zero twist the two axes meet perpendicularly. In an adapted basis put
+\[
+ M=\begin{pmatrix}e^{a/2}&0\\0&e^{-a/2}\end{pmatrix},\qquad
+ B_u=\begin{pmatrix}e^{u/2}&0\\0&e^{-u/2}\end{pmatrix}
+      \begin{pmatrix}A&\sqrt{A^2-1}\\\sqrt{A^2-1}&A\end{pmatrix}.
+\]
+Then $\det B_u=1$, $\tr B_u=2A\cosh(u/2)$, and direct multiplication gives
+\[
+ \tr[M,B_u]=2-4\sinh^2(a/2)(A^2-1)=-2\cosh(b/2),
+ \qquad [M,B_u]=MB_uM^{-1}B_u^{-1}.
+\]
+Solving this boundary equation recovers~\eqref{eq:Atwist}.
+Differentiating~\eqref{eq:torustwist}, with
+$Q=A^2\cosh^2(u/2)-1>0$, also gives
+\begin{equation}
+ \ell'_\beta(u)=\frac{A\sinh(u/2)}{\sqrt Q},\qquad
+ \ell''_\beta(u)=\frac{A(A^2-1)\cosh(u/2)}{2Q^{3/2}}>0.
+ \label{eq:torustwistderivatives}
+\end{equation}
+In particular $|\ell'_\beta|<1$, consistent with the single crossing
+in~\eqref{eq:cosine}.
+
+For any nonnegative measurable function $f$, change variables separately
+on the positive and negative twist axes to obtain
+\begin{equation}
+ \int_{\RR}f\bigl(\ell_\beta(u)\bigr)\,\dd u
+ =2\int_{r_0}^\infty
+ f(r)\frac{\sinh(r/2)}{\sqrt{\cosh^2(r/2)-A^2}}\,\dd r.
+ \label{eq:toruscoarea}
+\end{equation}
+Indeed, differentiating $\cosh(r/2)=A\cosh(u/2)$ gives
+$\dd u/\dd r=\sinh(r/2)/\sqrt{\cosh^2(r/2)-A^2}$ for $u>0$.
+The two signs of $u$ explain the factor $2$. The nonnegative equality
+allows infinity on both sides; for signed $f$ require absolute
+integrability. The coarea density's endpoint singularity at $r_0$ is
+integrable. For
+example, $y=\sqrt{\cosh^2(r/2)-A^2}$ converts the right-hand side to
+$4\int_0^\infty f(2\arcosh\sqrt{A^2+y^2})\,\dd y/\sqrt{A^2+y^2}$.
+
+Several useful checks are immediate:
+\begin{align}
+ \int_{\RR}\sech^2\bigl(\ell_\beta(u)/2\bigr)\,\dd u
+     &=\frac4{A^2},\label{eq:sechintegral}\\
+ \operatorname{meas}\{u:\ell_\beta(u)\le R\}
+     &=4\arcosh\left(\frac{\cosh(R/2)}{A}\right),\quad R\ge r_0,
+       \label{eq:sublevel}\\
+ \int_{\RR}\cosh^{-s}\bigl(\ell_\beta(u)/2\bigr)\,\dd u
+     &=\frac{2\sqrt\pi\,\Gamma(s/2)}
+             {A^s\Gamma((s+1)/2)},\quad s>0.
+       \label{eq:betaintegral}
+\end{align}
+The sublevel measure is zero for $R<r_0$. In the last integral the change
+of variable $t=\tanh(u/2)$ gives
+$2A^{-s}B(1/2,s/2)$, which proves the displayed gamma quotient.
+These are exact twist integrals. For a finite interval $[-U,U]$, $U\geq0$,
+the omitted tail satisfies
+\begin{equation}
+ \int_{|u|>U}\cosh^{-s}(\ell_\beta(u)/2)\,\dd u
+ \leq\frac{2^{s+2}}{sA^s}e^{-sU/2},\qquad s>0,
+ \label{eq:torusintegraltail}
+\end{equation}
+because $\cosh(u/2)\geq e^{|u|/2}/2$.
+For $s=2$ the tail is exactly $4A^{-2}(1-\tanh(U/2))$.
+These analytic tails do not enclose numerical quadrature or roundoff error.
+
+\subsection{A positive partition of unity}
+
+Define
+\begin{equation}
+ H_a(u)=\frac{\sinh(a/2)}{\cosh u+\cosh(a/2)}
+ =\frac12\left[
+ \tanh\left(\frac{u+a/2}{2}\right)
+ -\tanh\left(\frac{u-a/2}{2}\right)\right].
+ \label{eq:Hkernel}
+\end{equation}
+The second expression telescopes under translation by $a$, so
+\begin{equation}
+ \sum_{n\in\ZZ}H_a(\tau+na)=1.
+ \label{eq:Hidentity}
+\end{equation}
+All terms are positive and the convergence is exponential on compact
+twist intervals.
+More precisely, for $N\geq0$ put $L_N=(N+1/2)a$ and
+$P_N(\tau)=\sum_{n=-N}^NH_a(\tau+na)$. Finite telescoping gives
+\begin{align}
+ P_N(\tau)&=\tfrac12\left[
+    \tanh\frac{\tau+L_N}{2}-\tanh\frac{\tau-L_N}{2}\right],\notag\\
+ 1-P_N(\tau)&=\frac1{1+e^{L_N+\tau}}+
+               \frac1{1+e^{L_N-\tau}}
+       \leq2\cosh\tau\,e^{-L_N}.
+ \label{eq:Hpartialsumtail}
+\end{align}
+This is an explicit tail estimate, uniform for bounded $\tau$ with $a$
+fixed. One may reduce $\tau$ modulo $a$ to $|\tau|\leq a/2$ by relabeling
+the orbit; no estimate uniform as $a\to0$ is asserted for fixed $N$.
+
+Since~\eqref{eq:torustwist} implies
+$\cosh r+1=A^2(\cosh u+1)$, eliminate $u$ from~\eqref{eq:Hkernel} and set
+\begin{equation}
+ K_{a,b}(r)=
+ \frac{A^2\sinh(a/2)}
+      {\cosh r+1+A^2(\cosh(a/2)-1)}.
+ \label{eq:Kkernel}
+\end{equation}
+For $r\geq r_0$, this satisfies $K_{a,b}(r)=H_a(u)$ at the two twists
+with length $r$. For $r_n=\ell_{D_\alpha^n\beta}(X)$ we obtain the pointwise identity
+\begin{equation}
+ \boxed{\sum_{n\in\ZZ}K_{a,b}(r_n)=1.}
+ \label{eq:Kidentity}
+\end{equation}
+This is a constant series proved by telescoping, rather than inferred from
+its average. Its kernel depends on the distinguished cuff length $a$ and
+the boundary length $b$, and its index set is one twist orbit. It is not
+an unrestricted universal sum over every curve on the surface.
+The classes $D_\alpha^n\beta$ are all distinct as unoriented simple
+classes, since they cross $\alpha$ once and have distinct integral twist
+coordinates. Equal lengths, which occur at symmetric twist values, do
+not merge their labels. Equation~\eqref{eq:Hpartialsumtail} is also the
+tail estimate for this $K$-series.
+
+There is a simple source of many such examples. If $\rho\in L^1(\RR)$
+is an even nonnegative probability density, then
+\[
+ H_{a,\rho}(u)=\int_{u-a/2}^{u+a/2}\rho(v)\,\dd v
+ \quad\text{satisfies}\quad
+ \sum_{n\in\ZZ}H_{a,\rho}(u+na)=1.
+\]
+The translated intervals partition the line except for shared endpoints
+of measure zero, so Tonelli proves the identity. These terms are
+nonnegative; strict positivity requires further assumptions on $\rho$.
+Evenness makes
+$H_{a,\rho}$ a function of $|u|$, hence of the length $r$ through
+\eqref{eq:torustwist}. The choice
+$\rho(v)=\frac14\sech^2(v/2)$ gives~\eqref{eq:Hkernel}.
+This realizes the proposed ``zoo'' of identities in a concrete way, with
+the source of constancy and the parameter dependence both visible.

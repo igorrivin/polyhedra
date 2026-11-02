@@ -1,0 +1,165 @@
+{
+  "status": "author_static_checks_passed_not_independent_approval",
+  "recorded_at_utc": "2026-11-02T02:53:22.433230+00:00",
+  "owned_canonical_paths": [
+    "book/chapters/17-unfolding-constant-series.tex",
+    "book/chapters/18-figure-eight-curves.tex",
+    "book/chapters/19-pants-twists.tex",
+    "book/chapters/20-torus-twist-series.tex",
+    "book/chapters/21-cuff-matching.tex",
+    "book/chapters/22-cusps-orthospectrum.tex",
+    "book/claims/sections17-22.json"
+  ],
+  "six_chapter_old_labels_preserved_in_order": 48,
+  "six_chapter_current_labels": 54,
+  "new_labels_in_order": [
+    "eq:figurekerneltail",
+    "eq:figurefiniteidentity",
+    "eq:localdistancehessian",
+    "eq:torustwistderivatives",
+    "eq:torusintegraltail",
+    "eq:Hpartialsumtail"
+  ],
+  "headings_order_unchanged": true,
+  "single_final_newline_all_seven_files": true,
+  "balanced_local_braces_and_environments": true,
+  "ledger_claims": 59,
+  "all_chapter_labels_covered_in_ledger": true,
+  "citation_keys_resolve": [
+    "ALPS",
+    "HuTan",
+    "Kerckhoff",
+    "LeiZhang",
+    "LuoTan",
+    "McShane",
+    "McShanePants",
+    "MirzGeneral",
+    "MirzSimple",
+    "MirzVolumes",
+    "Parlier",
+    "RivinFigures",
+    "Springborn",
+    "WolpertTwist"
+  ],
+  "cross_references_resolve": true,
+  "global_graph_observation": {
+    "baseline_inputs_including_wrapper": 26,
+    "current_inputs_including_wrapper": 36,
+    "baseline_labels": 607,
+    "current_labels": 613,
+    "all_baseline_labels_survive_in_order": true,
+    "scope": "Read-only observation of the shared current graph, not approval or a freeze of other author files."
+  },
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "book/chapters/17-unfolding-constant-series.tex"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "book/chapters/18-figure-eight-curves.tex"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "book/chapters/19-pants-twists.tex"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "book/chapters/20-torus-twist-series.tex"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "book/chapters/21-cuff-matching.tex"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "book/chapters/22-cusps-orthospectrum.tex"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "book/claims/sections17-22.json"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "no_index_check_exit_note": "Exit 1 with empty diagnostics is the expected content-difference exit for a new file compared against /dev/null; no whitespace errors were printed.",
+  "not_run": [
+    "PDF compilation",
+    "maintained companion implementation or execution",
+    "independent mathematical review",
+    "stage or commit",
+    "installation",
+    "upload"
+  ]
+}

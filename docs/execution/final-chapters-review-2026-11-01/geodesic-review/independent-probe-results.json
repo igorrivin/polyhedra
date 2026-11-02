@@ -1,0 +1,795 @@
+{
+  "status": "all_independent_finite_probes_passed",
+  "script_sha256": "eda1567d85e7b667069b22b46d96cf5e5a7605fc031348f14261e74f52773ae7",
+  "python": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "exact_check_count": 37,
+  "exact_checks": [
+    "G4 Huu numerator",
+    "G4 Hvv numerator",
+    "G4 Huv numerator",
+    "G4 Hessian determinant numerator",
+    "G3 formal telescope N=1",
+    "G3 formal telescope N=2",
+    "G3 formal telescope N=3",
+    "G3 formal telescope N=4",
+    "G3 formal telescope N=12",
+    "G3 formal telescope N=40",
+    "G2 determinant 0",
+    "G2 trace polarization 0",
+    "G2 determinant 1",
+    "G2 trace polarization 1",
+    "G2 determinant 2",
+    "G2 trace polarization 2",
+    "G2 determinant 3",
+    "G2 trace polarization 3",
+    "G2 determinant 4",
+    "G2 trace polarization 4",
+    "G2 determinant 5",
+    "G2 trace polarization 5",
+    "G9 A determinant (1, 2, 3)",
+    "G9 B trace (1, 2, 3)",
+    "G9 A determinant (2, 3, 5)",
+    "G9 B trace (2, 3, 5)",
+    "G9 A determinant (3, 5, 2)",
+    "G9 B trace (3, 5, 2)",
+    "G9 Markov (1, 1, 1)",
+    "G9 flip H (1, 1, 1)",
+    "G9 Markov (1, 2, 3)",
+    "G9 flip H (1, 2, 3)",
+    "G9 Markov (2, 3, 5)",
+    "G9 flip H (2, 3, 5)",
+    "G7 uniform window (1/2, 0)",
+    "G7 uniform window (2, 1)",
+    "G7 uniform window (3/5, 3/10)"
+  ],
+  "floating_check_count": 112,
+  "floating_checks": [
+    {
+      "name": "G4 Hessian (mpf('0.03000000000000000000000000000000000000000000000000000000000000000000000012'), 1, -2)",
+      "dps": 70,
+      "scaled_residual": "9.77070935804e-77",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G4 Hessian (mpf('0.5'), 0, 0)",
+      "dps": 70,
+      "scaled_residual": "4.34672595784e-70",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G4 Hessian (mpf('2.0'), -3, 2)",
+      "dps": 70,
+      "scaled_residual": "3.43182921593e-72",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G4 Hessian (mpf('7.0'), 4, 4)",
+      "dps": 70,
+      "scaled_residual": "1.00052063827e-73",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G5 commutator (mpf('0.2000000000000000000000000000000000000000000000000000000000000000000000005'), 0, 0)",
+      "dps": 70,
+      "scaled_residual": "8.9832336462e-69",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G5 second derivative (mpf('0.2000000000000000000000000000000000000000000000000000000000000000000000005'), 0, 0)",
+      "dps": 70,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G6 coarea (mpf('0.2000000000000000000000000000000000000000000000000000000000000000000000005'), 0, mpf('0.5'))",
+      "dps": 70,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G6 coarea (mpf('0.2000000000000000000000000000000000000000000000000000000000000000000000005'), 0, mpf('2.0'))",
+      "dps": 70,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G6 finite s2 (mpf('0.2000000000000000000000000000000000000000000000000000000000000000000000005'), 0)",
+      "dps": 70,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G6 coarea (mpf('0.2000000000000000000000000000000000000000000000000000000000000000000000005'), 0, mpf('3.0'))",
+      "dps": 70,
+      "scaled_residual": "7.07474928033e-74",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G5 commutator (mpf('1.0'), mpf('0.6999999999999999999999999999999999999999999999999999999999999999999999982'), mpf('0.5'))",
+      "dps": 70,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G5 second derivative (mpf('1.0'), mpf('0.6999999999999999999999999999999999999999999999999999999999999999999999982'), mpf('0.5'))",
+      "dps": 70,
+      "scaled_residual": "9.05567907883e-72",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G6 coarea (mpf('1.0'), mpf('0.6999999999999999999999999999999999999999999999999999999999999999999999982'), mpf('0.5'))",
+      "dps": 70,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G6 coarea (mpf('1.0'), mpf('0.6999999999999999999999999999999999999999999999999999999999999999999999982'), mpf('2.0'))",
+      "dps": 70,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G6 finite s2 (mpf('1.0'), mpf('0.6999999999999999999999999999999999999999999999999999999999999999999999982'))",
+      "dps": 70,
+      "scaled_residual": "9.05567907883e-72",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G6 coarea (mpf('1.0'), mpf('0.6999999999999999999999999999999999999999999999999999999999999999999999982'), mpf('3.0'))",
+      "dps": 70,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G5 commutator (mpf('3.0'), 4, -4)",
+      "dps": 70,
+      "scaled_residual": "7.24454326306e-71",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G5 second derivative (mpf('3.0'), 4, -4)",
+      "dps": 70,
+      "scaled_residual": "4.2448495682e-73",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G6 coarea (mpf('3.0'), 4, mpf('0.5'))",
+      "dps": 70,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G6 coarea (mpf('3.0'), 4, mpf('2.0'))",
+      "dps": 70,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G6 finite s2 (mpf('3.0'), 4)",
+      "dps": 70,
+      "scaled_residual": "3.62227163153e-71",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G6 coarea (mpf('3.0'), 4, mpf('3.0'))",
+      "dps": 70,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G1 finite Fermi tail R=12",
+      "dps": 70,
+      "remainder": "7.987452464831129e-5",
+      "analytic_tail": "7.987476059326673e-5",
+      "status": "numerical comparison not enclosure"
+    },
+    {
+      "name": "G1 finite Fermi tail R=30",
+      "dps": 70,
+      "remainder": "2.900863120340321e-12",
+      "analytic_tail": "2.900863120340454e-12",
+      "status": "numerical comparison not enclosure"
+    },
+    {
+      "name": "G1 finite Fermi tail R=60",
+      "dps": 70,
+      "remainder": "5.341471565244877e-25",
+      "analytic_tail": "5.341471565244877e-25",
+      "status": "numerical comparison not enclosure"
+    },
+    {
+      "name": "G3 finite residual 6.00000000000000000001 N=4",
+      "dps": 70,
+      "scaled_residual": "2.26391976984e-72",
+      "tolerance": "1.0e-55",
+      "log_analytic_tail": "-3.4657359029023665949"
+    },
+    {
+      "name": "G3 finite residual 6.00000000000000000001 N=12",
+      "dps": 70,
+      "scaled_residual": "3.25438466914e-72",
+      "tolerance": "1.0e-55",
+      "log_analytic_tail": "-9.0109133476036822601"
+    },
+    {
+      "name": "G3 finite residual 6.00000000000000000001 N=40",
+      "dps": 70,
+      "scaled_residual": "3.7350141173e-72",
+      "tolerance": "1.0e-55",
+      "log_analytic_tail": "-28.419034421163739675"
+    },
+    {
+      "name": "G3 finite residual 6.01 N=4",
+      "dps": 70,
+      "scaled_residual": "4.80490462617e-72",
+      "tolerance": "1.0e-55",
+      "log_analytic_tail": "-3.5738905646724661597"
+    },
+    {
+      "name": "G3 finite residual 6.01 N=12",
+      "dps": 70,
+      "scaled_residual": "2.8153738044e-74",
+      "tolerance": "1.0e-55",
+      "log_analytic_tail": "-9.402066683989933446"
+    },
+    {
+      "name": "G3 finite residual 6.01 N=40",
+      "dps": 70,
+      "scaled_residual": "2.60603378019e-528733",
+      "tolerance": "1.0e-55",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-1217452.5186840507195"
+    },
+    {
+      "name": "G3 finite residual 9 N=4",
+      "dps": 70,
+      "scaled_residual": "4.14138869771e-72",
+      "tolerance": "1.0e-55",
+      "log_analytic_tail": "-9.6237808079311237783"
+    },
+    {
+      "name": "G3 finite residual 9 N=12",
+      "dps": 70,
+      "scaled_residual": "3.54495853161e-522",
+      "tolerance": "1.0e-55",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-1202.7449280194761944"
+    },
+    {
+      "name": "G3 finite residual 9 N=40",
+      "dps": 70,
+      "scaled_residual": "3.02902101738e-138990210556",
+      "tolerance": "1.0e-55",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-320036786899.30204654"
+    },
+    {
+      "name": "G3 finite residual 11 N=4",
+      "dps": 70,
+      "scaled_residual": "5.97202208049e-72",
+      "tolerance": "1.0e-55",
+      "log_analytic_tail": "-14.284079640921418963"
+    },
+    {
+      "name": "G3 finite residual 11 N=12",
+      "dps": 70,
+      "scaled_residual": "9.27947171429e-1040",
+      "tolerance": "1.0e-55",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-2394.9748652948968256"
+    },
+    {
+      "name": "G3 finite residual 11 N=40",
+      "dps": 70,
+      "scaled_residual": "1.81863433428e-277980421099",
+      "tolerance": "1.0e-55",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-640073573768.68098129"
+    },
+    {
+      "name": "G3 finite residual 30 N=4",
+      "dps": 70,
+      "scaled_residual": "3.03431128286e-72",
+      "tolerance": "1.0e-55",
+      "log_analytic_tail": "-43.827667639927584832"
+    },
+    {
+      "name": "G3 finite residual 30 N=12",
+      "dps": 70,
+      "scaled_residual": "1.72404263421e-4323",
+      "tolerance": "1.0e-55",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-9958.1257018740611224"
+    },
+    {
+      "name": "G3 finite residual 30 N=40",
+      "dps": 70,
+      "scaled_residual": "1.32891847757e-1159692827641",
+      "tolerance": "1.0e-55",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-2670291417382.5904294"
+    },
+    {
+      "name": "G3 finite residual 1000 N=4",
+      "dps": 70,
+      "scaled_residual": "6.155593961e-72",
+      "tolerance": "1.0e-55",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-155.70708376131697728"
+    },
+    {
+      "name": "G3 finite residual 1000 N=12",
+      "dps": 70,
+      "scaled_residual": "3.99730953264e-16759",
+      "tolerance": "1.0e-55",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-38599.256228949745587"
+    },
+    {
+      "name": "G3 finite residual 1000 N=40",
+      "dps": 70,
+      "scaled_residual": "4.98668485434e-4498676892455",
+      "tolerance": "1.0e-55",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-10358586350773.672135"
+    },
+    {
+      "name": "G7 finite partition (mpf('0.1000000000000000000000000000000000000000000000000000000000000000000000002'), mpf('0.05000000000000000000000000000000000000000000000000000000000000000000000011'), 0)",
+      "dps": 70,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-55",
+      "positive_tail": "0.975020812521060014"
+    },
+    {
+      "name": "G7 finite partition (mpf('0.6999999999999999999999999999999999999999999999999999999999999999999999982'), mpf('-0.1399999999999999999999999999999999999999999999999999999999999999999999996'), 12)",
+      "dps": 70,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-55",
+      "positive_tail": "0.000319981375561375901"
+    },
+    {
+      "name": "G7 finite partition (mpf('7.0'), mpf('2.590000000000000000000000000000000000000000000000000000000000000000000016'), 150)",
+      "dps": 70,
+      "scaled_residual": "9.05567907883e-72",
+      "tolerance": "1.0e-55",
+      "positive_tail": "3.96299370845928702e-457"
+    },
+    {
+      "name": "G10 stable shadow d=.1",
+      "dps": 70,
+      "scaled_residual": "8.00645852908e-71",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G10 stable shadow d=.7",
+      "dps": 70,
+      "scaled_residual": "1.8235898263e-71",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G10 stable shadow d=2",
+      "dps": 70,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G10 stable shadow d=8",
+      "dps": 70,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G10 stable shadow d=100",
+      "dps": 70,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G10 stable shadow d=1000",
+      "dps": 70,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G9 decoration 0.1",
+      "dps": 70,
+      "scaled_residual": "1.81113581577e-71",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G9 decoration 1.0",
+      "dps": 70,
+      "scaled_residual": "9.05567907883e-72",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G9 decoration 20.0",
+      "dps": 70,
+      "scaled_residual": "9.05567907883e-72",
+      "tolerance": "1.0e-55"
+    },
+    {
+      "name": "G8 matched x=0 with shifted incoming endpoint",
+      "dps": 70,
+      "derivative": "-0.7866910696888382643047486",
+      "interpretation": "positions match but directions do not"
+    },
+    {
+      "name": "G4 Hessian (mpf('0.030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000012'), 1, -2)",
+      "dps": 110,
+      "scaled_residual": "2.11008153562e-115",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G4 Hessian (mpf('0.5'), 0, 0)",
+      "dps": 110,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G4 Hessian (mpf('2.0'), -3, 2)",
+      "dps": 110,
+      "scaled_residual": "5.35774850278e-113",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G4 Hessian (mpf('7.0'), 4, 4)",
+      "dps": 110,
+      "scaled_residual": "4.59416546167e-114",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G5 commutator (mpf('0.20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008'), 0, 0)",
+      "dps": 110,
+      "scaled_residual": "9.84653213002e-109",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G5 second derivative (mpf('0.20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008'), 0, 0)",
+      "dps": 110,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G6 coarea (mpf('0.20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008'), 0, mpf('0.5'))",
+      "dps": 110,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G6 coarea (mpf('0.20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008'), 0, mpf('2.0'))",
+      "dps": 110,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G6 finite s2 (mpf('0.20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008'), 0)",
+      "dps": 110,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G6 coarea (mpf('0.20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008'), 0, mpf('3.0'))",
+      "dps": 110,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G5 commutator (mpf('1.0'), mpf('0.69999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999967'), mpf('0.5'))",
+      "dps": 110,
+      "scaled_residual": "5.32244980001e-110",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G5 second derivative (mpf('1.0'), mpf('0.69999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999967'), mpf('0.5'))",
+      "dps": 110,
+      "scaled_residual": "8.31632781252e-112",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G6 coarea (mpf('1.0'), mpf('0.69999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999967'), mpf('0.5'))",
+      "dps": 110,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G6 coarea (mpf('1.0'), mpf('0.69999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999967'), mpf('2.0'))",
+      "dps": 110,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G6 finite s2 (mpf('1.0'), mpf('0.69999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999967'))",
+      "dps": 110,
+      "scaled_residual": "8.31632781252e-112",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G6 coarea (mpf('1.0'), mpf('0.69999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999967'), mpf('3.0'))",
+      "dps": 110,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G5 commutator (mpf('3.0'), 4, -4)",
+      "dps": 110,
+      "scaled_residual": "1.995918675e-110",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G5 second derivative (mpf('3.0'), 4, -4)",
+      "dps": 110,
+      "scaled_residual": "3.89827866212e-113",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G6 coarea (mpf('3.0'), 4, mpf('0.5'))",
+      "dps": 110,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G6 coarea (mpf('3.0'), 4, mpf('2.0'))",
+      "dps": 110,
+      "scaled_residual": "3.32653112501e-111",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G6 finite s2 (mpf('3.0'), 4)",
+      "dps": 110,
+      "scaled_residual": "3.32653112501e-111",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G6 coarea (mpf('3.0'), 4, mpf('3.0'))",
+      "dps": 110,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G1 finite Fermi tail R=12",
+      "dps": 110,
+      "remainder": "7.987452464831129e-5",
+      "analytic_tail": "7.987476059326673e-5",
+      "status": "numerical comparison not enclosure"
+    },
+    {
+      "name": "G1 finite Fermi tail R=30",
+      "dps": 110,
+      "remainder": "2.900863120340321e-12",
+      "analytic_tail": "2.900863120340454e-12",
+      "status": "numerical comparison not enclosure"
+    },
+    {
+      "name": "G1 finite Fermi tail R=60",
+      "dps": 110,
+      "remainder": "5.341471565244877e-25",
+      "analytic_tail": "5.341471565244877e-25",
+      "status": "numerical comparison not enclosure"
+    },
+    {
+      "name": "G3 finite residual 6.00000000000000000001 N=4",
+      "dps": 110,
+      "scaled_residual": "1.03954097662e-112",
+      "tolerance": "1.0e-95",
+      "log_analytic_tail": "-3.4657359029023665949"
+    },
+    {
+      "name": "G3 finite residual 6.00000000000000000001 N=12",
+      "dps": 110,
+      "scaled_residual": "5.5712899216e-112",
+      "tolerance": "1.0e-95",
+      "log_analytic_tail": "-9.0109133476036822601"
+    },
+    {
+      "name": "G3 finite residual 6.00000000000000000001 N=40",
+      "dps": 110,
+      "scaled_residual": "2.60985470528e-113",
+      "tolerance": "1.0e-95",
+      "log_analytic_tail": "-28.419034421163739675"
+    },
+    {
+      "name": "G3 finite residual 6.01 N=4",
+      "dps": 110,
+      "scaled_residual": "1.10315200084e-112",
+      "tolerance": "1.0e-95",
+      "log_analytic_tail": "-3.5738905646724661597"
+    },
+    {
+      "name": "G3 finite residual 6.01 N=12",
+      "dps": 110,
+      "scaled_residual": "2.52949306443e-112",
+      "tolerance": "1.0e-95",
+      "log_analytic_tail": "-9.402066683989933446"
+    },
+    {
+      "name": "G3 finite residual 6.01 N=40",
+      "dps": 110,
+      "scaled_residual": "2.60603378019e-528733",
+      "tolerance": "1.0e-95",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-1217452.5186840507195"
+    },
+    {
+      "name": "G3 finite residual 9 N=4",
+      "dps": 110,
+      "scaled_residual": "1.92156568316e-112",
+      "tolerance": "1.0e-95",
+      "log_analytic_tail": "-9.6237808079311237783"
+    },
+    {
+      "name": "G3 finite residual 9 N=12",
+      "dps": 110,
+      "scaled_residual": "3.54495853161e-522",
+      "tolerance": "1.0e-95",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-1202.7449280194761944"
+    },
+    {
+      "name": "G3 finite residual 9 N=40",
+      "dps": 110,
+      "scaled_residual": "3.02902101738e-138990210556",
+      "tolerance": "1.0e-95",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-320036786899.30204654"
+    },
+    {
+      "name": "G3 finite residual 11 N=4",
+      "dps": 110,
+      "scaled_residual": "7.32956803321e-112",
+      "tolerance": "1.0e-95",
+      "log_analytic_tail": "-14.284079640921418963"
+    },
+    {
+      "name": "G3 finite residual 11 N=12",
+      "dps": 110,
+      "scaled_residual": "9.27947171429e-1040",
+      "tolerance": "1.0e-95",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-2394.9748652948968256"
+    },
+    {
+      "name": "G3 finite residual 11 N=40",
+      "dps": 110,
+      "scaled_residual": "1.81863433428e-277980421099",
+      "tolerance": "1.0e-95",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-640073573768.68098129"
+    },
+    {
+      "name": "G3 finite residual 30 N=4",
+      "dps": 110,
+      "scaled_residual": "2.63276725455e-112",
+      "tolerance": "1.0e-95",
+      "log_analytic_tail": "-43.827667639927584832"
+    },
+    {
+      "name": "G3 finite residual 30 N=12",
+      "dps": 110,
+      "scaled_residual": "1.72404263421e-4323",
+      "tolerance": "1.0e-95",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-9958.1257018740611224"
+    },
+    {
+      "name": "G3 finite residual 30 N=40",
+      "dps": 110,
+      "scaled_residual": "1.32891847757e-1159692827641",
+      "tolerance": "1.0e-95",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-2670291417382.5904294"
+    },
+    {
+      "name": "G3 finite residual 1000 N=4",
+      "dps": 110,
+      "scaled_residual": "1.3126546865e-112",
+      "tolerance": "1.0e-95",
+      "log_analytic_tail": "-155.70708376131697728"
+    },
+    {
+      "name": "G3 finite residual 1000 N=12",
+      "dps": 110,
+      "scaled_residual": "3.99730953264e-16759",
+      "tolerance": "1.0e-95",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-38599.256228949745587"
+    },
+    {
+      "name": "G3 finite residual 1000 N=40",
+      "dps": 110,
+      "scaled_residual": "4.98668485434e-4498676892455",
+      "tolerance": "1.0e-95",
+      "conditioning": "cancellation-limited; formal coefficient identity supplies exact equality",
+      "log_analytic_tail": "-10358586350773.672135"
+    },
+    {
+      "name": "G7 finite partition (mpf('0.10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004'), mpf('0.050000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000021'), 0)",
+      "dps": 110,
+      "scaled_residual": "8.31632781252e-112",
+      "tolerance": "1.0e-95",
+      "positive_tail": "0.975020812521060014"
+    },
+    {
+      "name": "G7 finite partition (mpf('0.69999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999967'), mpf('-0.14000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006'), 12)",
+      "dps": 110,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-95",
+      "positive_tail": "0.000319981375561375901"
+    },
+    {
+      "name": "G7 finite partition (mpf('7.0'), mpf('2.5900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000016'), 150)",
+      "dps": 110,
+      "scaled_residual": "1.6632655625e-111",
+      "tolerance": "1.0e-95",
+      "positive_tail": "3.96299370845928702e-457"
+    },
+    {
+      "name": "G10 stable shadow d=.1",
+      "dps": 110,
+      "scaled_residual": "9.19096364358e-111",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G10 stable shadow d=.7",
+      "dps": 110,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G10 stable shadow d=2",
+      "dps": 110,
+      "scaled_residual": "1.53624531859e-111",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G10 stable shadow d=8",
+      "dps": 110,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G10 stable shadow d=100",
+      "dps": 110,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G10 stable shadow d=1000",
+      "dps": 110,
+      "scaled_residual": "0.0",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G9 decoration 0.1",
+      "dps": 110,
+      "scaled_residual": "4.15816390626e-112",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G9 decoration 1.0",
+      "dps": 110,
+      "scaled_residual": "4.15816390626e-112",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G9 decoration 20.0",
+      "dps": 110,
+      "scaled_residual": "4.15816390626e-112",
+      "tolerance": "1.0e-95"
+    },
+    {
+      "name": "G8 matched x=0 with shifted incoming endpoint",
+      "dps": 110,
+      "derivative": "-0.7866910696888382643047486",
+      "interpretation": "positions match but directions do not"
+    }
+  ],
+  "limitations": [
+    "Finite representative probes do not implement the full companion contract.",
+    "Floating values, derivatives and quadrature are not interval certificates.",
+    "Exact symbolic identities are distinct from sampled inequalities and analytic tail bounds.",
+    "No complete curve enumeration or global identity was computed."
+  ]
+}

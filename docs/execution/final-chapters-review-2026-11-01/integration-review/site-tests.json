@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/tmp/polyhedra-baseline-20261031/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "site/tests",
+    "-v"
+  ],
+  "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+  "scope": "Existing focused site test suite, run once; not the dependency-complete toolkit suite",
+  "started_at_utc": "2026-11-02T04:38:57.026107+00:00",
+  "returncode": 0,
+  "elapsed_seconds": 0.8300965829985216,
+  "finished_at_utc": "2026-11-02T04:38:57.856266+00:00",
+  "source_unchanged_before_after": true
+}

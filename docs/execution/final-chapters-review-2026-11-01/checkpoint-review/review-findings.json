@@ -1,0 +1,63 @@
+{
+  "decision": "targeted_revision_required",
+  "recorded_at_utc": "2026-11-02T03:40:06.894430+00:00",
+  "reviewer": "final_checkpoint_reviewer",
+  "author_freeze_sha256": "fc438829b4a38da85bda247b38115ee012cce4344027adeb8efa840560d5a790",
+  "reviewed_tool_sha256": {
+    "checkpoint_lib.py": "2e227c30dcb0585b307fc5d45c55538409e3ef3569ba2eb89908a3a86e55eeb9",
+    "run_clean_replay.py": "26ea5840dd35fbded2ec7023ca86ca37e3ff05eb6e311bbf9eea2749603cdc60",
+    "compare_replays.py": "f4f80cec1f4a76d1e5e290094edfb3152bd9ad4601a56c1e27253750c52d0e8a",
+    "verify_checkpoint.py": "3d99648a42ac015f6c8a013ef1d34af9db214a4e04b886c4b63bb727945025dc",
+    "test_checkpoint.py": "c1fd2a738660066eb64283d4bd68f42ab3b66807c5ecf1a487857ea0c93147d2"
+  },
+  "required_findings": [
+    {
+      "id": "CR01",
+      "severity": "required_scientific_comparison_correctness",
+      "path": "checkpoint_lib.py",
+      "lines": [
+        46,
+        58
+      ],
+      "title": "Binary64 JSON parsing silently loses scientific numeric distinctions",
+      "evidence": "parse_float converts each numeric token to float. Distinct tiny/high-precision numbers then have identical parsed values and canonical encodings. The entire finite_comparison accepts a changed unknown scientific signal 1e-999 versus 0.0, and 1.0000000000000001 versus 1.0.",
+      "reproductions": [
+        "json_underflow",
+        "json_near_one",
+        "json_binary64_integer_boundary",
+        "report_raw_underflow",
+        "report_raw_rounding"
+      ],
+      "required_behavior": "Retain exact numeric information or reject a lossy input before scientific comparison. Do not treat distinct scientific numbers as equal, and preserve scalar type distinctions from strings and booleans. Timing metadata exclusions must remain exact, individually validated, and serializable in success/failure receipts.",
+      "controls": "Boolean/integer, string/number, integer/float, distinct large integers and tiny-positive strings already reject correctly; preserve these controls.",
+      "recheck": "Normal and optimized parsing, full-report comparison, serialization and failure-receipt regressions for subnormal/underflow values and close decimals."
+    },
+    {
+      "id": "CR02",
+      "severity": "required_prelaunch_graph_coverage",
+      "path": "checkpoint_lib.py",
+      "lines": [
+        270,
+        343
+      ],
+      "title": "Declared 36-file count is not an active manuscript graph check",
+      "evidence": "ready_spec checks len(tex_input_sha256)==36; approved_spec validates declared bytes without expanding book/main.tex. The independent synthetic command successfully executes with 36 disconnected .tex files and no book/main.tex. verify_checkpoint.manuscript checks the active graph only at the later artifact stage.",
+      "reproductions": [
+        "unconnected_36_files_without_entry_point"
+      ],
+      "required_behavior": "Before launching the clean replay, derive or independently bind and verify the complete active input graph rooted at book/main.tex, and require its exact path/hash mapping to equal the 36-entry declared map in both the source commit and current files. A count alone must not authorize the run. Reject missing entry points, omitted active inputs, unrelated filler paths, repeated/cyclic inputs and outside paths.",
+      "controls": "Existing source/approval/runtime identity, exact group-name, empty Git-state and failure-receipt gates must remain intact.",
+      "recheck": "Use a connected synthetic 36-input fixture for the positive replay control and rejected omitted/replaced/unconnected cases before command_executed becomes true."
+    }
+  ],
+  "other_required_findings": [],
+  "test_results": {
+    "existing_tests_normal": 29,
+    "existing_tests_optimized": 29,
+    "ruff_passed": true,
+    "independent_probes_per_mode": 15,
+    "unexpected_acceptances_per_mode": 6,
+    "distinct_required_defects": 2
+  },
+  "approval_boundary": "No approval to run real science or finalize a checkpoint. Actual final schemas, approval bindings, commits, complete companion, PDF and candidate remain separately unresolved."
+}

@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "ready": true,
+  "unresolved": [],
+  "baseline_commit": "151673b1817e66aae493eb7da1be5ddf49adfe0f",
+  "source_commit": "8f722ae462307146818932cde4811e4bb4e8423e",
+  "replay_spec": {
+    "path": "clean-source/replay-spec.json",
+    "outer_source": "clean-source/replay-spec.json",
+    "identity": {
+      "sha256": "7fbcdc3ca5c2443fff1b89096c6a5b94c3ddd233794fb1949d5737eb99f2266e",
+      "bytes": 38837
+    }
+  },
+  "source_receipt": {
+    "path": "source-checkpoint/source-checkpoint.json",
+    "identity": {
+      "sha256": "56df9d0d5bfc155c8f0bcc077bbb4320290896d87d602b7cf823e18f42b88bd0",
+      "bytes": 50680
+    },
+    "required_values": {
+      "/passed": true,
+      "/checks_passed": true,
+      "/exit_status": 0
+    }
+  },
+  "approval_pins": [
+    {
+      "role": "structure",
+      "path": "structure-review/review-manifest.json",
+      "identity": {
+        "sha256": "50a17cfb46c8b867c5dd3c45129a6157f6bfaab248f889cd63dab177fe43e8fd",
+        "bytes": 2224
+      },
+      "required_values": {
+        "/decision": "APPROVED: exact frozen structural extraction",
+        "/source_preservation_normal_and_optimized": true,
+        "/author_evidence_unchanged": true,
+        "/head_and_index_unchanged": true
+      }
+    },
+    {
+      "role": "quantum",
+      "path": "quantum-review/final-acceptance.json",
+      "identity": {
+        "sha256": "c631f5ed63513246adf7bbec958c3298ab577861ee02f1d359ff6ca25b7c4dd9",
+        "bytes": 3479
+      },
+      "required_values": {
+        "/status": "independent_exact_byte_acceptance",
+        "/required_open_findings": []
+      }
+    },
+    {
+      "role": "geodesic",
+      "path": "geodesic-review/revision-v2/final-acceptance.json",
+      "identity": {
+        "sha256": "b734eb97f35f360022cb874b4561d9d3151f876d26db7eb6459e9f676576c0ef",
+        "bytes": 2867
+      },
+      "required_values": {
+        "/decision": "approved_exact_final_mathematical_source_and_claim_ledger",
+        "/open_required_findings": []
+      }
+    },
+    {
+      "role": "conventions",
+      "path": "conventions-review/revision-v3/final-acceptance.json",
+      "identity": {
+        "sha256": "2a4030977ea4a64d584e98cce5171765d9e51d0abbf003b0622054d9723fd1b4",
+        "bytes": 3109
+      },
+      "required_values": {
+        "/status": "independent_exact_byte_acceptance",
+        "/required_open_findings": []
+      }
+    },
+    {
+      "role": "computation",
+      "path": "computation-review/revision-v2/final-acceptance.json",
+      "identity": {
+        "sha256": "70070fe32c42961d68b035ccb7fae5b012c50ac5814ca42bd05689bfc64b6592",
+        "bytes": 25941
+      },
+      "required_values": {
+        "/decision": "approved_exact_runtime_and_author_result_for_finite_computational_scope",
+        "/implementation_approved": true,
+        "/required_open_findings": [],
+        "/source_before_after_current_equal": true,
+        "/scientific_fixture_and_groups_exactly_equal_to_v1": true
+      }
+    },
+    {
+      "role": "integration",
+      "path": "integration-review/final-acceptance.json",
+      "identity": {
+        "sha256": "84b9eb77d45339fad20af6df2439f710a9fc2a47af35c823f4b3f8e3029cd708",
+        "bytes": 18644
+      },
+      "required_values": {
+        "/decision": "approved_exact_source_integration_and_precommit_PDF_for_later_checkpoint",
+        "/source_integration_approved": true,
+        "/precommit_pdf_build_and_visual_approved": true,
+        "/required_open_findings": [],
+        "/approved_source_path_count": 40,
+        "/active_tex_input_count": 36
+      }
+    }
+  ],
+  "baseline_inventory": {
+    "path": "structure/baseline-tracked-inventory.json",
+    "identity": {
+      "sha256": "7215c3af89f2f4fe50634bad4f572cbffbdd27c9cebfd0530e8d97c3c68e6ac8",
+      "bytes": 1135435
+    }
+  },
+  "original_inventory_identity": {
+    "sha256": "3e7cb4912789f4134652daf0f4097e28a871e4630207b04fef0a41b49d9ee6f1",
+    "bytes": 206532
+  },
+  "replay_receipt": {
+    "path": "clean-source/run-command.json",
+    "identity": {
+      "sha256": "7e3f2bee77621bb26439511daacf5b325fe4a9c65ca91afac39ca08b1c73a8f2",
+      "bytes": 21385
+    },
+    "required_values": {
+      "/checks_passed": true,
+      "/command_executed": true,
+      "/returncode": 0,
+      "/exit_status": 0
+    }
+  },
+  "comparison_receipt": {
+    "path": "clean-source/scientific-comparison.json",
+    "identity": {
+      "sha256": "2d55295cbb1d18f38bffa615d9981c7cb9f5a8f08c05dd298d3905adbc9d469b",
+      "bytes": 25361
+    },
+    "required_values": {
+      "/checks_passed": true,
+      "/exit_status": 0,
+      "/identical_scientific_payload": true
+    }
+  },
+  "claim_ledgers": {
+    "book/claims/sections10-11.json": 61,
+    "book/claims/sections17-22.json": 59,
+    "book/claims/section32-appendixb.json": 66
+  },
+  "pdf": {
+    "identity": {
+      "sha256": "5bb873e52a4fe668d74f6137150d5e1180f75d6ed1c93bff21724e5b8bcf4c83",
+      "bytes": 1522690
+    },
+    "reviewed_outer_pdf": "integration-review/pdf-build/main.pdf",
+    "build_timing_claim": "actual independently reviewed precommit build copied byte-for-byte",
+    "input_freeze": {
+      "path": "integration-review/tex-input-freeze.json",
+      "identity": {
+        "sha256": "f9d51b08ba5da5b4d68eb48508be4ce58a49e22a15a55a4b9cf4a44fa6c79e3d",
+        "bytes": 11268
+      },
+      "required_values": {
+        "/stage": "precommit integrated source"
+      },
+      "input_sha256_pointer": "/files",
+      "input_sha256_shape": "mapping"
+    },
+    "build_receipt": {
+      "path": "integration-review/pdf-build-receipt.json",
+      "identity": {
+        "sha256": "a15ccdf4a4b47f09f4e6173bcf13ff42776442c60ffcb3da0991b2363b4b6704",
+        "bytes": 10522
+      },
+      "required_values": {
+        "/active_input_count": 36,
+        "/compiled_unique_labels": 613,
+        "/compiled_unique_bibliography_keys": 129,
+        "/overfull_count": 0,
+        "/undefined_reference_or_citation": false,
+        "/multiply_defined_labels": false,
+        "/missing_character_warning": false,
+        "/source_matches_live_and_snapshot_after_build": true,
+        "/postcommit_build": false
+      },
+      "pdf_sha256_pointer": "/pdf/sha256"
+    },
+    "visual_receipt": {
+      "path": "integration-review/visual-review.json",
+      "identity": {
+        "sha256": "f83ab82a95be4124cbcf16719aea88dc352c74935294e8988f401e38aa7bc15e",
+        "bytes": 11483
+      },
+      "required_values": {
+        "/decision": "approved_precommit_integrated_PDF_for_requested_increment",
+        "/required_open_findings": [],
+        "/page_count_visually_inspected": 57
+      },
+      "pdf_sha256_pointer": "/pdf/sha256"
+    }
+  },
+  "preparation_note": "Actual source, replay/comparison and independently reviewed precommit PDF bindings. Candidate and postcommit approvals remain outside this payload.",
+  "artifact_whitespace": {
+    "path": "artifact-whitespace-exceptions.json",
+    "identity": {
+      "sha256": "423226b2b95c51fccaeccb1530a3a3d7a2ab200b32d49b9095869f542d43b4ae",
+      "bytes": 77432
+    },
+    "scope": "Exact verbatim artifact-only observations; no source exemption. Independent candidate review required before staging."
+  }
+}

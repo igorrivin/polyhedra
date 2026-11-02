@@ -1,0 +1,33 @@
+{
+  "status": "author_freeze_for_independent_math_review",
+  "date": "2026-11-01",
+  "baseline_commit": "151673b1817e66aae493eb7da1be5ddf49adfe0f",
+  "extraction_review_manifest_sha256": "50a17cfb46c8b867c5dd3c45129a6157f6bfaab248f889cd63dab177fe43e8fd",
+  "canonical_files": [
+    {
+      "path": "book/chapters/10-quantum-introduction.tex",
+      "sha256": "010a50a8f5205255bef2417f76515fff8962a443ea835c30bfcee02846c5ebfb",
+      "bytes": 43507
+    },
+    {
+      "path": "book/chapters/11-quantum-degeneration.tex",
+      "sha256": "5a62080dbc2320f57efec073aa803cdff20dd06c05529dc7e064346cf0f47db9",
+      "bytes": 13435
+    },
+    {
+      "path": "book/claims/sections10-11.json",
+      "sha256": "ea22e86c4399d4d3fcf83c938144373c89367cb7f9ce1a074b866499000ce1cb",
+      "bytes": 59312
+    }
+  ],
+  "old_labels_preserved_in_order": 48,
+  "claims": 61,
+  "sources": 23,
+  "heading_order_preserved": true,
+  "all_ledger_chapter_hashes_match": true,
+  "reviewed_dependencies_unchanged": true,
+  "scope": "Author pass only. No independent acceptance, source commit/stage, PDF build, companion implementation, publication or installation.",
+  "evidence_directory": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/quantum-author",
+  "external_source_hash_status": "Primary PDF/HTML theorem statements and formulas inspected through web tools; no PDF byte hashes claimed.",
+  "companion_status": "Contract only; shared paths and 70/110 decimal-digit pair planned. Implementation and independent execution review pending."
+}

@@ -1,0 +1,396 @@
+{
+  "schema_version": 1,
+  "review_role": "independent adverse-input probe",
+  "optimized": true,
+  "source_set_sha256": "1a19c98c7822ac5b22f46db044a70a45880a11470db10d94a5d084564ba7614d",
+  "frozen_author_result_sha256": "618d7125e80813db18b96c55513bd6a0432a1cf7fad63595c6c58d89112b67a4",
+  "records": [
+    {
+      "name": "Q3_missing_negative_q",
+      "expected_rejection": true,
+      "rejected": false,
+      "summary": {
+        "fixture_gate": "accepted",
+        "affected_group": {
+          "checks": 26
+        }
+      },
+      "expected_behavior": false
+    },
+    {
+      "name": "Q2_three_duplicate_simplexes_replace_boxes",
+      "expected_rejection": true,
+      "rejected": false,
+      "summary": {
+        "fixture_gate": "accepted",
+        "affected_group": {
+          "checks": 117
+        }
+      },
+      "expected_behavior": false
+    },
+    {
+      "name": "G7_required_large_L_replaced_by_N_zero",
+      "expected_rejection": true,
+      "rejected": false,
+      "summary": {
+        "fixture_gate": "accepted",
+        "affected_group": {
+          "checks": 622
+        }
+      },
+      "expected_behavior": false
+    },
+    {
+      "name": "G8_missing_shifted_nonstationary_case",
+      "expected_rejection": true,
+      "rejected": false,
+      "summary": {
+        "fixture_gate": "accepted",
+        "affected_group": {
+          "checks": 2
+        }
+      },
+      "expected_behavior": false
+    },
+    {
+      "name": "G8_missing_inconsistent_endpoint_spacing",
+      "expected_rejection": true,
+      "rejected": false,
+      "summary": {
+        "fixture_gate": "accepted",
+        "affected_group": {
+          "checks": 1
+        }
+      },
+      "expected_behavior": false
+    },
+    {
+      "name": "provenance_empty_formula_contracts",
+      "expected_rejection": true,
+      "rejected": false,
+      "summary": {
+        "fixture_gate": "accepted",
+        "affected_group": {
+          "contracts": 0
+        }
+      },
+      "expected_behavior": false
+    },
+    {
+      "name": "provenance_empty_accepted_manuscript_map",
+      "expected_rejection": true,
+      "rejected": false,
+      "summary": {
+        "fixture_gate": "accepted",
+        "affected_group": {
+          "observations": 0
+        }
+      },
+      "expected_behavior": false
+    },
+    {
+      "name": "existing_Q1_partial_grid_guard",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "complete accepted finite figure-eight N list required",
+      "expected_behavior": true
+    },
+    {
+      "name": "existing_G10_partial_grid_guard",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "required geodesic conditioning/coverage fixtures were changed or truncated",
+      "expected_behavior": true
+    },
+    {
+      "name": "existing_Q3_missing_dependency_guard",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "the exact surgery dependency requires all three declared source guards",
+      "expected_behavior": true
+    },
+    {
+      "name": "parse_reject_{\"x\":1,\"x\":2}",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "duplicate fixture key: x",
+      "expected_behavior": true
+    },
+    {
+      "name": "parse_reject_{\"a\":{\"x\":1,\"x\":2}}",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "duplicate fixture key: x",
+      "expected_behavior": true
+    },
+    {
+      "name": "parse_reject_{\"x\":NaN}",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "fixture numbers must be integers or exact rational strings: NaN",
+      "expected_behavior": true
+    },
+    {
+      "name": "parse_reject_{\"x\":Infinity}",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "fixture numbers must be integers or exact rational strings: Infinity",
+      "expected_behavior": true
+    },
+    {
+      "name": "parse_reject_{\"x\":-Infinity}",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "fixture numbers must be integers or exact rational strings: -Infinity",
+      "expected_behavior": true
+    },
+    {
+      "name": "parse_reject_{\"x\":1e9999}",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "fixture numbers must be integers or exact rational strings: 1e9999",
+      "expected_behavior": true
+    },
+    {
+      "name": "parse_reject_{\"x\":0.1}",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "fixture numbers must be integers or exact rational strings: 0.1",
+      "expected_behavior": true
+    },
+    {
+      "name": "exact_reject_'nan'",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "finite rational input required",
+      "expected_behavior": true
+    },
+    {
+      "name": "exact_reject_'inf'",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "finite rational input required",
+      "expected_behavior": true
+    },
+    {
+      "name": "exact_reject_'-inf'",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "finite rational input required",
+      "expected_behavior": true
+    },
+    {
+      "name": "exact_reject_'1/0'",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "finite rational input required",
+      "expected_behavior": true
+    },
+    {
+      "name": "exact_reject_'sqrt(2)'",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "finite rational input required",
+      "expected_behavior": true
+    },
+    {
+      "name": "exact_reject_True",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "rational inputs must be strings",
+      "expected_behavior": true
+    },
+    {
+      "name": "exact_reject_0.1",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "rational inputs must be strings",
+      "expected_behavior": true
+    },
+    {
+      "name": "positive_70_zero",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ArithmeticError",
+      "message": "reviewer tiny signal: strictly positive real signals required",
+      "expected_behavior": true
+    },
+    {
+      "name": "positive_70_half",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ArithmeticError",
+      "message": "reviewer tiny signal: scaled residual 0.5 exceeds 1.0e-55",
+      "expected_behavior": true
+    },
+    {
+      "name": "positive_70_negative",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ArithmeticError",
+      "message": "reviewer tiny signal: strictly positive real signals required",
+      "expected_behavior": true
+    },
+    {
+      "name": "positive_70_nan",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ArithmeticError",
+      "message": "reviewer tiny signal: nonfinite input",
+      "expected_behavior": true
+    },
+    {
+      "name": "positive_70_infinity",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ArithmeticError",
+      "message": "reviewer tiny signal: nonfinite input",
+      "expected_behavior": true
+    },
+    {
+      "name": "positive_70_retained",
+      "expected_rejection": false,
+      "rejected": false,
+      "summary": null,
+      "expected_behavior": true
+    },
+    {
+      "name": "positive_110_zero",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ArithmeticError",
+      "message": "reviewer tiny signal: strictly positive real signals required",
+      "expected_behavior": true
+    },
+    {
+      "name": "positive_110_half",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ArithmeticError",
+      "message": "reviewer tiny signal: scaled residual 0.5 exceeds 1.0e-95",
+      "expected_behavior": true
+    },
+    {
+      "name": "positive_110_negative",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ArithmeticError",
+      "message": "reviewer tiny signal: strictly positive real signals required",
+      "expected_behavior": true
+    },
+    {
+      "name": "positive_110_nan",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ArithmeticError",
+      "message": "reviewer tiny signal: nonfinite input",
+      "expected_behavior": true
+    },
+    {
+      "name": "positive_110_infinity",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ArithmeticError",
+      "message": "reviewer tiny signal: nonfinite input",
+      "expected_behavior": true
+    },
+    {
+      "name": "positive_110_retained",
+      "expected_rejection": false,
+      "rejected": false,
+      "summary": null,
+      "expected_behavior": true
+    },
+    {
+      "name": "h_trace_boundary",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "h requires a hyperbolic trace t>2",
+      "expected_behavior": true
+    },
+    {
+      "name": "kernel_boundary",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "universal kernel input must exceed six",
+      "expected_behavior": true
+    },
+    {
+      "name": "distance_zero_separation",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "local endpoint distance requires d>0",
+      "expected_behavior": true
+    },
+    {
+      "name": "acosh_below_domain",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "real acosh requires argument at least one; no clamping",
+      "expected_behavior": true
+    },
+    {
+      "name": "torus_zero_cuff",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "torus cuff requires a>0 and boundary b>=0",
+      "expected_behavior": true
+    },
+    {
+      "name": "shadow_zero_distance",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "orthogeodesic distance must be strictly positive",
+      "expected_behavior": true
+    },
+    {
+      "name": "exclusive_output_creation",
+      "expected_behavior": true,
+      "rejected": true,
+      "expected_rejection": true
+    },
+    {
+      "name": "dangling_output_symlink",
+      "expected_rejection": true,
+      "rejected": true,
+      "exception": "SystemExit",
+      "message": "2",
+      "expected_behavior": true,
+      "missing_target_still_absent": true
+    }
+  ],
+  "unexpected_acceptances": [
+    "Q3_missing_negative_q",
+    "Q2_three_duplicate_simplexes_replace_boxes",
+    "G7_required_large_L_replaced_by_N_zero",
+    "G8_missing_shifted_nonstationary_case",
+    "G8_missing_inconsistent_endpoint_spacing",
+    "provenance_empty_formula_contracts",
+    "provenance_empty_accepted_manuscript_map"
+  ],
+  "scope": "Mutated fixture objects only; no canonical source/result mutation. Existing frozen coverage is complete."
+}

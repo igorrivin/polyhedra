@@ -1,0 +1,40 @@
+{
+  "source_set_sha256": "86ac29026811b5c7f6207e4568d01a01496326f3c8c1b0d8fb2b8fcfb541d8c6",
+  "findings": [
+    {
+      "id": "R1",
+      "severity": "minor_required_source_pin",
+      "claims": [
+        "19.09"
+      ],
+      "locations": [
+        "book/chapters/19-pants-twists.tex:153",
+        "book/claims/sections17-22.json:183",
+        "book/claims/sections17-22.json:1302"
+      ],
+      "problem": "The stated simple-multicurve length comparison is pinned only to Theorem 3.4 and equation (3.6), which give Dehn-Thurston parametrization and the combinatorial length definition.",
+      "evidence": "MirzSimple p.107: Proposition 3.5, equation (3.7), states the two-sided comparison, under an L-bounded pants decomposition.",
+      "requested_repair": "Retain the coordinate/definition pins and add Proposition 3.5, equation (3.7), to the prose, source record and relevant ledger pin/description. No mathematical claim or contract change is needed.",
+      "source_url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v168-n1-p03.pdf"
+    },
+    {
+      "id": "R2",
+      "severity": "minor_required_source_pin",
+      "claims": [
+        "22.03"
+      ],
+      "locations": [
+        "book/chapters/22-cusps-orthospectrum.tex:52",
+        "book/claims/sections17-22.json:216",
+        "book/claims/sections17-22.json:1903"
+      ],
+      "problem": "The citation says Theorem 3 and the following measure discussion, pp.3-4, but the explicit measure-zero paragraph is on printed page 5.",
+      "evidence": "Primary author draft Theorem 3 is on p.4; after Corollary 5 the next page explicitly invokes the Birman-Series measure-zero conclusion. The primary indexed page containing this paragraph ends with page number 5.",
+      "requested_repair": "Correct the page pin to pp.4-5, or pp.3-5 if retaining the preliminary lamination context, consistently in prose/source record/ledger.",
+      "source_url": "https://macbuse.github.io/M2R_2019/shearsAgain.pdf"
+    }
+  ],
+  "mathematical_blockers": [],
+  "optional_source_improvement": "Kerckhoff Theorem 1 p.253 and nonsimple remark p.254 are directly accessible in the independent Pisa primary scan; incorporate this improved access only if desired.",
+  "companion_contract": "Accepted separately; unaffected by R1/R2."
+}

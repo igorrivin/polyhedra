@@ -1,0 +1,89 @@
+{
+  "status": "passed",
+  "scope": "Targeted metadata reconciliation and static checks only.",
+  "source_graph_entry": "book/main.tex",
+  "source_graph_files": 36,
+  "original_labels_preserved_in_order": 607,
+  "current_unique_labels": 613,
+  "bibliography_keys": 129,
+  "chapter_bytes_unchanged": true,
+  "claim_identity_status_and_statement_fields_unchanged": true,
+  "allowed_changed_claim_fields": [
+    "dependencies",
+    "dependency_review_states",
+    "independent_review_boundary",
+    "inherited_statuses"
+  ],
+  "initial_evidence_preserved": true,
+  "quantum_independent_acceptance_bound": true,
+  "geodesic_independent_review": "pending",
+  "planned_companion_groups": 14,
+  "all_new_evidence_whitespace": [
+    {
+      "path": "after/book/chapters/32-open-questions.tex",
+      "trailing_whitespace_lines": [],
+      "exactly_one_final_newline": true
+    },
+    {
+      "path": "after/book/chapters/appendix-b-conventions.tex",
+      "trailing_whitespace_lines": [],
+      "exactly_one_final_newline": true
+    },
+    {
+      "path": "after/book/claims/section32-appendixb.json",
+      "trailing_whitespace_lines": [],
+      "exactly_one_final_newline": true
+    },
+    {
+      "path": "author-static-checks.json",
+      "trailing_whitespace_lines": [],
+      "exactly_one_final_newline": true
+    },
+    {
+      "path": "before/book/chapters/32-open-questions.tex",
+      "trailing_whitespace_lines": [],
+      "exactly_one_final_newline": true
+    },
+    {
+      "path": "before/book/chapters/appendix-b-conventions.tex",
+      "trailing_whitespace_lines": [],
+      "exactly_one_final_newline": true
+    },
+    {
+      "path": "before/book/claims/section32-appendixb.json",
+      "trailing_whitespace_lines": [],
+      "exactly_one_final_newline": true
+    },
+    {
+      "path": "check_author.py",
+      "trailing_whitespace_lines": [],
+      "exactly_one_final_newline": true
+    },
+    {
+      "path": "dependency-comparison.json",
+      "trailing_whitespace_lines": [],
+      "exactly_one_final_newline": true
+    },
+    {
+      "path": "ledger-only.patch",
+      "trailing_whitespace_lines": [],
+      "exactly_one_final_newline": true
+    },
+    {
+      "path": "metadata-delta.json",
+      "trailing_whitespace_lines": [],
+      "exactly_one_final_newline": true
+    },
+    {
+      "path": "reconcile.py",
+      "trailing_whitespace_lines": [],
+      "exactly_one_final_newline": true
+    },
+    {
+      "path": "reconciliation-report.md",
+      "trailing_whitespace_lines": [],
+      "exactly_one_final_newline": true
+    }
+  ],
+  "current_dependency_drift": []
+}

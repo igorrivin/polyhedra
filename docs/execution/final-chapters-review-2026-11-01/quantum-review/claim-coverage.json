@@ -1,0 +1,641 @@
+{
+  "reviewed_snapshot": "initial-author-freeze",
+  "total_claims": 61,
+  "all_claims_read": true,
+  "external_full_proofs_rechecked": false,
+  "records": [
+    {
+      "id": "s10.recoupling",
+      "statement": "Two multiplicity-free sl2 coupling bases have six labels and the four specified admissible triples.",
+      "author_status": "external_statement_checked",
+      "labels": [
+        "sec:quantumintro",
+        "sec:introrecoupling",
+        "eq:introrecoupling"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Both Hom decompositions follow by multiplicity-free sl2 Clebsch-Gordan; the four triples are consistent. Taylor-Woodward p.1 independently inspected.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.quantum_integer",
+      "statement": "The symmetric quantum integer tends to n and the compact fusion cutoff/admissibility conditions are stated in the same algebraic parameter.",
+      "author_status": "external_statement_checked",
+      "labels": [
+        "eq:introqinteger"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "LHopital or the sine quotient gives n; Taylor-Woodward equation (1) gives exactly the cutoff, triangle and parity conditions stated.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.state_sum",
+      "statement": "Pentagon, orthogonality and normalization identities underpin a tetrahedral state sum.",
+      "author_status": "external_statement_checked",
+      "labels": [
+        "eq:introstatesum"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Chen-Yang Sections2.2-2.3 connect Biedenharn-Elliott and orthogonality identities to the2-3 and0-2 moves. The chapter explicitly leaves actual weights and normalization to the chosen theory.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.invariant_dictionary",
+      "statement": "Colored Jones, Kashaev, RT, TV, continuous recoupling and Liouville correlation have different inputs and normalization requirements.",
+      "author_status": "external_statement_checked",
+      "labels": [
+        "sec:introinvariants"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Inputs and outputs agree with the independent Jones/Kashaev, state-sum, modular-double and GMC source statements. Continuous kernels are not called topological manifold invariants.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.jones_kashaev",
+      "statement": "Form the reduced colored Jones polynomial at generic q, then evaluate at exp(2pi*i/N) to obtain the normalized Kashaev invariant.",
+      "author_status": "external_statement_checked",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Murakami-Murakami p.1 reduced unknot normalization and Theorem4.9 verified. Evaluating a reduced generic polynomial avoids division by the zero quantum dimension.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.knot_volume",
+      "statement": "The hyperbolic-knot volume conjecture uses changing color and root and ordinary three-dimensional volume.",
+      "author_status": "external_conjecture",
+      "labels": [
+        "eq:introknotvolume"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Retained as a conjecture for general hyperbolic knots; Murakami-Murakami formulation and current Wong-Yang introduction agree with this status.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.closed_growth",
+      "statement": "Chen-Yang absolute-growth limits have factors4pi/r and2pi/r; Wong-Yang prove the stated hyperbolic figure-eight filling cases.",
+      "author_status": "external_statement_checked",
+      "labels": [
+        "eq:introclosedvolume"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Chen-Yang Conjectures1.1-1.2 and Wong-Yang Theorems1.1-1.2 directly verify the odd root and4pi/r versus2pi/r rates. The special theorem is not generalized.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.center_relation",
+      "statement": "TV of a spherical fusion category is RT of its center; the modulus-square specialization requires matching unitary modular data.",
+      "author_status": "external_statement_checked",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Turaev-Virelizier pp.1-2 explicitly separates RT of the center, modular mirror-product, and unitary modulus square. This supports the normalization warning.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.root_color_scope",
+      "statement": "q_J=q_alg^2 is a common conversion, while [N] at q_alg=exp(pi*i/N) is zero and spin(N-1)/2 is excluded.",
+      "author_status": "derived_in_chapter",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "At q_alg=exp(pi*i/N), numerator of[N] is0 and denominator is nonzero forN>=2; spin(N-1)/2 exceeds(N-2)/2.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.figure_product",
+      "statement": "The reduced figure-eight root evaluation is the positive product sum.",
+      "author_status": "external_statement_checked",
+      "labels": [
+        "sec:introfigureeight",
+        "eq:introfigureproduct"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Kashaev equations(2.2),(2.5), Murakami equation(3.1), and Murakami-Murakami Theorem4.9 independently checked. Reviewer numerical evaluation uses the complex half-power expression and a separate log-sum implementation.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.figure_maximum",
+      "statement": "m=floor(5N/6), with possible adjacent tie, is a global product maximum and P_m<=J_N<=N*P_m.",
+      "author_status": "derived_in_chapter",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Ratio signs give decrease/increase/decrease. Evaluating the cyclotomic product at1 gives P_(N-1)=N^2>1, resolving comparison with P_0. Adjacent tie is correctly allowed when6 dividesN.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.figure_integral",
+      "statement": "The logarithmic product converges to the integral of log(4sin^2(pi*x)) from0 to5/6.",
+      "author_status": "derived_in_chapter",
+      "labels": [
+        "eq:introfigureintegral"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Subtract2log(x) at0; the remainder extends continuously. Stirling evaluates the logarithmic Riemann sum. The upper/lower logarithmic gap is log(N)/N.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.figure_volume",
+      "statement": "The limit is4Lambda(pi/6)=6Lambda(pi/3)=2v3, the figure-eight complement volume.",
+      "author_status": "external_statement_checked",
+      "labels": [
+        "eq:introfigurevolume"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "The factor2pi converts the integral to-4Lambda(5pi/6); reflection and duplication give6Lambda(pi/3). Murakami Section3.2 and two independently evaluated numerical targets agree.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.qpochhammer",
+      "statement": "The compact-disk q-Pochhammer logarithm equals -Li2(z)/epsilon+log(1-z)/2+O(epsilon).",
+      "author_status": "derived_in_chapter",
+      "labels": [
+        "sec:introdilog",
+        "eq:introqpochhammer"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Absolute convergence justifies the double sum. R(t)/t is continuous on(0,infinity), tends to1/12 at0 and0 at infinity, hence is bounded; summing gives uniform O(epsilon) on|z|<=rho<1.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.quantum_pentagon",
+      "statement": "The cited quantum pentagon has the classical Rogers five-term limit.",
+      "author_status": "external_statement_checked",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Faddeev-Kashaev introduction and Sections2-3 state the quantum identity and its Rogers limit. Product indexing is not confused with the locally derived n=0 Pochhammer expansion.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.bloch_wigner",
+      "statement": "D(z) gives the oriented upper-half-plane ideal-tetrahedron volume and dLi2=-log(1-z)dlog z.",
+      "author_status": "derived_from_reviewed_dependencies",
+      "labels": [
+        "eq:introBlochWigner"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "The upper-half-plane Bloch-Wigner convention agrees with chapter03. Direct differentiation gives dLi2=-log(1-z)dlog(z); the boundary-log term is retained. QR01 asks for the missing direct-dependency hash.",
+      "required_provenance_finding": "QR01"
+    },
+    {
+      "id": "s10.quantum_shape",
+      "statement": "The tetrahedral shift equation and its leading phase produce the companion shape1-z^-1.",
+      "author_status": "external_statement_checked",
+      "labels": [
+        "eq:introquantumshape"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "From Dimofte-Garoufalidis product(5.5), shiftingZ byhbar extracts1-exp(-Z); its dual product is unchanged. Differentiation ofLi2(exp(-Z)) gives log(1-exp(-Z)). Branch qualifications match(5.7).",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.state_integral_gluing",
+      "statement": "A specified tetrahedral state-integral phase differentiates to logarithmic gluing equations.",
+      "author_status": "formal_framework",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Dimofte-Garoufalidis Section5.1 supports the formal gluing mechanism. A specified quadratic term, logarithm lifts and contour remain required.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.stationary_phase",
+      "statement": "A localized nondegenerate steepest-descent integral has the displayed Gaussian expansion.",
+      "author_status": "conditional_analytic_statement",
+      "labels": [
+        "sec:introsemiclassical",
+        "eq:introsaddleintegral",
+        "eq:introgaussian"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Holomorphic nondegenerate phase, symbol derivative control, fixed ray and local real descent contour give the stated Gaussian determinant with oriented square root. The complement estimate is explicitly separate.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.loop_dictionary",
+      "statement": "Tree, one-loop and higher-loop terms are phase, Gaussian/amplitude and higher contractions; logarithmic powers depend on normalization.",
+      "author_status": "formal_framework",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Taylor-Gaussian contractions justify the terms used. Zero modes are not included in the nondegenerate local theorem, and geometric slope/area expansions are not mislabeled quantum loops.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.torsion_scope",
+      "statement": "Adjoint cellular cohomology and chosen peripheral/cohomology bases govern torsion; a bare Hessian is insufficient.",
+      "author_status": "external_statement_checked",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Dimofte-Garoufalidis Conjecture1.8 is checked as a conjecture in that source. The wording does not assert the current general conjecture remains open. Wong-Yang supplies an actual special-family inverse-square-root torsion theorem.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.thimbles",
+      "statement": "Relative-cycle coefficients select saddle contributions and change at Stokes loci.",
+      "author_status": "external_statement_checked",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Witten2010 equations(2.15)-(2.16) and Section2.3 supply the relative-cycle coefficients and their Stokes changes; the chapter does not assert all saddles contribute or a universal infinite-dimensional theorem.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.fold_scale",
+      "statement": "Cubic balance gives x~hbar^(1/3), t~hbar^(2/3); the regular-family theorem has h=2pi*b^2 and volume-action parameter h/2.",
+      "author_status": "derived_from_reviewed_dependencies",
+      "labels": [
+        "fig:mono-airy"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Balancingx^3/hbar andtx/hbar gives the claimed powers. Chapter14 volume-action h/2 and chapter15 cleared-family, bounded-real-parameter additive scope are accurately preserved.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.cs_functional",
+      "statement": "The displayed Chern-Simons action has variation(2pi)^-1 integral tr(delta A wedge F) on a closed manifold.",
+      "author_status": "derived_in_chapter",
+      "labels": [
+        "sec:introCS",
+        "eq:introCSfunctional"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Vary the quadratic term and integrate by parts on closedM; cyclicity turns the cubic variation into3tr(deltaA A^2). With2/3 and1/(4pi), the total is1/(2pi)tr(deltaA F). Dimofte(2.4) matches the convention.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.complex_cs",
+      "statement": "Hyperbolic holonomy determines a complex flat connection; analytic continuation requires a cycle and an action convention.",
+      "author_status": "formal_framework",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "The complex-flat-connection interpretation and integration-cycle distinction agree with Witten2010 and Dimofte2011. Gukovv1 was unavailable in this review and is not used as sole support.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.boundary_pairing",
+      "statement": "TQFT gluing pairs boundary states; orientation reversal supplies the dual, while analytic models need convergence.",
+      "author_status": "external_statement_checked",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Turaev-Virelizier TQFT setup and Dimofte boundary-wavefunction discussion support the pairing framework. Finite linear algebra is distinguished from analytic integration.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.nz_polarization",
+      "statement": "Multiplier logs give Omega=dv wedge du/2 and Phi prime=v/2 in the specified WKB convention.",
+      "author_status": "derived_from_reviewed_dependencies",
+      "labels": [
+        "eq:introNZpolarization",
+        "eq:introWKBstate"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "The stated classical primitive and symplectic factors match chapter16; exponentiation is a WKB ansatz, not an existence theorem.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.volume_boundary",
+      "statement": "Incomplete volume has the boundary correction -Re(u)Im(v)/2 in addition to Im(F)/2.",
+      "author_status": "derived_from_reviewed_dependencies",
+      "labels": [
+        "eq:introvolumeboundary"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Matches chapter16 exactly. Foru=x+iy,v=a+ib, differentiating gives dV=(a dy-x db)/2; the boundary correction and complete-volume constant are retained.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.weyl_operators",
+      "statement": "P=hbar*d/du, m=e^(u/2), l=shift_hbar give [P,u]=hbar and lm=e^(hbar/2)ml.",
+      "author_status": "derived_in_chapter",
+      "labels": [
+        "sec:introquantization",
+        "eq:introcommutator"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "On arbitraryf, shift_hbar(exp(u/2)f)=exp(hbar/2)exp(u/2)f(u+hbar). Also[hbar*d/du,u]f=hbar*f. Lift signs are constant and commute.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.quantum_curve",
+      "statement": "A difference operator with principal symbol A(l,m) recovers A(exp(Phi prime),exp(u/2))=0 from WKB.",
+      "author_status": "conditional_analytic_statement",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Taylor-expanding a fixed shift on exp(Phi/hbar) gives principal symbol l=exp(Phi prime). Ordering and lower-order terms are correctly left undetermined.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.filling_generator",
+      "statement": "The determinant-one slope transform preserves dv wedge du and dG=b_core da/2-v du/2; stationarity imposes a=pu+qv.",
+      "author_status": "derived_in_chapter",
+      "labels": [
+        "eq:introfillingkernel"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Usingdet=1 gives b_core=(-u+sigma*a)/q. The two derivatives ofG are-v/2 andb_core/2. Four exact slope fixtures with both signs ofq independently passed.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.rt_exponent",
+      "statement": "With hbar_r=4pi*i/r and Im(Phi_filled)=V, exponential modulus is exp(rV/(4pi)).",
+      "author_status": "derived_in_chapter",
+      "labels": [
+        "eq:introRTgrowth"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Re((X+iV)/(4pi*i/r))=rV/(4pi). The Gaussian ratio is1/(p+qv prime) only after mixed-derivative kernel normalization, as chapter16 and exact probes show.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.liouville_construction",
+      "statement": "Subcritical GMC renormalizes the area exponential and point insertions; correlations are marked-surface functions.",
+      "author_status": "external_statement_checked",
+      "labels": [
+        "sec:introLiouville"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "KRV Section2.1 and equations(2.5)-(2.12) verify the subcritical GMC setting and normal-ordering convention. No moduli density is inferred from the raw correlation.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.virasoro",
+      "statement": "Q=b+b^-1, c=1+6Q^2, Delta=alpha(Q-alpha) and the stated Virasoro commutator fix the conformal conventions.",
+      "author_status": "external_statement_checked",
+      "labels": [
+        "eq:introLiouvilleparameters"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Teschner equation(3), descendants inSection2.1, and the Virasoro-module discussion supportQ,c,Delta and highest-weight conventions.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.spectral_domain",
+      "statement": "In physics charges, the real four-point bootstrap domain is alpha_i<Q/2, alpha1+alpha3>Q/2, alpha2+alpha4>Q/2 for marks0,1,z,infinity.",
+      "author_status": "external_statement_checked",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "GKRV Theorem1.1 pairs source labels at(0,z) and(1,infinity). Relabeling to the chapters(0,1,z,infinity) and dividing source charges by2 gives exactly the displayed inequalities. Extra spectral terms outside that domain are retained.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.fusion_kernel",
+      "statement": "Changing pants decomposition gives continuous fusion with explicit trivalent and spectral normalizations.",
+      "author_status": "external_statement_checked",
+      "labels": [
+        "eq:introfusion"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Teschner-Vartanov equations(4.4)-(4.6) explicitly include trivalent normalization ratios and spectral measure; Section2 supplies principal labels and direct-integral structure.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.double_sine",
+      "statement": "Double-Gamma quotient, two sine shifts and reflection are the stated double-sine conventions.",
+      "author_status": "external_statement_checked",
+      "labels": [
+        "eq:introdoublesine"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Teschner-Vartanov AppendixA equations(A.13)-(A.16) and the Gamma quotient directly match. The formula is not misused as a uniform asymptotic theorem.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.double_sine_limit",
+      "statement": "The shift quotient formally forces L prime=log(2sin pi*x), and reflection fixes L=-Lambda(pi*x)/pi.",
+      "author_status": "formal_framework",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "The shift produces the finite difference, whose smooth limit has derivative log(2sin(pi*x)). Reflection about(1+b^2)/2 fixes the limiting midpoint value0. Actual uniform bounds are delegated to the reviewed chapter15 lemma.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.zero_mode",
+      "statement": "The constant-mode integral is b^-1 Lambda_L^-s Gamma(s) Z^-s.",
+      "author_status": "derived_in_chapter",
+      "labels": [
+        "sec:introscreening",
+        "eq:introzeromode"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Witht=Lambda_L*Z*exp(2bc), the leading2 andJacobian1/(2bt) yield1/b. Re(s)>0 is exactly the zero-endpoint condition.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.screening_first_moment",
+      "statement": "Flat charges give s=-1; the continued unit-volume expression uses the first moment, equal to the finite flat-cone area.",
+      "author_status": "derived_from_reviewed_dependencies",
+      "labels": [
+        "eq:introfirstmoment"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "s=-1 follows fromsum(mu)=2. Strict KRV moment inequalities hold becauseb^2<1 andmu_i<1. Reference powers cancel, singularities have exponent<2, and infinity has decay|w|^-4. The raw divergent integral is not substituted directly.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.curvature_measure",
+      "statement": "Logarithmic curvature removes pairwise factors and yields the curvature-minus-one CH form and its top exterior power.",
+      "author_status": "derived_from_reviewed_dependencies",
+      "labels": [
+        "eq:introcurvaturemeasure"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "The exact chapter12 formula is(b^-1)*pairwise powers*area. Off collisions their log curvature vanishes, leaving-2i partial barpartial log(area), and the top exterior power is divided byd!. QR01 asks for the missing sections7-8 ledger hash.",
+      "required_provenance_finding": "QR01"
+    },
+    {
+      "id": "s10.finite_screening",
+      "statement": "Delta(b)=1 and neutrality give one-screening twisted periods; the four-point space has dimension2 and its finite basis change is exact.",
+      "author_status": "derived_from_reviewed_dependencies",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Delta(b)=1 and2b*alpha_i=mu_i are exact. Four-punctured rank-one nontrivial local-system periods have dimension2, with logarithmic bases at balanced weights. Infinite fusion-residue identification retains the separate chapter13 continuation/tail input.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s10.limit_dictionary",
+      "statement": "N,r,b,A and slope parameters encode independent limits; the pure-heavy prescription and exact finite-b shifts are distinguished.",
+      "author_status": "derived_from_reviewed_dependencies",
+      "labels": [
+        "sec:introreadingguide"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "The parameter table is consistent with chapters12-16. Roberts classical, Taylor-Woodward compact spherical, root-of-unity hyperbolic and continuousb regimes remain separate.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s11.volume_dictionary",
+      "statement": "Surface area, enclosed volume and moduli volume are distinct; the knot formula concerns enclosed three-dimensional volume.",
+      "author_status": "external_conjecture",
+      "labels": [
+        "sec:quantumdegeneration",
+        "eq:volumeconjecture"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "No surface/moduli volume substitution is made in the knot conjecture; its general status remains explicitly conjectural.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s11.individual_volume",
+      "statement": "Controlled rescaled convex-body convergence gives W(P_A)=A^(3/2)W_E+o(A^(3/2)).",
+      "author_status": "derived_in_chapter",
+      "labels": [
+        "eq:individualflatvolume"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "SetQ_A=A^-1/2 P_A. Hausdorff convergence of bounded convex bodies gives volume convergence, and(1-A|y|^2)^-2 converges uniformly to1 on a common bounded set; change of variables givesA^3/2.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s11.wp_scale",
+      "statement": "The fixed intrinsic angle path gives the separately normalized final-chamber WP volume asymptotic.",
+      "author_status": "derived_from_reviewed_dependencies",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "The factor2^-d and final-chamberO(A^(d+1)) match chapter08 and its ledger. The intrinsic angle path is explicitly distinguished from the Klein homothety. QR01 asks for the missing ledger pin.",
+      "required_provenance_finding": "QR01"
+    },
+    {
+      "id": "s11.klein_series",
+      "statement": "The metric determinant yields density(1-|x|^2)^-2 and a convergent homothetic volume moment series.",
+      "author_status": "derived_in_chapter",
+      "labels": [
+        "eq:Kleinvolumeexpansion"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Independent symbolic determinant gives(1-|x|^2)^-4. Its square root gives the stated density. Uniform geometric-series integration onrR<1 is valid;15 exact moment fixtures passed independently.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s11.klein_remainder",
+      "statement": "The geometric-series tail is nonnegative and bounded by r^3 Vol(Q)t^(m+1)(m+2-(m+1)t)/(1-t)^2.",
+      "author_status": "derived_in_chapter",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Differentiate the scalar geometric-series tail or multiply by(1-t)^2 to derive the formula. Exact checks form=0,...,8 passed; nonnegative integrand coefficients justify the radius majorant.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s11.schlafli",
+      "statement": "For compact curvature-minus-one polyhedra, dW=-1/2 sum ell_e d alpha_e for interior dihedral angles.",
+      "author_status": "external_statement_checked",
+      "labels": [
+        "eq:Schlafli"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Rivin equation(1), specialized toK=-1,n=3, gives the interior-angle sign and1/2. The compact differentiable fixed-combinatorics regime is stated.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s11.face_coefficients",
+      "statement": "Exact Lorentzian face normals give the displayed cosine and b_e formulas and even-angle/odd-length expansions.",
+      "author_status": "derived_in_chapter",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Lorentzian product of(rh_f,n_f) and(rh_g,n_g), normalized and negated, gives(c+r^2 h_f h_g)/sqrt(...). Differentiating arccos at0 yieldsb_e. Straight Klein edges and even metric give odd length expansions.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s11.first_curvature",
+      "statement": "The first angle curvature correction satisfies sum L_e*b_e=-3Vol_E(Q).",
+      "author_status": "derived_in_chapter",
+      "labels": [
+        "eq:firstcurvaturevolume"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Compare3r^2 Vol(Q) with-r^2 sumL_e b_e inSchlafli. Differentiable remainders are expressly required for the area version. Exact simplex,cube and translated-box sums passed.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s11.doubling",
+      "statement": "Doubling a convex polyhedron has volume2W and edge cone angles2alpha.",
+      "author_status": "derived_in_chapter",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Two copies add ordinary volumes; two interior wedges give2alpha along each edge. This does not imply Porti-Weiss hypotheses.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s11.regeneration_scope",
+      "statement": "Porti-Weiss regeneration requires the specific closed orientable Euclidean cone structure with angles<=pi and not almost product.",
+      "author_status": "external_statement_checked",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Porti-Weiss Theorem1.3 and Definition1.2 explicitly requireclosed,orientable,angles<=pi,not almost product. Hodgsons author page supplies historical metadata only. No unrestricted theorem is inferred.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s11.volume_regular_continuation",
+      "statement": "The cited Rivin work supplies continuity toward degeneration and derivative control, not a universal smooth power series.",
+      "author_status": "external_statement_checked",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Rivin introduction,Theorem1,Schlafli equation(1), and logarithmic edge/cofactor discussion verify continuity and logarithmic derivative control. These are not a universal Taylor-series claim.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s11.costantino",
+      "statement": "The cited hyperbolic-type result uses pole-removed ev_n([n]{6j}) and the doubled D-block volume.",
+      "author_status": "external_statement_checked",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Independently inspectedNotation p.3,Definition2.4 p.4,Definitions3.1-3.2 pp.7-8,andTheorem3.9 p.10. ev is the leading Laurent coefficient; multiplying[n] removes the simple pole. The result isVol(D(u)), twice a truncated tetrahedron.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s11.cm_leading",
+      "statement": "Chen-Murakami Theorem1 gives the leading logarithmic volume for general convergent admissible half-integer labels in its ideal/ultraideal domain.",
+      "author_status": "external_statement_checked",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Version1706.04887v3 Theorem1 directly matches general convergent half-integer admissible labels,the selected vertex-sum inequality,the ideal/ultraideal hypothesis,andq=exp(4pi*i/r).",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s11.cm_refined",
+      "statement": "The refined equivalent has sqrt(2)*pi*r^-3/2*(-detG)^-1/4 times exp(rW/(2pi)) only on the exact arithmetic sequence.",
+      "author_status": "external_statement_checked",
+      "labels": [
+        "eq:quantum6jstructure"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Versionv3 Theorem2 and its official HTML directly verifyodd rational numerators/denominators,odd common multiples,andj=r*eta/2-1/2; coefficient is sqrt(2)*pi, notsqrt(2*pi). No arbitrary rounding sequence is assigned the refined equivalent.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s11.roberts",
+      "statement": "Classical large-label Euclidean 6j asymptotics have oscillatory Regge action and Euclidean-volume amplitude.",
+      "author_status": "external_statement_checked",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "Roberts Theorem1 and preceding exterior-angle convention verify the oscillatory Euclidean large-label asymptotic and volume amplitude. This does not establish a hyperbolic shrinking-family limit.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s11.gram_degeneracy",
+      "statement": "At a nondegenerate Euclidean tetrahedron, the face-normal Gram matrix has rank3 and determinant0.",
+      "author_status": "derived_in_chapter",
+      "labels": [],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "For a genuine Euclidean tetrahedron the four unit outward normals spanR3, with positive area-weighted dependence. TheirGram hasrank3 anddet0. This warns of nonuniformity without proving anAiry theorem.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s11.joint_scale",
+      "statement": "A contribution exp(W/hbar) with W~A^(3/2) selects A~hbar^(2/3).",
+      "author_status": "formal_framework",
+      "labels": [
+        "eq:jointscale"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "W~A^3/2 in a specified exp(W/hbar) action givesA~hbar^2/3. Chapter15 scope andhbar_vol=pi*b^2=h/2 are accurately carried forward; no fixed-volume matching is claimed.",
+      "required_provenance_finding": null
+    },
+    {
+      "id": "s11.compact_model",
+      "statement": "Uniform geometry and the local WP coefficient limit prove the compact constructed integral limit.",
+      "author_status": "conditional_analytic_statement",
+      "labels": [
+        "eq:modelpartition",
+        "eq:modelpartitionlimit"
+      ],
+      "mathematical_assessment": "accepted_with_stated_scope",
+      "review_reason": "On compact measurableK, uniform scaled-volume convergence gives uniform exponential convergence; locally uniform WP form coefficients imply wedge-density convergence. A finite coordinate cover provides bounded integrable majorants. No noncompact limit or quantum identity follows. QR01 asks for its missing direct ledger pin.",
+      "required_provenance_finding": "QR01"
+    }
+  ]
+}

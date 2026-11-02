@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-02T04:57:31.671897+00:00",
+  "decision": "approve_exact_actual_replay_bindings_for_guarded_launch",
+  "status": "independent_actual_binding_delta_acceptance",
+  "required_open_findings": [],
+  "ready_for_guarded_numerical_launch": true,
+  "root_release_required": true,
+  "binding_freeze": {
+    "path": "clean-source/binding-freeze.json",
+    "sha256": "b2e5310f136f546d35c020910a54d675d4916920da75d449708c7964f643c9fd",
+    "bytes": 1646
+  },
+  "accepted_replay_spec": {
+    "path": "clean-source/replay-spec.json",
+    "sha256": "7fbcdc3ca5c2443fff1b89096c6a5b94c3ddd233794fb1949d5737eb99f2266e",
+    "bytes": 38837
+  },
+  "accepted_source_receipt": {
+    "path": "source-checkpoint/source-checkpoint.json",
+    "sha256": "56df9d0d5bfc155c8f0bcc077bbb4320290896d87d602b7cf823e18f42b88bd0",
+    "bytes": 50680
+  },
+  "source_commit": "8f722ae462307146818932cde4811e4bb4e8423e",
+  "baseline_commit": "151673b1817e66aae493eb7da1be5ddf49adfe0f",
+  "actual_source_approval": {
+    "path": "integration-review/final-acceptance.json",
+    "identity": {
+      "sha256": "84b9eb77d45339fad20af6df2439f710a9fc2a47af35c823f4b3f8e3029cd708",
+      "bytes": 18644
+    },
+    "required_values": {
+      "/decision": "approved_exact_source_integration_and_precommit_PDF_for_later_checkpoint",
+      "/source_integration_approved": true,
+      "/precommit_pdf_build_and_visual_approved": true,
+      "/required_open_findings": [],
+      "/approved_source_path_count": 40,
+      "/active_tex_input_count": 36
+    },
+    "source_sha256_pointer": "/approved_source_sha256",
+    "source_sha256_shape": "mapping"
+  },
+  "actual_computation_approval": {
+    "path": "computation-review/revision-v2/final-acceptance.json",
+    "identity": {
+      "sha256": "70070fe32c42961d68b035ccb7fae5b012c50ac5814ca42bd05689bfc64b6592",
+      "bytes": 25941
+    },
+    "required_values": {
+      "/decision": "approved_exact_runtime_and_author_result_for_finite_computational_scope",
+      "/implementation_approved": true,
+      "/required_open_findings": [],
+      "/source_before_after_current_equal": true,
+      "/scientific_fixture_and_groups_exactly_equal_to_v1": true
+    },
+    "runtime_sha256_pointer": "/accepted_runtime_sha256",
+    "runtime_sha256_shape": "mapping",
+    "reference_identity_pointer": "/accepted_author_result",
+    "reference_identity_shape": "path-record",
+    "reference_manuscript_sha256_pointer": "/author_current_manuscript_sha256",
+    "reference_tex_observation_sha256_pointer": "/author_tex_sha256",
+    "expected_groups_pointer": "/accepted_group_names"
+  },
+  "immutable_author_reference": {
+    "path": "computation/full-v2/author-result-70-110.json",
+    "identity": {
+      "sha256": "5f73fce03e43103dc457570bcd90f4722599b5ac0d67a9b9b88d9e00679f0429",
+      "bytes": 4694781
+    }
+  },
+  "source_path_count": 40,
+  "runtime_path_count": 24,
+  "active_TeX_count": 36,
+  "observed_TeX_count": 46,
+  "manuscript_observation_count": 14,
+  "guarded_path_count": 78,
+  "exact_changed_paths": {
+    "manuscript": [
+      "book/chapters/10-quantum-introduction.tex",
+      "book/chapters/11-quantum-degeneration.tex",
+      "book/chapters/17-unfolding-constant-series.tex",
+      "book/chapters/18-figure-eight-curves.tex",
+      "book/chapters/19-pants-twists.tex",
+      "book/chapters/20-torus-twist-series.tex",
+      "book/chapters/21-cuff-matching.tex",
+      "book/chapters/22-cusps-orthospectrum.tex",
+      "book/claims/sections10-11.json",
+      "book/claims/sections17-22.json"
+    ],
+    "active_TeX": [
+      "book/chapters/10-quantum-introduction.tex",
+      "book/chapters/11-quantum-degeneration.tex",
+      "book/chapters/17-unfolding-constant-series.tex",
+      "book/chapters/18-figure-eight-curves.tex",
+      "book/chapters/19-pants-twists.tex",
+      "book/chapters/20-torus-twist-series.tex",
+      "book/chapters/21-cuff-matching.tex",
+      "book/chapters/22-cusps-orthospectrum.tex",
+      "book/chapters/32-open-questions.tex",
+      "book/polyhedral_volumes_and_geodesic_identities.tex"
+    ],
+    "inactive_TeX_fixed": [
+      "book/figures/01_connections.tex",
+      "book/figures/02_polyhedral_regimes.tex",
+      "book/figures/03_cotangent_hessian.tex",
+      "book/figures/04_dehn_filling.tex",
+      "book/figures/05_reconnection_atoms.tex",
+      "book/figures/06_double_covers.tex",
+      "book/figures/07_flat_row.tex",
+      "book/figures/08_flip.tex",
+      "book/figures/09_airy.tex",
+      "book/figures/preamble.tex"
+    ]
+  },
+  "expected_groups": [
+    "Q1_figure_eight",
+    "Q2_klein_geometry",
+    "Q3_peripheral_filling",
+    "Q4_charge_curvature",
+    "G1_torus_unfolding",
+    "G2_pants_traces",
+    "G3_figure_eight_kernel",
+    "G4_local_distance",
+    "G5_seams_torus_holonomy",
+    "G6_twist_coarea",
+    "G7_twist_partition",
+    "G8_endpoint_matching",
+    "G9_cusp_decoration",
+    "G10_boundary_shadows"
+  ],
+  "expected_check_counts": {
+    "exact": 1342,
+    "numerical_formula_comparisons": 4266,
+    "cross_precision_observations": 509
+  },
+  "all_294_reviewed_input_identities_unchanged": true,
+  "current_and_committed_source_equal_to_approved": true,
+  "git_status_before_and_after_empty": true,
+  "index_clean": true,
+  "accepted_v3_helpers_unchanged": true,
+  "helper_tests_repeated": false,
+  "numerical_replay_performed": false,
+  "candidate_report_synthesized": false,
+  "PDF_build_marker_render_or_copy_performed": false,
+  "canonical_or_git_mutation_by_reviewer": false,
+  "candidate_artifact_approval_claimed": false,
+  "review_evidence": {
+    "subject-freeze.json": {
+      "sha256": "6ea7e63b635d78b0f9f713c6f492427511c231ddec40e39616949c0bc6a1f193",
+      "bytes": 68745
+    },
+    "pdf-binding-inputs.json": {
+      "sha256": "40168447fc61a6732097b227383b27a32a6d895a7f6f8389b9ea1a53ed76c7d6",
+      "bytes": 474
+    },
+    "independent-checks.json": {
+      "sha256": "a26d84f1ea40376d896b735b43690773385955b62e5e991300f23b279b302062",
+      "bytes": 331115
+    },
+    "review.md": {
+      "sha256": "b86e9dfe0c584871514655c8a718e87f7bad7792e288c3716232523494dc3006",
+      "bytes": 3693
+    }
+  },
+  "remaining_actual_stages": [
+    "Root release and actual accepted runner invocation with a new exclusive OUTER receipt",
+    "Successful fresh report and strict author-versus-clean-source scientific comparison",
+    "Final candidate copying, bounded verbatim whitespace treatment, links/manifests and independent artifact approval",
+    "Separate artifact commit and OUTER postcommit receipts",
+    "Later upload"
+  ]
+}

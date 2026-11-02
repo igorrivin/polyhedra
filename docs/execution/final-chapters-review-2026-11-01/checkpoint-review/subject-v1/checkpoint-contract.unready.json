@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "ready": false,
+  "unresolved": [
+    "Final fourteen-group code/fixture/report and independent computation approval",
+    "Final mathematical reviews and integrated source/PDF approvals",
+    "Actual source-only direct-child commit and empty Git state",
+    "Exact source/runtime/manuscript hash maps and actual approval-schema pointers",
+    "Actual clean-source result, comparison and curated candidate identities"
+  ],
+  "baseline_commit": "151673b1817e66aae493eb7da1be5ddf49adfe0f",
+  "source_commit": null,
+  "replay_spec": {
+    "path": "clean-source/replay-spec.json",
+    "outer_source": "clean-source/replay-spec.json",
+    "identity": null
+  },
+  "source_receipt": {
+    "path": "source-checkpoint/source-checkpoint.json",
+    "identity": null,
+    "required_values": {
+      "/passed": true
+    }
+  },
+  "approval_pins": [
+    {
+      "role": "structure",
+      "path": "structure-review/review-manifest.json",
+      "identity": null,
+      "required_values": {
+        "/decision": "approve"
+      }
+    },
+    {
+      "role": "quantum",
+      "path": "quantum-review/final-acceptance.json",
+      "identity": null,
+      "required_values": {
+        "/status": "independent_exact_byte_acceptance",
+        "/required_open_findings": []
+      }
+    },
+    {
+      "role": "geodesic",
+      "path": "geodesic-review/final-acceptance.json",
+      "identity": null,
+      "required_values": {
+        "/decision": "approve"
+      }
+    },
+    {
+      "role": "conventions",
+      "path": "conventions-review/final-acceptance.json",
+      "identity": null,
+      "required_values": {
+        "/decision": "approve"
+      }
+    },
+    {
+      "role": "computation",
+      "path": "computation-review/approved-manifest.json",
+      "identity": null,
+      "required_values": {
+        "/decision": "approve"
+      }
+    },
+    {
+      "role": "integration",
+      "path": "integration-review/approved-source-manifest.json",
+      "identity": null,
+      "required_values": {
+        "/decision": "approve"
+      }
+    }
+  ],
+  "baseline_inventory": {
+    "path": "structure/baseline-tracked-inventory.json",
+    "identity": {
+      "sha256": "7215c3af89f2f4fe50634bad4f572cbffbdd27c9cebfd0530e8d97c3c68e6ac8",
+      "bytes": 1135435
+    }
+  },
+  "original_inventory_identity": {
+    "sha256": "3e7cb4912789f4134652daf0f4097e28a871e4630207b04fef0a41b49d9ee6f1",
+    "bytes": 206532
+  },
+  "replay_receipt": {
+    "path": "clean-source/run-command.json",
+    "identity": null,
+    "required_values": {
+      "/checks_passed": true,
+      "/command_executed": true,
+      "/returncode": 0,
+      "/exit_status": 0
+    }
+  },
+  "comparison_receipt": {
+    "path": "clean-source/scientific-comparison.json",
+    "identity": null,
+    "required_values": {
+      "/checks_passed": true,
+      "/exit_status": 0,
+      "/identical_scientific_payload": true
+    }
+  },
+  "claim_ledgers": {
+    "book/claims/sections10-11.json": 61,
+    "book/claims/sections17-22.json": 59,
+    "book/claims/section32-appendixb.json": 66
+  },
+  "pdf": {
+    "identity": null,
+    "reviewed_outer_pdf": null,
+    "build_timing_claim": "actual independently reviewed precommit build copied byte-for-byte",
+    "input_freeze": {
+      "path": "integration-review/tex-input-freeze.json",
+      "identity": null,
+      "required_values": {
+        "/count": 36
+      },
+      "input_sha256_pointer": "/files",
+      "input_sha256_shape": "path-record-mapping"
+    },
+    "build_receipt": {
+      "path": "integration-review/pdf-build-receipt.json",
+      "identity": null,
+      "required_values": {
+        "/returncode": 0,
+        "/actual_tex_input_count": 36,
+        "/compiled_unique_labels": 613,
+        "/compiled_unique_bibliography_keys": 129,
+        "/overfull_count": 0,
+        "/undefined_references_or_citations": false,
+        "/source_freeze_unchanged_after_build": true
+      },
+      "pdf_sha256_pointer": "/pdf_sha256"
+    },
+    "visual_receipt": {
+      "path": "integration-review/pdf-visual-approval.json",
+      "identity": null,
+      "required_values": {
+        "/decision": "approve",
+        "/open_findings": []
+      },
+      "pdf_sha256_pointer": "/source_pdf_sha256"
+    }
+  },
+  "preparation_note": "Unready template. Paths/pointers describe proposed interfaces and must be bound to original actual receipts without rewriting them."
+}

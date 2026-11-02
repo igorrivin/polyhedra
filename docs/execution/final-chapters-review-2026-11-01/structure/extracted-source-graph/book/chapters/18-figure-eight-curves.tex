@@ -1,0 +1,191 @@
+\section{Figure-eight curves and simple lifts}
+\label{sec:figures}
+
+In this section surfaces have cusps or geodesic boundary and no cone
+singularities.
+
+\subsection{The pants trace relation}
+
+Let $\gamma$ be a closed geodesic with exactly one transverse self-intersection,
+not a proper iterate. Its two-lobed neighborhood is a pair of pants. After
+tightening the cuffs, allow coincident cuff images in the ambient surface;
+this occurs on a one-holed torus. If the three cuff lengths are $a,b,c$,
+write
+\[
+ t_a=2\cosh(a/2),\quad t_b=2\cosh(b/2),\quad t_c=2\cosh(c/2).
+\]
+A cusp has positive trace $2$. For the figure-eight that wraps the $a$
+and $b$ cuffs, the trace identity is
+\begin{equation}
+ \boxed{t_\gamma=t_at_b+t_c.}
+ \label{eq:figuretrace}
+\end{equation}
+This is Rivin's pants relation~\cite[Theorem 1.3]{RivinFigures}. It also
+follows directly from
+$\tr(AB^{-1})=\tr A\,\tr B-\tr(AB)$ with the consistent signs of pants
+holonomies; rewriting in positive traces produces the plus sign in
+\eqref{eq:figuretrace}.
+
+For pants with lengths $(a,b,0)$, the two figures that use the cusp as one
+lobe have traces
+\begin{equation}
+ u=2t_a+t_b,\qquad v=t_a+2t_b,
+ \qquad
+ t_a=\frac{2u-v}{3},\quad t_b=\frac{2v-u}{3}.
+ \label{eq:twofigures}
+\end{equation}
+Consequently any weight assigned to this pair of cuffs can be rewritten
+as a weight in the two associated figure-eight lengths. This gives a
+direct reindexing of a pants identity. It produces a paired-curve weight;
+it does not automatically produce a universal function of one figure-eight
+length.
+
+\subsection{What the local double cover accomplishes}
+
+Use pants generators $a,b$, with third cuff $c=(ab)^{-1}$ and figure
+$\gamma=ab^{-1}$. Consider the connected double cover given by
+\[
+ \chi(a)=\chi(b)=1\in\ZZ/2\ZZ.
+\]
+Then $\chi(c)=\chi(\gamma)=0$. The $a,b$ cuffs each lift with degree two,
+while $c$ has two degree-one lifts. The upstairs surface is a four-holed
+sphere with cuff lengths
+\begin{equation}
+ (2a,2b,c,c).
+ \label{eq:doublepants}
+\end{equation}
+The figure-eight has two closed degree-one lifts, each of which is simple.
+One way to see this is to lift its two-loop spine: the lifted graph has
+two vertices, and either lift uses one $a$ edge and one $b$ edge to form
+a simple cycle.
+
+The two lifted cycles meet at both vertices of that graph. Geometrically,
+the two simple lifts intersect each other twice, once over each lift of
+the original crossing. Thus two components of the lifted domain do not
+mean a disjoint multicurve upstairs.
+
+There is a further global issue: this particular character of the pants
+group need not extend to the whole surface. A lobe that is zero in
+$H_1(S;\ZZ/2\ZZ)$---for example, a separating lobe on a closed surface---
+cannot be assigned value one by an ambient character.
+Rivin proves a global substitute: a one-double-point geodesic has a simple
+lift in a fourfold cover~\cite[Theorem 4.2]{RivinFigures}.
+
+Even when a suitable cover exists, applying an entire simple-curve identity
+upstairs and projecting downstairs introduces other projected topological
+types, covering degrees, and multiplicities. Desingularization supplies
+an important geometric tool, but selecting just the desired downstairs
+curves requires additional accounting.
+
+\subsection{The two types on a punctured torus}
+
+On a once-punctured torus, a figure-eight has a unique essential simple
+curve $\alpha$ disjoint from it. Its pants neighborhood has one peripheral
+cuff and two parallel essential cuffs, which both tighten to $\alpha$.
+Cutting along $\alpha$ gives pants of lengths $(a,a,0)$, where
+$a=\ell_\alpha$ and $t=2\cosh(a/2)>2$.
+
+There are exactly three unoriented figure-eight classes in these cut pants:
+\begin{center}
+\begin{tabular}{@{}p{0.42\textwidth}c c@{}}
+\toprule
+Lobes & Number & Positive trace\\
+\midrule
+One essential cuff and the cusp & $2$ & $3t$\\
+Both essential cuff copies & $1$ & $t^2+2$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The first two are exchanged by the hyperelliptic involution; call their
+family $\mathcal N$. The third is hyperelliptic; call its family
+$\mathcal H$. Equal lengths in the first row do not identify the two
+free-homotopy classes. In torus homology the first family has a primitive
+class up to sign and the second twice a primitive class, although its
+geodesics are not proper iterates.
+
+For a word check, glue pants generators by $b=s a^{-1}s^{-1}$. The first
+two figures can be represented by $a^2b$ and $ab^2$, while the third is
+$ab^{-1}=asa s^{-1}$. The last word is not a square. The common disjoint
+class $\alpha$ is recoverable from the figure's pants neighborhood, so
+grouping all figure-eights by $\alpha$ has no duplication.
+
+Lei--Zhang correct the index set in Rivin's earlier torus identity: its
+stated formula accounts for $\mathcal N$, while $\mathcal H$ requires
+separate treatment~\cite{LeiZhang}. The separation is important here
+because the next construction is intended to include \emph{both} families.
+
+\subsection{A positive single-length kernel for all figure-eights}
+
+Define, for $t>2$,
+\begin{equation}
+ h(t)=1-\sqrt{1-\frac4{t^2}}.
+ \label{eq:htrace}
+\end{equation}
+If $t=2\cosh(\ell/2)$, then $h(t)=2/(1+e^\ell)$. Hence McShane's
+identity is $\sum_\alpha h(t_\alpha)=1$. The classification immediately
+gives the two separate identities
+\begin{align}
+ \sum_{\gamma\in\mathcal N}
+       \left(1-\sqrt{1-\frac{36}{t_\gamma^2}}\right)&=2,
+       \label{eq:nidentity}\\
+ \sum_{\gamma\in\mathcal H}
+       \left(1-\sqrt{1-\frac4{t_\gamma-2}}\right)&=1.
+       \label{eq:hidentity}
+\end{align}
+
+To use the same kernel on every one-crossing geodesic, let
+\begin{equation}
+ \beta(x)=\frac{x^2}{9}+2,\qquad
+ F(x)=\sum_{n=0}^{\infty}(-1)^n2^{-n-1}
+             h\left(\frac{\beta^{\circ n}(x)}3\right),\qquad x>6.
+ \label{eq:universalkernel}
+\end{equation}
+Here $\beta^{\circ n}$ means iteration, with $\beta^{\circ0}(x)=x$.
+
+\begin{proposition}
+On a complete finite-area once-punctured hyperbolic torus,
+\begin{equation}
+ \boxed{\sum_{\substack{\gamma\text{ unoriented, not iterated}\\
+                       i(\gamma,\gamma)=1}}
+        F\bigl(2\cosh(\ell_\gamma/2)\bigr)=1.}
+ \label{eq:allfigureidentity}
+\end{equation}
+The kernel is positive and satisfies
+\begin{equation}
+ \frac14h(x/3)\le F(x)\le\frac12h(x/3),
+ \qquad F(x)\sim\frac9{x^2}\quad(x\longrightarrow\infty).
+ \label{eq:fbound}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+For $x>6$,
+$\beta(x)-x=(x-3)(x-6)/9>0$. Since $h$ is positive and decreasing,
+the absolute values of the summands in~\eqref{eq:universalkernel} decrease,
+and the series is absolutely convergent, bounded termwise by $2^{-n-1}$.
+Its alternating-series bounds place $F$ between the first term and the
+first term minus the second. The second is at most half the first, proving
+\eqref{eq:fbound}'s inequalities.
+
+Shifting the series index yields
+\[
+ 2F(x)+F(\beta(x))=h(x/3).
+\]
+For $x=3t$ this reads
+\begin{equation}
+ 2F(3t)+F(t^2+2)=h(t).
+ \label{eq:kernelrelation}
+\end{equation}
+The three figure-eights associated with a simple $\alpha$ have exactly
+the traces on the left. Sum over $\alpha$ and use McShane's identity.
+Positivity justifies the regrouping and proves convergence of the full
+geodesic sum. Finally $h(x/3)=18x^{-2}+O(x^{-4})$ and the second and
+subsequent terms contribute $O(x^{-4})$, giving the stated asymptotic.
+\end{proof}
+
+This is an elementary construction from the corrected classification,
+not a claim of a new identity in the literature. It is restricted to the
+cusped torus. Cone continuation requires checking existence of the indexed
+geodesics as well as continuing the weight; the cone obstruction discussed
+by Lei--Zhang is a reason to keep that distinction explicit~\cite{LeiZhang}.
+

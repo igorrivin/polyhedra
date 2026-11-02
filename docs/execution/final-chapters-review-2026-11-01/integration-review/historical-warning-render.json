@@ -1,0 +1,24 @@
+{
+  "purpose": "Inspect unchanged Section 9 underfull warning on final integrated PDF",
+  "pdf_sha256": "5bb873e52a4fe668d74f6137150d5e1180f75d6ed1c93bff21724e5b8bcf4c83",
+  "page": 31,
+  "command": [
+    "/usr/local/bin/gs",
+    "-dSAFER",
+    "-dBATCH",
+    "-dNOPAUSE",
+    "-sDEVICE=png16m",
+    "-r130",
+    "-dFirstPage=31",
+    "-dLastPage=31",
+    "-sOutputFile=/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/rendered/page-031.png",
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/pdf-build/main.pdf"
+  ],
+  "returncode": 0,
+  "stdout": "GPL Ghostscript 10.04.0 (2024-09-18)\nCopyright (C) 2024 Artifex Software, Inc.  All rights reserved.\nThis software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:\nsee the file COPYING for details.\nProcessing pages 31 through 31.\nPage 31\n",
+  "stderr": "\nThe following errors were encountered at least once while processing this file:\n\tCMap unrecoverably broken\n\n   **** This file had errors that were repaired or ignored.\n   **** The file was produced by: \n   **** >>>> pdfTeX-1.40.27 <<<<\n   **** Please notify the author of the software that produced this\n   **** file that it does not conform to Adobe's published PDF\n   **** specification.\n\n",
+  "image": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/final-chapters-review-2026-11-01/integration-review/rendered/page-031.png",
+    "sha256": "be7dfdead0ab1add0d2bd8a83bc9668a4c92e286476311936adc7016a622a6ed"
+  }
+}

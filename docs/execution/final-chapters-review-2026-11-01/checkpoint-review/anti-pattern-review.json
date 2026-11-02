@@ -1,0 +1,34 @@
+{
+  "status": "bounded_code_review_complete_two_required_findings_elsewhere",
+  "production_files_reviewed": [
+    "checkpoint_lib.py",
+    "run_clean_replay.py",
+    "compare_replays.py",
+    "verify_checkpoint.py"
+  ],
+  "gates_use_assert": false,
+  "shell_true_or_eval_exec": false,
+  "canonical_write_or_commit_cleanup_in_tools": false,
+  "writes": "Only exclusive outer receipt plus the explicitly launched companion output; tests create and remove isolated synthetic repositories.",
+  "reviewed_controls": [
+    "frozen specifications and exact approval records",
+    "explicit source parent and hash allowlist",
+    "all fourteen exact names bound through computation approval",
+    "individually enumerated stage metadata exceptions",
+    "unchanged unknown field comparison, subject to CR01 numeric loss",
+    "failure receipts after safe exclusive reservation",
+    "output overwrite, traversal and symlink escape rejection",
+    "before/after source state and input drift",
+    "separate candidate and artifact-commit lifecycle",
+    "copy manifests and no self hash",
+    "original/import/LFS preservation gates",
+    "precommit PDF identity and declared visual/build acceptance boundaries",
+    "normal and optimized execution"
+  ],
+  "limitations": [
+    "Actual graph is not checked at replay launch until CR02 is repaired.",
+    "No real final report/approval schema or candidate was available.",
+    "Original-source/PDF/claim gates were read but not exercised on a final real candidate; synthetic candidate tests explicitly mock them.",
+    "Independent rendered PDF review and mathematical/code companion approval are separate tasks."
+  ]
+}

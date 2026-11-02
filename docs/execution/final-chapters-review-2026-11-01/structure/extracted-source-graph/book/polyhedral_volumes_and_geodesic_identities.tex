@@ -1,0 +1,1292 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[margin=27mm,headheight=14pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{booktabs,array,longtable}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\definecolor{linkblue}{RGB}{28,65,105}
+\usepackage[colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue,
+ pdfauthor={},pdftitle={Polyhedra, Moduli, and Quantum Geometry}]{hyperref}
+% Merge this preamble into the main document before inlining the figures.
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,positioning}
+\definecolor{mpblue}{RGB}{35,76,110}
+\definecolor{mpteal}{RGB}{33,117,119}
+\definecolor{mpochre}{RGB}{175,108,35}
+\definecolor{mpred}{RGB}{161,65,54}
+\definecolor{mpgray}{RGB}{104,112,120}
+
+\usepackage[font=small,labelfont=bf]{caption}
+\setlength{\textfloatsep}{20pt plus 3pt minus 3pt}
+\setlength{\intextsep}{18pt plus 3pt minus 3pt}
+\renewcommand{\topfraction}{.88}
+\renewcommand{\bottomfraction}{.8}
+\renewcommand{\textfraction}{.1}
+\renewcommand{\floatpagefraction}{.75}
+\newcommand{\monographpart}[2]{%
+  \clearpage\part{#1}%
+  \noindent\textit{#2}\par\medskip}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Polyhedra, Moduli, and Quantum Geometry}
+\fancyhead[R]{\small Research monograph}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{1.25em}
+\setlength{\emergencystretch}{2em}
+\makeatletter
+\renewcommand*\l@subsection{\@dottedtocline{2}{1.5em}{3.1em}}
+\makeatother
+\setlist{itemsep=3pt,topsep=5pt}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\Pf}{Pf}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Vol}{Vol}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\WP}{\mathrm{WP}}
+\newcommand{\M}{\mathcal M}
+\newcommand{\T}{\mathcal T}
+\newcommand{\MM}{\overline{\mathcal M}}
+\newcommand{\HH}{\mathbb H}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\dV}{\dd V_{\WP}}
+\newcommand{\length}{\ell}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\angles}{\boldsymbol\theta}
+\newcommand{\lengths}{\mathbf L}
+\newcommand{\eqtag}[1]{\textnormal{(#1)}}
+
+\title{\textbf{Polyhedra, Moduli,\\and Quantum Geometry}\\[8pt]
+\large Variational principles, spectral methods, and computation}
+\author{}
+\date{30 October 2026}
+
+\begin{document}
+\maketitle
+\thispagestyle{plain}
+
+\begin{abstract}
+Hyperbolic and Euclidean polyhedra, Weil--Petersson theory, mapping class
+groups, Dehn surgery, and quantum invariants admit a common approach
+through geometric variational principles. This monograph develops the
+connections between them. Volume and length functions determine geometric
+equations; their Hessians govern boundary response, numerical solution,
+and semiclassical amplitudes. Two quantum and semiclassical viewpoints
+enter: three-manifold invariants built from tetrahedral data, and Colin
+de Verdi\`ere's finite-dimensional approach to surface trace formulas.
+
+The comparisons yield several explicit results. In a prescribed final
+cone-angle chamber, the leading small-area coefficient of an exact
+Weil--Petersson volume polynomial is $2^{-d}$ times the
+Thurston--Deligne--Mostow volume, where $d=n-3$. At the flat
+weights, the same complex hyperbolic form is the logarithmic curvature
+of a continued unit-volume Liouville correlation; its four-point fusion
+and Hermitian area pairing are calculated explicitly. A normalized
+quantum tetrahedral integral has a uniform Airy transition on the regular
+one-parameter family, including the first correction.
+
+The computational strand connects the Casson--Rivin program to finite
+elements and resistor networks. For the planar prescribed-angle
+realization problem, the negative volume Hessian is twice the cotangent
+stiffness matrix. Its Schur complement describes boundary response, and
+its Gaussian determinant has a rooted-forest expansion. A compatible
+barrier supplies a path-following iteration bound with Laplacian linear
+subproblems. On a geometric Dehn-filling branch, a holomorphic Legendre
+critical value recovers the filling volume to all orders; the inverse
+volume Hessian determines peripheral response, and the Gaussian surgery
+factor agrees with the peripheral torsion factor.
+
+On surfaces, character-twisted trace data organize multicurves by length.
+A length-valued Euler product has isolated unit leading atoms, while a
+trace identity obstructs a perfect fixed linear selector of simple curves.
+Weighted counts imply mixing under precise endpoint hypotheses; a
+marked-torus model gives an explicit global correlation bound on the
+nonsquare genus-two $(2,2)$ stratum. Flat-point lower bounds and arithmetic
+transfer estimates separate the geometric and M\"obius obstructions to
+sharp counting.
+
+These results lead to a conjectural program: uniform quantum gluing and
+Dehn filling, effective extraction of connected-curve coefficients,
+weighted counting beyond the marked-torus model, and sharp norm-ball
+discrepancies. Established inputs, deductions proved here, conditional
+implications, and numerical evidence are distinguished throughout.
+\end{abstract}
+
+\clearpage
+\setcounter{tocdepth}{2}
+\begingroup\small
+\linespread{0.98}\selectfont
+\setlength{\parskip}{0pt}
+\tableofcontents
+\endgroup
+\clearpage
+\begingroup\small
+\setlength{\parskip}{0pt}
+\listoffigures
+\endgroup
+\clearpage
+\section*{Introduction: the connections and the results}
+\addcontentsline{toc}{section}{Introduction: the connections and the results}
+\label{sec:monographintro}
+
+The organizing question is how information passes between apparently
+distant descriptions of geometric objects. A polyhedron can be studied
+through its intrinsic metric, its dihedral angles, its volume, or the
+conformal geometry of its boundary. A surface can be studied through
+geodesics, periods, character varieties, or a mapping-class quotient.
+Each description makes a different operation accessible: integration,
+optimization, gluing, quantization, or computation. The purpose of this
+monograph is to make the passages between these descriptions explicit.
+
+Three operations recur. \emph{Variation} produces a geometric equation
+and a Hessian. \emph{Elimination of internal variables} produces a boundary
+response; the same Schur complement occurs in electrical networks,
+constrained volume optimization, and Gaussian integration.
+\emph{Degeneration} tests the uniformity of a comparison, producing
+Euclidean limits, Airy transitions, cusp phenomena, and changes in
+numerical conditioning. These operations explain why the subjects
+belong together. Each comparison still has its own geometric space,
+measure, and normalization.
+
+The computational interpretation is particularly useful. The companion
+study on Duffin networks and ideal polyhedra~\cite{IpolyStudy} identifies
+a volume Hessian with a cotangent finite-element matrix. Incorporating
+that identity here connects polyhedral realization to sparse linear
+algebra, and connects both to the later calculations of peripheral
+response and semiclassical determinants. Figure~\ref{fig:mono-connections}
+gives a map of these connections. The arrows denote specified operations;
+the detailed statements identify which are exact, asymptotic, or conditional.
+
+
+% BEGIN INLINE FIGURE: 01_connections.tex
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  font=\small,>=Latex,line cap=round,
+  box/.style={draw=mpblue!60,fill=mpblue!4,rounded corners=2pt,
+    minimum height=9mm,inner sep=5pt,align=center,text width=3.5cm},
+  link/.style={->,draw=mpgray,line width=.75pt},
+  lab/.style={font=\scriptsize,fill=white,inner sep=2pt,align=center}]
+  \node[box,text width=4.7cm] (poly) at (0,4.4)
+    {Polyhedral volume and angle structures\\\textit{Euclidean and hyperbolic}};
+  \node[box] (wp) at (-4.5,1.7)
+    {Weil--Petersson geometry\\and Euclidean periods};
+  \node[box] (fem) at (4.5,1.7)
+    {Cotangent Hessians\\and finite elements};
+  \node[box,text width=3.4cm] (surgery) at (0,-.25)
+    {Peripheral holonomy\\and Dehn filling};
+  \node[box] (quantum) at (-4.5,-2.25)
+    {Quantum geometry\\and fusion amplitudes};
+  \node[box] (complexity) at (4.5,-.25)
+    {Resistor networks\\and sparse computation};
+  \node[box] (trace) at (4.5,-2.25)
+    {Twisted trace formulas\\and curve coefficients};
+  \node[box,text width=4.7cm] (count) at (0,-5.1)
+    {Mapping-class orbits\\counting errors and mixing};
+  \draw[link] (poly.west) -| (wp.north);
+  \node[lab] at (-4.5,3.35) {realization and\\degeneration};
+  \draw[link] (poly.east) -| (fem.north);
+  \node[lab] at (4.5,3.35) {second variation};
+  \draw[link] (poly.south)--(surgery.north);
+  \node[lab,text width=2.0cm,anchor=west] at (.12,2.55) {gluing and\\constrained\\variation};
+  \draw[link] (wp.south)--node[lab,left]{area potentials\\and fusion}(quantum.north);
+  \draw[link] (fem.south)--node[lab,right]{linear solves}(complexity.north);
+  \draw[link] (surgery.south west)--node[lab,sloped,above]{critical values}(quantum.north east);
+  \draw[draw=mpgray,dashed,line width=.75pt] (quantum.east)--node[lab,above]{shared semiclassical methods}(trace.west);
+  \draw[link] (trace.south) |- (count.east);
+  \node[lab,text width=3cm,anchor=east] at (4.35,-3.95) {coefficient extraction\\and weighted counting};
+\end{tikzpicture}
+\caption[The geometric and analytic connections]{A guide to the constructions developed in the monograph. Solid
+arrows name operations whose domains and hypotheses are stated in the text;
+they do not assert equivalences of entire theories. The dashed link records
+the use of semiclassical analysis in two different settings: quantum
+three-manifold constructions and surface trace formulas. The counting-to-mixing
+implications retain their endpoint-weight and nonescape hypotheses.}
+\label{fig:mono-connections}
+\end{figure}
+% END INLINE FIGURE
+
+
+\subsection*{The principal results}
+\addcontentsline{toc}{subsection}{The principal results}
+
+The main conclusions fall into six groups. Their significance lies both
+in the individual formulas and in the transfer of information between
+the subjects. We give their precise scopes here; the cited sections
+contain the hypotheses, proofs, and original sources of the inputs.
+
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.}]
+\item \textbf{Polyhedral geometry and moduli volumes.}
+The ideal-polyhedral cells give a normalized partition function for
+genus-zero WP volumes. For fixed admissible deficit weights, the
+final-chamber identity~\eqref{eq:exactWPclassflat} gives an exact class
+polynomial, and~\eqref{eq:WPCHvolumeasymptotic} identifies
+$2^{-d}V_{\mathrm{CH}}(\mu)$ as the coefficient of $A^d$ in its
+small-area volume expansion, with $d=n-3$. This makes
+the Euclidean period geometry a computable limit of the hyperbolic
+moduli-volume theory. The chamber, labels, and orbifold conventions are
+part of the formulas.
+
+\item \textbf{Quantum periods and a uniform degeneration.}
+The finite-$b$ identity~\eqref{eq:exactLiouvillecurvature} identifies the
+Thurston--Deligne--Mostow form with the logarithmic curvature of a
+continued unit-volume Liouville correlation. The four-point residue
+calculation determines its fusion matrix and Hermitian area pairing.
+Proposition~\ref{prop:regularquantumAiry} gives a separate uniform
+Airy theorem, with its first correction, for the specified pole-cleared
+tetrahedral integral on the regular one-parameter family.
+
+\item \textbf{Volume optimization, finite elements, and complexity.}
+Proposition~\ref{prop:ipolyHessian} identifies the negative volume
+Hessian with twice the cotangent stiffness matrix in the disk's
+leading--trailing angle coordinates. Equations~\eqref{eq:ipolySchur}
+and~\eqref{eq:ipolyForestDeterminant} give its boundary elimination and
+rooted-forest determinant. Proposition~\ref{prop:ipolyCompatibility}
+supplies the compatible barrier and yields a quantitative path-following
+bound after initial centering. The distinction between a fast Laplacian
+solve and the full nonlinear realization problem makes the remaining
+feasibility, precision, and certification questions explicit.
+
+\item \textbf{Dehn filling through a critical value.}
+Proposition~\ref{prop:dehncriticalvalue} identifies the local filling
+volume with a holomorphic Legendre critical value as an equality of
+analytic germs. Thus every classical long-slope coefficient is fixed,
+including the Neumann--Zagier expansion. The inverse volume Hessian
+recovers the marked cusp quadratic form, and the Gaussian factor
+matches the peripheral factor in torsion surgery. The transfer to a
+full quantum invariant is conditional on the representation, cycle,
+noncancellation, and competing-sector estimates stated in
+Proposition~\ref{prop:dehnquantumconditional}.
+
+\item \textbf{Length-sensitive reconstruction from trace data.}
+Proposition~\ref{prop:globaldiagonal} assigns each multicurve an
+isolated unit first atom in a length-valued Euler product. A fixed
+linear character functional cannot preserve every simple primitive
+trace while annihilating every nonsimple trace; the explicit obstruction
+is~\eqref{eq:globalobstruction}. Keeping the length and twisting data
+therefore matters. The construction supplies exact coefficient objects
+and finite isolation bounds, while uniform stability and effective
+extraction remain additional analytic questions.
+
+\item \textbf{Effective dynamics and the boundary of sharp counting.}
+Theorem~\ref{thm:twopointfullrate} is a converse from a specified weighted
+two-endpoint count to mixing, with control of derivative endpoint
+weights. Theorem~\ref{thm:markedtorusmixing} gives an explicit global
+correlation bound for the marked-torus model of the nonsquare genus-two
+$(2,2)$ stratum. The strict-convexity, inverse-flatness, and arithmetic
+transfer results then identify the separate geometric and M\"obius
+inputs needed for sharp primitive counting. The proposed $O_X(L)$
+remainder is a question to be decided, not a conclusion of these results.
+\end{enumerate}
+
+\subsection*{The conjectural program}
+\addcontentsline{toc}{subsection}{The conjectural program}
+
+The larger quantum-volume problem asks whether controlled local
+tetrahedral asymptotics can be assembled into uniform asymptotics of
+three-manifold invariants, including Dehn filling. The local critical
+value and the Gaussian surgery factor specify two necessary matching
+conditions. Global gluing and contour estimates are the next steps.
+On the surface side, the coefficient constructions suggest a route from
+spectral data to effective connected-curve counting. The weighted
+mixing converse specifies the estimate that route would have to produce,
+including endpoint regularity and cusp control.
+
+Two further questions join the computational and counting strands to
+this program. Can geometric angle bounds and verified linear solves
+turn variational existence into useful complexity and certification
+theorems beyond the planar model? Can the fine geometry of a torus
+norm ball provide the quantitative discrepancy modulus needed to decide
+the linear-error question? Section~\ref{sec:questions} states these
+targets alongside the other open problems, without assigning an answer
+where the evidence does not yet support one.
+
+\subsection*{Structure and routes through the monograph}
+\addcontentsline{toc}{subsection}{Structure and routes through the monograph}
+
+The exposition is divided into seven parts. The quantum introduction is
+written for geometers who do not assume familiarity with state sums,
+recoupling coefficients, conformal blocks, or stationary-phase terminology.
+Later calculations can be read after that introduction or reached
+directly through the result map above.
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{.09\textwidth}p{.34\textwidth}p{.50\textwidth}@{}}
+\toprule
+Part & Subject & Main passage \\
+\midrule
+I & Polyhedra and moduli measures & Angle cells, WP volume, and Euclidean periods \\[4pt]
+II & Variational geometry and computation & Volume Hessians, finite elements, and complexity \\[4pt]
+III & Quantum geometry, degeneration, and surgery & Tetrahedral amplitudes, fusion, and peripheral response \\[4pt]
+IV & Curves, trace formulas, and quotients & Geodesic identities and length-valued coefficients \\[4pt]
+V & Mapping-class dynamics and mixing & Weighted orbit counts and the marked-torus model \\[4pt]
+VI & Sharp counting and arithmetic & Flat norm balls, diagnostics, and M\"obius cancellation \\[4pt]
+VII & Open problems and conjectural directions & The estimates and geometric comparisons still required \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A geometric route runs through Parts~I--II and the classical Dehn-filling
+calculation in Part~III. A quantum route begins with
+Section~\ref{sec:quantumintro}, then follows the period, fusion, Airy, and
+surgery comparisons. A surface and spectral route begins with the
+geodesic identities in Part~IV and continues through Parts~V--VI.
+For computation, Section~\ref{sec:ipolybridge} leads to the inverse-Hessian
+response in Section~\ref{sec:dehnresponse} and the counting diagnostics in
+Section~\ref{sec:sharpdiagnostics}. These routes share definitions and
+normalizations rather than requiring every calculation to be read in order.
+
+\paragraph{Provenance and mathematical status.}
+This research monograph grew from a mathematical discussion and includes
+both exposition and deductions from the cited literature. The supplied
+\texttt{igorrivin/ipoly} snapshot contributes the companion manuscript
+and its numerical scripts; Section~\ref{sec:ipolybridge} incorporates its
+core variational and computational arguments. Numerical checks are
+identified where they occur. A theorem proved for a normalized local
+integral, a specified stratum, or a conditional weighted count retains
+that scope when it is used elsewhere in the monograph.
+
+
+
+\monographpart{Polyhedra and moduli measures}{Polyhedral realization supplies coordinates; the measure comparison turns them into volume formulas. Fixed-deficit Euclidean shapes then reveal a period geometry at the flat limit.}
+
+\input{chapters/01-volume-normalization.tex}
+\input{chapters/02-ideal-angle-cells.tex}
+\input{chapters/03-ideal-tetrahedron.tex}
+\input{chapters/04-hyperideal-integrand.tex}
+\input{chapters/05-boundary-cone-continuation.tex}
+\input{chapters/06-torus-sphere.tex}
+\input{chapters/07-euclidean-periods.tex}
+\input{chapters/08-wp-flat-limit.tex}
+\monographpart{Variational geometry and computation}{The volume Hessian becomes a discrete Dirichlet operator. Boundary elimination, Gaussian determinants, and barrier methods connect the geometry to computation.}
+
+% Integration draft.  Uses existing main-manuscript macros and theorem environments.
+% New bibliography keys are listed in tmp/ipoly_monograph_bridge_bibliography.tex.
+\input{chapters/09-volume-hessians.tex}
+\monographpart{Quantum geometry, degeneration, and surgery}{An introduction to the quantum constructions leads to exact period comparisons, a controlled tetrahedral degeneration, and the classical and Gaussian data of Dehn filling.}
+
+\input{chapters/10-quantum-introduction.tex}
+\input{chapters/11-quantum-degeneration.tex}
+\input{chapters/12-quantum-boundary-measure.tex}
+\input{chapters/13-four-point-fusion.tex}
+\input{chapters/14-normalized-quantum-comparison.tex}
+\input{chapters/15-quantum-airy.tex}
+\input{chapters/16-dehn-filling-response.tex}
+\monographpart{Curves, trace formulas, and quotients}{Cutting and gluing geodesics produces identities and twist integrals. Twisted trace formulas retain the multicurve coefficients and their lengths.}
+
+\input{chapters/17-unfolding-constant-series.tex}
+\input{chapters/18-figure-eight-curves.tex}
+\input{chapters/19-pants-twists.tex}
+\input{chapters/20-torus-twist-series.tex}
+\input{chapters/21-cuff-matching.tex}
+\input{chapters/22-cusps-orthospectrum.tex}
+\clearpage
+\input{chapters/23-trace-coefficients.tex}
+\input{chapters/24-quantitative-counting.tex}
+\input{chapters/25-global-coefficient-filters.tex}
+\monographpart{Mapping-class dynamics and mixing}{Weighted endpoint counts encode correlations. The general converse specifies the required estimates, while the marked-torus model supplies an explicit calculation on one genus-two stratum.}
+
+\input{chapters/26-counting-to-mixing.tex}
+\input{chapters/27-weighted-mixing-converse.tex}
+\input{chapters/28-genus-two-model.tex}
+\input{chapters/29-controlled-observables.tex}
+\monographpart{Sharp counting and arithmetic}{The local shape of a norm ball governs geometric discrepancy. Primitive counting adds a separate arithmetic cancellation problem, and exact diagnostics keep the two inputs visible.}
+
+\input{chapters/30-sharp-diagnostics.tex}
+\input{chapters/31-arithmetic-remainder.tex}
+\monographpart{Open problems and conjectural directions}{The comparisons suggest concrete further estimates, integrations, and gluing problems. Their hypotheses identify what the next results would need to establish.}
+
+\input{chapters/32-open-questions.tex}
+\appendix
+\input{chapters/appendix-a-fricke.tex}
+\clearpage
+\input{chapters/appendix-b-conventions.tex}
+\clearpage
+\begin{thebibliography}{999}
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+\addcontentsline{toc}{section}{References}
+
+\bibitem{WentworthGardiner}
+R. A. Wentworth,
+\emph{Energy of harmonic maps and Gardiner's formula},
+in \emph{In the Tradition of Ahlfors--Bers, IV},
+Contemp. Math. \textbf{432} (2007), 221--229.
+\href{https://doi.org/10.1090/conm/432/08311}{DOI: 10.1090/conm/432/08311};
+\href{https://math.umd.edu/~raw/papers/gardiner.pdf}{Author's version}.
+
+\bibitem{AranaHerreraSquare2020}
+F. Arana-Herrera,
+\emph{Counting square-tiled surfaces with prescribed real and imaginary
+foliations and connections to Mirzakhani's asymptotics for simple
+closed hyperbolic geodesics},
+J. Mod. Dyn. \textbf{16} (2020), 81--107.
+\href{https://doi.org/10.3934/jmd.2020004}{DOI: 10.3934/jmd.2020004};
+\href{https://arxiv.org/abs/1902.05626}{arXiv:1902.05626}.
+
+\bibitem{AranaHerreraSquareEffective}
+F. Arana-Herrera,
+\emph{Effective count of square-tiled surfaces with prescribed real and
+imaginary foliations in connected components of strata},
+Ergodic Theory Dynam. Systems \textbf{45} (2025), 649--662.
+\href{https://doi.org/10.1017/etds.2024.54}{DOI: 10.1017/etds.2024.54};
+\href{https://arxiv.org/abs/2207.04091}{arXiv:2207.04091}.
+
+\bibitem{ABEMPolar}
+J. Athreya, A. Bufetov, A. Eskin and M. Mirzakhani,
+\emph{Lattice point asymptotics and volume growth on Teichm\"uller space},
+Duke Math. J. \textbf{161} (2012), 1055--1111.
+\href{https://arxiv.org/abs/math/0610715}{arXiv:math/0610715}.
+
+\bibitem{AranaHerreraLattice}
+F. Arana-Herrera,
+\emph{Effective mapping class group dynamics I: Counting lattice points
+in Teichm\"uller space},
+Duke Math. J. \textbf{172} (2023), 1437--1529.
+\href{https://arxiv.org/abs/2010.03123}{arXiv:2010.03123}.
+
+\bibitem{HumphriesModular}
+P. Humphries,
+\emph{Distributing points on the torus via modular inverses},
+Quart. J. Math. \textbf{73} (2022), 1--16.
+\href{https://doi.org/10.1093/qmath/haab015}{DOI: 10.1093/qmath/haab015};
+\href{https://arxiv.org/abs/2003.09955}{arXiv:2003.09955}.
+
+\bibitem{PollicottSharpZeta}
+M. Pollicott and R. Sharp,
+\emph{Zeta functions in higher Teichm\"uller theory},
+Math. Z. \textbf{306} (2024), article 37.
+\href{https://doi.org/10.1007/s00209-024-03437-4}{DOI: 10.1007/s00209-024-03437-4}.
+
+\bibitem{BJPZeta}
+D. Borthwick, C. Judge and P. A. Perry,
+\emph{Selberg's zeta function and the spectral geometry of
+geometrically finite hyperbolic surfaces},
+Comment. Math. Helv. \textbf{80} (2005), 483--515.
+\href{https://doi.org/10.4171/CMH/23}{DOI: 10.4171/CMH/23}.
+
+\bibitem{EdwardsOhMixing}
+S. Edwards and H. Oh,
+\emph{Spectral gap and exponential mixing on geometrically finite
+hyperbolic manifolds},
+Duke Math. J. \textbf{170} (2021), 3417--3458.
+\href{https://doi.org/10.1215/00127094-2021-0051}{DOI: 10.1215/00127094-2021-0051}.
+
+\bibitem{GNDiscrepancy}
+A. Gorodnik and A. Nevo,
+\emph{On discrepancy, intrinsic Diophantine approximation, and spectral gaps},
+J. Th\'eor. Nombres Bordeaux \textbf{36} (2024), 127--174.
+\href{https://doi.org/10.5802/jtnb.1275}{DOI: 10.5802/jtnb.1275};
+\href{https://arxiv.org/abs/2203.02802}{arXiv:2203.02802}.
+
+\bibitem{SharpZeta}
+R. Sharp,
+\emph{Convergence of zeta functions for amenable group extensions of shifts},
+in \emph{Dynamics: Topology and Numbers}, Contemp. Math. \textbf{744}
+(2020), 245--257.
+\href{https://warwick.ac.uk/fac/sci/maths/people/staff/richard_sharp/p2/zeta-infinite-convergence-revised.pdf}{Author's version}.
+
+\bibitem{BabillotMixing}
+M. Babillot,
+\emph{On the mixing property for hyperbolic systems},
+Israel J. Math. \textbf{129} (2002), 61--76.
+\href{https://www.math.utah.edu/~chaika/Babillot-Mixing}{Full text}.
+
+\bibitem{DolgopyatMixing}
+D. Dolgopyat,
+\emph{On decay of correlations in Anosov flows},
+Ann. of Math. (2) \textbf{147} (1998), 357--390.
+\href{https://doi.org/10.2307/121012}{DOI: 10.2307/121012}.
+
+\bibitem{EMMEffective}
+A. Eskin, M. Mirzakhani and A. Mohammadi,
+\emph{Effective counting of simple closed geodesics on hyperbolic surfaces},
+J. Eur. Math. Soc. \textbf{24} (2022), 3059--3108.
+\href{https://doi.org/10.4171/JEMS/1144}{DOI: 10.4171/JEMS/1144}.
+
+\bibitem{LuoStongLengths}
+F. Luo and R. Stong,
+\emph{Lengths of simple loops on surfaces with hyperbolic metrics},
+Geom. Topol. \textbf{6} (2002), 495--521.
+\href{https://doi.org/10.2140/gt.2002.6.495}{DOI: 10.2140/gt.2002.6.495}.
+
+\bibitem{McShaneRivinTori}
+G. McShane and I. Rivin,
+\emph{Simple curves on hyperbolic tori},
+C. R. Acad. Sci. Paris S\'er. I Math. \textbf{320} (1995), 1523--1528.
+\href{https://arxiv.org/abs/math/0005220v1}{arXiv:math/0005220v1}.
+
+\bibitem{RivinSimpleAsymptotics}
+I. Rivin,
+\emph{A simpler proof of Mirzakhani's simple curve asymptotics},
+\href{https://arxiv.org/abs/math/0512066}{arXiv:math/0512066} (2005).
+
+\bibitem{AHTComponents}
+I. Agol, J. Hass and W. Thurston,
+\emph{The computational complexity of knot genus and spanning area},
+\href{https://arxiv.org/abs/math/0205057}{arXiv:math/0205057},
+2004 revision, Theorem 12 and Corollary 13.
+
+\bibitem{CdVPeriodic}
+Y. Colin de Verdi\`ere,
+\emph{Spectre du laplacien et longueurs des g\'eod\'esiques p\'eriodiques. II},
+Compositio Math. \textbf{27} (1973), 159--184.
+\href{https://www.numdam.org/item/CM_1973__27_2_159_0/}{Numdam}.
+
+\bibitem{CharlesMarche}
+L. Charles and J. March\'e,
+\emph{Multicurves and regular functions on the representation variety
+of a surface in $\mathrm{SU}(2)$},
+Comment. Math. Helv. \textbf{87} (2012), 409--431.
+\href{https://doi.org/10.4171/CMH/258}{doi:10.4171/CMH/258}.
+
+\bibitem{NaudTwisted}
+F. Naud,
+\emph{Random covers of compact surfaces and smooth linear spectral statistics},
+Ann. Henri Poincar\'e \textbf{27} (2026), 347--373.
+\href{https://arxiv.org/abs/2209.07941}{arXiv:2209.07941}.
+
+\bibitem{DThurstonPositive}
+D. P. Thurston,
+\emph{A positive basis for surface skein algebras},
+Proc. Natl. Acad. Sci. USA \textbf{111} (2014), no. 27, 9725--9732.
+\href{https://arxiv.org/abs/1310.1959}{arXiv:1310.1959}.
+
+\bibitem{BasokChelkak}
+M. Basok and D. Chelkak,
+\emph{Tau-functions \`a la Dub\'edat and probabilities of cylindrical
+events for double-dimers and CLE(4)},
+J. Eur. Math. Soc. \textbf{23} (2021), 2787--2832.
+\href{https://doi.org/10.4171/JEMS/1072}{doi:10.4171/JEMS/1072}.
+
+\bibitem{WolpertTwist}
+S. Wolpert,
+\emph{An elementary formula for the Fenchel--Nielsen twist},
+Comment. Math. Helv. \textbf{56} (1981), 132--135.
+\href{https://doi.org/10.1007/BF02566203}{doi:10.1007/BF02566203}.
+
+\bibitem{AougabLahnLovingMiller}
+T. Aougab, M. Lahn, M. Loving, and N. Miller,
+\emph{Unmarked simple length spectral rigidity for covers},
+\href{https://arxiv.org/abs/2210.16706}{arXiv:2210.16706}, revised 2023.
+
+\bibitem{TaylorWoodward}
+Y. U. Taylor and C. T. Woodward,
+\emph{6j symbols for $U_q(\mathfrak{sl}_2)$ and non-Euclidean tetrahedra},
+preprint (2003), revised 2005.
+\href{https://arxiv.org/abs/math/0305113}{arXiv:math/0305113}.
+
+\bibitem{TuraevVirelizier}
+V. Turaev and A. Virelizier,
+\emph{On two approaches to 3-dimensional TQFTs}, 2010.
+\href{https://arxiv.org/abs/1006.3501}{arXiv:1006.3501}.
+
+\bibitem{KashaevVolume}
+R. M. Kashaev,
+\emph{The hyperbolic volume of knots from the quantum dilogarithm},
+Lett. Math. Phys. \textbf{39} (1997), 269--275.
+\href{https://arxiv.org/abs/q-alg/9601025}{arXiv:q-alg/9601025}.
+
+\bibitem{MurakamiIntro}
+H. Murakami,
+\emph{An introduction to the volume conjecture},
+in \emph{Interactions between hyperbolic geometry, quantum topology
+and number theory}, Contemp. Math. \textbf{541} (2011), 1--40.
+\href{https://arxiv.org/abs/1002.0126}{arXiv:1002.0126}.
+
+\bibitem{FaddeevKashaev}
+L. D. Faddeev and R. M. Kashaev,
+\emph{Quantum dilogarithm},
+Mod. Phys. Lett. A \textbf{9} (1994), 427--434.
+\href{https://arxiv.org/abs/hep-th/9310070}{arXiv:hep-th/9310070}.
+
+\bibitem{DimofteGaroufalidis}
+T. Dimofte and S. Garoufalidis,
+\emph{The quantum content of the gluing equations},
+Geom. Topol. \textbf{17} (2013), 1253--1315.
+\href{https://arxiv.org/abs/1202.6268}{arXiv:1202.6268}.
+
+\bibitem{WittenJones}
+E. Witten,
+\emph{Quantum field theory and the Jones polynomial},
+Comm. Math. Phys. \textbf{121} (1989), 351--399.
+\href{https://doi.org/10.1007/BF01217730}{doi:10.1007/BF01217730}.
+
+\bibitem{WittenContinuation}
+E. Witten,
+\emph{Analytic continuation of Chern--Simons theory}, 2010.
+\href{https://arxiv.org/abs/1001.2933}{arXiv:1001.2933}.
+
+\bibitem{GukovApoly}
+S. Gukov,
+\emph{Three-dimensional quantum gravity, Chern--Simons theory,
+and the $A$-polynomial}, 2003.
+\href{https://arxiv.org/abs/hep-th/0306165}{arXiv:hep-th/0306165}.
+
+\bibitem{DimofteQuantumRS}
+T. Dimofte,
+\emph{Quantum Riemann surfaces in Chern--Simons theory}, 2011.
+\href{https://arxiv.org/abs/1102.4847}{arXiv:1102.4847}.
+
+\bibitem{NeumannZagier}
+W. D. Neumann and D. Zagier,
+\emph{Volumes of hyperbolic three-manifolds},
+Topology \textbf{24} (1985), no. 3, 307--332.
+\href{https://doi.org/10.1016/0040-9383(85)90004-7}{doi:10.1016/0040-9383(85)90004-7}.
+
+\bibitem{FuterGueritaud}
+D. Futer and F. Gu\'eritaud,
+\emph{From angled triangulations to hyperbolic structures},
+in \emph{Interactions between hyperbolic geometry, quantum topology
+and number theory}, Contemp. Math. \textbf{541} (2011), 159--182.
+\href{https://arxiv.org/abs/1004.0440}{arXiv:1004.0440}.
+
+\bibitem{ChenYang}
+Q. Chen and T. Yang,
+\emph{Volume conjectures for the Reshetikhin--Turaev and the
+Turaev--Viro invariants},
+Quantum Topol. \textbf{9} (2018), no. 3, 419--460.
+\href{https://doi.org/10.4171/QT/111}{doi:10.4171/QT/111}.
+
+\bibitem{GangRomoYamazaki}
+D. Gang, M. Romo, and M. Yamazaki,
+\emph{All-order volume conjecture for closed 3-manifolds from
+complex Chern--Simons theory},
+Comm. Math. Phys. \textbf{359} (2018), 915--936.
+\href{https://arxiv.org/abs/1704.00918}{arXiv:1704.00918}.
+
+\bibitem{WongYangDehn}
+K. H. Wong and T. Yang,
+\emph{On the volume conjecture for hyperbolic Dehn-filled 3-manifolds
+along the figure-eight knot},
+Quantum Topol. \textbf{16} (2025), no. 3, 419--491.
+\href{https://doi.org/10.4171/QT/240}{doi:10.4171/QT/240}.
+
+\bibitem{DimofteVeen}
+T. Dimofte and R. van der Veen,
+\emph{A spectral perspective on Neumann--Zagier}, 2014.
+\href{https://arxiv.org/abs/1403.5215}{arXiv:1403.5215}.
+
+\bibitem{MathewsPurcellSymplectic}
+D. V. Mathews and J. S. Purcell,
+\emph{A symplectic basis for 3-manifold triangulations}, 2022.
+\href{https://arxiv.org/abs/2208.06969}{arXiv:2208.06969}.
+
+\bibitem{ALPS}
+D. Alessandrini, L. Liu, A. Papadopoulos, and W. Su,
+\emph{The behaviour of Fenchel--Nielsen distance under a change of pants
+decomposition}, preprint (2011).
+\href{https://arxiv.org/abs/1105.0202}{arXiv:1105.0202}.
+
+\bibitem{AMN}
+L. Anagnostou, S. Mullane, and P. Norbury,
+\emph{Weil--Petersson volumes, stability conditions and wall-crossing},
+preprint (2023).
+\href{https://arxiv.org/abs/2310.13281}{arXiv:2310.13281}.
+
+\bibitem{AnagnostouNorbury}
+L. Anagnostou and P. Norbury,
+\emph{Volumes of moduli spaces of hyperbolic surfaces with cone points},
+preprint (2022), version 4 (2025).
+\href{https://arxiv.org/abs/2212.13701}{arXiv:2212.13701}.
+
+\bibitem{BaoBonahon}
+X. Bao and F. Bonahon,
+\emph{Hyperideal polyhedra in hyperbolic 3-space},
+Bull. Soc. Math. France \textbf{130} (2002), no. 3, 457--491.
+\href{https://doi.org/10.24033/bsmf.2426}{doi:10.24033/bsmf.2426}.
+
+\bibitem{BellettiYang}
+G. Belletti and T. Yang,
+\emph{Asymptotics of quantum $6j$-symbols and generalized hyperbolic tetrahedra},
+J. Topol. \textbf{18} (2025), no. 3, e70033.
+\href{https://doi.org/10.1112/topo.70033}{doi:10.1112/topo.70033}.
+
+\bibitem{Budd}
+T. Budd,
+\emph{Irreducible metric maps and Weil--Petersson volumes},
+Comm. Math. Phys. \textbf{394} (2022), 887--917.
+\href{https://doi.org/10.1007/s00220-022-04418-6}{doi:10.1007/s00220-022-04418-6}.
+
+\bibitem{BMZ}
+T. Budd, T. Meeusen, and B. Zonneveld,
+\emph{A tree bijection for the moduli space of genus-0 hyperbolic surfaces
+with boundaries}, preprint (2025).
+\href{https://arxiv.org/abs/2512.09722}{arXiv:2512.09722}.
+
+\bibitem{CDE}
+S. Charbonnier, F. David, and B. Eynard,
+\emph{Local properties of the random Delaunay triangulation model and
+topological 2D gravity}, preprint (2017), version 3 (2018).
+\href{https://arxiv.org/abs/1701.02580}{arXiv:1701.02580}.
+
+\bibitem{ChenMurakami}
+Q. Chen and J. Murakami,
+\emph{Asymptotics of quantum $6j$ symbols}, preprint (2017), revised 2021.
+\href{https://arxiv.org/abs/1706.04887}{arXiv:1706.04887}.
+
+\bibitem{Costantino}
+F. Costantino,
+\emph{6j-symbols, hyperbolic structures and the Volume Conjecture},
+Geom. Topol. \textbf{11} (2007), 1831--1854.
+\href{https://arxiv.org/abs/math/0611399}{arXiv:math/0611399}.
+
+\bibitem{DeligneMostow}
+P. Deligne and G. D. Mostow,
+\emph{Monodromy of hypergeometric functions and non-lattice integral monodromy},
+Publ. Math. IHES \textbf{63} (1986), 5--89.
+\href{https://www.numdam.org/item/PMIHES_1986__63__5_0/}{Numdam original article}.
+
+\bibitem{DLMF}
+NIST Digital Library of Mathematical Functions,
+\emph{Airy functions, hypergeometric functions, elliptic integrals,
+and coalescing saddles},
+Sections 9.5, 15.10, 19.12, and 36.12.
+\href{https://dlmf.nist.gov/9.5}{Airy contour integrals};
+\href{https://dlmf.nist.gov/15.10}{Hypergeometric connection formulas};
+\href{https://dlmf.nist.gov/19.12}{elliptic logarithmic expansions};
+\href{https://dlmf.nist.gov/36.12}{uniform approximations of integrals}.
+
+\bibitem{DoNorbury}
+N. Do and P. Norbury,
+\emph{Weil--Petersson volumes and cone surfaces},
+Geom. Dedicata \textbf{141} (2009), 93--107.
+\href{https://arxiv.org/abs/math/0603406}{arXiv:math/0603406};
+\href{https://doi.org/10.1007/s10711-008-9345-y}{doi:10.1007/s10711-008-9345-y}.
+
+\bibitem{ET}
+L. Eberhardt and G. J. Turiaci,
+\emph{2D dilaton gravity and the Weil--Petersson volumes with conical defects},
+preprint (2023).
+\href{https://arxiv.org/abs/2304.14948}{arXiv:2304.14948}.
+
+\bibitem{Fillastre}
+F. Fillastre,
+\emph{Existence and uniqueness theorem for convex polyhedral metrics on
+compact surfaces}, survey (2010).
+\href{https://arxiv.org/abs/1011.3123}{arXiv:1011.3123}.
+
+\bibitem{FillastreMetrics}
+F. Fillastre,
+\emph{Polyhedral hyperbolic metrics on surfaces},
+Geom. Dedicata \textbf{134} (2008), 177--196.
+\href{https://arxiv.org/abs/0801.0538v1}{arXiv:0801.0538v1}.
+
+\bibitem{Goldman}
+W. M. Goldman,
+\emph{Mapping class group dynamics on surface group representations},
+in \emph{Problems on mapping class groups and related topics},
+Proc. Sympos. Pure Math. \textbf{74}, Amer. Math. Soc. (2006), 189--214.
+\href{https://arxiv.org/abs/math/0509114}{arXiv:math/0509114}.
+
+\bibitem{GKRVBootstrap}
+C. Guillarmou, A. Kupiainen, R. Rhodes, and V. Vargas,
+\emph{Conformal bootstrap in Liouville theory},
+preprint (2020), version 2.
+\href{https://arxiv.org/abs/2005.11530}{arXiv:2005.11530}.
+
+\bibitem{HeusenerPorti}
+M. Heusener and J. Porti,
+\emph{Holomorphic volume forms on representation varieties of surfaces
+with boundary}, Ann. H. Lebesgue \textbf{3} (2020), 341--380.
+\href{https://arxiv.org/abs/1804.07504}{arXiv:1804.07504}.
+
+\bibitem{HodgsonThesis}
+C. D. Hodgson,
+\emph{Degeneration and regeneration of geometric structures on 3-manifolds},
+Ph.D. thesis, Princeton University (1986), vii+169 pp.
+Bibliographic metadata is confirmed by the author's
+\href{https://researchers.ms.unimelb.edu.au/~craigdh@unimelb/public.html}{publication list};
+no numbered theorem from the thesis is used here.
+
+\bibitem{HuTan}
+H. Hu and S. P. Tan,
+\emph{New identities for small hyperbolic surfaces},
+Bull. London Math. Soc. \textbf{46} (2014), no. 5, 1021--1031.
+\href{https://arxiv.org/abs/1402.1573}{arXiv:1402.1573};
+\href{https://doi.org/10.1112/blms/bdu056}{doi:10.1112/blms/bdu056}.
+
+\bibitem{KawazumiWP}
+N. Kawazumi,
+\emph{A topological proof of Wolpert's formula for the Weil--Petersson
+symplectic form in terms of the Fenchel--Nielsen coordinates},
+arXiv:2408.04937v2 (2025).
+\href{https://arxiv.org/abs/2408.04937}{arXiv:2408.04937}.
+
+\bibitem{Kerckhoff}
+S. P. Kerckhoff,
+\emph{The Nielsen realization problem},
+Ann. of Math. (2) \textbf{117} (1983), 235--265.
+\href{https://doi.org/10.2307/2007076}{doi:10.2307/2007076}.
+
+\bibitem{Kojima}
+S. Kojima,
+\emph{Complex hyperbolic cone structures on the configuration spaces},
+Rend. Istit. Mat. Univ. Trieste \textbf{32}, suppl. 1 (2001), 149--163.
+\href{https://arxiv.org/abs/math/9907147}{arXiv:math/9907147};
+\href{https://rendiconti.dmi.units.it/volumi/32s1/09.pdf}{published article}.
+
+\bibitem{KoziarzNguyen}
+V. Koziarz and D.-M. Nguyen,
+\emph{Complex hyperbolic volume and intersection of boundary divisors in
+moduli spaces of pointed genus zero curves},
+Ann. Sci. Ec. Norm. Super. (4) \textbf{51} (2018), 1549--1597.
+\href{https://arxiv.org/abs/1601.05252}{arXiv:1601.05252}.
+
+\bibitem{KRV}
+A. Kupiainen, R. Rhodes, and V. Vargas,
+\emph{Integrability of Liouville theory: proof of the DOZZ formula},
+Ann. of Math. \textbf{191} (2020), 81--166.
+\href{https://arxiv.org/abs/1707.08785}{arXiv:1707.08785}.
+
+\bibitem{LeiZhang}
+D. Lei and Y. Zhang,
+\emph{A note on Rivin's interpretation of McShane's identity as identities
+for closed geodesics with one self-intersection},
+J. Knot Theory Ramifications \textbf{32} (2023), no. 6, 2350049, 10 pp.
+\href{https://doi.org/10.1142/S0218216523500499}{doi:10.1142/S0218216523500499}.
+The abstract and publisher preview were consulted for the correction;
+the identities used here are independently derived in Section~\ref{sec:figures}.
+
+\bibitem{LuoTan}
+F. Luo and S. P. Tan,
+\emph{A dilogarithm identity on moduli spaces of curves},
+preprint (2011).
+\href{https://arxiv.org/abs/1102.2133}{arXiv:1102.2133}.
+
+\bibitem{MazzeoWeiss}
+R. Mazzeo and H. Weiss,
+\emph{Teichm\"uller theory for conic surfaces}, preprint (2015).
+\href{https://arxiv.org/abs/1509.07608}{arXiv:1509.07608}.
+
+\bibitem{McMullenGB}
+C. T. McMullen,
+\emph{The Gauss--Bonnet theorem for cone manifolds and volumes of moduli spaces},
+author's manuscript, revised 24 April 2015.
+\href{https://people.math.harvard.edu/~ctm/papers/home/text/papers/gb/gb.pdf}{Author's PDF}.
+
+\bibitem{McShane}
+G. McShane,
+\emph{Simple geodesics and a series constant over Teichm\"uller space},
+Invent. Math. \textbf{132} (1998), 607--632.
+\href{https://doi.org/10.1007/s002220050235}{doi:10.1007/s002220050235}.
+
+\bibitem{McShanePants}
+G. McShane,
+\emph{The double life of pants}, draft (October 2004).
+\href{https://macbuse.github.io/M2R_2019/shearsAgain.pdf}{Author's PDF}.
+See the cusp-ray and gap descriptions in Sections 3, 5, and 9.
+
+\bibitem{MirzVolumes}
+M. Mirzakhani,
+\emph{Simple geodesics and Weil--Petersson volumes of moduli spaces of
+bordered Riemann surfaces},
+Invent. Math. \textbf{167} (2007), 179--222.
+\href{https://doi.org/10.1007/s00222-006-0013-2}{doi:10.1007/s00222-006-0013-2}.
+
+\bibitem{MirzIntersection}
+M. Mirzakhani,
+\emph{Weil--Petersson volumes and intersection theory on the moduli space
+of curves}, J. Amer. Math. Soc. \textbf{20} (2007), no. 1, 1--23.
+\href{https://doi.org/10.1090/S0894-0347-06-00526-1}{doi:10.1090/S0894-0347-06-00526-1}.
+
+\bibitem{MirzSimple}
+M. Mirzakhani,
+\emph{Growth of the number of simple closed geodesics on hyperbolic surfaces},
+Ann. of Math. (2) \textbf{168} (2008), 97--125.
+\href{https://annals.math.princeton.edu/2008/168-1/p03}{Journal article}.
+
+\bibitem{MirzGeneral}
+M. Mirzakhani,
+\emph{Counting mapping class group orbits on hyperbolic surfaces},
+preprint (2016).
+\href{https://arxiv.org/abs/1601.03342}{arXiv:1601.03342}.
+
+\bibitem{MondelloBoundary}
+G. Mondello,
+\emph{Triangulated Riemann surfaces with boundary and the Weil--Petersson
+Poisson structure}, J. Differential Geom. \textbf{81} (2009), no. 2, 391--436.
+\href{https://arxiv.org/abs/math/0610698}{arXiv:math/0610698};
+\href{https://doi.org/10.4310/jdg/1231856265}{doi:10.4310/jdg/1231856265}.
+
+\bibitem{MondelloCones}
+G. Mondello,
+\emph{Poisson structures on the Teichm\"uller space of hyperbolic
+surfaces with conical points}, preprint (2008), version 2 (2009).
+\href{https://arxiv.org/abs/0812.1602}{arXiv:0812.1602}.
+
+\bibitem{MostowHalfIntegral}
+G. D. Mostow,
+\emph{Generalized Picard lattices arising from half-integral conditions},
+Publ. Math. IHES \textbf{63} (1986), 91--106.
+\href{https://www.numdam.org/item/PMIHES_1986__63__91_0/}{Numdam original article}.
+
+\bibitem{MurakamiMurakami}
+H. Murakami and J. Murakami,
+\emph{The colored Jones polynomials and the simplicial volume of a knot},
+Acta Math. \textbf{186} (2001), 85--104.
+\href{https://arxiv.org/abs/math/9905075}{arXiv:math/9905075}.
+
+\bibitem{MurakamiYano}
+J. Murakami and M. Yano,
+\emph{On the volume of a hyperbolic and spherical tetrahedron},
+Comm. Anal. Geom. \textbf{13} (2005), no. 2, 379--400.
+\href{https://murakami.w.waseda.jp/papers/tetrahedronrev3.pdf}{Author's manuscript}.
+
+\bibitem{Parlier}
+H. Parlier,
+\emph{Geodesic and orthogeodesic identities on hyperbolic surfaces},
+preprint (2020).
+\href{https://arxiv.org/abs/2004.09078}{arXiv:2004.09078}.
+
+\bibitem{Penner}
+R. C. Penner,
+\emph{Weil--Petersson volumes},
+J. Differential Geom. \textbf{35} (1992), no. 3, 559--608.
+\href{https://doi.org/10.4310/jdg/1214448257}{doi:10.4310/jdg/1214448257}.
+
+\bibitem{PortiWeiss}
+J. Porti and H. Weiss,
+\emph{Deforming Euclidean cone 3-manifolds},
+Geom. Topol. \textbf{11} (2007), 1507--1538.
+\href{https://arxiv.org/abs/math/0510432}{arXiv:math/0510432}.
+
+\bibitem{RivinIntrinsic}
+I. Rivin,
+\emph{Intrinsic geometry of convex ideal polyhedra in hyperbolic 3-space},
+in \emph{Analysis, algebra, and computers in mathematical research
+(Lule\aa, 1992)}, Lecture Notes in Pure and Applied Mathematics \textbf{156},
+Dekker, New York (1994), 275--291.
+\href{https://arxiv.org/abs/math/0005234}{arXiv:math/0005234}.
+
+\bibitem{RivinAngles}
+I. Rivin,
+\emph{A characterization of ideal polyhedra in hyperbolic 3-space},
+Ann. of Math. (2) \textbf{143} (1996), 51--70.
+\href{https://doi.org/10.2307/2118652}{doi:10.2307/2118652}.
+
+\bibitem{RivinDegeneration}
+I. Rivin,
+\emph{Volumes of degenerating polyhedra---on a conjecture of J. W. Milnor},
+Geom. Dedicata \textbf{131} (2008), 73--85.
+\href{https://arxiv.org/abs/math/0512065}{arXiv:math/0512065};
+\href{https://doi.org/10.1007/s10711-007-9217-x}{doi:10.1007/s10711-007-9217-x}.
+
+\bibitem{RivinFigures}
+I. Rivin,
+\emph{Geodesics with one self-intersection, and other stories},
+Adv. Math. \textbf{231} (2012), 2391--2412.
+\href{https://arxiv.org/abs/0901.2543}{arXiv:0901.2543}.
+
+\bibitem{Roberts}
+J. Roberts,
+\emph{Classical 6j-symbols and the tetrahedron},
+Geom. Topol. \textbf{3} (1999), 21--66.
+\href{https://arxiv.org/abs/math-ph/9812013}{arXiv:math-ph/9812013}.
+
+\bibitem{SaadiZwiebach}
+M. Saadi and B. Zwiebach,
+\emph{Closed string field theory from polyhedra},
+Ann. Physics \textbf{192} (1989), 213--227.
+\href{https://doi.org/10.1016/0003-4916(89)90126-7}{doi:10.1016/0003-4916(89)90126-7}.
+
+\bibitem{Schlenker}
+J.-M. Schlenker,
+\emph{M\'etriques sur les poly\`edres hyperboliques convexes},
+J. Differential Geom. \textbf{48} (1998), no. 2, 323--405.
+\href{https://doi.org/10.4310/jdg/1214460799}{doi:10.4310/jdg/1214460799}.
+
+\bibitem{Springborn}
+B. Springborn,
+\emph{The hyperbolic geometry of Markov's theorem on Diophantine
+approximation and quadratic forms},
+L'Enseignement Math. (2) \textbf{63} (2017), 333--373.
+\href{https://doi.org/10.4171/LEM/63-3/4-5}{doi:10.4171/LEM/63-3/4-5}.
+
+\bibitem{TeschnerRevisited}
+J. Teschner,
+\emph{Liouville theory revisited},
+Classical Quantum Gravity \textbf{18} (2001), R153--R222.
+\href{https://arxiv.org/abs/hep-th/0104158}{arXiv:hep-th/0104158}.
+
+\bibitem{TeschnerVartanov}
+J. Teschner and G. S. Vartanov,
+\emph{6j symbols for the modular double, quantum hyperbolic geometry,
+and supersymmetric gauge theories}, preprint (2012).
+\href{https://arxiv.org/abs/1202.4698v3}{arXiv:1202.4698v3} (2013 version).
+
+\bibitem{ThurstonShapes}
+W. P. Thurston,
+\emph{Shapes of polyhedra and triangulations of the sphere},
+Geom. Topol. Monogr. \textbf{1} (1998), 511--549.
+\href{https://arxiv.org/abs/math/9801088}{arXiv:math/9801088}.
+
+\bibitem{WangFlatWP}
+X. Wang,
+\emph{The complex hyperbolic form as a Weil--Petersson form},
+preprint (2022), revised 2024.
+\href{https://arxiv.org/abs/2209.10842}{arXiv:2209.10842};
+\href{https://doi.org/10.1142/S0219199724500068}{doi:10.1142/S0219199724500068}.
+
+\bibitem{Zonneveld}
+B. Zonneveld,
+\emph{A tree bijection for cusp-less planar hyperbolic surfaces},
+preprint (2025).
+\href{https://arxiv.org/abs/2512.10673}{arXiv:2512.10673}.
+
+\bibitem{Zwiebach}
+B. Zwiebach,
+\emph{Consistency of closed string polyhedra from minimal area},
+Phys. Lett. B \textbf{241} (1990), 343--349.
+\href{https://doi.org/10.1016/0370-2693(90)91654-T}{doi:10.1016/0370-2693(90)91654-T}.
+
+\bibitem{BenirschkeServan}
+F.~Benirschke and C.~A.~Serv\'an,
+\emph{Isometric embeddings of Teichm\"uller spaces are covering constructions},
+Advances in Mathematics \textbf{452} (2024), 109817.
+\href{https://doi.org/10.1016/j.aim.2024.109817}{Journal article}.
+For the classical genus-two exception see Corollary~1.2(3).
+See also the authors' erratum, \emph{Advances in Mathematics}
+\textbf{489} (2026), 110831,
+\href{https://doi.org/10.1016/j.aim.2026.110831}{doi:10.1016/j.aim.2026.110831};
+the classical genus-two isometry used here is unchanged.
+
+\bibitem{FillastreIzmestievCusps}
+F.~Fillastre and I.~Izmestiev,
+\emph{Hyperbolic cusps with convex polyhedral boundary},
+Geometry \& Topology \textbf{13} (2009), 457--492.
+\href{https://doi.org/10.2140/gt.2009.13.457}{doi:10.2140/gt.2009.13.457}.
+Alexandrov's sphere realization theorem is recalled as Theorem~1.1.
+
+\bibitem{LanneauComponents}
+E.~Lanneau,
+\emph{Connected components of the strata of the moduli spaces of quadratic differentials},
+Annales scientifiques de l'\'Ecole Normale Sup\'erieure (4)
+\textbf{41} (2008), 1--56.
+\href{https://www.numdam.org/item/ASENS_2008_4_41_1_1_0/}{Publisher text}.
+See Sections~1.1.1--1.1.3 for period coordinates and the hyperelliptic covering constructions.
+
+\bibitem{StrombergssonVishe}
+A.~Str\"ombergsson and P.~Vishe,
+\emph{An effective equidistribution result for
+$SL(2,\RR)\ltimes(\RR^2)^{\oplus k}$ and application to
+inhomogeneous quadratic forms},
+Journal of the London Mathematical Society (2) \textbf{102} (2020), 143--204.
+\href{https://doi.org/10.1112/jlms.12316}{doi:10.1112/jlms.12316};
+\href{https://arxiv.org/abs/1811.10340}{arXiv:1811.10340}.
+The fiber Fourier orbit types used here are described in Section~4.
+
+\bibitem{BenoistKobayashi}
+Y.~Benoist and T.~Kobayashi,
+\emph{Tempered homogeneous spaces II},
+in D.~Fisher, D.~Kleinbock, and G.~Soifer (eds.),
+\emph{Dynamics, Geometry, Number Theory: The Impact of Margulis on Modern Mathematics},
+University of Chicago Press, 2022, pp.~213--245.
+\href{https://arxiv.org/abs/1706.10131}{arXiv:1706.10131}.
+See Lemma~2.3, Remark~2.4, and Proposition~2.6 for induction,
+amenability, and the matrix-coefficient estimate.
+
+\bibitem{CowlingHaagerupHowe}
+M.~Cowling, U.~Haagerup, and R.~Howe,
+\emph{Almost $L^2$ matrix coefficients},
+Journal f\"ur die reine und angewandte Mathematik \textbf{387} (1988), 97--110.
+\href{https://doi.org/10.1515/crll.1988.387.97}{doi:10.1515/crll.1988.387.97}.
+
+\bibitem{OtalRosas}
+J.-P.~Otal and E.~Rosas,
+\emph{Pour toute surface hyperbolique de genre $g$, $\lambda_{2g-2}>1/4$},
+Duke Mathematical Journal \textbf{150} (2009), 101--115.
+\href{https://doi.org/10.1215/00127094-2009-048}{doi:10.1215/00127094-2009-048};
+\href{https://arxiv.org/abs/0905.0506}{arXiv:0905.0506}.
+Theorem~2 is the finite-area statement, including residual and cuspidal
+eigenvalues.
+
+\bibitem{AthreyaLagaceMollerRaum}
+J.~S.~Athreya, J.~Lagac\'e, M.~M\"oller, and M.~Raum,
+\emph{Spectral decomposition and Siegel--Veech transforms for strata:
+the case of marked tori},
+Journal of Spectral Theory \textbf{15} (2025), 895--959.
+\href{https://doi.org/10.4171/JST/563}{doi:10.4171/JST/563};
+\href{https://arxiv.org/abs/2404.06597}{arXiv:2404.06597}.
+Its one-relative-mark model provides a finer spectral comparison; the
+present affine model has two relative marked vectors.
+
+\bibitem{AthreyaAffineLattices}
+J.~S.~Athreya,
+\emph{Random affine lattices},
+in \emph{Geometry, Groups and Dynamics},
+Contemporary Mathematics \textbf{639} (2015), 169--174.
+\href{https://doi.org/10.1090/conm/639/12793}{doi:10.1090/conm/639/12793};
+\href{https://arxiv.org/abs/1409.6355}{arXiv:1409.6355}.
+Lemmas~3 and~4 give the affine mean and variance formulas.
+
+\bibitem{ShigaHyperbolicQC}
+H.~Shiga,
+\emph{On the hyperbolic length and quasiconformal mappings},
+Complex Variables, Theory and Application \textbf{50} (2005), 123--130.
+\href{https://doi.org/10.1080/02781070412331328206}{doi:10.1080/02781070412331328206}.
+Equation~(1.1) recalls Wolpert's quasiconformal length inequality.
+
+
+\bibitem{BaranyPrimitivePolygons}
+I.~B\'ar\'any, G.~Martin, E.~Naslund, and S.~Robins,
+\emph{Primitive points in rational polygons},
+Canadian Mathematical Bulletin \textbf{63} (2020), 850--870.
+\href{https://doi.org/10.4153/S0008439520000090}{doi:10.4153/S0008439520000090};
+\href{https://arxiv.org/abs/1509.02201v2}{arXiv:1509.02201v2}.
+
+\bibitem{BowditchMarkoff}
+B.~H.~Bowditch,
+\emph{Markoff triples and quasifuchsian groups},
+Proceedings of the London Mathematical Society (3) \textbf{77} (1998), 697--736.
+\href{https://doi.org/10.1112/S0024611598000604}{doi:10.1112/S0024611598000604}.
+
+\bibitem{DoanLiNguyenStableNorm}
+N.~M.~Doan, X.~Li, and V.~Nguyen,
+\emph{Stable-norm boundary geometry on once-punctured tori},
+preprint, version~3, 9 October 2026.
+\href{https://arxiv.org/abs/2605.14574v3}{arXiv:2605.14574v3}.
+The local statements checked are Theorem~4.7 (p.~23) and Lemma~4.8
+(pp.~25--26); the complete preprint proof has not been independently audited.
+
+
+\bibitem{ZhaiPrimitive2003}
+W.~Zhai,
+\emph{On primitive lattice points in planar domains},
+Acta Arithmetica \textbf{109} (2003), 1--26.
+\href{https://doi.org/10.4064/aa109-1-1}{doi:10.4064/aa109-1-1}.
+The geometric hypotheses and unconditional Mertens estimate are on
+pp.~1--2; the paper uses the area parameter $x=L^2$.
+
+\bibitem{BakerPrimitive2010}
+R.~C.~Baker,
+\emph{Primitive lattice points in planar domains},
+Acta Arithmetica \textbf{142} (2010), 267--302.
+\href{https://doi.org/10.4064/aa142-3-4}{doi:10.4064/aa142-3-4}.
+Theorem~1 is conditional on RH and the geometric hypotheses (H1)--(H4).
+
+\bibitem{OpenAIQuasiRHSeptember}
+OpenAI,
+\emph{The Quasi-Riemann Hypothesis: A Zero-Free Half-Plane
+$\Re s>7/8$}, manuscript dated 30 September 2026.
+\href{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf}{Initial-release manuscript}.
+Theorem~1.1 was checked in the
+\href{https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex}{TeX source at the same revision}.
+It is used only conditionally; its proof and formalization have not been
+independently verified here.
+
+\bibitem{OpenAIQuasiRHOctober}
+OpenAI,
+\emph{The Quasi-Riemann Hypothesis}, manuscript dated 5 October 2026.
+\href{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/paper2.pdf}{Initial-release manuscript}.
+Theorem~1.1 and the following paragraph in the
+\href{https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex}{TeX source at the same revision}
+claim a zero-free half-plane $\Re s>11/12$ and describe it as an intermediate
+result toward the September claim. Its use here is conditional; its proof
+and formalization have not been independently verified.
+
+% References used by the canonical Section 9 chapter. The review ledger
+% records which theorem statements and source texts were checked.
+
+\bibitem{IpolyStudy}
+\emph{Duffin's resistor networks, the volume of ideal polyhedra, and
+nearly-linear-time Laplacian solvers}, companion working study,
+18 September 2026; supplied snapshot of the \texttt{igorrivin/ipoly}
+repository, manuscript and numerical-verification scripts.
+Corrections to this preserved historical snapshot are recorded in the
+\href{companion-reconciliation.md}{companion reconciliation note}.
+
+\bibitem{DuffinNetworks}
+R.~J. Duffin,
+\emph{Distributed and lumped networks},
+J. Math. Mech. \textbf{8} (1959), 793--826.
+
+\bibitem{RivinEuclidean}
+I. Rivin,
+\emph{Euclidean structures on simplicial surfaces and hyperbolic volume},
+Ann. of Math. \textbf{139} (1994), 553--580.
+\url{https://doi.org/10.2307/2118572}.
+
+\bibitem{RivinOptimization}
+I. Rivin,
+\emph{Combinatorial optimization in geometry}, preprint, 1999.
+\url{https://arxiv.org/abs/math/9907032v1}.
+
+\bibitem{BoydVandenberghe}
+S. Boyd and L. Vandenberghe,
+\emph{Convex Optimization}, Cambridge University Press, 2004,
+especially Chapter~11.
+\url{https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf}.
+
+\bibitem{BoydVandenbergheSlides}
+S. Boyd and L. Vandenberghe,
+\emph{Convex Optimization}, lecture slides, path-following discussion,
+PDF pages 378--382.
+\url{https://web.stanford.edu/~boyd/cvxbook/bv_cvxslides.pdf}.
+
+\bibitem{SpielmanTengSolvers}
+D.~A. Spielman and S.-H. Teng,
+\emph{Nearly-linear time algorithms for preconditioning and solving
+symmetric, diagonally dominant linear systems},
+SIAM J. Matrix Anal. Appl. \textbf{35} (2014), 835--885.
+\url{https://arxiv.org/abs/cs/0607105}.
+
+\bibitem{RippaEnergy}
+S. Rippa,
+\emph{Minimal roughness property of the Delaunay triangulation},
+Comput. Aided Geom. Design \textbf{7} (1990), 489--497.
+\url{https://doi.org/10.1016/0167-8396(90)90011-F}.
+
+\bibitem{DisarloParlier}
+V. Disarlo and H. Parlier,
+\emph{The geometry of flip graphs and mapping class groups},
+Trans. Amer. Math. Soc. \textbf{372} (2019), 3809--3844.
+\url{https://arxiv.org/abs/1411.4285}.
+
+\bibitem{BrockWPVolumes}
+J.~F. Brock,
+\emph{The Weil--Petersson metric and volumes of $3$-dimensional hyperbolic
+convex cores},
+J. Amer. Math. Soc. \textbf{16} (2003), 495--535.
+\url{https://arxiv.org/abs/math/0109048v2}.
+
+\bibitem{BrockMappingTori}
+J.~F. Brock,
+\emph{Weil--Petersson translation distance and volumes of mapping tori},
+Comm. Anal. Geom. \textbf{11} (2003), 987--999.
+\url{https://arxiv.org/abs/math/0109050}.
+
+\bibitem{PortiTorsionSurvey}
+J.~Porti,
+\emph{Reidemeister torsion, hyperbolic three-manifolds, and character varieties},
+arXiv:1511.00400v2 (2016).
+\url{https://arxiv.org/abs/1511.00400v2}.
+
+\end{thebibliography}
+\end{document}
