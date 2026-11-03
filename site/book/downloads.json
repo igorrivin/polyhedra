@@ -21,6 +21,12 @@
   ],
   "groups": [
     {
+      "id": "exposition", "title": "Worked teaching examples",
+      "scope": "Exact small calculations accompanying the whole-monograph exposition pass, with section names, symbolic residuals and source hashes.",
+      "limit": "Finite symbolic examples only; no general theorem, global geometric realization or historical numerical campaign is verified by these checks.",
+      "files": ["experiments/exposition/README.md", "experiments/exposition/check_examples.py", "artifacts/exposition/result.json"]
+    },
+    {
       "id": "normalizations", "title": "Sections 1–8 and Appendix A: exact finite normalizations",
       "scope": "Rational fixtures for perimeter and Gram determinants, stack factors, cone walls, intersections, Pfaffians and SL₂ trace identities.",
       "limit": "Finite identities for the named fixtures. No general moduli integral, divisor theorem or geometric realization is computed.",

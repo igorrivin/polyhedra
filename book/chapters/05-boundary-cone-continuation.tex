@@ -1,6 +1,17 @@
 \section{Boundary lengths, cone angles, and continuation}
 \label{sec:cones}
 
+A cone point is locally obtained by gluing the two sides of a sector;
+its opening angle is the total angle around its tip. Smooth points
+have opening $2\pi$, while positive curvature concentrated at a cone
+point corresponds to opening less than $2\pi$. The purpose of this
+section is to explain when replacing a boundary length $L$ by an
+imaginary value $i\theta$ in a volume polynomial computes the volume
+of surfaces with cone points. Polynomial substitution is always an
+algebraic operation. Its geometric meaning can change when cone
+points are allowed to collide, so the parameter regions, or
+\emph{chambers}, must be specified.
+
 \subsection{Fixed signature and the polynomial chamber}
 
 Allow $a$ cone points with opening angles $\theta_1,\ldots,\theta_a$ and
@@ -13,6 +24,21 @@ zero lengths for cusps. Thus $n=a+b$ and $d=3g-3+n$. The area is
 There is no separate puncture parameter in the volume polynomial: a cusp
 is represented by $L=0$, or equivalently by cone opening zero.
 
+The intersection notation below packages volume calculations into
+finite algebra. The compactification $\MM_{g,n}$ adds stable nodal
+surfaces to $\M_{g,n}$: a pinched curve becomes a node, with its two
+sides remembered. Stability requires each spherical component to
+have at least three special points (marks or branches of nodes),
+and each genus-one component at least one. At mark $i$, the complex
+cotangent line of the surface varies in a line bundle over moduli;
+its first Chern class, a degree-two cohomology class, is $\psi_i$.
+Products of these classes can be integrated when their total degree
+is the real dimension $2d$. Such integrals are intersection numbers.
+
+Let $\pi:\MM_{g,n+1}\to\MM_{g,n}$ forget the last mark and
+stabilize the resulting surface. The pushforward $\pi_*$ integrates
+along its one-complex-dimensional fibers, reducing cohomological
+degree by two. Thus $\pi_*(\psi_{n+1}^2)$ again has degree two.
 Use the logarithmic tautological class
 $\kappa_1=\pi_*(\psi_{n+1}^2)$ on $\MM_{g,n}$. The fixed-boundary WP class,
 continued to cone parameters, is
@@ -55,6 +81,17 @@ $\int\kappa_1=\int\psi_1=1/24$, giving the torus normalization in
 \eqref{eq:basevolumes} and its one-cone continuation.
 
 \subsection{Pure cone/cusp volumes beyond the first chamber}
+
+The weight $w_i$ below is the cone deficit divided by $2\pi$.
+A collection of marks can merge in the weighted compactification
+when its total weight is at most one. On the ordinary
+compactification this event is recorded by a \emph{boundary divisor}:
+a locus of complex codimension one where the surface splits at a
+node. The notation $\delta_{0:S}$ is both the rational-tail divisor
+with exactly the marks in $S$ on its genus-zero side and its
+associated degree-two class. A pair of colliding marks therefore
+contributes a correction involving the class of that particular
+boundary, rather than an undifferentiated scalar correction.
 
 For $0\le\theta_i<2\pi$, put
 \[

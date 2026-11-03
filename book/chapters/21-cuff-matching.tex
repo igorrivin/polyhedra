@@ -21,6 +21,34 @@ retained if the curve is marked, rather than only considered modulo a
 twist. These congruences are necessary and sufficient for the prescribed
 position matching. They do not supply the direction data of the pieces.
 
+For example, let the cuff length be $6$ and take positions
+$x=(1,3)$ and $y=(2,4)$ in the chosen cyclic order. Both
+differences are $1$, so twist $\tau=1$ matches them. Replacing
+$y$ by $(2,5)$ gives differences $1$ and $2$, so no single
+twist realizes that prescribed matching. Matching one endpoint
+has not determined the rest of the chain.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\small,>=Latex]
+ \draw[mpgray] (0,1)--(6,1);\draw[mpgray] (0,-.4)--(6,-.4);
+ \foreach \x in {0,6}{\draw (\x,.9)--(\x,1.1);\draw (\x,-.5)--(\x,-.3);}
+ \node[left] at (0,1) {first side};\node[left] at (0,-.4) {second side};
+ \foreach \x/\lab in {1/{x_1=1},3/{x_2=3}}
+   {\fill[mpblue] (\x,1) circle(2pt);\node[above] at (\x,1.1) {$\lab$};}
+ \foreach \x/\lab in {2/{y_1=2},4/{y_2=4}}
+   {\fill[mpteal] (\x,-.4) circle(2pt);\node[below] at (\x,-.5) {$\lab$};}
+ \draw[->,mpochre] (1,.85)--(2,-.25);
+ \draw[->,mpochre] (3,.85)--(4,-.25);
+ \node[right] at (6,.3) {$\tau=1\pmod6$};
+\end{tikzpicture}
+\caption*{Position matching on a cuff of length $6$, drawn as two
+intervals whose endpoints $0$ and $6$ are identified on each side.
+The arrows show the same translation for both marked endpoints.
+They indicate the gluing correspondence, not geodesic directions;
+tangent matching must still be checked.}
+\end{figure}
+
 Second, orient a chain by its direction of travel and measure all
 tangential components in the common cuff coordinate just chosen.
 A transverse unit-speed geodesic segment has a signed tangential velocity
@@ -41,6 +69,13 @@ orthogonal segments the tangential components vanish, so smooth gluing
 is automatic once the endpoints match. A generic closed geodesic does
 not satisfy this orthogonality condition along an arbitrarily chosen
 pants decomposition.
+
+At one of those matched positions, incoming and outgoing tangential
+components $p_{\rm in}=1/2$ and $p_{\rm out}=-1/2$ give
+$\partial S/\partial x=1$, so the chain has a corner and is
+not stationary. If both are $1/2$ and the pieces cross to opposite
+sides, their normal components have magnitude $\sqrt3/2$ and
+fit as well. Position and direction are separate tests.
 
 Equivalently, boundary data live in a phase space $(s,p)$: endpoint
 position and tangential component. The length of an arc is a generating

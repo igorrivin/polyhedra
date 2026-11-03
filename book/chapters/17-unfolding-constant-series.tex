@@ -37,6 +37,30 @@ sum on a quotient becomes one integral of a single function on
 a larger space. For a signed or complex-valued $f$, the same
 argument works if $\int_{\RR}|f|<\infty$.
 
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\small,>=Latex]
+ \draw[->,mpgray] (-4.6,0)--(5,0) node[right] {$u$};
+ \foreach \x/\lab in {-4/-2,-2/-1,0/0,2/1,4/2}
+   {\draw (\x,-.1)--(\x,.1);\node[below] at (\x,-.1) {$\lab$};}
+ \draw[mpblue,line width=2pt] (0,0)--(2,0);
+ \draw[mpteal,line width=2pt] (-2,0)--(0,0);
+ \draw[mpochre,line width=2pt] (2,0)--(4,0);
+ \draw[->,mpteal] (1,.3) to[bend right=35] (-1,.3);
+ \draw[->,mpochre] (1,.3) to[bend left=35] (3,.3);
+ \node[above,text=mpblue] at (1,1.1) {$x\in[0,1)$};
+ \node[above,text=mpteal] at (-1,.75) {$u=x-1$};
+ \node[above,text=mpochre] at (3,.75) {$u=x+1$};
+ \node[below] at (-4,-.6) {$\cdots$};
+ \node[below] at (4,-.6) {$\cdots$};
+\end{tikzpicture}
+\caption*{Unfolding replaces the copies $f(x+n)$ on one unit interval
+by $f(u)$ on all translated intervals $[n,n+1)$. The intervals tile
+the line, with each endpoint assigned to the interval on its right.
+The picture concerns integration domains; it does not assert that
+the periodic sum has a constant value.}
+\end{figure}
+
 Take $f(u)=e^{-|u|}$. For $0\le x\le1$, separate $n\ge0$ from
 $n\le-1$ and sum the two geometric series:
 \[
@@ -265,6 +289,13 @@ cut surface is already a pair of pants, whose fixed-boundary
 moduli space is a point.
 
 \subsection{Operations that preserve constancy}
+
+The pointwise mechanism should remain visible when building new
+identities. If $S_1(X)=c_1$ and $S_2(X)=c_2$, their product is
+$c_1c_2$, but expanding it sums over every pair of indexing curves.
+Some pairs intersect. Discarding those terms changes the function
+and needs a new argument. This is a useful first check on proposed
+multicurve identities.
 
 Finite linear combinations of constant series preserve constancy.
 Parameter integrals do too when the constant is integrable and Fubini's

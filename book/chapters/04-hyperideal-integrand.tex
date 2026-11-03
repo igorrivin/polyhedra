@@ -1,6 +1,15 @@
 \section{Hyperideal polyhedra: an actual local integrand}
 \label{sec:hyperideal}
 
+The ideal calculation had cusps and a constant angle density. We now
+replace those ends by positive-length boundaries and ask for the
+corresponding local density. The route has three steps: truncate
+exterior vertices, express the boundary lengths through finite arc
+lengths, and invert the WP Poisson bracket while keeping those boundary
+lengths fixed. The last restriction matters because the six arc lengths
+of a tetrahedron are not six independent coordinates on a fixed-boundary
+moduli space.
+
 \subsection{From vertices to orthogeodesic lengths}
 
 A strictly hyperideal vertex lies outside the closed ball in the projective
@@ -8,6 +17,16 @@ model, while every edge meets the ball. Its polar plane cuts off the vertex.
 After all such truncations, the original faces form a bordered hyperbolic
 surface; the truncation polygons give its geodesic boundaries. Ideal vertices
 can be included by a limiting procedure and give cusps.
+
+Here is a concrete convention for the linear algebra. In Minkowski
+space write $\langle x,y\rangle=x_1y_1+x_2y_2+x_3y_3-x_4y_4$.
+A vector is spacelike if its squared norm is positive and timelike if
+it is negative. Hyperbolic space is the sheet
+$\langle x,x\rangle=-1$, $x_4>0$; projectivizing gives the ball
+model. The polar plane of a spacelike vector $v$ is
+$\langle v,x\rangle=0$ inside that sheet. It meets the incident
+polyhedral edges orthogonally, which is why the truncated edge lengths
+are useful intrinsic coordinates.
 
 For a hyperideal tetrahedron choose unit spacelike representatives
 $v_1,\ldots,v_4$ in Minkowski space of signature $(3,1)$. Choose their signs
@@ -18,7 +37,8 @@ have negative pairwise inner products. Set
  \label{eq:qvertices}
 \end{equation}
 Here $a_{ij}$ is the length of the original edge between the two polar
-truncation planes. It is an orthogeodesic of the intrinsic bordered surface.
+truncation planes. It is an \emph{orthogeodesic} of the intrinsic bordered surface:
+a geodesic segment perpendicular to the boundary at both endpoints.
 The six $a_{ij}$ specify the vertex configuration up to ambient isometry on
 the admissible tetrahedral domain.
 
@@ -71,6 +91,21 @@ polyhedral domain must be imposed when the purpose is to integrate a
 canonical polyhedral cell.
 
 \subsection{The WP density on a fixed-boundary leaf}
+
+A Poisson bracket assigns to functions $f,g$ a function $\{f,g\}$
+that measures their infinitesimal symplectic interaction. In local
+coordinates it is encoded by an antisymmetric matrix. On a
+nondegenerate two-dimensional coordinate patch $(u,v)$, knowledge
+of $\{u,v\}=b\ne0$ determines the positive area density
+$|\dd u\,\dd v|/|b|$. This is the inversion used below.
+
+A \emph{Casimir} is a function whose bracket with every function
+vanishes. Here the boundary lengths are Casimirs, so one first fixes
+them and works on a \emph{leaf}, the subspace where they have the
+specified values. For four boundary components, six arc variables
+minus four independent length conditions leave a two-dimensional
+leaf. Trying to invert the full six-variable Poisson matrix would
+retain four directions in which it is degenerate.
 
 Mondello's Poisson formula for arc lengths has the boundary kernel
 \begin{equation}
@@ -168,6 +203,19 @@ If it is nonsingular, then
 This is simply the top exterior power of the inverse Poisson matrix. It
 turns a local arc-bracket formula into a local volume formula in every
 dimension.
+
+The Pfaffian $\Pf B$ is the polynomial in the entries of an
+antisymmetric even-dimensional matrix whose square is $\det B$.
+For two independent coordinate pairs with brackets $b_1,b_2$,
+\[
+ B=\begin{pmatrix}0&b_1&0&0\\-b_1&0&0&0\\
+ 0&0&0&b_2\\0&0&-b_2&0\end{pmatrix},\qquad
+ \Pf B=b_1b_2.
+\]
+The density is therefore the product of the two pairwise densities,
+$|\dd x_1\dd x_2\dd x_3\dd x_4|/|b_1b_2|$.
+This explains the square root in the determinant expression without
+requiring a choice of orientation for the positive measure.
 
 Bao--Bonahon's angle characterization assumes a planar $3$-connected dual
 graph, $0<\theta_e<\pi$, circuit sums at least $2\pi$ with equality

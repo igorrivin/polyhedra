@@ -24,6 +24,15 @@ The earlier torus count $A_X$ in Section~\ref{subsec:normballbarrier}
 includes the origin and uses hyperbolic length units; the conversion
 to the unit-shortest-vector gauge is given at the end of this section.
 
+The Mertens function $M(x)=\sum_{n\le x}\mu(n)$ measures
+arithmetic cancellation; $\mu$ is the M\"obius function of
+Section~\ref{sec:coefficientdistributions}. For instance
+$M(6)=1-1-1+0-1+1=-1$, much smaller than the sum of absolute
+values, which is five. The geometric discrepancy measures a
+different cancellation, between a lattice count and its area.
+The cutoff $D$ below lets us use geometry for small divisors and
+arithmetic for large divisors, then balance the two errors.
+
 There are two inputs in the primitive problem: the geometric discrepancy
 $\Delta_B$, and cancellation in the M\"obius function.  A quantitative
 bound for the second input does not by itself specify the first.  The
@@ -125,6 +134,18 @@ zero-free-half-plane formulation is equivalent to
 Here nonvanishing excludes the pole at $s=1$, where $1/\zeta$
 instead has a zero. We give the analytic step because a fixed zero-free
 half-plane and a height-dependent zero-free region are different inputs.
+
+Here RH abbreviates the Riemann hypothesis, that all nontrivial
+zeros of the Riemann zeta function have real part $1/2$.
+The proof of the displayed equivalence uses standard complex
+analysis. Borel--Carath\'eodory converts a bound on the real part
+of an analytic function into a modulus bound on a smaller disk;
+the three-circles theorem interpolates modulus bounds between
+concentric circles. They control $1/\zeta$ at large imaginary
+height. Perron inversion then recovers the coefficient sum $M(x)$
+from a vertical integral, whose contour can be moved through the
+zero-free region. The following details show where each estimate
+is needed; zero-freeness alone is not a bound on that integral.
 
 Suppose first that the left side of~\eqref{eq:zeroFreeMertens} holds.
 Fix $0<\delta<(1-\theta_0)/2$. At sufficiently large $|t|$, choose the
@@ -260,6 +281,14 @@ Balancing this with $L^2D^{\theta-2}$ gives
  E_B(L)\ll L^{\kappa(\alpha,\theta)},\qquad
  \kappa(\alpha,\theta)=\frac{2-\alpha\theta}{3-\alpha-\theta}.
 \end{equation}
+To see the balance explicitly, write $D=L^d$. The two error
+exponents are $\alpha+d(1-\alpha)$ and $2+d(\theta-2)$.
+Equating them gives $d=(2-\alpha)/(3-\alpha-\theta)$.
+At the illustrative values $\alpha=2/3$, $\theta=1/2$,
+this is $d=8/11$ and both exponents are $10/11$.
+The actual RH application allows an arbitrarily small positive
+loss in $\theta$, as the next statement records.
+
 For example, $\alpha=2/3$ and a Mertens exponent arbitrarily close
 to $1/2$ give $O_\varepsilon(L^{10/11+\varepsilon})$.
 Exponents arbitrarily close to $7/8$ and $11/12$ give, respectively,
@@ -391,6 +420,13 @@ unit-shortest-vector convention, gives the exact identity
  A_B(L)=2\sum_{\substack{\gamma\text{ unoriented simple}\\\lambda_\gamma\le L}}
                \left\lfloor\frac L{\lambda_\gamma}\right\rfloor.
 \]
+For example, if the shortest unoriented geodesic in the chosen
+units has length $2$, then at cutoff $5$ its signed multiples
+contribute $2\lfloor5/2\rfloor=4$: the two orientations at
+lengths $2$ and $4$. Other simple supports contribute their own
+multiples. This is why one primitive length list determines the
+all-point count, with the factor two and the floor both essential.
+
 Thus the proposed geometric threshold can be investigated without
 estimating the norm-ball area or introducing a new enumeration of
 curve types. No finite numerical range proves the uniform bound

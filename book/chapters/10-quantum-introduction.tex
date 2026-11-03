@@ -56,7 +56,8 @@ possible number $0,\ldots,m$ of copies of the second standard basis
 vector. In particular, $V_0=\CC$ is the trivial representation and
 $V_{1/2}=\CC^2$ is the usual matrix action.
 The name \emph{spin} for $j$ comes from rotations: the compact group
-$\mathrm{SU}(2)$ double-covers $\mathrm{SO}(3)$, and the complexification
+$\mathrm{SU}(2)$ of unitary $2\times2$ matrices of determinant one
+double-covers the three-dimensional rotation group $\mathrm{SO}(3)$, and the complexification
 of its Lie algebra is $\mathfrak{sl}_2$. Integer spins descend to
 $\mathrm{SO}(3)$; nonintegral half-integer spins need the double cover.
 We use this familiar family because its tensor-product rule is
@@ -217,7 +218,11 @@ additional asymptotic statement.
 In quantum mechanics a state is a vector, and a measurable quantity
 is represented by a self-adjoint operator. Rotations are generated
 by the three angular-momentum operators $J_x,J_y,J_z$.
-For spin $\tfrac12$ these are Pauli's familiar matrices:
+The lowercase $j=0,\tfrac12,1,\ldots$ is a \emph{dimensionless
+spin label}: it specifies the representation $V_j$, of dimension
+$2j+1$. It is a number, whereas each uppercase $J$ is an operator
+with angular-momentum units. For $j=\tfrac12$, these operators
+are given by the Pauli matrices:
 \[
  J_x=\frac{\hbar}{2}\begin{pmatrix}0&1\\1&0\end{pmatrix},\qquad
  J_y=\frac{\hbar}{2}\begin{pmatrix}0&-i\\i&0\end{pmatrix},\qquad
@@ -228,10 +233,15 @@ They satisfy $[J_x,J_y]=i\hbar J_z$ and its cyclic analogues;
 after complexification this is the $\mathfrak{sl}_2$ algebra above.
 On $V_j$, the squared total angular momentum
 $\mathbf J^2=J_x^2+J_y^2+J_z^2$ has value $\hbar^2j(j+1)$,
-and $J_z$ has the $2j+1$ values $\hbar m$, $m=-j,-j+1,\ldots,j$.
-Thus the representation label has a direct physical meaning~\cite[Section 4.2]{CappellaroSpin}.
+and $J_z$ has eigenvalues $\hbar m$. Here the dimensionless
+\emph{component label} $m$ ranges over $-j,-j+1,\ldots,j$.
+Thus the angular-momentum magnitude is $\hbar\sqrt{j(j+1)}$,
+while a measured $z$-component is $\hbar m$. For $j=\tfrac12$
+these are $\sqrt3\hbar/2$ and $\pm\hbar/2$, respectively.
+The representation label therefore has a direct physical meaning~\cite[Section 4.2]{CappellaroSpin}.
 
-For two independent spins, total angular momentum is
+For two independent spins, with $I$ denoting the identity operator,
+total angular momentum is
 $\mathbf J^{(1)}\otimes I+I\otimes\mathbf J^{(2)}$.
 The decomposition $V_{1/2}\otimes V_{1/2}=V_0\oplus V_1$
 says that their combined spin can be $0$ (the \emph{singlet})
@@ -239,10 +249,11 @@ or $1$ (the \emph{triplet}). For three spins one can first measure
 the total spin of the first pair, or of the last pair. These are
 different measurement bases. Wigner's $6j$-symbols, also expressed
 as Racah recoupling coefficients, convert between them~\cite[Section 1]{AquilantiSixJ}.
-In our $2\times2$ example, prepare the normalized state
-$B_0^{(ab)c}(e_+)$. Measuring the last pair gives $t=0$ with
-probability $|-1/2|^2=1/4$, and $t=1$ with probability
-$|\sqrt3/2|^2=3/4$. The entries of $F$ are probability
+In our $2\times2$ example, prepare the first pair in its singlet
+and the third spin with $J_z=+\hbar/2$. The last pair's total-spin
+label $t$ is then $0$ with probability $|-1/2|^2=1/4$, or $1$
+with probability $|\sqrt3/2|^2=3/4$.
+The entries of the recoupling matrix $F$ are probability
 \emph{amplitudes}; their squared moduli are probabilities.
 
 The link to gravity is a further step. General relativity describes
@@ -637,6 +648,12 @@ Kashaev gives the product formula~\cite[eqs. (2.2), (2.5)]{KashaevVolume}.
 The following elementary asymptotic proof is presented by
 Murakami and credited there to Ekholm~\cite[Section 3.2]{MurakamiIntro}.
 
+For a small exact evaluation, take $N=3$. The two nontrivial
+factors are $4\sin^2(\pi/3)=4\sin^2(2\pi/3)=3$,
+so $P_{3,0}=1$, $P_{3,1}=3$, $P_{3,2}=9$, and $J_3=13$.
+The asymptotic argument is a way to locate the largest such product
+without computing the entire sum for each large $N$.
+
 The ratio of consecutive products is
 \[
  \frac{P_{N,k}}{P_{N,k-1}}=4\sin^2\frac{\pi k}{N}.
@@ -692,6 +709,14 @@ critical points and possible cancellation.
 
 \subsection{Why dilogarithms occur}
 \label{sec:introdilog}
+
+The ordinary dilogarithm starts as the power series
+$\operatorname{Li}_2(z)=\sum_{m\ge1}z^m/m^2$ for $|z|<1$.
+The second denominator power distinguishes it from
+$-\log(1-z)=\sum_{m\ge1}z^m/m$. Elsewhere one uses analytic
+continuation with specified branches. The quantum product below
+produces precisely this extra denominator when many small factors
+are accumulated.
 
 An elementary convergent product explains the terminology. For
 $\varepsilon>0$ and $|z|<1$, set
@@ -795,6 +820,16 @@ For a real
 Laplace integral with a strict maximum this is the usual Gaussian
 formula; for a complex phase it is applied along suitable real
 $m$-dimensional contours in the complexified variables.
+
+For a real example with no contour ambiguity, let
+$S(x)=S_*-kx^2/2$, $k>0$, and $a=1$. Then
+$\int_{\mathbb R}e^{S(x)/\hbar}\,\dd x
+=e^{S_*/\hbar}\sqrt{2\pi\hbar/k}$ for $\hbar>0$.
+A larger $k$ makes the peak narrower and decreases its integral.
+Taking the logarithm separates $S_*/\hbar$ from
+$\tfrac12\log(2\pi\hbar)-\tfrac12\log k$.
+This is the simplest instance of a classical term plus a
+Gaussian determinant, before any higher corrections occur.
 
 This formula gives a useful translation of the physics terminology.
 The \emph{classical} or \emph{tree-level} contribution is the
@@ -931,6 +966,17 @@ estimates in the text.}
 \subsection{Flat connections, Chern--Simons theory, and boundary states}
 \label{sec:introCS}
 
+A connection specifies how to transport vectors along paths.
+In a local choice of frame it is described by a matrix-valued
+one-form $\mathscr A$. A gauge change is a change of that frame;
+curvature measures the infinitesimal failure of transport around
+a loop to return the vector unchanged. Even when curvature is
+zero, transport around a noncontractible loop can be nontrivial:
+this is holonomy. The holonomies of a flat connection give a
+representation of the fundamental group, considered up to a
+simultaneous change of basis. This quotient is the character-variety
+problem mentioned below.
+
 The connection with hyperbolic geometry can be phrased using flat
 connections. If $\mathscr A$ is a connection one-form, its curvature
 is $F_{\mathscr A}=\dd\mathscr A+\mathscr A\wedge\mathscr A$.
@@ -989,6 +1035,8 @@ The Neumann--Zagier normalization is
  \qquad \alpha_\partial=\frac12v\,\dd u.
  \label{eq:introNZpolarization}
 \end{equation}
+A Lagrangian submanifold has half the dimension of a symplectic
+space, with the symplectic form restricting to zero on it.
 The geometric deformations of the interior give a Lagrangian curve
 $v=v(u)$. A semiclassical boundary state associated with this
 branch has the form
@@ -1285,6 +1333,13 @@ the Thurston--Deligne--Mostow construction. The charge convention
 in the detailed probabilistic formulas is $\beta_i=2\alpha_i$.
 Section~\ref{sec:quantummeasure} checks the continuation and
 integrability conditions and proves the exact finite-$b$ identity.
+
+To see why pairwise powers disappear, work locally away from
+collisions. Then $\log|p_i-p_j|^2$ is the real part of a
+holomorphic logarithm and has $\partial\bar\partial$ equal to
+zero. Such a function is called \emph{pluriharmonic}. Multiplying
+an area potential by a product of these powers changes its
+logarithm, but leaves its mixed complex derivative unchanged.
 
 The remaining factors in the correlation are pairwise powers of
 $|p_i-p_j|$, whose logarithms are pluriharmonic away from collisions.

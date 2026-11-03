@@ -20,4 +20,6 @@ Use Context7 for current library, framework, SDK, API, CLI and cloud-service doc
 
 ## Verification
 
+For mathematical exposition work, use the repository's [exposition skill](.agents/skills/exposition/SKILL.md). Define notation at first use, motivate constructions, work examples through to an answer, and retain a per-unit coverage record for whole-manuscript requests. Boxes and captions must be locally understandable. This editorial pass is separate from a proof audit or a scientific replay.
+
 Run meaningful focused regression tests for corrected failures, then the existing relevant suite. Use an isolated supported Python environment. Keep source installation, test results, numerical replay, proof verification and deployment as separate claims. Update the nearest ownership documentation when responsibilities or entry points change.

@@ -14,6 +14,13 @@ and the conditioning of coefficient extraction remain separate problems.
 \subsection{The norm-ball obstruction and the correct error scale}
 \label{subsec:normballbarrier}
 
+An observable is a function of the geometric object being varied.
+Its norm controls how large or how irregular that function can be
+over moduli space. This is a different question from counting curves
+on one fixed surface. The examples below keep these two operations
+separate: first count lattice vectors, then construct functions of a
+lattice and its marked points whose correlations can be estimated.
+
 The genus-one length norm gives a necessary benchmark for any passage from
 smooth return estimates to sharp simple-curve counting. Let $X$ be a fixed
 complete hyperbolic once-punctured torus, and let $B_X$ be the unit ball of
@@ -35,6 +42,15 @@ Indeed, $P_X(L)=\sum_d\mu(d)(A_X(L/d)-1)$, with $d\ll_X L$;
 the boundary errors sum as $L\sum_{d\ll_X L}d^{-1}$. These are the
 upper estimates behind \cite[Theorem~4.1]{McShaneRivinTori}, with the
 orientation factor made explicit here.
+
+Here a primitive vector $(p,q)$ has $\gcd(|p|,|q|)=1$.
+The gauge $\|v\|_B=\inf\{r>0:v\in rB\}$ measures size
+using $B$ as its unit ball; for this symmetric body it is a norm.
+A rational supporting normal means that the tangent line is parallel
+to a lattice direction. An irrational radial direction means that
+the line from the origin to the contact point contains no nonzero
+lattice vector. These are different lines, so the two conditions
+can hold together.
 
 The next theorem in that paper concerns a dense set of hyperbolic
 structures. Its mechanism is an infinitely flat boundary point whose
@@ -101,6 +117,12 @@ first quantity realizes the minimum, and
 \[
  r_n\asymp_{B,N}L_n^{1-2/N}.
 \]
+The choice of a prime row makes primitivity especially transparent:
+on $y=7$, each of $(2,7),(3,7),(4,7),(5,7)$ is primitive.
+In general the only exceptions have first coordinate divisible by
+the row height. The argument now uses this elementary fact on the
+long interval produced by flatness.
+
 The interval has length at most $n/2$. Among its integer points
 $(k,n)$, at most one has $n\mid k$; every other point is primitive
 because $n$ is prime. Thus
@@ -287,6 +309,14 @@ For arbitrary bounded Borel $H$, the same statement is interpreted
 using the already recovered first-atom location. No assertion that
 first-atom extraction is a bounded linear functional is being made.
 
+The two cutoffs measure different geometries. The factor $f(gm/R)$
+selects flat displacement vectors of scale $R$, while
+$h(\ell_m/L)$ tests the hyperbolic length of the associated curve
+at scale $L$. There is no assertion that these lengths agree.
+For the square torus and $m=(1,0)$ the flat closed lift has length
+one and the pole-to-pole half segment has length $1/2$; its
+hyperbolic representative has a separate length $\ell_m$.
+
 Choose an even $f\in C_c^2(\RR^2)$ supported in the unit disk, a bounded
 Borel function $h:(0,\infty)\to\CC$, and parameters $R\geq1$, $L>0$.
 Define
@@ -393,6 +423,13 @@ For the derivative counting converse, require $h\in C^1$ and
  H_0=\|h\|_\infty<\infty,\qquad
  H_1=\sup_{s>0}s|h'(s)|<\infty.
 \]
+For example, $h(s)=e^{-s}$ has $H_0=1$ and
+$H_1=\sup_{s>0}se^{-s}=1/e$. Its derivative cost stays bounded
+as $L$ varies, because differentiating $h(\ell/L)$ produces
+$(\ell/L)h'(\ell/L)$ after the length-variation bound.
+A sharp cutoff is allowed in the preceding rotation estimate,
+but is not differentiable enough for this terminal estimate.
+
 Wolpert's quasiconformal length inequality gives
 \begin{equation}
  |V\ell_m|\leq2\ell_m,
@@ -497,7 +534,13 @@ The homogeneous calculation can be tested on explicit geometric sums.
 These are the relative-period Siegel--Veech transforms discussed in
 \cite[Section~6.1]{AthreyaLagaceMollerRaum}.
 On the marked-torus model write a point as $(g,v_1,v_2)$, with the
-physical marked points understood modulo $g\ZZ^2$. For
+physical marked points understood modulo $g\ZZ^2$. The Schwartz class $\mathscr S(\mathbb R^2)$ consists of smooth
+functions whose derivatives decrease faster than every inverse
+power of distance. A Siegel transform sums a test function over
+lattice vectors; here the vectors are shifted by a marked point.
+Centering subtracts the mean, leaving the fluctuation to be measured.
+
+For
 $f\in\mathscr S(\RR^2)$ define
 \[
  S_{f,j}(g,v_1,v_2)=\sum_{m\in\ZZ^2}f(gm+v_j),\qquad
@@ -516,6 +559,12 @@ With $v_j=gu_j$, Poisson summation gives
  \sum_{n\in\ZZ^2\setminus\{0\}}
        \widehat f(g^{-T}n)e^{2\pi i n\cdot u_j}.
 \]
+Poisson summation exchanges the shifted lattice sum for a Fourier
+series on the marked-point torus. Parseval then says that integrating
+the squared modulus over that torus is the sum of squared Fourier
+coefficients. The Siegel mean formula performs the remaining lattice
+average. These are the three operations behind the isometry below.
+
 Fiber Parseval followed by the usual Siegel mean formula for all
 nonzero lattice vectors gives the exact identity
 \begin{equation}
@@ -549,6 +598,11 @@ For the Gaussian $f(x)=e^{-\pi|x|^2}$, the formula becomes
  =\frac1{2\cosh t}.
  \label{eq:affinegaussiancorr}
 \end{equation}
+At $t=0$ this covariance is $1/2$, the squared norm of the
+observable. At $t=\log 2$ it is $2/5$, because
+$\cosh(\log2)=5/4$. This exact example checks both the
+normalization at time zero and the rate at large time.
+
 Thus an $e^{-t}$ correlation rate is attained by a natural smooth
 observable. More generally, substitution $x_1=e^{-t}u$ in
 \eqref{eq:affinesiegelexactcorr} gives, for Schwartz tests,
@@ -585,6 +639,13 @@ the dual lattice has a primitive vector of length $\varepsilon\ll1$;
 the cusp measure is comparable to $\varepsilon\dd\varepsilon$.
 Centering has removed zero frequencies but leaves precisely this
 collinear-frequency obstruction.
+
+Two square-integrable functions need not have a square-integrable
+product: squaring the product demands more integrability in the cusp.
+The problematic frequency pairs have rank one, such as
+$(n_1,n_2)=((1,0),(2,0))$. A pair such as $((1,0),(0,1))$
+has nonzero determinant and rank two. The following construction
+keeps the latter Fourier modes before taking the moduli-space norm.
 
 There is an explicit $L^2$ replacement. Retain only the full-rank
 frequency matrices:

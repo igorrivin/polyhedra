@@ -24,6 +24,15 @@ supply those additional estimates.
 
 \subsection{Fixing the Teschner--Vartanov normalization}
 
+Normalization changes coefficients because it changes the basis
+vectors being compared. If $f=M g$, and we replace $f_j$ by
+$f_j/a_j$ and $g_k$ by $g_k/b_k$, the new matrix has entries
+$(b_k/a_j)M_{jk}$. This elementary rule accounts for the ratios
+of trivalent factors below. A trivalent factor belongs to one
+three-label coupling; a channel contains two such couplings.
+The Plancherel density is the weight in the continuous analogue
+of an orthonormal basis expansion.
+
 Write $R^{\mathrm{an}}$ for the analytic $b$-$6j$ symbol and
 $R$ for the symmetric symbol in~\cite{TeschnerVartanov}.
 Their equations (4.5)--(4.6) give the standard Virasoro fusion
@@ -147,6 +156,22 @@ retains the continuation input of Section~\ref{sec:screenedfusion};
 no pointwise substitution into a singular Barnes integral is
 being made. Its determinant is
 $-\sin(\pi\delta_0)/\sin(\pi\delta_1)$.
+
+For a nonbalanced example, take
+$\mu=(1/4,1/3,1/2,11/12)$. These weights lie in $(0,1)$ and
+sum to two, with $\delta_0=1/4$ and $\delta_1=1/6$.
+The finite analytic matrix is then
+\[
+ \mathsf B=
+ \begin{pmatrix}
+ \sqrt3&-(\sqrt6-\sqrt2)/2\\
+ 2&-\sqrt2
+ \end{pmatrix},\qquad \det\mathsf B=-\sqrt2.
+\]
+The determinant agrees with
+$-\sin(\pi/4)/\sin(\pi/6)$. Its entries need not have modulus
+at most one: the preserved pairing is indefinite, as the next
+formula makes explicit, rather than a probability inner product.
 
 For reference, put
 $\sigma_i=\sin(\pi\mu_i)$ and
@@ -301,6 +326,14 @@ For equal half-weights it is
  \begin{pmatrix}1&-1&0&0\\-1&1&0&0\\
                  0&0&1&-1\\0&0&-1&1\end{pmatrix}.
 \]
+In this equal-weight example the vectors $(1,1,0,0)$ and
+$(0,0,1,1)$ lie in the kernel, and the two remaining eigenvalues
+are $2$. For comparison, a regular Euclidean tetrahedron has
+normal Gram matrix with diagonal $1$ and off-diagonal $-1/3$:
+its eigenvalues are $0,4/3,4/3,4/3$. Thus a vanishing determinant
+alone does not distinguish a planar configuration from a genuine
+Euclidean tetrahedron; the number of independent normal directions does.
+
 By contrast, the outward normals of a nondegenerate Euclidean
 tetrahedron span three dimensions. This difference holds for
 every four-weight choice on the screening locus, and remains
@@ -394,6 +427,14 @@ flat boundary metric encode intrinsic vertex deficits, so the
 two kinds of data must be related geometrically before they
 can be identified.
 
+The compact family is a separate geometric test. It uses six
+edge dihedral angles, whereas the preceding screening calculation
+uses four vertex-deficit weights and two intermediate labels.
+The distinction can already be seen on a regular Euclidean
+tetrahedron: each face angle is $\pi/3$, each intrinsic vertex
+opening is $\pi$, and each interior edge dihedral is
+$\arccos(1/3)$. These three angles describe different features.
+
 For a regular tetrahedron of edge length $\ell$, let $\beta$
 be a face angle and $\eta$ an interior dihedral. Hyperbolic
 trigonometry gives
@@ -474,6 +515,15 @@ The double root and its real logarithmic lift are
  v_{\mathrm E}=2\pi-5\eta_{\mathrm E}.
 \]
 None of the dilogarithm arguments is $1$ at this point.
+
+A double root of the saddle equation is the point at which the
+two separate Gaussian approximations fail: the second derivative
+vanishes, so their inverse square-root Hessians would diverge.
+To obtain a useful approximation one must keep the next nonzero
+term, the cubic, and vary the parameter at the same time. The
+derivative calculation below both checks that this is a simple
+fold and fixes its constants; a double algebraic root alone would
+not check the analytic phase or its branch singularities.
 
 For $u=e^{iv}$ the action, including a term independent of
 $v$, is $S(v,\eta)=U(e^{iv},\eta)-2\pi v+\text{const.}$

@@ -1,6 +1,27 @@
 \section{The volume problem and its normalization}
 \label{sec:conventions}
 
+\paragraph{What is being measured?}
+A moduli space is a space whose points are geometric objects, with
+objects related by the prescribed equivalence regarded as the same point.
+Here one point is an oriented hyperbolic surface, considered up to
+orientation-preserving isometry that preserves the labels of its ends.
+The genus $g$ counts handles; $n$ counts boundary components or cusps.
+A geodesic boundary is a closed curve that is straight for the intrinsic
+metric. A cusp is a noncompact end with finite area, modeled by a
+horoball modulo a translation. ``Unparametrized'' means that a boundary
+has a label and a length but no chosen starting point.
+
+The volume of this \emph{space of surfaces} is different from the area
+of one surface. For fixed boundary lengths, the latter is already
+$2\pi(2g-2+n)$ by Gauss--Bonnet. The volume problem asks how much
+room there is to vary the shape. The Weil--Petersson (WP) symplectic
+form supplies the measure for that question. A symplectic form is a
+closed, nondegenerate alternating two-form; on a space of real
+dimension $2d$, its top exterior power $\omega^d/d!$ is the associated
+volume form. The integer $d$ below is half the real dimension, and
+$\lengths$ abbreviates the ordered list $(L_1,\ldots,L_n)$.
+
 Let $\M_{g,n}(L_1,\ldots,L_n)$ denote the moduli space of oriented hyperbolic
 surfaces of genus $g$ with $n$ labeled, unparametrized geodesic boundary
 components of prescribed lengths. A zero length denotes a cusp. Throughout,
@@ -11,6 +32,24 @@ $2g-2+n>0$. Put
  V_{g,n}(\lengths)=\int_{\M_{g,n}(\lengths)}
                   \frac{\omega_{\WP}^{d}}{d!}.
 \]
+A useful way to see the dimension is to cut the surface into
+\emph{pairs of pants}, meaning spheres with three holes. The
+$3g-3+n$ interior cutting curves each contribute a length and a
+relative gluing displacement, or twist. These are the
+Fenchel--Nielsen coordinates $(\ell_j,\tau_j)$ on the marked
+space: a marking identifies the surface topologically with a fixed
+reference surface. Forgetting that marking takes the quotient by
+mapping classes, that is, orientation-preserving homeomorphisms up
+to isotopy. The length--twist coordinates are local coordinates on
+moduli, with possible finite symmetries. They do not make the whole
+moduli space a rectangular region.
+
+For a pair of pants, $(g,n)=(0,3)$ and $d=0$: the three boundary
+lengths determine its metric, so there is no shape parameter left.
+For a one-holed torus, $(g,n)=(1,1)$ and $d=1$: cutting one curve
+leaves a pair of pants with boundary lengths $(L,\ell,\ell)$,
+and gluing the two equal boundaries requires the twist $\tau$.
+
 We use the Fenchel--Nielsen convention
 \begin{equation}
  \omega_{\WP}=\sum_{j=1}^{d}\dd\ell_j\wedge\dd\tau_j,
@@ -18,7 +57,12 @@ We use the Fenchel--Nielsen convention
  \label{eq:fn}
 \end{equation}
 This fixes the scale of the form independently of the convention for
-orbifold integration. For comparison with complex coordinates $t_j$, let
+orbifold integration. For comparison with complex coordinates $t_j$, recall that an
+infinitesimal change of complex structure can be represented locally
+by a \emph{Beltrami differential} $\mu(w)\,\dd\bar w/\dd w$.
+The harmonic representative is the canonical representative selected
+by the hyperbolic metric; its coefficient $\mu(w)$ is what enters
+the following integral. Let
 $\mu_j$ be the harmonic Beltrami representative of $\partial/\partial t_j$
 and let $H_{j\bar k}=\int_X\mu_j\overline{\mu_k}\,\dd A$ use the curvature
 $-1$ area element. Our positive complex convention is
@@ -49,6 +93,17 @@ effective volume by $h$ without rescaling the local two-form. Rescaling
 $\omega_{\WP}$ by a constant $c$ instead multiplies a $2d$-dimensional
 volume by $c^d$. These are separate normalization operations.
 
+The orbifold convention can be understood in a finite quotient chart.
+If a finite symmetry group of order $h$ acts on a parameter region,
+its orbifold integral is the integral upstairs divided by $h$.
+This includes elements that act trivially on the parameters, called
+\emph{ineffective} symmetries. On the one-holed torus the generic
+elliptic involution contributes such a factor of two. Thus the
+stack volume at $L=0$ is $\pi^2/12$, whereas the effective quotient
+volume is $\pi^2/6$. This changes the counting of objects with
+symmetries; it does not replace the local form $\dd\ell\wedge\dd\tau$
+by half that form.
+
 The original geometric proposal has three separate ingredients:
 \begin{enumerate}
  \item realize an intrinsic surface by a canonical convex polyhedron;
@@ -61,7 +116,11 @@ case the measure comparison is particularly favorable; in the hyperideal
 case a useful local density is still available, but it is generally no longer
 constant in the natural angle variables.
 
-There are also two different cross-ratios in the four-point problem. Four
+There are also two different cross-ratios in the four-point problem.
+The cross-ratio is the complex parameter obtained by taking three
+ordered points on the Riemann sphere to $0,1,\infty$ by a M\"obius
+transformation and recording the image of the fourth, with the
+ordering fixed. Four
 ideal vertices on $\partial\HH^3$ have an \emph{ambient} cross-ratio. The
 intrinsic metric on the polyhedral boundary has a conformal uniformization,
 and its four punctures have a \emph{conformal} cross-ratio. The realization

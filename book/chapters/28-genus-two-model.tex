@@ -13,6 +13,15 @@ The latter identification is specific to that stratum.
 \subsection{Six branch points and the compact polyhedron}
 \label{subsec:genus2compact}
 
+Hyperelliptic means admitting a degree-two holomorphic map to the
+sphere. A branch value is a point over which the two sheets meet;
+locally the map is $z=w^2$. A flat quadratic differential is a
+square if it is globally $\omega^2$ for a holomorphic one-form
+$\omega$. Otherwise its square root changes sign around some
+loops. The orientation double cover is the cover on which that
+sign ambiguity disappears. These are the two kinds of double
+cover used in this section; they have different branch sets.
+
 Every genus-two Riemann surface $X$ is hyperelliptic.  Its quotient
 map $\pi:X\to\mathbb P^1$ has six branch values: the
 Riemann--Hurwitz formula reads $2=2(-2)+6$.  With compatible
@@ -76,6 +85,15 @@ hyperelliptic involution.  At a branch point the order transforms by
  =2\operatorname{ord}_{\pi(p)}(q_0)+2.
  \label{eq:genus2order}
 \end{equation}
+The order formula is easy to check locally. If
+$q_0=z^k\,\dd z^2$ and $z=w^2$, then
+$\pi^*q_0=4w^{2k+2}\,\dd w^2$. A simple pole ($k=-1$)
+therefore becomes a regular point upstairs, while a regular
+point ($k=0$) becomes a double zero. In a quadratic stratum
+label, $-1$ denotes a simple pole, $0$ a retained regular mark,
+and a positive integer a zero of that order. A zero of order $k$
+has flat cone angle $(k+2)\pi$.
+
 For a generic polynomial with two distinct roots away from the
 branch values, this gives
 \[
@@ -173,6 +191,14 @@ $E[2]$.  The two marked regular points lift to unordered pairs
  \rho^{-1}(b_1)=\{p,-p\},\qquad
  \rho^{-1}(b_2)=\{q,-q\}.
 \]
+For the square torus $E=\mathbb C/(\mathbb Z+i\mathbb Z)$,
+$E[2]$ consists of $0,1/2,i/2,(1+i)/2$: the points satisfying
+$2p=0$ in the torus group. One admissible choice is
+$p=1/3$, $q=i/3$. Neither is two-torsion and they are not equal
+up to sign. Their four lifts $\{p,-p,q,-q\}$ are distinct.
+This is a concrete marked flat torus from which the six-pointed
+sphere and the genus-two differential can be reconstructed.
+
 Their admissibility conditions are exactly
 \begin{equation}
  p,q\notin E[2],\qquad p\ne q,\qquad p\ne -q.
@@ -280,6 +306,15 @@ six-cone-point quotient metric.}
 
 \subsection{A homogeneous finite cover}
 \label{subsec:genus2homogeneous}
+
+A homogeneous space is a space obtained by a transitive group
+action, represented here as a group modulo a discrete subgroup.
+The matrix $A$ chooses an oriented lattice basis with area one;
+the extra vectors choose marked points modulo that lattice.
+A level-two structure retains the basis modulo two, so it labels
+the two-torsion classes. Haar measure is the translation-invariant
+group measure. The quotient notation below packages these
+concrete lattice and point identifications.
 
 Choose a full symplectic level-two structure on the torus and
 choose an ordering and one lift from each of the two pairs
@@ -489,6 +524,19 @@ is required: one simply sums over all its frequency orbits. The same
 rank distinction appears in the fiber Fourier analysis of
 \cite[Section~4, especially Lemma~4.3]{StrombergssonVishe}.
 
+The representation-theoretic step uses an external theorem, so
+its terminology merits a reading guide. A representation is
+\emph{tempered} here when its averaging operators are bounded by
+the corresponding operators in the regular representation on
+$L^2(G)$. Weak containment is precisely this operator-norm
+comparison for compactly supported convolution tests.
+Amenability is the averaging property of the stabilizer groups
+that allows this comparison after induction. In our rank-one
+case those stabilizers are discrete unipotent groups, hence
+abelian; the rank-two stabilizer is trivial. The cited induction
+theorem is what turns these elementary stabilizer calculations
+into a uniform spectral bound.
+
 The trivial representation of an amenable group is weakly
 contained in its regular representation. Induction preserves
 weak containment and takes the regular representation of a closed
@@ -546,6 +594,14 @@ Use the norm
  \mathcal S_1(F)^2=\|F\|_2^2+\|\Theta F\|_2^2.
  \label{eq:markedtorusKnorm}
 \end{equation}
+A $K$-type is an angular Fourier mode: under rotation by
+$\theta$ it is multiplied by $e^{in\theta}$ for an integer $n$.
+The generator $\Theta$ differentiates that rotation, multiplying
+the mode by $in$. Thus $\mathcal S_1$ controls a weighted square
+sum with weights $1+n^2$. The function $\Xi$ below is the
+standard spherical bound for matrix coefficients; its explicit
+one-variable integral is all that is needed for the rate calculation.
+
 The angle is the ordinary matrix rotation angle: on the orientation
 cover, $\omega$ changes to $e^{i\theta}\omega$, so the genus-two
 quadratic differential changes to $e^{2i\theta}q_X$. Thus this
@@ -638,6 +694,13 @@ For fixed $t$ define the overlap weight
                    \psi(a_th\lambda)\,\dd h.
  \label{eq:markedtorusweight}
 \end{equation}
+Periodization adds all lattice translates of a compactly supported
+test, generalizing $\sum_{n\in\mathbb Z}f(x+n)$ from the
+unfolding toy model. The overlap weight is nonzero only when
+one translated support meets the evolved other support.
+This turns the correlation into a finite sum over actual returns
+between these two supports, with their overlap volumes retained.
+
 Only finitely many $\lambda$ contribute, since any such lattice
 element lies in the compact set
 $(\operatorname{supp}\varphi)^{-1}a_{-t}

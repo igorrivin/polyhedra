@@ -12,6 +12,15 @@ correlation, a K\"ahler potential, and a volume density is essential.
 
 \subsection{A first-moment identity at the flat weights}
 
+The calculation has three steps. First a particular charge sum
+turns the random quantity $Z^{-s}$ into $Z$, whose expectation is
+known. Next that expectation is identified with flat area.
+Finally a mixed derivative of its logarithm produces the geometric
+two-form. Only the first step is probabilistic; the last two are
+ordinary integration and differentiation. Section~\ref{sec:introscreening}
+gives the zero-mode substitution that explains why $s=-1$ is the
+useful specialization.
+
 Fix the weights~\eqref{eq:flatweights}, all marked points finite in the
 chosen coordinate, and a Liouville parameter $0<b<1$. Set
 \begin{equation}
@@ -95,8 +104,12 @@ therefore cancels the reference-metric factors exactly:
     |w|_+^{-4}\dd^2w
  =\mathcal A_\mu(\boldsymbol p).
 \]
-This integral is finite because each $\mu_i<1$ and, when all
-marks are finite, the integrand is $O(|w|^{-4})$ at infinity.
+Near $p_i$, polar coordinates bound the singularity by a
+constant times $\int_0^\epsilon r^{1-2\mu_i}\,\dd r$, which
+is finite precisely when $\mu_i<1$. At infinity the sum
+$\sum_i\mu_i=2$ gives decay $|w|^{-4}$, so the radial tail
+is bounded by a constant times $\int_R^\infty r^{-3}\,\dd r$.
+These checks justify using the first moment under the integral.
 It is exactly the area in~\eqref{eq:DMarea}.
 Each $\log|p_i-p_j|$ is pluriharmonic off the diagonals.
 Taking $-2i\partial\bar\partial\log$ consequently removes
@@ -220,6 +233,16 @@ different quantity $V_{0,4}(0)=2\pi^2$.
 
 \subsection{An actual boundary torsion measure}
 
+Here a boundary conjugacy class fixes the type of each peripheral
+holonomy; locally a regular $\mathrm{SL}_2$ conjugacy class is
+specified by its trace. ``Good'' means irreducible with only the
+central stabilizer, and ``boundary-regular'' means each peripheral
+centralizer has the minimal dimension. These are the nonsingularity
+hypotheses of the external torsion theorem. The Goldman form is
+the symplectic pairing on infinitesimal flat-connection deformations,
+obtained by intersecting their cohomology classes and pairing the
+Lie-algebra coefficients with $B$.
+
 There is also a measure comparison on the representation side.
 For a good, boundary-regular $\mathrm{SL}_2(\CC)$ representation
 of an $n$-holed sphere, Heusener--Porti prove
@@ -249,6 +272,14 @@ it is not retained unchanged when the Goldman form is recalibrated.
 If the scale of $B$ is negative on the real form, choose its
 complex square root consistently in the holomorphic forms,
 then take the positive density on the real leaf.
+
+The elementary model for the next operation is
+$\Omega=f(x,y,t)\,\dd x\wedge\dd y\wedge\dd t$.
+To obtain the measure at fixed $t$, first separate the factor
+$\dd t$, leaving $f(x,y,t)\,\dd x\wedge\dd y$, and then
+set $t=t_0$. Pulling the original three-form back to the
+plane $t=t_0$ gives zero because $\dd t$ pulls back to zero.
+The peripheral forms play the role of these transverse factors.
 
 One must disintegrate by the peripheral forms \emph{before}
 fixing the conjugacy classes. Simply pulling the unrestricted
@@ -296,6 +327,12 @@ of Appendix~\ref{app:fricke} becomes
  \Phi=x^2+y^2+z^2+xyz-2a^2(x+y+z)+4a^2+a^4-4=0.
  \label{eq:equalFricke}
 \end{equation}
+The trace coordinates all approach $-2$, which would erase
+the differences between limiting shapes. A blowup here simply
+means retaining their first scaled deviations from $-2$.
+It is an explicit change of coordinates, not an assertion that
+the unscaled limiting character still distinguishes the shapes.
+
 Blow up the limiting character by
 \begin{equation}
  x=-2-AX,\qquad y=-2-AY,\qquad z=-2-AZ.
@@ -342,6 +379,14 @@ $\Phi_z=2A(X+Y-Z)+A^2(XY-1/8)+O(A^4)$ gives
  \quad}
  \label{eq:Frickefirstcorrection}
 \end{equation}
+At the ordinary chart point $u=v=1$ the leading values are
+$X=1/2$, $Y=1$, $Z_0=1/2$, and the quadric equation is zero.
+Also $Z_1=0$, while the density coefficient is
+$\tfrac12(1-3A/16+O(A^2))$. Thus even where the first correction
+to $Z$ vanishes, the first correction to the measure need not vanish.
+This calculation is local; it gives no permission to integrate
+the correction uniformly to a noncompact end.
+
 This is an explicit first correction in a fixed \emph{blown-up
 character chart}. Here $\tau=u+iv$ is the limiting flat period
 coordinate, not the exact period ratio or conformal cross-ratio
@@ -356,7 +401,10 @@ naively to recover the global polynomial of
 The phase-space measure of a unitary change of polarization is
 more constrained than a bare scalar $6j$ prefactor. In one
 degree of freedom, let $S(q,Q)$ generate a canonical relation,
-$p=\partial_qS$, away from its caustic. A branchwise normalized
+$p=\partial_qS$, away from its caustic, meaning where the projection used for
+these coordinates degenerates. In this chart the required
+nondegeneracy is $\partial_q\partial_QS\ne0$.
+A branchwise normalized
 semiclassical kernel has the leading form
 \begin{equation}
  K_\hbar(q,Q)\sim
@@ -364,6 +412,13 @@ semiclassical kernel has the leading form
        \exp\left(\frac{iS}{\hbar}+\frac{i\pi m}{4}\right).
  \label{eq:normalizedWKBkernel}
 \end{equation}
+Here $m$ is an integer recording the contour or Gaussian phase
+convention on the chosen branch; it is unrelated to spin labels
+in the earlier physics box. For $S(q,Q)=qQ$, the mixed derivative
+is one, and the kernel is the Fourier kernel
+$(2\pi\hbar)^{-1/2}e^{iqQ/\hbar}$ up to this phase. Its squared
+modulus times $2\pi\hbar\,\dd q\dd Q$ is just
+$\dd q\dd Q$, illustrating the measure identity.
 The amplitude follows by applying unitarity to the leading
 phase difference $(q-q')p$ and changing variables from $Q$ to
 $p$. Thus

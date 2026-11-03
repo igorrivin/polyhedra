@@ -8,6 +8,13 @@ $ABCD=I$, and set
  a=\tr A,\ b=\tr B,\ c=\tr C,\ d=\tr D,
  \qquad x=\tr(AB),\ y=\tr(AC),\ z=\tr(BC).
 \]
+The matrices are holonomies around the four boundary loops in
+their chosen order; $ABCD=I$ expresses the surface relation.
+The trace of a matrix is the sum of its diagonal entries.
+Peripheral traces $a,b,c,d$ are held fixed, whereas $x,y,z$
+describe internal curves and vary with the marked structure.
+One relation among those three coordinates leaves a surface.
+
 With the four peripheral traces fixed, the character surface satisfies
 the Fricke relation
 \begin{align}
@@ -35,11 +42,24 @@ $\tr(A^2BC)=ad-z$, while the two-matrix trace identity gives
 $\tr(ACAB)=xy-bc+z$. Their difference is
 $ad+bc-xy-2z=-\Phi_z$.
 
+Here $[X,C]=XC-CX$ is a matrix commutator and
+$\Phi_z=\partial\Phi/\partial z=2z+xy-ad-bc$.
+The calculation is a change of variables from length and twist
+$(\ell,\tau)$ to trace coordinates $(x,y)$.
+Its Jacobian is $s(-\Phi_z/(2s))=-\Phi_z/2$:
+the factors of $\sinh(\ell/2)$ cancel, leaving the desired two.
+
 Since $\dd x=s\,\dd\ell$ and $\omega_{\WP}=\dd\ell\wedge\dd\tau$,
 \begin{equation}
  \boxed{\dV=\frac{2|\dd x\wedge\dd y|}{|\Phi_z|}.}
  \label{eq:frickedensity}
 \end{equation}
+As a local illustration, at a point with $|\Phi_z|=4$ a tiny
+trace-coordinate rectangle of side lengths $\epsilon,\eta$
+has WP area $\epsilon\eta/2+o(\epsilon\eta)$ as both sides
+shrink. This uses the density at an already geometric smooth
+point; it does not construct such a point from arbitrary traces.
+
 Equivalently, on this twist chart,
 $\dd x\wedge\dd y=-\Phi_z\,\dd\ell\wedge\dd\tau/2$.
 Reversing the chosen twist direction reverses the signed form but leaves

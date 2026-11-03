@@ -15,6 +15,15 @@ integration, flips, and the Casson--Rivin program.
 \subsection{The cotangent form and the correct deformation coordinates}
 \label{subsec:ipolyCoordinates}
 
+A finite element calculation replaces a function by its values at mesh
+vertices, extending it linearly across each triangle. Its energy is
+then a quadratic form in finitely many numbers. An electrical network
+has the same form: a conductance $w$ on an edge with voltage difference
+$v_i-v_j$ contributes $w(v_i-v_j)^2$. Our task is to identify precisely
+which polyhedral deformation variables produce this quadratic form.
+The Hessian is the matrix of second derivatives; its negative measures
+how rapidly volume decreases away from a maximum.
+
 Let $\mathcal T$ be a finite, connected, consistently oriented simplicial
 triangulation of a closed disk, with interior vertices $I$ and nonempty
 boundary vertex set $B$. Each triangle has three distinct vertices.
@@ -29,6 +38,13 @@ geometric realization, integration over each triangle gives
 \end{equation}
 Here each undirected edge is counted once, $\alpha_e,\beta_e$ are its
 opposite angles, and the second term is omitted on a boundary edge.
+Here $L_{ij}=-w_{ij}$ for distinct joined vertices and
+$L_{ii}=\sum_{j\ne i}w_{ij}$; missing edges have weight zero.
+A barycentric function $\phi_i$ is the affine function equal to one
+at vertex $i$ and zero at the other two vertices of a triangle.
+The collection of these functions lets us reconstruct the piecewise
+linear function from its vertex values.
+
 To check the normalization, the
 off-diagonal stiffness entry on a triangle is
 $\int_T\nabla\phi_i\cdot\nabla\phi_j\,dA=-\tfrac12\cot\alpha_k$
@@ -239,6 +255,21 @@ coordinate and constraint system.}
 \subsection{Boundary response, Schur complements, and a Gaussian factor}
 \label{subsec:ipolyResponse}
 
+The subscripts $I$ and $B$ mean interior and boundary vertices;
+$L_{IB}$, for example, has interior rows and boundary columns.
+A Dirichlet problem fixes boundary voltages and asks for interior
+voltages with no injected current. The Neumann data are the currents
+needed at the boundary to maintain those voltages.
+
+For a three-vertex path with unit conductances, fix endpoint voltages
+$0$ and $1$, and call the middle voltage $x$. The energy is
+$x^2+(x-1)^2=2(x-1/2)^2+1/2$. Minimization gives $x=1/2$;
+the effective conductance between the endpoints is $1/2$.
+Completing this square is the one-variable version of the matrix
+elimination below. Integrating $\exp[-(x^2+(x-1)^2)/(2\hbar)]$
+over $x$ instead gives $\sqrt{\pi\hbar}\,e^{-1/(4\hbar)}$:
+the same effective energy, now with a Gaussian prefactor.
+
 For the finite element network, eliminating the interior voltage gives
 \begin{equation}
  v_I=-L_{II}^{-1}L_{IB}v_B,\qquad
@@ -323,6 +354,17 @@ zero terms, and strictness of $L_{II}$ makes the total positive.
 
 \subsection{Why the nonlinear iteration needs a barrier}
 \label{subsec:ipolyBarrierComplexity}
+
+A barrier is a function that tends to $+\infty$ at the boundary
+of the admissible domain. Minimizing $F-t\mathcal V$ balances
+staying safely inside against increasing volume; increasing $t$
+gradually reduces the influence of the barrier. A convex function
+$f$ is \emph{self-concordant} here if
+$|D^3f[h,h,h]|\le2(D^2f[h,h])^{3/2}$ for every direction $h$.
+This compares the change of the Hessian with the local scale set
+by the Hessian itself, which is what controls Newton steps.
+The norm $\|h\|_H=\sqrt{h^THh}$ and its dual
+$\|g\|_{H^{-1}}=\sqrt{g^TH^{-1}g}$ will be used below.
 
 A fast linear solve does not by itself bound the number of Newton
 steps. In particular, $-\mathcal V$ is not uniformly self-concordant:
@@ -551,6 +593,18 @@ energy comparison concerns the fixed Euclidean realization.}
 \label{fig:mono-flip}
 \end{figure}
 % END INLINE FIGURE
+
+For the next comparison, graph distance counts elementary moves.
+A \emph{quasi-isometry} preserves large distances up to fixed
+multiplicative and additive errors, with every target point within
+a bounded distance of its image. It does not identify individual
+edge lengths or local metrics. A mapping torus is formed from
+$S\times[0,1]$ by identifying $(x,1)$ with $(f(x),0)$ for a surface
+map $f$; its monodromy is the mapping class of $f$.
+Pseudo-Anosov classes are those with the invariant stretching and
+contracting measured foliations used in surface dynamics. The
+comparison theorems below are external inputs, with their surface
+and boundary hypotheses retained.
 
 For a connected orientable finite-type marked surface admitting an ideal
 triangulation, with at least one marked point on every boundary curve,

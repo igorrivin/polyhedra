@@ -1,6 +1,15 @@
 \section{Euclidean shapes and Deligne--Mostow periods}
 \label{sec:thurstonDM}
 
+A Euclidean polyhedron can change size without changing its shape.
+We remove that scale and also fix how much curvature is concentrated
+at each vertex. The remaining shapes admit complex coordinates:
+cut the surface open, develop the pieces into the plane, and record
+the complex displacement of each developed edge. The important
+point is that these displacements are integrals of one differential.
+This is why a geometric shape problem leads to periods and
+hypergeometric functions.
+
 \subsection{The fixed-curvature leaf at the Euclidean end}
 
 Fix $n\ge4$ and real numbers
@@ -21,6 +30,17 @@ The sum condition makes infinity a regular point. Near $p_i$, radial
 integration gives a cone of opening $2\pi(1-\mu_i)$. Thus the space of
 oriented, labeled Euclidean cone spheres with these deficits, up to
 similarity, has underlying complex manifold $\M_{0,n}$.
+
+For a local calculation, write $w-p_i=re^{i\vartheta}$ and ignore
+a smooth nonzero scale factor. The metric is
+$r^{-2\mu_i}(\dd r^2+r^2\dd\vartheta^2)$.
+With radial distance $R=r^{1-\mu_i}/(1-\mu_i)$, this becomes
+\[
+ \dd R^2+(1-\mu_i)^2R^2\dd\vartheta^2.
+\]
+As $\vartheta$ ranges from $0$ to $2\pi$, a small circle has
+circumference $2\pi(1-\mu_i)R$. This computes its cone opening
+and also shows why $\mu_i<1$ places the cone tip at finite distance.
 
 Alexandrov realization identifies these metrics with convex Euclidean
 polyhedral surfaces, allowing doubled planar polygons. This is the
@@ -102,7 +122,13 @@ Define the multivalued differential
  \eta_p(w)=\prod_i(w-p_i)^{-\mu_i}\,\dd w.
  \label{eq:DMdifferential}
 \end{equation}
-Its branches differ by unit complex numbers. It therefore defines a
+Going once around $p_i$ multiplies a branch by
+$e^{-2\pi i\mu_i}$, a unit complex number. A \emph{rank-one
+unitary local system} records precisely these phase changes when
+one analytically continues around loops. A twisted cycle is a
+path or chain together with the corresponding choice of local
+coefficient, so integration stays consistent with that continuation.
+The differential therefore defines a
 twisted cohomology class for a rank-one unitary local system on the
 punctured sphere. The relevant twisted cohomology space has complex
 dimension $n-2$, and its Hermitian intersection form $H$ has signature
@@ -114,7 +140,12 @@ the coordinates
  \label{eq:DMperiods}
 \end{equation}
 are the hypergeometric periods of Deligne--Mostow~\cite{DeligneMostow}.
-Projectivizing their positive line gives a local map to
+The signature $(1,n-3)$ means that after a linear change of basis
+$H(Z,Z)=|Z_0|^2-|Z_1|^2-\cdots-|Z_{n-3}|^2$.
+Positive vectors modulo multiplication by nonzero complex scalars
+form complex hyperbolic space: in the chart $Z_0=1$ they satisfy
+$\sum_{j=1}^{n-3}|Z_j|^2<1$.
+Projectivizing the positive line of periods gives a local map to
 $\mathbb{CH}^{n-3}$. Analytic continuation produces projective unitary
 monodromy.
 
@@ -146,8 +177,18 @@ the two constructions, with labels retained, are canonically isometric
 the Hermitian intersection pairing varies between sources; fixing it
 by~\eqref{eq:DMarea} removes that ambiguity, and a constant scalar
 does not change the projective metric. Throughout this monograph the complex hyperbolic
-metric has \emph{holomorphic sectional curvature $-1$}. Its K\"ahler
-form, in the preceding local period coordinates, is
+metric has \emph{holomorphic sectional curvature $-1$}.
+
+In one complex coordinate $z=x+iy$, the operators $\partial$ and
+$\bar\partial$ differentiate holomorphic and antiholomorphic
+variables separately. A function such as $-2\log\mathcal A$ is
+a \emph{K\"ahler potential}: applying $i\partial\bar\partial$
+produces the two-form. Multiplying $\eta$ by a nonzero holomorphic
+factor $h$ adds $\log|h|^2$ to $\log\mathcal A$; its mixed
+complex derivative is zero. This is the concrete reason the
+metric depends on the shape and not the local scale choice.
+
+Its K\"ahler form, in the preceding local period coordinates, is
 \begin{equation}
  \omega_{\mathrm{CH}}=-2i\,\partial\bar\partial\log\mathcal A.
  \label{eq:CHpotential}
@@ -172,6 +213,17 @@ further useful interpretation in terms of periods of algebraic curves;
 it does not require the monodromy group to be a lattice.
 
 \subsection{Collision angles and the lattice conditions}
+
+As the marked points move around a loop, a chosen basis of periods
+may return as a linear combination of its original values. This
+is \emph{monodromy}. The local complex hyperbolic charts exist
+without requiring the monodromy group to be discrete. A lattice
+is a discrete isometry group with finite-volume quotient; the
+integrality conditions below are sufficient conditions for that
+stronger global conclusion. For instance, weights $1/3$ and
+$1/3$ give a collision angle $2\pi/3$, which is a disk modulo
+an order-three rotation. This is the local meaning of an integer
+reciprocal in the INT condition.
 
 Suppose two marks of total weight $\mu_i+\mu_j<1$ collide, with local
 separation $\delta$, while the other marks remain distinct and away
@@ -250,4 +302,11 @@ the ineffective stabilizer
 \cite[Example 2.1 and Section 5]{Kojima}. This is the flat
 endpoint of the equal-angle torus--sphere correspondence in
 Section~\ref{sec:torussphere}.
+
+At $z=1/2$ the two elliptic integrals in the ratio are identical,
+so $\tau=i$. Up to an overall complex scale, the period lattice
+is generated by $1$ and $i$: the associated torus is square.
+Its quotient by $w\mapsto-w$ is the flat pillowcase with four
+angle-$\pi$ points. This gives a shape one can recognize directly
+from a period ratio.
 

@@ -17,9 +17,21 @@ The proofs and the exploratory numerical observations are stated separately.
 \subsection{The normalized all-point discrepancy and the logarithmic loss}
 \label{subsec:mobiusmodulus}
 
+For positive comparison functions $g$, the notation $E(L)=O(g(L))$
+means $|E(L)|\le Cg(L)$ eventually, with one fixed constant $C$;
+$E(L)=o(g(L))$ means $E(L)/g(L)\to0$.
+For example $L\sqrt{\log L}=o(L\log L)$ but is not $O(L)$.
+Thus the qualitative improvement below leaves a real interval of
+possible error sizes to investigate.
+
 Let $B$ be a fixed convex body containing the origin in its interior.
 Rescale its gauge so that the shortest nonzero integer vector has gauge one;
 central symmetry is not needed in this subsection.
+The gauge is $\|v\|_B=\inf\{r>0:v\in rB\}$.
+The normalization means $\min_{m\in\mathbb Z^2\setminus\{0\}}
+\|m\|_B=1$. It is a choice of units, not the assertion that the
+shortest hyperbolic geodesic has length one.
+
 Write $a=\operatorname{Area}(B)$,
 \[
  A_0(u)=\#(uB\cap(\mathbb Z^2\setminus\{0\})),\qquad
@@ -68,6 +80,14 @@ Consequently the Dini condition
 implies an $O_B(L)$ primitive remainder without any M\"obius cancellation.
 With the prime number theorem, this improves to $o_B(L)$; see
 \eqref{eq:primitiveDiniPNT} below.
+The measure $du/u$ gives equal weight to equal multiplicative
+scales: putting $v=\log u$ turns it into $dv$.
+For $u\ge e$, the candidate modulus $1/(\log u)^2$ is
+integrable against $du/u$, whereas $1/\log u$ is not: its
+integral up to $L$ is $\log\log L$.
+This explains the threshold without claiming either modulus for
+the particular norm balls studied here.
+
 In particular any all-point power saving $D_B(u)=O_B(u^{1-\eta})$,
 $\eta>0$, suffices. Infinite graph-flatness does not logically exclude
 this route: for example a bound $u\exp(-\sqrt{\log u})$ has no fixed
@@ -182,6 +202,12 @@ Suppose $N(L)/L^2\to c$, put $E(L)=N(L)-cL^2$, and define
 \[
  \Delta_2N(L)=N(2L)-4N(L)=E(2L)-4E(L).
 \]
+For the toy expression $N(L)=cL^2+bL$, the difference is
+$\Delta_2N(L)=-2bL$: the unknown $c$ cancels exactly.
+The inverse formula below recovers $bL$ from these differences.
+This example explains what the diagnostic removes, before any
+assumption is made about the actual error of a curve count.
+
 Iterating the latter equality and using $E(L)=o(L^2)$ gives
 \begin{equation}
  E(L)=-\sum_{j=0}^\infty4^{-j-1}\Delta_2N(2^jL).
@@ -462,6 +488,14 @@ In particular, it equals
 \[
  (b-a)\frac{\varphi(n)}n+O(2^{\omega(n)}).
 \]
+Here $\varphi(n)$ counts residue classes coprime to $n$, and
+$\omega(n)$ is the number of distinct prime divisors of $n$;
+it is unrelated to the geometric modulus $\omega_B$ above.
+For $n=6$ and $[a,b]=[1,6]$, the divisor sum is
+$6-3-2+1=2$, selecting precisely $k=1,5$.
+The term $2^{\omega(n)}$ counts square-free divisors, each of
+which contributes a bounded endpoint-rounding error.
+
 The formula includes endpoints exactly. For prime $n$ and $b-a<n$,
 the simpler absolute-error comparison with $b-a$ used above applies.
 
@@ -523,6 +557,15 @@ triples
 \end{equation}
 The first is the modular torus; the second is an asymmetric example.
 Both satisfy $2<x\le y\le z\le xy/2$.
+
+A Farey mediant adds two neighboring primitive slope vectors:
+$(p_1,q_1),(p_2,q_2)\mapsto(p_1+p_2,q_1+q_2)$.
+Neighboring means $|p_1q_2-p_2q_1|=1$, which ensures that the
+sum is primitive. The trace relation supplies its new geometric
+length. From $(3,3,3)$ the first replacement is $3\cdot3-3=6$,
+so the new length is $2\arcosh3$, whereas each root has length
+$2\arcosh(3/2)$. Equal lengths at the roots still belong to
+three different curve labels.
 
 Assign the root curves the slopes $(1,0)$, $(0,1)$, and $(1,1)$,
 respectively. The three open sectors between these roots enumerate

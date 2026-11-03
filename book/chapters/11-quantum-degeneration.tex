@@ -25,6 +25,15 @@ This remains a conjecture in general; see the colored-Jones
 formulation in~\cite{MurakamiMurakami} and the tetrahedral
 results in~\cite{Costantino}.
 
+The elementary model is ordinary Euclidean dilation by $r$: areas
+scale by $r^2$ and volumes by $r^3$, so volume scales as area to
+the power $3/2$ when shape is fixed. The issue in hyperbolic
+geometry is to justify that the shrinking bodies really retain
+a nondegenerate shape. Hausdorff convergence means that every point
+of either compact body lies within a distance tending to zero of
+the other body. The rescaling and boundedness hypotheses below
+make this dilation argument rigorous.
+
 Suppose a family of compact convex polyhedra $P_A$ has hyperbolic
 boundary area $A\downarrow0$. Make the geometric convergence
 precise by choosing isometries into a Klein chart for which the
@@ -77,6 +86,15 @@ Consequently, whenever $r\sup_Q|y|<1$,
       +3r^7\int_Q|y|^4\,\dd^3y+\cdots.
  \label{eq:Kleinvolumeexpansion}
 \end{align}
+For $Q=[-1,1]^3$, the Euclidean volume is $8$ and
+$\int_Q|y|^2\,\dd^3y=3(8/3)=8$. Consequently
+$W(rQ)=8r^3+16r^5+O(r^7)$ for $r\to0$.
+Here $R=\sqrt3$, so the convergent series applies for
+$r<1/\sqrt3$. The positive correction reflects the fact that
+the Klein volume density exceeds Euclidean density away from
+the center. This is a computable example of the specified
+homothetic path, without requiring a quantum invariant.
+
 The series converges uniformly on $Q$ for each
 $rR<1$, where $R=\sup_Q|y|$. Its nonnegative remainder after
 $k=m$ is bounded by
@@ -240,6 +258,13 @@ then singles out the dimensionless ratio
  A\asymp\hbar^{2/3}.
  \label{eq:jointscale}
 \end{equation}
+For example, if $A=c\hbar^{2/3}$ with fixed $c>0$, then
+$W(P_A)/\hbar\to c^{3/2}W_{\mathrm E}$.
+If $A/\hbar^{2/3}\to0$, that exponent tends to zero instead;
+if the ratio tends to infinity and the limiting Euclidean volume
+is positive, it grows without bound. The intermediate scale
+keeps the exponent visible and finite.
+
 This is the regime in which geometric degeneration competes
 with the semiclassical limit. At this stage it is a scaling prediction;
 Section~\ref{sec:quantumAiry} proves an additive uniform Airy

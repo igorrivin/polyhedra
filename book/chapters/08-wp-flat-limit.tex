@@ -1,6 +1,15 @@
 \section{From ideal polyhedra to the Euclidean limit of WP geometry}
 \label{sec:flatlimit}
 
+There are two limits to distinguish. A hyperbolic cone surface on
+the prescribed angle path has area tending to zero, so its metric
+shrinks. Dividing that metric by its area keeps a visible unit-area
+shape, which tends to a flat cone sphere. The WP form is instead a
+metric object on the \emph{space of these surfaces}. This section
+computes its scaling and then checks the total-volume scaling by
+intersection theory. The latter step is necessary because a local
+limit on a noncompact parameter space need not control its total mass.
+
 \subsection{A prescribed intrinsic interpolation}
 
 For the weights in~\eqref{eq:flatweights}, define
@@ -59,7 +68,26 @@ configuration. Every nondegenerate Euclidean tetrahedron is
 cospherical, but its radial path still need not preserve $X$ or
 the angle path~\eqref{eq:anglepath}.
 
+For the four equal weights $\mu_i=1/2$, each opening is $\pi t$.
+At $t=0$ all four ends are cusps; at $t=1/2$ the openings are
+$\pi/2$ and the area is $2\pi$; as $t\to1$ the openings tend
+to $\pi$ and the area tends to zero. After rescaling to unit
+area the limiting object is a flat pillowcase. The conformal
+cross-ratio is held fixed throughout this example, so the claim
+concerns a path of metrics on one fixed marked conformal sphere.
+
 \subsection{The normalized local WP form}
+
+A metric measures tangent vectors; its inverse, called the
+\emph{cometric}, measures covectors. Here tangent vectors are
+infinitesimal changes of conformal structure, and cotangent vectors
+are quadratic differentials. The displayed pairing is a cometric.
+In one dimension the distinction is visible already in a scalar:
+if a cometric coefficient is $A^{-1}q$, the tangent metric
+coefficient is $A/q$. Thus a diverging cotangent pairing can
+correspond to a shrinking tangent metric. The argument below is
+the matrix version of this observation, followed by identification
+of the limiting matrix with the period metric.
 
 The scale of the WP form can be seen directly from the cotangent
 pairing. Write $w=x+iy$ and $g_t=\rho_t|\dd w|^2$. For
@@ -117,6 +145,24 @@ hyperbolic-to-flat limit verbatim. Local convergence on a noncompact
 moduli space alone does not justify convergence of total volumes.
 
 \subsection{The class calculation and an exact final-chamber polynomial}
+
+The notation $[\omega]$ denotes the cohomology class of a closed
+two-form. Classes retain exactly the information needed to
+integrate top-degree products on the compactification. A stable
+bipartition $I\mid I^c$ divides the marked points into two sets,
+each of size at least two; its divisor records a nodal sphere
+with those marks on the two components. A subset is \emph{light}
+when its total weight $\mu_I$ is less than one, and \emph{balanced}
+when that total is one. These elementary tests determine which
+collision terms survive near the flat endpoint.
+
+The proof strategy is to insert the linear path of weights into
+the quadratic wall-crossing class from Section~\ref{sec:cones}.
+Its constant term vanishes at the flat endpoint. The linear term
+is the complex hyperbolic class, and the quadratic term is the
+explicit correction $\Xi_\mu$. Taking the $d$th power explains
+in advance why only the degrees $d$ through $2d$ can occur in the
+final volume polynomial.
 
 Put $d=n-3$, $D=n-2$, and $\mu_I=\sum_{i\in I}\mu_i$. Let
 $\delta_I=\delta_{I^c}$ denote the divisor of the stable bipartition
@@ -346,6 +392,15 @@ $\varepsilon<2\delta/(1+2\delta)$ and collapses as $\delta\to0$.
 The full piecewise WP volume remains continuous. The small-$A$
 expansion must therefore be taken at fixed weights; uniformity
 across balanced collision walls requires a separate analysis.
+
+One can see the order-of-limits issue directly from the inequality
+$\varepsilon<2\delta/(1+2\delta)$. Fixing $\delta>0$ leaves a
+nonempty interval in which the final polynomial applies. Fixing
+any $\varepsilon>0$ and then sending $\delta$ to zero eventually
+leaves that interval. Consequently a coefficient obtained by first
+expanding at fixed $\delta$ need not converge to the coefficient
+of the expansion at $\delta=0$. No discontinuity of the underlying
+volume function is required.
 
 \subsection{Why the complex hyperbolic volumes look different}
 

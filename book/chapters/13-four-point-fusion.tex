@@ -1,6 +1,16 @@
 \section{The four-point residue: fusion, area, and an explicit density}
 \label{sec:screenedfusion}
 
+There are two ways to follow this section. Readers interested in
+the geometric answer can start with the Euler arc integrals and
+their finite change-of-basis matrix, then derive the area and its
+curvature. The opening contour calculation explains how the same
+two-dimensional space appears in Liouville theory; its infinite
+spectral continuation has an additional hypothesis, stated explicitly.
+A channel means a choice of which pair of marked points is combined
+first. It is the continuous analogue of the two pairings in the
+three-spin example of Section~\ref{sec:introrecoupling}.
+
 The one-screening calculation can be completed at the level of
 four-point residues. Two intermediate Virasoro channels contribute,
 their change of basis is an explicit hypergeometric connection
@@ -102,6 +112,15 @@ uniform spectral estimate through further pole coalescences or as
 $b\to0$ is asserted.
 
 \paragraph{The local pinch calculation.}
+A contour is pinched when singularities approach it from opposite
+sides so that it cannot stay between them in the limit. The local
+model is $1/[x(x+\varepsilon)]$: its poles are at $0$ and
+$-\varepsilon$, and its residue at $x=-\varepsilon$ is
+$-1/\varepsilon$. This elementary calculation explains how a pole
+in the integration variable creates a pole in the external parameter.
+The orientation and reflection multiplicity must still be accounted
+for in the full spectral normalization below.
+
 Two opposite pole families are
 \begin{align}
  \alpha&=a_s+mb+n/b,\notag\\
@@ -141,8 +160,9 @@ displayed sum coordinate, are
        {\prod_{j=1}^3\mathfrak g(2b\alpha_j)}.
  \label{eq:threepointscreeningresidues}
 \end{align}
-For completeness these follow directly from DOZZ. Its denominator
-is $\Upsilon_b(\Sigma-Q)\prod_j\Upsilon_b(\Sigma-2\alpha_j)$;
+For completeness these follow directly from DOZZ. Here $\Upsilon_b(x)=1/[\Gamma_b(x)\Gamma_b(Q-x)]$;
+its zeros encode the pole families of the DOZZ factors.
+The DOZZ denominator is $\Upsilon_b(\Sigma-Q)\prod_j\Upsilon_b(\Sigma-2\alpha_j)$;
 use
 \[
  \Upsilon_b(Q-x)=\Upsilon_b(x),\qquad
@@ -209,6 +229,22 @@ in the literature; the bootstrap normalization is calibrated by
 
 \subsection{Why the screening integrals are the Virasoro blocks}
 
+The special functions needed for the finite computation can be
+defined without representation theory. For $|z|<1$,
+\[
+ {}_2F_1(a,b;c;z)=\sum_{n\ge0}
+       \frac{(a)_n(b)_n}{(c)_n n!}z^n,
+ \qquad (a)_0=1,\quad (a)_n=a(a+1)\cdots(a+n-1).
+\]
+Here $c$ avoids $0,-1,-2,\ldots$; other arguments use analytic
+continuation. The letter $b$ in this three-parameter function is
+an argument placeholder, not the Liouville parameter.
+The beta function is
+$B(p,q)=\int_0^1t^{p-1}(1-t)^{q-1}\,\dd t
+=\Gamma(p)\Gamma(q)/\Gamma(p+q)$ for positive real $p,q$.
+These definitions identify both the normalized power series and
+the constants removed from the arc integrals.
+
 Let $F(a,b;c;z)={}_2F_1(a,b;c;z)$ and take branches positive
 for $0<z<1$, continued first to
 $\CC\setminus(({-\infty},0]\cup[1,\infty))$.
@@ -245,6 +281,21 @@ The corresponding Euler arc integrals are
        =B(1-\mu_1,1-\mu_3)f_1(z).
  \label{eq:screeningEulerarcs}
 \end{align}
+For the second arc, the substitution $w=zt$ gives a factor
+$z^{1-\mu_1-\mu_3}$ and the integral
+\[
+ \int_0^1t^{-\mu_1}(1-t)^{-\mu_3}(1-zt)^{-\mu_2}\,\dd t.
+\]
+Expanding the last factor and integrating each power of $t$
+produces the beta factor and the series for $f_1$. The exponent
+$\delta_0$ thus comes directly from rescaling the short arc.
+A Pochhammer contour is a commutator of small loops about the two
+endpoints; with the continued local coefficients it closes the
+multivalued integral. Ward identities express compatibility with
+infinitesimal conformal changes. Integrating their total-derivative
+term over this closed twisted contour gives zero, which is why
+screening preserves those identities.
+
 The positive arc branches are phase-normalized versions of
 the twisted periods; closed Pochhammer contours justify the
 Ward-identity argument, with the same normalized functions.
@@ -311,6 +362,13 @@ $a=1-\mu_4$, $b=\mu_3$, $c=\mu_1+\mu_3$ in
  \det\mathsf M=-\frac{\delta_0}{\delta_1}.
  \label{eq:fusiondeterminant}
 \end{equation}
+For two functions the Wronskian is
+$W(f,g)=fg'-f'g$. It measures whether their values and first
+derivatives are linearly independent. A constant change of basis
+multiplies the Wronskian by its determinant. Applying that rule
+to the explicit local exponents at $0$ and $1$ gives the determinant
+above; it also detects the failure of these bases at a balanced weight.
+
 The matrix is independent of the Liouville parameter $b$ when
 the deficits $\mu_i$ are fixed. All $b$-dependence in these
 blocks is then in the common factor $E_b$ and in the overall
@@ -491,9 +549,14 @@ bipartition differences have sum
  \sum_{j=1}^3|r-x_j|
    =1-r-x_1+|r-x_1|=1-2\min(r,x_1).
 \]
-This proves the stated minimum formula. Equal weights give
-$V_{\mathrm{DM}}=2\pi$; for example
-$\mu=(1/4,1/2,1/2,3/4)$ gives $V_{\mathrm{DM}}=\pi$.
+This proves the stated minimum formula. Equal weights give $V_{\mathrm{DM}}=2\pi$.
+For $\mu=(1/4,1/2,1/2,3/4)$ the three exponent differences are
+$\delta_0=1/4$, $\delta_1=0$, and $\delta_\infty=-1/4$.
+The completed parameter sphere therefore has two cone angles
+$\pi/2$ and one cusp. Gauss--Bonnet gives
+$2\pi(1-1/4-0-1/4)=\pi$, also equal to
+$4\pi\min\{\mu_i,1-\mu_i\}$. These are singularities in the
+space of shapes, not the four cone points on an individual flat sphere.
 
 The integral here is of the smooth curvature on the open
 moduli space, with its cone/cusp completion. If one instead
@@ -511,6 +574,13 @@ same Virasoro weight. The second solution is a regularized
 logarithmic, or parameter-derivative, block; it is not a
 second independent ordinary normalized highest-weight block
 at the same weight.
+
+The elementary prototype of this basis replacement is
+$1,z^\delta$: as $\delta\to0$ both tend to $1$, but
+$(z^\delta-1)/\delta\to\log z$ on a fixed logarithm branch.
+The second direction has not disappeared; it is recovered by a
+divided difference. The following regularization does the same
+thing for the two hypergeometric solutions.
 
 Use the independent periods
 \begin{equation}
@@ -532,7 +602,8 @@ gives
     \left(\frac{(1/2)_m}{m!}\right)^2
        (H_{2m}-H_m)z^m,
 \]
-where $H_m$ is a harmonic number. Thus the holomorphic part
+where $H_m=\sum_{k=1}^m1/k$ is the $m$th harmonic number
+and $(1/2)_m$ is the rising factorial defined above. Thus the holomorphic part
 has zero constant term. The analogous statement for
 $\ell_1$ uses $\log(1-z)$.
 Solving~\eqref{eq:equalweightlogsolutions} gives the finite

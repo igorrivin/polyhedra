@@ -15,6 +15,20 @@ torsion identities cited below; no novelty claim is made.
 
 \subsection{Peripheral conventions and the two small parameters}
 
+A cusp has torus cross sections. A slope is an unoriented primitive
+closed curve on such a torus, represented in a chosen basis by
+$p\mu+q\lambda$ with coprime integers $p,q$, up to common sign.
+Dehn filling attaches a solid torus so that this curve bounds its
+meridian disk; the core is the central circle of the attached solid
+torus. The deformation equations describe how the original cusp
+geometry changes to accommodate this attachment.
+
+The Euclidean cusp torus has a lattice proportional to
+$\mathbb Z+\tau\mathbb Z$, with $\operatorname{Im}\tau>0$.
+The complex vector $p+q\tau$ represents the slope. Dividing its
+squared length by the parallelogram area removes the arbitrary
+choice of cusp cross section.
+
 Let $M$ be an oriented, finite-volume, one-cusped hyperbolic
 three-manifold. Fix an oriented meridian--longitude basis $(\mu,\lambda)$
 and the geometric deformation branch through the complete structure.
@@ -59,6 +73,14 @@ the hyperbolic Dehn surgery theorem supplies the smooth geometric
 completion for sufficiently long primitive slopes
 \cite[Section 4]{NeumannZagier}. Geometric completion is a separate
 statement from the analytic existence of this small solution.
+
+Notation changes in this section: $A=p+q\tau$ is a complex
+slope vector, not the shrinking surface area used earlier;
+$B=\operatorname{Im}\tau$ is a positive real number, and $Q(p,q)$
+is a quadratic form, not Liouville's background charge.
+A holonomy \emph{germ} means the analytic deformation defined in
+some neighborhood of the complete point, with neighborhoods that
+agree after shrinking regarded as the same local object.
 
 Two expansions must be kept distinct: $|A|^{-1}\to0$ is a
 \emph{classical long-slope expansion}, whereas the quantum level
@@ -116,6 +138,13 @@ $p\,\dd\Im u+q\,\dd\Im v$ gives
 $p\Re u+q\Re v=0$. Hence the single angular condition, together
 with constrained criticality, gives the full complex equation
 \eqref{eq:dehncone}.
+
+A source $j$ rewards increasing the selected observable $Lx$ by
+adding $jLx$ to the objective. Here $j$ is a real optimization
+parameter, unrelated to the spin label in Section~\ref{sec:introrecoupling}.
+The envelope rule differentiates the optimized value using its
+explicit parameter dependence: the derivative through the
+optimizing $x$ disappears because the objective is stationary there.
 
 The proposed linear perturbation can therefore be written as
 \begin{equation}
@@ -250,6 +279,16 @@ Substituting $\Im v=(\theta-p\Im u)/q$ yields
 an independently constructed cone path.
 \end{proof}
 
+The linear model $v=\tau u$ makes the calculation transparent
+in the chosen polarization, where $q\ne0$.
+Its stationary point is $u_\theta=i\theta/A$ and its critical
+value is $\mathcal S^*=\theta^2/(2qA)$. Since
+$\operatorname{Im}(1/(qA))=-B/|A|^2$, the volume change is
+$-B\theta^2/(4|A|^2)$. This gives the leading response for an
+actual cusp; higher powers of $u$ in its holonomy supply the
+corrections. For the square-lattice model $\tau=i$ the quadratic
+form is $Q(p,q)=p^2+q^2$.
+
 This is an exact identity of analytic germs, so it compares all
 orders of the two classical expansions. For $q=0$, exchange the
 oriented basis to $(\mu',\lambda')=(\lambda,-\mu)$; the new slope
@@ -353,6 +392,16 @@ In particular the leading loss is $\pi^2/Q(p,q)$, and the quartic
 term detects the first nonlinear deformation coefficient $c_3$.
 
 \subsection{Computing the quartic coefficient from angle-volume derivatives}
+
+Why does a fourth-order response contain third derivatives?
+Even in the elementary function
+$V(x,y)=V_0-kx^2/2-ay^2/2+cx^2y+dx^4$, with $a,k>0$,
+maximizing over $y$ gives $y=cx^2/a$ and
+$\max_yV=V_0-kx^2/2+(d+c^2/(2a))x^4$.
+The adjustable variable changes the quartic coefficient.
+The tensor calculation below is this same readjustment in all
+unconstrained angle directions; $R$ represents their inverse-Hessian
+response while keeping $Lx$ fixed.
 
 The comparison supplies a more detailed computational identity.
 Keep $K,L,\chi$ as above, and write
@@ -503,8 +552,11 @@ phase choices. A full amplitude also contains the boundary-state
 torsion and a solid-torus factor.
 
 More precisely, suppose $\theta=2\pi$ gives a smooth hyperbolic filled
-manifold and the representation is its holonomy. Assume its adjoint
-representation is acyclic and its restriction to the compact core is
+manifold and the representation is its holonomy. The adjoint representation acts on infinitesimal matrix changes
+by conjugation. ``Acyclic'' means that all cohomology groups of
+its twisted cellular complex vanish; this removes deformation
+and stabilizer directions from the closed-manifold torsion.
+Assume its adjoint representation is acyclic and its restriction to the compact core is
 regular for both $\mu$ and $p\mu+q\lambda$: the peripheral invariant
 vector paired with either curve supplies a basis of the one-dimensional
 twisted $H_1$, with the compatible boundary basis in $H_2$.
@@ -709,6 +761,14 @@ is twice their oriented intersection number; edge rows pair to zero
 with one another and with all peripheral rows. The topological
 interpretation is proved in their Section 3. A geometric construction
 of symplectic bases is given in~\cite{MathewsPurcellSymplectic}.
+
+Symplectic reduction here consists of imposing the independent
+edge equations and then identifying points along their conjugate
+Hamiltonian flows. Each independent commuting constraint removes
+one coordinate by the equation and one by that identification.
+Thus $n-h$ such constraints reduce dimension $2n$ to
+$2n-2(n-h)=2h$. The term \emph{coisotropic} records that these
+constraint flows stay tangent to their common level set.
 
 The vanishing edge-edge pairings say that the linear constraints
 Poisson-commute. Since $\operatorname{rank}R_E=n-h$, their
@@ -920,6 +980,14 @@ Equivalently,
                        \Re v'(u)&|v'(u)|^2\end{pmatrix}.
  \label{eq:NZnonlinearresponse}
 \end{equation}
+A Monge--Ampere equation prescribes a determinant of a Hessian.
+Here it says that the two principal quadratic responses multiply
+to $1/4$, even though their individual values can vary. For the
+linear square-cusp model $v=iu$, the reduced volume is
+$\overline V=V_0-(y^2+s^2)/4$, so
+$-D^2\overline V=I/2$ and its determinant is indeed $1/4$.
+This is a statement in the specified angular coordinates.
+
 The determinant-$4$ identity holds throughout this local branch.
 At $u=0$ it reduces to the cusp formula already derived.
 For a filling path it gives the exact response
@@ -992,6 +1060,14 @@ has the dependence
     =\sqrt{\frac{\dd u}{\dd a}}.}
  \label{eq:NZhalfdensity}
 \end{equation}
+A half-density transforms by the square root of the Jacobian
+that transforms a density. For example, if $a=cu$ with $c>0$,
+then a density $f(u)\,\dd u$ has coefficient $f(a/c)/c$
+in the $a$ coordinate, while its half-density coefficient gains
+$c^{-1/2}$. In the formula above the local Jacobian is
+$\dd a/\dd u=p+qv'(u)$, with the complex square root fixed by
+continuation.
+
 Universal powers of $\hbar$, phases, and square-root branches are
 fixed by the chosen integral convention. The displayed dependence is
 the transformation law for a half-density along $\mathcal L_M$.

@@ -10,6 +10,15 @@ length and number of components count those multiplicities. The
 empty multicurve is included. Cusps and boundary require additional
 trace terms and are not included in the assertions below.
 
+The question is whether spectral information can retain the label
+of a simple curve. A usual trace formula sums over all closed
+geodesics, including self-intersecting ones. Here we vary an auxiliary
+unitary holonomy $\rho$, expand its trace functions in a simple-multicurve
+basis, and collect the coefficient of a chosen multicurve. That
+coefficient is a signed measure of source lengths. The key result
+is that for a simple target its earliest atom records the target's
+own length, even though later atoms include many other curves.
+
 The inputs are the twisted Selberg formula, the simple-multicurve
 basis of the character ring, and Dylan Thurston's sign-coherence
 theorem for the bracelet basis. We prove the intervening length and
@@ -17,6 +26,14 @@ coefficient estimates explicitly. The resulting construction is a
 deduction from these established inputs, with no novelty claim.
 
 \subsection{Broken geodesics and the effect of reconnection}
+
+A broken geodesic is a closed polygon whose vertices may move;
+each short edge is the unique shortest segment between consecutive
+vertices. The injectivity-radius restriction ensures that uniqueness.
+A heat parametrix is a local approximation to the heat kernel,
+used to relate these finite-dimensional energies to a spectral trace.
+The important distinction below is elementary: moving vertices keeps
+the connectivity fixed, whereas reconnecting a crossing changes it.
 
 Colin de Verdi\`ere's construction approximates loop space by broken
 geodesics and applies stationary phase to a complex heat
@@ -70,6 +87,14 @@ $\rho:\pi_1(S)\to\mathrm{SU}(2)$ set
  \qquad T_\varnothing=1.
  \label{eq:coeffbasis}
 \end{equation}
+A character records traces of holonomy matrices, and the character
+ring consists of their polynomial combinations subject to the trace
+identities. A basis element $T_C$ multiplies one trace for each
+component, including repeated parallel copies. The notation $[T_C]f$
+means the coefficient of that basis element in a finite expansion
+of $f$, just as $[x^2]p$ means the coefficient of $x^2$ in a polynomial.
+It is not evaluation at a particular representation.
+
 The phrase ``unnegated trace basis'' refers to this sign convention,
 not to positivity of the function on $\mathrm{SU}(2)$. The functions
 $T_C$ are linearly independent on the unitary character variety and
@@ -88,6 +113,20 @@ is a unique finite expansion
  \label{eq:coeffcurveexpansion}
 \end{equation}
 These integers depend only on topology, not on $X$.
+
+For instance, $\tr(A^2)=(\tr A)^2-2$ and
+$\tr(A^3)=(\tr A)^3-3\tr A$ for a determinant-one matrix.
+For a simple $\alpha$, its triple traversal therefore contributes
+coefficient $-3$ to the target $\alpha$, at source length
+$3\ell_\alpha$. This already explains why the coefficient measure
+can have negative atoms, even though its first simple-curve atom
+will be positive.
+
+A flat unitary bundle attaches a copy of $\mathbb C^2$ to each
+point, with parallel transport prescribed by $\rho$. Its Laplacian
+acts on sections using that transport. The spectral test sums a
+function $h$ over its eigenvalues; the trace formula rewrites the
+same quantity using closed-geodesic lengths and their holonomies.
 
 Let $\Delta_\rho$ be the rank-two flat unitary bundle Laplacian,
 and write $\lambda_j(\rho)=1/4+r_j(\rho)^2$. For an even
@@ -316,6 +355,17 @@ growth estimate. A direct crossing count gives an exponential in
 $\ell_\gamma^2$ and only a small-time conclusion. Bracelet
 positivity gives a stronger estimate.
 
+The skein algebra is a way of recording curves algebraically with
+local crossing-resolution relations. A bracelet is the element
+obtained by following a simple support repeatedly, encoded by the
+Chebyshev polynomial $P_n$, rather than by the monomial for $n$
+parallel copies. Sign coherence says that the nonzero coefficients
+in the relevant bracelet expansion have one common sign. At a
+positive geometric evaluation, this prevents cancellation and
+bounds every coefficient by the total value. The external theorem
+supplies this sign property; the proof below extracts the particular
+bound needed here.
+
 At skein parameter $+1$, Dylan Thurston proves that every diagram
 has a sign-coherent expansion in the bracelet
 basis~\cite[Theorem 2]{DThurstonPositive}. A bracelet supported on
@@ -432,6 +482,16 @@ asymptotic is required.
 \end{proof}
 
 \subsection{Convergent heat and Laplace transforms}
+
+A transform tests the same atomic measure with a different weight.
+The heat weight $e^{-L^2/(4t)}$ suppresses large lengths especially
+strongly; as $t$ decreases it selects the shortest surviving atom.
+The Laplace weight $e^{-sL}$ does the same as $s$ increases.
+Their absolute convergence must be proved because the coefficients
+are signed and the number of source geodesics grows exponentially.
+Here $|\sigma|$ denotes total variation, which replaces each net
+atomic mass by its absolute value, and $\operatorname{sys}(X)$ is
+the length of a shortest essential closed geodesic.
 
 Define
 \begin{align}
@@ -804,6 +864,15 @@ which is generally nonzero. Thus sending every trace to its
 Chebyshev polynomial does not define a multiplicative operation
 on this character ring.
 
+A virtual representation is a formal difference of representations;
+its character is the corresponding difference of characters.
+For example, the second Adams character is
+$\chi_{\psi^2\rho}=\chi_{\operatorname{Sym}^2\rho}-1
+=(\tr\rho)^2-2$, evaluated on each group element.
+This is compatible with representation operations, unlike an
+attempt to replace all generators of a character polynomial by
+unrelated Chebyshev substitutions.
+
 There is an exact repair if extra twisting data are supplied.
 For the original $\mathrm{SU}(2)$ representation $\rho$, work in
 the virtual representation ring generated by its symmetric powers.
@@ -829,7 +898,11 @@ For $D_k\delta_L=\delta_{kL}$,
  Q_\rho=\sum_{k\geq1}D_kP_{\psi^k\rho},\qquad
  \boxed{P_\rho=\sum_{k\geq1}\mu(k)D_kQ_{\psi^k\rho}.}
 \]
-These sums are locally finite, and the second identity follows from
+Here $\mu(k)$ is the arithmetic M\"obius function: it is zero
+if a prime square divides $k$, and otherwise is $(-1)^r$ when
+$k$ has $r$ distinct prime factors, with $\mu(1)=1$.
+The identity $\sum_{k\mid n}\mu(k)=0$ for $n>1$ cancels
+repeated traversals. These sums are locally finite, and the second identity follows from
 $\psi^j\psi^k=\psi^{jk}$ and divisor M\"obius inversion. It requires
 spectra for higher symmetric-power twists, which are additional
 data beyond the original rank-two family. The explicit subtraction

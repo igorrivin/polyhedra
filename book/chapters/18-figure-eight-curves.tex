@@ -8,6 +8,14 @@ an orientation is explicitly chosen for a word calculation.
 
 \subsection{The pants trace relation}
 
+A figure-eight in this section is a \emph{curve on a surface},
+not the figure-eight knot in three-space used in Section~\ref{sec:introfigureeight}.
+A free-homotopy class allows the starting point to move; reversing
+orientation identifies the class with its inverse. A proper iterate
+traverses a shorter closed curve more than once. These distinctions
+matter because the forthcoming sums count curve classes, not just
+different numerical lengths.
+
 Let $\gamma$ be a closed geodesic with exactly one transverse self-intersection,
 not a proper iterate. Its two-lobed regular neighborhood is a pair of
 pants: the two ends of each lobe are adjacent in the cyclic order at the
@@ -35,6 +43,14 @@ Rewriting in positive geometric traces produces the plus sign in
 character identity; Section~\ref{sec:coefficientdistributions} retains
 signed traces and therefore has a different sign.
 
+For a concrete trace calculation, take cuffs with positive traces
+$t_a=t_b=3$ and a cusp $t_c=2$. Their lengths are
+$a=b=2\arcosh(3/2)$ and $c=0$. The figure wrapping both
+positive-length cuffs has trace $11$, hence length
+$2\arcosh(11/2)$. Each figure wrapping one of them and the cusp
+has trace $9$, hence length $2\arcosh(9/2)$. Equal lengths in
+the latter pair do not make the two classes the same.
+
 For pants with lengths $(a,b,0)$, the two figures that use the cusp as one
 lobe have traces
 \begin{equation}
@@ -50,6 +66,13 @@ it does not automatically produce a universal function of one figure-eight
 length.
 
 \subsection{What the local double cover accomplishes}
+
+A two-sheeted cover is specified by a homomorphism to
+$\mathbb Z/2\mathbb Z$: a loop with value zero returns to the
+same sheet, while value one switches sheets. Thus a cuff with
+value one closes only after two traversals and has one lift of
+twice its length. A cuff with value zero has a separate lift on
+each sheet. This is the covering calculation used next.
 
 Use pants generators $a,b$, with third cuff $c=(ab)^{-1}$ and figure
 $\gamma=ab^{-1}$. Consider the connected double cover given by
@@ -145,6 +168,15 @@ The separation is important here
 because the next construction is intended to include \emph{both} families.
 
 \subsection{A positive single-length kernel for all figure-eights}
+
+The three figures associated with one simple curve suggest a
+functional equation. If that curve has trace $t$, its figures
+have traces $3t,3t,t^2+2$. To replace its McShane weight $h(t)$
+by a common figure-eight weight, seek
+$2F(3t)+F(t^2+2)=h(t)$. Solving this relation by repeated
+substitution produces the alternating series below. The proof
+then checks positivity, which is not automatic from an alternating
+formula.
 
 Define, for $t>2$,
 \begin{equation}

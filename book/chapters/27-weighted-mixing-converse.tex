@@ -16,6 +16,14 @@ proof of Teichm\"uller mixing.
 \subsection{Two independent character variables retain the pair}
 \label{subsec:paircoefficients}
 
+Keeping two character variables is like keeping the two variables
+of a polynomial $P(x,y)$ rather than substituting $y=x$.
+The substitution can merge different coefficient labels; here it
+would also resolve crossings between the two curve systems.
+The external product retains an ordered pair of lengths, so its
+first atom is a corner of a quadrant, not merely the smallest sum
+of the two lengths.
+
 Keep a closed marked hyperbolic surface $X$ as an auxiliary device,
 and let $\rho,\sigma$ be independent rank-two character variables.
 The length-valued product of Section~\ref{sec:globalfilters} can be
@@ -70,6 +78,15 @@ convergence.
 \subsection{Filling pairs as actual coordinates for the flow}
 \label{subsec:pairgeometry}
 
+A measured foliation describes locally parallel leaves together
+with a transverse measure; singularities are allowed at finitely
+many points. For a quadratic differential $q=dz^2$, vertical
+leaves have constant $x=\operatorname{Re}z$, and horizontal
+leaves constant $y=\operatorname{Im}z$. Their transverse measures
+are $|\dd x|$ and $|\dd y|$. The intersection number $i(A,B)$
+extends the weighted crossing count of multicurves. A filling
+pair leaves no nonzero measured foliation disjoint from both.
+
 For definiteness let $S$ be closed, oriented, and of genus $g\geq2$.
 A pair $(A,B)$ of nonzero measured foliations is \emph{filling} if
 \[
@@ -100,6 +117,14 @@ In particular
 has unit area.  This is a genuine parametrization of points of the
 flow space; the two foliations are the stable and unstable data of a
 single differential, rather than two unrelated curves.
+
+The stretch $g_t$ multiplies horizontal distances by $e^t$ and
+vertical distances by $e^{-t}$. A rectangle of width $2$ and
+height $3$ therefore becomes a rectangle of width $2e^t$ and
+height $3e^{-t}$, still of area $6$. For a weighted crossing
+with these widths, that area equals its contribution $2\cdot3$
+to $i(A,B)$. Summing over crossings explains area preservation
+and the unit-area normalization in the preceding formulas.
 
 For an integral pair
 $A=\sum_i a_i\alpha_i$, $B=\sum_j b_j\beta_j$ in minimal position,
@@ -157,6 +182,15 @@ weight of such a class is
 \]
 This is the same stabilizer factor appearing in the square-tiled
 count of \cite[Section~1 and Section~3]{AranaHerreraSquare2020}.
+
+A stratum fixes the orders of the zeros and poles of a quadratic
+differential. Period coordinates record integrals of its locally
+chosen square root along prescribed relative cycles. Changes of
+these coordinates are linear with integral structure, so they
+define the Lebesgue measure called Masur--Veech measure.
+The relevant lattice depends on the stratum and conventions;
+its dimension is part of the counting problem, not a universal
+constant for every family of differentials.
 
 Fix a connected component $\mathcal Q$ of a stratum and put
 $h=\dim_{\mathbb C}\mathcal Q$.  The real period-coordinate dimension
@@ -308,6 +342,15 @@ Teichm\"uller time $g_t=\diag(e^t,e^{-t})$.
 The equality is an equality of measures under the map
 $(q,t)\mapsto\pi(g_tq)$ on the marked universal space, with $t>0$;
 it is not a claim that this map is one-to-one on the quotient $B$.
+
+In ordinary planar polar coordinates, $\dd x\dd y=r\,\dd r\dd\theta$.
+To integrate an angular and radial test without the radial factor,
+one must insert $1/r$ before changing variables. The role of
+$J_x(q,t)^{-1}$ below is exactly analogous: it cancels the
+Jacobian when terminal points are converted to initial directions
+and travel times. The additional $e^{ht}$ specifies the desired
+time weighting. A bisector count retains restrictions or weights
+on both endpoint directions, rather than just a distance cutoff.
 
 Let $D\subset\T(S)$ be a measurable fundamental domain. For $x,y\in D$
 and $\gamma\in\Gamma$, let
@@ -491,6 +534,14 @@ pointwise hypothesis. Uniformity over the observables, the two
 basepoints, and all large real values of $T$ is part of the assertion;
 one unweighted total count does not supply it.
 
+
+The caution about differentiation is elementary. A function
+$R(t)=e^{-\delta t}\sin(e^{2\delta t})$ is exponentially small,
+but its derivative contains a term of size $e^{\delta t}$.
+Thus a bound on a cumulative remainder cannot simply be
+differentiated to obtain a pointwise one. The smoothing argument
+uses controlled derivatives of the correlation; the next theorem
+instead inserts a differentiated endpoint test into an exact identity.
 
 A flow eigenfunction checks that the weighted hypothesis detects an
 actual spectral obstruction. If an admissible nonzero test $G$ satisfies
@@ -746,6 +797,16 @@ absolutely summable Fourier coefficients (in particular $C^2$ tests), set
            f(a/c)g(\overline a/c),\qquad
  a\overline a\equiv1\pmod c.
 \]
+Here $\varphi(c)$ is Euler's totient, the number of invertible
+residues modulo $c$, and $\overline a$ is the multiplicative
+inverse of $a$ modulo $c$, not a complex conjugate.
+For $c=5$ the endpoint pairs are
+$(1,1),(2,3),(3,2),(4,4)$, divided by $5$.
+Each endpoint separately runs over all invertible residues, but
+the pair is coupled by inversion. The Fourier sums below measure
+that dependence. Later $\tau(c)$ counts positive divisors and
+$(m,n,c)$ denotes their greatest common divisor.
+
 Writing $f(x)=\sum_m\widehat f(m)e(mx)$ and similarly for $g$ gives the exact
 identity
 \begin{equation}\label{eq:pairkloosterman}

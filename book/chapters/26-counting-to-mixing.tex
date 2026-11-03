@@ -1,6 +1,19 @@
 \section{When counting errors imply mixing}
 \label{sec:countmixing}
 
+Mixing means that observing a system now and much later becomes
+asymptotically independent. For a probability-preserving flow,
+\[
+ \operatorname{Corr}_t(f,h)=
+ \int f\,(h\circ g_t)\,\dd\mu
+       -\left(\int f\,\dd\mu\right)\left(\int h\,\dd\mu\right).
+\]
+Mixing asks that this tend to zero for appropriate observables;
+a rate bounds how fast it does so in terms of stated norms.
+A scalar count need not retain both observations. The examples
+below identify counts that do, and show what is lost by counts
+that forget this information.
+
 A counting remainder can imply mixing when the counts determine an
 appropriate operator, or when they retain sufficiently uniform information
 about both endpoints of orbit segments. The following elementary
@@ -43,6 +56,15 @@ and the correlation uses normalized Liouville measure.
 \end{proposition}
 
 \begin{proof}
+The proof uses a spectral dictionary: a small positive Laplace
+eigenvalue would create an additional pole in a transformed
+geodesic count. A sufficiently small counting remainder rules out
+that pole. An external matrix-coefficient theorem then converts
+the eigenvalue gap to decay of correlations. Here
+$\operatorname{Li}(x)=\int_2^x\dd u/\log u$ (the lower cutoff
+changes only a constant), and a Sobolev norm measures the $L^2$
+sizes of a function and its derivatives up to a fixed order.
+
 Put $\alpha=1-\delta>\tfrac12$. For $\Re s>1$, define
 \[
  F(s)=\sum_{P\ \mathrm{primitive}}\ell(P)e^{-s\ell(P)}
@@ -101,6 +123,17 @@ convention. The exponent is quantitative, while explicit numerical or
 family-uniform mixing constants require additional estimates.
 
 \subsection{A quantitative converse in homogeneous dynamics}
+
+The next paragraph is an optional comparison with an arithmetic
+setting. An averaging operator translates a function by group
+elements in $B$ and averages the results using probability measure
+$\beta_B$. Its norm on mean-zero functions measures how much
+nonconstant information survives that average. Discrepancy is the
+difference between a normalized count and its predicted volume.
+The cited theorem bounds this operator norm by a localized $L^2$
+discrepancy. Its $S$-arithmetic hypotheses, involving real and
+selected non-Archimedean factors, are external prerequisites;
+the finite-state and localized arguments below do not require them.
 
 There is an established arithmetic converse. In the $S$-arithmetic
 setting of Gorodnik--Nevo~\cite[Theorems 1.4 and 5.2]{GNDiscrepancy},
@@ -179,6 +212,16 @@ different poles, and repeated copies of one eigenvalue have the same
 nonzero residue and add. No pole can therefore lie inside
 $|z|<\rho^{-1}$. Zero eigenvalues already satisfy the conclusion.
 \end{proof}
+
+For a complete two-state example, take
+$A=\left(\begin{smallmatrix}2&1\\1&2\end{smallmatrix}\right)$.
+Its eigenvalues are $3$ and $1$, so $\tr A^n=3^n+1$ and
+$\kappa=\log3$ is a valid saving. The transition matrix is
+$P=A/3$, with stationary probabilities $(1/2,1/2)$.
+The mean-zero observable $f=(1,-1)$ satisfies $Pf=f/3$,
+so its stationary correlation at lag $n$ is exactly $3^{-n}$.
+This makes the connection between the secondary eigenvalue,
+counting error and loss of memory explicit.
 
 To convert the gap into a mixing statement, choose positive Perron
 vectors $r,l$ normalized by $\sum_i l_ir_i=1$, and set
@@ -337,6 +380,14 @@ For $0<\beta\leq1$ and bounded $\beta$-H\"older functions $f,g$,
 \end{proposition}
 
 \begin{proof}
+The proof balances spatial resolution against counting error.
+A $\beta$-H\"older function satisfies
+$|f(x)-f(y)|\le C d(x,y)^\beta$, so replacing it by a constant
+on a cell of diameter $h$ costs $O(h^\beta)$. Smaller cells
+improve that approximation but create more ordered cell pairs,
+which amplify an entrywise counting error. The choice of $h$
+at the end makes these two effects comparable.
+
 Replace $f,g$ by their cellwise averages $f_h,g_h$. Their uniform
 approximation errors are at most $[f]_\beta h^\beta$ and
 $[g]_\beta h^\beta$. Invariance bounds the resulting correlation

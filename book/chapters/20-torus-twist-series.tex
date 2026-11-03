@@ -23,6 +23,14 @@ see also~\cite[Proposition 3.1, pp.~5--6]{ALPS}. Take the positive square
 root $A>1$. For $b=0$,
 $A=\coth(a/2)$. The minimum length is $r_0=2\arcosh A$.
 
+As an example with simple constants, take $b=0$ and $a=\log3$.
+Then $A=\coth((\log3)/2)=2$, so
+$\cosh(\ell_\beta(u)/2)=2\cosh(u/2)$ and
+$r_0=2\arcosh2$. At $u=0$ the derivative is zero and the
+second derivative is $1/\sqrt3$. This is a minimum, not a
+periodic return: replacing $u$ by $u+a$ changes this particular
+curve's length and corresponds to a different twist-orbit label.
+
 There is also a matrix check fixing the signed boundary convention.
 At zero twist the two axes meet perpendicularly. In an adapted basis put
 \[
@@ -63,6 +71,12 @@ integrable. For
 example, $y=\sqrt{\cosh^2(r/2)-A^2}$ converts the right-hand side to
 $4\int_0^\infty f(2\arcosh\sqrt{A^2+y^2})\,\dd y/\sqrt{A^2+y^2}$.
 
+For the same example $A=2$, the first integral below is $1$.
+The apparently singular density at the minimum comes from the
+two inverse branches $u$ and $-u$ meeting there: locally
+$r-r_0$ is a positive multiple of $u^2$, so $\dd u/\dd r$
+has order $(r-r_0)^{-1/2}$, which is integrable.
+
 Several useful checks are immediate:
 \begin{align}
  \int_{\RR}\sech^2\bigl(\ell_\beta(u)/2\bigr)\,\dd u
@@ -99,6 +113,13 @@ Define
  -\tanh\left(\frac{u-a/2}{2}\right)\right].
  \label{eq:Hkernel}
 \end{equation}
+Write $T(u)=\tanh((u+a/2)/2)$. Then
+$H_a(u)=[T(u)-T(u-a)]/2$. Summing from $n=-N$ to $N$
+cancels all interior terms, leaving only the two endpoints.
+As $N\to\infty$ those endpoints tend to $1$ and $-1$,
+so their half-difference is one. This is the pointwise source
+of the identity, before any integration over twists or moduli.
+
 The second expression telescopes under translation by $a$, so
 \begin{equation}
  \sum_{n\in\ZZ}H_a(\tau+na)=1.

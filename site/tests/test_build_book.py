@@ -23,6 +23,29 @@ def converter(number="28", labels=None, routes=None):
 
 
 class CompleteBookTests(unittest.TestCase):
+    def test_explicit_unnumbered_illustration_preserves_caption_and_alt(self):
+        caption = [{"t": "Str", "c": "Angle"}, {"t": "Space"},
+                   {"t": "Math", "c": [{"t": "InlineMath"}, "A+B<\\pi"]}]
+        figure = {"t": "Figure", "c": [["", [], []], [None, [{"t": "Plain", "c": caption}]],
+                   [{"t": "Plain", "c": [{"t": "Image", "c": [["", [], []], [], ["assets/figure.png", ""]]}]}]]}
+        document = {"blocks": [figure]}
+        book.mark_unnumbered_figures(document, r"\begin{figure}\caption*{Angle $A+B<\pi$}\end{figure}")
+        transformed = converter().transform(document)
+        result = transformed["blocks"][0]
+        self.assertIn("unnumbered", result["c"][0][1])
+        self.assertEqual(result["c"][1][1][0]["c"], caption)
+        image = next(book.chapter.ast_nodes(result, "Image"))
+        self.assertIn("Angle", book.chapter.inline_text(image["c"][1]))
+        self.assertNotIn("Figure", book.chapter.inline_text(result["c"][1]))
+        figure["c"][0][1] = []
+        book.mark_unnumbered_figures(document, r"\begin{figure}\caption{Angle}\end{figure}")
+        with self.assertRaisesRegex(book.BuildError, "source label"):
+            converter().transform(document)
+        with self.assertRaisesRegex(book.BuildError, "inventories differ"):
+            book.mark_unnumbered_figures(document, "")
+        with self.assertRaisesRegex(book.BuildError, "numbered source label"):
+            book.mark_unnumbered_figures(document, r"\begin{figure}\caption*{Angle}\label{bad}\end{figure}")
+
     def test_source_bundle_and_selected_code_carry_exact_scoped_license_files(self):
         _, payload = book.curated_inputs(ROOT)
         expected = {"LICENSES/README.md", "LICENSES/CC-BY-4.0.txt", "LICENSES/MONOGRAPH-NOTICE.md",

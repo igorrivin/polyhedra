@@ -12,6 +12,14 @@ Cutting a general immersed curve, even a filling one,
 need not give disjoint arcs: self-intersections may remain inside a pair
 of pants. Nor are the actual segments generally orthogonal to the cuffs.
 
+For example, twisting a curve once around a cuff leaves the number
+of its intersections with that cuff unchanged but changes the way
+its endpoints are joined across the cut. Dehn--Thurston coordinates
+record intersection counts together with integral twisting data
+(and the usual conventions for components parallel to cuffs).
+An itinerary is the more detailed record of successive pants,
+relative arc classes and crossings followed by an immersed curve.
+
 Boundary intersection counts alone lose the relative homotopy classes of
 the arcs, their cyclic joining pattern, and winding information. For simple
 multicurves this information is organized by Dehn--Thurston coordinates.
@@ -25,6 +33,14 @@ holonomy matrices. Both keep the information that intersection counts alone
 discard.
 
 \subsection{An exact local distance function}
+
+A seam is a shortest perpendicular arc between two cuffs.
+In the universal covering plane the relevant cuff lifts are
+\emph{ultraparallel}: disjoint geodesics with distinct ideal
+endpoints and a unique common perpendicular. The variables below
+allow the arc endpoints to move away from the feet of that
+perpendicular, so they describe ordinary crossing segments as
+well as seams.
 
 Take two distinct ultraparallel geodesic lifts of positive-length cuffs
 in $\HH^2$, at common perpendicular distance $d>0$.
@@ -43,6 +59,18 @@ For example, in the hyperboloid model use
 Then $\cosh D=-\langle p,q\rangle$ for the Lorentz form of signature
 $(-,+,+)$, and $\arcosh$ is its nonnegative real branch.
 Reversing one endpoint coordinate changes the sign of the mixed term.
+
+Setting $u=v=0$ gives $D_d=d$, as it should at the perpendicular.
+Setting $v=0$ gives $\cosh D_d(u,0)=\cosh d\cosh u$:
+moving only one endpoint increases the distance. At the
+perpendicular, the endpoint Hessian is
+\[
+ \nabla^2D_d(0,0)=\frac1{\sinh d}
+     \begin{pmatrix}\cosh d&-1\\-1&\cosh d\end{pmatrix}.
+\]
+Its eigenvalues $(\cosh d\pm1)/\sinh d$ are positive. Moving
+both endpoints together is cheaper than moving them in opposite
+directions, but either motion increases length to second order.
 
 For the ordinary seam between cuffs $a,b>0$ of pants with third cuff
 $c\geq0$, the right-angled-hexagon relation gives
@@ -194,6 +222,13 @@ However, the positive cuff orthant times one twist box is the quotient by
 this particular twist subgroup, not a fundamental domain for the full
 mapping class group. A further full-moduli integration needs the appropriate
 orbit unfolding.
+
+For one cuff, the formula is exactly the circle-to-line toy
+unfolding of Section~\ref{sec:unfolding}, with interval length
+$a$ instead of $1$ and function $u\mapsto F(\ell_\gamma(u))$.
+If the curve is disjoint from that cuff, every twist leaves it
+unchanged; this shows concretely why one must remove that
+stabilizer direction before counting distinct curves.
 
 For example, with weight $(2\cosh(\ell_\gamma/2))^{-s}$ and
 $x_i=e^{u_i/2}$, the right side becomes the Mellin-type integral

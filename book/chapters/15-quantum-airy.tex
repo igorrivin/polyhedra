@@ -9,6 +9,22 @@ the cone-metric measure. No novelty claim is made.
 
 \subsection{The exact normalization and the result}
 
+The Airy function is the standard replacement for a Gaussian when
+two stationary points merge. In the normalization used here,
+\[
+ \operatorname{Ai}(z)=\frac1{2\pi i}
+   \int_{c-i\infty}^{c+i\infty}e^{Y^3/3-zY}\,\dd Y,
+ \qquad c>0,
+\]
+with the contour directed upward. On this line the cubic exponent
+has a negative quadratic real part in $\operatorname{Im}Y$, so
+the integral converges. It solves $\operatorname{Ai}''(z)=z
+\operatorname{Ai}(z)$ and selects the solution decaying for
+positive real $z$; a prime below means differentiation in its argument.
+A Barnes integral is a contour integral of products of Gamma-type
+special functions. Here those functions are the double sines
+$S_b$ defined in Section~\ref{sec:introLiouville}.
+
 Take $b>0$, $Q=b+b^{-1}$, and
 \[
  \alpha=\frac{\pi-\eta}{2\pi b},\quad
@@ -90,6 +106,21 @@ hyperbolic side has $\zeta\ge0$; negative $\zeta$ describes the
 analytic continuation across the Euclidean transition.
 \end{proposition}
 
+Uniformity means that for each fixed $Z$ there is a constant
+$C_Z$ bounding the error inside braces by $C_Zh^{2/3}$ for
+\emph{every} $\zeta\in[-Z,Z]$ once $b$ is small enough.
+The same bound works as the saddles approach and merge.
+It is additive, so it still makes sense at a zero of the leading
+Airy function, where a relative-error formula would divide by zero.
+
+At the merger $\zeta=0$,
+$\operatorname{Ai}(0)=1/[3^{2/3}\Gamma(2/3)]$ and
+$\operatorname{Ai}'(0)=-1/[3^{1/3}\Gamma(1/3)]$.
+Thus after removing the prefactor the first correction is positive
+and of order $h^{1/3}$. The unnormalized quantity can grow like
+$b^{-1/3}$ even though this normalized expression tends to a finite
+value. This distinction explains the normalization of the later table.
+
 In particular the leading prefactor is
 $\frac34(2\pi)^{1/3}b^{-1/3}$. The correction can equivalently
 be written by replacing the Airy argument with
@@ -98,6 +129,14 @@ The proof below controls the exact quantum integrand, the whole
 contour, its orientation, and the first correction.
 
 \subsection{A uniform double-sine estimate from its real integral}
+
+The proof has three analytic tasks. The double-sine estimate first
+separates the exact quantum function into a smooth amplitude and a
+classical phase. A global contour estimate then proves that the
+portion far from the merging saddles is negligible. Finally a
+rescaling computes the Airy integral and its correction. The local
+Taylor expansion alone would accomplish only the third task;
+it would leave open whether another part of the contour dominates.
 
 Let $\Lambda$ be the analytic primitive on
 $0<\operatorname{Re}z<\pi$ specified by
@@ -348,6 +387,13 @@ Only after this fixed-$b$ relocation do we apply the uniform
 centered-strip estimates near $v_*$. They apply to the entire
 vertical line there, including its unbounded imaginary part.
 
+To bound a complex exponential, use
+$|e^{G/h}|=e^{\operatorname{Re}G/h}$ for positive real $h$.
+A fixed drop $\operatorname{Re}G\le -m<0$ therefore supplies
+$e^{-m/h}$, which is smaller than every positive power of $h$.
+This is why the next calculation studies the real part along the
+entire vertical contour, instead of merely solving the saddle equation.
+
 On the vertical line $v=v_*+iy$ at $\eta=\eta_{\mathrm E}$,
 put $r=\tanh(y/2)$. For $y>0$, direct differentiation gives
 \begin{equation}
@@ -442,6 +488,13 @@ Now set
  x=v-v_*=\frac{\lambda}{3}Y,\qquad
  t=\frac{\lambda^2}{6\sqrt2}\zeta.
 \]
+In this substitution $x$ has size $\lambda$ and $t$ size
+$\lambda^2$. Accordingly $x^3$ and $tx$ both have size
+$\lambda^3=h$, while $x^4$, $tx^2$ and $t^2$ have size
+$\lambda^4$. Dividing the phase by $h$ makes the latter terms
+first-order corrections in $\lambda$. This is the meaning of
+``weighted order'' in the expansion below.
+
 The rescaled contour is upward with $\operatorname{Re}Y=3c$.
 The derivative table gives, through weighted order four,
 \begin{align}

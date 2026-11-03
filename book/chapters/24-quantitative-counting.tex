@@ -20,6 +20,13 @@ put $d=6g-6$.  For a fixed nonzero rational multicurve $\gamma_0$, write
  \#\{\gamma\in\operatorname{Mod}(S)\gamma_0:
                          \ell_X(\gamma)\leq R\}.
 \]
+A remainder $O(R^{d-\kappa})$ with $\kappa>0$ is called a
+power saving because it is smaller than the $R^d$ main term
+by a factor $R^{-\kappa}$. The subscript on $O_{X,\gamma_0}$
+allows its constant to depend on the metric and curve type.
+An existence theorem for a positive $\kappa$ and an explicit
+numerical value for it are different levels of quantitative information.
+
 Eskin--Mirzakhani--Mohammadi prove that there exists
 $\kappa(g)>0$ such that
 \begin{equation}
@@ -47,6 +54,16 @@ quantitative control follows from ordinary lattice geometry alone.
 
 \subsection{A constructive lattice benchmark for all multicurves}
 \label{subsec:countlattice}
+
+A measured lamination is a closed union of disjoint geodesic leaves
+with a compatible transverse measure. Weighted disjoint closed
+curves are its integral examples, and geometric length extends
+continuously and homogeneously to this space. A train track is a
+finite branched diagram carrying such leaves; nonnegative branch
+weights satisfy switch equations expressing conservation at each
+junction. These equations provide linear coordinate cones and
+integral lattices. Thurston measure is the compatible Lebesgue
+measure in those coordinates, with its lattice normalization fixed.
 
 Let $\mathcal{ML}_{\ZZ}(S)$ denote integral measured laminations,
 equivalently essential simple multicurves with positive integer
@@ -106,6 +123,15 @@ For $R\geq a$ this gives the explicit bound
  \label{eq:countcellerror}
 \end{equation}
 The upper increment $(R+a)^d-R^d$ dominates the lower decrement.
+
+The scale of the error is familiar from a square. For
+$K=[0,1]^2$ and $\Lambda=\mathbb Z^2$, the exact count in
+$RK$ is $(\lfloor R\rfloor+1)^2=R^2+O(R)$.
+Interior lattice cells account for area; the uncertainty lies in
+cells meeting the boundary, whose number has one lower power of
+$R$. The inradius and cell-radius argument above supplies this
+principle for a general convex body, without assuming a smooth boundary.
+The covolume $v$ is the volume of one lattice fundamental cell.
 
 To apply this estimate, use a finite rational polyhedral cone
 subdivision subordinate to train-track charts, with their actual
@@ -181,6 +207,13 @@ the truncated leading-term tail is $O_X(R)$.  Therefore
  P_X(R)=\frac{B(X)}{\zeta(d)}R^d+O_X(R^{d-1}).
  \label{eq:countprimitive}
 \end{equation}
+Here $\zeta(d)=\sum_{k\ge1}k^{-d}$, and the arithmetic
+M\"obius function is the one defined in Section~\ref{sec:coefficientdistributions}.
+For example, $2\alpha+3\beta$ is primitive when $\alpha,\beta$
+are distinct disjoint simple supports, since $\gcd(2,3)=1$.
+It still has two supports. Dividing out a common integer weight
+and requiring connected support answer different questions.
+
 A union $\alpha+\beta$ of distinct disjoint simple curves is primitive
 but disconnected.  Thus~\eqref{eq:countprimitive} does not count
 connected simple curves in higher genus.
@@ -505,6 +538,13 @@ $\sigma=\Re s>0$ and $\varepsilon=\operatorname{sys}(X)$,
 \]
 using $km\geq k+m-1$.
 
+For a fixed simple $\alpha$, all $m\alpha$ have one support,
+so they contribute $z(e^{-s\ell_\alpha}+e^{-2s\ell_\alpha}+\cdots)$.
+For disjoint distinct $\alpha,\beta$, a term $2\alpha+3\beta$
+contributes $z^2e^{-s(2\ell_\alpha+3\ell_\beta)}$.
+This explains why the linear coefficient selects one support
+before M\"obius inversion removes its multiplicity.
+
 Even the support-coefficient extraction is explicit and bounded.
 Set $q=3g-2$ and $\omega=e^{2\pi i/q}$. Then
 \begin{equation}
@@ -512,6 +552,12 @@ Set $q=3g-2$ and $\omega=e^{2\pi i/q}$. Then
                  \omega^{-j}\mathcal P_X(s,\omega^j).
  \label{eq:countsupportfourier}
 \end{equation}
+In genus two the degree is at most three and $q=4$.
+For $P(z)=a_0+a_1z+a_2z^2+a_3z^3$, the formula reads
+$[z]P=[P(1)-iP(i)-P(-1)+iP(-i)]/4=a_1$.
+The four roots of unity cancel all powers except the first.
+The same finite averaging explains the error bound below.
+
 Thus an error bounded by $E(s)$ at each of these finitely many
 values remains bounded by $E(s)$ after extracting the linear
 coefficient. This operation has none of the growing-degree
@@ -624,6 +670,13 @@ $O(h)$.  Hence the total error is
 \]
 Choose $h=R^{-\delta}$ for sufficiently large $R$, with $\delta$ as in the statement.
 \end{proof}
+
+For example, a hypothetical smooth saving $\eta=1$ with a
+second-derivative cost $h^{-2}$ gives $\delta=1/3$.
+Choosing $h=R^{-1/3}$ makes both the smoothing loss $hR^d$
+and the analytic error $h^{-2}R^{d-1}$ equal in order to
+$R^{d-1/3}$. Making the cutoff sharper reduces one error while
+increasing the other; balancing them is the reason for the exponent loss.
 
 This criterion identifies the necessary analytic input and its
 explicit payoff.  The present coefficient estimates do not establish

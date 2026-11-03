@@ -1,6 +1,16 @@
 \section{Equal parameters and the torus--sphere correspondence}
 \label{sec:torussphere}
 
+The question is why a torus with one boundary and a sphere with four
+boundaries can have closely related curve lengths and volume formulas.
+The explanation uses two different covers of a third object. An
+\emph{orbifold point of order $k$} has a disk neighborhood modulo a
+rotation of order $k$, hence cone opening $2\pi/k$. An orbifold
+cover is an ordinary local isometry away from these points and
+unwraps that rotation near them. This language keeps the common
+quotient geometric even where an ordinary surface quotient would
+have a branch point.
+
 The familiar punctured correspondence extends geometrically to equal
 positive boundaries. Let $Q(c^4)$ be a four-holed sphere with all four
 boundary lengths $c$, and let $T(2c)$ be a one-holed torus with boundary
@@ -15,6 +25,16 @@ The middle surface is a sphere with one geodesic boundary and three
 angle-$\pi$ orbifold points. The torus quotient uses its elliptic
 involution; the sphere quotient uses its Klein-four symmetry. This works
 for every $c>0$ and limits to the cusped case~\cite[Section 3]{HuTan}.
+
+There is a quick consistency check on the covering degrees.
+The areas of the one-holed torus and four-holed sphere are $2\pi$
+and $4\pi$. The middle orbifold has area
+$2\pi(-2+4)-3\pi=\pi$. Thus the ratios of areas are exactly
+$2$ and $4$, as a local-isometric cover requires. The boundary
+lengths supply a separate check: the torus boundary maps twice
+to the length-$c$ boundary, while the four length-$c$ sphere
+boundaries each map once. These checks explain the diagram; they
+do not replace the existence of the stated covers.
 
 A matching simple curve on $T$ covers an arc between two orbifold points
 twice; its counterpart on $Q$ covers that arc four times. Thus

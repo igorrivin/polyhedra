@@ -1,10 +1,27 @@
 \section{Ideal polyhedra, angle cells, and a partition function}
 \label{sec:idealcells}
 
+The aim is to replace an integral over surfaces by ordinary integrals
+over finitely many regions of angle assignments. Two issues have to
+be settled: which assignments come from polyhedra, and what density
+they carry. An \emph{ideal} vertex lies on the sphere at infinity of
+hyperbolic three-space. It has no finite distance from an interior
+point, but a polyhedron with ideal vertices can have finite volume.
+Its boundary metric has a cusp at each vertex.
+
 \subsection{The geometric parametrization}
 
 In the polyhedral cell discussion take $n\ge4$; the three-ended sphere is
 the zero-dimensional pants base case.
+
+The \emph{dual graph} has a vertex for each face of the polyhedron
+and an edge crossing each original edge. A dual face encircles one
+original vertex. The orientation supplies a cyclic order of edges
+at every dual vertex; a graph with these cyclic orders is a
+\emph{ribbon graph}. Thickening its edges to narrow strips recovers
+an oriented surface with boundary. Here the complementary faces
+are labeled by the punctures. A simple circuit is a closed edge
+path with no repeated vertices except its starting/ending vertex.
 
 Rivin's intrinsic realization theorem identifies a complete finite-area
 hyperbolic metric on an $n$-punctured sphere with the boundary metric of a
@@ -39,7 +56,34 @@ map has face perimeters $2\pi$ and no short nonfacial circuit. This is the
 genus-zero instance of a $2\pi$-irreducible metric map. It gives the precise
 combinatorial object behind the proposed sum over polyhedral types.
 
+For example, an ideal tetrahedron has six edges and four ideal
+vertices. At the regular tetrahedron each interior dihedral angle
+is $\pi/3$, hence each exterior angle $\theta_e$ is $2\pi/3$.
+The three angles around a dual face add to $2\pi$; a nonfacial
+four-edge circuit has sum $8\pi/3>2\pi$. The four independent
+linear perimeter equations leave $6-4=2$ free parameters, agreeing
+with the real dimension of the four-punctured-sphere moduli space.
+These are lengths of the \emph{dual metric graph}, measured in
+radians; they are not the infinite lengths of the original ideal edges.
+
 \subsection{A normalized cell integral}
+
+A sum over combinatorial types must avoid counting the same labeled,
+oriented object several times, and an integral on a constraint surface
+must specify its measure. The first issue produces the automorphism
+factor below. The second can already be seen in the toy constraint
+$x+y=L$ with $x,y>0$:
+\[
+ \int_{x,y>0} f(x,y)\,\delta(x+y-L)\,\dd x\,\dd y
+   =\int_0^L f(x,L-x)\,\dd x.
+\]
+Here $\delta$ is the Dirac delta, characterized by
+$\int f(u)\delta(u-a)\,\dd u=f(a)$.
+The measure on this line is $\dd x$, whereas its Euclidean arc length
+is $\sqrt2\,\dd x$. Disintegration means choosing the measure on
+each fiber so that integration over fibers and then over the constraint
+value recovers the original ambient integral. This distinction is the
+reason for retaining the determinant in the graph formula.
 
 For a dual ribbon graph $G$ with labeled faces, define its constrained
 Lebesgue measure by disintegrating $\prod_e\dd\theta_e$ with respect to the
@@ -100,8 +144,13 @@ curves and uses uniqueness to control the covering of moduli space
 \cite{Zwiebach}. These give a concrete historical counterpart to the
 suggestion that such cells should be used for integration.
 
-Several identifications nevertheless require care. A metric ribbon graph
-can be thickened into a flat surface using a Jenkins--Strebel differential.
+Several identifications nevertheless require care. A quadratic differential is locally an expression $q=\varphi(w)\,\dd w^2$
+whose transformation rule makes $|q|$ a well-defined flat metric away
+from its zeros and poles. A Jenkins--Strebel differential is a special
+one whose regular horizontal trajectories form cylinders of closed
+curves. Their boundaries make a metric ribbon graph. Conversely a
+suitable metric ribbon graph can be thickened by these flat cylinders
+into a surface.
 A hyperbolic polyhedron has an intrinsic hyperbolic boundary metric and also
 extrinsic dual data. These constructions may share the same combinatorial
 and length description without giving the same metric or the same conformal

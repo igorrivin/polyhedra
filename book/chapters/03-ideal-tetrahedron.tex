@@ -1,7 +1,25 @@
 \section{The ideal tetrahedron: an explicit volume integral}
 \label{sec:tetrahedron}
 
+This is the first complete integral: a two-dimensional space of
+tetrahedral shapes becomes a triangle in two angle coordinates,
+and its density becomes constant. The number $V_{0,4}$ computed
+here is the WP volume of that shape space, not the hyperbolic volume
+of a single tetrahedron. We keep the four vertex labels, so swapping
+vertices is not silently divided out.
+
 \subsection{Lambda lengths and the ambient cross-ratio}
+
+In the upper-half-space model, hyperbolic three-space is
+$\{(w,h):w\in\CC,\ h>0\}$ with metric
+$(|\dd w|^2+\dd h^2)/h^2$; its ideal boundary is
+$\CC\cup\{\infty\}$. A \emph{horosphere} centered at a finite
+ideal point is a Euclidean sphere tangent to $h=0$, while one
+centered at infinity is a horizontal plane. Its intersection with
+a face is a horocycle. A \emph{decoration} chooses one such
+horocycle at each cusp. It supplies finite reference endpoints
+on otherwise infinitely long ideal edges; changing the decoration
+changes the lambda lengths but not the underlying surface.
 
 Take the four labeled ideal vertices to be $0,1,\infty,z$, where
 $z=x+iy\in\CC\setminus\{0,1\}$. For $y\ne0$ their convex hull is a genuine
@@ -58,6 +76,12 @@ The Jacobian calculation is elementary:
 \]
 Their wedge is $y\,\dd x\wedge\dd y/(r^2s^2)$.
 
+At $z=\tfrac12+i\tfrac{\sqrt3}{2}$ the triangle $(0,1,z)$ is
+regular, so $r=s=1$. The displayed density is then
+$\sqrt3\,\dd x\,\dd y$. This is a local density at a single
+shape; the next change of variables integrates over all shapes
+on one orientation sheet.
+
 \subsection{Integration in angle coordinates}
 
 For $y>0$, let $A,B,C$ be the interior angles of the Euclidean triangle
@@ -85,6 +109,29 @@ Including the other sheet gives the promised direct calculation:
 \end{equation}
 The real configurations form the flat locus and contribute zero two-dimensional
 WP measure.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\small,>=Latex]
+ \fill[mpteal!12] (0,0)--(4,0)--(0,4)--cycle;
+ \draw[mpblue,thick] (0,0)--(4,0)--(0,4)--cycle;
+ \draw[->] (-.2,0)--(4.6,0) node[right] {$A$};
+ \draw[->] (0,-.2)--(0,4.6) node[above] {$B$};
+ \node[below] at (4,0) {$\pi$}; \node[left] at (0,4) {$\pi$};
+ \node[below left] at (0,0) {$0$};
+ \node[rotate=-45,above] at (2,2) {$C=0$};
+ \fill[mpochre] (1.3333,1.3333) circle (2pt);
+ \node[align=center,font=\scriptsize] at (1.6,.55) {regular shape\\$A=B=C=\pi/3$};
+ \node[align=center] at (6.5,2.7) {open angle triangle\\density $2\,\dd A\,\dd B$};
+ \node[align=center] at (6.5,1.3) {Euclidean coordinate area $\pi^2/2$\\WP volume of one sheet $\pi^2$};
+\end{tikzpicture}
+\caption*{The angle domain for one orientation of the ideal tetrahedron.
+Here $A,B,C$ are its three interior dihedral angles, with
+$A+B+C=\pi$ and $C=\pi-A-B$.
+The boundary lines are excluded: at least one angle is zero there.
+The shaded triangle is a parameter space, not a face of the tetrahedron.
+The other orientation supplies a second copy for the volume integral.}
+\end{figure}
 
 There is also a useful check on~\eqref{eq:polyhedralpartition}. In a
 tetrahedral angle cell, the four perimeter equations force opposite exterior

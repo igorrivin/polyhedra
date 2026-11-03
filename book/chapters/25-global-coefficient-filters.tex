@@ -24,6 +24,13 @@ Section~\ref{subsec:countsupport}. We seek a functional
 which preserves simple primitive curves and annihilates the complete
 iterate family of every primitive figure-eight.
 
+A filter is a linear rule assigning a number to each basis
+multicurve. It can make the contributions of a chosen geometric
+family cancel when their trace polynomials are expanded.
+For a figure-eight, $T_\gamma=xy-z$, so the simplest cancellation
+requires $w_2-w_1=0$. Cancelling every power imposes more
+conditions, which the following moment construction solves at once.
+
 For $0\leq\theta\leq\pi$, put $v=2\cos\theta$ and let
 $u_+,u_-$ be the two roots of
 \[
@@ -100,6 +107,18 @@ $u_\pm^2-u_\pm=2\cos\theta$,
 \]
 The simple-curve assertion is $w_1=1$.
 \end{proof}
+
+The first two cases check the mechanism directly:
+$\Lambda(xy-z)=w_2-w_1=1-1=0$, and
+\[
+ \Lambda((xy-z)^2-2)=w_4-2w_3+w_2-2w_0
+                  =5-2+1-4=0.
+\]
+The last constant contributes $-2w_0=-4$ because
+$\Lambda(1)=2$. By contrast a simple curve's double traversal
+has value $\Lambda(x^2-2)=w_2-2w_0=-3$.
+Thus the filter cancels the intended figure-eight family without
+silently removing all iterates or producing a positive measure.
 
 This is a single global functional, so no choice of a pants
 decomposition and no sum of separately normalized pants projections
@@ -198,6 +217,16 @@ representation data. Our explicit filter has values $-5,5,-1$
 on these three words, in agreement with the identity.
 
 \subsection{Retaining lengths: an Euler product with a unit diagonal}
+
+Convolution adds lengths: an atom at $a$ times one at $b$ becomes
+an atom at $a+b$. For a single primitive curve the inverse factor
+below is the formal geometric series
+$\mathbf1+T_\alpha\delta_{\ell_\alpha}
+ +T_\alpha^2\delta_{2\ell_\alpha}+\cdots$.
+For disjoint $\alpha,\beta$, multiplying two such factors gives
+$T_{\alpha+\beta}\delta_{\ell_\alpha+\ell_\beta}$ with coefficient
+one. There is no division by two: a multiset is chosen once from
+the product, rather than ordered and then averaged.
 
 To preserve the information discarded by a fixed character
 functional, work in the convolution algebra of locally finite
@@ -309,6 +338,12 @@ $D_m\delta_L=\delta_{mL}$. The precise reconstruction formula is
  }
  \label{eq:globalEulerinput}
 \end{equation}
+Here $\log_*$ is the usual logarithm series with multiplication
+replaced by convolution; it is well defined at each positive length
+cutoff. For a factor $1-X$, the identity
+$-\log(1-X)=\sum_{m\ge1}X^m/m$ explains the $1/m$ and the
+addition of $m$ copies of its source length.
+
 The tensor-power character is $T_\delta^m$. It must not be
 replaced by $P_m(T_\delta)=\operatorname{tr}\rho(\delta^m)$.
 Tensor powers decompose into finite sums of $\mathrm{SU}(2)$

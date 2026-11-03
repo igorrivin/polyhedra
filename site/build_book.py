@@ -401,14 +401,18 @@ class BookConverter:
         if kind == "Figure":
             attrs, caption, body = content
             images = list(chapter.ast_nodes(body, "Image"))
-            if len(images) != 1 or not attrs[0]:
+            unnumbered = "unnumbered" in attrs[1]
+            if len(images) != 1 or (not attrs[0] and not unnumbered):
                 raise BuildError("figure must have one image and a source label")
+            if unnumbered and attrs[0]:
+                raise BuildError("unnumbered illustration must not reuse a numbered source label")
             alt = chapter.inline_text(caption[0] or caption[1])
             if not alt:
                 raise BuildError("figure has no caption")
             images[0]["c"][1] = [literal(alt)]
-            number = self.label_number(attrs[0])
-            caption[1][0]["c"] = [literal(f"Figure {number}. ")] + caption[1][0]["c"]
+            if not unnumbered:
+                number = self.label_number(attrs[0])
+                caption[1][0]["c"] = [literal(f"Figure {number}. ")] + caption[1][0]["c"]
         return {key: self.transform(child) for key, child in value.items()}
 
 
@@ -450,6 +454,19 @@ def trim_frontmatter(tex):
     return tex
 
 
+def mark_unnumbered_figures(document, tex):
+    """Recover explicit caption-star intent, which the LaTeX reader discards."""
+    sources = re.findall(r"\\begin\{figure\}(.*?)\\end\{figure\}", chapter.uncomment(tex), re.S)
+    figures = list(chapter.ast_nodes(document, "Figure"))
+    if len(sources) != len(figures):
+        raise BuildError("source and parsed figure inventories differ")
+    for source, figure in zip(sources, figures):
+        if re.search(r"\\caption\*\s*\{", source):
+            if chapter.LABEL_RE.search(source) or figure["c"][0][0]:
+                raise BuildError("unnumbered illustration must not reuse a numbered source label")
+            figure["c"][0][1].append("unnumbered")
+
+
 def read_latex(preamble, tex, tools, work, name):
     # The print-only frame becomes a structured note, preserving its math and
     # citations through the same reader and converter as the surrounding prose.
@@ -463,6 +480,7 @@ def read_latex(preamble, tex, tools, work, name):
     if result.stderr.strip():
         raise BuildError(f"Pandoc reader warning: {name}")
     document = json.loads(result.stdout)
+    mark_unnumbered_figures(document, tex)
     abstract = document["meta"].get("abstract")
     if abstract:
         if abstract["t"] != "MetaBlocks":
