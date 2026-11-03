@@ -1,0 +1,61 @@
+{
+  "baseline_xml_counts": {
+    "error": 9,
+    "passed": 425,
+    "skipped": 18,
+    "failed": 4
+  },
+  "separate_hypothesis_xml_counts": {
+    "passed": 4
+  },
+  "test_scope": "Recorded package tests only; no reviewer execution or new full-suite count.",
+  "core_commands_recorded_success": true,
+  "sdist_commands_recorded_success": true,
+  "cli_schema_version": 2,
+  "cli_schema_hash_matches_current": true,
+  "archives": {
+    "ideal_poly_volume_toolkit-0.3.0.tar.gz": {
+      "sha256": "f7304cc006225c6c18a110988d71e287ba8ff2aca5ca450c84e47c9fbae7ce51",
+      "python_files": 48,
+      "python_hashes_equal_baseline": true
+    },
+    "ideal_poly_volume_toolkit-0.3.0-py3-none-any.whl": {
+      "sha256": "02aa9270d76a1479cd765cd4a4b4b8bcd348df522783d10be5ff00e5aa506fca",
+      "python_files": 48,
+      "python_hashes_equal_baseline": true
+    }
+  },
+  "audit_evidence_sha256": {
+    "baseline-full-tests-command.json": "18ceb59ba4043466ce4be7a91b83070fe6a27ea5cc1f0a2a80a8fe239cca35e8",
+    "baseline-full-tests.xml": "f2d4905b14c237814823f7d25756126475565a2f4fe64554157ea1ca3b7f3c61",
+    "baseline-full-tests.stdout.txt": "d010ec8d4ad6f190b2f44a74ea296b177fa43f3ddcbf5875b712d963debc2b2a",
+    "hypothesis-tests-v2-command.json": "7df2689bfd472743975cb9861414ffadadd7f2f8d02a33093041e790c9d0f0fd",
+    "hypothesis-tests-v2.xml": "af9ae4b5c73f22dc6706980f2ecf361e71db9ed59d965df3912fceb2cf8cdd6f",
+    "hypothesis-tests-v2.stdout.txt": "c0b1f07d706af4782dca47b26075bed08b8fc2cfc09674e7b064589fcaca54c1",
+    "package-build-command.json": "5ab5c5c7e1b7646ce61da3d035db8cee2417931065135434aaee583bdd39eb0d",
+    "package-build.stdout.txt": "d8065c07cf05b8b5ef0720a7b6413e356c83a1a279ebea19465ff7c5e9f92279",
+    "core-wheel-install-command.json": "1be660a8beaec21af9831b6115365fcf26caebe72ed2919ff77ba5e8f131e6c0",
+    "core-wheel-install.stdout.txt": "3c7dd2d0764ac699f7449929bac19ed4fb1aabc3d652a772079c1001be4e10dd",
+    "core-smoke-commands.json": "43d97140a4d2e40219774abdbc18b0f98c8dd86565c2ff97280d0a43614c4a2c",
+    "core-imports.stdout.txt": "f09341dedd54d5877f1c44ef50df24524c7bf49f433958e07947659cc1cd1942",
+    "core-cli-tetrahedron.json": "ec4da81c2c7b54916dc490ed048ad5bda81de965575be71920976550187ae64d",
+    "core-cli-schema-validation.json": "58912c4ff83664fef0968d35a91faf42d600535deeca43486e2936016bcd6db6",
+    "sdist-install-command.json": "3668eb54915e3eec9b8d232e82a36e881d8e017367f065a58fa6cdaba302fa04",
+    "sdist-install.stdout.txt": "6ac3df4ee9e48de2c9d7718e6855f79250e3f40fd7b39ff5935644639e228991",
+    "sdist-smoke-commands.json": "fdf5c99fd7f037471fd124b39292cbad68aaad17b58ae084c29d52f03c081bae",
+    "sdist-imports.stdout.txt": "b94086979e053a8b917301c0211b1afe116815e6f0ac5e80bd8b88c3d4ed3b7e",
+    "pip-check.stdout.txt": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+    "sdist-pip-check.stdout.txt": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+    "release-audit.md": "00571ad46cf25723562c8ec9effe5a05f62ed602457cc1e89103c306aca8f245",
+    "release-summary.json": "98f90832919658e3a95b6c8e2e9cb2e009724b64da4f1caa3e57785341bdeb88"
+  },
+  "remaining_gates": [
+    "missing optional development dependencies",
+    "supported Python matrix",
+    "fresh online resolution",
+    "browser QA",
+    "local PDF/web visual verification",
+    "license decision",
+    "publication"
+  ]
+}

@@ -1,0 +1,441 @@
+{
+  "baseline_commit": "f697d61ce5ef48c538a44e3ff47193ca5aaf46a8",
+  "scope": "Editorial equivalence checks and dependency mapping; not a new external theorem audit or numerical replay. Directly edited convention rows and nearby source claims are distinguished in each explanation.",
+  "rows": [
+    {
+      "findings": [
+        "E04"
+      ],
+      "claims": [
+        {
+          "ledger": "book/claims/sections10-11.json",
+          "id": "s11.cm_leading",
+          "historical_status": "external_statement_checked"
+        },
+        {
+          "ledger": "book/claims/sections10-11.json",
+          "id": "s11.cm_refined",
+          "historical_status": "external_statement_checked"
+        },
+        {
+          "ledger": "book/claims/sections10-11.json",
+          "id": "s11.schlafli",
+          "historical_status": "external_statement_checked"
+        },
+        {
+          "ledger": "book/claims/section32-appendixb.json",
+          "id": "appB.angles",
+          "historical_status": "convention_pointer_checked"
+        },
+        {
+          "ledger": "book/claims/section32-appendixb.json",
+          "id": "appB.cm_labels",
+          "historical_status": "convention_pointer_checked"
+        }
+      ],
+      "change": "Section 11 interior-angle symbol theta becomes alpha.",
+      "editorial_equivalence": "The three inline expressions for j/r, eta and G_fg are literal theta-to-alpha substitutions. The interior geometric angle, admissibility conditions, exact rational sequence, prefactor and limiting statement are unchanged. Historical claim text retains theta and its original source hash.",
+      "claim_status_changed": false,
+      "old_approval_extended_to_new_bytes": false
+    },
+    {
+      "findings": [
+        "E05"
+      ],
+      "claims": [
+        {
+          "ledger": "book/claims/sections7-8.json",
+          "id": "s7.period_geometry",
+          "historical_status": "external_theorem_statement_checked"
+        },
+        {
+          "ledger": "book/claims/sections12-14.json",
+          "id": "s12.curvature",
+          "historical_status": "derived_from_external_statements"
+        },
+        {
+          "ledger": "book/claims/sections12-14.json",
+          "id": "s13.density",
+          "historical_status": "derived_in_chapter"
+        },
+        {
+          "ledger": "book/claims/sections12-14.json",
+          "id": "s13.total_volume",
+          "historical_status": "derived_from_external_statements"
+        },
+        {
+          "ledger": "book/claims/section32-appendixb.json",
+          "id": "appB.ch_curvature",
+          "historical_status": "convention_pointer_checked"
+        }
+      ],
+      "change": "Section 13 declares the DM/CH form and volume aliases.",
+      "editorial_equivalence": "Both notations use omega=-2i*d*dbar log area and curvature -1. The existing density and Gauss-Bonnet volume formulas are untouched; there is no factor, measure or domain change.",
+      "claim_status_changed": false,
+      "old_approval_extended_to_new_bytes": false
+    },
+    {
+      "findings": [
+        "E06"
+      ],
+      "claims": [
+        {
+          "ledger": "book/claims/sections10-11.json",
+          "id": "s10.fold_scale",
+          "historical_status": "derived_from_reviewed_dependencies"
+        }
+      ],
+      "change": "The Airy illustration uses t instead of mu.",
+      "editorial_equivalence": "The complete figure source equals its previous source after the mu-to-t substitution, modulo whitespace. The cubic x^3/3-t*x, stationary equation x^2=t and scales hbar^(1/3), hbar^(2/3) are unchanged. This illustration is not the exact quantum integrand.",
+      "claim_status_changed": false,
+      "old_approval_extended_to_new_bytes": false
+    },
+    {
+      "findings": [
+        "E08"
+      ],
+      "claims": [
+        {
+          "ledger": "book/claims/sections10-11.json",
+          "id": "s10.limit_dictionary",
+          "historical_status": "derived_from_reviewed_dependencies"
+        },
+        {
+          "ledger": "book/claims/section16.json",
+          "id": "s16.peripheral_germ",
+          "historical_status": "external_theorem_statement_checked"
+        },
+        {
+          "ledger": "book/claims/section16.json",
+          "id": "s16.real_legendre",
+          "historical_status": "derived_in_chapter"
+        },
+        {
+          "ledger": "book/claims/section32-appendixb.json",
+          "id": "appB.real_source",
+          "historical_status": "convention_pointer_checked"
+        }
+      ],
+      "change": "The Section 10 dictionary and Appendix B distinguish angular holonomy from a completed cone angle.",
+      "editorial_equivalence": "This carries the existing Section 16 hypotheses into the shorthand rows: theta=Lx is angular holonomy; the core length and j=ell_core/2 require a geometric cone branch. No local deformation or Legendre proposition is altered.",
+      "claim_status_changed": false,
+      "old_approval_extended_to_new_bytes": false
+    },
+    {
+      "findings": [
+        "E10"
+      ],
+      "claims": [
+        {
+          "ledger": "book/claims/sections26-29.json",
+          "id": "s29.normball_upper",
+          "historical_status": "derived_in_chapter_external_inputs"
+        },
+        {
+          "ledger": "book/claims/section30.json",
+          "id": "s30.normalization",
+          "historical_status": "derivation_checked"
+        },
+        {
+          "ledger": "book/claims/section31.json",
+          "id": "s31.conventions",
+          "historical_status": "derivation_checked"
+        },
+        {
+          "ledger": "book/claims/section31.json",
+          "id": "s31.all_point_from_primitive_lengths",
+          "historical_status": "derivation_checked"
+        },
+        {
+          "ledger": "book/claims/section32-appendixb.json",
+          "id": "appB.gauge_counts",
+          "historical_status": "convention_pointer_checked"
+        }
+      ],
+      "change": "Section 31 and Appendix B identify A_B=A_0 and Delta_B=D_B, and distinguish the earlier A_X.",
+      "editorial_equivalence": "Section 30 and 31 both exclude zero and use the shortest-vector-one gauge. Section 29 includes zero and uses hyperbolic length. For the normalized torus ball the translation is A_B(u)=A_X(s_X*u)-1; this explanatory relation leaves the original definitions, discrepancy estimates and systole conversion untouched.",
+      "claim_status_changed": false,
+      "old_approval_extended_to_new_bytes": false
+    },
+    {
+      "findings": [
+        "E11"
+      ],
+      "claims": [
+        {
+          "ledger": "book/claims/sections26-29.json",
+          "id": "s26.selberg_converse",
+          "historical_status": "conditional_implication"
+        },
+        {
+          "ledger": "book/claims/sections26-29.json",
+          "id": "s27.pair_realization",
+          "historical_status": "external_theorem_statement_checked"
+        },
+        {
+          "ledger": "book/claims/sections26-29.json",
+          "id": "s27.quotient_scales",
+          "historical_status": "derived_in_chapter"
+        },
+        {
+          "ledger": "book/claims/section32-appendixb.json",
+          "id": "appB.flow_scale",
+          "historical_status": "convention_pointer_checked"
+        }
+      ],
+      "change": "Appendix B names both time conventions.",
+      "editorial_equivalence": "Section 26 already uses unit-speed geodesic time diag(exp(t/2),exp(-t/2)); Sections 27 onward use Teichmuller time diag(exp(t),exp(-t)). The clarification changes no operator, exponent or hypothesis in either setting.",
+      "claim_status_changed": false,
+      "old_approval_extended_to_new_bytes": false
+    },
+    {
+      "findings": [
+        "E07"
+      ],
+      "claims": [
+        {
+          "ledger": "book/claims/sections12-14.json",
+          "id": "s14.uniform_quantum_dependency",
+          "historical_status": "inherited_analytic_dependency_not_audited"
+        },
+        {
+          "ledger": "book/claims/section15.json",
+          "id": "s15.normalization",
+          "historical_status": "derived_from_external_statements"
+        },
+        {
+          "ledger": "book/claims/section15.json",
+          "id": "s15.strip_estimate",
+          "historical_status": "analytic_derivation_in_chapter"
+        },
+        {
+          "ledger": "book/claims/section15.json",
+          "id": "s15.contour",
+          "historical_status": "analytic_derivation_in_chapter"
+        },
+        {
+          "ledger": "book/claims/section15.json",
+          "id": "s15.uniform_transition",
+          "historical_status": "analytic_derivation_in_chapter"
+        }
+      ],
+      "change": "Section 14 now points to the completed Section 15 theorem.",
+      "editorial_equivalence": "The theorem was already present and independently reviewed before this editorial pass. Its regular, pole-cleared, bounded-real-parameter scope is repeated. The old finite-formula review remains an inherited analytic dependency, not a newly upgraded proof approval.",
+      "claim_status_changed": false,
+      "old_approval_extended_to_new_bytes": false
+    },
+    {
+      "findings": [
+        "E01"
+      ],
+      "claims": [
+        {
+          "ledger": "book/claims/sections12-14.json",
+          "id": "s12.first_moment",
+          "historical_status": "derived_from_external_statements"
+        },
+        {
+          "ledger": "book/claims/sections12-14.json",
+          "id": "s12.curvature",
+          "historical_status": "derived_from_external_statements"
+        },
+        {
+          "ledger": "book/claims/sections12-14.json",
+          "id": "s13.fusion",
+          "historical_status": "derived_in_chapter"
+        },
+        {
+          "ledger": "book/claims/sections12-14.json",
+          "id": "s13.area_pairing",
+          "historical_status": "derived_in_chapter"
+        },
+        {
+          "ledger": "book/claims/section15.json",
+          "id": "s15.uniform_transition",
+          "historical_status": "analytic_derivation_in_chapter"
+        },
+        {
+          "ledger": "book/claims/section16.json",
+          "id": "s16.angle_stationarity",
+          "historical_status": "derived_in_chapter"
+        },
+        {
+          "ledger": "book/claims/section16.json",
+          "id": "s16.cusp_hessian",
+          "historical_status": "derived_in_chapter"
+        },
+        {
+          "ledger": "book/claims/section16.json",
+          "id": "s16.critical_value",
+          "historical_status": "derived_in_chapter"
+        },
+        {
+          "ledger": "book/claims/section16.json",
+          "id": "s16.quantum_transfer",
+          "historical_status": "conditional_quantum_consequence"
+        },
+        {
+          "ledger": "book/claims/section16.json",
+          "id": "s16.torsion_surgery",
+          "historical_status": "external_theorem_statement_checked"
+        },
+        {
+          "ledger": "book/claims/section16.json",
+          "id": "s16.half_density",
+          "historical_status": "derived_in_chapter"
+        }
+      ],
+      "change": "Overview summaries carry the established parameter domains and local/conditional qualifications.",
+      "editorial_equivalence": "The named proposition and theorem bodies are unchanged. In particular the Gaussian factor is D_*^(-1/2), while peripheral torsion changes by D_*; full smooth-filling amplitude also needs the boundary torsion and solid-torus terms under the existing regularity assumptions.",
+      "claim_status_changed": false,
+      "old_approval_extended_to_new_bytes": false
+    },
+    {
+      "findings": [
+        "E02"
+      ],
+      "claims": [
+        {
+          "ledger": "book/claims/sections23-25.json",
+          "id": "23.04",
+          "historical_status": "external_statement_and_derived_normalization"
+        },
+        {
+          "ledger": "book/claims/sections26-29.json",
+          "id": "s28.haar_period_measure",
+          "historical_status": "derived_in_chapter_external_inputs"
+        },
+        {
+          "ledger": "book/claims/sections26-29.json",
+          "id": "s28.rotation_spherical_bounds",
+          "historical_status": "derived_in_chapter_external_inputs"
+        },
+        {
+          "ledger": "book/claims/sections26-29.json",
+          "id": "s28.global_correlation",
+          "historical_status": "derived_in_chapter_external_inputs"
+        },
+        {
+          "ledger": "book/claims/sections26-29.json",
+          "id": "s28.scope",
+          "historical_status": "open_comparison"
+        },
+        {
+          "ledger": "book/claims/sections26-29.json",
+          "id": "s29.normball_upper",
+          "historical_status": "derived_in_chapter_external_inputs"
+        }
+      ],
+      "change": "Reading routes distinguish surface settings; the marked-torus summary names its probability measure and norm.",
+      "editorial_equivalence": "The marked-torus estimate remains global on the stated nonsquare genus-two stratum. The closed-surface coefficient construction and later once-punctured-torus diagnostics retain their different domains.",
+      "claim_status_changed": false,
+      "old_approval_extended_to_new_bytes": false
+    },
+    {
+      "findings": [
+        "E09"
+      ],
+      "claims": [
+        {
+          "ledger": "book/claims/sections7-8.json",
+          "id": "s7.flat_leaf",
+          "historical_status": "derived_in_chapter"
+        },
+        {
+          "ledger": "book/claims/sections7-8.json",
+          "id": "s7.period_geometry",
+          "historical_status": "external_theorem_statement_checked"
+        },
+        {
+          "ledger": "book/claims/section9.json",
+          "id": "s9.gradient_hessian",
+          "historical_status": "proved_in_chapter"
+        },
+        {
+          "ledger": "book/claims/section9.json",
+          "id": "s9.rippa_energy",
+          "historical_status": "external_theorem_statement_checked"
+        },
+        {
+          "ledger": "book/claims/sections10-11.json",
+          "id": "s10.fold_scale",
+          "historical_status": "derived_from_reviewed_dependencies"
+        },
+        {
+          "ledger": "book/claims/section16.json",
+          "id": "s16.schematic",
+          "historical_status": "illustration"
+        },
+        {
+          "ledger": "book/claims/sections23-25.json",
+          "id": "23.06",
+          "historical_status": "derived_geometric"
+        },
+        {
+          "ledger": "book/claims/sections23-25.json",
+          "id": "23.07",
+          "historical_status": "derived_analytic"
+        },
+        {
+          "ledger": "book/claims/sections26-29.json",
+          "id": "s28.cover_figure",
+          "historical_status": "illustration"
+        },
+        {
+          "ledger": "book/claims/section30.json",
+          "id": "s30.local_row_statistic",
+          "historical_status": "conditional_bound"
+        }
+      ],
+      "change": "Eight existing figures receive adjacent explanatory callouts.",
+      "editorial_equivalence": "Existing labels, figure order and geometry are retained; only the separately declared Airy variable rename changes a figure itself. These references introduce existing claims and add no mathematical assertion beyond the caption and nearby text.",
+      "claim_status_changed": false,
+      "old_approval_extended_to_new_bytes": false
+    },
+    {
+      "findings": [
+        "E12"
+      ],
+      "claims": [
+        {
+          "ledger": "book/claims/section32-appendixb.json",
+          "id": "s32.computational_map",
+          "historical_status": "evidence_scope_checked"
+        },
+        {
+          "ledger": "book/claims/section32-appendixb.json",
+          "id": "appB.source_audit_scope",
+          "historical_status": "author_scope_declaration"
+        }
+      ],
+      "change": "Two ledger paths become repository-root-relative; the introduction points to the conventions and computation guide.",
+      "editorial_equivalence": "Only navigation and evidence scope are clarified. All fifteen open question bodies and claim statuses remain unchanged.",
+      "claim_status_changed": false,
+      "old_approval_extended_to_new_bytes": false
+    },
+    {
+      "findings": [
+        "E13",
+        "E14"
+      ],
+      "claims": [],
+      "change": "A historical result reservation is described as a recorded result, and three Schlaefli spellings are normalized.",
+      "editorial_equivalence": "The historical artifacts already exist; this is no new generation or replay. Spelling does not alter the volume differential or its hypotheses.",
+      "claim_status_changed": false,
+      "old_approval_extended_to_new_bytes": false
+    },
+    {
+      "findings": [
+        "byline",
+        "acknowledgment",
+        "README status"
+      ],
+      "claims": [],
+      "change": "User-supplied author/affiliation and Codex credit are added; README distinguishes the editorial revision from historical approvals.",
+      "editorial_equivalence": "Date remains 30 October 2026. No copyright or license grant is added. Prior claim ledgers, acceptance/source/runtime pins and results retain their exact bytes.",
+      "claim_status_changed": false,
+      "old_approval_extended_to_new_bytes": false
+    }
+  ],
+  "ledger_policy": "All 13 claim ledgers remain byte-identical. The listed statuses are their historical recorded statuses, not new approvals of this revision."
+}

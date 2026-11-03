@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "scope": "Finite formula checks for Sections 23-31; separate from the torus enumeration campaign",
+  "formula_contracts": {
+    "extraction_baseline_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+    "author_contract_sha256": {
+      "algebra-author/companion-fixtures.md": "492677ee47840e8be336927547b60c068735b904808d63a9ffdec3737e147d51",
+      "dynamics-author/companion-fixtures.md": "55bc53431ccd7e979d1a7ca751605c05ec0f5d9a009edfbdd9352f164e4d8ca0",
+      "arithmetic-author/campaign-contract.md": "5091ff284d0e07b4eae4e9597a4afb924664ea55e4a8e46bb0dcd49c4b77981f"
+    },
+    "trace_coefficients": {
+      "labels": ["eq:coeffChebyshev", "eq:coeffsimplepowers", "eq:coeffpowergenerating", "eq:coefffigurepowers", "eq:coefffigurecancellation"],
+      "formula": "P0=2; P1=x; P(k+1)=x*Pk-P(k-1); figure-eight trace=xy-z; collect after cuff identification y=x."
+    },
+    "global_filter": {
+      "labels": ["eq:coeffAdamsobstruction", "eq:globalobstruction", "eq:globalmoments", "eq:globalweightseries", "eq:globalonecrossing"],
+      "formula": "S0=2,S1=1,Sn=S(n-1)+v*S(n-2); moment(v^(2j))=binom(2j,j), odd moments zero; Lambda(x^a y^b z^c)=w(a+b+c)."
+    },
+    "support_and_euler": {
+      "labels": ["eq:countonesupport", "eq:countsupportmobius", "eq:countsupportfourier", "eq:globalEuler", "eq:globaldiagonal", "eq:globalEulerinput"],
+      "formula": "Support degree is not parallel-copy degree; divisor selector is sum_(d|n) mu(d), without 1/d; convolution log uses ordinary T^m/m, not Pm(T)/m."
+    },
+    "dynamics": {
+      "labels": ["subsec:countmixscalar", "prop:countmixfinite", "eq:twopointfullidentity", "eq:pairbruhat", "eq:pairkloosterman"],
+      "formula": "Distinguish 1^T A^n 1, tr(A^n), and stationary centered correlation; Bruhat endpoints (a/c,d/c) satisfy ad=1 mod c."
+    },
+    "primitive_and_affine": {
+      "labels": ["lem:polearcprimitivebound", "eq:polearcflatlength", "eq:affinesiegelexactcorr", "eq:affinegaussiancorr", "eq:affineranktwogaussiancorr"],
+      "formula": "Primitive oriented flat count <=2+2*pi*R^2; a_t=diag(exp(t),exp(-t)); affine Gaussian covariance=1/(2*sqrt(a*b)*cosh(t)); rank-two covariance=pi/(zeta(2)*cosh(t))*sum_(k>=1) sigma1(k)*exp(-4*pi*k*cosh(t))/k."
+    },
+    "arithmetic": {
+      "labels": ["sec:sharpdiagnostics", "sec:arithmeticgeometry", "eq:primitiveexactnormalizedmobius", "eq:dyadicerrorinverse", "eq:dyadicblockmetrics", "eq:primitiveRHbalancedpower"],
+      "formula": "A_square(u)=4*floor(u)*(floor(u)+1); P_square(u)=8*sum phi(n); Delta2N=N(2L)-4N(L); M=sup |Delta2N(u)|/u; Q^2=(1/T)*integral_T^(2T) Delta2N(u)^2/u^2 du; d=(2-alpha)/(3-alpha-theta), kappa=(2-alpha*theta)/(3-alpha-theta)."
+    }
+  },
+  "precisions": [60, 90],
+  "polynomial_maximum": 12,
+  "sl2_matrices": [
+    {"id": "unipotent-noncommuting", "A": [[1, 1], [0, 1]], "B": [[1, 0], [1, 1]]},
+    {"id": "hyperbolic-integer", "A": [[2, 1], [1, 1]], "B": [[1, 2], [1, 3]]},
+    {"id": "rational-chart", "A": [["3/2", 0], [0, "2/3"]], "B": [[2, "1/3"], [3, 1]]},
+    {"id": "commuting-control", "A": [[1, 2], [0, 1]], "B": [[1, 3], [0, 1]]}
+  ],
+  "support_genera": [2, 3],
+  "formal_length_cutoff": 14,
+  "mobius_maximum": 60,
+  "scalar_m": [2, 3, 5],
+  "matrix_power_maximum": 32,
+  "bruhat_c_maximum": 31,
+  "endpoint_frequencies": [[1, 1], [1, -1], [2, 3], [0, 1]],
+  "primitive_matrices": [
+    {"id": "identity", "matrix": [[1, 0], [0, 1]]},
+    {"id": "rational-diagonal", "matrix": [[2, 0], [0, "1/2"]]},
+    {"id": "rational-shear", "matrix": [[1, "1/2"], [0, 1]]}
+  ],
+  "primitive_radii": ["1/2", "1", "2", "3"],
+  "gaussian_pairs": [["1", "1"], ["1", "2"], ["2", "3"]],
+  "gaussian_times": ["0", "1/2", "1", "2"],
+  "rank_one_boxes": [4, 8, 16, 32],
+  "rank_two_terms": 24,
+  "orbit_determinants": [1, 2, 3],
+  "terminal_families": [
+    {"h": "2", "r": "1", "c": "3/2", "M": "5/3", "T": "3"},
+    {"h": "1", "r": "2", "c": "-2/3", "M": "1", "T": "5/2"},
+    {"h": "1", "r": "1", "c": "3/2", "M": "5/3", "T": "3"}
+  ],
+  "lattice_cutoffs": ["1", "3/2", "2", "7/2", "5", "17/2"],
+  "primitive_formal_lengths": ["2", "2", "4", "5", "8"],
+  "dyadic_starts": ["1", "2", "5/2", "4"],
+  "dyadic_depths": [1, 2, 4],
+  "row_endpoints": [["-5", "5"], ["-7/3", "13/4"], ["0", "0"], ["2", "2"], ["1/3", "2/3"], ["-4", "-1"]],
+  "row_n": [1, 2, 3, 6, 11, 12, 30],
+  "balance_thetas": ["1/2", "7/8", "11/12"]
+}

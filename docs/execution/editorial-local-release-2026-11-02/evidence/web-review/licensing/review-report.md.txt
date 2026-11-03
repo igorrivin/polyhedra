@@ -1,0 +1,39 @@
+# Independent site licensing addendum acceptance
+
+Decision: **accept the exact four-file frozen site licensing delta**. No remaining finding was identified. The user's scoped CC BY 4.0 monograph and MIT companion grants are reflected in the current-edition prose and bundles while retained terms and historical evidence remain separate.
+
+Author freeze: `bd74068b279d2548fdb02747d68486bb2d69fef6d1a897fe8e4c1deb9f555586`.
+Baseline: `edef1dda04cac2f50a7c22e4240556714fac4d91`.
+Patch: `b728c503fa94e8743c1e9ca93a7c93fe05ea1f74f89c8c01f77a39e8fab21135`.
+
+| Accepted changed path | SHA-256 |
+| --- | --- |
+| `site/build_book.py` | `b7a004518b8bec542e07e69a37405782a4659d1e987fc942be189f54a4621124` |
+| `site/book/downloads.json` | `5dfbce55a16d8b73fd2784a85b48fa869f757259e992f851d8379ee96fc3dc70` |
+| `site/README.md` | `3ff72f54616fe049177ac3b2dcd1bf82b06e06d0d5426d22175de667b5f9d1b8` |
+| `site/tests/test_build_book.py` | `d82d547d04cd18ce650206092643ebfccedcca7baa3fdcfeead7414ced3733eb` |
+
+The three other owned files and two reused helpers retain their accepted v3 identities. All seven owned identities and both helper hashes appear in `review-inputs.json` and `acceptance.json`.
+
+## Delta and distribution checks
+
+Independent AST comparison confirms 26 function/class definitions are unchanged, including the converter, numbering, source router, containment checks, fresh compiler and receipt-byte checks, and CLI. Only `page_shell`, `computation_page`, `source_archive`, and `build` change. The build changes pass the already captured license payload into the source ZIP and record license hashes/scoped rights in the edition manifest. External compilation reuse remains unavailable; input-byte rechecks still precede destination replacement.
+
+The source ZIP contains exactly **44 distinct safe entries**: 36 frozen TeX files, seven licensing files, and one manifest. Every file is byte-identical to its frozen input. The manifest records TeX and licensing hashes separately. The seven licensing files include the scope map, monograph notice, full CC BY text, new-companion MIT text and covered-file list, retained toolkit MIT copy, and retained package LICENSE. Relative links in the scope map and monograph notice resolve inside the ZIP. Both toolkit notice copies match the baseline bytes exactly. An extra private-test payload entry is not copied into the ZIP.
+
+The inspection selection is exactly **58 files**. Its six additions are licensing inputs; the previously selected groups are unchanged. Selected maintained experiment scripts appear on the explicit MIT-covered list. Historical result records, contract records, the historical Section 15 table, and `research/ipoly` are not swept into that list. Scope language does not assign one license to an entire historical archive or to recorded scientific results.
+
+The actual canonical license paragraph converts through Pandoc without warnings or an auxiliary file and matches the author's fragment exactly. Footer and computation prose link the copied CC BY terms, MIT terms, covered-file list, monograph credit/notice, scope map and retained toolkit notice. Every licensing inspection link resolves to the selected payload. The resulting source ZIP SHA-256 is `9ab40fffa8cecc7b9aa6cd3bde96e56b2d4209cd0538b51dc64d9b542e57493d`, identical to the author's bounded probe.
+
+Missing any of the seven required licensing payloads rejects archive creation before writing a ZIP. Missing and symlinked selected license files are rejected. For each of the seven licenses, a post-snapshot mutation is rejected by the exact production input-comparison loop executed in isolation on temporary fixtures. That probe executes neither the build function nor a compiler; it tests the unchanged byte gate directly. Legal-term provenance and the broader eleven-file rights/text review belong to the independent licensing source review; this review confirms exact copying and scoped distribution.
+
+## Verification and source binding
+
+- `recheck-cases.py` / `recheck-cases.json`: **23 passing finite checks** covering the above delta, bytes, links, exclusions and failure cases.
+- `run_suite.py` / `suite.log` / `suite-summary.json`: **46 tests passed**, zero failures or errors. The full-book test module's TeX graph was bound to the copied frozen licensing source; web and helper hashes matched before and after the run. The historical suite code remains baseline-identical.
+- Both Node pure search suites passed. No newly built licensed complete-edition index is claimed.
+- All **148** pre-license exported files match the immutable pre-license manifest; the three named pre-license receipts and all **46** historical Section 9 inputs also match. Those bytes remain the earlier edition's evidence, not a licensed final build.
+
+The probes used the 36 TeX inputs and seven licensing inputs from source freeze `ac08a3aa4ca40de4378226c62935b6e9d3e26b08e40af60eef02f7dfe5f9cf20`. The current source-author revision-v2 freeze is `90a4c7be964843ca4e4d247ffd32c26010169901a028f762794c6215a7fa25a8`. Independent comparison confirms it changes only `book/README.md`, which is outside both this inspection selection and the source ZIP; all tested TeX/license inputs remain identical. `source-freeze-revision-binding.json` records that linkage. The book editorial reviewer owns the combined fifteen-path approval.
+
+No complete licensed edition build, PDF/TikZ generation, release/PDF marker, auxiliary-numbering probe, numerical replay, browser/server, canonical edit, commit, push, upload or synchronization was performed. Final clean-source licensed output and its validation remain later gates. Earlier v1/v2/v3 acceptances and evidence are preserved.

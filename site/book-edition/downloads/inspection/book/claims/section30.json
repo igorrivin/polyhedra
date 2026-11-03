@@ -1,0 +1,644 @@
+{
+  "schema_version": "1.1",
+  "chapter_source": "book/chapters/30-sharp-diagnostics.tex",
+  "chapter_label": "sec:sharpdiagnostics",
+  "review_date": "2026-11-01",
+  "baseline_commit": "9c8b61790aaa674902b9d60e80122c318a578bcc",
+  "review_scope": "Author audit followed by independent analytic approval of the complete local argument and pinned primary-source statements in Chapters 30-31. Numerical and integration review have separate records; recent preprint applications remain conditional.",
+  "path_convention": "Paths are relative to the research repository; outer execution evidence is identified in the integration checkpoint.",
+  "status_definitions": {
+    "derivation_checked": "Local mathematical derivation checked by author and independent reviewer under the written hypotheses.",
+    "external_statement_checked": "The stated theorem/convention was checked in the pinned primary source; the external proof was not re-refereed.",
+    "conditional_external_statement_checked": "A preprint statement was checked in its pinned source; it is retained only as an explicit hypothetical input.",
+    "exact_finite_check": "Exact rational/algebraic arithmetic checks the stated finite fixture, not transcendental evaluation or an asymptotic theorem.",
+    "numerical_check": "Finite numerical evidence tied to its own source/result and measured residuals; no interval certification or asymptotic conclusion.",
+    "conditional_bound": "A proved implication under an error or analytic hypothesis not established by the finite computation.",
+    "reported_unreplayed": "Historical implementation or precision/sensitivity report remains unrecovered; any reproduced numerical values are identified separately.",
+    "open_target": "An unproved target or unverified geometric instantiation, not a publication-ready theorem."
+  },
+  "source_pins": {
+    "BaranyPrimitivePolygons": {
+      "url": "https://arxiv.org/pdf/1509.02201v2",
+      "version": "arXiv:1509.02201v2, 31 July 2019",
+      "locator": "Theorems 1.2 and 1.4, page 2",
+      "scope": "Rational-polygon upper bound and origin-star-shaped rational-polygon two-sided omega bound; statements checked, external proofs not re-refereed.",
+      "accessed": "2026-11-01",
+      "verification": "Primary-source statement inspection through web retrieval; not a local byte download or full proof audit."
+    },
+    "BowditchMarkoff": {
+      "url": "https://warwick.ac.uk/fac/sci/maths/people/staff/brian_bowditch/bhb-markoff.pdf",
+      "version": "Author-hosted 42-page manuscript, accessed 1 November 2026",
+      "locator": "Sections 1-2: Markoff maps, edge relation and simple-curve/Farey-tree identification",
+      "scope": "Curve conventions and trace recursion; not an audit of the full quasifuchsian theory.",
+      "accessed": "2026-11-01",
+      "verification": "Primary-source statement inspection through web retrieval; not a local byte download or full proof audit."
+    },
+    "DoanLiNguyenStableNorm": {
+      "url": "https://arxiv.org/pdf/2605.14574v3",
+      "version": "arXiv:2605.14574v3, 9 October 2026",
+      "locator": "Theorem 4.7, page 23; Lemma 4.8, pages 25-26; cumulative/boundary distinction, pages 2-3",
+      "scope": "Version and local-flatness statements checked. The complete flatness proof, global counting assertions and formalization were not independently audited and are not used as proved inputs.",
+      "accessed": "2026-11-01",
+      "verification": "Primary-source statement inspection through web retrieval; not a local byte download or full proof audit."
+    },
+    "McShaneRivinTori": {
+      "url": "https://arxiv.org/pdf/math/0005220v1",
+      "version": "arXiv:math/0005220v1, 23 May 2000",
+      "locator": "Section 2, pages 4-5; Theorem 4.1 and Conjecture 4.3, page 8",
+      "scope": "Norm on homology, strict triangle inequality on integral nonparallel classes, cumulative count, modular-torus conjecture. Historical blanket irrational infinite-flatness and literal linear lower-bound assertions are not imported as proved inputs.",
+      "accessed": "2026-11-01",
+      "verification": "Primary-source statement inspection through web retrieval; not a local byte download or full proof audit."
+    }
+  },
+  "computational_boundary": "The prior length-64 source/result remain frozen. A new length-8192 campaign reproduces counts and printed M/Q rows with its own provenance, sampled precision checks and conditional rational sensitivity. True-spectrum membership, every-node errors, asymptotic bounds, recent preprint proofs/formalizations and a flat-normal identification remain unverified.",
+  "claims": [
+    {
+      "id": "s30.normalization",
+      "labels": [
+        "subsec:mobiusmodulus"
+      ],
+      "status": "derivation_checked",
+      "scope": "The gauge is positively homogeneous, its shortest nonzero lattice value is one, and counts include the boundary and exclude zero. All primitive vectors are counted with signs.",
+      "hypotheses": [
+        "B is a fixed convex body with zero in its interior."
+      ],
+      "dependencies": [],
+      "source_keys": [],
+      "proof_notes": "Central symmetry is unnecessary for the general discrepancy arguments; the torus curve count is half the signed count."
+    },
+    {
+      "id": "s30.normalized_mobius",
+      "labels": [
+        "eq:primitiveexactnormalizedmobius"
+      ],
+      "status": "derivation_checked",
+      "scope": "Exact primitive inversion and the normalized signed harmonic sum; the omitted area tail is uniformly bounded after division by L.",
+      "hypotheses": [
+        "L>=2; M=floor(L)."
+      ],
+      "dependencies": [
+        "s30.normalization"
+      ],
+      "source_keys": [],
+      "proof_notes": "Each nonzero lattice vector has a unique positive gcd and signed primitive part. A0(u)=0 for u<1. L*sum(d^-2,d>M)<=L/M<=2.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "result_groups": [
+          "exact.Mobius_lattice"
+        ],
+        "result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
+      }
+    },
+    {
+      "id": "s30.dini_comparison",
+      "labels": [
+        "eq:primitiveDini"
+      ],
+      "status": "derivation_checked",
+      "scope": "Absolute values and the decreasing envelope give L times one plus the logarithmic modulus integral.",
+      "hypotheses": [
+        "omega(u)=sup(v>=u)|D(v)|/v."
+      ],
+      "dependencies": [
+        "s30.normalized_mobius"
+      ],
+      "source_keys": [],
+      "proof_notes": "For d<=floor(L)-1 integrate over [L/(d+1),L/d]; log(1+1/d)>=1/(2d). Treat the last interval below one by the bounded boundary discrepancy."
+    },
+    {
+      "id": "s30.dini_linear",
+      "labels": [
+        "eq:primitiveDini"
+      ],
+      "status": "conditional_bound",
+      "scope": "An integrable normalized envelope gives O_B(L) without arithmetic cancellation; any fixed all-point power saving implies this hypothesis.",
+      "hypotheses": [
+        "Integral of omega(u)/u from one to infinity is finite."
+      ],
+      "dependencies": [
+        "s30.dini_comparison"
+      ],
+      "source_keys": [],
+      "proof_notes": "The example exp(-sqrt(log u)) has finite logarithmic integral but no fixed power decay. PNT supplies the separate o(L) improvement in s31.dini_pnt."
+    },
+    {
+      "id": "s30.chord_sobolev",
+      "labels": [
+        "prop:strictconvexlittleo"
+      ],
+      "status": "derivation_checked",
+      "scope": "Each chord-length function has a zero extension in W^{1,1} and derivative norm at most twice diam(B).",
+      "hypotheses": [
+        "B is strictly convex, compact, with nonempty interior."
+      ],
+      "dependencies": [],
+      "source_keys": [],
+      "proof_notes": "Concavity, endpoint singleton support, local absolute continuity and total variation give the endpoint extension. No smoothness or curvature lower bound is assumed."
+    },
+    {
+      "id": "s30.fourier_decay",
+      "labels": [
+        "prop:strictconvexlittleo"
+      ],
+      "status": "derivation_checked",
+      "scope": "Along each fixed ray r*Fourier(1_B)(r nu) tends to zero; its absolute value is uniformly bounded in the direction.",
+      "hypotheses": [
+        "Fourier convention exp(-2*pi*i*x.xi)."
+      ],
+      "dependencies": [
+        "s30.chord_sobolev"
+      ],
+      "source_keys": [],
+      "proof_notes": "Fubini followed by integration by parts and Riemann-Lebesgue. Directionwise convergence, not a uniform directional rate, is used."
+    },
+    {
+      "id": "s30.poisson_little_o",
+      "labels": [
+        "prop:strictconvexlittleo"
+      ],
+      "status": "derivation_checked",
+      "scope": "Fixed-radius mollification, Poisson summation and a convex-body sandwich prove D_B(L)=o_B(L).",
+      "hypotheses": [
+        "Choose r0 disk contained in B and a fixed nonnegative smooth unit-mass mollifier supported in epsilon disk."
+      ],
+      "dependencies": [
+        "s30.fourier_decay"
+      ],
+      "source_keys": [],
+      "proof_notes": "After division by L, nonzero Fourier terms have the summable majorant C*|m|^-1*|rhohat_epsilon(m)|. First send L to infinity at fixed epsilon, then epsilon to zero. Excluding the origin changes the count by one."
+    },
+    {
+      "id": "s30.strict_convex_primitive",
+      "labels": [
+        "prop:strictconvexlittleo"
+      ],
+      "status": "derivation_checked",
+      "scope": "Strict convexity gives omega(u)->0 and E_primitive(L)=o_B(L log L), with no effective rate.",
+      "hypotheses": [],
+      "dependencies": [
+        "s30.poisson_little_o",
+        "s30.dini_comparison"
+      ],
+      "source_keys": []
+    },
+    {
+      "id": "s30.polygon_comparison",
+      "labels": [
+        "subsec:rationalpolygonbenchmark"
+      ],
+      "status": "external_statement_checked",
+      "scope": "The rational-polygon upper bound and origin-star-shaped rational-polygon Omega_± lower bound apply to polygons, not automatically to strictly convex norm balls.",
+      "hypotheses": [
+        "Rational vertices; the lower theorem additionally requires origin-star-shapedness."
+      ],
+      "dependencies": [],
+      "source_keys": [
+        "BaranyPrimitivePolygons"
+      ]
+    },
+    {
+      "id": "s30.square_totients",
+      "labels": [
+        "subsec:rationalpolygonbenchmark"
+      ],
+      "status": "derivation_checked",
+      "scope": "At integer N>=1 the signed primitive count in [-N,N]^2 is 8*sum(phi(n),n<=N).",
+      "hypotheses": [
+        "Closed square; zero excluded."
+      ],
+      "dependencies": [],
+      "source_keys": [],
+      "proof_notes": "Partition by the maximum absolute coordinate; the N=1 shell also has eight points.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "result_groups": [
+          "exact.Mobius_lattice"
+        ],
+        "result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
+      }
+    },
+    {
+      "id": "s30.polygon_approximation",
+      "labels": [
+        "subsec:rationalpolygonbenchmark"
+      ],
+      "status": "derivation_checked",
+      "scope": "A fixed area error delta_a creates delta_a*L^2 main-term error; error o(L) requires area discrepancy o(1/L) and boundary membership control.",
+      "hypotheses": [
+        "This is a necessary accuracy comparison, not a sufficient lattice approximation theorem."
+      ],
+      "dependencies": [],
+      "source_keys": []
+    },
+    {
+      "id": "s30.dyadic_inversion",
+      "labels": [
+        "subsec:dyadicdiagnostic",
+        "eq:dyadicerrorinverse"
+      ],
+      "status": "derivation_checked",
+      "scope": "Telescoping inversion removes c exactly and gives the stated O(L) and O(L log L) equivalences.",
+      "hypotheses": [
+        "N(L)/L^2 tends to a fixed c; E=N-cL^2."
+      ],
+      "dependencies": [],
+      "source_keys": [],
+      "proof_notes": "At k steps the remaining term is 4^-k E(2^k L), which tends to zero. Under each displayed bound the inverse series converges absolutely. Finite blocks do not supply the infinite-range hypothesis.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "result_groups": [
+          "exact.dyadic_events"
+        ],
+        "result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
+      }
+    },
+    {
+      "id": "s30.block_events",
+      "labels": [
+        "eq:dyadicblockmetrics"
+      ],
+      "status": "derivation_checked",
+      "scope": "All full/half events, grouped simultaneous jumps, one-sided limits and exact segment integrals determine the finite M/Q metrics.",
+      "hypotheses": [
+        "Locally finite positive lengths with multiplicities; N counts <=L; [T,2T] needs the spectrum through 4T."
+      ],
+      "dependencies": [],
+      "source_keys": [],
+      "proof_notes": "Full events jump by -4; half events by +1. Exclude the external left limit at T, include both limits at the terminal endpoint. Integral is D^2*(1/a-1/b).",
+      "code_paths": [
+        "experiments/section30/run.py",
+        "experiments/section30/tests/test_diagnostic.py"
+      ],
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "result_groups": [
+          "exact.dyadic_events"
+        ],
+        "result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
+      }
+    },
+    {
+      "id": "s30.inverse_width",
+      "labels": [
+        "subsec:inverseflatness",
+        "eq:inverseflatwidth"
+      ],
+      "status": "derivation_checked",
+      "scope": "The row intersection at T=L+delta has the displayed endpoints and width T*W(h*delta/T).",
+      "hypotheses": [
+        "B strictly convex and contains zero; unique top point (alpha,h), h>0; alpha/h irrational; two-sided local upper graph over an open x interval; L=n/h; delta>0 and delta=o(L)."
+      ],
+      "dependencies": [],
+      "source_keys": [],
+      "proof_notes": "The local profile is convex, uniquely minimized at zero, and strictly increasing on each side. Its inverses are concave. Compactness ensures sufficiently shallow caps lie in this local graph."
+    },
+    {
+      "id": "s30.prime_row_count",
+      "labels": [
+        "prop:inverseflatrow"
+      ],
+      "status": "derivation_checked",
+      "scope": "For prime n the new row contains w+O(1) primitive lattice points with lower bound w-2.",
+      "hypotheses": [
+        "The row width is eventually <n; alpha/h is irrational."
+      ],
+      "dependencies": [
+        "s30.inverse_width"
+      ],
+      "source_keys": [],
+      "proof_notes": "The contact row has no lattice point. An interval shorter than n contains at most one multiple of n; all other integers are coprime to n."
+    },
+    {
+      "id": "s30.row_discrepancy",
+      "labels": [
+        "eq:inverseflatdiscrepancy"
+      ],
+      "status": "derivation_checked",
+      "scope": "Monotone inclusion of the dilates turns a primitive-row burst into the displayed two-scale discrepancy lower bound.",
+      "hypotheses": [
+        "Same contact and prime-row hypotheses."
+      ],
+      "dependencies": [
+        "s30.prime_row_count"
+      ],
+      "source_keys": [],
+      "proof_notes": "No points disappear because zero lies inside B; subtract c_B*(2L delta+delta^2), then max absolute values is at least half the positive difference."
+    },
+    {
+      "id": "s30.microscopic_row",
+      "labels": [
+        "eq:inverseflatmicroscopic",
+        "fig:mono-flat-row"
+      ],
+      "status": "derivation_checked",
+      "scope": "At delta=1/L, concavity gives w>=L W(h/L^2), while the quadratic main term changes by O_B(1). The figure is schematic.",
+      "hypotheses": [],
+      "dependencies": [
+        "s30.row_discrepancy"
+      ],
+      "source_keys": [],
+      "proof_notes": "W(h/(L^2+1)) >= L^2/(L^2+1)*W(h/L^2). The product with L+1/L cancels exactly."
+    },
+    {
+      "id": "s30.infinite_flatness_scope",
+      "labels": [
+        "prop:inverseflatrow"
+      ],
+      "status": "conditional_bound",
+      "scope": "An explicitly infinitely flat graph gives W(u)>>_N u^(1/N), hence Omega(L^(1-epsilon)) for every epsilon>0 along contact scales; not Omega(L).",
+      "hypotheses": [
+        "For every N, f(±s)<=C_N*s^N near zero, in addition to the supporting-row hypotheses."
+      ],
+      "dependencies": [
+        "s30.microscopic_row"
+      ],
+      "source_keys": [],
+      "proof_notes": "W(u)->0 under strict convexity, so this single microscopic row gives only o(L) as its own lower-bound scale."
+    },
+    {
+      "id": "s30.flatness_models",
+      "labels": [
+        "subsec:flatnessmodels",
+        "eq:exponentialflatrow"
+      ],
+      "status": "derivation_checked",
+      "scope": "The three model inversions give L/(log L)^(1/beta), L/(log log L)^(1/beta), and L*exp(-(2 log L)^(1/gamma)), respectively.",
+      "hypotheses": [
+        "Model inequalities hold two-sided locally; beta>0, gamma>1; use the contact hypotheses for discrepancy implications."
+      ],
+      "dependencies": [
+        "s30.microscopic_row"
+      ],
+      "source_keys": [],
+      "proof_notes": "Each displayed profile has positive second derivative sufficiently near zero. Matching upper/lower graph profiles determine row width, not the total discrepancy. None is identified as an actual torus profile."
+    },
+    {
+      "id": "s30.exact_row_divisors",
+      "labels": [
+        "eq:primitiveintervalexact"
+      ],
+      "status": "derivation_checked",
+      "scope": "The divisor sum counts closed-interval coprime integers exactly, including negative and integer endpoints; its error from width*phi(n)/n is O(2^omega(n)).",
+      "hypotheses": [
+        "n>=1 integer; real a<=b."
+      ],
+      "dependencies": [],
+      "source_keys": [],
+      "proof_notes": "Use sum(mu(d),d|gcd(k,n)) and count multiples in [a,b]. Each squarefree-divisor rounding error is bounded by one.",
+      "finite_computation": {
+        "status": "implemented_finite_examples",
+        "result_groups": [
+          "exact.row_and_balance"
+        ],
+        "result_path": "artifacts/counting_mixing/result.json",
+        "limit": "Exact finite rational examples only; no geometric modulus, infinite-range bound or arithmetic hypothesis is established."
+      }
+    },
+    {
+      "id": "s30.local_row_statistic",
+      "labels": [
+        "subsec:rowdiagnostic"
+      ],
+      "status": "conditional_bound",
+      "scope": "J_n directly measures the local inverse width without an area estimate.",
+      "hypotheses": [
+        "The same verified rational supporting normal and irrational radial contact; n prime; enough coordinate precision."
+      ],
+      "dependencies": [
+        "s30.inverse_width",
+        "s30.prime_row_count"
+      ],
+      "source_keys": []
+    },
+    {
+      "id": "s30.height_precision",
+      "labels": [
+        "subsec:rowdiagnostic"
+      ],
+      "status": "derivation_checked",
+      "scope": "Exact contact-scale sensitivity is L*|e|/|h+e|; |e|<=h/2 gives an upper bound 2L|e|/h. Microscopic row counts also require endpoint floor/ceiling certification.",
+      "hypotheses": [
+        "Approximate height h+e remains positive."
+      ],
+      "dependencies": [],
+      "source_keys": [],
+      "proof_notes": "Precision comparisons alone cannot certify the transcendental height, a rational normal, or endpoint membership."
+    },
+    {
+      "id": "s30.curve_markoff_identification",
+      "labels": [
+        "subsec:torustraceexperiment"
+      ],
+      "status": "external_statement_checked",
+      "scope": "Primitive slopes modulo simultaneous sign parameterize unoriented essential simple curves; Farey edges satisfy the trace identity and equal traces retain multiplicity.",
+      "hypotheses": [
+        "Complete finite-area once-punctured hyperbolic torus; positive real trace convention."
+      ],
+      "dependencies": [],
+      "source_keys": [
+        "BowditchMarkoff",
+        "McShaneRivinTori"
+      ]
+    },
+    {
+      "id": "s30.exact_roots",
+      "labels": [
+        "eq:diagnostictracetriples"
+      ],
+      "status": "exact_finite_check",
+      "scope": "The two frozen triples satisfy the Markoff equation and 2<x<=y<=z<=xy/2 in exact Q(sqrt(11)) arithmetic.",
+      "hypotheses": [
+        "Only the two specified fixture triples."
+      ],
+      "dependencies": [],
+      "source_keys": [],
+      "code_paths": [
+        "experiments/section30/run.py",
+        "experiments/section30/fixture.json",
+        "experiments/torus_campaign/run.py"
+      ],
+      "evidence_scope": "Preserved bounded checks plus fresh campaign exact-root checks for the same two inputs; generation identities are in the checkpoint."
+    },
+    {
+      "id": "s30.sector_pruning",
+      "labels": [
+        "subsec:torustraceexperiment"
+      ],
+      "status": "derivation_checked",
+      "scope": "The three open sectors and three roots enumerate each unoriented primitive slope once. Outward traces strictly increase, so exact trace/length cutoff pruning is valid.",
+      "hypotheses": [
+        "Reduced positive root triple; determinant-one sector bases."
+      ],
+      "dependencies": [],
+      "source_keys": [],
+      "proof_notes": "Mediants give unique positive coprime coordinates in each sector. At the first negative edge xy-z>=z; at the other two xz-y>z and yz-x>z. Thereafter c>=max(a,b)>2 implies ac-b>c and bc-a>c."
+    },
+    {
+      "id": "s30.log_recursion",
+      "labels": [
+        "subsec:torustraceexperiment"
+      ],
+      "status": "derivation_checked",
+      "scope": "The logarithmic trace formula is algebraically exact and the outward subtracted ratio is at most 1/2, avoiding severe cancellation.",
+      "hypotheses": [
+        "Exact reduced positive outward recursion; numerical errors remain a separate issue."
+      ],
+      "dependencies": [
+        "s30.sector_pruning"
+      ],
+      "source_keys": []
+    },
+    {
+      "id": "s30.slope_box_coverage",
+      "labels": [
+        "subsec:torustraceexperiment"
+      ],
+      "status": "derivation_checked",
+      "scope": "The fixed fixture root bound gives length>2F/5 and hence max(|p|,q)<160 for length<=64.",
+      "hypotheses": [
+        "Minimum root trace>=5/2; outward subtraction ratio<=1/2."
+      ],
+      "dependencies": [
+        "s30.sector_pruning"
+      ],
+      "source_keys": [],
+      "proof_notes": "v=log(trace/2) is superadditive along mediants, and root v>1/5. F is the endpoint coefficient sum. Algebraic coverage does not certify the numerical cutoff comparisons.",
+      "derivation_path": "experiments/section30/README.md"
+    },
+    {
+      "id": "s30.bounded_replacement",
+      "labels": [
+        "subsec:torustraceexperiment",
+        "eq:dyadicblockmetrics"
+      ],
+      "status": "numerical_check",
+      "scope": "The preserved length-64 result records 1104 modular and 1127 asymmetric curves, blocks T=4,8,16, exact-trace oracle comparisons and event checks.",
+      "hypotheses": [
+        "Frozen prior source/result and their recorded decimal/binary64 precision conventions."
+      ],
+      "dependencies": [],
+      "source_keys": [],
+      "result_path": "artifacts/section30/result.json",
+      "code_paths": [
+        "experiments/section30/run.py",
+        "experiments/section30/tests/test_diagnostic.py"
+      ],
+      "coverage_gap": "Frozen earlier length-64 result; the new full campaign is separate evidence, not recovery of the original archive or a uniform true-length error certificate."
+    },
+    {
+      "id": "s30.bounded_conditional_sensitivity",
+      "labels": [
+        "subsec:torustraceexperiment"
+      ],
+      "status": "conditional_bound",
+      "scope": "Exact rational upper/lower counting envelopes bound M(T) for the fixed supplied length list without fixing uncertain internal event order.",
+      "hypotheses": [
+        "Every stored length has error<=1e-10; fixed membership. Applying it to the complete spectrum also assumes no omitted curve can enter any threshold through 4T."
+      ],
+      "dependencies": [],
+      "source_keys": [],
+      "derivation_path": "experiments/section30/README.md",
+      "result_path": "artifacts/section30/result.json",
+      "coverage_gap": "The assumed uniform length error and completeness under perturbation are not certified."
+    },
+    {
+      "id": "s30.historical_long_run",
+      "labels": [
+        "subsec:torustraceexperiment"
+      ],
+      "status": "reported_unreplayed",
+      "scope": "The historical implementation and its 100-digit, long-path, cutoff-distance and sensitivity comparisons remain unrecovered. The new full campaign separately reproduces the 18191508/18486116 counts and every printed M/Q entry at four decimals.",
+      "hypotheses": [],
+      "dependencies": [],
+      "source_keys": [],
+      "coverage_gap": "Original source/full spectrum/full block and precision/sensitivity records were absent. A new campaign is separate evidence and cannot recover missing original provenance.",
+      "new_reproduction": {
+        "status": "new_finite_campaign_separate_provenance",
+        "result_path": "artifacts/torus_campaign/result.json",
+        "reproduced": [
+          "Both length-8192 integer counts",
+          "All four historically printed M/Q rows at four decimal places"
+        ],
+        "new_evidence": [
+          "All ten dyadic blocks per surface",
+          "151/126 selected 100/140-digit samples including 36 near-8192 curves per surface",
+          "Independent 100/160-digit matrix-word samples and full stored-stream dyadic count arithmetic",
+          "Exact rational M envelopes conditional on epsilon=1e-6 and completeness/no-entry"
+        ],
+        "limit": "The worst sampled binary64 difference is below 1.2e-9, not the historical 7.5e-13 claim. Across all blocks the new envelope widths are below 1.232e-6 and 5.613e-7; neither certifies the length-error or membership hypotheses."
+      }
+    },
+    {
+      "id": "s30.recent_flatness_preprint",
+      "labels": [
+        "subsec:recentflatnessqualification"
+      ],
+      "status": "conditional_external_statement_checked",
+      "scope": "The pinned preprint distinguishes vanishing exponential approximation exponent (infinite graph flatness) from superexponential approximation (flatness order one).",
+      "hypotheses": [],
+      "dependencies": [],
+      "source_keys": [
+        "DoanLiNguyenStableNorm"
+      ],
+      "coverage_gap": "Only the statements were checked. The prior unsupported sentence claiming a local Fricke/convexity audit was removed. The general row and strict-convexity proofs do not depend on this preprint."
+    },
+    {
+      "id": "s30.surface_flat_point",
+      "labels": [
+        "subsec:rowdiagnostic",
+        "subsec:torustraceexperiment"
+      ],
+      "status": "open_target",
+      "scope": "Neither named torus is claimed to have a verified lattice-rational supporting normal at an irrational infinitely flat radial point.",
+      "hypotheses": [],
+      "dependencies": [
+        "s30.local_row_statistic"
+      ],
+      "source_keys": [
+        "McShaneRivinTori"
+      ]
+    }
+  ],
+  "independent_review": {
+    "status": "approved_with_written_hypotheses",
+    "records": [
+      "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/review.md",
+      "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/review-decisions.json",
+      "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/analytic-claim-review.json"
+    ],
+    "scope": "All 57 claims in the frozen analytic chapters and ledgers; not a full audit of cited preprint proofs/formalizations, interval certification, or asymptotic inference from finite data."
+  },
+  "computational_companion": {
+    "code_path": "experiments/counting_mixing/",
+    "result_path": "artifacts/counting_mixing/result.json",
+    "checkpoint": "docs/execution/counting-mixing-review-2026-11-01/",
+    "review_record": "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/review-v2.md",
+    "approval_manifest": "docs/execution/counting-mixing-review-2026-11-01/computation-review/revision-v2/approved-manifest-v2.json",
+    "approval_manifest_sha256": "c059cf9591f534bb6517486389b111c79fdff77531b192cbfab846021bd6536e",
+    "approved_source_set_sha256": "4b1f8f22f155c464f0ecda6ab95c581926db157bae4ee7583e67fbc6448ded63",
+    "independent_review_status": "approved_v2_R1_resolved_no_open_findings",
+    "reviewer_replay_counts": {
+      "exact": 4054,
+      "numerical_formula_comparisons": 354,
+      "cross_precision_observations": 297,
+      "focused_tests": 38
+    },
+    "prior_v1_status": "Initial numerical acceptance was rejected for R1 and is not retroactively approved; its evidence remains frozen.",
+    "scope": "Exact finite fixtures and selected 60/90-digit formula comparisons; analytic truncation bounds are separate from uncertified quadrature and roundoff.",
+    "generation_status": "Final generation and source identities are recorded separately in the checkpoint; author and reviewer runs retain their own provenance."
+  },
+  "torus_campaign": {
+    "code_path": "experiments/torus_campaign/",
+    "result_path": "artifacts/torus_campaign/result.json",
+    "review_record": "docs/execution/counting-mixing-review-2026-11-01/arithmetic-review/review-decisions.json",
+    "generation_record": "docs/execution/counting-mixing-review-2026-11-01/",
+    "scope": "New full campaign through hyperbolic length 8192; 18191508 modular and 18486116 asymmetric curves, all twenty block rows, dyadic signed all-point counts and conditional sensitivity.",
+    "units": "Hyperbolic length. For unit-shortest gauge, lambda=ell/systole and A_B(L)=A_hyp(systole*L).",
+    "historical_boundary": "No recovery of the historical extended-precision implementation, sample selection or sensitivity construction. The length-64 predecessor retains its prior bytes and source identity.",
+    "generation_status": "Final repaired-source replay and source identities are recorded separately by the checkpoint; the reviewed v2 author run is not relabeled as a v3 or clean-source run."
+  }
+}

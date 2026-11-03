@@ -1,0 +1,378 @@
+{
+  "schema_version": "1.0",
+  "chapter_sources": [
+    "book/chapters/07-euclidean-periods.tex",
+    "book/chapters/08-wp-flat-limit.tex"
+  ],
+  "chapter_labels": [
+    "sec:thurstonDM",
+    "sec:flatlimit"
+  ],
+  "review_date": "2026-11-01",
+  "baseline_commit": "ad63b7ac9821040cb69e19c61bfbc46c68eff1a3",
+  "revision_review": "This ledger records author derivations and primary-source statement checks. Independent approval and the reviewed hashes are recorded separately in docs/execution/normalization-review-2026-11-01/.",
+  "status_definitions": {
+    "external_theorem_statement_checked": "The cited primary statement, hypotheses and stated normalization were inspected; no complete external-proof re-refereeing is claimed.",
+    "derived_in_chapter": "A general derivation is written in the canonical chapter and author-checked; independent review is a separate record.",
+    "derived_from_external_theorems": "A consequence is derived in the chapter from explicitly cited analytical inputs and stated local hypotheses; it is not quoted as a source theorem.",
+    "exact_finite_check": "Exact rational calculation for named finite fixtures; not a general proof or analytic certificate."
+  },
+  "sources": [
+    {
+      "key": "DeligneMostow",
+      "url": "https://www.numdam.org/item/PMIHES_1986__63__5_0.pdf",
+      "pins": [
+        "Introduction, pp. 5-9; local period construction also cross-checked in Kojima Sections 3-4"
+      ],
+      "checked": "Positive real weights below one with total two give the relevant Hermitian signature; INT is a sufficient lattice condition. This audit does not claim a classification of all discrete monodromy."
+    },
+    {
+      "key": "Kojima",
+      "url": "https://rendiconti.dmi.units.it/volumi/32s1/09.pdf",
+      "pins": [
+        "Example 2.1, printed p. 151",
+        "Lemmas 4.1-4.2 and Theorem 4.3, printed pp. 157-158",
+        "Proposition 5.1 and Example 5.4, printed pp. 159-160"
+      ],
+      "checked": "The period and developed-edge constructions agree after projectivization. Lemma 4.2 specifies the scalar between the area and intersection pairings. Four labels have ineffective Klein-four permutation kernel; M0,5 has ten boundary curves with intersections indexed by disjoint pairs."
+    },
+    {
+      "key": "MostowHalfIntegral",
+      "url": "https://www.numdam.org/item/PMIHES_1986__63__91_0.pdf",
+      "pins": [
+        "Introduction and Main Theorem, printed pp. 91-93; proof Section 3"
+      ],
+      "checked": "The cited half-integral theorem allows one specified equal-weight permutation block. Light pairs within it may have positive half-integral reciprocals; other light pairs require integral reciprocals. Chapter statement now follows that precise scope."
+    },
+    {
+      "key": "ThurstonShapes",
+      "url": "https://arxiv.org/pdf/math/9801088",
+      "pins": [
+        "Theorem 0.2, printed p. 513",
+        "Sections 2-3 for area coordinates and collisions; Section 5 for cusps"
+      ],
+      "checked": "Positive deficits below 2pi with total 4pi give finite-volume complex hyperbolic cone geometry. The full equal-curvature permutation quotient has the stated orbifold criterion. Labeled geometry is recovered without treating that permutation action as free."
+    },
+    {
+      "key": "MazzeoWeiss",
+      "url": "https://arxiv.org/html/1509.07608",
+      "pins": [
+        "Theorem 1",
+        "Section 6.1 curvature-map argument and its following remark",
+        "Proposition 16 and Theorem 9"
+      ],
+      "checked": "Angle parameters lie in (-1,0). Unit-area metrics are unique for weighted Euler characteristic at most zero. Local slices include angle, pointed conformal and scaling parameters and conic regularity. The chapter deduces locally uniform pairing convergence along its fixed path; no collision or total-volume convergence is attributed to this source."
+    },
+    {
+      "key": "WangFlatWP",
+      "url": "https://arxiv.org/pdf/2209.10842v2",
+      "html_url": "https://arxiv.org/html/2209.10842v2",
+      "pins": [
+        "Theorem 1.2.1, pp. 2-3",
+        "Section 2.6 equation (2.8), p. 8",
+        "Section 2.7 equations (2.9)-(2.11), pp. 9-10",
+        "Section 4.4 final period-variation calculation"
+      ],
+      "checked": "Flat WP and period forms are identified for positive deficit weights below one and total two. The chapter uses the positive norm ratio from the proof: minus the area-logarithm Hessian equals the harmonic Beltrami norm averaged over area. It does not import the displayed source form signs or area units without conversion."
+    },
+    {
+      "key": "KawazumiWP",
+      "url": "https://arxiv.org/pdf/2408.04937v2",
+      "html_url": "https://arxiv.org/html/2408.04937v2",
+      "pins": [
+        "Introduction equation (1), p. 1",
+        "Section 6.1 equation (38), printed p. 31"
+      ],
+      "checked": "With coefficientwise harmonic Beltrami identification the FN form is minus twice the imaginary part of the raw tangent Petersson pairing, equivalently positive i G dz wedge dbar z. The source writes the opposite twist orientation. Its closed-surface theorem calibrates the convention, not the conical existence theorem."
+    },
+    {
+      "key": "KoziarzNguyen",
+      "url": "https://arxiv.org/pdf/1601.05252",
+      "pins": [
+        "Theorem 1.1, printed p. 2",
+        "Remark 1.3, printed p. 3",
+        "Section 7.3 divisor class, printed pp. 31-32",
+        "Section 7.4 curvature conversion and Corollary 7.4, printed pp. 32-33",
+        "Section 8.1 and Proposition 8.2, printed pp. 33-34",
+        "Section 8.4, printed pp. 37-38",
+        "Appendix A"
+      ],
+      "checked": "The class is B_mu, counting each unordered boundary once and choosing its lighter weight. Section 7.3 gives the divisor class; Section 7.4 converts Omega to the curvature-minus-one form by 4pi. Direct metric/current analysis excludes balanced sums=1; the balanced divisor and volume formulas are understood by continuity under Remark 1.3. The rational corrected relative divisor and Section 8.4 vertical intersection signs support the separate real-class continuation argument."
+    },
+    {
+      "key": "McMullenGB",
+      "url": "https://people.math.harvard.edu/~ctm/papers/home/text/papers/gb/gb.pdf",
+      "pins": [
+        "Section 8 and Theorem 8.1, printed pp. 24-25, revision 24 April 2015"
+      ],
+      "checked": "Ordered marked points, curvature minus one, constant (-4pi)^d/(d+1)!, one contribution per set partition, and positive-part collision factors. The proof discusses finite-volume noncompact balanced cases by continuity or cusp analysis."
+    },
+    {
+      "key": "AMN",
+      "url": "https://arxiv.org/pdf/2310.13281",
+      "pins": [
+        "Definitions 2.12-2.13, equations (17)-(18), and Lemma 2.14, printed pp. 14-15"
+      ],
+      "checked": "The Section1-6 author checked the chamber volume definition and geometric equality, and the reduction pullback correction. Genus zero requires sum(a)>2 and 0<a_i<=1. The chapter uses the ordinary compactification pullback only in the correct chamber; the flat endpoint is an algebraic limit, not a positive-area application of the theorem."
+    }
+  ],
+  "claims": [
+    {
+      "id": "s7.flat_leaf",
+      "labels": [
+        "eq:flatweights",
+        "eq:flatconemetric"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "n>=4; all marks distinct; real 0<mu_i<1; sum(mu)=2.",
+        "Orientation and all labels retained; quotient by positive scale and rotation; all marks finite in displayed affine expression."
+      ],
+      "evidence": "Explicit metric has integrable cone singularities and regular infinity. Alexandrov realization is a separate external input, including doubled polygons.",
+      "source_keys": [
+        "ThurstonShapes",
+        "MazzeoWeiss"
+      ],
+      "coverage_gap": "No constructive convex realization or metric reconstruction is supplied by the normalization companion."
+    },
+    {
+      "id": "s7.period_geometry",
+      "labels": [
+        "eq:DMdifferential",
+        "eq:DMperiods",
+        "eq:DMarea",
+        "eq:CHpotential"
+      ],
+      "status": "external_theorem_statement_checked",
+      "hypotheses": [
+        "Same positive real flat weights; local flat trivialization of the unitary system.",
+        "Area pairing H=(i/2) integral eta wedge bar eta; signature (1,n-3); holomorphic sectional curvature -1."
+      ],
+      "evidence": "DM period coordinates and Thurston developed-edge coordinates agree as labeled projective structures. The chapter separately derives the curvature factor from the disk metric.",
+      "source_keys": [
+        "DeligneMostow",
+        "Kojima"
+      ],
+      "coverage_gap": "No arbitrary-weight period integrator or global monodromy discreteness decision is implemented."
+    },
+    {
+      "id": "s7.cyclic_cover",
+      "labels": [
+        "eq:DMdifferential"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "Rational weights with q their least common denominator; compact normalization of y^q=product(w-p_i)^m_i."
+      ],
+      "evidence": "Connectedness follows from the least denominator; eta=dw/y extends holomorphically and has deck character exp(-2pi i/q). Its eigenspace realizes twisted cohomology.",
+      "source_keys": [
+        "DeligneMostow"
+      ],
+      "coverage_gap": "No algebraic-curve or eigenspace computation is implemented."
+    },
+    {
+      "id": "s7.collisions_and_lattices",
+      "labels": [
+        "eq:vanishingperiod",
+        "eq:INT"
+      ],
+      "status": "external_theorem_statement_checked",
+      "hypotheses": [
+        "Only the selected pair collides; other marks remain separated; mu_i+mu_j<1 for the vanishing-period cone formula.",
+        "INT requires positive integral reciprocal for every light pair.",
+        "The cited Mostow SigmaINT theorem permits one specified equal-weight permutation block; reciprocal is half-integral inside that block and integral for other light pairs."
+      ],
+      "evidence": "Rescaling gives the local exponent. The lattice/uniformization theorems are external inputs. The Sigma quotient and labeled completion are distinguished; balanced collisions are cusps, not finite-angle strata.",
+      "source_keys": [
+        "MostowHalfIntegral",
+        "ThurstonShapes",
+        "Kojima"
+      ],
+      "coverage_gap": "Conditions are sufficient in the stated quotient conventions; no classification of every exceptional discrete monodromy is claimed."
+    },
+    {
+      "id": "s7.pillowcase",
+      "labels": [
+        "eq:ellipticDM",
+        "eq:ellipticperiodratio"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "Four labeled weights equal 1/2; elliptic parameter z, not its square root; 0<z<1 for the displayed real period choice.",
+        "Curvature -1; effective projective modular quotient."
+      ],
+      "evidence": "Elliptic periods give tau=i K(1-z)/K(z). Labeled P Gamma(2) area is 2pi; S4 action has Klein-four kernel, so effective quotient area is pi/3.",
+      "source_keys": [
+        "Kojima"
+      ],
+      "coverage_gap": "No certified numerical elliptic-period replay is part of this exact rational companion."
+    },
+    {
+      "id": "s8.cone_metric_limit",
+      "labels": [
+        "eq:anglepath",
+        "eq:areapath",
+        "eq:unitareanormalization",
+        "eq:flatmetriclimit"
+      ],
+      "status": "derived_from_external_theorems",
+      "hypotheses": [
+        "Fixed positive flat weights; t tends to1 from below; marked conformal structure varies only in a relatively compact coordinate chart without collisions.",
+        "Unit area removes flat scale; Mazzeo-Weiss beta_i=-a_i lies in (-1,0) near t=1; weighted Euler characteristic is -(n-2)(1-t)."
+      ],
+      "evidence": "Gauss-Bonnet gives A=2pi(n-2)(1-t). Unit-area uniformization and smooth conic deformation imply the stated local flat limit.",
+      "source_keys": [
+        "MazzeoWeiss"
+      ],
+      "coverage_gap": "No global uniform estimate near the Deligne-Mumford boundary, zero weights, or numerical cone-metric solver is asserted."
+    },
+    {
+      "id": "s8.local_wp_ch_factor",
+      "labels": [
+        "eq:localWPCHlimit",
+        "eq:CHpotential"
+      ],
+      "status": "derived_from_external_theorems",
+      "hypotheses": [
+        "The local metric-limit hypotheses above.",
+        "Cotangent differentials have at most simple poles; a uniform positive lower bound for nearby deficit weights gives an integrable radial dominator.",
+        "Raw harmonic Beltrami matrix G uses dx dy area; FN positive form is i G dz wedge dbar z.",
+        "Wang period calculation is translated to the positive area-pairing convention; CH curvature is -1."
+      ],
+      "evidence": "Dominated convergence of A Q, followed by inversion, identifies the local limiting tangent pairing. Minus the area-logarithm Hessian equals the area-average raw flat pairing, so A^-1 omega_WP tends to omega_CH/2. Kawazumi eq38 fixes the real/complex factor2; his closed-surface theorem is used to calibrate conventions only.",
+      "source_keys": [
+        "MazzeoWeiss",
+        "WangFlatWP",
+        "KawazumiWP"
+      ],
+      "coverage_gap": "Locally uniform convergence of coefficients is claimed; global dominated convergence of total volume is not. No PDE or analytic convergence certificate is supplied by finite class fixtures."
+    },
+    {
+      "id": "s8.ch_compactification",
+      "labels": [
+        "eq:CHclassB",
+        "eq:CHintersection"
+      ],
+      "status": "external_theorem_statement_checked",
+      "hypotheses": [
+        "Real 0<mu_i<1 and sum2; n>=4; all labels retained.",
+        "Stable unordered bipartitions counted once; use min(mu_I,mu_Ic), including balanced value1.",
+        "Ordinary Mbar0n extension as a closed current away from balanced weights; at balanced weights use the continuous limiting divisor class and volume formula. Top intersection is divided by d! with curvature conversion 4pi."
+      ],
+      "evidence": "Koziarz-Nguyen Theorem1.1 and Section7.3 give B_mu; Section7.4 gives the curvature-minus-one conversion. Remark1.3 excludes balanced weights from the direct metric/current analysis and supplies the volume formula there by continuity. The displayed B_mu class is also continuous in the weights.",
+      "source_keys": [
+        "KoziarzNguyen"
+      ]
+    },
+    {
+      "id": "s8.endpoint_class_identities",
+      "labels": [
+        "eq:exactWPclassflat"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "Ordinary universal curve; K is log-relative canonical; Gamma_i are marked sections.",
+        "F_I is the light-side vertical component over delta_I; use a fixed final-chamber light list.",
+        "Rational flat weights away from balanced walls first; continuous real divisor classes extend the identities to all stated real weights."
+      ],
+      "evidence": "The chapter writes all vertical pushforward rules, verifies pi_*Lambda(a)^2=beta(a), and uses Lambda(mu)=pi^* B_mu and pi_*R=n-2. Projection formula proves beta(mu)=0 and the linear coefficient2(n-2)B_mu for every admissible weight vector.",
+      "source_keys": [
+        "KoziarzNguyen"
+      ],
+      "coverage_gap": "Finite n4/n5 intersections and n6 F-curve probes illustrate this general derivation; they do not prove it."
+    },
+    {
+      "id": "s8.final_chamber_polynomial",
+      "labels": [
+        "eq:Xiclass",
+        "eq:exactWPclassflat",
+        "eq:exactWPvolumeflat",
+        "eq:WPCHvolumeasymptotic",
+        "eq:finalchamberwidth"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "Fixed mu and r_i=1-mu_i; epsilon=1-t; A=2pi(n-2)epsilon.",
+        "Only stable subsets with mu_I<1 enter Xi; balanced subsets remain heavy for every epsilon>0.",
+        "Strict final chamber epsilon<min_light(1-mu_I)/(|I|-mu_I), with original epsilon<=1; empty-light case has no positive collision wall.",
+        "AMN pulled-back WP class and intersection-volume theorem apply in each positive-area chamber."
+      ],
+      "evidence": "Quadratic expansion of beta gives exact class (A/2)[omega_CH]+A^2 Xi and exact volume polynomial with degrees d through2d. Total-volume asymptotic follows from intersection theory, separately from local analytic convergence.",
+      "source_keys": [
+        "KoziarzNguyen",
+        "AMN"
+      ],
+      "coverage_gap": "The fixed-weight final polynomial is not a single polynomial for the full ideal-to-flat path."
+    },
+    {
+      "id": "s8.named_exact_examples",
+      "labels": [
+        "eq:equalflatvolume",
+        "eq:finalchamberwidth",
+        "eq:McMullenpartitionvolume"
+      ],
+      "status": "exact_finite_check",
+      "hypotheses": [
+        "Named n4 equal and printed rational weights, two rational balanced perturbations, and n5 equal/asymmetric fixtures.",
+        "All arithmetic in the companion is rational, using a=A/pi and V_WP/pi^(2d)."
+      ],
+      "evidence": "Chapter n4 equal gives pi A-A^2/8; printed n4 gives3pi A/5+9A^2/40 for0<A<4pi/11. Independent n5 boundary intersections and partition enumeration both give V_CH=8pi^2/5 and final V_WP=2pi^2 A^2/5+pi A^3/5+A^4/40 for0<A<pi.",
+      "source_keys": [
+        "Kojima",
+        "KoziarzNguyen",
+        "McMullenGB"
+      ],
+      "computation": {
+        "status": "author_companion_checks_passed",
+        "code_paths": [
+          "experiments/normalizations/run.py",
+          "experiments/normalizations/fixture.json",
+          "experiments/normalizations/tests/test_normalizations.py"
+        ],
+        "fixture_ids": [
+          "n4-equal",
+          "n4-printed",
+          "n4-perturbed-1-10",
+          "n4-perturbed-1-100",
+          "n5-equal",
+          "n5-asymmetric"
+        ],
+        "artifact_status": "Canonical artifacts/normalizations/result.json awaits the root clean-source artifact stage."
+      },
+      "coverage_gap": "Finite fixtures check constants and algebra; they are not tests of convex realization, lattice classification, or analytic convergence."
+    },
+    {
+      "id": "s8.balanced_nonuniformity",
+      "labels": [
+        "eq:Xiclass",
+        "eq:finalchamberwidth"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "mu(delta)=(1/2-delta,1/2-delta,1/2+delta,1/2+delta),0<delta<1/2."
+      ],
+      "evidence": "Xi degree is delta/2 while equal weights give-1/8. Final chamber epsilon<2delta/(1+2delta) shrinks to zero. Continuity of the full wall-corrected volume does not imply continuity of a selected chamber coefficient.",
+      "source_keys": [
+        "AMN"
+      ],
+      "coverage_gap": "No uniform asymptotic expansion across balanced-weight crossovers is established."
+    },
+    {
+      "id": "s8.partition_volume",
+      "labels": [
+        "eq:McMullenpartitionvolume"
+      ],
+      "status": "external_theorem_statement_checked",
+      "hypotheses": [
+        "Positive real flat weights; all labels retained; holomorphic sectional curvature -1.",
+        "Each set partition with at least three blocks counted once; singleton factor1; positive-part factor for non-singletons."
+      ],
+      "evidence": "McMullen Theorem8.1 gives the prefactor(-4pi)^d/(d+1)! and collision factors; balanced finite-volume cases are included in its proof. KN Corollary7.4 checks agreement with intersection theory.",
+      "source_keys": [
+        "McMullenGB",
+        "KoziarzNguyen"
+      ]
+    }
+  ],
+  "evidence_boundary": "No manuscript/model upload, hosted QA, fresh PDF/HTML build or geometry solver is part of this author revision. The root workflow owns independent review and artifact generation."
+}

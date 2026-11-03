@@ -1,0 +1,83 @@
+{
+  "stage": "Exact approved source preflight before staging",
+  "created_at_utc": "2026-11-02T15:00:26.736944+00:00",
+  "baseline_commit": "f697d61ce5ef48c538a44e3ff47193ca5aaf46a8",
+  "approval": {
+    "path_from_outer_run": "editorial-review/source-status-v2/acceptance.json",
+    "sha256": "b4837ced28f611de327df1f7f5e274424be3627d03f741f1bd36daa40e0e7a4e"
+  },
+  "approval_coverage_sha256": "8fe7ca54ba83b7aaa5492c6591f8237046d5783b383f1b89c3c08773608590e6",
+  "approval_inputs": [
+    {
+      "path_from_outer_run": "editorial-review/acceptance.json",
+      "sha256": "6e0ed1995681aeed4c82168811608a2e35599c0141cc25c254638114c1789f5e"
+    },
+    {
+      "path_from_outer_run": "pdf-review/layout-v3/acceptance.json",
+      "sha256": "bd7ba17bb707fe38b9320504c66b0ac165206a868dc799240807edeb3ffd2941"
+    },
+    {
+      "path_from_outer_run": "web-review/v3/acceptance.json",
+      "sha256": "c81904ff3841dffa15c6f25a5f0491677cb6a261a59fdcd62b0c289ff807537e"
+    },
+    {
+      "path_from_outer_run": "checkpoint-preparation/source-status-integration/revision-v2/source-status-freeze.json",
+      "sha256": "6ecdf8d9d98c60ac90fcda97be62ae220597dd7961a41b2ce2da84ac843cc81a"
+    },
+    {
+      "path_from_outer_run": "release-audit/canonical-before.json",
+      "sha256": "5e79f81d384336d05aa2945ae8b585de6f98f8144152cda6e776492661d87536"
+    }
+  ],
+  "source_paths": [
+    "INTEGRATION_PLAN.md",
+    "LICENSES/README.md",
+    "README.md",
+    "book/README.md",
+    "book/chapters/07-euclidean-periods.tex",
+    "book/chapters/09-volume-hessians.tex",
+    "book/chapters/10-quantum-introduction.tex",
+    "book/chapters/11-quantum-degeneration.tex",
+    "book/chapters/13-four-point-fusion.tex",
+    "book/chapters/14-normalized-quantum-comparison.tex",
+    "book/chapters/16-dehn-filling-response.tex",
+    "book/chapters/23-trace-coefficients.tex",
+    "book/chapters/28-genus-two-model.tex",
+    "book/chapters/30-sharp-diagnostics.tex",
+    "book/chapters/31-arithmetic-remainder.tex",
+    "book/chapters/32-open-questions.tex",
+    "book/chapters/appendix-b-conventions.tex",
+    "book/computational-status.md",
+    "book/polyhedral_volumes_and_geodesic_identities.tex",
+    "docs/INTEGRATION_STATUS.md",
+    "experiments/quantum_geodesics/README.md",
+    "packages/volume-toolkit/docs/release-0.4.0.md",
+    "site/README.md",
+    "site/book/downloads.json",
+    "site/book/edition.css",
+    "site/book/search.js",
+    "site/build_book.py",
+    "site/tests/test_book_search.cjs",
+    "site/tests/test_build_book.py"
+  ],
+  "source_count": 29,
+  "tracked_modifications": 23,
+  "new_source_files": 6,
+  "clean_index_before_staging": true,
+  "all_current_materialized_hashes_match_approved": true,
+  "protected_baseline_count": 2735,
+  "protected_git_tree_sha256": "fbf33fec97b20971347bb3aca8f6afc93cdbb1f166a48f87ed4bea1c0387c295",
+  "protected_materialized_evidence": {
+    "path_from_outer_run": "editorial-review/source-status-v2/protected-baseline-checks.json",
+    "sha256": "9c13418216d12984a6cc19bf65f94ed49656ff47937a7c95269d3a442ef09b68"
+  },
+  "operations_excluded": [
+    "build",
+    "marker",
+    "artifact curation",
+    "scientific replay",
+    "push",
+    "upload",
+    "deploy"
+  ]
+}

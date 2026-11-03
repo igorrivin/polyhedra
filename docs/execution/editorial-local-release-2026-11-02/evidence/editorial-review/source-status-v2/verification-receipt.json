@@ -1,0 +1,27 @@
+{
+  "started_at_utc": "2026-11-02T14:56:19.495615+00:00",
+  "completed_at_utc": "2026-11-02T14:56:21.054074+00:00",
+  "command": [
+    "python3",
+    "-B",
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/editorial-review/source-status-v2/verify_sources.py"
+  ],
+  "script_sha256": "c5aaa9b8efc0db1d490da28cf4d0b2d9ab06f800f13a34157499ff81bec42ddb",
+  "passed": true,
+  "index_sha256_before_and_after": "98964596604f1b34de84834f0aa99d325664d2c960169b9d86e65441291af2d5",
+  "staged_paths": [],
+  "baseline_head_unchanged": true,
+  "canonical_writes": 0,
+  "whitespace_exit_code": 0,
+  "not_performed": [
+    "canonical edits",
+    "PDF marker/build/render",
+    "web build",
+    "scientific replay",
+    "package/site tests",
+    "staging",
+    "commit",
+    "browser/server",
+    "push/upload/deployment"
+  ]
+}

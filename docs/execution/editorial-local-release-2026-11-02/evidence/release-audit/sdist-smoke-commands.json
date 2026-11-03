@@ -1,0 +1,93 @@
+{
+  "installed_package_hashes_match": {
+    "ideal_poly_volume_toolkit/__init__.py": true,
+    "ideal_poly_volume_toolkit/angle_barrier.py": true,
+    "ideal_poly_volume_toolkit/combinatorial_enumeration.py": true,
+    "ideal_poly_volume_toolkit/cone_realization.py": true,
+    "ideal_poly_volume_toolkit/fast_logdet.py": true,
+    "ideal_poly_volume_toolkit/geometric_realization.py": true,
+    "ideal_poly_volume_toolkit/geometry.py": true,
+    "ideal_poly_volume_toolkit/geometry_4d.py": true,
+    "ideal_poly_volume_toolkit/geometry_4d_torch.py": true,
+    "ideal_poly_volume_toolkit/geometry_torch.py": true,
+    "ideal_poly_volume_toolkit/h5_volume_torch.py": true,
+    "ideal_poly_volume_toolkit/hyperbolic_4_simplex_volume.py": true,
+    "ideal_poly_volume_toolkit/hyperbolic_4_simplex_volume_models.py": true,
+    "ideal_poly_volume_toolkit/hyperbolic_5_6_simplex_volume.py": true,
+    "ideal_poly_volume_toolkit/hyperbolic_model_transforms.py": true,
+    "ideal_poly_volume_toolkit/inscribed_realization.py": true,
+    "ideal_poly_volume_toolkit/li2_torch.py": true,
+    "ideal_poly_volume_toolkit/murakami_torch.py": true,
+    "ideal_poly_volume_toolkit/optimization.py": true,
+    "ideal_poly_volume_toolkit/optimization_cli.py": true,
+    "ideal_poly_volume_toolkit/planar_utils.py": true,
+    "ideal_poly_volume_toolkit/plantri_interface.py": true,
+    "ideal_poly_volume_toolkit/pointset_to_fuchsian.py": true,
+    "ideal_poly_volume_toolkit/rivin_delaunay.py": true,
+    "ideal_poly_volume_toolkit/rivin_holonomy.py": true,
+    "ideal_poly_volume_toolkit/rivin_zero_shear.py": true,
+    "ideal_poly_volume_toolkit/rl/__init__.py": true,
+    "ideal_poly_volume_toolkit/rl/_legacy_polytope_env.py": true,
+    "ideal_poly_volume_toolkit/rl/cage/__init__.py": true,
+    "ideal_poly_volume_toolkit/rl/cage/task.py": true,
+    "ideal_poly_volume_toolkit/rl/generic.py": true,
+    "ideal_poly_volume_toolkit/rl/inner_optimizers.py": true,
+    "ideal_poly_volume_toolkit/rl/polytope/__init__.py": true,
+    "ideal_poly_volume_toolkit/rl/polytope/env.py": true,
+    "ideal_poly_volume_toolkit/rl/polytope/h4_combinatorics_benchmark.py": true,
+    "ideal_poly_volume_toolkit/rl/polytope/h4_symmetric_benchmark.py": true,
+    "ideal_poly_volume_toolkit/rl/polytope/optimizers.py": true,
+    "ideal_poly_volume_toolkit/rl/polytope/task.py": true,
+    "ideal_poly_volume_toolkit/rl/polytope/types.py": true,
+    "ideal_poly_volume_toolkit/rl/training.py": true,
+    "ideal_poly_volume_toolkit/rl_cages.py": true,
+    "ideal_poly_volume_toolkit/rl_generic.py": true,
+    "ideal_poly_volume_toolkit/rl_optimizer.py": true,
+    "ideal_poly_volume_toolkit/simplex_volume_4d.py": true,
+    "ideal_poly_volume_toolkit/symmetry.py": true,
+    "ideal_poly_volume_toolkit/variational.py": true,
+    "ideal_poly_volume_toolkit/visualization.py": true,
+    "ideal_poly_volume_toolkit/volume_threshold.py": true
+  },
+  "commands": [
+    {
+      "name": "sdist-pip-check",
+      "command": [
+        "/private/tmp/polyhedra-release-sdist-20261102/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "/private/tmp",
+      "elapsed_seconds": 0.282925583072938,
+      "returncode": 0,
+      "stdout": "sdist-pip-check.stdout.txt",
+      "stderr": "sdist-pip-check.stderr.txt"
+    },
+    {
+      "name": "sdist-imports",
+      "command": [
+        "/private/tmp/polyhedra-release-sdist-20261102/bin/python",
+        "-c",
+        "import json, ideal_poly_volume_toolkit, ideal_poly_volume_toolkit.geometry as geometry; print(json.dumps({\"package_path\":ideal_poly_volume_toolkit.__file__,\"geometry_path\":geometry.__file__,\"version\":ideal_poly_volume_toolkit.__version__}))"
+      ],
+      "cwd": "/private/tmp",
+      "elapsed_seconds": 6.851355666993186,
+      "returncode": 0,
+      "stdout": "sdist-imports.stdout.txt",
+      "stderr": "sdist-imports.stderr.txt"
+    },
+    {
+      "name": "sdist-cli-help",
+      "command": [
+        "/private/tmp/polyhedra-release-sdist-20261102/bin/ideal-poly-optimize",
+        "--help"
+      ],
+      "cwd": "/private/tmp",
+      "elapsed_seconds": 4.056999458000064,
+      "returncode": 0,
+      "stdout": "sdist-cli-help.stdout.txt",
+      "stderr": "sdist-cli-help.stderr.txt"
+    }
+  ]
+}

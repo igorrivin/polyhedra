@@ -1,0 +1,611 @@
+{
+  "schema_version": "1.0",
+  "chapter_source": "book/chapters/16-dehn-filling-response.tex",
+  "chapter_label": "sec:dehnresponse",
+  "review_date": "2026-11-01",
+  "baseline_commit": "bf260eaab047d9047602ece652e5a7e43625d3f6",
+  "revision_scope": "Bounded author audit of local deformation, constrained volume response, peripheral conventions, finite formal coefficients and conditional quantum surgery. Primary theorem statements and hypotheses inspected; complete external proofs and global quantum-invariant constructions are not re-audited.",
+  "path_convention": "Code and artifact paths are relative to the repository root; execution provenance is recorded by the quantum-surgery review checkpoint.",
+  "status_definitions": {
+    "derived_in_chapter": "A derivation is explicit in the canonical chapter and has an author mathematical audit; independent acceptance is recorded separately against file hashes.",
+    "external_theorem_statement_checked": "The cited theorem statement, displayed identity and relevant hypotheses were inspected in primary material; a complete independent proof of the external theorem is not asserted.",
+    "conditional_quantum_consequence": "A consequence of the explicit phase, amplitude, cycle, nondegeneracy and global-dominance assumptions; those assumptions are not established by finite coefficient checks.",
+    "external_conjecture": "Retained as a conjecture for the stated class, with a separately cited theorem for the specified figure-eight fillings.",
+    "illustration": "A schematic drawing of the equations, not computational or geometric evidence."
+  },
+  "claims": [
+    {
+      "id": "s16.peripheral_germ",
+      "labels": [
+        "eq:dehnholonomy",
+        "eq:dehncone"
+      ],
+      "status": "external_theorem_statement_checked",
+      "hypotheses": [
+        "Oriented finite-volume one-cusped hyperbolic manifold; marked local geometric branch at the complete point; B=Im(tau)>0.",
+        "u,v are logarithms of multipliers, twice sign-adjusted SL2 eigenvalue logarithms; the smooth equation is pu+qv=2pi i.",
+        "Primitive slope; positive complete ideal triangulation additionally required only for the angle-optimization statements."
+      ],
+      "source_evidence": [
+        {
+          "source": "NeumannZagier",
+          "url": "https://people.mpim-bonn.mpg.de/zagier/files/doi/10.1016/0040-9383(85)90004-7/fulltext.pdf",
+          "pin": "Theorem3, Section4 and equations(52),(65)-(68)",
+          "access": "Primary source statement or displayed formula inspected; source scope limits recorded in the author source-pins artifact."
+        }
+      ],
+      "coverage_gap": "A small holonomy solution is not by itself a geometric cone completion."
+    },
+    {
+      "id": "s16.uniform_long_slope",
+      "labels": [
+        "eq:dehncone",
+        "eq:dehnconeloss"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "Fixed analytic germ v=tau*u+O(u^3); bounded real theta; |p+q*tau| sufficiently large."
+      ],
+      "derivation": "Set t=q/A and z=i*theta/A. Since |t|<=1/B, choose one disk with |t*h prime|<1/2. The uniform local inverse of u+t*h(u)=z gives u=O(1/A), while parity and the analytic volume formula give the eighth-order remainder.",
+      "coverage_gap": "Uniformity is classical in slope and bounded theta. It supplies no uniformity in the quantum level or proof of cone completion."
+    },
+    {
+      "id": "s16.angle_stationarity",
+      "labels": [
+        "eq:dehnvolumedifferential"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "Positive complete geometric ideal triangulation; torus ideal vertex links; independent coordinates on the full tetrahedron/edge-constrained angle space.",
+        "K is positive definite; rank P=2 by the peripheral intersection pairing; thus L is nonzero."
+      ],
+      "derivation": "The constrained IFT gives the nearby interior maximizer. Leading-trailing variations impose the real edge equations and real peripheral filling equation; dV=1/2(Re(v)dIm(u)-Re(u)dIm(v)).",
+      "source_evidence": [
+        {
+          "source": "FuterGueritaud",
+          "url": "https://arxiv.org/pdf/1004.0440v2",
+          "pin": "Lemma4.4, Proposition4.6, Lemma5.3, Proposition5.4; Theorem6.1 only at theta=2pi",
+          "access": "Primary source statement or displayed formula inspected; source scope limits recorded in the author source-pins artifact."
+        }
+      ]
+    },
+    {
+      "id": "s16.real_legendre",
+      "labels": [
+        "eq:realdehnlegendre",
+        "eq:dehnsourcecore"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "Unique local positive interior maximum; L nonzero.",
+        "Physical core length notation requires the geometric cone branch."
+      ],
+      "derivation": "For B(j)=max(V+jLx), B prime=theta and Vpq=B-j*theta. Envelope derivative is -j; Schlaefli gives j=core length/2 on geometric completions."
+    },
+    {
+      "id": "s16.cusp_hessian",
+      "labels": [
+        "eq:dehnquadraticresponse",
+        "eq:cuspHessian",
+        "eq:cuspmatrixHessian"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "Same full positive angle-space hypotheses; marked cusp shape B>0."
+      ],
+      "derivation": "Linear response gives chi=L K inverse L transpose; comparison with the local volume coefficient yields chi=2|p+q*tau|^2/B, the peripheral matrix and determinant4.",
+      "computation": {
+        "status": "exact_finite_fixture_scope",
+        "code_paths": [
+          "experiments/quantum_surgery/run.py"
+        ],
+        "evidence_paths": [
+          "artifacts/quantum_surgery/result.json"
+        ],
+        "description": "Figure-eight K,P, chi and determinant checks; general boundary matrix algebra fixtures.",
+        "limit": "Finite exact algebra is separate from a convergence proof, geometric realization and a global quantum asymptotic."
+      }
+    },
+    {
+      "id": "s16.potential",
+      "labels": [
+        "eq:dehnprimitive",
+        "eq:dehnsurgeryaction"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "Analytic one-cusp branch; q nonzero for the displayed generating function; constants fixed at cusp."
+      ],
+      "derivation": "F prime=v and Phi_NZ=2F. The action F+p*u^2/(2q)-i*theta*u/q has the filling equation as its critical equation.",
+      "source_evidence": [
+        {
+          "source": "NeumannZagier",
+          "url": "https://people.mpim-bonn.mpg.de/zagier/files/doi/10.1016/0040-9383(85)90004-7/fulltext.pdf",
+          "pin": "Theorem3 and Section6",
+          "access": "Primary source statement or displayed formula inspected; source scope limits recorded in the author source-pins artifact."
+        }
+      ],
+      "computation": {
+        "status": "exact_finite_fixture_scope",
+        "code_paths": [
+          "experiments/quantum_surgery/run.py"
+        ],
+        "evidence_paths": [
+          "artifacts/quantum_surgery/result.json"
+        ],
+        "description": "Formal polynomial action and its critical equation through the stated finite degree.",
+        "limit": "Finite exact algebra is separate from a convergence proof, geometric realization and a global quantum asymptotic."
+      }
+    },
+    {
+      "id": "s16.critical_value",
+      "labels": [
+        "prop:dehncriticalvalue",
+        "eq:dehnexactcriticalvolume",
+        "eq:dehnenvelope",
+        "eq:NZrealvolume"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "q nonzero; unique small analytic solution; p+q*v prime nonzero; volume denotes the local geometric volume germ.",
+        "For physical core-length interpretation, a positive geometric cone completion is separately assumed."
+      ],
+      "derivation": "NZ real volume V-V0=1/2 Im F-1/2 Re(u) Im(v) and the filling equation give 1/2 Im S*. Envelope derivatives follow by differentiating the critical equation.",
+      "source_evidence": [
+        {
+          "source": "NeumannZagier",
+          "url": "https://people.mpim-bonn.mpg.de/zagier/files/doi/10.1016/0040-9383(85)90004-7/fulltext.pdf",
+          "pin": "Section6, equations(52)-(53)",
+          "access": "Primary source statement or displayed formula inspected; source scope limits recorded in the author source-pins artifact."
+        }
+      ],
+      "computation": {
+        "status": "exact_finite_fixture_scope",
+        "code_paths": [
+          "experiments/quantum_surgery/run.py"
+        ],
+        "evidence_paths": [
+          "artifacts/quantum_surgery/result.json"
+        ],
+        "description": "Formal filling and critical action coefficients plus envelope derivative; not a filled-manifold volume evaluation.",
+        "limit": "Finite exact algebra is separate from a convergence proof, geometric realization and a global quantum asymptotic."
+      }
+    },
+    {
+      "id": "s16.schematic",
+      "labels": [
+        "fig:mono-dehn-filling"
+      ],
+      "status": "illustration",
+      "hypotheses": [
+        "Projection of complex curves; no quantitative geometric realization inferred."
+      ]
+    },
+    {
+      "id": "s16.filling_series",
+      "labels": [
+        "eq:dehninversion",
+        "eq:dehncriticalseries",
+        "eq:dehnconeloss",
+        "eq:dehnsmoothloss"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "Odd analytic v with specified tau,c3,c5; q nonzero; theta Taylor regime or the separately justified bounded-theta long-slope regime.",
+        "Smooth-filled volume requires an actual smooth hyperbolic completion at theta=2pi."
+      ],
+      "derivation": "Invert A*u+q*c3*u^3+q*c5*u^5=i*theta through degree5, integrate -i*u/q through degree6, and take half imaginary part.",
+      "computation": {
+        "status": "exact_finite_fixture_scope",
+        "code_paths": [
+          "experiments/quantum_surgery/run.py"
+        ],
+        "evidence_paths": [
+          "artifacts/quantum_surgery/result.json"
+        ],
+        "description": "Exact filling inverse, action and envelope coefficients through theta5/theta6 at fixed algebraic cusp data and specified primitive slopes.",
+        "limit": "Finite exact algebra is separate from a convergence proof, geometric realization and a global quantum asymptotic."
+      }
+    },
+    {
+      "id": "s16.quartic_response",
+      "labels": [
+        "eq:dehnquartictensors",
+        "eq:dehnquarticdictionary"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "Smooth strictly concave local objective; fixed linear constraint Lx=theta; K positive definite.",
+        "Identification with c3 additionally uses the geometric branch and its even volume."
+      ],
+      "derivation": "e=K inverse L transpose/chi; R projects the inverse Hessian onto ker L. Solve x=theta*e+theta^2*R*t/2. The unknown cubic displacement has zero cross term; the response correction is 3*t transpose R*t.",
+      "computation": {
+        "status": "exact_finite_fixture_scope",
+        "code_paths": [
+          "experiments/quantum_surgery/run.py"
+        ],
+        "evidence_paths": [
+          "artifacts/quantum_surgery/result.json"
+        ],
+        "description": "Exact figure-eight derivative contraction, cubic cancellation and quartic response including the constrained correction.",
+        "limit": "Finite exact algebra is separate from a convergence proof, geometric realization and a global quantum asymptotic."
+      }
+    },
+    {
+      "id": "s16.closed_quantum_conjecture",
+      "labels": [
+        "eq:closedquantumvolume"
+      ],
+      "status": "external_conjecture",
+      "hypotheses": [
+        "Closed oriented hyperbolic manifold; specified Chen-Yang normalization; odd r; root exp(2pi*i/r)."
+      ],
+      "source_evidence": [
+        {
+          "source": "ChenYang",
+          "url": "https://arxiv.org/pdf/1503.02547v4",
+          "pin": "Conjectures1.1-1.2, p.2",
+          "access": "Primary source statement or displayed formula inspected; source scope limits recorded in the author source-pins artifact."
+        }
+      ],
+      "coverage_gap": "Not asserted as a general theorem. Figure-eight hyperbolic rational fillings have the separately cited external theorem."
+    },
+    {
+      "id": "s16.quantum_phase",
+      "labels": [
+        "eq:dehnquantumphase",
+        "eq:dehnquantumexponent",
+        "eq:dehnquantumresponse"
+      ],
+      "status": "conditional_quantum_consequence",
+      "hypotheses": [
+        "Boundary state with phase Phi0+F/2, Im(Phi0)=V0; hbar=4pi*i/r; same local critical point."
+      ],
+      "derivation": "Taking the modulus of exp(T/hbar) identifies the geometric exponential with exp(r*Vpq/(4pi)); this is an identity for the specified phase, not identification with an exact RT invariant.",
+      "source_evidence": [
+        {
+          "source": "WongYangDehn",
+          "url": "https://ems.press/content/serial-article-files/51093",
+          "pin": "p.456 unnumbered Yoshida filling formula and potential normalization(5.9)",
+          "access": "Primary source statement or displayed formula inspected; source scope limits recorded in the author source-pins artifact."
+        },
+        {
+          "source": "GangRomoYamazaki",
+          "url": "https://arxiv.org/pdf/1704.00918v2",
+          "pin": "Equations(12)-(14), p.6",
+          "access": "Primary source statement or displayed formula inspected; source scope limits recorded in the author source-pins artifact."
+        }
+      ]
+    },
+    {
+      "id": "s16.quantum_transfer",
+      "labels": [
+        "prop:dehnquantumconditional"
+      ],
+      "status": "conditional_quantum_consequence",
+      "hypotheses": [
+        "An exact surgery representation with the stipulated phase and uniform classical symbol on a chosen compact parameter interval.",
+        "Nondegenerate geometric saddle; its thimble occurs; net leading geometric-sector coefficient uniformly bounded away from zero.",
+        "For the full invariant, all remaining contributions are uniformly exponentially smaller."
+      ],
+      "derivation": "Uniform stationary phase gives the local expansion; polynomial Gaussian factors affect normalized logarithms by O(log(r)/r); the assumed global gap and noncancellation permit passage to the full invariant.",
+      "coverage_gap": "No new exact surgery representation, contour survival, noncancellation theorem, cusp-uniform quantum normalization or simultaneous slope/level limit is established."
+    },
+    {
+      "id": "s16.jacobian",
+      "labels": [
+        "eq:dehnjacobian"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "q nonzero; nondegenerate small critical point."
+      ],
+      "derivation": "Differentiate pu+qv=i*theta and the quadratic action.",
+      "computation": {
+        "status": "exact_finite_fixture_scope",
+        "code_paths": [
+          "experiments/quantum_surgery/run.py"
+        ],
+        "evidence_paths": [
+          "artifacts/quantum_surgery/result.json"
+        ],
+        "description": "Formal derivative and action Hessian identities.",
+        "limit": "Finite exact algebra is separate from a convergence proof, geometric realization and a global quantum asymptotic."
+      }
+    },
+    {
+      "id": "s16.torsion_surgery",
+      "labels": [
+        "eq:dehntorsionsurgery",
+        "eq:dehngaussiantorsion"
+      ],
+      "status": "external_theorem_statement_checked",
+      "hypotheses": [
+        "Smooth hyperbolic filling at theta=2pi; closed adjoint representation acyclic.",
+        "Restriction regular for both mu and the filling curve, with specified twisted H1 and H2 bases; D* nonzero.",
+        "Loxodromic core; sinh(w/2) nonzero; signs and square-root branches fixed consistently."
+      ],
+      "source_evidence": [
+        {
+          "source": "WongYangDehn",
+          "url": "https://ems.press/content/serial-article-files/51093",
+          "pin": "Equations(5.16),(5.23), pp.459,461",
+          "access": "Primary source statement or displayed formula inspected; source scope limits recorded in the author source-pins artifact."
+        },
+        {
+          "source": "PortiTorsionSurvey",
+          "url": "https://arxiv.org/pdf/1511.00400v2",
+          "pin": "Propositions5.13-5.14, p.40; Proposition4.23(b), p.34 with (k1,k2)=(2,0)",
+          "access": "Primary source statement or displayed formula inspected; source scope limits recorded in the author source-pins artifact."
+        }
+      ],
+      "coverage_gap": "No torsion value for a filled manifold is computed. At the cusp the solid-torus factor vanishes; one-loop identification also requires the correctly normalized boundary amplitude, not the Gaussian alone."
+    },
+    {
+      "id": "s16.figure_eight_series",
+      "labels": [
+        "eq:figureeightNZcoefficients",
+        "eq:figureeightfillingloss"
+      ],
+      "status": "external_theorem_statement_checked",
+      "hypotheses": [
+        "Standard marked figure-eight geometric cusp; multiplier logs with tau=2sqrt(3)i."
+      ],
+      "source_evidence": [
+        {
+          "source": "NeumannZagier",
+          "url": "https://people.mpim-bonn.mpg.de/zagier/files/doi/10.1016/0040-9383(85)90004-7/fulltext.pdf",
+          "pin": "Equations(64)-(68), pp.329-331 and following volume expansion",
+          "access": "Primary source statement or displayed formula inspected; source scope limits recorded in the author source-pins artifact."
+        }
+      ],
+      "computation": {
+        "status": "exact_finite_fixture_scope",
+        "code_paths": [
+          "experiments/quantum_surgery/run.py"
+        ],
+        "evidence_paths": [
+          "artifacts/quantum_surgery/result.json"
+        ],
+        "description": "Exact finite cosh(v/2)=1+cosh(u)-cosh(2u) coefficients through u6, with v truncated throughu5. Eigenvalue variables are m=exp(u/2), l=-exp(v/2).",
+        "limit": "Finite exact algebra is separate from a convergence proof, geometric realization and a global quantum asymptotic."
+      }
+    },
+    {
+      "id": "s16.figure_eight_hessian",
+      "labels": [
+        "eq:figureeightdirectHessian",
+        "eq:figureeightdirectquartic"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "The displayed two-tetrahedron positive figure-eight shapes and full three-dimensional angle coordinates."
+      ],
+      "derivation": "K=E transpose E/sqrt(3); P comes from angular holonomy. Lambda third=4/3 and fourth=-8/(3sqrt(3)) at pi/3; contract and include the Schur response term.",
+      "computation": {
+        "status": "exact_finite_fixture_scope",
+        "code_paths": [
+          "experiments/quantum_surgery/run.py"
+        ],
+        "evidence_paths": [
+          "artifacts/quantum_surgery/result.json"
+        ],
+        "description": "Exact K,P,E, susceptibility, e and constrained cubic/quartic tensor expressions for the stated fixed slope fixtures.",
+        "limit": "Finite exact algebra is separate from a convergence proof, geometric realization and a global quantum asymptotic."
+      }
+    },
+    {
+      "id": "s16.figure_eight_quantum_theorem",
+      "labels": [
+        "sec:dehnresponse"
+      ],
+      "status": "external_theorem_statement_checked",
+      "hypotheses": [
+        "Closed oriented hyperbolic manifold obtained by rational Dehn filling of the figure-eight knot; odd r and the source normalization."
+      ],
+      "source_evidence": [
+        {
+          "source": "WongYangDehn",
+          "url": "https://ems.press/content/serial-article-files/51093",
+          "pin": "Theorems1.1-1.2, pp.420-421",
+          "access": "Primary source statement or displayed formula inspected; source scope limits recorded in the author source-pins artifact."
+        }
+      ],
+      "coverage_gap": "The source proves the leading RT term with relative O(1/r), inverse-square-root adjoint torsion amplitude and RT/TV volume limits. Full global proof is external, not established by the companion fixtures."
+    },
+    {
+      "id": "s16.symplectic_reduction",
+      "labels": [
+        "sec:NZsymplectic",
+        "eq:NZmatrixpairing",
+        "eq:NZboundarysymplectic"
+      ],
+      "status": "external_theorem_statement_checked",
+      "hypotheses": [
+        "Oriented ideal triangulation with h torus cusps; n tetrahedra; longitude-meridian row order; independent ambient Z,W coordinates.",
+        "Rank R_E=n-h; reduction near the regular geometric point."
+      ],
+      "derivation": "Ambient sum dZ wedge dW reduces to 1/2 sum dv wedge du; actual tetrahedral shape equations are Lagrangian. Modern sources are background, not a normalization substitute.",
+      "source_evidence": [
+        {
+          "source": "NeumannZagier",
+          "url": "https://people.mpim-bonn.mpg.de/zagier/files/doi/10.1016/0040-9383(85)90004-7/fulltext.pdf",
+          "pin": "Theorem2.2 eq.(21), Proposition2.3, Corollary2.4, pp.314-315",
+          "access": "Primary source statement or displayed formula inspected; source scope limits recorded in the author source-pins artifact."
+        }
+      ]
+    },
+    {
+      "id": "s16.reciprocity",
+      "labels": [
+        "eq:NZreciprocity",
+        "eq:NZvolumeprimitive"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "Regular local geometric Lagrangian graph v=v(u); fixed logarithm branches and potential constant."
+      ],
+      "derivation": "Vanishing restricted symplectic form gives symmetric mixed derivatives; alpha=d(F/2). beta=Im(alpha)-d(x*s)/2, so d beta=Im(Omega) vanishes on the geometric branch.",
+      "source_evidence": [
+        {
+          "source": "NeumannZagier",
+          "url": "https://people.mpim-bonn.mpg.de/zagier/files/doi/10.1016/0040-9383(85)90004-7/fulltext.pdf",
+          "pin": "Theorem3",
+          "access": "Primary source statement or displayed formula inspected; source scope limits recorded in the author source-pins artifact."
+        },
+        {
+          "source": "FuterGueritaud",
+          "url": "https://arxiv.org/pdf/1004.0440v2",
+          "pin": "Lemma4.4 and Proposition5.4",
+          "access": "Primary source statement or displayed formula inspected; source scope limits recorded in the author source-pins artifact."
+        }
+      ]
+    },
+    {
+      "id": "s16.canonical_filling",
+      "labels": [
+        "eq:NZcanonicalfilling",
+        "eq:NZcanonicalkernel",
+        "eq:NZgeneratingidentity",
+        "eq:NZcanonicalaction",
+        "eq:NZinvariantpotential"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "p*sigma-q*rho=1; q nonzero for G; consistent local logarithm and additive-constant conventions."
+      ],
+      "derivation": "a=pu+qv, b=rho*u+sigma*v preserve 1/2 dv wedge du. Direct differentiation of G gives (b da-v du)/2. On the canonical relation G=(ab-uv)/4; at a=i*theta the real framing term is -sigma*theta^2/(4q).",
+      "source_evidence": [
+        {
+          "source": "WongYangDehn",
+          "url": "https://ems.press/content/serial-article-files/51093",
+          "pin": "p.456 unnumbered filling formula and(5.9) for the normalization comparison",
+          "access": "Primary source statement or displayed formula inspected; source scope limits recorded in the author source-pins artifact."
+        }
+      ],
+      "computation": {
+        "status": "exact_finite_fixture_scope",
+        "code_paths": [
+          "experiments/quantum_surgery/run.py"
+        ],
+        "evidence_paths": [
+          "artifacts/quantum_surgery/result.json"
+        ],
+        "description": "Exact canonical differential, symplectic determinant, framing and potential-invariance identities.",
+        "limit": "Finite exact algebra is separate from a convergence proof, geometric realization and a global quantum asymptotic."
+      }
+    },
+    {
+      "id": "s16.coefficient_covariance",
+      "labels": [
+        "eq:NZcoefficientcovariance",
+        "eq:NZvolumenewpolarization"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "SL2(Z) peripheral basis change; A nonzero; odd analytic one-cusp germ."
+      ],
+      "derivation": "Formal inverse of a=A*u+q*c3*u^3+q*c5*u^5 gives transformed tau,c3,c5; the transformed volume follows at a=i*theta. The weight-4 law is covariance, not a modular-form claim.",
+      "computation": {
+        "status": "exact_finite_fixture_scope",
+        "code_paths": [
+          "experiments/quantum_surgery/run.py"
+        ],
+        "evidence_paths": [
+          "artifacts/quantum_surgery/result.json"
+        ],
+        "description": "Exact transformed cubic/quintic coefficients and imaginary cusp-shape identity; q=0 allowed in covariance though excluded from G.",
+        "limit": "Finite exact algebra is separate from a convergence proof, geometric realization and a global quantum asymptotic."
+      }
+    },
+    {
+      "id": "s16.nonlinear_hessian",
+      "labels": [
+        "eq:NZreducedHessian",
+        "eq:NZMongeAmpere",
+        "eq:NZnonlinearresponse",
+        "eq:NZexactcurvature"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "Positive geometric neighborhood, full angle space, rankP=2, nondegenerate interior constrained maximum.",
+        "T=v prime has positive imaginary part; (Imu,Imv) form local real coordinates on the geometric branch."
+      ],
+      "derivation": "Constrained differentiation gives the inverse Schur response. Cauchy-Riemann equations and the volume gradient give g=(1/(2ImT))[[|T|^2,-ReT],[-ReT,1]], determinant1/4. Differentiate the filling envelope for exact curvature.",
+      "computation": {
+        "status": "exact_finite_fixture_scope",
+        "code_paths": [
+          "experiments/quantum_surgery/run.py"
+        ],
+        "evidence_paths": [
+          "artifacts/quantum_surgery/result.json"
+        ],
+        "description": "Finite exact boundary metric, inverse/determinant and constrained matrix identities; no general manifold solver.",
+        "limit": "Finite exact algebra is separate from a convergence proof, geometric realization and a global quantum asymptotic."
+      }
+    },
+    {
+      "id": "s16.angular_metric",
+      "labels": [
+        "eq:NZcompatiblemetric"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "Same regular one-cusp branch with ImT>0 and angular coordinates(y,s)."
+      ],
+      "derivation": "The displayed J squares to -I; omega_ang=-dy wedge ds/2 satisfies g(X,Y)=omega_ang(X,JY) and pulls back to (ImT/2)|du|^2.",
+      "coverage_gap": "This metric is not identified with the earlier Thurston-Deligne-Mostow metric; ambient complex symplectic form restricts to zero."
+    },
+    {
+      "id": "s16.multicusp",
+      "labels": [
+        "eq:NZmulticuspHessian"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "Positive complete geometric triangulation with h torus cusps; full rank2h peripheral angular map; local regular graph with symmetric T=A0+iB0 and B0 positive definite."
+      ],
+      "derivation": "Block Cauchy-Riemann inversion gives the stated Hessian and determinant4^(-h). At the complete point NZ parity makes T diagonal; mixed even potential terms can couple cusps at higher order.",
+      "source_evidence": [
+        {
+          "source": "NeumannZagier",
+          "url": "https://people.mpim-bonn.mpg.de/zagier/files/doi/10.1016/0040-9383(85)90004-7/fulltext.pdf",
+          "pin": "Theorem3 and Section4",
+          "access": "Primary source statement or displayed formula inspected; source scope limits recorded in the author source-pins artifact."
+        }
+      ],
+      "coverage_gap": "No multicusp numerical deformation or global cone family is supplied."
+    },
+    {
+      "id": "s16.half_density",
+      "labels": [
+        "eq:NZhalfdensity"
+      ],
+      "status": "derived_in_chapter",
+      "hypotheses": [
+        "Specified canonical kernel normalization; q nonzero; D* nonzero; coherent square-root phases."
+      ],
+      "derivation": "The ratio of mixed kernel derivative to stationary Hessian is 1/D*=du/da; its square root is the boundary half-density law.",
+      "source_evidence": [
+        {
+          "source": "GangRomoYamazaki",
+          "url": "https://arxiv.org/pdf/1704.00918v2",
+          "pin": "Equations(12)-(14), p.6",
+          "access": "Primary source statement or displayed formula inspected; source scope limits recorded in the author source-pins artifact."
+        }
+      ],
+      "computation": {
+        "status": "exact_finite_fixture_scope",
+        "code_paths": [
+          "experiments/quantum_surgery/run.py"
+        ],
+        "evidence_paths": [
+          "artifacts/quantum_surgery/result.json"
+        ],
+        "description": "Exact squared Jacobian identity; no numerical branch or universal phase selected.",
+        "limit": "Finite exact algebra is separate from a convergence proof, geometric realization and a global quantum asymptotic."
+      },
+      "coverage_gap": "The solid-torus factor and correctly normalized torsion state are additional input; the symplectic calculation does not select a global integration cycle."
+    }
+  ]
+}

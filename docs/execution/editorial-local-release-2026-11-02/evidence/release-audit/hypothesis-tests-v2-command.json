@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/tmp/polyhedra-baseline-20261031/bin/python3.12",
+    "-m",
+    "pytest",
+    "tests/test_numerical_properties.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=/private/tmp/polyhedra-release-hypothesis-tests-v2-20261102",
+    "--junitxml=/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/release-audit/hypothesis-tests-v2.xml"
+  ],
+  "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit",
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "MPLCONFIGDIR": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/release-audit/mpl-cache",
+    "PYTHONPATH": "/private/tmp/polyhedra-release-test-overlay-20261102:/Volumes/Lexar/lambda/devel/polyhedra/consolidated/packages/volume-toolkit",
+    "PYTHONNOUSERSITE": "1",
+    "HYPOTHESIS_STORAGE_DIRECTORY": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/release-audit/hypothesis-storage"
+  },
+  "elapsed_seconds": 2.215785916079767,
+  "returncode": 0
+}

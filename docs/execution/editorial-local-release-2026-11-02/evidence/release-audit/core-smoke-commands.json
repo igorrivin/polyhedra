@@ -1,0 +1,81 @@
+[
+  {
+    "name": "pip-check",
+    "command": [
+      "/private/tmp/polyhedra-release-core-v2-20261102/bin/python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "cwd": "/private/tmp",
+    "elapsed_seconds": 0.2768402090296149,
+    "returncode": 0,
+    "stdout": "pip-check.stdout.txt",
+    "stderr": "pip-check.stderr.txt"
+  },
+  {
+    "name": "core-imports",
+    "command": [
+      "/private/tmp/polyhedra-release-core-v2-20261102/bin/python",
+      "-c",
+      "import importlib, importlib.metadata as md, importlib.util, json, sys\nimport numpy as np\nmodules={name:importlib.import_module(\"ideal_poly_volume_toolkit\"+(\".\"+name if name else \"\")) for name in [\"\", \"geometry\", \"optimization\", \"variational\", \"rivin_delaunay\", \"rivin_holonomy\", \"geometric_realization\"]}\npaths={name:module.__file__ for name,module in modules.items()}\nassert all(\"polyhedra-release-core-v2-20261102/lib/python3.12/site-packages/\" in path for path in paths.values()),paths\noptional=[\"torch\",\"gymnasium\",\"gradio\",\"pynauty\",\"hypothesis\",\"matplotlib\",\"networkx\",\"plotly\",\"PIL\"]\nabsent={name:importlib.util.find_spec(name) is None for name in optional}\nassert all(absent.values()),absent\nvertices=np.array([0.0j,1.0+0.0j,np.exp(1j*np.pi/3)],dtype=np.complex128)\nvolume=modules[\"geometry\"].ideal_poly_volume_via_delaunay(vertices,mode=\"bloch_wigner\")\nassert abs(volume-1.0149416064096537)<2e-15,volume\nassert modules[\"optimization\"].negative_volume_objective([np.pi/3,np.pi/2],4)<0\nassert \"torch\" not in sys.modules\nprint(json.dumps({\"python\":sys.version,\"prefix\":sys.prefix,\"module_paths\":paths,\"optional_modules_absent\":absent,\"tetrahedron_direct_volume\":volume,\"distributions\":{d.metadata[\"Name\"]:d.version for d in md.distributions()}},indent=2))\n"
+    ],
+    "cwd": "/private/tmp",
+    "elapsed_seconds": 10.114314417005517,
+    "returncode": 0,
+    "stdout": "core-imports.stdout.txt",
+    "stderr": "core-imports.stderr.txt"
+  },
+  {
+    "name": "cli-help",
+    "command": [
+      "/private/tmp/polyhedra-release-core-v2-20261102/bin/ideal-poly-optimize",
+      "--help"
+    ],
+    "cwd": "/private/tmp",
+    "elapsed_seconds": 1.1120707499794662,
+    "returncode": 0,
+    "stdout": "cli-help.stdout.txt",
+    "stderr": "cli-help.stderr.txt"
+  },
+  {
+    "name": "cli-tetrahedron",
+    "command": [
+      "/private/tmp/polyhedra-release-core-v2-20261102/bin/ideal-poly-optimize",
+      "--vertices",
+      "4",
+      "--trials",
+      "1",
+      "--maxiter",
+      "30",
+      "--popsize",
+      "8",
+      "--workers",
+      "1",
+      "--seed",
+      "42",
+      "--output",
+      "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/release-audit/core-cli-tetrahedron.json"
+    ],
+    "cwd": "/private/tmp",
+    "elapsed_seconds": 0.8573587910505012,
+    "returncode": 0,
+    "stdout": "cli-tetrahedron.stdout.txt",
+    "stderr": "cli-tetrahedron.stderr.txt"
+  },
+  {
+    "name": "compileall",
+    "command": [
+      "/private/tmp/polyhedra-release-core-v2-20261102/bin/python",
+      "-m",
+      "compileall",
+      "-q",
+      "/private/tmp/polyhedra-release-package-build-20261102/ideal_poly_volume_toolkit"
+    ],
+    "cwd": "/private/tmp",
+    "elapsed_seconds": 0.141075958032161,
+    "returncode": 0,
+    "stdout": "compileall.stdout.txt",
+    "stderr": "compileall.stderr.txt"
+  }
+]

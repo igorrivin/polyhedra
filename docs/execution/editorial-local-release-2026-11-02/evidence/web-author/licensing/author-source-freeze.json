@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-11-02T15:22:41.334126+00:00",
+  "baseline_commit": "edef1dda04cac2f50a7c22e4240556714fac4d91",
+  "stage": "Site licensing source delta frozen for independent review; no licensed full build yet",
+  "files": [
+    {
+      "path": "site/build_book.py",
+      "before_sha256": "57bcef22df545e5a2335fa3fcc9cda8c96e841307c1f0b1d95ba6b28739f0948",
+      "after_sha256": "b7a004518b8bec542e07e69a37405782a4659d1e987fc942be189f54a4621124",
+      "bytes": 55025,
+      "snapshot": "frozen/site/build_book.py"
+    },
+    {
+      "path": "site/book/downloads.json",
+      "before_sha256": "844d93043ff169865062603262fb2d6c70c66f7d8af8024828c48085f2618d86",
+      "after_sha256": "5dfbce55a16d8b73fd2784a85b48fa869f757259e992f851d8379ee96fc3dc70",
+      "bytes": 6097,
+      "snapshot": "frozen/site/book/downloads.json"
+    },
+    {
+      "path": "site/README.md",
+      "before_sha256": "b11c4ebb95f45ca248481d7c9a2cd038ddfc8fe1de852f0cf5af4d236b500a0c",
+      "after_sha256": "3ff72f54616fe049177ac3b2dcd1bf82b06e06d0d5426d22175de667b5f9d1b8",
+      "bytes": 17391,
+      "snapshot": "frozen/site/README.md"
+    },
+    {
+      "path": "site/tests/test_build_book.py",
+      "before_sha256": "a0f0086f8e0ed4b94921c3944c1ae733a8ea5942c1db8adcc4e8d88c0c5c0182",
+      "after_sha256": "d82d547d04cd18ce650206092643ebfccedcca7baa3fdcfeead7414ced3733eb",
+      "bytes": 18918,
+      "snapshot": "frozen/site/tests/test_build_book.py"
+    }
+  ],
+  "changed_file_count": 4,
+  "patch_sha256": "b728c503fa94e8743c1e9ca93a7c93fe05ea1f74f89c8c01f77a39e8fab21135",
+  "source_author_freeze": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/licensing-source/freeze-manifest.json",
+  "source_author_freeze_sha256": "ac08a3aa4ca40de4378226c62935b6e9d3e26b08e40af60eef02f7dfe5f9cf20",
+  "license_input_sha256": {
+    "LICENSES/README.md": "345e69c061ecf6b276a8c57999516c855536ac7584af6aa4b4c3cdcd9bf6430e",
+    "LICENSES/CC-BY-4.0.txt": "2ade8c89b8bbe0d859b124a9e47032c8494022f43091e8278ae8e2554a292196",
+    "LICENSES/MONOGRAPH-NOTICE.md": "34657dce59f05f339911fad763497d7615e0b721978910eadde2c3777b698e3b",
+    "LICENSES/new-companions-MIT.txt": "a56fbd01e5bce5116c4860ba8067070fb6d69861d6368a4a76c55f2457969384",
+    "LICENSES/new-companion-files.txt": "6d52e33dc36d133cfa95fd6a5e97bc1708698f8e1865a18d847badf279222342",
+    "LICENSES/volume-toolkit-MIT.txt": "14c0fc10e8db2ba14a669b9939a69f22e729cdaecec1e8bde47d2b959ac5be38",
+    "packages/volume-toolkit/LICENSE": "14c0fc10e8db2ba14a669b9939a69f22e729cdaecec1e8bde47d2b959ac5be38"
+  },
+  "evidence_sha256": {
+    "site-tests.log": "a5ebca9de615f2528b135fd158841c42231f703cb732d49ef60f2093cc08d220",
+    "book-search.log": "8d1c3b3ab55e1dba496c0215cc6a2474ad69185fdd196303d1fe1b28db6c86c0",
+    "preview-search.log": "884ae66336a31d66d46b9cca95f5e28890a972ff95b2ee2c8dac3822276c75cb",
+    "probe/result.json": "c68c174976ca86e714ea3e6c53755081603e94fff77058cc7ce3ec78a899e502",
+    "source-binding.json": "435cadb7c9367096dbfa742ae849c7a6d2c1aefa6fda316bd8dc94652700c29e",
+    "baseline-audit.json": "26b519d70be3d08772fd27392b16559d59c997e0141829813d471cb29793e0cc",
+    "probe_licensing.py": "430e668e16e51b28e92902bb30ff81298964169ab8865ace51a2b2b75ca1d1a5",
+    "report.md": "d5679131d7e5b3b5bd9c05006c821c21975523fb994155f6412c0f78ca713db1"
+  },
+  "checks": {
+    "site_tests_passed": 46,
+    "book_search": "passed pure suite; no newly built complete index exists",
+    "preview_search_pure_assertions": 11,
+    "non_PDF_license_probe": "passed",
+    "complete_source_zip_entries": 44,
+    "curated_inspection_files": 58,
+    "git_diff_check": "passed"
+  },
+  "preserved_pre_license_receipt_sha256": {
+    "final-build/receipt.json": "c96bc8c540506698e442a9c54f1cbdff90072fdaa02b153092960bfe4dc83698",
+    "edition-dist/downloads/edition-manifest.json": "838d20bf8953bc27647fdf38e134cc873824fd3ee4b23e7dbe12c6b4c222a35f",
+    "edition-build/compilation-manifest.json": "7a87dce48d3548aabd14f943be38cf22bab02bb0c3f246ac51d95821e84a2b06"
+  },
+  "not_performed": [
+    "PDF marker",
+    "PDF or TikZ compilation",
+    "auxiliary reuse",
+    "browser/server",
+    "scientific replay",
+    "staging/commit",
+    "sync/upload/push"
+  ]
+}

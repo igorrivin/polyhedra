@@ -1,0 +1,97 @@
+{
+  "recorded_at_utc": "2026-11-02T14:41:59.338144+00:00",
+  "scope": "Layout-v2 actual precommit draft; not final clean web export, new proof audit or numerical replay.",
+  "decision": "layout_repair_still_required",
+  "source_decision": "approved_exact_two_file_layout_only_delta",
+  "pdf": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/pdf-review/layout-v2/pdf-build/main.pdf",
+    "sha256": "cca99921f2c822a554db9ab4be84c2ebc25fc6eeb8c5b2a74a9229df87f2a647",
+    "bytes": 1528745,
+    "pages": 201
+  },
+  "build_convergence": {
+    "returncode": 0,
+    "pdflatex_passes": 3,
+    "latexmk_targets_up_to_date": true,
+    "diagnostics": {
+      "overfull_count": 0,
+      "underfull_count": 3,
+      "undefined_reference_or_citation": false,
+      "multiply_defined_labels": false,
+      "missing_character": false,
+      "fatal_error": false,
+      "rerun_required": false
+    }
+  },
+  "original_full_book_coverage_reuse": {
+    "original_review_sha256": "8878838d80082b4d1ce3c852463b92a8e80d8ea7501d92839c4c5087635cb135",
+    "all_pages_compared": 201,
+    "exact_raster_identical": 198,
+    "changed_pages": [
+      154,
+      193,
+      194
+    ],
+    "shifted_pages": [],
+    "basis": "Exact decoded RGB pixel equality for the other 198 pages preserves the prior all-page contact review and original-size coverage at those pages."
+  },
+  "new_original_size_visual_inspection": {
+    "pages": [
+      153,
+      154,
+      155,
+      191,
+      192,
+      193,
+      194,
+      195
+    ],
+    "method": "Viewed the 130 dpi full-size PNGs at original detail; no additional contact-sheet review claimed."
+  },
+  "closed_findings": [
+    {
+      "id": "PDF-LAYOUT-02",
+      "page": 154,
+      "result": "Both degree/branch-value labels now sit below and outside their arrow shafts, remain readable, and do not collide with the diagram or surrounding prose."
+    }
+  ],
+  "required_findings": [
+    {
+      "id": "PDF-LAYOUT-01",
+      "pages": [
+        193,
+        194,
+        195
+      ],
+      "result": "Repair insufficient. Page 194 now contains only the final line those external sources.; References still begins on page 195. A further local pagination repair is needed.",
+      "repair_boundary": "Preserve all 43 table rows and the complete source-note wording/qualifiers.",
+      "evidence": [
+        "rendered/page-193.png",
+        "rendered/page-194.png"
+      ]
+    }
+  ],
+  "unchanged_sources_snapshot_and_old_pdfs_verified": true,
+  "marker_repeated": false,
+  "evidence_sha256": {
+    "source-check.json": "4b3be0fdf8f5ab1370b967e122a46b80fe2da1a6e97c4b5bfd3f528c3ef93d90",
+    "tex-input-freeze.json": "f3bbbd9b8eb0bb637a78e87e077c898db0875ba1828b1e78dce9c55e2030d6cb",
+    "build-command.json": "fc741881338e9dc1db1302600e7db59bc22edd265c8e3c5ba7b144cc8c1f13f9",
+    "pdf-build-receipt.json": "e6dd8e3a15a548ed2edb1510d9e8567022870a8cc997dabad817044dfa4acd41",
+    "render-manifest.json": "293a1bce2fe06bc8fb3eb16cc43d492a26c03bd071eb13a69e2af71844d0435f",
+    "page-comparison.json": "f795b929ac37777443cd66dab051cf8ddc8a29e3ce63491089ba7ea8ba53697e",
+    "original-draft-preservation.json": "73cc7494595b542ce18df5dab988ce1d99bb7a323f06a0e3691cfa2444672dc2"
+  },
+  "existing_marker_receipt_sha256": "f86b1113893b5524549ad32f5dc44e8b9712907fd9586ccbd309d6991d79ebc5",
+  "inspected_raster_sha256": {
+    "153": "2069265ce87313b94f42109c08aaead91f7a3492c4e49ab8630e04f77608a0dd",
+    "154": "01a63b91fbf1fdf3e8a604093c2e1df7d1c16b942642a261c457b3197e938d76",
+    "155": "7442e7273c4286c1a9e05bb5fabe7fbb8ff209acd308fe37a0aa6cd5dc47ea7e",
+    "191": "627815b2e4708973ba019cdb340f60f9491dbfce9f983741aeaf73957876eeb4",
+    "192": "f98060b6ffd430c9c923221574aed430ca32374c8146f3ebb073a279a491054f",
+    "193": "7ede719d2a63eb0d20360a39c572cb7068c8fc35ebf1974e3d2580dab8f7f4f5",
+    "194": "8c5529f62fe8925d1c74ec495257b6bd7182575633fb6678b753fa874609b76f",
+    "195": "6421a8a8603cf2ba1b6f4ec253574298c3b2f92d1e55ac0ea6e80eae494589a2"
+  },
+  "next_step": "Parent-author coordinated Appendix B layout-only repair, independent source check and fresh isolated rebuild without repeating the marker."
+}

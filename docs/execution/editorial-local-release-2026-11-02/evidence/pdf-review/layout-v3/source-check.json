@@ -1,0 +1,50 @@
+{
+  "recorded_at_utc": "2026-11-02T14:48:59.735388+00:00",
+  "decision": "approved_qualifier_preserving_appendix_b_wording_only_delta_for_rebuild",
+  "author_freeze_sha256": "9b7264ef02a686ac400659c32754407fb4573a0533bb19a294b408ccc9c07678",
+  "author_patch_sha256": "412b1e0ee0c8c6dadb0888c3249c531e1d5a146d5293e3d00082b98cac96b4e2",
+  "appendix_b_sha256": "6cdcee282d3b3a5cc4a139a73671c657b432807de937f69c8a5a302dea798add",
+  "independent_check": "Whole-file equality after one exact two-sentence substitution against the pinned v2 source, plus independent reading of the four qualifiers.",
+  "qualifier_equivalence": [
+    {
+      "meaning": "Inherited source-statement audits",
+      "old": "source-statement audits inherited from the earlier reviewed chapters",
+      "new": "inherited source-statement audits",
+      "retained": true
+    },
+    {
+      "meaning": "Current convention dependencies",
+      "old": "the current convention dependencies",
+      "new": "current convention dependencies",
+      "retained": true
+    },
+    {
+      "meaning": "Finite computational support",
+      "old": "the finite computational support",
+      "new": "finite computational support",
+      "retained": true
+    },
+    {
+      "meaning": "No new complete external-proof review",
+      "old": "It does not claim a fresh complete proof review of those external sources.",
+      "new": "It does not claim a new complete review of the external proofs.",
+      "retained": true
+    }
+  ],
+  "earlier_source_note_prose_unchanged": true,
+  "all_table_bytes_identical": true,
+  "convention_rows": 43,
+  "all_equations_math_macros_citations_labels_and_references_preserved": true,
+  "font_margin_grouping_pagination_commands_preserved": true,
+  "other_35_active_inputs_byte_identical": true,
+  "approved_source_and_context_files_checked": 40,
+  "ordered_counts_preserved": {
+    "labels": 613,
+    "bibliography_keys": 129,
+    "references": 538,
+    "citations": 236
+  },
+  "required_source_findings": [],
+  "marker_repeated": false,
+  "marker_receipt_sha256": "f86b1113893b5524549ad32f5dc44e8b9712907fd9586ccbd309d6991d79ebc5"
+}

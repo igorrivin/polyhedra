@@ -1,0 +1,645 @@
+{
+  "schema_version": "1.0",
+  "chapter_sources": [
+    "book/chapters/01-volume-normalization.tex",
+    "book/chapters/02-ideal-angle-cells.tex",
+    "book/chapters/03-ideal-tetrahedron.tex",
+    "book/chapters/04-hyperideal-integrand.tex",
+    "book/chapters/05-boundary-cone-continuation.tex",
+    "book/chapters/06-torus-sphere.tex",
+    "book/chapters/appendix-a-fricke.tex"
+  ],
+  "review_date": "2026-11-01",
+  "baseline_commit": "ad63b7ac9821040cb69e19c61bfbc46c68eff1a3",
+  "revision_review": "Author/source verification is recorded here; independent review and computation approval are recorded separately in docs/execution/normalization-review-2026-11-01/.",
+  "path_convention": "Repository-relative code/artifact paths; author working evidence is in the outer workspace execution/normalization-review-2026-11-01/math-a and will be curated separately.",
+  "computational_companion": {
+    "readme": "experiments/normalizations/README.md",
+    "driver": "experiments/normalizations/run.py",
+    "result": "artifacts/normalizations/result.json",
+    "status": "Companion implementation, test evidence and computation approval are recorded separately in docs/execution/normalization-review-2026-11-01/."
+  },
+  "sources": {
+    "KawazumiWP": {
+      "url": "https://arxiv.org/html/2408.04937v2#S6.SS1",
+      "location": "Introduction equation (1); Section 6.1, equation (38); Proposition 6.1",
+      "checked": "Closed-surface FN/Beltrami/Goldman scale. Positive complex coefficient iH and opposite twist sign reconciled.",
+      "limit": "This paper alone is not a cone-surface extension theorem."
+    },
+    "MondelloBoundary": {
+      "url": "https://arxiv.org/pdf/math/0610698",
+      "version": "v4 (2009)",
+      "location": "Definition 1.2; Theorem 1.4; Theorem 4.1 and Remark 4.2; Theorem 4.5",
+      "checked": "FN convention; one-quarter ordered endpoint wedge; positive-boundary arc hypotheses; reduced-length cusp form.",
+      "limit": "Global fixed-boundary integration and a quantitative cusp solver are not supplied."
+    },
+    "DoNorbury": {
+      "url": "https://arxiv.org/pdf/math/0603406",
+      "location": "Opening definition of V_1,1, page 1; Section 2",
+      "checked": "Explicit extra one-half for the ineffective torus stabilizer; polynomial/cone substitution framework.",
+      "limit": "Unrestricted imaginary-length evaluation is not a geometric volume theorem."
+    },
+    "RivinIntrinsic": {
+      "url": "https://arxiv.org/pdf/math/0005234",
+      "location": "Theorems 1.1, 1.2, 1.3; Section 3",
+      "checked": "Ideal intrinsic existence and uniqueness; generalized uniqueness; ambient cross-ratio/shear description.",
+      "limit": "Generalized existence is not Theorem 1.3."
+    },
+    "RivinAngles": {
+      "url": "https://annals.math.princeton.edu/articles/13203",
+      "location": "1996 Annals metadata; ideal characterization also covered by Bao\u2013Bonahon Theorems 1\u20132 and stated in Budd Section 1.3",
+      "checked": "Metadata accessed; ideal inequalities compared with the primary generalized angle theorem.",
+      "limit": "The full original 1996 proof was not retrieved in this pass."
+    },
+    "BaoBonahon": {
+      "url": "https://www.numdam.org/item/BSMF_2002__130_3_457_0.pdf",
+      "location": "Theorems 1\u20132, pages 459\u2013460",
+      "checked": "Planar 3-connected dual graph; exterior angles in (0,pi); closed circuits at least2pi with facial ideal equality; same-face path inequality greater thanpi; uniqueness.",
+      "limit": "No claim that these linear conditions alone fix intrinsic boundary lengths."
+    },
+    "Budd": {
+      "url": "https://link.springer.com/article/10.1007/s00220-022-04418-6",
+      "location": "Section 1.1 measure definition; Corollary 2; Section 1.3",
+      "checked": "Root weight, labeled maps, disintegrated measure, exact powers of two, ideal correspondence and genus0/1 polynomial identity.",
+      "limit": "Its Schlenker attribution is consistent with the precise FillastreMetrics restatement; Schlenker's original proof was not rechecked."
+    },
+    "CDE": {
+      "url": "https://arxiv.org/pdf/1701.02580",
+      "version": "v3 (2018)",
+      "location": "Sections 3.2.3\u20133.2.4, equations (3.31)\u2013(3.36); Section 3.3.1",
+      "checked": "Horosphere lambda formula and local measure comparison; distinction between embedding and intrinsic conformal coordinates.",
+      "limit": "CDE uses its own form scale; this manuscript fixes the multiplier via FN/Mondello and the tetrahedron calculation."
+    },
+    "Schlenker": {
+      "url": "https://doi.org/10.4310/jdg/1214460799",
+      "location": "Original global realization theorem, explicitly restated in FillastreMetrics Theorem1.1 and attributed in its Section1.3",
+      "checked": "The exact genus-zero statement and its attribution were checked in the version-pinned Fillastre restatement.",
+      "limit": "Schlenker's original proof was not inspected; the checked restatement does not constitute a new proof or a re-refereeing of that proof."
+    },
+    "BMZ": {
+      "url": "https://arxiv.org/html/2512.09722v1",
+      "location": "Equation (5), Theorem 1, Corollary 2",
+      "checked": "Origin cusp, nonnegative remaining lengths, full measure subset, coordinate measure2^(n\u22122) with total ends n+1.",
+      "limit": "Independent angle and boundary-simplex coordinates, not induced ambient Euclidean hypersurface measure; no equivalence to hyperideal angle cells asserted."
+    },
+    "Zonneveld": {
+      "url": "https://arxiv.org/html/2512.10673v1",
+      "location": "Theorem 3",
+      "checked": "Selected pair L1<L2; full measure subset with unique shortest separating geodesic; tree/double-tree measure.",
+      "limit": "Equal-length values use continuity of volume; no claim that the same cell bijection is nonsingular at equal lengths."
+    },
+    "AnagnostouNorbury": {
+      "url": "https://arxiv.org/pdf/2212.13701",
+      "version": "v4 (2025)",
+      "location": "Theorem 1.1, Corollary 1.2, Theorem 1.3; Lemmas 2.6 and 2.10",
+      "checked": "Pure-cone pair-sum chamber, area/stability, weighted compactification, small-cone mixed regime, sufficiently large positive boundary in the nonnodal degeneration example.",
+      "limit": "No unrestricted mixed large-cone/positive-boundary continuation theorem asserted."
+    },
+    "AMN": {
+      "url": "https://arxiv.org/pdf/2310.13281",
+      "location": "Definitions 2.12\u20132.13; Lemma 2.14; weighted stability domain in Section 2",
+      "checked": "Weighted WP class, geometric top intersection, reduction pullback coefficient(1\u2212sum weights)^2.",
+      "limit": "Boundary divisor intersections still required after pulling back; open-moduli restriction alone cannot determine volume."
+    },
+    "HuTan": {
+      "url": "https://arxiv.org/pdf/1402.1573",
+      "location": "Section 3, pages 6\u20139",
+      "checked": "Torus involution and sphere Klein-four action; degree2/4 common quotient; matching simple-curve lengths.",
+      "limit": "WP scaling and labeled-stack volume ratios are derived here using the degree pairing, not quoted as Hu\u2013Tan volume results."
+    },
+    "FillastreMetrics": {
+      "url": "https://arxiv.org/pdf/0801.0538v1",
+      "version": "v1 (2008); Geometriae Dedicata134(2008),177\u2013196",
+      "location": "Theorem1.1 and congruence qualification, printed page2; Section1.3, printed page3",
+      "checked": "Genus-zero hyperbolic metric with finitely many positive-curvature cone singularities, cusps and complete infinite-area ends has a unique finite-vertex convex generalized hyperbolic realization up to congruence. The funnel/cusp input is the case without finite cone singularities. Section1.3 explicitly attributes the proof to Schlenker.",
+      "limit": "This is a precise external statement check, not an independent global proof. Version2 is a separate two-page erratum concerning parabolic/Fuchsian connectedness; the theorem statement is pinned to version1."
+    }
+  },
+  "status_definitions": {
+    "explicit_convention": "A chosen convention with its primary-source scale conversion identified.",
+    "external_statement_checked": "Specific external statement and hypotheses read in primary material; proof not re-refereed.",
+    "external_input_not_fully_source_verified": "External input retained with an explicit source-access or scope limit; not claimed independently verified.",
+    "derived_in_chapter_author_verified": "Direct general derivation expanded and checked by the author in the canonical chapter; independent review is recorded separately in docs/execution/normalization-review-2026-11-01/."
+  },
+  "claims": [
+    {
+      "id": "s1.fn_and_hermitian_scale",
+      "labels": [
+        "eq:fn"
+      ],
+      "status": "explicit_convention",
+      "hypotheses": [
+        "Curvature\u22121; FN twist measured in length with full Dehn twist increment ell.",
+        "Complex-coordinate coefficient is raw integral H=integral mu_j conjugate(mu_k) dA; positive form iH dt wedge dbar t."
+      ],
+      "evidence": [
+        "KawazumiWP equation38 and Introduction equation1; MondelloBoundary Theorem1.4.",
+        "Twist sign is reversed from Kawazumi; cone extension hypotheses belong to Section8."
+      ],
+      "computation": {
+        "target": "Conventions shared by all fixtures; no finite check proves the analytic identification."
+      },
+      "review_limit": "Closed-surface source conversion checked; the cone version requires its separately cited geometric extension."
+    },
+    {
+      "id": "s1.base_volumes",
+      "labels": [
+        "eq:basevolumes"
+      ],
+      "status": "external_statement_checked",
+      "hypotheses": [
+        "Labeled unparametrized ends; stack integration; fixed boundary lengths.",
+        "Generic elliptic involution retained in M_1,1."
+      ],
+      "evidence": [
+        "DoNorbury opening definition; Budd Corollary2 base normalizations."
+      ],
+      "computation": {
+        "target": "Exact rational coefficients of V04 and V11; effective/stack factor2."
+      },
+      "review_limit": "These base fixtures do not prove Mirzakhani's recursion."
+    },
+    {
+      "id": "s2.intrinsic_realization",
+      "labels": [
+        "sec:idealcells"
+      ],
+      "status": "external_statement_checked",
+      "hypotheses": [
+        "Complete finite-area sphere with n>=4 labeled punctures; oriented equivalence.",
+        "Allow doubled ideal polygons as degenerate limiting configurations."
+      ],
+      "evidence": [
+        "RivinIntrinsic Theorems1.1\u20131.3."
+      ],
+      "computation": {
+        "target": "No global realization solver in this increment."
+      },
+      "review_limit": "Existence/uniqueness theorem statement checked; entire proof not re-refereed."
+    },
+    {
+      "id": "s2.angle_domain",
+      "labels": [
+        "eq:rivinangles1",
+        "eq:rivinangles2",
+        "eq:rivinangles3"
+      ],
+      "status": "external_statement_checked",
+      "hypotheses": [
+        "Convex polyhedral combinatorics: planar3-connected dual graph with fixed oriented embedding.",
+        "Exterior angles in(0,pi); facial sums2pi; simple nonfacial circuit sums>2pi."
+      ],
+      "evidence": [
+        "RivinAngles metadata and ideal characterization; BaoBonahon Theorems1\u20132; Budd Section1.3."
+      ],
+      "computation": {
+        "target": "Tetrahedral finite angle fiber."
+      },
+      "review_limit": "Original1996 proof not retrieved. Rank of n perimeter constraints is proved directly via connected primal triangulation and an odd face cycle."
+    },
+    {
+      "id": "s2.disintegration",
+      "labels": [
+        "eq:deltameasure"
+      ],
+      "status": "derived_in_chapter_author_verified",
+      "hypotheses": [
+        "Full rank perimeter matrix; edge incidences counted with boundary multiplicity.",
+        "Coordinate elimination uses an invertible n by n minor."
+      ],
+      "evidence": [
+        "Change of variables from edge coordinates to independent fiber variables and perimeters gives reciprocal absolute determinant."
+      ],
+      "computation": {
+        "target": "Exact tetrahedral minor determinant\u22122 and reciprocal1/2."
+      },
+      "review_limit": "This is a disintegrated density, not induced Euclidean hypersurface volume."
+    },
+    {
+      "id": "s2.partition",
+      "labels": [
+        "eq:polyhedralpartition"
+      ],
+      "status": "external_statement_checked",
+      "hypotheses": [
+        "Oriented trivalent maps, labeled faces, label-and-orientation preserving automorphisms.",
+        "Irreducible ideal domain at all perimeters2pi; lower-dimensional strata omitted."
+      ],
+      "evidence": [
+        "Budd Section1.1 root weight1/(2E), Corollary2 and Section1.3; CDE Section3.2 lambda comparison."
+      ],
+      "computation": {
+        "target": "n4: two sheets each map volume pi\u00b2/4; multiplier4 yields WP2pi\u00b2."
+      },
+      "review_limit": "A finite n4 check cannot establish the general cell decomposition or measure theorem."
+    },
+    {
+      "id": "s3.lambda_pullback",
+      "labels": [
+        "eq:penner",
+        "eq:lambdagauge",
+        "eq:tetdensity"
+      ],
+      "status": "derived_in_chapter_author_verified",
+      "hypotheses": [
+        "Nonflat ideal tetrahedron; four labeled ambient vertices0,1,infinity,z.",
+        "Signed decorated distances; lambda=exp(delta/2); oriented triangles."
+      ],
+      "evidence": [
+        "MondelloBoundary Theorem4.5 gives\u22121/2 reduced-length wedge, hence\u22122 logarithmic-lambda wedge.",
+        "CDE equation3.34; explicit diameter/height gauge and Jacobian in chapter."
+      ],
+      "computation": {
+        "target": "Exact Jacobian identity and sheet normalization; no conformal-uniformization implementation."
+      },
+      "review_limit": "Coordinate z is ambient ideal-vertex cross-ratio, not intrinsic conformal cross-ratio."
+    },
+    {
+      "id": "s3.angle_integral",
+      "labels": [
+        "eq:onecell",
+        "eq:v04direct"
+      ],
+      "status": "derived_in_chapter_author_verified",
+      "hypotheses": [
+        "Two orientation sheets; positive A,B,C with sum pi.",
+        "Flat locus contributes zero2-dimensional measure; labels fixed."
+      ],
+      "evidence": [
+        "Direct Jacobian and elementary simplex area.",
+        "Explicit perimeter minor produces1/2 da db and matches partition multiplier4."
+      ],
+      "computation": {
+        "target": "Exact sheet areas and two-sheet factors."
+      },
+      "review_limit": "Boundary angle simplex alone collapses a family of flat quadrilateral moduli."
+    },
+    {
+      "id": "s3.integrability_and_flat_locus",
+      "labels": [
+        "sec:tetrahedron"
+      ],
+      "status": "derived_in_chapter_author_verified",
+      "hypotheses": [
+        "Ambient z-plane excluding0,1; density2|y|/(|z|\u00b2|1\u2212z|\u00b2)."
+      ],
+      "evidence": [
+        "Polar-coordinate estimates near0,1 and O(|z|^\u22123) at infinity.",
+        "Flat quadrilateral limit keeps x but sends angle coordinates to one simplex vertex."
+      ],
+      "computation": {
+        "target": "No compactification/uniformization solver."
+      },
+      "review_limit": "Coordinate-density vanishing does not imply intrinsic WP degeneration."
+    },
+    {
+      "id": "s4.hexagon_and_gram",
+      "labels": [
+        "eq:qvertices",
+        "eq:truncationlengths",
+        "eq:gram"
+      ],
+      "status": "derived_in_chapter_author_verified",
+      "hypotheses": [
+        "Strict tetrahedron: all q_ij>1 and detG<0; G_ii1,G_ij\u2212q_ij.",
+        "Choose spacelike representatives in a common projective chart; do not assign a time orientation to spacelike vectors."
+      ],
+      "evidence": [
+        "Right-angled hexagon cosine rule.",
+        "Principal-minor/interlacing proof of signature(3,1); Schur-complement projection to a truncation H\u00b2 proves strict triangle inequalities."
+      ],
+      "computation": {
+        "target": "Symmetric q=2 fixture: G=3I\u22122J, det\u2212135, a=b=acosh2,L=3a."
+      },
+      "review_limit": "No general interval admissibility classifier or global fixed-boundary parameterization."
+    },
+    {
+      "id": "s4.arc_bracket",
+      "labels": [
+        "eq:boundarykernel"
+      ],
+      "status": "external_statement_checked",
+      "hypotheses": [
+        "Strictly positive geodesic boundaries; maximal disjoint orthogeodesic system.",
+        "Oriented endpoint distances; all common endpoint pairs counted; boundary lengths are Casimirs."
+      ],
+      "evidence": [
+        "MondelloBoundary Theorem4.1 gives1/4 ordered wedge; evaluation on distinct coordinate differentials doubles it."
+      ],
+      "computation": {
+        "target": "q=2 fixture K=1/5, bracket1/10; antisymmetry K(L\u2212s)=\u2212K(s)."
+      },
+      "review_limit": "Do not invert the degenerate full arc matrix before restriction to a fixed-boundary leaf."
+    },
+    {
+      "id": "s4.local_density",
+      "labels": [
+        "eq:hyperidealdensity",
+        "eq:gramdensity"
+      ],
+      "status": "derived_in_chapter_author_verified",
+      "hypotheses": [
+        "Regular fixed(L1,L2,L3,L4) leaf, genuine truncation triangle.",
+        "a12,a13 share exactly one boundary; b<L1/2 makes the local bracket nonzero."
+      ],
+      "evidence": [
+        "Invert2-dimensional bracket; differentiate q=cosh a and substitute exact cosh/sinh b identities."
+      ],
+      "computation": {
+        "target": "q=2 fixture coefficient10 in a-coordinates and10/3 in q-coordinates."
+      },
+      "review_limit": "Other arc variables vary with the fixed-boundary constraints; full cell integral not performed."
+    },
+    {
+      "id": "s4.cusp_limit",
+      "labels": [
+        "sec:hyperideal"
+      ],
+      "status": "derived_in_chapter_author_verified",
+      "hypotheses": [
+        "L tends0 with s/L tending rho; raw arc lengths renormalized by endpoint terms for a chosen horocycle."
+      ],
+      "evidence": [
+        "Elementary kernel limit1\u22122rho; MondelloBoundary Theorem4.5 describes cuspidal reduced-length form."
+      ],
+      "computation": {
+        "target": "No fixed-boundary-to-cusp solver; limit identity may be checked algebraically."
+      },
+      "review_limit": "Different decoration gauges have different coordinate Jacobians."
+    },
+    {
+      "id": "s4.pfaffian",
+      "labels": [
+        "eq:pfaffiandensity"
+      ],
+      "status": "derived_in_chapter_author_verified",
+      "hypotheses": [
+        "2d independent coordinates on a fixed-boundary symplectic leaf; skew Poisson matrix nonsingular."
+      ],
+      "evidence": [
+        "Top exterior power of inverse matrix; detB=Pf(B)^2."
+      ],
+      "computation": {
+        "target": "Exact skew4x4 fixture Pf12,det144,density1/12."
+      },
+      "review_limit": "An arbitrary nonsingular skew fixture validates linear algebra only, not a geometric WP bracket."
+    },
+    {
+      "id": "s4.hyperideal_angles",
+      "labels": [
+        "sec:hyperideal"
+      ],
+      "status": "external_statement_checked",
+      "hypotheses": [
+        "Planar3-connected dual graph; exterior angles between0 andpi.",
+        "Closed circuits at least2pi with ideal facial equality; required same-face embedded paths greater thanpi."
+      ],
+      "evidence": [
+        "BaoBonahon Theorems1\u20132 directly read."
+      ],
+      "computation": {
+        "target": "No complete angle-cell enumerator."
+      },
+      "review_limit": "Irreducibility alone omits the hyperideal path condition."
+    },
+    {
+      "id": "s4.global_funnel_realization",
+      "labels": [
+        "sec:hyperideal"
+      ],
+      "status": "external_statement_checked",
+      "hypotheses": [
+        "Complete genus-zero hyperbolic metric with finitely many cusps and complete infinite-area ends, including a metric obtained by attaching funnels to positive geodesic boundaries.",
+        "Finite-vertex convex generalized hyperbolic realization; uniqueness up to congruence within this class."
+      ],
+      "evidence": [
+        "FillastreMetrics arXiv0801.0538v1 Theorem1.1 and nearby congruence qualification give the precise external statement; Section1.3 explicitly attributes the proof to Schlenker.",
+        "The version-pinned restatement was inspected by the independent reviewer and the author. The earlier compact-metric survey citation was correctly removed from this particular claim."
+      ],
+      "computation": {
+        "target": "No implementation or finite test establishes global existence."
+      },
+      "review_limit": "Schlenker's original proof was not inspected, and no new global realization proof is claimed. The local Gram/Poisson derivation is independent of this external existence input. The original statement-retrieval limitation is resolved by the precise Fillastre restatement."
+    },
+    {
+      "id": "s4.budd_identity",
+      "labels": [
+        "eq:buddidentity"
+      ],
+      "status": "external_statement_checked",
+      "hypotheses": [
+        "g0,n>=3 or g1,n>=1; metric-map circumferences alpha_i>=2pi for real hyperbolic length interpretation.",
+        "Stack WP convention and Budd map measure."
+      ],
+      "evidence": [
+        "Budd Corollary2; Section1.3 explicitly separates hyperideal perimeter geometry."
+      ],
+      "computation": {
+        "target": "Base-volume rational ratio fixtures."
+      },
+      "review_limit": "Fails in g>=2; substitution is not the geometric truncation-boundary relation."
+    },
+    {
+      "id": "s4.tree_density",
+      "labels": [
+        "eq:treevolume"
+      ],
+      "status": "external_statement_checked",
+      "hypotheses": [
+        "Genus0, m>=3 ends with distinguished origin cusp; remaining lengths nonnegative.",
+        "Use BMZ independent angle and paired boundary-simplex coordinates; cusp boundary vertices degree1."
+      ],
+      "evidence": [
+        "BMZ equation5, Theorem1, Corollary2.",
+        "Zonneveld Theorem3: positive boundaries with selected unequal pair and unique shortest separating geodesic on full measure subset."
+      ],
+      "computation": {
+        "target": "Tree-volume code remains a separate computational target."
+      },
+      "review_limit": "No identification of tree/spine cells with hyperideal angle cells; equal-length sequel values only by continuity."
+    },
+    {
+      "id": "s5.area",
+      "labels": [
+        "eq:gb"
+      ],
+      "status": "derived_in_chapter_author_verified",
+      "hypotheses": [
+        "Curvature\u22121; prescribed cone openings, geodesic boundaries and cusps; area positive."
+      ],
+      "evidence": [
+        "Gauss\u2013Bonnet with cone deficits; cusps represented by opening0."
+      ],
+      "computation": {
+        "target": "Exact stability inequalities on rational multiples of pi."
+      },
+      "review_limit": "Area positivity alone does not validate uncorrected polynomial continuation."
+    },
+    {
+      "id": "s5.uncorrected_class",
+      "labels": [
+        "eq:wpclass",
+        "eq:intersectionvolume",
+        "eq:mixedv04"
+      ],
+      "status": "external_statement_checked",
+      "hypotheses": [
+        "Logarithmic kappa1 on ordinary DM compactification; labeled disjoint cone/boundary sets.",
+        "Mixed case cone openings<pi; pure cone/cusp pair sums<2pi; area positive."
+      ],
+      "evidence": [
+        "MirzIntersection boundary class (existing cited input).",
+        "AnagnostouNorbury Theorem1.1/Corollary1.2; DoNorbury continuation and stack convention."
+      ],
+      "computation": {
+        "target": "Exact V04 and V11 coefficients; cone substitution signs."
+      },
+      "review_limit": "Boundary-class proof not independently re-refereed; polynomial outside its geometric chamber is only formal."
+    },
+    {
+      "id": "s5.wall_class",
+      "labels": [
+        "eq:wallclass"
+      ],
+      "status": "external_statement_checked",
+      "hypotheses": [
+        "Pure cones/cusps,0<=theta_i<2pi; weights1\u2212theta/(2pi)>0;2g\u22122+sum weights>0.",
+        "Sum over stable rational-tail divisors on ordinary DM; genus0 also complement size>=2."
+      ],
+      "evidence": [
+        "AMN Definitions2.12\u20132.13 and Lemma2.14; coefficient rescaling2pi\u00b2(1\u2212sumw)^2=Phi\u00b2/2.",
+        "Projection formula under proper birational reduction; no positive double counting of complementary light subsets."
+      ],
+      "computation": {
+        "target": "Exact n4 wall and n5 boundary intersection fixtures."
+      },
+      "review_limit": "Full top power requires divisor products/self-intersections; pure-cone formula not extended to arbitrary mixed large cones and positive boundaries."
+    },
+    {
+      "id": "s5.four_cone_volume",
+      "labels": [
+        "eq:conev04"
+      ],
+      "status": "derived_in_chapter_author_verified",
+      "hypotheses": [
+        "Four labeled cone/cusp points;theta_i<2pi;sumtheta_i<4pi."
+      ],
+      "evidence": [
+        "Apply wall class and degree-one boundary/psi/kappa intersections on Mbar04."
+      ],
+      "computation": {
+        "target": "(0,0,3pi/2,3pi/2):\u2212pi\u00b2/4+pi\u00b2/2=pi\u00b2/4."
+      },
+      "review_limit": "This scalar addition is special to complex dimension1."
+    },
+    {
+      "id": "s5.formal_kernel",
+      "labels": [
+        "eq:kernelcontinuation"
+      ],
+      "status": "derived_in_chapter_author_verified",
+      "hypotheses": [
+        "Algebraic substitution(L,s)=(i theta,i alpha); denominator nonzero."
+      ],
+      "evidence": [
+        "sinh(iu)=i sin u."
+      ],
+      "computation": {
+        "target": "Formal identity only."
+      },
+      "review_limit": "Real geometric chart, domain and chamber require separate input; Lemma2.10 mixed degeneration needs sufficiently large positive boundary."
+    },
+    {
+      "id": "s6.common_cover",
+      "labels": [
+        "eq:commonorbifold",
+        "eq:lengthtorussphere"
+      ],
+      "status": "external_statement_checked",
+      "hypotheses": [
+        "c>0 fixed;equal sphere boundaries; torus boundary2c; oriented surfaces.",
+        "Common orbifold has one boundary c and three order2 points."
+      ],
+      "evidence": [
+        "HuTan Section3 verifies degree2 torus and degree4 sphere quotient and simple-curve lift multiplicities."
+      ],
+      "computation": {
+        "target": "No topological cover/curve-class enumerator."
+      },
+      "review_limit": "This is a correspondence through a common orbifold, not a direct unbranched sphere-to-torus degree2 map."
+    },
+    {
+      "id": "s6.wp_and_label_ratio",
+      "labels": [
+        "eq:voltorussphere"
+      ],
+      "status": "derived_in_chapter_author_verified",
+      "hypotheses": [
+        "Compare forms on common marked lifted family at fixed c; orbifold branch points treated as order2 cone points.",
+        "Labeled sphere boundaries; torus stack includes ineffective involution."
+      ],
+      "evidence": [
+        "Integral Goldman pairing scales with cover degree, so omegaQ=2omegaT.",
+        "Klein-four acts freely/transitively on boundaries;4!/4=6 labeled choices; stacktorus=effectivetorus/2."
+      ],
+      "computation": {
+        "target": "V04(c^4)=12V11eff(2c)=24V11stack(2c)."
+      },
+      "review_limit": "Generic counts yield orbifold integration; exceptional symmetries are not discarded as unlabeled regular points."
+    },
+    {
+      "id": "s6.cone_cover",
+      "labels": [
+        "eq:conetorus"
+      ],
+      "status": "derived_in_chapter_author_verified",
+      "hypotheses": [
+        "0<phi<pi; sphere four conesphi and torus singlecone2phi; quotientarea pi\u2212phi>0."
+      ],
+      "evidence": [
+        "Conformal branched-cover construction and uniqueness of negative-curvature conical uniformization.",
+        "Section5 pure-cone chamber and single-cone continuation give geometric polynomial volumes."
+      ],
+      "computation": {
+        "target": "Exact equal-cone polynomial ratio24."
+      },
+      "review_limit": "phi=pi is zero-area boundary limit, not an additional hyperbolic moduli space."
+    },
+    {
+      "id": "appA.fricke",
+      "labels": [
+        "eq:fricke"
+      ],
+      "status": "derived_in_chapter_author_verified",
+      "hypotheses": [
+        "A,B,C,D inSL2R withABCD=I; fixed peripheral traces; stated trace ordering."
+      ],
+      "evidence": [
+        "Standard trace relation; Cayley\u2013Hamilton and tr(U)tr(V)=tr(UV)+tr(UV^{-1}) identities."
+      ],
+      "computation": {
+        "target": "Exact rational SL2 fixture satisfies polynomial."
+      },
+      "review_limit": "An arbitrary real character solution need not lie in the geometric component."
+    },
+    {
+      "id": "appA.wp_factor",
+      "labels": [
+        "eq:frickedensity"
+      ],
+      "status": "derived_in_chapter_author_verified",
+      "hypotheses": [
+        "Smooth geometric relative character component; x=2cosh(ell/2)>2;Phi_z!=0 for(x,y) chart.",
+        "Twist fixesA,B and conjugatesC,D byexp(tauH_X/2); FN formdell wedge dtau."
+      ],
+      "evidence": [
+        "tr(A[X,C])=ad+bc\u2212xy\u22122z=\u2212Phi_z;dx=sinh(ell/2)dell.",
+        "Thusdx wedge dy=\u2212Phi_z omega/2 and positive density2/|Phi_z|."
+      ],
+      "computation": {
+        "target": "Exact Fricke twist numerator identity on rational matrices."
+      },
+      "review_limit": "If gradientPhi=0, changing coordinate pair does not remove the singularity. No global mapping-class fundamental domain provided."
+    }
+  ]
+}

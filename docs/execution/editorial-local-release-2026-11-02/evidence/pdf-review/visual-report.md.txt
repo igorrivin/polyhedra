@@ -1,0 +1,14 @@
+The first editorial draft compiles successfully to 201 pages, but two local layout repairs are required before PDF acceptance. This is the actual precommit draft, not the final clean web export. No new mathematical proof audit or numerical replay was performed.
+
+Every page was visually checked through all 51 contact sheets. 63 pages were also inspected at original raster size, including the title/byline/affiliation/abstract, complete introduction and Codex acknowledgment, all nine figures, all eight table blocks, the complete longtable, all seven part transitions, changed notation and paths, compiler warning pages, and all seven bibliography pages. Exact page coverage and image hashes are in `visual-review.json`.
+
+Required repairs:
+
+- PDF-LAYOUT-01: Appendix B's source note leaves its final three lines alone on page 194; References begins on page 195. Adjust local layout while preserving the 43 rows and complete source qualifications. Evidence: `rendered/page-193.png` and `rendered/page-194.png`.
+- PDF-LAYOUT-02: On page 154, both descending arrows in Figure 8 cross their gray degree/branch-value labels. Move the labels clear of the shafts without changing the diagram's content. Source: `book/chapters/28-genus-two-model.tex:249-252`; evidence: `rendered/page-154.png`.
+
+The title metadata, revised Airy labels, other figures, and all tables are legible. There are no overfull boxes, unresolved references or citations, duplicate labels, missing characters, or required reruns. The 36 recorded custom inputs, 613 unique labels, and 129 bibliography keys match the frozen source. Three inherited underfull paragraph warnings were inspected without finding a collision or clipping defect.
+
+Draft PDF: `pdf-build/main.pdf`, SHA-256 `19412c6923e8a5181487a4b1555eebb4c73ac3c8931e0ba98c92ce016c4c9a47`. All three old PDF locations retain their original hashes, and the draft's 36-input snapshot remains unchanged. The successful single marker receipt is preserved in `marker-receipt.json`; later rebuilds must not repeat it.
+
+Canonical changes observed after the draft freeze at report time: 0. Any later source repairs require a separate snapshot and build directory; keep this draft and its evidence intact.

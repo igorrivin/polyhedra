@@ -1,0 +1,583 @@
+[
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "--show-toplevel"
+    ],
+    "exit_code": 0,
+    "stdout": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "f697d61ce5ef48c538a44e3ff47193ca5aaf46a8\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--cached",
+      "--name-only"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--name-only"
+    ],
+    "exit_code": 0,
+    "stdout": "INTEGRATION_PLAN.md\nLICENSES/README.md\nREADME.md\nbook/README.md\nbook/chapters/07-euclidean-periods.tex\nbook/chapters/09-volume-hessians.tex\nbook/chapters/10-quantum-introduction.tex\nbook/chapters/11-quantum-degeneration.tex\nbook/chapters/13-four-point-fusion.tex\nbook/chapters/14-normalized-quantum-comparison.tex\nbook/chapters/16-dehn-filling-response.tex\nbook/chapters/23-trace-coefficients.tex\nbook/chapters/28-genus-two-model.tex\nbook/chapters/30-sharp-diagnostics.tex\nbook/chapters/31-arithmetic-remainder.tex\nbook/chapters/32-open-questions.tex\nbook/chapters/appendix-b-conventions.tex\nbook/computational-status.md\nbook/polyhedral_volumes_and_geodesic_identities.tex\ndocs/INTEGRATION_STATUS.md\nexperiments/quantum_geodesics/README.md\npackages/volume-toolkit/docs/release-0.4.0.md\nsite/README.md\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "ls-files",
+      "--others",
+      "--exclude-standard"
+    ],
+    "exit_code": 0,
+    "stdout": "site/book/downloads.json\nsite/book/edition.css\nsite/book/search.js\nsite/build_book.py\nsite/tests/test_book_search.cjs\nsite/tests/test_build_book.py\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "ls-tree",
+      "-r",
+      "-z",
+      "f697d61ce5ef48c538a44e3ff47193ca5aaf46a8"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "add",
+      "--chmod=-x",
+      "--pathspec-from-file=/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/source-checkpoint/approved-source-paths.nul",
+      "--pathspec-file-nul"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--cached",
+      "--name-only"
+    ],
+    "exit_code": 0,
+    "stdout": "INTEGRATION_PLAN.md\nLICENSES/README.md\nREADME.md\nbook/README.md\nbook/chapters/07-euclidean-periods.tex\nbook/chapters/09-volume-hessians.tex\nbook/chapters/10-quantum-introduction.tex\nbook/chapters/11-quantum-degeneration.tex\nbook/chapters/13-four-point-fusion.tex\nbook/chapters/14-normalized-quantum-comparison.tex\nbook/chapters/16-dehn-filling-response.tex\nbook/chapters/23-trace-coefficients.tex\nbook/chapters/28-genus-two-model.tex\nbook/chapters/30-sharp-diagnostics.tex\nbook/chapters/31-arithmetic-remainder.tex\nbook/chapters/32-open-questions.tex\nbook/chapters/appendix-b-conventions.tex\nbook/computational-status.md\nbook/polyhedral_volumes_and_geodesic_identities.tex\ndocs/INTEGRATION_STATUS.md\nexperiments/quantum_geodesics/README.md\npackages/volume-toolkit/docs/release-0.4.0.md\nsite/README.md\nsite/book/downloads.json\nsite/book/edition.css\nsite/book/search.js\nsite/build_book.py\nsite/tests/test_book_search.cjs\nsite/tests/test_build_book.py\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "ls-files",
+      "--stage",
+      "-z",
+      "--",
+      "INTEGRATION_PLAN.md",
+      "LICENSES/README.md",
+      "README.md",
+      "book/README.md",
+      "book/chapters/07-euclidean-periods.tex",
+      "book/chapters/09-volume-hessians.tex",
+      "book/chapters/10-quantum-introduction.tex",
+      "book/chapters/11-quantum-degeneration.tex",
+      "book/chapters/13-four-point-fusion.tex",
+      "book/chapters/14-normalized-quantum-comparison.tex",
+      "book/chapters/16-dehn-filling-response.tex",
+      "book/chapters/23-trace-coefficients.tex",
+      "book/chapters/28-genus-two-model.tex",
+      "book/chapters/30-sharp-diagnostics.tex",
+      "book/chapters/31-arithmetic-remainder.tex",
+      "book/chapters/32-open-questions.tex",
+      "book/chapters/appendix-b-conventions.tex",
+      "book/computational-status.md",
+      "book/polyhedral_volumes_and_geodesic_identities.tex",
+      "docs/INTEGRATION_STATUS.md",
+      "experiments/quantum_geodesics/README.md",
+      "packages/volume-toolkit/docs/release-0.4.0.md",
+      "site/README.md",
+      "site/book/downloads.json",
+      "site/book/edition.css",
+      "site/book/search.js",
+      "site/build_book.py",
+      "site/tests/test_book_search.cjs",
+      "site/tests/test_build_book.py"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "1c3b99ce29bea8699b08d93f8c2dd55b3a59d3b3"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "fe822bb32851c9951cbf69f0084fddc77074fa8c"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "b951788c1e0f5f82de7a39a86781cedfdce85997"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "793ae82f4000db12d0265bb6b07d18d832bf4b56"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "a9d1c8130f0c8eeb1321369a57d1e6d2cc27b62e"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "2b3b97a9abdeb766d35121bf2e54b3494ab2a6fd"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "d55dc1c7697de00f049229e527540f58cef8a68a"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "7b21a81dcade13340bbc2b6dce308e53b31b96f3"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "3310c03cc8126e15a1b25ae89ab1225b3272000f"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "1079c594bb436bc1659f0c759ab1b0a40f0cdebb"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "2a392be928e41d97b66d096e88d74c380a6cd801"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "111265888671ee33fb61684fc7333053d2e35298"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "5e48cd839f93e83456e5bd25ca6de93b996c95c7"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "de898d9dd45b20572e6b5991dd2438062424e76a"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "509aa1dc0098185add3ee1263fe7fce91a19bd87"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "e6afedfe4f87b8aeb5aae573505ff2e98f2d0636"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "53e3510847df76e757322f844c3a80187de863bb"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "75a5ec2dbd63a07cb29e0902d6ce385d6575a506"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "93656285adf58117bf42eb56877f78f9814c99ef"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "d5bb96cefd0d8fcb7d53320ab40cdc488ae785bd"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "6d7bf2723b959bd045d365971f6856a3c316b599"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "ff9a09d759d66b03399cf06c1e3eb06c11bf860f"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "543c9fd7cb3da88df2e8efed4a19df43e22e0717"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "4c1cbda1b60f346eafdfa7b116d696e538656e36"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "fd418c6e5ee80564a921212d2efd51905e8984fb"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "f35fedcf38f66421b41c7d298be4a10e43f6aac0"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "2a3c2e8c65f763a42db1207e8e532af92354a957"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "f893aadb995f407e9d1a640a7aeaf6eb71f88c71"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "cat-file",
+      "blob",
+      "dde281641baecc518339aebbff23c3e6d8fdda90"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--name-only"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "f697d61ce5ef48c538a44e3ff47193ca5aaf46a8\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "commit",
+      "-m",
+      "Reconcile monograph conventions and add complete local edition builder"
+    ],
+    "exit_code": 0,
+    "stdout": "[main edef1dd] Reconcile monograph conventions and add complete local edition builder\n 29 files changed, 1599 insertions(+), 81 deletions(-)\n create mode 100644 site/book/downloads.json\n create mode 100644 site/book/edition.css\n create mode 100644 site/book/search.js\n create mode 100644 site/build_book.py\n create mode 100644 site/tests/test_book_search.cjs\n create mode 100644 site/tests/test_build_book.py\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "edef1dda04cac2f50a7c22e4240556714fac4d91\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "rev-list",
+      "--parents",
+      "-n",
+      "1",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "edef1dda04cac2f50a7c22e4240556714fac4d91 f697d61ce5ef48c538a44e3ff47193ca5aaf46a8\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff-tree",
+      "--no-commit-id",
+      "--name-only",
+      "-r",
+      "edef1dda04cac2f50a7c22e4240556714fac4d91"
+    ],
+    "exit_code": 0,
+    "stdout": "INTEGRATION_PLAN.md\nLICENSES/README.md\nREADME.md\nbook/README.md\nbook/chapters/07-euclidean-periods.tex\nbook/chapters/09-volume-hessians.tex\nbook/chapters/10-quantum-introduction.tex\nbook/chapters/11-quantum-degeneration.tex\nbook/chapters/13-four-point-fusion.tex\nbook/chapters/14-normalized-quantum-comparison.tex\nbook/chapters/16-dehn-filling-response.tex\nbook/chapters/23-trace-coefficients.tex\nbook/chapters/28-genus-two-model.tex\nbook/chapters/30-sharp-diagnostics.tex\nbook/chapters/31-arithmetic-remainder.tex\nbook/chapters/32-open-questions.tex\nbook/chapters/appendix-b-conventions.tex\nbook/computational-status.md\nbook/polyhedral_volumes_and_geodesic_identities.tex\ndocs/INTEGRATION_STATUS.md\nexperiments/quantum_geodesics/README.md\npackages/volume-toolkit/docs/release-0.4.0.md\nsite/README.md\nsite/book/downloads.json\nsite/book/edition.css\nsite/book/search.js\nsite/build_book.py\nsite/tests/test_book_search.cjs\nsite/tests/test_build_book.py\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "ls-tree",
+      "-r",
+      "-z",
+      "edef1dda04cac2f50a7c22e4240556714fac4d91"
+    ],
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--cached",
+      "--name-only"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--name-only"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "status",
+      "--short",
+      "--untracked-files=all"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff-tree",
+      "--check",
+      "f697d61ce5ef48c538a44e3ff47193ca5aaf46a8",
+      "edef1dda04cac2f50a7c22e4240556714fac4d91"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,63 @@
+{
+  "baseline_head": "f697d61ce5ef48c538a44e3ff47193ca5aaf46a8",
+  "baseline_tests": {
+    "passed": 425,
+    "failed": 4,
+    "skipped": 18,
+    "collection_errors": 9,
+    "failure_cause": "gymnasium unavailable",
+    "collection_causes": {
+      "gymnasium": 8,
+      "hypothesis": 1
+    },
+    "skip_cause": "pynauty unavailable"
+  },
+  "offline_hypothesis_followup": {
+    "passed": 4,
+    "failed": 0,
+    "scope": "newly enabled tests/test_numerical_properties.py only"
+  },
+  "data_integrity": {
+    "returncode": 0,
+    "lfs_paths": 412,
+    "lfs_json_payloads": 354,
+    "canonical_input_hashes": 2,
+    "result_manifest_artifacts": 2
+  },
+  "package_build": {
+    "version": "0.3.0",
+    "copied_files": 56,
+    "python_files_matched": 48,
+    "wheel": true,
+    "sdist": true,
+    "forbidden_archive_entries": []
+  },
+  "wheel_core_install": {
+    "pip_check": true,
+    "outside_checkout_imports": true,
+    "optional_dependencies_absent": true,
+    "cli_help": true,
+    "seeded_cli_schema_v2": true,
+    "compileall": true
+  },
+  "sdist_install": {
+    "pip_check": true,
+    "outside_checkout_imports": true,
+    "cli_help": true,
+    "all_python_hashes_match": true
+  },
+  "remaining_local_environment_gates": [
+    "Gymnasium-dependent test collection/execution",
+    "pynauty-dependent graph/symmetry tests",
+    "cma development/RL dependency",
+    "Gradio 6.x GUI/app construction",
+    "pytest-cov development dependency",
+    "complete supported Python 3.10-3.14 matrix",
+    "normal online dependency resolution"
+  ],
+  "source_changes_proposed": [
+    "proposed-schema-checklist-correction.patch"
+  ],
+  "canonical_tracked_files_changed": 0,
+  "publication": "No upload, push, deploy, tag or external publication; metadata/licensing decisions pending with parent"
+}

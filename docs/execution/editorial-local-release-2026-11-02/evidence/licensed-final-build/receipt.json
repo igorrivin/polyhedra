@@ -1,0 +1,115 @@
+{
+  "source_commit": "4681abb777c813808f2ea4758461c4e89d510ff7",
+  "source_clean_at_start": true,
+  "source_checkpoint_sha256": "87e1d460be50c3c292088fc23a46a83e9e78981b32d2e607f4a3673a781531ba",
+  "approved_source_files_rehashed": 15,
+  "command": [
+    "/tmp/polyhedra-baseline-20261031/bin/python",
+    "site/build_book.py",
+    "--output-dir",
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/licensed-edition-dist",
+    "--work-dir",
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/licensed-edition-build",
+    "--require-clean"
+  ],
+  "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/consolidated",
+  "started_at_utc": "2026-11-02T23:44:54.829913+00:00",
+  "marker_repeated": false,
+  "existing_marker_receipt_sha256": "f86b1113893b5524549ad32f5dc44e8b9712907fd9586ccbd309d6991d79ebc5",
+  "preserved_pre_license_receipt_sha256": {
+    "final-build/receipt.json": "c96bc8c540506698e442a9c54f1cbdff90072fdaa02b153092960bfe4dc83698",
+    "edition-dist/downloads/edition-manifest.json": "838d20bf8953bc27647fdf38e134cc873824fd3ee4b23e7dbe12c6b4c222a35f",
+    "edition-build/compilation-manifest.json": "7a87dce48d3548aabd14f943be38cf22bab02bb0c3f246ac51d95821e84a2b06"
+  },
+  "python_version": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+  "tool_bin_prepend": [
+    "/Library/TeX/texbin",
+    "/opt/homebrew/bin",
+    "/usr/local/bin"
+  ],
+  "build_returncode": 0,
+  "build_elapsed_seconds": 54.23178283299785,
+  "build_finished_at_utc": "2026-11-02T23:45:49.062649+00:00",
+  "search_command": [
+    "/opt/homebrew/bin/node",
+    "site/tests/test_book_search.cjs",
+    "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/licensed-edition-dist/search-index.json"
+  ],
+  "search_returncode": 0,
+  "source_commit_at_end": "4681abb777c813808f2ea4758461c4e89d510ff7",
+  "source_status_at_end": "",
+  "finished_at_utc": "2026-11-02T23:45:49.295159+00:00",
+  "stage": "Fresh licensed local edition built; builder static checks and actual-index Node search checks passed",
+  "edition_directory": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/licensed-edition-dist",
+  "build_directory": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/licensed-edition-build",
+  "edition_manifest": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/licensed-edition-dist/downloads/edition-manifest.json",
+    "sha256": "15e2f7f49e7041cfd6f3035ceb2f17ebcf90f6f0896e78bb6e36da7f2a3fef07"
+  },
+  "compilation_manifest": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/licensed-edition-build/compilation-manifest.json",
+    "sha256": "544fe09b8e196f02d3de55e7a17a1cc597ab65b85ef7418cff9d3bc7e9fc0f04"
+  },
+  "pdf": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/licensed-edition-dist/downloads/monograph.pdf",
+    "sha256": "959a27f7559e571faaacebd561133f2e53c6847f99b0c5757d12f4ec467ae2f8"
+  },
+  "source_archive": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/licensed-edition-dist/downloads/monograph-source.zip",
+    "sha256": "9ab40fffa8cecc7b9aa6cd3bde96e56b2d4209cd0538b51dc64d9b542e57493d"
+  },
+  "aux_sha256": "b4edf252ab6b04433a35b0fededa1869bd4e639b87f413df4c45b1a4b1979c64",
+  "input_hash_count": 100,
+  "active_TeX_input_count": 36,
+  "output_hash_count_excluding_manifest": 154,
+  "license_sha256": {
+    "LICENSES/README.md": "345e69c061ecf6b276a8c57999516c855536ac7584af6aa4b4c3cdcd9bf6430e",
+    "LICENSES/CC-BY-4.0.txt": "2ade8c89b8bbe0d859b124a9e47032c8494022f43091e8278ae8e2554a292196",
+    "LICENSES/MONOGRAPH-NOTICE.md": "34657dce59f05f339911fad763497d7615e0b721978910eadde2c3777b698e3b",
+    "LICENSES/new-companions-MIT.txt": "a56fbd01e5bce5116c4860ba8067070fb6d69861d6368a4a76c55f2457969384",
+    "LICENSES/new-companion-files.txt": "6d52e33dc36d133cfa95fd6a5e97bc1708698f8e1865a18d847badf279222342",
+    "LICENSES/volume-toolkit-MIT.txt": "14c0fc10e8db2ba14a669b9939a69f22e729cdaecec1e8bde47d2b959ac5be38",
+    "packages/volume-toolkit/LICENSE": "14c0fc10e8db2ba14a669b9939a69f22e729cdaecec1e8bde47d2b959ac5be38"
+  },
+  "verification": {
+    "html_pages": 41,
+    "book_pages": 36,
+    "source_labels": 613,
+    "bibliography_entries": 129,
+    "mathml_nodes": 4729,
+    "figures": 9,
+    "tables": 8,
+    "local_links_and_search_targets": 3317,
+    "search_passages": 1242,
+    "browser_verification": "not performed by this builder; static checks are separate"
+  },
+  "tool_versions": {
+    "latexmk": {
+      "executable": "/Library/TeX/texbin/latexmk",
+      "version": "Latexmk, John Collins, 27 Dec. 2024. Version 4.86a"
+    },
+    "pandoc": {
+      "executable": "/opt/homebrew/bin/pandoc",
+      "version": "pandoc 3.12.1"
+    },
+    "gs": {
+      "executable": "/usr/local/bin/gs",
+      "version": "10.04.0"
+    },
+    "node": "v26.12.1"
+  },
+  "log_sha256": {
+    "build.stdout": "c9b54cf7daaca4473f811ec5f0fb029744964102c88804138532279a1bc8a2fb",
+    "build.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "search.stdout": "8d1c3b3ab55e1dba496c0215cc6a2474ad69185fdd196303d1fe1b28db6c86c0",
+    "search.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "boundaries": {
+    "PDF_and_diagram_visual_review": "independent review pending at receipt time",
+    "browser_review": "not performed by builder",
+    "scientific_replay": "not performed",
+    "source_or_canonical_copy_git_mutation": "not performed",
+    "upload_sync_push_deployment": "not performed",
+    "pre_license_evidence": "edition-dist, edition-build and final-build preserved; no prior compilation used as build input"
+  }
+}

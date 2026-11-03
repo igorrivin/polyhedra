@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/Library/TeX/texbin/latexmk",
+    "-norc",
+    "-pdf",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-file-line-error",
+    "-no-shell-escape",
+    "-outdir=../../pdf-build",
+    "main.tex"
+  ],
+  "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/pdf-review/layout-v3/frozen-source/book",
+  "scope": "layout-v3 precommit editorial draft, not final clean export",
+  "started_at_utc": "2026-11-02T14:48:59.798696+00:00",
+  "existing_marker_receipt": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/pdf-review/marker-receipt.json",
+  "marker_receipt_sha256": "f86b1113893b5524549ad32f5dc44e8b9712907fd9586ccbd309d6991d79ebc5",
+  "marker_repeated": false,
+  "returncode": 0,
+  "finished_at_utc": "2026-11-02T14:49:10.356363+00:00",
+  "elapsed_seconds": 10.557743499986827,
+  "accepted_sources_and_snapshot_unchanged_before_after": true,
+  "original_and_v2_evidence_unchanged": true,
+  "tex_input_freeze_sha256": "af7a7da04d9c616cb1fb53aae4e261ea6d9bd74aed7485e56194b0cff8cccab2"
+}

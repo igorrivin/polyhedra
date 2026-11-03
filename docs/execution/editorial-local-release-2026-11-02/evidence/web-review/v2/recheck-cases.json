@@ -1,0 +1,123 @@
+{
+  "passed": 23,
+  "cases": [
+    {
+      "case": "original_inter_include_prose_math",
+      "passed": true,
+      "rejected_with": "unconsumed body content between chapter inputs: 'Review sentinel prose $123=456$. \\\\textbf{Review proof}.\\n\\n\\\\input{chapters/02-ideal-angle-cells.tex}\\n\\\\'"
+    },
+    {
+      "case": "original_extra_active_include",
+      "passed": true,
+      "rejected_with": "unrecognized chapter include: book/review-extra.tex"
+    },
+    {
+      "case": "unused_graph_input",
+      "passed": true,
+      "rejected_with": "active source inputs were not consumed: ['book/review-extra.tex']"
+    },
+    {
+      "case": "wrapper_remainder",
+      "passed": true,
+      "rejected_with": "entry wrapper has unsupported or unconsumed content"
+    },
+    {
+      "case": "bibliography_prefix",
+      "passed": true,
+      "rejected_with": "unconsumed content before bibliography entries"
+    },
+    {
+      "case": "bibliography_tail",
+      "passed": true,
+      "rejected_with": "unconsumed content after the bibliography"
+    },
+    {
+      "case": "document_tail",
+      "passed": true,
+      "rejected_with": "unconsumed content after the document boundary"
+    },
+    {
+      "case": "nested_existing_input",
+      "passed": true,
+      "rejected_with": "nested source include needs explicit routing: book/chapters/01-volume-normalization.tex"
+    },
+    {
+      "case": "supported_include_route_consumed",
+      "passed": true
+    },
+    {
+      "case": "original_unlabeled_equation_through_pandoc",
+      "passed": true,
+      "rejected_with": "numbered equation requires an explicit canonical label"
+    },
+    {
+      "case": "unlabeled_align_through_pandoc",
+      "passed": true,
+      "rejected_with": "align numbering is not uniquely fixed by the compiled labels"
+    },
+    {
+      "case": "starred_unnumbered_equation_preserved",
+      "passed": true
+    },
+    {
+      "case": "align_numbers_derived_from_compiled_witness",
+      "passed": true
+    },
+    {
+      "case": "inconsistent_align_witnesses",
+      "passed": true,
+      "rejected_with": "align numbering is not uniquely fixed by the compiled labels"
+    },
+    {
+      "case": "dot_segments_actually_normalized",
+      "passed": true
+    },
+    {
+      "case": "original_work_inside_checkout",
+      "passed": true,
+      "rejected_with": "build/output must be outside the research checkout without symlink ancestors"
+    },
+    {
+      "case": "output_inside_checkout",
+      "passed": true,
+      "rejected_with": "build/output must be outside the research checkout without symlink ancestors"
+    },
+    {
+      "case": "same_physical_directories",
+      "passed": true,
+      "rejected_with": "output and build scratch directories must be disjoint"
+    },
+    {
+      "case": "nested_physical_directories",
+      "passed": true,
+      "rejected_with": "output and build scratch directories must be disjoint"
+    },
+    {
+      "case": "symlink_before_dot_dot",
+      "passed": true,
+      "rejected_with": "build/output path has a symlink ancestor"
+    },
+    {
+      "case": "canonical_byline_affiliation_displayed",
+      "passed": true,
+      "metadata": {
+        "author": "Igor Rivin",
+        "affiliation_lines": [
+          "Department of Mathematics, Temple University"
+        ],
+        "date": "30 October 2026"
+      }
+    },
+    {
+      "case": "canonical_abstract_and_acknowledgment_preserved",
+      "passed": true,
+      "boundary": "Fixed pre-layout introduction; old aux provisional, figure references unresolved, no final-numbering claim"
+    },
+    {
+      "case": "original_self_authored_receipt_entry_point_removed",
+      "passed": true,
+      "cli_exit_code": 2
+    }
+  ],
+  "source_boundary": "Fixed pre-layout editorial snapshot only; not final current source"
+}

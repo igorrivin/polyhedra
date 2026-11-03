@@ -1,0 +1,87 @@
+{
+  "passed_cases": 15,
+  "cases": [
+    {
+      "case": "exact_literal_accepted_RawBlock",
+      "passed": true
+    },
+    {
+      "case": "other_or_extended_setter_rejected_RawBlock",
+      "passed": true,
+      "raw": "\\setlength{\\LTpost}{8pt}"
+    },
+    {
+      "case": "other_or_extended_setter_rejected_RawBlock",
+      "passed": true,
+      "raw": "\\setlength{\\parskip}{4pt}"
+    },
+    {
+      "case": "other_or_extended_setter_rejected_RawBlock",
+      "passed": true,
+      "raw": "\\setlength{\\LTpost}{4pt}\\unsupported{Hidden}"
+    },
+    {
+      "case": "other_or_extended_setter_rejected_RawBlock",
+      "passed": true,
+      "raw": "\\setlength{\\LTpost}{4pt}Hidden"
+    },
+    {
+      "case": "exact_literal_accepted_RawInline",
+      "passed": true
+    },
+    {
+      "case": "other_or_extended_setter_rejected_RawInline",
+      "passed": true,
+      "raw": "\\setlength{\\LTpost}{8pt}"
+    },
+    {
+      "case": "other_or_extended_setter_rejected_RawInline",
+      "passed": true,
+      "raw": "\\setlength{\\parskip}{4pt}"
+    },
+    {
+      "case": "other_or_extended_setter_rejected_RawInline",
+      "passed": true,
+      "raw": "\\setlength{\\LTpost}{4pt}\\unsupported{Hidden}"
+    },
+    {
+      "case": "other_or_extended_setter_rejected_RawInline",
+      "passed": true,
+      "raw": "\\setlength{\\LTpost}{4pt}Hidden"
+    },
+    {
+      "case": "actual_pandoc_adjacent_prose_preserved",
+      "passed": true
+    },
+    {
+      "case": "actual_pandoc_other_setter_rejected",
+      "passed": true,
+      "raw": "\\setlength{\\LTpost}{8pt}"
+    },
+    {
+      "case": "actual_pandoc_other_setter_rejected",
+      "passed": true,
+      "raw": "\\setlength{\\parskip}{4pt}"
+    },
+    {
+      "case": "layout_v2_matches_pre_layout_fragment_exactly",
+      "passed": true,
+      "html_sha256": "c16d33303c4787cf03ca4515bc472a6da67f573c8373f45149cb1d58361f9719"
+    },
+    {
+      "case": "layout_v3_only_authorized_two_sentence_replacement",
+      "passed": true,
+      "html_sha256": "9c36150b9ae070442b06828525bae2b2f4996452f0b6b1c1b65bcafadf7106ed",
+      "source_sha256": "6cdcee282d3b3a5cc4a139a73671c657b432807de937f69c8a5a302dea798add",
+      "mathml_nodes": 109,
+      "tables": 1,
+      "reference_links_unchanged": true,
+      "labels_unchanged": true
+    }
+  ],
+  "source_manifest_sha256": "9b7264ef02a686ac400659c32754407fb4573a0533bb19a294b408ccc9c07678",
+  "source_boundary": "Exact immutable layout-v3 graph; Appendix B conversion only",
+  "aux_sha256": "1b5cb49042c83c68fb41010c4929ac2cc95a2fa3e4f85dbd37638d247278f490",
+  "numbering_status": "Prior accepted auxiliary values used provisionally; final current numbers not verified",
+  "no_PDF_or_diagram_generation": true
+}

@@ -1,0 +1,63 @@
+{
+  "stage": "Four applied source-status/metadata documents, frozen for separate independent review; no commit",
+  "created_at_utc": "2026-11-02T14:52:53.065963+00:00",
+  "baseline_commit": "f697d61ce5ef48c538a44e3ff47193ca5aaf46a8",
+  "files": [
+    {
+      "path": "README.md",
+      "before_sha256": "b38752855a2ff46c369b60d096135589fb4ae6421cf129f39f5792ed7a2adce5",
+      "after_sha256": "d35af93bed967536e36e505e214a53146dac45a05b9a3ee2f02b79042204b06c",
+      "bytes": 11049,
+      "frozen_copy": "after/README.md"
+    },
+    {
+      "path": "docs/INTEGRATION_STATUS.md",
+      "before_sha256": "7b7e71768702faeac19bac4ac4abb8b0558163f34ab57297756d6fc76b769ba3",
+      "after_sha256": "60871a1094912e66e93e4eeed0c82ff900f86c7afb750fa9f06bcd5a783ead96",
+      "bytes": 10275,
+      "frozen_copy": "after/docs/INTEGRATION_STATUS.md"
+    },
+    {
+      "path": "INTEGRATION_PLAN.md",
+      "before_sha256": "6883c25399ceb1cee5359c7256088d94612bcba37e039a4a2319f27c680480bd",
+      "after_sha256": "97a4c62d23320f0f6f4df8580ecc43b941bb12ba078d8acf2952057acbd7a130",
+      "bytes": 51186,
+      "frozen_copy": "after/INTEGRATION_PLAN.md"
+    },
+    {
+      "path": "LICENSES/README.md",
+      "before_sha256": "d455bd777ed9efcce7f5e191e98019ff2f61ac8506cb89b86dc0a3fe7c8f9502",
+      "after_sha256": "b619df07be81f57d76eb6bfa93f4313ee6a999729a96e143ee8155abd2d5b4c4",
+      "bytes": 704,
+      "frozen_copy": "after/LICENSES/README.md"
+    }
+  ],
+  "canonical_write_allowlist": [
+    "README.md",
+    "docs/INTEGRATION_STATUS.md",
+    "INTEGRATION_PLAN.md",
+    "LICENSES/README.md"
+  ],
+  "diff": {
+    "path": "four-file.diff",
+    "sha256": "ca42fe22f38ec8d3539c391c177c0fc238057c8ce16805147d3029e4acf88f54"
+  },
+  "source_acceptance_boundaries": {
+    "initial_editorial_release_documents": {
+      "path": "editorial-review/acceptance.json",
+      "sha256": "6e0ed1995681aeed4c82168811608a2e35599c0141cc25c254638114c1789f5e",
+      "approved_count": 18
+    },
+    "web_v3": {
+      "path": "web-review/v3/acceptance.json",
+      "sha256": "c81904ff3841dffa15c6f25a5f0491677cb6a261a59fdcd62b0c289ff807537e",
+      "source_file_count": 7,
+      "independent_focused_checks": 15,
+      "site_tests_passed": 45
+    },
+    "layout_v2": "accepted exact source transform, per parent",
+    "layout_v3": "parent reports 200-page build; full visual/prose recheck finishing; no final acceptance claimed here"
+  },
+  "scope": "Enduring behavior and metadata only; rights unresolved and no license assigned; toolkit MIT preserved. Exact build/artifact/commit outcomes belong to checkpoint.",
+  "supersedes_documentation_candidate": "../source-status-freeze.json; original three-file evidence preserved"
+}

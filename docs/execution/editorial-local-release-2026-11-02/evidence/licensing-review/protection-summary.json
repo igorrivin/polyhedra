@@ -1,0 +1,31 @@
+{
+  "baseline_commit": "edef1dda04cac2f50a7c22e4240556714fac4d91",
+  "baseline_tracked_files": 2764,
+  "baseline_reconstructed_from": "release-audit/canonical-before.json plus approved and committed source-status-v2 29-path set",
+  "source_commit_changes_equal_prior_29_path_allowlist": true,
+  "protected_materialized_files_checked": 2754,
+  "all_protected_hashes_equal_baseline": true,
+  "excluded_changed_source_paths": [
+    "book/polyhedral_volumes_and_geodesic_identities.tex",
+    "book/README.md",
+    "LICENSES/README.md",
+    "README.md",
+    "docs/INTEGRATION_STATUS.md",
+    "INTEGRATION_PLAN.md",
+    "LICENSES/CC-BY-4.0.txt",
+    "LICENSES/new-companions-MIT.txt",
+    "LICENSES/new-companion-files.txt",
+    "LICENSES/MONOGRAPH-NOTICE.md",
+    "experiments/README.md",
+    "site/README.md",
+    "site/book/downloads.json",
+    "site/build_book.py",
+    "site/tests/test_build_book.py"
+  ],
+  "tracked_modifications": 10,
+  "new_files": 5,
+  "scope": "File identity only; no scientific replay or build. Combined source approval is separate.",
+  "detail_receipt_sha256": "3fef84e089f46c2ff3855730596d060600ec170b2cbbc3096d7e219f8dcc37b0",
+  "expected_hash_evidence": "Reused initial clean inventory and exact previously approved 29-path source set; its Git delta to edef1dda is verified.",
+  "current_hash_evidence": "Fresh materialized file reads; no scientific evaluation, installation, build or original-repository scan."
+}

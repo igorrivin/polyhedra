@@ -1,0 +1,643 @@
+{
+  "schema_version": "1.0",
+  "operation": "section15_finite_checks",
+  "evidence_status": "exact_finite_algebra_and_numerical_asymptotic_column",
+  "conventions": {
+    "h": "2*pi*b^2",
+    "lambda": "h^(1/3)",
+    "eta": "acos(1/3)-h^(2/3)*zeta/(6*sqrt(2))",
+    "contour_orientation_in_algebra": "upward; dw/i"
+  },
+  "provenance": {
+    "source_commit": "cf34fcbcd0ee867a2dee974d9c952238bc5c6ce6",
+    "repository_dirty_at_start": false,
+    "git_status_porcelain_at_start": [],
+    "source_sha256": {
+      "experiments/section15/check.py": "56175063c8debbd150f1a3dc617d04367696dce7b713379aa8723ab3289d7ad0",
+      "experiments/section15/historical-table.json": "91ecc5703fe0089940825f8e165ab88e0693535067e8ca080736a0895f164011",
+      "book/chapters/15-quantum-airy.tex": "e042499f66436b1aafc1219efbef3c9db945f6a99bc60738ac913ebfa78a0d9e"
+    },
+    "python": "3.12.11",
+    "mpmath": "1.3.0",
+    "generated_at_utc": "2026-11-01T04:54:22.298552+00:00"
+  },
+  "historical_table_provenance": {
+    "source_commit": "df952174e55f08a52596d912d9713a9d1e116313",
+    "source_path": "book/polyhedral_volumes_and_geodesic_identities.tex",
+    "source_label": "sec:quantumAiry",
+    "original_subsection": "A numerical check of the exact integral",
+    "status": "transcription_of_printed_values_only",
+    "raw_quantum_integral_output_available": false,
+    "rounding_mode_of_original_quantum_output_known": false,
+    "note": "reported_Q is retained historical input, not output of this driver. No original code, precision, contour, or tail record was supplied."
+  },
+  "chapter_retains_historical_rows": true,
+  "algebra": {
+    "arithmetic": "exact rational pairs a+b*sqrt(2)",
+    "checks": [
+      {
+        "name": "cot(theta1) at fold",
+        "actual": {
+          "rational": "0",
+          "sqrt2_coefficient": "2"
+        },
+        "expected": {
+          "rational": "0",
+          "sqrt2_coefficient": "2"
+        },
+        "passed": true
+      },
+      {
+        "name": "cot(theta2) at fold",
+        "actual": {
+          "rational": "0",
+          "sqrt2_coefficient": "1"
+        },
+        "expected": {
+          "rational": "0",
+          "sqrt2_coefficient": "1"
+        },
+        "passed": true
+      },
+      {
+        "name": "cot(theta3) at fold",
+        "actual": {
+          "rational": "0",
+          "sqrt2_coefficient": "-11"
+        },
+        "expected": {
+          "rational": "0",
+          "sqrt2_coefficient": "-11"
+        },
+        "passed": true
+      },
+      {
+        "name": "cot(s) at fold",
+        "actual": {
+          "rational": "0",
+          "sqrt2_coefficient": "1/2"
+        },
+        "expected": {
+          "rational": "0",
+          "sqrt2_coefficient": "1/2"
+        },
+        "passed": true
+      },
+      {
+        "name": "cot(3s) at fold",
+        "actual": {
+          "rational": "0",
+          "sqrt2_coefficient": "-5/2"
+        },
+        "expected": {
+          "rational": "0",
+          "sqrt2_coefficient": "-5/2"
+        },
+        "passed": true
+      },
+      {
+        "name": "sin(theta1) squared at fold",
+        "actual": {
+          "rational": "1/9",
+          "sqrt2_coefficient": "0"
+        },
+        "expected": {
+          "rational": "1/9",
+          "sqrt2_coefficient": "0"
+        },
+        "passed": true
+      },
+      {
+        "name": "sin(theta2) squared at fold",
+        "actual": {
+          "rational": "1/3",
+          "sqrt2_coefficient": "0"
+        },
+        "expected": {
+          "rational": "1/3",
+          "sqrt2_coefficient": "0"
+        },
+        "passed": true
+      },
+      {
+        "name": "sin(theta3) squared at fold",
+        "actual": {
+          "rational": "1/243",
+          "sqrt2_coefficient": "0"
+        },
+        "expected": {
+          "rational": "1/243",
+          "sqrt2_coefficient": "0"
+        },
+        "passed": true
+      },
+      {
+        "name": "sin(s)/sin(3s) at fold",
+        "actual": {
+          "rational": "3",
+          "sqrt2_coefficient": "0"
+        },
+        "expected": {
+          "rational": "3",
+          "sqrt2_coefficient": "0"
+        },
+        "passed": true
+      },
+      {
+        "name": "exp(2 G_v) positive-sine ratio",
+        "actual": {
+          "rational": "1",
+          "sqrt2_coefficient": "0"
+        },
+        "expected": {
+          "rational": "1",
+          "sqrt2_coefficient": "0"
+        },
+        "passed": true
+      },
+      {
+        "name": "exp(G_eta/6) positive-sine ratio",
+        "actual": {
+          "rational": "1",
+          "sqrt2_coefficient": "0"
+        },
+        "expected": {
+          "rational": "1",
+          "sqrt2_coefficient": "0"
+        },
+        "passed": true
+      },
+      {
+        "name": "A_star squared; A_star positive",
+        "actual": {
+          "rational": "81/16",
+          "sqrt2_coefficient": "0"
+        },
+        "expected": {
+          "rational": "81/16",
+          "sqrt2_coefficient": "0"
+        },
+        "passed": true
+      },
+      {
+        "name": "(log A)_v",
+        "actual": {
+          "rational": "0",
+          "sqrt2_coefficient": "7"
+        },
+        "expected": {
+          "rational": "0",
+          "sqrt2_coefficient": "7"
+        },
+        "passed": true
+      },
+      {
+        "name": "G derivative v^2 eta^0",
+        "actual": {
+          "rational": "0",
+          "sqrt2_coefficient": "0"
+        },
+        "expected": {
+          "rational": "0",
+          "sqrt2_coefficient": "0"
+        },
+        "passed": true
+      },
+      {
+        "name": "G derivative v^3 eta^0",
+        "actual": {
+          "rational": "54",
+          "sqrt2_coefficient": "0"
+        },
+        "expected": {
+          "rational": "54",
+          "sqrt2_coefficient": "0"
+        },
+        "passed": true
+      },
+      {
+        "name": "G derivative v^1 eta^1",
+        "actual": {
+          "rational": "0",
+          "sqrt2_coefficient": "18"
+        },
+        "expected": {
+          "rational": "0",
+          "sqrt2_coefficient": "18"
+        },
+        "passed": true
+      },
+      {
+        "name": "G derivative v^0 eta^2",
+        "actual": {
+          "rational": "0",
+          "sqrt2_coefficient": "36"
+        },
+        "expected": {
+          "rational": "0",
+          "sqrt2_coefficient": "36"
+        },
+        "passed": true
+      },
+      {
+        "name": "G derivative v^4 eta^0",
+        "actual": {
+          "rational": "0",
+          "sqrt2_coefficient": "-648"
+        },
+        "expected": {
+          "rational": "0",
+          "sqrt2_coefficient": "-648"
+        },
+        "passed": true
+      },
+      {
+        "name": "G derivative v^2 eta^1",
+        "actual": {
+          "rational": "-18",
+          "sqrt2_coefficient": "0"
+        },
+        "expected": {
+          "rational": "-18",
+          "sqrt2_coefficient": "0"
+        },
+        "passed": true
+      },
+      {
+        "name": "Psi derivative numerator coefficient u^0",
+        "actual": {
+          "rational": "0",
+          "sqrt2_coefficient": "0"
+        },
+        "expected": {
+          "rational": "0",
+          "sqrt2_coefficient": "0"
+        },
+        "passed": true
+      },
+      {
+        "name": "Psi derivative numerator coefficient u^1",
+        "actual": {
+          "rational": "2592",
+          "sqrt2_coefficient": "0"
+        },
+        "expected": {
+          "rational": "2592",
+          "sqrt2_coefficient": "0"
+        },
+        "passed": true
+      },
+      {
+        "name": "Psi derivative numerator coefficient u^2",
+        "actual": {
+          "rational": "9504",
+          "sqrt2_coefficient": "0"
+        },
+        "expected": {
+          "rational": "9504",
+          "sqrt2_coefficient": "0"
+        },
+        "passed": true
+      },
+      {
+        "name": "leading Y^3",
+        "actual": {
+          "rational": "1/3",
+          "sqrt2_coefficient": "0"
+        },
+        "expected": {
+          "rational": "1/3",
+          "sqrt2_coefficient": "0"
+        },
+        "passed": true
+      },
+      {
+        "name": "leading zeta Y",
+        "actual": {
+          "rational": "-1",
+          "sqrt2_coefficient": "0"
+        },
+        "expected": {
+          "rational": "-1",
+          "sqrt2_coefficient": "0"
+        },
+        "passed": true
+      },
+      {
+        "name": "correction coefficient Y",
+        "actual": {
+          "rational": "0",
+          "sqrt2_coefficient": "7/3"
+        },
+        "expected": {
+          "rational": "0",
+          "sqrt2_coefficient": "7/3"
+        },
+        "passed": true
+      },
+      {
+        "name": "correction coefficient Y4",
+        "actual": {
+          "rational": "0",
+          "sqrt2_coefficient": "-1/3"
+        },
+        "expected": {
+          "rational": "0",
+          "sqrt2_coefficient": "-1/3"
+        },
+        "passed": true
+      },
+      {
+        "name": "correction coefficient zetaY2",
+        "actual": {
+          "rational": "0",
+          "sqrt2_coefficient": "1/12"
+        },
+        "expected": {
+          "rational": "0",
+          "sqrt2_coefficient": "1/12"
+        },
+        "passed": true
+      },
+      {
+        "name": "correction coefficient zeta2",
+        "actual": {
+          "rational": "0",
+          "sqrt2_coefficient": "1/4"
+        },
+        "expected": {
+          "rational": "0",
+          "sqrt2_coefficient": "1/4"
+        },
+        "passed": true
+      },
+      {
+        "name": "integrated Ai prime coefficient",
+        "actual": {
+          "rational": "0",
+          "sqrt2_coefficient": "-3"
+        },
+        "expected": {
+          "rational": "0",
+          "sqrt2_coefficient": "-3"
+        },
+        "passed": true
+      },
+      {
+        "name": "integrated zeta^2 Ai cancellation",
+        "actual": {
+          "rational": "0",
+          "sqrt2_coefficient": "0"
+        },
+        "expected": {
+          "rational": "0",
+          "sqrt2_coefficient": "0"
+        },
+        "passed": true
+      },
+      {
+        "name": "coefficient of lambda/b after oriented Airy integral",
+        "actual": {
+          "rational": "3/4",
+          "sqrt2_coefficient": "0"
+        },
+        "expected": {
+          "rational": "3/4",
+          "sqrt2_coefficient": "0"
+        },
+        "passed": true
+      }
+    ],
+    "all_passed": true,
+    "not_checked": [
+      "G_star=0 Lobachevsky identity",
+      "double-sine integral",
+      "uniform remainders and contour deformation",
+      "global transition theorem"
+    ]
+  },
+  "approximation": {
+    "runs": [
+      {
+        "working_decimal_digits": 80,
+        "series_comparison_absolute_tolerance": "1.0e-70",
+        "rows": [
+          {
+            "b": "0.0125",
+            "zeta": "0",
+            "reported_Q": "0.459087",
+            "printed_Q1": "0.464164",
+            "computed_Q1": "0.46416363948697927608753947983109480835535251723371811264238238081080630845473633",
+            "ode_series_Q1": "0.46416363948697927608753947983109480835535251723371811264238238081080630845473633",
+            "series_terms": 160,
+            "series_comparison_absolute_residual": "5.2710989716152616121742870256350095038549806911842537750388815125540721454848798e-82",
+            "printed_column_absolute_residual": "0.00000036051302072391246052016890519164464748276628188735761761918919369154526366653131",
+            "printed_Q1_agrees_to_six_decimal_places": true,
+            "series_comparison_passed": true,
+            "scaled_difference_from_rounded_reported_Q": "-0.513936813178122576281486239774",
+            "scaled_half_width_if_reported_Q_was_rounded_to_nearest": "0.0000506178166182849704768258090541",
+            "quantum_integral_replayed": false
+          },
+          {
+            "b": "0.00625",
+            "zeta": "0",
+            "reported_Q": "0.422572",
+            "printed_Q1": "0.423779",
+            "computed_Q1": "0.42377916468231125617731094134854374634470697928517519970151308398934524367482862",
+            "ode_series_Q1": "0.42377916468231125617731094134854374634470697928517519970151308398934524367482862",
+            "series_terms": 160,
+            "series_comparison_absolute_residual": "0.0",
+            "printed_column_absolute_residual": "0.00000016468231125617731094134854374634470697928517519970151308398934524367482861937281",
+            "printed_Q1_agrees_to_six_decimal_places": true,
+            "series_comparison_passed": true,
+            "scaled_difference_from_rounded_reported_Q": "-0.307945067525508993992210200933",
+            "scaled_half_width_if_reported_Q_was_rounded_to_nearest": "0.00012754890531419151666981476229",
+            "quantum_integral_replayed": false
+          },
+          {
+            "b": "0.003125",
+            "zeta": "0",
+            "reported_Q": "0.398047",
+            "printed_Q1": "0.398339",
+            "computed_Q1": "0.39833853973463606391832945313811600922377898583707617648463952087174654550867131",
+            "ode_series_Q1": "0.39833853973463606391832945313811600922377898583707617648463952087174654550867131",
+            "series_terms": 160,
+            "series_comparison_absolute_residual": "0.0",
+            "printed_column_absolute_residual": "0.00000046026536393608167054686188399077622101416292382351536047912825345449132869076317",
+            "printed_Q1_agrees_to_six_decimal_places": true,
+            "series_comparison_passed": true,
+            "scaled_difference_from_rounded_reported_Q": "-0.187403549782527316114246002026",
+            "scaled_half_width_if_reported_Q_was_rounded_to_nearest": "0.000321403101392795885661275703335",
+            "quantum_integral_replayed": false
+          },
+          {
+            "b": "0.0125",
+            "zeta": "1",
+            "reported_Q": "0.214333",
+            "printed_Q1": "0.202400",
+            "computed_Q1": "0.20239963064074513926396710106380059742890396063194962375482442758786746742239715",
+            "ode_series_Q1": "0.20239963064074513926396710106380059742890396063194962375482442758786746742239715",
+            "series_terms": 160,
+            "series_comparison_absolute_residual": "2.6355494858076308060871435128175047519274903455921268875194407562770360727424399e-82",
+            "printed_column_absolute_residual": "0.00000036935925486073603289893619940257109603936805037624517557241213253257760284714753",
+            "printed_Q1_agrees_to_six_decimal_places": true,
+            "series_comparison_passed": true,
+            "scaled_difference_from_rounded_reported_Q": "1.2080822037300467196361742806",
+            "scaled_half_width_if_reported_Q_was_rounded_to_nearest": "0.0000506178166182849704768258090541",
+            "quantum_integral_replayed": false
+          },
+          {
+            "b": "0.00625",
+            "zeta": "1",
+            "reported_Q": "0.182316",
+            "printed_Q1": "0.177567",
+            "computed_Q1": "0.17756731227862258452795078435978830124194988499803850450255481311727727639893041",
+            "ode_series_Q1": "0.17756731227862258452795078435978830124194988499803850450255481311727727639893041",
+            "series_terms": 160,
+            "series_comparison_absolute_residual": "2.6355494858076308060871435128175047519274903455921268875194407562770360727424399e-82",
+            "printed_column_absolute_residual": "0.00000031227862258452795078435978830124194988499803850450255481311727727639893041292046",
+            "printed_Q1_agrees_to_six_decimal_places": true,
+            "series_comparison_passed": true,
+            "scaled_difference_from_rounded_reported_Q": "1.21137984108126366512166494725",
+            "scaled_half_width_if_reported_Q_was_rounded_to_nearest": "0.00012754890531419151666981476229",
+            "quantum_integral_replayed": false
+          },
+          {
+            "b": "0.003125",
+            "zeta": "1",
+            "reported_Q": "0.163805",
+            "printed_Q1": "0.161924",
+            "computed_Q1": "0.16192393196755799135256022326681437783622491300226954276776123773369738093675054",
+            "ode_series_Q1": "0.16192393196755799135256022326681437783622491300226954276776123773369738093675054",
+            "series_terms": 160,
+            "series_comparison_absolute_residual": "5.2710989716152616121742870256350095038549806911842537750388815125540721454848798e-82",
+            "printed_column_absolute_residual": "0.000000068032442008647439776733185622163775086997730457232238762266302619063249456779869",
+            "printed_Q1_agrees_to_six_decimal_places": true,
+            "series_comparison_passed": true,
+            "scaled_difference_from_rounded_reported_Q": "1.20916219911541193149626407363",
+            "scaled_half_width_if_reported_Q_was_rounded_to_nearest": "0.000321403101392795885661275703335",
+            "quantum_integral_replayed": false
+          }
+        ]
+      },
+      {
+        "working_decimal_digits": 120,
+        "series_comparison_absolute_tolerance": "1.0e-110",
+        "rows": [
+          {
+            "b": "0.0125",
+            "zeta": "0",
+            "reported_Q": "0.459087",
+            "printed_Q1": "0.464164",
+            "computed_Q1": "0.464163639486979276087539479831094808355352517233718112642382380810806308454736332991025746082466619113534063564409842489",
+            "ode_series_Q1": "0.464163639486979276087539479831094808355352517233718112642382380810806308454736332991025746082466619113534063564409842489",
+            "series_terms": 240,
+            "series_comparison_absolute_residual": "4.84073989356164784102253829160793980946277399006098858185970367668052043512210745607835279284626824613507192813444308442e-122",
+            "printed_column_absolute_residual": "0.00000036051302072391246052016890519164464748276628188735761761918919369154526366700897425391753338088646593643559015751093885",
+            "printed_Q1_agrees_to_six_decimal_places": true,
+            "series_comparison_passed": true,
+            "scaled_difference_from_rounded_reported_Q": "-0.513936813178122576281486239774",
+            "scaled_half_width_if_reported_Q_was_rounded_to_nearest": "0.0000506178166182849704768258090541",
+            "quantum_integral_replayed": false
+          },
+          {
+            "b": "0.00625",
+            "zeta": "0",
+            "reported_Q": "0.422572",
+            "printed_Q1": "0.423779",
+            "computed_Q1": "0.42377916468231125617731094134854374634470697928517519970151308398934524367482861991533297924224615769589891523802277607",
+            "ode_series_Q1": "0.42377916468231125617731094134854374634470697928517519970151308398934524367482861991533297924224615769589891523802277607",
+            "series_terms": 240,
+            "series_comparison_absolute_residual": "4.84073989356164784102253829160793980946277399006098858185970367668052043512210745607835279284626824613507192813444308442e-122",
+            "printed_column_absolute_residual": "0.000000164682311256177310941348543746344706979285175199701513083989345243674828619915332979242246157695898915238022776070355001",
+            "printed_Q1_agrees_to_six_decimal_places": true,
+            "series_comparison_passed": true,
+            "scaled_difference_from_rounded_reported_Q": "-0.307945067525508993992210200933",
+            "scaled_half_width_if_reported_Q_was_rounded_to_nearest": "0.00012754890531419151666981476229",
+            "quantum_integral_replayed": false
+          },
+          {
+            "b": "0.003125",
+            "zeta": "0",
+            "reported_Q": "0.398047",
+            "printed_Q1": "0.398339",
+            "computed_Q1": "0.398338539734636063918329453138116009223778985837076176484639520871746545508671309233087395321222930111940007361555024355",
+            "ode_series_Q1": "0.398338539734636063918329453138116009223778985837076176484639520871746545508671309233087395321222930111940007361555024355",
+            "series_terms": 240,
+            "series_comparison_absolute_residual": "4.84073989356164784102253829160793980946277399006098858185970367668052043512210745607835279284626824613507192813444308442e-122",
+            "printed_column_absolute_residual": "0.000000460265363936081670546861883990776221014162923823515360479128253454491328690766912604678777069888059992638444975645442753",
+            "printed_Q1_agrees_to_six_decimal_places": true,
+            "series_comparison_passed": true,
+            "scaled_difference_from_rounded_reported_Q": "-0.187403549782527316114246002026",
+            "scaled_half_width_if_reported_Q_was_rounded_to_nearest": "0.000321403101392795885661275703335",
+            "quantum_integral_replayed": false
+          },
+          {
+            "b": "0.0125",
+            "zeta": "1",
+            "reported_Q": "0.214333",
+            "printed_Q1": "0.202400",
+            "computed_Q1": "0.202399630640745139263967101063800597428903960631949623754824427587867467422397152748355402247230383687056228162872195768",
+            "ode_series_Q1": "0.202399630640745139263967101063800597428903960631949623754824427587867467422397152748355402247230383687056228162872195768",
+            "series_terms": 240,
+            "series_comparison_absolute_residual": "2.42036994678082392051126914580396990473138699503049429092985183834026021756105372803917639642313412306753596406722154221e-122",
+            "printed_column_absolute_residual": "0.000000369359254860736032898936199402571096039368050376245175572412132532577602847251644597752769616312943771837127804231882507",
+            "printed_Q1_agrees_to_six_decimal_places": true,
+            "series_comparison_passed": true,
+            "scaled_difference_from_rounded_reported_Q": "1.2080822037300467196361742806",
+            "scaled_half_width_if_reported_Q_was_rounded_to_nearest": "0.0000506178166182849704768258090541",
+            "quantum_integral_replayed": false
+          },
+          {
+            "b": "0.00625",
+            "zeta": "1",
+            "reported_Q": "0.182316",
+            "printed_Q1": "0.177567",
+            "computed_Q1": "0.177567312278622584527950784359788301241949884998038504502554813117277276398930413002059591424686953568456873436545053118",
+            "ode_series_Q1": "0.177567312278622584527950784359788301241949884998038504502554813117277276398930413002059591424686953568456873436545053118",
+            "series_terms": 240,
+            "series_comparison_absolute_residual": "0.0",
+            "printed_column_absolute_residual": "0.000000312278622584527950784359788301241949884998038504502554813117277276398930413002059591424686953568456873436545053117921802",
+            "printed_Q1_agrees_to_six_decimal_places": true,
+            "series_comparison_passed": true,
+            "scaled_difference_from_rounded_reported_Q": "1.21137984108126366512166494725",
+            "scaled_half_width_if_reported_Q_was_rounded_to_nearest": "0.00012754890531419151666981476229",
+            "quantum_integral_replayed": false
+          },
+          {
+            "b": "0.003125",
+            "zeta": "1",
+            "reported_Q": "0.163805",
+            "printed_Q1": "0.161924",
+            "computed_Q1": "0.16192393196755799135256022326681437783622491300226954276776123773369738093675054329403049895779251865541825079616467732",
+            "ode_series_Q1": "0.16192393196755799135256022326681437783622491300226954276776123773369738093675054329403049895779251865541825079616467732",
+            "series_terms": 240,
+            "series_comparison_absolute_residual": "2.42036994678082392051126914580396990473138699503049429092985183834026021756105372803917639642313412306753596406722154221e-122",
+            "printed_column_absolute_residual": "0.0000000680324420086474397767331856221637750869977304572322387622663026190632494567059695010422074813445817492038353226797415453",
+            "printed_Q1_agrees_to_six_decimal_places": true,
+            "series_comparison_passed": true,
+            "scaled_difference_from_rounded_reported_Q": "1.20916219911541193149626407363",
+            "scaled_half_width_if_reported_Q_was_rounded_to_nearest": "0.000321403101392795885661275703335",
+            "quantum_integral_replayed": false
+          }
+        ]
+      }
+    ],
+    "precision_stability_absolute_differences": [
+      "2.9910257460824666191e-81",
+      "8.4667020757753842304e-83",
+      "7.6691260467877706989e-82",
+      "2.7483554022472303837e-81",
+      "3.0020595914246869536e-81",
+      "3.2940304989577925187e-81"
+    ],
+    "precision_stability_absolute_tolerance": "1e-70",
+    "all_passed": true,
+    "arithmetic": "mpmath numerical approximation; no interval arithmetic",
+    "historical_quantum_integral_replayed": false
+  },
+  "quantum_integral_replayed": false,
+  "uniform_theorem_verified": false,
+  "runtime_seconds": 0.09194966708309948,
+  "all_checks_passed": true
+}

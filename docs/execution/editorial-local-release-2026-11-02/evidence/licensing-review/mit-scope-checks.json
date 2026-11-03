@@ -1,0 +1,301 @@
+{
+  "file_count": 59,
+  "existing_unchanged": 58,
+  "files": [
+    {
+      "path": "experiments/README.md",
+      "sha256": "a9ace616d82c09f4502fe6bb480daa112812e8b2b4164a5e6d5cc00727837cfc",
+      "unchanged_from_baseline": false
+    },
+    {
+      "path": "experiments/counting_mixing/README.md",
+      "sha256": "225d070e6eab3f61992c04c62f50361fd1f494a78ada8e2cf4d7b9dee61c4745",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/counting_mixing/__init__.py",
+      "sha256": "6fc28e861807e61233bed8d0ca6c66001b4792c95d539dcc11d50e7060804715",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/counting_mixing/algebra.py",
+      "sha256": "36399bd0068d0a0faa454b7df8c01a9e9cd7b03e138ca9c61fd3ad8716c8deb4",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/counting_mixing/arithmetic.py",
+      "sha256": "5a3d249be1fd9c3cbe2079426c3fd75e18aca1a339cf7684f7f61e76860bae9f",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/counting_mixing/dynamics.py",
+      "sha256": "bb1cdbff6b64971ef5ef317f6be068baa55a2ea65cbad291a8631639f253c378",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/counting_mixing/exact.py",
+      "sha256": "12bfa97e4debfbb8695480efea45319ad52e824ed88721f09ea5aad062227e99",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/counting_mixing/fixture.json",
+      "sha256": "538c23145ba1ded0f57c7f67a68412a35644ea85c1dd8c4470d902e11e57be33",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/counting_mixing/numerics.py",
+      "sha256": "b87a7eaf165a391dd183b0a22bc8ff747540c15b291ff53b7cf102d7472f6de7",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/counting_mixing/run.py",
+      "sha256": "c079ee98ac182709cd9511a30a3a1a560b7b22311af6aaa4da06a427d19c1014",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/counting_mixing/tests/test_counting_mixing.py",
+      "sha256": "4fb1744e6be2a4c28a6c1ecbcdd26f4d9e29e7c84900246a7ed26cacf1e8a52d",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/normalizations/README.md",
+      "sha256": "0f460da36f82b31d4e2b51a11b1e732544410281e7f1322206eb30b1564b86cb",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/normalizations/fixture.json",
+      "sha256": "603a15ca995ba2b430aa06cdaa6439443a79bbf59f2275590f8f22ad5a537141",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/normalizations/run.py",
+      "sha256": "cd74141cb4ed4230b84f3e156c96ec67dbbed27bc4047c05fc2f8106e74d018d",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/normalizations/tests/test_normalizations.py",
+      "sha256": "65bd0079d7efd9a920bc00069c764d27cc66aebd6ab4af38fb13a01a0c277502",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_geodesics/README.md",
+      "sha256": "193149f1dd1fb67bf45dab240ec3b61aad0ece113859b59522b8534d9fef7fd0",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_geodesics/__init__.py",
+      "sha256": "0c8007dbe9a1134b40566beed05c4469fb671771a78f072090c4f2b0504404a2",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_geodesics/common.py",
+      "sha256": "279d158fb17d557dfe4c17bcb01bcb932f6e5343594c1d664ffd0519775bb2cc",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_geodesics/figure_eight.py",
+      "sha256": "7fc20f4328316e31565341537bffae462a6083423ef30d6ce4fb02ceb6bc68e8",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_geodesics/fixture.json",
+      "sha256": "3c0f2ba7ffe7715d38e602697a0c7012b1963f653b483f5c7033858670530a1b",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_geodesics/geodesic_exact.py",
+      "sha256": "6e72ad9335987f7c355d1a4a744905008faf2088e6ba4b4efa4b676243c30ea7",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_geodesics/geometry.py",
+      "sha256": "18a92ccbbae9ebe84b841fe97fd0df91a66fac00f81d411dfd2ff636975878b0",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_geodesics/kernels.py",
+      "sha256": "4c4431bb43267144dac233948846897e1032a7ee938908e6b1701421799ded97",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_geodesics/klein.py",
+      "sha256": "f5ab68c308580b1c954d16104118b9cf807455bf7b6e51125e872ac0c505a4dd",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_geodesics/normalization.py",
+      "sha256": "50436249a581492e3cc263e389929bad9d22925e0c523922a0f4b06dd6686687",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_geodesics/run.py",
+      "sha256": "618f17d3aec05e2a6de637c851e6ccfabfde50088662f5198f165eebd8a5254a",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_geodesics/tests/test_geodesic.py",
+      "sha256": "61652d138e4be89ef15fd748fda0eea941807e97fcad770f4f0ee73709337c71",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_geodesics/tests/test_quantum.py",
+      "sha256": "a5d3a2a8242a579b3af345dcce40a55c4314c10becfa82f7215e5dda6335fcc0",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_geodesics/tests/test_validation.py",
+      "sha256": "9ad40c44d0607cf919335c9b0ec7dd4e0985a1dc3b2a2f3513f2cc8c35e2b8b8",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_geodesics/twist_integrals.py",
+      "sha256": "11e99ee89d12f8dd11697ed663b40da2eee15eb0150c77320fb0e7173b4b54ea",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_surgery/README.md",
+      "sha256": "2c9c712cb99788bb331ebf40cd7e440bfa04666add75c9238a2646f12198edce",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_surgery/__init__.py",
+      "sha256": "1925c77c6e7cfff79798b2eab36ecb21b06bac8825c399743937da5da05f1d37",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_surgery/algebra.py",
+      "sha256": "c03d19471ba817dd8b9af234dd54418c3d411cb0d222803dfe2a93333c8d0ed4",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_surgery/exact.py",
+      "sha256": "1c9b6ce9fbf39dc4033e62451f83039616b1a1fa79fddcc7bd990aa5d9ec4f97",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_surgery/fixture.json",
+      "sha256": "c6f5f162a72331f48db888106a9fd7870005883838136603bf53b2f4eba62198",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_surgery/periods.py",
+      "sha256": "a18044e87b1c49c0232dec5b56e94cc417e6faebda7dc3f0748858d9b12acdc3",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_surgery/run.py",
+      "sha256": "24aa7025bfae88e4e601aee1cbcbf60f3e43220880662ff592917c79be21c192",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/quantum_surgery/tests/test_quantum_surgery.py",
+      "sha256": "a929d97ab2790a394cfa0e3a1874248de5ea54da42611f52c07bb0f7b6b58727",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/section15/README.md",
+      "sha256": "37849f959764bb6801c68c5af94edd369224c42152625b6876b9437e58d40387",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/section15/check.py",
+      "sha256": "56175063c8debbd150f1a3dc617d04367696dce7b713379aa8723ab3289d7ad0",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/section15_quantum/README.md",
+      "sha256": "72be417c8d03f743ae056a2bb4b8b4a4f73047e3c368980c54f16569bb203322",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/section15_quantum/check.py",
+      "sha256": "e0966000c16b3f34ed36102a8c38d00aa602e8e7fd3e5e605341bc7bf43896ba",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/section15_quantum/evaluate.py",
+      "sha256": "fee7dae3a298deaf0520fe09ceb0d584306c63937fa923ba4d03729a6cdacf81",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/section15_quantum/test_evaluate.py",
+      "sha256": "4ad45d1e359216715207aaafa4e6f9399f013ab585799b1db84164edbb110921",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/section30/README.md",
+      "sha256": "43f5c6dff6040f1946a961668bad19b80cf54248115bb910d55ea656dfef6724",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/section30/fixture.json",
+      "sha256": "ef8869c5e4729605d630a81f5bd9f8dc9f34363facd84aeead4d15de238dd196",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/section30/run.py",
+      "sha256": "3dc50d531d2b7a3eac8cb608772e14cd2649c724b65e8d117b04ca8735e8e34d",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/section30/tests/test_diagnostic.py",
+      "sha256": "decb663edd303c9e4687df0a8b8feb652eb099b01ba0288ad83921ce4f5883c4",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/section9/README.md",
+      "sha256": "a69e69a7135107b04481f26a84e62336086d7002bad5c75f7c29f3d79664fd36",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/section9/barrier-fixtures.json",
+      "sha256": "fdd1cd88cec4398199e46c8a38cfec2955f0118672972bfceb5ab732b86aec1a",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/section9/barrier_run.py",
+      "sha256": "e9f1f772f9cfa5bb74637926b868d5f6cc1049c3cc4372faf8bbe750afc83c60",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/section9/fixture.json",
+      "sha256": "70349bb959ac7169202cb9304d9e3ce8f414a693626a7a3c06a38ded276269a1",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/section9/run.py",
+      "sha256": "91525e17669887d7863834a3322207088c7ff4dbf4b4f8348a67b529a6142a19",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/section9/tests/test_barrier_examples.py",
+      "sha256": "6f8bc34af91a85a22a312926ae1dd5d416ed287d6e3eba8c7525433710deba3f",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/section9/tests/test_rendering.py",
+      "sha256": "a6726c477ae419d2a86b1d9c64fd1b12a27bc98395ea53f55dd1a1bc7e497a7f",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/torus_campaign/README.md",
+      "sha256": "cb32059b9558a946c955981346fdb9ee72c3f305e7a8760e134b99c4c8ce3de4",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/torus_campaign/campaign.cpp",
+      "sha256": "b17839d5b657f143ab90535c8d3432a1e5a9bdb51a477dea3b414702f88de9c3",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/torus_campaign/run.py",
+      "sha256": "f80154b6d7c9b60e2fa2c74a898fa096d0e03e3f36719df6c7802382441cb8fe",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "experiments/torus_campaign/tests/test_campaign.py",
+      "sha256": "0009b84e4a7b1c65e10e34f22ec910282b5b37dff3662d498698f3c32389a680",
+      "unchanged_from_baseline": true
+    }
+  ]
+}

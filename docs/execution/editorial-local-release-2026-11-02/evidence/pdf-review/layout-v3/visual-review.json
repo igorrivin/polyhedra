@@ -1,0 +1,148 @@
+{
+  "recorded_at_utc": "2026-11-02T14:52:32.496078+00:00",
+  "scope": "Layout-v3 actual precommit source and PDF review; not final clean web export, new proof audit, numerical replay, or deployment verification.",
+  "decision": "approved_layout_v3_precommit_source_and_pdf",
+  "pdf": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/pdf-review/layout-v3/pdf-build/main.pdf",
+    "sha256": "2759cb2a351c043734d8ecca8686e01399de8b3859526ed0d949f5af5e3e0354",
+    "bytes": 1528469,
+    "pages": 200
+  },
+  "build_convergence": {
+    "returncode": 0,
+    "pdflatex_passes": 3,
+    "latexmk_targets_up_to_date": true,
+    "diagnostics": {
+      "overfull_count": 0,
+      "underfull_count": 3,
+      "undefined_reference_or_citation": false,
+      "multiply_defined_labels": false,
+      "missing_character": false,
+      "fatal_error": false,
+      "rerun_required": false
+    }
+  },
+  "source_verification": {
+    "active_input_count": 36,
+    "ordered_labels": 613,
+    "bibliography_keys": 129,
+    "convention_rows": 43,
+    "only_v3_delta": "The final two Appendix B process-note sentences were shortened while retaining all four requested audit qualifiers. All math, citations, labels, table rows, earlier note prose, and all other 35 active inputs are unchanged from v2.",
+    "source_check_sha256": "69689e1570064d65392889610919a25a4efe6fc6723949af2415f7be95ac5f69"
+  },
+  "all_page_coverage": {
+    "new_page_count": 200,
+    "every_new_page_compared_to_v2": true,
+    "exact_full_raster_matches_to_v2": 191,
+    "changed_full_raster_pages": [
+      6,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200
+    ],
+    "reference_page_shift": {
+      "new_pages": [
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200
+      ],
+      "old_v2_pages": [
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201
+      ],
+      "body_text_and_body_pixels_identical": true,
+      "only_raster_differences": "Footer page numbers"
+    },
+    "other_changes": {
+      "6": "References contents entry changes from 195 to 194.",
+      "193": "Only the shortened final source-note sentences reflow."
+    },
+    "coverage_basis": "The original 201-page draft had all 51 contact sheets and 63 original-size critical pages inspected. V2 changed only 154,193,194; all were inspected. V3 has 191 exact full-page raster matches to v2, and every one of its 9 changed or shifted pages was inspected at original size. This supports complete layout coverage through preserved-image comparisons; no new full contact-sheet visual sweep is claimed for v3.",
+    "original_review_sha256": "8878838d80082b4d1ce3c852463b92a8e80d8ea7501d92839c4c5087635cb135",
+    "v2_review_sha256": "3dbf07bd20ffc061b974a686e6a414feeb9a8b8c8439a1376c7bb93988eeed34"
+  },
+  "own_v3_original_size_inspection": {
+    "pages": [
+      6,
+      154,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200
+    ],
+    "count": 12,
+    "resolution_dpi": 130,
+    "dimensions": [
+      1075,
+      1520
+    ],
+    "method": "Opened each full-page PNG with original image detail."
+  },
+  "closed_findings": [
+    {
+      "id": "PDF-LAYOUT-01",
+      "pages": [
+        192,
+        193,
+        194
+      ],
+      "result": "The complete Appendix B source note fits on page 193 below the table, with its four audit qualifiers retained. References begins on page 194; the nearly empty continuation page is eliminated. All 43 table rows are preserved and readable."
+    },
+    {
+      "id": "PDF-LAYOUT-02",
+      "pages": [
+        154
+      ],
+      "result": "Both degree/branch labels remain clear of their arrow shafts. V3 page 154 is pixel-identical to the accepted v2 repair and was inspected again at original size."
+    }
+  ],
+  "required_residual_findings": [],
+  "old_and_prior_draft_evidence_preserved": true,
+  "canonical_and_v3_snapshot_unchanged_before_after": true,
+  "marker_repeated": false,
+  "existing_marker_receipt_sha256": "f86b1113893b5524549ad32f5dc44e8b9712907fd9586ccbd309d6991d79ebc5",
+  "evidence_sha256": {
+    "source-check.json": "69689e1570064d65392889610919a25a4efe6fc6723949af2415f7be95ac5f69",
+    "tex-input-freeze.json": "af7a7da04d9c616cb1fb53aae4e261ea6d9bd74aed7485e56194b0cff8cccab2",
+    "build-command.json": "db76d54ac7ae1144c9df8c02c8292cc406725e64d88bad5839b85b843a1388c1",
+    "pdf-build-receipt.json": "9785cd40a0bfc4ad1826b155a520da9f0874c43a525682dd7f22f0cbec8b9bba",
+    "render-manifest.json": "24c6cbbf14d8c9cf8cb5986dc21f3684f8522c5efe920ab9010ffb48e972902a",
+    "page-comparison.json": "89ef8622bf8a7abfa07c123782219ab84adc9878966f76d7228b84abf0f37b7a",
+    "prior-drafts-preservation.json": "02f44783e4266017e76cb4f19b2d987a8df152e963ec874f9af8fa15d8e76cd6"
+  },
+  "inspected_raster_sha256": {
+    "6": "7e25d05d2aa0f2a395808ad97fdb31214247cfda4156704b10acf92e9906418f",
+    "154": "01a63b91fbf1fdf3e8a604093c2e1df7d1c16b942642a261c457b3197e938d76",
+    "191": "627815b2e4708973ba019cdb340f60f9491dbfce9f983741aeaf73957876eeb4",
+    "192": "f98060b6ffd430c9c923221574aed430ca32374c8146f3ebb073a279a491054f",
+    "193": "caeea289ac9d24168c5965765a7d01e845fd7f8ca2047ec42bb914f501332abc",
+    "194": "d0e917c6b042e8885e08f1198e86ad3c7f20c87107904215973989dec6c5d809",
+    "195": "7d014935c28636b8d5e79d3b211673d818b118708eb9865dd6e54d4d7cd10444",
+    "196": "fd12a98dfe90ffb2de0d9041beb93303f0b450c2030e3d39e1b7137a60a8b384",
+    "197": "6b382c272cd604a60dbde96bb0cbbe3f2e69d1b1fa2a9881238c8ca9cf9a1343",
+    "198": "7b015ce75f17c7df6d6717b09f9aece6221ca7cde30bee6702261b870019df5b",
+    "199": "68568486e4efe0d824c9e22d176eb163b5191b212344b7c90862c28ff5ce771f",
+    "200": "d913fd725300dd5d464001a19e8a10a8b542494dc206f49dd5992b1bba7c3105"
+  },
+  "next_scope": "Final clean-source web-builder export requires its own source/PDF binding and all-page raster comparison against this accepted v3 draft; marker must not repeat."
+}

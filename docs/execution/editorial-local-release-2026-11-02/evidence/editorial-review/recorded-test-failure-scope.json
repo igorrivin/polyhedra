@@ -1,0 +1,160 @@
+{
+  "scope": "Read existing JUnit; no tests rerun",
+  "records": [
+    {
+      "kind": "error",
+      "test": "::tests.test_cage_optimizer_accounting",
+      "dependency_named": "gymnasium"
+    },
+    {
+      "kind": "error",
+      "test": "::tests.test_h4_combinatorics_benchmark",
+      "dependency_named": "gymnasium"
+    },
+    {
+      "kind": "error",
+      "test": "::tests.test_h4_combinatorics_response",
+      "dependency_named": "gymnasium"
+    },
+    {
+      "kind": "error",
+      "test": "::tests.test_h4_symmetric_benchmark",
+      "dependency_named": "gymnasium"
+    },
+    {
+      "kind": "error",
+      "test": "::tests.test_h4_symmetric_response",
+      "dependency_named": "gymnasium"
+    },
+    {
+      "kind": "error",
+      "test": "::tests.test_numerical_properties",
+      "dependency_named": "hypothesis"
+    },
+    {
+      "kind": "error",
+      "test": "::tests.test_rl_budget_contract",
+      "dependency_named": "gymnasium"
+    },
+    {
+      "kind": "error",
+      "test": "::tests.test_rl_harness",
+      "dependency_named": "gymnasium"
+    },
+    {
+      "kind": "error",
+      "test": "::tests.test_rl_validator",
+      "dependency_named": "gymnasium"
+    },
+    {
+      "kind": "skipped",
+      "test": "tests.test_arithmetic_corpus::test_pynauty_identifier_is_relabeling_invariant_when_available",
+      "dependency_named": "pynauty"
+    },
+    {
+      "kind": "failure",
+      "test": "tests.test_h4_symmetric_maxima_campaign::test_real_n8_sixteen_cell_calibration_smoke",
+      "dependency_named": "gymnasium"
+    },
+    {
+      "kind": "skipped",
+      "test": "tests.test_hd_geometric_symmetry::test_h4_16_cell_has_full_hyperoctahedral_group",
+      "dependency_named": "pynauty"
+    },
+    {
+      "kind": "skipped",
+      "test": "tests.test_hd_geometric_symmetry::test_group_is_invariant_under_nontrivial_lorentz_boundary_map",
+      "dependency_named": "pynauty"
+    },
+    {
+      "kind": "skipped",
+      "test": "tests.test_hd_geometric_symmetry::test_group_certification_survives_strong_lorentz_boost[7.0]",
+      "dependency_named": "pynauty"
+    },
+    {
+      "kind": "skipped",
+      "test": "tests.test_hd_geometric_symmetry::test_group_certification_survives_strong_lorentz_boost[8.0]",
+      "dependency_named": "pynauty"
+    },
+    {
+      "kind": "skipped",
+      "test": "tests.test_hd_geometric_symmetry::test_group_certification_survives_strong_lorentz_boost[10.0]",
+      "dependency_named": "pynauty"
+    },
+    {
+      "kind": "skipped",
+      "test": "tests.test_hd_geometric_symmetry::test_huge_finite_coordinates_fail_with_strict_json_diagnostics",
+      "dependency_named": "pynauty"
+    },
+    {
+      "kind": "skipped",
+      "test": "tests.test_hd_geometric_symmetry::test_generic_ideal_h4_simplex_filters_combinatorial_symmetries",
+      "dependency_named": "pynauty"
+    },
+    {
+      "kind": "skipped",
+      "test": "tests.test_hd_geometric_symmetry::test_almost_symmetric_input_is_not_fully_certified_without_rejection_gap",
+      "dependency_named": "pynauty"
+    },
+    {
+      "kind": "skipped",
+      "test": "tests.test_hd_geometric_symmetry::test_indeterminate_fit_prevents_full_group_certification",
+      "dependency_named": "pynauty"
+    },
+    {
+      "kind": "skipped",
+      "test": "tests.test_hd_geometric_symmetry::test_invalid_nonunit_input_is_rejected_before_hull_work",
+      "dependency_named": "pynauty"
+    },
+    {
+      "kind": "skipped",
+      "test": "tests.test_hd_geometric_symmetry::test_nonsimplicial_tesseract_is_not_certified",
+      "dependency_named": "pynauty"
+    },
+    {
+      "kind": "skipped",
+      "test": "tests.test_hd_geometric_symmetry::test_group_enumeration_cap_preserves_topology_and_order",
+      "dependency_named": "pynauty"
+    },
+    {
+      "kind": "skipped",
+      "test": "tests.test_hd_geometric_symmetry::test_invalid_audit_controls_raise[unit_tolerance-0.0]",
+      "dependency_named": "pynauty"
+    },
+    {
+      "kind": "skipped",
+      "test": "tests.test_hd_geometric_symmetry::test_invalid_audit_controls_raise[distinct_tolerance-inf]",
+      "dependency_named": "pynauty"
+    },
+    {
+      "kind": "skipped",
+      "test": "tests.test_hd_geometric_symmetry::test_invalid_audit_controls_raise[support_tolerance--1.0]",
+      "dependency_named": "pynauty"
+    },
+    {
+      "kind": "skipped",
+      "test": "tests.test_hd_geometric_symmetry::test_invalid_audit_controls_raise[isometry_tolerance-nan]",
+      "dependency_named": "pynauty"
+    },
+    {
+      "kind": "skipped",
+      "test": "tests.test_hd_geometric_symmetry::test_invalid_audit_controls_raise[max_group_order-0]",
+      "dependency_named": "pynauty"
+    },
+    {
+      "kind": "failure",
+      "test": "tests.test_rl_training_launcher::test_launcher_writes_truthful_atomic_model_and_config",
+      "dependency_named": "gymnasium"
+    },
+    {
+      "kind": "failure",
+      "test": "tests.test_rl_training_launcher::test_training_failure_leaves_no_partial_artifact_or_lock",
+      "dependency_named": "gymnasium"
+    },
+    {
+      "kind": "failure",
+      "test": "tests.test_rl_training_launcher::test_dry_run_writes_nothing_and_never_calls_trainer",
+      "dependency_named": "gymnasium"
+    }
+  ]
+}

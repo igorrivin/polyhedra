@@ -1,0 +1,53 @@
+{
+  "scope": "References to previously established original-source preservation; no new original/LFS restoration or payload campaign",
+  "original_repositories": [
+    {
+      "path": "ideal_poly_volume_toolkit",
+      "head": "cc6b689652ce735f2098bb0a3235089210d764df",
+      "tracked_files": 925
+    },
+    {
+      "path": "ipoly",
+      "head": "30ef40e23005509bd94d26f27dc48ea778832a50",
+      "tracked_files": 28
+    }
+  ],
+  "original_tracked_files": 953,
+  "original_archive": {
+    "path": "polyhedra_moduli_quantum_monograph_sources.zip",
+    "sha256": "8f28b07686ea579a7dfb7b88ccef5c12bdd50b6e328737d5a8a79f6e06ba92dc",
+    "bytes": 2224739
+  },
+  "canonical_references": [
+    {
+      "path": "provenance/source-map.json",
+      "sha256": "d3be5871bd6b63adf55e350305c6842520a1d981cee3dae1a6c3c9819a1cf854"
+    },
+    {
+      "path": "audit/2026-10-31/source-inventory.json",
+      "sha256": "3e7cb4912789f4134652daf0f4097e28a871e4630207b04fef0a41b49d9ee6f1"
+    },
+    {
+      "path": "provenance/backup-manifest.json",
+      "sha256": "2b446fd87c6f91f65ff46fafdcfc12e52daa7eab1ec4b9d3ef6e428926116e7f"
+    },
+    {
+      "path": "docs/execution/final-chapters-review-2026-11-01/integration-review/preservation-receipt.json",
+      "sha256": "7f8029bf864341dd79c2748680ec432e03dc322a2a304e86b623b368ed2271a5"
+    }
+  ],
+  "current_protection_receipts": [
+    "evidence/editorial-review/source-status-v2/protected-baseline-checks.json",
+    "evidence/licensing-review/protection-summary.json"
+  ],
+  "protected_counts": {
+    "editorial_stage": 2735,
+    "licensing_stage": 2754
+  },
+  "licensing_protected_file_details": {
+    "path_from_outer_run": "licensing-review/protected-baseline-checks.json",
+    "sha256": "3fef84e089f46c2ff3855730596d060600ec170b2cbbc3096d7e219f8dcc37b0",
+    "copied": false,
+    "reason": "Full independent details remain preserved OUTER; the reviewed protection summary and combined acceptance are copied."
+  }
+}

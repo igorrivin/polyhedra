@@ -1,0 +1,52 @@
+{
+  "baseline": "f697d61ce5ef48c538a44e3ff47193ca5aaf46a8",
+  "frozen_builder_sha256": "1b2f129a84eefa3721de3ba6fff52671cc423b661e64b29a289011b5e45eeee0",
+  "tests": [
+    {
+      "name": "inter_include_valid_prose_math_and_emphasis",
+      "result": "INCORRECT_SILENT_SUCCESS",
+      "extracted_source_pages_identical": true
+    },
+    {
+      "name": "extra_active_include_not_rendered_but_archived",
+      "result": "INCORRECT_SILENT_SUCCESS",
+      "archived_extra": "book/review-extra.tex"
+    },
+    {
+      "name": "unlabelled_numbered_equation",
+      "result": "INCORRECT_SILENT_SUCCESS",
+      "transformed_ast": {
+        "t": "Math",
+        "c": [
+          {
+            "t": "DisplayMath"
+          },
+          "x=123"
+        ]
+      }
+    },
+    {
+      "name": "dot_dot_work_path_inside_checkout",
+      "result": "INCORRECT_GUARD_ACCEPTANCE",
+      "supplied": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/web-review/path-probe/hop/../checkout/scratch",
+      "resolved": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/web-review/path-probe/checkout/scratch"
+    },
+    {
+      "name": "old_source_receipt",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "name": "malformed_compilation_receipt_artifacts",
+      "result": "ACCEPTED_BY_CACHE_LOADER",
+      "pdf_bytes": 10,
+      "png_bytes": 24,
+      "tool_versions_present": false,
+      "boundary": "The valid accepted baseline auxiliary file is paired with deliberately invalid PDF/PNG bytes; no compiler origin or tool versions are required."
+    },
+    {
+      "name": "canonical_author_affiliation",
+      "result": "DROPPED",
+      "rendered_html": "<section id=\"introduction\" class=\"level1 unnumbered\">\n<h1 class=\"unnumbered\">Introduction</h1>\n<p>Visible body.</p>\n</section>"
+    }
+  ]
+}

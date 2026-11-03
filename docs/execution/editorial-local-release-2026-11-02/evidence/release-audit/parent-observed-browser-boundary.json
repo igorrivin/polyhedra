@@ -1,0 +1,32 @@
+{
+  "observer": "parent agent /root",
+  "evidence_type": "parent-reported observations, not rerun by release auditor",
+  "file_navigation": {
+    "surface": "Obscura",
+    "tool": "browser_tab_new",
+    "url": "file:///Volumes/Lexar/lambda/devel/polyhedra/consolidated/site/section9/chapter.html",
+    "isError": true,
+    "error": "Network error: file:// navigation is disabled for this browser context"
+  },
+  "loopback_server": {
+    "command": [
+      "/tmp/polyhedra-baseline-20261031/bin/python",
+      "-B",
+      "-m",
+      "http.server",
+      "8765",
+      "--bind",
+      "127.0.0.1",
+      "--directory",
+      "/Volumes/Lexar/lambda/devel/polyhedra/consolidated/site/section9"
+    ],
+    "execution_mode": "normal sandbox",
+    "exit_code": 1,
+    "failure_location": "socket.bind",
+    "exception": "PermissionError: [Errno 1] Operation not permitted",
+    "server_remained_running": false
+  },
+  "browser_verification_achieved": false,
+  "release_gate": "Browser QA remains unresolved; static/PDF checks do not constitute browser verification",
+  "retried_or_escalated_by_release_auditor": false
+}

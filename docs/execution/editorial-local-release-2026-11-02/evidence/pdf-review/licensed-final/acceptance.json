@@ -1,0 +1,70 @@
+{
+  "approved_at_utc": "2026-11-02T23:53:02.727362+00:00",
+  "decision": "approved_final_licensed_pdf_layout_and_source_binding",
+  "pdf": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/licensed-edition-dist/downloads/monograph.pdf",
+    "sha256": "959a27f7559e571faaacebd561133f2e53c6847f99b0c5757d12f4ec467ae2f8",
+    "bytes": 1529604,
+    "pages": 200,
+    "identical_build_pdf": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/licensed-edition-build/pdf/main.pdf"
+  },
+  "source_commit": "4681abb777c813808f2ea4758461c4e89d510ff7",
+  "source_check_sha256": "c4ea2d9ef6aa2397e93d832714f0b00fc44d82b0b463b0db3303cdae988ffe73",
+  "active_TeX_inputs": 36,
+  "compiled_labels": 613,
+  "compiled_bibliography_keys": 129,
+  "compilation_manifest_sha256": "544fe09b8e196f02d3de55e7a17a1cc597ab65b85ef7418cff9d3bc7e9fc0f04",
+  "aux_sha256": "b4edf252ab6b04433a35b0fededa1869bd4e639b87f413df4c45b1a4b1979c64",
+  "source_license_acceptance_sha256": "bb8ddebefb877020a50e6eadd4a5a62da1b3180dac8745a7e386d00f3bdb862b",
+  "source_checkpoint_sha256": "87e1d460be50c3c292088fc23a46a83e9e78981b32d2e607f4a3673a781531ba",
+  "fresh_build_receipt_sha256": "8cdf1e9b70ea2301a8154f6fa923a29ede7a6a80ca4f9fdc06336589b0705bd7",
+  "build_convergence": {
+    "pdflatex_passes": 3,
+    "final_pass_diagnostics": {
+      "overfull_count": 0,
+      "underfull_count": 3,
+      "undefined_reference_or_citation": false,
+      "multiply_defined_labels": false,
+      "missing_character": false,
+      "fatal_error": false,
+      "rerun_required": false
+    }
+  },
+  "all_page_comparison_sha256": "4a779370f1fb4bb6e530a6d3a63453e61c0b23de0e2dd56c526de3a2561b1281",
+  "exact_page_raster_matches_to_accepted_v3": 199,
+  "changed_pages": [
+    11
+  ],
+  "shifted_pages": [],
+  "actual_original_size_inspected_pages": [
+    1,
+    10,
+    11,
+    12,
+    154,
+    191,
+    192,
+    193,
+    194,
+    200
+  ],
+  "visual_review_sha256": "ccb1fa87923decf3c8602cdc8cb99e97398e73346a852a900394a6e4765668ed",
+  "review_sha256": "af79440ed5a7394039c657bd979a90f8cab2363c6a5bef821658f482da7a7174",
+  "required_residual_findings": [],
+  "closed_findings": [
+    "PDF-LAYOUT-01",
+    "PDF-LAYOUT-02"
+  ],
+  "previous_artifacts_and_marker_unchanged": true,
+  "canonical_source_clean": true,
+  "marker_receipt_sha256": "f86b1113893b5524549ad32f5dc44e8b9712907fd9586ccbd309d6991d79ebc5",
+  "marker_repeated": false,
+  "boundaries": {
+    "independent_review_of_existing_fresh_build": true,
+    "reviewer_rebuilt": false,
+    "new_proof_audit": false,
+    "numerical_replay": false,
+    "browser_or_static_web_acceptance": false,
+    "upload_or_deployment": false
+  }
+}

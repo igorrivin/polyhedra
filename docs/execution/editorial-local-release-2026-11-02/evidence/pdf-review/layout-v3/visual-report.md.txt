@@ -1,0 +1,11 @@
+The 200-page layout-v3 precommit source and PDF are accepted for layout. Both required findings are closed: Figure 8 labels remain clear of their arrows, and Appendix B now ends completely on page 193 with References starting on page 194. No required layout findings remain.
+
+The independent source check approved only the shortening of the final two process-note sentences. Inherited source-statement audits, current convention dependencies, finite computational support, and the explicit absence of a new complete external-proof review all remain. All 43 table rows, equations, references, citations, 613 labels, 129 bibliography keys, and the other 35 active inputs are preserved.
+
+The fresh build converged in three pdflatex passes. There are no overfull boxes, unresolved references/citations, duplicate labels, missing characters, or required reruns. The same three inherited underfull paragraph warnings remain.
+
+Every v3 page was compared with v2 using exact decoded RGB pixels and extracted body text. 191 pages match completely. Page 6 changes only the References page number; page 193 reflows the shortened source-note ending. The seven bibliography pages move from 195–201 to 194–200 with identical body text and body pixels; only their footer numbers change. All nine changed or shifted pages were visually inspected at original raster size, together with pages 154, 191 and 192 (12 pages total). Earlier complete layout coverage is reused only through these recorded equality checks. No new all-page contact-sheet viewing is claimed for v3.
+
+PDF SHA-256: 2759cb2a351c043734d8ecca8686e01399de8b3859526ed0d949f5af5e3e0354. Source freeze SHA-256: af7a7da04d9c616cb1fb53aae4e261ea6d9bd74aed7485e56194b0cff8cccab2. The original and v2 PDFs, snapshots, rasters and review records, plus earlier PDFs and the single successful marker receipt, remain intact. The marker was not repeated.
+
+This acceptance covers the actual precommit draft and source. It is not a new proof audit, numerical replay, final clean web export, or publication approval. The later clean-source exported PDF still requires all-page comparison against this draft.

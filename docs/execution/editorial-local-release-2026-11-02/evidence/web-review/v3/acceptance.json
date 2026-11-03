@@ -1,0 +1,32 @@
+{
+  "decision": "accepted_exact_v3_web_source",
+  "author_freeze_sha256": "8639538283edc21d5ba6f883181bdb94debf78938d7d4e7b47821f5223b91990",
+  "source_sha256": {
+    "site/build_book.py": "57bcef22df545e5a2335fa3fcc9cda8c96e841307c1f0b1d95ba6b28739f0948",
+    "site/book/edition.css": "779222ec7ea3de9d3e6e6a7f07ae3dfa1ac6367902e1ddf1d52a1d7f1b0e5ef3",
+    "site/book/search.js": "0681c803353ebd829920f8ad0a8480691245e92f02e8439e7ea6b0ebfb8fb3c2",
+    "site/book/downloads.json": "844d93043ff169865062603262fb2d6c70c66f7d8af8024828c48085f2618d86",
+    "site/tests/test_build_book.py": "a0f0086f8e0ed4b94921c3944c1ae733a8ea5942c1db8adcc4e8d88c0c5c0182",
+    "site/tests/test_book_search.cjs": "6cbdd470eed503f68e42dcff42cafae5497fcdaab7b85244441acebbf51aec56",
+    "site/README.md": "b11c4ebb95f45ca248481d7c9a2cd038ddfc8fe1de852f0cf5af4d236b500a0c"
+  },
+  "reused_helpers_sha256": {
+    "site/build_section9.py": "b01681557e5acde91dac749065b9ef787edd03cb3a5b4fa21f77aff9e0cc63a5",
+    "site/build_preview.py": "d68aca41430476139464c2b4cd636024d5a0462e66161dfc372f3202049557c9"
+  },
+  "delta_sha256": "1672bf42fdf86a1fe5c2a8452efe5bbea66ffc2e9b881deef6374602f1d9ed60",
+  "prior_v2_acceptance_sha256": "69f400a67790911f043984245697f53b817f0e17c20a7b025ea971ea0f31fb7c",
+  "original_five_findings_remain_resolved": true,
+  "finite_cases": 15,
+  "site_tests": 45,
+  "site_failures": 0,
+  "unchanged_node_checks_reused_from_v2_by_identity": true,
+  "layout_v3_source_freeze_sha256": "9b7264ef02a686ac400659c32754407fb4573a0533bb19a294b408ccc9c07678",
+  "appendix_source_sha256": "6cdcee282d3b3a5cc4a139a73671c657b432807de937f69c8a5a302dea798add",
+  "appendix_html_sha256": "9c36150b9ae070442b06828525bae2b2f4996452f0b6b1c1b65bcafadf7106ed",
+  "appendix_html_change": "Exactly the two authorized final source-note sentences; all other output bytes unchanged",
+  "numbering_status": "Prior accepted auxiliary values used provisionally; final current numbers not verified",
+  "final_complete_build_accepted": false,
+  "earlier_review_evidence_unchanged": true,
+  "report_sha256": "d7c0dfbd0ded6da9aaa6c6cf11a8260f67ca2803b6b03c00352898a0d9915b08"
+}

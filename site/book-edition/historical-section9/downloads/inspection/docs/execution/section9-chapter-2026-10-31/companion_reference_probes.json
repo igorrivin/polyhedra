@@ -1,0 +1,129 @@
+{
+  "baseline": "26b3c134d9308d345cb76f1240db9de982b2e5a6",
+  "source_sha256": {
+    "book/polyhedral_volumes_and_geodesic_identities.tex": "63102e64405a58b8f5d51bfdffe6be43fc5cfe9a232dc0f396f1709733d750dc",
+    "research/ipoly/duffin_rivin_volume_laplacian_solvers.tex": "339a2440e65864339ae7ffb9fb3bdd69f8070232216a6045b65cb3550587de69",
+    "audit/2026-10-31/ipoly-audit.md": "95e7f80fb389ec82bb7665a1629e216cef538dd1704f62f4230d3fa1f39e6638"
+  },
+  "evidence_status": "Independent algebra diagnostics; sampled floating point is not proof.",
+  "compatibility": {
+    "samples": 10000,
+    "seed": 20261031,
+    "arithmetic": "binary64",
+    "max_relative_A_identity_error": 8.212980286774967e-13,
+    "max_scaled_third_identity_error": 8.107258369224431e-13,
+    "max_tangent_sum_residual": 2.6645352591003757e-15,
+    "max_compatibility_ratio": 1.5158230962484345,
+    "proved_upper_bound": 1.7320508075688772
+  },
+  "boundary_counterexample": {
+    "coordinates": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        -0.0,
+        -0.5773502691896258
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        -0.5,
+        0.8660254037844386
+      ]
+    ],
+    "triangles": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        3
+      ]
+    ],
+    "triangle_angles_degrees": [
+      [
+        90.0,
+        59.99999999999999,
+        30.000000000000014
+      ],
+      [
+        120.00000000000001,
+        29.999999999999996,
+        29.99999999999998
+      ]
+    ],
+    "boundary_angles_degrees": [
+      210.0,
+      59.99999999999999,
+      60.000000000000014,
+      29.99999999999998
+    ],
+    "internal_opposite_angle_sum_degrees": 89.99999999999997,
+    "interpretation": "Positive locally Delaunay disk angles do not imply a convex developed boundary."
+  },
+  "degeneration": {
+    "bare_SC_asymptotic": [
+      {
+        "epsilon": 0.01,
+        "bare_SC_ratio": 4.082891184230469,
+        "scaled_ratio": 0.40828911842304694
+      },
+      {
+        "epsilon": 0.0001,
+        "bare_SC_ratio": 40.8248294546346,
+        "scaled_ratio": 0.40824829454634604
+      },
+      {
+        "epsilon": 1e-06,
+        "bare_SC_ratio": 408.2482904642714,
+        "scaled_ratio": 0.4082482904642714
+      },
+      {
+        "epsilon": 1e-08,
+        "bare_SC_ratio": 4082.482904638629,
+        "scaled_ratio": 0.40824829046386296
+      }
+    ],
+    "scaled_limit": 0.4082482904638631,
+    "boundary_slopes": [
+      {
+        "epsilon": 0.01,
+        "needle_directional_derivative": 4.60108154905252,
+        "flat_directional_derivative": 1.4516092200416741
+      },
+      {
+        "epsilon": 0.0001,
+        "needle_directional_derivative": 9.416078181064883,
+        "flat_directional_derivative": 1.4517240487187983
+      },
+      {
+        "epsilon": 1e-06,
+        "needle_directional_derivative": 14.23852513717893,
+        "flat_directional_derivative": 1.4517240601672654
+      },
+      {
+        "epsilon": 1e-08,
+        "needle_directional_derivative": 19.06104731886161,
+        "flat_directional_derivative": 1.451724071848318
+      }
+    ],
+    "flat_derivative_limit": 1.4517240602024013
+  },
+  "short_step_constants": {
+    "arithmetic": "exact rational",
+    "decrement_target": "1/4",
+    "parameter_step_c": "1/20",
+    "decrement_after_parameter_change_bound": "5/16",
+    "exact_Newton_result_bound": "25/121",
+    "gap_multiplier_for_m_over_t": "17/12",
+    "optional_inexact_energy_relative_error": "1/100",
+    "optional_inexact_Newton_result_bound": "10420/47961"
+  }
+}

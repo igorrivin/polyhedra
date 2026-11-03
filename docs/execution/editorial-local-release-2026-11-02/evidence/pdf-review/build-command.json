@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/Library/TeX/texbin/latexmk",
+    "-norc",
+    "-pdf",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-file-line-error",
+    "-no-shell-escape",
+    "-outdir=../../pdf-build",
+    "main.tex"
+  ],
+  "cwd": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/pdf-review/frozen-source/book",
+  "scope": "actual precommit editorial draft, not final clean export",
+  "started_at_utc": "2026-11-02T14:19:20.516481+00:00",
+  "marker_receipt_sha256": "f86b1113893b5524549ad32f5dc44e8b9712907fd9586ccbd309d6991d79ebc5",
+  "returncode": 0,
+  "finished_at_utc": "2026-11-02T14:19:31.596687+00:00",
+  "elapsed_seconds": 11.080279625020921,
+  "accepted_sources_and_snapshot_unchanged_before_after": true,
+  "tex_input_freeze_sha256": "3bfbda4dd20f5ee56d7d3795f715f1056f81d21323951def4a23058a78f849b1"
+}

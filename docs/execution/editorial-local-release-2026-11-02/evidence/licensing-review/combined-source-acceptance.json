@@ -1,0 +1,121 @@
+{
+  "decision": "approved_exact_15_path_licensing_source_addendum",
+  "approved_at_utc": "2026-11-02T23:43:00.566378+00:00",
+  "baseline_commit": "edef1dda04cac2f50a7c22e4240556714fac4d91",
+  "source_acceptance": {
+    "path": "licensing-review/acceptance.json",
+    "sha256": "bb8ddebefb877020a50e6eadd4a5a62da1b3180dac8745a7e386d00f3bdb862b",
+    "files": 11
+  },
+  "web_acceptance": {
+    "path": "web-review/licensing/acceptance.json",
+    "sha256": "7f3588f95cba7e9c4adc9bf1e3921f98251679a123a7a5abc8401ae52b9cb407",
+    "files": 4
+  },
+  "files": [
+    {
+      "path": "INTEGRATION_PLAN.md",
+      "sha256": "a41a148ecfb31457bf88369fbffe3c984f69cbc51cc6fec9048ae5817cdc6fed",
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "sha256": "2ade8c89b8bbe0d859b124a9e47032c8494022f43091e8278ae8e2554a292196",
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "LICENSES/MONOGRAPH-NOTICE.md",
+      "sha256": "34657dce59f05f339911fad763497d7615e0b721978910eadde2c3777b698e3b",
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "LICENSES/README.md",
+      "sha256": "345e69c061ecf6b276a8c57999516c855536ac7584af6aa4b4c3cdcd9bf6430e",
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "LICENSES/new-companion-files.txt",
+      "sha256": "6d52e33dc36d133cfa95fd6a5e97bc1708698f8e1865a18d847badf279222342",
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "LICENSES/new-companions-MIT.txt",
+      "sha256": "a56fbd01e5bce5116c4860ba8067070fb6d69861d6368a4a76c55f2457969384",
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "README.md",
+      "sha256": "0be42e2a51e1783da0227a6971f598b0038195d298dcbc315fe32441f30c8514",
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "book/README.md",
+      "sha256": "42be6d7f58df13572ea97f7d29ae1bbc1be8d97e5c4cb1281a821bb2848d7954",
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "book/polyhedral_volumes_and_geodesic_identities.tex",
+      "sha256": "05dffe181160a6193462b5aa0b5088ebf29b403cb3db67c0da041198e7e507aa",
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "docs/INTEGRATION_STATUS.md",
+      "sha256": "31269b30d7af5abf8801a1083bc3bf2f10d8c1a15454e68cc8c7f6800f5d2cb3",
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "experiments/README.md",
+      "sha256": "a9ace616d82c09f4502fe6bb480daa112812e8b2b4164a5e6d5cc00727837cfc",
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "site/README.md",
+      "sha256": "3ff72f54616fe049177ac3b2dcd1bf82b06e06d0d5426d22175de667b5f9d1b8",
+      "approval": "web-review/licensing/acceptance.json"
+    },
+    {
+      "path": "site/book/downloads.json",
+      "sha256": "5dfbce55a16d8b73fd2784a85b48fa869f757259e992f851d8379ee96fc3dc70",
+      "approval": "web-review/licensing/acceptance.json"
+    },
+    {
+      "path": "site/build_book.py",
+      "sha256": "b7a004518b8bec542e07e69a37405782a4659d1e987fc942be189f54a4621124",
+      "approval": "web-review/licensing/acceptance.json"
+    },
+    {
+      "path": "site/tests/test_build_book.py",
+      "sha256": "d82d547d04cd18ce650206092643ebfccedcca7baa3fdcfeead7414ced3733eb",
+      "approval": "web-review/licensing/acceptance.json"
+    }
+  ],
+  "source_path_count": 15,
+  "tracked_modifications": 10,
+  "new_files": 5,
+  "all_current_hashes_match_actual_approvals": true,
+  "web_v1_to_source_v2_binding": {
+    "author_v2_manifest_sha256": "90a4c7be964843ca4e4d247ffd32c26010169901a028f762794c6215a7fa25a8",
+    "active_TeX_hashes_identical": 36,
+    "license_input_hashes_identical": 7,
+    "only_v1_to_v2_change": "book/README.md, outside web tested input subset"
+  },
+  "required_source_findings": [],
+  "protected_baseline_evidence": {
+    "summary": "licensing-review/protection-summary.json",
+    "sha256": "99500d54505e203e552c9a75c9edc127dc8a8c4c3fdcb8e66dae185e4ab6fffb",
+    "materialized_files_checked": 2754,
+    "all_match": true,
+    "expected_identities": "Reused accepted clean inventory plus prior committed 29-path source set",
+    "actual_identities": "Fresh read-only hashes from this licensing review; no scientific computation"
+  },
+  "pre_license_evidence_retained": {
+    "source_commit": "edef1dda04cac2f50a7c22e4240556714fac4d91",
+    "prior_29_path_acceptance_sha256": "b4837ced28f611de327df1f7f5e274424be3627d03f741f1bd36daa40e0e7a4e",
+    "prior_web_v3_acceptance_sha256": "c81904ff3841dffa15c6f25a5f0491677cb6a261a59fdcd62b0c289ff807537e",
+    "export_identity_preservation": "Inherited from independently accepted web licensing review; no pre-license artifact was replaced by this reviewer"
+  },
+  "index_unchanged_and_unstaged": true,
+  "new_tests_builds_or_scientific_replay_by_combined_check": false,
+  "final_licensed_build_accepted": false,
+  "approved_next_step": "Commit only these 15 source paths; then perform the fresh licensed build and separate final PDF/static artifact review."
+}

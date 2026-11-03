@@ -1,0 +1,37 @@
+# Independent v3 compatibility acceptance
+
+Decision: **accept the exact frozen v3 web source**. The only changes from accepted v2 are the literal Appendix B print-spacing allowance and its focused regression. No remaining finding was identified in this bounded review.
+
+Author freeze SHA-256: `8639538283edc21d5ba6f883181bdb94debf78938d7d4e7b47821f5223b91990`.
+The actual two-file diff was regenerated independently from the frozen v2/v3 files and matches the supplied delta SHA-256 `1672bf42fdf86a1fe5c2a8452efe5bbea66ffc2e9b881deef6374602f1d9ed60`.
+
+| Accepted source | SHA-256 |
+| --- | --- |
+| `site/build_book.py` | `57bcef22df545e5a2335fa3fcc9cda8c96e841307c1f0b1d95ba6b28739f0948` |
+| `site/book/edition.css` | `779222ec7ea3de9d3e6e6a7f07ae3dfa1ac6367902e1ddf1d52a1d7f1b0e5ef3` |
+| `site/book/search.js` | `0681c803353ebd829920f8ad0a8480691245e92f02e8439e7ea6b0ebfb8fb3c2` |
+| `site/book/downloads.json` | `844d93043ff169865062603262fb2d6c70c66f7d8af8024828c48085f2618d86` |
+| `site/tests/test_build_book.py` | `a0f0086f8e0ed4b94921c3944c1ae733a8ea5942c1db8adcc4e8d88c0c5c0182` |
+| `site/tests/test_book_search.cjs` | `6cbdd470eed503f68e42dcff42cafae5497fcdaab7b85244441acebbf51aec56` |
+| `site/README.md` | `b11c4ebb95f45ca248481d7c9a2cd038ddfc8fe1de852f0cf5af4d236b500a0c` |
+
+The five unchanged owned files and both reused helpers match accepted v2 bytes. Earlier source review and Node-search evidence are reused only by those identities. Immutable copies of all seven files and both helpers are under `frozen/`; complete input identities are in `review-inputs.json` and `acceptance.json`.
+
+## Meaningful checks
+
+`build_book.py:294–298` adds only the exact literal `\setlength{\LTpost}{4pt}` to the existing presentation-command allowlist. It does not introduce a generic setter handler or skip surrounding material. The focused checks exercise both raw block and inline forms, alternate values, unrelated setters, concatenated commands, trailing content, and actual Pandoc parsing.
+
+`recheck_cases.py` / `recheck-cases.json` record **15 passing cases**. The exact directive succeeds; `LTpost` at 8pt, `parskip` at 4pt, and extended raw commands remain errors. Actual Pandoc conversion preserves the paragraphs before and after the accepted directive.
+
+The Appendix B conversion was checked on two immutable inputs:
+
+- The layout-v2 spacing/grouping-only source reproduces the pre-layout HTML byte for byte, SHA-256 `c16d33303c4787cf03ca4515bc472a6da67f573c8373f45149cb1d58361f9719`.
+- The final layout-v3 source, SHA-256 `6cdcee282d3b3a5cc4a139a73671c657b432807de937f69c8a5a302dea798add`, produces HTML SHA-256 `9c36150b9ae070442b06828525bae2b2f4996452f0b6b1c1b65bcafadf7106ed`. The entire output equals the previous HTML with exactly the authorized final two sentences replaced. All other bytes are unchanged. Both outputs have 109 MathML nodes and one table; ordered reference links and label IDs match exactly. The revised source note, including its explicit limit on external-proof review, is retained in full.
+
+`run_suite.py`, `suite.log`, and `suite-summary.json` independently record **45 tests passed, zero failures and zero errors**. Only the full-book test module's TeX-graph read was bound to the copied immutable layout-v3 source; other tests were unchanged. The web source and helper hashes matched before and after the run. Historical test code matches baseline Git bytes. This suite did not invoke a real full-book compiler or export.
+
+## Boundaries
+
+The copied 36-file graph matches layout-v3 manifest SHA-256 `9b7264ef02a686ac400659c32754407fb4573a0533bb19a294b408ccc9c07678`. The Appendix B conversion uses the older accepted auxiliary file, SHA-256 `1b5cb49042c83c68fb41010c4929ac2cc95a2fa3e4f85dbd37638d247278f490`; its displayed numbers are **provisional**, not verified current-source numbers. This review does not claim a complete current-source export, final figure rendering, PDF visual verification, browser behavior, proof verification, or numerical replay.
+
+The original five v1 findings remain resolved by the accepted v2 changes, which this exact narrow delta preserves. Earlier v1/v2 evidence remains unchanged. The next parent-owned gate is the final clean-source complete build after the source commit, with freshly compiled auxiliary numbers and explicit output/source conservation. No release/PDF marker, PDF/TikZ generation, numerical campaign, browser/server, canonical edit, commit, source synchronization, push, upload or deployment was performed here.

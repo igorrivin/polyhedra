@@ -1,0 +1,194 @@
+{
+  "suites": [
+    {
+      "name": "pytest",
+      "errors": "9",
+      "failures": "4",
+      "skipped": "18",
+      "tests": "456",
+      "time": "55.078",
+      "timestamp": "2026-11-02T08:30:06.976640-05:00",
+      "hostname": "Mac"
+    }
+  ],
+  "failures": [
+    {
+      "case": ".tests.test_cage_optimizer_accounting",
+      "kind": "error",
+      "message": "collection failure",
+      "last_line": [
+        "E   ModuleNotFoundError: No module named 'gymnasium'"
+      ]
+    },
+    {
+      "case": ".tests.test_h4_combinatorics_benchmark",
+      "kind": "error",
+      "message": "collection failure",
+      "last_line": [
+        "E   ModuleNotFoundError: No module named 'gymnasium'"
+      ]
+    },
+    {
+      "case": ".tests.test_h4_combinatorics_response",
+      "kind": "error",
+      "message": "collection failure",
+      "last_line": [
+        "E   ModuleNotFoundError: No module named 'gymnasium'"
+      ]
+    },
+    {
+      "case": ".tests.test_h4_symmetric_benchmark",
+      "kind": "error",
+      "message": "collection failure",
+      "last_line": [
+        "E   ModuleNotFoundError: No module named 'gymnasium'"
+      ]
+    },
+    {
+      "case": ".tests.test_h4_symmetric_response",
+      "kind": "error",
+      "message": "collection failure",
+      "last_line": [
+        "E   ModuleNotFoundError: No module named 'gymnasium'"
+      ]
+    },
+    {
+      "case": ".tests.test_numerical_properties",
+      "kind": "error",
+      "message": "collection failure",
+      "last_line": [
+        "E   ModuleNotFoundError: No module named 'hypothesis'"
+      ]
+    },
+    {
+      "case": ".tests.test_rl_budget_contract",
+      "kind": "error",
+      "message": "collection failure",
+      "last_line": [
+        "E   ModuleNotFoundError: No module named 'gymnasium'"
+      ]
+    },
+    {
+      "case": ".tests.test_rl_harness",
+      "kind": "error",
+      "message": "collection failure",
+      "last_line": [
+        "E   ModuleNotFoundError: No module named 'gymnasium'"
+      ]
+    },
+    {
+      "case": ".tests.test_rl_validator",
+      "kind": "error",
+      "message": "collection failure",
+      "last_line": [
+        "E   ModuleNotFoundError: No module named 'gymnasium'"
+      ]
+    },
+    {
+      "case": "tests.test_h4_symmetric_maxima_campaign.test_real_n8_sixteen_cell_calibration_smoke",
+      "kind": "failure",
+      "message": "ModuleNotFoundError: No module named 'gymnasium'",
+      "last_line": [
+        "ideal_poly_volume_toolkit/rl/generic.py:22: ModuleNotFoundError"
+      ]
+    },
+    {
+      "case": "tests.test_rl_training_launcher.test_launcher_writes_truthful_atomic_model_and_config",
+      "kind": "failure",
+      "message": "ModuleNotFoundError: No module named 'gymnasium'",
+      "last_line": [
+        "ideal_poly_volume_toolkit/rl/generic.py:22: ModuleNotFoundError"
+      ]
+    },
+    {
+      "case": "tests.test_rl_training_launcher.test_training_failure_leaves_no_partial_artifact_or_lock",
+      "kind": "failure",
+      "message": "ModuleNotFoundError: No module named 'gymnasium'",
+      "last_line": [
+        "ideal_poly_volume_toolkit/rl/generic.py:22: ModuleNotFoundError"
+      ]
+    },
+    {
+      "case": "tests.test_rl_training_launcher.test_dry_run_writes_nothing_and_never_calls_trainer",
+      "kind": "failure",
+      "message": "ModuleNotFoundError: No module named 'gymnasium'",
+      "last_line": [
+        "ideal_poly_volume_toolkit/rl/generic.py:22: ModuleNotFoundError"
+      ]
+    }
+  ],
+  "skips": [
+    {
+      "case": "tests.test_arithmetic_corpus.test_pynauty_identifier_is_relabeling_invariant_when_available",
+      "message": "pynauty is not installed"
+    },
+    {
+      "case": "tests.test_hd_geometric_symmetry.test_h4_16_cell_has_full_hyperoctahedral_group",
+      "message": "pynauty is required for geometric symmetry certification"
+    },
+    {
+      "case": "tests.test_hd_geometric_symmetry.test_group_is_invariant_under_nontrivial_lorentz_boundary_map",
+      "message": "pynauty is required for geometric symmetry certification"
+    },
+    {
+      "case": "tests.test_hd_geometric_symmetry.test_group_certification_survives_strong_lorentz_boost[7.0]",
+      "message": "pynauty is required for geometric symmetry certification"
+    },
+    {
+      "case": "tests.test_hd_geometric_symmetry.test_group_certification_survives_strong_lorentz_boost[8.0]",
+      "message": "pynauty is required for geometric symmetry certification"
+    },
+    {
+      "case": "tests.test_hd_geometric_symmetry.test_group_certification_survives_strong_lorentz_boost[10.0]",
+      "message": "pynauty is required for geometric symmetry certification"
+    },
+    {
+      "case": "tests.test_hd_geometric_symmetry.test_huge_finite_coordinates_fail_with_strict_json_diagnostics",
+      "message": "pynauty is required for geometric symmetry certification"
+    },
+    {
+      "case": "tests.test_hd_geometric_symmetry.test_generic_ideal_h4_simplex_filters_combinatorial_symmetries",
+      "message": "pynauty is required for geometric symmetry certification"
+    },
+    {
+      "case": "tests.test_hd_geometric_symmetry.test_almost_symmetric_input_is_not_fully_certified_without_rejection_gap",
+      "message": "pynauty is required for geometric symmetry certification"
+    },
+    {
+      "case": "tests.test_hd_geometric_symmetry.test_indeterminate_fit_prevents_full_group_certification",
+      "message": "pynauty is required for geometric symmetry certification"
+    },
+    {
+      "case": "tests.test_hd_geometric_symmetry.test_invalid_nonunit_input_is_rejected_before_hull_work",
+      "message": "pynauty is required for geometric symmetry certification"
+    },
+    {
+      "case": "tests.test_hd_geometric_symmetry.test_nonsimplicial_tesseract_is_not_certified",
+      "message": "pynauty is required for geometric symmetry certification"
+    },
+    {
+      "case": "tests.test_hd_geometric_symmetry.test_group_enumeration_cap_preserves_topology_and_order",
+      "message": "pynauty is required for geometric symmetry certification"
+    },
+    {
+      "case": "tests.test_hd_geometric_symmetry.test_invalid_audit_controls_raise[unit_tolerance-0.0]",
+      "message": "pynauty is required for geometric symmetry certification"
+    },
+    {
+      "case": "tests.test_hd_geometric_symmetry.test_invalid_audit_controls_raise[distinct_tolerance-inf]",
+      "message": "pynauty is required for geometric symmetry certification"
+    },
+    {
+      "case": "tests.test_hd_geometric_symmetry.test_invalid_audit_controls_raise[support_tolerance--1.0]",
+      "message": "pynauty is required for geometric symmetry certification"
+    },
+    {
+      "case": "tests.test_hd_geometric_symmetry.test_invalid_audit_controls_raise[isometry_tolerance-nan]",
+      "message": "pynauty is required for geometric symmetry certification"
+    },
+    {
+      "case": "tests.test_hd_geometric_symmetry.test_invalid_audit_controls_raise[max_group_order-0]",
+      "message": "pynauty is required for geometric symmetry certification"
+    }
+  ]
+}

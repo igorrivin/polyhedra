@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/tmp/polyhedra-baseline-20261031/bin/python3.12",
+    "-m",
+    "pip",
+    "download",
+    "--dest",
+    "/private/tmp/polyhedra-release-dependency-wheelhouse-20261102",
+    "--cache-dir",
+    "/private/tmp/polyhedra-release-pip-cache-20261102",
+    "--retries",
+    "0",
+    "--timeout",
+    "10",
+    "--disable-pip-version-check",
+    "gymnasium",
+    "hypothesis",
+    "pytest-cov",
+    "ruff",
+    "pynauty",
+    "cma",
+    "gradio>=6,<7"
+  ],
+  "cwd": "/private/tmp",
+  "returncode": 1,
+  "elapsed_seconds": 0.5725563330342993,
+  "network_mode": "normal sandbox; no escalation; fresh task-local target/cache",
+  "downloaded_files": []
+}

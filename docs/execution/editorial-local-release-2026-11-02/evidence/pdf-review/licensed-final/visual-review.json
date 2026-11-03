@@ -1,0 +1,131 @@
+{
+  "recorded_at_utc": "2026-11-02T23:53:02.721318+00:00",
+  "decision": "approved_final_licensed_pdf_layout_and_source_binding",
+  "scope": "Independent review of the final licensed local PDF from the existing fresh clean-source build. No new build, proof audit, numerical replay, browser review, upload or deployment.",
+  "pdf": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/licensed-edition-dist/downloads/monograph.pdf",
+    "sha256": "959a27f7559e571faaacebd561133f2e53c6847f99b0c5757d12f4ec467ae2f8",
+    "bytes": 1529604,
+    "pages": 200,
+    "identical_build_pdf": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/licensed-edition-build/pdf/main.pdf"
+  },
+  "all_page_comparison": {
+    "old_pdf_sha256": "2759cb2a351c043734d8ecca8686e01399de8b3859526ed0d949f5af5e3e0354",
+    "new_pdf_sha256": "959a27f7559e571faaacebd561133f2e53c6847f99b0c5757d12f4ec467ae2f8",
+    "old_page_count": 200,
+    "new_page_count": 200,
+    "exact_raster_match_count": 199,
+    "raster_changed_pages": [
+      11
+    ],
+    "shifted_pages": [],
+    "text_changed_pages": [
+      11
+    ]
+  },
+  "changed_page_11_pixel_difference_bbox": [
+    138,
+    512,
+    939,
+    601
+  ],
+  "own_original_size_inspection": {
+    "pages": [
+      1,
+      10,
+      11,
+      12,
+      154,
+      191,
+      192,
+      193,
+      194,
+      200
+    ],
+    "count": 10,
+    "dpi": 130,
+    "dimensions": [
+      1075,
+      1520
+    ],
+    "method": "Opened each complete PNG with original image detail using view_image."
+  },
+  "observations": [
+    {
+      "pages": [
+        1
+      ],
+      "observations": "Title, subtitle, Igor Rivin byline, Department of Mathematics, Temple University affiliation and abstract are readable and balanced, with no clipping."
+    },
+    {
+      "pages": [
+        10,
+        11,
+        12
+      ],
+      "observations": "Introduction continuation, substantial Codex acknowledgment, complete License and credit paragraph and following Part I opening are legible. The CC BY 4.0 notice fits on page 11 with clear paragraph spacing and its third-party exception and companion-code scope intact. No content or page shift beyond the added notice."
+    },
+    {
+      "pages": [
+        154
+      ],
+      "observations": "Figure 8 degree/branch labels remain clear of both arrow shafts; the diagram, caption and following subsection are legible. The accepted overlap repair remains intact."
+    },
+    {
+      "pages": [
+        191,
+        192,
+        193,
+        194
+      ],
+      "observations": "Appendix A closes cleanly; Appendix B begins on 192, continues its convention table on 193, and keeps the complete source note beneath the table on 193. No orphan note page. References begins cleanly on 194."
+    },
+    {
+      "pages": [
+        200
+      ],
+      "observations": "Final bibliography page ends cleanly with entry 129; no clipping or pagination anomaly."
+    }
+  ],
+  "coverage_basis": "The original 201-page draft received a complete 51-contact-sheet sweep plus 63 original-size critical-page inspections. V2 and v3 then received exact all-page raster comparisons and original-size inspection of every changed or shifted page. This final review verified the pinned v3 review/raster evidence, compared every licensed page, found 199 exact full-page RGB matches with no shifts, and inspected the sole changed page plus nine additional critical pages at original size. No new visual contact-sheet sweep is claimed.",
+  "prior_review_evidence": {
+    "original_visual_review_sha256": "8878838d80082b4d1ce3c852463b92a8e80d8ea7501d92839c4c5087635cb135",
+    "v3_acceptance_sha256": "bd7ba17bb707fe38b9320504c66b0ac165206a868dc799240807edeb3ffd2941",
+    "v3_visual_review_sha256": "67347510cd9fd86a86b7630d80f487b476c9c5e544269350748b2321cd573de3",
+    "v3_render_manifest_sha256": "24c6cbbf14d8c9cf8cb5986dc21f3684f8522c5efe920ab9010ffb48e972902a",
+    "all_200_v3_rasters_match_the_accepted_manifest": true
+  },
+  "inspected_raster_sha256": {
+    "1": "eb3882c601df5676446ba70d53e175b654dad1033e9aaccc9b47480458b7c46f",
+    "10": "868baec442b479c26f078c14f98c88e68414626fccaddf18f730f1372c24e356",
+    "11": "286d409fe91d5d0c929ddb8e4d897bf8bdd6f320d23ced0e2cbd0b4bfff03461",
+    "12": "d168280f8c021182c54b27039cc5a1d583e7af385f184be553f91d509ca783fe",
+    "154": "01a63b91fbf1fdf3e8a604093c2e1df7d1c16b942642a261c457b3197e938d76",
+    "191": "627815b2e4708973ba019cdb340f60f9491dbfce9f983741aeaf73957876eeb4",
+    "192": "f98060b6ffd430c9c923221574aed430ca32374c8146f3ebb073a279a491054f",
+    "193": "caeea289ac9d24168c5965765a7d01e845fd7f8ca2047ec42bb914f501332abc",
+    "194": "d0e917c6b042e8885e08f1198e86ad3c7f20c87107904215973989dec6c5d809",
+    "200": "d913fd725300dd5d464001a19e8a10a8b542494dc206f49dd5992b1bba7c3105"
+  },
+  "findings": {
+    "required_residual": [],
+    "previous_findings_still_closed": [
+      "PDF-LAYOUT-01",
+      "PDF-LAYOUT-02"
+    ]
+  },
+  "evidence_sha256": {
+    "source-build-check.json": "c4ea2d9ef6aa2397e93d832714f0b00fc44d82b0b463b0db3303cdae988ffe73",
+    "tex-input-freeze.json": "841f4c660e49dc74ce4469149d15a98a6a691ca829f2f6b5bc554133a5c9fe7f",
+    "authorized-source-delta.patch": "6f44c8e7708cd3a61a0ca5c9ee30f914f7dd33cace04fa585e9df9dec987c63f",
+    "render-manifest.json": "9eb4de7f31b4990c911c35ace0c0fd92a22d18766e1e989657fb77804743dc82",
+    "page-comparison.json": "4a779370f1fb4bb6e530a6d3a63453e61c0b23de0e2dd56c526de3a2561b1281",
+    "prior-artifacts-preservation.json": "ba0dc7d0c560a8d1c05de7d67a0e7be2346c1e1badbc8b531633eaa8f7932aef",
+    "post-comparison-preservation.json": "e2b768239b8d9da7f027dd8768701378b2a2cf3bb2faff85f038d4cda8a121de",
+    "verify_render_compare.py": "cd203c62f6ca79ac442b50dc100f1f2d42986d6b00d36678e28de44acd718801"
+  },
+  "all_928_pinned_prior_artifacts_still_match": true,
+  "canonical_clean_at_review_completion": true,
+  "marker_repeated": false,
+  "marker_receipt_sha256": "f86b1113893b5524549ad32f5dc44e8b9712907fd9586ccbd309d6991d79ebc5"
+}

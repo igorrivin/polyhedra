@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-02T14:41:38.519329+00:00",
+  "stage": "v3 minimal Appendix B layout compatibility delta for independent recheck",
+  "v2_freeze": {
+    "path": "/Volumes/Lexar/lambda/devel/polyhedra/execution/editorial-local-release-2026-11-02/web-author/v2/author-source-freeze.json",
+    "sha256": "d82df31d8f5f859923ea92fc2849bee7b4f299b316658e175afe8f2635ce5397"
+  },
+  "source_sha256": {
+    "site/build_book.py": "57bcef22df545e5a2335fa3fcc9cda8c96e841307c1f0b1d95ba6b28739f0948",
+    "site/book/edition.css": "779222ec7ea3de9d3e6e6a7f07ae3dfa1ac6367902e1ddf1d52a1d7f1b0e5ef3",
+    "site/book/search.js": "0681c803353ebd829920f8ad0a8480691245e92f02e8439e7ea6b0ebfb8fb3c2",
+    "site/book/downloads.json": "844d93043ff169865062603262fb2d6c70c66f7d8af8024828c48085f2618d86",
+    "site/tests/test_build_book.py": "a0f0086f8e0ed4b94921c3944c1ae733a8ea5942c1db8adcc4e8d88c0c5c0182",
+    "site/tests/test_book_search.cjs": "6cbdd470eed503f68e42dcff42cafae5497fcdaab7b85244441acebbf51aec56",
+    "site/README.md": "b11c4ebb95f45ca248481d7c9a2cd038ddfc8fe1de852f0cf5af4d236b500a0c"
+  },
+  "reused_helper_sha256": {
+    "site/build_section9.py": "b01681557e5acde91dac749065b9ef787edd03cb3a5b4fa21f77aff9e0cc63a5",
+    "site/build_preview.py": "d68aca41430476139464c2b4cd636024d5a0462e66161dfc372f3202049557c9"
+  },
+  "changed_from_v2": [
+    "site/build_book.py",
+    "site/tests/test_build_book.py"
+  ],
+  "book_layout_freeze_sha256": "fc17e3542ada46a1c580e18670abcc0ceb45599d2ff9239a97e3bea4225d21b2",
+  "delta_sha256": "1672bf42fdf86a1fe5c2a8452efe5bbea66ffc2e9b881deef6374602f1d9ed60",
+  "report_sha256": "bdb0c25bd6208621d65b9203ad2e7c5fb3cc2990f5330f4d9254048c90bed091",
+  "failed_v2_probe_sha256": "ee4b16990e652b922ac5255fc12edaa45aabb96e09793900fb75c46d4f54aa9c",
+  "passing_v3_probe_sha256": "788bc17546a49d453af388c4bc734176b906b8f144b1ddfe426056cee3cd6b18",
+  "regression_suite": {
+    "passed": 45,
+    "failures": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "5452d4df3ee904e26dab0b2fd7def0947cacd83eb8d512724b6e8897d579339c"
+  },
+  "probe_script_sha256": "d5c6f873c3a44c920dc6cc61e5b195bebf77b3443210da9b514f396c1544f315",
+  "scope_limit": "Narrow conversion compatibility only, with provisional old-aux numbers; no fresh current-PDF numbering or visual claim. V2 independent review remains bound to its immutable snapshot.",
+  "not_performed": [
+    "PDF/TikZ generation",
+    "PDF marker",
+    "browser/server",
+    "scientific replay",
+    "commit/push/upload/deployment"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "decision": "accepted_exact_v2_code_for_five_finding_resolution",
+  "author_freeze_sha256": "d82df31d8f5f859923ea92fc2849bee7b4f299b316658e175afe8f2635ce5397",
+  "source_sha256": {
+    "site/build_book.py": "642aa86e3da206f2033d7593952770d19993b734927a88d4d2cd549dd0421425",
+    "site/book/edition.css": "779222ec7ea3de9d3e6e6a7f07ae3dfa1ac6367902e1ddf1d52a1d7f1b0e5ef3",
+    "site/book/search.js": "0681c803353ebd829920f8ad0a8480691245e92f02e8439e7ea6b0ebfb8fb3c2",
+    "site/book/downloads.json": "844d93043ff169865062603262fb2d6c70c66f7d8af8024828c48085f2618d86",
+    "site/tests/test_build_book.py": "3180858e985d7e9e8ec415674b0aeb6057ae71dd3e03c56d66f3b9439f8d6a54",
+    "site/tests/test_book_search.cjs": "6cbdd470eed503f68e42dcff42cafae5497fcdaab7b85244441acebbf51aec56",
+    "site/README.md": "b11c4ebb95f45ca248481d7c9a2cd038ddfc8fe1de852f0cf5af4d236b500a0c"
+  },
+  "helpers": {
+    "site/build_section9.py": "b01681557e5acde91dac749065b9ef787edd03cb3a5b4fa21f77aff9e0cc63a5",
+    "site/build_preview.py": "d68aca41430476139464c2b4cd636024d5a0462e66161dfc372f3202049557c9"
+  },
+  "resolved_findings": [
+    "complete body and input coverage",
+    "canonical author and affiliation",
+    "path canonicalization",
+    "unlabeled equation rejection",
+    "removal of external compilation reuse"
+  ],
+  "independent_cases": 23,
+  "site_tests": 44,
+  "site_failures": 0,
+  "node_suites_passed": 2,
+  "fixed_editorial_source_manifest_sha256": "06114dcfc5015ab3289f65eca8b484bd995661e07b5b3699c215e3a2de86f680",
+  "final_output_accepted": false,
+  "later_layout_compatibility": "separate v3 delta required for literal LTpost spacing command",
+  "v1_evidence_unchanged": true,
+  "report_sha256": "9a120c00d62853698194442a6ccbdf3fa1f37cf7d9a5bb5e6912efe11b7d44af"
+}

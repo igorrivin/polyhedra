@@ -1,0 +1,177 @@
+{
+  "python": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+  "executable": "/tmp/polyhedra-baseline-20261031/bin/python3.12",
+  "prefix": "/tmp/polyhedra-baseline-20261031",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "distributions": {
+    "narwhals": "2.27.1",
+    "evoc": "0.3.1",
+    "umap-learn": "0.5.12",
+    "scikit-learn": "1.9.1",
+    "cloudpickle": "3.1.2",
+    "kiwisolver": "1.5.1",
+    "colorlog": "6.12.0",
+    "torch": "2.14.1",
+    "exchange_calendars": "4.13.2",
+    "jsonschema-specifications": "2023.7.1",
+    "fonttools": "4.66.1",
+    "packaging": "26.3",
+    "networkx": "3.7",
+    "joblib": "1.6.0",
+    "Pygments": "2.21.0",
+    "attrs": "23.1.0",
+    "pytz": "2026.5",
+    "pyluach": "2.3.0",
+    "s3transfer": "0.19.2",
+    "jsonschema": "4.26.0",
+    "SQLAlchemy": "2.1.4",
+    "iniconfig": "2.3.1",
+    "build": "1.6.1",
+    "toolz": "1.2.0",
+    "numpy": "2.5.4",
+    "tzdata": "2026.5",
+    "jmespath": "1.1.0",
+    "contourpy": "1.4.0",
+    "sympy": "1.14.0",
+    "pip": "26.2.1",
+    "plotly": "6.9.0",
+    "alembic": "1.20.0",
+    "tqdm": "4.70.1",
+    "pytest": "9.1.1",
+    "setuptools": "84.0.0",
+    "urllib3": "2.8.0",
+    "pyproject_hooks": "1.3.3",
+    "python-dateutil": "2.9.0.post0",
+    "mpmath": "1.3.0",
+    "PyYAML": "6.0.3",
+    "fsspec": "2026.9.0",
+    "filelock": "4.1.1",
+    "matplotlib": "3.11.2",
+    "ideal_poly_volume_toolkit": "0.3.0",
+    "python-dotenv": "1.2.4",
+    "llvmlite": "0.50.0",
+    "Mako": "1.4.3",
+    "cycler": "0.12.1",
+    "Jinja2": "3.1.6",
+    "pandas": "2.3.3",
+    "botocore": "1.43.111",
+    "threadpoolctl": "3.7.0",
+    "pypdf": "6.20.0",
+    "numba": "0.68.0",
+    "pluggy": "1.6.0",
+    "boto3": "1.43.111",
+    "optuna": "5.0.0",
+    "referencing": "0.30.2",
+    "pynndescent": "0.6.0",
+    "typing_extensions": "4.16.0",
+    "MarkupSafe": "3.0.4",
+    "korean_lunar_calendar": "0.4.0",
+    "pillow": "12.3.0",
+    "pyparsing": "3.3.3",
+    "rpds-py": "0.30.0",
+    "six": "1.17.0",
+    "scipy": "1.18.1"
+  },
+  "base_and_dev_requirements": [
+    {
+      "requirement": "numpy",
+      "installed": "2.5.4",
+      "satisfied": true
+    },
+    {
+      "requirement": "scipy",
+      "installed": "1.18.1",
+      "satisfied": true
+    },
+    {
+      "requirement": "mpmath",
+      "installed": "1.3.0",
+      "satisfied": true
+    },
+    {
+      "requirement": "pytest",
+      "installed": "9.1.1",
+      "satisfied": true
+    },
+    {
+      "requirement": "pytest-cov",
+      "installed": null,
+      "satisfied": false
+    },
+    {
+      "requirement": "hypothesis",
+      "installed": null,
+      "satisfied": false
+    },
+    {
+      "requirement": "jsonschema>=4.18",
+      "installed": "4.26.0",
+      "satisfied": true
+    },
+    {
+      "requirement": "ruff",
+      "installed": null,
+      "satisfied": false
+    },
+    {
+      "requirement": "build",
+      "installed": "1.6.1",
+      "satisfied": true
+    },
+    {
+      "requirement": "torch>=2.0",
+      "installed": "2.14.1",
+      "satisfied": true
+    },
+    {
+      "requirement": "gradio>=6,<7",
+      "installed": null,
+      "satisfied": false
+    },
+    {
+      "requirement": "matplotlib",
+      "installed": "3.11.2",
+      "satisfied": true
+    },
+    {
+      "requirement": "plotly",
+      "installed": "6.9.0",
+      "satisfied": true
+    },
+    {
+      "requirement": "Pillow",
+      "installed": "12.3.0",
+      "satisfied": true
+    },
+    {
+      "requirement": "pynauty",
+      "installed": null,
+      "satisfied": false
+    },
+    {
+      "requirement": "networkx",
+      "installed": "3.7",
+      "satisfied": true
+    },
+    {
+      "requirement": "gymnasium",
+      "installed": null,
+      "satisfied": false
+    },
+    {
+      "requirement": "cma",
+      "installed": null,
+      "satisfied": false
+    }
+  ],
+  "missing_base_and_dev": [
+    "pytest-cov",
+    "hypothesis",
+    "ruff",
+    "gradio",
+    "pynauty",
+    "gymnasium",
+    "cma"
+  ],
+  "toolkit_direct_url": "{\"archive_info\": {\"hash\": \"sha256=3a83accb261fc046bd00f99341a70000b31e27752b8050fe764729c0506bba0a\", \"hashes\": {\"sha256\": \"3a83accb261fc046bd00f99341a70000b31e27752b8050fe764729c0506bba0a\"}}, \"url\": \"file:///tmp/polyhedra-baseline-artifacts-20261031/ideal_poly_volume_toolkit-0.3.0-py3-none-any.whl\"}"
+}

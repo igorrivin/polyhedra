@@ -1,0 +1,11 @@
+# Site licensing integration
+
+The four-file site delta replaces pending-rights copy with the approved scoped CC BY 4.0 and MIT notices. It links the monograph attribution notice and exact MIT-covered file list, retains inherited toolkit notices, and preserves the finite evidence language. No converter, numbering, containment or fresh-compilation behavior was changed.
+
+The complete TeX ZIP now carries all 36 active inputs, seven exact licensing files and its source manifest: 44 entries. The seven files are the scope map, monograph notice, CC BY legal code, new-code MIT terms, exact covered-file list and both existing toolkit license copies. Including the package copy keeps the scope map's relative package-notice link valid inside the ZIP. The inspection allowlist grows from 52 to 58 files; no research result or new scientific payload was added. Both manifests retain the ordinary input/output hashes and add a separate licensing hash map.
+
+One regression verifies exact source/license bytes, ZIP inventory, source and license hashes, MIT coverage for selected experiment scripts, exclusion of the historical table from that scope, and rejection when the CC BY terms are missing. All 46 site tests and both Node search suites passed. The non-PDF probe converts the canonical license paragraph without a Pandoc warning, checks licensing targets and all source-ZIP notice links, and binds its 36 active TeX hashes and actual license inputs to the book author's frozen source. It uses no PDF, auxiliary file or diagram renderer.
+
+The successful pre-license output payloads and historical Section 9 source/export hashes were rechecked unchanged. The earlier final-build receipt retains SHA c96bc8c540506698e442a9c54f1cbdff90072fdaa02b153092960bfe4dc83698. This probe is not a licensed complete edition. Independent source review, an addendum commit and a fresh build/visual review remain required. The site README's example uses fresh licensed-edition-dist and licensed-edition-build paths so the pre-license evidence is preserved.
+
+No PDF marker, PDF/TikZ compilation, browser/server, scientific replay, staging, commit, sync, upload or push was performed for this delta.

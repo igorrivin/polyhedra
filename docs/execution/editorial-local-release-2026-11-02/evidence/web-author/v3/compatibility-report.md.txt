@@ -1,0 +1,31 @@
+# Narrow Appendix B compatibility delta
+
+The frozen v2 converter rejected the newly applied book layout directive
+`\setlength{\LTpost}{4pt}` as unhandled raw TeX. The observed failure is preserved
+in `layout-probe-original/result.json`, bound to the v2 builder and book
+layout-v2 freeze `fc17e3542ada46a1c580e18670abcc0ceb45599d2ff9239a97e3bea4225d21b2`.
+
+The only converter change adds this exact directive to the existing
+presentation-only command allowlist. It controls printed spacing after the
+longtable; the HTML table's spacing is already defined by the stylesheet.
+Other `setlength` targets and values remain rejected. There is no generic
+setter handler, math change, Figure 8 translation change, or source-text edit.
+
+One regression verifies that the directive contributes no prose, following
+source-note content remains intact, and alternative setters are rejected.
+The complete site suite passes all 45 tests. `git diff --check -- site` passes.
+
+The narrow current-source probe passes with no Pandoc warning. Its Appendix B
+HTML is byte-for-byte identical to the preserved pre-layout v2 fragment:
+SHA-256 `c16d33303c4787cf03ca4515bc472a6da67f573c8373f45149cb1d58361f9719`.
+It retains the one table, 109 MathML nodes, and complete source note. The probe
+still uses the older accepted auxiliary file for provisional display numbers;
+it does not verify current numbering or the new PDF. The first corrected
+probe completed its HTML comparison but failed while hashing a Path in its
+receipt writer; the saved `probe_layout.py` corrects that harness-only error
+and completes the same comparison and receipt.
+
+The only canonical files changed from v2 are `site/build_book.py` and
+`site/tests/test_build_book.py`. V2 and its independent-review scope remain
+unchanged. No PDF/TikZ generation, marker, browser, server, scientific replay,
+commit, upload or deployment occurred in this compatibility pass.

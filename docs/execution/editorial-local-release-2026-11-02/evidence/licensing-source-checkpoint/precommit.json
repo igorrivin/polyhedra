@@ -1,0 +1,165 @@
+{
+  "stage": "Exact staged licensing source verified",
+  "baseline_commit": "edef1dda04cac2f50a7c22e4240556714fac4d91",
+  "approval_sha256": {
+    "licensing-review/acceptance.json": "bb8ddebefb877020a50e6eadd4a5a62da1b3180dac8745a7e386d00f3bdb862b",
+    "web-review/licensing/acceptance.json": "7f3588f95cba7e9c4adc9bf1e3921f98251679a123a7a5abc8401ae52b9cb407",
+    "licensing-review/combined-source-acceptance.json": "51c2ee3060199c0b9a7a2e6e4f2dbec569f16ad659fc685120c7c5e3d7b666d9"
+  },
+  "default_staged_whitespace_check_passed": true,
+  "all_git_modes": "100644",
+  "staged_files": [
+    {
+      "path": "INTEGRATION_PLAN.md",
+      "git_mode": "100644",
+      "git_blob": "58fafaf80171776778078e88b092162f511b148b",
+      "git_blob_sha256": "a41a148ecfb31457bf88369fbffe3c984f69cbc51cc6fec9048ae5817cdc6fed",
+      "materialized_sha256": "a41a148ecfb31457bf88369fbffe3c984f69cbc51cc6fec9048ae5817cdc6fed",
+      "bytes": 51651,
+      "baseline_git_blob": "1c3b99ce29bea8699b08d93f8c2dd55b3a59d3b3",
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "git_mode": "100644",
+      "git_blob": "62d60754e1359f61cd9cab597191fb40c7961870",
+      "git_blob_sha256": "2ade8c89b8bbe0d859b124a9e47032c8494022f43091e8278ae8e2554a292196",
+      "materialized_sha256": "2ade8c89b8bbe0d859b124a9e47032c8494022f43091e8278ae8e2554a292196",
+      "bytes": 18615,
+      "baseline_git_blob": null,
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "LICENSES/MONOGRAPH-NOTICE.md",
+      "git_mode": "100644",
+      "git_blob": "5c90c5b9710a914dfccac1d0500067895ef4e2a4",
+      "git_blob_sha256": "34657dce59f05f339911fad763497d7615e0b721978910eadde2c3777b698e3b",
+      "materialized_sha256": "34657dce59f05f339911fad763497d7615e0b721978910eadde2c3777b698e3b",
+      "bytes": 1355,
+      "baseline_git_blob": null,
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "LICENSES/README.md",
+      "git_mode": "100644",
+      "git_blob": "410a4e2c920f5394ea6a4adf35b0d82264bcd2ff",
+      "git_blob_sha256": "345e69c061ecf6b276a8c57999516c855536ac7584af6aa4b4c3cdcd9bf6430e",
+      "materialized_sha256": "345e69c061ecf6b276a8c57999516c855536ac7584af6aa4b4c3cdcd9bf6430e",
+      "bytes": 4591,
+      "baseline_git_blob": "fe822bb32851c9951cbf69f0084fddc77074fa8c",
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "LICENSES/new-companion-files.txt",
+      "git_mode": "100644",
+      "git_blob": "cf55bf6201c7bacf0ff0075757a38dd3a6cae128",
+      "git_blob_sha256": "6d52e33dc36d133cfa95fd6a5e97bc1708698f8e1865a18d847badf279222342",
+      "materialized_sha256": "6d52e33dc36d133cfa95fd6a5e97bc1708698f8e1865a18d847badf279222342",
+      "bytes": 2575,
+      "baseline_git_blob": null,
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "LICENSES/new-companions-MIT.txt",
+      "git_mode": "100644",
+      "git_blob": "5bd45372d0915bdf8798b3a81a7e80a67e3d968a",
+      "git_blob_sha256": "a56fbd01e5bce5116c4860ba8067070fb6d69861d6368a4a76c55f2457969384",
+      "materialized_sha256": "a56fbd01e5bce5116c4860ba8067070fb6d69861d6368a4a76c55f2457969384",
+      "bytes": 1075,
+      "baseline_git_blob": null,
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "README.md",
+      "git_mode": "100644",
+      "git_blob": "e3ece2ba2b5cb1acc5a3f8b2deb45634d22c5f3f",
+      "git_blob_sha256": "0be42e2a51e1783da0227a6971f598b0038195d298dcbc315fe32441f30c8514",
+      "materialized_sha256": "0be42e2a51e1783da0227a6971f598b0038195d298dcbc315fe32441f30c8514",
+      "bytes": 11400,
+      "baseline_git_blob": "b951788c1e0f5f82de7a39a86781cedfdce85997",
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "book/README.md",
+      "git_mode": "100644",
+      "git_blob": "abde89c2b194ceccce6dbb91910ffd946032832a",
+      "git_blob_sha256": "42be6d7f58df13572ea97f7d29ae1bbc1be8d97e5c4cb1281a821bb2848d7954",
+      "materialized_sha256": "42be6d7f58df13572ea97f7d29ae1bbc1be8d97e5c4cb1281a821bb2848d7954",
+      "bytes": 11484,
+      "baseline_git_blob": "793ae82f4000db12d0265bb6b07d18d832bf4b56",
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "book/polyhedral_volumes_and_geodesic_identities.tex",
+      "git_mode": "100644",
+      "git_blob": "3561c7393fef2556b679999bc65f98d65f67cf8a",
+      "git_blob_sha256": "05dffe181160a6193462b5aa0b5088ebf29b403cb3db67c0da041198e7e507aa",
+      "materialized_sha256": "05dffe181160a6193462b5aa0b5088ebf29b403cb3db67c0da041198e7e507aa",
+      "bytes": 57968,
+      "baseline_git_blob": "93656285adf58117bf42eb56877f78f9814c99ef",
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "docs/INTEGRATION_STATUS.md",
+      "git_mode": "100644",
+      "git_blob": "d60c5accc55f05de0610111ad4f06ca1526c9af2",
+      "git_blob_sha256": "31269b30d7af5abf8801a1083bc3bf2f10d8c1a15454e68cc8c7f6800f5d2cb3",
+      "materialized_sha256": "31269b30d7af5abf8801a1083bc3bf2f10d8c1a15454e68cc8c7f6800f5d2cb3",
+      "bytes": 10574,
+      "baseline_git_blob": "d5bb96cefd0d8fcb7d53320ab40cdc488ae785bd",
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "experiments/README.md",
+      "git_mode": "100644",
+      "git_blob": "aa2b71aec2c52bf09ca976d813176173f2feb7ac",
+      "git_blob_sha256": "a9ace616d82c09f4502fe6bb480daa112812e8b2b4164a5e6d5cc00727837cfc",
+      "materialized_sha256": "a9ace616d82c09f4502fe6bb480daa112812e8b2b4164a5e6d5cc00727837cfc",
+      "bytes": 943,
+      "baseline_git_blob": null,
+      "approval": "licensing-review/acceptance.json"
+    },
+    {
+      "path": "site/README.md",
+      "git_mode": "100644",
+      "git_blob": "2fbad2fc501da5c87fd05db4cfc91751597147a8",
+      "git_blob_sha256": "3ff72f54616fe049177ac3b2dcd1bf82b06e06d0d5426d22175de667b5f9d1b8",
+      "materialized_sha256": "3ff72f54616fe049177ac3b2dcd1bf82b06e06d0d5426d22175de667b5f9d1b8",
+      "bytes": 17391,
+      "baseline_git_blob": "543c9fd7cb3da88df2e8efed4a19df43e22e0717",
+      "approval": "web-review/licensing/acceptance.json"
+    },
+    {
+      "path": "site/book/downloads.json",
+      "git_mode": "100644",
+      "git_blob": "652c5bea223ba79020dbf56090041c2bca17ef83",
+      "git_blob_sha256": "5dfbce55a16d8b73fd2784a85b48fa869f757259e992f851d8379ee96fc3dc70",
+      "materialized_sha256": "5dfbce55a16d8b73fd2784a85b48fa869f757259e992f851d8379ee96fc3dc70",
+      "bytes": 6097,
+      "baseline_git_blob": "4c1cbda1b60f346eafdfa7b116d696e538656e36",
+      "approval": "web-review/licensing/acceptance.json"
+    },
+    {
+      "path": "site/build_book.py",
+      "git_mode": "100644",
+      "git_blob": "eb1b5cf102247bd5d6a820c983bae67293d1d22b",
+      "git_blob_sha256": "b7a004518b8bec542e07e69a37405782a4659d1e987fc942be189f54a4621124",
+      "materialized_sha256": "b7a004518b8bec542e07e69a37405782a4659d1e987fc942be189f54a4621124",
+      "bytes": 55025,
+      "baseline_git_blob": "2a3c2e8c65f763a42db1207e8e532af92354a957",
+      "approval": "web-review/licensing/acceptance.json"
+    },
+    {
+      "path": "site/tests/test_build_book.py",
+      "git_mode": "100644",
+      "git_blob": "4bab3871d3f810943c4d7d7fb2bc4550eb1f565e",
+      "git_blob_sha256": "d82d547d04cd18ce650206092643ebfccedcca7baa3fdcfeead7414ced3733eb",
+      "materialized_sha256": "d82d547d04cd18ce650206092643ebfccedcca7baa3fdcfeead7414ced3733eb",
+      "bytes": 18918,
+      "baseline_git_blob": "dde281641baecc518339aebbff23c3e6d8fdda90",
+      "approval": "web-review/licensing/acceptance.json"
+    }
+  ],
+  "worktree_matches_staged_sources": true,
+  "index_sha256": "0fdfb38a6bf4816e2f28415786a502d0f8f0ee4783cd2adf3592aaa8f55bf1ee"
+}

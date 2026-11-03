@@ -1,0 +1,34 @@
+{
+  "schema_version": 2,
+  "schema_path": "packages/volume-toolkit/docs/schemas/optimization-result-v2.schema.json",
+  "schema_sha256": "c37419bfd086a8ad5c2206215df45554dd4114f34e7b6a9bd08e89234e137bde",
+  "schema_valid": true,
+  "strict_json_roundtrip": true,
+  "best_volume": 1.0149416063712777,
+  "structure": {
+    "n_vertices": 4,
+    "n_finite_vertices": 3,
+    "implicit_infinity_index": 3,
+    "n_faces": 4,
+    "n_finite_faces": 1,
+    "n_infinity_faces": 3,
+    "n_edges": 6,
+    "euler_characteristic": 2,
+    "vertex_degrees": [
+      3,
+      3,
+      3,
+      3
+    ]
+  },
+  "trial_solver_success": true,
+  "trial_validation": {
+    "status": "verified",
+    "reason": "Canonical volume and complete boundary reconstruction passed",
+    "cached_objective": -1.0149416063712777,
+    "cached_objective_repr": null,
+    "objective_difference": 0.0,
+    "invalid_params_repr": null,
+    "polish": null
+  }
+}

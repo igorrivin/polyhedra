@@ -1,0 +1,140 @@
+{
+  "stage": "Independent finite source/licensing checks; no complete build, PDF/TikZ, aux, numerical replay or browser",
+  "passed_cases": 23,
+  "cases": [
+    {
+      "case": "converter_numbering_path_and_no_reuse_definitions_unchanged",
+      "passed": true,
+      "changed_functions": [
+        "build",
+        "computation_page",
+        "page_shell",
+        "source_archive"
+      ],
+      "identical_definitions": 26
+    },
+    {
+      "case": "selection_adds_only_six_license_inputs",
+      "passed": true,
+      "inspection_files": 58,
+      "license_files": 7
+    },
+    {
+      "case": "new_code_scope_and_original_toolkit_notices_preserved",
+      "passed": true
+    },
+    {
+      "case": "zip_exact_bytes_separate_manifests_and_notice_links",
+      "passed": true,
+      "entries": 44,
+      "license_files": 7,
+      "tex_files": 36
+    },
+    {
+      "case": "missing_license_rejects_before_zip_LICENSES/README.md",
+      "passed": true,
+      "error": "source archive is missing required license files: ['LICENSES/README.md']"
+    },
+    {
+      "case": "missing_license_rejects_before_zip_LICENSES/CC-BY-4.0.txt",
+      "passed": true,
+      "error": "source archive is missing required license files: ['LICENSES/CC-BY-4.0.txt']"
+    },
+    {
+      "case": "missing_license_rejects_before_zip_LICENSES/MONOGRAPH-NOTICE.md",
+      "passed": true,
+      "error": "source archive is missing required license files: ['LICENSES/MONOGRAPH-NOTICE.md']"
+    },
+    {
+      "case": "missing_license_rejects_before_zip_LICENSES/new-companions-MIT.txt",
+      "passed": true,
+      "error": "source archive is missing required license files: ['LICENSES/new-companions-MIT.txt']"
+    },
+    {
+      "case": "missing_license_rejects_before_zip_LICENSES/new-companion-files.txt",
+      "passed": true,
+      "error": "source archive is missing required license files: ['LICENSES/new-companion-files.txt']"
+    },
+    {
+      "case": "missing_license_rejects_before_zip_LICENSES/volume-toolkit-MIT.txt",
+      "passed": true,
+      "error": "source archive is missing required license files: ['LICENSES/volume-toolkit-MIT.txt']"
+    },
+    {
+      "case": "missing_license_rejects_before_zip_packages/volume-toolkit/LICENSE",
+      "passed": true,
+      "error": "source archive is missing required license files: ['packages/volume-toolkit/LICENSE']"
+    },
+    {
+      "case": "source_zip_does_not_blanket_export_extra_payload",
+      "passed": true
+    },
+    {
+      "case": "changed_license_fails_production_snapshot_gate_LICENSES/README.md",
+      "passed": true,
+      "error": "source changed during the build: LICENSES/README.md"
+    },
+    {
+      "case": "changed_license_fails_production_snapshot_gate_LICENSES/CC-BY-4.0.txt",
+      "passed": true,
+      "error": "source changed during the build: LICENSES/CC-BY-4.0.txt"
+    },
+    {
+      "case": "changed_license_fails_production_snapshot_gate_LICENSES/MONOGRAPH-NOTICE.md",
+      "passed": true,
+      "error": "source changed during the build: LICENSES/MONOGRAPH-NOTICE.md"
+    },
+    {
+      "case": "changed_license_fails_production_snapshot_gate_LICENSES/new-companions-MIT.txt",
+      "passed": true,
+      "error": "source changed during the build: LICENSES/new-companions-MIT.txt"
+    },
+    {
+      "case": "changed_license_fails_production_snapshot_gate_LICENSES/new-companion-files.txt",
+      "passed": true,
+      "error": "source changed during the build: LICENSES/new-companion-files.txt"
+    },
+    {
+      "case": "changed_license_fails_production_snapshot_gate_LICENSES/volume-toolkit-MIT.txt",
+      "passed": true,
+      "error": "source changed during the build: LICENSES/volume-toolkit-MIT.txt"
+    },
+    {
+      "case": "changed_license_fails_production_snapshot_gate_packages/volume-toolkit/LICENSE",
+      "passed": true,
+      "error": "source changed during the build: packages/volume-toolkit/LICENSE"
+    },
+    {
+      "case": "missing_selected_license_file",
+      "passed": true,
+      "error": "missing or symlinked inspection file: LICENSES/CC-BY-4.0.txt"
+    },
+    {
+      "case": "symlinked_selected_license_file",
+      "passed": true,
+      "error": "missing or symlinked inspection file: LICENSES/CC-BY-4.0.txt"
+    },
+    {
+      "case": "canonical_notice_and_same_local_terms_linked_without_aux",
+      "passed": true
+    },
+    {
+      "case": "pre_license_export_receipts_and_historical_section9_bytes_preserved",
+      "passed": true,
+      "pre_license_output_files": 148,
+      "historical_inputs": 46
+    }
+  ],
+  "source_author_freeze_sha256": "ac08a3aa4ca40de4378226c62935b6e9d3e26b08e40af60eef02f7dfe5f9cf20",
+  "source_zip_sha256": "9ab40fffa8cecc7b9aa6cd3bde96e56b2d4209cd0538b51dc64d9b542e57493d",
+  "license_input_sha256": {
+    "LICENSES/README.md": "345e69c061ecf6b276a8c57999516c855536ac7584af6aa4b4c3cdcd9bf6430e",
+    "LICENSES/CC-BY-4.0.txt": "2ade8c89b8bbe0d859b124a9e47032c8494022f43091e8278ae8e2554a292196",
+    "LICENSES/MONOGRAPH-NOTICE.md": "34657dce59f05f339911fad763497d7615e0b721978910eadde2c3777b698e3b",
+    "LICENSES/new-companions-MIT.txt": "a56fbd01e5bce5116c4860ba8067070fb6d69861d6368a4a76c55f2457969384",
+    "LICENSES/new-companion-files.txt": "6d52e33dc36d133cfa95fd6a5e97bc1708698f8e1865a18d847badf279222342",
+    "LICENSES/volume-toolkit-MIT.txt": "14c0fc10e8db2ba14a669b9939a69f22e729cdaecec1e8bde47d2b959ac5be38",
+    "packages/volume-toolkit/LICENSE": "14c0fc10e8db2ba14a669b9939a69f22e729cdaecec1e8bde47d2b959ac5be38"
+  },
+  "snapshot_gate_method": "Executed only exact production input-comparison AST loop on isolated license fixtures; build() was not called."
+}

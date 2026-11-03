@@ -1,0 +1,19 @@
+# Two documentation corrections
+
+The released two-file change is complete. `packages/volume-toolkit/docs/release-0.4.0.md` now asks the CLI smoke test to emit schema version 2, matching the already verified current producer. `experiments/quantum_geodesics/README.md` now links the existing reviewed clean-source result and completed checkpoint instead of calling that result prospective. It explicitly identifies this as a post-run prose correction, preserves the historical recorded README hash and acceptance records, and makes no new scientific-replay claim.
+
+Exact source bytes are frozen under [before/](before/) and [after/](after/). The [two-file diff](two-file.diff) has SHA-256 `a1d873fa28e92d6df197ad39683720ac522cf7e91ff5a50a9ec7248ac708bba5`. The [before manifest](before-freeze.json) and [after manifest](after-freeze.json) contain both document hashes and every verified unchanged scientific-file hash.
+
+Verification establishes:
+
+- All 48 package Python files, all 13 quantum/geodesic Python and fixture files, and six quantum/surgery Python files are unchanged.
+- The clean result, accepted author result, scientific comparison and three relevant acceptance records are byte-identical to their pre-edit state.
+- Of the historical result's 24 recorded runtime files, only `experiments/quantum_geodesics/README.md` differs now, exactly as intended. The other 23 match their historical recorded hashes. [Runtime comparison](historical-runtime-comparison.json).
+- All nine local Markdown links in the two documents resolve, and scoped `git diff --check` passes.
+- Package version remains 0.3.0; `pyproject.toml` still matches the initial audit hash. No test, build, installation or scientific replay was rerun for these literal documentation corrections.
+
+Safe pip configuration inspection found no configured keys, no `PIP_NO_INDEX`, no index or find-links overrides, and no pip configuration, certificate or proxy environment overrides. Consequently no observed pip setting disables the index. The earlier download's nonverbose two-line failure contains no socket or HTTP diagnostic, so it does not distinguish a network failure from an empty or unavailable index. No additional network request or bypass was made. No credentials, private index URL or token was printed or saved. [Sanitized configuration evidence](../safe-pip-configuration.json).
+
+The parent reported two browser-preflight failures: Obscura rejects `file://` navigation, and the normal-sandbox loopback HTTP server exited 1 at `socket.bind` with `PermissionError: [Errno 1] Operation not permitted`. No server remained running and no browser verification was achieved. These are explicitly parent-observed records, not auditor reruns. No retry, escalation or alternate permission bypass occurred. Browser QA remains a separate unresolved local-release gate. [Parent-observed evidence](../parent-observed-browser-boundary.json).
+
+The user has now resolved the author byline as Igor Rivin, Temple University mathematics, with a Codex acknowledgment; the editorial owner is handling those book metadata changes. Licensing remains unanswered. This correction changed no canonical metadata outside the two assigned documents, no old results or approvals, and no original source identity.

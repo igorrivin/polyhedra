@@ -1,0 +1,76 @@
+# Local release environment audit, 2 November 2026
+
+The core package builds and installs successfully from the audited source, and its installed CLI emits valid schema-v2 output. The complete development-suite gate remains open because several optional dependencies are unavailable. This audit makes no publication, supported-platform matrix, full numerical-campaign replay, or general mathematical-correctness claim.
+
+The source baseline is `f697d61ce5ef48c538a44e3ff47193ca5aaf46a8`, initially clean with 2,758 tracked files. The supported interpreter is CPython 3.12.11 at `/tmp/polyhedra-baseline-20261031/bin/python3.12`. Default Python 3.15 is outside the declared `>=3.10,<3.15` range. No canonical file, original repository, Git ref, existing environment installation, or existing dependency cache was changed by this audit. Its products are confined to this outer directory and fresh `/private/tmp/polyhedra-release-*` locations.
+
+## Fresh verification
+
+| Gate | Observed result | Evidence |
+| --- | --- | --- |
+| One complete baseline pytest attempt | **425 passed, 18 skipped, 4 failed, 9 collection errors**, 55.08 seconds | [command](baseline-full-tests-command.json), [stdout](baseline-full-tests.stdout.txt), [JUnit](baseline-full-tests.xml), [failure summary](baseline-full-tests-summary.json) |
+| Newly enabled Hypothesis tests | **4 passed**, 1.86 seconds; only `tests/test_numerical_properties.py` | [command](hypothesis-tests-v2-command.json), [stdout](hypothesis-tests-v2.stdout.txt), [JUnit](hypothesis-tests-v2.xml) |
+| Materialized data integrity | **Pass**: 412 LFS paths, 354 JSON payloads, two canonical-input hashes, two result-manifest artifacts | [command](data-integrity-command.json), [stdout](data-integrity.stdout.txt) |
+| Package-only source build | **Pass**, wheel and sdist; no result corpus, private holdout answers, original manuscript, Git metadata, key/certificate files, cache or AppleDouble sidecars | [source selection and hashes](package-source-copy.json), [command](package-build-command.json), [archive inventories](distribution-verification.json) |
+| Installed wheel in a fresh core environment | **Pass**: `pip check`, outside-checkout imports, CLI help, seeded tetrahedron CLI; optional dependencies physically absent | [installation](core-wheel-install-command.json), [commands](core-smoke-commands.json), [environment and import paths](core-imports.stdout.txt) |
+| Installed sdist in another fresh environment | **Pass**: local build/install, `pip check`, outside-checkout imports and CLI help | [installation](sdist-install-command.json), [commands and source-hash equality](sdist-smoke-commands.json) |
+| Package Python source identity | **Pass**, all 48 package `.py` files match canonical source, copied source, wheel, sdist and both installations | [archive verification](distribution-verification.json), [sdist verification](sdist-smoke-commands.json) |
+| Compilation and whitespace | **Pass**, package `compileall` in the temporary source copy and canonical `git diff --check` | [commands](core-smoke-commands.json), [final source receipt](canonical-after.json) |
+
+The full baseline was deliberately run with `--continue-on-collection-errors`; it did not stop at the first missing import. No tests were removed or weakened. All four failures and eight collection errors name missing `gymnasium`; the other collection error names missing `hypothesis`. All 18 skips are due to unavailable `pynauty`. The [historical summaries](historical-test-failures.json) preserve the earlier 31 October runs separately; their counts are not the new baseline result.
+
+The Gymnasium collection errors affect cage accounting, H4 combinatorics and symmetric benchmark/response tests, RL budget, RL harness and RL validator modules. The four executable failures are the real N=8 sixteen-cell calibration and three RL training-launcher cases. No additional source defect was demonstrated by the tests that executed.
+
+The release benchmark smoke is among the passing baseline tests. Its one-sample bounded smoke is not a canonical performance release baseline or an optimizer-quality study. No old monograph numerical campaign was rerun.
+
+## Environment recovery and its limits
+
+The [baseline inventory](baseline-environment.json) shows seven missing declared development dependencies: `pytest-cov`, `hypothesis`, `ruff`, `gradio`, `pynauty`, `gymnasium`, and `cma`. Base NumPy/SciPy/mpmath, Torch, pytest, build, plotting and jsonschema packages are installed. The baseline's installed toolkit is an older local 0.3.0 wheel, so source-suite commands explicitly put the canonical package directory on `PYTHONPATH`; the installed-wheel probes clear `PYTHONPATH` and run from `/private/tmp`.
+
+Read-only searches covered the standard uv/pip caches, uv tools/interpreters, Homebrew site-packages, four discovered project virtual environments, and Anaconda environments/package archives. The candidate inventories are [standard locations](offline-dependency-candidates.json), [project environments](project-venv-dependency-candidates.json), [Anaconda metadata](anaconda-dependency-candidates.json), and [Anaconda archive names](anaconda-archive-candidates.json).
+
+Anaconda's `jaxenv` contains compatible pure-Python Hypothesis 6.124.9 and sortedcontainers 2.4.0. Copies in `/private/tmp/polyhedra-release-test-overlay-20261102` enabled the four property tests without altering Anaconda or the baseline environment. The initial directory-only copy omitted Hypothesis's top-level pytest plugin; that unsuccessful setup is retained in `hypothesis-tests-command.json` and its stderr. The subsequent copy follows the installed distribution's RECORD and includes all three top-level helper modules. See [copy hashes](hypothesis-local-copy.json) and [copy repair](hypothesis-local-copy-v2-repair.json). The four passing tests are a separate follow-up, not a new complete-suite count.
+
+Ruff is available in Anaconda, but no package Python source was changed here, so there is no changed-source lint gate to run. Available Gradio installations are 4.x/5.x and do not satisfy the declared `>=6,<7` range. No compatible local Gymnasium, pynauty, cma or pytest-cov installation/archive was found in the examined locations. This is a scoped inventory, not a claim to have searched every byte on the machine.
+
+One normal-sandbox dependency download attempted all seven missing requirements with a fresh target/cache, `--retries 0` and `--timeout 10`. It exited 1 after 0.57 seconds at Gymnasium with `from versions: none` and `No matching distribution found for gymnasium`, downloading nothing. The [exact command](dependency-download-command.json) and [stderr](dependency-download.stderr.txt) are preserved. That output does not establish a defect in Gymnasium or identify whether the index/network caused the empty candidate set. No escalation, browser workaround, repeated network-resolution attempts or existing-cache mutation followed.
+
+Core verification uses two fresh symlink virtual environments with local snapshots of NumPy 2.5.4, SciPy 1.18.1 and mpmath 1.3.0. The sdist environment also has setuptools 84.0.0 solely for the local no-isolation build. These are auditable local dependency copies, **not fresh online resolver installations**. Copy manifests: [core](core-dependency-copy.json), [sdist](sdist-dependency-copy.json). The first venv attempt copied the standalone macOS Python executable and failed because its relative `libpython3.12.dylib` was absent; the failed target and [diagnostic](setup-failure-diagnostics.json) remain. The fresh [explicit `--symlinks` setup](core-venv-create-v2.json) succeeded.
+
+The core-only runtime contains just pip, the toolkit and its three base dependencies. Torch, Gymnasium, Gradio, pynauty, Hypothesis, matplotlib, networkx, plotly and Pillow are absent. The wheel imports the package, geometry, optimization, variational, Rivin Delaunay/holonomy and geometric realization from its installed files. Direct regular-tetrahedron evaluation returns `1.0149416064096537`. The seeded CLI result is `1.0149416063712777`, has V/E/F = 4/6/4 and Euler characteristic 2, and reports raw solver success and a separately verified trial. It passes the current schema and strict JSON round-trip check. [CLI result](core-cli-tetrahedron.json), [schema validation](core-cli-schema-validation.json).
+
+The wheel `pip check` emits a disabled-cache warning because the user's pip cache is unwritable; it still reports no broken requirements. Build messages about pruned repository tests and deliberately disabled byte-compilation are recorded. They are expected from the selected safe build and do not replace the successful explicit compilation check.
+
+## Package metadata and minimal correction
+
+Version **0.3.0 is intentional**. The release guide explicitly retains it until the separate 0.4.0 package release is finalized, and the CHANGELOG labels that work `Unreleased`. No version bump, final release date, tag or publication is justified by this book-release audit. The built metadata and installed versions agree on 0.3.0.
+
+One actual stale documentation line is confirmed: `packages/volume-toolkit/docs/release-0.4.0.md:268` asks the CLI smoke to emit schema v1, although the current producer, migration guide, source contracts and executed installed CLI use schema v2. The [one-line proposed patch](proposed-schema-checklist-correction.patch) corrects the checklist only. It is not applied. Historical v1 schemas and artifacts remain valid historical material and need no changes.
+
+| Local artifact | SHA-256 |
+| --- | --- |
+| `ideal_poly_volume_toolkit-0.3.0-py3-none-any.whl` | `02aa9270d76a1479cd765cd4a4b4b8bcd348df522783d10be5ff00e5aa506fca` |
+| `ideal_poly_volume_toolkit-0.3.0.tar.gz` | `f7304cc006225c6c18a110988d71e287ba8ff2aca5ca450c84e47c9fbae7ce51` |
+
+These local probe artifacts are not designated release downloads. They were built from an allowlisted copy of 56 tracked package/source-metadata files, not a fresh clone or the eventual full-book export.
+
+## Remaining gates and decisions
+
+The active root `.github/workflows/ci.yml` installs `.[dev]` and tests Python 3.10–3.14 on Ubuntu, imports geometry/Rivin, constructs GUI/app adapters on 3.14, and separately checks materialized data integrity on 3.12. Nested historical workflows are not active root CI. That matrix and GUI/app construction were not run here; the guide's older ARM64 3.14 validation remains historical evidence. Existing root CI does not currently add separate wheel/sdist/core-only jobs; this local audit supplies bounded checks, not hosted CI results.
+
+To close the environment gate, obtain compatible Gymnasium, pynauty, cma, pytest-cov and Gradio 6.x (including transitive requirements) in a new supported environment, retain the resolved inventory, and rerun the full suite and GUI/app checks. The supported-version CI matrix and fresh-clone/LFS test remain separate. No currently observed source failure calls for bypassing those dependencies or modifying the tests.
+
+The following publication decisions remain with the user/parent; none was silently chosen:
+
+- Exact author byline, acknowledgment/credit wording, and copyright-holder attribution. The canonical book still has `\author{}` at line 86; the preserved toolkit MIT notice has a blank owner after `Copyright (c) 2024`.
+- License grants and scope for the monograph, historical `ipoly` text/scripts, and new maintained companion code. `LICENSES/README.md` explicitly says the toolkit's MIT license does not license the other texts. Existing original notices must be preserved.
+- Canonical remote name/visibility and the public source-download policy. No canonical Git remote is configured; package project URLs still target the original toolkit repository. Accessible source links must follow the eventual deliberate publication scope.
+- Whether the old HF application remains supported. Its current source adapters and historical workflows were retained; no remote deployment was attempted.
+
+The current title is *Polyhedra, Moduli, and Quantum Geometry: Variational principles, spectral methods, and computation*, dated 30 October 2026. No tracked standalone CITATION, CREDITS or AUTHORS file was found. Citation metadata can be completed after the attribution and publication choices; this audit does not infer it from repository ownership.
+
+The [final invariance receipt](canonical-after.json) confirms all 2,758 tracked-file hashes remain equal to the initial snapshot, baseline distribution versions are unchanged, and whitespace checking passes. Concurrent work has added untracked `site/book/` and `site/build_book.py`; therefore the current whole checkout is not described as clean. Those files were not written or packaged by this audit.
+
+Documentation consulted for setup: [pip local-wheel installation](https://pip.pypa.io/en/stable/user_guide/), [pip download destination](https://pip.pypa.io/en/stable/cli/pip_download/), and [Python venv symlink support](https://github.com/python/cpython/blob/main/Doc/library/venv.rst), fetched through Context7. Repository instructions, release guide, current packaging, active CI, preserved historical results and fresh command receipts supply the project-specific conclusions.
+
+The machine-readable handoff is [release-summary.json](release-summary.json). No push, upload, deployment, external package publication, canonical-source modification or expensive monograph campaign replay occurred.

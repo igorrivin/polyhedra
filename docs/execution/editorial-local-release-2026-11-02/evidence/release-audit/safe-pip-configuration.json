@@ -1,0 +1,56 @@
+{
+  "command": [
+    "/tmp/polyhedra-baseline-20261031/bin/python3.12",
+    "-m",
+    "pip",
+    "config",
+    "list"
+  ],
+  "returncode": 0,
+  "configuration_keys_sanitized": {},
+  "environment_flags_sanitized": {
+    "PIP_NO_INDEX": {
+      "present": false
+    },
+    "PIP_INDEX_URL": {
+      "present": false
+    },
+    "PIP_EXTRA_INDEX_URL": {
+      "present": false
+    },
+    "PIP_CONFIG_FILE": {
+      "present": false
+    },
+    "PIP_FIND_LINKS": {
+      "present": false
+    },
+    "PIP_TRUSTED_HOST": {
+      "present": false
+    },
+    "PIP_PROXY": {
+      "present": false
+    },
+    "PIP_CERT": {
+      "present": false
+    },
+    "PIP_CLIENT_CERT": {
+      "present": false
+    },
+    "HTTP_PROXY": {
+      "present": false
+    },
+    "HTTPS_PROXY": {
+      "present": false
+    },
+    "ALL_PROXY": {
+      "present": false
+    }
+  },
+  "stderr_present": true,
+  "network_requests": 0,
+  "conclusion": {
+    "index_disabled_by_observed_environment_or_configuration": false,
+    "download_failure_cause": "Not identified by the preserved nonverbose download output; no socket/HTTP diagnostic was captured. Network failure versus an empty or unavailable index cannot be distinguished without another request.",
+    "further_network_requests_made": false
+  }
+}

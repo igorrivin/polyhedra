@@ -1,0 +1,317 @@
+{
+  "stage": "Authorized source-only local commit completed and verified",
+  "completed_at_utc": "2026-11-02T15:00:27.971525+00:00",
+  "commit": "edef1dda04cac2f50a7c22e4240556714fac4d91",
+  "parent": "f697d61ce5ef48c538a44e3ff47193ca5aaf46a8",
+  "title": "Reconcile monograph conventions and add complete local edition builder",
+  "direct_child": true,
+  "source_path_count": 29,
+  "tracked_modifications": 23,
+  "new_source_files": 6,
+  "tracked_file_count_after": 2764,
+  "exact_committed_files": [
+    {
+      "path": "INTEGRATION_PLAN.md",
+      "git_mode": "100644",
+      "git_blob": "1c3b99ce29bea8699b08d93f8c2dd55b3a59d3b3",
+      "git_blob_sha256": "97a4c62d23320f0f6f4df8580ecc43b941bb12ba078d8acf2952057acbd7a130",
+      "materialized_sha256": "97a4c62d23320f0f6f4df8580ecc43b941bb12ba078d8acf2952057acbd7a130",
+      "bytes": 51186,
+      "baseline_git_blob": "8eda5db1a9f046c0de5fbadc61b311120b44d876",
+      "approval": "editorial-review/source-status-v2/acceptance.json"
+    },
+    {
+      "path": "LICENSES/README.md",
+      "git_mode": "100644",
+      "git_blob": "fe822bb32851c9951cbf69f0084fddc77074fa8c",
+      "git_blob_sha256": "b619df07be81f57d76eb6bfa93f4313ee6a999729a96e143ee8155abd2d5b4c4",
+      "materialized_sha256": "b619df07be81f57d76eb6bfa93f4313ee6a999729a96e143ee8155abd2d5b4c4",
+      "bytes": 704,
+      "baseline_git_blob": "c871383a7b408602576de01e6ab00cf28db2a533",
+      "approval": "editorial-review/source-status-v2/acceptance.json"
+    },
+    {
+      "path": "README.md",
+      "git_mode": "100644",
+      "git_blob": "b951788c1e0f5f82de7a39a86781cedfdce85997",
+      "git_blob_sha256": "d35af93bed967536e36e505e214a53146dac45a05b9a3ee2f02b79042204b06c",
+      "materialized_sha256": "d35af93bed967536e36e505e214a53146dac45a05b9a3ee2f02b79042204b06c",
+      "bytes": 11049,
+      "baseline_git_blob": "c75f7fd363faa1b73ccd9cee26ea29ea0755e7b7",
+      "approval": "editorial-review/source-status-v2/acceptance.json"
+    },
+    {
+      "path": "book/README.md",
+      "git_mode": "100644",
+      "git_blob": "793ae82f4000db12d0265bb6b07d18d832bf4b56",
+      "git_blob_sha256": "d34cb8ca1a610beaa96b4ec46415455027e95212ac30d06cd7bd6b7a493106c8",
+      "materialized_sha256": "d34cb8ca1a610beaa96b4ec46415455027e95212ac30d06cd7bd6b7a493106c8",
+      "bytes": 10697,
+      "baseline_git_blob": "9d8fc020abfae965ba520833b9c8ab09335fea17",
+      "approval": "editorial-review/acceptance.json"
+    },
+    {
+      "path": "book/chapters/07-euclidean-periods.tex",
+      "git_mode": "100644",
+      "git_blob": "a9d1c8130f0c8eeb1321369a57d1e6d2cc27b62e",
+      "git_blob_sha256": "046ae8e6ba6a4c3ce46a23e8fd2138cdade3be33b600ba74fecb0069d7d574b9",
+      "materialized_sha256": "046ae8e6ba6a4c3ce46a23e8fd2138cdade3be33b600ba74fecb0069d7d574b9",
+      "bytes": 11910,
+      "baseline_git_blob": "14e3124bc3ede45b79873070af1c80facd4a654c",
+      "approval": "editorial-review/acceptance.json"
+    },
+    {
+      "path": "book/chapters/09-volume-hessians.tex",
+      "git_mode": "100644",
+      "git_blob": "2b3b97a9abdeb766d35121bf2e54b3494ab2a6fd",
+      "git_blob_sha256": "15b8c3324ec9e1acf7a7926e4c0443db0a22db1648240a3d1790e178bbb5d056",
+      "materialized_sha256": "15b8c3324ec9e1acf7a7926e4c0443db0a22db1648240a3d1790e178bbb5d056",
+      "bytes": 34810,
+      "baseline_git_blob": "88f0b002231fa601a5ad64f72d9e5a5744d43e6c",
+      "approval": "editorial-review/acceptance.json"
+    },
+    {
+      "path": "book/chapters/10-quantum-introduction.tex",
+      "git_mode": "100644",
+      "git_blob": "d55dc1c7697de00f049229e527540f58cef8a68a",
+      "git_blob_sha256": "d8fe0bb6f6698a3c50865ae2cf0cac029f4a26c30f46fa71de1907d1ffd48fa3",
+      "materialized_sha256": "d8fe0bb6f6698a3c50865ae2cf0cac029f4a26c30f46fa71de1907d1ffd48fa3",
+      "bytes": 44447,
+      "baseline_git_blob": "dda7531b6c50e54c7bd55bcf0671bb86a73624ba",
+      "approval": "editorial-review/acceptance.json"
+    },
+    {
+      "path": "book/chapters/11-quantum-degeneration.tex",
+      "git_mode": "100644",
+      "git_blob": "7b21a81dcade13340bbc2b6dce308e53b31b96f3",
+      "git_blob_sha256": "910a1a2003b79ee6cc96787d22cf6b12944c0c7b369ca316fec2c5aa210aa080",
+      "materialized_sha256": "910a1a2003b79ee6cc96787d22cf6b12944c0c7b369ca316fec2c5aa210aa080",
+      "bytes": 14115,
+      "baseline_git_blob": "afddc210c89e142a2b4cc6ae8880592c690bd443",
+      "approval": "editorial-review/acceptance.json"
+    },
+    {
+      "path": "book/chapters/13-four-point-fusion.tex",
+      "git_mode": "100644",
+      "git_blob": "3310c03cc8126e15a1b25ae89ab1225b3272000f",
+      "git_blob_sha256": "d19b0ceaba665faabfbbcc7c73fced86ce7613a20f039aef962255c07d6c0106",
+      "materialized_sha256": "d19b0ceaba665faabfbbcc7c73fced86ce7613a20f039aef962255c07d6c0106",
+      "bytes": 24620,
+      "baseline_git_blob": "64c2fb3388c90bcd9cac710740bfdf53813d6fda",
+      "approval": "editorial-review/acceptance.json"
+    },
+    {
+      "path": "book/chapters/14-normalized-quantum-comparison.tex",
+      "git_mode": "100644",
+      "git_blob": "1079c594bb436bc1659f0c759ab1b0a40f0cdebb",
+      "git_blob_sha256": "0525eaef04fd63396a14630fe2399d0c352b86961730fa5c6a259126289df237",
+      "materialized_sha256": "0525eaef04fd63396a14630fe2399d0c352b86961730fa5c6a259126289df237",
+      "bytes": 21865,
+      "baseline_git_blob": "d94737ebd61d68efe8defba2b545b3cd31cf94d7",
+      "approval": "editorial-review/acceptance.json"
+    },
+    {
+      "path": "book/chapters/16-dehn-filling-response.tex",
+      "git_mode": "100644",
+      "git_blob": "2a392be928e41d97b66d096e88d74c380a6cd801",
+      "git_blob_sha256": "9b885422342f706d4f7d06fafa4dec7509a69be1aec7133c6377346459635731",
+      "materialized_sha256": "9b885422342f706d4f7d06fafa4dec7509a69be1aec7133c6377346459635731",
+      "bytes": 42239,
+      "baseline_git_blob": "d9ff69f49a125ba1578859b2b3c61b5fc01a760a",
+      "approval": "editorial-review/acceptance.json"
+    },
+    {
+      "path": "book/chapters/23-trace-coefficients.tex",
+      "git_mode": "100644",
+      "git_blob": "111265888671ee33fb61684fc7333053d2e35298",
+      "git_blob_sha256": "56e59ccb2e65f16393d72511ec0a4b62e51411b71b3bc9038fb3f5579b93670b",
+      "materialized_sha256": "56e59ccb2e65f16393d72511ec0a4b62e51411b71b3bc9038fb3f5579b93670b",
+      "bytes": 35340,
+      "baseline_git_blob": "3e742d3fbc1684b71a0a9455babc11f3b389e992",
+      "approval": "editorial-review/acceptance.json"
+    },
+    {
+      "path": "book/chapters/28-genus-two-model.tex",
+      "git_mode": "100644",
+      "git_blob": "5e48cd839f93e83456e5bd25ca6de93b996c95c7",
+      "git_blob_sha256": "0383f71af0980643fdab7c5be47fa0055078fc203f1670acad0a8fc7127f2136",
+      "materialized_sha256": "0383f71af0980643fdab7c5be47fa0055078fc203f1670acad0a8fc7127f2136",
+      "bytes": 34708,
+      "baseline_git_blob": "d85ca97f2d76856b2b0b87c66a09d42a4382a87f",
+      "approval": "pdf-review/layout-v3/acceptance.json"
+    },
+    {
+      "path": "book/chapters/30-sharp-diagnostics.tex",
+      "git_mode": "100644",
+      "git_blob": "de898d9dd45b20572e6b5991dd2438062424e76a",
+      "git_blob_sha256": "323849154e2a1e8518095b9a5bc2fa5ebf9e798d2c2166bfdae65f56b3563a68",
+      "materialized_sha256": "323849154e2a1e8518095b9a5bc2fa5ebf9e798d2c2166bfdae65f56b3563a68",
+      "bytes": 32957,
+      "baseline_git_blob": "16301b013110c260477de037b6a9dc5921566c66",
+      "approval": "editorial-review/acceptance.json"
+    },
+    {
+      "path": "book/chapters/31-arithmetic-remainder.tex",
+      "git_mode": "100644",
+      "git_blob": "509aa1dc0098185add3ee1263fe7fce91a19bd87",
+      "git_blob_sha256": "1a2da9895ced25170fa0d748326c3aee7c72363745770bcca0b1baba974be40b",
+      "materialized_sha256": "1a2da9895ced25170fa0d748326c3aee7c72363745770bcca0b1baba974be40b",
+      "bytes": 18526,
+      "baseline_git_blob": "20144d3faf3f3a9190ace7fa779d2dccd8a0d71a",
+      "approval": "editorial-review/acceptance.json"
+    },
+    {
+      "path": "book/chapters/32-open-questions.tex",
+      "git_mode": "100644",
+      "git_blob": "e6afedfe4f87b8aeb5aae573505ff2e98f2d0636",
+      "git_blob_sha256": "da1dbec5377e48b044d635ce0a229ec336c4cb5e8a986cbe6a0bf2b17ea28029",
+      "materialized_sha256": "da1dbec5377e48b044d635ce0a229ec336c4cb5e8a986cbe6a0bf2b17ea28029",
+      "bytes": 15286,
+      "baseline_git_blob": "b0a691658779af83f677138a18ee512a2e4b248b",
+      "approval": "editorial-review/acceptance.json"
+    },
+    {
+      "path": "book/chapters/appendix-b-conventions.tex",
+      "git_mode": "100644",
+      "git_blob": "53e3510847df76e757322f844c3a80187de863bb",
+      "git_blob_sha256": "6cdcee282d3b3a5cc4a139a73671c657b432807de937f69c8a5a302dea798add",
+      "materialized_sha256": "6cdcee282d3b3a5cc4a139a73671c657b432807de937f69c8a5a302dea798add",
+      "bytes": 9652,
+      "baseline_git_blob": "2da15aa02f203ac8fb13ac9431e0372a81667be9",
+      "approval": "pdf-review/layout-v3/acceptance.json"
+    },
+    {
+      "path": "book/computational-status.md",
+      "git_mode": "100644",
+      "git_blob": "75a5ec2dbd63a07cb29e0902d6ce385d6575a506",
+      "git_blob_sha256": "4e04187988c2f1533fe6862d66b5071270b4f8dfc58694dd2a93ed07f66c6de9",
+      "materialized_sha256": "4e04187988c2f1533fe6862d66b5071270b4f8dfc58694dd2a93ed07f66c6de9",
+      "bytes": 36232,
+      "baseline_git_blob": "b1eb5f08ee82983bcc0e9798e1690fa5bbf913ec",
+      "approval": "editorial-review/acceptance.json"
+    },
+    {
+      "path": "book/polyhedral_volumes_and_geodesic_identities.tex",
+      "git_mode": "100644",
+      "git_blob": "93656285adf58117bf42eb56877f78f9814c99ef",
+      "git_blob_sha256": "8c4f0f0020c0191177b09465d4b3e136f9d7400fcce4b3ec287b16bdee3047ce",
+      "materialized_sha256": "8c4f0f0020c0191177b09465d4b3e136f9d7400fcce4b3ec287b16bdee3047ce",
+      "bytes": 57606,
+      "baseline_git_blob": "906f279f2d0410709889859bb46937cae404acc4",
+      "approval": "editorial-review/acceptance.json"
+    },
+    {
+      "path": "docs/INTEGRATION_STATUS.md",
+      "git_mode": "100644",
+      "git_blob": "d5bb96cefd0d8fcb7d53320ab40cdc488ae785bd",
+      "git_blob_sha256": "60871a1094912e66e93e4eeed0c82ff900f86c7afb750fa9f06bcd5a783ead96",
+      "materialized_sha256": "60871a1094912e66e93e4eeed0c82ff900f86c7afb750fa9f06bcd5a783ead96",
+      "bytes": 10275,
+      "baseline_git_blob": "7ee8304a63c6e458fc2731c07464bd85c76fb37f",
+      "approval": "editorial-review/source-status-v2/acceptance.json"
+    },
+    {
+      "path": "experiments/quantum_geodesics/README.md",
+      "git_mode": "100644",
+      "git_blob": "6d7bf2723b959bd045d365971f6856a3c316b599",
+      "git_blob_sha256": "193149f1dd1fb67bf45dab240ec3b61aad0ece113859b59522b8534d9fef7fd0",
+      "materialized_sha256": "193149f1dd1fb67bf45dab240ec3b61aad0ece113859b59522b8534d9fef7fd0",
+      "bytes": 9074,
+      "baseline_git_blob": "6f4b5383da1db12b22d6d2bd5eea657aee8334a4",
+      "approval": "editorial-review/acceptance.json"
+    },
+    {
+      "path": "packages/volume-toolkit/docs/release-0.4.0.md",
+      "git_mode": "100644",
+      "git_blob": "ff9a09d759d66b03399cf06c1e3eb06c11bf860f",
+      "git_blob_sha256": "d199ececa1270b88f628460120abb32eda3320fdf4d2f37971254dbd8fe07d30",
+      "materialized_sha256": "d199ececa1270b88f628460120abb32eda3320fdf4d2f37971254dbd8fe07d30",
+      "bytes": 14574,
+      "baseline_git_blob": "e6c0c2c81ab228db7a0252db43c438bf287ee87c",
+      "approval": "editorial-review/acceptance.json"
+    },
+    {
+      "path": "site/README.md",
+      "git_mode": "100644",
+      "git_blob": "543c9fd7cb3da88df2e8efed4a19df43e22e0717",
+      "git_blob_sha256": "b11c4ebb95f45ca248481d7c9a2cd038ddfc8fe1de852f0cf5af4d236b500a0c",
+      "materialized_sha256": "b11c4ebb95f45ca248481d7c9a2cd038ddfc8fe1de852f0cf5af4d236b500a0c",
+      "bytes": 16584,
+      "baseline_git_blob": "c7db129a3d59e0901d43fd9c7adf6105115aa092",
+      "approval": "web-review/v3/acceptance.json"
+    },
+    {
+      "path": "site/book/downloads.json",
+      "git_mode": "100644",
+      "git_blob": "4c1cbda1b60f346eafdfa7b116d696e538656e36",
+      "git_blob_sha256": "844d93043ff169865062603262fb2d6c70c66f7d8af8024828c48085f2618d86",
+      "materialized_sha256": "844d93043ff169865062603262fb2d6c70c66f7d8af8024828c48085f2618d86",
+      "bytes": 5731,
+      "baseline_git_blob": null,
+      "approval": "web-review/v3/acceptance.json"
+    },
+    {
+      "path": "site/book/edition.css",
+      "git_mode": "100644",
+      "git_blob": "fd418c6e5ee80564a921212d2efd51905e8984fb",
+      "git_blob_sha256": "779222ec7ea3de9d3e6e6a7f07ae3dfa1ac6367902e1ddf1d52a1d7f1b0e5ef3",
+      "materialized_sha256": "779222ec7ea3de9d3e6e6a7f07ae3dfa1ac6367902e1ddf1d52a1d7f1b0e5ef3",
+      "bytes": 8217,
+      "baseline_git_blob": null,
+      "approval": "web-review/v3/acceptance.json"
+    },
+    {
+      "path": "site/book/search.js",
+      "git_mode": "100644",
+      "git_blob": "f35fedcf38f66421b41c7d298be4a10e43f6aac0",
+      "git_blob_sha256": "0681c803353ebd829920f8ad0a8480691245e92f02e8439e7ea6b0ebfb8fb3c2",
+      "materialized_sha256": "0681c803353ebd829920f8ad0a8480691245e92f02e8439e7ea6b0ebfb8fb3c2",
+      "bytes": 3786,
+      "baseline_git_blob": null,
+      "approval": "web-review/v3/acceptance.json"
+    },
+    {
+      "path": "site/build_book.py",
+      "git_mode": "100644",
+      "git_blob": "2a3c2e8c65f763a42db1207e8e532af92354a957",
+      "git_blob_sha256": "57bcef22df545e5a2335fa3fcc9cda8c96e841307c1f0b1d95ba6b28739f0948",
+      "materialized_sha256": "57bcef22df545e5a2335fa3fcc9cda8c96e841307c1f0b1d95ba6b28739f0948",
+      "bytes": 53190,
+      "baseline_git_blob": null,
+      "approval": "web-review/v3/acceptance.json"
+    },
+    {
+      "path": "site/tests/test_book_search.cjs",
+      "git_mode": "100644",
+      "git_blob": "f893aadb995f407e9d1a640a7aeaf6eb71f88c71",
+      "git_blob_sha256": "6cbdd470eed503f68e42dcff42cafae5497fcdaab7b85244441acebbf51aec56",
+      "materialized_sha256": "6cbdd470eed503f68e42dcff42cafae5497fcdaab7b85244441acebbf51aec56",
+      "bytes": 1592,
+      "baseline_git_blob": null,
+      "approval": "web-review/v3/acceptance.json"
+    },
+    {
+      "path": "site/tests/test_build_book.py",
+      "git_mode": "100644",
+      "git_blob": "dde281641baecc518339aebbff23c3e6d8fdda90",
+      "git_blob_sha256": "a0f0086f8e0ed4b94921c3944c1ae733a8ea5942c1db8adcc4e8d88c0c5c0182",
+      "materialized_sha256": "a0f0086f8e0ed4b94921c3944c1ae733a8ea5942c1db8adcc4e8d88c0c5c0182",
+      "bytes": 16658,
+      "baseline_git_blob": null,
+      "approval": "web-review/v3/acceptance.json"
+    }
+  ],
+  "protected_baseline_paths": 2735,
+  "protected_git_tree_sha256": "fbf33fec97b20971347bb3aca8f6afc93cdbb1f166a48f87ed4bea1c0387c295",
+  "protected_git_modes_and_blobs_unchanged": true,
+  "default_whitespace_check_passed": true,
+  "all_approved_materialized_hashes_unchanged": true,
+  "worktree_status": "",
+  "index_diff_paths": [],
+  "unstaged_diff_paths": [],
+  "approval_sha256": "b4837ced28f611de327df1f7f5e274424be3627d03f741f1bd36daa40e0e7a4e",
+  "precommit_receipt_sha256": "74d367dd8058257aa704ee5c2f070e7c81a38e6db2f37b2b251f3c046c859910",
+  "preflight_receipt_sha256": "56d559ac77bfbd1247cbeb3b342dce2f6ac1119f622a916376f7e410469804cd",
+  "commands_sha256": "770574546345bb22780f49d12f61243f8244023a11058a72ce1444375767cc2c",
+  "build_marker_replay_curation_push_upload_deploy_performed": false
+}

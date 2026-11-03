@@ -1,0 +1,87 @@
+{
+  "stage": "Exact historical preservation exceptions for independent candidate review",
+  "exceptions": [
+    {
+      "canonical_path": "docs/execution/editorial-local-release-2026-11-02/evidence/licensing-review/official-web-retrieval.txt",
+      "sha256": "e5987182f19cac5b52e7ab460e38e607c760445c32c90b344929a102d0bfe8d8",
+      "bytes": 24248,
+      "diagnostics_path": "docs/execution/editorial-local-release-2026-11-02/whitespace-diagnostics/a025e9040f755571.json",
+      "diagnostics_sha256": "045fe494c9df4583d995195eb8d3015a2a0607049438738b92038944150d0ab4",
+      "preserved_source": {
+        "source_root": "outer_run",
+        "source_path": "licensing-review/official-web-retrieval.txt",
+        "sha256": "e5987182f19cac5b52e7ab460e38e607c760445c32c90b344929a102d0bfe8d8",
+        "kind": "exact checkpoint evidence"
+      },
+      "scope": "Exact unchanged historical transcript or existing-source inspection bytes only; no folder rule."
+    },
+    {
+      "canonical_path": "docs/execution/editorial-local-release-2026-11-02/evidence/release-audit/baseline-full-tests.stdout.txt",
+      "sha256": "d010ec8d4ad6f190b2f44a74ea296b177fa43f3ddcbf5875b712d963debc2b2a",
+      "bytes": 18538,
+      "diagnostics_path": "docs/execution/editorial-local-release-2026-11-02/whitespace-diagnostics/994ad4b47e3c4acd.json",
+      "diagnostics_sha256": "c524914384f18637842bf9f99dfea6198250b4653ab1926a3ca5dfdf3b78213b",
+      "preserved_source": {
+        "source_root": "outer_run",
+        "source_path": "release-audit/baseline-full-tests.stdout.txt",
+        "sha256": "d010ec8d4ad6f190b2f44a74ea296b177fa43f3ddcbf5875b712d963debc2b2a",
+        "kind": "exact checkpoint evidence"
+      },
+      "scope": "Exact unchanged historical transcript or existing-source inspection bytes only; no folder rule."
+    },
+    {
+      "canonical_path": "site/book-edition/downloads/inspection/LICENSES/volume-toolkit-MIT.txt",
+      "sha256": "14c0fc10e8db2ba14a669b9939a69f22e729cdaecec1e8bde47d2b959ac5be38",
+      "bytes": 1056,
+      "diagnostics_path": "docs/execution/editorial-local-release-2026-11-02/whitespace-diagnostics/2c727fee16b9dd93.json",
+      "diagnostics_sha256": "9821f398f08855bcfdd8d219deb04926a6c87a400170c41efb29fa881b170ebb",
+      "preserved_source": {
+        "path": "LICENSES/volume-toolkit-MIT.txt",
+        "sha256": "14c0fc10e8db2ba14a669b9939a69f22e729cdaecec1e8bde47d2b959ac5be38",
+        "kind": "unchanged classified inspection input"
+      },
+      "scope": "Exact unchanged historical transcript or existing-source inspection bytes only; no folder rule."
+    },
+    {
+      "canonical_path": "site/book-edition/downloads/inspection/packages/volume-toolkit/LICENSE",
+      "sha256": "14c0fc10e8db2ba14a669b9939a69f22e729cdaecec1e8bde47d2b959ac5be38",
+      "bytes": 1056,
+      "diagnostics_path": "docs/execution/editorial-local-release-2026-11-02/whitespace-diagnostics/86b10fde95d81304.json",
+      "diagnostics_sha256": "2ae8eb9110393955e3a4ed5a2b3fc9b0e2b9f651ca6f0358b662cad3a8704ad0",
+      "preserved_source": {
+        "path": "packages/volume-toolkit/LICENSE",
+        "sha256": "14c0fc10e8db2ba14a669b9939a69f22e729cdaecec1e8bde47d2b959ac5be38",
+        "kind": "unchanged classified inspection input"
+      },
+      "scope": "Exact unchanged historical transcript or existing-source inspection bytes only; no folder rule."
+    },
+    {
+      "canonical_path": "site/book-edition/historical-section9/chapter.html",
+      "sha256": "d8e79d7ee395923059a262c897b413dfe8cb85c4777496595c55dfafa11585a4",
+      "bytes": 163972,
+      "diagnostics_path": "docs/execution/editorial-local-release-2026-11-02/whitespace-diagnostics/09da8dd3c2fb28f0.json",
+      "diagnostics_sha256": "49b726354836f9a235133e3c184661aad2b8523feef5b1ee788e8192b4b9b636",
+      "preserved_source": {
+        "path": "site/section9/chapter.html",
+        "sha256": "d8e79d7ee395923059a262c897b413dfe8cb85c4777496595c55dfafa11585a4",
+        "kind": "frozen historical Section 9 asset"
+      },
+      "scope": "Exact unchanged historical transcript or existing-source inspection bytes only; no folder rule."
+    },
+    {
+      "canonical_path": "site/book-edition/historical-section9/downloads/inspection/book/chapters/09-volume-hessians.tex",
+      "sha256": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00",
+      "bytes": 34587,
+      "diagnostics_path": "docs/execution/editorial-local-release-2026-11-02/whitespace-diagnostics/54e2674519b411ad.json",
+      "diagnostics_sha256": "6df0922202d2b2816b861ad733ea37edc38d774b9950fe21ee6235eb4426abdd",
+      "preserved_source": {
+        "path": "site/section9/downloads/inspection/book/chapters/09-volume-hessians.tex",
+        "sha256": "5f61c653a5cd26bfa5e1a5b436c621b7d72436af46abd3d0b63c5cb401483b00",
+        "kind": "frozen historical Section 9 asset"
+      },
+      "scope": "Exact unchanged historical transcript or existing-source inspection bytes only; no folder rule."
+    }
+  ],
+  "authored_or_generated_exemptions": [],
+  "global_or_folder_override": false
+}

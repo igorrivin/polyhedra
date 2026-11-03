@@ -1,0 +1,354 @@
+{
+  "decision": "accepted_exact_final_licensed_static_export",
+  "source_commit": "4681abb777c813808f2ea4758461c4e89d510ff7",
+  "bound_sha256": {
+    "licensed-edition-dist/downloads/edition-manifest.json": "15e2f7f49e7041cfd6f3035ceb2f17ebcf90f6f0896e78bb6e36da7f2a3fef07",
+    "licensed-edition-dist/downloads/monograph.pdf": "959a27f7559e571faaacebd561133f2e53c6847f99b0c5757d12f4ec467ae2f8",
+    "licensed-edition-build/compilation-manifest.json": "544fe09b8e196f02d3de55e7a17a1cc597ab65b85ef7418cff9d3bc7e9fc0f04",
+    "licensed-final-build/receipt.json": "8cdf1e9b70ea2301a8154f6fa923a29ede7a6a80ca4f9fdc06336589b0705bd7",
+    "web-review/licensing/acceptance.json": "7f3588f95cba7e9c4adc9bf1e3921f98251679a123a7a5abc8401ae52b9cb407",
+    "final-build/receipt.json": "c96bc8c540506698e442a9c54f1cbdff90072fdaa02b153092960bfe4dc83698",
+    "edition-dist/downloads/edition-manifest.json": "838d20bf8953bc27647fdf38e134cc873824fd3ee4b23e7dbe12c6b4c222a35f",
+    "edition-build/compilation-manifest.json": "7a87dce48d3548aabd14f943be38cf22bab02bb0c3f246ac51d95821e84a2b06"
+  },
+  "input_files_rehashed_against_git": 100,
+  "source_graph_files": 36,
+  "compiled_snapshot_files": 36,
+  "output_files_rehashed": 154,
+  "actual_output_inventory_including_manifest": 155,
+  "historical_inputs_rehashed": 46,
+  "historical_export_files": 44,
+  "unchanged_pre_license_export_files": 148,
+  "licensed_zip_entries": 44,
+  "inspection_files": 58,
+  "license_files": 7,
+  "fresh_aux_sha256": "b4edf252ab6b04433a35b0fededa1869bd4e639b87f413df4c45b1a4b1979c64",
+  "fresh_aux_page_count": 200,
+  "reading_pages": 36,
+  "all_html_pages": 41,
+  "source_labels": 613,
+  "numbered_equation_labels": 472,
+  "bibliography_entries": 129,
+  "mathml_nodes": 4729,
+  "figures": 9,
+  "tables": 8,
+  "all_url_occurrences_including_external": 3317,
+  "local_url_occurrences": 3147,
+  "external_link_occurrences": 170,
+  "source_prose_word_tokens": 67129,
+  "aligned_equation_rows": 97,
+  "search_passages": 1242,
+  "actual_index_node_exit_code": 0,
+  "static_accessibility_pages": 38,
+  "source_to_html_checks": [
+    {
+      "page": "introduction.html",
+      "math": 10,
+      "prose_word_tokens": 1889,
+      "tables": 1,
+      "figures": 1
+    },
+    {
+      "page": "01-volume-normalization.html",
+      "math": 25,
+      "prose_word_tokens": 429,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "02-ideal-angle-cells.html",
+      "math": 32,
+      "prose_word_tokens": 664,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "03-ideal-tetrahedron.html",
+      "math": 48,
+      "prose_word_tokens": 638,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "04-hyperideal-integrand.html",
+      "math": 83,
+      "prose_word_tokens": 1353,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "05-boundary-cone-continuation.html",
+      "math": 53,
+      "prose_word_tokens": 723,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "06-torus-sphere.html",
+      "math": 29,
+      "prose_word_tokens": 486,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "07-euclidean-periods.html",
+      "math": 71,
+      "prose_word_tokens": 1069,
+      "tables": 0,
+      "figures": 1
+    },
+    {
+      "page": "08-wp-flat-limit.html",
+      "math": 146,
+      "prose_word_tokens": 1525,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "09-volume-hessians.html",
+      "math": 206,
+      "prose_word_tokens": 3427,
+      "tables": 0,
+      "figures": 2
+    },
+    {
+      "page": "10-quantum-introduction.html",
+      "math": 278,
+      "prose_word_tokens": 4649,
+      "tables": 2,
+      "figures": 1
+    },
+    {
+      "page": "11-quantum-degeneration.html",
+      "math": 98,
+      "prose_word_tokens": 1507,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "12-quantum-boundary-measure.html",
+      "math": 135,
+      "prose_word_tokens": 1726,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "13-four-point-fusion.html",
+      "math": 198,
+      "prose_word_tokens": 2087,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "14-normalized-quantum-comparison.html",
+      "math": 151,
+      "prose_word_tokens": 1737,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "15-quantum-airy.html",
+      "math": 257,
+      "prose_word_tokens": 2218,
+      "tables": 1,
+      "figures": 0
+    },
+    {
+      "page": "16-dehn-filling-response.html",
+      "math": 293,
+      "prose_word_tokens": 3872,
+      "tables": 0,
+      "figures": 1
+    },
+    {
+      "page": "17-unfolding-constant-series.html",
+      "math": 46,
+      "prose_word_tokens": 953,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "18-figure-eight-curves.html",
+      "math": 84,
+      "prose_word_tokens": 1365,
+      "tables": 1,
+      "figures": 0
+    },
+    {
+      "page": "19-pants-twists.html",
+      "math": 51,
+      "prose_word_tokens": 1218,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "20-torus-twist-series.html",
+      "math": 76,
+      "prose_word_tokens": 607,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "21-cuff-matching.html",
+      "math": 20,
+      "prose_word_tokens": 419,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "22-cusps-orthospectrum.html",
+      "math": 75,
+      "prose_word_tokens": 1205,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "23-trace-coefficients.html",
+      "math": 265,
+      "prose_word_tokens": 3053,
+      "tables": 0,
+      "figures": 1
+    },
+    {
+      "page": "24-quantitative-counting.html",
+      "math": 247,
+      "prose_word_tokens": 2738,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "25-global-coefficient-filters.html",
+      "math": 106,
+      "prose_word_tokens": 1488,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "26-counting-to-mixing.html",
+      "math": 175,
+      "prose_word_tokens": 1712,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "27-weighted-mixing-converse.html",
+      "math": 293,
+      "prose_word_tokens": 3680,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "28-genus-two-model.html",
+      "math": 261,
+      "prose_word_tokens": 3372,
+      "tables": 0,
+      "figures": 1
+    },
+    {
+      "page": "29-controlled-observables.html",
+      "math": 266,
+      "prose_word_tokens": 3358,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "30-sharp-diagnostics.html",
+      "math": 294,
+      "prose_word_tokens": 3419,
+      "tables": 2,
+      "figures": 1
+    },
+    {
+      "page": "31-arithmetic-remainder.html",
+      "math": 182,
+      "prose_word_tokens": 1818,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "32-open-questions.html",
+      "math": 24,
+      "prose_word_tokens": 1997,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "appendix-a-fricke.html",
+      "math": 29,
+      "prose_word_tokens": 201,
+      "tables": 0,
+      "figures": 0
+    },
+    {
+      "page": "appendix-b-conventions.html",
+      "math": 109,
+      "prose_word_tokens": 904,
+      "tables": 1,
+      "figures": 0
+    },
+    {
+      "page": "references.html",
+      "math": 13,
+      "prose_word_tokens": 3623,
+      "tables": 0,
+      "figures": 0
+    }
+  ],
+  "diagram_hashes": [
+    {
+      "file": "assets/figure-01.png",
+      "sha256": "c5248baa1c2714efeecb867e81c7708b7e08bfdebe496a62cb250aa76850d9cf",
+      "width": 1263,
+      "height": 1054
+    },
+    {
+      "file": "assets/figure-02.png",
+      "sha256": "051100fdeca219456c0e00227d275eb106ebdb1035d1236e19728579494434d7",
+      "width": 1138,
+      "height": 872
+    },
+    {
+      "file": "assets/figure-03.png",
+      "sha256": "ff955ac87063f13e1d698a1085ac18f30f6b643f818db8a57eb8ac6b0528336f",
+      "width": 1224,
+      "height": 634
+    },
+    {
+      "file": "assets/figure-04.png",
+      "sha256": "cd534d247190d9b257611f6e775a5d6d89d2cdfcaa06f8275baede2fe718197d",
+      "width": 1186,
+      "height": 580
+    },
+    {
+      "file": "assets/figure-05.png",
+      "sha256": "8849f683d2a4871de0f11b4ab5c9e70f52ec0f77c590cb679017b8b1eabf37c2",
+      "width": 1251,
+      "height": 563
+    },
+    {
+      "file": "assets/figure-06.png",
+      "sha256": "81eefb4b2d4e6bd02eb206c3d352e35f7f39fad610f57fa1cea98046f6f2dd22",
+      "width": 1351,
+      "height": 477
+    },
+    {
+      "file": "assets/figure-07.png",
+      "sha256": "fab7500765d9a2169540ecc55faed1b79cbdf2a87322d1a8e382ffa307d07697",
+      "width": 1286,
+      "height": 708
+    },
+    {
+      "file": "assets/figure-08.png",
+      "sha256": "4a32927a69716a9cc3c6bbacfee825d5cd4309ec4601401242527b21cfb6caf2",
+      "width": 1262,
+      "height": 893
+    },
+    {
+      "file": "assets/figure-09.png",
+      "sha256": "262e32b2146b6b6037bd0feb2e1b28cd7c9dac056407628fb9624dc02730d218",
+      "width": 1346,
+      "height": 513
+    }
+  ],
+  "scope": "Read-only generated-output verification. Source read to Pandoc JSON AST for ordered formula and prose-token comparison; no HTML/PDF generation. No browser or scientific replay. PDF visual review separately owned."
+}

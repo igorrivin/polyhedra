@@ -1,0 +1,74 @@
+# Full-book web author repair, v2
+
+The five required v1 source findings are addressed. This is a source repair and
+non-PDF conversion checkpoint, pending independent recheck. It is not a final
+edition build, PDF/diagram inspection, browser review, scientific replay, or
+publication approval.
+
+This code freeze precedes the subsequent two-file book layout repair for
+Figure 8 and the Appendix B page break. The preserved format probe reads the
+earlier editorial freeze with SHA-256
+`06114dcfc5015ab3289f65eca8b484bd995661e07b5b3699c215e3a2de86f680`.
+Its complete source hashes are recorded in its receipt. Later source/PDF
+conservation must use the later frozen source and freshly compiled auxiliary
+file; this pre-layout probe makes no claim about those later bytes.
+
+1. `source_pages()` now walks and consumes the entire supported chapter-routing
+   region, verifies the entry wrapper and bibliography boundaries, and checks
+   that every active graph input was consumed. It supports explicit chapter
+   `input` and `include` commands, including omitted `.tex` suffixes. Unrouted
+   inter-chapter prose/math, unknown or repeated inputs, nested inputs, and
+   unexplained wrapper/bibliography content are rejected. The current canonical
+   acknowledgment remains in the rendered introduction. Known comments,
+   whitespace and print-layout boundaries remain explicitly supported.
+2. Ordinary numbered equation environments without canonical labels are
+   rejected. Unnumbered starred displays remain supported; a starred display
+   cannot acquire a spurious number from a label. The existing strict align-row
+   numbering checks remain unchanged.
+3. Output and scratch paths reject symlink ancestors before normalization.
+   Containment and disjointness checks operate on resolved paths. The exact
+   `hop/../checkout/scratch` defect, its output counterpart, normalized overlap,
+   and symlink aliases are covered by regressions that stop before build work.
+4. The canonical TeX author declaration supplies the visible byline and
+   affiliation, as well as author/affiliation HTML metadata. No separate
+   maintained byline string was added. Current values are Igor Rivin and
+   Department of Mathematics, Temple University. The abstract and canonical
+   Codex acknowledgment survive conversion.
+5. The externally supplied compilation-reuse CLI option, build parameter and
+   receipt loader are removed. Every actual build requires new empty scratch
+   space and freshly compiles the frozen book and drawings. The generated
+   receipt is output evidence; an in-memory hash recheck protects those fresh
+   output bytes while assembling the export. It is not an accepted input
+   provenance assertion. Regression checks reject the removed CLI option and
+   previously owned scratch space before a compiler can run.
+
+## Verification
+
+- All 44 Python site tests passed, including the existing frozen Section 9 and
+  preview tests. Complete logs are `site-tests.stdout` and `site-tests.stderr`.
+- Full-book Node search checks passed against the current-source probe's index.
+  The historical preview's 11 pure search assertions also passed.
+- `git diff --check` passed. Commands and outputs are recorded in
+  `command-results.json` and the numbered stdout/stderr files.
+- The current 36-input TeX graph was checked against the editorial author's
+  `applied/final-freeze-manifest.json`. The format/conservation probe contains
+  36 reading fragments, 4,729 MathML nodes, all 613 label anchors, all 129
+  bibliography entries, nine unresolved figure references, eight tables,
+  783 book links and 1,240 search passages. It has no duplicate HTML identifiers
+  or external runtime dependency. The landing metadata/byline and rendered
+  Codex acknowledgment are checked explicitly.
+- That probe deliberately uses the accepted older auxiliary file for
+  provisional display numbers. Its receipt states that current numbering has
+  **not** been verified by fresh compilation. It does not copy an old PDF into
+  a new edition, render drawings, or offer a compilation-reuse build path.
+
+The v1 author freeze and evidence remain unchanged. This repair touches only
+the previously owned site files; the explicit download allowlist and search
+program retain their v1 bytes. No canonical mathematical source, claim ledger,
+scientific result, historical Section 9 asset, prior Site export or third-party
+notice was changed by this pass. Local working-edition and unresolved-rights
+language remains in place.
+
+No PDF marker, TeX/PDF/TikZ generation, server, browser, numerical campaign,
+commit, push, upload, source synchronization or deployment was invoked here.
+The parent owns the already-issued marker and the subsequent build gates.
