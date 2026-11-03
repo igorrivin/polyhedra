@@ -91,6 +91,38 @@ def companion_guide(config, commit):
     return body + '</section>'
 
 
+def pdf_path_locations(doc, targets):
+    """Find body paths across lines and pages, retaining every glyph location.
+
+    The canonical book has two running headings and a numeric page footer.
+    Remove only those recognized margin lines, never intervening body prose.
+    """
+    headings = {'Polyhedra,Moduli,andQuantumGeometry', 'Researchmonograph',
+                'Polyhedra,Moduli,andQuantumGeometryResearchmonograph'}
+    chars = []
+    for page in doc:
+        for bi, block in enumerate(page.get_text('rawdict')['blocks']):
+            for li, line in enumerate(block.get('lines', [])):
+                glyphs = [char for span in line['spans'] for char in span['chars']]
+                text = ''.join(char['c'] for char in glyphs if not char['c'].isspace())
+                if text in headings and line['bbox'][3] < 60:
+                    continue
+                if text == str(page.number + 1) and line['bbox'][1] > page.rect.height - 60:
+                    continue
+                chars.extend((char['c'], char['bbox'], (page.number, bi, li))
+                             for char in glyphs if not char['c'].isspace())
+    text = ''.join(char[0] for char in chars)
+    occupied, found = set(), []
+    for name in sorted(targets, key=len, reverse=True):
+        for match in re.finditer(re.escape(name), text):
+            positions = set(range(match.start(), match.end()))
+            if occupied & positions:
+                continue
+            occupied.update(positions)
+            found.append((name, chars[match.start():match.end()]))
+    return found
+
+
 def link_pdf(source, output, targets, repository_url):
     import pymupdf
 
@@ -99,30 +131,18 @@ def link_pdf(source, output, targets, repository_url):
     original_links = [page.get_links() for page in doc]
     records = []
     counts = Counter()
-    for page in doc:
-        chars = []
-        for bi, block in enumerate(page.get_text('rawdict')['blocks']):
-            for li, line in enumerate(block.get('lines', [])):
-                for span in line['spans']:
-                    for char in span['chars']:
-                        if not char['c'].isspace():
-                            chars.append((char['c'], char['bbox'], (bi, li)))
-        text = ''.join(c[0] for c in chars)
-        occupied = set()
-        for name in sorted(targets, key=len, reverse=True):
-            for match in re.finditer(re.escape(name), text):
-                positions = set(range(match.start(), match.end()))
-                if occupied & positions:
-                    continue
-                occupied.update(positions)
-                rectangles = {}
-                for _, bbox, line in chars[match.start():match.end()]:
-                    rect = pymupdf.Rect(bbox)
-                    rectangles[line] = rectangles[line] | rect if line in rectangles else rect
-                for rect in rectangles.values():
-                    page.insert_link({'kind': pymupdf.LINK_URI, 'from': rect, 'uri': targets[name]})
-                counts[name] += 1
-                records.append({'page': page.number + 1, 'path': name, 'uri': targets[name], 'rectangles': [list(r) for r in rectangles.values()]})
+    for name, chars in pdf_path_locations(doc, targets):
+        rectangles = {}
+        for _, bbox, line in chars:
+            rect = pymupdf.Rect(bbox)
+            rectangles[line] = rectangles[line] | rect if line in rectangles else rect
+        segments = []
+        for (page_number, _, _), rect in rectangles.items():
+            doc[page_number].insert_link({'kind': pymupdf.LINK_URI, 'from': rect, 'uri': targets[name]})
+            segments.append({'page': page_number + 1, 'rectangle': list(rect)})
+        counts[name] += 1
+        records.append({'page': segments[0]['page'], 'path': name, 'uri': targets[name],
+                        'rectangles': [s['rectangle'] for s in segments], 'segments': segments})
     missing = set(targets) - set(counts)
     if missing:
         raise ValueError('Computational paths not located in PDF: ' + repr(sorted(missing)))
@@ -224,6 +244,8 @@ def build(source, output, ref, allow_dirty=False):
     css.write_text(css.read_text() + '\n#reproduce pre{white-space:pre-wrap;overflow-wrap:anywhere;padding:1rem;background:#f5f5f2}\n')
     shutil.copyfile(source / 'downloads/monograph.pdf', output / 'downloads/monograph-original.pdf')
     pdf = link_pdf(source / 'downloads/monograph.pdf', output / 'downloads/monograph.pdf', targets, config['repository_url'])
+    if Counter(row['path'] for row in pdf['path_links']) != Counter(name for _, name in occurrences):
+        raise ValueError('PDF and HTML computational path occurrence counts differ')
     (output / 'downloads/repository-pdf-links.json').write_text(json.dumps(pdf, indent=2) + '\n')
     manifest = {'schema_version': 1, 'operation': 'polyhedra-repository-links-v1', 'repository_url': config['repository_url'],
                 'repository_commit': commit, 'release_tag': config['release_tag'], 'source_dirty': dirty,
