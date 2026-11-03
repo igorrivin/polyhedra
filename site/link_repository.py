@@ -220,6 +220,8 @@ def build(source, output, ref, allow_dirty=False):
             changed[name] = {'before': digest(before), 'after': digest(data)}
     if linked_count != len(occurrences):
         raise ValueError('Not all repository path occurrences were linked')
+    css = output / 'assets/edition.css'
+    css.write_text(css.read_text() + '\n#reproduce pre{white-space:pre-wrap;overflow-wrap:anywhere;padding:1rem;background:#f5f5f2}\n')
     shutil.copyfile(source / 'downloads/monograph.pdf', output / 'downloads/monograph-original.pdf')
     pdf = link_pdf(source / 'downloads/monograph.pdf', output / 'downloads/monograph.pdf', targets, config['repository_url'])
     (output / 'downloads/repository-pdf-links.json').write_text(json.dumps(pdf, indent=2) + '\n')

@@ -2,7 +2,7 @@
 
 The monograph is published at https://polyhedra.dimensionreducers.ai and its canonical research repository at https://github.com/igorrivin/polyhedra.
 
-The `edition-2026-11-03` release pairs the current repository with the accepted 200-page monograph from scientific artifact commit `13f15cb12a0bfe694cf161c3dda1acebe59fb211`. Computational source, fixtures, mathematical text, claim ledgers and recorded result bytes are preserved in this publication increment. Reader-facing README commands and package project URLs are updated for public use.
+The `edition-2026-11-03-r1` release pairs the current repository with the accepted 200-page monograph from scientific artifact commit `13f15cb12a0bfe694cf161c3dda1acebe59fb211`. Computational source, fixtures, mathematical text, claim ledgers and recorded result bytes are preserved in this publication increment. Reader-facing README commands and package project URLs are updated for public use.
 
 ## Reader entry points
 
