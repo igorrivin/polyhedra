@@ -19,13 +19,13 @@ interval enclosure, or nearly-linear solver is claimed.
 With the toolkit installed, run from any working directory:
 
 ```sh
-python /absolute/path/to/consolidated/experiments/section9/run.py
+python experiments/section9/run.py --output /tmp/polyhedra-section9/result.json --site-dir /tmp/polyhedra-section9/site
 ```
 
 Or from the consolidated repository without installing it:
 
 ```sh
-PYTHONPATH=packages/volume-toolkit python experiments/section9/run.py
+PYTHONPATH=packages/volume-toolkit python experiments/section9/run.py --output /tmp/polyhedra-section9/result.json --site-dir /tmp/polyhedra-section9/site
 ```
 
 The defaults write `artifacts/section9/result.json` and

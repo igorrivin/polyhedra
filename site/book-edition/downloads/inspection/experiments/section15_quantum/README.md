@@ -6,11 +6,13 @@ approximation. The historical values in `../section15/historical-table.json`
 are read-only comparison inputs; their rounding convention is unknown.
 
 The supported environment used for development is Python 3.12.11 with
-mpmath 1.3.0. No installation, optional acceleration, or python-flint is
-required. Run from any directory, with a new output path whose parent exists:
+mpmath 1.3.0. Install the repository's core dependencies first (including mpmath). Optional acceleration and
+python-flint are not required. Run from the repository root, with a new output
+path whose parent exists:
 
 ```sh
-/tmp/polyhedra-baseline-20261031/bin/python /Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/section15_quantum/check.py --profile full --output /absolute/new/result.json
+mkdir -p /tmp/polyhedra-quantum
+python experiments/section15_quantum/check.py --profile full --output /tmp/polyhedra-quantum/result.json
 ```
 
 `smoke` runs the independent checks at 30 decimal digits and the first
@@ -179,6 +181,6 @@ explicitly uncertified error status.
 Focused checks (no full toolkit suite):
 
 ```sh
-/tmp/polyhedra-baseline-20261031/bin/python -m pytest /Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/section15_quantum/test_evaluate.py -q
-/opt/anaconda3/bin/ruff check /Volumes/Lexar/lambda/devel/polyhedra/consolidated/experiments/section15_quantum
+python -m pytest experiments/section15_quantum/test_evaluate.py -q
+ruff check experiments/section15_quantum
 ```

@@ -8,9 +8,9 @@ theorem, an asymptotic rate, geometric model hypotheses, or an interval enclosur
 Run from the repository root with Python 3.12 and the existing mpmath 1.3 environment:
 
 ```sh
-/tmp/polyhedra-baseline-20261031/bin/python experiments/counting_mixing/run.py --output /tmp/counting-mixing-result.json
-/tmp/polyhedra-baseline-20261031/bin/python -m unittest discover -s experiments/counting_mixing/tests -v
-/opt/anaconda3/bin/ruff check experiments/counting_mixing
+python experiments/counting_mixing/run.py --output /tmp/counting-mixing-result.json
+python -m unittest discover -s experiments/counting_mixing/tests -v
+ruff check experiments/counting_mixing
 ```
 
 No installation or network access occurs. The output parent directory must exist,
