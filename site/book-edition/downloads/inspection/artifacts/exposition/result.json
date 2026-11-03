@@ -1,0 +1,740 @@
+{
+  "schema_version": 1,
+  "purpose": "Exact teaching examples for the whole-monograph exposition pass",
+  "source_commit": "72b441ebb504cb7efb5232680600196023383691",
+  "source_dirty": true,
+  "source_sha256": {
+    "experiments/exposition/check_examples.py": "9963c1170522ba3cca6d88a521bc3c4f7c329325b696754ec48cfe4b64315da3",
+    "book/chapters/._07-euclidean-periods.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/._09-volume-hessians.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/._10-quantum-introduction.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/._11-quantum-degeneration.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/._13-four-point-fusion.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/._14-normalized-quantum-comparison.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/._15-quantum-airy.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/._16-dehn-filling-response.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/._23-trace-coefficients.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/._24-quantitative-counting.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/._25-global-coefficient-filters.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/._26-counting-to-mixing.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/._27-weighted-mixing-converse.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/._28-genus-two-model.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/._29-controlled-observables.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/._30-sharp-diagnostics.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/._31-arithmetic-remainder.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/._32-open-questions.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/._appendix-b-conventions.tex": "85a51774f94d618b7978d88731777fa2a0c8257a398292833bccc1a7b35d4ff2",
+    "book/chapters/01-volume-normalization.tex": "741cbb179b73dcd83296471dc6228aa7d58732d7c7f9c44bfca62ffc87b12e4f",
+    "book/chapters/02-ideal-angle-cells.tex": "4b3961486b73adf837e5c9041bd4c54bf717cdae7c8afa2b900b378c99543cbd",
+    "book/chapters/03-ideal-tetrahedron.tex": "7a47468280ccfe0fa05d4f33f571fab7f7524b06e0557c2b34964739a792c48d",
+    "book/chapters/04-hyperideal-integrand.tex": "912b1a244a2ebd40434134cdb08f482a7ae8bc4eed8c05bf8de0b5f42c10d305",
+    "book/chapters/05-boundary-cone-continuation.tex": "61626db09669e05b7d9cc21d6de05673a52fd375a78da069ccbb6c9fbafe9826",
+    "book/chapters/06-torus-sphere.tex": "6df9eadb14ed2b388ff5d1a770c0fae5f266bff0eec3ad7f7baa54263e253328",
+    "book/chapters/07-euclidean-periods.tex": "bd7917167432b3794f3b7ed0ace45be7d480125c7c0a36a9e273b4d3ad2fce9e",
+    "book/chapters/08-wp-flat-limit.tex": "25b12241babeb3955732c9e4e46954659adcb578afb400834836149b97aa9869",
+    "book/chapters/09-volume-hessians.tex": "95e4ed0b28e54b7121a0d244fda2d0bd8d379b7ea042d455f8e6dcf5d97e3ce0",
+    "book/chapters/10-quantum-introduction.tex": "62c137ff68051122c7f2b58b1219e6cb4095d9c9fe05af7194bdd5da930be195",
+    "book/chapters/11-quantum-degeneration.tex": "bbac2d6a57eee69f52f426f16bfbcc341275c263a6f06f56b1270ffb171761cc",
+    "book/chapters/12-quantum-boundary-measure.tex": "853d33d3c5ced7ee679c25475a33557e6d5424ccd3eb4c05e81e1500ac3f586b",
+    "book/chapters/13-four-point-fusion.tex": "8506dc6bce747452879be274aac1144ac839ba9086246781e829dbdb71806ef1",
+    "book/chapters/14-normalized-quantum-comparison.tex": "58c63d1d6e7c470ecaa81b83509d2eb6904efdbd5e603562316376cfa83daaa1",
+    "book/chapters/15-quantum-airy.tex": "af552f8e176f92681f7f3e2f89ee19b9a452d4cc98e49030cc807094890858fc",
+    "book/chapters/16-dehn-filling-response.tex": "c607f18c7684d638ea3f3266896fe433315261eb2fceddd79d6bfe83d0358005",
+    "book/chapters/17-unfolding-constant-series.tex": "02e6d06769548266b727c6642875be2c372698c6944efaa3eaeec81105970e65",
+    "book/chapters/18-figure-eight-curves.tex": "63cc2fcacd3b4781452d67d74cf802877c74294add0b35f82b022d1e6063242e",
+    "book/chapters/19-pants-twists.tex": "9cfab9df886851c7c36d546c6b901aebe758c855f9552d22acea860defea11f7",
+    "book/chapters/20-torus-twist-series.tex": "00f943dd36c34f62ec326bb3a6f1914ec49e8a03e44310eb4add05d25b3edae3",
+    "book/chapters/21-cuff-matching.tex": "303322d2fe1bd7efb7c82b7746132c41f5c7e052615c731a4a8435dbd2e98f92",
+    "book/chapters/22-cusps-orthospectrum.tex": "02360f376c261b7cabe4ad03eb8d1a3eb412a916ac85e114c85abb9790fec1ef",
+    "book/chapters/23-trace-coefficients.tex": "698edb439dfb4da1786aa8c1a8463543dd059d6b92872c0073b6fef20e0e766b",
+    "book/chapters/24-quantitative-counting.tex": "50e3131be8be0db65ad45d9d2c193689caf05d7564f8d80bd95945ed97ab5e50",
+    "book/chapters/25-global-coefficient-filters.tex": "3e1e4882bd2f43c8a78f7bc22136008314b166541bb8706e57c3491fdef71c3c",
+    "book/chapters/26-counting-to-mixing.tex": "87df469e3ba94db2a3c63a550a4d69c01db7cba6ec6ffe67ff37d2315a7f70af",
+    "book/chapters/27-weighted-mixing-converse.tex": "79b73828cb9eb630d27d36ac9410cb17750d2797ab5458b878e0468e1aa7f97e",
+    "book/chapters/28-genus-two-model.tex": "e0563bdacf68267d64aaeb909fa40677d7ac14dff5c536ddffeadc89eef333f1",
+    "book/chapters/29-controlled-observables.tex": "8296f3ae5625fb6900ab695e5bdfa53b37b505ac0aaa8f9ee50ae230136dc0d2",
+    "book/chapters/30-sharp-diagnostics.tex": "056e8cacf2df7d3cdba0c378133328819ca7c3813fce9135835e3a9447522528",
+    "book/chapters/31-arithmetic-remainder.tex": "fddc7f7d93811d75075116ed27e1e73f2abba85f6f3c5ea373da470f6e323141",
+    "book/chapters/32-open-questions.tex": "297e9242ffe4784945d253ded8e4fb3fcb8d75eb8fe2957e998d4080abd5c57d",
+    "book/chapters/appendix-a-fricke.tex": "8300aa69724ff067235d905ad9a4bc973c9303d0edf2fc8c1200789728ef168a",
+    "book/chapters/appendix-b-conventions.tex": "269b4683a52811665ebd956c9c352c86f247cd8a5e9cdb74df1c859670132683"
+  },
+  "python": "3.12.4",
+  "sympy": "1.14.0rc1",
+  "passed": 84,
+  "checks": [
+    {
+      "section": "1",
+      "example": "pants parameters for a once-punctured torus",
+      "value": "1",
+      "expected": "1",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "2",
+      "example": "regular exterior perimeter",
+      "value": "2*pi",
+      "expected": "2*pi",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "2",
+      "example": "tetrahedral angle-cell dimension",
+      "value": "2",
+      "expected": "2",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "2",
+      "example": "delta constraint versus arclength",
+      "value": "1",
+      "expected": "1",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "3",
+      "example": "angle-domain coordinate area",
+      "value": "pi**2/2",
+      "expected": "pi**2/2",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "3",
+      "example": "two orientation sheets at density two",
+      "value": "2*pi**2",
+      "expected": "2*pi**2",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "3",
+      "example": "equilateral cross-ratio density",
+      "value": "sqrt(3)",
+      "expected": "sqrt(3)",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "4",
+      "example": "inverse Poisson block determinant",
+      "value": "a**(-2)",
+      "expected": "a**(-2)",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "5,B",
+      "example": "opening plus deficit at weight one third",
+      "value": "2*pi",
+      "expected": "2*pi",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "6",
+      "example": "orbifold cover area",
+      "value": "pi",
+      "expected": "pi",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "7",
+      "example": "cone radial coefficient",
+      "value": "x**(-2/3)",
+      "expected": "x**(-2/3)",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "7",
+      "example": "collision rotation order",
+      "value": "3",
+      "expected": "3",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "8",
+      "example": "inverse cometric rescaling",
+      "value": "a/k",
+      "expected": "a/k",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "9",
+      "example": "network minimizing voltage",
+      "value": "1/2",
+      "expected": "1/2",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "9",
+      "example": "network minimized energy",
+      "value": "1/2",
+      "expected": "1/2",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "9",
+      "example": "network Gaussian completion of square",
+      "value": "x**2 + (x - 1)**2",
+      "expected": "2*(x - 1/2)**2 + 1/2",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "10",
+      "example": "spin half squared magnitude in hbar squared units",
+      "value": "3/4",
+      "expected": "3/4",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "10",
+      "example": "spin half magnitude in hbar units",
+      "value": "sqrt(3)/2",
+      "expected": "sqrt(3)/2",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "10",
+      "example": "recoupling matrix orthogonality",
+      "value": "0",
+      "expected": "0",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "10",
+      "example": "last-pair singlet probability",
+      "value": "1/4",
+      "expected": "1/4",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "10",
+      "example": "last-pair triplet probability",
+      "value": "3/4",
+      "expected": "3/4",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "10",
+      "example": "figure-eight colored Jones N=3",
+      "value": "13",
+      "expected": "13",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "10",
+      "example": "Gaussian integral",
+      "value": "sqrt(2)*sqrt(pi)*sqrt(h)/sqrt(k)",
+      "expected": "sqrt(2)*sqrt(pi)*sqrt(h)/sqrt(k)",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "11",
+      "example": "cube quadratic moment",
+      "value": "8",
+      "expected": "8",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "11",
+      "example": "Klein cube fifth-order coefficient",
+      "value": "16",
+      "expected": "16",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "12",
+      "example": "first Fricke density correction at u=v=1",
+      "value": "-3/32",
+      "expected": "-3/32",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "13",
+      "example": "four-point delta zero example",
+      "value": "1/4",
+      "expected": "1/4",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "13",
+      "example": "logarithmic limiting basis at positive z",
+      "value": "log(a)",
+      "expected": "log(a)",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "14",
+      "example": "nonbalanced fusion determinant",
+      "value": "-sqrt(2)",
+      "expected": "-sqrt(2)",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "14",
+      "example": "screened Gram characteristic polynomial",
+      "value": "x**2*(x - 2)**2",
+      "expected": "x**2*(x - 2)**2",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "15",
+      "example": "quartic correction at cubic scale",
+      "value": "1/3",
+      "expected": "1/3",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "16",
+      "example": "quartic correction after transverse optimization",
+      "value": "d + c**2/(2*a)",
+      "expected": "d + c**2/(2*a)",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "16",
+      "example": "square-cusp Hessian determinant",
+      "value": "1/4",
+      "expected": "1/4",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "17",
+      "example": "unfolded integral on a circle",
+      "value": "2",
+      "expected": "2",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "18",
+      "example": "positive pants traces",
+      "value": "11",
+      "expected": "11",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "18",
+      "example": "cusp figure-eight trace",
+      "value": "9",
+      "expected": "9",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "19",
+      "example": "Fermi distance at common seam",
+      "value": "cosh(d)",
+      "expected": "cosh(d)",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "20",
+      "example": "coarea example A=2",
+      "value": "sqrt(3)/3",
+      "expected": "sqrt(3)/3",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "21",
+      "example": "two endpoint translations agree",
+      "value": "0",
+      "expected": "0",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "21",
+      "example": "altered endpoint translations disagree",
+      "value": "-1",
+      "expected": "-1",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "21",
+      "example": "corner first variation",
+      "value": "1",
+      "expected": "1",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "21",
+      "example": "normal component at tangent one half",
+      "value": "sqrt(3)/2",
+      "expected": "sqrt(3)/2",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "22",
+      "example": "intersection lies on first semicircle",
+      "value": "1",
+      "expected": "1",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "22",
+      "example": "intersection lies on translate",
+      "value": "1",
+      "expected": "1",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "22",
+      "example": "halving horocycle change",
+      "value": "log(4)",
+      "expected": "2*log(2)",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "23",
+      "example": "double traversal trace",
+      "value": "x**2 - 2",
+      "expected": "x**2 - 2",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "23",
+      "example": "triple traversal trace",
+      "value": "x*(x**2 - 3)",
+      "expected": "x**3 - 3*x",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "24",
+      "example": "primitive disconnected weights",
+      "value": "1",
+      "expected": "1",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "24",
+      "example": "four roots of unity select linear coefficient",
+      "value": "3",
+      "expected": "3",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "24",
+      "example": "smoothing exponent",
+      "value": "1/3",
+      "expected": "1/3",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "25",
+      "example": "one-crossing filter",
+      "value": "0",
+      "expected": "0",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "25",
+      "example": "doubled one-crossing filter",
+      "value": "0",
+      "expected": "0",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "25",
+      "example": "simple double traversal filter",
+      "value": "-3",
+      "expected": "-3",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "26",
+      "example": "two-state periodic count n=1",
+      "value": "4",
+      "expected": "4",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "26",
+      "example": "two-state covariance n=1",
+      "value": "1/3",
+      "expected": "1/3",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "26",
+      "example": "two-state periodic count n=2",
+      "value": "10",
+      "expected": "10",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "26",
+      "example": "two-state covariance n=2",
+      "value": "1/9",
+      "expected": "1/9",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "26",
+      "example": "two-state periodic count n=3",
+      "value": "28",
+      "expected": "28",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "26",
+      "example": "two-state covariance n=3",
+      "value": "1/27",
+      "expected": "1/27",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "26",
+      "example": "two-state periodic count n=4",
+      "value": "82",
+      "expected": "82",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "26",
+      "example": "two-state covariance n=4",
+      "value": "1/81",
+      "expected": "1/81",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "26",
+      "example": "two-state periodic count n=5",
+      "value": "244",
+      "expected": "244",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "26",
+      "example": "two-state covariance n=5",
+      "value": "1/243",
+      "expected": "1/243",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "27",
+      "example": "area preserved by diagonal flow",
+      "value": "6",
+      "expected": "6",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "27",
+      "example": "inverse residue 1 modulo 5",
+      "value": "1",
+      "expected": "1",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "27",
+      "example": "inverse residue 2 modulo 5",
+      "value": "1",
+      "expected": "1",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "27",
+      "example": "inverse residue 3 modulo 5",
+      "value": "1",
+      "expected": "1",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "27",
+      "example": "inverse residue 4 modulo 5",
+      "value": "1",
+      "expected": "1",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "28",
+      "example": "quadratic pullback coefficient",
+      "value": "4*x**8",
+      "expected": "4*x**8",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "29",
+      "example": "length-weight derivative bound at maximum",
+      "value": "exp(-1)",
+      "expected": "exp(-1)",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "29",
+      "example": "Gaussian covariance at zero",
+      "value": "1/2",
+      "expected": "1/2",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "29",
+      "example": "Gaussian covariance at log two",
+      "value": "2/5",
+      "expected": "2/5",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "30",
+      "example": "integrable logarithmic modulus",
+      "value": "1",
+      "expected": "1",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "30",
+      "example": "dyadic leading term cancels",
+      "value": "-2*b*ell",
+      "expected": "-2*b*ell",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "30",
+      "example": "primitive closed interval n=6",
+      "value": "2",
+      "expected": "2",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "30",
+      "example": "first modular-torus trace replacement",
+      "value": "6",
+      "expected": "6",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "31",
+      "example": "Mertens sum at six",
+      "value": "-1",
+      "expected": "-1",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "31",
+      "example": "balanced cutoff exponent",
+      "value": "8/11",
+      "expected": "8/11",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "31",
+      "example": "small-divisor error exponent",
+      "value": "10/11",
+      "expected": "10/11",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "31",
+      "example": "large-divisor error exponent",
+      "value": "10/11",
+      "expected": "10/11",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "31",
+      "example": "signed multiples at cutoff five",
+      "value": "4",
+      "expected": "4",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "32",
+      "example": "four-boundary target correction",
+      "value": "15",
+      "expected": "15",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "A",
+      "example": "trace Jacobian cancels hyperbolic factor",
+      "value": "-z/2",
+      "expected": "-z/2",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    },
+    {
+      "section": "A",
+      "example": "density at absolute Phi_z four",
+      "value": "1/2",
+      "expected": "1/2",
+      "residual": "0",
+      "method": "exact symbolic arithmetic"
+    }
+  ],
+  "limits": "Fixed exact algebra and symbolic integrals only. No global theorem, interval quadrature, geometric realization or historical scientific campaign is verified by this script."
+}
