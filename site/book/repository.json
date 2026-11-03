@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "repository_url": "https://github.com/igorrivin/polyhedra",
+  "website_url": "https://polyhedra.dimensionreducers.ai",
+  "release_tag": "edition-2026-11-03",
+  "scientific_base_commit": "13f15cb12a0bfe694cf161c3dda1acebe59fb211",
+  "companions": [
+    {
+      "id": "normalizations",
+      "title": "Sections 1-8 and Appendix A",
+      "group_id": "normalizations",
+      "directory": "experiments/normalizations",
+      "recipe": "experiments/normalizations/README.md",
+      "entrypoint": "experiments/normalizations/run.py",
+      "result": "artifacts/normalizations/result.json",
+      "inputs": [
+        "experiments/normalizations/fixture.json"
+      ],
+      "chapters": [
+        "01-volume-normalization.html"
+      ],
+      "command": "python experiments/normalizations/run.py --output /tmp/polyhedra-run/normalizations.json",
+      "scope": "Rational fixtures for perimeter and Gram determinants, stack factors, cone walls, intersections, Pfaffians and SL\u2082 trace identities.",
+      "limit": "Finite identities for the named fixtures. No general moduli integral, divisor theorem or geometric realization is computed."
+    },
+    {
+      "id": "section9",
+      "title": "Section 9: Hessians and barriers",
+      "group_id": "section9",
+      "directory": "experiments/section9",
+      "recipe": "experiments/section9/README.md",
+      "entrypoint": "experiments/section9/run.py",
+      "result": "artifacts/section9/result.json",
+      "inputs": [
+        "experiments/section9/fixture.json"
+      ],
+      "chapters": [
+        "09-volume-hessians.html"
+      ],
+      "command": "python experiments/section9/run.py --output /tmp/polyhedra-run/section9.json --site-dir /tmp/polyhedra-run/section9-site",
+      "scope": "The unchanged grid and dense barrier results belong to the frozen Section 9 checkpoint. Its complete reproduction archives remain available from the historical companion pages above.",
+      "limit": "Small supplied fixtures, numerical comparisons and finite exact identities. No nearly-linear solver, global embedding or interval optimality certificate is supplied."
+    },
+    {
+      "id": "quantum_geodesics",
+      "title": "Sections 10-11, 17-22, 32 and Appendix B",
+      "group_id": "quantum-geodesics",
+      "directory": "experiments/quantum_geodesics",
+      "recipe": "experiments/quantum_geodesics/README.md",
+      "entrypoint": "experiments/quantum_geodesics/run.py",
+      "result": "artifacts/quantum_geodesics/result.json",
+      "inputs": [
+        "experiments/quantum_geodesics/fixture.json"
+      ],
+      "chapters": [
+        "10-quantum-introduction.html",
+        "19-pants-twists.html"
+      ],
+      "command": "python experiments/quantum_geodesics/run.py --output /tmp/polyhedra-run/quantum-geodesics.json",
+      "scope": "Four finite quantum groups and ten finite geodesic groups support Sections 10\u201311, 17\u201322, 32 and Appendix B. The recorded report preserves exact and numerical evidence separately.",
+      "limit": "No general Jones or root-of-unity 6j evaluator, global moduli/GMC solver, numerical asymptotic theorem, arbitrary realization or geometric completeness result is claimed."
+    },
+    {
+      "id": "quantum_surgery",
+      "title": "Sections 12-14 and 16",
+      "group_id": "quantum-surgery",
+      "directory": "experiments/quantum_surgery",
+      "recipe": "experiments/quantum_surgery/README.md",
+      "entrypoint": "experiments/quantum_surgery/run.py",
+      "result": "artifacts/quantum_surgery/result.json",
+      "inputs": [
+        "experiments/quantum_surgery/fixture.json"
+      ],
+      "chapters": [
+        "14-normalized-quantum-comparison.html"
+      ],
+      "command": "python experiments/quantum_surgery/run.py --output /tmp/polyhedra-run/quantum-surgery.json",
+      "scope": "Finite period, fusion and local peripheral/surgery calculations with their original recorded coordinates, precision and source identities.",
+      "limit": "Local formulas and fixed examples. No full quantum gluing, geometric Dehn-filling solver or branch-independent Gaussian phase is certified."
+    },
+    {
+      "id": "section15",
+      "title": "Section 15: finite Airy checks",
+      "group_id": "airy",
+      "directory": "experiments/section15",
+      "recipe": "experiments/section15/README.md",
+      "entrypoint": "experiments/section15/check.py",
+      "result": "artifacts/section15/checks.json",
+      "inputs": [
+        "experiments/section15/historical-table.json"
+      ],
+      "chapters": [
+        "15-quantum-airy.html"
+      ],
+      "command": "python experiments/section15/check.py --output /tmp/polyhedra-run/airy-finite.json",
+      "scope": "The exact-integrand companion supplies new numerical quadrature with precision, contour and cutoff comparisons. The earlier finite algebra and historical input values remain separately downloadable.",
+      "limit": "The original Airy evaluator and its raw error record remain unrecovered. The later calculation is independent evidence, not a replay of that missing evaluator; neither supplies a total interval certificate."
+    },
+    {
+      "id": "section15_quantum",
+      "title": "Section 15: exact-integrand quadrature",
+      "group_id": "airy",
+      "directory": "experiments/section15_quantum",
+      "recipe": "experiments/section15_quantum/README.md",
+      "entrypoint": "experiments/section15_quantum/check.py",
+      "result": "artifacts/section15_quantum/result.json",
+      "inputs": [
+        "experiments/section15/historical-table.json"
+      ],
+      "chapters": [
+        "15-quantum-airy.html"
+      ],
+      "command": "python experiments/section15_quantum/check.py --profile smoke --output /tmp/polyhedra-run/quantum-smoke.json",
+      "scope": "The exact-integrand companion supplies new numerical quadrature with precision, contour and cutoff comparisons. The earlier finite algebra and historical input values remain separately downloadable.",
+      "limit": "The original Airy evaluator and its raw error record remain unrecovered. The later calculation is independent evidence, not a replay of that missing evaluator; neither supplies a total interval certificate."
+    },
+    {
+      "id": "counting_mixing",
+      "title": "Sections 23-31: finite formulas",
+      "group_id": "counting-mixing",
+      "directory": "experiments/counting_mixing",
+      "recipe": "experiments/counting_mixing/README.md",
+      "entrypoint": "experiments/counting_mixing/run.py",
+      "result": "artifacts/counting_mixing/result.json",
+      "inputs": [
+        "experiments/counting_mixing/fixture.json"
+      ],
+      "chapters": [
+        "23-trace-coefficients.html"
+      ],
+      "command": "python experiments/counting_mixing/run.py --output /tmp/polyhedra-run/counting-mixing.json",
+      "scope": "Exact and numerical finite checks accompany the coefficient, dynamics and arithmetic formulas; the result retains its clean-source checkpoint provenance.",
+      "limit": "Finite checks do not prove the stated global counting or mixing implications and do not supply their independent analytic hypotheses."
+    },
+    {
+      "id": "section30",
+      "title": "Section 30: bounded diagnostic",
+      "group_id": "torus",
+      "directory": "experiments/section30",
+      "recipe": "experiments/section30/README.md",
+      "entrypoint": "experiments/section30/run.py",
+      "result": "artifacts/section30/result.json",
+      "inputs": [
+        "experiments/section30/fixture.json"
+      ],
+      "chapters": [
+        "30-sharp-diagnostics.html"
+      ],
+      "command": "python experiments/section30/run.py --output /tmp/polyhedra-run/torus-bounded.json",
+      "scope": "The maintained full diagnostic through length 8192 is supplied alongside the frozen length-64 predecessor. Each result keeps its own inputs, precision and source record.",
+      "limit": "The original historical high-length precision archive remains unrecovered. These replacement diagnostics do not certify a global sharp asymptotic or recover the original campaign."
+    },
+    {
+      "id": "torus_campaign",
+      "title": "Sections 30-31: full torus campaign",
+      "group_id": "torus",
+      "directory": "experiments/torus_campaign",
+      "recipe": "experiments/torus_campaign/README.md",
+      "entrypoint": "experiments/torus_campaign/run.py",
+      "result": "artifacts/torus_campaign/result.json",
+      "inputs": [],
+      "chapters": [
+        "30-sharp-diagnostics.html",
+        "31-arithmetic-remainder.html"
+      ],
+      "command": "python experiments/torus_campaign/run.py --cutoff 64 --output-dir /tmp/polyhedra-run/torus64",
+      "scope": "The maintained full diagnostic through length 8192 is supplied alongside the frozen length-64 predecessor. Each result keeps its own inputs, precision and source record.",
+      "limit": "The original historical high-length precision archive remains unrecovered. These replacement diagnostics do not certify a global sharp asymptotic or recover the original campaign."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "source_commit": "13f15cb12a0bfe694cf161c3dda1acebe59fb211",
+  "reachable_objects": 4062,
+  "git_blobs_scanned": 3052,
+  "git_blob_bytes": 124738535,
+  "embedded_archives_scanned": 168,
+  "verified_lfs_objects": 402,
+  "lfs_bytes": 53364256,
+  "missing_historical_lfs_objects": {},
+  "patterns_checked": [
+    "private-key",
+    "github-token",
+    "openai-key",
+    "aws-access-key",
+    "slack-token",
+    "url-credentials"
+  ],
+  "findings": [],
+  "reviewed_templates": [
+    {
+      "path": "packages/volume-toolkit/.github/workflows/sync-to-hf.yml",
+      "kind": "shell-variable credential reference; no literal secret"
+    }
+  ],
+  "scope": "Pattern and filename checks over reachable history, embedded archives and verified LFS payloads; not a guarantee that no confidential content exists."
+}

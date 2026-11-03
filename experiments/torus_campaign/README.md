@@ -12,15 +12,15 @@ Use the supported Python interpreter and the available Apple compiler. No new
 packages are needed. From the repository root, first run:
 
 ```sh
-/tmp/polyhedra-baseline-20261031/bin/python -m unittest discover -s experiments/torus_campaign/tests -v
-/tmp/polyhedra-baseline-20261031/bin/python experiments/torus_campaign/run.py --cutoff 64 --output-dir /tmp/torus-check64
-/tmp/polyhedra-baseline-20261031/bin/python experiments/torus_campaign/run.py --cutoff 512 --output-dir /tmp/torus-preflight512
+python -m unittest discover -s experiments/torus_campaign/tests -v
+python experiments/torus_campaign/run.py --cutoff 64 --output-dir /tmp/torus-check64
+python experiments/torus_campaign/run.py --cutoff 512 --output-dir /tmp/torus-preflight512
 ```
 
 After checking those receipts and resource measurements, run:
 
 ```sh
-/tmp/polyhedra-baseline-20261031/bin/python experiments/torus_campaign/run.py --cutoff 8192 --preflight /tmp/torus-preflight512/result.json --output-dir /tmp/torus-full8192
+python experiments/torus_campaign/run.py --cutoff 8192 --preflight /tmp/torus-preflight512/result.json --output-dir /tmp/torus-full8192
 ```
 
 Outputs and their directory must be new. The full run requires a successful

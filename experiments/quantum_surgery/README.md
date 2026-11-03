@@ -2,11 +2,11 @@
 
 This offline companion checks explicitly bounded formulas from [Section 12](../../book/chapters/12-quantum-boundary-measure.tex), [Section 13](../../book/chapters/13-four-point-fusion.tex), [Section 14](../../book/chapters/14-normalized-quantum-comparison.tex), and [Section 16](../../book/chapters/16-dehn-filling-response.tex). It is separate from the volume toolkit. The geometric hypotheses and source theorems remain mathematical inputs.
 
-Run with Python 3.10 or newer and mpmath 1.3.0. The supported review environment is `/tmp/polyhedra-baseline-20261031/bin/python`; no installation or network access occurs during these commands:
+Run with Python 3.10 or newer and mpmath 1.3.0. The supported review environment is `python`; no installation or network access occurs during these commands:
 
 ```sh
-/tmp/polyhedra-baseline-20261031/bin/python experiments/quantum_surgery/run.py --output /tmp/quantum-surgery-result.json
-/tmp/polyhedra-baseline-20261031/bin/python -m unittest discover -s experiments/quantum_surgery/tests -v
+python experiments/quantum_surgery/run.py --output /tmp/quantum-surgery-result.json
+python -m unittest discover -s experiments/quantum_surgery/tests -v
 ruff check experiments/quantum_surgery
 ```
 

@@ -5,9 +5,9 @@ This offline companion has four finite quantum groups and ten finite geodesic gr
 Run in the existing supported Python environment (Python 3.12, mpmath 1.3, SymPy 1.14):
 
 ```sh
-/tmp/polyhedra-baseline-20261031/bin/python experiments/quantum_geodesics/run.py --output /tmp/quantum-geodesics-result.json
-/tmp/polyhedra-baseline-20261031/bin/python -m unittest discover -s experiments/quantum_geodesics/tests -v
-/opt/anaconda3/bin/ruff check experiments/quantum_geodesics
+python experiments/quantum_geodesics/run.py --output /tmp/quantum-geodesics-result.json
+python -m unittest discover -s experiments/quantum_geodesics/tests -v
+ruff check experiments/quantum_geodesics
 ```
 
 Output must be a new file in an existing directory outside the companion source. Initial author results remain preserved under the outer `../execution/final-chapters-review-2026-11-01/computation/`. The [reviewed clean-source result](../../artifacts/quantum_geodesics/result.json) is recorded in the [completed checkpoint](../../docs/execution/final-chapters-review-2026-11-01/README.md), which identifies its source commit and separate author, review and final-generation evidence. No result is computed or written on import; the driver works from another working directory. Explicit exceptions remain active under `python -O`. Serialization happens before exclusive file creation, so failed identities or nonfinite data cannot produce a successful result.

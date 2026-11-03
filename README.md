@@ -1,10 +1,64 @@
-# Polyhedra
+# Polyhedra, Moduli, and Quantum Geometry
 
-Research software and a computational companion to *Polyhedra, Moduli, and Quantum Geometry*.
+**Igor Rivin · Department of Mathematics, Temple University**
+Prepared and revised with substantial help from Codex.
 
-This repository integrates the volume toolkit, the historical `ipoly` study, and the supplied monograph while preserving the original Git histories and source provenance. The integration is in progress; numerical examples and mathematical claims retain the evidence limits recorded in the audit and plan.
+[Read the monograph](https://polyhedra.dimensionreducers.ai) · [PDF](https://polyhedra.dimensionreducers.ai/downloads/monograph.pdf) · [Computational guide](experiments/README.md) · [Download this edition](https://github.com/igorrivin/polyhedra/releases/tag/edition-2026-11-03)
 
-## Contents
+This is the public companion repository for the monograph. It brings together the canonical LaTeX, the maintained volume toolkit, nine computational companions, recorded results and claim ledgers, and the preserved histories of the original toolkit and `ipoly` repositories.
+
+## Start here
+
+- **Read:** use the [web edition](https://polyhedra.dimensionreducers.ai) or [PDF](https://polyhedra.dimensionreducers.ai/downloads/monograph.pdf). Computational paths in the linked edition point to the exact repository commit for that edition.
+- **Find a computation:** the [chapter guide](experiments/README.md) connects sections to recipes, inputs, results, and evidence limits. The [web computational index](https://polyhedra.dimensionreducers.ai/computations.html) provides the same route alongside the text.
+- **Inspect without Git:** download `polyhedra-source.zip` from the [edition release](https://github.com/igorrivin/polyhedra/releases/tag/edition-2026-11-03). It includes the actual LFS-backed data and a checksum manifest. GitHub's automatic source archives may contain LFS pointers instead.
+- **Reproduce:** use a Git clone as below. Drivers record the source commit and working-tree state; keep new outputs outside the checkout. The ZIP is an inspection/source distribution, not a Git checkout.
+
+## Quick start
+
+Install Python 3.10-3.14 and Git LFS, then:
+
+```sh
+git clone https://github.com/igorrivin/polyhedra.git
+cd polyhedra
+git lfs install --local
+git lfs pull
+python3.12 -m venv .venv
+. .venv/bin/activate
+python -m pip install -e packages/volume-toolkit
+mkdir -p /tmp/polyhedra-example
+python experiments/normalizations/run.py --output /tmp/polyhedra-example/normalizations.json
+```
+
+Use a new output filename for each run. The normalization example is a finite exact check. Other companions need different runtimes and precision settings; consult their recipes before launching a full campaign. No hosted numerical service is required.
+
+## Repository map
+
+| Path | Contents |
+| --- | --- |
+| [`book/`](book/README.md) | Canonical LaTeX, figures, and mathematical claim ledgers |
+| [`packages/volume-toolkit/`](packages/volume-toolkit/README.md) | Installable geometry, volume, angle, and optimization toolkit |
+| [`experiments/`](experiments/README.md) | Maintained chapter computations and reproduction instructions |
+| [`artifacts/`](artifacts/) | Recorded results and historical manuscript checkpoints |
+| [`site/`](site/README.md) | Edition builder and repository/PDF link tools |
+| [`research/ipoly/`](research/ipoly/README.md) | Preserved original study and scripts |
+| [`docs/execution/`](docs/execution/) | Reviews, scoped acceptance records, and verification receipts |
+| [`provenance/`](provenance/README.md) | Original source identities and history/path mapping |
+| [`LICENSES/`](LICENSES/README.md) | CC BY 4.0 text, MIT code scopes, and inherited notices |
+
+## Current verification
+
+For this publication, all **713 toolkit tests passed** in a fresh isolated Python 3.12.4 environment with network-resolved development dependencies. This is a new result; the earlier dependency-limited test records below remain unchanged. Numerical campaign replay, proof review and the supported-version CI matrix are distinct checks.
+
+## Evidence and edition status
+
+The public website and companion repository are published separately. The release identifies its repository commit; the site's repository-link manifest identifies the exact source targets and publication-only PDF/HTML changes. Existing scientific results retain their original inputs, source identities, precision and residual records. Publishing the repository does not rerun those campaigns or turn floating-point agreement into an interval certificate or a proof of a general theorem.
+
+The monograph contains all 32 chapters and both appendices. The [computational status](book/computational-status.md), [numerical errata](book/numerical-errata.md), and [publication guide](docs/publication.md) explain coverage and verification limits. Original source histories and earlier artifacts remain available as historical evidence.
+
+The following descriptions retain the scope of the original research checkpoints. Their references to local-only status and blocked uploads describe those earlier stages; the current publication is linked above.
+
+## Research checkpoint index
 
 - [Volume toolkit](packages/volume-toolkit/README.md): existing Python package and API, tests, examples, and historical results.
 - [Monograph source](book/README.md): canonical LaTeX with modular sources and claim ledgers for Sections 1–32 and both appendices. The chapter reviews distinguish local proofs, inspected external statements, conditional consequences, finite computations and open questions; each checkpoint retains its exact source and evidence limits.
@@ -33,7 +87,7 @@ The cross-chapter editorial pass reconciles notation, assumptions, reading route
 
 The scientific result `artifacts/quantum_geodesics/result.json` retains the provenance in the [final-chapters checkpoint](docs/execution/final-chapters-review-2026-11-01/README.md). This editorial/local-edition increment performs no numerical replay. Earlier results, PDFs, Section 9 exports and the Sites preview retain their existing identities. The original Airy evaluator and torus precision archive remain unrecovered; open research questions retain their stated scope and are not publication requirements. Browser QA, complete declared release checks, distributed license notices and inherited-material exclusions remain publication gates. Upload and deployment are the final publication step.
 
-## Development
+## Development and recorded earlier checks
 
 Use Python 3.10 through 3.14, matching the toolkit's declared support. The system `python3` is currently 3.15 and is unsuitable. With an installed supported interpreter (3.12 shown), from the repository root:
 

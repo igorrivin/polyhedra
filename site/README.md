@@ -294,3 +294,15 @@ Focused regressions and the existing site suite:
 /tmp/polyhedra-baseline-20261031/bin/python -m unittest discover -s site/tests -v
 /opt/homebrew/bin/node site/tests/test_book_search.cjs
 ```
+# Public repository links
+
+The public monograph is at https://polyhedra.dimensionreducers.ai and its computational repository is https://github.com/igorrivin/polyhedra. The [publication guide](../docs/publication.md) describes the exact-commit links, release archive, and PDF annotations.
+
+After generating a complete local edition, `link_repository.py` produces a separate linked public edition. It preserves the original build manifest and scientific files, validates every repository target, and adds `downloads/repository-link-manifest.json`. The final run requires a clean source commit and an output directory outside this checkout. Configuration and the nine companion recipes are in `book/repository.json`.
+
+```sh
+python -m pip install pymupdf
+python site/link_repository.py --source site/book-edition --output /tmp/polyhedra-linked --ref HEAD
+```
+
+The earlier builder and preview instructions below describe their original local stages. The linking step does not rerun their mathematical conversion or any scientific campaign.

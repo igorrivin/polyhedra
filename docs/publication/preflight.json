@@ -1,0 +1,40 @@
+{
+  "stage": "publication author preflight before source commit",
+  "python": "3.12.4",
+  "toolkit_tests": {
+    "passed": 713,
+    "seconds": 36.78
+  },
+  "site_tests": {
+    "passed": 46,
+    "subtests_passed": 109,
+    "seconds": 1.04
+  },
+  "dependency_check": "95 installed packages compatible; fresh virtual environment with system packages disabled",
+  "data_integrity": {
+    "lfs_paths": 412,
+    "parsed_lfs_json": 354,
+    "canonical_input_hashes": 2,
+    "manifest_artifacts": 2,
+    "all_lfs_materialized": true
+  },
+  "history": {
+    "git_blobs_scanned": 3052,
+    "archives_scanned": 168,
+    "verified_lfs_objects": 402,
+    "unresolved_findings": 0
+  },
+  "pdf_author_preview": {
+    "pages": 200,
+    "linked_path_occurrences": 54,
+    "unique_paths": 24,
+    "existing_links_preserved": 1183,
+    "render_verification": "All pages unchanged outside the added title-page repository footer; title page also visually inspected."
+  },
+  "scientific_replay": "not performed",
+  "limits": [
+    "These checks cover the declared Python 3.12.4 environment; the supported-version GitHub CI matrix runs separately after push.",
+    "Existing scientific results retain their original source, precision and evidence scopes.",
+    "Final clean-source link build, release asset hashes and publication receipts are recorded separately."
+  ]
+}
