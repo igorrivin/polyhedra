@@ -1,0 +1,61 @@
+{
+  "baseline_commit": "5f7cd6d172e10cbae520ed4cf21a5746798b10dd",
+  "revision_scope": [
+    "Section 10 introduction and 10.1",
+    "Section 17.1"
+  ],
+  "source_hashes": {
+    "book/chapters/10-quantum-introduction.tex": {
+      "before_sha256": "d8fe0bb6f6698a3c50865ae2cf0cac029f4a26c30f46fa71de1907d1ffd48fa3",
+      "after_sha256": "a4191fae29e49573e88c5cf5a1e28e2eecccbe9f98c999e356711ab1bce35e7b"
+    },
+    "book/chapters/17-unfolding-constant-series.tex": {
+      "before_sha256": "7b3e784b9b6f7ace3f402afca0a402e5cc354fd118d751b07b6a8bad707a4e88",
+      "after_sha256": "55573e1b632634754dff7395e59466c3039f7c9308120362285d3d35239014a0"
+    }
+  },
+  "all_original_labels_and_equation_numbers_preserved": true,
+  "chapter_remainders_byte_identical": true,
+  "historical_claim_ledgers_unchanged": true,
+  "review_type": "author revision and author mathematical self-review; no new independent acceptance",
+  "new_evidence": "Exact recoupling algebra and written elementary unfolding derivations; no scientific campaign replay",
+  "primary_sources_checked": [
+    {
+      "url": "https://arxiv.org/pdf/math/0305113",
+      "scope": "Taylor-Woodward opening definitions: intermediate labels, change of basis, finite fusion conventions"
+    },
+    {
+      "url": "https://arxiv.org/pdf/math-ph/9812013",
+      "scope": "Roberts classical representation and tetrahedral context"
+    },
+    {
+      "url": "https://www.labri.fr/perso/vdelecro/toprint/mirzakhani1-pdf2up.pdf",
+      "scope": "Mirzakhani Section 7 covering/integration formula and Section 8 recursion mechanism"
+    },
+    {
+      "url": "https://macbuse.github.io/M2R_2019/shearsAgain.pdf",
+      "scope": "McShane cusp-gap explanation and pants kernels; full null-set proof not reproduced"
+    }
+  ],
+  "preview_validation": {
+    "pdf_pages": 206,
+    "label_numbers": 613,
+    "bibliography_entries": 129,
+    "mathml_nodes": 4877,
+    "figures": 9,
+    "tables": 8,
+    "local_links_and_search_targets": 3361,
+    "site_tests_passed": 46,
+    "visual_review_pages": [
+      40,
+      41,
+      42,
+      43,
+      99,
+      100,
+      101,
+      102
+    ]
+  },
+  "preview_boundary": "Preview was generated before the final short definitions of lowering matrix, essential/simple curves, and ineffective isotropy; the clean final build receives separate verification."
+}

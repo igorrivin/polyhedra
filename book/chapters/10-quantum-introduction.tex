@@ -2,12 +2,15 @@
 \label{sec:quantumintro}
 
 This part uses several constructions that share the word
-\emph{quantum} but have different definitions. This section introduces
-the objects, the elementary asymptotic mechanism, and the distinctions
-needed to read the calculations. The prerequisites are representation
-theory at the level of tensor products, elementary complex analysis,
-and the geometry already discussed. No physical interpretation is
-needed for the finite sums or special-function identities.
+\emph{quantum} but have different definitions. We begin with a
+linear-algebra question: how does one compare two ways of combining
+three vector spaces that carry symmetries? The answer supplies the
+local weights used later to build topological invariants. The opening
+example needs only tensor products and changes of basis; the
+representation-theoretic terms are introduced as they arise.
+Later subsections also use elementary complex analysis and the
+geometry already discussed. No physical interpretation is needed
+for the finite sums or special-function identities.
 
 The organizing operation is cutting and gluing. A decomposition gives
 intermediate labels; changing the decomposition gives a change-of-basis
@@ -21,28 +24,195 @@ tetrahedra.
 \subsection{Six labels: recoupling and tetrahedral weights}
 \label{sec:introrecoupling}
 
-Let $V_j$ be the irreducible $\mathfrak{sl}_2$-representation of dimension
-$2j+1$, where $j$ is a nonnegative half-integer. Consider
+\paragraph{Why start with representations?}
+A triangulated three-manifold has many descriptions: its tetrahedra
+can be assembled in different orders, and the triangulation itself
+can be changed. To build an invariant from local data, we need
+weights with exact rules for comparing these descriptions.
+Representation theory provides such rules. Combining representations
+uses tensor products; decomposing them into simpler pieces introduces
+intermediate labels; changing the order of decomposition produces a
+matrix. The identities satisfied by these matrices will become the
+identities needed for changing a triangulation. This is the reason
+for the algebra in this subsection.
+
+The Lie algebra $\mathfrak{sl}_2=\mathfrak{sl}_2(\CC)$ is the vector
+space of traceless $2\times2$ complex matrices, with bracket
+$[X,Y]=XY-YX$. A \emph{representation} on a vector space $V$ assigns
+to each $X$ a linear operator $\rho(X)$ on $V$, linearly in $X$,
+so that $\rho([X,Y])=[\rho(X),\rho(Y)]$. It is
+\emph{irreducible} if no nonzero proper subspace is preserved by all
+these operators. Thus an irreducible representation is a building
+block for a symmetry action.
+
+The finite-dimensional irreducibles are
 \[
- \operatorname{Hom}_{\mathfrak{sl}_2}(V_d,V_a\otimes V_b\otimes V_c).
+ V_j=\operatorname{Sym}^{2j}(\CC^2),\qquad
+ j=0,\tfrac12,1,\tfrac32,\ldots,\qquad \dim V_j=2j+1.
 \]
-There are two natural bases. One first decomposes $V_a\otimes V_b$
-and records an intermediate representation $V_s$; the other first
-decomposes $V_b\otimes V_c$ and records $V_t$. Thus
+Here $\operatorname{Sym}^m(\CC^2)$ is the space of symmetric
+$m$-fold tensors on $\CC^2$; its basis has one element for each
+possible number $0,\ldots,m$ of copies of the second standard basis
+vector. In particular, $V_0=\CC$ is the trivial representation and
+$V_{1/2}=\CC^2$ is the usual matrix action.
+The name \emph{spin} for $j$ comes from rotations: the compact group
+$\mathrm{SU}(2)$ double-covers $\mathrm{SO}(3)$, and the complexification
+of its Lie algebra is $\mathfrak{sl}_2$. Integer spins descend to
+$\mathrm{SO}(3)$; nonintegral half-integer spins need the double cover.
+We use this familiar family because its tensor-product rule is
+especially explicit. At this stage $j$ is a representation label,
+not an edge length.
+
+\paragraph{Combining two building blocks.}
+On a tensor product the infinitesimal symmetry acts on both factors:
+\[
+ X(v\otimes w)=(Xv)\otimes w+v\otimes(Xw).
+\]
+The Clebsch--Gordan rule says
+\[
+ V_a\otimes V_b
+   \cong\bigoplus_{s=|a-b|}^{a+b}V_s,
+ \qquad s\text{ increases in steps of }1.
+\]
+Each allowed $V_s$ occurs once. Equivalently, the triple $(a,b,s)$
+is \emph{admissible} when it satisfies the triangle inequalities
+and $a+b+s$ is an integer. The direct-sum sign means that every
+vector has a unique sum of components in these invariant subspaces.
+
+For example,
+\[
+ V_{1/2}\otimes V_{1/2}=V_0\oplus V_1,\qquad 2\cdot2=1+3.
+\]
+Choose an orthonormal basis $e_+,e_-$ of $\CC^2$. The one-dimensional
+summand is spanned by
+\[
+ \frac{e_+\otimes e_- - e_-\otimes e_+}{\sqrt2},
+\]
+and the three-dimensional summand is the symmetric subspace, with
+basis
+\[
+ e_+\otimes e_+,\qquad
+ \frac{e_+\otimes e_-+e_-\otimes e_+}{\sqrt2},\qquad
+ e_-\otimes e_-.
+\]
+The antisymmetric vector is fixed by $\mathrm{SL}_2$ because its
+transformation factor is the determinant, which is one.
+This gives a concrete meaning to a decomposition into irreducibles.
+
+\paragraph{What the symbols $B$ and $F$ mean.}
+Now combine three factors and specify a desired output type $V_d$.
+The vector space
+\[
+ H_d=\operatorname{Hom}_{\mathfrak{sl}_2}
+       (V_d,V_a\otimes V_b\otimes V_c)
+\]
+consists of linear maps that commute with the symmetry action.
+Such a map is called an \emph{intertwiner}. The dimension of $H_d$
+counts how many copies of $V_d$ occur in the triple tensor product.
+
+Choose, once and for all, a normalized inclusion
+$C_s^{ab}:V_s\longrightarrow V_a\otimes V_b$ for each admissible
+triple. For example, $C_0^{1/2,1/2}(1)$ can be the antisymmetric
+unit vector just displayed. There are two ways to compose these
+inclusions:
+\[
+ \begin{aligned}
+ B_s^{(ab)c}&=(C_s^{ab}\otimes\mathrm{id}_{V_c})\,C_d^{sc},\\
+ B_t^{a(bc)}&=(\mathrm{id}_{V_a}\otimes C_t^{bc})\,C_d^{at}.
+ \end{aligned}
+\]
+Both are maps from $V_d$ to the same triple tensor product.
+The parentheses record which two factors were combined first.
+The index $s$ ranges over labels for which $(a,b,s)$ and $(s,c,d)$
+are admissible; $t$ ranges over labels for which $(b,c,t)$ and
+$(a,t,d)$ are admissible. Each collection is a basis of $H_d$.
+
+The letter $B$ therefore denotes a \emph{basis intertwiner}.
+The numbers $F_{st}^{abc;d}$ are defined to be the coefficients
+that express the first basis in the second:
 \begin{equation}
  B_s^{(ab)c}=\sum_t F_{st}^{abc;d}B_t^{a(bc)}.
  \label{eq:introrecoupling}
 \end{equation}
-The coefficients depend on six labels $a,b,c,d,s,t$. With conventional
-dimension and sign factors, they are the \emph{$6j$-symbols}. The
-four admissible triples
+For fixed $a,b,c,d$, this is an ordinary finite change-of-basis
+matrix, with row index $s$ and column index $t$. The sum runs
+over the allowed intermediate types, not over vectors of $V_t$.
+Normalization and phase choices for the inclusions matter:
+changing them changes the entries of $F$. One may use the
+$\mathrm{SU}(2)$-invariant Hermitian inner products to make the
+bases orthonormal; $F$ is then unitary.
+
+\paragraph{A complete $2\times2$ example.}
+Take $a=b=c=d=\tfrac12$. Applying the two-factor rule twice gives
+\[
+ V_{1/2}^{\otimes3}\cong V_{3/2}\oplus V_{1/2}\oplus V_{1/2}.
+\]
+Thus $H_{1/2}$ has dimension two. In the first basis we distinguish
+the copies by whether the first pair has type $s=0$ or $s=1$;
+in the second we use the type $t=0$ or $t=1$ of the last pair.
+
+The whole calculation can be seen in three tensor coordinates.
+Write
+\[
+ u=e_+\otimes e_+\otimes e_-,\qquad
+ v=e_+\otimes e_-\otimes e_+,\qquad
+ w=e_-\otimes e_+\otimes e_+.
+\]
+An intertwiner from $V_{1/2}$ is determined by its value on $e_+$.
+For the following phase choices those values are
+\[
+ \begin{aligned}
+ B_0^{(ab)c}(e_+)&=\frac{v-w}{\sqrt2},
+ &B_1^{(ab)c}(e_+)&=\frac{2u-v-w}{\sqrt6},\\
+ B_0^{a(bc)}(e_+)&=\frac{u-v}{\sqrt2},
+ &B_1^{a(bc)}(e_+)&=\frac{u+v-2w}{\sqrt6}.
+ \end{aligned}
+\]
+To see why these vectors describe the two copies, the raising
+matrix $\left(\begin{smallmatrix}0&1\\0&0\end{smallmatrix}\right)$
+sends each of $u,v,w$ to $e_+\otimes e_+\otimes e_+$ under the
+tensor-product action. It kills precisely the combinations whose
+three coefficients sum to zero. These form a two-dimensional
+space; applying its transpose, the lowering matrix, supplies the corresponding
+images of $e_-$. The vectors above give two orthonormal bases
+of this same space. Their subscripts $0,1$ record the
+antisymmetric or symmetric behavior of the chosen pair.
+
+Taking their inner products gives
+\[
+ \begin{pmatrix}B_0^{(ab)c}\\ B_1^{(ab)c}\end{pmatrix}
+ =\begin{pmatrix}
+ -\tfrac12&\tfrac{\sqrt3}{2}\\
+ \tfrac{\sqrt3}{2}&\tfrac12
+ \end{pmatrix}
+ \begin{pmatrix}B_0^{a(bc)}\\ B_1^{a(bc)}\end{pmatrix}.
+\]
+For instance, the upper-left entry is
+$\langle(v-w)/\sqrt2,(u-v)/\sqrt2\rangle=-1/2$.
+The rows have norm one and are perpendicular, as a change between
+orthonormal bases requires. Although tensor products are associative,
+the bases selected by the two decompositions are different.
+\emph{Recoupling} is the operation of converting between them.
+There is no asymptotic approximation in this example.
+
+\paragraph{From a basis change to a tetrahedron.}
+The coefficients in \eqref{eq:introrecoupling} depend on six
+labels $a,b,c,d,s,t$. With conventional dimension and sign factors
+they are the \emph{$6j$-symbols}. The name records these six
+representation labels; it does not refer to the size of the matrix.
+The four admissible triples
 \[
  (a,b,s),\quad(s,c,d),\quad(b,c,t),\quad(a,t,d)
 \]
-can be assigned to the four faces of a tetrahedron. At this point the
-tetrahedron is a way to organize the labels. Its interpretation as a
-metric tetrahedron requires an additional asymptotic statement.
+can be assigned to the four faces of a tetrahedron. Explicitly,
+on a tetrahedron with vertices $1,2,3,4$, put
+$a,b,s,d,c,t$ on edges $12,23,13,14,34,24$, respectively.
+Every face then carries one of the four triples.
+This explains the tetrahedral arrangement of a recoupling coefficient.
+Its interpretation as a \emph{metric} tetrahedron requires an
+additional asymptotic statement.
 
+\paragraph{Deforming the rules.}
 A quantum group deforms this tensor-product calculus. For
 $U_{q_{\rm alg}}(\mathfrak{sl}_2)$, ordinary integers and factorials in
 the explicit formulas are replaced by their quantum analogues, for example
@@ -53,33 +223,60 @@ the explicit formulas are replaced by their quantum analogues, for example
  [n]_{q_{\rm alg}}\longrightarrow n\quad(q_{\rm alg}\to1).
  \label{eq:introqinteger}
 \end{equation}
-The full definition also specifies tensor products and braidings; it
-is not merely a rule for replacing integers. At the usual compact
+Thus $[2]_{q_{\rm alg}}=q_{\rm alg}+q_{\rm alg}^{-1}$ tends to $2$,
+and the quantum dimension $d_j=[2j+1]_{q_{\rm alg}}$ tends to
+the ordinary dimension in this convention.
+The full definition also specifies tensor products and braidings;
+a braiding is the prescribed operator for exchanging two factors.
+It is not merely a rule for replacing integers. At the usual compact
 root $q_{\rm alg}=e^{\pi i/r}$, the finite fusion theory retains the
 labels $0,\frac12,\ldots,\frac{r-2}{2}$. A triple must satisfy the
 triangle inequalities, integral total spin, and
 $a+b+c\le r-2$. Taylor--Woodward give the representation-theoretic
 definition and these conventions explicitly~\cite{TaylorWoodward}.
 
-Associating four tensor factors in the five possible ways gives the
-\emph{pentagon identity}. In tetrahedral language it supplies the
-identity for replacing two tetrahedra by three in a triangulated ball.
-Together with orthogonality and normalization identities, this makes
-state sums independent of the triangulation. Schematically, a
-Turaev--Viro sum for a closed triangulated manifold has the form
+\paragraph{Why these coefficients can build an invariant.}
+With four tensor factors there are five ways to put in parentheses.
+Each elementary change of parentheses has an $F$-matrix.
+Following either route between two parenthesizations must give
+the same total change of basis. This equality of matrix products
+is the \emph{pentagon identity}. In tetrahedral language it supplies
+the identity for replacing two tetrahedra by three inside a
+triangulated ball, keeping its boundary fixed. The internal labels
+are summed because the intermediate basis is not part of the
+boundary data. Together with orthogonality and normalization
+identities, this makes appropriately defined state sums independent
+of the triangulation.
+
+Schematically, a Turaev--Viro sum for a closed triangulated
+three-manifold has the form
 \begin{equation}
  Z_r(M)=C_r(T)\sum_{\text{admissible edge labels }\mathbf j}
        \prod_{e\in E(T)}d_{j_e}\,
        \prod_{\Delta\in T}\{6j\}_{\Delta,\mathbf j}.
  \label{eq:introstatesum}
 \end{equation}
-Here $T$ is a triangulation, $d_j$ is a quantum dimension, and $C_r(T)$
-is the prescribed normalization. This displayed formula explains the
-structure; the exact weights are part of the definition of the chosen
-theory~\cite[Sections 2.2--2.3]{ChenYang}. A \emph{state} in this sum
-is an admissible assignment of labels. The sum is over such assignments;
-a description as an integral over hyperbolic metrics, with a particular
-geometric measure, would be a further result.
+Here $M$ is the manifold, $T$ its triangulation, and $E(T)$ the
+set of edges. A \emph{state} $\mathbf j$ assigns an allowed label
+$j_e$ to every edge so that the three labels on every triangular
+face are admissible. For one state, multiply a quantum dimension
+$d_{j_e}$ for each edge and a $6j$-weight for each tetrahedron
+$\Delta$, using its six edge labels. Then sum over all states and
+multiply by the prescribed normalization $C_r(T)$.
+At the finite root there are only finitely many states.
+This formula explains the structure; the exact weights and
+normalization belong to the chosen theory~\cite[Sections 2.2--2.3]{ChenYang}.
+
+We can now see the route back to geometry. The representation
+calculus first supplies exact rules for assembling local weights
+into a global invariant. One can then study what happens as the
+labels and quantum parameter vary: particular asymptotic regimes
+relate the tetrahedral weights to geometric actions and volumes.
+The finite example above explains the local algebra needed for
+that question; it does not itself assert a volume formula.
+Nor is the state sum already an integral over hyperbolic metrics.
+Such an interpretation, including its geometric measure, would
+require a further result.
 
 \subsection{The invariants and their volume limits}
 \label{sec:introinvariants}

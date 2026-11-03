@@ -157,7 +157,7 @@ def link_pdf(source, output, targets, repository_url):
     return {'pages': len(linked), 'path_occurrences': sum(counts.values()), 'unique_paths': len(counts),
             'existing_links_preserved': sum(map(len, original_links)), 'path_links': records,
             'source_sha256': digest(Path(source).read_bytes()), 'linked_sha256': digest(Path(output).read_bytes()),
-            'render_comparison': 'All 200 pages compared: unchanged pixels outside the added title-page footer; existing text, links and outline preserved.'}
+            'render_comparison': f'All {len(linked)} pages compared: unchanged pixels outside the added title-page footer; existing text, links and outline preserved.'}
 
 
 def build(source, output, ref, allow_dirty=False):

@@ -2,14 +2,16 @@
 
 The monograph is published at https://polyhedra.dimensionreducers.ai and its canonical research repository at https://github.com/igorrivin/polyhedra.
 
-The `edition-2026-11-03-r2` release pairs the current repository with the accepted 200-page monograph from scientific artifact commit `13f15cb12a0bfe694cf161c3dda1acebe59fb211`. Computational source, fixtures, mathematical text, claim ledgers and recorded result bytes are preserved in this publication increment. Reader-facing README commands and package project URLs are updated for public use.
+The `edition-2026-11-03-r3` release expands the exposition in Sections 10.1 and 17.1, with a complete recoupling example and a progression from elementary unfolding to the punctured-torus calculation. The rebuilt monograph has 206 pages. Existing equation, theorem and bibliography numbers are preserved. Computational implementations, fixtures, historical claim ledgers and recorded results retain their earlier bytes and evidence scope. The [revision record](execution/exposition-revision-2026-11-03/README.md) describes the new text and author checks; earlier independent approvals do not automatically extend to it.
+
+Release r2 remains the linked 200-page edition based on scientific artifact commit `13f15cb12a0bfe694cf161c3dda1acebe59fb211`. The `scientific_base_commit` in the repository-link configuration retains that historical baseline; the new edition's build manifest identifies the revised mathematical source exactly.
 
 ## Reader entry points
 
 - `experiments/README.md` maps the nine companions to recipes, entry points and recorded results.
 - The website's computational index links back to the relevant chapters and to source, inputs, outputs and recipes at the exact published repository commit.
 - All 54 repository-path occurrences in the current HTML edition become links to their 24 existing file/directory targets.
-- The linked PDF retains all 200 pages and their mathematical content. It adds a small repository address to the title page and URI annotations over located computational paths. The original PDF remains downloadable as `monograph-original.pdf` on the site.
+- The linked PDF retains all pages and mathematical content of the newly compiled edition. It adds a small repository address to the title page and URI annotations over located computational paths. That edition's unannotated PDF is downloadable as `monograph-original.pdf`; older published PDFs remain in their versioned GitHub releases.
 - The release's `polyhedra-source.zip` contains tracked source and materialized LFS data, with a per-file SHA-256 manifest. It contains no Git database or local environments. Git-based provenance-aware drivers should be run from a clone.
 
 ## Build and verification

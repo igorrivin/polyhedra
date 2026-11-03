@@ -1,0 +1,66 @@
+{
+  "evidence_kind": "exact finite rational and quadratic-field algebra",
+  "arithmetic": "fractions.Fraction; Q(sqrt(3)) represented by rational coefficient pairs",
+  "basis_vectors_before_normalization": {
+    "s": [
+      [
+        0,
+        1,
+        -1
+      ],
+      [
+        2,
+        -1,
+        -1
+      ]
+    ],
+    "t": [
+      [
+        1,
+        -1,
+        0
+      ],
+      [
+        1,
+        1,
+        -2
+      ]
+    ]
+  },
+  "squared_normalizing_factors": [
+    2,
+    6
+  ],
+  "unnormalized_change_of_basis": [
+    [
+      "-1/2",
+      "1/2"
+    ],
+    [
+      "3/2",
+      "1/2"
+    ]
+  ],
+  "normalized_change_of_basis": [
+    [
+      "-1/2",
+      "sqrt(3)/2"
+    ],
+    [
+      "sqrt(3)/2",
+      "1/2"
+    ]
+  ],
+  "basis_reconstruction_exact": true,
+  "orthogonality_exact": true,
+  "raising_operator_annihilation_exact": true,
+  "clebsch_gordan_dimension_spot_checks": 81,
+  "analytic_examples": {
+    "periodization": "Proved in text by Tonelli and the tiling [n,n+1) of R.",
+    "exponential": "Two geometric series give (exp(-x)+exp(x-1))/(1-exp(-1)); its integral is 2.",
+    "nonconstancy": "Endpoint minus midpoint equals (1-exp(-1/2))^2/(1-exp(-1)) > 0.",
+    "tent": "For x in [0,1], only n=0,-1 contribute and their sum is (1-x)+x=1.",
+    "torus": "Existing identity and normalization retained; no fresh numerical campaign."
+  },
+  "scope": "Author verification of the displayed finite example. Analytic statements have written derivations or named sources; no independent proof audit or new scientific replay is claimed."
+}

@@ -3,10 +3,92 @@
 
 \subsection{What a volume computation determines}
 
-Let $\Gamma$ be the mapping class group of an oriented finite-type surface
-with fixed boundary lengths, and let $\gamma$ be a fixed nonperipheral
-curve or multicurve class. Use the same WP orbifold measure on both
-quotients. For a measurable nonnegative function, or one for which
+The problem is to integrate a sum over curves while the underlying
+surface also varies. Directly, this asks us to keep track of all the
+curves on every surface in moduli space. \emph{Unfolding} changes the
+order of description: we integrate over surfaces equipped with one
+chosen curve, and evaluate just the term belonging to that curve.
+The sum disappears because the choice of curve has become part of
+the integration domain. An elementary example shows exactly how
+this trade works.
+
+\paragraph{A toy model: unfolding the circle to the line.}
+Let $f:\RR\to[0,\infty)$ be integrable, and form the periodic sum
+\[
+ P_f(x)=\sum_{n\in\ZZ}f(x+n).
+\]
+Shifting $x$ by one merely reindexes the sum, so $P_f$ is a
+function on the circle $\RR/\ZZ$. A fundamental interval for
+that circle is $[0,1)$: each point of the circle has one
+representative there. By nonnegativity, Tonelli's theorem allows
+us to interchange sum and integral:
+\[
+ \begin{aligned}
+ \int_0^1P_f(x)\,\dd x
+ &=\sum_{n\in\ZZ}\int_0^1f(x+n)\,\dd x\\
+ &=\sum_{n\in\ZZ}\int_n^{n+1}f(u)\,\dd u
+ =\int_{\RR}f(u)\,\dd u.
+ \end{aligned}
+\]
+In the second line we used $u=x+n$. The translated intervals
+$[n,n+1)$ tile the real line, so they join into a single
+integration domain. This is unfolding: one integral of a
+sum on a quotient becomes one integral of a single function on
+a larger space. For a signed or complex-valued $f$, the same
+argument works if $\int_{\RR}|f|<\infty$.
+
+Take $f(u)=e^{-|u|}$. For $0\le x\le1$, separate $n\ge0$ from
+$n\le-1$ and sum the two geometric series:
+\[
+ P_f(x)=\frac{e^{-x}+e^{x-1}}{1-e^{-1}},
+ \qquad \int_0^1P_f(x)\,\dd x=2.
+\]
+Knowing the integral has not determined the function:
+\[
+ P_f(0)=\frac{1+e^{-1}}{1-e^{-1}},\qquad
+ P_f(\tfrac12)=\frac{2e^{-1/2}}{1-e^{-1}},
+\]
+and these values differ by
+$(1-e^{-1/2})^2/(1-e^{-1})>0$.
+Thus unfolding computes the mean, here $2$, without making
+the periodic sum constant.
+
+A contrasting example is the tent function
+$f(u)=\max(1-|u|,0)$. For $0\le x\le1$ only the terms with
+$n=0,-1$ can be nonzero, and their sum is
+$(1-x)+x=1$. Its translates form a \emph{partition of unity}:
+their values add to one at every point. This extra pointwise
+fact explains constancy; integrating it also gives the value
+of the integral. McShane's identity will supply a geometric
+partition playing a comparable role.
+
+\paragraph{What replaces the circle and the line?}
+Fix an oriented surface and its boundary lengths.
+Teichm\"uller space $\T$ consists of its marked hyperbolic
+structures: the marking identifies curves with curves on a
+fixed reference surface. The mapping class group $\Gamma$
+consists of orientation-preserving diffeomorphisms modulo
+isotopy, with the prescribed boundary conventions. Its action
+changes the marking. The quotient $\Gamma\backslash\T$ is
+moduli space, where the marking has been forgotten.
+
+Choose an essential, nonperipheral curve class $\gamma$: it cannot
+be contracted to a point or moved into a puncture or boundary. Its orbit
+$\Gamma\gamma$ consists of all classes obtained by changing
+the marking, each counted once. Write $\ell_\delta(X)$ for
+the length of the geodesic representative of $\delta$ on $X$.
+The subgroup $\Stab(\gamma)$ preserves $\gamma$.
+Consequently $\Stab(\gamma)\backslash\T$ remembers a surface
+\emph{together with a distinguished curve in this orbit}.
+The map to $\Gamma\backslash\T$ forgets that curve.
+The different choices over a surface are precisely what the
+orbit sum counts, with automorphisms handled by orbifold
+integration. Curves of equal length are still distinct
+summands when their classes are different.
+
+Use the same Weil--Petersson (WP) orbifold measure $\dV$ on
+both quotients. For a measurable nonnegative function $F$,
+or one for which
 $\int_{\Gamma\backslash\T}\sum_\delta|F(\ell_\delta)|\,\dV<\infty$,
 the basic unfolding identity is
 \begin{equation}
@@ -16,67 +98,171 @@ the basic unfolding identity is
              F(\ell_\gamma(X))\,\dV(X).
  \label{eq:unfold}
 \end{equation}
-The orbit contains each class once; $\Stab(\gamma)$ preserves the entire
-chosen decoration, including any orientation, ordering or component
-weights. Integration over coset translates of a fundamental domain proves
-the formula, with ineffective isotropy retained on both sides. For
-nonnegative functions either side may be infinite. Simplicity of the
-orbit curves is not required.
+To prove it, take a fundamental domain for $\Gamma$ and
+integrate each summand over that domain. Change the marking
+in each term so that the chosen curve becomes $\gamma$.
+The resulting translates assemble into a fundamental domain
+for $\Stab(\gamma)$, just as the translated unit intervals
+assembled into $\RR$. The stabilizer identifies exactly the
+repetitions that would otherwise count the same chosen curve
+again. Ineffective isotropy is retained on both sides: even symmetries
+that act trivially contribute the reciprocal of their group order.
+For nonnegative functions either integral may be infinite.
 
-Simplicity becomes important when evaluating the right side. If $\gamma$
-is a disjoint simple multicurve, cut along it and use Fenchel--Nielsen
-coordinates. Each twist period integrates to $\ell_j$, so the resulting
-integral has factors $\prod_j\ell_j\,\dd\ell_j$ times WP volumes of the
-components, with the relevant symmetry factors. This is the geometric
-integration mechanism underlying Mirzakhani's volume recursion
-\cite[Theorem 7.1 and Lemma 7.3]{MirzVolumes}. The symmetry and
-one-handle factors in that formula must be converted using the volume
-convention for each component; they are not extra factors to append to
-an already stack-normalized quotient.
+The same argument applies to a specified multicurve, with
+$\Stab(\gamma)$ preserving its entire decoration, including
+any orientation, ordering or component weights, and with the
+same length statistic on both sides. Simplicity is not needed
+for this change of integration domain.
 
-Suppose a series $S(X)$ is independently known to be constant, say $C$,
-and $0<V_{g,n}<\infty$ in the chosen normalization.
+\paragraph{Why remembering a simple curve helps.}
+If the chosen curve is simple, meaning it has no self-intersections,
+cutting along it produces two
+geodesic boundary circles of the same length $x$.
+To reconstruct the surface we must specify the cut surface
+and how far one boundary is shifted before regluing it to the
+other. That shift is the Fenchel--Nielsen twist $\tau$,
+measured in length units. A full Dehn twist changes $\tau$
+to $\tau+x$, so a fundamental twist interval is $0\le\tau<x$.
+The WP length--twist factor is $\dd x\,\dd\tau$; integrating
+out the twist therefore gives
+\[
+ \int_0^x\dd\tau\,\dd x=x\,\dd x.
+\]
+This is the origin of the length factor in the unfolded
+integral. It is the size of the gluing parameter, rather than
+an extra weight chosen for the curve.
+
+For a disjoint simple multicurve, repeat this construction
+along each component. The result has factors
+$\prod_j x_j\,\dd x_j$ and the WP volumes of the cut components.
+For example, cutting a nonseparating curve on a genus-$g$
+surface with $n$ boundaries leaves a genus-$(g-1)$ surface
+with $n+2$ boundaries, the two new lengths both being $x$.
+A separating cut leaves two surfaces, so their volume factors
+multiply. Finite symmetries must still be accounted for:
+unoriented cuffs or indistinguishable components must not be
+accidentally counted twice. Mirzakhani's integration formula
+makes these factors precise~\cite[Theorem 7.1 and Lemma 7.3]{MirzVolumes}.
+Its symmetry and one-handle factors must be converted using
+the volume convention for each component; they are not extra
+factors to append to an already stack-normalized quotient.
+
+\paragraph{An integral is an average; an identity needs more.}
+Suppose a series $S(X)$ is independently known to be constant,
+say $C$, and $0<V_{g,n}<\infty$ in the chosen normalization.
 Then
 \begin{equation}
  C=\frac{1}{V_{g,n}}
        \int_{\M_{g,n}}S(X)\,\dV(X),
  \label{eq:recoverconstant}
 \end{equation}
-and unfolding can calculate its value. If constancy has not been proved,
-the same quotient computes only its average. This is the precise logical
-distinction behind the proposal to recover an identity from a volume.
+and unfolding can calculate its value. Without an independent
+constancy argument the same quotient is only the mean of $S$,
+as the exponential toy example shows. Conversely, if a pointwise
+identity supplies a known nonzero $C$, evaluating its integral
+can determine the unknown volume $V_{g,n}$. This second use is
+the starting point of Mirzakhani's volume recursion.
 
-On the punctured torus, for an unoriented essential simple curve orbit,
-the stack-normalized formula is
+\paragraph{A complete surface example: the punctured torus.}
+Let $X$ be a complete finite-area hyperbolic torus with one cusp.
+All essential unoriented simple closed curves belong to a
+single mapping class group orbit. Cutting along a chosen one,
+of length $x$, leaves a pair of pants with boundary lengths
+$(0,x,x)$, where length zero denotes the cusp. A hyperbolic
+pair of pants is determined by its three boundary lengths.
+There is therefore no further moduli integral for the cut
+surface: the remaining continuous parameters are just $x>0$
+and the regluing twist $\tau$.
+
+The effective stabilizer quotient has coordinates
+$x>0$ and $0\le\tau<x$. In the stack convention of
+Section~\ref{sec:torussphere}, the torus's generic elliptic
+involution has order two and acts trivially on Teichm\"uller
+space. Orbifold integration retains its weight $1/2$.
+Thus the unfolded integral is
+$\frac12\int_0^\infty\int_0^x f(x)\,\dd\tau\,\dd x$, giving
 \begin{equation}
  \int_{\M_{1,1}}\sum_{\alpha\text{ simple}}f(\ell_\alpha)\,\dV
        =\frac12\int_0^\infty x f(x)\,\dd x.
  \label{eq:torusunfold}
 \end{equation}
-Indeed, the effective stabilizer quotient has coordinates $x>0$ and
-$0\leq\tau<x$, while the ineffective torus involution contributes the
-single factor $1/2$. This is the stack convention of
-Section~\ref{sec:torussphere}; it is not a second quotient by cuff exchange.
-For $f(x)=(1+e^x)^{-1}$, expand in $e^{-x}$ to obtain
+The sum is over unoriented, nonperipheral simple curve classes.
+The factor $1/2$ occurs once; it is not a second quotient by
+cuff exchange.
+
+Choose $f(x)=(1+e^x)^{-1}$. The many-curve integral has become
+an elementary one-variable integral:
 \[
  \int_0^\infty\frac{x\,\dd x}{1+e^x}
-   =\sum_{m\ge1}\frac{(-1)^{m-1}}{m^2}=\frac{\pi^2}{12}.
+ =\sum_{m\ge1}(-1)^{m-1}\int_0^\infty xe^{-mx}\,\dd x
+ =\sum_{m\ge1}\frac{(-1)^{m-1}}{m^2}
+ =\frac{\pi^2}{12}.
 \]
+Here $(1+e^x)^{-1}=\sum_{m\ge1}(-1)^{m-1}e^{-mx}$ for $x>0$.
 Termwise integration is justified by
 $\sum_m\int_0^\infty xe^{-mx}\,\dd x=\sum_m m^{-2}<\infty$.
 For a finite numerical check, the integral beyond $R$ is at most
-$(R+1)e^{-R}$, and the alternating sum through $m=M$ has error at most
-$(M+1)^{-2}$.
-The integral of the series is $\pi^2/24$; division by
-$V_{1,1}=\pi^2/12$ gives $C=1/2$. Its pointwise constancy is McShane's
-theorem~\cite{McShane}:
+$(R+1)e^{-R}$, and the alternating sum through $m=M$ has error
+at most $(M+1)^{-2}$.
+Equation~\eqref{eq:torusunfold} therefore gives $\pi^2/24$
+for the integral over moduli space.
+
+Why choose this particular $f$? Because McShane's theorem says
+that its curve sum is pointwise constant~\cite{McShane}:
 \begin{equation}
  \sum_{\alpha\text{ simple, unoriented}}
                  \frac{1}{1+e^{\ell_\alpha(X)}}=\frac12.
  \label{eq:mcshane}
 \end{equation}
-The tetrahedral volume calculation and the covering argument provide an
-independent route to the volume used in this normalization check.
+The geometric idea is a partition at the cusp on a
+\emph{single fixed surface}. Take a small horocycle around
+the cusp and normalize its length measure to have total mass
+one. Its points specify geodesic rays leaving the cusp.
+The gap construction groups the complementary intervals by
+simple curves; the exceptional set has measure zero.
+For a curve of length $x$, the associated gaps have combined
+normalized measure $2/(1+e^x)$. This width is computed in the
+pair of pants obtained by cutting along that curve.
+Adding the gap widths gives one, hence \eqref{eq:mcshane}.
+This describes the mechanism, not a proof of the required
+gap classification or null-set theorem; see
+\cite[Sections 3, 5, and 9]{McShanePants}.
+As with the tent function, the partition supplies the
+pointwise statement that integration alone cannot supply.
+
+We can now use the two ingredients in either direction.
+Integrating McShane's identity and using the computed integral
+gives
+\[
+ \frac12 V_{1,1}=\frac{\pi^2}{24},
+ \qquad V_{1,1}=\frac{\pi^2}{12}.
+\]
+Alternatively, if the volume is already known from the
+tetrahedral calculation and torus--sphere correspondence,
+unfolding checks that the mean of the McShane sum is $1/2$.
+Its constancy still comes from McShane's theorem.
+The cusp partition and unfolding do different jobs:
+one sums gaps on one surface; the other integrates a curve
+sum over all surfaces.
+
+\paragraph{How the example becomes a volume recursion.}
+For a surface with positive boundary lengths, Mirzakhani's
+generalized McShane identity partitions a distinguished
+boundary of length $L_1$ by gap functions associated with
+embedded pairs of pants. Its right-hand side is $L_1$.
+Integration makes that side $L_1V_{g,n}(L)$.
+On the other side, group the pants by topological type and
+unfold each orbit sum. Removing the chosen pants leaves
+surfaces of smaller complexity. Their volumes, together with
+the explicitly known gap kernels and the length--twist
+factors, evaluate the unfolded terms.
+Consequently the unknown volume is related to lower-complexity
+volumes; this is a recursion, not just another integral
+representation~\cite[Section 8]{MirzVolumes}.
+The punctured-torus example is especially simple because its
+cut surface is already a pair of pants, whose fixed-boundary
+moduli space is a point.
 
 \subsection{Operations that preserve constancy}
 
