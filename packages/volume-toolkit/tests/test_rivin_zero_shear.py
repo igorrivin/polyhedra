@@ -3,21 +3,23 @@
 from __future__ import annotations
 
 import cmath
+import inspect
 import json
 import math
 
 import numpy as np
 import pytest
+from scipy.optimize import least_squares
 from scipy.sparse import csr_matrix
 
 from ideal_poly_volume_toolkit.rivin_zero_shear import (
     _ROOTS_OF_UNITY,
+    StandardUpperHalfPlaneZeroShearSystem,
+    ZeroShearSystem,
     _exact_generalized_circle_sign,
     _normalize_cp1_points,
     _support_predicate,
     _support_report,
-    StandardUpperHalfPlaneZeroShearSystem,
-    ZeroShearSystem,
     audit_zero_shear_realization,
     lognormal_edge_weights,
     normalize_cp1_points,
@@ -26,7 +28,6 @@ from ideal_poly_volume_toolkit.rivin_zero_shear import (
     weighted_pole_link_tutte_embedding,
     weighted_tutte_embedding,
 )
-
 
 TETRAHEDRON_FACES = [
     (0, 1, 2),
@@ -443,7 +444,17 @@ def test_tutte_solver_keeps_disk_coordinates_and_normalizes_separately():
     )
     assert result.normalized_vertices_cp1[:3] == (None, 0j, 1 + 0j)
     assert result.audit.planar_embedding["embedded"]
-    assert result.trajectory_kind == "accepted_iterates"
+    # SciPy 1.16 added accepted-iterate callbacks. Older supported versions
+    # retain a separately labelled residual-evaluation trajectory.
+    if "callback" in inspect.signature(least_squares).parameters:
+        assert result.trajectory_kind == "accepted_iterates"
+        assert all(row["kind"] == "accepted_iterate" for row in result.trajectory)
+    else:
+        assert result.trajectory_kind == "residual_evaluations_fallback"
+        assert any(
+            row["kind"] == "residual_evaluation_fallback"
+            for row in result.trajectory
+        )
     assert result.trajectory[0]["kind"] == "accepted_iterate"
     assert result.trajectory[0]["in_target_convex_cell"] is True
     assert result.trajectory[0]["support_passes"] is True

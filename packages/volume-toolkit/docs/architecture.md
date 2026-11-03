@@ -104,6 +104,14 @@ variables; it returns the same `TutteSolveResult` diagnostics as
 Levenberg--Marquardt polishing are solver controls, not substitutes for the
 independent strict audit.
 
+Trajectory recording follows the installed SciPy interface. With the
+`least_squares` callback introduced in SciPy 1.16, the solver records
+`accepted_iterates`. Older supported SciPy versions record
+`residual_evaluations_fallback`; these samples are not accepted optimizer
+iterations and must not be counted as such. The initial and final accepted
+points retain their separate per-record labels. Numerical acceptance remains
+the same independent geometric audit in both cases.
+
 `scripts/check_zero_shear_response.py` owns only the strict private-key/model
 JSON protocol and delegates geometry to the package audit. The optional
 private-reference chordal error is diagnostic unless its tolerance is

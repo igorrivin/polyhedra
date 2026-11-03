@@ -1,0 +1,20 @@
+{
+  "reason": "Python 3.10 CI uses SciPy 1.15.3, whose least_squares lacks the callback added in SciPy 1.16. The existing fallback correctly reports residual evaluations; only the test expected accepted iterates unconditionally.",
+  "changes": "Make the existing trajectory test assert the documented kind and record labels for the available SciPy interface; document the distinction. No numerical implementation, fixture or recorded result changed.",
+  "local_validation": [
+    {
+      "python": "3.12.4",
+      "scipy": "1.18.1",
+      "tests/test_rivin_zero_shear.py": "25 passed"
+    },
+    {
+      "python": "3.12.4",
+      "scipy": "1.15.3",
+      "numpy": "2.2.6",
+      "mpmath": "1.3.0",
+      "tests/test_rivin_zero_shear.py": "25 passed"
+    }
+  ],
+  "scope": "Author checks before the correction commit; the fresh Python 3.10-3.14 hosted matrix is recorded separately in GitHub Actions.",
+  "scipy_reference": "https://github.com/scipy/scipy/blob/v1.16.1/doc/source/release/1.16.0-notes.rst"
+}

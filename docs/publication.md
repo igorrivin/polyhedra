@@ -2,7 +2,7 @@
 
 The monograph is published at https://polyhedra.dimensionreducers.ai and its canonical research repository at https://github.com/igorrivin/polyhedra.
 
-The `edition-2026-11-03-r1` release pairs the current repository with the accepted 200-page monograph from scientific artifact commit `13f15cb12a0bfe694cf161c3dda1acebe59fb211`. Computational source, fixtures, mathematical text, claim ledgers and recorded result bytes are preserved in this publication increment. Reader-facing README commands and package project URLs are updated for public use.
+The `edition-2026-11-03-r2` release pairs the current repository with the accepted 200-page monograph from scientific artifact commit `13f15cb12a0bfe694cf161c3dda1acebe59fb211`. Computational source, fixtures, mathematical text, claim ledgers and recorded result bytes are preserved in this publication increment. Reader-facing README commands and package project URLs are updated for public use.
 
 ## Reader entry points
 
@@ -32,3 +32,7 @@ The [license map](../LICENSES/README.md) preserves CC BY 4.0 for the monograph, 
 ## Publication checks
 
 The [preflight receipt](publication/preflight.json) records 713 passing toolkit tests, 46 site tests with 109 passing subtests, successful materialized-data checks, and a compatible 95-package isolated environment. The [resolved dependency list](publication/requirements-py312.txt) describes that environment. The [history audit](publication/history-audit.json) checked reachable Git content, embedded archives and all historical LFS payloads before public upload. These are bounded verification records, not a general proof or a fresh replay of every scientific result.
+
+## Python 3.10 compatibility check
+
+The first hosted matrix passed on Python 3.11-3.14 and in the data-integrity job. Python 3.10 with SciPy 1.15.3 exposed an incorrect test expectation: it expected accepted-iterate callbacks, which SciPy added in 1.16. The existing solver correctly returns the separately labelled residual-evaluation fallback. The regression test now checks the appropriate documented trajectory kind and its individual records. No solver, mathematical source, fixture or scientific result was changed for this correction. The earlier public tags and releases remain historical snapshots.
