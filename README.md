@@ -3,7 +3,7 @@
 **Igor Rivin · Department of Mathematics, Temple University**
 Prepared and revised with substantial help from Codex.
 
-[Read the monograph](https://polyhedra.dimensionreducers.ai) · [PDF](https://polyhedra.dimensionreducers.ai/downloads/monograph.pdf) · [Computational guide](experiments/README.md) · [Download this edition](https://github.com/igorrivin/polyhedra/releases/tag/edition-2026-11-03-r3)
+[Read the monograph](https://polyhedra.dimensionreducers.ai) · [PDF](https://polyhedra.dimensionreducers.ai/downloads/monograph.pdf) · [Computational guide](experiments/README.md) · [Download this edition](https://github.com/igorrivin/polyhedra/releases/tag/edition-2026-11-03-r4)
 
 This is the public companion repository for the monograph. It brings together the canonical LaTeX, the maintained volume toolkit, nine computational companions, recorded results and claim ledgers, and the preserved histories of the original toolkit and `ipoly` repositories.
 
@@ -11,7 +11,7 @@ This is the public companion repository for the monograph. It brings together th
 
 - **Read:** use the [web edition](https://polyhedra.dimensionreducers.ai) or [PDF](https://polyhedra.dimensionreducers.ai/downloads/monograph.pdf). Computational paths in the linked edition point to the exact repository commit for that edition.
 - **Find a computation:** the [chapter guide](experiments/README.md) connects sections to recipes, inputs, results, and evidence limits. The [web computational index](https://polyhedra.dimensionreducers.ai/computations.html) provides the same route alongside the text.
-- **Inspect without Git:** download `polyhedra-source.zip` from the [edition release](https://github.com/igorrivin/polyhedra/releases/tag/edition-2026-11-03-r3). It includes the actual LFS-backed data and a checksum manifest. GitHub's automatic source archives may contain LFS pointers instead.
+- **Inspect without Git:** download `polyhedra-source.zip` from the [edition release](https://github.com/igorrivin/polyhedra/releases/tag/edition-2026-11-03-r4). It includes the actual LFS-backed data and a checksum manifest. GitHub's automatic source archives may contain LFS pointers instead.
 - **Reproduce:** use a Git clone as below. Drivers record the source commit and working-tree state; keep new outputs outside the checkout. The ZIP is an inspection/source distribution, not a Git checkout.
 
 ## Quick start

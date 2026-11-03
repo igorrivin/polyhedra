@@ -46,9 +46,9 @@
     },
     {
       "id": "quantum-geodesics", "title": "Quantum and geodesic finite checks",
-      "scope": "Four finite quantum groups and ten finite geodesic groups support Sections 10–11, 17–22, 32 and Appendix B. The recorded report preserves exact and numerical evidence separately.",
+      "scope": "Four finite quantum groups and ten finite geodesic groups support Sections 10–11, 17–22, 32 and Appendix B. A separate Section 10.1 teaching example compares exact equal-spin Wigner 6j values with their Euclidean Ponzano–Regge approximation. Each report retains its own evidence status.",
       "limit": "No general Jones or root-of-unity 6j evaluator, global moduli/GMC solver, numerical asymptotic theorem, arbitrary realization or geometric completeness result is claimed.",
-      "files": ["artifacts/quantum_geodesics/result.json", "experiments/quantum_geodesics/README.md", "experiments/quantum_geodesics/run.py", "experiments/quantum_geodesics/fixture.json", "book/claims/sections10-11.json", "book/claims/sections17-22.json", "book/claims/section32-appendixb.json"]
+      "files": ["artifacts/quantum_geodesics/result.json", "experiments/quantum_geodesics/README.md", "experiments/quantum_geodesics/run.py", "experiments/quantum_geodesics/fixture.json", "experiments/quantum_geodesics/regge_example.py", "artifacts/regge_example/result.json", "book/claims/sections10-11.json", "book/claims/sections17-22.json", "book/claims/section32-appendixb.json"]
     },
     {
       "id": "counting-mixing", "title": "Sections 23–31: finite counting and mixing formulas",

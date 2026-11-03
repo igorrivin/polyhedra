@@ -62,7 +62,7 @@ class CompleteBookTests(unittest.TestCase):
         self.assertEqual(len(pages), 35)
         self.assertEqual(len(parts), 7)
         self.assertEqual(len(routes), 613)
-        self.assertEqual(len(bib), 129)
+        self.assertEqual(len(bib), 136)
         self.assertEqual(routes["sec:monographintro"], "introduction.html")
         self.assertEqual(routes["sec:ipolybridge"], "09-volume-hessians.html")
         self.assertEqual(routes["app:conventions"], "appendix-b-conventions.html")
@@ -193,6 +193,24 @@ class CompleteBookTests(unittest.TestCase):
             converter().transform({"t": "RawBlock", "c": ["latex", r"\unsupported{Proof text}"]})
         path = converter().transform({"t": "RawInline", "c": ["latex", r"\path{artifacts/quantum_geodesics/result.json}"]})
         self.assertEqual(path["c"][1], "artifacts/quantum_geodesics/result.json")
+
+    def test_physics_note_keeps_math_citations_and_other_quotations(self):
+        c = converter()
+        math = {"t": "Math", "c": [{"t": "InlineMath"}, r"J_x=\hbar\sigma_x/2"]}
+        citation = {"t": "Cite", "c": [[{"citationId": "A", "citationPrefix": [], "citationSuffix": []}], []]}
+        note = {"t": "BlockQuote", "c": [
+            {"t": "Para", "c": [{"t": "Strong", "c": [book.literal("Physics: angular momentum.")]}]},
+            {"t": "Para", "c": [math, citation]}]}
+        result = c.transform(note)
+        self.assertEqual(result["t"], "Div")
+        self.assertIn("physics-box", result["c"][0][1])
+        self.assertIn(["role", "note"], result["c"][0][2])
+        self.assertIn(r"J_x=\hbar\sigma_x/2", [x["c"][1] for x in book.chapter.ast_nodes(result, "Math")])
+        self.assertIn("references.html#ref-A", json.dumps(result))
+        for quote in ({"t": "BlockQuote", "c": []},
+                      {"t": "BlockQuote", "c": [{"t": "Para", "c": []}]},
+                      {"t": "BlockQuote", "c": [{"t": "Para", "c": [book.literal("A quotation.")]}]}):
+            self.assertEqual(c.transform(quote), quote)
 
     def test_appendix_longtable_spacing_keeps_the_following_note_and_rejects_other_setters(self):
         blocks = [{"t": "RawBlock", "c": ["latex", r"\setlength{\LTpost}{4pt}"]},

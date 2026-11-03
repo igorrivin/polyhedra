@@ -393,6 +393,11 @@ class BookConverter:
             if not strong or strong.get("t") not in {"Strong", "Emph"} or strong["c"][-1].get("t") != "Str":
                 raise BuildError("unrecognized theorem heading")
             strong["c"][-1]["c"] = number
+        if kind == "BlockQuote" and content and content[0].get("t") == "Para":
+            inlines = content[0].get("c", [])
+            heading = inlines[0] if inlines else None
+            if heading and heading.get("t") == "Strong" and chapter.inline_text(heading["c"]).startswith("Physics:"):
+                return {"t": "Div", "c": [["", ["physics-box"], [["role", "note"]]], self.transform(content)]}
         if kind == "Figure":
             attrs, caption, body = content
             images = list(chapter.ast_nodes(body, "Image"))
@@ -446,6 +451,10 @@ def trim_frontmatter(tex):
 
 
 def read_latex(preamble, tex, tools, work, name):
+    # The print-only frame becomes a structured note, preserving its math and
+    # citations through the same reader and converter as the surrounding prose.
+    tex = tex.replace(r"\begin{physicsbox}", r"\begin{quote}")
+    tex = tex.replace(r"\end{physicsbox}", r"\end{quote}")
     # Pandoc's documented latex_macros expansion and JSON AST are used before
     # strict transforms: https://pandoc.org/MANUAL.html#extension-latex_macros
     result = chapter.run([tools["pandoc"], "--from=latex+raw_tex", "--to=json"], cwd=work,

@@ -1,0 +1,85 @@
+{
+  "stage": "author revision and self-review",
+  "baseline_commit": "249e21888106700170a8bd4caf2b52b20df36d59",
+  "source_sha256": {
+    "book/chapters/10-quantum-introduction.tex": "a48fc868d220bb1843123ba6c3d1235dfcf1af5b647c963c7b87e1b446b3105b",
+    "book/polyhedral_volumes_and_geodesic_identities.tex": "b65f18f52a1ce481049d31c9c13b2ae79ff6be3d6f9543791a64a84eb226bd03",
+    "experiments/quantum_geodesics/regge_example.py": "b37a4950a96b57727ca8384cad88071428076c358292742feecfb55def4c7a58",
+    "site/build_book.py": "9ecafdee3927abcbd6741b563c542b74a3632190c0665a82d442537739eeb2d9",
+    "site/book/edition.css": "bf23faed0d219fb8e469161ae47323385728e92a87b746a0418bddd2aea0fb5e"
+  },
+  "sources": {
+    "Regge1961": {
+      "url": "https://doi.org/10.1007/BF02733251",
+      "consulted": "original bibliographic record and abstract; not full text"
+    },
+    "PonzanoRegge": {
+      "url": "https://arxiv.org/pdf/0803.3319",
+      "consulted": "original chapter attribution and bibliographic metadata in Barrett and Naish-Guzman"
+    },
+    "Roberts": {
+      "url": "https://arxiv.org/pdf/math-ph/9812013",
+      "consulted": "Theorem 1, exterior angles, Section 6.1 shifted-length equivalence"
+    },
+    "BarrettNaishGuzman": {
+      "url": "https://arxiv.org/pdf/0803.3319",
+      "consulted": "Sections 2.1-2.4, state sum, divergences, finite deformation"
+    },
+    "TuraevViro1992": {
+      "url": "https://www.math.stonybrook.edu/~oleg/math/papers/1992-TuraViro.pdf",
+      "consulted": "introduction, finite colors and triangulation invariance"
+    },
+    "TaylorWoodward": {
+      "url": "https://arxiv.org/pdf/math/0305113",
+      "consulted": "compact-root labels, admissibility and spherical semiclassical regime"
+    },
+    "CappellaroSpin": {
+      "url": "https://ocw.mit.edu/courses/22-51-quantum-theory-of-radiation-interactions-fall-2012/693972cea9cf9da5e4e9e86fbc72c9e7_MIT22_51F12_Notes.pdf",
+      "consulted": "Section 4.2 Pauli operators and angular momentum"
+    },
+    "AquilantiSixJ": {
+      "url": "https://arxiv.org/pdf/1009.2811",
+      "consulted": "introduction on angular-momentum recoupling and semiclassical geometry"
+    },
+    "DLMFSixJ": {
+      "url": "https://dlmf.nist.gov/34.4.E2",
+      "consulted": "finite Racah formula; equal-spin specialization derived directly; no reliance on the page claim that face inequalities suffice for Euclidean realization"
+    }
+  },
+  "preservation": {
+    "all_other_chapter_bytes_unchanged": true,
+    "chapter10_from_subsection10_2_unchanged": true,
+    "existing_label_numbers": 613,
+    "original_bibliography_numbers": 129,
+    "appended_references": 7
+  },
+  "preview": {
+    "pdf_pages": 209,
+    "visually_inspected_pages": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      208,
+      209
+    ],
+    "verification": {
+      "html_pages": 41,
+      "book_pages": 36,
+      "source_labels": 613,
+      "bibliography_entries": 136,
+      "mathml_nodes": 4971,
+      "figures": 9,
+      "tables": 9,
+      "local_links_and_search_targets": 3415,
+      "search_passages": 1315,
+      "browser_verification": "not performed by this builder; static checks are separate"
+    },
+    "site_tests": 47,
+    "search_checks": "passed",
+    "browser_qa": "unavailable; not performed"
+  },
+  "scope": "No new independent mathematical acceptance. The new example is finite evidence; no interval error or asymptotic theorem proved by computation."
+}

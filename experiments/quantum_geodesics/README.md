@@ -1,5 +1,17 @@
 # Finite quantum and geodesic checks
 
+## Regge and Wigner 6j teaching example (Section 10.1)
+
+The standalone [regular-tetrahedron example](regge_example.py) evaluates the equal-integer-spin Wigner 6j-symbol by exact rational Racah sums, then compares it with the Euclidean Ponzano–Regge leading term for spins 10, 20 and 40. It also computes the angle deficit for five regular tetrahedra around an edge. The phase uses **exterior** dihedral angle `acos(-1/3)` and length `N+1/2`; the deficit uses **interior** angle `acos(1/3)`.
+
+```sh
+python experiments/quantum_geodesics/regge_example.py --output /tmp/regge-example.json
+```
+
+The output must be a new file. The [author's result](../../artifacts/regge_example/result.json) records the exact fractions, 80- and 120-digit floating evaluations, cross-precision residuals, software versions and driver hash. The [revision record](../../docs/execution/regge-turaev-viro-2026-11-03/README.md) includes a separate SymPy comparison. This is a finite illustration, with no interval error bound or numerical proof of the asymptotic theorem. It does not implement general or root-of-unity 6j-symbols. The earlier four-group quantum and ten-group geodesic campaign below keeps its original code and recorded results.
+
+## Preserved quantum and geodesic campaign
+
 This offline companion has four finite quantum groups and ten finite geodesic groups. It is independent of the supported volume-toolkit package. The accepted formula contracts and review records are copied under `contracts/` with their original bytes; these record provenance, not approval of this implementation. The geodesic contract approval covers its finite mathematical specification, separately from manuscript prose and claim-ledger review.
 
 Run in the existing supported Python environment (Python 3.12, mpmath 1.3, SymPy 1.14):
