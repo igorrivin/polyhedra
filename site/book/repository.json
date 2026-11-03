@@ -6,6 +6,23 @@
   "scientific_base_commit": "13f15cb12a0bfe694cf161c3dda1acebe59fb211",
   "companions": [
     {
+      "id": "exposition",
+      "title": "Worked examples throughout the monograph",
+      "group_id": "exposition",
+      "directory": "experiments/exposition",
+      "recipe": "experiments/exposition/README.md",
+      "entrypoint": "experiments/exposition/check_examples.py",
+      "result": "artifacts/exposition/result.json",
+      "inputs": [],
+      "chapters": [
+        "10-quantum-introduction.html",
+        "17-unfolding-constant-series.html"
+      ],
+      "command": "python experiments/exposition/check_examples.py > /tmp/polyhedra-run/exposition.json",
+      "scope": "Exact small calculations added for exposition, identified by section and source hashes.",
+      "limit": "84 exact symbolic checks of teaching examples. These do not replay earlier scientific campaigns or prove the surrounding global theorems."
+    },
+    {
       "id": "normalizations",
       "title": "Sections 1-8 and Appendix A",
       "group_id": "normalizations",
